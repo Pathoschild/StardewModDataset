@@ -1,0 +1,263 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Mod page metadata",
+	"description": "The metadata for a Stardew Valley mod page fetched from CurseForge, ModDrop, or Nexus Mods.",
+	"type": "object",
+	"properties": {
+		"Site": {
+			"description": "The mod site which has the mod.",
+			"type": "string",
+			"enum": [ "CurseForge", "ModDrop", "Nexus" ]
+		},
+		"Id": {
+			"description": "The mod page ID within the mod site.",
+			"type": "integer"
+		},
+		"Name": {
+			"description": "The mod name based on the mod page.",
+			"type": [ "string", "null" ]
+		},
+		"Author": {
+			"description": "The author's canonical name based on the mod page (usually the username). This is identical for all mods uploaded to the same site by a user.",
+			"type": [ "string", "null" ]
+		},
+		"AuthorLabel": {
+			"description": "The author's display name based on the mod page, if different from Author. This may differ across mods by the same author, may include free text entered by the uploader on Nexus, or may include multiple names on CurseForge.",
+			"type": [ "string", "null" ]
+		},
+		"TagLine": {
+			"description": "A short blurb which describes the mod page, if available.",
+			"type": [ "string", "null" ]
+		},
+		"Description": {
+			"description": "The full mod page description body, if available. The format depends on the mod site (e.g. ModDrop uses Markdown and Nexus uses BBCode).",
+			"type": [ "string", "null" ]
+		},
+		"PageUrl": {
+			"description": "The full URL to the mod's web page.",
+			"type": "string",
+			"format": "uri"
+		},
+		"Version": {
+			"description": "The version number based on the mod page, if available. This is the version as shown on the mod page, which may not be a valid semantic version.",
+			"type": [ "string", "null" ]
+		},
+		"Updated": {
+			"description": "When the mod metadata last changed, as an ISO 8601 UTC date/time. To the extent supported by each mod site, this covers any change to the mod page (including mod page edits, file uploads, hiding or republishing, etc).",
+			"type": "string",
+			"format": "date-time"
+		},
+		"Downloads": {
+			"description": "The active downloads on the mod page. The selected files depend on the mod site: CurseForge includes all files; ModDrop includes all files not marked 'old', 'hidden', or 'deleted'; and Nexus includes all files not marked 'old', 'archived', or 'deleted'.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ModPageDownload"
+			}
+		},
+		"OtherFields": {
+			"description": "The remaining fields which weren't mapped to one of the other fields.",
+			"type": "object"
+		}
+	},
+	"required": [ "Site", "Id", "Name", "Author", "PageUrl", "Version", "Updated", "Downloads" ],
+
+	"$defs": {
+		"ModPageDownload": {
+			"description": "A download entry on a mod page.",
+			"type": "object",
+			"properties": {
+				"Id": {
+					"description": "The unique ID for this file within the mod site.",
+					"type": "integer"
+				},
+				"Type": {
+					"description": "The download type. The meaning depends on the mod site: on CurseForge, 'release' downloads are Main and 'alpha' or 'beta' downloads are Optional; on ModDrop, non-prerelease and non-alternate downloads are Main; on Nexus, files in the 'main' category are Main and those in the 'optional' category are Optional. (For Nexus, all downloads are Optional if the mod page only contains files in non-archived/old/deleted categories that would normally be excluded.)",
+					"type": "string",
+					"enum": [ "Main", "Optional" ]
+				},
+				"DisplayName": {
+					"description": "The download's title as entered by the uploader.",
+					"type": [ "string", "null" ]
+				},
+				"FileName": {
+					"description": "The name of the file when downloaded (usually a .zip file).",
+					"type": [ "string", "null" ]
+				},
+				"Description": {
+					"description": "The description text for the file. This may be BBCode on Nexus.",
+					"type": [ "string", "null" ]
+				},
+				"Version": {
+					"description": "The version number based on the download info, if any. This is the version as shown on the mod page, which may not be a valid semantic version.",
+					"type": [ "string", "null" ]
+				},
+				"SizeInBytes": {
+					"description": "The size of the downloaded file in bytes.",
+					"type": "integer",
+					"minimum": 0
+				},
+				"Uploaded": {
+					"description": "When the file was uploaded, as an ISO 8601 UTC date/time.",
+					"type": "string",
+					"format": "date-time"
+				},
+				"Mods": {
+					"description": "The mods detected within this download, based on analysis using the SMAPI toolkit. This is always non-empty, unless the DownloadError or UnpackError fields are set.",
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ModFolder"
+					}
+				},
+				"DownloadError": {
+					"description": "An error message indicating why the file could not be downloaded, if applicable. This is usually an issue on the mod site (e.g. they quarantined the file).",
+					"type": "string"
+				},
+				"UnpackError": {
+					"description": "An error message indicating why the mods could not be unpacked from the downloaded archive, if applicable. This is usually an issue with the file itself (e.g. the author uploaded a corrupted archive).",
+					"type": "string"
+				},
+				"OtherFields": {
+					"description": "The remaining fields which weren't mapped to one of the other fields.",
+					"type": "object"
+				}
+			},
+			"required": [ "Id", "Type", "DisplayName", "FileName", "Version", "SizeInBytes", "Uploaded", "Mods" ]
+		},
+
+		"ModFolder": {
+			"description": "A mod folder detected within a download.",
+			"type": "object",
+			"properties": {
+				"Id": {
+					"description": "The normalized mod ID from the mod's manifest.json, if found.",
+					"type": [ "string", "null" ]
+				},
+				"DisplayName": {
+					"description": "The display name for the mod. This is usually the normalized name from the manifest.json (if it was parseable), else generated based on the folder path in the download.",
+					"type": "string"
+				},
+				"Type": {
+					"description": "The detected mod type. One of: ContentPack (contains files loaded as a content pack by another SMAPI mod); Smapi (uses SMAPI directly, e.g. a C# mod); Xnb (a legacy type which replaces game files directly); Ignored (folder is ignored by convention, e.g. because it's prefixed with a dot); or Invalid (mod is invalid and its type could not be determined).",
+					"type": "string",
+					"enum": [ "ContentPack", "Ignored", "Invalid", "Smapi", "Xnb" ]
+				},
+				"RelativePath": {
+					"description": "The relative path to this mod within the download. Omitted if the mod occupies the entire download.",
+					"type": "string"
+				},
+				"Manifest": {
+					"description": "The mod's parsed manifest.json file, if it could be parsed. This is the normalized JSON structure, not the raw text (e.g. JSON comments aren't included).",
+					"$ref": "#/$defs/ModManifest"
+				},
+				"ManifestParseError": {
+					"description": "If the mod's manifest.json couldn't be parsed, the error type. One of: EmptyFolder (folder is empty or contains only ignored files); EmptyVortexFolder (folder is an empty folder managed by the Vortex mod manager); IgnoredFolder (folder is ignored by convention); ManifestInvalid (mod's manifest.json could not be parsed); ManifestMissing (folder contains non-ignored and non-XNB files, but none of them are manifest.json); or XnbMod (folder is an XNB mod).",
+					"type": "string",
+					"enum": [ "EmptyFolder", "EmptyVortexFolder", "IgnoredFolder", "ManifestInvalid", "ManifestMissing", "XnbMod" ]
+				},
+				"ManifestParseErrorText": {
+					"description": "If the mod's manifest.json couldn't be parsed, a human-readable message indicating why (e.g. the message shown in the SMAPI console window).",
+					"type": "string"
+				}
+			},
+			"required": [ "Id", "DisplayName", "Type" ]
+		},
+
+		"ModManifest": {
+			"description": "The parsed manifest.json for a scanned mod.",
+			"type": "object",
+			"properties": {
+				"Name": {
+					"description": "The mod name.",
+					"type": [ "string", "null" ]
+				},
+				"Description": {
+					"description": "A brief description of the mod.",
+					"type": [ "string", "null" ]
+				},
+				"Author": {
+					"description": "The mod author's name.",
+					"type": [ "string", "null" ]
+				},
+				"Version": {
+					"description": "The mod version. This is guaranteed to be a semantic version (since an invalid version results in a manifest parse error).",
+					"type": "string"
+				},
+				"MinimumApiVersion": {
+					"description": "The minimum SMAPI version required by this mod, if specified. This is guaranteed to be a semantic version.",
+					"type": "string"
+				},
+				"MinimumGameVersion": {
+					"description": "The minimum Stardew Valley version required by this mod, if specified. This is guaranteed to be a semantic version.",
+					"type": "string"
+				},
+				"EntryDll": {
+					"description": "The name of the DLL to load in the mod directory, if it's a SMAPI (C#) mod.",
+					"type": "string"
+				},
+				"ContentPackFor": {
+					"description": "The mod which will read this as a content pack, if it's a content pack.",
+					"$ref": "#/$defs/ModManifestContentFor"
+				},
+				"Dependencies": {
+					"description": "The other mods that must be loaded before this mod.",
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/ModManifestDependency"
+					}
+				},
+				"UpdateKeys": {
+					"description": "The namespaced mod IDs to query for updates (like \"Nexus:541\").",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"UniqueId": {
+					"description": "The unique mod ID.",
+					"type": "string"
+				},
+				"OtherFields": {
+					"description": "The remaining fields which weren't mapped to one of the other fields.",
+					"type": "object"
+				}
+			},
+			"required": [ "Name", "Description", "Author", "Version", "UpdateKeys", "UniqueId" ]
+		},
+
+		"ModManifestContentFor": {
+			"description": "The mod that will load a content pack, from the content pack's manifest.",
+			"type": "object",
+			"properties": {
+				"UniqueId": {
+					"description": "The unique ID of the mod which can read this content pack.",
+					"type": [ "string", "null" ]
+				},
+				"MinimumVersion": {
+					"description": "The minimum required version (if any).",
+					"type": [ "string", "null" ]
+				}
+			},
+			"required": [ "UniqueId" ]
+		},
+
+		"ModManifestDependency": {
+			"description": "A mod dependency listed in a mod manifest.",
+			"type": "object",
+			"properties": {
+				"UniqueId": {
+					"description": "The unique mod ID to require.",
+					"type": [ "string", "null" ]
+				},
+				"MinimumVersion": {
+					"description": "The minimum required version (if any).",
+					"type": "string"
+				},
+				"IsRequired": {
+					"description": "Whether the dependency must be installed to use the mod.",
+					"type": "boolean"
+				}
+			},
+			"required": [ "UniqueId", "IsRequired" ]
+		}
+	}
+}

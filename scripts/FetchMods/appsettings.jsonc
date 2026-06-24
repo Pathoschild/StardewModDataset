@@ -1,0 +1,67 @@
+{
+	/*********
+	** Behavior
+	*********/
+	// Whether to delete mods which no longer exist on the mod sites. If false, they'll show warnings instead.
+	"DeleteRemovedMods": true,
+
+	// Whether to try redownloading mods which couldn't be downloaded in the past (e.g. due to being quarantined).
+	"RetryPreviousFailedDownloads": true,
+
+	// The maximum age in hours for which a mod export is considered fresh.
+	// Older exports are still used but will log warnings.
+	"MaxExportAgeInHours": 5,
+
+
+	/*********
+	** File paths
+	*********/
+	// The path to the 7-zip install directory (containing 7z.dll and 7z.exe).
+	"SevenZipPath": "C:\\Program Files\\7-Zip",
+
+
+	/*********
+	** API settings
+	*********/
+	/****
+	** Generic
+	****/
+	// The user agent sent to the mod site APIs.
+	"UserAgent": "StardewModDataset/202606 (+https://github.com/Pathoschild/StardewModData)",
+
+	/****
+	** CurseForge
+	****/
+	// The base URL for the CurseForge export API.
+	// This must be provided by a CurseForge rep.
+	"CurseForgeExportUrl": null,
+
+	/****
+	** ModDrop
+	****/
+	// The base URL for the ModDrop export API.
+	// This must be provided by a ModDrop rep.
+	"ModDropExportUrl": null,
+
+	// The ModDrop username with which to authenticate.
+	// This is usually the username for your normal account on the ModDrop site.
+	"ModDropUser": null,
+
+	// The ModDrop password with which to authenticate.
+	// This is usually the password for your normal account on the ModDrop site.
+	"ModDropPassword": null,
+
+	/****
+	** Nexus
+	****/
+	// The base URL for the Nexus export API.
+	// This must be provided by a Nexus rep.
+	"NexusExportUrl": null,
+
+	// The Nexus API key with which to authenticate.
+	// To generate a key:
+	//   1. On the Nexus website, click the user profile dropdown in the top-right.
+	//   2. Go to Site Preferences > API Keys.
+	//   3. Generate a personal API key at the bottom of the page.
+	"NexusApiKey": null
+}
