@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 40509,
+	"Name": "Performance HUD - FPS Memory and Debug Display",
+	"Author": "ZeroXPatch",
+	"Description": "[b][color=#ffff00][size=6][center]Customizable Performance/Debug HUD[/center][/size][/color][center]Safe to uninstall anytime. Removing it just disables the features.\n<br />\n<br />[url=https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=downloads]https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=downloads[/url][/center]\n<br />\n<br />\n<br />Customizable Performance/Debug HUD[/b] adds a lightweight, configurable overlay to Stardew Valley that shows performance and useful debug info in real time.\n<br />\n<br />It’s designed for:\n<br />\n<br />[list]\n<br />[*]players who want to monitor FPS/performance,\n<br />[*]modders troubleshooting lag or stutter,\n<br />[*]streamers/testing setups,\n<br />[*]anyone who wants quick “what’s happening right now” info without opening logs.\n<br />[/list]All HUD items are individually toggleable in [b]Generic Mod Config Menu (GMCM)[/b], and you can move the HUD with X/Y position settings. You can also bind a hotkey to toggle the HUD on/off instantly.\n<br />\n<br />[b][color=#00ff00]Features[/color]\n<br />\n<br />[/b][list]\n<br />[*]FPS + frame time (smoothness / stutter detection)\n<br />[*]Memory usage (rough mod load pressure)\n<br />[*]Update tick timing (how heavy the game loop is)\n<br />[*]Current location ID (helpful for debugging, map mods, and event triggers)\n<br />[*]Temporary sprites count (visual effect/activity indicator)\n<br />[*]Handy player debug info (tile position, facing direction, date/time, weather, multiplayer)\n<br />[/list]\n<br />[center][img]https://staticdelivery.nexusmods.com/mods/1303/images/40509/40509-1766536431-871395498.png[/img]\uFEFF\uFEFF[/center]\n<br />[list]\n<br />[/list][b][color=#00ff00]Configuration[/color][/b]\n<br />\n<br />Open [b]GMCM[/b] → “Customizable Performance/Debug HUD”\n<br />\n<br />[list]\n<br />[*]Toggle each stat on/off\n<br />[*]Change HUD position (X/Y)\n<br />[*]Set a hotkey to toggle the overlay\n<br />[/list][b][color=#00ff00]Compatibility\n<br />\n<br />[/color][/b][list]\n<br />[*]Safe, overlay-only mod (no saves edited)\n<br />[*]Works alongside other mods\n<br />[*]No XNB edits\n<br />[/list][line][b][color=#00ff00]What each HUD item is for\n<br />[/color][/b]\n<br />FPS\n<br />\n<br />[b]What it shows:[/b] Frames per second.\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Higher FPS generally feels smoother.\n<br />[*]If FPS drops hard in certain places (farm, mines, big modded maps), it can tell you [i]where[/i] performance issues happen.\n<br />[/list][b]Good for:[/b] “This area feels laggy — is it actually dropping FPS?”\n<br />[line]Frame Time (ms)\n<br />\n<br />[b]What it shows:[/b] How long each frame took to render (milliseconds).\n<br />\n<br />[b]Why it matters:\n<br />[/b]\n<br />[list]\n<br />[*]Frame time is [i]the best way to spot stutter[/i].\n<br />[*]Even if FPS looks “fine,” frame time spikes reveal hitching/micro-stutter.\n<br />[/list][b]Quick rule of thumb:\n<br />[/b]\n<br />[list]\n<br />[*]~16.7ms ≈ 60 FPS\n<br />[*]~33.3ms ≈ 30 FPS\n<br />Big spikes = stutters.[/list][b]Good for:[/b] “Why does it feel choppy even when FPS says 60?”\n<br />[line]Memory\n<br />\n<br />[b]What it shows:[/b] Game process memory usage.\n<br />\n<br />[b]Why it matters:\n<br />[/b]\n<br />[list]\n<br />[*]Heavy mod lists can push memory up.\n<br />[*]Large memory usage can correlate with longer loading times, sluggishness, or instability on some systems.\n<br />[/list][b]Good for:[/b] “Did adding mods raise memory a lot?” / “Why is my game loading slower?”\n<br />[line]Update Load Estimate (Update dt)\n<br />\n<br />[b]What it shows:[/b] How long the game update tick takes (ms), average + max.\n<br />\n<br />[b]Why it matters:\n<br />[/b]\n<br />[list]\n<br />[*]This is a rough indicator of [i]CPU workload per tick[/i].\n<br />[*]If this climbs or spikes, it can mean the game is doing too much logic work (often mod-related).\n<br />[/list][b]Good for:[/b] “Is the game logic bogging down, not just graphics?”\n<br />[line]Location ID\n<br />\n<br />[b]What it shows:[/b] The internal ID/name of the current map.\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Helpful for bug reports (“this happens in [b]Town[/b] or [b]Farm[/b] or a modded map name”).\n<br />[*]Helps modders debug event conditions, triggers, and map-specific issues.\n<br />[/list][b]Good for:[/b] “What map am I actually in?” (especially on custom maps)\n<br />[line]Temporary Sprites Count\n<br />\n<br />[b]What it shows:[/b] Count of temporary sprite effects (sparkles, splashes, animations, visual effects).\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]This number can rise during heavy visual activity (storms, machines, combat, lots of effects).\n<br />[*]If it gets unusually high, it can hint that something is spamming effects.\n<br />[/list][b]Good for:[/b] “Are visual effects piling up and causing lag?”\n<br />[line]Debug QoL \n<br />\n<br />StatsPlayer Tile\n<br />\n<br />[b]What it shows:[/b] Your tile coordinates (X, Y).\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Useful for placing things precisely.\n<br />[*]Handy when reporting issues to mod authors (“bug occurs at tile 40, 18”).\n<br />[/list][b]Good for:[/b] map building, mod debugging, precise placement.\n<br />[line]Facing Direction\n<br />\n<br />[b]What it shows:[/b] Which direction you’re facing (Up/Right/Down/Left).\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Some interactions, tools, and mod features depend on facing direction.\n<br />[*]Useful for debugging “it only works when facing X direction” issues.\n<br />[/list][line]In-Game Date/Time\n<br />\n<br />[b]What it shows:[/b] Season/day/year + clock time.\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Useful when testing events, schedules, time-based mechanics, or speedruns.\n<br />[*]Helps reproduce bugs (“at 9:50 PM on Fall 12”).\n<br />[/list][line]Weather\n<br />\n<br />[b]What it shows:[/b] Current weather state (Sun/Rain/Storm/Snow/Wind).\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Weather affects NPC routines, lightning behavior, some mod logic, crop watering, etc.\n<br />[*]Useful for testing “this only happens in rain/storm”.\n<br />[/list][line]Multiplayer Info\n<br />\n<br />[b]What it shows:[/b] Single/Host/Farmhand + player count.\n<br />\n<br />[b]Why it matters:[/b]\n<br />[list]\n<br />[*]Multiplayer can affect timing, syncing, and certain mod behaviors.\n<br />[*]Useful when diagnosing “works in single-player but not multiplayer.”\n<br />[/list]\n<br />\n<br />[b][size=4][center][color=#00ff00]Q&amp;A:[/color][/center][/size][/b]\n<br />Q: How do I move the HUD?\n<br />\n<br />In GMCM (or [code]config.json[/code]), change:\n<br />[list]\n<br />[*][code]PositionX[/code]\n<br />[*][code]PositionY[/code]\n<br />[/list]These are UI pixel coordinates from the top-left corner.\n<br />\n<br />Q: How do I hide/show the HUD quickly?\n<br />\n<br />Use the toggle hotkey in config:\n<br />[list]\n<br />[*]Default: [b]F8[/b]\n<br />You can change it in GMCM under [b]General → Toggle HUD keybind[/b].[/list]Q: My FPS is high but the game still feels stuttery — why?\n<br />\n<br />Check [b]Frame Time[/b].\n<br />Even at “60 FPS”, frame time spikes mean micro-stutters/hitches are happening.\n<br />\n<br />Q: What does “Update dt” mean?\n<br />\n<br />That’s the time the game spends per update tick (logic/CPU work), shown as average + max.\n<br />Higher values or frequent spikes can indicate heavy logic load (sometimes mod-related).\n<br />\n<br />Q: The numbers look “wrong” or don’t change much. Is it broken?Some values naturally won’t change often:\n<br />[list]\n<br />[*][b]Location ID[/b] only changes when you change maps.\n<br />[*][b]Weather[/b] changes daily.\n<br />[*][b]Multiplayer[/b] changes only when players join/leave.\n<br />[/list]If [b]everything[/b] is stuck, make sure the HUD is enabled and not toggled off (press your HUD hotkey once).\n<br />\n<br />Q: Will this reduce performance?\n<br />\n<br />Very little. The HUD is lightweight, and most readings are sampled periodically (not every frame).\n<br />That said, any overlay adds [i]some[/i] work — if you’re chasing max performance, disable items you don’t need.\n<br />\n<br />Q: Does it work in multiplayer?\n<br />\n<br />Yes. It should work for host and farmhands. The multiplayer line shows your role + player count.\n<br />\n<br />Q: Is it compatible with other UI/HUD mods?\n<br />\n<br />Usually yes. If another mod draws in the same area, just move this HUD using X/Y in GMCM.\n<br />\n<br />Q: Does this work on modded/custom maps?\n<br />\n<br />Yes. Location ID is especially useful for modded maps, since it shows the internal map name.\n<br />\n<br />Q: Can I change font size/colors/anchor?\n<br />\n<br />Not in this version (simple, minimal overlay). If you want these options, request them and I can add:\n<br />[list]\n<br />[*]scale setting,\n<br />[*]anchor presets (TopLeft/TopRight/etc),\n<br />[*]optional background opacity,\n<br />[*]text color.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40509",
+	"Version": "1.0",
+	"Updated": "2025-12-24T00:21:54+00:00",
+	"Downloads": [
+		{
+			"Id": 151303,
+			"Type": "Main",
+			"DisplayName": "Performance HUD",
+			"FileName": "Performance HUD-40509-1-0-1766535714.zip",
+			"Description": ":)",
+			"Version": "1.0",
+			"SizeInBytes": 30831,
+			"Uploaded": "2025-12-24T00:21:54+00:00",
+			"Mods": [
+				{
+					"Id": "ZeroXPatch.PerformanceHud",
+					"DisplayName": "Performance HUD",
+					"Type": "Smapi",
+					"RelativePath": "PerformanceHud",
+					"Manifest": {
+						"Name": "Performance HUD",
+						"Description": "Configurable HUD for FPS, frame time, memory, location ID, temporary sprites, update load estimate, and debug QoL stats.",
+						"Author": "ZeroXPatch",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PerformanceHud.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ZeroXPatch.PerformanceHud"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537991,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427197,
+		"UploaderId": 141646868,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

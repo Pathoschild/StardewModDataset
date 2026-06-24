@@ -1,0 +1,137 @@
+{
+	"Site": "Nexus",
+	"Id": 8680,
+	"Name": "Even Better RNG",
+	"Author": "pepoluan",
+	"Description": "[font=Trebuchet MS][b][size=5][color=#ffff00][i][size=3]Donation Points (DP) goes 100% to \"Doctors without Borders\" [/size][/i][size=3](Médecins sans Frontières)[/size][/color]\n<br />\n<br />Background[/size][/b][/font]\n<br />\n<br />Stardew Valley uses .Net Framework's own System.Random class, a \"really bad\" PRNG for the several reasons:\n<br />[list]\n<br />[*]It's slow\n<br />[*]It's \"biased\" towards lower values\n<br />[*]It has uneven distribution of odd-vs-even numbers\n<br />[*]It is, in general, [url=https://stackoverflow.com/a/6842191/149900]broken in the worst ways[/url]\uFEFF\n<br />[*]Here are some more docs, if you [i]really[/i] want to delve into the nitty-gritty stuff: [url=https://fuglede.dk/en/blog/bias-in-net-rng/][1][/url]\uFEFF [url=https://gist.github.com/fuglede/772402ecc3997ada82a03ce65361781b][2][/url]\uFEFF [url=https://github.com/dotnet/runtime/issues/23198][3][/url]\uFEFF\n<br />[/list]\n<br />Zoryn4163 created the [url=https://github.com/Zoryn4163/SMAPI-Mods/tree/master/BetterRNG]\"Better RNG\" mod[/url] (available only via GitHub) that tried to fix this bug. Unfortunately, there are several problems with \"Better RNG\":\n<br />[list=1][*]\"Better RNG\" uses [b]Mersenne Twister[/b], a [url=https://prng.di.unimi.it/#quality]slow[/url]\uFEFF and [url=https://en.wikipedia.org/wiki/Mersenne_Twister#Disadvantages]kind-of-problematic[/url]\uFEFF algorithm. See [url=https://arxiv.org/pdf/1910.06437.pdf]this paper[/url] for even more details.\n<br />[*]Although the feature is called \"Override Daily Luck\", it actually [url=https://github.com/Zoryn4163/SMAPI-Mods/blob/3594cc87abb4d6318c80c80f900dfa982367ae33/BetterRNG/ModEntry.cs#L49]triggers only on SaveLoaded[/url]\uFEFF.\n<br />[*]It has recently (as of 2021-05-16) come to my attention that every now and then, the game re-creates [font=Courier New]System.Random[/font] and inject that into [font=Courier New]Game1.random[/font], meaning that RNG replacement needs to be done continually, something \"Better RNG\" does not do.\n<br />[*]The mod has not been updated for more than 1 year.\n<br />\n<br />[/list]\n<br />Benefits of this mod against \"Better RNG\":\n<br />[list=1]\n<br />[*]This mod uses the [i]much[/i] faster and less-problematic [url=https://prng.di.unimi.it/]XoShiRo128** PRNG[/url], for better randomness. (If you're using SDV64, it will use XoShiRo256** instead, which is even faster for pure 64-bit programs).\n<br />\n<br />(FYI, the \"Xoshiro Family\" of PRNG has been selected as the default RNG for [b]Julia 1.6[/b] and [b][url=https://github.com/dotnet/runtime/pull/47085].Net 6.0[/url][/b])\n<br />[*]This mod implements \"Override Daily Luck\" properly.\n<br />[*]This mod continually checks if [font=Courier New]Game1.random[/font] had been replaced by a 'rogue' RNG, and enforces its PRNG. This is done in an optimized way that does not cause any lags (technical explanation: PRNG is [i]not[/i] re-instantiated since it's cached; mod simply \"repoints\" Game1.random to the cached PRNG)\n<br />[*]This mod is regularly updated.\n<br />[/list]\n<br />\n<br />(\"Override Weather\" is NOT implemented because the SDV's logic for weather is quite complex and I don't want to break anyone's game. If you [i]really[/i] want to change the odds for weather, you can use another mod such as [url=https://www.nexusmods.com/stardewvalley/mods/604]\"Climates of Ferngill\"[/url].)\n<br />\n<br />Since v1.1.0, you can press [b]F5[/b] to reload changes in config.json (for example, if you don't like the mod's default \"Gaussian distribution\" for Luck.) However, in later versions you can change the mod's settings wholly via [b]Generic Mod Config Menu[/b].\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Installation[/size][/font]\n<br />[/b][list=1]\n<br />[*]Install latest SMAPI (mod requires minimal version 3.7.0)\n<br />[*]Download the provided Zip file and extract into the Mods directory\n<br />[*]Verify it's running on the SMAPI console\n<br />[*](Optional) Configure to your liking by editing config.json or using Generic Mod Config Menu\n<br />\n<br />[/list]\n<br />\n<br />[font=Trebuchet MS][size=5][b][font=Courier New]config.json[/font][/b] [b]knobs[/b][/size][/font]\n<br />\n<br />[list]\n<br />[*][b][font=Courier New]ReloadHotkey[/font][/b] -- Hotkey to press if you want to reload config.json. Default = [font=Courier New]\"RightShift + F5\"[/font]\n<br />[*][b][font=Courier New]OverrideDailyLuck[/font][/b] -- If true, then everytime a savegame is loaded, you (or your team's) luck will be recalculated\n<br />[*][b][font=Courier New]GaussianLuck[/font][/b] -- If true, then use Gaussian / Normal distribution for luck calculation\n<br />[*][b][font=Courier New]GaussianLuckStdDev[/font][/b] -- Affects the Gaussian / Normal distribution\n<br />[/list]\n<br />[size=2]Note that starting version 1.9.0, it is no longer possible to specify the RNG's seed. This is because since version 1.8.4 the RNG is actually no longer predictable anymore even if you specify a seed, as on each DayStarted it will advance by an unpredictable number (from the OS's secure CSPRNG). Therefore, the ability to specify a seed (and to reseed the currently-running RNG) is removed.\n<br />[/size]\n<br />[b]This mod supports configuration using [/b][url=https://www.nexusmods.com/stardewvalley/mods/5098][b]\"Generic Mod Config Menu\"[/b][/url] (GMCM), but does [u]not[/u] require GMCM to function.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Note on Gaussian[/size][/font][/b]\n<br />[url=https://en.wikipedia.org/wiki/Normal_distribution]Gaussian distribution, a.k.a. \"Normal distribution\", a.k.a. \"Bell Curve distribution\"[/url], means that Luck will tend towards \"neutral\", sometimes \"a bit (un)lucky\", and rarely \"very (un)lucky\". Kinda reflective of Real Life :-)\n<br />\n<br />If you don't like this, set [b][font=Courier New]GaussianLuck[/font][/b] to [b][font=Courier New]false[/font][/b]\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Some more Technical Details[/size][/font][/b]\n<br />This mod uses the free/libre library [url=https://www.nuget.org/packages/XoshiroPRNG.Net/][b]XoshiroPRNG.Net[/b][/url] made by yours truly and published using NuGet. It's a drop-in replacement for .Net Framework's System.Random, yet also provide additional interface that fully \"unleashes\" the power of the Xoshiro family of PRNG. It's suprisingly popular: As of this writing, it has been downloaded more than 2300 times since its release. Someone else had in fact [url=https://peteroupc.github.io/random.html]recommended the use of my library[/url] over Mersenne Twister or (*shivers*) System.Random.\n<br />\n<br />Source code for the XoshiroPRNG.Net library is available by following the link provided on the NuGet link above.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]API for Other Modders[/size][/font][/b]\n<br />Starting version 1.5.0, \"Even Better RNG\" also provides an API which other SMAPI modders can use.\n<br />\n<br />[url=https://sourceforge.net/p/sdvmod-even-better-rng/code/ci/v1-PC/tree/EvenBetterRNG/IEvenBetterRNGAPI.cs]The Interface file[/url] is provided in the latest version's zipfile. Copy that file to your project, and add [color=#00ff00][b][font=Courier New]using [/font][/b][/color][color=#00ff00][b][font=Courier New]EvenBetterRNG;[/font][/b][/color] on the top. I've added XML comments to each interface method, so hopefully you can easily understand what each method does.\n<br />\n<br />[url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Integrations#Using_an_API]Grab the API as per SMAPI instructions[/url], and you will have access to the following functions:\n<br />[list]\n<br />[*][font=Courier New][color=#00ff00]GetNewRandom[/color][/font] method (with 3 overrides), which will give you a new XoShiRo128** PRNG whenever invoked. Don't keep calling this, you might cause your mod to have memory leak. Rather, call once and cache. Or use the next method:\n<br />[*][font=Courier New][color=#00ff00]GetNamedRandom[/color][/font][color=#00ff00] [/color]method (2 overrides), which will give you a singleton-like PRNG (created only if necessary, exact same one if already created).\n<br />[*][font=Courier New][color=#00ff00]TryRegisterDailyLuckOverrideCallback[/color][/font], use this to register one (or more) callback(s). The callback(s) will be called after EBRNG has finished recalculating Daily Luck. Use this to ensure that whatever manipulation you're going to do with Daily Luck will not be overwritten by EBRNG.\n<br />[/list]\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Source Code[/size][/font][/b]\n<br />[url=https://sourceforge.net/p/sdvmod-even-better-rng/code/ci/default/tree/]Is available on SourceForge[/url] &lt;== Click\n<br />\n<br />Please do not ask me to move the repository to GitHub; that won't ever happen.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8680",
+	"Version": "1.10.0",
+	"Updated": "2021-06-28T14:04:54+00:00",
+	"Downloads": [
+		{
+			"Id": 42600,
+			"Type": "Main",
+			"DisplayName": "EvenBetterRNG 1.10.0 for PC",
+			"FileName": "EvenBetterRNG 1.10.0 for PC-8680-1-10-0-1624877482.zip",
+			"Description": "For @PC (Windows, Mac, and Linux). Android players please use the for Android version.\n<br /><br />Version 1.10.0 adds GetMainRandom() API method to better support other mods' needs.\n<br /><br /><br />",
+			"Version": "1.10.0",
+			"SizeInBytes": 29825,
+			"Uploaded": "2021-06-28T10:51:22+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.EvenBetterRNG",
+					"DisplayName": "Even Better RNG",
+					"Type": "Smapi",
+					"RelativePath": "EvenBetterRNG",
+					"Manifest": {
+						"Name": "Even Better RNG",
+						"Description": "Replace SDV RNG with high-performance XoShiRo(128|256)**",
+						"Author": "pepoluan",
+						"Version": "1.10.0",
+						"MinimumApiVersion": "3.7.0",
+						"EntryDll": "EvenBetterRNG.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Chucklefish:6117",
+							"Nexus:8680@PC"
+						],
+						"UniqueId": "pepoluan.EvenBetterRNG",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/p/sdvmod-even-better-rng/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"1.0.0": "Initial Release",
+								"1.1.0": "Attach to DayStart instead of SaveLoaded, add Reload (F5) functionality",
+								"1.2.0": "Implement support for Generic Mod Config Menu, cap the gaussian result, and change the gaussian stdev",
+								"1.5.0": "Provide API for other SMAPI mods",
+								"1.6.0": "Use XoShiRo256** for 64-bit, change hotkey to KeybindList to allow modifier keys (RightShift, LeftCtrl, etc), instrumentation",
+								"1.7.0": "Add some CLI, add experimental periodic forcing",
+								"1.7.1": "Add GetNamedRandom API, remove premature capping in GaussianLuck, optimize GaussianLuck calculation",
+								"1.7.2": "Periodic forcing is now enforced, experimental per-tick forcing implemented",
+								"1.7.3": "Log original Game1.random Type and source, lock NamedPRNG dict before mutating",
+								"1.8.0": "Periodic forcing is now every second, some properties made static",
+								"1.8.1": "Lower SMAPI requirement to hopefully run on Android",
+								"1.8.2": "Version bump to make it same as Android version's",
+								"1.8.3": "Add TryRegisterDailyLuckOverrideCallback() to API, update XoshiroPRNG.Net to 1.6.0, targets .Net 4.5.2",
+								"1.8.4": "Make random numbers even less predictable",
+								"1.9.0": "Use CSPRNG to seed the RNG and remove ability to specify seed/reseed",
+								"1.10.0": "Add GetMainRandom() to API"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429288,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 42606,
+			"Type": "Main",
+			"DisplayName": "EvenBetterRNG 1.10.0 for Android",
+			"FileName": "EvenBetterRNG 1.10.0 for Android-8680-1-10-0-1624889094.zip",
+			"Description": "EXPERIMENTAL version specifically built for @Android",
+			"Version": "1.10.0",
+			"SizeInBytes": 27695,
+			"Uploaded": "2021-06-28T14:04:54+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.EvenBetterRNG",
+					"DisplayName": "Even Better RNG",
+					"Type": "Smapi",
+					"RelativePath": "EvenBetterRNG",
+					"Manifest": {
+						"Name": "Even Better RNG",
+						"Description": "Replace SDV RNG with high-performance XoShiRo(128|256)**",
+						"Author": "pepoluan",
+						"Version": "1.10.0",
+						"MinimumApiVersion": "3.7.0",
+						"EntryDll": "EvenBetterRNG.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8680@Android"
+						],
+						"UniqueId": "pepoluan.EvenBetterRNG",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/p/sdvmod-even-better-rng/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"1.0.0": "Initial Release",
+								"1.1.0": "Attach to DayStart instead of SaveLoaded, add Reload (F5) functionality",
+								"1.2.0": "Implement support for Generic Mod Config Menu, cap the gaussian result, and change the gaussian stdev",
+								"1.5.0": "Provide API for other SMAPI mods",
+								"1.6.0": "Use XoShiRo256** for 64-bit, change hotkey to KeybindList to allow modifier keys (RightShift, LeftCtrl, etc), instrumentation",
+								"1.7.0": "Add some CLI, add experimental periodic forcing",
+								"1.7.1": "Add GetNamedRandom API, remove premature capping in GaussianLuck, optimize GaussianLuck calculation",
+								"1.7.2": "Periodic forcing is now enforced, experimental per-tick forcing implemented",
+								"1.7.3": "Log original Game1.random Type and source, lock NamedPRNG dict before mutating",
+								"1.8.0": "Periodic forcing is now every second, some properties made static",
+								"1.8.1": "Lower SMAPI requirement to hopefully run on Android",
+								"1.8.2": "Removal of leftover KeybindList's",
+								"1.8.3": "Add TryRegisterDailyLuckOverrideCallback() to API, update XoshiroPRNG.Net to 1.6.0, targets .Net 4.5.2",
+								"1.8.4": "Make random numbers even less predictable",
+								"1.9.0": "Use CSPRNG to seed the RNG and remove ability to specify seed/reseed",
+								"1.10.0": "Add GetMainRandom() to API"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429294,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395368,
+		"UploaderId": 27024274,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

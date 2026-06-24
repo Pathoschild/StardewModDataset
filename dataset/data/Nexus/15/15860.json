@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 15860,
+	"Name": "Like a Duck to Water",
+	"Author": "aedenthorn",
+	"Description": "For people complaining about ducks rarely if ever swimming in water, the reason seems to be some conflict between the game's collision logic and the farm animal check to see whether they can reach water from their current tile. On the standard farm, there are only 4 tiles on the whole map that a duck can be at to be able to jump into the water (they're at the bottom of the big pond).\n<br />\n<br />This mod changes collision logic for ducks with regards to water so there are more chances for them to swim normally (the standard farm map will have 22 tiles they can enter the water from).\n<br />\n<br />Further, the mod checks each duck on the farm map (after they eat and are petted, and every ten minutes) to see if it:\n<br />\n<br />[list]\n<br />[*]has not swam today[/*]\n<br />[*]has been petted today (by default, autopetting counts)[/*]\n<br />[/list]If all of the above are true, and the farm has water-entry tiles near the duck (default [b]20[/b] tiles away or less), ducks will begin to try to find a path to water, moving directly to the closest reachable water-entry tile not already targeted by another duck.\n<br />\n<br />By default, ducks now eat from water sources when swimming, making it unnecessary to prevent them from swimming before they eat as in the vanilla game (this can be disabled in the config).\n<br />\n<br />Finally, ducks gain a set friendship bonus (default [b]10 points[/b]) the first time they swim on a given day.\n<br />\n<br />\n<br />[b][size=5]Notes:[/size][/b]\n<br />\n<br />This mod should work with any modded animal that can swim, if such a thing ever exists. It should work with any farm map that has proper water tiles.\n<br />\n<br />Ducks are added to a queue with their potential hop tile info, and the mod checks a maximum of one duck\u00A0every tick\u00A0 (based on a random chance per tick). Pathfinding will only occur if no animal pathfinding was done on that tick, so the mod shouldn't cause any performance issues.\n<br />\n<br />\n<br />[size=5][b]Config[/b][/size]\n<br />\n<br />You can customize this mod by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15860",
+	"Version": "0.5.1",
+	"Updated": "2026-05-08T19:37:55+00:00",
+	"Downloads": [
+		{
+			"Id": 166847,
+			"Type": "Main",
+			"DisplayName": "Like a Duck to Water",
+			"FileName": "Like a Duck to Water-15860-0-5-1-1778269075.zip",
+			"Description": "Changes:<br /><br />Added option to make ducks eat from water sources while swimming (you will have to turn off Eat Before Swimming to make this happen if you are updating from a previous version)",
+			"Version": "0.5.1",
+			"SizeInBytes": 23971,
+			"Uploaded": "2026-05-08T19:37:55+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.LikeADuckToWater",
+					"DisplayName": "Like a Duck to Water",
+					"Type": "Smapi",
+					"RelativePath": "LikeADuckToWater",
+					"Manifest": {
+						"Name": "Like a Duck to Water",
+						"Description": "Makes ducks actually want to swim in water once they have been fed and petted.",
+						"Author": "aedenthorn",
+						"Version": "0.5.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LikeADuckToWater.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:15860"
+						],
+						"UniqueId": "aedenthorn.LikeADuckToWater"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553535,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342402548,
+		"UploaderId": 18901754,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

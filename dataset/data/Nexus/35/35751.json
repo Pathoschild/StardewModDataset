@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 35751,
+	"Name": "ScriptCommandPlus-Reverse Proposal And Divorce Framework",
+	"Author": "Avren9",
+	"Description": "ScriptCommandPlus (SCP) A lightweight mod that adds three commands usable in Content Patcher events or other SMAPI mods:\n<br />\n<br />[list]\n<br />[*]/propose\u00A0— NPC proposes marriage to the player\n<br />[/list]\n<br />[list]\n<br />[*]\uFEFF/breakup\u00A0— NPC breaks up with the player\n<br />[/list]\n<br />[list]\n<br />[*]\uFEFF/divorce\u00A0— NPC divorces the player\n<br />[/list]\n<br />\n<br />\n<br />All in-game relationship states are updated automatically. No manual adjustments needed.\n<br />\n<br />No C# coding required. No bundled content.\u00A0\n<br />\n<br />It works for any character, from the vanilla game or mods, as long as they are a\u00A0datable NPC.\n<br />\n<br />\n<br />[size=4][b]About\u00A0\u00A0polygamy\n<br />\n<br />[/b][/size]This optional file is intended for players using polygamy/multi-spouse mods. It modifies the core commands to ensure compatibility.\n<br />\n<br />The main difference is the behavior of the /divorce command:\n<br />\n<br />[list]\n<br />[*][b]Standard Version (Main File):[/b] The spouse and their room/patio are removed immediately.\n<br />[*][b]Polyamory Version (This File):[/b] To ensure safe compatibility, divorce is finalized [b]overnight[/b]. After using the command, the spouse will be gone the [b]next morning[/b].\n<br />[/list]\n<br />If you have any mod that allows multiple spouses, please download this version instead of the main file to avoid potential bugs and save file issues.\n<br />\n<br />[url=https://github.com/HelriaVellon/ScriptCommandPlus]Source code available on GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35751",
+	"Version": "1.6.0",
+	"Updated": "2025-09-28T14:12:31+00:00",
+	"Downloads": [
+		{
+			"Id": 141891,
+			"Type": "Main",
+			"DisplayName": "ScriptCommandPlus",
+			"FileName": "ScriptCommandPlus-35751-1-6-0-1756891495.zip",
+			"Description": "",
+			"Version": "1.6.0",
+			"SizeInBytes": 5998,
+			"Uploaded": "2025-09-03T09:24:55+00:00",
+			"Mods": [
+				{
+					"Id": "Helria.ScriptCommandPlus",
+					"DisplayName": "ScriptCommandPlus",
+					"Type": "Smapi",
+					"RelativePath": "ScriptCommandPlus",
+					"Manifest": {
+						"Name": "ScriptCommandPlus",
+						"Description": "Adds custom commands for CP events to trigger NPC-initiated propose, breakup, and divorce using C# logic. Bridges event scripts and core mechanics.",
+						"Author": "Helria",
+						"Version": "1.6.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ScriptCommandPlus2.0.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:35751"
+						],
+						"UniqueId": "Helria.ScriptCommandPlus"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528579,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 144045,
+			"Type": "Optional",
+			"DisplayName": "ScriptCommandPlus (Polyamory Compatible Version)",
+			"FileName": "ScriptCommandPlus (Polyamory Compatible Version)-35751-1-6-1759068751.zip",
+			"Description": "This version is for polygamy/multi-spouse players. It allows the propose and divorce commands to work correctly with multiple spouses.",
+			"Version": "1.6",
+			"SizeInBytes": 7487,
+			"Uploaded": "2025-09-28T14:12:31+00:00",
+			"Mods": [
+				{
+					"Id": "Helria.SCP",
+					"DisplayName": "SCP",
+					"Type": "Smapi",
+					"RelativePath": "ScriptCommandPlus_PolyamoryCompatible",
+					"Manifest": {
+						"Name": "SCP",
+						"Description": "Adds custom commands for CP events to trigger NPC-initiated propose, breakup, and divorce using C# logic---Polyamory Compatible",
+						"Author": "Helria",
+						"Version": "1.6.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SCP.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:35751"
+						],
+						"UniqueId": "Helria.SCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530733,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342422439,
+		"UploaderId": 186373734,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

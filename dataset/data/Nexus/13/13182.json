@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 13182,
+	"Name": "Popcorn Machine",
+	"Author": "failsplat",
+	"Description": "[size=3]Note: This mod depends on Artisan Valley, which is not being updated for SDV 1.6. Waiting for the the successor to Artisan Valley to come out for SDV v1.6.[/size][size=5]\n<br />[/size][size=6]Popcorn Machine (Mod for Stardew Valley)[/size]\n<br />Turn corn and a variety of toppings into popcorn!\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/13182/13182-1659235351-333051897.gif[/img]\n<br />[size=5]Required Mods[/size]\n<br />- Producer Framework Mod\n<br />- Json Assets\n<br />\n<br />[size=5]Optional Mods (Unlock more flavors!)[/size]\n<br />[size=2]- PPJA More Recipes\n<br />- PPJA Even More Recipes\n<br />- PPJA Artisan Valley\n<br />[/size]\n<br />Flavors[/size]\n<br />All recipes use Corn to produce\n<br />- (Plain) Popcorn\n<br />- Butter (with Artisan Valley)\n<br />- Cheese\n<br />- Caramel (with Even More Recipes)\n<br />- Chocolate (with More Recipes)\n<br />- Kettle Corn (+Sugar)\n<br />- Hot Chili (+Hot Pepper)\n<br />- Truffle\n<br />- Maple\n<br />## Install\n<br />1. [Install the latest version of SMAPI](https://smapi.io/).\n<br />2. Download this mod folder.\n<br />3. Put the unzipped content packs into `Stardew Valley/Mods` to install them.\n<br />4. Run the game using SMAPI.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13182",
+	"Version": "1.0.1",
+	"Updated": "2022-08-08T12:19:11+00:00",
+	"Downloads": [
+		{
+			"Id": 58631,
+			"Type": "Main",
+			"DisplayName": "Popcorn Machine",
+			"FileName": "Popcorn Machine-13182-1-0-1-1659961151.zip",
+			"Description": "Contains two components (JA and PFM)",
+			"Version": "1.0.1",
+			"SizeInBytes": 33596,
+			"Uploaded": "2022-08-08T12:19:11+00:00",
+			"Mods": [
+				{
+					"Id": "Failsplat.PopcornJA",
+					"DisplayName": "(JA) Popcorn Machine",
+					"Type": "ContentPack",
+					"RelativePath": "Popcorn Machine\\[JA] Popcorn Machine",
+					"Manifest": {
+						"Name": "(JA) Popcorn Machine",
+						"Description": "Adds a popcorn machine and a variety of popcorn flavors.",
+						"Author": "Failsplat",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ppja.artisanvalleymachinegoods",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "paradigmnomad.morefood",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ppja.evenmorerecipes",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13182"
+						],
+						"UniqueId": "Failsplat.PopcornJA"
+					}
+				},
+				{
+					"Id": "Failsplat.PopcornPFM",
+					"DisplayName": "(PFM) Popcorn Machine",
+					"Type": "ContentPack",
+					"RelativePath": "Popcorn Machine\\[PFM] Popcorn Machine",
+					"Manifest": {
+						"Name": "(PFM) Popcorn Machine",
+						"Description": "Adds machine recipes for the Popcorn Machine",
+						"Author": "Failsplat",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Failsplat.PopcornJA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Failsplat.PopcornPFM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342445319,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399870,
+		"UploaderId": 37944320,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

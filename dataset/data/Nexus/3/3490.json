@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 3490,
+	"Name": "ConfigureMachineOutputs",
+	"Author": "Mizzion",
+	"Description": "Allows the player to change the output on machines in the game.\u00A0 \n<br />\n<br />[b]Make sure you run the game atleast one time, so it generates the config.json file.[/b]\n<br />\n<br />[b]KeyBinds[/b]\n<br />[i]F5[/i] - Reloads the config file while the game is running.\n<br />\n<br />\n<br />Inside the config file, you will see a lot of setting that you are able to change. We will use the [b]Seed Maker[/b] as an example\n<br />\n<br />\n<br />[code]\n<br />\"SeedMaker\": {\n<br />      \"CustomSeedMakerEnabled\": true,\n<br />      \"MoreSeedsForQuality\": false,\n<br />      \"SeedMakerInputMultiplier\": 100,\n<br />      \"SeedMakerMinOutput\": 2,\n<br />      \"SeedMakerMaxOutPut\": 5\n<br />[/code]\n<br />\n<br />[b]CustomSeedMakerEnabled[/b] - Whether the mod should run the custom outputs for the machine.\n<br />\n<br />[b]MoreSeedsForQuality[/b] - Whether or not, you should get more seeds based on the quality of the crop put into the Seed Maker.\n<br />\n<br />[b]MoreSeedsInputMultiplier[/b] - Sets the amount of items that will go into the Seed Maker at one time. Example : If you set it to 100, it will put 100 parsnips into the SeedMaker. The output will be a random number between your \"SeedMakerMinOutput\" and \"SeedMakerMaxOutput\" multiplied by the \"SeedMakerInputMultiplier\".\n<br />\n<br />Let's say you set the MinOuput to 10 and the MaxOutput to 20, and the InputMultiplier was 10.  The random number was 25, the Output will be 25 * 10 = 250. You would get 250 seeds back depending on if \"MoreSeedsForQuality\" was enabled or not.\n<br />\n<br />[b]SeedMakerMinOutPut[/b] - The Minimum output.\n<br />\n<br />[b]SeedMakerMaxOutPut[/b] - The Maximum output.\n<br />\n<br />\n<br />The way the mod works, is It will pick a random number between your [b]min[/b] and [b]max[/b] outputs.\n<br />\n<br />[b][color=red]Incompatible Mods[/color][/b]:\n<br />[size=2][url=https://www.nexusmods.com/stardewvalley/mods/2516/]Custom Crystalarium Mod[/url] [/size] - Hijacks the same methods as ConfigureMachineOutputs.\n<br />[size=2][url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url][/size] - You can use Automate with CustomMachineOutputs, but automated machines will use the vanilla amounts instead of those you configured.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3490",
+	"Version": "2.0.8",
+	"Updated": "2021-01-11T14:54:16+00:00",
+	"Downloads": [
+		{
+			"Id": 35373,
+			"Type": "Main",
+			"DisplayName": "ConfigureMachineOutputs",
+			"FileName": "ConfigureMachineOutputs-3490-2-0-8-1610376856.zip",
+			"Description": "Updated to work with SDV 1.5\n<br /><br />Added the following machines:\n<br />Solar Panel, Wood Chipper, Bone Mill, Heavy Tapper, Deconstructor.\n<br /><br />Fixed the following:\n<br />Juices being called \"Weed Juice\". Tea Leaves should now give you green tea.",
+			"Version": "2.0.8",
+			"SizeInBytes": 65264,
+			"Uploaded": "2021-01-11T14:54:16+00:00",
+			"Mods": [
+				{
+					"Id": "mizzion.configuremachineOutputs",
+					"DisplayName": "Configure Machine Outputs",
+					"Type": "Smapi",
+					"RelativePath": "ConfigureMachineOutputs",
+					"Manifest": {
+						"Name": "Configure Machine Outputs",
+						"Description": "Allows the player to change the Input/Output amounts an most vanilla machines.",
+						"Author": "Mizzion",
+						"Version": "2.0.8",
+						"MinimumApiVersion": "3.8.3",
+						"EntryDll": "ConfigureMachineOutputs.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3490",
+							"ModDrop:661367"
+						],
+						"UniqueId": "mizzion.configuremachineOutputs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342422061,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390178,
+		"UploaderId": 51622381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

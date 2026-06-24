@@ -1,0 +1,103 @@
+{
+	"Site": "Nexus",
+	"Id": 44376,
+	"Name": "Everyone Is Sandy But Alex Is Josh And We Talk Like A Pirate On Fall 19 - TheContentModdersYearnForThe.Foreach",
+	"Author": "mushymato",
+	"Description": "[size=4][b]EveryoneIsSandy[/b][/size]\n<br />Sandy is a fashion icon in the valley, everyone should be Sandy.\n<br />\n<br />[size=4][b]ButAlexIsJosh[/b][/size]\n<br />Alex is embroiled in property ownership dispute right now and had to change his name back to Josh so that he won't get evicted out of JoshHouse.\n<br />\n<br />[size=4][b]AndWeTalkLikeAPirateOnFall19[/b][/size]\n<br />On Fall 19, Ferngill National Talk Like a Pirate Day, we will Talk Like a Pirate.\n<br />\n<br />[size=4][b]How can I acquire this power?[/b][/size]\n<br />\n<br />1. Install SMAPI and Content Patcher\n<br />2. Install TheContentModdersYearnForThe.zip\n<br />3. Install EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19.zip\n<br />\n<br />[size=4][b]How can I reject this power?[/b][/size]\n<br />\n<br />Simply remove TheContentModdersYearnForThe and EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19.\n<br />Sandy will forgive you.\n<br />\n<br />[size=4][b]This TheContentModdersYearnForThe.dll, what does it do?[/b][/size]\n<br />You can do content edits with content edits and they do foreach things as well as regex things.\n<br />\n<br />[size=4][b][font=Courier New]TheContentModdersYearnForThe/Foreach[/font][/b][/size]\n<br />[font=Courier New]json\n<br />{\"mushymato.EveryoneIsSandy_Joshed_Dialogues\": {\n<br />\u00A0 // target asset, either exact or a prefix\n<br />\u00A0 \"Target\": \"Characters/Dialogue/\",\n<br />\u00A0 // marks this as a prefix\n<br />\u00A0 \"TargetIsPrefix\": true,\n<br />\u00A0 // (Texture2D only) copy asset from another asset\n<br />\u00A0 \"CopyFrom\": null,\n<br />\u00A0 // Filter on some value(s), takes same structure as Modify + extra \"Truthy\": true field which controls if the condition checks for true or false\n<br />\u00A0 \"Filter\": null,\n<br />\u00A0 \"Modify\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 // List of fields to drill down\n<br />\u00A0 \u00A0 \u00A0 \"Fields\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 // exact field name/key\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Key\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 // this is wildcard, applicable if this field is a dict or a list\n<br />\u00A0 \u00A0 \u00A0 \u00A0 // does modify on every member\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"*\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 // regex, must provide Split even if empty string\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Match\": \"Alex\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 // Split on, only works for strings\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Split\": \"(&#92;&#92;$[a-zA-Z]|&#92;&#92;[.+&#92;&#92;])\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 // If RandValues is set then a value is picked randomly from that list, otherwise Value is used\n<br />\u00A0 \u00A0 \u00A0 \"Value\": \"[LocalizedText Strings&#92;&#92;NPCNames:Alex]\",\n<br />\u00A0 \u00A0 \u00A0 \"RandValues\": null\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ],\n<br />\u00A0 // Internal order of these foreach data edits, lower is earlier\n<br />\u00A0 \"Precedence\": 1\n<br />}}[/font]\n<br />\n<br />[size=4][b][url=https://github.com/Mushymato/TheContentModdersYearnForThe]Source Code[/url][/b][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44376",
+	"Version": "1.0.0",
+	"Updated": "2026-04-01T00:51:53+00:00",
+	"Downloads": [
+		{
+			"Id": 162611,
+			"Type": "Main",
+			"DisplayName": "TheContentModdersYearnForThe 1.0.0",
+			"FileName": "TheContentModdersYearnForThe 1.0.0-44376-1-0-0-1774761464.zip",
+			"Description": "For SDV 1.6.15+, initial release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 29433,
+			"Uploaded": "2026-03-29T05:17:44+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.TheContentModdersYearnForThe",
+					"DisplayName": "TheContentModdersYearnForThe",
+					"Type": "Smapi",
+					"RelativePath": "TheContentModdersYearnForThe",
+					"Manifest": {
+						"Name": "TheContentModdersYearnForThe",
+						"Description": "Foreach/Sed/Etc",
+						"Author": "mushymato",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "TheContentModdersYearnForThe.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44376",
+							"GitHub:Mushymato/TheContentModdersYearnForThe"
+						],
+						"UniqueId": "mushymato.TheContentModdersYearnForThe",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549299,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 163002,
+			"Type": "Main",
+			"DisplayName": "EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19",
+			"FileName": "EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19-44376-1-0-1-1775004713.zip",
+			"Description": "For SDV 1.6.15+, initial release, requires TheContentModdersYearnForThe",
+			"Version": "1.0.1",
+			"SizeInBytes": 4303,
+			"Uploaded": "2026-04-01T00:51:53+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19",
+					"DisplayName": "Everyone Is Sandy But Alex Is Josh And We Talk Like A Pirate On Fall 19",
+					"Type": "ContentPack",
+					"RelativePath": "EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19",
+					"Manifest": {
+						"Name": "Everyone Is Sandy But Alex Is Josh And We Talk Like A Pirate On Fall 19",
+						"Description": "coming next april 1st: the pirate who is really into graph theory meets an yeehaw saying cowboy who knows quantum computing and then they kiss",
+						"Author": "mushymato",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mushymato.TheContentModdersYearnForThe",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "mushymato.EveryoneIsSandyAlexIsJoshWeTalkLikeAPirateOnFall19",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549690,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431064,
+		"UploaderId": 18790269,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

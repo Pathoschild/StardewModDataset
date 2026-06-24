@@ -1,0 +1,701 @@
+{
+	"Site": "Nexus",
+	"Id": 21017,
+	"Name": "Mobile Phone Continued",
+	"Author": "JoXW",
+	"Description": "Original mod:\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6523]here[/url]\n<br />\n<br />[i][size=4][url=https://www.pcgamer.com/uk/this-stardew-valley-mod-gives-your-farmer-their-own-smartphone/]Featured on PC Gamer![/url][/size][/i]\n<br />\n<br />[size=5]Description[/size]\n<br />\n<br />This mod provides you with a smartphone interface and a pre-installed phone app that lets you talk to friendly villagers from anywhere.\n<br />\n<br />The phone app lets you call and receive calls, which allows you to chat (play daily dialogue), reminisce (replay old events with the NPC), or invite friends on outings (if you have an invite installed, like\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6633]this one[/url]).\n<br />\n<br />Creating and adding apps to the smartphone interface offers an alternative to hotkeys, which can be especially useful for actual mobile (Android) users, users with many mods installed whose hotkeys might conflict, or mod authors who want to avoid hotkey conflicts when creating mods.\n<br />\n<br />[size=5]Usage[/size]\n<br />\n<br />\n<br />[size=4]Manipulating the Phone:[/size]\n<br />\n<br />To open and close the phone, press the toggle hotkey (End\u00A0key by default) or click on the small phone icon (set\u00A0ShowPhoneIcon\u00A0to\u00A0true\u00A0in the config).\n<br />\n<br />To rotate the phone, press the rotate hotkey (PageDown\u00A0key by default). There is also a rotate app in the phone (optional).\n<br />\n<br />Move the phone around the screen by dragging with the mouse on the phone edge (not its screen).\n<br />\n<br />Move the small phone icon around the screen by dragging it with the mouse.\n<br />\n<br />You can disable the phone icon in the\u00A0config.json\u00A0file.\n<br />\n<br />\n<br />[size=4]App List:[/size]\n<br />\n<br />To get the name of an app, hover over the app icon.\n<br />\n<br />To switch app order, long-press on an app and drag it to the new position.\n<br />\n<br />\n<br />[size=4]Phone App:[/size]\n<br />\n<br />Open your phone book by clicking on the phone app.\n<br />\n<br />Scroll through phone contacts by dragging with the mouse.\n<br />\n<br />Close the app by pressing the phone hotkey (End) or\u00A0Esc.\n<br />\n<br />By default, the phone app only shows NPCs with at least 1000 friendship points (4 hearts). You can change the point requirement in the\u00A0config.json\u00A0file.\n<br />\n<br />There are also two config entries called\u00A0CallBlockList\u00A0and\u00A0CallAllowList. You can use one or the other to either choose specific NPCs who cannot call or be called, or choose specific NPCs who can call and be called. Just add NPC names to one list or the other,\u00A0separated by commas, to use that list. E.g:\n<br />\n<br />\u00A0 \"CallBlockList\": \"Alex,Shane\",\n<br />\n<br />\n<br />[size=4]Customize App:[/size]\n<br />\n<br />The phone is customizable and reskinnable using the Customize app that comes with the phone.\n<br />\n<br />There are four skins included with the mod: black, white, pink, and pink with decals (see screenshots); there are two backgrounds included as well.\n<br />\n<br />There are no ringtone files included with the mod, but two built-in sounds are added to the Ring tab.\n<br />\n<br />You can add more built-in sounds by adding their names to the comma-separated list at\u00A0BuiltInRingTones\u00A0in the\u00A0config.json\u00A0file.\n<br />\n<br />A list of built-in sound names is\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/482]here[/url].\n<br />\n<br />You can add your own backgrounds, skins, and ringtones to the Themes app by placing them in the following folders of this mod:\n<br />\n<br />assets/backgrounds\n<br />assets/skins\n<br />assets/ringtones\n<br />\n<br />Ringtones must be 16-bit PCM WAV files.\n<br />\n<br />There is a content pack with skins, backgrounds, and ringtones created by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/72008153]altPsyk[/url]\u00A0in the optional files section.\n<br />\n<br />You can also very easily create your own content pack with theme items. Details are\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/475]here[/url].\n<br />\n<br />\n<br />[size=5]Receiving Phone Calls[/size]\n<br />\n<br />By default, there is a 1% chance every ten game minutes of a friend calling you.\n<br />\n<br />You can disable incoming calls or change the chance in the\u00A0config.json\u00A0file.\n<br />\n<br />By default you will not receive calls when in the mines or skull cavern. You can change this in the\u00A0config.json\u00A0file.\n<br />\n<br />You can adjust ring number and frequency in the\u00A0config.json\u00A0file.\n<br />\n<br />The phone icon will vibrate during ringing (optional), and you can enable a HUD message in\u00A0config.json.\n<br />\n<br />To answer or reject a call, open the phone and click on one of the buttons (see screenshots).\n<br />\n<br />\n<br />[size=5]Phone Calls[/size]\n<br />\n<br />By default, NPCs will preface the conversation menus with generic strings. You can set a custom string for each NPC by adding it to their dialogue dictionary with the following keys:\n<br />\n<br />MobilePhoneGreeting\n<br />MobilePhoneReminisce\n<br />MobilePhoneInvite\n<br />MobilePhoneGoodBye\n<br />\n<br />There is a mod that does this for you, adding custom greetings for different NPCs:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6759]Custom Phatic Cues[/url]\n<br />[/list]\n<br />\n<br />[size=4]Main Menu:[/size]\n<br />\n<br />The first menu has at least three options:\u00A0Chat,\u00A0Reminisce\u00A0and\u00A0Good-bye.\n<br />\n<br />Chat\u00A0displays the NPC's daily dialogue (only available once per day).\n<br />\n<br />Where are you?\u00A0Has the NPC tell you the map they are in at the moment. (Thanks to Tiakall for the strings!)\n<br />\n<br />Reminisce\u00A0(available for vanilla and SVE NPCs if there are seen events related to that NPC) provides you with a menu of events related to that NPC already seen by the player. You can replay them as much as you like. They should not have any impact on the game (i.e. no friendship consequences of dialogue choices, no gaining or losing of items, etc.), though flags may be altered if you choose differently (still not sure about this).\n<br />\n<br />For more information on setting up a reminisce menu for custom NPCs, please check out\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/478]this article[/url].\n<br />\n<br />Chat Dialogue is limited to existing vanilla dialogue for now, and so it sometimes might not fit with a phone conversation.\n<br />\n<br />You will receive friendship points for chatting, just as if you were talking to the person directly.\n<br />\n<br />\n<br />[size=4]Additional Menus:[/size]\n<br />\n<br />If you install an Invite mod like\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6633]Balloon Ride[/url]\u00A0or \uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/7225]Shane Dinner Date for Mobile Phone Mod Invite Menu[/url], there will be an\u00A0Invite\u00A0option for specific villagers.\n<br />\n<br />If you call\u00A0Robin, you can now ask her to\u00A0build buildings\u00A0and\u00A0upgrade the farm house\u00A0from the phone.\n<br />\n<br />If you install\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/4582]NPC Adventures[/url]\uFEFF you will be able to ask NPCs to follow you from the phone interface by using the\u00A0Recruit\u00A0option.\n<br />\n<br />\n<br />[size=5]Apps[/size]\n<br />\n<br />The phone comes with a single app, mentioned above, that acts as a means of talking to NPCs.\n<br />\n<br />Any SMAPI mod can easily add an app icon to the phone's home screen by calling this mod's API. Details for modders are\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/467]here[/url].\n<br />\n<br />You can also create a simple content pack app to simulate a key or button press. There are examples in the optional\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6523?tab=files]files[/url]. Details on creating content pack apps are\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/473]here[/url].\n<br />\n<br />[size=4]Mods with Mobile Phone App Integration:[/size]\n<br />\n<br />These mods that have mobile phone app integration or are made specifically for the phone:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2048]Arcade 2048[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2056/]Arcade Snake[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3976/]Chess[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/11325]Email [/url]\uFEFF(Updated version in optional files)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6215][/url][url=https://www.nexusmods.com/stardewvalley/mods/6215]Custom Reminders[/url][url=https://www.nexusmods.com/stardewvalley/mods/6215][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5803]JoJa-84-Plus--Ingame-calculator[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6538]Mobile Arcade[/url]\u00A0(Updated version in optional files)\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6568/]Mobile Audio Player[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6601]Mobile Calendar[/url]\u00A0\u00A0(Updated version in optional files)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6543/]Mobile Catalogues[/url]\u00A0\u00A0(Updated version in optional files)\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6575]Mobile Television[/url]\u00A0\u00A0(Updated version in optional files)\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5384/]Plato Warp Menu[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6503]Quotes[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7409]To-Dew[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6524]Video Player[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/23614]Joja Express[/url]\uFEFF\n<br />[/list]\n<br />Installing any of the above mods should automatically add an app to the phone's home screen or allow adding one via its\u00A0config.json\u00A0file.\n<br />\n<br />\n<br />[size=4]Content Pack Apps:[/size]\n<br />\n<br />The following are content pack app mods (Some might require updating their dependencies):\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]CJB Cheat Menu Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]CJB Item Spawner Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]Get Glam Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]Joys of Efficiency Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]Loan Mod Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]Pelican Fiber Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21017?tab=files]TMXL Toolkit Mobile App[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6916]Tractor Mod Mobile App[/url]\u00A0by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/18592979]LenneDalben[/url]\n<br />[/list]\n<br />The above mods require the actual mod they trigger to be installed. They only emulate a specific key press when you click their app icons, so if you change the mod's hotkey, you have to change the app mod's keypress as well! Most are available in this mod's files tab. See\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/473]here[/url]\u00A0for more on creating a CP app.\n<br />\n<br />\n<br />[size=4]Invite Mods:[/size]\n<br />\n<br />The following mods create special events for the Invite entry in a phone call:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7225]Shane Dinner Date for Mobile Phone Mod Invite Menu[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6633]Balloon Ride[/url]\n<br />[/list]\n<br />\n<br />[size=4]Customization Mods:[/size]\n<br />\n<br />The following add customization entries to the phone's Customize app:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7390]SDV Mobile Phone Reskin Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6759]Custom Phatic Cues for Mobile Phone[/url]\u00A0(Needs an update)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6951]Classic Mobile Phone Themes[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/20048]SubtlyLiminal's Mobile Phone Themes[/url]\u00A0(Updated for this mod)\uFEFF\n<br />[/list]\n<br />\n<br />If you implement an mod that integrates with the mobile phone, please send me a message so I can add your mod to the above lists.\n<br />\n<br />\n<br />[size=5]Custom NPC Data[/size]\n<br />\n<br />You can set variables for specific NPCs using Content Patcher. Target the path\u00A0\"JoXW.MobilePhone/npcs\"\u00A0and use the following syntax:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"JoXW.MobilePhone/npcs\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Emily\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"reminisces\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"name\": \"Emily-event-0\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": \"HaleyHouse\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"eventId\": \"471942\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"night\": false,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"mail\": null\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0],\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"minPointsToCall\": 250,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"canCall\": true\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />At the moment you can add reminisces set minimum points to call and whether the NPC can be called or call the player.\n<br />\n<br />\n<br />[size=5]Config[/size]\n<br />\n<br />The\u00A0config.json\u00A0file is created in this mod's folder the first time you run the game with this mod installed. Many of the variables should be left alone, some of them will be changed by interacting with the phone in-game.\n<br />\n<br />Some of the config variables can be modified using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />Hotkeys can be set in the config file for both toggling the phone and rotating it, as well as a hotkey for toggling receiving incoming calls.\n<br />\n<br />PhonePosition\u00A0must be one of the following:\u00A0mid,\u00A0top-left,\u00A0top-right,\u00A0bottom-left,\u00A0bottom-right. This determines where the phone is anchored in-case the screen size changes. You can still move the phone anywhere on the screen using the offsets in the config file or dragging the phone edge.\n<br />\n<br />MinPointsToCall\u00A0determines how many friendship points are required to show an NPC in the call app (each heart represents 250 points). Default is 1000 points or four hearts.\n<br />\n<br />\n<br />[size=5]Credit[/size]\n<br />\n<br />Thanks to\u00A0[url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn[/url]\u00A0for the original mod!\n<br />\n<br />Thanks to AltPsyk for all the great theme-related assets and custom mobile phone apps (MPAs)!\n<br />\n<br />Thanks to Alarice111111 for adding SVE Reminisce events!\n<br />\n<br />Thanks to everyone who submitted translation files!\n<br />\n<br />\n<br />[size=5]Technical[/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21017",
+	"Version": "4.1.4",
+	"Updated": "2024-11-24T15:23:39+00:00",
+	"Downloads": [
+		{
+			"Id": 85790,
+			"Type": "Optional",
+			"DisplayName": "altPsyk Theme Content Pack for Mobile Phone",
+			"FileName": "altPsyk Theme Content Pack for Mobile Phone-21017-0-3-1-1711475423.zip",
+			"Description": "@altPsyk\n<br />This content pack contains four backgrounds and one skin for the Mobile Phone, all created by altPsyk and offered for free!",
+			"Version": "0.3.1",
+			"SizeInBytes": 2786710,
+			"Uploaded": "2024-03-26T17:50:23+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobilePhoneThemes",
+					"DisplayName": "Mobile Phone Themes",
+					"Type": "ContentPack",
+					"RelativePath": "[MPC] Trapezohedron",
+					"Manifest": {
+						"Name": "Mobile Phone Themes",
+						"Description": "Adds skins and backgrounds to the mobile phone.",
+						"Author": "JoXW, Trapezohedron",
+						"Version": "0.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "JoXW.MobilePhoneThemes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342472478,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88719,
+			"Type": "Optional",
+			"DisplayName": "Arcade Mobile Apps",
+			"FileName": "Arcade Mobile Apps-21017-1-0-3-1712181067.zip",
+			"Description": "@Arcade\n<br />Adds app icons for Prairie King and Junimo Kart to the Mobile Phone mod.\n<br />Updated version of Mobile Arcade (https://www.nexusmods.com/stardewvalley/mods/6538)",
+			"Version": "1.0.3",
+			"SizeInBytes": 15861,
+			"Uploaded": "2024-04-03T21:51:07+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileArcade",
+					"DisplayName": "Mobile Arcade Continued",
+					"Type": "Smapi",
+					"RelativePath": "MobileArcade",
+					"Manifest": {
+						"Name": "Mobile Arcade Continued",
+						"Description": "Links to arcade games for your mobile phone.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MobileArcade.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@Arcade"
+						],
+						"UniqueId": "JoXW.MobileArcade"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475407,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88720,
+			"Type": "Optional",
+			"DisplayName": "Calendar Mobile App",
+			"FileName": "Calendar Mobile App-21017-1-0-2-1712181181.zip",
+			"Description": "@Calendar\n<br />\n<br />Adds Calendar app for your mobile phone.\n<br />Updated version of Mobile Arcade (https://www.nexusmods.com/stardewvalley/mods/6601)",
+			"Version": "1.0.2",
+			"SizeInBytes": 12471,
+			"Uploaded": "2024-04-03T21:53:01+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileCalendar",
+					"DisplayName": "Mobile Calendar Continued",
+					"Type": "Smapi",
+					"RelativePath": "MobileCalendar",
+					"Manifest": {
+						"Name": "Mobile Calendar Continued",
+						"Description": "A Calendar app for your mobile phone.",
+						"Author": "JoXW",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MobileCalendar.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@Calendar"
+						],
+						"UniqueId": "JoXW.MobileCalendar"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475408,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88725,
+			"Type": "Optional",
+			"DisplayName": "Get Glam Mobile App",
+			"FileName": "Get Glam Mobile App-21017-0-1-2-1712181831.zip",
+			"Description": "@GetGlam\n<br />Requires Get Glam mod\n<br />Made by altPsyk\n<br />This mod has no affiliation to above mod. If you change the key for the above mod, you'll have to change the key specified in this app's config.json as well!",
+			"Version": "0.1.2",
+			"SizeInBytes": 12261,
+			"Uploaded": "2024-04-03T22:03:51+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileGetGlam",
+					"DisplayName": "Mobile Phone App for Get Glam",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] Get Glam",
+					"Manifest": {
+						"Name": "Mobile Phone App for Get Glam",
+						"Description": "Adds an app that triggers the default key for Get Glam.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MartyrPher.GetGlam",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@GetGlam"
+						],
+						"UniqueId": "JoXW.MobileGetGlam"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475413,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88726,
+			"Type": "Optional",
+			"DisplayName": "CJB Cheats Mobile App",
+			"FileName": "CJB Cheats Mobile App-21017-0-1-3-1712181921.zip",
+			"Description": "@CJBCheats\n<br />Requires CJB Cheats to be installed.\n<br />This mod has no affiliation to above mod. If you change the key for the above mod, you'll have to change the key specified in this app's config.json as well!\n<br />",
+			"Version": "0.1.3",
+			"SizeInBytes": 24347,
+			"Uploaded": "2024-04-03T22:05:21+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileCJBCheats",
+					"DisplayName": "Mobile Phone App for CJB Cheats",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] CJB Cheats",
+					"Manifest": {
+						"Name": "Mobile Phone App for CJB Cheats",
+						"Description": "Adds an app that triggers the default key for CJB Cheats Menu.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.3",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "CJBok.CheatsMenu",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@CJBCheats"
+						],
+						"UniqueId": "JoXW.MobileCJBCheats"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475414,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88727,
+			"Type": "Optional",
+			"DisplayName": "CJB Item Spawner Mobile App",
+			"FileName": "CJB Item Spawner Mobile App-21017-0-1-2-1712181976.zip",
+			"Description": "@CJBItemSpawner\n<br />By altPsyk\n<br />Requires CJB Item Spawner\n<br />This mod has no affiliation to above mod. If you change the key for the above mod, you'll have to change the key specified in this app's config.json as well!",
+			"Version": "0.1.2",
+			"SizeInBytes": 14946,
+			"Uploaded": "2024-04-03T22:06:16+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileCJBItemSpawner",
+					"DisplayName": "Mobile Phone App for CJB Item Spawner",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] CJB Item Spawner",
+					"Manifest": {
+						"Name": "Mobile Phone App for CJB Item Spawner",
+						"Description": "Adds an app that triggers the default key for CJB Item Spawner.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "CJBok.ItemSpawner",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@CJBItemSpawner"
+						],
+						"UniqueId": "JoXW.MobileCJBItemSpawner"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475415,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88728,
+			"Type": "Optional",
+			"DisplayName": "Loan Mod Mobile App",
+			"FileName": "Loan Mod Mobile App-21017-0-1-2-1712182131.zip",
+			"Description": "@Loan\n<br />Requires Loan Mod\n<br />Made by altPsyk\n<br />This mod has no affiliation to above mod. All it does is bind a key click to the app icon, so if you change the mod's key, you'll have to change the key specified in this app's config.json as well!",
+			"Version": "0.1.2",
+			"SizeInBytes": 12166,
+			"Uploaded": "2024-04-03T22:08:51+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileLoanMod",
+					"DisplayName": "Mobile Phone App for Loan Mod",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] Loan Mod",
+					"Manifest": {
+						"Name": "Mobile Phone App for Loan Mod",
+						"Description": "Adds an app that triggers the default key for Doomnik's Loan Mod.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Doomnik.LoanMod",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@Loan"
+						],
+						"UniqueId": "JoXW.MobileLoanMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475416,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88729,
+			"Type": "Optional",
+			"DisplayName": "Pelican Fiber Mobile App",
+			"FileName": "Pelican Fiber Mobile App-21017-0-1-2-1712182232.zip",
+			"Description": "@PelicanFiber\n<br />Requires Pelican Fiber mod\n<br />Made by altPsyk\n<br />NOTE: This mod mimics PageUp, so it won't work unless you change the PelicanFiber hotkey to PageUp!",
+			"Version": "0.1.2",
+			"SizeInBytes": 12401,
+			"Uploaded": "2024-04-03T22:10:32+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobilePelicanFiber",
+					"DisplayName": "Mobile Phone App for Pelican Fiber",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] Pelican Fiber",
+					"Manifest": {
+						"Name": "Mobile Phone App for Pelican Fiber",
+						"Description": "Adds an app that triggers the default key for Pelican Fiber.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "jwdred.PelicanFiber",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@PelicanFiber"
+						],
+						"UniqueId": "JoXW.MobilePelicanFiber"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475417,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88730,
+			"Type": "Optional",
+			"DisplayName": "TMXL Toolkit Mobile App",
+			"FileName": "TMXL Toolkit Mobile App-21017-0-1-2-1712182338.zip",
+			"Description": "@TMXL\n<br />Requires TMXL Toolkit\n<br />Made by altPsyk\n<br />This mod has no affiliation to above mod. If you change the key for the above mod, you'll have to change the key specified in this app's config.json as well!",
+			"Version": "0.1.2",
+			"SizeInBytes": 13831,
+			"Uploaded": "2024-04-03T22:12:18+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileTMXL",
+					"DisplayName": "Mobile Phone App for TMXL Map Toolkit",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] TMXL Map Toolkit",
+					"Manifest": {
+						"Name": "Mobile Phone App for TMXL Map Toolkit",
+						"Description": "Adds an app that triggers the default key for TMXL Map Toolkit.",
+						"Author": "JoXW",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.TMXLoader",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@TMXL"
+						],
+						"UniqueId": "JoXW.MobileTMXL"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475418,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88731,
+			"Type": "Optional",
+			"DisplayName": "Joys of Efficiency Mobile App",
+			"FileName": "Joys of Efficiency Mobile App-21017-0-1-3-1712182405.zip",
+			"Description": "@Efficiency\n<br />Requires Joys of Efficiency mod\n<br />Made by altPsyk\n<br />This mod has no affiliation to above mod. If you change the mod's key, you'll have to change the key specified in this app's config.json as well!",
+			"Version": "0.1.3",
+			"SizeInBytes": 12864,
+			"Uploaded": "2024-04-03T22:13:25+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileJoysOfEfficiency",
+					"DisplayName": "Mobile Phone App for Joys of Efficiency",
+					"Type": "ContentPack",
+					"RelativePath": "[MPA] Joys Of Efficiency",
+					"Manifest": {
+						"Name": "Mobile Phone App for Joys of Efficiency",
+						"Description": "Adds an app that triggers the default key for Joys of Efficiency.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.3",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "punyo.JoysOfEfficiency",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@Efficiency"
+						],
+						"UniqueId": "JoXW.MobileJoysOfEfficiency"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475419,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 88977,
+			"Type": "Optional",
+			"DisplayName": "Balloon Ride Continued",
+			"FileName": "Balloon Ride Continued-21017-0-1-4-1712238166.zip",
+			"Description": "@BalloonRide\n<br />Allows you to invite any villager you are dating on a balloon ride, by calling them on the Mobile Phone.\n<br />Updated version of Balloon Ride (https://www.nexusmods.com/stardewvalley/mods/6633)",
+			"Version": "0.1.4",
+			"SizeInBytes": 11898,
+			"Uploaded": "2024-04-04T13:42:46+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.BalloonRide",
+					"DisplayName": "Balloon Ride Continued",
+					"Type": "ContentPack",
+					"RelativePath": "[MPI] Balloon Ride",
+					"Manifest": {
+						"Name": "Balloon Ride Continued",
+						"Description": "Adds an event invite to the mobile phone to take a balloon ride.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "0.1.4",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "JoXW.MobilePhone",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@BalloonRide"
+						],
+						"UniqueId": "JoXW.BalloonRide"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475665,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 103781,
+			"Type": "Optional",
+			"DisplayName": "Television Mobile App",
+			"FileName": "Television Mobile App-21017-1-0-2-1718364398.zip",
+			"Description": "@TV\n<br /><br />Adds a television app to the mobile phone that lets you access your tv channels from anywhere.\n<br /><br />Updated version of Mobile Television (https://www.nexusmods.com/stardewvalley/mods/6575)",
+			"Version": "1.0.2",
+			"SizeInBytes": 29297,
+			"Uploaded": "2024-06-14T11:26:38+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileTelevision",
+					"DisplayName": "Mobile Television Continued",
+					"Type": "Smapi",
+					"RelativePath": "MobileTelevision",
+					"Manifest": {
+						"Name": "Mobile Television Continued",
+						"Description": "Television for your mobile phone.",
+						"Author": "JoXW",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MobileTelevision.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@TV"
+						],
+						"UniqueId": "JoXW.MobileTelevision"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342490469,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 117391,
+			"Type": "Optional",
+			"DisplayName": "Email App",
+			"FileName": "Email App-21017-1-0-0-1732363687.zip",
+			"Description": "@Email\n<br />\n<br />Adds an Email app to the mobile phone that lets you check your farm's mail from anywhere. \n<br />\n<br />Updated version of Email  (https://www.nexusmods.com/stardewvalley/mods/11325)",
+			"Version": "1.0.0",
+			"SizeInBytes": 34953,
+			"Uploaded": "2024-11-23T12:08:07+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.Email",
+					"DisplayName": "Email",
+					"Type": "Smapi",
+					"RelativePath": "Email",
+					"Manifest": {
+						"Name": "Email",
+						"Description": "Check mail on your mobile phone.",
+						"Author": "JoXW",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Email.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@Email"
+						],
+						"UniqueId": "JoXW.Email"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342504079,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 117394,
+			"Type": "Main",
+			"DisplayName": "Mobile Phone Continued",
+			"FileName": "Mobile Phone Continued-21017-4-1-4-1732364135.zip",
+			"Description": "See change log for details.",
+			"Version": "4.1.4",
+			"SizeInBytes": 575055,
+			"Uploaded": "2024-11-23T12:15:35+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobilePhone",
+					"DisplayName": "Mobile Phone Continued",
+					"Type": "Smapi",
+					"RelativePath": "MobilePhone",
+					"Manifest": {
+						"Name": "Mobile Phone Continued",
+						"Description": "Gives you a mobile phone.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "4.1.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MobilePhone.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21017"
+						],
+						"UniqueId": "JoXW.MobilePhone"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342504082,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 117509,
+			"Type": "Optional",
+			"DisplayName": "Catalouges Mobile App",
+			"FileName": "Catalouges Mobile App-21017-1-0-3-1732461819.zip",
+			"Description": "@Catalogues\n<br />\n<br />Allows you to add catalouges for most merchants in the game to the Mobile Phone.\n<br />\n<br />Updated version of Mobile Catalogues (https://www.nexusmods.com/stardewvalley/mods/6543)",
+			"Version": "1.0.3",
+			"SizeInBytes": 46022,
+			"Uploaded": "2024-11-24T15:23:39+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.MobileCatalogues",
+					"DisplayName": "Mobile Catalogues Continued",
+					"Type": "Smapi",
+					"RelativePath": "MobileCatalogues",
+					"Manifest": {
+						"Name": "Mobile Catalogues Continued",
+						"Description": "Online shopping for your mobile phone.",
+						"Author": "JoXW, aedenthorn",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MobileCatalogues.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "JoXW.MobilePhone",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21017@Catalogues"
+						],
+						"UniqueId": "JoXW.MobileCatalogues"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342504197,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407705,
+		"UploaderId": 25104754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

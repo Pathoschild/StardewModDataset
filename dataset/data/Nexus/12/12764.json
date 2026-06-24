@@ -1,0 +1,71 @@
+{
+	"Site": "Nexus",
+	"Id": 12764,
+	"Name": "Rummage - The Thievery Mod",
+	"Author": "ApryllForever",
+	"Description": "Rummage! allow you to get items from places by clicking on the tile! Vanilla kitchens, bedrooms, and stores all have tiles added! Usually, its dressers, boxes, shelves, the foot of a bed, or sometimes walls around beds! Just move your cursor over an area, the white action glove will show you where! If you click and nothing happens, click a couple times. Because the rooms all have message tiles, and message tiles overlap a tile around themselves, it sometimes takes a few tries.\n<br />\n<br />This mod allows the farmer to rummage around and find items! Get things from kitchens! Loot rooms! Be careful, if people catch you stealing, they will be angry!\u00A0 You can get cookies, energy tonics, even rarely rings! This mod is built off of my Rest Stop Trash Can Code, which is largely the Ridgeside Trash Can code, Thanks Shekurika!!!\n<br />\n<br />There is one fuckword in this mod, just to let you know. Some characters become very angry and will swear at you for stealing their stuff! If you do not like swears, you can change this in the config.json file, using wordpad or another text editor. Or, use the Generic Mod Config Menu mod to easily toggle it in game!!!\n<br />\n<br />This mod is designed to work with Stardew Valley Expanded. It does not affect any SVE assets, nor change anything SVE affects. SVE edits a considerable number of vanilla rooms and homes, this mod is designed to work with either vanilla or SVE (I totally recommend SVE. I'm not affiliated with them, it's just super rad and totally awesome!!!).\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />\n<br />For Players:\n<br />\n<br />This mod adds tiles to places throughout the game where you can right click and get things, when you see the action white glove hand cursor. There are places in the stores, in houses, and such. Even the Community Center gets some loot to finally make it worthwhile! Look around; every major character has one in their rooms, except:\n<br />\n<br />The Witch (the wizard in vanilla... but I like Rasmodia better!!! See the wizard to witch mod), because she would smite you!!!\n<br />\n<br />Linus: Only a complete sleaze would steal from Linus.\n<br />\n<br />Jas and Vinnie: Do not steal from the children!!! That is terrible!!!\n<br />\n<br />Granny and Grampa: You can steal from their kitchen and living room (and maybe should feel bad about it, but there are sometimes cookies!!!), but their room? That's just too far!!!\n<br />\n<br />Leo: He does not have anything to steal. His birds are powerful too!!!\n<br />\n<br />Like the garbage cans, people will become angry if you are within seven tiles of them!!! You will lose a lot of friendship. However, you might get food, cool items, or perhaps all you can find is garbage!!!\n<br />\n<br />\n<br />\n<br />For Modders:\n<br />\n<br />This mod allows you to add rummage tiles to your maps, where you can allow the farmer to get any vanilla object from the object list which You put the ID for (I don't know how to get weapons or other things yet). To add the tile to a custom map, on the Objects Buildings Layer, add a Object named TileData, with the custom property of Action RS.Rummage XX (XX being whatever number you assign to it. Must be an integer), for example, RS.Rummage 33. There must be something in the buildings layer on that tile for the action to work. To define the number (with any map), set it in [CP] Rummage/Data/Extras/RummageData.JSON. I have a whole lot of different items with their ID numbers listed in the file, hopefully it will prove helpful to you to be able to add tiles you would like or edit what is already found!\n<br />\n<br />After you add the tile information, add the EditMap to your mod's ContentPatcher file. This is where you will say what maps and tiles are affected for vanilla maps, In the future, I would like to make this compatible with JSON Assets and Dynamic Game Assets (This is simply the first form of my release of the mod. I wanted to gain experience releasing mods so that I might be prepared to release a major mod I am making called Rest Stop). You also will need to add EditData to ExtraDialogue, as shown below (you can make the people say whatever you want. The $a means Angry Face, the $h means happy face. The kids think it's funny that you are rummaging around, but you still lose friendship, because they know to not trust your thieving butt!)\n<br />\n<br />Examples:\n<br />\n<br />For Vanilla Maps: (or adding to any map instead of editing the TMX/TBIN file)\n<br />\n<br />\n<br />\n<br />{ \"Action\": \"EditMap\",\n<br />\"Target\": \"Maps/SeedShop\", //////Abigail's Dresser\n<br />\"Update\": \"OnLocationChange\",\n<br />\"MapTiles\": [\n<br />   {   \n<br />    \"Position\": { \"X\": 12, \"Y\": 4 },\n<br />    \"Layer\": \"Buildings\",\n<br />    \"SetProperties\": {\n<br />    \"Action\": \"RS.Rummage 30\",\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF}\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF}\n<br />         ]\n<br />  },\n<br />\n<br />{\n<br />\"Action\": \"EditData\",\n<br />\"Target\": \"Data/ExtraDialogue\",\n<br />\"Entries\": {\n<br />   \"RummageComment_Child\": \"Why are you digging around in there???$h\",\n<br />   \"RummageComment_Teen\": \"Get the fuck out of that!!!$a\",\n<br />   \"RummageComment_Adult\": \"Hey!!! Get out of that!!! Stop thieving around!!!$a\",   \n<br />   },\n<br />},\n<br />\n<br />\n<br />The RummageData.JSON uses this format: \"weight ItemID NumberofItems/weight ItemID NumberofItems/weight ItemID NumberofItems/...\",\n<br />\n<br />//////This one is for Abigail \n<br />\"30\" : \"4 879 1/4 431 3/4 241 1/4 93 2/4 92 2/4 874 3/4 288 1/4 287 2/4 286 4/4 253 2/4 403 2/4 311 2/2 432 1/4 272 1/4 766 3/4 349 1/1 534 1/\", ////Monster Musk, Sunflower Seeds, etc...\n<br />\n<br />This way, you can use this to add rummageable tiles anywhere there is a tile in the buildings layer!\n<br />\n<br />So, to use this for your mod you are releasing, you will add the information to your content patcher and to the RummageData.JSON file, and use the mod files with your release. You will also need to edit the source code to change the tile action from RS.Rummage to YourModName.Rummage, to avoid incompatibility with any other mod.. Please credit me if you are releasing it using my files. Cheers!\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, not tested on multiplayer.\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*]https://discord.com/channels/993399816589688844/993399817545977898\n<br />[*]https://github.com/ApryllForever/Rummage/blob/main/README.md\n<br />[*]Source code\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12764",
+	"Version": "2.1.0",
+	"Updated": "2025-06-17T17:25:02+00:00",
+	"Downloads": [
+		{
+			"Id": 134900,
+			"Type": "Main",
+			"DisplayName": "Rummage",
+			"FileName": "Rummage-12764-2-1-0-1750181102.zip",
+			"Description": "Made the rings actually work.",
+			"Version": "2.1.0",
+			"SizeInBytes": 19664,
+			"Uploaded": "2025-06-17T17:25:02+00:00",
+			"Mods": [
+				{
+					"Id": "ApryllForever.RestStop.Rummage",
+					"DisplayName": "Rummage",
+					"Type": "Smapi",
+					"RelativePath": "Rummage\\Rummage",
+					"Manifest": {
+						"Name": "Rummage",
+						"Description": "Loot around places and find things!!!",
+						"Author": "ApryllForever",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "Rummage.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ApryllForever.RestStop.Rummage"
+					}
+				},
+				{
+					"Id": "ApryllForever.RummageContentPatcher",
+					"DisplayName": "Rummage - Content Patcher",
+					"Type": "ContentPack",
+					"RelativePath": "Rummage\\[CP] Rummage",
+					"Manifest": {
+						"Name": "Rummage - Content Patcher",
+						"Description": "Rummage - CP",
+						"Author": "ApryllForever",
+						"Version": "2.0.3",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ApryllForever.RummageContentPatcher"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342521588,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399452,
+		"UploaderId": 126026623,
+		"CategoryId": 3,
+		"Adult": true
+	}
+}

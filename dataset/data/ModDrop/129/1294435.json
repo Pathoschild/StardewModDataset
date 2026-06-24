@@ -1,0 +1,89 @@
+{
+	"Site": "ModDrop",
+	"Id": 1294435,
+	"Name": "Last Day To Plant Redux",
+	"Author": "Atravita",
+	"TagLine": "Look, I just wanted a mod of this type to handle the fertilizers from More Fertilizers, okay?\n\nInspired by LastDayToPlant, this mod calculates the last day you can plant certain crops, taking into account fertilizers (including mod fertilizers!)",
+	"Description": "Look, I just wanted a mod of this type to handle the fertilizers from [More Fertilizers](https://www.nexusmods.com/stardewvalley/mods/11837), okay?\n\nInspired by [LastDayToPlant](https://www.nexusmods.com/stardewvalley/mods/7917?tab=posts), this mod calculates the last day you can plant certain crops, taking into account fertilizers (including mod fertilizers!)\n\nInstall\n\n1.  Install the latest version of [SMAPI](https://smapi.io).\n\n2.  Download and install [AtraCore](https://www.nexusmods.com/stardewvalley/mods/12932).\n\n3.  Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n\n4.  Run the game using SMAPI.\nUninstall\nSimply delete from your Mods directory.\n\nConfiguration\nRun SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) to configure.\n\n*   [font=Courier New]DisplayOption[/font]: The way you'd like the information presented to you. [font=Courier New]OnFirstWarp[/font] displays it the first time you warp, assuming you have no menus open and no events are happening. [font=Courier New]InMailbox[/font] puts it in your mailbox. [font=Courier New]None[/font] does neither. (The letter is also always present in the mail collections tab, should you ever need to refer back to it. It should always be relatively near the end.)\n\n*   [font=Courier New]CropsToDisplay[/font]: Which crops should this mod display to you? [font=Courier New]All[/font] displays all for the season, [font=Courier New]Purchaseable[/font] displays crops you can purchase AND crops you've \"seen\", and [font=Courier New]Seen[/font] only displays crops you've seen.\n\n*   [font=Courier New]FertilizersToDisplay[/font]: Which fertilizers should this mod display to you? [font=Courier New]All[/font] for all relevant fertilizers, [font=Courier New]Seen[/font] for only fertilizers you've seen before. ([font=Courier New]Purchaseable[/font] isn't an option here, since More Fertilizers handles most of its shop logic on its own.)\n\n*   [font=Courier New]AllowSeedsList[/font]: A list of seeds to always display. Would look something like [font=Courier New][\"Beet Seeds\", \"Cake Plant Seeds\", \"Ancient Ferns Seed\"][/font]. Use the [font=Courier New]internal[/font] name, not the display name. (The ID will also work.)\n\n*   [font=Courier New]AllowFertilizersList[/font]: A list of fertilizers to always display. Follows the same format as seeds, and also uses the internal name. (Note that most fertilizers for More Fertilizers have long internal names that don't match the display names).\nTechnical notes:\n\n*   Each plant is only checked once per fertilizer. This shouldn't matter unless someone creates a fertilizer that only has a chance of changing the growth time, which as far as I know no one has.\n\n*   I assume all paddy crops are grown near water.\n\n*   The process used to calculate the number of days for each plant under each condition is fairly slow, and there's nothing I can realistically do about the fact that it's an [font=Courier New]O(mn)[/font] problem. I cache as much as I can, but on my computer first startup takes about 400-500 ms (for about 100 modded crops + about 20 modded fertilizers). About half this time is reflecting into JA to see when crops are purchase-able, so [font=Courier New]Seen[/font] and [font=Courier New]All[/font] are definitely significantly faster. (That said - it's cached, I usually see about 2-20ms on subsequent days.)\n\n*   Fertilizers are only displayed if they change the time needed (so things like the Quality Fertilizer are ignored).\n\n*   For split-screen - the two players are tracked together for things like [font=Courier New]Seen[/font] fertilizers and crops.\n\n*   In multiplayer, if you change professions, you'll temporarily see timing info for both your old profession and new profession.\n\n*   I only look at the current month for timing info, so if you have a crop that takes more than an in-game month to grow, this mod will never tell you about it. This is entirely because I structured my caches weird, but at this point I'm not rewriting the whole mod for a handful of crops most people would plant in their greenhouse anyways.\n\n*   This mod assumes the month is 28 days. I'll implement support for mods that add longer/shorter months if sufficient people ask.\nFuture development ideas:\n\n*   Displaying this info on the shop menu itself?\nCompatibility\n\n*   Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n\n*   Works in single player, multiplayer, and split-screen mode. Should be fine if installed for only one player in multiplayer.\n\n*   Should be compatible with most other mods. Works for JA crops, but not DGA crops. Works with mods that change the growth time via CP, like [Balanced Valley](https://www.nexusmods.com/stardewvalley/mods/13970?tab=description) (except, well, not taking into account crops that take more than a month to grow.) Designed to work with my [More Fertilizers](https://www.nexusmods.com/stardewvalley/mods/11837). Takes into account Walk of Life's Prestiged Agriculturalist.\nSee also\n[Changelog](https://github.com/atravita-mods/StardewMods/blob/main/LastDayToPlantRedux/docs/changelog.md)\n\nAll donation points for this mod go to [Against Malaria](https://www.againstmalaria.com/). Please consider supporting them if you like this mod!\nLooking for something else? Please consider [my other mods](https://www.nexusmods.com/users/116553368?tab=user+files)!",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1294435",
+	"Version": null,
+	"Updated": "2023-03-24T22:36:14.98+00:00",
+	"Downloads": [
+		{
+			"Id": 1377060,
+			"Type": "Main",
+			"DisplayName": "LastDayToPlantRedux",
+			"FileName": "LastDayToPlantRedux.zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.2+/AtraCore 0.2.0",
+			"Version": "0.1.1",
+			"SizeInBytes": 37205,
+			"Uploaded": "2023-03-24T22:36:14.979+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.LastDayToPlantRedux",
+					"DisplayName": "Last Day to Plant Redux",
+					"Type": "Smapi",
+					"RelativePath": "LastDayToPlantRedux",
+					"Manifest": {
+						"Name": "Last Day to Plant Redux",
+						"Description": "Tells you the last day to plant various crops, adjusted for fertilizer.",
+						"Author": "atravita",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "LastDayToPlantRedux.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.2.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:15004"
+						],
+						"UniqueId": "atravita.LastDayToPlantRedux",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "097355624b7c6476517e5fa6bfc83518",
+				"md5In": "1f86852cb1d03c3f4f031965aa5298fd",
+				"scriptType": 0,
+				"sha256Ex": "4e515de29d44d77cfbd228c4c9013420e64daef817b66c1fe223e55bf5baa63a",
+				"sha256In": "51620d51e91d015442debdd639b764ee2b2bb9acebf86e414517f03cde4e12a6"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1673383924767,
+		"DateUpdated": 1679697374980,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1673383827797,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1294435/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1294435/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1294435/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1294435/icon_original"
+		},
+		"nexusModID": 15004,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 249973
+	}
+}

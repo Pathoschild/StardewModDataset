@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 26947,
+	"Name": "ValleyCast",
+	"Author": "ihasTacoFML",
+	"AuthorLabel": "ihasTaco",
+	"Description": "[size=5][b]Compatibility[/b][/size]\n<br />[b]Tested with OBS Studio v31.0.3 &amp; Stardew Valley 1.6.15[/b]  \n<br />May not work with Streamlabs OBS yet, testing needed.  \n<br />Currently tested only on Windows.\n<br />\n<br />Source code: [url=https://github.com/ihasTaco/ValleyCast]https://github.com/ihasTaco/ValleyCast[/url]\n<br />\n<br />[size=5][b]Setup[/b][/size]\n<br />\n<br />[b]Configure OBS Studio[/b]:  \n<br />• Open OBS Studio  \n<br />• Go to Tools &gt; WebSocket Server Settings  \n<br />• Click \"Show Connection Info\" and set this window aside  \n<br />\n<br />[b]Launch Stardew Valley[/b]:  \n<br />• Make sure [b]SMAPI[/b] and [b]Generic Mod Configuration Menu[/b] are installed  \n<br />• Launch Stardew through SMAPI  \n<br />\n<br />[b]Set Up ValleyCast[/b]:  \n<br />• Click the [b]cog icon[/b] in the bottom-left of the screen  \n<br />• Select [b]ValleyCast[/b] from the menu  \n<br />• Enter your OBS connection info (IP and Port) from the WebSocket settings window  \n<br />[b]Note:[/b] If OBS and Stardew are on the same machine, defaults will usually work. For separate devices, use your local IP and matching port.\n<br />\n<br />[size=5][b]Features (v0.1.6)[/b][/size]\n<br />[list]\n<br />[*][b]NEW! | Hot Reload Support[/b]: Instantly reload config.json in-game via [b]F5[/b] or the GMCM checkbox\n<br />[*][b]NEW! | Dynamic Text Updates[/b]: Auto-updates an OBS text source at day start (e.g. “Day 4, Spring, Year 1”)\n<br />[*][b]Integrated Mod Settings[/b]: Configure everything in-game with Generic Mod Config Menu\n<br />[*][b]OBS Integration[/b]: Controls OBS Studio using WebSockets with zero fuss\n<br />[*][b]In-Game Notifications[/b]: Alerts you when OBS connects, disconnects, or config reloads\n<br />[*][b]Save Load Recording Toggle[/b]: Automatically starts recording when a save loads\n<br />[*][b]Day-End Recording Toggle[/b]: Restarts recording after each in-game day\n<br />[*][b]Improved Error Handling[/b]: Cleaner logs, safer reconnects, and resilient configs\n<br />[*][b]All the Logs™[/b]: SMAPI logs everything, from triggers to WebSocket payloads\n<br />[/list]\n<br />[size=5][b]Known Bugs[/b][/size]\n<br />[list]\n<br />[*]OBS recording state detection ([i]IsRecording[/i]) isn’t working correctly in the current version\n<br />[*]Scene switching and weekly/monthly toggles are implemented but not yet configurable\n<br />[*]Not tested on macOS or Streamlabs OBS\n<br />[/list]\n<br />[size=5][b]Roadmap[/b][/size]\n<br />[size=4][b]Upcoming Features[/b][/size]\n<br />\n<br />[b]Automated Recording Control[/b]:  \n<br />• Week-End and Month-End toggles (need UI config)\n<br />[b]Scene Switching[/b]:  \n<br />• Switch OBS scenes based on season or events\n<br />[b]Event Notifications?[/b]:  \n<br />• Reminders for birthdays, festivals, order deadlines\n<br />[b]Overlay Integration?[/b]:  \n<br />• Show in-game task progress in OBS overlay  \n<br />• Example: [url=https://i.ytimg.com/vi/M9rPRjzbvWM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGMgZSg-MA8=&amp;rs=AOn4CLBU9mEbOiqFz65SIZpgLIq19zimXQ]LoZ Ship of Harkinian Tracker[/url]  \n<br />• Keybind to toggle overlay visibility\n<br />[b]Dynamic Text Elements[/b]:  \n<br />• Display live stats in OBS (days played, gold, items)\n<br />\n<br />[size=4][b]Developer Note[/b][/size]  \n<br />I'm currently trying out some new techniques for managing ADHD and avoiding burnout. That means updates may be spaced out more intentionally, expect the next one in about a week. Thanks for your patience and support!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/26947",
+	"Version": "0.1.5",
+	"Updated": "2025-05-04T22:50:52+00:00",
+	"Downloads": [
+		{
+			"Id": 131687,
+			"Type": "Main",
+			"DisplayName": "ValleyCast",
+			"FileName": "ValleyCast-26947-0-1-6-1746399052.zip",
+			"Description": "Hot reload support added! Reload config.json in-game via F5 or mod settings. OBS text source updates now supported (e.g., Day/Season/Year). Improved logging + new notifications for OBS connection and config reload.",
+			"Version": "0.1.6",
+			"SizeInBytes": 219481,
+			"Uploaded": "2025-05-04T22:50:52+00:00",
+			"Mods": [
+				{
+					"Id": "ihasTaco.ValleyCast",
+					"DisplayName": "ValleyCast",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "ValleyCast",
+						"Description": "Control OBS automatically based on in-game events",
+						"Author": "ihasTaco",
+						"Version": "0.1.6",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ValleyCast.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:26947"
+						],
+						"UniqueId": "ihasTaco.ValleyCast"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342518375,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342413635,
+		"UploaderId": 73495758,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

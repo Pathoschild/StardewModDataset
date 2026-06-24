@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 10152,
+	"Name": "Custom Object Production",
+	"Author": "aedenthorn",
+	"Description": "This mod is another [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] extension that lets you specify daily item production of any object that calls DayUpdate (big craftables, but also stones, etc.).\n<br />\n<br />To tell this mod about a product, use the following Content Patcher syntax (e.g.):\n<br />\n<br />\n<br />[code]\uFEFF\uFEFF{\n<br />\u00A0\u00A0\u00A0 \"Format\": \"1.23.0\",\n<br />\u00A0\u00A0\u00A0 \"Changes\": [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"custom_object_production_dictionary\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Meat Vat\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"infoList\": \n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0[\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\":\"684\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"min\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"max\": 2,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 200\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\":\"766\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"min\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"max\": 3,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 40\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\":\"680\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"min\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"max\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 4\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\":\"413\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"min\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"max\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 3\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\":\"439\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"min\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"max\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 2\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\":\"857\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"min\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"max\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 1\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0]\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 ]\n<br />}\n<br />[/code]\n<br />\n<br />[b]custom_object_production_dictionary[/b] is the path this mod uses to populate the list of objects that are producing something on a given day. \n<br />\n<br />Entry keys can be either the name of the object or the parent sheet index, but a string either way. Entry values are objects with the following keys:\n<br />\n<br />[list]\n<br />[*][b]id[/b] - the parent sheet index, JA name, or DGA mod.ID/Name of the item to be produced today (as a string)\n<br />[*][b]min[/b] - min amount to produce today\n<br />[*][b]max[/b] - max amount to produce today\n<br />[*][b]minQuality[/b] - for items that have quality (crops, etc.)\n<br />[*][b]maxQuality[/b] - for items that have quality (crops, etc.)\n<br />[/list]\n<br />\n<br />[size=5][b]Limitations[/b][/size]\n<br />\n<br />[list]\n<br />[*]The mod doesn't take into account the state of the object (e.g. whether a campfire is lit), \n<br />[*]You can't specify a certain type of product, e.g. blueberry jam, salmon roe, etc.\n<br />[*]Products are produced at the day start - setting a production countdown timer isn't possible with this mod.\n<br />[/list]\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires SDV 1.5.5+\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10152",
+	"Version": "0.3.0",
+	"Updated": "2023-10-18T16:26:00+00:00",
+	"Downloads": [
+		{
+			"Id": 77377,
+			"Type": "Main",
+			"DisplayName": "Custom Object Production",
+			"FileName": "Custom Object Production-10152-0-3-0-1697646360.zip",
+			"Description": "Changes:\n<br /><br />Obsolescence fix",
+			"Version": "0.3.0",
+			"SizeInBytes": 12957,
+			"Uploaded": "2023-10-18T16:26:00+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomObjectProduction",
+					"DisplayName": "Custom Object Production",
+					"Type": "Smapi",
+					"RelativePath": "CustomObjectProduction",
+					"Manifest": {
+						"Name": "Custom Object Production",
+						"Description": "Custom Object Production.",
+						"Author": "aedenthorn",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "CustomObjectProduction.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10152"
+						],
+						"UniqueId": "aedenthorn.CustomObjectProduction",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomObjectProduction"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342464065,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396840,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

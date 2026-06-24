@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 24667,
+	"Name": "Critter Fixes",
+	"Author": "juminos",
+	"Description": "Currently fixes rabbit running animation, incorrect summer butterfly sprite index reference, and butterfly animation for statue of blessings butterflies.\n<br />\n<br />1. There's a mistake in the game code causing the running animation for rabbit critters to skip over one sprite index and instead repeats another causing the animation to look jerky. This mod corrects it by essentially just changing a 5 to a 4.\n<br />\n<br />[img]https://i.imgur.com/eijGJ0S.png[/img]\n<br />\n<br />2. There is also a sprite index reference to a blank area of the spritesheet preventing 2 rare summer butterfly variants from appearing. I patched the butterfly constructor to reference the correct sprite indices.\n<br />\n<br />[img]https://i.imgur.com/9sAdewc.png[/img]\n<br />\n<br />[s]3. The butterflies that spawn when using statue of blessings are spring butterflies, but they are using the summer butterfly animation when using the statue outside of spring (and also winter i think) which has an extra frame in the animation loop. I patched it to always use the spring animation loop for spring (and winter) butterflies regardless of season.[/s]\u00A0 (this has been officially fixed in update 1.6.15)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24667",
+	"Version": "2.1.1",
+	"Updated": "2024-12-23T03:18:55+00:00",
+	"Downloads": [
+		{
+			"Id": 119932,
+			"Type": "Main",
+			"DisplayName": "Critter Fixes",
+			"FileName": "Critter Fixes-24667-2-1-1-1734923935.rar",
+			"Description": "removed butterfly animation fix (officially fixed)",
+			"Version": "2.1.1",
+			"SizeInBytes": 11232,
+			"Uploaded": "2024-12-23T03:18:55+00:00",
+			"Mods": [
+				{
+					"Id": "juminos.CritterFixes",
+					"DisplayName": "Critter Fixes",
+					"Type": "Smapi",
+					"RelativePath": "CritterFixes",
+					"Manifest": {
+						"Name": "Critter Fixes",
+						"Description": "Fixes errors in the game code for various critter animations.",
+						"Author": null,
+						"Version": "2.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CritterFixes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:24667"
+						],
+						"UniqueId": "juminos.CritterFixes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506620,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411355,
+		"UploaderId": 199353398,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

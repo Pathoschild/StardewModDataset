@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 47973,
+	"Name": "Giant Crop Interiors",
+	"Author": "aedenthorn",
+	"Description": "[youtube]DTDft5p3xsg[/youtube]\n<br />\n<br />\n<br />[size=5][u][b]Overview[/b][/u][/size]\n<br />\n<br />This mod turns giant pumpkins and giant melons into buildings with doors and interior space.\n<br />\n<br />Interior spaces are decoratable with wallpaper and flooring.\n<br />\n<br />By default giant crops cannot be destroyed when there are objects placed in their interiors.\n<br />\n<br />Destroying a giant crop removes the interior space.\n<br />\n<br />\n<br />[size=5][u][b]Custom Interiors[/b][/u][/size]\n<br />\n<br />You can edit the interior location map by targetting [b]\"Maps/GiantCrop\"[/b].\n<br />\n<br />You can edit the door sprites by targetting the following paths:\n<br />\n<br />\"aedenthorn.GiantCropInteriors/Pumpkin\"\n<br />\"aedenthorn.GiantCropInteriors/Melon\"\n<br />\n<br />You can designate other giant crops as having interiors using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.GiantCropInteriors/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Cauliflower\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 \u00A0\u00A0 \"Texture\": \"path/to/texture\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 \u00A0\u00A0 \"Name\": \"My Building\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 \u00A0\u00A0 \"Description\": \"This is my building.\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 \u00A0\u00A0 \"IndoorMap\": \"GiantCrop\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 \u00A0\u00A0 \"IndoorMapType\": \"StardewValley.Locations.DecoratableLocation\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />The mod will add new building types for each dictionary entry. The IndoorMap must be in the Maps folder, so when loading it from a mod file, prefix it with \"Maps/\" but omit \"Maps\" in the above dictionary entry).\n<br />\n<br />\n<br />[size=5][u][b]Notes[/b][/u][/size]\n<br />\n<br />This is one of those mods that has some potential for undesired results; it creates an invisible building at each crop location. Removing the mod doesn't remove the buildings.\u00A0\n<br />\n<br />To remove the mod properly, disable \"ModEnabled\" in the config, then save your game with the mod disabled. You can then delete the mod or just leave it disabled.\u00A0\n<br />\n<br />Note that this means that\u00A0[b]disabling the mod removes all objects placed in crop interiors[/b].\n<br />\n<br />\n<br />[size=5][u][b]Notes[/b][/u][/size]\n<br />\n<br />This mod also patches a bug that's been around forever that prevents wallpaper from showing three tiles tall unless the third tile has a wallpaperable building tile over it. Theoretically it should be possible to have wallpaperable walls three tiles high even without a wallpaperable building tile over the third tile, but the game prevents this by checking if the third tile down is actually floor tile, which makes sense in theory. The problem is the game doesn't actually check if the third tile is a floor tile, it just says that all wallpaper and flooring tiles are floorable except behind the baby crib. This mod makes it actually check, allowing for the third tile to be wallpapered if it's not a floor tile. If you want to implement this fix in your mod, here's the fix code:\n<br />\n<br />[code][HarmonyPatch(typeof(DecoratableLocation), \"IsFloorableTile\")]\n<br />public class DecoratableLocation_IsFloorableTile_Patch\n<br />{\n<br />\u00A0 \u00A0 public static void Postfix(DecoratableLocation __instance, int x, int y, ref bool __result)\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 if (!__result)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 return;\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 string floor_id = __instance.GetFloorID(x, y);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 __result = floor_id != null;\n<br />\u00A0 \u00A0 }\n<br />}[/code]\n<br />\n<br />[size=5][u][b]Technical[/b][/u][/size]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47973",
+	"Version": "0.1.1",
+	"Updated": "2026-06-22T02:45:54+00:00",
+	"Downloads": [
+		{
+			"Id": 172119,
+			"Type": "Main",
+			"DisplayName": "GiantCropInteriors",
+			"FileName": "4a/9c/20/4a9c20d4-5f91-42ab-b5a1-b210bbf9a789",
+			"Description": "",
+			"Version": "0.1.1",
+			"SizeInBytes": 188446,
+			"Uploaded": "2026-06-22T02:45:54+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.GiantCropInteriors",
+					"DisplayName": "Giant Crop Interiors",
+					"Type": "Smapi",
+					"RelativePath": "GiantCropInteriors",
+					"Manifest": {
+						"Name": "Giant Crop Interiors",
+						"Description": "Giant Crop Interiors.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GiantCropInteriors.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47973"
+						],
+						"UniqueId": "aedenthorn.GiantCropInteriors"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558807,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434661,
+		"UploaderId": 18901754,
+		"CategoryId": 16,
+		"Adult": false
+	}
+}

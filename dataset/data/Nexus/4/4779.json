@@ -1,0 +1,98 @@
+{
+	"Site": "Nexus",
+	"Id": 4779,
+	"Name": "Daily Screenshot",
+	"Author": "CompSciLauren",
+	"Description": "[img]https://i.postimg.cc/fy2JD15h/example-farm.gif[/img]\n<br />\n<br />This is an example of what you can do with this mod. You can customize the quality and size. By taking a daily screenshot, eventually you'll have enough images to create a GIF that shows a time-lapse of your farm as you progress through the game!\n<br />\n<br />[b][size=6]Features[/size]\uFEFF\n<br />[/b][list]\n<br />[*]One screenshot is automatically taken of your entire farm every day as soon as you leave your house.\n<br />[*]Easy to gather screenshots to create a GIF that shows how your farm changes over time! GIF makers can be found online, such as\u00A0[url=https://ezgif.com/maker]ezgif GIF maker[/url]. Here is an\u00A0[url=https://github.com/CompSciLauren/stardew-valley-daily-screenshot-mod/blob/3.1.0/Images/example1.gif]example[/url].\n<br />[*]Customizable! Change any number of default settings based on your preferences. Examples:[list]\n<br />[*]What time of day to take screenshot.\n<br />[*]How often to take screenshot (e.g. daily, weekly, or monthly).\n<br />[*]Keyboard shortcut that takes screenshot when pressed (set to \"None\" by default).\n<br />[*]What weather conditions are allowed. It is common to allow all except rainy/stormy days, but default option allows all weather.\n<br />[*]Add multiple sets of rules (common example: 1 set for daily automatic screenshots, 1 for manual key-press screenshots).\n<br />[/list]\n<br />[*]Compatible with the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]\"Generic Mod Config Menu\" mod[/url], which adds an in-game UI for easily updating the config (no need to edit the JSON manually).\n<br />[*]Screenshots are sent to your StardewValley/Screenshots folder, with each save file getting its own \"FarmName-Screenshots\" folder. Screenshots between multiple save files will not get mixed up.\n<br />[*]Easily access the screenshots in-game by scrolling to the bottom of the \"Options\" tab in the menu and clicking the \"Open Destination Folder\" button.\n<br />[*]Keeps the screenshots in the correct order to make creating the GIF easier. This is achieved by naming each screenshot with a \"year-season-day.png\" numerical format. For example, on Year 1, Winter, Day 3, the screenshot would be named \"01-04-03.png\".\n<br />[*]Translations available for the following languages: English, Spanish, Portuguese, French, Chinese. Korean coming soon. All text will be translated if your in-game language is set to any of those listed.\n<br />[/list]\n<br />\n<br />[size=6][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0and unzip it into Stardew Valley/Mods. (recommended, but optional)\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=6][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.4 or later on Linux/Mac/Windows\n<br />[*]Does NOT work anymore on Android (see Android download option in Files tab under Miscellaneous). This is something I hope to fix eventually but is not being worked on currently.\n<br />[*]Works in both single player and multiplayer.\n<br />[*]No known mod conflicts.\n<br />[*]Works with the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />[/list]\n<br />[size=6][b]Config\n<br />[/b][/size]See step 2 of \"Installation\" section above - highly recommend using the Generic Mod Config Menu! This will let you edit the mod settings from within the game on a user-friendly screen. If you'd rather edit the JSON directly, continue reading this section.\n<br />\uFEFF\n<br />After you launch the game with this mod for the first time, a JSON file will be created with default mod settings. It can be edited directly. For detailed information about how the Config options work, see the [url=https://github.com/CompSciLauren/stardew-valley-daily-screenshot-mod]source code[/url]\uFEFF readme page. If you still have questions after reading that, please let me know! (You can post a comment on this mod page or message me on Discord - username is \"compscilauren\").\n<br />\n<br />This is a common example of how you might setup your config.json file. The first object in \"SnapshotRules\" is for a daily screenshot of your farm at the start of each day. The second object is for a manual shortcut to take a screenshot every time you press the letter \"P\" on your keyboard.\n<br />\n<br />[code]{\n<br />\u00A0 \"AuditoryEffects\": true,\n<br />\u00A0 \"VisualEffects\": true,\n<br />\u00A0 \"ScreenshotNotifications\": true,\n<br />\u00A0 \"SnapshotRules\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Name\": \"Daily Farm Picture\",\n<br />\u00A0 \u00A0 \u00A0 \"ZoomLevel\": 0.25,\n<br />\u00A0 \u00A0 \u00A0 \"Directory\": \"Default\",\n<br />\u00A0 \u00A0 \u00A0 \"FileName\": \"Default\",\n<br />\u00A0 \u00A0 \u00A0 \"Trigger\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Days\": \"Daily\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Weather\": \"Any\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Location\": \"Farm\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Key\": \"None\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"StartTime\": 600,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"EndTime\": 2600\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Name\": \"Keypress Picture\",\n<br />\u00A0 \u00A0 \u00A0 \"ZoomLevel\": 1.0,\n<br />\u00A0 \u00A0 \u00A0 \"Directory\": \"/home/hailey/SDV\",\n<br />\u00A0 \u00A0 \u00A0 \"FileName\": \"None\",\n<br />\u00A0 \u00A0 \u00A0 \"Trigger\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Days\": \"Daily\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Weather\": \"Any\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Location\": \"Any\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Key\": \"P\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"StartTime\": 600,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"EndTime\": 2600\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />More examples of customizing the config.json file are available on the [url=https://github.com/CompSciLauren/stardew-valley-daily-screenshot-mod/wiki/Examples-for-config.json-file]GitHub Wiki[/url].\n<br />\n<br />[b][size=6]Future[/size][/b]\n<br />To get a sneak peek of potential new features, see the [url=https://github.com/CompSciLauren/stardew-valley-daily-screenshot-mod/issues]Mod Issues[/url] page.\n<br />\n<br />If you have a feature request or run into a bug, please let me know! I do my best to review and address requests/reports when I can. This mod is a passion project I work on in my spare time, so updates may take a bit. Thank you for your patience. And thanks for checking out this mod!\n<br />\n<br />[b][size=6]See Also[/size][/b]\n<br />[list]\n<br />[*][url=https://github.com/CompSciLauren/stardew-valley-daily-screenshot-mod]Source code[/url]\n<br />[*][url=https://github.com/CompSciLauren/stardew-valley-daily-screenshot-mod/wiki/FAQ]FAQ (Frequently Asked Questions)[/url]\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/articles/3753]Latest article[/url]\uFEFF\uFEFF\uFEFF\uFEFF (contains additional details about the latest release, v3.3.0)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5093]Cozy Clothing[/url]\uFEFF, my other mod :)\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4779",
+	"Version": "3.3.0",
+	"Updated": "2025-10-29T01:14:13+00:00",
+	"Downloads": [
+		{
+			"Id": 133988,
+			"Type": "Main",
+			"DisplayName": "Daily Screenshot",
+			"FileName": "Daily Screenshot-4779-3-2-0-1749174303.zip",
+			"Description": "Changes:\n<br />\n<br />- Add French translations for UI config.",
+			"Version": "3.2.0",
+			"SizeInBytes": 53697,
+			"Uploaded": "2025-06-06T01:45:03+00:00",
+			"Mods": [
+				{
+					"Id": "CompSciLauren.DailyScreenshot",
+					"DisplayName": "Daily Screenshot",
+					"Type": "Smapi",
+					"RelativePath": "DailyScreenshot",
+					"Manifest": {
+						"Name": "Daily Screenshot",
+						"Description": "Automatically takes a daily screenshot of your entire farm.",
+						"Author": "CompSciLauren",
+						"Version": "3.2.0",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "DailyScreenshot.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4779",
+							"ModDrop:677025",
+							"Chucklefish:5907",
+							"CurseForge:353698",
+							"GitHub:CompSciLauren/stardew-valley-daily-screenshot-mod"
+						],
+						"UniqueId": "CompSciLauren.DailyScreenshot"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520676,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 146747,
+			"Type": "Main",
+			"DisplayName": "Daily Screenshot",
+			"FileName": "Daily Screenshot-4779-3-3-0-1761700453.zip",
+			"Description": "",
+			"Version": "3.3.0",
+			"SizeInBytes": 64450,
+			"Uploaded": "2025-10-29T01:14:13+00:00",
+			"Mods": [
+				{
+					"Id": "CompSciLauren.DailyScreenshot",
+					"DisplayName": "Daily Screenshot",
+					"Type": "Smapi",
+					"RelativePath": "DailyScreenshot",
+					"Manifest": {
+						"Name": "Daily Screenshot",
+						"Description": "Automatically takes a daily screenshot of your entire farm.",
+						"Author": "CompSciLauren",
+						"Version": "3.3.0",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "DailyScreenshot.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4779",
+							"ModDrop:677025",
+							"Chucklefish:5907",
+							"CurseForge:353698",
+							"GitHub:CompSciLauren/stardew-valley-daily-screenshot-mod"
+						],
+						"UniqueId": "CompSciLauren.DailyScreenshot"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533435,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391467,
+		"UploaderId": 77375368,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

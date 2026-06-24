@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 7183,
+	"Name": "Goodbye American English",
+	"Author": "TheMightyAmondee",
+	"Description": "[size=6]Goodbye American English\n<br />\n<br />[/size]Changes American spelling to British spelling.\n<br />\n<br />Also changes the game units to the metric system and the season fall to autumn by default, this can be disabled in the config file\n<br />\n<br />I've tried to be as thorough as I can but I may have missed some changes, let me know if you spot anything and I'll fix it up.\n<br />\n<br />Please note that community bundle names will only be updated in new save files. Existing save files will still use \"fall\".\n<br />\n<br />[size=3][b]NameReplacer:[/b]\n<br />[/size]\n<br />Version 1.4.0 introduced the ability to change the display names of any concession snack or object using the included NameReplacer.json file, think of this as an internal content pack. When entering name replacements make sure to put a comma at the end of each entry (except the last one).\n<br />You can safely delete this file if you don't want to change any names. If you want to replace names but have deleted the file, simply create a new JSON file with the name \"NameReplacer\". In Version 1.5.0, the NameReplacer has become more advanced, thanks to Harmony! Now preserve and honey names can be independently or generically edited. These edits are discussed in the Advanced NameReplacer section.\n<br />\n<br />To turn Harmony patching off, set AllowAdvancedNameReplacer to false in the config. This stops some replacements from occurring but can prevent issues if the game is experiencing problems.\n<br />\n<br />In 1.6.0 the format of the NameReplacer has been updated for readability and to be better compatible with Stardew Valley 1.6. The old format is no longer supported and will show a warning to update.\n<br />\n<br />[b]1.6.0[/b]\n<br />In version 1.6.0 the format of the NameReplacer has changed to better support the new object data format.\u00A0\n<br />For Objects: Name replacement entries are in the format: \"ItemName\": \"NewItemName\", e.g to turn Hot Pepper into Chilli, the entry would be \"Hot Pepper\": \"Chilli\".\n<br />For Concession snacks: Name replacement entries are in the format: \"ConcessionName_C\":\"NameToReplaceWith\", e.g to turn Cotton Candy into Fairy Floss, the entry would be \"Cotton Candy_C\":\"Fairy Floss\"\n<br />\n<br />\n<br />[size=3]Advanced NameReplacer:[/size]\n<br />[size=2]\n<br />[b]Generic edits[/b]\n<br />[b]1.6.0[/b]\n<br />Universal edits to all preserve names i.e all Jelly becomes Jam are in the form \"PP_PreserveType\":\"EditType/NameToReplaceWith\".\n<br />To break it down:\n<br />The PreserveType is the preserve to change. Either: \"Juice\", \"Wine\", \"Pickles\", \"Jelly\", \"Roe\", \"Wild Honey\" or \"Honey\". Edits for \"Wild Honey\" replaces the entire object name.\n<br />The EditType can be one of \"prefix\" or \"suffix\". Basically, put the preserve word before \"prefix\" or after \"suffix\" the object name. Either will replace the entire name for \"Wild Honey\".\n<br />E.g \"PP_Jelly\": \"suffix/Jam\"\n<br />\n<br />[b]Independent edits[/b]\n<br />Unique preserve edits can be done when AllowAdvancedNameReplacer is true (which is the default) in the config. Generic edits are mutually exclusive (can only prefix or suffix, not both). Unique edits will override generic edits.\n<br />\n<br />[b]1.6.0[/b]\n<br />Unique edits are in the form \"P_(O)ObjectID_PreserveType\":\"EditType/NameToReplaceWith\".\n<br />To break it down:\n<br />The ObjectID refers to the object ID of the item to replace the preserve name for. i.e Potato's ID to change Potato Juice to something else.\n<br />The PreserveType refers to the preserve to change. Either: \"Juice\", \"Wine\", \"Pickles\", \"Jelly\", \"Roe\" or \"Honey\".\n<br />The EditType can be one of \"prefix\", \"suffix\" or \"replace\". Basically, put the preserve word before \"prefix\" or after \"suffix\" the object name. \"replace\" will replace the entire name with something else. For \"replace\" using {0} will insert the object name in it's place.\n<br />E.g \"P_(O)613_Jelly\": \"suffix/Sauce\", (this changes Apple Jelly to Apple Sauce)\n<br />[b]\n<br />Generic edits are mutually exclusive (can only prefix or suffix, not both). Unique edits will override generic edits.[/b][/size]\n<br />\n<br />[b]Version 1.4.0\n<br />[/b]- Added ability to replace object and concession names.\n<br />- Fish size is now correctly converted to centimetres.\n<br />\n<br />[b]Version 1.4.1\n<br />[/b]- NameReplacer.json now generates upon the mod being run. This is so the file doesn't need to be edited with each update\n<br />- Updated to new content api. Use version 1.4.0 if using an older version of SMAPI.\n<br />\n<br />[b]Version 1.5.0\n<br />[/b]- NameReplacer.json can now replace more names\n<br />- Now uses Harmony. This can be disabled if needed at the cost of features.\n<br />\n<br />[b]Version 1.6.0\n<br />[/b]- Updated for 1.6\n<br />- New NameReplacer format to be more compatible with 1.6\n<br />\n<br />[b]Version 1.6.1\n<br />[/b]- Fix fiber seed recipe not being added properly\n<br />[b]\n<br />Version 1.6.2\n<br />[/b]- Updated for 1.6.9\n<br />\n<br />[b]To install:\n<br />[/b]- Ensure SMAPI is installed\n<br />- Simply unzip the download file into your Mods folder\n<br />- The config file will be generated when the game has been run at least once\n<br />[url=https://github.com/TheMightyAmondee/GoodbyeAmericanEnglish]\n<br />\n<br />\n<br />Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7183",
+	"Version": "1.6.3",
+	"Updated": "2026-04-16T23:42:21+00:00",
+	"Downloads": [
+		{
+			"Id": 164670,
+			"Type": "Main",
+			"DisplayName": "Goodbye American English",
+			"FileName": "Goodbye American English-7183-1-6-3-1776382941.zip",
+			"Description": "Requires SMAPI 4.1 or later",
+			"Version": "1.6.3",
+			"SizeInBytes": 24687,
+			"Uploaded": "2026-04-16T23:42:21+00:00",
+			"Mods": [
+				{
+					"Id": "TheMightyAmondee.GoodbyeAmericanEnglish",
+					"DisplayName": "Goodbye American English",
+					"Type": "Smapi",
+					"RelativePath": "GoodbyeAmericanEnglish",
+					"Manifest": {
+						"Name": "Goodbye American English",
+						"Description": "Replaces american spelling with british spelling",
+						"Author": "TheMightyAmondee",
+						"Version": "1.6.3",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "GoodbyeAmericanEnglish.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7183",
+							"ModDrop:854437"
+						],
+						"UniqueId": "TheMightyAmondee.GoodbyeAmericanEnglish"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342551358,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393871,
+		"UploaderId": 95739353,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

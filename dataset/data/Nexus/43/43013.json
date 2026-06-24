@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 43013,
+	"Name": "Bigger Auto Grabber",
+	"Author": "RafiaBee",
+	"Description": "[size=4][b]What does this mod do?[/b][/size]\n<br />\n<br />If you use mods like [url=https://www.nexusmods.com/stardewvalley/mods/20799]Deluxe Grabber Redux[/url], you've probably run into the auto-grabber overflowing its 36-slot chest. This mod lets you expand that capacity so the grabber can collect everything in one go — no more mashing the global-grab button.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Configurable capacity[/b] — Set the auto-grabber's internal chest anywhere from 36 (vanilla) up to 288 slots via the config menu, or any custom value in [font=Courier New]config.json[/font][/*]\n<br />[*][b]Works with any auto-grabber mod[/b] — Deluxe Grabber Redux Fix, or anything else that uses auto-grabbers[/*]\n<br />[*][b]Applies everywhere[/b] — All existing and newly placed auto-grabbers get the expanded capacity[/*]\n<br />[*][b]Safe to install and uninstall[/b] — No items are ever deleted. Removing the mod simply reverts auto-grabbers to the vanilla 36 slots; items in extra slots persist in your save and become accessible again if you reinstall[/*]\n<br />[/list]\n<br />[size=4][b]How it works[/b][/size]\n<br />\n<br />The mod uses a Harmony patch on the auto-grabber's internal chest to override its capacity. Each auto-grabber chest is tagged with mod data on save load, day start, and whenever a new auto-grabber is placed, so the patch knows which chests to expand.\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />If you have [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] installed, you can change the capacity from the in-game options screen. Otherwise, edit [font=Courier New]config.json[/font] in the mod folder.\n<br />[list]\n<br />[*][b]Capacity[/b] (default: 36) — Number of item slots in each auto-grabber. The config menu slider goes from 36 to 288 in increments of 12. You can set any value you like by editing [font=Courier New]config.json[/font] directly.[/*]\n<br />[/list]\n<br />[size=4][b]Good to know[/b][/size]\n<br />[list]\n<br />[*]The in-game chest UI displays up to 72 slots (6 rows) at a time. If you set the capacity higher, you can scroll through all your items using the mouse wheel or the up/down arrows on the right side of the grid.[/*]\n<br />[*]If you reduce the capacity below the number of occupied slots, items in the extra slots stay in your save — they just won't be visible in the UI until you increase the capacity again.[/*]\n<br />[*]This mod has no effect on regular chests — only the internal chest inside auto-grabbers.[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*][b]Custom Chest Size[/b] by Kree — When Custom Chest Size is installed, Bigger Auto-Grabber detects it and steps aside so the two mods don't fight over the menu layout. Auto-grabber sizing is then handled entirely by Custom Chest Size.[/*]\n<br />[/list]\n<br />[size=4][b]Translations[/b][/size]\n<br />This mod supports translations! Please feel free to translate the mod to your language and upload to Nexus on your own page. Nexus will automatically link it to this mod.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[b]Required:[/b]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.1+[/*]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[/list][b]Optional:[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — In-game settings menu[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43013",
+	"Version": "1.2.0",
+	"Updated": "2026-05-02T22:54:25+00:00",
+	"Downloads": [
+		{
+			"Id": 166290,
+			"Type": "Main",
+			"DisplayName": "Bigger Auto-Grabber",
+			"FileName": "Bigger Auto-Grabber-43013-1-2-1-1777762465.zip",
+			"Description": "Detects Custom Chest Size mod (https://www.nexusmods.com/stardewvalley/mods/45116) at startup and bows out completely when it is loaded.",
+			"Version": "1.2.1",
+			"SizeInBytes": 21080,
+			"Uploaded": "2026-05-02T22:54:25+00:00",
+			"Mods": [
+				{
+					"Id": "RafiaBee.BiggerAutoGrabber",
+					"DisplayName": "Bigger Auto-Grabber",
+					"Type": "Smapi",
+					"RelativePath": "BiggerAutoGrabber",
+					"Manifest": {
+						"Name": "Bigger Auto-Grabber",
+						"Description": "Expands the auto-grabber's internal chest beyond the vanilla 36-slot limit.",
+						"Author": "Rafia-Bee",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "BiggerAutoGrabber.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.6.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:43013"
+						],
+						"UniqueId": "RafiaBee.BiggerAutoGrabber"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552978,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429701,
+		"UploaderId": 145364473,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

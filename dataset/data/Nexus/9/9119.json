@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 9119,
+	"Name": "Animal Produce Expansion",
+	"Author": "elbebeta",
+	"AuthorLabel": "elbe",
+	"Description": "Look who's back with another in their line of unasked for animal mods!\n<br />\n<br />Today I've got my most ambitious undertaking to date: a mod to allow regular animal drops (not truffles, that's different code apparently and I haven't gone into it yet) to be expanded to an arbitrary size! What does this add? Umm, I guess you could put feathers or rare eggs into the chicken drop lists or something. Maybe seeds, that feels like something a chicken would have.\n<br />\n<br />Config example!\n<br />[code]\uFEFF{\n<br />\u00A0 \"AnimalDrops\": [\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Animal\": \"White Chicken\",\u00A0 // Name of animal\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Drops\": [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Item\": \"176\",\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 // Item number or name\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Weight\": 10.0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 // Weight given to this drop in the collection\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },{\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Item\": \"174\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Weight\": 2.0\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }],\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"ChanceForExtraDrops\": 0.2, // value between 0 (no chance) and 1 (100% chance) \n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"ExtraDrops\": [\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 // if ChanceForExtraDrops is &gt; 0 and this list is empty it will pick from Drops\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Item\": \"Blue Egg\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Weight\": 10.0\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }]}]}\n<br />[/code]You put the name of the animal and a list of weighted drops you'd like to see in game. If you aren't familiar with them, a weighted list gives each item \"weight\" into being chosen. In the example above a regular egg has a weight of 10 while a large egg has a weight of 2, so you have around a 5 in 6 chance of getting a regular egg there. You can put whatever you want, number wise, but you probably shouldn't go crazy: having one item at weight 1000000000 and another at 0.0000001 is valid but come on.\n<br />\n<br />After that we have the ChanceForExtraDrops value. That's a percentage chance of a second drop occurring, you can put any number between 0 and 1.0, if it's larger than that it'd just still treat it as 1.0.\n<br />\n<br />And then we have the ExtraDrops collection that works exactly the same as the Drops collection, but you can put rarer items in their if you want. If ExtraDrops is empty but the ChanceForExtraDrops is &gt; 0 it'll choose the second drop form the Drops list.\n<br />\n<br />I'm considering this a beta right now. Getting it to work with the base game wasn't hard but working around BFAV just made things difficult. If you want to try it out, with or without BFAV, please send me bug reports if you find anything wrong.\n<br />\n<br />Mechanically, in vanilla, it sets the default drop to whatever it rolled up and the deluxe drop to -1 and then allows the base code to handle it's conditions and item placement. BFAV ended up requiring me to just overrule BFAV's own drop logic - and I wasn't going to update BFAV again just for my benefit. I have found you may not always reliably get the bonus drop if you don't have a grabber as the game probably tried to put it somewhere it couldn't, so the more animals you have the more likely the floor will get filled.\n<br />\n<br />It's far from perfect but sometimes other people trying things out can find problems you never saw or even thought to try. If you're interested give it a try.\n<br />\n<br />Source is in the [url=https://github.com/lshtech/AnimalProduceExpansion]source hole[/url]\uFEFF\n<br />Or you can start an [url=https://www.nexusmods.com/stardewvalley/mods/9049]army of large birds[/url]\uFEFF or tell Marnie you [url=https://www.nexusmods.com/stardewvalley/mods/9107]don't want her damn cows[/url] or, you know, whatever.\n<br />\n<br />My next plans don't involve animals. I'll probably fall flat on my face trying.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9119",
+	"Version": "0.3.0",
+	"Updated": "2021-07-16T01:39:00+00:00",
+	"Downloads": [
+		{
+			"Id": 43106,
+			"Type": "Main",
+			"DisplayName": "Animal Produce Expansion - The Beta Years",
+			"FileName": "Animal Produce Expansion - The Beta Years-9119-0-3-0-1626399540.zip",
+			"Description": "",
+			"Version": "0.3.0",
+			"SizeInBytes": 22252,
+			"Uploaded": "2021-07-16T01:39:00+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.AnimalProduceExpansion",
+					"DisplayName": "Animal Produce Expansion",
+					"Type": "Smapi",
+					"RelativePath": "AnimalProduceExpansion",
+					"Manifest": {
+						"Name": "Animal Produce Expansion",
+						"Description": "Allows animals to drop an arbitrary number of drops from a weighted list",
+						"Author": "elbe",
+						"Version": "0.3.0",
+						"EntryDll": "AnimalProduceExpansion.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "pepoluan.EvenBetterRNG",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Paritee.BetterFarmAnimalVariety",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9119"
+						],
+						"UniqueId": "elbe.AnimalProduceExpansion"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429794,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395807,
+		"UploaderId": 559339,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

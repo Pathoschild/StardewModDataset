@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 12510,
+	"Name": "Custom Wallpaper Framework",
+	"Author": "aedenthorn",
+	"Description": "This framework lets modders create wide and hi-res wallpaper using Content Patcher.\n<br />\n<br />Wallpaper should first be added to the catalogue using [url=https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.5.5#In_the_furniture_catalogue]the game's built-in custom wallpaper system[/url].\n<br />\n<br />To implement this mod, create a Content Patcher patch targeting this mod's dictionary, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.CustomWallpaperFramework/dictionary\",\n<br />\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CustomWallpaperWide\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.CustomWallpaperWide\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CustomWallpaperWide/Wallpaper\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"width\": 12\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CustomWallpaperWide2\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.CustomWallpaperWide2\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CustomWallpaperWide/Wallpaper2\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"width\": 2\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CustomWallpaperWide3\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.CustomWallpaperWide3\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CustomWallpaperWide/Wallpaper3\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"width\": 8\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CustomWallpaperWide4\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.CustomWallpaperWide4\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CustomWallpaperWide/Wallpaper4\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"width\": 5,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"scale\":2\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CustomWallpaperWide5\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.CustomWallpaperWide5\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CustomWallpaperWide/Wallpaper5\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"width\": 6,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"scale\":1\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0}\n<br />}\n<br />[/code]\n<br />[b]id[/b] must refer to the id of your wallpaper added using the game's custom wallpaper system.\n<br />[b]width[/b] refers to the number of tiles wide the wallpaper is. Wallpaper is always 3 tiles high.\n<br />[b]scale[/b] is the size multiplier used when displaying the wallpaper, so a scale of 4 means your wallpaper will be scaled up 4x (this is the default). If you want higher-resolution wallpaper, you can set the scale to 2 or 1.\u00A0 Your texture file size must reflect this, so if your scale is 4, the texture must be 48 pixels tall (3 * 64 / 4), etc.\n<br />[b]texturePath[/b] must be a path in the game's Content folder (usually a fake path using Content Patcher to load an actual png file).\n<br />\n<br />An example pack is [url=https://www.nexusmods.com/stardewvalley/mods/12534]here[/url].\n<br />\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12510",
+	"Version": "0.2.0",
+	"Updated": "2023-10-06T00:05:26+00:00",
+	"Downloads": [
+		{
+			"Id": 76808,
+			"Type": "Main",
+			"DisplayName": "Custom Wallpaper Framework",
+			"FileName": "Custom Wallpaper Framework-12510-0-2-0-1696550726.zip",
+			"Description": "Changes:\n<br /><br />Deprecation fix",
+			"Version": "0.2.0",
+			"SizeInBytes": 13123,
+			"Uploaded": "2023-10-06T00:05:26+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomWallpaperFramework",
+					"DisplayName": "Custom Wallpaper Framework",
+					"Type": "Smapi",
+					"RelativePath": "CustomWallpaperFramework",
+					"Manifest": {
+						"Name": "Custom Wallpaper Framework",
+						"Description": "Custom Wallpaper Framework.",
+						"Author": "aedenthorn",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "CustomWallpaperFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:12510"
+						],
+						"UniqueId": "aedenthorn.CustomWallpaperFramework",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomWallpaperFramework"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342463496,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399198,
+		"UploaderId": 18901754,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

@@ -1,0 +1,103 @@
+{
+	"Site": "Nexus",
+	"Id": 47733,
+	"Name": "Clocks",
+	"Author": "aedenthorn",
+	"Description": "[youtube]NA9p9khlXjo[/youtube]\n<br />\n<br />\n<br />[size=5][u][b]Overview[/b][/u][/size]\n<br />\n<br />This mod is a part of my ongoing project to make things do things.\n<br />\n<br />It makes the [url=https://stardewvalleywiki.com/Wall_Clock]Wall Clock[/url] added in 1.6 tell time like the Gold Clock and Community Center clock do.\n<br />\n<br />The Wall Clock can be purchased from the Furniture Catalogue for 0g.\n<br />\n<br />By default, clock hand movement is smooth, showing the current precise time. You can turn off smooth movement in the config, which will cause the clock to show time in discrete 10 minute intervals like the UI clock.\n<br />\n<br />By default this mod also fixes both the Community Center clock and the Gold Clock to show proper smooth movement (or discrete time intervals) like the Wall Clock, as the vanilla movement is a bit off. You can disable this fix in the config.\n<br />\n<br />\n<br />[size=5][u][b]Config[/b][/u][/size]\n<br />\n<br />You can change the hand and nub colors as well as opacity in the config.\n<br />\n<br />\n<br />[size=5][u][b]Custom Clocks[/b][/u][/size]\n<br />\n<br />You can set any furniture to be a clock using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.Clocks/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"1557\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DrawOffset\": \"64, 64\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HourHand\": \"LooseSprites/Cursors\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MinuteHand\": \"LooseSprites/Cursors\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Nub\": \"LooseSprites/Cursors\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HourHandSourceRect\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 369,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 399,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 5,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 9\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MinuteHandSourceRect\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 363,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 395,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 5,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 13\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"NubSourceRect\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 375,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 404,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 4,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HourHandColor\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"B\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"G\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"R\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"A\": 255\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MinuteHandColor\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"B\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"G\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"R\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"A\": 255\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"NubColor\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"B\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"G\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"R\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"A\": 255\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Alpha\": 1,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Scale\": 3.0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />This turns the Sun #44 painting into a clock as in the screenshot, using the same hour hand, minute hand, and nub as the Community Center clock and Gold Clock. I've added the above example as a content pack in the Optional Files section that\u00A0 you can adapt as you like.\n<br />\n<br />\n<br />[u][size=5][b]Technical[/b][/size][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47733",
+	"Version": "0.1.0",
+	"Updated": "2026-06-15T22:42:57+00:00",
+	"Downloads": [
+		{
+			"Id": 171409,
+			"Type": "Main",
+			"DisplayName": "Clocks",
+			"FileName": "6f/6a/99/6f6a99df-c30c-425c-a402-b34985604b9a",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 46222,
+			"Uploaded": "2026-06-15T22:41:13+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.Clocks",
+					"DisplayName": "Clocks",
+					"Type": "Smapi",
+					"RelativePath": "Clocks",
+					"Manifest": {
+						"Name": "Clocks",
+						"Description": "Clocks.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Clocks.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47733"
+						],
+						"UniqueId": "aedenthorn.Clocks"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558097,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 171410,
+			"Type": "Optional",
+			"DisplayName": "Sun 44 Clock",
+			"FileName": "32/45/ae/3245aec5-99d1-4117-817b-fa8548492b33",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 1171,
+			"Uploaded": "2026-06-15T22:42:57+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.Sun44ClockCP",
+					"DisplayName": "Sun 44 Clock",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] [Clocks] Sun 44 Clock",
+					"Manifest": {
+						"Name": "Sun 44 Clock",
+						"Description": "Sun 44 Clock.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.4.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "aedenthorn.Clocks",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:47733Sun"
+						],
+						"UniqueId": "aedenthorn.Sun44ClockCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558098,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434421,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

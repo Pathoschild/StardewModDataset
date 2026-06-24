@@ -1,0 +1,113 @@
+{
+	"Site": "Nexus",
+	"Id": 5647,
+	"Name": "Fallen London Mushroom Wines",
+	"Author": "winterykite",
+	"Description": "v2.3.2:\n<br />[list]\n<br />[*]Added Custom Cask Mod dependency to enable aging the wines in casks, as PFM does not support casks.\n<br />[*]Renamed Amanita Wine to Amanita Sherry, after some research that revealed that Sherry isn't a distilled wine...\n<br />[*]Chanterelles now produce Winewounds, after Winewound Heath, where Chanterelles apparently grow in Fallen London.\n<br />[*]Purple Mushrooms now produce Broken Giant instead. Prices for this have been adjusted.\n<br />[*]Creeping Willow [b]does no longer exist[/b] -- please make sure, before updating, that you sell all instances of it, and create a clean reinstall.\n<br />[*]Producing times have been adjusted a bit downwards\n<br />[*]Added vanilla NPC likes\n<br />[*]Added German translation\n<br />[*]New icons! Now they're full bottles instead of the cut-off at the bottom ones from FL\n<br />[/list]\n<br />TODO:\u00A0\n<br />[list]\n<br />[*]work with jina2ya to update their korean translation to the updated mod\n<br />[*]add support for custom NPClikes\n<br />[*]add support for SubterranianOverhaul (Voidshroom Spore -&gt; Bottled Oblivion)\n<br />[*]add support for stills (Winewounds -&gt; Strangling Willow Absinthe; Amanita Sherry -&gt; Muscaria Brandy; Bottled Oblivion -&gt; Black Wings Absinthe). The object files themselves have been created, I just need to figure out how to only add a distilled item if a still mod is present. I might have to learn how to make .dll files for this. The things you do for love.\n<br />[*]add goat airag?\n<br />[*]add hesperidean cider?\n<br />[*]add darkdrop coffee?\n<br />[*]adjust Shane's likes after he went sober\n<br />[/list]\n<br />\n<br />v1.0.0:\n<br />This mod adds Greyfields, Morelways, Broken Giant, Amanita Wine, and Creeping Willow Wine to your Stardew Valley game, as based on items in the browser game Fallen London.\n<br />\n<br />Wait, isn't it Amanita [i]Sherry[/i]\u00A0and [i]Strangling[/i]\u00A0Willow [i]Absinthe[/i]?\n<br />Well, yes, but these are the non-distilled versions. I might add the distilled, proper versions at a later point. Once I've figured out if there is a way to make a mod dependant on one of a list of other mods.\n<br />\n<br />Which mushroom becomes which wine?\n<br />Pretty straightforward:\n<br />Common Mushroom -&gt; Greyfields\n<br />Red Mushroom -&gt; Amanita Wine\n<br />Morel -&gt; Morelways\n<br />Purple Mushroom -&gt; Creeping Willow\n<br />Chanterelle -&gt; Broken Giant",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5647",
+	"Version": "2.3.2",
+	"Updated": "2020-04-07T16:08:22+00:00",
+	"Downloads": [
+		{
+			"Id": 25714,
+			"Type": "Main",
+			"DisplayName": "Fallen London Mushroom Wines",
+			"FileName": "Fallen London Mushroom Wines-5647-2-3-2-1586275702.zip",
+			"Description": "Please make sure to sell all instances of Creeping Willow before you do a clean install.",
+			"Version": "2.3.2",
+			"SizeInBytes": 13573,
+			"Uploaded": "2020-04-07T16:08:22+00:00",
+			"Mods": [
+				{
+					"Id": "winteryKite.CCMushrooms",
+					"DisplayName": "(CCM) Fallen London Mushroom Wines",
+					"Type": "ContentPack",
+					"RelativePath": "Fallen London Mushroom Wines\\[CCM] Fallen London Mushroom Wines",
+					"Manifest": {
+						"Name": "(CCM) Fallen London Mushroom Wines",
+						"Description": "Makes the mushroom wines caskable with the help of CustomCaskMod",
+						"Author": "winteryKite",
+						"Version": "2.3.2",
+						"MinimumApiVersion": "2.11.2",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.CustomCaskMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "winteryKite.PFMushrooms",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5647"
+						],
+						"UniqueId": "winteryKite.CCMushrooms"
+					}
+				},
+				{
+					"Id": "winteryKite.JAMushrooms",
+					"DisplayName": "(JA) Fallen London Mushroom Wines",
+					"Type": "ContentPack",
+					"RelativePath": "Fallen London Mushroom Wines\\[JA] Fallen London Mushroom Wines",
+					"Manifest": {
+						"Name": "(JA) Fallen London Mushroom Wines",
+						"Description": "Adds a few mushroom wines from Fallen London to JA.",
+						"Author": "winteryKite",
+						"Version": "2.3.2",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5647"
+						],
+						"UniqueId": "winteryKite.JAMushrooms"
+					}
+				},
+				{
+					"Id": "winteryKite.PFMushrooms",
+					"DisplayName": "(PFM) Fallen London Mushroom Wines",
+					"Type": "ContentPack",
+					"RelativePath": "Fallen London Mushroom Wines\\[PFM] Fallen London Mushroom Wines",
+					"Manifest": {
+						"Name": "(PFM) Fallen London Mushroom Wines",
+						"Description": "Adds a few mushroom wines from Fallen London to the keg.",
+						"Author": "winteryKite",
+						"Version": "2.3.2",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "winteryKite.JAMushrooms",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5647"
+						],
+						"UniqueId": "winteryKite.PFMushrooms"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342412402,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392335,
+		"UploaderId": 60830831,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

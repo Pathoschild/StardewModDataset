@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 6944,
+	"Name": "Gift Decline",
+	"Author": "JustToDownloadThings",
+	"AuthorLabel": "desto",
+	"Description": "[b][code]\uFEFF[/code]Installation[/b]\n<br />[list]\n<br />[*]Download the mod zip\n<br />[*]Download and install [url=https://smapi.io/]SMAPI[/url]\uFEFF\n<br />[*]Drop this mod into the Mods folder\n<br />[/list]\n<br />[b]Configuration[/b]\n<br />- [code]ResetEveryXDays: int[/code] = Reset all gift tastes to their original value after this many days have passed, starting from the very first day (Day 1, Year 1).  \n<br />If set to [code]0[/code], gift taste will never be reset. Defaults to [code]112[/code] (= yearly)[code]\n<br />[/code]- [code]MaximumDeviation: int[/code] = Limit by how much the taste for a gift can drop.\n<br />E.g. if set to [code]2[/code], a loved gift can not fall below a neutral reaction.\n<br />- [code]ReduceAfterXGifts: int[/code] = Reduce the gift taste only after the item has been gifted to the NPC this many times.\n<br />\n<br />[b]CLI[/b]\n<br />- [code]reset_gift_tastes[/code] = Reset all gift tastes to their original value.\n<br />\n<br />[b]Multiplayer[/b]\n<br />The gift taste decline is shared across all players. So if you gift an item to an NPC and then your friend gifts the same item to that same NPC, your friend will already get the subpar reaction.\n<br />\n<br />You could counteract that by setting [code]ReduceAfterXGifts[/code] to the number of players.\n<br />\n<br />[b]Source[/b]\n<br />Over on [url=https://github.com/desto-git/sdv-mods/tree/master/GiftDecline]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6944",
+	"Version": "1.1.5",
+	"Updated": "2024-04-22T15:03:53+00:00",
+	"Downloads": [
+		{
+			"Id": 94555,
+			"Type": "Main",
+			"DisplayName": "Gift Decline",
+			"FileName": "Gift Decline-6944-1-1-5-1713798233.zip",
+			"Description": "- Fix: Update to Stardew Valley 1.6",
+			"Version": "1.1.5",
+			"SizeInBytes": 22030,
+			"Uploaded": "2024-04-22T15:03:53+00:00",
+			"Mods": [
+				{
+					"Id": "desto.GiftDecline",
+					"DisplayName": "Gift Decline",
+					"Type": "Smapi",
+					"RelativePath": "GiftDecline",
+					"Manifest": {
+						"Name": "Gift Decline",
+						"Description": "Inhabitants will like items less each time you gift them that same item.",
+						"Author": "desto",
+						"Version": "1.1.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GiftDecline.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6944"
+						],
+						"UniqueId": "desto.GiftDecline"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481243,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393632,
+		"UploaderId": 56376082,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

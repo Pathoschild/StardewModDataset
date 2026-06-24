@@ -1,0 +1,87 @@
+{
+	"Site": "Nexus",
+	"Id": 589,
+	"Name": "Replanter",
+	"Author": "jwdred",
+	"Description": "[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]About[/b][/color][/size][/font][/color]\r<br />\r<br />If you&#39;re like me, your fledgling farm just isn&#39;t making the money it could be making because you fear harvest time and all the replanting that comes with it. \u00A0News flash, this just in&#33; \u00A0Many farms use time and health saving tools to supplement their hand tools&#33;&#33; \u00A0And if they don&#39;t use machinery, you can bet your last g. that they&#39;re probably paying other people to help out.\r<br />\r<br />With Replanter, you can have your farm &#34;just so&#34; and have someone else harvest and replant all your crops. \u00A0It will even purchase just the amount of seeds you need for replanting. \u00A0If that sounds like cheating to you, just wait until you read about the exciting options available with Replanter&#33;\r<br />\r<br />I look forward to your feedback&#33;\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Update[/b][/color][/size][/font][/color]\r<br />\r<br />Thanks for everyone that provided feedback over the past couple weeks, particularly those who have been reporting the infinite harvest bug that plagued the renewable crops. \u00A0Working closely with Demetrius, we think we&#39;ve developed an organic pesticide that has eradicated this bug in version 1.0.4. \u00A0Please let me know if any of you continue to experience the problem.\r<br />\r<br />With that out of the way, I think I&#39;ll have time to add a more granular cost structure for those who want to use it. \u00A0So look for that in the coming days or weeks.\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Quick Setup[/b][/color][/size][/font][/color]\r<br />\r<br />1. Unzip the mod and put it into your &#34;Mods&#34; folder.\r<br />2. If you want to use this like a trainer, change config settings: free: true, waterCrops: true, and enableMessages: false.\r<br />3. If you want the mod to charge you, but you don&#39;t care about dialogues and such, change config.json settings: enableMessages: false.\r<br />4. Start the SMAPI executable, and kick back and enjoy the wonder that is automated planting and harvesting.\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Configuration[/b][/color][/size][/font][/color]\r<br />\r<br />The configuration defaults to the following settings.\r<br />\r<br />{\r<br />  &#34;keybind&#34;: &#34;J&#34;,\r<br />  &#34;enableLogging&#34;: false,\r<br />  &#34;free&#34;: false,\r<br />  &#34;seedDiscount&#34;: 0,\r<br />  &#34;whoChecks&#34;: &#34;spouse&#34;,\r<br />  &#34;enableMessages&#34;: true,\r<br />  &#34;costPerCropHarvested&#34;: 0.5,\r<br />  &#34;sellHarvestedCropsImmediately&#34;: false,\r<br />  &#34;waterCrops&#34;: false,\r<br />  &#34;ignoreList&#34;: &#34;591|593|595|597|376&#34;\r<br />  &#34;alwaysSellList&#34;: &#34;&#34;,\r<br />  &#34;neverSellList&#34;: &#34;&#34;,\r<br />  &#34;chestCoords&#34;: &#34;70, 14&#34;,\r<br />  &#34;bypassInventory&#34;: false,\r<br />  &#34;chestDefs&#34;: &#34;258,70,14|282,70,14&#34;,\r<br />  &#34;clearDeadPlants&#34;: true,\r<br />  &#34;smartReplantingEnabled&#34;: false\r<br />}\r<br />\r<br />[b][u]keybind[/u][/b]: defaults to J, set it to whichever key you want to use to summon your farm help.\r<br />\r<br />[b][u]enableLogging[/u][/b]:\u00A0 tells the mod whether to output debugging messages to your SMAPI console. Defaults to false.\r<br />\r<br />[u][b]enableMessages[/b][/u]: tells the mod that you&#39;d like in-game feedback during usage.  Defaults to true.\r<br />\r<br />[b][u]free[/u][/b]: will make the mod disregard all other cost calculating mechanisms. \u00A0That&#39;s free as in beer-- all the beer you&#39;re gonna \u00A0to be making because you don&#39;t have to sow your own freaking wheat seeds anymore, am I right? \u00A0Defaults to false.\r<br />\r<br />[b][u]seedDiscount[/u][/b]: defaults to 0, and can be 0-100. \u00A0Let&#39;s face it, with all the seeds you&#39;re going to be buying now, that 500g rebate from Pierre just isn&#39;t gonna cut it. \u00A0If he wants your business, he better start earning it.\r<br />\r<br />[b][u]whoChecks[/u][/b]: defaults to &#34;spouse&#34;. \u00A0Set it to a character like &#34;Pierre&#34; or &#34;Emily&#34;, in the game if you want them to report your costs and earnings after they&#39;ve harvested and replanted all your crops..\r<br />\r<br />[b][u]costPerCropHarvested[/u][/b]: the amount you are paying per harvested crop. \u00A0It defaults to 0.5. \u00A0If you think they deserve 15g an hour for picking artichokes, that&#39;s your business.\r<br />\r<br />[b][u]sellHarvestedCropsImmediately[/u][/b]:  defaults to false. \u00A0Setting this to &#39;true&#39; will allow you to immediately see the financial benefits of somebody else&#39;s hard labor. \u00A0If it&#39;s nighttime, or a Wednesday.. your harvester will drag Pierre from his bed down to the shop to accept receipt of your crops&#33; \u00A0If this is set to false, and you don&#39;t have enough space in your inventory to receive them, you&#39;ll have to call your farm hand again after you&#39;ve cleared some room.\r<br />\r<br />[b][u]waterCrops[/u][/b]: defaults to false. \u00A0Your farm helper is going to be going around to every plant to see if it&#39;s ready to harvest anyway, why not have him take the water hose along with him? \u00A0Setting to &#34;true&#34; will water your crops as well as harvest them. \u00A0This will water even the crops that don&#39;t get harvested.\r<br />\r<br />[b][u]ignoreList[/u][/b]: is a bar-separated list of harvest ids (not seed ids&#33;) that you don&#39;t want harvested. \u00A0The default is\u00A0&#34;591|593|595|597|376&#34;, which were all the flowers I could think of-- that way your helper will know you&#39;ll be none too pleased if he goes near your beehives.\r<br />\r<br />[b][u]alwaysSellList[/u][/b]: a bar-separated list of harvest ids that you want to always sell.  This is an override if you want to disable &#34;sellHarvestedCropsImmediately&#34;, but there are some crops you would like to get rid of right way.\r<br />\r<br />[b][u]neverSellList[/u][/b]: a bar-separated list of harvest ids that you never want to sell.  This is the opposite of the alwaysSellList, if you want to set &#34;sellHarvestedCropsImmediately&#34; to true, but there are some things you&#39;d prefer to have pass through your inventory first.  If something ends up on both the alwaysSellList and the neverSellList, the alwaysSellList will take precedence.\r<br />\r<br />[b][u]chestCoords[/u][/b]: these are the coordinates for your default chest.  You can only carry so much, right?  Rather than your help telling you they&#39;ll come back after you&#39;ve cleared your inventory-- you tell them, &#34;No, put it in the chest.&#34;  Defaults to the 70,14 (the spot immediately to the left of the sell box.\r<br />\r<br />[b][u]bypassInventory[/u][/b]: If you want things to skip your inventory and go directly to the chest, then set this to true.\r<br />\r<br />[b][u]chestDefs[/u][/b]: This is a bar separated list of numbers that define chests specific to particular crops.  Maybe you want your grapes to go to the chest next to your kegs, and your strawberries to go to the chest by your preserves jar... or maybe you just have so many blueberries that you don&#39;t want them crowding out the rest of the crops in your default chest.  These are in the format: harvest id, x, y|harvest id, x, y|... so forth.  If a suitable chest cannot be located at the coordinates specified, the default chest will be tried... and then your inventory.\r<br />\r<br />[b][u]clearDeadPlants[/u][/b]: Set this to true if you want your helper to clear dead plants, especially handy around season changes.\r<br />\r<br />[b][u]smartReplantingEnabled[/u][/b]: This is an opt-in setting for experimental functionality encompassing my original vision for this mod. \u00A0I&#39;ll be honest with you-- I think this is working, but it&#39;s still somewhat experimental.\r<br />\r<br />Basically the idea is, you would never replant a field of 300 Starfruits on the 25th of summer, and you don&#39;t want your farm helper making expensive blunders like that too. If the crop can&#39;t be harvest again before the season changes (if it&#39;s not good for the next season), then after the last harvest the field will be left fallow for you to do with as you please.\r<br />\r<br />This does not apply to regenerating plants, which are left indefinitely.  Ideally the calculations take into account your farming level (something might take only 11 days instead of 13). \u00A0[b][u]I have not tested whether it takes into account fertilizers like speed-gro.[/u][/b]  Anyway, back up your saves regularly if you want to try this feature out, and enable this setting at your own risk. \u00A0Really, the worst that could happen is that one of your fields gets cut down before its prime.. but that&#39;s not cool to some people.\r<br />\r<br />Eventually this setting will become the default, and the opposite will be a configuration setting for users that use All-Crops-All-Season type mods.\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Customization[/b][/color][/size][/font][/color]\r<br />\r<br />The dialog.xnb file will allow you to customize the dialog to your liking. \u00A0I&#39;ve also included the dialog.yaml source file, but the mod\u00A0will read it from the XNB file. \u00A0If you don&#39;t know how to do it, google\u00A0&#34;how to unpack and repack stardew valley mods&#34;. \u00A0Anyway...\r<br />\u00A0\r<br />The dialogue elements are arranged in a name_index format.\u00A0If the name starts with a capital &#39;X&#39;, that means those messages need to\u00A0stay roughly in that order and in the same format for the dialog to make sense.\u00A0\u00A0The number is important.\r<br />\u00A0\r<br />All other elements can be added to, and modified because they are used randomly at the appropriate place in the dialogue. \u00A0You have to\u00A0use the same &#34;name&#34; from the &#34;name_id&#34; that are already in\u00A0the file, but you can add to and remove so long as all the numbers in a\u00A0particular group are unique.\r<br />\u00A0\r<br />Also you&#39;ll see that I added a few names down at the bottom,&#34;Shane_1&#34;, &#34;Shane_2&#34;, &#34;Leah_1&#34;, for example.\u00A0\u00A0You can add any other Stardew characters dialog to the file in that same\u00A0format. \u00A0Those dialogues will be merged in with the &#34;smalltalk&#34;\u00A0group if your &#34;whoChecks&#34; is set to one of the characters.\r<br />\u00A0\r<br />Most of the notation that existing SDV dialogs use will work(for example @ is replaced by the name of the farmer). \u00A0There&#39;s also\u00A0notation added to use values from this mod in the dialog, they are (along with\u00A0a description)\r<br />\u00A0\r<br />[b]%%cropsHarvested%%[/b]\u00A0\u00A0- \u00A0The total number of crops that were harvested.\r<br />[b]%%runningSeedCost%%[/b]\u00A0\u00A0- \u00A0The cost of seeds for all crops replanted.\r<br />[b]%%runningSellPrice%%[/b]\u00A0\u00A0- \u00A0The total sell price for all crops harvested.\r<br />[b]%%runningLaborCost%%[/b]\u00A0\u00A0- \u00A0The total cost of labor.\r<br />[b]%%totalCrops%%[/b]\u00A0\u00A0- \u00A0The total number of crops that were tended to in some way.\r<br />[b]%%cropsWatered%%[/b]\u00A0\u00A0- \u00A0The number of crops that were watered.\r<br />[b]%%totalCost%%[/b]\u00A0\u00A0- \u00A0The total cost of seeds and labor.\r<br />[b]%%numUnharvested%%[/b]\u00A0\u00A0- \u00A0The number of crops that weren&#39;t able to be harvested.\r<br />[b]%%checker%%[/b]\u00A0\u00A0- \u00A0The name of the checker specified in whoChecks.\r<br />[b]%%spouse%%[/b]\u00A0\u00A0- \u00A0The farmer&#39;s spouse&#39;s name (if married), the value of whoChecks otherwise.\r<br />\u00A0\r<br />The dialog groups in the file, and a quick explanation of when each are used:\r<br />\u00A0\r<br />Xdialog - Some specific dialogs used when the spouse or non-character harvest the fields.\r<br />greeting - Greetings the checker will use when addressing the farmer.\r<br />smalltalk & character names - Comments that are thrown in at the end of most conversations.\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Notes[/b][/color][/size][/font][/color]\r<br />\r<br />[s]I haven&#39;t tested whether this harvests the greenhouse yet, it probably doesn&#39;t. \u00A0Planned for a future release.[/s] \u00A0Greenhouse should now work&#33;\r<br />\r<br />This may leave you with a zero balance, but your employee won&#39;t care yet. \u00A0Also planned for a future release.\r<br />\r<br />This doesn&#39;t harvest giant crops. \u00A0If you want to grow giant crops, you can harvest them and replant them yourself. \u00A0May look into this in a future release.\r<br />\r<br />[s]No crops are protected from your harvester. \u00A0I&#39;m planning on adding a list of protected crops to the config-- my harvester killed all my honey flowers :([/s] \u00A0You can protect specific crops now&#33;\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]\r<br />Changelog[/b][/color][/size][/font][/color]\r<br />\r<br />1.0.0 Initial release\r<br />1.0.1 Fixed null pointer when looking up seeds (if you had sunflowers, you&#39;ll know what this was about), added some additional features. \u00A0Added some error checks to fail more gracefully.\r<br />1.0.2 Added a whole bunch of new features, basically just begging for more bugs. \u00A0Added harvesting of fruit trees.\r<br />1.0.3 Fixed a bug (I hope) where the dialogues would not load if your mods are located somewhere other than your Stardew Valley/Mods folder.\r<br />1.0.4 Fixed a bug that allowed infinite reharvesting of renewable plants.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/589",
+	"Version": "1.0.5",
+	"Updated": "2018-07-10T12:36:41+00:00",
+	"Downloads": [
+		{
+			"Id": 5151,
+			"Type": "Main",
+			"DisplayName": "Replanter.1.0.5.zip",
+			"FileName": "Replanter.1.0.5.zip-589-1-0-5.zip",
+			"Description": "Updated for SMAPI 2.0",
+			"Version": "1.0.5",
+			"SizeInBytes": 33598,
+			"Uploaded": "2017-08-12T13:42:47+00:00",
+			"Mods": [
+				{
+					"Id": "jwdred.Replanter",
+					"DisplayName": "Replanter",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "Replanter",
+						"Description": "Harvest and replant fields that are ready.",
+						"Author": "jwdred",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "1.15.0",
+						"EntryDll": "Replanter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "jwdred.Replanter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342391839,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 10064,
+			"Type": "Main",
+			"DisplayName": "Replanter.1.1.zip",
+			"FileName": "Replanter.1.1.zip-589-1-1.zip",
+			"Description": "For Stardew Valley 1.3",
+			"Version": "1.1",
+			"SizeInBytes": 33957,
+			"Uploaded": "2018-07-10T12:36:41+00:00",
+			"Mods": [
+				{
+					"Id": "jwdred.Replanter",
+					"DisplayName": "Replanter",
+					"Type": "Smapi",
+					"RelativePath": "Replanter",
+					"Manifest": {
+						"Name": "Replanter",
+						"Description": "Harvest and replant fields that are ready.",
+						"Author": "jwdred",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "2.6.0-beta",
+						"EntryDll": "Replanter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:589"
+						],
+						"UniqueId": "jwdred.Replanter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342396752,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387277,
+		"UploaderId": 35568295,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

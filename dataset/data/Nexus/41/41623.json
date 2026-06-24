@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 41623,
+	"Name": "Stardew Games Menu",
+	"Author": "aedenthorn",
+	"Description": "[b][size=5]Playing Games[/size][/b]\n<br />\n<br />Games menu can be accessed via a new play button in the bottom right corner of the Title Menu, above existing buttons (see screenshots above).\n<br />\n<br />The mod comes with Junimo Cart and Journey of the Prairie King pre-installed so you can play them without loading into a save.\n<br />\n<br />An example of a game that works with this menu is [url=https://www.nexusmods.com/stardewvalley/videos/586]Jigsaw Puzzle[/url].\n<br />\n<br />\n<br />[b][size=5]Making Games[/size][/b]\n<br />\n<br />Modders can add games to the menu by accessing the mod's API, setting custom methods for clicking and drawing, e.g.:\n<br />\n<br />[code]public interface IStardewGamesAPI\n<br />{\n<br />\u00A0 \u00A0 public void AddGame(string name, Action&lt;Rectangle, int, int&gt; clickAction, Action&lt;SpriteBatch, Rectangle&gt; drawAction);\n<br />\u00A0 \u00A0 public void ReturnToMenu();\n<br />}\n<br />public void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)\n<br />{\n<br />\u00A0 \u00A0 var sgapi = Helper.ModRegistry.GetApi&lt;IStardewGamesAPI&gt;(\"aedenthorn.StardewGames\");\n<br />\u00A0 \u00A0 if (sgapi != null)\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 sgapi.AddGame(context.ModManifest.UniqueID, ClickAction, DrawAction);\n<br />\u00A0 \u00A0 }\n<br />}\n<br />private void DrawAction(SpriteBatch b, Rectangle area)\n<br />{\n<br />\u00A0 \u00A0 ...\n<br />}\n<br />private void ClickAction(Rectangle area, int x, int y)\n<br />{\n<br />\u00A0 \u00A0 ...\n<br />}\n<br />[/code]\n<br />\n<br />The API passes the rectangle bounds on the screen of the game's slot to both methods, and relative click position x and y coordinates to the click action (allowing for multiple buttons, etc.).\n<br />\n<br />\n<br />[b][size=5]Technical\n<br />[/size][/b]\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41623",
+	"Version": "0.1.0",
+	"Updated": "2026-01-25T08:51:56+00:00",
+	"Downloads": [
+		{
+			"Id": 154791,
+			"Type": "Main",
+			"DisplayName": "Stardew Games",
+			"FileName": "Stardew Games-41623-0-1-0-1769331116.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 161211,
+			"Uploaded": "2026-01-25T08:51:56+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.StardewGames",
+					"DisplayName": "Stardew Games",
+					"Type": "Smapi",
+					"RelativePath": "StardewGames",
+					"Manifest": {
+						"Name": "Stardew Games",
+						"Description": "Stardew Games.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewGames.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:41623"
+						],
+						"UniqueId": "aedenthorn.StardewGames"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342541479,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428311,
+		"UploaderId": 18901754,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 20843,
+	"Name": "Grandma's Farm",
+	"Author": "twilightdvsn",
+	"Description": "[size=4][b]Grandma's Farm[/b][/size]\n<br />[line]\n<br />Grandma's Farm is a custom farm map, compatible with the 1.6 update and Stardew Valley Expanded.\n<br />There is an area for [color=green]foraging[/color] with hardwood stumps that respawn every day (unless their tile is covered after being cut down), an area for [color=brown]mining[/color] with rocks that spawn based on your mining level, and 3 different [color=blue]fishing[/color] areas.\n<br />\n<br />The fishing areas are pretty straight forward, the mountain lake fish will be in the lake towards the top left, the river fish will be in the river to the right of the house, and the ocean fish will be in the water at the beach to the bottom right.\n<br />\n<br />FOR THIS TO WORK I ADDED A NEW DEPENDENCY THAT YOU WILL HAVE TO DOWNLOAD\n<br />\n<br />This map has [color=red]2[/color] versions, one that is compatible with SVE, with shortcuts to the secret woods, Grandpa's shed, and the path to the Cindersap Forest behind the large tree.\n<br />The other one has those paths closed off. You can switch between these in the config.json file, or in [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]. [u]The default is the SVE version[/u].\n<br />\n<br />ONLY REPLACES STANDARD FARM.\n<br />\n<br />This map uses two tilesheets that you need to download, DaisyNiko's and Xiddav's. In the SMAPI terminal, it will probably warn you about them not being updated for 1.6, but the map should still work just fine. You also need Farm Type Manager. These will be in the required tab above.\n<br />\n<br />Directions:\n<br />1. Download the dependencies in the required tab\n<br />2. Download this mod\n<br />3. Extract the folder into your Mods folder. NOTE: You will see that inside the parent folder there is another CP folder and FTM folder, just keep those folders in there.\n<br />\n<br />Also, thank you to FlashShifter for allowing me to use some files from SVE, and to glymr for all the help throughout the way &lt;3\n<br />\n<br />NOTES FOR SVE:\n<br />The original warp point for the nexus portal on your farm will be in a different spot than the farm teleport spawn. Follow these directions to fix it:\n<br />1. Go to your mods\n<br />2. Open up to the config file: Stardew Valley Expanded-&gt;[CP] Stardew Valley Expanded-&gt;config\n<br />3. On line 3, for the \"EnchantedGroveWarpX\", change the number to 52\n<br />4. Leave line 4 the same\n<br />5. You're done!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/20843",
+	"Version": "1.2.0",
+	"Updated": "2024-04-04T22:18:57+00:00",
+	"Downloads": [
+		{
+			"Id": 89117,
+			"Type": "Main",
+			"DisplayName": "Grandma's Farm",
+			"FileName": "Grandma's Farm-20843-1-2-0-1712269137.zip",
+			"Description": "Fishing zones should now work, new dependency you must download though! The respective areas will house mountain lake, river, and ocean fish now. Also fixed up the map for grandpa's shed",
+			"Version": "1.2.0",
+			"SizeInBytes": 54910,
+			"Uploaded": "2024-04-04T22:18:57+00:00",
+			"Mods": [
+				{
+					"Id": "twilight.GrandmasFarm",
+					"DisplayName": "Grandma's Farm",
+					"Type": "ContentPack",
+					"RelativePath": "Grandma's Farm\\[CP] Grandma's Farm",
+					"Manifest": {
+						"Name": "Grandma's Farm",
+						"Description": "A farm map with areas for advancing all skills (except combat), including paths that are SVE compatible.",
+						"Author": "twilightdvsn",
+						"Version": "1.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DaisyNiko.Tilesheets",
+								"MinimumVersion": "1.9.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "xiddav.tilesheet",
+								"MinimumVersion": "1.0.5",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Esca.EMP",
+								"MinimumVersion": "1.2.3",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:20843"
+						],
+						"UniqueId": "twilight.GrandmasFarm"
+					}
+				},
+				{
+					"Id": "twilight.FarmFTM",
+					"DisplayName": "Farm Spawning Locations",
+					"Type": "ContentPack",
+					"RelativePath": "Grandma's Farm\\[FTM] Grandma's Farm",
+					"Manifest": {
+						"Name": "Farm Spawning Locations",
+						"Description": "Sets the forage area to only around the stumps, makes stumps and ore respawn everyday.",
+						"Author": "twilightdvsn",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.10.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "twilight.FarmFTM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342475805,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407531,
+		"UploaderId": 115231878,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

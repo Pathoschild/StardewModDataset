@@ -1,0 +1,71 @@
+{
+	"Site": "Nexus",
+	"Id": 17661,
+	"Name": "Content Patcher Editor",
+	"Author": "aedenthorn",
+	"Description": "This mod is an attempt to facilitate the process of creating and maintaining Content Patcher mods via a user-friendly in-game menu.\n<br />\n<br />\n<br />[b][size=5]Usage[/size][/b]\n<br />\n<br />Open the menu using a hotkey combination (default [b]LeftShift + RightBracket[/b]) or by clicking the tree button in the bottom left of the Title Menu.\n<br />\n<br />The main menu shows a list of installed Content Patcher packs. \n<br />\n<br />You can add a new, empty Content Patcher pack by pressing the green plus button.\n<br />\n<br />Clicking on a pack name opens the pack edit menu.\n<br />\n<br />\n<br />[b][size=5]Menu[/size][/b]\n<br />\n<br />The edit menu has three tabs. \n<br />\n<br />The [b]Manifest [/b]tab lets you edit most of the fields in the mod's manifest.json file. \n<br />\n<br />The [b]Changes [/b]tab lets you edit and add Content Patcher changes. See the [url=https://github.com/Pathoschild/StardewMods/blob/stable/ContentPatcher/docs/author-guide.md#actions]Content Patcher Action documentation[/url] for more info on each type and field.\n<br />\n<br />The [b]Config[/b] tab lets you edit and add config variables. Se the [url=https://github.com/Pathoschild/StardewMods/blob/stable/ContentPatcher/docs/author-guide/config.md]Content Patcher Config documentation[/url] for more info.\n<br />\n<br />\n<br />[b][size=5]Buttons[/size][/b]\n<br />\n<br />There is a [b]Back[/b] button in the top left to return to the packs list.\n<br />\n<br />There are [b]Add[/b] buttons in the bottom right on the [b]Changes[/b] and [b]Config[/b] tabs to add new changes and config variables.\n<br />\n<br />There are [b]Zip, Reload[/b], and [b]Folder[/b] buttons on the left side of the bottom bar to create a zip file of the pack in the Mods folder, reload the pack (causing Content Patcher to recognize your changes immediately), and open the pack's file folder in explorer.\n<br />\n<br />There are [b]Save[/b] and [b]Revert[/b] buttons that appear in the middle of the bottom bar when a content pack has been changed. [b]Revert[/b] erases all unsaved changes.\n<br />\n<br />\n<br />[b][size=5]Config[/size][/b]\n<br />\n<br />You can change the hotkey combination to open the menu in the config.\n<br />\n<br />By default, backup files are created when you save a changed content pack. You can turn this off in the config.\n<br />\n<br />You can change the config by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[b][size=5]Limitations[/size][/b]\n<br />\n<br />The [b]Reload[/b] button uses Content Patcher's [b]patch reload[/b] command, which may have limitations on what can be reloaded (config, tokens, etc.) in-game.\n<br />\n<br />In the [b]Manifest [/b]tab, [b]Dependencies[/b] can't yet be edited using the menu.\n<br />\n<br />In the [b]Changes[/b] tab, for [b]EditData[/b] type, only [b]Entries [/b]has been implemented. For [b]EditMap[/b] type, [b]TextOperations[/b] hasn't been implemented.\n<br />\n<br />For [b]EditData[/b],\u00A0 only [b]Entries [/b]that have string values are editable at the moment - other values will appear as blanks but should be preserved even if you edit the key and save the mod.\n<br />\n<br />The mod uses the version of Content Patcher installed on your machine when creating a new [b]Format[/b] field.\n<br />\n<br />This mod is new and hasn't been rigorously tested. Please report any bugs or issues.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17661",
+	"Version": "0.5.2",
+	"Updated": "2023-09-13T15:31:29+00:00",
+	"Downloads": [
+		{
+			"Id": 75884,
+			"Type": "Main",
+			"DisplayName": "Content Patcher Editor",
+			"FileName": "Content Patcher Editor-17661-0-5-2-1694619089.zip",
+			"Description": "Changes:\n<br /><br />Added option to set mods folder",
+			"Version": "0.5.2",
+			"SizeInBytes": 61335,
+			"Uploaded": "2023-09-13T15:31:29+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.ContentPatcherEditor",
+					"DisplayName": "Content Patcher Editor",
+					"Type": "Smapi",
+					"RelativePath": "ContentPatcherEditor",
+					"Manifest": {
+						"Name": "Content Patcher Editor",
+						"Description": "Content Patcher Editor.",
+						"Author": "aedenthorn",
+						"Version": "0.5.2",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "ContentPatcherEditor.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:17661"
+						],
+						"UniqueId": "aedenthorn.ContentPatcherEditor",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "ContentPatcherEditor"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342462572,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342404349,
+		"UploaderId": 18901754,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

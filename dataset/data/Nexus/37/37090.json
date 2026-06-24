@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 37090,
+	"Name": "Spouse House Unlocker",
+	"Author": "chelin00",
+	"Description": "[size=5]What this mod does[/size][list]\n<br />[*]Removes the [b]time lock on exterior doors[/b] of the [b]original home[/b] of any NPC you’re married to.\n<br />[*]Works with [b]multiple spouses[/b]: all married NPCs’ homes are unlocked for you.\n<br />[*][b]Does not[/b] change bedroom/inner room locks (the vanilla 2-heart rule still applies).\n<br />[*][b]Auto-detects[/b] your current spouses from the save; [b]no config required[/b] for normal use.\n<br />[*]Compatible with content packs that alter door actions (parses common [code]LockedDoorWarp[/code] formats).\n<br />[*]Optional [b]door sound[/b] when entering.\n<br />[/list]Tested with [b]Stardew Valley 1.6.x[/b] and [b]SMAPI 4.3.x[/b].\n<br />\n<br />[size=4]Requirements[/size][list]\n<br />[*]SMAPI 4.3.x\n<br />[*]Stardew Valley 1.6.x\n<br />[/list][size=4]Installation[/size][list=1]\n<br />[*]Unzip to [code]Stardew Valley/Mods[/code]\n<br />\n<br />\n<br />[*]Launch the game through SMAPI.\n<br />\n<br />[/list][size=5]How it works (technical)[/size]\n<br />The mod applies a Harmony prefix to [code]GameLocation.performAction[/code]. When a tile action contains a [code]LockedDoorWarp …[/code] for your spouse’s home, it consumes the event and warps you inside—bypassing the time check. It leaves all other actions intact and never edits schedules or hearts.\n<br />\n<br />[size=5]Configuration (optional)[/size]\n<br />[code]Mods/SpouseHomeUnlocker/config.json[/code]\n<br />\n<br />{\n<br />\u00A0 \"SpouseToHomes\": {\n<br />\u00A0 \u00A0 // Optional overrides. Only needed if a content pack renames maps.\n<br />\u00A0 \u00A0 // \"Harvey\": [\"Hospital\"]\n<br />\u00A0 },\n<br />\u00A0 \"PlayDoorSound\": true,\n<br />\u00A0 \"DoorSound\": \"doorClose\"\n<br />}\n<br />\n<br />[list]\n<br />[*][b]SpouseToHomes[/b]: Add or replace map names if a pack changes them.\n<br />[*][b]PlayDoorSound/DoorSound[/b]: Toggle and choose the cue name (e.g., [code]doorClose[/code], [code]doorCreak[/code]). Cue names may vary by setup.\n<br />[/list]\n<br />[size=5]Compatibility[/size][list]\n<br />[*][b]Content Patcher packs[/b] (e.g., Immersive Spouses): supported; the parser handles reordered tokens like [code]LockedDoorWarp 7 9 LeahHouse 1000 1800 Leah 500[/code].\n<br />[*][b]Other Harmony mods[/b] touching [code]performAction[/code]: usually fine. This mod runs with [b]VeryHigh[/b] priority, but if another mod cancels the action before ours, it can block unlocking.\n<br />[*][b]Multiplayer[/b]: not specifically tested; likely host-only behavior. (Unknown.)\n<br />[*]\n<br />[/list][size=5]Limitations / Non-goals[/size][list]\n<br />[*]Only exterior “locked” doors to spouse [b]original homes[/b] are unlocked.\n<br />[*]Does [b]not[/b] bypass bedroom doors (vanilla heart gates remain).\n<br />[*]Does [b]not[/b] change NPC schedules, pathing, mail, or festivals.\n<br />[*]\n<br />[/list][size=5]Troubleshooting[/size][list]\n<br />[*]Door still locked?\n<br />[list]\n<br />[*]Check the SMAPI console; you should see lines like:\n<br />[code][SHU] action='LockedDoorWarp …'[/code] and [code]unlocking → warp to &lt;Map&gt; (X,Y)[/code].[*]If you see [code]targetMap='…' is not for any married spouse.[/code], the map name likely differs—add it under [code]SpouseToHomes[/code].\n<br />[/list][*]No sound: set [code]\"PlayDoorSound\": true[/code] and try another [code]\"DoorSound\"[/code] cue.\n<br />[/list]\n<br />[size=5]Credits &amp; permissions\n<br />\n<br />[/size][list]\n<br />[*]You may translate and share config examples; please link back to this page. Reuse of code is fine with credit.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37090",
+	"Version": "1-0-0",
+	"Updated": "2025-08-28T07:11:01+00:00",
+	"Downloads": [
+		{
+			"Id": 141326,
+			"Type": "Main",
+			"DisplayName": "Spouse House Unlocker",
+			"FileName": "Spouse House Unlocker-37090-beta-0-6-1756365061.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 8537,
+			"Uploaded": "2025-08-28T07:11:01+00:00",
+			"Mods": [
+				{
+					"Id": "chelin00.SpouseHomeUnlocker",
+					"DisplayName": "Spouse House Unlocker",
+					"Type": "Smapi",
+					"RelativePath": "SpouseHomeUnlocker-0-6",
+					"Manifest": {
+						"Name": "Spouse House Unlocker",
+						"Description": "Allows you to freely enter your spouse’s original home even if the door is locked.",
+						"Author": "chelin00",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpouseHomeUnlocker.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "chelin00.SpouseHomeUnlocker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528014,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423778,
+		"UploaderId": 252361752,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

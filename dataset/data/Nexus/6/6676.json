@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 6676,
+	"Name": "UV Index (Sunscreen Mod)",
+	"Author": "Jonqora",
+	"Description": "[size=6][b]UV Index (Sunburn Mod)[/b][/size]\n<br />\n<br />This mod adds functional sunscreen to the game that protects you from sunburn. If you spend too long outdoors without sunscreen on a sunny day, you'll get sunburnt... but it won't show up until the next day!\n<br />\n<br />Sunburn will temporarily change your character's skin color. [b][color=#e06666]NPC villagers who see your tomato-red skin will react in shock![/color][/b] Each villager has a unique set of randomized reactions.\n<br />\n<br />Active sunburn damage lowers your starting health and energy for the day and gives you a slight speed debuff. More severe sunburn damage will take longer to heal (up to 3 days without treatment).\n<br />\n<br />[i]\u00A0 \u00A0 NOTE: If you only want the skin color changes, you can configure this mod to disable any debuffs.[/i]\n<br />\n<br />Watch the weather channel on TV to be notified of sun conditions for the next day. Higher UV index means greater sunburn risk and faster burn development. UV intensity is semi-randomly determined and is influenced by season, weather conditions, and time of day. Early mornings or evenings spent outside should be very low-risk even on the worst days. But during midday and summer afternoons... [i]watch out[/i].\n<br />\n<br />You can buy protective Sunscreen lotion from Harvey's shop for 100g. You can also buy Aloe Vera Gel (500g), which you can use to treat a sunburn to speed your healing process and reverse [i]some[/i] of the damage.\n<br />\n<br />\n<br />(If you uninstall this mod while still sunburnt, your character's skin color and everything else will return to normal.)\n<br />\n<br />\n<br />[b][size=3]Translation Support[/size][/b]\n<br />This mod is designed with full translation support! If you would like to help translate this mod to other languages, you can [url=https://github.com/StardewModders/mod-translations/issues/33]contribute here[/url]. Submitted translations will be included in future mod updates.\n<br />\n<br />\n<br />[b][size=5][center]User Information[/center][/size][/b][size=4][b]COMPATIBILITY[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley v1.4 or later;\n<br />[*]Linux, Mac, Windows, and Android.\n<br />[*]Single-player and multiplayer. Can be installed by some OR all players - see Multiplayer section for details.\n<br />[/list]\n<br />[size=4][b]INSTALLATION[/b][/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io/]Install the latest version of SMAPI.[/url]\n<br />[*]Install the latest version of [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets.[/url]\n<br />[*]Download this mod from the link in the header above.\n<br />[*]Unzip the mod and place the [code]UVIndex[/code] folder inside your [code]Mods[/code] folder.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=4][b]USING THE MOD[/b][/size]\n<br />The mod should be active as soon as you've installed it correctly. You can check the TV weather channel to see the UV forecast, and you can buy SPF60 Sunscreen and Aloe Vera Gel lotions from Harvey's clinic. When you take sun damage, it will show up as a sunburn [b]the following day[/b]. Then you can run around town as red as a lobster and see all the villager reactions. ;)\n<br />\n<br />\n<br />[center][b][size=5]Multiplayer[/size][/b][/center]UV Index mod should be fully multiplayer-compatible. (If you find bugs, please report them in the comments section!) All features of this mod should work even if you are the only person who uses it! This mod only affects gameplay for players who install it.\n<br />\n<br />To make sure the skin colors used for sunburned players are synced in multiplayer, use the [code]BurnSkinColorIndex[/code] config setting. Choose three unique skin color values (ranging from 1-24); be sure to choose skin color choices that are not already being used for any player character! Make sure all players who are using the mod have the same skin color values in their UV Index config, arranged in the same order. Then you should be able to see each others' sunburns properly.\n<br />\n<br />If you want to see and poke fun at other players' sunburns but don't want to get sunburnt yourself, you can install this mod and set [code]EnableSunburn[/code] in the config to [code]false[/code].\n<br />\n<br />\n<br />[size=5][center][b]Config Settings[/b][/center][/size]After running SMAPI at least once with UV Index installed, a [code]config.json[/code] file will be created inside the [code]UVIndex[/code] mod folder. Open it in any text editor to change your config settings for UV Index.\n<br />\n<br />[b]Optional:[/b] UV Index mod includes [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (GMCM) support. If you download this optional mod, you can use a settings button in the Stardew Valley menu screen to change your UV Index config while the game is running.\n<br />\n<br />[b][size=3]EnableSunburn:[/size][/b]\n<br />Enables all sunburn effects for the current player. Defaults to [code]true[/code].\n<br />(Turn this off if you're in multiplayer and want to see other players' sunburns but never get sunburnt yourself.)\n<br />[b][size=3]SunburnSeasons:[/size][/b]\n<br />Enables or disables sunburn chance during certain times of year. Defaults to [code]\"AllSeasons\"[/code].[list]\n<br />[*][code]\"SummerOnly\"[/code] - You can only get sunburnt on summer days.\n<br />[*][code]\"SpringSummerFall\"[/code] - You can get sunburnt during spring, summer, and fall; sunburn risk is highest in summer.\n<br />[*][code]\"AllSeasons\"[/code] - You can get sunburnt in any season, but sunburn risk in winter is very low.\n<br />[/list][b][size=3]WeatherReport:[/size][/b]\n<br />Reports tomorrow's maximum UV Index on the TV weather channel. Defaults to [code]true[/code].\n<br />[b][size=3]SkinColorChange:[/size][/b]\n<br />Changes player skin display color to an appropriate shade of red when sunburnt. Defaults to [code]true[/code].\n<br />[b][size=3]VillagerReactions:[/size][/b]\n<br />Villagers react in shock when they see a sunburnt player. Defaults to [code]true[/code].\n<br />\n<br />[b][size=3]SunscreenDuration:[/size][/b]\n<br />How long sunscreen protection will last after applying. Default is [code]3[/code] in-game hours. Should work as intended even with other mods like TimeSpeed.\n<br />[b][size=3]HealthLossPerLevel:[/size][/b]\n<br />Loss in new day starting health per level of sunburn damage (moderate sunburn is x2, severe sunburn is x3). Defaults to [code]20[/code].\n<br />[b][size=3]EnergyLossPerLevel:[/size][/b]\n<br />Loss in new day starting energy per level of sunburn damage (moderate sunburn is x2, severe sunburn is x3). Defaults to [code]50[/code].\n<br />[b][size=3]SunburnSpeedDebuff:[/size][/b]\n<br />Active sunburn (no matter what severity) gives a [code]-1[/code] debuff to movement speed. Defaults to [code]true[/code].\n<br />\n<br />[b][size=3]BurnSkinColorIndex:[/size][/b]\n<br />[b]Only used in multiplayer.[/b] Specifies which skin color options to replace in-game and use for sunburnt players. Defaults to [code][ 19, 20, 21 ][/code]. (The original colors for the default values are red, purple, and yellow - UV Index mod changes them to red, dark red, and even darker red.)\n<br />\n<br />[b][size=3]DebugMode:[/size][/b]\n<br />Logs noisy info messages to the SMAPI console for Jonqora to stress over. Defaults to [code]false[/code].\n<br />\n<br />\n<br />[b][size=5][center]Notes[/center][/size][/b][size=4][b]ACKNOWLEDGEMENTS\n<br />[/b][/size][list]\n<br />[*][i]Created for the Stardew Valley Discord Summer 2020 modding contest![/i]\n<br />[*]Many thanks to [url=https://twitter.com/himetarts]Hime[/url] for volunteering to create the new sunscreen and aloe gel sprites!\n<br />[*]Thanks to [url=https://www.nexusmods.com/stardewvalley/users/2920064]Sakorona[/url] for sharing some helpful time-wrangling C# code!\n<br />[*]Much gratitude to ConcernedApe and [url=https://www.nexusmods.com/stardewvalley/users/1552317?tab=user+files]Pathoschild[/url].\n<br />[*]Thanks to those who provided help and support in the [url=https://discordapp.com/invite/StardewValley]Stardew Valley Discord[/url] #making-mods channel.\n<br />[/list]\n<br />[b][size=4]SEE ALSO[/size][/b][list]\n<br />[*]Help [url=https://github.com/StardewModders/mod-translations/issues/33]translate[/url]\uFEFF this mod to other languages\n<br />[*]Source code on [url=https://github.com/Jonqora/StardewMods/tree/master/SunscreenMod]GitHub[/url]\n<br />[*]Check out [url=https://www.nexusmods.com/users/88107803?tab=user+files]my other mods[/url]!\n<br />[/list]\n<br />[size=1]Tiny reminder: endorse the mod if you like it. It means more people will see it, and it makes the author happy. :)[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6676",
+	"Version": "1.0.1",
+	"Updated": "2020-08-31T09:01:49+00:00",
+	"Downloads": [
+		{
+			"Id": 30810,
+			"Type": "Main",
+			"DisplayName": "UV Index v1.0.1",
+			"FileName": "UV Index v1.0.1-6676-1-0-1-1598864509.zip",
+			"Description": "[b]Requires SMAPI v3.5.0 or higher.[/b] Unzip and place inside [code]Mods[/code] folder to install.\n<br />[i]Changelog v1.0.1: A few bug fixes and various code improvements.[/i]",
+			"Version": "1.0.1",
+			"SizeInBytes": 81691,
+			"Uploaded": "2020-08-31T09:01:49+00:00",
+			"Mods": [
+				{
+					"Id": "Jonqora.UVIndex",
+					"DisplayName": "UV Index (Sunscreen Mod)",
+					"Type": "Smapi",
+					"RelativePath": "UVIndex",
+					"Manifest": {
+						"Name": "UV Index (Sunscreen Mod)",
+						"Description": "(Sunscreen Mod) Apply sunscreen on sunny days... or you'll get sunburnt!",
+						"Author": "Jonqora",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.5.0",
+						"EntryDll": "SunscreenMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"MinimumVersion": "1.3.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6676"
+						],
+						"UniqueId": "Jonqora.UVIndex"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342417498,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393364,
+		"UploaderId": 88107803,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

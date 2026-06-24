@@ -1,0 +1,93 @@
+{
+	"Site": "Nexus",
+	"Id": 45699,
+	"Name": "Stardew Hydraulics",
+	"Author": "Alcalina",
+	"AuthorLabel": "Alca256",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Hydraulics adds an underground-style irrigation network to Stardew Valley, letting you place pipes and connect water pumps to automatically water farmland based on available flow and power.[/color]\n<br />\n<br />[size=4][b]Installation Instructions[/b][/size]\n<br />[list=1]\n<br />[*][color=#D4D4D8]Install the latest version of SMAPI 4.5.2+.[/color][/*]\n<br />[*][color=#D4D4D8]Install Content Patcher.[/color][/*]\n<br />[*][color=#D4D4D8]Download and unzip Hydraulics.[/color][/*]\n<br />[*][color=#D4D4D8]Place the Hydraulics folder inside your Stardew Valley/Mods folder.[/color][/*]\n<br />[*][color=#D4D4D8]Launch the game through SMAPI.[/color][/*]\n<br />[/list][size=4][b]Main Features[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Build and remove irrigation pipes on the main farm (also works on Beach Farm).[/color][/*]\n<br />[*][color=#D4D4D8]Place tiered water pumps (Bronze, Steel, Gold, Iridium).[/color][/*]\n<br />[*][color=#D4D4D8]Automatic watering based on network flow.[/color][/*]\n<br />[*][color=#D4D4D8]Optional energy requirement for pumps.[/color][/*]\n<br />[*][color=#D4D4D8]Configurable build costs, refunds, and per-tile water cost.[/color][/*]\n<br />[*][color=#D4D4D8]Pipe edit mode with in-world overlays.[/color][/*]\n<br />[*][color=#D4D4D8]Multiplayer sync support (not fully tested yet — please report issues).[/color][/*]\n<br />[*][color=#D4D4D8]GMCM integration for in-game configuration.[/color][/*]\n<br />[/list][size=4][b]How to Use[/b][/size]\n<br />[color=#D4D4D8]Hydraulics creates an underground irrigation network using [b]pipes + pumps[/b].\n<br />Once set up, crops on connected pipe tiles are watered automatically.[/color]\n<br />\n<br />[color=#D4D4D8][b]1) Controls (default keys)[/b][/color]\n<br />[list]\n<br />[*][color=#D4D4D8]Toggle Pipe Edit Mode: [b]End[/b][/color][/*]\n<br />[*][color=#D4D4D8]Reload config in-game: [b]F5[/b][/color][/*]\n<br />[/list][color=#D4D4D8][b]2) Pipe Edit Mode[/b]\n<br />When Pipe Edit Mode is ON:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]Left click: place pipe on a valid tile.[/color][/*]\n<br />[*][color=#D4D4D8]Right click: remove existing pipe (refund applies).[/color][/*]\n<br />[*][color=#D4D4D8]Placement/removal is blocked if the player cannot act (menu open, dialogue, etc.).[/color][/*]\n<br />[*][color=#D4D4D8]Pipe placement is only allowed on valid farm tiles.[/color][/*]\n<br />[*][color=#D4D4D8]Pipes cannot be placed on tiles occupied by pumps.[/color][/*]\n<br />[/list][color=#D4D4D8][b]3) Pump Interactions[/b]\n<br />When Pipe Edit Mode is OFF:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8][b]Right click a pump[/b] to trigger a local irrigation refresh.[/color][/*]\n<br />[*][color=#D4D4D8]Using a hoe on a pipe tile can also trigger irrigation sync.[/color][/*]\n<br />[/list][color=#D4D4D8][b]4) How Watering Works[/b]\n<br />The network is recalculated and applied:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]At day start.[/color][/*]\n<br />[*][color=#D4D4D8]After relevant edits/changes.[/color][/*]\n<br />[*][color=#D4D4D8]After pump/object updates.[/color][/*]\n<br />[/list][color=#D4D4D8]If it is raining, daily irrigation is skipped.\n<br />A tile is watered only if:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]It has a pipe with water flow.[/color][/*]\n<br />[*][color=#D4D4D8]And it contains tilled soil/crops.[/color][/*]\n<br />[/list][color=#D4D4D8][b]5) Power / Energy Behavior[/b][/color]\n<br />[list]\n<br />[*][color=#D4D4D8]If [b]RequireEnergyForPumps = true[/b], pumps need valid power conditions to produce flow.[/color][/*]\n<br />[*][color=#D4D4D8]If disabled, pumps can provide flow without energy requirements.[/color][/*]\n<br />[/list][color=#D4D4D8][b]6) Visual Overlays and Indicators[/b]\n<br />In Pipe Edit Mode:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]Pipe network overlay is shown.[/color][/*]\n<br />[*][color=#D4D4D8]Placement helper (valid/blocked tile color).[/color][/*]\n<br />[*][color=#D4D4D8]Subnetwork flow text (current/max flow).[/color][/*]\n<br />[/list][color=#D4D4D8]Pump status marker colors:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]Red: unpowered or no water near.[/color][/*]\n<br />[*][color=#D4D4D8]Yellow: powered but idle (no pipes connected or raining day).[/color][/*]\n<br />[*][color=#D4D4D8]Green: actively producing flow.[/color][/*]\n<br />[/list][color=#D4D4D8][b]7) Config Options[/b][/color]\n<br />[list]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Enabled mod` (default: `true`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Reload config key (default: `F5`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Toggle pipe edit mode key (default: `End`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Require energy for pumps (default: `true`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Pipe build gold cost (default: `100`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Pipe build copper ore cost (default: `2`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Pipe destroy gold refund (default: `50`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Pipe destroy copper ore refund (default: `1`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Water cost per tile (default: `0.25`)[/color][/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]Play sprinkler animation (default: `true`)[/color][/color][/*]\n<br />[/list][size=4][b]Quick Start[/b][/size]\n<br />[list=1]\n<br />[*][color=#D4D4D8]Press [b]End[/b] to enable Pipe Edit Mode.[/color][/*]\n<br />[*][color=#D4D4D8]Place pipes with left click.[/color][/*]\n<br />[*][color=#D4D4D8]Craft a pump (unlocked at Farming levels 2/4/6/8)[/color][/*]\n<br />[*][color=#D4D4D8]Place a pump connected to that network.[/color][/*]\n<br />[*][color=#D4D4D8]If energy mode is enabled, ensure power is available.[/color][/*]\n<br />[*][color=#D4D4D8]Sleep: irrigation applies automatically on non-rainy days.[/color][/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]SMAPI (minimum API version 4.5.2).[/color][/*]\n<br />[*][color=#D4D4D8]Stardew Valley 1.6.15 or newer.[/color][/*]\n<br />[*][color=#D4D4D8]Pathoschild.ContentPatcher (required dependency).[/color][/*]\n<br />[*][color=#D4D4D8](Optional) Generic Mod Config Menu for easier settings management.[/color][/*]\n<br />[/list][size=4][b]Shout Outs[/b][/size]\n<br />[color=#D4D4D8]Special thanks to the creators of these now-obsolete mods, which were a major source of inspiration for Hydraulics:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/10197]Utility Grid[/url][/color][/*]\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/10198]Simple Irrigation System[/url][/color][/*]\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/10205]Pipe Irrigation[/url][/color][/*]\n<br />[/list][color=#D4D4D8]Source code of my mods and maintained custom versions is available on [url=https://github.com/alca259/Mods-Game-StardewValley/tree/main/Hydraulics]my GitHub[/url].[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45699",
+	"Version": "3.1.1",
+	"Updated": "2026-05-06T21:22:27+00:00",
+	"Downloads": [
+		{
+			"Id": 166655,
+			"Type": "Main",
+			"DisplayName": "Hydraulics 3.1.3",
+			"FileName": "Hydraulics 3.1.3-45699-3-1-3-1778102547.zip",
+			"Description": "",
+			"Version": "3.1.3",
+			"SizeInBytes": 53100,
+			"Uploaded": "2026-05-06T21:22:27+00:00",
+			"Mods": [
+				{
+					"Id": "Alca259.Hydraulics",
+					"DisplayName": "Hydraulics",
+					"Type": "Smapi",
+					"RelativePath": "Hydraulics",
+					"Manifest": {
+						"Name": "Hydraulics",
+						"Description": "Adds a fully functional subterranean irrigation system to the game.",
+						"Author": "Alca259",
+						"Version": "3.1.3",
+						"MinimumApiVersion": "4.5.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "Hydraulics.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:alca259/Mods-Game-StardewValley",
+							"Nexus:45699"
+						],
+						"UniqueId": "Alca259.Hydraulics",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "Alca259.Hydraulics.Content",
+					"DisplayName": "Hydraulics Content",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Hydraulics Content",
+					"Manifest": {
+						"Name": "Hydraulics Content",
+						"Description": "Content Pack for Hydraulics water pump BigCraftable and recipe.",
+						"Author": "Alca259",
+						"Version": "3.1.3",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.5.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Alca259.Hydraulics",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:alca259/Mods-Game-StardewValley",
+							"Nexus:45699"
+						],
+						"UniqueId": "Alca259.Hydraulics.Content"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553343,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432387,
+		"UploaderId": 1523995,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

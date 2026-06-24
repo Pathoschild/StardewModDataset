@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 5361,
+	"Name": "SDV Game of Life",
+	"Author": "ubererdferkel",
+	"AuthorLabel": "Super Aardvark",
+	"Description": "This mod lets you play [url=https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life]Conway's Game of Life[/url] on your farm.  Watered dirt grows and dies in complex patterns.  Optionally allow it to hoe new tiles and even remove debris as it grows.\u00A0 Not very useful, but a bit of silly fun when you get tired of working.\u00A0 Retaining Soil can be especially fun, since you will wake up to a random starting pattern each day.\u00A0 Best not to play Game of Life after spending time watering all your crops, though!\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]How to use[/size]\n<br />Go to your farm, have some tilled dirt (the kind you can plant seeds in), water some of it, and play the Game of Life!\u00A0 Dry dirt with three adjacent watered spaces will become watered.\u00A0 Watered dirt with two or three adjacent watered spaces will stay watered.\u00A0 All other watered spaces will dry out.\u00A0 This happens once per second by default; the speed can be adjusted in game.\u00A0 Pause the Game of Life any time (Hold [b]L[/b] and press [b]P[/b]).\n<br />\n<br />[size=5]Key Bindings\n<br />[/size]Hold [b]L[/b] (configurable) and press one of the following.\u00A0 Pressing [b]L[/b] alone will show a reminder.\n<br />[list]\n<br />[*][size=2][b][code]P[/code][/b] : Play/Pause Game of Life[/size]\n<br />[*][size=2][b][code]+[/code][/b] : Increase speed (maximum 20 ticks per second)[/size]\n<br />[*][size=2][b][code]-[/code][/b] : Decrease speed (minimum 1 tick every 10 seconds)[/size]\n<br />[*][size=2][b][code].[/code][/b] : Step forward one tick[/size]\n<br />[/list]\n<br />[size=5]Configuration\n<br />[/size]After using the mod for the first time, [b]config.json[/b] will appear in the mod folder.\u00A0 Edit this file to control the mod's options.  You can change the modifier key from L to something else, change the default speed, allow Game of Life to till new dirt, and more.  Here's a sample config.json with comments explaining the options.\n<br />\n<br />[spoiler]\n<br />[code]\uFEFF\n<br />{\n<br />\u00A0 // Hold this key and press 'P' to play/pause, '+' to speed up, and '-' to slow down\n<br />\u00A0 // Press it alone for a reminder.\n<br />\u00A0 \"ModKey\": \"L\",\n<br />\n<br />\u00A0 // The initial speed.\u00A0 Ranges from 0 (10 seconds per tick) to 12 (20 ticks per second)\n<br />\u00A0 // Adjustable in game\n<br />\u00A0 \"Speed\": 3,\n<br />\n<br />\u00A0 // Whether to spread into untilled dirt, leaving it tilled\n<br />\u00A0 \"HoeDirt\": false,\n<br />\n<br />\u00A0 // Whether to destroy certain types of things that get in the way.\n<br />\u00A0 // Resources may be generated from immature trees and stumps.\n<br />\u00A0 \"DestroyGrass\": false,\n<br />\u00A0 \"DestroyStumps\": false,\n<br />\u00A0 \"DestroyImmatureTrees\": false,\n<br />\u00A0 // No resources from mature trees.\n<br />\u00A0 // Tapped trees are not destroyed.\n<br />\u00A0 \"DestroyMatureTrees\": false,\n<br />\n<br />\u00A0 // Objects that you probably don't mind destroying.\u00A0\u00A0\n<br />\u00A0 // No resources will be generated.\n<br />\u00A0 \"DestroyWeeds\": false,\n<br />\u00A0 \"DestroyTwigs\": false,\n<br />\u00A0 \"DestroyRocks\": false,\n<br />\n<br />\u00A0 // Whether to till dirt under objects that can't be destroyed.\n<br />\u00A0 // Grass and Trees are not objects.\n<br />\u00A0 // This can leave things in a funny state (e.g. artifact spots that can't be dug up).\n<br />\u00A0 \"HoeUnderObjects\": false,\n<br />\n<br />\u00A0 // ALL OBJECTS and terrain features (trees, grass, etc) can be destroyed.\n<br />\u00A0 // Chests and all contents will be LOST.\n<br />\u00A0 // Other crafted objects can probably be picked up again.\n<br />\u00A0 // This overrides all the above flags.\n<br />\u00A0 // USE AT YOUR OWN RISK.\n<br />\u00A0 \"DestroyEverything\": false\n<br />}\n<br />[/code]\n<br />[/spoiler]\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Tested with Stardew Valley 1.4 / SMAPI 3.2.\n<br />[*]Works in single player.\u00A0 Untested in multiplayer (if you try it and it works, let me know!)\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5361",
+	"Version": "1.0.0",
+	"Updated": "2020-02-08T22:41:44+00:00",
+	"Downloads": [
+		{
+			"Id": 23765,
+			"Type": "Main",
+			"DisplayName": "SDV Game of Life",
+			"FileName": "SDV Game of Life-5361-1-0-0-1581201704.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 15796,
+			"Uploaded": "2020-02-08T22:41:44+00:00",
+			"Mods": [
+				{
+					"Id": "SuperAardvark.GameOfLife",
+					"DisplayName": "SDV Game of Life",
+					"Type": "Smapi",
+					"RelativePath": "SDVGameOfLife",
+					"Manifest": {
+						"Name": "SDV Game of Life",
+						"Description": "Lets you play Conway's Game of Life on your farm.  Watered dirt grows and dies in complex patterns.  Hold L, Press P to Play/Pause.",
+						"Author": "Super Aardvark",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.2.0",
+						"EntryDll": "SDVGameOfLife.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5361"
+						],
+						"UniqueId": "SuperAardvark.GameOfLife"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342410453,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392049,
+		"UploaderId": 4787570,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

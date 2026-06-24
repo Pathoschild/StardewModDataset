@@ -1,0 +1,80 @@
+{
+	"Site": "Nexus",
+	"Id": 41213,
+	"Name": "SDV Maps Haru - Tiled",
+	"Author": "HaruNesukts",
+	"Description": "[center][/center]\n<br />[center]\uFEFF[b]Creating maps with Tiled can often involve tedious, repetitive tasks such as animations, tile properties, and fixing tilesheet paths. This extension makes it more accessible.\n<br />\n<br />[/b]This adds options such as copying animations, properties, adding lights, doors, warp, changing tiles for day and night, adding smart copying between maps, and more.\n<br />More information below\u00A0\n<br />\n<br />[size=3]If you want to contribute an idea, you can comment on a post[/size]\n<br />\n<br />[b][size=3]Manual[/size]\n<br />[/b]\n<br />[b]\uFEFF[img]https://i.imgur.com/2URTFZi.png[/img]\n<br />\uFEFF\n<br />\n<br />[/b][b]Fix Tilesheets[/b]\n<br />Automatically repairs tilesheet paths when the image is located in the same folder as the map.\n<br />\n<br />[b]Choose Folder[/b]\n<br />Choose a folder to replace all the Tilesheet sheets\n<br />\n<br />\n<br />[img]https://i.imgur.com/EAhJcYt.png[/img]\n<br />\uFEFF\n<br />[b]Generate Base Layers and Layers Objects[/b]\n<br />Creates all the standard [i]normal layers[/i] needed for a map, such as:\n<br />Back, Buildings, Paths, Front, AlwaysFront\n<br />\n<br />\n<br />[b]Organize All Layers[/b]\n<br />Automatically organizes every layer in the map, whether normal or object, for a cleaner workflow.\n<br />[b]\n<br />\n<br />Add Extra Level[/b]\n<br />Allows you to duplicate a selected layer to create additional levels.\n<br />Back2, Back3, etc.\n<br />Works with normal layers only (not object layers).\n<br />\n<br />\n<br />\n<br />[img]https://i.imgur.com/ciNs8Ut.png[/img]\n<br />\n<br />[b]Add Tile Animation/Remove\u00A0Tile Animation\n<br />[/b]\n<br />[b]Add Tile Animation:[/b] Automatically generates animations for selected tiles.\n<br />[b]Remove Tile Animation:[/b] Clears all animation frames from the selected tiles.a\n<br />\n<br />[b]Direction:[/b] Determines where the script looks for the subsequent animation frames (Right, Down, Left, Up).\n<br />\n<br />[b]Number of Frames:[/b] The total count of frames including the starting one.\n<br />[b]Frame Duration:[/b] The speed of the animation measured in milliseconds (ms).\n<br />\n<br />[b]Stride:[/b] [b]Auto:[/b] The script automatically calculates the ID offset (e.g., if moving Down, it skips the number of tiles in a row).\n<br />[b]Stride: Custom:[/b] You define the ID offset manually. Useful if your animation frames are non-adjacent (e.g., every 4 tiles).\n<br />\n<br />[b]Use Copy Mode:[/b] Designed for complex or large objects (like a 2x2 multi-tile door).\n<br />You select the \"target\" tiles and provide a [b]Start Tile ID[/b]. The script will map the animation frames from that source area to your selection.\n<br />\n<br />\n<br />[b]Smart Paste[/b]\n<br />It basically does an intelligent paste of any tile you’ve copied and then pasted on your map using the tileset you’ve already created.\n<br />\n<br />[color=#00ff00]Enable[/color]/[color=#ff0000]Disable[/color]\n<br />\n<br />Default = [color=#00ff00]Enable[/color]\n<br />\n<br />\n<br />[b]Copy Tileset All Animations[/b]\n<br />Copies all animations from the currently opened tilesheet.\n<br />\n<br />\n<br />[b]Paste Tileset All Animations[/b]\n<br />Pastes previously copied animations into the target tilesheet.\n<br />\n<br />\n<br />[b]Copy Tileset Custom Propierties[/b]\n<br />\uFEFFRight-click to copy the selected tiles\n<br />\n<br />\n<br />[b]\uFEFFCopy Tileset Custom Propierties[/b]\n<br />\uFEFFRight-click to paste the selected tiles\n<br />\n<br />\n<br />[b]Delete Animation Tilesets[/b]\n<br />You can remove the tile animations with a right click\n<br />\n<br />\n<br />[b]Copy Tileset Animations\u00A0With Selected Area[/b]\n<br />You can copy the tile animations with a right click\n<br />\n<br />\n<br />[b]Paste Tileset Animations\u00A0With Selected Area[/b]\n<br />You can paste the tile animations with a right click\n<br />\n<br />[img]https://i.imgur.com/ua587QO.png[/img]\n<br />\n<br />[b]Ghost Tile[/b]\n<br />Used for tiles without images or what I call ghost tiles, it is found in [b]Layers -&gt; Ghost Tile Finder[/b].[b]\u00A0[/b]You can remove it from one or from everyone\n<br />\n<br />[b]Light and BrookSounds\n<br />[/b]\n<br />Select\u00A0[b]Rectangular Select,[/b]\u00A0choose a position,\u00A0then go to[b]\u00A0[/b][b]Layer [/b]→\u00A0[b]Add Light Sources or\u00A0BrookSounds[/b]. And choose the type of light or type of sound.\n<br />\uFEFF\n<br />\n<br />[b]DayTiles and NightTiles\n<br />[/b]\n<br />Select [b]Rectangular Select[/b], choose a layer, then go to [b]Layer → Add Stardew Day/Night Tiles[/b].This adds the [b]DayTiles[/b] and [b]NightTiles[/b] properties (if they already exist, it just adds values without replacing them).It also copies the [b]position[/b] and the [b]selected tile[/b]. The tilesheets currently available are:\n<br />\n<br />[list]\n<br />[*][code]Vanilla Tilesheets[/code][/*]\n<br />[*][code]Lumisteria Tilesheets[/code][/*]\n<br />[*][code]PC's Tilesheets[/code][/*]\n<br />[*][code]Crystalinerose Tilesheets[/code][/*]\n<br />[*][code]DaisyNiko's Tilesheets[/code][/*]\n<br />[/list]\n<br />\n<br />[b]Warp\uFEFF[/b]\u00A0 \uFEFF\n<br />Use [b]Rectangular Select[/b], choose a position, then go to [b]Layer → One Warp or Multi Warp[/b]\u00A0to copy map coordinates. It’s not always useful, but available if needed.\n<br />\n<br />\n<br />[b]Doors[/b]\n<br />\n<br />Use [b]Rectangular Select[/b], select the layer with the door (bottom tile), then go to [b]Layer → Add Selection To Doors Property[/b]. It will copy the coordinates, tilesheet, and tile ID.\n<br />\n<br />Example:\n<br />\n<br />[img]https://i.imgur.com/a5mqrQP.png[/img]\uFEFF\n<br />\n<br />\n<br />\n<br />Thanks for checking out the mod! If you liked it, feel free to give an [b]endorsement[/b] and follow it.\n<br />\n<br />[b]Warning:[/b]\u00A0 [color=#ea9999]This is not a [i]Stardew Valley[/i] mod, but a [b]Tiled plugin[/b] that helps create maps and shortcuts for [i]Stardew Valley[/i]. It's especially for map creators/modders[/color]\n<br />\n<br />[b]Credits:[/b]\n<br />[b]irocendar [/b]by inspiration of its extension [url=https://www.nexusmods.com/stardewvalley/mods/40281]Tilesheetinator[/url]\uFEFF\u00A0\n<br />[b]Sergey Krilov[/b] by inspiration of its extension [url=https://github.com/lukas-shawford/tiled-bulk-animations]Bulk Animations[/url]\uFEFF\n<br />\n<br />If you want, you can support me on my [url=https://ko-fi.com/ko_fi_harunesukts]ko-fi[/url] or my [url=https://paypal.me/Samuelmedina644600]Paypal[/url][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41213",
+	"Version": "2.3.0",
+	"Updated": "2026-03-29T04:32:02+00:00",
+	"Downloads": [
+		{
+			"Id": 162605,
+			"Type": "Optional",
+			"DisplayName": "SDVMapsHaru Advice",
+			"FileName": "SDVMapsHaru Advice-41213-2-3-0-1774758690.zip",
+			"Description": "Send a notice to the SMAPI console about a new update of the extension.\n<br />\n<br />This goes in the mods folder.",
+			"Version": "2.3.0",
+			"SizeInBytes": 1002,
+			"Uploaded": "2026-03-29T04:31:30+00:00",
+			"Mods": [
+				{
+					"Id": "HaruNesukts.SDVMapsHaruAdvice",
+					"DisplayName": "SDVMapsHaru Advice",
+					"Type": "ContentPack",
+					"RelativePath": "SDVMapsHaru Advice",
+					"Manifest": {
+						"Name": "SDVMapsHaru Advice",
+						"Description": "Send a notice to the SMAPI console about a new update of the extension.",
+						"Author": "HaruNesukts",
+						"Version": "2.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:41213"
+						],
+						"UniqueId": "HaruNesukts.SDVMapsHaruAdvice"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549293,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 162606,
+			"Type": "Main",
+			"DisplayName": "SDV Maps Haru",
+			"FileName": "SDV Maps Haru-41213-3-0-0-1774758722.zip",
+			"Description": "To install this extension, follow these steps:\n<br />\n<br />Open the Tiled program.\n<br />\n<br />Go to Edit &gt; Preferences &gt; Plugins.\n<br />\n<br />Scroll down to the Extensions section.\n<br />\n<br />Copy the compressed folder of the extension into that directory.",
+			"Version": "2.3.0",
+			"SizeInBytes": 40544,
+			"Uploaded": "2026-03-29T04:32:02+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "sdv-maps-haru",
+					"Type": "Invalid",
+					"RelativePath": "sdv-maps-haru",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549294,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427901,
+		"UploaderId": 197897369,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

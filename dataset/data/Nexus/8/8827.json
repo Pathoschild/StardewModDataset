@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 8827,
+	"Name": "Quest Essentials",
+	"Author": "purrplingcat",
+	"Description": "[size=2]Also known as enhanced QF or Quest Framework Extended. Quest Essentials allows you create more immersive multi staged (multi objective) quests via Quest Framework and also offers new quest types in game:\n<br />\n<br />[list]\n<br />[*]Talk with NPC\n<br />[*]Earn money\n<br />[*]Sell item\n<br />[*]Collect (bug-free replacement for harves quest type)\n<br />[*]Adventure Quest (multi staged quests with multiple objectives aka tasks). This quest type adds more immersion to the game!\n<br />[/list]\n<br />[b]Adventurel quest task (objective) types:[/b]\n<br />\n<br />Collect, Craft/Cook, Deliver, EnterSpot, Fish, Gift, Slay, Talk and TileAction\n<br />\n<br />[i]Planned task types in future: Ship/Sell, PlaceItem, EnterLocation\n<br />[/i][/size]\n<br />[size=4][b]Installation[/b][/size][list=1]\n<br />[*]Install\u00A0[url=https://smapi.io/]SMAPI[/url]\u00A0(version 3.13 or newer)\n<br />[*]Install\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6414]Quest Framework[/url]\u00A0(version 1.4 or newer)\n<br />[*]Download Quest Essentials from Nexus mods\n<br />[*]Unpack ZIP file into [i]Mods[/i] directory\n<br />[*]Run Stardew Valley via SMAPI\n<br />\n<br />[/list]\n<br />Now you can install mods or content packs which requires\u00A0Quest Essentials\u00A0or you can start create your own. See docs bellow.\n<br />\n<br />[size=4][b]How to create QF quests using QE types[/b][/size]\n<br />\n<br />Read the [b][url=https://github.com/purrplingcat/StardewMods/blob/master/QuestEssentials/README.md]docs[/url][/b] for Quest Essentials.\n<br />\n<br />[b][size=4]Comparison of Adventure Quests (multi staged quests) with SDV's native Special Orders[/size][/b]\n<br />\n<br />Adventure quest is[b] more immersive quest type[/b]. It adds some new functions for classic [i]SDV quests[/i] and are comparable with [i]SDV's Special Orders[/i], but [b]more immersive[/b] and different a little bit. Both Adventure Quests provided by QF+QE and native Special Orders can work together and some people can tell \"Why adventure quests? That the same as Special Orders!\". But it's not the same, there are some differences between QE's adventure quests (mutli-staged quests with multiple objectives called tasks) and SDV's native special orders:\n<br />\n<br />[list]\n<br />[*][b]Adventure\u00A0quests are individual per farmer[/b] (Special Orders log is shared for all farmers)\n<br />[*]Adventure quests [b]allows define task depends on another task completion[/b] (Special orders doesn't support it). With this [b]you can create multiple-objective roll quest[/b]. Tasks requiring some another tasks to be completed will NOT SHOWN ANT NOT ACTIVE until all required tasks are completed.\n<br />[*]Adventure Quests [b]provides objective tasks for enter a specific tile or map area to complete; click or give item to a specific tile[/b] (Special Orders has not tile interaction objectives)\n<br />[*]Adventure Quests [b]supports additional When precondition as completion rule[/b] which must be match to increase counter or complete the task. The When precondition is optional. If you don't define it, it aplies only the task internal completion rules. When pre-conditions use the common global conditions in QF\n<br />[*]Adventure\u00A0[b]quests can be cancelled[/b] (if you allow it in QF pack for your concrete special quest)\n<br />[*]Adventure\u00A0[b]quests supports both time limited or unlimited quests[/b] and for time-limited quests you can specify how much concrete days is for your quest. (Special Orders allows you define only time-limited quests and in cycles like TwoDays, Week or month, not the concrete number). This feature is provided by QF itself because the same behavior/configuration is for all QF quest and you can define it.\n<br />[*]Adventure\u00A0[b]quests CAN'T be randomized[/b] (Special Orders support quest randomization)\n<br />[*]Special orders are offered only on Special Order board (with QF you can provide SO by NPC and on custom boards); Adventure\u00A0[b]quests can be offered by any QF offer source with provided When global condition[/b].\n<br />[*]Adventure\u00A0[b]quests can start even for some objective/tasks interactions[/b] (like complete task, talk with NPC and etc)\n<br />[*]Adventure\u00A0[b]quests has\u00A0[/b][b]Craft/Cook, EnterSpot, Talk and TileAction objective/task types[/b] which special orders doesn't offer.\n<br />[/list]\n<br />So when use special quest and when special order? Think about what do you need and expect from your concrete quest and about your quest design (with their story, interactions and etc.) If you want to do something which is impossible or pretty hard to do with special orders, then it's right choice to use QE and their special quest as type for your concrete quest(s). If you want use both - QE's adventure quests and SDV's special orders, you are able to do it. [b]Adventure\u00A0quests and special orders are compatible and can work together[/b].\n<br />\n<br />[b][i]With Adventure Quests you can do more adventure in the Stardew Valley![/i][/b] Also with this you can do more immersive [b][url=https://www.nexusmods.com/stardewvalley/mods/4582]NPC Adventures[/url][/b] (feature comming soon)\n<br />\n<br />[size=4][b]FAQ[/b][/size]\n<br />\n<br />[b]Is Quest Essentials a replacement for the Quest Framework?[/b]\n<br />\n<br />No. It's just a extension for Quest Framework, which makes Quest Framework better and allows you do more with QF.\n<br />\n<br />[b]Why features od Quest Essentials is not apart of Quest Framework?[/b]\n<br />\n<br />Because these are new extra quest types which aren't included in vanilla SDV and it's an extension. QF by default doesn't add new quest types, it's just a framework which provides an API (Content Pack and C# SMAPI API) to create immersive custom quests, quest types and provides a quest management. Quest Essentials are extension mod which adds concrete new quest types using the Quest Framework.\n<br />\n<br />[b]Do you plan merge Quest Framework and Quest Essentials into one project?[/b]\n<br />\n<br />No. Currently it's not planned merge them. Maybe I will transplant the Adventure Quest mainframe as standardized api into QF but without tasks. But it's just big MAYBE.\n<br />\n<br />[b]Can I define custom tast types for Adventure Quest type with Quest Essentials?[/b]\n<br />\n<br />Yes, you can do it. See docs.\n<br />\n<br />[b]Do you plan add ___?[/b]\n<br />\n<br />Only as commisioned work. For more information DM me or contact me via Discord (preffered).\n<br />\n<br />[size=4][b]Links[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.purrplingcat.com]PurrplingCat's homepage[/url]\uFEFF\n<br />[*][url=https://www.patreon.com/purrplingcat]PurrplingCat's Patreon[/url]\uFEFF\n<br />[*][url=https://npcadventures.dev/discord]Get support on Discord[/url]\uFEFF\uFEFF\n<br />[*][url=https://github.com/purrplingcat/StardewMods/blob/master/QuestEssentials]Source code on GitHub[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8827",
+	"Version": "1.0.0",
+	"Updated": "2022-01-03T18:46:34+00:00",
+	"Downloads": [
+		{
+			"Id": 48844,
+			"Type": "Main",
+			"DisplayName": "Quest Essentials 1.0",
+			"FileName": "Quest Essentials 1.0-8827-1-0-0-1641235594.zip",
+			"Description": "It requires Quest Framework 1.4 or newer.",
+			"Version": "1.0.0",
+			"SizeInBytes": 76775,
+			"Uploaded": "2022-01-03T18:46:34+00:00",
+			"Mods": [
+				{
+					"Id": "PurrplingCat.QuestEssentials",
+					"DisplayName": "Quest Essentials",
+					"Type": "Smapi",
+					"RelativePath": "QuestEssentials",
+					"Manifest": {
+						"Name": "Quest Essentials",
+						"Description": "A useful extension for Quest Framework which provides new quest types and tools",
+						"Author": "PurrplingCat",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "QuestEssentials.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PurrplingCat.QuestFramework",
+								"MinimumVersion": "1.4.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8827"
+						],
+						"UniqueId": "PurrplingCat.QuestEssentials"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342435532,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395515,
+		"UploaderId": 68185132,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

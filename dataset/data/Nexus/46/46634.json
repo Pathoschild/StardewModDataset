@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 46634,
+	"Name": "OD's Better Computer",
+	"Author": "ODMods",
+	"AuthorLabel": "OD Mods",
+	"Description": "[size=6]OD's Better Computer[/size]\n<br />\n<br />Transforms the Farm Computer into a fully functional desktop interface with **21 built-in apps**.\n<br />\n<br />[size=4]Features[/size]\n<br />\n<br />- **Desktop Interface**: A complete desktop-style interface replacing the vanilla Farm Computer\n<br />- **21 Apps**: Everything you need to manage your farm life in one place\n<br />- **Notifications**: Reminders app sends popup notifications on the bottom left each morning\n<br />\n<br />[size=4]Built-in Apps[/size]\n<br />\n<br />| App | Description |\n<br />|-----|-------------|\n<br />| \uD83D\uDCCA **Farm Dashboard** | Real-time overview: crops ready, animal status, machines (not used/working/ready), watering status |\n<br />| \uD83D\uDC65 **Contacts** | Quick villager lookup with hearts and relationship info |\n<br />| \uD83D\uDCC5 **Calendar** | Full calendar with season navigation — browse any season's birthdays and festivals |\n<br />| \uD83C\uDF24️ **Weather** | Today's weather + tomorrow's forecast |\n<br />| \uD83D\uDC95 **Relationships** | Track friendship levels, who you've talked to, gift status |\n<br />| \uD83D\uDCC8 **Statistics** | All player/farm stats — now works correctly with pre-existing/1.5 saves |\n<br />| \uD83D\uDCEC **Mail** | Read your letters anytime |\n<br />| \uD83C\uDFDB️ **Museum Tracker** | Donated items &amp; missing items for the museum |\n<br />| \uD83C\uDFEB **Community Center** | Bundle tracker showing what's complete/incomplete |\n<br />| \uD83C\uDFA3 **Fishing Log** | Fish caught, seasons, locations |\n<br />| \uD83C\uDF3F **Foraging Guide** | What's in season today, where to find it |\n<br />| ⛏️ **Mines Log** | Levels explored, items found |\n<br />| \uD83C\uDF81 **Gift Guide** | Loves/likes/dislikes for every villager, birthdays highlighted |\n<br />| \uD83C\uDF73 **Cooking** | Recipes learned, recipes you can cook today |\n<br />| \uD83D\uDDFA️ **Farm Map** | Interactive farm map viewer |\n<br />| \uD83D\uDCE6 **Shipping History** | Items shipped &amp; totals |\n<br />| \uD83D\uDCDD **Notes** | Persistent notepad for your reminders |\n<br />| \uD83D\uDCFA **TV Guide** | Queen of Sauce, Fortune Teller, weather — browse any day/season |\n<br />| \uD83D\uDD14 **Reminders** | Set reminders that pop up as notifications each morning, with filters for season, day, weekday, weather, birthdays, and repeat |\n<br />| ⚙️ **Settings** | Toggle individual apps on/off, boot animation toggle |\n<br />\n<br />[size=4]Installation[/size]\n<br />\n<br />1. Install [SMAPI 4.0+](https://smapi.io/)\n<br />2. Extract this mod folder into your `Stardew Valley/Mods` folder\n<br />3. Run the game using SMAPI\n<br />4. Craft or place a **Farm Computer** and interact with it\n<br />\n<br />[size=4]Requirements[/size]\n<br />\n<br />- Stardew Valley 1.6+\n<br />- SMAPI 4.0+\n<br />\n<br />[size=4]How To Use[/size]\n<br />\n<br />1. Place a Farm Computer on your farm (crafted with:\n<br />\u00A0 - 1 Battery Pack\n<br />\u00A0 - 10 Refined Quartz\n<br />\u00A0 - 5 Gold Bars\n<br />\u00A0 - 2 Iridium Bars\n<br />\u00A0 - 1 Diamond\n<br />2. Left-click (or use your action button) while standing next to it\n<br />3. Click any app icon to launch\n<br />4. Use mouse wheel to scroll in apps\n<br />5. Press Escape or click X to close\n<br />[size=4]\n<br />Configuration[/size]\n<br />\n<br />A `config.json` will be generated on first run. You can configure:\n<br />- `DisabledApps`: List of app IDs to hide from the desktop\n<br />- `BootAnimation`: `true`/`false` to toggle the boot animation\n<br />- `Notes`: Persistent text stored by the Notes app\n<br />- `Reminders`: List of reminders managed through the Reminders app\n<br />\n<br />Or use the **Settings app** inside the computer to toggle apps visually!\n<br />[size=4]\n<br />For Mod Developers[/size]\n<br />\n<br />This mod exposes an API to add your own custom apps! Use `IModRegistry.GetApi&lt;IBetterComputerApi&gt;()` and call `RegisterApp()`.\n<br />\n<br />Implement the `IComputerApp` interface:\n<br />\n<br />```csharp\n<br />public interface IComputerApp\n<br />{\n<br />\u00A0 \u00A0 string Id { get; }\n<br />\u00A0 \u00A0 string Name { get; }\n<br />\u00A0 \u00A0 string ShortLabel { get; }\n<br />\u00A0 \u00A0 Color IconColor { get; }\n<br />\u00A0 \u00A0 Color IconTextColor { get; }\n<br />\n<br />\u00A0 \u00A0 void Open();\n<br />\u00A0 \u00A0 void Draw(SpriteBatch b, Rectangle bounds);\n<br />\u00A0 \u00A0 void DrawIcon(SpriteBatch b, Rectangle iconArea);\n<br />\u00A0 \u00A0 void ReceiveLeftClick(int x, int y);\n<br />\u00A0 \u00A0 void ReceiveScrollWheel(int direction);\n<br />\u00A0 \u00A0 void PerformHoverAction(int x, int y);\n<br />\u00A0 \u00A0 void ReceiveKeyPress(Keys key);\n<br />}\n<br />```\n<br />\n<br />[size=4]Compatibility[/size]\n<br />\n<br />- Works with Stardew Valley 1.6\n<br />- Compatible with most mods that don't replace the Farm Computer interaction\n<br />- Multiplayer compatible (each player uses their own computer)\n<br />\n<br />[size=4]Version History[/size]\n<br />\n<br />[b]1.1.0[/b]\n<br />\n<br />- Bug Fixes\n<br />- Added intuitive Reminders app\n<br />- Added support to add your own app icons\n<br />\n<br />[b]1.0.0[/b]\n<br />\n<br />- Initial release\n<br />\u00A0 \u00A0",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46634",
+	"Version": "1.1",
+	"Updated": "2026-06-06T16:30:07+00:00",
+	"Downloads": [
+		{
+			"Id": 170285,
+			"Type": "Main",
+			"DisplayName": "OD's Better Computer 1.1",
+			"FileName": "OD's Better Computer 1.1-46634-1-1-1780763407.zip",
+			"Description": "",
+			"Version": "1.1",
+			"SizeInBytes": 108062,
+			"Uploaded": "2026-06-06T16:30:07+00:00",
+			"Mods": [
+				{
+					"Id": "ODMods.BetterComputer",
+					"DisplayName": "OD's Better Computer",
+					"Type": "Smapi",
+					"RelativePath": "OD's Better Computer 1.1",
+					"Manifest": {
+						"Name": "OD's Better Computer",
+						"Description": "Transforms the Farm Computer into a fully functional desktop interface with 6 built-in apps: Farm Dashboard, Contacts, Calendar, Weather Station, Relationships Tracker, and Farm Statistics.",
+						"Author": "OD Mods",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ODsBetterComputer.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ODMods.BetterComputer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556973,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433322,
+		"UploaderId": 158079398,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 5762,
+	"Name": "Pregnancy Role",
+	"Author": "kdau",
+	"Description": "[size=6][b][img]https://www.kdau.com/PregnancyRole/icon.png[/img] Pregnancy Role[/b][/size]\n<br />\n<br />[i]a [url=http://stardewvalley.net/]Stardew Valley[/url] mod by [url=https://www.kdau.com]kdau[/url][/i]\n<br />\n<br />People of all genders may or may not be able to become pregnant. This mod gives Stardew Valley farmers and NPCs the full range of possibilities.\n<br />\n<br />Pregnancy Role does not change the chance or timing of baby proposals between spouses. However, if and when a proposal for a new baby is made, whether the spouse is an NPC or another player, this mod will affect what happens. There will be a pregnancy only if one of the spouses can become pregnant and the other spouse can make pregnant. In any other combination, there will be an adoption instead.\n<br />\n<br />[img]https://www.kdau.com/headers/compatibility.png[/img]\n<br />\n<br />[b]Game:[/b] Stardew Valley 1.5+\n<br />\n<br />[b]Platform:[/b] Linux, macOS or Windows (Android: use 1.4 version)\n<br />\n<br />[b]Multiplayer:[/b] Only applies to players with the mod installed and their spouses. If two players marry in-game, they must both have the mod installed.\n<br />\n<br />[b]Other mods:[/b]\n<br />[list]\n<br />[*]Mods affecting the pregnancy and adoption features may or may not be compatible.\n<br />[*]If custom skill mods are installed, the dropdown on the Skills tab will be adjusted to fit.\n<br />[/list]\n<br />\n<br />[img]https://www.kdau.com/headers/installation.png[/img]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url]\n<br />[*]Download this mod from the link in the header above\n<br />[*]Unzip and put the [code]PregnancyRole[/code] folder inside your [code]Mods[/code] folder\n<br />[*]Run the game using SMAPI\n<br />[/list]\n<br />\n<br />[img]https://www.kdau.com/headers/use.png[/img]\n<br />\n<br />For [b]farmers and farmhands[/b] (players), you can change the pregnancy role as follows:\n<br />\n<br />[list=1]\n<br />[*]Open the pause menu. (On Linux/macOS/Windows, press Escape. On Android, tap the menu icon.)\n<br />[*]Go to the Skills tab (the one whose icon is your farmer's face).\n<br />[*]Choose a value in the \"Pregnancy Role\" dropdown.\n<br />[/list]\n<br />For [b]vanilla NPC spouses[/b] (characters from the base game), you can change the pregnancy role as follows:\n<br />\n<br />[list=1]\n<br />[*]Open the pause menu. (On Linux/macOS/Windows, press Escape. On Android, tap the menu icon.)\n<br />[*]Go to the Social tab (the tab whose icon is a heart).\n<br />[*]Choose your spouse in the list.\n<br />[*]Choose a value in the \"Pregnancy Role\" dropdown.\n<br />[/list]\n<br />For [b]custom NPCs[/b] and modded vanilla NPCs, modders can use Pregnancy Role as follows:\n<br />\n<br />[list]\n<br />[*]1. Add this mod as a dependency of your mod. Its unique ID is [code]kdau.PregnancyRole[/code].\n<br />[*]2. Locate field 9 (relationships) of the NPC's entry in [code]NPCDispositions[/code]:\n<br />[list]\n<br />[*]For a custom NPC, use the [code]EditData[/code] patch that manifests your NPC.\n<br />[*]For a vanilla NPC, add an [code]EditData[/code] patch that edits this field for the NPC.\n<br />[/list]\n<br />[*]3. Append one of the following (no quotes) to the list of relationships:\n<br />[list]\n<br />[*][code]PregnancyRole become[/code] (can become pregnant)\n<br />[*][code]PregnancyRole make[/code] (can make pregnant)\n<br />[*][code]PregnancyRole adopt[/code] (always adopt)\n<br />[/list]\n<br />[/list]\n<br />\n<br />[img]https://www.kdau.com/headers/configuration.png[/img]\n<br />\n<br />If you need to hide or reposition the \"Pregnancy Role\" dropdown on the Skills tab and/or the Social tab detail page, you can edit this mod's [code]config.json[/code] file. It will be created in the mod's main folder ([code]Mods/PregnancyRole[/code]) the first time you run the game with the mod installed. These options are available:\n<br />[list]\n<br />[*][code]ShowPlayerDropdown[/code]: Set to [code]false[/code] to hide the \"Pregnancy Role\" dropdown for the player on the Skills tab.\n<br />[*][code]PlayerDropdownOrigin[/code]: Set the [code]X[/code] and [code]Y[/code] values to pixel coordinates, relative to the top left of the game menu, where the dropdown should appear. Coordinates (0,0) mean that the position will be calculated automatically.\n<br />[*][code]ShowSpouseDropdown[/code]: Set to [code]false[/code] to hide the \"Pregnancy Role\" dropdown for the spouse on the Social tab detail page.\n<br />[*][code]SpouseDropdownOrigin[/code]: Set the [code]X[/code] and [code]Y[/code] values to pixel coordinates, relative to the top left of the detail page, where the dropdown should appear. Coordinates (0,0) mean that the position will be calculated automatically.\n<br />[/list]\n<br />\n<br />[img]https://www.kdau.com/headers/translation.png[/img]\n<br />\n<br />This mod can be translated into any language supported by Stardew Valley. It is currently available in English and Russian.\n<br />\n<br />Your contribution would be welcome. Please see the [url=https://stardewvalleywiki.com/Modding:Translations]instructions on the wiki[/url]. You can send me your work in [url=https://gitlab.com/kdau/pregnancyrole/-/issues]a GitLab issue[/url] or the Posts tab above.\n<br />\n<br />[img]https://www.kdau.com/headers/acknowledgments.png[/img]\n<br />\n<br />[list]\n<br />[*]This mod is based on ideas and advice from [url=https://www.nexusmods.com/stardewvalley/users/83595503]EssGee[/url].\n<br />[*]Like all mods, this one is indebted to ConcernedApe, Pathoschild and the various framework modders.\n<br />[*]The Russian translation was prepared by BANANJI.\n<br />[/list]\n<br />\n<br />[img]https://www.kdau.com/headers/see-also.png[/img]\n<br />\n<br />[list]\n<br />[*][url=https://gitlab.com/kdau/pregnancyrole/-/blob/main/doc/RELEASE-NOTES.md]Release notes[/url]\n<br />[*][url=https://gitlab.com/kdau/pregnancyrole]Source code[/url]\n<br />[*][url=https://gitlab.com/kdau/pregnancyrole/-/issues]Report bugs[/url]\n<br />[*][url=https://www.kdau.com/stardew]My other Stardew stuff[/url]\n<br />[*]Mirrors: [b]Nexus[/b], [url=https://www.moddrop.com/stardew-valley/mods/768494-pregnancy-role]ModDrop[/url], [url=https://forums.stardewvalley.net/resources/pregnancy-role.53/]forums[/url]\n<br />[/list]\n<br />Other mods to consider:\n<br />\n<br />[list]\n<br />[*][url=https://www.moddrop.com/stardew-valley/mods/580603-diverse-stardew-valley-dsv-seasonal]Diverse Stardew Valley - Seasonal[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4310]Mx. Qi[/url] (not updated for 1.5)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4459]No More Dialogue Differences[/url] (not updated for 1.5)\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5762",
+	"Version": "2.0.0",
+	"Updated": "2021-06-27T03:32:25+00:00",
+	"Downloads": [
+		{
+			"Id": 28065,
+			"Type": "Main",
+			"DisplayName": "Pregnancy Role for Android",
+			"FileName": "Pregnancy Role-5762-1-2-0-1591830244.zip",
+			"Description": "This is the last version that supported Stardew Valley 1.4 and can be used on Android until it upgrades to 1.5.",
+			"Version": "1.2.0",
+			"SizeInBytes": 12034,
+			"Uploaded": "2020-06-10T23:04:04+00:00",
+			"Mods": [
+				{
+					"Id": "kdau.PregnancyRole",
+					"DisplayName": "Pregnancy Role",
+					"Type": "Smapi",
+					"RelativePath": "PregnancyRole",
+					"Manifest": {
+						"Name": "Pregnancy Role",
+						"Description": "Set pregnancy role for farmers and NPCs separate from gender",
+						"Author": "kdau",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.5.0",
+						"EntryDll": "PregnancyRole.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5762",
+							"ModDrop:768494"
+						],
+						"UniqueId": "kdau.PregnancyRole"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342414753,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42562,
+			"Type": "Main",
+			"DisplayName": "Pregnancy Role",
+			"FileName": "Pregnancy Role-5762-2-0-0-1624764745.zip",
+			"Description": "",
+			"Version": "2.0.0",
+			"SizeInBytes": 19035,
+			"Uploaded": "2021-06-27T03:32:25+00:00",
+			"Mods": [
+				{
+					"Id": "kdau.PregnancyRole",
+					"DisplayName": "Pregnancy Role",
+					"Type": "Smapi",
+					"RelativePath": "PregnancyRole",
+					"Manifest": {
+						"Name": "Pregnancy Role",
+						"Description": "Set pregnancy role for farmers and NPCs separate from gender",
+						"Author": "kdau",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "PregnancyRole.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5762",
+							"ModDrop:768494"
+						],
+						"UniqueId": "kdau.PregnancyRole"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429250,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392450,
+		"UploaderId": 80928528,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 33353,
+	"Name": "Special Spouse Dialogue Framework",
+	"Author": "Kantrip",
+	"Description": "[color=#d9ead3][size=6][b]Special Spouse Dialogue Framework\n<br />[/b][/size][/color]\n<br />[size=4]Ever wanted an NPC spouse to deliver certain lines under unusual circumstances? Maybe you'd like a line to show up after the wedding night, or the day before a certain event is going to play out? Since Marriage Dialogue is checked before conversation topics, this can be tricky to achieve. \n<br />\n<br />[b][color=#d9ead3]This is the kind of thing I found myself writing often:[/color][/b]\n<br />[/size][code]//Add a special line for the morning after their wedding\n<br />//Marriage dialogue is checked BEFORE CTs, so I am going to need to just load in an entirely different set of Indoor/Rainy dialogue based on whether the CT is active.\n<br />{    \n<br />\u00A0 \u00A0 \"Action\": \"EditData\",    \n<br />\u00A0 \u00A0 \"Target\": \"Characters/Dialogue/MarriageDialogueSebastian\",    \n<br />\u00A0 \u00A0 \"When\": {\"HasConversationTopic\": \"{{ModId}}_Topic_WeddingNight\"},    \n<br />\u00A0 \u00A0 \"Entries\": {      \u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Indoor_Day_0\": \"{{i18n:weddingNight.Indoor_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Indoor_Day_1\": \"{{i18n:weddingNight.Indoor_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Indoor_Day_2\": \"{{i18n:weddingNight.Indoor_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Indoor_Day_3\": \"{{i18n:weddingNight.Indoor_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Indoor_Day_4\": \"{{i18n:weddingNight.Indoor_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Rainy_Day_0\": \"{{i18n:weddingNight.Rainy_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Rainy_Day_1\": \"{{i18n:weddingNight.Rainy_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Rainy_Day_2\": \"{{i18n:weddingNight.Rainy_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Rainy_Day_3\": \"{{i18n:weddingNight.Rainy_Day_Sebastian}}\",      \u00A0 \n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Rainy_Day_4\": \"{{i18n:weddingNight.Rainy_Day_Sebastian}}\",    \n<br />\u00A0 \u00A0 },\n<br />},\n<br />\n<br />//And this mess won't even replace patio dialogue, Outdoor dialogue, spouse room dialogue...\n<br />[/code][size=4]\n<br />[b][color=#d9ead3]The Special Spouse Dialogue Framework changes that mess to this:\n<br />[/color][/b][/size][code]{    \n<br />   \uFEFF\"Action\": \"EditData\",    \n<br />   \uFEFF\"Target\": \"Mods/Kantrip.SpecialSpouseDialogue/Dialogue\",    \n<br />   \uFEFF\"When\": {      \u00A0 \n<br />   \uFEFF   \uFEFF\"HasMod\": \"Kantrip.SpecialSpouseDialogue\",      \u00A0 \n<br />   \uFEFF   \uFEFF\"HasConversationTopic\": \"{{ModId}}_Topic_WeddingNight\",    \n<br />   \uFEFF},    \n<br />   \uFEFF\"Entries\": {      \u00A0 \n<br />   \uFEFF   \uFEFF\"Morning_Sebastian\": \"{{i18n:weddingNight.Morning_Sebastian}}\",      \u00A0 \n<br />   \uFEFF   \uFEFF\"Night_Sebastian\": \"{{i18n:weddingNight.Night_Sebastian}}\",    \n<br />   \uFEFF},\n<br />},\n<br />[/code][size=4]\n<br />\n<br />[/size][color=#d9ead3][size=5][b]For Mod Authors\n<br />[/b][/size][/color][size=4]As with my mod [url=https://www.nexusmods.com/stardewvalley/mods/32078]WeddingAnniversaries[/url], this mod creates a custom Dialogue asset that can be written to via Content Patcher. If the asset is populated at the beginning of the day, the NPC spouse will use that line instead of ANY of the other vanilla lines that could already be queued up by the game.\n<br />\n<br />Please see\u00A0[url=https://github.com/Kantrip-Mods/StardewMods/tree/main/SpecialSpouseDialogue]the GitHub page[/url]\uFEFF\u00A0for complete documentation.\n<br />\n<br />[/size][color=#d9ead3][size=5][b]Dialogue Keys\n<br />[/b][/size][/color][size=4]This mod respects the following dialogue keys, where\u00A0[NPC]\u00A0is the NPC's name (e.g. \"Abigail\", \"Harvey\", etc):[/size][list]\n<br />[*][size=4][b]Morning_[NPC]\u00A0[/b]: This is the dialogue line that will show up the first time the player speaks to the NPC spouse in question.[/size]\n<br />[*][size=4][b]Night_[NPC]\u00A0[/b]: This is the dialogue line that will show up after 6:00PM, just like the default CP Indoor_Night key.[/size]\n<br />[/list][font=-apple-system, system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji][size=4]\n<br />[/size][/font][size=4]You can write to one or both of these keys. When checking for custom dialogue, SpecialSpouseDialogue will leave the vanilla marriage dialogue alone if a given key is blank.\n<br />\n<br />[/size][color=#d9ead3][size=5][b]IMPORTANT\n<br />[/b][/size][/color][size=4]This mod will completely quash regular spouse dialogue when SpecialSpouseDialogue's Dialogue asset is written to. That is what it is designed to do. However, it's important to realize that this means no:\n<br />[/size][list]\n<br />[*][size=4]Schedule dialogue (leave/return)[/size]\n<br />[*][size=4]Indoor/Rainy/Night dialogue[/size]\n<br />[*][size=4]Patio dialogue[/size]\n<br />[*][size=4]Spouse room dialogue[/size]\n<br />[*][size=4]Outdoor dialogue[/size]\n<br />[*][size=4]Etc[/size]\n<br />[/list][font=-apple-system, system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji][size=4]\n<br />[/size][/font][size=4]SpecialSpouseDialogue will read from this asset [b]OnDayStarted[/b] and clear this asset [b]OnDayEnding[/b], so you don't have to perform any cleanup.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/33353",
+	"Version": "1.0.1",
+	"Updated": "2025-05-18T16:54:27+00:00",
+	"Downloads": [
+		{
+			"Id": 132577,
+			"Type": "Main",
+			"DisplayName": "Special Spouse Dialogue Framework",
+			"FileName": "Special Spouse Dialogue Framework-33353-1-0-1-1747587267.zip",
+			"Description": "Special Spouse Dialogue Framework",
+			"Version": "1.0.1",
+			"SizeInBytes": 14166,
+			"Uploaded": "2025-05-18T16:54:27+00:00",
+			"Mods": [
+				{
+					"Id": "Kantrip.SpecialSpouseDialogue",
+					"DisplayName": "Special Spouse Dialogue Framework",
+					"Type": "Smapi",
+					"RelativePath": "SpecialSpouseDialogue",
+					"Manifest": {
+						"Name": "Special Spouse Dialogue Framework",
+						"Description": "A framework to allow CP mods to easily overwrite spouse dialogue.",
+						"Author": "Kantrip",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpecialSpouseDialogue.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:33353"
+						],
+						"UniqueId": "Kantrip.SpecialSpouseDialogue"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342519265,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342420041,
+		"UploaderId": 204877634,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

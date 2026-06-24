@@ -1,0 +1,84 @@
+{
+	"Site": "Nexus",
+	"Id": 44185,
+	"Name": "New Escape Rope",
+	"Author": "iamsaulc",
+	"Description": "[b]Ever needed to leave the mines quickly without wasting time, or go back to a previous floor without abandoning your run?[/b]\n<br />This mod adds two new items inspired by the iconic Escape Rope from Pokémon, introducing new ways to move within the mines.\n<br />\n<br />[b]Features\n<br />[/b]\n<br />[u]Escape Rope[/u]\n<br />Instantly lets you exit:\n<br />\n<br />[list]\n<br />[*]The Mines\n<br />[*]Skull Cavern\n<br />[*]Volcano Dungeon\n<br />[/list]\n<br />Ideal for quick escapes or dangerous situations.\n<br />\n<br />[u]Floor Rope[/u]\n<br />Allows you to move up one floor in the mines, something not possible in the base game.\n<br />Ideal if you forgot something on the previous floor or accidentally clicked a ladder and went down.\n<br />\n<br />[b]Availability\n<br />[/b]\n<br />Both items can be purchased from the Dwarf in the mines\n<br />\n<br />[b]Integration\n<br />[/b]\n<br />Items are added via Content Patcher, while the logic is implemented in C# using SMAPI.\n<br />\n<br />[b]Gameplay experience\n<br />[/b]\n<br />Includes animations and sound effects, with fast and context-aware usage.\n<br />\n<br />[b]Inspiration[/b]\n<br />\n<br />This mod is inspired by the classic Escape Rope from Pokémon, adapted to Stardew Valley to expand exploration options without breaking the core gameplay.\n<br />\n<br />[b][center][url=https://github.com/iamsaulc/NewEscapeRope]Source Code[/url]\uFEFF\n<br />[url=https://www.nexusmods.com/profile/iamsaulc]My other mods[/url]\uFEFF[/center][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44185",
+	"Version": "1.0.0",
+	"Updated": "2026-03-25T19:30:54+00:00",
+	"Downloads": [
+		{
+			"Id": 161984,
+			"Type": "Main",
+			"DisplayName": "New Escape Rope",
+			"FileName": "New Escape Rope-44185-1-0-0-1774467054.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 15575,
+			"Uploaded": "2026-03-25T19:30:54+00:00",
+			"Mods": [
+				{
+					"Id": "IamSaulC.NewEscapeRope",
+					"DisplayName": "New Escape Rope",
+					"Type": "Smapi",
+					"RelativePath": "NewEscapeRope\\NewEscapeRope",
+					"Manifest": {
+						"Name": "New Escape Rope",
+						"Description": "Adds an Escape Rope and a Floor Rope sold by the Dwarf. Item data and shop entries are managed by the companion Content Patcher pack.",
+						"Author": "IamSaulC",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NewEscapeRope.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44185"
+						],
+						"UniqueId": "IamSaulC.NewEscapeRope"
+					}
+				},
+				{
+					"Id": "IamSaulC.NewEscapeRopeContent",
+					"DisplayName": "New Escape Rope Content",
+					"Type": "ContentPack",
+					"RelativePath": "NewEscapeRope\\[CP]NewEscapeRope",
+					"Manifest": {
+						"Name": "New Escape Rope Content",
+						"Description": "Content Patcher pack for New Escape Rope. Handles item data, sprites and shop entries.",
+						"Author": "IamSaulC",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "IamSaulC.NewEscapeRope",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44185"
+						],
+						"UniqueId": "IamSaulC.NewEscapeRopeContent"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342548672,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430873,
+		"UploaderId": 192696206,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

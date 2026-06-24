@@ -1,0 +1,107 @@
+{
+	"Site": "Nexus",
+	"Id": 40892,
+	"Name": "Craftable Backpacks",
+	"Author": "Stoel1994",
+	"AuthorLabel": "Michael Stoelwinder",
+	"Description": "[center][b]NO LONGER BROKEN[/b]\n<br />The time has finally come. I believe i have finally got to the core issue!\n<br />\n<br />Now presenting Version 3.1! It doesn't suck any more!!\n<br />\n<br />I have implemented several changes this time which have made the user experience visually easier to digest. First of all, i have remade the way the inventory is drawn. the old way was clunky, ugly and frankly embarrassing. I have made the player inventory a scrolling UI which has left the bounds of everything else as god (ConcernedApe) intended.\n<br />I have also fixed the relative position of the player inventory when interacting with large chests. i noticed a horrible overlay and i did. not. like.\n<br />Finally, most importantly, i believe that because of the changes made to how the game is drawing the new slots (going back to vanilla) this mod SHOULD be compatible with more mods now. Please, try. Give\u00A0 me your feedback. Make me better.\n<br />\n<br />[b]Project Description[/b]\n<br />This mod allows you to craft backpack upgrades, removing the need to rely on Pierre. The goal is to make the game more self-sustaining by prioritizing crafting over purchasing.\n<br />\n<br />[b]New Items Added:[/b]\n<br />[list]\n<br />[*][b]8 Backpack Upgrades:[/b] Ranging from 18 to 60 inventory spaces.\n<br />[*][b]Hessian:[/b] A new textile used to craft early-game bags.\n<br />[*][b]The Junimo Pocket:[/b] A specialized late-game utility.\n<br />[/list][quote][b]Note:[/b] Yes, I know I'm not the best at making sprites. Bite me![/quote][line][b]\n<br />[/b][b]Improved Progression:\u00A0[/b]I’ve reordered the bag upgrades! I had a bit of a \"Brain Fart™\" when originally designing the mod, but I've fixed the flow:\n<br />\n<br />[list]\n<br />[*][b]Logical Flow:[/b] Of course you’ll reach the bottom of the Mines before you hit the Skull Cavern.\n<br />[*][b]Earlier Upgrades:[/b] You no longer have to wait for a Deluxe Coop and wool-producing bunnies just to get 24 slots.\n<br />[*][b]New Recipe Order:[/b] Recipes 1–4 now require [b]Hessian[/b], while recipes 5–8 require [b]Cloth[/b].\n<br />[*]This ensures a smooth progression as you move through the Mines.\n<br />[/list][b]New Feature: The Junimo Pocket\n<br />[/b]This is a [b]Late-Game Item[/b].\n<br />The Junimo Pocket shares the same \"time-space\" as the Junimo Chest. It grants you access to your tools from anywhere in the world while keeping them stored safely in your Junimo Chest, freeing up your main inventory for loot.\n<br />\n<br />[b]How to Use:[/b]\n<br />[list]\n<br />[*][b]Toggle Visibility:[/b] Upon consuming the item, you gain a secondary hotbar linked to your Junimo Chest. If you want the hotbar to \"KFO,\" simply press [b]SHIFT + TAB[/b] to hide or reveal it.\n<br />[*][b]Swapping Items:[/b] Hold [b]SHIFT[/b] and press a number ([b]1–9[/b]) to instantly swap the item in your hand with the corresponding item in your Junimo Pocket.\n<br />[*][b]Putting Items Away:[/b] Press the same combination again, and your tool will squeeze back into its rightful place in the chest.\n<br />[/list]\n<br />[b]Bug Fix Update:[/b]\n<br />I have redone the code, thanks to mycatoreo (an amazing name by the way, our Guinea Pig is also called Oreo) and have made it so all inventory lines are visible to the player. this works not only for the player inventory ui in the menu, but also for chests and big chests.[/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40892",
+	"Version": "1.0.0",
+	"Updated": "2026-03-14T01:35:01+00:00",
+	"Downloads": [
+		{
+			"Id": 160318,
+			"Type": "Main",
+			"DisplayName": "Craftable_Backpacks",
+			"FileName": "Craftable_Backpacks-40892-3-4-0-1773452101.zip",
+			"Description": "",
+			"Version": "3.4.0",
+			"SizeInBytes": 46877,
+			"Uploaded": "2026-03-14T01:35:01+00:00",
+			"Mods": [
+				{
+					"Id": "MichaelStoelwinder.CraftableBackpacks",
+					"DisplayName": "Craftable Backpacks",
+					"Type": "Smapi",
+					"RelativePath": "CraftableBackpacks",
+					"Manifest": {
+						"Name": "Craftable Backpacks",
+						"Description": "Adds craftable backpack upgrades with a scrolling UI.",
+						"Author": "MichaelStoelwinder",
+						"Version": "3.4.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CraftableBackpacks.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MichaelStoelwinder.CraftableBackpacks"
+					}
+				},
+				{
+					"Id": "MichaelS.CraftableBackpacks.CP",
+					"DisplayName": "Craftable Backpacks (Content Patcher)",
+					"Type": "ContentPack",
+					"RelativePath": "CraftableBackpacks_CP",
+					"Manifest": {
+						"Name": "Craftable Backpacks (Content Patcher)",
+						"Description": "Handles the Wizard's mail and recipe data for backpacks.",
+						"Author": "MichaelS",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "MichaelS.CraftableBackpacks.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MichaelS.CraftableBackpacks.CP"
+					}
+				},
+				{
+					"Id": "MichaelS.CraftableBackpacks.JA",
+					"DisplayName": "Craftable Backpacks (Json Assets)",
+					"Type": "ContentPack",
+					"RelativePath": "CraftableBackpacks_JA",
+					"Manifest": {
+						"Name": "Craftable Backpacks (Json Assets)",
+						"Description": "Adds craftable backpack upgrade items.",
+						"Author": "MichaelS",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "MichaelS.CraftableBackpacks.JA"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547006,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427580,
+		"UploaderId": 248063885,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}

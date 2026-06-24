@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 36672,
+	"Name": "Dating Reversed",
+	"Author": "beldavid1",
+	"AuthorLabel": "Beldavid",
+	"Description": "You’ll see a 3-step dialogue:\n<br />a randomized warm-up line\n<br />a randomized follow-up line\n<br />a prompt: “Will you accept this bouquet?”\n<br />Choosing Yes shows a heart emote ❤️, you receive a Bouquet, and you are set to Dating with that NPC.\n<br />Choosing Not right now shows a tear emote \uD83D\uDE22 and applies a short cooldown before anyone asks again. (this will count towards your seasonal limit)\n<br />Fully configurable via Generic Mod Config Menu (GMCM), including gender filters, per-NPC toggles, monthly/seasonal limits, and cooldowns.\n<br />\n<br />\n<br />Requirements:\n<br />Stardew Valley 1.6+\n<br />SMAPI 4.0+\n<br />Generic Mod Config Menu\u00A0\n<br />(Recommended) Polyamory Sweet if you want more than 1 NPC to ask you out\n<br />\n<br />\n<br />Installation:\n<br />Install SMAPI.\n<br />Install Generic Mod Config Menu.\n<br />Download Dating Reversed and unzip it into Stardew Valley/Mods.\n<br />Launch the game with SMAPI.\n<br />\u00A0\n<br />\n<br />Updating:\n<br />Replace the old mod folder with the new one.\n<br />It’s safe to update mid-save.\n<br />\n<br />\n<br />Uninstalling:\n<br />Delete the mod folder from Mods.\n<br />(Optional) Run the in-game console command \"dr.clearall\" to\u00A0reset any mod data.\n<br />\n<br />\n<br />GMCM Configuration:\u00A0\n<br />Open GMCM from the title screen or the in-game menu (Options → Mod Options):\n<br />Enable Mod: Master on/off.\n<br />Max Bouquets Per Season: How many NPC confession events can happen per in-game season.\n<br />Random Cooldown: If on, the days before the next potential confession are random (1–9).\n<br />Fixed Cooldown (if random disabled): The exact number of cooldown days when Random Cooldown is off.\n<br />Allow Male Suitors / Allow Female Suitors: Filter by NPC gender.\n<br />Specific NPC Toggles: Enable/disable individual datable NPCs. *Must be in-game to see*\n<br />Changes to season limits and the NPC pool affect future event rolls. If you’re testing and want to force a new roll, use\u00A0dr.clearcooldown or dr.forceevent &lt;NPC&gt;\n<br />\n<br />\n<br />How it works (under the hood):\n<br />Each morning, the mod picks at most one eligible NPC (not already dating you, ~8 hearts, allowed by filters, not on cooldown, and within the per-season cap).\n<br />When you leave your farmhouse onto the Farm (6:00–10:00), the event plays.\n<br />The “Yes” branch runs a safely pre-injected sub-event (emote ❤️, line, Bouquet, and status).\n<br />The “Not right now” branch is handled inline (emote \uD83D\uDE22, line) and applies cooldown.\n<br />Multiplayer: Works for the host. Farmhands are ignored to avoid content race conditions.\n<br />\n<br />Compatibility:\n<br />Stardew 1.6+ / SMAPI 4.0+: supported.\n<br />Should be compatible with most dialogue/relationship mods. Mods that replace Farm events wholesale could conflict.\n<br />Safe to add/remove mid-save.\n<br />Any and all NPCs from any mod should be compatible so long as they have the (single) status. Including datable Jodi, Robin, and Caroline.\n<br />This mod will let only 1 or all the single NPCs (Men and Women) ask you out assuming you have a multiple dating/marriage mod.\u00A0\n<br />\n<br />\n<br />Console Commands (debugging only):\n<br />[spoiler]\n<br />[list]\n<br />State &amp; picking:dr.dumpstatus — Shows current pick, monthly count, and cooldown.dr.debugpool — Lists eligible right now.dr.explainpool — For every datable NPC, shows “OK” or the first reason they’re excluded (points, gender toggle, already dating, seen this month, etc.).dr.dumpids — How many datable NPCs the mod sees (useful for content-packs).dr.repick — Clears today’s pick &amp; cooldown, then picks a new NPC immediately.Day/season:dr.clearcooldown — Clears today’s cooldown and pick (doesn’t change monthly count).dr.clearall — Full reset of this save’s DR data (daily pick, monthly counters, per-NPC monthly gates). Does not touch your save beyond that.Event control:dr.forceevent &lt;NPC&gt; — Force a specific NPC to be today’s proposer.dr.playevent — Plays today’s bouquet scene (auto-warps you to Farm and injects the event data if needed).Relationships:dr.setdating &lt;NPC&gt; / dr.unsetdating &lt;NPC&gt; — Toggle Dating for one NPC.dr.sethall &lt;hearts 0–10&gt; — Set all datable NPCs to the given hearts (e.g., dr.sethall 8 → 2000 pts, perfect for testing).dr.setpoints &lt;NPC&gt; &lt;hearts|points&gt; — Set one NPC to a heart value or raw points (e.g., dr.setpoints Emily 8 or dr.setpoints Emily 2000).dr.getpoints &lt;NPC&gt; — Print one NPC’s current points &amp; status.[/list][/spoiler]\n<br />\n<br />\n<br />FAQs\n<br />Q: Do I have to give a Bouquet first?\n<br />A: No. This mod flips the script: NPCs can initiate and give you the bouquet.\n<br />Q: Can I limit who can ask?\n<br />A: Yes—by gender and per-NPC toggles in GMCM.\n<br />Q: My GMCM menu doesn’t show NPC toggles.\n<br />A: Load your save first. The per-NPC list populates in-game, not on the title screen.\n<br />\n<br />Troubleshooting:\n<br />Q. I pressed Yes but nothing happened\n<br />A. Make sure GMCM is installed, and you loaded your save before testing (so the per-NPC setup is ready). If you’re testing repeatedly, run dr.clearcooldown first to remove any cooldown.\n<br />\uFEFF\n<br />Q. No one ever asks me out\n<br />A. Ensure you’re ~8 hearts (2,000 friendship points), not already dating, and the NPC is enabled. Make sure you walk from Farmhouse onto Farm between 6:00–10:00 and that your Season cap in not reached.\u00A0\n<br />\n<br />\n<br />Credits &amp; Permissions:\n<br />Code &amp; design: Beldavid.\n<br />wurmmehl for providing a German translation (Included in this mod)\n<br />kaoruarden\u00A0for providing a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/36699]Mandarin[/url]\u00A0(Traditional Chinese and Simplified Chinese Version)\n<br />NiveK\u00A0for providing a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/36912]Portuguese[/url]\u00A0Traduzido PT-BR\n<br />Juanpa98ar\u00A0for providing a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/37363]Spanish\n<br />[/url]GMCM by spacechase0.\n<br />Please credit the above if you fork/redistribute. Respect Nexus Mods permissions and the original mod’s license\n<br />Free permission to translate to other languages just give me credit for the original mod.\n<br />\n<br />\n<br />Changelog\n<br />v5.60 — Added gender tags to the tool tips in the GMCM to make things easier, added several new randomization options to the GMCM\n<br />v5.50 — I broke the allow Female/Male option with 5.4 this has been fixed, I have also added a nice menu accessible by pressing ctrl+d (this is changeable).\n<br />v5.4.0 — One user stated that their spouse triggered the bouquet event somehow so I made the NPC fail-safes more robust to hopefully guarantee that no Dating, Married, or Engaged NPCs will trigger the bouquet\u00A0event.\n<br />v5.3.0 — Changed the heart logic to range from 8-10 as some of the dating mods (eg. dateable Robin) do not unlock till they are at 10 hearts meaning this mod will never fire off. Also fixed a minor grammatical error.\n<br />v5.2.0 — Bug fixes.\n<br />v5.1.0 — Bug fixes and another 5.1 to make NPC detection more robust, also user wurmmehl provided a German translation that I included in the i18N\n<br />v5.0.0 —\u00A0Revised code hopefully putting a stop to the \"yes\" being treated as \"no\"\n<br />v4.5.0 — Updated i18n to add the GMCM language in order to make the GMCM menu translatable. *No other changes*\n<br />v4.0.0 — Fixed a cooldown logic bug, cleaned up debug commands to print out actual info and not raw data, and added new section to GMCM so you can view chosen NPC and cooldown days left if using multiple partners.\u00A0\n<br />v3.5.0\u00A0— Dating was getting stuck and not refreshing and had to fix it. Added several new debugging commands. Tested with Stardew Valley Expanded, East Scarp and Ridgeside, all seems to work, and all \"dateable\" NPCs were added to GMCM.\u00A0\n<br />v3.0.0\u00A0— Adding debug command toggle box to the GMCM menu with default of off and adding a loss of 1 heart (250 points) with a slider to customize or disable.\n<br />v2.1.0 — Re-uploaded to fix the folder structure\n<br />v2.0.0 — Removed\u00A0\"Will you accept this bouquet?\" out of the .dll code into the i18n default.json\n<br />v1.0.0 — First public release: 3-step ask, emotes, per-season limits, cooldowns, per-NPC toggles, host-safe injection, debug commands.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36672",
+	"Version": "5.6",
+	"Updated": "2026-04-17T01:32:49+00:00",
+	"Downloads": [
+		{
+			"Id": 164672,
+			"Type": "Main",
+			"DisplayName": "Dating Reversed",
+			"FileName": "Dating Reversed-36672-5-6-1776389569.zip",
+			"Description": "Added gender tags to the tool tips in the GMCM to make things easier, added several new randomization options to the GMCM",
+			"Version": "5.6",
+			"SizeInBytes": 51363,
+			"Uploaded": "2026-04-17T01:32:49+00:00",
+			"Mods": [
+				{
+					"Id": "DatingReversed",
+					"DisplayName": "Dating Reversed",
+					"Type": "Smapi",
+					"RelativePath": "Dating Reversed",
+					"Manifest": {
+						"Name": "Dating Reversed",
+						"Description": "Sets an NPC's relationship to Dating after your custom bouquet event.",
+						"Author": "Beldavid",
+						"Version": "5.6.0",
+						"MinimumApiVersion": "4.5.0",
+						"EntryDll": "DatingReversed.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:36672"
+						],
+						"UniqueId": "DatingReversed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342551360,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423360,
+		"UploaderId": 304421,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 23637,
+	"Name": "NPC Tokens for Content Patcher",
+	"Author": "siliconmodding",
+	"Description": "This mod is not supposed to do anything on its own.\n<br />\n<br />NPC Tokens for Content Patcher adds the custom token \"[font=Courier New][b]siliconmodding.NPCTokens/NPC:[/b][/font]\", which takes\u00A0two arguments separated by a plus sign (+): the target NPC's name (not DisplayName), and the information you want a token of.\u00A0A token missing an NPC name argument will return an empty string.\n<br />\n<br />For example,\u00A0\"[font=Courier New]siliconmodding.NPCTokens/NPC:Alex+Gender[/font]\" will return Alex's gender.\n<br />\n<br />Note that [b]these tokens will not work when used through aliases[/b] (so yes, you will normally need to copy/paste \"[font=Courier New]siliconmodding.NPCTokens/NPC:Abigail+Birthday_Season[/font]\" whenever you want to find out Abigail was born in fall). However, they will work in dynamic tokens!\n<br />\n<br />\n<br />[b]These are the information arguments and the values they return:\n<br />[/b][list]\n<br />[*][font=Courier New]displayname[/font]\u00A0| The character's display name in the current game language\n<br />[*][font=Courier New]gender[/font] | Male, Female, Undefined\n<br />[*][font=Courier New]birthday_season[/font]\u00A0| spring, summer, fall, winter, [space if null] (note that this will return lowercase)\n<br />[*][font=Courier New]birthday_day[/font] | number from 1-28, 0 if none\n<br />[*][font=Courier New]age[/font] | 0 (adult), 1 (teen), 2 (child)\n<br />[*][font=Courier New]manners[/font] | 0 (neutral), 1 (polite), 2 (rude)\n<br />[*][font=Courier New]socialanxiety[/font] | 0 (outgoing), 1 (shy), 2 (neutral)\n<br />[*][font=Courier New]optimism[/font] | 0 (positive), 1 (negative), 2 (neutral)\n<br />[*][font=Courier New]datable[/font] | True, False\n<br />[*][font=Courier New]loveinterest[/font] | Name of love interest, [space if none]\n<br />[*][font=Courier New]haspartnerfordance[/font] | True, False\n<br />[*][font=Courier New]isinvisible[/font] | True, False\n<br />[*][font=Courier New]cansocialize[/font] | True, False\n<br />[*][font=Courier New]isdarkskinned[/font] | True, False\n<br />[*][font=Courier New]isadoptionspouse[/font] | True, False (I think it's the same as\u00A0SpouseAdopts in Characters.json)\n<br />[*][font=Courier New]cangetpregnant[/font] | True, False (Same as\u00A0SpouseWantsChildren\u00A0in Characters.json)\n<br />[*][font=Courier New]ismarriedorengaged[/font] | True, False\n<br />[*][font=Courier New]canrecievegifts[/font] | True, False\n<br />[/list]\n<br />For example, Maru, specifically when married to a female farmer with a nursery built, would return this data for the following tokens:\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+[font=Courier New]displayname[/font]\u00A0| Maru\n<br />siliconmodding.NPCTokens/NPC:Maru+gender | Female\n<br />siliconmodding.NPCTokens/NPC:Maru+birthday_season | summer\n<br />siliconmodding.NPCTokens/NPC:Maru+birthday_day | 10\n<br />siliconmodding.NPCTokens/NPC:Maru+age | 1\n<br />siliconmodding.NPCTokens/NPC:Maru+manners | 0\n<br />siliconmodding.NPCTokens/NPC:Maru+socialanxiety | 0\n<br />siliconmodding.NPCTokens/NPC:Maru+optimism | 0\n<br />siliconmodding.NPCTokens/NPC:Maru+datable | True\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+loveinterest | Harvey\n<br />siliconmodding.NPCTokens/NPC:Maru+haspartnerfordance | False\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+isinvisible | False\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+cansocialize | True\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+isdarkskinned | True\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+isadoptionspouse | True (From being married to a farmer of the same gender)\n<br />siliconmodding.NPCTokens/NPC:Maru+cangetpregnant | True\u00A0(From having child requirements fulfilled (this will also be true for male spouses, hence the other name,\u00A0SpouseWantsChildren))\n<br />siliconmodding.NPCTokens/NPC:Maru+ismarriedorengaged | True\u00A0\n<br />siliconmodding.NPCTokens/NPC:Maru+canrecievegifts | True\u00A0\n<br />\n<br />\n<br />Feel free to request any useful tokens I might've missed!\n<br />[url=https://github.com/silicon-git/NPCTokens]Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23637",
+	"Version": "1.0.2",
+	"Updated": "2024-06-01T21:42:56+00:00",
+	"Downloads": [
+		{
+			"Id": 102111,
+			"Type": "Main",
+			"DisplayName": "NPCTokens",
+			"FileName": "NPCTokens-23637-1-0-2-1717278176.zip",
+			"Description": "Added token argument for getting an NPC's displayName.",
+			"Version": "1.0.2",
+			"SizeInBytes": 12526,
+			"Uploaded": "2024-06-01T21:42:56+00:00",
+			"Mods": [
+				{
+					"Id": "siliconmodding.NPCTokens",
+					"DisplayName": "NPC Tokens",
+					"Type": "Smapi",
+					"RelativePath": "NPCTokens",
+					"Manifest": {
+						"Name": "NPC Tokens",
+						"Description": "Custom Content Patcher tokens for NPCs.",
+						"Author": "siliconmodding",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "NPCTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23637"
+						],
+						"UniqueId": "siliconmodding.NPCTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488799,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410325,
+		"UploaderId": 163433143,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

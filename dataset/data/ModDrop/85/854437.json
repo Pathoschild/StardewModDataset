@@ -1,0 +1,81 @@
+{
+	"Site": "ModDrop",
+	"Id": 854437,
+	"Name": "Goodbye American English",
+	"Author": "TheMightyAmondee",
+	"TagLine": "Changes american spelling to british spelling and converts units to the metric system (optional).",
+	"Description": "Changes American spelling to British spelling.\n\nAlso changes the game units to the metric system and the season fall to autumn by default, this can be disabled in the config file\n\nI've tried to be as thorough as I can but I may have missed some changes, let me know if you spot anything and I'll fix it up.\n\nVersion 1.4.1 requires SMAPI 3.14.0 or above. Use 1.4.0 for older SMAPI versions.\n\nNameReplacer:\n\nVersion 1.4.0 introduced the ability to change the display names of any concession snack or object using the included NameReplacer.json file, think of this as an internal content pack. When entering name replacements make sure to put a comma at the end of each entry (except the last one).\nYou can safely delete this file if you don't want to change any names. If you want to replace names but have deleted the file, simply create a new JSON file with the name \"NameReplacer\". In Version 1.5.0, the NameReplacer has become more advanced, thanks to Harmony! Now preserve and honey names can be independently or generically edited. These edits are discussed in the Advanced NameReplacer section.\n\nTo turn Harmony patching off, set AllowAdvancedNameReplacer to false in the config. This stops some replacements from occurring but can prevent issues if the game is experiencing problems.\n\nIn 1.6.0 the format of the NameReplacer has been updated for readability and to be better compatible with Stardew Valley 1.6. The old format is no longer supported and will show a warning to update.\n\n1.6.0\nIn version 1.6.0 the format of the NameReplacer has changed to better support the new object data format. \nFor Objects: Name replacement entries are in the format: \"ItemName\": \"NewItemName\", e.g to turn Hot Pepper into Chilli, the entry would be \"Hot Pepper\": \"Chilli\".\nFor Concession snacks: Name replacement entries are in the format: \"ConcessionName_C\":\"NameToReplaceWith\", e.g to turn Cotton Candy into Fairy Floss, the entry would be \"Cotton Candy_C\":\"Fairy Floss\"\n\nAdvanced NameReplacer:\n\nGeneric edits\n1.6.0\nUniversal edits to all preserve names i.e all Jelly becomes Jam are in the form \"PP_PreserveType\":\"EditType/NameToReplaceWith\".\nTo break it down:\nThe PreserveType is the preserve to change. Either: \"Juice\", \"Wine\", \"Pickles\", \"Jelly\", \"Roe\" or \"Honey\".\nThe EditType can be one of \"prefix\" or \"suffix\". Basically, put the preserve word before \"prefix\" or after \"suffix\" the object name.\nE.g \"PP_Jelly\": \"suffix/Jam\"\n\nIndependent edits\nUnique preserve edits can be done when AllowAdvancedNameReplacer is true (which is the default) in the config. Generic edits are mutually exclusive (can only prefix or suffix, not both). Unique edits will override generic edits.\n\n1.6.0\nUnique edits are in the form \"P_(O)ObjectID_PreserveType\":\"EditType/NameToReplaceWith\".\nTo break it down:\nThe ObjectID refers to the object ID of the item to replace the preserve name for. i.e Potato's ID to change Potato Juice to something else.\nThe PreserveType refers to the preserve to change. Either: \"Juice\", \"Wine\", \"Pickles\", \"Jelly\", \"Roe\" or \"Honey\".\nThe EditType can be one of \"prefix\", \"suffix\" or \"replace\". Basically, put the preserve word before \"prefix\" or after \"suffix\" the object name. \"replace\" will replace the entire name with something else. For \"replace\" using {0} will insert the object name in it's place.\nE.g \"P_(O)613_Jelly\": \"suffix/Sauce\", (this changes Apple Jelly to Apple Sauce)\n\n\nGeneric edits are mutually exclusive (can only prefix or suffix, not both). Unique edits will override generic edits.\n\nVersion 1.4.0\n- Added ability to replace object and concession names.\n- Fish size is now correctly converted to centimetres.\n\nVersion 1.4.1\n- NameReplacer.json now generates upon the mod being run. This is so the file doesn't need to be edited with each update\n- Updated to new content api. Use version 1.4.0 if using an older version of SMAPI.\n\nVersion 1.5.0\n- NameReplacer.json can now replace more names\n- Now uses Harmony. This can be disabled if needed at the cost of features.\n\nVersion 1.6.0\n- Updated for 1.6\n- New NameReplacer format to be more compatible with 1.6\n\nVersion 1.6.1\n- Fix fiber seed recipe not being added properly\n\nVersion 1.6.2\n- Updated for 1.6.9\n\nTo install:\n- Ensure SMAPI is installed\n- Simply unzip the download file into your Mods folder\n- The config file will be generated when the game has been run at least once",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/854437",
+	"Version": null,
+	"Updated": "2024-11-05T03:35:48.757+00:00",
+	"Downloads": [
+		{
+			"Id": 1654487,
+			"Type": "Main",
+			"DisplayName": "GoodbyeAmericanEnglish 1.6.2",
+			"FileName": "GoodbyeAmericanEnglish 1.6.2.zip",
+			"Description": "Changes american spelling and converts units to the metric system.\n\n",
+			"Version": "1.6.2",
+			"SizeInBytes": 23911,
+			"Uploaded": "2024-11-05T03:35:35.691+00:00",
+			"Mods": [
+				{
+					"Id": "TheMightyAmondee.GoodbyeAmericanEnglish",
+					"DisplayName": "Goodbye American English",
+					"Type": "Smapi",
+					"RelativePath": "GoodbyeAmericanEnglish",
+					"Manifest": {
+						"Name": "Goodbye American English",
+						"Description": "Replaces american spelling with british spelling",
+						"Author": "TheMightyAmondee",
+						"Version": "1.6.2",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "GoodbyeAmericanEnglish.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7183",
+							"ModDrop:854437"
+						],
+						"UniqueId": "TheMightyAmondee.GoodbyeAmericanEnglish"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "af33ffce4f7bea36f50bdf496ad3ebee",
+				"md5In": "f1c429f95f3fb2fc1d30d6e80353acc6",
+				"patchNotes": "Updated for 1.6.9",
+				"scriptType": 0,
+				"sha256Ex": "4a5dab0a2b2bf98267a6e1ee100f99bf4c91ddff407e9aa4d1f6271c1d0cbdba",
+				"sha256In": "097904c52de1ebaf46e9aa7a2d4f2198d5669c8d06bc9721cc834b3f7165c551"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1606217271957,
+		"DateUpdated": 1730777748757,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1606216858383,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/854437/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/854437/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/854437/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/854437/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 198696
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 1019,
+	"Name": "AutoAnimalDoors",
+	"Author": "taggartaa",
+	"AuthorLabel": "Aaron Taggart",
+	"Description": "[size=6][b]AutoAnimalDoors[/b][/size]\n<br />\n<br />All\u00A0 documentation is available on the github readme which is more nicely formatted:\u00A0\n<br />[url=https://github.com/taggartaa/AutoAnimalDoors/blob/master/README.md]https://github.com/taggartaa/AutoAnimalDoors/blob/master/README.md\n<br />\n<br />[/url]Don't want to go there? Okay, I also try to keep the documentation updated here as well!\n<br />\n<br />[size=3]This is a mod created for StardewValley which will automate the animal door opening/closing process for all your barns and coop.[/size]\n<br />\n<br />[size=5][i]Installation[/i]\n<br />[/size]\n<br />[list=1]\n<br />[*][size=3][url=https://github.com/Pathoschild/SMAPI/releases]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=3]Unzip the mod folder into\u00A0Stardew Valley/Mods.[/size]\n<br />[*][size=3]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />[size=4][u]Android Users:\n<br />\n<br />[/u][/size][size=3]I don't have any way of testing android, however thanks to\u00A0[url=https://www.nexusmods.com/stardewvalley/users/178008513]Puadii09[/url], this should work:\n<br />\n<br />[list]\n<br />[*][s]Mod Version:[b] 2.3.0[/b][/s]\n<br />[*][s]Smapi Version: [b]3.7 (android)[/b][/s]\n<br />[*][s]Stardew Valley Version: [b]1.4.5[/b][/s]\n<br />[*][b][url=https://www.nexusmods.com/stardewvalley/users/60962371]Dani1490[/url]\u00A0[/b]has tested the latest version of the mod on android and says it works (with 2.3.0 no longer working).\u00A0\n<br />[/list][b]\n<br />[/b][b][i]Note:[/i][/b]\u00A0[/size][size=3]I have not been actively developing for android so it will be missing the newer features.\n<br />[/size]\n<br />[size=5][i]Features[/i][/size]\n<br />\n<br />[size=4][u]Opening animal doors\u00A0automatically[/u]\n<br />[/size]\n<br />[size=3]Your animal doors will open automatically at the time you specified in the config file no matter where your character is in the game world (you will hear the door opening sound).\u00A0\n<br />\n<br />If that time never occurs during the day (for instance, you specified 730AM but you used some other mod to set the time to 900AM) the doors will still open unless it is past your specified doors close time. Note: the doors will only ever auto-open once per day.\n<br />\n<br />Doors will not open in the Winter or on Rainy/Thunder Stormy days by defualt, this can be changed in the config file.\n<br />\n<br />You can disable the animal doors opening automatically with a setting in the config file if you would like your doors to auto-close, but not auto-open.[/size]\n<br />\n<br />[size=4][u]Closing animal doors automatically[/u][/size]\n<br />\n<br />[size=3]Your animal doors will close automatically at the time you specified in the config file if all your animals are inside. If they are not yet inside, the doors will wait for all the animals to enter their homes before closing any doors.\u00A0[/size]\n<br />\n<br />[size=3]If you go to bed before your animal door close time, your animal doors will be closed, and all your animals will be warped back to their homes to keep them safe from attacks ;)[/size]\n<br />\n<br />[size=3]Note: The current implementation closes the animal doors and warps the animals back as soon as you get into bed (even if you select \"No\" from the \"Go to sleep now?\" dialog). It is difficult (impossible?) to warp your animals back to safty on time once \"Yes\" is pressed.[/size]\n<br />\n<br />[u][size=4]Other Mods Support[/size][/u]\n<br />\n<br />I added the option\u00A0[b]UnrecognizedAnimalBuildingsEnabled [/b]to allow you to enable auto opening of animal buildings that are added by other mods (example:\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/13492]Aviary Mod[/url]). Keep in mind that I can't test every mod out there, and I can't control other mods door animations or sounds, so they will likely not follow your\u00A0DoorSoundSetting. For this reason, I have disabled the option by default.\n<br />\n<br />[u][size=4]Upgrade Level Requirement[/size][/u]\n<br />\n<br />[size=3]You can set the required upgrade level for barns or coops before the auto open/close feature is enabled via the CoopRequiredUpgradeLevel and BarnRequiredUpgradeLevel respectively. The number corresponds to the minimim upgrade level required for the feature to be enabled. If you want to only have the doors automatically open/close on the last upgrade level (to correspond with the auto feeder system) you can set these values to 3.\n<br />[/size]\n<br />[size=3]Consequently, you can disable this mod for barns or coops by setting the value to anything 4 or over, since you can never have a coop/barn with that high of an upgrade level.[/size]\n<br />\n<br />[size=5][i]Config File\n<br />[/i][/size]\n<br />[size=3]Hey, you no longer have to use a config file, I integrated with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]. Download and install that mod and configure all these settings in the game! :)[/size]\n<br />\n<br />[size=3]Oh, you'd rather use the config file? That is okay too.\u00A0The config file is where all the options for this mod can be set. It will be automatically created the first time the game is launched with this mod installed.\n<br />You can find it in the mods install directory.[/size]\n<br />\n<br />[u][size=4]Values[/size][/u]\n<br />\n<br />[b]AnimalDoorOpenTime -[/b]The time animal doors are scheduled to open (730 = 7:30 am, 1310 = 1:10 pm)\n<br />[b]AnimalDoorCloseTime -[/b]\u00A0The time animal doors are scheduled to close (730 = 7:30 am, 1310 = 1:10 pm)\n<br />[b]CoopRequiredUpgradeLevel[/b] - The coop upgrade level required for auto open/close (1=base, 2=big, 3=deluxe)\n<br />[b]BarnRequiredUpgradeLevel[/b] - The barn upgrade level required for auto open/close (1=base, 2=big, 3=deluxe)\n<br />[b]UnrecognizedAnimalBuildingsEnabled\u00A0 [/b]-\u00A0true if animal bulidings from other mods should auto open/close, false if not\n<br />[b]AutoOpenEnabled -[/b]\u00A0true if doors should automatically open, false if not\n<br />[b]DoorSoundSetting -[/b]\u00A0Sets when you hear the door sound openning and closing. Possible values: (\"ONLY_ON_FARM\", \"ALWAYS_ON\", \"ALWAYS_OFF\")\n<br />[b]OpenDoorsWhenRaining -\u00A0[/b]true if doors should open even when raining/lightning, false if not\n<br />[b]OpenDoorsDuringWinter -[/b]\u00A0true if doors should open even during winter, false if not\n<br />[b]CloseAllBuildingsAtOnce [/b]-\u00A0true if all buildings should wait till every animal is inside before closing, false if each building should only wait for their own animals\n<br />[b]DoorEventPopupEnabled[/b] -\u00A0true if you want a chat popup when the doors open/close, false otherwise\n<br />\n<br />[u][size=4]Example config.json\n<br />[/size][/u]\n<br />{\n<br />\u00A0 \"AnimalDoorOpenTime\": 730,\n<br />\u00A0 \"AnimalDoorCloseTime\": 1800,\n<br />\u00A0 \"CoopRequiredUpgradeLevel\": 1,\n<br />\u00A0 \"BarnRequiredUpgradeLevel\": 1,\n<br />\u00A0 \"UnrecognizedAnimalBuildingsEnabled\": false,\n<br />\u00A0 \"AutoOpenEnabled\": true,\n<br />\u00A0 \"OpenDoorsWhenRaining\": false,\n<br />\u00A0 \"OpenDoorsDuringWinter\": false,\n<br />\u00A0 \"CloseAllBuildingsAtOnce\": false,\n<br />\u00A0 \"DoorEventPopupEnabled\": false,\n<br />\u00A0 \"DoorSoundSetting\": \"ONLY_ON_FARM\"\n<br />}\n<br />[size=6][b]Source Code[/b][/size]\n<br />[size=3]https://github.com/taggartaa/AutoAnimalDoors\n<br />\n<br />1751b5a2-367f-43e9-90b3-9948cdba812b[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/1019",
+	"Version": "4.2.0",
+	"Updated": "2024-04-28T12:05:35+00:00",
+	"Downloads": [
+		{
+			"Id": 95957,
+			"Type": "Main",
+			"DisplayName": "AutoAnimalDoors 4.2.0",
+			"FileName": "AutoAnimalDoors 4.2.0-1019-4-2-0-1714305935.zip",
+			"Description": "",
+			"Version": "4.2.0",
+			"SizeInBytes": 25156,
+			"Uploaded": "2024-04-28T12:05:35+00:00",
+			"Mods": [
+				{
+					"Id": "AaronTaggart.AutoAnimalDoors",
+					"DisplayName": "AutoAnimalDoors",
+					"Type": "Smapi",
+					"RelativePath": "AutoAnimalDoors",
+					"Manifest": {
+						"Name": "AutoAnimalDoors",
+						"Description": "Open and close the doors automatically for your animals.",
+						"Author": "Aaron Taggart",
+						"Version": "4.2.0",
+						"MinimumApiVersion": "4.0.1",
+						"EntryDll": "AutoAnimalDoors.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1019",
+							"CurseForge:1002753"
+						],
+						"UniqueId": "AaronTaggart.AutoAnimalDoors"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342482645,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387707,
+		"UploaderId": 5720295,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

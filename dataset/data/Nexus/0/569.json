@@ -1,0 +1,179 @@
+{
+	"Site": "Nexus",
+	"Id": 569,
+	"Name": "Skill Prestige",
+	"Author": "CinderGarde",
+	"Description": "[b]1.4 Upgrade Notes:[/b]\u00A0\n<br />[list]\n<br />[*]Data.json: When copying in the new version of the mod, please ensure you pay attention to the folder structure so your files remain in the correct place. If you still have a Data.json file, ensure it is in the directory with the SkillPrestige.dll file. This file stored all of your hard-earned prestige points and other prestige data prior to 1.4. It is highly recommended to backup your Data.json file before updating as the app will eventually delete the file for you.\u00A0After you open each save file with prestige data and sleep at least once it will migrate the data to an internal save, and then delete that save's data from the data.json file. once all are gone, it will delete the file itself. There is one exception to this for legacy support, check multiplayer details section for more information.\n<br />[*]after 1.4.3, please remove the SkillPrestige.Yacs folder, it is no longer needed\n<br />[*]If you are having trouble finding the UI, please check your crafting screen for a 'Prestige Statue' you can build for 10 stone, place and interact with it (gamepad or right click it) to open the prestige selection menu\n<br />[*]Full gamepad support now included\n<br />[*]Multiplayer support now officially included, splitscreen multiplayer coming next\n<br />[/list]\n<br />Check the change logs for the most recent update information!\n<br />\n<br />The Skill Prestige Mod allows you to earn permanent profession perks beyond that which can normally be obtained in Vanilla play. By spending Prestige Point(s), earned by resetting a skill from 10 to 0, your character can buy the level 5 or 10 profession of their choice. By default, level 5 professions cost 1 Prestige Point, while Level 10 professions cost 2 Prestige Points and require their associated level 5 profession already be purchased. For example, buying the Lv5 Tiller, Lv10 Artisan, and Lv10 Agriculturalist professions would require 1+2+2=5 Prestige Points. Only Prestige Points earned from a specific skill can be used to buy that skill's professions. By default, recipes are lost when a skill is reset. You will need to craft a prestige statue to interact with this mod, it should be available in your crafting menu once the mod is installed and costs 10 stone.\u00A0\n<br />\n<br />[b]Settings Descriptions:[/b]\n<br />The settings menu is available from the prestige statue's menu, craft the statue, place and interact with it, and then click the options button at the top right of the menu for this mod's settings menu. Settings options include:\n<br />\n<br />[b]Reset Recipes Upon Prestige[/b] - unlearns recipes when you reset to level 0 in a skill, on by default.\n<br />[b]Use Prestige Point Experience Multiplier[/b] - adds an experience multiplier for unspent prestige points\n<br />[b]ExperienceMultiplier [/b]-\u00A0the amount to multiply experience by per prestige point. Defaults to 10% (not in UI, can be edited by changing the psconfigs files)\n<br />[b]Cost of Tier One Prestige[/b] - Prestige point cost per level 5 profession (default 1)\n<br />[b]Cost of Tier Two Prestige[/b] - Prestige point cost per level 10 profession (default 2)\n<br />[b]Points Per Prestige[/b] - How many points are gained every time a player prestiges a skill\n<br />[b]Painless Prestige Mode[/b] - A mastery compatible mode that doesn't reset your level to 0, but costs extra experience gained past level 10\n<br />[b]Extra Experience Cost[/b] - How many experience points Painless Prestige mode costs for each prestige. Default is 15000 (the amount for level 10)\n<br />\n<br />[b]Mod Compatibility:[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14142]Socializing Skill[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14073]Binning Skill[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/16820]Travelling Skill[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22199]Archaeology Skill[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/23791]\uFEFFScaring/Thieving Skill[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22681]Yet Another Cooking Skill[/url]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/521]Luck Skill[/url]\u00A0(with the included adapter project)\uFEFF\n<br />[*]Unreleased skills:\n<br />[*]Moonslime's\u00A0[url=https://github.com/Pet-Slime/StardewValley/tree/master/LuckSkillCode]Luck Skill[/url]\u00A0(remove the Luck Skill above if you have it and get this mod from github in the releases folder, then delete the Luck Skill Adapter from this mod)\n<br />[*][url=https://github.com/drbirbdev/StardewValley/tree/main/SlimingSkill]Sliming Skill[/url]\u00A0(untested, still in development)\n<br />[*]Moonslime's [url=https://github.com/Pet-Slime/StardewValley/tree/master/MagicSkillCode]Magic Skill[/url]\u00A0(untested, still in development)\uFEFF\n<br />[/list]\n<br />[b]Notes:[/b]\n<br />[u]Multiplayer:\n<br />[/u]Full support is included for host/client multiplayer, although there are some caveats to knowing how it works for various situations, such as:\n<br />\n<br />[list]\n<br />[*]If anyone playing does not have the mod they will not see the statue and will see a circle with a slash through it. They can break the statue and it will not drop.\u00A0\n<br />[*]Hosting: The save information for each player will be on the host's data file if the host has skill prestige\n<br />[*]Joining if the host also has SkillPrestige: each night it will send your data to be saved with the host's save file and then reloaded and redistributed to all players in the morning\n<br />[*]Joining if the host does *not* have SkillPrestige: you can still use the mod for yourself but there will be one special consideration: you will need to follow that 1.4 upgrade note about migrating your data.json file each time you update the app. It's the only way the mod can save your data as a client without the host having the Skill Prestige mod installed, and this is the only remaining situation that still uses the data.json save method.\n<br />[/list]\n<br />[u]General:[/u]\n<br />Post 1.6, prestiging fishing may setup the condition to trigger a scene where willy comes by and gives you a training rod and some fishing tips, it should only happen once, though. (only in the normal prestige mode, painless prestige mode will not set this condition) see:\u00A0[url=https://stardewvalleywiki.com/Training_Rod]Training Rod[/url]\n<br />\n<br />[b]Future Development Goals include:[/b]\n<br />[list]\n<br />[*]Split screen multiplayer support\n<br />[*]Visual bugfixes for known issues\n<br />[*]Witchcraft skill support (SVE)\n<br />[*]Language localization\n<br />[/list]\n<br />[b]Known Issues:[/b]\n<br />[list]\n<br />[*]Socializing Skill: Non-breaking errors on level up menu 5 and 10, not displaying custom menus and fills log with repeated errors\n<br />[*]Binning Skill: The prestige menu tier 2 cost display overlaps with the environmentalist profession, no impact on function\n<br />[*]Archaeology Skill: The level 5 level up menu when the user has purchased only one of the tier 1 skills has text that extends beyond its container, no impact on function\n<br />[*]Split screen multiplayer has some menu display issues among potential others.\n<br />[/list]\n<br />See the stickied post for detailed information on current development status.\n<br />\n<br />My source code is\u00A0[url=https://github.com/Alphablackwolf/SkillPrestige]here[/url]. There is an (outdated) guide on my\u00A0[url=https://github.com/Alphablackwolf/SkillPrestige/wiki/How-to-Register-My-Mod%27s-Skills]github wiki[/url]\u00A0which explains how to make other skill mods compatible with this mod.\u00A0I invite any bug reports here on nexus or on\u00A0[url=https://github.com/Alphablackwolf/SkillPrestige/issues]github[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/569",
+	"Version": "1.4.3",
+	"Updated": "2024-05-19T00:55:07+00:00",
+	"Downloads": [
+		{
+			"Id": 99908,
+			"Type": "Main",
+			"DisplayName": "Skill Prestige 1.4.3 beta",
+			"FileName": "Skill Prestige 1.4.3 beta-569-1-4-3-1716080107.zip",
+			"Description": "**if you are coming in before 1.4, data is migrating, backup your data.json just in case**\n<br /><br />After this download, please remove the SkillPrestige.Yacs folder, it will no longer be needed.\n<br /><br />Please check the changelog. All SpaceCore skills added!",
+			"Version": "1.4.3",
+			"SizeInBytes": 124433,
+			"Uploaded": "2024-05-19T00:55:07+00:00",
+			"Mods": [
+				{
+					"Id": "alphablackwolf.skillPrestige",
+					"DisplayName": "Skill Prestige",
+					"Type": "Smapi",
+					"RelativePath": "SkillPrestige\\SkillPrestige",
+					"Manifest": {
+						"Name": "Skill Prestige",
+						"Description": "Lets you earn permanent profession perks beyond that which can normally be obtained in Vanilla play by spending Prestige Points, earned by resetting a skill from 10 to 0.",
+						"Author": "CinderGarde",
+						"Version": "1.4.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SkillPrestige.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:569"
+						],
+						"UniqueId": "alphablackwolf.skillPrestige"
+					}
+				},
+				{
+					"Id": "CinderGarde.SkillPrestige.CP",
+					"DisplayName": "(CP) Skill Prestige",
+					"Type": "ContentPack",
+					"RelativePath": "SkillPrestige\\SkillPrestige [CP]",
+					"Manifest": {
+						"Name": "(CP) Skill Prestige",
+						"Description": "SkillPrestige Content Patcher",
+						"Author": "CinderGarde",
+						"Version": "1.4.3",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "alphablackwolf.SkillPrestige",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "CinderGarde.SkillPrestige.CP"
+					}
+				},
+				{
+					"Id": "alphablackwolf.LuckSkillPrestigeAdapter",
+					"DisplayName": "Skill Prestige for Luck Skill",
+					"Type": "Smapi",
+					"RelativePath": "SkillPrestige\\SkillPrestige.LuckSkill",
+					"Manifest": {
+						"Name": "Skill Prestige for Luck Skill",
+						"Description": "Extends Skill Prestige to support the Luck Skill mod.",
+						"Author": "CinderGarde",
+						"Version": "1.4.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SkillPrestige.LuckSkill.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "alphablackwolf.skillPrestige",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.LuckSkill",
+								"MinimumVersion": "1.2.6",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:569"
+						],
+						"UniqueId": "alphablackwolf.LuckSkillPrestigeAdapter"
+					}
+				},
+				{
+					"Id": "CinderGarde.SpaceCoreSkillAdapter",
+					"DisplayName": "Skill Prestige for all SpaceCore skill mods",
+					"Type": "Smapi",
+					"RelativePath": "SkillPrestige\\SkillPrestige.SpaceCore",
+					"Manifest": {
+						"Name": "Skill Prestige for all SpaceCore skill mods",
+						"Description": "Extends Skill Prestige to support SpaceCore skill mods.",
+						"Author": "CinderGarde",
+						"Version": "1.4.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SkillPrestige.SpaceCore.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "alphablackwolf.skillPrestige",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.CookingSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "moonslime.LuckSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "drbirbdev.BinningSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "drbirbdev.SocializingSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "drbirbdev.SlimingSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Achtuur.StardewTravelSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "moonslime.ArchaeologySkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "moonslime.SpookySkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "moonslime.MagicSkill",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:569"
+						],
+						"UniqueId": "CinderGarde.SpaceCoreSkillAdapter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486596,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387257,
+		"UploaderId": 5038026,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

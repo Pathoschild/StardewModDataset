@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 8876,
+	"Name": "Map Editor",
+	"Author": "aedenthorn",
+	"Description": "[size=4][b]This mod is now outdated, please download the following mod instead:\n<br />\n<br />[/b][/size][size=4][b][url=https://www.nexusmods.com/stardewvalley/mods/18387/]Map Editor Extended[/url][/b][/size]\n<br />\n<br />\n<br />[size=5][b]Basic Usage[/b][/size]\n<br />\n<br />This mod provides a simple means of non-destructively editing a map while in-game by selecting an existing tile on the map and copying it to another tile.\n<br />\n<br />To start editing, press the activation hotkey (default [b]F10[/b]).\n<br />\n<br />To copy a tile, select a tile with the copy key (default [b]Right Mouse Button[/b], then move to the target tile and press the paste key (default [b]Left Mouse Button[/b]).\n<br />\n<br />To revert a change, highlight it and press the revert hotkey (default [b]Delete[/b]).\n<br />\n<br />To stop editing, press the activation hotkey again or [b]Esc[/b].\n<br />\n<br />Should work with all farm types and custom maps.\n<br />\n<br />\n<br />[size=5][b]Advanced[/b][/size]\n<br />\n<br />[size=4][b]Custom Tile Changes[/b][/size]\n<br />\n<br />Once you have selected a tile to copy, you can use the scroll wheel or customizable scroll buttons (default [b]Up[/b] and [b]Down[/b] arrow keys) to pick a tile index from the tile's tile sheet. \n<br />\n<br />The copied tile actually can contain tiles for multiple layers, so scrolling will only change the tile index for a single layer at a time.\n<br />\n<br />To change which layer you are affecting with the scroll wheel, hold down the layer mod key\u00A0(default [b]Left Shift[/b]) while using the scroll wheel.\n<br />\n<br />For maps with multiple tile sheets, you can change the selected tile's tile sheet (for the current selected layer) by holding down the sheet mod key\u00A0(default [b]Left Alt[/b]) while scrolling.\n<br />\n<br />Changing tile index and tile sheet will not work for animated tiles.\n<br />\n<br />\n<br />[size=4][b]JSON Files[/b][/size]\n<br />\n<br />There are three types of JSON file the mod will pull edits from:\n<br />\n<br />[list]\n<br />[*]Per-save files in a subfolder called [b]data[/b] in the mod's folder - edits in this file will only affect the corresponding save.\n<br />[*]Custom global files in a subfolder called [b]custom [/b]in the mod's folder - edits in these files will affect all saves.\n<br />[*]A single global file in the mod's folder called [b]map_data.json[/b] - edits in this file will affect all saves.\n<br />[/list]\n<br />[b]Per-save:[/b]\n<br />\n<br />The per-save file overrides both other types of file, and files in the custom folder override the main global file.\n<br />\n<br />Per-save files are created when you first make an edit and all edits are saved to a corresponding save file, unless you turn off [b]UseSaveSpecificEdits[/b] in the config.\n<br />\n<br />\n<br />[b]Custom:[/b]\n<br />\n<br />If you want to use custom global files, you must create the [b]custom[/b] folder yourself ([b]Mods&#92;MapEdit&#92;custom&#92;[/b]).\n<br />\n<br />Custom global files can be named whatever you want - if you are given data files from others, this is where they should go. You can send someone your per-save file this way, for example.\n<br />\n<br />[b]Global:[/b]\n<br />\n<br />Edits are stored to the main global file if [b]UseSaveSpecificEdits[/b] is off and [b]IncludeGlobalEdits[/b] is on. If both are on, edits go to the per-save file, but edits in the main global file are loaded as well.\n<br />\n<br />\n<br />You can reload map edits from the data files by activating the mod using the hotkey\u00A0(default [b]F10[/b]) and pressing the refresh key (default [b]F5[/b]).\n<br />\n<br />\n<br />[size=4][b]Mod Configuration[/b][/size]\n<br />\n<br />You can change the hotkeys and action sounds by editing the mod's [b]config.json[/b] file, created in the mod's folder after running the game with this mod installed.\n<br />\n<br />\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />\n<br />The mod copies and pastes everything except the Paths layer, and includes any tile properties like warps, water, dirt, etc.\n<br />\n<br />Map edits are saved immediately to a JSON file\u00A0corresponding to the current save game\u00A0  (or a global file if per-save edits is turned off) and are persistent as long as the mod is enabled.\n<br />\n<br />The mod probably doesn't propagate changes to other players in multiplayer.\n<br />\n<br />\n<br />[b][size=5]Demonstration[/size][/b]\n<br />\n<br />Here's a video of me creating a pond with this mod:\n<br />\n<br />[youtube]YVhBdRqFnlE[/youtube]\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url]\n<br />\n<br />\n<br />.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8876",
+	"Version": "0.8.2",
+	"Updated": "2023-05-07T18:42:15+00:00",
+	"Downloads": [
+		{
+			"Id": 70745,
+			"Type": "Main",
+			"DisplayName": "Map Edit",
+			"FileName": "Map Edit-8876-0-8-2-1683484935.zip",
+			"Description": "Changes:\n<br /><br />NRE fix",
+			"Version": "0.8.2",
+			"SizeInBytes": 30307,
+			"Uploaded": "2023-05-07T18:42:15+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MapEdit",
+					"DisplayName": "Map Edit",
+					"Type": "Smapi",
+					"RelativePath": "MapEdit",
+					"Manifest": {
+						"Name": "Map Edit",
+						"Description": "Enables in-game editing of map tiles.",
+						"Author": "aedenthorn",
+						"Version": "0.8.2",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "MapEdit.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8876"
+						],
+						"UniqueId": "aedenthorn.MapEdit",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "MapEdit"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342457433,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395564,
+		"UploaderId": 18901754,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

@@ -1,0 +1,80 @@
+{
+	"Site": "Nexus",
+	"Id": 47968,
+	"Name": "Ride Your Pigs (and other farm animals)",
+	"Author": "zombifier",
+	"Description": "Have mods that add Barn Horses but disappointed you can't ride them? Or just want to ride your cows or even ostriches into town? Rejoice, as this mod solves your dilemma by adding a new Saddle &amp; Reins item to Marnie's shop that allows you to convert any farm animals into a mount when used!\n<br />\n<br />[youtube]3nRPjSe_2hg[/youtube]\n<br />\n<br />(Credits to [url=https://www.nexusmods.com/profile/DolphinIsNotaFish?gameId=1303]DolphinIsNotAFish[/url] for the video)\n<br />\n<br />[b]Notes[/b]:\n<br />[list]\n<br />[*]The item is only available for purchase after you build a Stable and read the letter from Marnie.[/*]\n<br />[*]Most farm animals are slower than the regular Horse, except for Horse farm animals (like the ones from [url=https://www.nexusmods.com/stardewvalley/mods/47473]Mizu's Horse[/url]). Smaller animals are especially slow - don't ride your poor Chickens! [s]Or do, there are no laws against it[/s][/*]\n<br />[*]Dismounting your animals while still on the farm will make them revert back to being farm animals. Dismounting off-farm though should keep them as regular mounts.[/*]\n<br />[*]Like regular horses you don't need to bring them home every night.[/*]\n<br />[*]The Horse Flute works for them as well! In MP games, the animal horses will only teleport to the person who rode them off the farm first.[/*]\n<br />[/list]\n<br />[b]Installation Instructions[/b]\n<br />[list]\n<br />[*]As usual, install [url=https://smapi.io/]SMAPI[/url], [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url], and then extract this mod into the Mods folder.[/*]\n<br />[*]It's recommended you also install [url=https://www.nexusmods.com/stardewvalley/mods/1232]Pony Weight Loss Program[/url] or [url=https://www.nexusmods.com/stardewvalley/mods/7911]Horse Overhaul[/url] so you can ride your animals out of the door during rainy and winter days. Note that for Horse Overhaul, features like friendship and saddle bags only work on the \"main\" horse.[/*]\n<br />[/list]\n<br />[b]Boring but Important Technical Details\u00A0That You Should Read Before Reporting Problems[/b]:\n<br />[spoiler][list]\n<br />[*]When the item is used on a farm animal, it turns the animal invisible and removes its collision box while spawning a reskinned horse clone on top.[/*]\n<br />[*]The invisible base animal will still perform its actions, including eating grass, digging up truffles, or going back inside, though you cannot interact with it directly while the \"horse\" is present.[/*]\n<br />[*]To avoid these invisible animals getting inadvertently locked out, they're all teleported inside at 7 PM.[/*]\n<br />[*]The horse clone disappears if you dismount in the same location as the original animal, or at the end of the day if any persists, and the base animal will turn visible when it does. It will be teleported to the horse clone's position in the former case.[/*]\n<br />[*]The clone horses don't have ownerId set, so as to avoid breaking stuff by making the game confuse between these clone horses and actual horses.[/*]\n<br />[/list][/spoiler]\n<br />\n<br />[b]Known Issues:[/b]\n<br />[list]\n<br />[*]There's some very slight position shift when the farm animal is replaced by its horsy counterpart. This is because of significant differences between the draw code between farm animals and horses.[/*]\n<br />[/list]\n<br />[b]Mod compatibility notes:[/b]\n<br />[list]\n<br />[*]Every mod should be compatible, including ones that modify the base horse's mechanics. Whether said modifications apply to the \"fake\" horse is on a case by case basis, but nothing should break or be incompatible.[/*]\n<br />[*]Every farm animal is rideable, regardless of mods. One tile animals (like most coop animals) are 50% slower, while larger non-Horse animals are 20% slower. Modded Barn Horses are just as fast as the Stable Horse (if they have \"Horse\" in the unique ID).[/*]\n<br />[*]To overwrite the speed for your own animal, set the field `selph.RideableFarmAnimals_SpeedModifier` field in the animal data's CustomFields dict. The value is the speed modifier (1 = 100%, same as normal horse, 0.8 = 80%).[/*]\n<br />[/list]\n<br />Source:\u00A0[url=https://github.com/zombifier/My_Stardew_Mods/tree/master/RideableFarmAnimals]https://github.com/zombifier/My_Stardew_Mods/tree/master/RideableFarmAnimals[/url]\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47968",
+	"Version": "1.0.0",
+	"Updated": "2026-06-22T04:14:30+00:00",
+	"Downloads": [
+		{
+			"Id": 172127,
+			"Type": "Main",
+			"DisplayName": "Ride Your Pigs",
+			"FileName": "b5/32/f1/b532f155-8dd2-4b93-81db-9b3858848b5f",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 28022,
+			"Uploaded": "2026-06-22T04:14:30+00:00",
+			"Mods": [
+				{
+					"Id": "selph.RideableFarmAnimals",
+					"DisplayName": "Ride Your Pigs",
+					"Type": "Smapi",
+					"RelativePath": "Ride Your Pigs\\Ride Your Pigs",
+					"Manifest": {
+						"Name": "Ride Your Pigs",
+						"Description": "Adds a tool that allows you to ride any farm animal like a horse.",
+						"Author": "selph",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "RideableFarmAnimals.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47968"
+						],
+						"UniqueId": "selph.RideableFarmAnimals"
+					}
+				},
+				{
+					"Id": "selph.RideableFarmAnimalsCP",
+					"DisplayName": "Ride Your Pigs (CP)",
+					"Type": "ContentPack",
+					"RelativePath": "Ride Your Pigs\\[CP] Ride Your Pigs",
+					"Manifest": {
+						"Name": "Ride Your Pigs (CP)",
+						"Description": "Adds a tool that allows you to ride any farm animal like a horse - CP Component.",
+						"Author": "selph",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "selph.RideableFarmAnimals",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "selph.RideableFarmAnimalsCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558815,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434656,
+		"UploaderId": 24394309,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

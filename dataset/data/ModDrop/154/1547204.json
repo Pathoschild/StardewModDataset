@@ -1,0 +1,186 @@
+{
+	"Site": "ModDrop",
+	"Id": 1547204,
+	"Name": "Garbage Day",
+	"Author": "LeFauxMatt",
+	"TagLine": "Every day trash builds up in the trash cans around town, and once a week on Garbage Day it empties out.",
+	"Description": "![](https://i.imgur.com/Ulr2XSt.png)\nThis mod turns all the garbage cans into storages which collect trash throughout the week. This also allows map modders to add more garbage cans on maps other than the Town.\n[YouTube](http://www.youtube.com/watch?v=HkzI1rORggo)\n\n![](https://i.imgur.com/GPXxDLK.png)\n\n*   Garbage Cans can be accessed as storages.\n\n*   More Garbage Cans can be added to maps.\n\n*   Customize loot items for each Garbage Can.\n\n![](https://i.imgur.com/lG4kcA2.png)\nFor ease of use, it is recommended to set config options from [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098).\n\n![](https://i.imgur.com/fMhu2q8.png)\nSee [here](https://github.com/LeFauxMatt/StardewMods/tree/develop/GarbageDay#translations) for the current status on translations.\n\nFeel free to visit me on my [Discord server](https://lxnq.to/discord) for announcements and early access to beta releases of my mods.\nYou can also request help from me on the Stardew Valley discord in [#modded-tech-support](https://discord.com/channels/137344473976799233/1272025932932055121)  (ping me @LeFauxMatt).\n\n[Source](https://github.com/LeFauxMatt/GarbageDay/)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1547204",
+	"Version": null,
+	"Updated": "2025-02-08T06:38:14.043+00:00",
+	"Downloads": [
+		{
+			"Id": 1567843,
+			"Type": "Optional",
+			"DisplayName": "Garbage Day CP",
+			"FileName": "Garbage Day CP.zip",
+			"Description": "@CP content pack for converting specific garbage cans when OnByDefault is set to false.\n\nRequires the main mod to be installed to work.",
+			"Version": "3.1.0",
+			"SizeInBytes": 1155,
+			"Uploaded": "2024-04-05T02:53:39.409+00:00",
+			"Mods": [
+				{
+					"Id": "furyx639.GarbageDayCP",
+					"DisplayName": "(CP) Garbage Day",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Garbage Day",
+					"Manifest": {
+						"Name": "(CP) Garbage Day",
+						"Description": "Adds data to each vanilla garbage so that they will be converted into Garbage Day chests.",
+						"Author": "furyx639",
+						"Version": "3.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.GarbageDay",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8204@CP"
+						],
+						"UniqueId": "furyx639.GarbageDayCP",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "6380da53c5307d0ee2a1efdbd7f53f19",
+				"md5In": "0f353786a9db11c0cfbafad30f0b89f5",
+				"scriptType": 0,
+				"sha256Ex": "12654eed4718dcc3b7f7f5d361052d716253144653555cd1b142ee296010f9f6",
+				"sha256In": "fa98a98d47e77ad7c48fb62dffbf65adbb04aad6489e6175491f63f7a23028c6"
+			}
+		},
+		{
+			"Id": 1684761,
+			"Type": "Main",
+			"DisplayName": "Garbage Day",
+			"FileName": "Garbage Day.zip",
+			"Description": "Change Log",
+			"Version": "3.3.0",
+			"SizeInBytes": 102441,
+			"Uploaded": "2025-02-08T06:38:14.041+00:00",
+			"Mods": [
+				{
+					"Id": "furyx639.GarbageCan",
+					"DisplayName": "Garbage Can",
+					"Type": "ContentPack",
+					"RelativePath": "GarbageDay\\Garbage Can",
+					"Manifest": {
+						"Name": "Garbage Can",
+						"Description": "Adds a garbage can chest to the game.",
+						"Author": "furyx639",
+						"Version": "3.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.ExpandedStorage",
+								"MinimumVersion": "3.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8204",
+							"CurseForge:871837",
+							"ModDrop:1547204",
+							"GitHub:LeFauxMatt/GarbageDay"
+						],
+						"UniqueId": "furyx639.GarbageCan",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "furyx639.GarbageDay",
+					"DisplayName": "Garbage Day",
+					"Type": "Smapi",
+					"RelativePath": "GarbageDay\\GarbageDay",
+					"Manifest": {
+						"Name": "Garbage Day",
+						"Description": "Turns the town trash cans into chests.",
+						"Author": "LeFauxMatt",
+						"Version": "3.3.0",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.14",
+						"EntryDll": "GarbageDay.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.ExpandedStorage",
+								"MinimumVersion": "3.2.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.14.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8204",
+							"CurseForge:871837",
+							"ModDrop:1547204",
+							"GitHub:LeFauxMatt/GarbageDay"
+						],
+						"UniqueId": "furyx639.GarbageDay",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "0ce2c9afdfc6347f9444b877bd53d7aa",
+				"md5In": "1f50afd75f8db11d594c28314112070b",
+				"scriptType": 0,
+				"sha256Ex": "28a05e44f4b8528cf3542759a185b511d83d63cf213429010ebf89539e8c87e3",
+				"sha256In": "c8251a12a730e7313f813b3db7179a6dc7b4ae55b73190dd2c25b9fa81fffdca"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1712285627367,
+		"DateUpdated": 1738996694043,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1712285619253,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1547204/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1547204/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1547204/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1547204/icon_original"
+		},
+		"nexusModID": 8204,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 164890
+	}
+}

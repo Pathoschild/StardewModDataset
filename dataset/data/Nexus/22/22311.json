@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 22311,
+	"Name": "Re-Mixed Seeds",
+	"Author": "giovannim",
+	"AuthorLabel": "nein",
+	"Description": "Initially I made the base as part of Find Your Own seeds but someone mentioned they like to use better mixed seeds on their own, and it makes sense to split the uploads, so... (Also I made this because Better Mixed Seeds broke)\n<br />\n<br />Note: The unzipped folder will be called MixedSeedMod!\n<br />\n<br />By default currently, Vanilla is the only seed set turned on. To enable mixed seeds from the other modpacks, find the seedset in the config.json file and set enabled to true. If you enable sets that you don't have, there will probably be errors! Cornucopia's is split between the different packs you can enable there as well. \n<br />\n<br />Additionally, if you want to see one kind of crop set more than others, the config file has drop chance fields! If you want both vanilla and cornucopia but want to see way more vanilla, just make the vanilla drop chance a bigger number, and so on!\n<br />\n<br />Mod Compatibility included:\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/19508?tab=files&amp;file_id=86252]Cornucopia - More Crops\n<br />[/url]- [url=https://www.nexusmods.com/stardewvalley/mods/20290]Cornucopia - More Flowers[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/14653]Atelier Wildflour Crops and Forage[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/20598]Lumisteria Serene Meadow[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded\n<br />[/url]- [url=https://www.nexusmods.com/stardewvalley/mods/15107]Quaint Living[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/16999]Quaint Living 2[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/5787]East Scarp[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/8630]Walk to the Desert\n<br />[/url]-[url=https://www.nexusmods.com/stardewvalley/mods/8828?tab=description] Forage of Ferngill[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/22490?tab=description]Bonster's Combines Crops and Recipes[/url]\n<br />\n<br />If you want me to add compatibility with another crop mod, let me know! It should be pretty easy to do!\n<br />\n<br />By default in Vanilla, these seeds are turned off:\n<br />[b]Ancient Fruit:[/b] You can get these from monster drops or the traveling cart, so there's no need to get them from mixed seeds.\n<br />[b]Sweet Gem Berry: [/b]Similar reason, you can get this the same as you always would from the cart\n<br />[b]Pineapple / Taro Root[/b]: I'm letting these drops stay as part of ginger island, \n<br />where you get them from means other than just buying them. \n<br />[b]Carrot/SummerSquash/Brocolli:[/b] Again, I could add these, but you can already get them from artifact \n<br />spots, which isn't in shops and need to be scavenged anyways\n<br />[b]Grape:[/b] Gotten from Foraging, and also has a compatibility error with Cornucopia enabled\n<br />[b]Rice[/b]: Gotten from monster drops and also it seems popular enough to not want in the mix to disable by default\n<br />\n<br />By default, the Joja crops in SVE are turned off.\n<br />\n<br />To enable any of them, just find them in Vanilla.json in the SeedSets folder, and set their Enabled to true! Conversely, if you want to disable something like Rice Shoots, just find the Rice in the spring section in the file and set enabled to false! \n<br />\n<br />Mod Config Options:\n<br />\n<br />[b]RandomizeWinter:[/b] Default is set to true, which will randomize crops to the other seasons, as vanilla does, which is why winter mixed seeds are random in the greenhouse. Set this to false to set it to use only winter crops in winter (as crop mods may add winter exclusive crops).\n<br />\n<br />[b]TrellisEnabled[/b]: Default set to true, allows trellis crops to drop from mixed seeds. Set to false to disable trellis crops\n<br />\n<br />[b]FlowersInFlowerMix[/b]: Default set to true, flowers will not appear in regular mixed seeds, but instead appear in Mixed Flower Seeds! Set this to false for vanilla mixed flower seeds and flowers appear in regular mixed seeds as enabled.\n<br />\n<br />[b]RandomizeGingerIsland:[/b] Default is set to true, sets mixed seeds to pick randomly from spring, summer, and winter sets for planting. Set this to false for the vanilla ginger island mixed seeds.\n<br />\n<br />[b]EnableYearRequirements[/b]: Default set to true, seeds with year requirements before being sold in shops will not appear until the year they're usually available. Set to false to ignore year requirements\n<br />\n<br />Note: All these fields are done by me by hand, so there may be some errors where I missed a year requirement or some such! If you run into any problems like that, please let me know so I can fix it!\n<br />\n<br />All these are toggle-able from the generic mod config menu, as well as enabling or disabling the various seed packs! Also you should only see seedpacks from mods you have installed now, and be able to move a slider to set how frequently you want seeds from each pack to drop\n<br />\n<br />\n<br />Please let me know if there are any bugs, I'm still new to coding and filepaths seem like they can be finicky, but hopefully things work! Also because I may not be into stardew modding forever (there are many mods and new ones all the time)...\n<br />\n<br />Future plans:\n<br />- Enable a toggle to switch between flat and weighted seed drops\n<br />- Maybe have the greenhouse always randomize all seasons somehow??\n<br />- Better error logging + handling\n<br />- Something to check and automatically disable uninstalled mods/some kind of safety features\n<br />\n<br />And last, How to add mod compatibility (this means writing json files):\n<br />The json framework for each seedst is pretty straightforward, you can follow the same pattern using the seedIDs from the mods you want to add \n<br />compatibility for! Add a powdermelon for winter if there's nothing else for winter just so there's something to find for that season if it's turned on. \n<br />Then in the config.json file, you will need to add a section for the new Seed Set you made (which needs to go in the SeedSets folder). Make sure the section name is exactly the same as the json file name. Hopefully that explanation makes sense enough!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/22311",
+	"Version": "1.0.5",
+	"Updated": "2024-04-30T01:48:24+00:00",
+	"Downloads": [
+		{
+			"Id": 96336,
+			"Type": "Main",
+			"DisplayName": "MixedSeedMod",
+			"FileName": "MixedSeedMod-22311-1-0-6-1714441704.zip",
+			"Description": "",
+			"Version": "1.0.6",
+			"SizeInBytes": 30983,
+			"Uploaded": "2024-04-30T01:48:24+00:00",
+			"Mods": [
+				{
+					"Id": "nein.MixedSeedMod",
+					"DisplayName": "MixedSeedMod",
+					"Type": "Smapi",
+					"RelativePath": "MixedSeedMod",
+					"Manifest": {
+						"Name": "MixedSeedMod",
+						"Description": "Improve mixed seeds",
+						"Author": "nein",
+						"Version": "1.0.6",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "MixedSeedMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:22311"
+						],
+						"UniqueId": "nein.MixedSeedMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342483024,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408999,
+		"UploaderId": 164330263,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

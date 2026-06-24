@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 38701,
+	"Name": "Animation Sprite Swap Framework",
+	"Author": "Nikanor24",
+	"AuthorLabel": "Nikanor",
+	"Description": "[list]\n<br />[/list]\uD83E\uDDE9 What It Does\n<br />\n<br />This framework lets you [b]swap NPC sprites automatically[/b] when a specific [b]animation[/b] is triggered during a schedule animation like [i]alex_lift_weights[/i]\n<br /> or [i]sam_guitar[/i].\n<br />\n<br />It reads a simple data file (Sprites/animationDescriptions) that lists which animations should use which sprite sheets.\n<br />When the animation starts, the framework temporarily replaces the NPC’s texture. When it ends, the original sprite is restored automatically.\n<br />\n<br />No events, no conditions, no complicated setup, just automatic sprite swapping.\n<br />\n<br />It’s especially useful if you’re using other mods that load character sprites (like [i]Seasonal Cute Characters[/i]) but you still want specific animations to run with a different sprite.\n<br />\n<br />⚙️ How To Use (for Modders)\n<br />\n<br />Create or edit a [b]Content Patcher[/b] pack with a simple EditData patch:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Sprites/animationDescriptions\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"alex_lift_weights\": \"Characters/Alex_Tattoo\",\n<br />\u00A0 \u00A0 \"sam_guitar\": \"Characters/Sam_BlackGuitar Portraits/Sam_BandShow\"\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />Each key (e.g., \"alex_lift_weights\") is the [b]animation ID[/b] used in schedules or events.\n<br />Each value is the [b]path to the sprite sheet[/b] that should be loaded while that animation is playing.\n<br />\n<br />When that animation runs in-game, the framework automatically:\n<br />[list=1]\n<br />[*]Replaces the NPC’s texture with your custom sprite.\n<br />[*]Restores the default sprite after the animation finishes.\n<br />\n<br />[/list]That’s it. No coding required.\n<br />\n<br />\uD83E\uDDE0 Notes for Modders[list]\n<br />[*]You can map [b]multiple animations per NPC[/b], even with different sprites.\n<br />[*]The animation key must [b]match exactly[/b] the one used by the game or your event/schedule (e.g., alex_lift_weights in Schedules/Alex).\n<br />[*]The sprite path must point to a valid game asset, like \"Characters/Alex_Tattoo\".\n<br />[*]This framework only manages the texture — it does [b]not[/b] add new animations, change frames, or edit timing.\n<br />[/list]\n<br />\n<br />✅ Compatibility[list]\n<br />[*]Works with [b]Stardew Valley 1.6+[/b]\n<br />[*]Works with [b]SMAPI 4.0+[/b]\n<br />[*]Compatible with all mods that modify schedules or animations\n<br />[*]Safe to use alongside [b]Seasonal, Outfit, and Appearance[/b] mods\n<br />[*]No known conflicts with other frameworks\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38701",
+	"Version": "1.3.2",
+	"Updated": "2025-11-03T00:10:37+00:00",
+	"Downloads": [
+		{
+			"Id": 147084,
+			"Type": "Main",
+			"DisplayName": "AnimationSpriteSwapFramework",
+			"FileName": "AnimationSpriteSwapFramework-38701-1-3-2-1762128637.zip",
+			"Description": "",
+			"Version": "1.3.2",
+			"SizeInBytes": 23701,
+			"Uploaded": "2025-11-03T00:10:37+00:00",
+			"Mods": [
+				{
+					"Id": "Nikanor.AnimationSpriteSwapFramework",
+					"DisplayName": "Animation Sprite Swap Framework",
+					"Type": "Smapi",
+					"RelativePath": "AnimationSpriteSwapFramework",
+					"Manifest": {
+						"Name": "Animation Sprite Swap Framework",
+						"Description": "Framework that swaps NPC sprites during animations. Now with config for logging and enabling schedules/events separately.",
+						"Author": "Nikanor",
+						"Version": "1.3.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AnimationSpriteSwapFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:38701"
+						],
+						"UniqueId": "Nikanor.AnimationSpriteSwapFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533772,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425389,
+		"UploaderId": 262325170,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

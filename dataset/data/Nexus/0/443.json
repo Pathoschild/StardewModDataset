@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 443,
+	"Name": "Auto Speed",
+	"Author": "Omegasis",
+	"AuthorLabel": "Alpha_Omegasis",
+	"Description": "[url=http://https://github.com/janavarro95/Stardew_Valley_Mods/tree/Development/GeneralMods/AutoSpeed/Framework]Here[/url]Lets you move faster without needing to enter commands in the SMAPI console.\n<br />\n<br />[b][color=#6aa84f]Compatible with Stardew Valley 1.4+ on Linux, Mac, and Windows. Requires SMAPI 3.0 or later.[/color][/b]\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Usage[/size]\n<br />You'll automatically walk/run faster with this mod installed. Edit the [font=Courier New]config.json[/font] file in a text editor to change the speed (it will appear after you run the game once).\n<br />\n<br />[size=5]Mod Authors:\n<br />[/size]Auto speed has had a few tweaks included to it to include an api for interfacing custom speeds! Now you can use SMAPI's built in api function to adjust added speed for the player so that your mod and auto speed doesn't conflict!\n<br />\n<br />To do this simply add this code into your mod when you wish to add in your custom speed:\n<br />\n<br />```\n<br />object api = helper.ModRegistry.GetApi(\"Omegasis.AutoSpeed\");\n<br />if (api != null)\n<br />   \uFEFFhelper.Reflection.GetMethod(api, \"addSpeedBoost\").Invoke(\"Your-Unique-ID\",#SpeedAmount);\n<br />//Replace #SpeedAmount with a number such as 1 or 3!\n<br />//Your-Unique-ID is the unique id for your speed boost. An example could be \"Omegasis.MyModTest.QuickSprint\"\n<br />```\n<br />\n<br />...and whenever you wish to remove your added speed use this code:\n<br />\n<br />```\n<br />object api = helper.ModRegistry.GetApi(\"Omegasis.AutoSpeed\");\n<br />if (api != null)\n<br />   \uFEFFhelper.Reflection.GetMethod(api, \"removeSpeedBoost\").Invoke(\"Your-Unique-ID\");\n<br />//Use the unique key you used to add in your speed boost to remove it!\n<br />```\n<br />\n<br />API Documentation:\u00A0[url=https://github.com/janavarro95/Stardew_Valley_Mods/tree/Development/GeneralMods/AutoSpeed/Framework]https://github.com/janavarro95/Stardew_Valley_Mods/tree/Development/GeneralMods/AutoSpeed/Framework[/url]\n<br />\n<br />If you have any questions or suggestions please feel free to post!\n<br />[size=5]See also[/size][list]\n<br />[*][url=http://community.playstarbound.com/threads/smapi-autospeed-mod.111771/]Official discussion thread[/url]\n<br />[*][url=https://github.com/janavarro95/Stardew_Valley_Mods/tree/master/GeneralMods/AutoSpeed]Source code + release notes[/url]\n<br />[*][url=https://github.com/janavarro95/Stardew_Valley_Mods#mods]My other mods[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/443",
+	"Version": "1.10.0",
+	"Updated": "2024-03-20T01:35:49+00:00",
+	"Downloads": [
+		{
+			"Id": 82979,
+			"Type": "Main",
+			"DisplayName": "Auto Speed - Stardew Valley 1.6",
+			"FileName": "Auto Speed - Stardew Valley 1.6-443-1-11-0-1710898549.zip",
+			"Description": "Updated for Stardew Valley 1.6. Speed is now applied as a buff that lasts all day for transparency for how the mod works + not to interfere with other mods.",
+			"Version": "1.11.0",
+			"SizeInBytes": 6615,
+			"Uploaded": "2024-03-20T01:35:49+00:00",
+			"Mods": [
+				{
+					"Id": "Omegasis.AutoSpeed",
+					"DisplayName": "Auto Speed",
+					"Type": "Smapi",
+					"RelativePath": "AutoSpeed",
+					"Manifest": {
+						"Name": "Auto Speed",
+						"Description": "Got to go fast!",
+						"Author": "Alpha_Omegasis",
+						"Version": "1.11.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AutoSpeed.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:443"
+						],
+						"UniqueId": "Omegasis.AutoSpeed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469667,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387131,
+		"UploaderId": 32171640,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

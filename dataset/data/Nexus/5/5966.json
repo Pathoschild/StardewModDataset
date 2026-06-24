@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 5966,
+	"Name": "Custom Ore Nodes",
+	"Author": "aedenthorn",
+	"Description": "This mod allows you to create custom ore nodes that have a chance to spawn instead of ordinary stones (similar to other ore nodes). By default it includes a new \"coal stone\" node that drops coal and has examples of a \"pizza stone\" that drops pizza and a rainbow stone that drops prismatic shards.\n<br />\n<br />\n<br />[b][size=5]Usage[/size][/b]\n<br />\n<br />To use this mod, target\u00A0\"aedenthorn.CustomOreNodes/dict\" using Content Patcher, with the following syntax:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"LogName\": \"PizzaStone\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.CustomOreNodes/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_PizzaStone\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"itemId\": \"{{ModId}}_PizzaStone\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"dropItems\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"itemIdOrName\": \"206\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"dropChance\": 100.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"minAmount\": 1,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"maxAmount\": 2,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"luckyAmount\": 1,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"minerAmount\": 1\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"oreLevelRanges\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"minLevel\": -1,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"maxLevel\": -1,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"spawnChanceMult\": 1.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"expMult\": 1.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"dropChanceMult\": 1.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"dropMult\": 1.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"minDifficulty\": -1,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"maxDifficulty\": -1\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"spawnChance\": 1.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"durability\": 2,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"exp\": 12\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"LogName\": \"PizzaStoneObject\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/Objects\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_PizzaStone\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Name\": \"{{ModId}}_PizzaStone\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Name\": \"Stone\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"Pizza Stone\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Description\": \"Pizza Stone\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Type\": \"Litter\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Category\": -999,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"SpriteIndex\": 206,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />[/code]\n<br />\n<br />[size=5][b]Node Explanation[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]itemId[/b]: the node item to display in world, corresponding to a custom object in [b]Data/Objects[/b]\n<br />[*][b]dropItems[/b]: the list of items to drop (see below)\n<br />[*][b]oreLevelRanges[/b]: the list of mine level ranges on which this ore node can spawn (see below)\n<br />[*][b]nodeDesc[/b]: describe your ore node.\n<br />[*][b]spawnChance[/b]: the base percent chance that each ordinary ore node will be this type of ore\n<br />[*][b][/b][b]durability[/b]: how hard it is to break this node\n<br />[*][b]exp[/b]: how much exp gained for breaking this node\n<br />[/list]\n<br />The object referenced in [b]Data/Objects[/b]\u00A0must have a category of -999 and its name must be \"Stone\", so you need to add a custom object as above.\n<br />\n<br />\n<br />[size=4][b]Drop Item List[/b][/size]\n<br />\n<br />The drop item list contains JSON objects with information on what items this node should drop as follows:\n<br />\n<br />[list]\n<br />[*][b]itemIdOrName[/b]: Object index or name of item (see Raw data [url=https://stardewvalleywiki.com/Modding:Object_data#Raw_data]here[/url]\uFEFF for object ids and names)\n<br />[*][b]dropChance[/b]: % Chance to drop this item\n<br />[*][b]minAmount[/b], [b]maxAmount[/b]: Minimum amount to drop, maximum amount to drop\n<br />[*][b]luckyAmount[/b]: Additional amount to drop if lucky\n<br />[*][b]minerAmount[/b]: Additional amount to drop if skilled miner\n<br />[/list]\n<br />\n<br />[b][size=4]Level Range List[/size][/b]\n<br />\n<br />The level range list contains JSON objects that specify ranges of mine floors this node can spawn on as follows:\n<br />\n<br />[list]\n<br />[*][b]minLevel[/b],[b]maxLevel[/b]: set either to [b]-1[/b] to disable it; 121 is the first Skull Cave level; 0 means outside of the mines (0,0 means only outside of the mines)\n<br />[*][b]spawnChanceMult[/b]: a multiplier for this range of the base chance of this node spawning \n<br />[*][b]expMult: [/b]a multiplier for this range of the base exp for mining this node \n<br />[*][b]dropMult: [/b]a multiplier for this range of the base amount of each item dropping from node\n<br />[*][b]dropChanceMult[/b]: a multiplier for this range of the base chance of each item dropping from node\n<br />[*][b]minDifficulty[/b], [b]maxDifficulty[/b]: new to SDV 1.5, mines can get harder. Set either of these to 1 if you only want it to spawn on harder levels. Set to -1 to disable.\n<br />[/list]\n<br />The node listed above translates into a 5% chance per stone of spawning a coal stone instead in the mines (levels 1-120). \n<br />\n<br />\n<br />[size=5][b]Other Underground Mods[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6597]Underground Secrets[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5894]Custom Dungeon Floors[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6669]Custom Resource Clumps[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5864]Boss Creatures[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7685]Treasure Chests Expanded[/url]\uFEFF\n<br />[/list]\n<br />\n<br />[size=5][b]Technical Notes[/b][/size]\n<br />\n<br />If you are trying to drop items from mods that you don't know the id for, just use the object name (but not the display name if it's different).\n<br />\n<br />The SMAPI log now shows better messages to tell you when something's wrong with your syntax. Check it if you are having trouble.\n<br />\n<br />The screenshots were created using [url=https://www.nexusmods.com/stardewvalley/mods/5894]Custom Dungeon Floors[/url] which allows for spawning more stones, among other things.\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Source code is available at [url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5966",
+	"Version": "3.0.0",
+	"Updated": "2025-10-23T02:20:01+00:00",
+	"Downloads": [
+		{
+			"Id": 37511,
+			"Type": "Optional",
+			"DisplayName": "Custom Ore Nodes Example Pack",
+			"FileName": "Custom Ore Nodes Example Pack-5966-0-2-0-1612592718.zip",
+			"Description": "New format",
+			"Version": "0.2.0",
+			"SizeInBytes": 4250,
+			"Uploaded": "2021-02-06T06:25:18+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CPCustomOreNodeExample",
+					"DisplayName": "(CP) Custom Ore Nodes Example",
+					"Type": "ContentPack",
+					"RelativePath": "[CON] Custom Ore Node Example Mod",
+					"Manifest": {
+						"Name": "(CP) Custom Ore Nodes Example",
+						"Description": "Custom Ore Nodes Example CP Mod",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.4.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.CustomOreNodes",
+							"MinimumVersion": "0.3.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.CPCustomOreNodeExample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342424199,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 146295,
+			"Type": "Main",
+			"DisplayName": "Custom Ore Nodes",
+			"FileName": "Custom Ore Nodes-5966-3-0-0-1761186001.zip",
+			"Description": "Changes:\n<br />\n<br />Update for 1.6 (not compatible with content packs made using old versions of this mod).",
+			"Version": "3.0.0",
+			"SizeInBytes": 19731,
+			"Uploaded": "2025-10-23T02:20:01+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomOreNodes",
+					"DisplayName": "Custom Ore Nodes",
+					"Type": "Smapi",
+					"RelativePath": "CustomOreNodes",
+					"Manifest": {
+						"Name": "Custom Ore Nodes",
+						"Description": "Spawns custom ore nodes in mines.",
+						"Author": "aedenthorn",
+						"Version": "3.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomOreNodes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5966"
+						],
+						"UniqueId": "aedenthorn.CustomOreNodes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532983,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392654,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

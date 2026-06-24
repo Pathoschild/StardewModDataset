@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 10462,
+	"Name": "Custom Pet Beds",
+	"Author": "aedenthorn",
+	"Description": "This mod makes pets sleep and wake up where you choose, either by specifying a furniture name, or an X,Y tile location.\n<br />\n<br />For custom pet beds designed to be used with this mod, see [url=https://www.nexusmods.com/stardewvalley/mods/10478]CP Pet Bed[/url] or\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/46316]Interactive Dog House and Cat Tree[/url].\n<br />\n<br />Config variables are as follows:\n<br />\n<br />[list]\n<br />[*]\u00A0 \"EnableMod\": true,[/*]\n<br />[*]\u00A0 \"IndoorIsBed\": true, - lets you walk through pets while they are sleeping[/*]\n<br />[*]\u00A0 \"OutdoorIsBed\": true, - lets you walk through pets while they are sleeping[/*]\n<br />[*]\u00A0 \"BedChance\": 100, - chance a pet will sleep on the custom bed[/*]\n<br />[*]\u00A0 \"IndoorBedName\": \"Pet Bed\", - name of furniture to sleep on indoors (or X,Y tile coordinates, e.g. \"15,15\")[/*]\n<br />[*]\u00A0 \"OutdoorBedName\": \"Pet Bed\",\u00A0 - name of furniture to sleep on outdoors (or X,Y tile coordinates , e.g. \"15,15\")[/*]\n<br />[*]\u00A0 \"IndoorBedOffset\": \"0,0\", - pixel offset position of the pet, counted from the top-left corner of the furniture / tile coordinates[/*]\n<br />[*]\u00A0 \"OutdoorBedOffset\": \"0,0\", - pixel offset position of the pet, counted from the top-left corner of the furniture / tile coordinates[/*]\n<br />[/list]\n<br />Multiple furniture types can be specified, separated using semi-colons, e.g. [b]\"IndoorBedName\": \"Ped Bed;Pet Rug;15,15\"[/b]. A random bed from the list will be assigned if found.\n<br />\n<br />Bed names can be prefixed with the pet's name and a colon to only allow for a certain pet (if you have a mod with multiple pets), e.g.: [b]\"IndoorBedName\": \"Buffy:Buffy Bed\"[/b].\n<br />\n<br />For modded furniture, you can use the furniture id without the mod name, as long as it ends in an underscore followed by the name, e.g. [b]Pet Bed[/b] for [b]aedenthorn.PetBedCP_Pet Bed[/b].\n<br />\n<br />If more than one furniture with the specified name exists, a random one will be chosen.\n<br />\n<br />If a piece of furniture with the specified name is not found, vanilla sleeping rules apply.\n<br />\n<br />If the bed name is in the format X,Y where X and Y are integers, the pet will be placed on the corresponding tile.\n<br />\n<br />Pixel offsets let you shift the pet from the given tile's position.\n<br />\n<br />You can edit all the config variables using [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF, or editing the [b]config.json[/b] file.\n<br />\n<br />\n<br />[size=5][b]Advanced[/b][/size]\n<br />\n<br />You can alternatively designate advanced pet beds using Content Patcher, e.g.:\n<br />\n<br />[code]\"Action\": \"EditData\",\n<br />\"Target\": \"aedenthorn.PetBed/dict\",\n<br />\"Entries\": {\n<br />\u00A0 \u00A0 \"Doghouse\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"X\": 12,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 20,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"PetTypes\": \"Dog\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"CanFlip\": false,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"FrontTexture\": \"{{ModId}}/DogHouseFront\"\n<br />\u00A0 \u00A0 }\n<br />}[/code]\n<br />\n<br />This will allow dogs to sleep in Doghouses with an offset of 12,20, prevent them from sleeping flipped horizontally, and draw an overlay texture to actually show them inside the doghouse.\n<br />\n<br />PetTypes is a comma-separated list, e.g. \"Dog,Cat\" for both dogs and cats.\n<br />\n<br />You still need to add \"Doghouse\" to \"OutdoorBedName\" as explained above, or you can set \"OutdoorBedName\" to \"\" to have the mod choose an entry from the dictionary.\n<br />\n<br />For a mod that uses this format, see\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/46316]Interactive Dog House and Cat Tree[/url].\n<br />\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires SDV 1.5.5+\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10462",
+	"Version": "0.7.0",
+	"Updated": "2026-05-22T05:42:06+00:00",
+	"Downloads": [
+		{
+			"Id": 168454,
+			"Type": "Main",
+			"DisplayName": "PetBed",
+			"FileName": "PetBed-10462-0-7-0-1779428526.zip",
+			"Description": "Changes:<br /><br />Added dictionary fields for wake up tile offset",
+			"Version": "0.7.0",
+			"SizeInBytes": 26291,
+			"Uploaded": "2026-05-22T05:42:06+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PetBed",
+					"DisplayName": "Pet Bed",
+					"Type": "Smapi",
+					"RelativePath": "PetBed",
+					"Manifest": {
+						"Name": "Pet Bed",
+						"Description": "Pet Bed.",
+						"Author": "aedenthorn",
+						"Version": "0.7.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PetBed.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10462"
+						],
+						"UniqueId": "aedenthorn.PetBed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555142,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397150,
+		"UploaderId": 18901754,
+		"CategoryId": 8,
+		"Adult": false
+	}
+}

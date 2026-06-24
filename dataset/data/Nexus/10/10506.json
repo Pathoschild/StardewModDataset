@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 10506,
+	"Name": "Farm Cave Framework",
+	"Author": "aedenthorn",
+	"Description": "This is a framework mod that lets you use Content Patcher to add more options to the farm cave setup event with Demetrius.\n<br />\n<br />There is also a config option to reset the cave and have Demetrius ask you again which setup you would like.\n<br />\n<br />[b]Warning: Resetting the cave layout after previously choosing one with this mod removes all objects previously placed in the cave in order to setup for a new cave type.[/b]\n<br />\n<br />Mods that use this framework:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/13922/]Bats and Mushrooms Farm Cave[/url]\uFEFF\n<br />\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10568]Lumisteria FCF Artifact Field[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10508/]Meat Vat Farm Cave[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10566/]Mineral Duggy Farm Cave[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10550/]Pagan Bunny Farm Cave[/url]\n<br />[/list]\n<br />Let me know if you create a mod that uses this framework!\n<br />\n<br />\n<br />[b][size=5]Creating Custom Setups[/size][/b]\n<br />\n<br />There are currently two types of setup, following the vanilla types:\n<br />\n<br />[list=1]\n<br />[*]Fixed stations that produce items daily like the mushroom bins\n<br />[*]Random appearing items like bat fruit\n<br />[/list]\n<br />Note that this mod doesn't actually cause stations to produce items like the mushroom bins - I recommend using the [url=https://www.nexusmods.com/stardewvalley/mods/10152]Custom Object Production[/url] mod to add station production.\n<br />\n<br />Content Patcher format is as follows:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"farm_cave_choices\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"MyFarmCave\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"MyFarmCave\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"choice\": \"My Thing\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"description\":\"I can set up machines in the cave to magically produce your thing.\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"objects\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.MyThingDGA/My Thing Producer\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 4,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 5\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0...\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0]\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"AnotherThing\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"AnotherThing\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"choice\": \"Another Thing\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"description\":\"I can set up the cave to make another thing appear.\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"resourceChance\": 66,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 \"resources\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"Another Thing\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 10\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"A Rare Thing\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"weight\": 1\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0...\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0]\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />[b]objects[/b] is a list of stations, [b]resources[/b] is a list of random items that might drop. A setup can use both at once if desired. [b]resourceChance[/b] is out of 100 - the game will keep trying to add random resources to an empty tile until this chance fails.\n<br />\n<br />\n<br />Note: Animations (bat eyes, flying bats, etc.) and sounds (bat flap, screechs, etc.) are still a WIP\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires SDV 1.5.5+\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10506",
+	"Version": "0.4.0",
+	"Updated": "2025-12-03T06:36:09+00:00",
+	"Downloads": [
+		{
+			"Id": 149728,
+			"Type": "Main",
+			"DisplayName": "Farm Cave Framework",
+			"FileName": "Farm Cave Framework-10506-0-4-0-1764743769.zip",
+			"Description": "Changes:\n<br />\n<br />Update for 1.6 (thanks to KronosTitanAnthem for their unofficial update)",
+			"Version": "0.4.0",
+			"SizeInBytes": 22467,
+			"Uploaded": "2025-12-03T06:36:09+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.FarmCaveFramework",
+					"DisplayName": "Farm Cave Framework",
+					"Type": "Smapi",
+					"RelativePath": "FarmCaveFramework",
+					"Manifest": {
+						"Name": "Farm Cave Framework",
+						"Description": "Farm Cave Framework.",
+						"Author": "aedenthorn",
+						"Version": "0.4.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmCaveFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10506"
+						],
+						"UniqueId": "aedenthorn.FarmCaveFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536416,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397194,
+		"UploaderId": 18901754,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

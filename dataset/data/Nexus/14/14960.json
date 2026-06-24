@@ -1,0 +1,75 @@
+{
+	"Site": "Nexus",
+	"Id": 14960,
+	"Name": "BusLocations - French",
+	"Author": "Calimelo",
+	"Description": "[size=3][color=#f1f1f1][url=https://discord.gg/BEjWhgexMb][img]https://cdn.discordapp.com/attachments/745684319489622046/1109082287775158292/Logo_Sora_Low.png[/img][/url]\n<br />\n<br />(Ceci est une traduction de la description d'origine)\u00A0\n<br />\n<br />Il s'agit d'un script super simple qui permet aux moddeurs d'ajouter facilement leur emplacement comme destination pour le bus ! Par défaut, il est livré avec un pack de contenu qui rajoute le \"Désert de Calico\" comme destination (la suppression du dossier \"[BL] Desert\" rend le désert inaccessible, je vous recommande donc de ne pas le supprimer), et d'autres packs de contenu peuvent être ajoutés librement ! Je n'ai aucune idée de ce qui se passe si vous avez trop d'options pour tenir sur l'écran, mais si ce mod décolle, j'ajouterai une sorte de gestionnaire pour cela.[/color]\n<br />\n<br />[/size][color=#f1f1f1][size=5]Bug également connu : il est possible mais très peu probable que lorsque vous interagissez avec le distributeur de billets, il vous donne le dialogue de bus normal au lieu de mon dialogue de bus. Si cela se produit, sortez de la boîte de dialogue et cliquez à nouveau sur la machine. Si cela vous donne toujours le mauvais dialogue, faites-le moi savoir et j'essaierai de comprendre d'où\u00A0ça vient ![/size][/color]\n<br />\n<br />\n<br />\n<br />[color=#f1f1f1][size=5]Comment l'utiliser (joueur) :[/size][/color]\n<br />[list]\n<br />[*][size=3]   Télécharger la dernière version de BusLocations[/size]\n<br />[/list][list]\n<br />[*][size=3]\u00A0 \u00A0 \u00A0 \u00A0Sortez les dossiers \"BusLocations\" et \"[BL] Desert\" du zip et placez-les dans votre dossier /Mods/ folder.[/size]\n<br />[*][size=3]\u00A0 \u00A0 \u00A0 \u00A0Et c'est tout ! Mon mod fera le reste à partir de maintenant.[/size]\n<br />[/list]\n<br />[size=5]Comment l'utiliser (moddeur) :[/size]\n<br />[list]\n<br />[*]   \uFEFF[size=3]Jetez un œil à l'exemple fourni \"[BL] Désert\" (qui est également crucial pour pouvoir aller dans le Désert !) Pour des exemples de formatage.[/size]\n<br />[*][size=3]   \uFEFFCréez un dossier intitulé \"[BL] (nom)\", à l'intérieur de celui-ci, créez \"manifest.json\" et \"content.json\" formatés de la même manière que l'exemple.[/size]\n<br />[*][size=3]   \uFEFF[/size][size=3]mapname dans le fichier de contenu est le nom de code de la carte - par exemple \"Désert\", \"Ville\", \"Montagne\", etc.[/size]\n<br />[*][size=3]   \uFEFFle nom d'affichage est ce qui apparaîtra réellement à la machine de bus - n'ajoutez pas le prix au nom d'affichage![/size]\n<br />[*][size=3]   \uFEFF[/size][size=3]destinationX et destinationY sont les coordonnées de la carte où le joueur arrive.[/size]\n<br />[*][size=3]\u00A0 \u00A0 \u00A0 \u00A0arrivalFacing est la direction à laquelle le joueur sera confronté après son arrivée. Les entrées valides sont soit 1-4 ou 0-3, tout ce que je sais, c'est que 2 est \"face cachée\".[/size]\n<br />[*][size=3]\u00A0 \u00A0 \u00A0 \u00A0 ticketPrice est le prix pour se rendre à votre emplacement.[/size]\n<br />[*][size=3]   \uFEFF[/size][size=3]Distribuez votre pack de contenu comme vous le feriez avec n'importe quel mod normal ![/size]\n<br />[/list]\n<br />[color=#f1f1f1]Je recommanderais d'utiliser Advanced Location Loader pour pouvoir créer facilement des cartes, puis vous devriez pouvoir utiliser ce mod pour créer un chemin vers votre carte !\n<br />\n<br />\n<br />[b]Si vous avez un quelconque problème ou une remarque, n'hésitez pas à laisser un commentaire ou à me contacter sur discord, je ferai de mon mieux pour vous aider ! ;)\n<br />[/b][b]\n<br />Si vous avez une requête de traduction pour un mod\u00A0Stardew\u00A0Valley ou que vous souhaitez avoir accès à tous mes projets n'hésitez pas à passer sur mon serveur !\u00A0[/b]\n<br />\n<br />[url=https://discord.gg/BEjWhgexMb]https://discord.gg/BEjWhgexMb[/url][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14960",
+	"Version": "1.2.0",
+	"Updated": "2023-01-06T18:22:54+00:00",
+	"Downloads": [
+		{
+			"Id": 64749,
+			"Type": "Main",
+			"DisplayName": "BusLocations",
+			"FileName": "BusLocations-14960-1-2-0-1673029374.zip",
+			"Description": "Ajout d'une API pour permettre aux autres mods de créer leurs propres animations pour le départ/l'arrivée de l'arrêt de bus. Avec l'aimable autorisation de l'utilisateur nexusmods ribeena, qui a également créé le seul mod à l'utiliser actuellement.",
+			"Version": "1.2.0",
+			"SizeInBytes": 14278,
+			"Uploaded": "2023-01-06T18:22:54+00:00",
+			"Mods": [
+				{
+					"Id": "hootless.BusLocations",
+					"DisplayName": "Bus Locations",
+					"Type": "Smapi",
+					"RelativePath": "BusLocations",
+					"Manifest": {
+						"Name": "Bus Locations",
+						"Description": "Un script qui permet aux moddeurs d'ajouter dynamiquement de nouveaux endroits où le bus peut se rendre.",
+						"Author": "nanzington",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.15.1",
+						"EntryDll": "BusLocations.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2905"
+						],
+						"UniqueId": "hootless.BusLocations"
+					}
+				},
+				{
+					"Id": "hootless.BLDesert",
+					"DisplayName": "(BL) Desert",
+					"Type": "ContentPack",
+					"RelativePath": "[BL] Desert",
+					"Manifest": {
+						"Name": "(BL) Desert",
+						"Description": "Exemple de pack de contenu pour BusLocations, qui ajoute le Désert comme destination.",
+						"Author": "Hootless",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.15.1",
+						"ContentPackFor": {
+							"UniqueId": "hootless.BusLocations"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"N"
+						],
+						"UniqueId": "hootless.BLDesert"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342451437,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401648,
+		"UploaderId": 58646681,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 10931,
+	"Name": "Flexible Sprinklers",
+	"Author": "Shockah",
+	"Description": "[size=6]TL;DR:[/size]\n<br />[size=4]Ever hated having to put a sprinkler in the middle of your crops? Ever wanted to make a layout that isn't 5x5? Now you can![/size]\n<br />[size=4]Improves all sprinklers to be more flexible, and yet tries to keep compatibility with existing farm setups.[/size]\n<br />\n<br />[size=6]1. Cluster algorithm[/size]\n<br />The main feature of this mod is a customized clustered watering algorithm for sprinklers. Sprinklers will now try to find clusters of tiles to water and split work between them to water as much as possible, without overlaps. This should allow for EVEN MORE custom crop layouts. Each type of sprinkler has a different max range at which it will look at tiles - the better the sprinkler is, the higher the range.\n<br />\n<br />By default, the simple vanilla watering algorithm is used, but if any of the tiles it should water are not able to watered, the cluster algorithm takes over.\n<br />\n<br />This behavior is configurable - you can disable the vanilla algorithm altogether, which can in some cases be beneficial (as otherwise the sprinklers may water the same tiles if their vanilla ranges overlap).\n<br />\n<br />Due to the nature of this algorithm, the sprinklers may sometimes fall into an edge case where they cannot decide on which tiles to water, because they're equally the \"best\" ones. The behavior for this case is also configurable, and by default a \"relaxed\" setting is used, meaning sprinklers may water more tiles than they should. Alternatively you can change it to \"restrictive\" (may water less tiles) or \"exact\" (will water exactly as many tiles as it should, in a sort-of spiraling manner around a sprinkler).\n<br />\n<br />You can also completely disable the new algorithm, if all you're after is the other features.\n<br />\n<br />[size=6]2. Configurable sprinkler power[/size]\n<br />The mod's config allows you to change how many tiles each tier of vanilla-style sprinklers should actually water. This is only taken into consideration when using the flood fill algorithm. Settings are provided for tiers 1-8 (vanilla game only has tiers 1-4, the rest may be reachable when combined with other mods).\n<br />\n<br />[size=6]3. Activating sprinklers on placement / action, or before sleep[/size]\n<br />Placing sprinklers and pressing the interaction keybind (right click / interaction button on controller) will now instantly activate the sprinkler. Both options are configurable, enabled by default. Unfortunately, those don't work with the Cluster behavior, due to its nature.\n<br />Additionally sprinklers can be activated before sleep, which DOES work with the Cluster behavior. This is also configurable.\n<br />\n<br />[size=6]4. Coverage display[/size]\n<br />Another feature is being able to display the current sprinkler coverage for several seconds, potentially also animating it to visualize how did the sprinklers pick their tiles to water (which may help improving the layout). Again, a lot of configurable options here.\n<br />\n<br />[size=6]5. Mod compatibility[/size]\n<br />The mod tries to be as compatible as possible with other sprinkler mods. Mods that were tested:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7630]Radioactive Tools[/url] - working out of the box, yay for good code!\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2428]Prismatic Tools[/url] (unofficial version found [url=https://forums.stardewvalley.net/threads/unofficial-mod-updates.2096/page-25#post-23572]here[/url]) - also working out of the box!\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2917]Line Sprinklers[/url] (unofficial version found [url=https://forums.stardewvalley.net/threads/unofficial-mod-updates.2096/page-14#post-21916]here[/url]) - via a compatibility layer included in the mod.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/41]Better Sprinklers[/url] - via a compatibility layer included in the mod.\n<br />[/list]\n<br />Additionally, due to the nature of my mod, this makes those mods compatible with the other features - this means all of those mods will now be able to be activated on placement/action, and they will also behave more akin to vanilla sprinklers, meaning they should also be able to receive the Enricher upgrade. Currently it may or may not work with the Pressure Nozzle - if the sprinkler uses the vanilla layout, it will work (most of the above mods), but custom ones won't (Line Sprinklers) - I may \"fix\" this in the future.\n<br />\n<br />There is also a dedicated setting to patch the game code in a bit more compatible way (postfixing instead of prefixing whenever possible), which is enabled by default. If you have any performance problems due to this (it's not much of a performance hit, but still), you can turn this off.\n<br />\n<br />The mod also adds its own very extensive API other mod developers can use to make their mods compatible with it, override its functionality or to retrieve information specific to this mod.\n<br />\n<br />Mods I [u]will not[/u] make compatible for various reasons:\n<br />[list]\n<br />[*]Any of the \"Sprinkler Activation\" mods - this mod already does it, and has to do it. If it didn't, it wouldn't be compatible with those mods, so I had to reimplement it as part of this mod.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/833]Basic Sprinkler Improved[/url] - this mod sort-of already does what that mod does, but in its own way.\n<br />[*]Any other outdated mods, especially without source code available.\n<br />[/list]\n<br />\n<br />[size=6]6. Enricher fix[/size]\n<br />This is a small one, but Enricher on a Basic Sprinkler worked as if it was on a Quality Sprinkler. Due to the nature of this mod this is \"fixed\".\n<br />\n<br />[size=6]Configuration[/size]\n<br />The mod has [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] support. You can also edit the [font=Courier New]config.json[/font] file manually.\n<br />\n<br />[size=6]Known issues and future plans[/size]\n<br />This is a list of things I may or may not do in this mod in the future:\n<br />[list]\n<br />[*][b]BUG:[/b] Pressure Nozzle has no effect on Line Sprinklers:\n<br />This should actually be a feature implemented in Line Sprinklers - it would require no or barely any further changes from the side of this mod if done that way.[*][b]BUG:[/b] Some modded sprinklers (noticed with Line Sprinklers) use the machine \"dance\" animation instead of rendering sprinkler upgrades. This is purely visual.\n<br />I may or may not bother fixing it, as it's also something that should really be done on the side of the Line Sprinklers mod, but we'll see.[*][b]TODO:[/b] Customized animations.\n<br />The current animations don't exactly fit the new behavior, but this is purely a visual thing.[/list]\n<br />\n<br />[size=6]Other info[/size]\n<br />You can find the source code [url=https://github.com/Shockah/Stardew-Valley-Mods/tree/master/FlexibleSprinklers]here[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10931",
+	"Version": "3.0.0",
+	"Updated": "2024-03-19T21:14:21+00:00",
+	"Downloads": [
+		{
+			"Id": 82854,
+			"Type": "Main",
+			"DisplayName": "Flexible Sprinklers",
+			"FileName": "Flexible Sprinklers-10931-3-0-0-1710882861.zip",
+			"Description": "",
+			"Version": "3.0.0",
+			"SizeInBytes": 59473,
+			"Uploaded": "2024-03-19T21:14:21+00:00",
+			"Mods": [
+				{
+					"Id": "Shockah.FlexibleSprinklers",
+					"DisplayName": "Flexible Sprinklers",
+					"Type": "Smapi",
+					"RelativePath": "FlexibleSprinklers",
+					"Manifest": {
+						"Name": "Flexible Sprinklers",
+						"Description": "Makes the sprinklers more flexible, while keeping their behavior the same under perfect conditions.",
+						"Author": "Shockah",
+						"Version": "3.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FlexibleSprinklers.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Shockah.Kokoro",
+								"MinimumVersion": "3.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10931"
+						],
+						"UniqueId": "Shockah.FlexibleSprinklers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469542,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397619,
+		"UploaderId": 133612513,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

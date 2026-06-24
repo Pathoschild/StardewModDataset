@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 14540,
+	"Name": "Simple Sounds",
+	"Author": "BleakCodex",
+	"Description": "[font=Lucida Sans Unicode][size=2]Note: This is a\u00A0Modding Resource, while possibly required by other Content Packs, it does not have an effect by itself.[/size]\n<br />\n<br />[size=6]\n<br />[b]Simple Sounds[/b][/size]\n<br />[/font]\n<br />\n<br />[b][size=5]Installation[/size]\n<br />[/b]Extract ZIP to your\u00A0[i]Stardew Valley/Mods[/i]\u00A0directory\n<br />\n<br />\n<br />[b][size=5]Requirements[/size][/b]\n<br />[url=https://smapi.io/]SMAPI\n<br />\n<br />\n<br />[/url][b][size=5]What is\u00A0[i]Simple Sounds[/i]?[/size][/b]\n<br />\n<br />Simple Sounds is a SMAPI Modding Resource which allows the import of Sound Files\u00A0for use in Events or other Mods.\n<br />Namely, this allows Sounds to be imported via a Content Pack and then referenced in events when using [i][b]/playSound {sound}[/b][/i]\n<br />\n<br />\n<br />[b]\n<br />[size=5]How do I use\u00A0[i][b][size=5][i]Simple Sounds[/i][/size][/b]?\u00A0[/i][/size]\n<br />[/b]For Mod Authors, usage is similar to other SMAPI Content Packs:\n<br />\n<br />\n<br />[size=4][b]1.) Create a manifest.json[/b][/size]\n<br />Follow the[url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Manifest]\u00A0SMAPI Manifest Format\n<br />[/url]You will need a [i]ContentPackFor [/i]entry pointed to SimpleSounds:\uFEFF\n<br />[code]\"ContentPackFor\": {\n<br />   \"UniqueID\": \"BleakCodex.SimpleSounds\"\n<br />},\n<br />[/code]\n<br />\n<br />[size=4][b]2.) Create a content.json\n<br />[/b][/size]The format is as follows:\n<br />\n<br />[code]{\n<br />   \"Sounds\" : [\n<br />      {\n<br />      \u00A0 \"Name\": \"{REQUIRED}\",\n<br />      \u00A0 \"FromFile\": \"{REQUIRED}\",\n<br />      \u00A0 \"Loop\": {OPTIONAL - DEFAULT \"false\"},\n<br />      \u00A0 \"InstanceLimit\" : {OPTIONAL - Default \"1\"},\n<br />      \u00A0 \"LimitBehavior\" : {OPTIONAL - Default \"FailToPlay\" - {FailToPlay | ReplaceOldest} }\n<br />      },\n<br />\u00A0 \u00A0 \u00A0 \u00A0...\n<br />    ]\n<br />}[/code]\n<br />[list]\n<br />[*]Name\n<br />[/list]      \uFEFF\uFEFFThe Name of the sound that will be added to the SDV Soundbank. Can be referenced during events via[i]\u00A0/playSound {Name}[/i]\n<br />[list]\n<br />[*]FromFile\n<br />[/list]      \uFEFF\uFEFFThe directory and fileName of the sound you're adding. SDV supports .WAV files, so other formats will need to be converted.\n<br />[list]\n<br />[*]Loop\n<br />[/list]   \uFEFF   \uFEFFIf the sound should be looped until stopped.\n<br />[list]\n<br />[*]InstanceLimit\n<br />[/list]   \uFEFF   \uFEFFHow many instances of this sound can be playing at once, 0 = Unlimited\n<br />[list]\n<br />[*]LimitBehavior\n<br />[/list]   \uFEFF   \uFEFFCan either be {FailToPlay | ReplaceOldest} - if an instance limit is specified, once the limit is hit will determine if the oldest instance should stop, or if    \uFEFF   \uFEFFthe newest instance should not play}\n<br />\n<br />\n<br />[size=4][b]3.) Include your .WAV files and copy your Content Pack into the Stardew Valley/Mods folder\n<br />\n<br />\n<br />Done!\n<br />[/b][/size]Once complete this sound will be accessible from the in-build SDV Soundbank, meaning you'll have access to it in events with:\n<br />[code]/playSound {Name}[/code]\n<br />Or via other mods which leverage the Stardew Valley Soundbank.\n<br />\n<br />\n<br />\n<br />[size=4][b]Feature Requests[/b][/size]\n<br />There are other mods which allow the replacement of sounds so I would recommend them over this one if that is your need.\n<br />It's likely possible to add music as well if there is a use-case and another mod hasn't already solved that. \n<br />Otherwise I will probably aim to keep this mod simple in order to keep maintainability low and compatibility high.\n<br />\n<br />\n<br />[size=4][b][url=https://github.com/BleakCodex/SimpleSounds]Source[/url][/b][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14540",
+	"Version": "1.0.1",
+	"Updated": "2022-11-20T17:36:00+00:00",
+	"Downloads": [
+		{
+			"Id": 63001,
+			"Type": "Main",
+			"DisplayName": "Simple Sounds v1.0.1",
+			"FileName": "Simple Sounds v1.0.1-14540-1-0-1-1668965760.zip",
+			"Description": "v1.0.1 - Reduce logging to Info-level",
+			"Version": "1.0.1",
+			"SizeInBytes": 10405,
+			"Uploaded": "2022-11-20T17:36:00+00:00",
+			"Mods": [
+				{
+					"Id": "BleakCodex.SimpleSounds",
+					"DisplayName": "Simple Sounds",
+					"Type": "Smapi",
+					"RelativePath": "SimpleSounds",
+					"Manifest": {
+						"Name": "Simple Sounds",
+						"Description": "Simple Modding Tool to Add Custom Sounds for other mods or events",
+						"Author": "BleakCodex",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SimpleSounds.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14540"
+						],
+						"UniqueId": "BleakCodex.SimpleSounds"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449689,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401228,
+		"UploaderId": 166034093,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

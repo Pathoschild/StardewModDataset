@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 46031,
+	"Name": "Prismatic Flowers",
+	"Author": "aedenthorn",
+	"Description": "[size=5][b]Description[/b][/size]\n<br />\n<br />By default, this mod gives randomly-colored flowers a 5% chance to be prismatic, meaning their color cycles through the rainbow in real-time.\n<br />\n<br />You can also use [url=https://stardewvalleywiki.com/Fairy_Dust]Fairy Dust[/url] to make a planted crop flower prismatic.\n<br />\n<br />By default, prismatic flowers sell for twice the price of ordinary flowers.\n<br />\n<br />Default prismatic cycling speed is pretty slow, so it can be difficult to notice a prismatic flower at first. You can increase the cycling speed for flower crops and picked flowers in the config.\n<br />\n<br />By default, all crops and picked flowers cycle simultaneously. You can chage the cycling patterns for both flower crops and picked flowers by setting CropPattern and ObjectPattern in the config. Possible values are:\n<br />\n<br />[list]\n<br />[*]None[/*]\n<br />[*]Random[/*]\n<br />[*]Up[/*]\n<br />[*]Down[/*]\n<br />[*]Left[/*]\n<br />[*]Right[/*]\n<br />[/list]Up, Down, Left, and Right only work for flower crops, the pattern will cause growing flowers to cycle in waves based on the flower's x or y tile coordinate. This video shows three different types of prismatism in action:\n<br />\n<br />[youtube]hPOwA4Z0-FQ[/youtube]\n<br />\n<br />\n<br />[size=5][b]Customization[/b][/size]\n<br />\n<br />You can set the mod to ignore certain flowers by adding them to the Ignore list in the config file. E.g.:\n<br />\n<br />[code]\"Ignore\":[\n<br />\u00A0 \u00A0 \"597\"\n<br />][/code]\n<br />\n<br />You can set custom prismatism per flower type using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"aedenthorn.PrismaticFlowers/dict\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"597\":\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Chance\":100,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Offset\":0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CropType\":\"None\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ObjectType\":\"None\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"TimeOffset\":0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Speed\":1.0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Color1\": \"#237FFF\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Color2\": \"#BFE4FF\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />}[/code]\n<br />\n<br />This causes prismatic Blue Jazz to cycle between two blue colors instead of the rainbow (as per the video above)\n<br />\n<br />\n<br />[b][size=5]Technical[/size][/b]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />[url=https://github.com/aedenthorn/StardewValleyMods/][/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46031",
+	"Version": "0.2.1",
+	"Updated": "2026-05-26T04:24:22+00:00",
+	"Downloads": [
+		{
+			"Id": 168972,
+			"Type": "Main",
+			"DisplayName": "PrismaticFlowers",
+			"FileName": "PrismaticFlowers-46031-0-2-1-1779769462.zip",
+			"Description": "Changes:<br /><br />Added price multiplier",
+			"Version": "0.2.1",
+			"SizeInBytes": 22002,
+			"Uploaded": "2026-05-26T04:24:22+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PrismaticFlowers",
+					"DisplayName": "Prismatic Flowers",
+					"Type": "Smapi",
+					"RelativePath": "PrismaticFlowers",
+					"Manifest": {
+						"Name": "Prismatic Flowers",
+						"Description": "Prismatic Flowers.",
+						"Author": "aedenthorn",
+						"Version": "0.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PrismaticFlowers.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46031"
+						],
+						"UniqueId": "aedenthorn.PrismaticFlowers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555660,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432719,
+		"UploaderId": 18901754,
+		"CategoryId": 14,
+		"Adult": false
+	}
+}

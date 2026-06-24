@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 6955,
+	"Name": "Economy Mod",
+	"Author": "millerscout",
+	"Description": "[size=4]Features:\n<br />[/size]\n<br />   \uFEFF- Tax Payment based on lot's value.\n<br />\n<br />\n<br />TIPS:\n<br />[Spoiler]\n<br />- You can change manually the state on Save and you don't need to close the game, sleep or reload the savegame.\n<br />- Having a hard time? lower the LotValue and tillableSoil.\n<br />\n<br />[/Spoiler]\n<br />[size=4]Configuration:\u00A0\n<br />[/size]\n<br />[Spoiler]\n<br />I love when the mods are configurable to configure to my liking So...:\n<br />on config file you'll find something like:\u00A0 [size=1]without the comments[/size]\n<br />{\n<br />\u00A0 \"ListOfDepreciationObjects\": [ /// if you want to add depreciation objects to decrease the lot's value you'll need to put the id here.\n<br />      746, //Jack O Lantern\n<br />      747, //RottenPlant\n<br />      748, //RottenPlant\n<br />      784, //Weeds\n<br />      785, //Weeds\n<br />      786, //Weeds\n<br />      674, //Weeds\n<br />      675, //Weeds\n<br />      676, //Weeds\n<br />      677, //Weeds\n<br />      678, //Weeds\n<br />      679, //Weeds,\n<br />      295, //Twig\n<br />      450, //Stone\n<br />\u00A0 ],\n<br />\u00A0 \"LotPrice\": 1500000, // this is the base price if you really into the calculation itself\n<br />\u00A0 \"TaxPaymentType\": \"Daily\", // currently just Daily it's implemented.\n<br />\u00A0 \"ThresholdInPercentageToAskAboutPayment\": 60 // you'll be asked if you want to postpone the payment or Pay if paying the tax will use 60% of your current money\n<br />}\n<br />\n<br />[/Spoiler]\n<br />Source: [url=https://github.com/millerscout/StardewMillerMods]github[/url]\n<br />\n<br />[size=4]Known Bugs:[/size]\n<br />[Spoiler]\n<br />- tooltips is drawn behind economic tab button.\n<br />- tooltips is drawn begind behind content of economic tab.\n<br />- fps drops when economic report is open (fixing)\n<br />[/Spoiler]\n<br />\n<br />[size=4]Roadmap:\n<br />[/size]- Increase Lot value ( House size, [s]GreenHouse[/s], Buildings, Special items that cost 1million).\n<br />- Detect if automation is being used and charge.\n<br />- Tax for tractor mod :D\n<br />- Not paying the bills, the tax collectors will\u00A0 take items from you.\n<br />- Loan Mod (integration/implementation).\n<br />- Remove Lookup Anything requirement.\n<br />- Consequences when bill aren't paid (Sabotage, pesticide arent magically brought, so crops are destroyed by bugs)\n<br />-[s] Ignore Tax for the first Year[/s]\n<br />[s]- Balance report\n<br />[/s]- Detailed Tax report\n<br />- Limit tile usage if tax aren't paid\u00A0\n<br />- Tax exemption ( Recycling, helping the community)\n<br />- More money = higher tax\n<br />- Config in game with preview of upcoming taxes.\n<br />   [s]\uFEFF- Config tab implemented[/s]\n<br />- [s]Show on billboard scheduled taxes.[/s]\n<br />- Tax payment type ( [s]daily[/s], [s]weekly [/s], monthly )\n<br />- balance Tax with Margin.\n<br />\n<br />[size=4]Features on upcoming version:\n<br />[/size]Configuration Menu with Tax Preview.\n<br />\n<br />[size=4]Goal:[/size]\n<br />\n<br />I don't feel challenged by the difficulty, even using Longevity.\n<br />\n<br />so my goal is to expand the game so that every change that occurs in the game is challenging, trying to implement emerging systems\n<br />\n<br />[size=4]FAQ:\n<br />[Spoiler]\n<br />[/size]Q: Does this work on multiplayer?\n<br />A: YES, it does, if you have separate wallets the tax is shared between each valid farmer\n<br />\n<br />Q: What is a valid farmer?\n<br />A: even if you have 4 houses built, just the ones that someone created a character will count.\n<br />\n<br />Q: What if my wallet isn't shared?\n<br />A:\u00A0 only the host pays the bill.\n<br />\n<br />Q: I Hate this mod, am i tied to suffer because i've installed?\n<br />A: Nope!, you're not, just delete the mod, it saves your bills on it's \"save\" folder[size=1] btw... you should't hate it :(, i spent hours writing with love[/size]\n<br />[size=3]\n<br />Q:\u00A0How it \"Calculates\"? O.o\n<br />[/size]A:\u00A0it counts every tillable soil and counts every tile that has liter.\u00A0\n<br />E.g:\u00A0\n<br />\n<br />depreciationPercentage = (100 - (State.UsableSoil - CalculateDepreciation()) * 100 / UsableSoil)\n<br />if depreciationPercentage &gt; 0\u00A0 then\n<br />   \uFEFF LotValue.Sum / depreciationPercentage \n<br />otherwise\n<br />\n<br /> LotValue.Sum;\n<br />\n<br />[/Spoiler]\n<br />[b]\n<br />Please use the github for issues :kiss:[/b]\n<br />\n<br />P.S sorry for the bad formattation, i'm lazy to do it right now :X",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6955",
+	"Version": "1.0.12",
+	"Updated": "2021-07-24T01:04:56+00:00",
+	"Downloads": [
+		{
+			"Id": 43287,
+			"Type": "Main",
+			"DisplayName": "Economy Mod 1.0.12",
+			"FileName": "Economy Mod 1.0.12-6955-1-0-12-1627088696.zip",
+			"Description": "- Fix a CTD when resizing the window while economy tab's open",
+			"Version": "1.0.12",
+			"SizeInBytes": 567662,
+			"Uploaded": "2021-07-24T01:04:56+00:00",
+			"Mods": [
+				{
+					"Id": "Millerscout.EconomyMod",
+					"DisplayName": "EconomyMod",
+					"Type": "Smapi",
+					"RelativePath": "EconomyMod",
+					"Manifest": {
+						"Name": "EconomyMod",
+						"Description": "WIP - EconomyMod (wannabe)",
+						"Author": "millerscout",
+						"Version": "1.0.12",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "EconomyMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.LookupAnything",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6955"
+						],
+						"UniqueId": "Millerscout.EconomyMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429975,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393643,
+		"UploaderId": 98969513,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

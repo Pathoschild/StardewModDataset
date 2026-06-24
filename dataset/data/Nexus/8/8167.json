@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 8167,
+	"Name": "Water Bot",
+	"Author": "andyruwruw",
+	"AuthorLabel": "Andrew Young",
+	"Description": "[center][img]https://raw.githubusercontent.com/andyruwruw/stardew-valley-water-bot/main/documentation/cover-image.gif[/img]\n<br />\n<br />[size=3][url=https://github.com/andyruwruw/stardew-valley-water-bot]Source Code[/url]\uFEFF\u00A0· [url=https://github.com/andyruwruw/stardew-valley-water-bot/issues/new/choose]Submit an Issue[/url]\uFEFF\u00A0· [/size][url=https://youtu.be/oSmOgki7tj0][size=3]Youtube Video[/size]\n<br />\n<br />[/url]\uFEFF[size=3]\uFEFFFor my fellow lazy farmers without sprinklers[/size][/center][center]\uFEFF[/center]\n<br />[size=6]Water Bot[/size]\n<br />\n<br />Right-clicking on a crop will start up the WaterBot, which will go through and water your crops 1 by 1.\n<br />\n<br />This mod is intended to make the process of watering your plants less tedious, without removing the loss of time and energy usually required in vanilla Stardew.\n<br />\n<br />Don't worry, the bot will automatically fill up the Watering Can if needed.\n<br />\n<br />[size=6]Say no more, I want to Install[/size]\n<br />\n<br />1. [url=https://smapi.io/]Install the latest version of SMAPI[/url].\n<br />\n<br />2. Download this mod and unzip it into\u00A0\u00A0[font=Courier New]Stardew Valley/Mods\n<br />\n<br />[/font]3. Run the game using SMAPI.\n<br />\n<br />[size=6]How to Use[/size]\n<br />\n<br />Good morning!\n<br />\n<br />Time to water your crops.\n<br />\n<br />[b]Pull out your Watering Can, and right-click on any of your beautiful crops as if you were watering them.[/b]\n<br />\n<br />By a miracle of love for your budding crops, you're carried away into watering the rest of them without pushing so much as a button.\n<br />\n<br />You automatically get more water to refill your watering can from instinct, still in a lucid state.\n<br />\n<br />[b]Snap out of it early by pressing any button.[/b]\n<br />\n<br />Don't worry, you won't knock yourself out from watering, you will stop before you run out of stamina\n<br />\n<br />[size=6]How to Use (Serious)[/size]\n<br />\n<br />Start the Bot:\n<br />- Right-click a crop with the Watering Can\n<br />\n<br />Stop the Bot:\n<br />- Press any button (left-click...etc)\n<br />\n<br />The bot will automatically:\n<br />- Refill water at the nearest source when it runs out.\n<br />- Water all crops that need it.\n<br />\n<br />The bot will stop if:\n<br />- You run out of stamina.\n<br />- There's no accessible water to refill.\n<br />- It finishes watering all reachable crops.\n<br />\n<br />[size=6]Open Source[/size]\n<br />\n<br />If you have any issues, [url=https://github.com/andyruwruw/stardew-valley-water-bot/issues]post them here[/url].\n<br />\n<br />All the source code is open source, feel free to shoot over a pull request if you find something!\n<br />\n<br />[url=https://github.com/andyruwruw/stardew-valley-water-bot]Github Repo[/url]\n<br />\n<br />[size=6]How it Works[/size]\n<br />\n<br />[size=5]1. Trigger[/size]\n<br />\n<br />To begin the mod listens for whenever the player[b] right-clicks.\u00A0[/b]If the player is clicking a crop with their watering can, the bot starts.\n<br />\n<br />[size=5]2. Loading the Player's Farm[/size]\n<br />\n<br />The bot first looks through the farm map data, going tile by tile and marking the following traits:\n<br />\n<br />Waterable: [i]Does the tile need to be watered?\n<br />[/i]\n<br />Block: [i]Does the tile allow the player to walk on top of it?\n<br />[/i]\n<br />Water: [i]Can the player refill the Watering Can here?\n<br />\n<br />[img]https://raw.githubusercontent.com/andyruwruw/stardew-valley-water-bot/main/documentation/implementation/load_map.gif[/img][/i]\n<br />\n<br />All the tiles are placed in a [url=https://chortle.ccsu.edu/Java5/Notes/chap49C/ch49C_3.html]2D array[/url]. Any waterable crops are also placed in their own array.\n<br />\n<br />[size=5]3. Find Grouped Crops[/size]\n<br />\n<br />Tiles with crops that need watering are then grouped based on adjacency using a [url=https://en.wikipedia.org/wiki/Depth-first_search]depth-first search[/url].\n<br />\n<br />[img]https://raw.githubusercontent.com/andyruwruw/stardew-valley-water-bot/main/documentation/implementation/find_groups.gif[/img]\n<br />\n<br />[size=5]\uFEFF4. Cost of Traveling Between Groups[/size]\n<br />\n<br />The bot then uses [url=https://en.wikipedia.org/wiki/A*_search_algorithm]A* pathfinding[/url] to determine the cost of traveling from one group to another.\n<br />\n<br />The algorithm starts at the tile closest to the [url=https://en.wikipedia.org/wiki/Centroid]centroid[/url] of each grouping.\n<br />\n<br />The cost of traveling to each group is also done from the player's current position.\n<br />\n<br />[img]https://raw.githubusercontent.com/andyruwruw/stardew-valley-water-bot/main/documentation/implementation/cost_matrix.gif[/img]\n<br />\n<br />\uFEFFThis gives us a nice cost matrix!\n<br />\n<br />At this point, any unreachable groups are disregarded.\n<br />\n<br />[size=5]5. The\u00A0Traveling\u00A0Water Man[/size]\n<br />\n<br />We need to find the shortest path through all the groups, starting at the player's current position.\n<br />\n<br />The bot runs a [url=https://medium.com/ivymobility-developers/algorithm-a168afcd3611]greedy approach[/url] to solving the [url=https://en.wikipedia.org/wiki/Travelling_salesman_problem]traveling salesman problem[/url].\n<br />\n<br />The starting point is the player's position.\n<br />\n<br />[size=5]6. Watering the Group[/size]\n<br />\n<br />For each group, [url=https://en.wikipedia.org/wiki/Depth-first_search]depth-first search[/url] is applied to fill in the tiles.\n<br />\n<br />At each tile, all adjacent (now including diagonals) are watered as well. This means we can skip walking to every block and simply water anything around us.\n<br />\n<br />If a block cannot be stood on, the bot chooses the next best option and waters it from there.\n<br />\n<br />[img]https://raw.githubusercontent.com/andyruwruw/stardew-valley-water-bot/main/documentation/implementation/fill_group.gif[/img]\n<br />[size=4]\n<br />[/size][size=5]7. Out of Water![/size]\n<br />\n<br />When the watering can is low, the bot will go to the nearest source of water to refill.\n<br />\n<br />The closest refillable spot is found using [url=https://en.wikipedia.org/wiki/Breadth-first_search]breadth-first-search[/url] from the player's position.\n<br />\n<br />Once the spot is found, the bot navigates the player to the closest spot to the water, refills, then returns to watering.\n<br />\n<br />[img]https://raw.githubusercontent.com/andyruwruw/stardew-valley-water-bot/main/documentation/implementation/refill_water.gif[/img]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8167",
+	"Version": "1.4.1",
+	"Updated": "2025-09-20T22:27:45+00:00",
+	"Downloads": [
+		{
+			"Id": 143439,
+			"Type": "Main",
+			"DisplayName": "WaterBot",
+			"FileName": "WaterBot-8167-1-4-1-1758407265.zip",
+			"Description": "Further updates from mrelarsen\n<br />\n<br />- Improvements to Grouping\n<br />- Add Fix to Stalemate",
+			"Version": "1.4.1",
+			"SizeInBytes": 36698,
+			"Uploaded": "2025-09-20T22:27:45+00:00",
+			"Mods": [
+				{
+					"Id": "andyruwruw.WaterBot",
+					"DisplayName": "WaterBot",
+					"Type": "Smapi",
+					"RelativePath": "WaterBot",
+					"Manifest": {
+						"Name": "WaterBot",
+						"Description": "Water all your plants by clicking a button and sitting back.",
+						"Author": "andyruwruw",
+						"Version": "1.4.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WaterBot.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8167",
+							"Github:andyruwruw/stardew-valley-water-bot"
+						],
+						"UniqueId": "andyruwruw.WaterBot"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530127,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394855,
+		"UploaderId": 98535563,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"Site": "Nexus",
+	"Id": 44100,
+	"Name": "Easy Gifting",
+	"Author": "PascalCase66",
+	"AuthorLabel": "PascalCase",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Adds an item that will remotely deliver liked/loved gifts to a nearby NPC from a specific chest. (Or to all known NPCs, if you're feeling lazy)\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#999999]Standard installation[/color]\n<br />[size=4][b]Main features[/b][/size]\n<br />[size=4][b]- To use the mod, create the item named \"Easy Button\", a new crafting recipe that takes one wood.\n<br />- Then, set aside a chest to contain gifts that you want to be delivered. Change its color to light purple (configurable).\n<br />- When near an NPC, press the Easy Button. The nearest NPC will receive their most desired gift from the designated chest or chests. (In cases of ties, the item with the lowest price is used)\n<br />- If you want to be really lazy, craft the Very Easy Button and use it. Gifts will be remotely delivered to all known villagers, following the same rules. This will, however, only generate 80% of the standard friendship (configurable).[/b][/size]\n<br />\n<br />Notable Configuration Options\n<br />-\u00A0 Gift After Talking To Villager:\u00A0If true, a gift will be delivered to the NPC after talking to them, without the need of the Easy Button.\n<br />-\u00A0\u00A0Gift All At End Of Day:\u00A0If true, mass delivery will occur at end of day without needing to press the Very Easy button. Useful if you forget.\n<br />-\u00A0\u00A0Loved Items Only:\u00A0Only send loved gifts, not also liked. This will encourage a playstyle of creating unique gifts rather than just giving every villager a random juice each day.\n<br />-\u00A0 Only Personalized Gifts: An alternative to Loved Items Only. Will only send items the NPC likes/loves, which are not universal likes/loves. Items that are universally liked but that the NPC loves are still valid.\n<br />-\u00A0\u00A0Easy Early Friendship: Overrides the above two options until 6 hearts to soften the early game a bit.\n<br />-\u00A0 Bulk Delivery Penalty: If true, bulk delivery (End of day or Very Easy Button) will only give 80% friendship.\n<br />-\u00A0 Chest Colors:\u00A0Only chests of this color will be used for gifting.\u00A0\n<br />\u00A0 - Setting to All will use all chests, including the default brown ones.\u00A0\n<br />\u00A0 - Setting to AllNonDefault will use all chests except the default brown ones.\u00A0\n<br />\u00A0 - Setting to AllNonDefaultInPlayerHome will use all non-default chests, but only those in the player's home. This may be a good compromise if you like using custom coloring extensively and don't want to dedicate any particular color for gifting.\n<br />\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#999999]Requires SMAPI/Content Patcher/Generic Mod Config Menu[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44100",
+	"Version": "1",
+	"Updated": "2026-03-24T04:19:30+00:00",
+	"Downloads": [
+		{
+			"Id": 161783,
+			"Type": "Main",
+			"DisplayName": "StardewGifting",
+			"FileName": "StardewGifting-44100-3-1774325970.zip",
+			"Description": "",
+			"Version": "3",
+			"SizeInBytes": 25612,
+			"Uploaded": "2026-03-24T04:19:30+00:00",
+			"Mods": [
+				{
+					"Id": "PascalCaseEasyGifting",
+					"DisplayName": "EasyGifting",
+					"Type": "Smapi",
+					"RelativePath": "StardewGifting\\StardewGiftingCode",
+					"Manifest": {
+						"Name": "EasyGifting",
+						"Description": "Deliver gifts from special storage",
+						"Author": "PascalCase",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewGifting.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44100"
+						],
+						"UniqueId": "PascalCaseEasyGifting"
+					}
+				},
+				{
+					"Id": "PascalCaseEasyGiftingContentPack",
+					"DisplayName": "EasyGiftingContentPack",
+					"Type": "ContentPack",
+					"RelativePath": "StardewGifting\\StardewGiftingContent",
+					"Manifest": {
+						"Name": "EasyGiftingContentPack",
+						"Description": "Deliver gifts from special storage",
+						"Author": "PascalCase",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44100"
+						],
+						"UniqueId": "PascalCaseEasyGiftingContentPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342548471,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430788,
+		"UploaderId": 60870576,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

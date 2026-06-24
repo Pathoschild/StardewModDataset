@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 41702,
+	"Name": "Map Tokens",
+	"Author": "aedenthorn",
+	"Description": "This mod adds the following Content Patcher tokens (all must be prefaced with \"[b]aedenthorn.MapTokens/[/b]\"):\n<br />\n<br />\n<br />[b][size=5]Farm Coordinates[/size][/b]\n<br />[b]\n<br />[/b][list]\n<br />[*][b]FarmHouseEntryTile[/b]\n<br />[*][b]MainMailboxTile[/b]\n<br />[*][b]GrampaShrineTile[/b]\n<br />[*][b]MapPropertyTile[/b]\n<br />[*][b]SpousePatioTile[/b]\n<br />[*][b]FarmTotemTile[/b]\n<br />[*][b]PetBowlTile[/b]\n<br />[/list]\n<br />Each of the above return a tile coordinate for the farm in the format [b]X Y[/b]. \n<br />\n<br />If you want comma-separated coordinates instead of space-separated, add [b]Comma [/b]to the end of the token, e.g. [b]aedenthorn.MapTokens/FarmHouseEntryTileComma[/b].\n<br />\n<br />If you want only the X or Y value, add [b]X [/b]or [b]Y [/b]to the end of the token.\n<br />\n<br />\n<br />[b][size=5]Map Property Coordinates\n<br />[/size][/b]\n<br />[list]\n<br />[*][b]MapPropertyTile[/b]\n<br />[/list]\n<br />This token takes two arguments, the location name and the name\u00A0of the coordinate-type map property, separated by colon, e.g.:\u00A0\n<br />\n<br />[b]aedenthorn.MapTokens/MapPropertyTile:Farm:PetBowlLocation\n<br />[/b]\n<br />You can use [b]Comma[/b], [b]X[/b], and[b] Y[/b] with this token as above.\n<br />\n<br />\n<br />[b][size=5]Coordinate Sets\n<br />[/size][/b]\n<br />[list]\n<br />[*][b]FarmHouseEntryTiles[/b]\n<br />[*][b]MailboxTiles[/b]\n<br />[*][b]WarpTiles[/b]\n<br />[/list]\n<br />These three return a set of space-separated coordinates; the first two are for farms with multiple homes or mailboxes, the third takes a location name and optional destination name as arguments, e.g.:\n<br />\n<br />\u00A0[b]aedenthorn.MapTokens/WarpTiles:Farm:BusStop\n<br />[/b]\n<br />will return a list of all warp tiles leading from the farm to the bus stop.\n<br />\n<br />\n<br />[b][size=5]Others[/size][/b]\n<br />\n<br />[list]\n<br />[*][b]MapPath[/b]\u00A0- returns the map path to a location's map file, takes the location name as an argument (e.g. [b]aedenthorn.MapTokens/MapPath:Farm[/b])\n<br />[/list]\n<br />\n<br />\n<br />[b][size=5]Technical\n<br />[/size][/b]\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41702",
+	"Version": "0.3.0",
+	"Updated": "2026-03-31T02:14:15+00:00",
+	"Downloads": [
+		{
+			"Id": 162875,
+			"Type": "Main",
+			"DisplayName": "Map Tokens",
+			"FileName": "Map Tokens-41702-0-3-0-1774923255.zip",
+			"Description": "Changes:\n<br />\n<br />Fix",
+			"Version": "0.3.0",
+			"SizeInBytes": 23629,
+			"Uploaded": "2026-03-31T02:14:15+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MapTokens",
+					"DisplayName": "Map Tokens",
+					"Type": "Smapi",
+					"RelativePath": "MapTokens",
+					"Manifest": {
+						"Name": "Map Tokens",
+						"Description": "Map tokens.",
+						"Author": "aedenthorn",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MapTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:41702"
+						],
+						"UniqueId": "aedenthorn.MapTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549563,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428390,
+		"UploaderId": 18901754,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

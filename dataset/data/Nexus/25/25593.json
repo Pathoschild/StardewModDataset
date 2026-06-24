@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 25593,
+	"Name": "PersistentBuffs",
+	"Author": "aceynk",
+	"Description": "[size=5][b]PersistentBuffs[/b][/size]\n<br />\n<br />Persistent buffs is a SMAPI (C#) Stardew Valley mod.\n<br />It allows Content Packs to make buffs persist across days and saves.\n<br />\n<br />This mod does nothing on its own.\n<br />\n<br />This mod is open source: [url=https://github.com/aceynk/PersistentBuffs/]https://github.com/aceynk/PersistentBuffs/[/url]\n<br />\n<br />[size=4][b]Dependencies[/b][/size]\n<br />\n<br />Requires SMAPI ([url=https://smapi.io]https://smapi.io[/url])\n<br />Content Packs likely require Content Patcher ([url=https://www.nexusmods.com/stardewvalley/mods/1915]https://www.nexusmods.com/stardewvalley/mods/1915[/url])\n<br />\n<br />[size=4][b]Mod Authors: How to use[/b][/size]\n<br />\n<br />I'll give an example of how to use a Content Patcher content pack to designate a buff as persistent.\n<br />This assumes you already have some knowledge with making Content Patcher mods.\n<br />\n<br />First, find a buff you want to make persistent.\n<br />I'll make a custom one, with the entry below:\n<br />\n<br />[code]\n<br />{\n<br />    \"Action\": \"EditData\",\n<br />    \"Target\": \"Data/Buffs\",\n<br />    \"Entries\": {\n<br />        \"{{ModID}}_PersistentSpeed\": {\n<br />         \"DisplayName\": \"PersistentSpeed\",\n<br />         \"Duration\": 10000000,\n<br />         \"IconTexture\": \"TileSheets&#92;&#92;BuffsIcons\",\n<br />         \"IconSpriteIndex\": 9,\n<br />         \"Effects\": {\n<br />            \"Speed\": 1\n<br />         }\n<br />        }\n<br />    }\n<br />}\n<br />\n<br />[/code]\n<br />(see [url=https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.6#Custom_buffs]https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.6#Custom_buffs[/url] for more information)\n<br />\n<br />Next, let's assign the buff to a food item (or whatever you want to use to add the buff).\n<br />I'll assign it to carrot items, with the entry below:\n<br />\n<br />[code]{\n<br />    \"Action\": \"EditData\",\n<br />    \"Target\": \"Data/Objects\",\n<br />    \"TargetField\": [\n<br />        \"Carrot\"\n<br />    ],\n<br />    \"Entries\": {\n<br />        \"Buffs\": [\n<br />         {\n<br />             \"BuffId\": \"{{ModID}}_PersistentSpeed\"\n<br />         }\n<br />        ]\n<br />    }\n<br />}[/code]\n<br />(see [url=https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-editdata.md]https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-editdata.md[/url] for more information)\n<br />\n<br />Now, the PersistentSpeed buff will be applied whenever a carrot is eaten.\n<br />Next, to make the buff persist throughout days and saves, one more patch is needed.\n<br />Add the buff id (here, it's \"{{ModID}}_PersistentSpeed\" (where {{ModID}} resolves to the id set in the mod manifest)) by targeting PersistentBuffs/PersistentBuffIds.\n<br />\n<br />[code]{\n<br />    \"Action\": \"EditData\",\n<br />    \"Target\": \"aceynk.PersistentBuffs/PersistentBuffIds\",\n<br />    \"Entries\": {\n<br />        \"{{ModID}}_PersistentSpeed\": true\n<br />    }\n<br />}[/code]\n<br />\n<br />Combining these patches, every carrot now gives a +1 speed buff that lasts through days and saves.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/25593",
+	"Version": "1.1.2",
+	"Updated": "2024-10-06T22:25:16+00:00",
+	"Downloads": [
+		{
+			"Id": 112807,
+			"Type": "Main",
+			"DisplayName": "PersistentBuffs",
+			"FileName": "PersistentBuffs-25593-1-1-2-1728253516.zip",
+			"Description": "v1.1.2 of PersistentBuffs",
+			"Version": "1.1.2",
+			"SizeInBytes": 14457,
+			"Uploaded": "2024-10-06T22:25:16+00:00",
+			"Mods": [
+				{
+					"Id": "aceynk.PersistentBuffs",
+					"DisplayName": "PersistentBuffs",
+					"Type": "Smapi",
+					"RelativePath": "PersistentBuffs",
+					"Manifest": {
+						"Name": "PersistentBuffs",
+						"Description": "Allows creation of buffs that persist through sleep.",
+						"Author": "aceynk",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PersistentBuffs.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Github:aceynk/PersistentBuffs",
+							"Nexus:25593"
+						],
+						"UniqueId": "aceynk.PersistentBuffs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342499495,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342412281,
+		"UploaderId": 211965858,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

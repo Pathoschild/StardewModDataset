@@ -1,0 +1,92 @@
+{
+	"Site": "ModDrop",
+	"Id": 988407,
+	"Name": "Animal Produce Expansion",
+	"Author": "lshtech",
+	"AuthorLabel": "elbe",
+	"TagLine": "Extends the animal produce system (aka, regular drops) to allow for a random selection from an arbitrarily sized weighted list, plus optional bonus drop.",
+	"Description": "Look who's back with another in their line of unasked for animal mods!\n\nToday I've got my most ambitious undertaking to date: a mod to allow regular animal drops (not truffles, that's different code apparently and I haven't gone into it yet) to be expanded to an arbitrary size! What does this add? Umm, I guess you could put feathers or rare eggs into the chicken drop lists or something. Maybe seeds, that feels like something a chicken would have.\n\nConfig example!\n``You put the name of the animal and a list of weighted drops you'd like to see in game. If you aren't familiar with them, a weighted list gives each item \"weight\" into being chosen. In the example above a regular egg has a weight of 10 while a large egg has a weight of 2, so you have around a 5 in 6 chance of getting a regular egg there. You can put whatever you want, number wise, but you probably shouldn't go crazy: having one item at weight 1000000000 and another at 0.0000001 is valid but come on.\n\nAfter that we have the ChanceForExtraDrops value. That's a percentage chance of a second drop occurring, you can put any number between 0 and 1.0, if it's larger than that it'd just still treat it as 1.0.\n\nAnd then we have the ExtraDrops collection that works exactly the same as the Drops collection, but you can put rarer items in their if you want. If ExtraDrops is empty but the ChanceForExtraDrops is &gt; 0 it'll choose the second drop form the Drops list.\n\nI'm considering this a beta right now. Getting it to work with the base game wasn't hard but working around BFAV just made things difficult. If you want to try it out, with or without BFAV, please send me bug reports if you find anything wrong.\n\nMechanically, in vanilla, it sets the default drop to whatever it rolled up and the deluxe drop to -1 and then allows the base code to handle it's conditions and item placement. BFAV ended up requiring me to just overrule BFAV's own drop logic - and I wasn't going to update BFAV again just for my benefit. I have found you may not always reliably get the bonus drop if you don't have a grabber as the game probably tried to put it somewhere it couldn't, so the more animals you have the more likely the floor will get filled.\n\nIt's far from perfect but sometimes other people trying things out can find problems you never saw or even thought to try. If you're interested give it a try.\n\nSource is in the [source hole](https://github.com/lshtech/AnimalProduceExpansion)\nOr you can start an [army of large birds](https://www.nexusmods.com/stardewvalley/mods/9049)  or tell Marnie you [don't want her damn cows](https://www.nexusmods.com/stardewvalley/mods/9107) or, you know, whatever.\n\nMy next plans don't involve animals. I'll probably fall flat on my face trying.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/988407",
+	"Version": null,
+	"Updated": "2021-07-16T13:03:03.237+00:00",
+	"Downloads": [
+		{
+			"Id": 1003861,
+			"Type": "Main",
+			"DisplayName": "Animal Produce Expansion - The Beta Years",
+			"FileName": "Animal Produce Expansion - The Beta Years.zip",
+			"Version": "0.3.0",
+			"SizeInBytes": 22834,
+			"Uploaded": "2021-07-16T12:45:59.146+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.AnimalProduceExpansion",
+					"DisplayName": "Animal Produce Expansion",
+					"Type": "Smapi",
+					"RelativePath": "AnimalProduceExpansion",
+					"Manifest": {
+						"Name": "Animal Produce Expansion",
+						"Description": "Allows animals to drop an arbitrary number of drops from a weighted list",
+						"Author": "elbe",
+						"Version": "0.3.0",
+						"EntryDll": "AnimalProduceExpansion.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "pepoluan.EvenBetterRNG",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Paritee.BetterFarmAnimalVariety",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9119"
+						],
+						"UniqueId": "elbe.AnimalProduceExpansion"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "af9d995cdc63938d216e93335d488cbd",
+				"md5In": "63d8e6ad76219f10341edcde554db633",
+				"scriptType": 0,
+				"sha256Ex": "9d9a9d59c38c5cad6605e62bc1a50adeade5b618f97b621d442a36bcad08128b",
+				"sha256In": "ac81f5e5fa8f2a46d793ea182641e124d40da175de004a81360fe3e9208c1d3a"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1626439575553,
+		"DateUpdated": 1626440583237,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1626439559130,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/988407/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/988407/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/988407/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/988407/icon_original"
+		},
+		"nexusModID": 9119,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": false,
+		"userID": 247126
+	}
+}

@@ -1,0 +1,128 @@
+{
+	"Site": "ModDrop",
+	"Id": 878236,
+	"Name": "JojaOnline",
+	"Author": "PeacefulEnd",
+	"TagLine": "JojaOnline is a mod that gives players the ability to purchase items from home, instead of having to spend their time trekking across town from store to store.",
+	"Description": "JojaOnline is a mod for Stardew Valley that adds a new \"online\" shop. This mod also adds a custom furniture labelled \"computer\", which allows access to the new store.\n\nThe JojaOnline shop has access to all of JojaMart's items (regardless if your local JojaMart has been terminated). The shops both share the same prices, including the price change if you purchased a JojaMart membership.\n\nAdditionally, JojaOnline has some extra items in stock from other local stores (such as wood, stone and fertilizers). The shop has also stocked some items not purchasable elsewhere like hardwood, but don't expect the prices to be cheap!\n\nThe idea behind JojaOnline was to create a mod that gave players the ability to purchase items without having to spend their time trekking across town from store to store (at the cost of being more expensive). I also wanted it to fit within the world of Stardew Valley and what better way than to have the Joja Corporation providing the service!\n\n\nInstall\n\n    Install the latest version of SMAPI.\n    Install all the dependencies.\n    Install this mod from Nexus mods.\n    Run the game using SMAPI.\n\nUsing JojaOnline\nIf using Custom Furniture\n\nPurchase the Computer furniture from your local carpenter store (Robin) and place it anywhere (presumably your home).\n\nRight click the Computer to open up JojaOnline. The items available for purchase will be displayed on the lower half of the screen. \n\n\nIf using Mobile Phone:\nOpen your in-game phone from using the Mobile mod and click the **JojaOnline** app icon.\n\nThe items available for purchase will be displayed on the lower half of the screen. Left clicking an item will add it to your cart, while  right clicking will remove items. You can shift click to add or remove multiple items, as well as hold down to add or remove until you let go.\n\nOnce you are ready to purchase, click on the cart icon located on the top right and you'll be brought to the checkout screen. There you can\nsee an overview of your selected items and the total cost. You are also able to pick a shipping method.\n\nAfter you confirm your purchase, your order will arrive by mail!\n\n\nAdditional Details\n\n---Shipping---\nJojaOnline offers the following shipping options to their customers:\n\nTwo Day | Cost: Free\nNext Day | Cost: 10% of subtotal\n\nJojaOnline now offers Joja Prime, which once purchases makes next day shipping free!\n\n---Daily Sale---\nThe shop will randomly pick a stocked item everyday to put on sale. The sale price is picked at random between [minSalePercentage]\nand [maxSalePercentage].\n\n---Limitations---\nThe maximum amount of unique items per order is 10. You can, however, have as many orders as you'd like. For example, you could place two separate orders on the same day with next day shipping. Both orders would then arrive on the next morning.\n\nConfigurations\nThis mod creates a config.json under the ...\\JojaOnline\\JojaOnline folder. It contains a few options that you can modify to change how JojaOnline interacts with the game.\n\nSource\n[GitHub](https://github.com/Floogen/JojaOnline)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/878236",
+	"Version": null,
+	"Updated": "2021-01-13T13:49:07.087+00:00",
+	"Downloads": [
+		{
+			"Id": 899720,
+			"Type": "Main",
+			"DisplayName": "JojaOnline-1.2.2",
+			"FileName": "JojaOnline-1.2.2.zip",
+			"Description": "Fixed bug with translations changing how categories were handled. Note that if you have an order coming in, wait for it to arrive before updating to the new version.",
+			"Version": "1.2.2",
+			"SizeInBytes": 62386,
+			"Uploaded": "2021-01-13T13:49:07.084+00:00",
+			"Mods": [
+				{
+					"Id": "PeacefulEnd.JojaOnline",
+					"DisplayName": "JojaOnline",
+					"Type": "Smapi",
+					"RelativePath": "JojaOnline\\JojaOnline",
+					"Manifest": {
+						"Name": "JojaOnline",
+						"Description": "Purchasing from Joja Corporation has never been easier!",
+						"Author": "PeacefulEnd",
+						"Version": "1.2.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "JojaOnline.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.MailFrameworkMod",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "aedenthorn.MobilePhone",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7486"
+						],
+						"UniqueId": "PeacefulEnd.JojaOnline"
+					}
+				},
+				{
+					"Id": "PeacefulEnd.JojaOnlineCF",
+					"DisplayName": "(CF) JojaOnline",
+					"Type": "ContentPack",
+					"RelativePath": "JojaOnline\\[CF] JojaOnline",
+					"Manifest": {
+						"Name": "(CF) JojaOnline",
+						"Description": "",
+						"Author": "PeacefulEnd",
+						"Version": "1.2.2",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.CustomFurniture"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "PeacefulEnd.JojaOnlineCF"
+					}
+				},
+				{
+					"Id": "PeacefulEnd.JojaOnlineJA",
+					"DisplayName": "(JA) JojaOnline",
+					"Type": "ContentPack",
+					"RelativePath": "JojaOnline\\[JA] JojaOnline",
+					"Manifest": {
+						"Name": "(JA) JojaOnline",
+						"Description": "Adds Joja Prime Membership.",
+						"Author": "PeacefulEnd",
+						"Version": "1.2.2",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "PeacefulEnd.JojaOnlineJA"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "ba44d2992f7474f268f32c6e98689274",
+				"md5In": "075bd943e33bdd6f2f3c8451032a0adc",
+				"patchNotes": "Fixed bug with translations changing how categories were handled. Note that if you have an order coming in, wait for it to arrive before updating to the new version.",
+				"scriptType": 0,
+				"sha256Ex": "6af61c4c8fdcdce09074108c44a5475166f1e0c948362cbd9683156d2a61a113",
+				"sha256In": "632ad6944b129b81fc0dc8f245de741ed55dbb372c64455d7764d60350b4e99a"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1609705548163,
+		"DateUpdated": 1610545747087,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1609704066660,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/878236/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/878236/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/878236/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/878236/icon_original"
+		},
+		"notice": "Requires latest version of the following:\n* [Custom Furniture](https://www.moddrop.com/stardew-valley/mods/793932-custom-furniture) (Optional) For the computer furniture to access JojaOnline. Use Mobile Phone otherwise.\n* [Mobile Phone](https://www.nexusmods.com/stardewvalley/mods/6523) (Optional) To access JojaOnline from your Mobile Phone. Use Custom Furniture otherwise.\n* [Mail Framework Mod](https://www.nexusmods.com/stardewvalley/mods/1536)\n* [Json Assets](https://www.nexusmods.com/stardewvalley/mods/1720)\n\n**NOTE**\nNot compatible with SpaceCore v1.5.0+ due to issue between PyTK and SpaceCore.\n\nPlease use SpaceCore v1.4.0 in the mean time.",
+		"dateNoticeUpdated": "2021-01-09T18:57:02.0727536-05:00",
+		"isNoticeEnabled": true,
+		"isUploadedByAuthor": true,
+		"userID": 209197
+	}
+}

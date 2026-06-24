@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 38712,
+	"Name": "Valley Girls - i18n Patch (Content Patcher)",
+	"Author": "Jybee",
+	"Description": "This patch transforms Valley Girls dialogues/events to use i18n (Content Patcher), without redistributing the original content.\n<br />[b]Result:[/b] the mod becomes properly translatable (EN by default via i18n/default.json).\n<br />\n<br />• Requirements: SMAPI 4.x, Content Patcher, original ‘Valley Girls’ mod.\n<br />• Installation: Replace the original files from the Valley Girls mod with the files from this patch.\n<br />• Scope: Dialogue + Events (replacements with {{i18n:...}} tokens).\n<br />• No assets (portraits, sprites) are included.\n<br />• Patch created on Valley Girl version 3.6.0\n<br />\n<br />------------\n<br />\n<br />[b]Purpose:[/b] to convert all dialogues/events in the Valley Girls mod to i18n format (Content Patcher keys), without redistributing assets.\n<br />[b]Usefulness:[/b] to make the mod properly translatable (and maintainable) into any language.\n<br />\n<br />[b]\uD83C\uDF1F Why this patch?[/b]\n<br />\n<br />[list]\n<br />[*][b] Clean translations:[/b] texts are no longer ‘hard-coded’ in event/dialogue JSON files; they go through i18n keys ({{i18n:...}}).\n<br />[*][b] Easy maintenance:[/b] when Valley Girls is updated, you just need to add/modify keys (instead of searching for bits of sentences in long files).\n<br />[*][b] Compatibility:[/b] English is still provided via i18n/default.json (fallback CP). Language packs can be added without affecting the mod's logic.\n<br />[*][b] Security:[/b] this patch only changes text and does not contain any assets (no images/portraits/sounds).\n<br />[/list]\n<br />[b]\uD83C\uDFAF Theme &amp; objective[/b]\n<br />\n<br />[list]\n<br />[*][b] Theme:[/b] Valley Girls focused on additional dialogue/events.\n<br />[*][b] Objective:[/b] to expose all textual content via consistent and stable i18n keys (e.g. Haley.Summer.Tue.001, Choice.Night.Yes).\n<br />[*][b] Scope:[/b]\n<br />[/list]    \uFEFFDialogue of the NPCs concerned (Data/Dialogue/*, Characters/Dialogue/* as appropriate),\n<br />    \uFEFFEvents (Data/Events/*, including MarriageEvents).\n<br />\n<br />[b]✅ What the patch actually does[/b]\n<br />\n<br />[list]\n<br />[*] Replaces text values with i18n tokens ({{i18n:Key}}).\n<br />[*] Provides an i18n/default.json file (English) containing 1 key per line/fragment.\n<br />[*] Leaves the logic (conditions, TextOperations, loading orders) intact.\n<br />[/list][b]\uD83D\uDCE6 Patch contents (tree structure)[/b]\n<br />\n<br />[code][CP] VALLEY GIRLS/\n<br />├─ content.json\n<br />├─ i18n/\n<br />│  └─ default.json\n<br />└─ assets/Jsons/Events/\n<br />   ├─ Events.json\n<br />   └─ MarriageEvents.json\n<br />[/code]\n<br />Note: Files located in assets/Jsons/Events/ are only used for text targeting/patching and do not contain any visual elements.\n<br />\n<br />[b]\uD83D\uDD27 Prerequisites[/b]\n<br />\n<br />[list]\n<br />[*] Stardew Valley 1.6.x\n<br />[*] SMAPI 4.x\n<br />[*] ContentPatcher\n<br />[*] Original ‘Valley Girls’ mod (required)\n<br />[/list]\n<br />[b]\uD83E\uDDED Installation &amp; loading order[/b]\n<br />\n<br />[list]\n<br />[*] Install Valley Girls (original mod).\n<br />[*] Unzip this patch into the Mods/ folder.\n<br />[*] Launch the game via SMAPI.\n<br />[*] The patch is designed to load after the original mod (i18n replacements apply automatically).\n<br />[/list]\n<br />[b]\uD83C\uDF0D Usage &amp; languages[/b]\n<br />\n<br />[list]\n<br />[*] By default, the game will use English from i18n/default.json.\n<br />[*] For another language, install a separate language pack.\n<br />[*] Language packs can condition their changes with ‘Language’: ‘fr’ (or other), so as not to overwrite the English.\n<br />[*] Example : i18n/fr.json\n<br />[/list][b]\uD83E\uDD1D Compatibility[/b]\n<br />\n<br />[list]\n<br />[*] Text scope only (Dialogue/Events).\n<br />[*] Compatible with other mods as long as they do not overwrite the exact same lines.\n<br />[*] If another mod modifies the same entry, leave this patch after it in the load order (or use the When/After conditions on the CP side).\n<br />[/list]\n<br />[b]\uD83E\uDDEA Verification &amp; Troubleshooting[/b]\n<br />\n<br />[list]\n<br />[*] [b]SMAPI report:[/b] in-game, open the SMAPI console (or look at smapi-latest.txt) to confirm that this mod's CP patches are applying.\n<br />[*][b] Conflicts:[/b] if some lines remain in English even though you have a VF installed, check:\n<br />[*]   \uFEFF \uFEFFthat the i18n pack (this mod) is present,\n<br />[*]   \uFEFF \uFEFFthat the translation is after this patch,\n<br />[*]   \uFEFF \uFEFFthe game language (en to apply the conditional EN),\n<br />[*]   \uFEFF \uFEFFmods that patch the same targets.\n<br />[*] [b]Saves:[/b] this patch does not affect saves (text only). You can install/uninstall it without risk of corruption.\n<br />[/list]\n<br />[b]\uD83D\uDCE3 Changelog[/b]\n<br />\n<br />[list]\n<br />[*]1.0.0 - Full conversion of Dialogues + Events to i18n format; addition of i18n/default.json (EN fallback).\n<br />[/list]\n<br />[b]\uD83D\uDC64 Credits &amp; permissions\n<br />[/b]\n<br />[list]\n<br />[*] Credits: original mod by [url=https://next.nexusmods.com/profile/TrashRacc1124]TrashRacc1124\uFEFF[/url]\uFEFF.\n<br />[*] i18n patch by [url=https://next.nexusmods.com/profile/Jybee]Jybee\uFEFF[/url]\uFEFF.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38712",
+	"Version": "1.0.0",
+	"Updated": "2025-10-20T12:47:30+00:00",
+	"Downloads": [
+		{
+			"Id": 146056,
+			"Type": "Main",
+			"DisplayName": "VALLEY GIRLS - i18n.zip",
+			"FileName": "VALLEY GIRLS - i18n.zip-38712-1-0-0-1760964450.zip",
+			"Description": "texts are no longer ‘hard-coded’ in event/dialogue JSON files; they go through i18n keys ({{i18n:...}}).",
+			"Version": "1.0.0",
+			"SizeInBytes": 39111,
+			"Uploaded": "2025-10-20T12:47:30+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "[CP] VALLEY GIRLS",
+					"Type": "Invalid",
+					"RelativePath": "[CP] VALLEY GIRLS",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532744,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425400,
+		"UploaderId": 34649135,
+		"CategoryId": 20,
+		"Adult": true
+	}
+}

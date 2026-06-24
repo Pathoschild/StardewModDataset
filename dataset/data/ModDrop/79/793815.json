@@ -1,0 +1,212 @@
+{
+	"Site": "ModDrop",
+	"Id": 793815,
+	"Name": "PyTK - Platonymous Toolkit",
+	"Author": "Platonymous",
+	"TagLine": "Toolkit for Smapi Mods",
+	"Description": "# PyTK\n\nby Platonymous\n\n---\n_PyTK 1.13.29 + SMAPI 3.4 changes to Map Edits_\n\nWith SMAPI 3.4 map edits made in Tiled, saved as TMX files and imported with TMXL, CP or the SMAPI API can now contain:\n- Rotated and/or flipped tiles\n- External .tsx tilesheets\nWith PyTK installed also supported are:\n- Extra map layers (Add the custom layer-property \"DrawAbove\" or \"DrawBefore\" with the value of a vanilla layer name)\n- Image-Layers (as extra layers, use offset to position)\n- Opacity for layers &amp; tiles\n- BackgroundColor map property to set the color drawn behind the map.\n- \"@WaterColor\" custom map property to set the color of the water on the map\n- \"@Color\" custom layer/tile - property to tint layers and tiles\n- Offsets for layers and tiles are supported but tiles, while drawn with the offset, will disappear and show in game based on their non-offset position.\n\nCustom Objects that use PyTK.CEH,  currently only work in single player or multiplayer if all players have the respective mod installed.\n\n_Changed save serializer Warning\n_SMAPI warns that this mod \"may corrupt your save files, or make them unusable if you uninstall\" it.\nThis is because PyTK accesses properties that COULD be used to change the serializer in that way, but doesn't actually change it.\nSo despite what the warning says, your save files will not be corrupted or become unusable when using or uninstalling this mod.\n\nIn development.\n\n![](https://imgur.com/T5Eybda.png)\n\nAdds a few new ways to use smapi.\n[Examples:](https://github.com/Platonymous/Stardew-Valley-Mods/blob/master/PyTK/Examples.md) https://github.com/Platonymous/Stardew-Valley-Mods/blob/master/PyTK/Examples.md\n\n[Source: https://github.com/Platonymous/Stardew-Valley-Mods/tree/master/PyTK\n\n](https://github.com/Platonymous/Stardew-Valley-Mods/tree/master/PyTK)![](https://imgur.com/b8d5H2A.png)\nIf you have any questions you can usually find me on the [Stardew Valley Discord](https://stardewvalleywiki.com/Modding:Community#Discord)  under the username **Routine**#8715\n![](https://imgur.com/u7Unylz.png)\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/793815",
+	"Version": null,
+	"Updated": "2023-11-10T08:34:35.097+00:00",
+	"Downloads": [
+		{
+			"Id": 1375781,
+			"Type": "Main",
+			"DisplayName": "PyTK Lite",
+			"FileName": "PyTK Lite.zip",
+			"Description": "If you're in doubt wich PytK to install, use this one.\nOnly contains very limited features. \nYou can't use both this and original PyTK at the same time. \nIf you absolutely need the original PyTK, you can download it from the optional files.",
+			"Version": "1.24.0",
+			"SizeInBytes": 31577,
+			"Uploaded": "2023-03-23T02:41:23.954+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.Toolkit",
+					"DisplayName": "PyTK Lite",
+					"Type": "Smapi",
+					"RelativePath": "C_PyTKLite",
+					"Manifest": {
+						"Name": "PyTK Lite",
+						"Description": "Platonymous Toolkit (Lite Version)",
+						"Author": "Platonymous",
+						"Version": "1.24.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "PyTKLite.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:1726"
+						],
+						"UniqueId": "Platonymous.Toolkit"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "f5ca5d0cbd9c4d4236374b3294e5a18d",
+				"md5In": "1843e75ed31a56dbde36ae10cae424eb",
+				"scriptType": 0,
+				"sha256Ex": "9b2d9d86d00a1e4432770efd105058e722db82f9527e76053983970adf86b9b5",
+				"sha256In": "fa5e31685ea7d991bc8359b1fee361e395b27e3574cbc03a6be9dbbfbc5a9c57"
+			}
+		},
+		{
+			"Id": 1462156,
+			"Type": "Optional",
+			"DisplayName": "PyTK - Platonymous Toolkit",
+			"FileName": "PyTK - Platonymous Toolkit.zip",
+			"Description": "Original PyTK, mostly needed for older versions of SDV",
+			"Version": "1.23.2",
+			"SizeInBytes": 585296,
+			"Uploaded": "2023-08-24T10:44:59.673+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.Toolkit",
+					"DisplayName": "PyTK",
+					"Type": "Smapi",
+					"RelativePath": "PyTK",
+					"Manifest": {
+						"Name": "PyTK",
+						"Description": "Platonymous Toolkit",
+						"Author": "Platonymous",
+						"Version": "1.23.2",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "PyTK.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Esca.FarmTypeManager",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Entoarox.EntoaroxFramework",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Entoarox.FurnitureAnywhere",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:1726"
+						],
+						"UniqueId": "Platonymous.Toolkit",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "Stardew-Valley-Mods",
+								"User": "Platonymous",
+								"Directory": "_releases",
+								"ModFolder": "PyTK"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "0e73c8f28d97808a546bc8427b48b877",
+				"md5In": "5387637a8956f665b6da373551033694",
+				"scriptType": 0,
+				"sha256Ex": "9e27beb2a84e6d29128344aedd5b0cb9ae4da96fe3bb130912e3453544f1c6af",
+				"sha256In": "726f9bde7c281b8ee504eee526a145eb861cc4c45c6111658ac722bfb67920b0"
+			}
+		},
+		{
+			"Id": 1493952,
+			"Type": "Optional",
+			"DisplayName": "PyTK Dummy",
+			"FileName": "PyTK Dummy.zip",
+			"Description": "For the upcoming Stardew Valley 1.6 only. Don't use this version unless you're testing the game's alpha version.\n\nDoes absolutely nothing, serves only to satisfy no longer valid dependencies in other mods.",
+			"Version": "1.24.2-alpha",
+			"SizeInBytes": 4006,
+			"Uploaded": "2023-11-10T08:34:35.097+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.Toolkit",
+					"DisplayName": "PyTK Dummy",
+					"Type": "Smapi",
+					"RelativePath": "C_PyTKDummy",
+					"Manifest": {
+						"Name": "PyTK Dummy",
+						"Description": "Platonymous Toolkit (Dummy Version)",
+						"Author": "Platonymous",
+						"Version": "1.24.2-alpha.20231110",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "PyTKDummy.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1726"
+						],
+						"UniqueId": "Platonymous.Toolkit"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "c9607f898445a1a9acf25bffcb5e3bcf",
+				"md5In": "81fba57a4f9ad2a3be4920a4e5df5181",
+				"scriptType": 0,
+				"sha256Ex": "db9917596b94d3879e35b054c6457dd41b1e13eb1707a72ed147e8a164cd871d",
+				"sha256In": "a52eb4ea04201658e7f4fa3238af04f941f24771923973d0848032b098d43a47"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1591070500697,
+		"DateUpdated": 1699605275097,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1591070433957,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/793815/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/793815/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/793815/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/793815/icon_original"
+		},
+		"nexusModID": 1726,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

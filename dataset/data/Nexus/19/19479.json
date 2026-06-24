@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 19479,
+	"Name": "Player Arrows",
+	"Author": "TheShamanLord",
+	"Description": "[b][u][size=3]Mod description:[/size][/u][/b]\n<br />This mod spawns customisable on-screen arrows that point to each other player who is currently in game.\n<br />\n<br />Works online or in split screen.\n<br />\n<br />This mod works client-side : other players do no need to have the mod for this to work.\n<br />\n<br />Works with Generic mod config menu.\n<br />\n<br />[b][u][size=3]Config options:\n<br />[/size][/u][/b]Enabled - Lets you enable and disable mod dynamically (true / false)\n<br />Debug - Causes mod to print many messages to smapi console (true / false)\n<br />NamesOnArrows - Makes mod draw the target's name above the arrow\u00A0(true / false)\n<br />DrawBorders - Adds 2 pixel thick border around the name. This is either black or white depending on colour palette chosen\u00A0(true / false)\n<br />PlayerLocationUpdateFPS - How many times per second the game should update location of the on screen arrow. Any number above 30 works fine, but it could slightly increase performance to use the lowest number you're happy with the smoothness of. (1 - 60)\n<br />ArrowOpacity - Opacity of the arrow. use 100 for opaque (0 - 100),\n<br />ColourPalette - These determine the colour ranges for the randomised colours of each arrow. (\"All\", \"pastel\", \"dark\", \"black\")\n<br />\n<br />[b][size=3][u]Known issues:[/u][/size][/b]\n<br />[list]\n<br />[*]Players may randomly get a very similar colour to each other, and be near indistinguishable.\n<br />[*]This mod automatically loops through all teleporters and chooses the first eligible one. The mod doesn't actually check if player can path to that teleporter. So if there's a bugged / strange teleporter, or one in a location you don't have access to yet, the arrow can still point there.\n<br />[*]Some mods don't create maps that work the same way that stardew's default maps work. So these are not compatible with this mod at the moment. If another player is in one of these maps, the arrow that points to them will currently point to the top left corner of the map (to the point 0,0). I will patch something in which causes these arrows to just not be displayed instead, and eventually investigate a proper workaround.\n<br />[/list]\n<br />[b][size=3][u]Future work on this mod:[/u][/size][/b]\n<br />[list]\n<br />[*]When tracking player to other map. Leaves icon on tile teleporter to show that it's the target location\n<br />[*]Smooth movement of arrow to chase player instead of move with them\n<br />[*]Menu to track NPC's\n<br />[*]Menu to track buildings\n<br />[/list]\n<br />If you have any bugs, issues or ideas you want to see added to this mod, please feel free to open an issue or discussion.\n<br />\n<br />Git:\u00A0https://github.com/Jwaad/Stardew_Player_Arrows",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19479",
+	"Version": "1.1.1",
+	"Updated": "2023-12-24T15:34:11+00:00",
+	"Downloads": [
+		{
+			"Id": 79742,
+			"Type": "Main",
+			"DisplayName": "PlayerArrowsV1.1.1",
+			"FileName": "PlayerArrowsV1.1.1-19479-1-1-1-1703432051.zip",
+			"Description": "Small patch that hides arrows that couldn't find a path to player / target",
+			"Version": "1.1.1",
+			"SizeInBytes": 28435,
+			"Uploaded": "2023-12-24T15:34:11+00:00",
+			"Mods": [
+				{
+					"Id": "TheShamanLord.PlayerArrows",
+					"DisplayName": "PlayerArrows",
+					"Type": "Smapi",
+					"RelativePath": "Stardew_Player_Arrows",
+					"Manifest": {
+						"Name": "PlayerArrows",
+						"Description": "An arrow pointer to all other players in multiplayer",
+						"Author": "TheShamanLord",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "Stardew_Player_Arrows.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:19479"
+						],
+						"UniqueId": "TheShamanLord.PlayerArrows"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342466430,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406167,
+		"UploaderId": 117520218,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 28950,
+	"Name": "No More Lag",
+	"Author": "NoNameKz",
+	"Description": "[color=#00ffff][size=6][b][u]How It Works:[/u][/b][/size]\n<br />[/color][font=Tahoma][size=3]When playing Stardew Valley, performance issues like lag or stuttering can happen, especially when moving between areas or after playing for a long time. This mod works behind the scenes to make sure your game runs smoothly by improving how the game manages resources and loads content.[/size]\n<br />\n<br />[size=3]This mod fixes that by focusing on four key areas:[/size]\n<br />\n<br />[b][color=#c9daf8][size=4][u]Smart Performance Management[/u][/size][/color]\n<br />[/b][size=3]The mod constantly monitors how well your game is performing and takes steps to prevent any slowdowns or lag spikes.\n<br />[/size]\n<br />[list]\n<br />[*][b]Frame Rate Monitoring:[/b] It watches how smoothly the game runs and adjusts settings automatically to maintain a steady performance.\n<br />[*][b]Problem Detection:[/b] If the game’s performance starts to drop, the mod reacts by optimizing on the fly to restore smooth gameplay.\n<br />[*][b]Optional FPS Display:[/b] You can choose to see an FPS counter on the screen to track how well your game is running at any moment.\n<br />[/list][b][color=#cfe2f3][size=4][u]\n<br />Faster Location Loading[/u][/size][/color]\n<br />[/b][size=3]Switching between locations in the game can cause delays as new areas and objects need to load. This mod makes location transitions quicker and more fluid.\n<br />[/size]\n<br />[list]\n<br />[*][b]Preloading Assets:[/b] The mod intelligently preloads important game files before you need them, so when you enter a new area, it’s already prepared, reducing loading times.\n<br />[*][b]Smoother Transitions:[/b] It minimizes stuttering or pauses when you move between areas, like entering buildings or moving to different parts of the map.\n<br />[/list][b][color=#cfe2f3][size=4][u]\n<br />Advanced Memory Management[/u][/size][/color]\n<br />[/b][size=3]Games can slow down when they use too much memory (RAM), especially during long sessions. This mod helps prevent that by managing memory usage efficiently.\n<br />[/size]\n<br />[list]\n<br />[*][b]Automatic Cleanup:[/b] The mod frees up memory by cleaning out unnecessary data that the game doesn’t need anymore, preventing memory-related slowdowns.\n<br />[*][b]Three Levels of Cleanup:[/b] Depending on how much memory your system has, you can choose between Light, Moderate, or Aggressive memory cleanup to best suit your needs.\n<br />[/list][b]\n<br />[color=#cfe2f3][size=4][u]Customizable Settings[/u][/size][/color]\n<br />[/b][size=3]This mod gives you full control over how it works, so you can adjust it to match your PC’s performance level.\n<br />[/size]\n<br />[list]\n<br />[*][b]Turn Features On/Off:[/b] You can enable or disable specific optimizations depending on what you prefer or what works best for your computer.\n<br />[*][b]Adjust Performance Goals:[/b] Set performance targets (like frame rate limits) based on your PC’s capabilities, whether it’s a high-end machine or an older system.\n<br />[*][b]Memory Usage Limits:[/b] Fine-tune how much memory the game is allowed to use to avoid crashes or performance dips.\n<br />[/list]\n<br />[i][size=3]You can find all of these settings in the\u00A0[/size][b]config.json[/b]\u00A0[/i][/font][size=3][font=Tahoma][i]file. To generate this file, make sure to enable the mod and load your save game first. After that, the file will appear in your mod folder, where you can adjust the settings.\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"EnableDetailedLogs\": true, // Enables detailed performance and operation logging\n<br />\u00A0 \"AssetCacheSize\": 100, // Maximum number of assets to keep in memory cache\n<br />\u00A0 \"MaxCacheItems\": 1000, // Limits the total number of items in the cache\n<br />\u00A0 \"MaxCacheSizeMB\": 100, // Maximum size of the asset cache in MB\n<br />\u00A0 \"CacheExpirationMinutes\": 30, // Time before unused assets are removed from the cache\n<br />\u00A0 \"OptimizeAssetLoading\": true, // Enables smart preloading and caching of game assets\n<br />\u00A0 \"OptimizeLocationTransitions\": true, // Optimizes loading during location changes\n<br />\u00A0 \"MemoryThreshold\": 512, // Memory usage limit in MB before optimization triggers\n<br />\u00A0 \"AggressiveMemoryCleanup\": false, // Enables more aggressive memory cleanup\n<br />\u00A0 \"TargetFrameRate\": 60, // Target frame rate for the game\n<br />\u00A0 \"EnableFrameRateOptimization\": true, // Automatically adjusts settings to maintain frame rate\n<br />\u00A0 \"LowFpsThreshold\": 45, // FPS threshold for triggering optimizations\n<br />\u00A0 \"ShowFpsOverlay\": false, // Displays FPS and performance stats on the screen\n<br />\u00A0 \"FpsMessageDelay\": 10, // Delay (in seconds) between FPS overlay updates\n<br />\u00A0 \"PreloadBatchSize\": 5, // Number of assets to load simultaneously during preloading\n<br />\u00A0 \"EnableCompatibilityMode\": true // Ensures better compatibility with other mods\n<br />}\n<br />\n<br />[/code][/i][/font]\n<br />\n<br />[font=Comic Sans MS][color=#00ff00][size=6][b][u]Compatibility:[/u][/b][/size][/color][/font]\n<br />[b]Compatible with Stardew Valley Expanded (SVE) and Ridgeside Village[/b][b]:[/b] Both of these popular mods add a lot of new content, such as new maps and NPCs. This mod has been tested with large content mods like SVE and Ridgeside Village, and it efficiently preloads the assets these mods introduce, reducing the likelihood of lag during location transitions.\n<br />\n<br />[/size][list]\n<br />[*][size=3][b]Note:[/b] [i]If you're using multiple large mods like SVE or Ridgeside Village together, the performance improvements may depend on your system's capacity to handle the extra data, but the mod will still optimize loading times and memory usage[/i][/size]\n<br />[/list][size=3]\n<br />[b]General Mod Compatibility:[/b] The mod supports other major mods, including Content Patcher (which dynamically modifies assets). It is also compatible with cosmetic mods, new NPCs, new items, and most quality-of-life mods.\n<br />\n<br />[b]Multiplayer Compatibility[/b]: The mod should work in multiplayer, providing players with smoother gameplay and reduced lag. Each player's system will manage their own asset loading and memory usage. For the best multiplayer experience, it is [b]highly recommended[/b] that both the host (the player who sets up the game server) and all participating players [b]install this mod[/b].\n<br />\n<br />[font=Tahoma]\n<br />[/font][/size][u][font=Comic Sans MS][color=#ff00ff][size=6][b]Q&amp;A:[/b][/size][/color][/font][/u]\n<br />[font=Tahoma][b][size=3]1. Will this mod completely stop all lag in my game?[/size][/b]\n<br />[size=3]While it helps reduce lag significantly by managing memory and preloading assets, it may not eliminate all lag, especially if you are using a very large number of mods or have [b]hardware limitations[/b]. Results may vary depending on your setup.[/size]\n<br />[/font]\n<br />[b][size=3]2.\u00A0My game still lags—what can I do?[/size][/b]\n<br />[font=Tahoma][size=3]If you're still experiencing lag, try adjusting the mod's memory settings in the config file to better match your system's capabilities. Also, check for other mods that might be conflicting and update them to the latest versions.[/size][/font]\n<br />\n<br />[b][size=4]3.\u00A0Does this mod affect my game’s save files?[/size][/b]\n<br />[font=Tahoma][size=3]No, this mod doesn’t change your save files. It only optimizes how the game loads and handles assets during gameplay.\n<br />\n<br />[b][size=4]4.\u00A0Can I disable this mod anytime?[/size][/b]\n<br />[font=Tahoma][size=3]Yes! You can remove or disable the mod without affecting your game saves or other mods. Just remember that if you disable it, the optimizations will no longer apply.[/size][/font][/size][/font]\n<br />\n<br />\n<br />[font=Comic Sans MS][color=#ffff00][size=6][u]My Other Mods:[/u][/size][/color][/font]\n<br />[list]\n<br />[*][font=Tahoma][size=3][b][url=https://www.nexusmods.com/stardewvalley/mods/28869]Harvest With an Axe[/url]\uFEFF:[/b]\u00A0[/size][size=3]Chop Multiple Trees with an Axe! Have you been frustrated with the Stardew Valley mechanics that make you cut down trees one by one? This mod provides the solution! Now you can cut multiple trees at once![/size][/font]\n<br />[*][font=Tahoma][size=3][b][url=https://www.nexusmods.com/stardewvalley/mods/28721]Dynamic Combat[/url]:[/b] Move freely while attacking, blocking, or unleashing special attacks—no more stiff movements! Attack from any angle with ease; you'll never have to turn your character again. It's a fun mod![/size][/font]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28950",
+	"Version": "1.0.2",
+	"Updated": "2024-11-06T19:14:56+00:00",
+	"Downloads": [
+		{
+			"Id": 115451,
+			"Type": "Optional",
+			"DisplayName": "No More Lag (v1.0.2) - Unmaintained",
+			"FileName": "No More Lag (v1.0.2)-28950-1-0-2-1730920496.zip",
+			"Description": "Note: This mod is currently unmaintained and incompatible with the latest updates.\n<br />\n<br />",
+			"Version": "1.0.2",
+			"SizeInBytes": 39146,
+			"Uploaded": "2024-11-06T19:14:56+00:00",
+			"Mods": [
+				{
+					"Id": "NoNameKz.NoMoreLag",
+					"DisplayName": "No More Lag",
+					"Type": "Smapi",
+					"RelativePath": "No More Lag",
+					"Manifest": {
+						"Name": "No More Lag",
+						"Description": "A mod designed to improve performance by optimizing asset loading and memory management",
+						"Author": "NoNameKz",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "No More Lag.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.23.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28950"
+						],
+						"UniqueId": "NoNameKz.NoMoreLag"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342502139,
+				"CategoryId": 2,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342415638,
+		"UploaderId": 35921965,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

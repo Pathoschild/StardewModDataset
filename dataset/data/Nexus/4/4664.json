@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 4664,
+	"Name": "Custom Kissing Mod",
+	"Author": "Digus",
+	"Description": "[size=3][b]Current version: 1.3.3[/b][/size][list][*][size=2][/size]Fix rare case of error when NPC has dialog available but no message in the stack.\n<br />[*]Fix config menu error when NPC texture name didn't follow vanilla rules. (Sunberry Village)\n<br />[/list]\n<br />[size=3][b]Objective: [/b][/size]\n<br />This mod was requested in the official forum at [url=https://community.playstarbound.com/threads/kiss-your-boyfriend-girlfriend-mod.158052/]Kiss your boyfriend/girlfriend mod![/url] thread. I liked the idea and worked into it, to let the player customize who it can kisses, based on the original game mechanic.\n<br />\n<br />[size=3][b]Compatibility:[/b][/size]\n<br />This mod may conflict with other mods that change interactions with NPCs .\n<br />\n<br />[size=3][b]Installation:[/b][/size][list]\n<br />[*][size=2][url=https://github.com/Pathoschild/SMAPI/releases]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/4664/]Unzip the Custom Kiss Mod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />[size=3][b]How does it work[/b]:\n<br />[/size][list]\n<br />[*][size=2]The same way as marriage kiss work, but with a boyfriend/girlfriend you has seen the 10 heart event.[/size]\n<br />[*][size=2]The first kiss will give friendship bonus and cure exhaustion just like marriage kiss.[/size]\n<br />[*][size=2]If you are married and kiss another NPC, your spouse might find out and will be jealous.[/size]\n<br />[*][size=2]If you try to kiss an NPC having less than 8 hearts, it will reject your kiss, like spouse reject it with less than 10 hearts.[/size]\n<br />[*][size=2]The cursor will show a heart indicator when you can kiss the NPC.[/size]\n<br />[*][size=2]If the NPC is in a place the dialog repeats, it will alternate between the dialog and kissing.[/size]\n<br />[*][size=2]All requirements and values are configurable and can be disabled or changed.[/size]\n<br />[*][size=2]The mod comes configured with the default values for bachelors and bachelorettes, but you can add other NPCs too.[/size]\n<br />[*][size=2]When adding new NPCs with Generic Mod Configuration Menu, it will pre configure the NPC with their marriage kissing frame if it exists.[/size]\n<br />[*][size=2]You can also change the default values to set custom kissing frames you added with other mods.[/size]\n<br />[*][size=2]The behavior of the married kiss is not changed, only the sprite might be changed. So even if you change friendship value and [size=2]exhaustion [/size]behavior, it will only apply for non spouse kiss.[/size]\n<br />[/list][size=3][size=3][b]\n<br />Config options:[/b][/size]\n<br />[size=2]Run the game at least once with the mod installed to create the config.json file. You can edit this file to change the configuration.\n<br />[/size][/size][list]\n<br />[*][size=2]\"[b]DisableDatingRequirement[/b]\": ([b]false[/b]|true) Enable or disable the requirement to be dating the NPC for the kiss to happen.[/size]\n<br />[*][size=2]\"[b]\uFEFFDisableEventRequirement[/b]\": ([b]false[/b]|true) Enable or disable [size=2]the requirement of have seen a specific event for the kiss to happen.[/size][/size]\n<br />[*][size=2][size=2]\"[b]DisableJealousy[/b]\": ([b]false[/b]|true) Enable or disable the spouse getting jealous for knowing you kissed someone else.[/size][/size]\n<br />[*][size=2][size=2][size=2][size=2]\"[b]DisableExhaustionReset[/b]\": ([b]false[/b]|true) Enable or disable removing the exhausted status from kissing.\uFEFF[/size][/size][/size][/size]\n<br />[*][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2]\"[b]RequiredFriendshipLevel[/b]\": ([b]8[/b]) Required friendship heart level for the kiss to happen.[/size][/size][/size][/size] Set to zero to disable it.[/size][/size][/size][/size]\n<br />[*][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2]\"[b]KissingFriendshipPoints[/b]\": ([b]10[/b]) Amount of friendship points gained from kissing[/size][/size][/size][/size].[/size][/size][/size][/size][/size][/size][/size][/size]\n<br />[*][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2]\"[b]\uFEFFJealousyFriendshipPoints[/b]\": ([b]-250[/b]) Amount of friendship points you lose for spouse finding out about the kiss[/size][/size][/size][/size].[/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size]\n<br />[*][size=2]\"[b]EnableContentPacksOverrides[/b]\": ([b]false[/b]|true) Enable or disable content packs to override loaded configs. If disabled you should handle conflicts manually, by removing npc configuration from the config.json file for conflicting content packs. If enabled the mod will always override and uses the config of the last content pack to load.[/size]\n<br />[*][size=2][size=2]\"[b]DisableCursorKissingIndication[/b]\": ([b]false[/b]|true) Enable or disable the cursor heart indicator being shown when its possible to kiss the NPC.[/size][/size]\n<br />[*][size=2]\"[b]NpcConfigs[/b]\": List of NPC configuration.[/size][list]\n<br />[*][size=2]\"[b]Name[/b]\": (string) The name of the NPC[/size].\n<br />[*][size=2]\"[b]Frame[/b]\": (int) The id of the frame to be used in the kissing animation.[/size]\n<br />[*][size=2][size=2]\"[b]FrameDirectionRight[/b]\": (boolean) If the character sprite is facing right.[/size][/size]\n<br />[*][size=2]\"[b]BeachFrame[/b]\": (int) The id of the frame to be used in the kissing animation at the beach.[/size]\n<br />[*][size=2][size=2]\"[b]BeachFrameDirectionRight[/b]\": (boolean) If the character beach sprite is facing right.[/size][/size]\n<br />[*][size=2][size=2][size=2][size=2]\"[b]RequiredEvent[/b]\": (int) Event required for the kiss to happen. Can be [b]null[/b].[/size][/size][/size][/size]\n<br />[/list]\n<br />[/list]\n<br />[b][size=3]For Modders to use content pack:[/size][/b][list]\n<br />[*]There is a template inside the mod folder with commented instructions on what each property do.\n<br />[/list]\n<br />\uFEFF[b][size=3]For Modders to use the api:[/size][/b][list]\n<br />[*]Follow this instructions on how to use an API: https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Integrations\n<br />[*]The api interface:\n<br />[/list][spoiler][code]\uFEFF\uFEFFnamespace CustomKissingMod.Api\n<br />{\n<br />    public interface ICustomKissingModApi\n<br />    {\n<br />      \u00A0 bool CanKissNpc(Farmer who, NPC npc);\n<br />      \u00A0 bool HasRequiredFriendshipToKiss(Farmer who, NPC npc);\n<br />    }\n<br />}[/code][/spoiler]\n<br />[size=3][b]Internationalization:[/b][/size]\n<br />[size=2]This mod is compatible with SMAPI support to i18n files. It has an official translation for pt-BR and ko, but you can translate for your language following this instructions: [url=https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation]https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation[/url][/size]\n<br />[size=3][b]\n<br />Uninstall:[/b][/size][list]\n<br />[*][size=2]Delete the mod from the installation folder.[/size]\n<br />[/list][size=3][b]Special Thanks:[/b][/size]\n<br />[list]\n<br />[*][url=https://community.playstarbound.com/members/msmeowners.989826/]MsMeowners[/url] - Who requested the mod.\n<br />[*] Everyone on the modding discord channel that are always super helpful.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/76778723]howxxxx[/url] for the Korean translation.\n<br />[/list]\n<br />[size=3][b]My Other Mods:[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1538]Animal Husbandry Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2360]Everlasting Baits And Unbreakable Tackles Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2374]Water Retaining Field Mod[/url]\uFEFF\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/2516]Custom Crystalarium Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2594]Crop Transplant Mod[/url]\uFEFF\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/2642]Custom Cask Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4711]Borderless Wood Floor Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4992]Custom Producer Mod[/url]\uFEFF\n<br />[/list][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4992]Custom Producer Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7842/]Mail Services Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8178/]Arcane Table Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8292/]Gem Lamp Posts Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8413]Advanced Casks Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/30937]Advanced Weather Forecast Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/32308]Subscription Boxes Mod[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4664",
+	"Version": "1.3.3",
+	"Updated": "2025-05-13T19:23:05+00:00",
+	"Downloads": [
+		{
+			"Id": 132227,
+			"Type": "Main",
+			"DisplayName": "CustomKissingMod-v1.3.3",
+			"FileName": "CustomKissingMod-v1.3.3-4664-1-3-3-1747164185.zip",
+			"Description": "SBV fix.",
+			"Version": "1.3.3",
+			"SizeInBytes": 35456,
+			"Uploaded": "2025-05-13T19:23:05+00:00",
+			"Mods": [
+				{
+					"Id": "Digus.CustomKissingMod",
+					"DisplayName": "Custom Kissing Mod",
+					"Type": "Smapi",
+					"RelativePath": "CustomKissingMod",
+					"Manifest": {
+						"Name": "Custom Kissing Mod",
+						"Description": "Let you configure kissing of NPCs.",
+						"Author": "Digus",
+						"Version": "1.3.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomKissingMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.14.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4664"
+						],
+						"UniqueId": "Digus.CustomKissingMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342518915,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391352,
+		"UploaderId": 2186381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

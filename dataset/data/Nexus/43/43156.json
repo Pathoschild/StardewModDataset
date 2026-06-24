@@ -1,0 +1,81 @@
+{
+	"Site": "Nexus",
+	"Id": 43156,
+	"Name": "Model Trains and Locomotives",
+	"Author": "zombifier",
+	"AuthorLabel": "Selph aka zombifier",
+	"Description": "Are you a fan of trains and transportation and want to live out your dreams of having a miniature locomotive running around your farm, between rows of crops and roaming animals? Now your dreams can be (virtual) reality; with Model Trains and Locomotives you can lay tracks, dig tunnels or build bridges around the farm, and then deploy toy trains complete with cargo wagons and passenger cars!\n<br />\n<br />[youtube]egNd3PRWpNw[/youtube]\n<br />\n<br />[size=4][b]INSTRUCTIONS[/b][/size]\n<br />\n<br />[list]\n<br />[*]Purchase the Train Catalogue from Robin for 100,000g. Or spawn it in with CJB Item Spawner, I won't judge\u00A0\uD83D\uDE09\n<br />[*]Lay tracks on the ground to make path for your trains. They can be placed top of other flooring, so get creative!\n<br />[*]Put bridges and tunnels entrances on top of the tracks to make paths across impassable terrains - water, walls, or even buildings!\n<br />[*]Once you have a path, put an engine on the tracks and watch it move! Attach more wagons to the train as you want.\n<br />[*]If you're holding the Locomotive Adjuster tool, right click on a train to reverse it, and left click to remove the wagon on the cursor, or the entire train if left clicking an engine.\n<br />[*]A train/wagon derailed and went off the map? Use the Collector (included in the Catalogue) to instantly clean up all trains and wagons on the current map.\n<br />[/list]\n<br />\n<br />[size=4][b]IMPORTANT NOTES[/b][/size]\n<br />\n<br />[list]\n<br />[*]Trains have very simple pathfinding: when they enter a junction they will prioritize going straight, followed by turning right and left respectively. Make sure to design your tracks to account for this! Crossings are fine, just make sure they can plot a full path back to their start position, and avoid loops that collapse on itself.\n<br />[*]Trains cannot properly warp to another map; avoid putting tracks on top of warps.\n<br />[*]Multiplayer is supported.\n<br />[*]Trains are purely decorative currently; they do not have other functionality for the moment.\n<br />[/list]\n<br />\n<br />[size=4][b]INSTALLATION INSTRUCTIONS\n<br />[/b][/size]\n<br />[list]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url]\uFEFF and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\n<br />[*]Extract this mod into the Mods folder as usual\n<br />[*]This mod is safe to uninstall; simply make sure to remove all placed objects/tracks beforehand. All trains will disappear after uninstallation.\n<br />[/list][size=4]\n<br />[b]FUTURE CONTENT[/b]\n<br />[/size]\n<br />In future versions you can expect a lot more features and content such as...[list]\n<br />[*]Even more rolling stock\n<br />[*]More track types\n<br />[*]More train-related furniture, such as signals or crossing sign\n<br />[*]Accurate train noises\n<br />[*]Better train collision and control\n<br />[*]Non-train vehicles...?\n<br />[/list]\n<br />I'm unlikely to add actual cargo functionality - these trains are meant to be decorative first and foremost, and other mods like Automatic or Junimatic already exists (and are very good!). It is however not 100% out of the picture. Maybe 70%, give or take.\n<br />\n<br />Are you a mod maker interested in adding new trains, tracks and bridges in your own style? It's totally possible! See the following documentation for how to add your own objects with a content pack:\u00A0[url=https://github.com/zombifier/My_Stardew_Mods/tree/master/ModelTrains]https://github.com/zombifier/My_Stardew_Mods/tree/master/ModelTrains[/url]\n<br />\n<br />[size=4][b]KNOWN ISSUES[/b][/size][list]\n<br />[*]In extremely rare cases a long train may derail after being reversed by hand. To reduce the chance of this happening avoid flipping trains that are going through junctions.\n<br />[*]Trains/wagons show the \"talk\" icon when hovering over them.\n<br />[*]In multiplayer, farmhands have collision with trains.\n<br />[/list]\n<br />\n<br />Special thanks to boxosoup for being my beta tester and identifying so many issues before release!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43156",
+	"Version": "1.0.0",
+	"Updated": "2026-03-06T22:37:05+00:00",
+	"Downloads": [
+		{
+			"Id": 159317,
+			"Type": "Main",
+			"DisplayName": "Model Trains and Locomotives",
+			"FileName": "Model Trains and Locomotives-43156-1-0-0-1772836625.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 120527,
+			"Uploaded": "2026-03-06T22:37:05+00:00",
+			"Mods": [
+				{
+					"Id": "selph.ModelTrainsCode",
+					"DisplayName": "Model Trains and Locomotives",
+					"Type": "Smapi",
+					"RelativePath": "ModelTrains\\ModelTrains",
+					"Manifest": {
+						"Name": "Model Trains and Locomotives",
+						"Description": "Add fully functional model trains and layable tracks to decorate your farms!",
+						"Author": "selph",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.9",
+						"EntryDll": "ModelTrains.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:43156"
+						],
+						"UniqueId": "selph.ModelTrainsCode"
+					}
+				},
+				{
+					"Id": "selph.ModelTrains",
+					"DisplayName": "Model Trains and Locomotives (CP Component)",
+					"Type": "ContentPack",
+					"RelativePath": "ModelTrains\\[CP]ModelTrains",
+					"Manifest": {
+						"Name": "Model Trains and Locomotives (CP Component)",
+						"Description": "Add fully functional model trains and layable tracks to decorate your farms!",
+						"Author": "selph",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "selph.ModelTrainsCode",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "selph.ModelTrains"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342546005,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429844,
+		"UploaderId": 24394309,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

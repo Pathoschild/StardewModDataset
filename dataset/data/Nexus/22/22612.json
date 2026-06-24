@@ -1,0 +1,98 @@
+{
+	"Site": "Nexus",
+	"Id": 22612,
+	"Name": "More Nightly Events",
+	"Author": "KhloeLeclair",
+	"AuthorLabel": "Khloe Leclair",
+	"Description": "Welcome to More Nightly Events! This is a framework mod for adding custom night-time events using content packs.\n<br />\n<br />If you're a player, there's nothing here to tell you, just download it if you use a mod that depends on it.\n<br />\n<br />\n<br />By default, this does nothing. It needs mods to add events to it! It does have some commands though.\n<br />\n<br />[size=5]Commands[/size]\n<br />\n<br />[size=4][code]mne_interrupt\n<br />[/code][/size]\n<br />This command will instantly stop all running events from the mod. If something is broken and you're stuck, try it. Do not pass go, do not collect $200, do not remain stuck in an infinite loop.\n<br />\n<br />[size=4][code]mne_invalidate[/code][/size]\n<br />Reload the event data. Useful for testing your changes without restarting the game.\n<br />\n<br />[size=4][code]mne_test [event][/code][/size]\n<br />Use this to force an event to run, for testing.\n<br />\n<br />[size=4][code]mne_list\n<br />[/code][/size]\n<br />List all the available events.\n<br />\n<br />Toss in the sample content pack and get testing (if you want)!\n<br />\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6 on Linux/Mac/Windows.\n<br />[*]Does not work on Stardew Valley 1.5 or below.\n<br />[*]Works in single player and theoretically in multiplayer.\n<br />[/list]\n<br />[size=5]Known Issues[/size]\n<br />[list]\n<br />[*]The mod is very young and has not been thoroughly tested yet.\n<br />[/list]\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/MoreNightlyEvents]Source code[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/MoreNightlyEvents/CHANGELOG.md]Changelog[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/MoreNightlyEvents/author-guide.md]For Devs: Content Authoring Guide[/url]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/MoreNightlyEvents/SamplePack]Sample Content Pack[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/22612",
+	"Version": "0.3.0",
+	"Updated": "2024-11-04T17:39:36+00:00",
+	"Downloads": [
+		{
+			"Id": 92930,
+			"Type": "Optional",
+			"DisplayName": "Sample Content Pack",
+			"FileName": "Sample Content Pack-22612-1-1-0-1713305000.zip",
+			"Description": "This is just a sample content pack, showing off a few events. None of them trigger by default. You need to use the mne_test command to trigger them.",
+			"Version": "1.1.0",
+			"SizeInBytes": 4239,
+			"Uploaded": "2024-04-16T22:03:20+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.mne.samplepack",
+					"DisplayName": "(MNE) Sample Events",
+					"Type": "ContentPack",
+					"RelativePath": "[MNE] SamplePack",
+					"Manifest": {
+						"Name": "(MNE) Sample Events",
+						"Description": "Some sample night-time events using More Nightly Events.",
+						"Author": "Khloe Leclair",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "leclair.morenightlyevents",
+							"MinimumVersion": "0.2.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "leclair.mne.samplepack",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342479618,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 115045,
+			"Type": "Main",
+			"DisplayName": "More Nightly Events",
+			"FileName": "More Nightly Events-22612-0-4-0-1730741976.zip",
+			"Description": "This is the @main release. Supports Stardew 1.6.9+.",
+			"Version": "0.4.0",
+			"SizeInBytes": 141822,
+			"Uploaded": "2024-11-04T17:39:36+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.morenightlyevents",
+					"DisplayName": "More Nightly Events",
+					"Type": "Smapi",
+					"RelativePath": "MoreNightlyEvents",
+					"Manifest": {
+						"Name": "More Nightly Events",
+						"Description": "A framework mod for adding new random night time events to the game via content packs!",
+						"Author": "Khloe Leclair",
+						"Version": "0.4.0",
+						"MinimumApiVersion": "4.1.0-beta",
+						"MinimumGameVersion": "1.6.9",
+						"EntryDll": "MoreNightlyEvents.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:22612@Main"
+						],
+						"UniqueId": "leclair.morenightlyevents",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342501733,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342409300,
+		"UploaderId": 138772588,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

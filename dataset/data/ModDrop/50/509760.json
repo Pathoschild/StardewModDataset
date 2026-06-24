@@ -1,0 +1,80 @@
+{
+	"Site": "ModDrop",
+	"Id": 509760,
+	"Name": "Automate",
+	"Author": "Pathoschild",
+	"TagLine": "Place a chest next to a machine (like a furnace or crystalarium), and the machine will automatically pull raw items f...",
+	"Description": "Put a chest next to any number of machines (like furnaces or crystalariums), and they'll take raw items from the chest and push their finished items into it. Press `U` (configurable) to show an automation overlay:\n\n![](https://raw.githubusercontent.com/Pathoschild/StardewMods/stable/Automate/docs/screenshots/iridium-mead-factory.png)\n\n![](https://i.imgur.com/suHzq2E.png)\n1. [Install the latest version of SMAPI](https://smapi.io).\n2. Install the mod through ModDrop (or unzip the download into `Stardew Valley/Mods`).\n3. Run the game using SMAPI.\n\n**Careful:** the shipping bin is automated by default. Make sure to move chests away from the shipping bin (or [disable shipping bin automation](https://github.com/Pathoschild/StardewMods/tree/develop/Automate#per-machine-settings)) if you don't want to ship their contents!\n\n![](https://i.imgur.com/M7KlO44.png)\n* Compatible with...\n  * Stardew Valley 1.5 or later;\n  * Linux, macOS, and Windows;\n  * single-player;\n  * split-screen and multiplayer. **Note:** Automate must be installed by the main player, and is optional for farmhands. Machines will be automated for all players, but the main player will get any XP, shipping bin money, etc due to restrictions in the way multiplayer works in Stardew Valley.\n* No known mod conflicts.\n\nPairs well with...\n* [Better Junimos](https://www.nexusmods.com/stardewvalley/mods/2221)\uFEFF adds more crop automation (like replanting) and other improvements.\n* [Deluxe Grabber Redux](https://www.nexusmods.com/stardewvalley/mods/7920)\uFEFF makes auto-grabbers collect nearby animal products, forage, crops, and indoor pot crops too.\n* [Non-Destructive NPCs](https://www.nexusmods.com/stardewvalley/mods/5176) prevents NPCs from destroying chests and machines.\n\n![](https://i.imgur.com/j6fpZ3A.png)\n\n### Basic automation\nPlace a chest next to a crafting machine (in any direction including diagonal) to connect it. Machines connected to a chest will push their output into it, and pull ingredients to process out of it.\n\nThis can be used to automate...\n* [auto-grabbers](https://stardewvalleywiki.com/Auto-Grabber)\uFEFF;\n* [bee houses](http://stardewvalleywiki.com/Bee_House);\n* [bone mills](https://stardewvalleywiki.com/Bone_Mill);\n* bushes (including [blackberry](https://stardewvalleywiki.com/Blackberry), [salmonberry](https://stardewvalleywiki.com/Salmonberry), and [tea](https://stardewvalleywiki.com/Tea_Bush) bushes);\n* [casks](http://stardewvalleywiki.com/Cask) (even outside cellar);\n* [charcoal kilns](http://stardewvalleywiki.com/Charcoal_Kiln);\n* [cheese presses](http://stardewvalleywiki.com/Cheese_Press);\n* [coffee makers](https://stardewvalleywiki.com/Coffee_Maker);\n* [crab pots](http://stardewvalleywiki.com/Crab_Pot);\n* [crystalariums](http://stardewvalleywiki.com/Crystalarium) (once started with the gem/mineral you want);\n* [deconstructors](https://stardewvalleywiki.com/Deconstructor);\n* [fish ponds](https://stardewvalleywiki.com/Fish_Pond) (for output only);\n* [fruit trees](http://stardewvalleywiki.com/Fruit_Trees);\n* [furnaces](http://stardewvalleywiki.com/Furnace) (don't forget they also need coal);\n* [garbage cans](http://stardewvalleywiki.com/Garbage_Can);\n* [geode crushers](https://stardewvalleywiki.com/Geode_Crusher) (don't forget they also need coal);\n* [hay hoppers](https://stardewvalleywiki.com/Hay_Hopper);\n* [hoppers](https://stardewvalleywiki.com/Hopper);\n* [Junimo huts](http://stardewvalleywiki.com/Junimo_Hut);\n* [incubators (for eggs)](https://stardewvalleywiki.com/Incubator);\n* [kegs](http://stardewvalleywiki.com/Keg);\n* [lightning rods](http://stardewvalleywiki.com/Lightning_Rod);\n* [looms](http://stardewvalleywiki.com/Loom);\n* [mayonnaise machines](http://stardewvalleywiki.com/Mayonnaise_Machine);\n* [mills](http://stardewvalleywiki.com/Mill);\n* [mini-shipping bins](https://stardewvalleywiki.com/Mini-Shipping_Bin);\n* [mushroom boxes](http://stardewvalleywiki.com/The_Cave#Mushrooms);\n* [oil makers](http://stardewvalleywiki.com/Oil_Maker);\n* [preserves jars](http://stardewvalleywiki.com/Preserves_Jar);\n* [recycling machines](http://stardewvalleywiki.com/Recycling_Machine);\n* [seed makers](http://stardewvalleywiki.com/Seed_Maker);\n* [shipping bin](https://stardewvalleywiki.com/Shipping_Bin)\uFEFF (configurable);\n* [silos](http://stardewvalleywiki.com/Silo);\n* [slime egg-presses](http://stardewvalleywiki.com/Slime_Egg);\n* [slime incubators](https://stardewvalleywiki.com/Slime_Incubator);\n* [soda machines](https://stardewvalleywiki.com/Soda_Machine);\n* [statues of endless fortune](https://stardewvalleywiki.com/Statue_Of_Endless_Fortune);\n* [statues of perfection](https://stardewvalleywiki.com/Statue_of_Perfection);\n* [statues of true perfection](https://stardewvalleywiki.com/Statue_Of_True_Perfection);\n* [tappers](http://stardewvalleywiki.com/Tapper);\n* [wood chippers](http://stardewvalleywiki.com/Wood_Chipper);\n* and [worm bins](http://stardewvalleywiki.com/Worm_Bin).\n\nAutomated machines will give you the same XP, achievements, and items you'd get for using them directly.\n\n### Machine groups\nYou can connect any number of chests and machines into a 'machine group', just by placing each chest/machine so it's touching another one. You can press `U` (configurable) to visualise your machine groups. See [some machine setups](https://github.com/Pathoschild/StardewMods/tree/stable/Automate#factories) for examples.\n\nIf you add multiple chests to the same machine group, they'll all be used in the automation. Input will be taken from all the chests, and output will be sent to chests in this order:\n\n1.chests edited using [Chests Anywhere](https://www.nexusmods.com/stardewvalley/mods/518)\uFEFF to enable 'prefer this chest for output';\n2.chests which already contain an item of the same type;\n3.any chest.\n\n### Connectors\nYou can optionally configure objects or paths as connectors, which link machines together. For example, here are wooden paths used as connectors:\n\n![](https://raw.githubusercontent.com/Pathoschild/StardewMods/stable/Automate/docs/screenshots/connectors.png)\n\nWorkbenches are the only connectors by default. The [optional download on Nexus](https://www.nexusmods.com/stardewvalley/mods/1063?tab=files) adds wood & crystal paths as connectors automatically, or you can edit the `config.json` manually to add connectors (see [__connectors__](https://github.com/Pathoschild/StardewMods/tree/stable/Automate#connectors) in the readme for more info).\n\n### Junimo chests\nEvery machine and chest connected to a [Junimo chest](https://stardewvalleywiki.com/Junimo_Chest) is part of a global machine group. This global group behaves just like a regular machine group (including for [machine priority](https://github.com/Pathoschild/StardewMods/tree/develop/Automate#machine-priority)), even if it's spread across many locations.\n\nFor example, you can use this to distribute automation across the world:\n\n1. Junimo huts on your farm collect crops;\n2. kegs in a shed turn them into juice/wine;\n3. cellar casks age the juice/wine;\n4. the shipping bin collects the final output.\n\nSee [_Junimo chests_](https://github.com/Pathoschild/StardewMods/tree/develop/Automate#junimo-chests) in the readme for more info.\n\n### Configuration\nSee [_configure_ in the readme](https://github.com/Pathoschild/StardewMods/tree/develop/Automate#configure) for help customizing the mod.\n\n![](https://i.imgur.com/ig7VIBk.png)\n\nAutomate can support custom machines and containers if you create an `IAutomationFactory` for them. (You don't need to do this for Custom Farming Redux or Producer Framework Mod packs, since they handle that for you.) See [_extensibility for modders_ in the readme](https://github.com/Pathoschild/StardewMods/tree/develop/Automate#extensibility-for-modders) for more info.\n\n![](https://i.imgur.com/ccJ4SPZ.png)\n* [Release notes](https://github.com/Pathoschild/StardewMods/blob/stable/Automate/docs/release-notes.md#release-notes)\n* [Source code](https://github.com/Pathoschild/StardewMods/tree/stable/Automate)\n* [My other mods](https://github.com/Pathoschild/StardewMods#readme)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/509760",
+	"Version": null,
+	"Updated": "2026-03-16T00:38:27.687+00:00",
+	"Downloads": [
+		{
+			"Id": 1795074,
+			"Type": "Main",
+			"DisplayName": "Automate 2.6.1",
+			"FileName": "Automate 2.6.1.zip",
+			"Description": "Requires SMAPI 4.1.10 or later. See release notes.",
+			"Version": "2.6.1",
+			"SizeInBytes": 216590,
+			"Uploaded": "2026-03-16T00:38:27.686+00:00",
+			"Mods": [
+				{
+					"Id": "Pathoschild.Automate",
+					"DisplayName": "Automate",
+					"Type": "Smapi",
+					"RelativePath": "Automate",
+					"Manifest": {
+						"Name": "Automate",
+						"Description": "Lets you automate crafting machines, fruit trees, and more by connecting them to chests.",
+						"Author": "Pathoschild",
+						"Version": "2.6.1",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "Automate.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1063"
+						],
+						"UniqueId": "Pathoschild.Automate"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "1d891742aa55ba21120226d7585a0d92",
+				"md5In": "7f74e54b80800e13201cafe2dac9a2df",
+				"scriptType": 0,
+				"sha256Ex": "718f4b797144ee0b88df9afd318deb401377d0ff1530c5c2895a6e5111550974",
+				"sha256In": "045ce813397fa104f1172a98c09abb22f38ec31023737dd4b03ad159b6b26a4d"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1552399862313,
+		"DateUpdated": 1773621507687,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1564249082483,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/509760/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/509760/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/509760/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/509760/icon_original"
+		},
+		"nexusModID": 1063,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66140
+	}
+}

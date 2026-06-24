@@ -1,0 +1,69 @@
+{
+	"Site": "Nexus",
+	"Id": 34216,
+	"Name": "Unified Experience System (UES) No Longer Maintained",
+	"Author": "Darkmushu1",
+	"Description": "I'm quitting modding to explore other things in life, whoever wants to take over the project and or maintain just let me know and I can add a redirect link here to your Nexus mod page. \n<br />\n<br />[b]What this mod does[/b]\n<br />Stores all Experience Gained and allows you to allocate every 100 experiences to a Skill (farming, mining, etc, and includes Spacecore mod skills) or to an Ability (these are custom abilities added from my other mods or other developers).\u00A0Includes Energy Bar for shared cooldowns across all abilities.\n<br />\n<br />All source of experience gained is stored as global experience. At every 100 global experience you get 1 point to distribute to your desired skill or ability. Point allocation will assign 100xp to the chosen skill or ability.\n<br />\n<br />Energy Bar is provided to act as \"Cool Down\" for all abilities. 100 Energy can't be increased, regens when no abilities has been cast for a few seconds.\n<br />\n<br />Experience\n<br />[spoiler]\n<br />Experience configuration allows you to set Max Level and set XP per level for Vanilla Skills (doesn't apply to spacecore skills). Experience and level requirements at level 0 -10 will still depend on Vanilla code to set level and determine experience, but levels 11 through configured level will all be determined by UES which has its own EXP scale per level that will set the level and set experience point per skill accordingly to what is allocated.\n<br />\n<br />Note that UES will override certain mods that blocks leveling after 10 until certain conditions are met and so you will be able to allocate XP to skills regardless of these blocks.\u00A0\n<br />\n<br />I haven't done as thorough testing as needed so there may still be bugs.\n<br />[/spoiler]\n<br />[b]Hotkey[/b]\n<br />Computer [F2] or Controller[Left Shoulder + Right Shoulder] or Mobile User can use Screen S Icon\u00A0 -&gt; Opens/close Menu to allocate points to skills\n<br />Computer [F3] or Controller[LeftThumbstickLeft + Right Trigger] or Mobile User can use Screen A Icon\u00A0 -&gt; Opens/close Menu to allocate points to Abilities\n<br />\n<br />\n<br />[b]Video Demo v1.1.0 Update:[/b]\n<br />[youtube]aAPZ0EDc0a4[/youtube]\n<br />\n<br />[b]Credit[/b]\n<br />[spoiler]\n<br />[url=https://next.nexusmods.com/profile/Blossom5280?gameId=1303]Blossom5280 [/url]requested to add support for modded skills and it was added.\n<br />[url=https://next.nexusmods.com/profile/LuCaRoCa]LuCaRoCa[/url] requested various great ideas for mobile in comment section.\n<br />[url=https://next.nexusmods.com/profile/1755084928?pk_vid=13ef6735e00eb04e17559903090c67bd]1755084928[/url]\u00A0requested Config options for control XP per click which instead had added\u00A0config option for points allocated per click to achieve same effect.\n<br />[url=https://next.nexusmods.com/profile/Se7enArcher]Se7enArcher[/url]\u00A0provided various enhancement ideas and bug fixes in comments that were used to improve this mod.[/spoiler]\n<br />\n<br />[b]Platform Support[/b]\n<br />Works on pc, steam deck, and mobile.\n<br />\n<br />[b]Here is a list of other Mods that have Abilities Registered with this Mod[/b]\n<br />[spoiler]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/32830]Ability to ride your weapon as a flying mount[/url][/*]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/32586]Weapon and Tools Deals Area of Effect by spinning them around[/url]\uFEFF[/*]\n<br />[/list][/spoiler]\n<br />\n<br />[b]What a Developer might want to know:[/b]\n<br />[spoiler]\n<br />[b]What does this mod offer?[/b]\n<br />[list]\n<br />[*]You want your ability to have a leveling system but don't want to build a custom UI and point allocation for it? This mod does all that for you once you register.[/*]\n<br />[*]This mod handles data storage in a save game for your ability and experience so you don't have to worry about this.[/*]\n<br />[*]You don't have to worry about how to create ways to gain experience like you normally would have to consider for a skill, since this mod already unifies all experienced gained and converted into points. The point can be allocated to level up your abilities.[/*]\n<br />[*]Once registered, you can make a call to get your ability level and perform the desired logic based on the level. You can also make calls to add points, add experience. Might be useful if your mod has quest rewards and want to add XP or points.[/*]\n<br />[*]Mod has built in Energy Bar that would essentially handle Cool Down for all abilities if abilities registered opts to use it. Energy regenerates only if no abilities have been casted after a few seconds. Energy Bar have 100 Energy and is capped and can't be increased. Regen will also stay the same.\u00A0[/*]\n<br />[/list]\n<br />[b]Registration[/b]\n<br />Once you register your Ability(s), this mod will now appear in the Ability List and allow user to allocate Points into that ability. Only successful Registered Abilities will be listed so if you remove your mod or it fails registry, your mod's ability will not appear in the Ability listing.\u00A0\n<br />\n<br />[b]What gets stored?\n<br />[/b]Your (ModID + AbilityID) with total Experienced will get stored in the game's saved data at the end of each night and loads when saved data is load each day.\n<br />\n<br />[b]How is Ability Level Calculated?[/b]\n<br />Ability Level is calculated using the registered values which includes experience per level. If you pass different Experience per level later the mod will show the current level automatically based on what you passed over.\n<br />\n<br />[b]i18n support?[/b]\n<br />The mod will show the display name and tool tip based on what you register and so you should pass your i18n text for DisplayName and tooltip only since the other text fields are used for unique id.\n<br />\n<br />[b]How difficult is it to register the mod and make the calls?\n<br />[/b]The readme document in the GitHub has a sample code you can copy and paste and easily tweak to register an ability and make a call to get ability's level.\n<br />[/spoiler]\n<br />[b]Endorsement[/b]\n<br />If mod is useful consider Endorsing and sharing with friends.\n<br />\n<br />See source code in link below to see implementation of a mod that registered abilities with the 3 different experience curve types.\n<br />[url=https://github.com/jessevang/UnifiedExperienceSystem]Github Link[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34216",
+	"Version": "V1.1.9",
+	"Updated": "2025-11-16T03:28:16+00:00",
+	"Downloads": [
+		{
+			"Id": 148182,
+			"Type": "Main",
+			"DisplayName": "Unified Experience System V1.1.9",
+			"FileName": "Unified Experience System V1.1.9-34216-V1-1-9-1763263696.zip",
+			"Description": "Add option to allow Spacecore skills to allocate points to exceeds 15k XP, reference config option \"Stop XP Allocation and XP Cap\". Default is set true, set false if you want to exceed 15k for certain skills\n<br />Hide Logging that was showing XP in console.",
+			"Version": "V1.1.9",
+			"SizeInBytes": 90592,
+			"Uploaded": "2025-11-16T03:28:16+00:00",
+			"Mods": [
+				{
+					"Id": "Darkmushu.UnifiedExperienceSystem",
+					"DisplayName": "UnifiedExperienceSystem",
+					"Type": "Smapi",
+					"RelativePath": "UnifiedExperienceSystem",
+					"Manifest": {
+						"Name": "UnifiedExperienceSystem",
+						"Description": "Unifies all experiences gained, and allows you to allocate to a skill or ability. Allows other mods to add abilities.",
+						"Author": "Darkmushu1",
+						"Version": "1.1.9",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "UnifiedExperienceSystem.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"MinimumVersion": "1.28.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "furyx639.ToolbarIcons",
+								"MinimumVersion": "3.2.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:34216"
+						],
+						"UniqueId": "Darkmushu.UnifiedExperienceSystem"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534870,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342420904,
+		"UploaderId": 40343530,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

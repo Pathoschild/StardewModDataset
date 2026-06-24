@@ -1,0 +1,66 @@
+{
+	"Site": "Nexus",
+	"Id": 39705,
+	"Name": "Stardew JSON Doctor - Spot Broken JSON for Mods",
+	"Author": "ZeroXPatch",
+	"Description": "[center][b][size=6]\uD83E\uDE7AStardew JSON Doctor\uD83E\uDE7A\u00A0\n<br /> [/size]\n<br />[color=#00ff00][size=5](JSON 一键体检工具)\n<br />\n<br />[/size][/color][/b][color=#ffff00][size=4]--- I personally use this for translation json file, before uploading to Nexus\n<br />--- 我个人每次上传翻译到N网前都会扫一下[/size][/color]\n<br />[color=#00ff00][size=3]\n<br />[/size][/color][/center][color=#00ff00][size=3][center][img]https://i.imgur.com/57X8Zds.png[/img][/center]\uFEFF\n<br />[/size][/color][color=#00ff00][size=3][b]Overview (简介)\u00A0 \u00A0 \u00A0 ----\u00A0 \u00A0Open Source Code is provided\n<br />[/b][/size][/color]\n<br />[color=#00ffff]What is this? (这是什么？)[/color]\n<br />\n<br />Stardew JSON Doctor is a standalone Windows utility that scans all .json files in your Stardew Valley Mods folder, checks whether they’re valid JSON, and gives you clear error messages (line + column) when something is wrong.\n<br />\n<br />Stardew JSON 诊所是一个 独立的 Windows 小工具，会扫描星露谷 Mods 文件夹中的所有 .json 文件，检查它们是不是合法 JSON，并在出错时给出带行号和列号的详细报错信息。\n<br />\n<br />[center][img]https://i.imgur.com/1kBdafo.png[/img]\uFEFF\uFEFF[/center]\n<br />\n<br />\n<br />[line][b][color=#00ffff][size=3]Features (功能亮点)\n<br />\n<br />[/size][/color][/b][list]\n<br />[*][b]Scan entire Mods folder (扫描整个 Mods 文件夹)[/b]\n<br />Recursively finds every [code].json[/code] under your chosen folder.递归扫描你选择的文件夹，找到所有 [code].json\n<br />[/code] 文件。[*][b]Detect invalid JSON (检测无效 JSON)[/b]\n<br />Uses a strict JSON parser and shows line + column when it fails.使用严格 JSON 解析器，出错时显示具体行号和列号。[*][b]Detect duplicate keys (检测重复键)[/b]\n<br />Warns if the same key appears multiple times inside one object.当同一对象里出现重复键时给出警告，方便你手动整理。[*][b]Auto-fix trailing commas only (仅自动修复末尾多余逗号)[/b]\n<br />Safely removes commas before [code]}[/code] or [code]][/code] that break JSON parsing.只会安全移除破坏 JSON 解析的末尾多余逗号（[code]}[/code] 或 [code]][/code] 前面的那一个 [code],[/code]）。\uD83D\uDC49 [b]It does not auto-fix any other syntax errors.[/b]\uD83D\uDC49 [b]它不会自动修复其他任何语法错误。[/b][*][b]Ignore [code]//[/code] comments option (可选：忽略 [code]//[/code] 注释)[/b]\n<br />Optional checkbox to ignore [code]//[/code] comment lines outside of strings when validating.可选项：在校验时忽略字符串外部的 [code]//[/code] 行注释，兼容带注释的 JSON 写法。[quote]Note: if auto-fix is on, comment-only lines may be removed in the saved file (original is kept as [code].bak[/code]).\n<br />注意：如果开启自动修复，修复后的文件里纯注释行可能会被移除（原文件会保存为 [code].bak[/code] 备份）。[/quote][*][b].bak backups (自动备份 .bak)[/b]\n<br />When auto-fix is enabled, the tool can create a [code].bak[/code] backup of the original file before writing changes.开启自动修复时，工具会在修改前为原始文件创建 [code].bak[/code] 备份，方便你随时还原。[*][b]Simple GUI, bilingual labels (简洁 GUI + 中英双语界面)[/b]\n<br />All UI labels are English with Chinese in parentheses, no config files needed.所有界面文字都是“英文 + 括号内中文说明”，无需阅读任何配置文档。[/list][line][color=#00ffff][size=3][b]What it actually does (工具具体能做什么)\n<br />[/b][/size][/color]\n<br />The JSON Doctor will:\n<br />JSON 诊所会帮你做到：\n<br />[list=1]\n<br />[*][b]Tell you where JSON is broken (告诉你“哪一行坏了”)[/b]\n<br />[list]\n<br />[*]If a file isn’t valid JSON, you’ll see:\n<br />[code]Invalid JSON (JSON 无效): … (line X, col Y)[/code][*]如果某个文件不是合法 JSON，你会看到：\n<br />[code]Invalid JSON (JSON 无效): … (line 行 X, col 列 Y)[/code][/list]\n<br />[*][b]Warn about duplicate keys (提示重复键)[/b]\n<br />[list]\n<br />[*]Example (示例)：\n<br />[code]{ \"Name\": \"Abigail\", \"Name\": \"Abby\" }[/code][*]The tool loads it but warns that [code]Name[/code] appears twice.\n<br />[*]工具能解析这种写法，但会提示 [code]Name[/code] 出现了两次，方便你后续手动清理。\n<br />[/list]\n<br />[*][b]Automatically fix trailing commas (自动修复末尾逗号)[/b]\n<br />[list]\n<br />[*]Example (示例)：\n<br />[code]{  \"Name\": \"Abigail\",  \"Age\": 20,}[/code][*]That last comma after [code]20[/code] will be removed when auto-fix is ON.\n<br />[*]若开启自动修复，上面 [code]20[/code] 后面的逗号会被删除，从而变成合法 JSON。\n<br />[/list]\n<br />[/list]And that’s it — [b]no magic full-auto repair[/b], just a very clear [b]diagnostic tool + one safe auto-fix[/b].\n<br />仅此而已——它不会“魔法般自动修好一切”，而是一个[b]给出清晰报错 + 提供一个安全自动修[/b]的检查工具。\n<br />[line][color=#00ffff][size=3][b]What it does NOT do (工具不会做什么)\n<br />[/b][/size][/color]\n<br />To avoid confusion:\n<br />为了避免误解，特别说明：\n<br />[list]\n<br />[*]❌ Does [b]not[/b] auto-fix missing commas, missing quotes, or missing braces.\n<br />不会自动修复缺逗号、缺引号或缺括号。[*]❌ Does [b]not[/b] understand Content Patcher logic, tokens, conditions, etc.\n<br />不理解 Content Patcher 的逻辑、条件、占位符等内容。[*]❌ Does [b]not[/b] guarantee your mod is “correct” gameplay-wise. It only validates JSON format.\n<br />不能保证你的模组逻辑正确，它只负责 JSON 格式是否正确。[/list]Think of it as:\n<br />[quote]“a JSON X-ray machine that also has one tiny scalpel for cutting extra commas.”\n<br />你可以把它理解成：\n<br />“一个 JSON X 光机，顺便带一把只会削多余逗号的小手术刀。”[/quote][line][color=#00ffff][size=3][b]How to Use (使用方法)\n<br />[/b]\n<br />[/size][/color][list=1]\n<br />[*][b]Download and extract (下载并解压)[/b]\n<br />[list]\n<br />[*]Extract the tool anywhere (e.g. near [code]Stardew Valley.exe[/code]).\n<br />[*]将工具压缩包解压到任意位置（例如放在 [code]Stardew Valley.exe[/code] 附近）。\n<br />[/list]\n<br />[*][b]Run the program (运行程序)[/b]\n<br />[list]\n<br />[*]Double-click the [code].exe[/code] (or run the [code].py[/code] with Python 3, if using source).\n<br />[*]双击 [code].exe[/code] 启动（如果使用源码版，则用 Python 3 运行 [code].py[/code]）。\n<br />[/list]\n<br />[*][b]Select your Mods folder (选择 Mods 文件夹)[/b]\n<br />[list]\n<br />[*]Click [b]“Browse... (浏览…)”[/b] and select your [code]Mods[/code] folder.\n<br />[*]点击 [b]“Browse... (浏览…)”[/b]，选择星露谷的 [code]Mods[/code] 文件夹。\n<br />[/list]\n<br />[*][b]Choose options (选择选项)[/b]\n<br />[list]\n<br />[*][b]Auto-fix trailing commas (自动修复末尾多余逗号)[/b] → enable if you want the tool to write changes.\n<br />[*][b]Create .bak backups (创建 .bak 备份)[/b] → highly recommended.\n<br />[*][b]Ignore // comments when validating (校验时忽略 // 注释)[/b] → turn on if your JSON uses [code]//[/code] comments.\n<br />[*]如果你只想“看问题不动文件”，可以[b]关闭自动修复[/b]，只看日志。\n<br />[/list]\n<br />[*][b]Scan JSON files (开始扫描)[/b]\n<br />[list]\n<br />[*]Click [b]“Scan JSON Files (扫描 JSON 文件)”[/b].\n<br />[*]Each file will be logged as [b]OK / FIXED / ERROR[/b], with messages underneath.\n<br />[*]日志区会按文件逐个显示：[b]OK / FIXED / ERROR[/b]，并在下面列出详细提示。\n<br />[/list]\n<br />[*][b]Review summary (查看总结)[/b]\n<br />[list]\n<br />[*]At the end, a popup shows: total files, valid, fixed, errors.\n<br />[*]扫描结束后会弹出总结窗口，显示文件总数、正常数量、已修复数量和仍有错误数量。\n<br />[/list]\n<br />[/list][line][b][color=#00ffff][size=3]Recommended Usage Modes (推荐使用方式)\n<br />\n<br />[/size][/color][/b][list]\n<br />[*][b]Safe check only (安全体检模式)[/b]\n<br />[list]\n<br />[*]Auto-fix: [b]OFF (关闭)[/b]\n<br />[*]Backups: [b]ON (开启)[/b]\n<br />[*]Ignore // comments: [b]ON (开启)[/b]\n<br />→ Tool shows you all problems, but doesn’t modify any file.→ 只看报告，不动文件，适合平时排查问题。[/list][*][b]Pre-release clean-up (发布前清理模式)[/b]\n<br />[list]\n<br />[*]Auto-fix: [b]ON (开启)[/b]\n<br />[*]Backups: [b]ON (开启)[/b]\n<br />[*]Ignore // comments: [b]ON (开启)[/b]\n<br />→ Safely removes trailing commas and keeps [code].bak[/code] backups of original files.→ 发布到 Nexus 前，用这套模式消掉多余逗号，同时保留 .bak 保险。[/list][/list]\n<br />Code is at\u00A0https://github.com/ZeroXPatch/Projects-for-Nexus-Mod",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39705",
+	"Version": "1.1",
+	"Updated": "2025-11-26T22:18:55+00:00",
+	"Downloads": [
+		{
+			"Id": 149140,
+			"Type": "Optional",
+			"DisplayName": "Testing files",
+			"FileName": "Testing files-39705-1-1764193605.zip",
+			"Description": "for testing purpose, one json has duplicate key issue, another has comma issue.\n<br />测试文件",
+			"Version": "1",
+			"SizeInBytes": 434,
+			"Uploaded": "2025-11-26T21:46:45+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "149140",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535828,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 149144,
+			"Type": "Main",
+			"DisplayName": "StardewJsonDoctor",
+			"FileName": "StardewJsonDoctor-39705-1-2-1764195535.zip",
+			"Description": "1.2 add option to ignore trailing comma if SMAPI allows it\n<br />1.1Fixed some issues. \n<br />\n<br />Exe file, you only need this. \n<br />\n<br />\n<br />\n<br />主文件，exe格式，你只要这个",
+			"Version": "1.2",
+			"SizeInBytes": 11189729,
+			"Uploaded": "2025-11-26T22:18:55+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "149144",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535832,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426393,
+		"UploaderId": 141646868,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

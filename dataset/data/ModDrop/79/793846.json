@@ -1,0 +1,80 @@
+{
+	"Site": "ModDrop",
+	"Id": 793846,
+	"Name": "PlanImporter",
+	"Author": "Platonymous",
+	"TagLine": "Import Plans from stardew.info",
+	"Description": "In Co-Op, only use if you are the host, and you have no extra cabins on your map (because they will be removed).\nAfter the import is done, you can build your cabins and go on as normal.\n\nAllows the import of plans that you or others build using the planner on [stardew.info](https://stardew.info) .\n\nYou can now import farms without exporting them first by using the id set on stardew.info.\nFor exp. this plan: https://stardew.info/planner/wicked-bulldog-76/ would be imported by typing:\n``in the console.\n\nthis will also create an import file in your folder, so it doesn't have to download the content again\nif you however want to perform a new download and not use the cached file type:\n`planweb wicked-bulldog-76`\n\nCurrently there is no button for the export so I made a simple Chrome Extension that will create one for you:\n[Stardew Planner Export\n](https://chrome.google.com/webstore/detail/stardew-planner-export/jgbhnhgpphpdajoononghfbeenmiiako)(Note: You need to save your plan in the planner before exporting.)\n\nAfter installing simply click the export icon in the upper right corner of the page while you are viewing a plan and it will automaticly download a .json file.\nRename the file however you like and place it into the imports folder of this mod.\n\nAfter you opened a game or started a new one, go into the smapi console and type:\n`plan myfarmexport`\nwith myfarmexport beiing your filename (without .json).\n\n**The mod will clear your whole farm and rebuild it based on the imported plan.**\n**_(Important: this will remove EVERYTHING on your farm, so it's best used for new games)_**\n\n**__There's currently no check wether or not your farmtype is suitable to the plan, so make sure you only use plans that were made for your farmtype.__\n**\n\nIncludes 2 plans for testing. one called farm.json which is for the [standart farm](https://stardew.info/planner/wicked-bulldog-76) and one called hill.json for the [hilltop farm](https://stardew.info/planner/friendly-cat-12/).\n\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/793846",
+	"Version": null,
+	"Updated": "2020-06-02T05:09:04.797+00:00",
+	"Downloads": [
+		{
+			"Id": 801936,
+			"Type": "Main",
+			"DisplayName": "Plan Importer",
+			"FileName": "Plan Importer.zip",
+			"Description": "Requires SMAPI",
+			"Version": "0.8.11",
+			"SizeInBytes": 34559,
+			"Uploaded": "2020-06-02T05:08:58.266+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.PlanImporter",
+					"DisplayName": "PlanImporter",
+					"Type": "Smapi",
+					"RelativePath": "PlanImporter",
+					"Manifest": {
+						"Name": "PlanImporter",
+						"Description": "Import plans from stardew.info.",
+						"Author": "Platonymous",
+						"Version": "0.8.11",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "PlanImporter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2071"
+						],
+						"UniqueId": "Platonymous.PlanImporter"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "37f8d8611e0c7784254425d5678f41e3",
+				"md5In": "3c0052a901364207b9de8acbae668b27",
+				"scriptType": 0,
+				"sha256Ex": "d9b41736166b1ded4fdd5cd0e4d6f8a2264c98fd428967ec3eca30b27c6b95d3",
+				"sha256In": "e1dc3fd9d101adea5e32deb53c6790e357b7f8aee223ff5285db37766418cb8e"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1591074544797,
+		"DateUpdated": 1591074536123,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1591074536123,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/793846/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/793846/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/793846/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/793846/icon_original"
+		},
+		"nexusModID": 2071,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

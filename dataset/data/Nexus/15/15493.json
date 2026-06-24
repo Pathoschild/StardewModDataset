@@ -1,0 +1,126 @@
+{
+	"Site": "Nexus",
+	"Id": 15493,
+	"Name": "Babysitter LittleNPC Conversion",
+	"Author": "UNAPOL",
+	"Description": "[size=3]An extremely messy conversion of Rowanexer's Babysitter to LittleNPCs.\u00A0\n<br />\n<br />Original Mod:\u00A0https://www.nexusmods.com/stardewvalley/mods/5348?tab=posts\n<br />\n<br />[/size]Basic functionality has been tested, it does appear to work as intended but I cannot guarantee that everything is perfect. Please let me know if anything is broken and feel free to improve.\n<br />\n<br />Also including an optional, temporary patch for Community Center Reimagined to ensure they go to school in the community center. If you want to use this patch, put it in the CC Reimagined 'includes' folder.\u00A0 \n<br />Despite what the name suggests it does not actually patch Farmer's Children, I was just afraid to change the file name. It only affects Babysitter.\u00A0 [u][b]ONLY use this patch for as long as CC Reimagined has not converted to LittleNPCs itself.\u00A0\n<br />\n<br />[/b][/u]Changing your toddler's sprites is as easy as replacing the spritesheets in the 'assets' folder with an equivalent spritesheet with the exact same name; same applies for portraits.\n<br />[i]\n<br />[b]NOTES:\u00A0[/b]\n<br />\n<br />[b]-This mod removes the report card function for my lack of understanding in how to make it work with LittleNPCs. Feel free to suggest ways to re-implement this function, I kinda miss it.\n<br />\n<br />[i][b]-NOT tested on settings other than \"no babysitter\"[/b]\n<br />\n<br />[b]-NOT tested with 2 children, however any alterations to schedules were mirrored on the 2nd child's schedule.[/b][/i][/b]\n<br />\n<br />[b]-Children without babysitters rely on the curfew function in LittleNPCs to go home and sleep. Do not use debug hurry on them, it appears to break them probably since it's not technically part of their schedule.[/b][/i]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15493",
+	"Version": "2.0",
+	"Updated": "2024-04-07T18:35:45+00:00",
+	"Downloads": [
+		{
+			"Id": 66606,
+			"Type": "Optional",
+			"DisplayName": "CC Reimagined Temporary Patch",
+			"FileName": "CC Reimagined Temporary Patch-15493-1-0-1676303144.zip",
+			"Description": "Despite file name, DOES NOT patch Farmer's Children to work with CC Reimagined. Drop this file into CC Reimagined \"includes' folder,  unzip and select yes to replace.\n<br /><br />Only use for as long as CC Reimagined's author has not converted their mod.",
+			"Version": "1.0",
+			"SizeInBytes": 522,
+			"Uploaded": "2023-02-13T15:45:44+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "66606",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342453294,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 82226,
+			"Type": "Main",
+			"DisplayName": "Toddler Sprite Overwrite Fix",
+			"FileName": "Toddler Sprite Version (EXPERIMENTAL)-15493-1-0-1710019464.zip",
+			"Description": "All this does is remove the included toddler sprites, which should force either the regular vanilla sprites, or replacer/mod sprites to load instead if this mod is overwriting them. Inform me of issues ASAP. \n<br /><br />ONLY USE ONE OF EITHER FILE, NOT BOTH!",
+			"Version": "1.0",
+			"SizeInBytes": 108970,
+			"Uploaded": "2024-03-09T21:24:24+00:00",
+			"Mods": [
+				{
+					"Id": "unapol.LittleNPCBabysitter",
+					"DisplayName": "LittleNPCs Babysitter",
+					"Type": "ContentPack",
+					"RelativePath": "Babysitter LittleNPCs-15493-1-0-1676302992\\Babysitter",
+					"Manifest": {
+						"Name": "LittleNPCs Babysitter",
+						"Description": "A babysitting mod that gives your child schedules and dialogue.",
+						"Author": "Unapol",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Candidus42.LittleNPCs",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.CustomNPCFixes",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "unapol.LittleNPCBabysitter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468914,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 90045,
+			"Type": "Main",
+			"DisplayName": "Babysitter LittleNPCs Conversions",
+			"FileName": "Babysitter LittleNPCs Conversions-15493-2-0-1712514945.zip",
+			"Description": "Updated for 1.6\n<br /><br />Should still function as intended, but cannot guarantee total functionality.",
+			"Version": "2.0",
+			"SizeInBytes": 118139,
+			"Uploaded": "2024-04-07T18:35:45+00:00",
+			"Mods": [
+				{
+					"Id": "unapol.LittleNPCBabysitter",
+					"DisplayName": "LittleNPCs Babysitter",
+					"Type": "ContentPack",
+					"RelativePath": "Babysitter",
+					"Manifest": {
+						"Name": "LittleNPCs Babysitter",
+						"Description": "A babysitting mod that gives your child schedules and dialogue.",
+						"Author": "Unapol",
+						"Version": "2.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Candidus42.LittleNPCs",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "unapol.LittleNPCBabysitter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342476733,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342402181,
+		"UploaderId": 36598535,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

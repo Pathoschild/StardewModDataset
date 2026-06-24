@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 45932,
+	"Name": "Stardew Valley Remake",
+	"Author": "yizhimunan",
+	"Description": "[SVR] Stardew Valley Remake（星露谷物语重修）\n<br />\n<br />[b]\u00A0一、关于 SVR[/b]\n<br />\n<br />SVR（Stardew Valley Remake）是一个以“重构星露谷体验”为目标的大型长期 MOD 项目。\n<br />\n<br />项目基于 SMAPI 与 Content Patcher 开发，目标并不仅仅是简单的角色替换或美化，而是希望逐渐将《星露谷物语》重构为一个拥有更多剧情、更强互动、更丰富角色成长与关系发展的全新世界。\n<br />\n<br />SVR 希望保留原版《星露谷物语》的温暖与日常，同时加入更多 Galgame 风格的剧情体验、角色互动以及长期成长内容。\n<br />\n<br />这是一个长期更新、持续扩展的项目。\n<br />\n<br />[b]二、项目起源[/b]\n<br />\n<br />五一假期时，我和好友重新打开了已经吃灰两年的《星露谷物语》。\n<br />\n<br />当然，我们也顺手安装了大量 MOD。\n<br />\n<br />结果我的好友，作为一个彻底的“钓鱼佬”：\n<br />\n<br />* 不种田\n<br />* 不下矿\n<br />* 不养动物\n<br />* 背包除了鱼竿几乎什么都不带\n<br />\n<br />每天唯一的目标就是：\n<br />\n<br />“钓鱼、卖鱼、继续钓鱼。”\n<br />\n<br />然后顺带把 Willy 威利的好感度刷满了。\n<br />\n<br />随后他问了我一个问题：\n<br />\n<br />&gt; “威利能结婚吗？”\n<br />\n<br />后来，在配置 Polyamory Sweet 时，他甚至把：\n<br />\n<br />```json\n<br />\"RomanceAllVillagers\"=true\n<br />```\n<br />\n<br />写成了：\n<br />\n<br />```json\n<br />\"RomanceAllVillagers\"=ture\n<br />```\n<br />\n<br />于是：\n<br />\n<br />* 不能送花\n<br />* 不能约会\n<br />* 更别说结婚\n<br />\n<br />为了帮他解决问题，我开始研究：\n<br />\n<br />* SMAPI\n<br />* Content Patcher\n<br />* NPC 数据结构\n<br />* 角色事件\n<br />* 好感系统\n<br />* 游戏资源逻辑\n<br />\n<br />而这，也成为了 SVR 的开始。\n<br />\n<br />\n<br />三、当前版本内容（v1.0.1）\n<br />\n<br />✔ 全员女性化与可结婚\n<br />\n<br />鹈鹕镇的大部分居民都拥有了：\n<br />\n<br />* 新姓名\n<br />* 新设定\n<br />* 新性格\n<br />* 新关系定位\n<br />\n<br />并且现在都可以成为结婚对象，马龙和莫里斯这类不可社交的角色我们也将在制作大部分的角色剧情后打算进入结婚对象的日程。\n<br />\n<br />[b]使用说明：[/b]\n<br />[b]config.json[/b]中：\n<br />[b]EnableFemaleNPC[/b] 决定了是否更改NPC的性别，默认情况下将小镇的居民们改为了女性，当然如果你只需要这个mod的结婚功能，而不需要后续的拓展你可以选择false关闭它，这样角色们的性别仍然是之前的，标签的（男朋友or女朋友，丈夫or妻子）。\n<br />\n<br />[b]EnableNameNPC[/b] 决定了是否更改NPC的姓名，在SVR中对大部分的角色进行了新的译名，这对中国玩家来说是为了更像女性，如果不需要新的姓名，想要原版的译名可以用false来关闭它。\n<br />\n<br />[b]EnableCanBeRomancedNPC [/b]决定了是否让所有的NPC变得可以结婚，这个开关是目前最有用的功能，同样默认true，用false来关闭它。\n<br />\n<br />[b]EnableBeautifyNPC[/b] 决定了是否启用新的美化，即新的头像和建模，目前还在在商量寻找画师的途中，因为SVR是免费的，寻找画师的资金得筹备，开启这个开关是为了让用户方便使用其他现有mod的美化。 同样默认true，用false来关闭它（不用担心，目前除了一个测试角色，其他的角色并没有准备美化）。\n<br />\n<br />[b]EnableGiftNPC[/b] 决定了是否启用新的礼物偏好，新的礼物偏好致使角色们的最爱普遍只剩下三个，这意味着送礼物将更难获得好感，或许日常对话将平衡这一点，我们正在奋力更新！ 同样默认true，用false来关闭它。\n<br />\n<br />[b]EnableDialogueNPC[/b] 决定了是否启用新的日常对话，因为目前团队只有三个人在工作，我们还是学生，所以处理大量的日常对话也许还得等一等，这个开关目前默认false（我们想在下一个版本的更新，将所有角色重新定制的第一次对话端上来……我们将处理更多的细节）\n<br />\n<br />[b]EnablePlotNPC[/b] 决定了是否启用新的剧情，因为游戏原本是以地图存储事件，而我们以角色存储事件，在我们的结构下，我们删除了所有的地图剧情，以致于重置剧情，这个开关目前默认false（请不要开启它！目前我们只做了一个测试，开启后会有不完整的体验以及丢失其他剧情的风险，我们想在第一个角色的剧情推出时启用它）\n<br />\n<br />未来还会继续扩展更多角色与地图 NPC。\n<br />\n<br />\u00A0✔ NPC 数据重构\n<br />\n<br />包括：\n<br />\n<br />* 角色数据\n<br />* 对话\n<br />* 礼物偏好\n<br />* 基础关系\n<br />* 婚恋相关设置\n<br />\n<br />目前已开始逐步重构角色设定与世界观。\n<br />\n<br />\u00A0✔ 模组双结构系统\n<br />\n<br />[SVR].cp（Content Patcher）\n<br />\n<br />负责：\n<br />\n<br />* NPC 数据\n<br />* 立绘\n<br />* 行走图\n<br />* 剧情文本\n<br />* 礼物系统\n<br />* 角色设定\n<br />\n<br />[SVR].cs（SMAPI）\n<br />\n<br />负责：\n<br />\n<br />* UI 功能\n<br />* 动态系统\n<br />* 新玩法\n<br />* 好感扩展\n<br />* 后续功能开发\n<br />\n<br />四、未来更新计划\n<br />\n<br />SVR 后续将持续扩展：\n<br />\n<br />## 角色系统\n<br />\n<br />* 全角色高清立绘\n<br />* 动态表情\n<br />* 新行走图\n<br />* 更丰富互动\n<br />\n<br />剧情系统\n<br />\n<br />* 1~10心完整剧情\n<br />* 多分支事件\n<br />* 不同结局\n<br />* Galgame 风格互动\n<br />\n<br />好感玩法\n<br />\n<br />不同角色将带来：\n<br />\n<br />* 商店折扣\n<br />* 特殊增益\n<br />* 隐藏能力\n<br />* 特殊事件\n<br />\n<br />与 NPC 建立关系不再只是“为了结婚”。\n<br />\n<br />后续扩展计划\n<br />\n<br />未来可能加入：\n<br />\n<br />* 动态 UI\n<br />* 手机系统\n<br />* Persona 风格社交系统\n<br />* Live2D\n<br />* 更多地图与 NPC\n<br />* 对 SVE 等大型 MOD 的兼容与二次创作\n<br />\n<br />甚至，也许未来会逐渐变成一个完全不同的“星露谷世界”。\n<br />\n<br />\n<br />五、当前版本信息\n<br />\n<br />版本：v1.0.3\n<br />\n<br />当前版本属于：\n<br />\n<br />* 基础框架搭建阶段\n<br />* 世界观与角色重构初期\n<br />* 核心系统建立阶段\n<br />\n<br />后续会持续更新与扩展。\n<br />\n<br />\n<br />\u00A0六、最后\n<br />\n<br />虽然现在的内容还不算多，但是可以和全镇npc结婚了！\n<br />\n<br />但我希望未来有一天，大家能够真正玩到一个：\n<br />\n<br />“全新的星露谷物语。”\n<br />\n<br />这也是为什么它被称为：\n<br />\n<br />Stardew Valley Remake —— 星露谷物语重修。\n<br />\n<br />为爱发电。\n<br />模组将持续更新。\n<br />\n<br />感谢目前的团队成员们：\n<br />xianweijiushiwomeicuo\n<br />WSDYP",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45932",
+	"Version": "v1.0.3",
+	"Updated": "2026-05-10T08:05:07+00:00",
+	"Downloads": [
+		{
+			"Id": 167058,
+			"Type": "Optional",
+			"DisplayName": "Stardew Valley Remake",
+			"FileName": "Stardew Valley Remake-45932-v1-0-3-1778400307.zip",
+			"Description": "v1.0.3版本，我们修复一个开关失灵的bug，我们在起初用了双层的角色姓名替换，而我们的开关只对其一个进行限制，这意味着用户关闭后，角色的姓名还是新的版本译名……这是错误的。<br />我们新增了一个新版剧情开关，原版的事件存储是以地图为单位的，我们修改为了以角色为主，但是我们做了删除所有地图的剧情处理，意味着启用新版剧情会覆盖旧版剧情（注：ci版本只是测试，目前默认false请不要开启）<br />我们在cs层做了新的处理，这仍在新版本中，目前cs层可以加载了（一个主角的UI），我们将在下一个版本真正启用它。",
+			"Version": "v1.0.3",
+			"SizeInBytes": 187859,
+			"Uploaded": "2026-05-10T08:05:07+00:00",
+			"Mods": [
+				{
+					"Id": "yizhimunan.SVRcp",
+					"DisplayName": "Stardew Valley Remake cp",
+					"Type": "ContentPack",
+					"RelativePath": "[SVR] Stardew Valley Remake\\[SVR].cp",
+					"Manifest": {
+						"Name": "Stardew Valley Remake cp",
+						"Description": "星露谷物语重修计划，简称SVR，目的是对每一位鹈鹕镇的居民进行美化和对其设定的修改，现在罗宾和卡罗琳也可以结婚了，阿比盖尔不再是她的女儿……贾斯他们也会因为游戏的时长变久变得可娶……cp主要负责美化",
+						"Author": "一止木南",
+						"Version": "1.0.3",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "yizhimunan.SVRcp"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553746,
+				"CategoryId": 2,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432620,
+		"UploaderId": 257672665,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

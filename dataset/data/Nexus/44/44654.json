@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 44654,
+	"Name": "IamMineFish Framework to add fish to the mines",
+	"Author": "iamsaulc",
+	"Description": "[b]IamMineFish[/b] is a SMAPI framework that allows content packs to add fish to specific mine floors using a weighted selection system.\n<br />\n<br />[size=4]How the weight system works[/size]\n<br />\n<br />Each fish has a weight in the pool. When the player catches something, the framework performs a single weighted selection among all candidates for that floor.\n<br />\n<br />[b]Example:[/b]\n<br />\n<br />Vanilla fish (fish that come by default in Stardew Valley on each mine floor) – weight: 100 (fixed)\n<br />Mod fish – weight: 10\n<br />\n<br />The probabilities would be:\n<br />Vanilla fish: 100/110 = 91%\n<br />Mod-added fish: 10/110 = 9%\n<br />\n<br />[list]\n<br />[*]The vanilla zone fish always has weight 100 and cannot be changed.\n<br />[*]Mod fish weight is limited to 90. Values above 90 are automatically reduced at registration time.\n<br />[*]If multiple mods register the same ItemId on the same floor, their weights are averaged into a single entry.\n<br />[/list]\n<br />[size=4]For content pack authors[/size]\n<br />\n<br />[b]manifest.json[/b]\n<br />\n<br />[code]\uFEFF\n<br />{\n<br />  \"Name\": \"My Fish Mod\",\n<br />  \"Author\": \"YourName\",\n<br />  \"Version\": \"1.0.0\",\n<br />  \"UniqueID\": \"YourName.MyFishMod\",\n<br />  \"ContentPackFor\": {\n<br />    \"UniqueID\": \"IamSaulC.IamMineFish\",\n<br />    \"MinimumVersion\": \"1.0.0\"\n<br />  }\n<br />}\n<br />[/code]\n<br />[b]content.json fields[/b]\n<br />\n<br />[b]*-[/b] [i]ItemId[/i] – string – Full fish ID obtained from /Data/Fish.json. Example: \"(O)145\"\n<br />\n<br />[b]*-[/b] [i]FloorMin[/i] and [i]FloorMax[/i] – int – Minimum and maximum floor. Default ranges are:\n<br />[quote]1–39 first fishing zone\n<br />40–79 second fishing zone\n<br />80–120 third fishing zone[/quote]\n<br />[b]*-[/b] [i]Weight[/i] – int – Relative weight (1–90). Default: 10. Values above 90 are automatically adjusted.\n<br />\n<br />content.json example:\n<br />\n<br />[code]\uFEFF\n<br />{\n<br />  \"IamMineFishAdd\": [\n<br />\n<br />    // Sunfish — (O)145\n<br />    // A common river fish found in Pelican Town and Cindersap Forest.\n<br />    // Registered for Zone 1 (floors 1–39, Upper/Jungle area).\n<br />    // At weight 73, it competes against the vanilla Stonefish (weight 100),\n<br />    // giving it approximately a 42% chance of appearing per catch.\n<br />    {\n<br />      \"ItemId\": \"(O)145\",\n<br />      \"FloorMin\": 1,\n<br />      \"FloorMax\": 39,\n<br />      \"Weight\": 73\n<br />    },\n<br />\n<br />    // Perch — (O)141\n<br />    // A freshwater fish native to the Mountain Lake, catchable in all seasons.\n<br />    // Registered for Zone 2 (floors 40–79, Frost area).\n<br />    // At weight 68, it competes against the vanilla Ice Pip (weight 100),\n<br />    // giving it approximately a 40% chance of appearing per catch.\n<br />    {\n<br />      \"ItemId\": \"(O)141\",\n<br />      \"FloorMin\": 40,\n<br />      \"FloorMax\": 79,\n<br />      \"Weight\": 68\n<br />    },\n<br />\n<br />    // Halibut — (O)708\n<br />    // An ocean fish found along the beach during spring, summer, and winter.\n<br />    // Registered for Zone 3 (floors 80–120, Lava area).\n<br />    // At weight 81, it competes against the vanilla Lava Eel (weight 100),\n<br />    // giving it approximately a 45% chance of appearing per catch.\n<br />    {\n<br />      \"ItemId\": \"(O)708\",\n<br />      \"FloorMin\": 80,\n<br />      \"FloorMax\": 120,\n<br />      \"Weight\": 81\n<br />    }\n<br />\n<br />  ]\n<br />}\n<br />[/code]\n<br />\n<br />[size=4]Player configuration (config.json)[/size]\n<br />\n<br />[b]CompeteWithVanillaFish\n<br />[/b]If disabled, the vanilla fish is always in the pool with weight 100. If enabled, many high-weight mod fish can reduce its appearance.\n<br />\n<br />[b]KeepVanillaFishPool\n<br />[/b]If enabled, when the vanilla fish wins, the original MineShaft.getFish() result is preserved. If disabled, the zone fish is always returned.\n<br />\n<br />[size=4]Debug[/size]\n<br />\n<br />SMAPI console command:\n<br />\n<br />[quote]imfdebug[/quote]\n<br />Shows:\n<br />\n<br />[list]\n<br />[*]Active content packs\n<br />[*]Registered fish\n<br />[*]Weights\n<br />[*]Floor ranges\n<br />[/list]\n<br />[size=4]Installation[/size]\n<br />\n<br />[list]\n<br />[*]Install SMAPI\n<br />[*]Copy the IamMineFish folder into Stardew Valley/Mods/\n<br />[*]Place content packs into Mods/\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44654",
+	"Version": "1.0.0",
+	"Updated": "2026-04-05T01:38:17+00:00",
+	"Downloads": [
+		{
+			"Id": 163461,
+			"Type": "Main",
+			"DisplayName": "IamMineFish",
+			"FileName": "IamMineFish-44654-1-0-0-1775353059.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 20656,
+			"Uploaded": "2026-04-05T01:37:39+00:00",
+			"Mods": [
+				{
+					"Id": "IamSaulC.IamMineFish",
+					"DisplayName": "IamMineFish",
+					"Type": "Smapi",
+					"RelativePath": "IamMineFish",
+					"Manifest": {
+						"Name": "IamMineFish",
+						"Description": "A framework that allows content packs to add fish to specific mine floors using a weighted system.",
+						"Author": "IamSaulC",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "IamMineFish.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44654"
+						],
+						"UniqueId": "IamSaulC.IamMineFish"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550149,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 163462,
+			"Type": "Optional",
+			"DisplayName": "Example Mine Fish Pack",
+			"FileName": "Example Mine Fish Pack-44654-1-0-0-1775353097.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 1241,
+			"Uploaded": "2026-04-05T01:38:17+00:00",
+			"Mods": [
+				{
+					"Id": "IamSaulC.ExampleMineFishPack",
+					"DisplayName": "Example Mine Fish Pack",
+					"Type": "ContentPack",
+					"RelativePath": "ExampleMineFishPack",
+					"Manifest": {
+						"Name": "Example Mine Fish Pack",
+						"Description": "Example content pack for IamMineFish. Adds lake, river, and ocean fish to each mine zone.",
+						"Author": "IamSaulC",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "IamSaulC.IamMineFish",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44654"
+						],
+						"UniqueId": "IamSaulC.ExampleMineFishPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550150,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431342,
+		"UploaderId": 192696206,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

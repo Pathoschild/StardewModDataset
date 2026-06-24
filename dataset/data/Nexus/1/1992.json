@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 1992,
+	"Name": "Better Sort (Organize Inventory)",
+	"Author": "Jower",
+	"Description": "This mod improves the default inventory organization and lets you configure it to your liking. It also automatically stacks items (unless you turn it off in config.json) in case you've spread your stacks out.\n<br />\n<br />By default it locks your axe, hoe, watering can, pickaxe and scythe to the first five slots (based on the order of your inventory when starting a new game, as an example), and then sorts items the same way as the base game, but with added sorting for putting stacks in size order and higher quality items before lower quality ones.\n<br />It also makes a right click sort items in order of most valuable stack, to help decide what to throw away when you run out of space.\n<br />And a middle click will sort items with the standard sorting function, if you ever miss it.\n<br />\n<br />You can lock items to specific slots in the inventory using the ItemLock configuration fields. For example \"12\": \"Pan\" to keep your pan in the upper right corner, or \n<br />\"36\": \"Slingshot\" to keep your slingshot in the bottom right.\n<br />Use \"Ignore\" to completely skip that slot in the sorting and keep whatever's in it there.\n<br />\n<br />Under Controls you can set up keys to sort the inventory at any time (LeftShortcut, RightShortcut, MiddleShortcut) or to sort the currently opened inventory (LeftShortcut2, RightShortcut2, MiddleShortcut2). For example \"LeftShortcut\": \"Q\"\n<br />\n<br />All sorting can be customized in the config.json file by adding sorting categories in any order you'd like. The categories are:\n<br />[list]\n<br />[*]Axe, Can, Hoe, Pail, Pan, Pickaxe, Rod, Scythe, Shears, Slingshot, Weapon - Specific tools\n<br />[*]Name - The English name of the item\n<br />[*]DisplayName - The local name of the item\n<br />[*]Category - The local category name. Second row of the tooltip.\n<br />[*]CategoryNum - The numeric index of the category the item belongs to. Vaguely related to the previous option, but has more categories.\n<br />[*]Stack - The number of items in an item stack\n<br />[*]Value - How much money you would get for selling an item from the stack\n<br />[*]StackValue - How much money you would get for selling the entire stack\n<br />[*]BaseValue - Value before any bonuses like quality. For choosing what to make jam out of.\n<br />[*]Type - The English name for the type of certain items. Probably not very useful. I just added it because the vanilla sorting uses it.\n<br />[*]Edibility - How much HP is restored by eating the item.\n<br />[*]Quality - Numerical quality. 0 is basic items. 3 is iridium star.\n<br />[*]ItemID - The internal ID of the item.\n<br />[*]Regrows - Sort seeds by whether or not they keep producing after the first harvest.\n<br />[*]GrowthTime - Sort seeds by how long they take to grow.\n<br />[*]GrowthSeason - Sort seeds by the first season they can grow in.\n<br />[*]\uFEFFMultiSeason - Sort seeds on whether they can grow in more than one season.\n<br />[*]WeaponLevel - Sort melee weapons by level.\n<br />\n<br />[/list]All categories can be prefixed with a minus sign (-) to reverse the order. Name, DisplayName, Category, CategoryNum, Type, and Quality can be followed by ={search} in order to limit the sorting. You could for example type \"-Name=Torch\" to sort all torches to the end, or \"Quality=3\" to sort iridium quality items to the front. It also supports regular expressions, so you could do \"Name=T.+\" to sort all items beginning with T to the front.\n<br />I may have gone a bit overboard with the configurability...",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/1992",
+	"Version": "1.5.2",
+	"Updated": "2024-05-10T10:57:41+00:00",
+	"Downloads": [
+		{
+			"Id": 98335,
+			"Type": "Main",
+			"DisplayName": "BetterSort 1.5.2",
+			"FileName": "BetterSort 1.5.2-1992-1-5-2-1715338661.zip",
+			"Description": "- Fixed the ItemID sort to use the new ItemIDs\n<br />- Added 3 new sorts. GrowthSeason, MultiSeason, and WeaponLevel",
+			"Version": "1.5.2",
+			"SizeInBytes": 23801,
+			"Uploaded": "2024-05-10T10:57:41+00:00",
+			"Mods": [
+				{
+					"Id": "Jower.BetterSort",
+					"DisplayName": "Better Sort",
+					"Type": "Smapi",
+					"RelativePath": "BetterSort",
+					"Manifest": {
+						"Name": "Better Sort",
+						"Description": "Better inventory sorting",
+						"Author": "Jower",
+						"Version": "1.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BetterSort.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1992"
+						],
+						"UniqueId": "Jower.BetterSort"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342485023,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388680,
+		"UploaderId": 567760,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

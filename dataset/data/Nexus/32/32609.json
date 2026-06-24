@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 32609,
+	"Name": "Shareable Mod List Generator",
+	"Author": "BarleyZP",
+	"Description": "[size=3][b][size=5]Shareable Mod List Generator[/size][/b]\n<br />\n<br />[b]Shareable Mod List Generator[/b] provides console commands to generate a shareable mod list based on the mods SMAPI currently has loaded. The shareable links website is hosted at [url=https://modlists.barleyzp.com]modlists.barleyzp.com[/url].\n<br />\n<br />[size=5][b]Usage[/b][/size]\n<br />\n<br />This tool has two parts: generating a mod list in JSON format, and sharing it as nicely-formatted HTML. Generating the JSON list is done via console command in the SMAPI console. You can generate a shareable HTML version through another console command or you can upload the JSON to the web interface's [url=https://modlists.barleyzp.com/upload]upload[/url] page.\n<br />\n<br />[b][size=4]Generating the JSON[/size][/b]\n<br />\n<br />[list=1]\n<br />[*] Install this mod.\n<br />[*] Launch the game with SMAPI.\n<br />[*]Run the command\u00A0[font=Arial]\u00A0[/font][font=Courier New]mod_list_json \"title\" \"author\"[/font].\n<br />[list]\n<br />[*] You can optionally append [font=Courier New]true [/font]to the end to skip calling the Nexus Mods API. If you do this, category information and other stats may be unavailable. For example: [font=Courier New]mod_list_json \"title\" \"author\" true[/font].\n<br />[/list][*] The JSON mod list will be saved to the [font=Courier New]GeneratedModListsJson [/font]folder inside this mod's folder.\n<br />[/list]Make sure to back up the mod list elsewhere for safekeeping! At this point, if you wish to edit your mod list (say, to include links that couldn't be automatically added), you may do so. It is recommended that you use an editor that has support for JSON schemas so you can validate that your format is correct.\n<br />\n<br />[b][size=4]Generating and Sharing the HTML[/size][/b]\n<br />\n<br />There are two ways to generate the HTML mod list and get a shareable link. Option 1 (console command) will also automatically save the HTML to your computer. Shareable links will be valid for 4 weeks. Anyone with this link will be able to access your mod list.\n<br />\n<br />[b]Option 1 (Console Command)[/b]\n<br />\n<br />Run the command mod_list_share \"title\" \"theme\".\n<br />\n<br />[list]\n<br />[*] The list will be saved in the [font=Courier New]GeneratedModListsHtml[/font][font=Arial]\u00A0[/font]folder inside this mod's folder.\n<br />[*] A shareable link will be printed to the SMAPI console.\n<br />[*] Valid color themes are: [font=Courier New]default[/font], [font=Courier New]sakura[/font], [font=Courier New]stardrop[/font], [font=Courier New]coffee[/font], and [font=Courier New]sage[/font]. For example: [font=Courier New]mod_list_share \"title\" sakura[/font].\n<br />[*] The [font=Courier New]title[/font] MUST match the title you provided to the [font=Courier New]mod_list_json[/font] command.\n<br />[/list]\n<br />[b]Option 2 (Web UI)[/b]\n<br />\n<br />Head to [url=https://modlists.barleyzp.com/upload]modlists.barleyzp.com/upload[/url] and upload the JSON file that was generated earlier.\n<br />\n<br />[list]\n<br />[*] If you want to have the HTML saved to your computer so you can always have it, save the HTML from your web browser. It will function without being hosted on the web server.\n<br />[/list]\n<br />[b][size=4]Source Code[/size][/b]\n<br />\n<br />Source available on [url=https://github.com/lisyce/StardewValleyMods/tree/main/ModListPageGen]GitHub[/url].\n<br />[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32609",
+	"Version": "2.0.1",
+	"Updated": "2025-06-16T23:26:26+00:00",
+	"Downloads": [
+		{
+			"Id": 134850,
+			"Type": "Main",
+			"DisplayName": "Shareable Mod List Generator 2.0.1",
+			"FileName": "Shareable Mod List Generator 2.0.1-32609-2-0-1-1750116386.zip",
+			"Description": "See the [url=https://github.com/lisyce/StardewValleyMods/blob/main/ModListPageGen/docs/CHANGELOG.md]changelog[/url] on GitHub.",
+			"Version": "2.0.1",
+			"SizeInBytes": 528392,
+			"Uploaded": "2025-06-16T23:26:26+00:00",
+			"Mods": [
+				{
+					"Id": "BarleyZP.ShareableModLists",
+					"DisplayName": "Shareable Mod List Generator",
+					"Type": "Smapi",
+					"RelativePath": "ModListPageGen",
+					"Manifest": {
+						"Name": "Shareable Mod List Generator",
+						"Description": "Provides console commands to generate an HTML-formmated mod list and shareable links based on the mods SMAPI has currently loaded.",
+						"Author": "BarleyZP",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.2.1",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "ModListPageGen.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:32609",
+							"Nexus:32589"
+						],
+						"UniqueId": "BarleyZP.ShareableModLists",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342521538,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342419297,
+		"UploaderId": 109869138,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

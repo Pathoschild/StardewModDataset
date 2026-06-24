@@ -1,0 +1,84 @@
+{
+	"Site": "Nexus",
+	"Id": 25530,
+	"Name": "Extra Shop Phone Numbers",
+	"Author": "PrincessFelicie",
+	"Description": "At present, this mod does exactly what it says on the tin -- it adds the travelling cart, Krobus's shop and the Oasis as phone numbers that can be called from the Telephone item obtainable from Robin's shop.\n<br />\n<br />A future update will add a book that needs to be obtained in order to unlock those numbers. Until this is added, consider this an alpha! Functional, but not complete.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/25530",
+	"Version": "0.1.1",
+	"Updated": "2024-07-08T18:49:22+00:00",
+	"Downloads": [
+		{
+			"Id": 106244,
+			"Type": "Main",
+			"DisplayName": "Extra Shop Phone Numbers 0.1.1",
+			"FileName": "Extra Shop Phone Numbers 0.1.1-25530-0-1-1-1720464562.zip",
+			"Description": "Added placeholder configs.\n<br />Replaced hard-coded strings with i18n. Mod should now be translatable.",
+			"Version": "0.1.1",
+			"SizeInBytes": 17229,
+			"Uploaded": "2024-07-08T18:49:22+00:00",
+			"Mods": [
+				{
+					"Id": "PrincessFelicie.ExtraShopPhoneNumbersCore",
+					"DisplayName": "Extra Shop Phone Numbers",
+					"Type": "Smapi",
+					"RelativePath": "ExtraShopPhoneNumbers\\[C#]ExtraShopPhoneNumbers",
+					"Manifest": {
+						"Name": "Extra Shop Phone Numbers",
+						"Description": "Adds phone entries to check the travelling merchant, Sandy, and Krobus's shops from home!",
+						"Author": "PrincessFelicie",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ExtraShopPhoneNumbers.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:25530"
+						],
+						"UniqueId": "PrincessFelicie.ExtraShopPhoneNumbersCore"
+					}
+				},
+				{
+					"Id": "PrincessFelicie.ExtraShopPhoneNumbersCP",
+					"DisplayName": "Extra Shop Phone Numbers",
+					"Type": "ContentPack",
+					"RelativePath": "ExtraShopPhoneNumbers\\[CP]ExtraShopPhoneNumbers",
+					"Manifest": {
+						"Name": "Extra Shop Phone Numbers",
+						"Description": "Adds phone entries to check the travelling merchant, Sandy, and Krobus's shops from home!",
+						"Author": "PrincessFelicie",
+						"Version": "0.1.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PrincessFelicie.ExtraShopPhoneNumbersCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:25530"
+						],
+						"UniqueId": "PrincessFelicie.ExtraShopPhoneNumbersCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342492932,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342412218,
+		"UploaderId": 28909830,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

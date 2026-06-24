@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 38311,
+	"Name": "Dialogue Extend Button",
+	"Author": "SunnyAndRainy",
+	"Description": "[size=3]   \uFEFF我是星露谷模组制作的初学者，而这个模组是我的第一个作品，创建它更多的目的是为了尝试，目前只有一些十分简单的功能，后续会不断更新。\n<br />   \uFEFF\n<br />   \uFEFF警告：本模组还处于开发阶段，还有许多功能需要测试\n<br />\n<br />   \uFEFF目前N网上的星露谷对话拓展模组大多数是基于ContentPatcher，可以修改游戏中的日常对话，婚后对话，特殊对话等等，或者根据游戏季节，时间，地点，事件等判断条件获取不同的对话。但是原版限制了我们每天对每位npc只能对话一次，本人计划通过实现一个小小的对话扩展按钮让玩家在日常对话中可以有稍微多那么一点点的主动性，可以让玩家按下热键，主动触发多次对话。\n<br />\n<br />   \uFEFF安装了这个模组后，你可以开关两种对话的触发，以下是它们的说明：\n<br />\n<br />   \uFEFF1.[b]多对话[/b]，开启后，对着npc按下热键时会触发来自其它模组的对话，以及游戏原版的部分通用对话，我的模组会自动过滤不符合好感，天气，地点，星期几等条件的对话，这是基于检测对话键名实现的，所以如果你安装的对话拓展模组定义的对话键有比较复杂的条件定义，或者是对话键名过于独特，我的模组可能无法正确触发它们，不过大多数情况我的模组都是生效的，另外，在模组配置菜单中，你可以开关我的模组会不会自动过滤不符合好感和星期几要求的对话。不管是婚后对话拓展的模组，还是日常对话拓展的模组，我的模组都支持，它会自动检测玩家是否与npc结婚，但是目前与多配偶的模组还不兼容。（特别提示，本功能是为了其它拓展对话模组设计的，如果你不打算加入其它拓展对话模组，请关闭它）\n<br />\n<br />   \uFEFF2.[b]自定义对话[/b]，开启后，对着npc按下热键时会触发由本模组添加的自定义对话，你可以在我的模组目录\"[b]DialogueButtonFramework/Data/Dialogue.json[/b]\"中自定义该功能所触发的对话，你可以编辑任何内容和条件，但请不要修改[b]{npcName}_Finish[/b]，[b]{npcName}_Fail[/b]，[b]{npcName}_Trigger_{number}[/b]的键名，注意：[b]{npcName}_Trigger_{number}[/b]格式的对话键才是我的模组所会触发的，\uFEFF目前模组被设置为有四个好感等级阶段，每达到一个等级阶段就会触发不同的对话，比如好感等级二被设置为六心，当玩家达到六心或六心以上就可以触发对应的[b]{npcName}_Trigger_2[/b]对话，如果玩家连好感等级一都达不到，就会触发[b]{npcName}_Fail[/b]。四种好感等级所需的心的数量是可以配置的。\n<br />\n<br />   \uFEFF3.如果你将多对话和自定义对话功能都关闭了，本模组不会对游戏做出任何修改。\n<br />\n<br />   \uFEFF当你用热键触发对话后，我的模组会创建一个可用对话的对话组，并在其中循环，尽可能确保你每次触发的对话都不一样，当你将配置的每天最大对话次数用完后，无论你开启的是多对话还是自定义对话，都会触发[b]Dialogue.json[/b]中的[b]{npcName}_Finish[/b]。\n<br />\n<br />   \uFEFF本模组目前只是提供了一个简单的扩展功能和Dialogue.json的对话扩展示例文件，并没有真正意义上的新增对话内容，后续我可能会更新我自己写的对话内容，当然也欢迎别人为此写下别的自定义对话。\n<br />   \uFEFF\n<br />   \uFEFF理论上来说，它应该兼容多人模式，如果你遇到了任何错误，欢迎留言告诉我。\n<br />\n<br />\n<br />   \uFEFFDialogue.json中不仅有原版角色，还预设了SVE的角色。\n<br />\n<br />\n<br />   \uFEFFI'm sorry that English is not my native language. The following is a machine translation.\n<br />\n<br />\n<br />   I am a beginner in creating Stardew Valley mods, and this mod is my first work. The main purpose of creating it was to try something out. Currently, it only has some very simple functions. Updates will be continuously made in the future.\n<br />\uFEFF\n<br />\uFEFF   \uFEFFWarning: This mod is still in the development stage and many functions need to be tested.\u00A0\n<br />\n<br />   Currently, most of the dialogue expansion mods for Stardew Valley on N Network are based on ContentPatcher. They allow you to modify the daily dialogues, post-marriage dialogues, special dialogues, etc. or obtain different dialogues based on conditions such as game seasons, time, location, events, etc. However, the original version limits us to only being able to have one conversation with each NPC per day. I plan to achieve this by implementing a small dialogue expansion button, allowing players to have a little more initiative in daily dialogues. Players can press a hotkey to trigger multiple conversations on their own initiative.\u00A0\n<br />\n<br />   \uFEFFAfter installing this module, you can switch between the two types of triggers for the dialogues. Here are the explanations for them:\u00A0\n<br />\n<br />   \uFEFF1. [b]MultiDialogue[/b]: Once enabled, pressing the hotkey on the NPC will trigger dialogues from other mods as well as some common dialogues from the original game. My mod will automatically filter out dialogues that do not meet conditions such as friendship level, weather, location, day of the week, etc. This is achieved by detecting the name of the dialogue key. So, if the dialogue keys defined by the installed dialogue expansion mods have complex condition definitions or the key names are too unique, my mod may not be able to correctly trigger them in most cases. However, my mod usually works. Additionally, in the mod configuration menu, you can switch whether my mod will automatically filter out dialogues that do not meet the requirements of friendship and day of the week. Whether it's a post-marriage dialogue expansion mod or a daily dialogue expansion mod, my mod supports both. It will automatically detect whether the player is married to the NPC, but currently it is not compatible with the multi-marriage mod. (Special note: This feature is designed for other expansion dialogue mods. If you don't plan to install other expansion dialogue mods, please turn it off.)\u00A0\n<br />\n<br />   \uFEFF2.[b] CustomDialogue[/b]: Once enabled, pressing the hotkey while facing the NPC will trigger the custom dialogue added by this mod. You can customize this function-triggered dialogue in the [b]\"DialogueButtonFramework/Data/Dialogue.json\"[/b] file in my mod directory. You can edit any content and conditions, but please do not modify the names of keys [b]{npcName}_Finish[/b], [b]{npcName}_Fail[/b], [b]{npcName}_Trigger_{number}[/b]. Note: The dialogue keys in the format of [b]{npcName}_Trigger_{number}[/b] are the ones that my mod will trigger. Currently, the mod is set to have four stages of affection levels, and each stage will trigger a different dialogue. For example, affection level 2 is set to six hearts. When the player reaches six hearts or above, the corresponding [b]{npcName}_Trigger_2[/b] dialogue can be triggered. If the player does not even reach affection level 1, the [b]{npcName}_Fail[/b] dialogue will be triggered. The number of hearts required for each affection level can be configured.\u00A0\n<br />\n<br />   \uFEFF3. If you disable both the multi-dialogue and custom dialogue functions, this module will not make any modifications to the game.\u00A0\n<br />\n<br />   When you trigger a dialogue using the hotkey, my module will create a dialogue group that is available and will cycle through it. This ensures that each time you trigger a dialogue, it will be different.When you have used up the configured maximum daily number of dialogues, whether you have enabled multiple dialogues or custom dialogues, the [b]{npcName}_Finish[/b] in [b]Dialogue.json[/b] will be triggered.\n<br />\n<br />   \uFEFFThis module currently only provides a simple extension function and an example file for Dialogue.json for dialogue expansion. It does not actually add any new dialogue content. I may update the dialogue content I wrote in the future. Of course, others are also welcome to write their own custom dialogues for this.\n<br />\uFEFF\n<br />   \uFEFFTheoretically, it should be compatible with multiplayer mode. If you encounter any errors, please feel free to leave a message and let me know.\u00A0\n<br />\n<br />   \uFEFFThe Dialogue.json file not only contains the original characters, but also pre-defines the SVE characters.\n<br />\n<br />更新日志：\n<br />1.0.0：\n<br />1.现在可以触发其他模组以及原版的对话了\n<br />2.现在在婚后也可以触发对话了，会触发对应的婚后对话内容\n<br />3.自定义了一套对话过滤算法（还需更多调试）\n<br />4.兼容了通用模组菜单，现在可以配置过滤算法的相关过滤选项\n<br />5.略微修改了Dialogue.json文件，以适应新版本\n<br />\n<br />0.0.2：\n<br />1.实现了日志输出开关可配置\n<br />2.实现了每日对话次数限制以及次数可配置\n<br />3.尝试兼容了多人游戏[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38311",
+	"Version": "1.0.0",
+	"Updated": "2025-10-11T09:49:35+00:00",
+	"Downloads": [
+		{
+			"Id": 145227,
+			"Type": "Main",
+			"DisplayName": "main file",
+			"FileName": "main file-38311-1-0-0-1760176175.zip",
+			"Description": "1.现在可以触发其他模组以及原版的对话了\n<br />2.现在在婚后也可以触发对话了，会触发对应的婚后对话内容\n<br />3.自定义了一套对话过滤算法（还需更多调试）\n<br />4.兼容了通用模组菜单，现在可以配置过滤算法的相关过滤选项\n<br />5.略微修改了Dialogue.json文件，以适应新版本\n<br />",
+			"Version": "1.0.0",
+			"SizeInBytes": 32349,
+			"Uploaded": "2025-10-11T09:49:35+00:00",
+			"Mods": [
+				{
+					"Id": "SunnyAndRainy.DialogueButtonFramework",
+					"DisplayName": "Dialogue Extend Button",
+					"Type": "Smapi",
+					"RelativePath": "DialogueButtonFramework",
+					"Manifest": {
+						"Name": "Dialogue Extend Button",
+						"Description": "Add the button to extend the dialogue",
+						"Author": "SunnyAndRainyu",
+						"Version": "1.0.0",
+						"EntryDll": "DialogueButtonFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:38311"
+						],
+						"UniqueId": "SunnyAndRainy.DialogueButtonFramework"
+					}
+				},
+				{
+					"Id": "SunnyAndRainy.DialogueButtonContent",
+					"DisplayName": "Dialogue Extend Button",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]DialogueButton",
+					"Manifest": {
+						"Name": "Dialogue Extend Button",
+						"Description": "the DialogueButton Mod's content",
+						"Author": "SunnyAndRainy",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "SunnyAndRainy.DialogueButtonFramework",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38311"
+						],
+						"UniqueId": "SunnyAndRainy.DialogueButtonContent",
+						"OtherFields": {
+							"Format": "2.5.3"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342531915,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342424999,
+		"UploaderId": 246118277,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 44893,
+	"Name": "Wedding Dialogue Fix",
+	"Author": "himanbam",
+	"AuthorLabel": "starkettle",
+	"Description": "During the wedding event, there is a bug that cuts out the part where Lewis actually pronounces you married. Meaning that you are not legally married to your Stardew Valley spouse :( \n<br />This mod fixes that.\n<br />\n<br />[u]The Issue:[/u]\n<br />\n<br />Where he is supposed to say:\u00A0\n<br />\"&lt;farmer name&gt;... &lt;spouse name&gt;...\", \"As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!\", \"You may kiss.\"\n<br />\n<br />He instead says: \n<br />\uFEFF\"&lt;farmer name&gt;...\",\u00A0 \"You may kiss.\"\n<br />\n<br />As far as I can tell, it's just a simple mistake in the event, where it should have 2 more \"EscapedText\" tokens, to handle the spaces. It's missing those, so it just stops after the first space.\n<br />I changed that and it solved it. I tested with the 4 combinations of farmer and spouse gender and they all worked.\n<br />\n<br />[u]Compatability:[/u]\n<br />\n<br />This was made for 1.16.15 and only tested with that. I don't know if other versions have the same issue, but it's possible it could work for those too.\n<br />\n<br />Because this patches the wedding event itself, any mods that replace the default wedding event or edit the same section of the event may not be compatible.\n<br />\n<br />However, most wedding dialogue changes should be fine with this, if they change the Strings/StringsFromCS asset. The event still uses the localized strings from that, which would include any modded dialogue.\n<br />\n<br />Similarly, this should work for all languages too.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44893",
+	"Version": "1.0.0",
+	"Updated": "2026-04-11T23:44:24+00:00",
+	"Downloads": [
+		{
+			"Id": 164160,
+			"Type": "Main",
+			"DisplayName": "Wedding Dialogue Fix",
+			"FileName": "Wedding Dialogue Fix-44893-1-0-0-1775951064.zip",
+			"Description": "Patches the event to fix the missing dialogue issue.",
+			"Version": "1.0.0",
+			"SizeInBytes": 1218,
+			"Uploaded": "2026-04-11T23:44:24+00:00",
+			"Mods": [
+				{
+					"Id": "starkettle.WeddingDialogueFix",
+					"DisplayName": "WeddingDialogueFix",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Wedding Dialogue Fix",
+					"Manifest": {
+						"Name": "WeddingDialogueFix",
+						"Description": "Fixes missing wedding dialogue.",
+						"Author": "starkettle",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44893"
+						],
+						"UniqueId": "starkettle.WeddingDialogueFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550848,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431581,
+		"UploaderId": 116393258,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

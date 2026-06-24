@@ -1,0 +1,70 @@
+{
+	"Site": "Nexus",
+	"Id": 34772,
+	"Name": "Crops Need Light",
+	"Author": "glossamer",
+	"Description": "[size=4][center][size=6][b]Crops Need Light[/b][/size][/center][/size]\n<br />\n<br />I created this mod because I was making a farm map that has a large cave area, and I thought--well, it feels a little overpowered to have access to what's basically a large greenhouse right at the start of the game. Wouldn't it be cuter, and fairer, if I couldn't grow crops in that cave unless I had some grow lights?\n<br />\n<br />I didn't know of any existing mods that would do this, and so I made Crops Need Light. With this mod, indoor areas that are [b]not[/b]\u00A0greenhouses will require grow lights (or regular old lamps) so that crops have enough light to grow. Map makers can also manually set other locations to be low light areas, meaning they will work the same way--players will have to craft and place grow lights in order to grow crops in those locations.\n<br />\n<br />\n<br />[center][size=5][b]Content[/b][/size][/center][list]\n<br />[*][b]2 Craftable Grow Lights[/b]: the basic grow light is unlocked at\u00A0[b]Farming Level 2[/b], while the deluxe grow light is learned at [b]Farming Level 7.[/b]\n<br />[*][b]Customizable Grow Lights[/b]: the basic grow light can be set to any of [b]7 wood colors[/b], and the deluxe grow light has [b]3 style options[/b].\n<br />[*][b]1 New Crop[/b]: The new [b]Cave Puff[/b]\u00A0isn't like other crops: it can only grow where there [i]isn't[/i] light! Cave puffs are a rare delicacy, and you won't find their seeds in stores. You'll have to get cave puff seeds by placing cave puffs in the seed maker.\n<br />[/list]\n<br />Need help finding cave puffs?\n<br />[spoiler]They can only spawn in the Secret Woods on rainy days during the summer. However, they don't start spawning until [i]after[/i] you have unlocked Skull Cavern![/spoiler]\n<br />\n<br />[center]\uFEFF[size=5][b]Multiplayer[/b][/size][/center]I have not tested this mod in multiplayer. I assume it should work fine if all players have this mod installed, with the same settings in their config, but I don't know that for certain. Let me know how it goes!\n<br />\n<br />\n<br />[center][size=5][b]Compatibility[/b][/size][/center]Although I would like my mod to be compatible with everything, alas I imagine it is not.\u00A0I'll make a list here of incompatible mods as they're discovered.\u00A0\n<br />\n<br />\n<br />[center][size=5][b]Known Issues and Future Plans[/b][/size][/center][list]\n<br />[*][b]Bushes and tea bushes[/b]: These are not currently affected by Crops Need Light, so they will grow according to vanilla rules. I am interested in changing this, but I would need to figure out how, since they have their own rules separate from trees and crops. This isn't a high priority for me, though, so it may be a while before I do anything about this.\n<br />[*][b]Trees and fruit trees[/b]: Crops Need Light [i]should[/i] prevent players from growing trees in low light areas if they are not low light trees, but I have not actually tested this. Crops Need Light also will not\u00A0prevent trees that have already been planted from growing or producing--if this is an issue for you, you can always just cut the existing trees down.\n<br />[/list]\n<br />\n<br />[center][size=5][b]\uFEFFFor Mod Authors[/b][/size][/center][size=4][b]Making Low Light Areas[/b][/size]\n<br />To make a location a \"low light area\", you have two options:\n<br />\n<br />[b]Option 1[/b]: If your map is an indoor location (the map does not have the\u00A0Outdoors property), but not a greenhouse (the map also does not have the IsGreenhouse property), then Crops Need Light will [i]automatically[/i] treat it as a low light area as long as the player has the config option \"Treat Indoor Locations as Low Light Areas\" set to [b]true[/b]. If you have an indoor location that you want to be full of light, just set IsGreenHouse to true in map properties!\n<br />\n<br />\n<br />[b]Option 2[/b]: If you want your location to require grow lights even if it is outdoors, or even if players have the automatic indoor low light setting set to false, then you can use the custom field\u00A0[code]\"glossamer.CropsNeedLight_LowLightArea\": \"true\"[/code]\u00A0in your location's data entry to make your location a low light area. Here's an example of how that would look in a mod using Content Patcher:\n<br />\n<br />[code]\uFEFF   \uFEFF{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/Locations\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_ExampleCave\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"Example Cave\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CreateOnLoad\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MapPath\": \"Maps/{{ModId}}_ExampleCave\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CanPlantHere\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CustomFields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"glossamer.CropsNeedLight_LowLightArea\": \"true\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />[/code]\n<br />\n<br />[size=4][b]Making Crops Tolerant of Low Light[/b][/size]\n<br />Crops Need Light also supports allowing crops to ignore lighting conditions--they will grow in low light areas or brightly lit areas alike, and they do not need grow lights. I call these \"low light crops.\"\n<br />\n<br />To make a crop a [b]low light crop[/b], you can add the custom field\u00A0[code]\"glossamer.CropsNeedLight_LowLightCrop\": \"true\"[/code]\u00A0to the crop's crop data entry.\n<br />\n<br />If you want your crop to [i]only[/i] grow in low light areas, then take that [b]same custom field[/b] and set it to \"I\" (uppercase i as in igloo) instead of \"true\", like so:\n<br />[code]\uFEFF\"glossamer.CropsNeedLight_LowLightCrop\": \"I\"\n<br />[/code]\n<br />Here's an example of a crop data entry using this custom field:\n<br />\n<br />[code]      \uFEFF\uFEFF\uFEFF{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/Crops\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_ExampleCropSeeds\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Seasons\": [ \"spring\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DaysInPhase\": [ 1, 2, 2, 3 ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HarvestItemId\": \"{{ModId}}_ExampleCrop\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\"Texture\": \"Mods/{{ModId}}/crops\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"SpriteIndex\": 0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CustomFields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"glossamer.CropsNeedLight_LowLightCrop\": \"true\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />[/code]\n<br />\n<br />[size=4][b]Making Grow Lights[/b][/size]\n<br />First, all grow lights must have the [code]IsLamp[/code] property in their big craftables data entry set to [b]true[/b].\n<br />\n<br />Once that is done, you can use the custom field\u00A0[code]\uFEFF\uFEFF\"glossamer.CropsNeedLight_GrowLightRadius\": \"4\"[/code]\u00A0in their big craftables data entry to make them a grow light. You can replace [code]4[/code]\u00A0with whatever range you want your grow light to have (in tiles).\n<br />\n<br />Here's what a grow light's data entry might look like:\n<br />\n<br />[code]   \uFEFF\uFEFF   \uFEFF{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/BigCraftables\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_ExampleGrowLight\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Name\": \"{{ModId}}_ExampleGrowLight\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"Example Grow Light\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Description\": \"This is an example grow light.\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\"IsLamp\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\"CustomFields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"glossamer.CropsNeedLight_GrowLightRadius\": \"6\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />[/code]\n<br />\n<br />\n<br />[size=4]Note[/size]\n<br />[b]You do not need to have Crops Need Light as a dependency for these settings to work, and your mod will not break if a player has your mod, but not Crops Need Light. It is safe to include these settings on your crops or locations for compatibility with Crops Need Light without requiring players to install this mod.\n<br />[/b]\n<br />\n<br />[center][b][size=5]Credits[/size][/b][/center]Thank you to all of the lovely people on the Stardew Valley discord who answered my questions as I was making this mod--I couldn't have done it without you! ❤️",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34772",
+	"Version": "1.0.0",
+	"Updated": "2025-06-12T05:30:46+00:00",
+	"Downloads": [
+		{
+			"Id": 134487,
+			"Type": "Main",
+			"DisplayName": "Crops Need Light",
+			"FileName": "Crops Need Light-34772-1-0-0-1749706246.zip",
+			"Description": "Requires Stardew Valley 1.6",
+			"Version": "1.0.0",
+			"SizeInBytes": 30400,
+			"Uploaded": "2025-06-12T05:30:46+00:00",
+			"Mods": [
+				{
+					"Id": "glossamer.CropsNeedLight",
+					"DisplayName": "Crops Need Light",
+					"Type": "Smapi",
+					"RelativePath": "CropsNeedLight\\CropsNeedLight",
+					"Manifest": {
+						"Name": "Crops Need Light",
+						"Description": "Prevents crops from growing in low light areas without a nearby grow light.",
+						"Author": "glossamer",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CropsNeedLight.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "glossamer.CropsNeedLight"
+					}
+				},
+				{
+					"Id": "glossamer.CropsNeedLightCP",
+					"DisplayName": "(CP) Crops Need Light",
+					"Type": "ContentPack",
+					"RelativePath": "CropsNeedLight\\[CP] CropsNeedLight",
+					"Manifest": {
+						"Name": "(CP) Crops Need Light",
+						"Description": "Adds 2 grow lights and 1 crop. Best used alongside Crops Need Light.",
+						"Author": "glossamer",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "glossamer.CropsNeedLightCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342521175,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421460,
+		"UploaderId": 131238558,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

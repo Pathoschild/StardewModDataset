@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 10735,
+	"Name": "Event Limiter",
+	"Author": "TheMightyAmondee",
+	"Description": "[b][size=6]Event Limiter[/size][/b]\n<br />\n<br />Event Limiter allows for the configurable limitation of the amount of events seen by the player each day, and in a row. This can help with storyline immersion or in multiplayer where time continues during events.\n<br />\n<br />By default, events are limited to 4 per day, and 2 in a row. Exempt events will also contribute to the event limits by default.\n<br />\n<br />Skipped events will be played the next time they will trigger, provided an event limit has not been reached. Hardcoded events (weddings) and PlayerKilled events won't be skipped and won't be counted as a seen event for the purposes of limiting events.\n<br />\n<br />Exclusions to which events are affected can also be configured. If there's a cutscene you never want skipped this can be done by listing its id in the Exceptions config option. As of version 1.2.1,\u00A0\u00A0event exceptions can optionally be excluded from contributing to event limits, similar to hardcoded events. Simply set\u00A0ExemptEventsCountTowardsLimit\u00A0to\u00A0false in the config.\n<br />\n<br />The mod supports Generic Mod Config Menu for changing event preferences as of version 1.1.0. Long exception lists will extend past the textbox in the menu but will be implemented properly. Square brackets and double quotation marks are not required when editing the exceptions in the config menu.\n<br />\n<br />As of version 1.2.0, Content Patcher integration and an api has been added to allow Content Patcher content packs and SMAPI mods to add there own event limit exceptions, and allow SMAPI mods to access some mod data. More information is available in the\u00A0[url=https://github.com/TheMightyAmondee/EventLimiter/blob/master/README.md]README[/url] on Github.\n<br />\n<br />The mod does use Harmony, just FYI.\n<br />\n<br />[size=4][b]Installation and use:[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Download the mod\n<br />[*]Unzip the download file and place the EventLimiter folder in your Mods folder\n<br />[*]Run the game at least once to generate the config\n<br />[*]Edit the config as desired and enjoy!\n<br />[/list]\n<br />[size=4][b]Editing the config:[/b][/size]\n<br />\n<br />When editing the config, enter only numbers (do not put quotation marks around the numbers).\n<br />\n<br />EventsPerDay sets how many events will be seen per day.\n<br />\n<br />EventsInARow sets how many events will be seen in a row when entering a new location.\n<br />\n<br />ExemptEventsCountTowardsLimit determines whether event exceptions will contribute towards the event limits when seen. Default is true.\u00A0\n<br />\n<br />Exceptions is a list of event ids (each enclosed in double quotation marks) the mod should not skip even if a limit is reached. It is in the form of a comma seperated list, enclosed in square brackets e.g [\"1\", \"2\", \"3\"]. \n<br />\n<br />Event Limiter will still recognise ids without double quotation marks surrounding them (pre 1.6), but this will likely break in the future. It is recommended to update the config accordingly. If using GMCM, double quotation marks aren't needed and the mod will correct the entries for you.\n<br />\n<br />While negative numbers can technically be entered in the config, the mod will treat these numbers as 0.\u00A0\n<br />If the mod is unable to read the config, default values will be used.\n<br />\n<br />[b][size=4]Compatibility:\n<br />[/size][/b]\n<br />- Requires SMAPI version 4.0 or above\n<br />- Compatible with multiplayer, each player can have different event preferences.\n<br />- Compatible with split-screen, event preferences are shared between players.\n<br />\n<br />[b][size=4]See also:\n<br />[/size][/b]\n<br />[url=https://github.com/TheMightyAmondee/EventLimiter]Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10735",
+	"Version": "1.3.1",
+	"Updated": "2024-05-06T04:14:26+00:00",
+	"Downloads": [
+		{
+			"Id": 97659,
+			"Type": "Main",
+			"DisplayName": "Event Limiter",
+			"FileName": "Event Limiter-10735-1-3-1-1714968865.zip",
+			"Description": "Requires SMAPI 4.0 or later",
+			"Version": "1.3.1",
+			"SizeInBytes": 16462,
+			"Uploaded": "2024-05-06T04:14:26+00:00",
+			"Mods": [
+				{
+					"Id": "TheMightyAmondee.EventLimiter",
+					"DisplayName": "Event Limiter",
+					"Type": "Smapi",
+					"RelativePath": "EventLimiter",
+					"Manifest": {
+						"Name": "Event Limiter",
+						"Description": "Limit events per day or in a row!",
+						"Author": "TheMightyAmondee",
+						"Version": "1.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EventLimiter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10735"
+						],
+						"UniqueId": "TheMightyAmondee.EventLimiter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342484347,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397423,
+		"UploaderId": 95739353,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

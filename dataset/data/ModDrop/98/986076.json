@@ -1,0 +1,174 @@
+{
+	"Site": "ModDrop",
+	"Id": 986076,
+	"Name": "Barn Incubator Support",
+	"Author": "lshtech",
+	"AuthorLabel": "elbe",
+	"TagLine": "Allowing mod added animals to hatch from the Ostrich Incubator",
+	"Description": "After updating the BFAV unofficial patch so [Ostriches can hatch again](https://github.com/lshtech/StardewValleyMods/releases/tag/BFAV-3.2.4) (fixed bug with golden chickens too) started to wonder if the Ostrich Incubator could be modded to support modded animals.\nThus, my first __official__ release: Barn Incubator Support.\n\nWhile I don't provide any animals that make use of it, this is basically a framework, more creative modders can create larger, barn sized animals that incubate and hatch.\n\nIt's pretty easy to set up. Using [BFAV Quails](https://www.nexusmods.com/stardewvalley/mods/4847) as an example you create or edit an animal's data to show them as being in a Barn (case insensitive):\n1/5/Quail Egg/Large Quail Egg/cluck/36/64/64/64/36/64/64/64/0/false/**Barn**/16/16/16/16/15/5/null/639/1000/Japanese Quail/**Barn**\"\n\nThe spot in the middle, index 15, is the one it checks by but the one at the end is the one displayed to the user. So, with some animal adding mod like BFAV, you can put in any item in the egg category that the animal produces and you'll get a brand new oviparous animal to name, pet, and exploit for your personal gain.\n\nWhile the only dependency this has directly is SMAPI it doesn't add extra animals or modify the hatching logic, just the insert into incubator logic.\n\nExtra details:\nIn the code the time it takes to incubate is 150 hours for all the coop birds, 250 hours for the ostrich, and twice the time for the dinosaur (300, in this case). I left it as coop animals are 150, any barn animals are 250, and anything with \"Dinosaur\" in it's name gets double that - in case someone wants to make a Large Dinosaur or something.\n\nWhen you put any egg into the ostrich incubator the sprite turns into the ostrich one. I don't currently have any good ideas on how to dynamically change that so it's just a little visual oddity.\n\nAn optional Content Patcher mod has been uploaded that will rename the incubator from \"Ostrich\" to \"Large\"; I felt like it seemed appropriate.\n\nSource can be found on [GitHub](https://github.com/lshtech/StardewValleyMods/tree/develop/BarnIncubatorSupport)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/986076",
+	"Version": null,
+	"Updated": "2021-07-13T02:54:44.28+00:00",
+	"Downloads": [
+		{
+			"Id": 1001472,
+			"Type": "Optional",
+			"DisplayName": "Rename Incubater from Ostrich to Large",
+			"FileName": "Rename Incubater from Ostrich to Large.zip",
+			"Version": "1.0.1",
+			"SizeInBytes": 957,
+			"Uploaded": "2021-07-13T02:54:19.94+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.BarnIncubatorSupportCP",
+					"DisplayName": "Content Patcher for Barn Incubator Support",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] BarnIncubatorSupport",
+					"Manifest": {
+						"Name": "Content Patcher for Barn Incubator Support",
+						"Description": "Renames \"Ostrich Incubator\" to \"Large Incubator\"",
+						"Author": "elbe",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2596"
+						],
+						"UniqueId": "elbe.BarnIncubatorSupportCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "58bc1d38ce393eb5c7641e9792758529",
+				"md5In": "a4f9a03abfec2ce113df6b0e05c49ceb",
+				"scriptType": 0,
+				"sha256Ex": "1f48e519ab602d28ea739e24c7a54fca2d5bc935a0c0a48813d3593c72d3b712",
+				"sha256In": "76271e2407ec43734232bd7c19d2f39c97edb441bf88b8461d3cd0d13ab926af"
+			}
+		},
+		{
+			"Id": 1001473,
+			"Type": "Main",
+			"DisplayName": "Barn Incubator Support",
+			"FileName": "Barn Incubator Support.zip",
+			"Description": "I've removed Barnosaurus Rex from the main package, fixed it's manifest, and uploaded it as an optional example file.",
+			"Version": "1.0.1",
+			"SizeInBytes": 7536,
+			"Uploaded": "2021-07-13T02:54:19.987+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.BarnIncubatorSupport",
+					"DisplayName": "Barn Incubator Support",
+					"Type": "Smapi",
+					"RelativePath": "BarnIncubatorSupport",
+					"Manifest": {
+						"Name": "Barn Incubator Support",
+						"Description": "Allows the ostrich incubator in the barn to hatch mod added animals",
+						"Author": "elbe",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BarnIncubatorSupport.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:9049"
+						],
+						"UniqueId": "elbe.BarnIncubatorSupport"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "d07670b5378badcf44e9d48a42025006",
+				"md5In": "f239bffdc78cff5b3829d3bf05a0de52",
+				"scriptType": 0,
+				"sha256Ex": "c2f5be94c609655910ee5fbe5225f8002589f9ee49c8844d05f4c50f82bd1907",
+				"sha256In": "963cec83f482c7ef623551878f41f2c0737a6a7ffce75cdd0b4bde7d0b293bad"
+			}
+		},
+		{
+			"Id": 1001474,
+			"Type": "Optional",
+			"DisplayName": "Barnosaurus Rex",
+			"FileName": "Barnosaurus Rex.zip",
+			"Description": "Example file. Changes the dinosaur to use the barn incubator.",
+			"Version": "1.0.1",
+			"SizeInBytes": 825,
+			"Uploaded": "2021-07-13T02:54:20.222+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.BarnosaurusRex",
+					"DisplayName": "Puts the dinosar in the barn",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Barnosaurus Rex",
+					"Manifest": {
+						"Name": "Puts the dinosar in the barn",
+						"Description": "Barnosaurus Rex",
+						"Author": "elbe",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "elbe.BarnosaurusRex"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "d50d76bd81b23d6dc3ed71e81f83ea81",
+				"md5In": "d119aa633ac95d9443888dd72819c942",
+				"scriptType": 0,
+				"sha256Ex": "3f2cd41eb8629ecca6639b87c51b851ad9694aa4210763ba08931160679ea83a",
+				"sha256In": "abbee2c3850df71cb119b17e5870b3a3ca933fb3d5d2a7a4b28692408a17feac"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1626144884280,
+		"DateUpdated": 1626144859893,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1626144859893,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/986076/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/986076/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/986076/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/986076/icon_original"
+		},
+		"nexusModID": 9049,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": false,
+		"userID": 247126
+	}
+}

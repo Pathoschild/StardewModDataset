@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 567,
+	"Name": "Customizable Traveling Cart Days",
+	"Author": "Yyeahdude",
+	"Description": "[b][size=5]Summary:[/size][/b]\n<br />This mod allows you to customize which days the traveling cart visits your town using a config file. So now rather than the cart showing up on the fixed days of Friday and Sunday you can customize its schedule to whatever you'd like by setting the chance of the cart showing up to for each individual day.\n<br />\n<br />\n<br />[b][size=5]Config File:[/size][/b]\n<br />The config.json file will be created automatically the first time you load Stardew Valley and stored in the same folder as the .dll file for this mod, located in your Mods folder.\n<br />The file will look something like this:\n<br />{\n<br />   [size=2]public int Monday { get; set; } = 0;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public int Tuesday { get; set; } = 0;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public int Wednesday { get; set; } = 0;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public int Thursday { get; set; } = 0;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public int Friday { get; set; } = 100;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public int Saturday { get; set; } = 0;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public int Sunday { get; set; } = 100;[/size]\n<br />}\n<br />The number associated with each day is the percent chance of the cart showing up, where 0 means the cart will never come on that day and 100 means it always will.\n<br />\n<br />\n<br />[b][size=5]Default Settings:[/size][/b]\n<br />By default the mod is configured to the default Fridays and Sundays schedule, but remember the whole point of this mod is to configure the schedule to your personal preference.\n<br />\n<br />\n<br />[b][size=5]Possible Ideas For Settings:[/size][/b]\n<br />-\"Traveling Cart no longer travels but is constant fixture in the Stardew Valley Community everyday\"\n<br />{\n<br />   \"Monday\": 100,\n<br />   \"Tuesday\": 100,\n<br />   \"Wednesday\": 100,\n<br />   \"Thursday\": 100,\n<br />   \"Friday\": 100,\n<br />   \"Saturday\": 100,\n<br />   \"Sunday\": 100\n<br />}\u00A0\n<br />\n<br />-\"Traveling Cart appearance is truly rare, this will make the cart show up about once a month\"\n<br />{\n<br />   \"Monday\": 4,\n<br />   \"Tuesday\": 4,\n<br />   \"Wednesday\": 4,\n<br />   \"Thursday\": 4,\n<br />   \"Friday\": 4,\n<br />   \"Saturday\": 4,\n<br />   [size=2]\"Sunday\": 4\n<br />}\u00A0\n<br />\n<br />-\"Balanced version: default config(100 + 100) = this setting(15 + 15 + 15 + 15 + 40 + 50 + 50) = 200\"\n<br />{\n<br />\u00A0 \"Monday\": 15,\n<br />\u00A0 \"Tuesday\": 15,\n<br />\u00A0 \"Wednesday\": 15,\n<br />\u00A0 \"Thursday\": 15,\n<br />\u00A0 \"Friday\": 40,\n<br />\u00A0 \"Saturday\": 50,\n<br />\u00A0 \"Sunday\": 50\n<br />}[/size]\n<br />\n<br />\n<br />[size=5]Changes:\n<br />[/size][u]1.2.1 :[/u]\n<br />- Fixed 1% chance for cart to arrive when config was set to 0\n<br />- Adjusted default config values to match vanilla. (100% chance on Fridays and Sundays)- The new default config file values only affects fresh installs of this mod, and wont change currently existing config files if you are simply updating\n<br />- Currently testing the Night Market for issues\n<br />\n<br />\n<br />[color=#93c47d][size=4]Please feel free to contact me with issues, suggestions, or even just neat configs you come up with.[/size][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/567",
+	"Version": "1.2.1",
+	"Updated": "2019-12-14T13:13:12+00:00",
+	"Downloads": [
+		{
+			"Id": 21501,
+			"Type": "Main",
+			"DisplayName": "Customizable Traveling Cart Days",
+			"FileName": "Customizable Traveling Cart Days-567-1-2-1-1576329192.zip",
+			"Description": "- Fixed 1% chance for cart to arrive when config was set to 0\n<br />- Adjusted default config values to match vanilla. (100% chance on Fridays and Sundays)\n<br />- The new default config file values only affects fresh installs of this mod",
+			"Version": "1.2.1",
+			"SizeInBytes": 6595,
+			"Uploaded": "2019-12-14T13:13:12+00:00",
+			"Mods": [
+				{
+					"Id": "Yyeahdude.TravelingCart",
+					"DisplayName": "Customizable Traveling Cart Days",
+					"Type": "Smapi",
+					"RelativePath": "TravelingCart",
+					"Manifest": {
+						"Name": "Customizable Traveling Cart Days",
+						"Description": "Lets you customize which days the traveling merchant visits",
+						"Author": null,
+						"Version": "1.2.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "TravelingCart.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:567"
+						],
+						"UniqueId": "Yyeahdude.TravelingCart",
+						"OtherFields": {
+							"Authour": "Yyeahdude",
+							"PerSaveConfigs": false
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342408189,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387255,
+		"UploaderId": 36870760,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

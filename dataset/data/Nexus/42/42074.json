@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 42074,
+	"Name": "Em's Tree Seed Birds Custom Tree Compatibility Patch",
+	"Author": "HarrisonGrey",
+	"AuthorLabel": "Em and HarrisonGrey",
+	"Description": "Hi, I'm Harry. [url=https://www.nexusmods.com/stardewvalley/mods/41939]Em's Tree Seed Birds[/url] was a collaboration between me and Em. If you've got a mod that adds custom Wild Trees, we wanted to make available a small compatibility template for adding your trees to the functionality of the Wild Bird Feeder. The file here is a single .json, simply look for YourTree, YourTree_SeedItem, and YourTreeSeedEntry and replace with the appropriate data from your mod.\n<br />\n<br />Once it has the proper data, you can either add this file into your mod and Include it like this:\n<br />[code]\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"Include\",\n<br />\u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/YourTreeSeedBirdsTEMPLATE.json\",\n<br />\u00A0 \u00A0 \u00A0 \"When\": { \"HasMod\": \"RivalRabbit.EmsTreeSeedBirds\" }\n<br />\u00A0 \u00A0 },\n<br />[/code]\uFEFFOr simply copy and paste the two data entries in this file into your contents.json or another included .json.\n<br />\n<br />You will also want to add\u00A0\"RivalRabbit.EmsTreeSeedBirds\" as an optional dependency in your Manifest so that the Wild Bird Feeder loads first and your mod can add information to it.\n<br />\n<br />Feel free to change the \"Condition\" on YourTreeSeedEntry, but it does need to include a RANDOM below 1 or else nothing past your entry will show up in the feeder. Also, note that your entry gets moved before \"WildSeeds\"; this is very important as WildSeeds should always be the last entry in the list, nothing listed after it will show up.\n<br />\n<br />Have fun!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42074",
+	"Version": "1.0",
+	"Updated": "2026-02-06T17:56:09+00:00",
+	"Downloads": [
+		{
+			"Id": 156057,
+			"Type": "Main",
+			"DisplayName": "Tree Seed Birds compatibility template",
+			"FileName": "Tree Seed Birds compatibility template-42074-1-0-1770400569.zip",
+			"Description": "A compatibility template so your custom wild trees can work with the Wild Bird Feeder",
+			"Version": "1.0",
+			"SizeInBytes": 667,
+			"Uploaded": "2026-02-06T17:56:09+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "156057",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342542745,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428762,
+		"UploaderId": 67153256,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

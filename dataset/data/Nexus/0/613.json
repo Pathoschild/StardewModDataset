@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 613,
+	"Name": "Hunger",
+	"Author": "Yyeahdude",
+	"Description": "[size=5]Summary:[/size]\n<br />[size=2]Whether\u00A0you've ever wondered why your farmer never got hungry despite living in a world full of food choices or are simply are looking for a slightly more\u00A0challenging\u00A0rewarding and\u00A0realistic\u00A0experience, Hunger is the mod for you.\u00A0[/size]\n<br />\n<br />Hunger is a SMAPI Mod that introduces a system that slowly drains your stamina throughout the day while you are out working, and restores it while you are relaxing in your home. The amounts of draining and regenerating are based on conditions such as location, time of day, and the size of house you have(for balance later in game). All the values can be tweaked or turned off entirely with a config file. In addition to the new hunger system you'll be greeted by a new PEN PAL FRIEND named Hunger who will provide you with tips and specifically chosen food items to get you started on a new play through. The original purpose of this mod was to both make the game more challenging as well as giving the player a real reason to cook and eat food. This was especially useful while I was modifying different cooked foods and creating a better system for acquiring recipes that are not quite polished enough for release but might be one day. \u00A0\u00A0\n<br />\n<br />\n<br />[size=5]Change-log:\n<br />[/size][size=2][b]1.0: [/b]\n<br />Initial release\n<br />[b]1.0.1:[/b]\n<br />-Fixed a bug causing stamina to drain in unintended\u00A0areas including festivals, heart events, and mini games.\n<br />-Fixed late night stamina\u00A0drain to start at 12:00 instead of 12:10.\n<br />-Underground Mine stamina drain now properly overrides\u00A0late night stamina drain if you are in the mines after midnight.\u00A0\n<br />[b]1.0.2:[/b]\n<br />-Fixed a bug causing stamina to drain when the game window isn't focused.\n<br />-Added a new lower drain level for when your'e standing still.\n<br />-Reworked how the drain amount is calculated. While the amounts are still roughly the same, they now stack together multiplicative\u00A0instead of there being static drain amounts for different locations. EX: base drain amount per hour(3) * walking multiplier(2) * inside mine multiplier(2) = 12.\n<br />-changes to config file reflecting the new more dynamic calculation method including manual adjustments if you are using a timespeed mod as well.\n<br />[b]1.2.1:[/b]\n<br />-Updated for Stardew Valley 1.3 Beta.\n<br />-Changed mail file to be a content pack rather than an xnb replacement. (Now requires Content Patcher)\n<br />[b]1.3.0:[/b]\n<br />- Updated for Stardew 1.4\n<br />- Combined mail content pack and smapi mod into one single mod with a new option in the config file to enable/disable the optional mail Hunger sends you.\n<br />[b]1.3.1:\n<br />[/b]-Fixed multiplayer: players should now only regen energy in their own house\n<br />- Added config option to change name of person who sends you hunger related mail (Default is still \"Hunger\")\u00A0\n<br />[/size]\n<br />\n<br />[size=5]Remember To Check Your Mail:[/size]\n<br />[list]\n<br />[*][size=2]Meet your new best friend\u00A0affectionately\u00A0named Hunger.[/size]\n<br />[*][size=2]Hunger sends you tips and hand picked food items for different events throughout your first year.[/size]\n<br />[*][size=2]IMPORTANT: if you don't click the food in the mail and\u00A0instead\u00A0exit out of the menu you will lose it.[/size]\n<br />[*][size=2]Currently only sends mail during the first year to avoid\u00A0redundancy\u00A0of\u00A0dialogue\u00A0but I'm considering adding\u00A0reoccurring\u00A0mail events to reward players in their other years in a future update.[/size]\n<br />[/list][size=1]\n<br />\n<br />[/size][size=5]Default Values And Config:\n<br />[/size]A config.json file is included but a new will be created in the same folder as Hunger.dll the first time you run Stardew Valley if you happen to want to reset the default values. This config file will let you individually adjust all the values that go into calculating how much your player should be gaining or draining at any time. By Default the drain for the first farm house with no upgrades starts off fairly slow in order for players to establish their farm and character. With the addition of the kitchen in the first house upgrade the drain value jumps a bit since you can now cook your own food and it also takes more energy to tend to a larger house. From here the next two upgrade's hunger cost jump less drastically to simply balance the later game and acquiring Stardrops.\n<br />\n<br />It is also worth noting I play with a time speed Mod that only modifies the time in mines and caves to half speed so the balance may be a little off.\n<br />The last option in the config file called\u00A0\"realSecondsPerInGame10Minutes\" fixes this as you can now manually adjust this amount if you play with a speed other than the games default 7 real seconds per in game 10 minutes.\n<br />\n<br />\n<br />[size=5]My Other Mods[/size]\n<br />[list]\n<br />[*][size=3][url=http://www.nexusmods.com/stardewvalley/mods/567/?]Customizable Traveling Cart Days[/url][/size]\n<br />[/list]\n<br />[color=#b6d7a8][size=4]Please feel free to contact me with issues or\u00A0balance\u00A0suggestions.[/size][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/613",
+	"Version": "1.3.1",
+	"Updated": "2019-12-17T23:26:20+00:00",
+	"Downloads": [
+		{
+			"Id": 8269,
+			"Type": "Optional",
+			"DisplayName": "Hunger - Only Mail Content Pack",
+			"FileName": "Hunger - Only Mail Content Pack-613-1-0-0.zip",
+			"Description": "Content pack that adds letters from Hunger to your mail.xnb file. Updated to use Content Patcher",
+			"Version": "1.0.0",
+			"SizeInBytes": 1386,
+			"Uploaded": "2018-05-11T20:19:09+00:00",
+			"Mods": [
+				{
+					"Id": "Yyeahdude.HungerMail",
+					"DisplayName": "Hunger Mail",
+					"Type": "ContentPack",
+					"RelativePath": "CP - Hunger Mail",
+					"Manifest": {
+						"Name": "Hunger Mail",
+						"Description": "Hunger sends you food in the mail.",
+						"Author": "Yyeahdude",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.3.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Yyeahdude.HungerMail"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342394957,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 21660,
+			"Type": "Main",
+			"DisplayName": "Hunger",
+			"FileName": "Hunger-613-1-3-1-1576625180.zip",
+			"Description": "Changes:\n<br />-Fixed multiplayer: players should now only regen energy in their own house\n<br />- Added config option to change name of person who sends you hunger related mail (Default is still \"Hunger\")",
+			"Version": "1.3.1",
+			"SizeInBytes": 10830,
+			"Uploaded": "2019-12-17T23:26:20+00:00",
+			"Mods": [
+				{
+					"Id": "HungerYyeadude",
+					"DisplayName": "Hunger",
+					"Type": "Smapi",
+					"RelativePath": "Hunger",
+					"Manifest": {
+						"Name": "Hunger",
+						"Description": "",
+						"Author": "Yyeahdude",
+						"Version": "1.3.1",
+						"EntryDll": "Hunger.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "HungerYyeadude",
+						"OtherFields": {
+							"PerSaveConfigs": false
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342408348,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387301,
+		"UploaderId": 36870760,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

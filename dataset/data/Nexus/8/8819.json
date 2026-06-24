@@ -1,0 +1,179 @@
+{
+	"Site": "Nexus",
+	"Id": 8819,
+	"Name": "Silo Size",
+	"Author": "pepoluan",
+	"Description": "Silo size mods already made are either (1) hardcoded new silo size to a huge number that I don't like, or (2) does not provide enough granularity to modify the silo size due to how they work.\n<br />\n<br />This mod changes the per-silo size instead. By default (configurable through [size=3][b][font=Courier New]config.json[/font][/b][/size]) it will set the size to 1000, but of course you can change it to, say, 123456, or 420, or 6969, or whatever size you want.\n<br />\n<br />(You'll have to edit the file manually; due to how this mod patches the game [see Technical Details below] it is unable to change the silo size without restarting the game, so there's no point in making a Mod Config Menu for this.)\n<br />\n<br />\n<br />[font=Trebuchet MS][size=5]Technical Details[/size][/font]\n<br />\n<br />This mod does its job by patching 3 places in the game code:\n<br />[list]\n<br />[*][font=Courier New]Farm.tryToAddHay[font=Arial] -- this is the actual limiter of silo size[/font][/font]\n<br />[*][font=Courier New]Buildings.Building.doAction[/font] -- this provides report of (total hay / max hay) when right-clicking on a silo, and\n<br />[*][font=Courier New]Object.checkForAction[font=Arial] -- this affects the Farm Computer device[/font][/font]\n<br />[/list]To the best of my knowledge, [i]none[/i] of the existing silo resizer mods do this.\n<br />\n<br />This patching happened before the game started, and the patches are designed to be as non-intrusive as possible, to greatly reduce the chances of conflicting with other mods that want to patch the above methods.\n<br />\n<br />Because of this, it is not possible to change the Silo Size value while the game is running; you'll have to exit and restart the game.\n<br />\n<br />\n<br />[font=Trebuchet MS][size=5]Installation - Main Mod[/size][/font]\n<br />\n<br />To install:\n<br />[list=1]\n<br />[*]Make sure you have the latest SMAPI\n<br />[*]Download the newest \"SiloSize\" zip file from the 'Files' tab\n<br />[*]Extract the mod into the Mods directory as usual\n<br />[*]Run the game once, and exit before loading a savegame\n<br />[*]Edit the config.json to your liking\n<br />[/list]\n<br />\n<br />[font=Trebuchet MS][size=5]Installation - Content Patcher content pack[/size][/font]\n<br />\n<br />Also provided in the 'Files' tab is a zip file named \"SiloSizeOnTV\" ; it is Content Patcher content pack to 'correct' the description for the silo in the \"Living off the Land\" show. This is optional, you do NOT have to install this, at all.\n<br />\n<br />To install:\n<br />[list=1]\n<br />[*]Make sure you have the latest Content Patcher\n<br />[*]Download the newest \"SiloSizeOnTV\" zip file from the 'Files' tab\n<br />[*]Extract the mod into the Mods directory as usual\n<br />[*]Done.\n<br />\n<br />[/list]\n<br />The \"SiloSizeOnTV\" content pack does NOT have any customization; since version 0.1.0 it automatically pulls the values it needs from the main mod.\n<br />\n<br />\n<br />[font=Trebuchet MS][size=5]Customization - config.json[/size][/font]\n<br />\n<br />This mod provides several knob to customize:\n<br />[list]\n<br />[*][color=#00ffff][b][font=Courier New][size=4]SiloSize[/size][/font][/b][/color] -- sets the size of each silo. Must be an integer greater than 0 and less than 2,147,483,648\n<br />[*][b][font=Courier New][color=#00ffff][size=4]MorningReport[/size][/color][/font][/b] -- if true, then each morning you will be told how many hay sheaves are stored in the silo(es). Report will only appear if you have one or more silo(es); if you don't have any silo, the report will not appear.\n<br />[/list]\n<br />(config.json will be created with default values after you (1) install the mod, [i]and[/i] (2) start the game once -- no need to load a save.)\n<br />\n<br />Support for \"Generic Mod Config Menu\" will [i]NOT[/i] be added, please don't ask for that.\n<br />\n<br />\n<br />\n<br />[font=Trebuchet MS][size=5]Source Code[/size][/font]\n<br />\n<br />[url=https://sourceforge.net/projects/sdvmod-silo-size/]Source code is available on SourceForge[/url]; it is released under the [b]MPL-2.0[/b] license.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8819",
+	"Version": "0.3.0",
+	"Updated": "2021-07-03T16:49:25+00:00",
+	"Downloads": [
+		{
+			"Id": 41663,
+			"Type": "Optional",
+			"DisplayName": "SiloSizeOnTV",
+			"FileName": "SiloSizeOnTV-8819-0-1-2-1622318331.zip",
+			"Description": "@OnTV : Fix silo description in the \"Livin' off the Land\" TV Show",
+			"Version": "0.1.2",
+			"SizeInBytes": 6487,
+			"Uploaded": "2021-05-29T19:58:51+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.SiloSizeCP",
+					"DisplayName": "(CP) Silo Size on TV",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Silo Size on TV",
+					"Manifest": {
+						"Name": "(CP) Silo Size on TV",
+						"Description": "Change silo size in TV Tips",
+						"Author": "pepoluan",
+						"Version": "0.1.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "pepoluan.SiloSize",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8819@OnTV"
+						],
+						"UniqueId": "pepoluan.SiloSizeCP",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json",
+							"Meta:Repository": "https://sourceforge.net/projects/sdvmod-silo-size/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"0.1.0": "Use SiloSize-provided token",
+								"0.1.1": "Match version to SiloSize",
+								"0.1.2": "Proper use of @subkey"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428351,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42601,
+			"Type": "Main",
+			"DisplayName": "SiloSize 0.3.0 for PC",
+			"FileName": "SiloSize 0.3.0-8819-0-3-0-1624880282.zip",
+			"Description": "Change patching strategy for Building.doAction, add low hay warning.\n<br /><br />This version is for @PC\n<br /><br />",
+			"Version": "0.3.0",
+			"SizeInBytes": 36043,
+			"Uploaded": "2021-06-28T11:38:02+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.SiloSize",
+					"DisplayName": "Silo Size",
+					"Type": "Smapi",
+					"RelativePath": "SiloSize",
+					"Manifest": {
+						"Name": "Silo Size",
+						"Description": "Change size of silo",
+						"Author": "pepoluan",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"EntryDll": "SiloSize.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8819"
+						],
+						"UniqueId": "pepoluan.SiloSize",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/projects/sdvmod-silo-size/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"0.1.0": "Provide token for ContentPatcher to be used in CP content packs",
+								"0.1.1": "Lower API version requirement to try to cater for the Android folks",
+								"0.2.0": "Change patching strategy for Object.checkForAction and improve compatibility with PFM",
+								"0.3.0": "Change patching strategy for Buildings.Building.doAction, add low hay warning"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429289,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 42767,
+			"Type": "Main",
+			"DisplayName": "SiloSize 0.3.0 for Android",
+			"FileName": "SiloSize 0.3.0 for Android-8819-0-3-0-1625330965.zip",
+			"Description": "Change patching strategy for Building.doAction, add low hay warning.\n<br /><br />This version is compiled specifically for @Android\n<br />",
+			"Version": "0.3.0",
+			"SizeInBytes": 33833,
+			"Uploaded": "2021-07-03T16:49:25+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.SiloSize",
+					"DisplayName": "Silo Size",
+					"Type": "Smapi",
+					"RelativePath": "SiloSize",
+					"Manifest": {
+						"Name": "Silo Size",
+						"Description": "Change size of silo",
+						"Author": "pepoluan",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"EntryDll": "SiloSize.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8819"
+						],
+						"UniqueId": "pepoluan.SiloSize",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/projects/sdvmod-silo-size/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"0.1.0": "Provide token for ContentPatcher to be used in CP content packs",
+								"0.1.1": "Lower API version requirement to try to cater for the Android folks",
+								"0.2.0": "Change patching strategy for Object.checkForAction and improve compatibility with PFM",
+								"0.3.0": "Change patching strategy for Buildings.Building.doAction, add low hay warning"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429455,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395507,
+		"UploaderId": 27024274,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

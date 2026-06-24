@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 32032,
+	"Name": "Better Game Menu",
+	"Author": "KhloeLeclair",
+	"AuthorLabel": "Khloe Leclair",
+	"Description": "Better Game Menu is a drop in replacement for the game's built-in pause menu (which is internally called [font=Courier New]GameMenu[/font]) that's focused on performance and extensibility.\n<br />\n<br />\n<br />[size=5]New Features[/size]\n<br />[list]\n<br />[*] Context menus for tabs! Other mods can register context menu entries. Additionally, if multiple mods try to register an implementation for a page, you can use the context menu to switch between them on the fly. If you use Generic Mod Config Menu, try right-clicking the Options tab.\n<br />[*] Error handling! If one of the pages of the menu has an error, it doesn't break the entire menu.\n<br />[/list]\n<br />\n<br />[size=5]Performance[/size]\n<br />The game's built-in pause menu is pretty bad for performance for a couple of reasons:\n<br />\n<br />[list=1]\n<br />[*] Every time you open the pause menu, it loads every tab of the menu at once, before you even try to use them.\n<br />[*]There's a long list of events that cause any open pause menus to completely close and re-open themselves, including things like changing the UI zoom, resizing the game window, and viewing certain sub-menus.\n<br />[/list]\n<br />Better Game Menu addresses these issues by only loading pages when you actually use them.\n<br />\n<br />Additionally, there are mods that work by replacing menu pages with custom implementations. Many of those function by replacing tabs after they were already created, meaning some pages get loaded more than once. With Better Game Menu's API, that is no longer an issue.\n<br />\n<br />Testers with large mod sets have reported significant improvements in the time it takes their pause menu to open.\n<br />\n<br />[size=5]Extensibility[/size]\n<br />The game's built-in pause menu is very troublesome to extend. Everything is hard-coded, and mods that add custom pages need to do an excessive amount of work just to make things work. Compatibility between multiple mods is a big issue too.\n<br />\n<br />Better Game Menu has a [url=https://github.com/KhloeLeclair/StardewMods/blob/main/BetterGameMenu/IBetterGameMenu.cs]comprehensive API[/url] that makes it easy for other mods to work with it. Adding a custom page goes from being a huge ordeal with event handlers and harmony patches to a single function call. Replacing built-in menu pages is also a single function call.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*] Works with Stardew Valley 1.6.15+ for PC.\n<br />[*] Does [b]not[/b] work with Android.\n<br />[*] [url=https://github.com/KhloeLeclair/StardewMods/issues/43]Mod Compatibility Tracker[/url]\n<br />[/list]\n<br />[size=5]Known Issues[/size]\n<br />[list]\n<br />[*] Better Game Menu looks just like the existing pause menu, but it's an entirely new implementation. As such, C# mods that interact with the pause menu will need to be updated to work with it. There's a [url=https://github.com/KhloeLeclair/StardewMods/issues/43]GitHub Issue for tracking compatibility[/url], and I am doing my best to work with developers of existing mods to get them updated.\n<br />[/list]\n<br />[size=5]See Also[/size]\n<br />[list]\n<br />[*] [url=https://github.com/KhloeLeclair/StardewMods/tree/main/BetterGameMenu]Source Code[/url]\n<br />[*] [url=https://github.com/KhloeLeclair/StardewMods/blob/main/BetterGameMenu/CHANGELOG.md]Changelog[/url]\n<br />[*] [url=https://github.com/KhloeLeclair/StardewMods/blob/main/BetterGameMenu/IBetterGameMenu.cs]For Devs: C# API[/url]\n<br />[*] [url=https://github.com/KhloeLeclair/StardewMods/blob/main/BetterGameMenu/guide.md]For Devs: Implementation Guide[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32032",
+	"Version": "1.0.1",
+	"Updated": "2025-04-09T21:32:37+00:00",
+	"Downloads": [
+		{
+			"Id": 129434,
+			"Type": "Main",
+			"DisplayName": "Better Game Menu",
+			"FileName": "Better Game Menu-32032-1-0-1-1744234357.zip",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 225800,
+			"Uploaded": "2025-04-09T21:32:37+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.bettergamemenu",
+					"DisplayName": "Better Game Menu",
+					"Type": "Smapi",
+					"RelativePath": "BetterGameMenu",
+					"Manifest": {
+						"Name": "Better Game Menu",
+						"Description": "Replaces the vanilla game menu with an improved reimplementation that improves performance and provides an easy API for other mods.",
+						"Author": "Khloe Leclair",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "BetterGameMenu.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:32032@Main"
+						],
+						"UniqueId": "leclair.bettergamemenu",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342516122,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418720,
+		"UploaderId": 138772588,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

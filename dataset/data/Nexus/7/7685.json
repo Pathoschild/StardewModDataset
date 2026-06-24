@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 7685,
+	"Name": "Treasure Chests Expanded",
+	"Author": "aedenthorn",
+	"Description": "[i][b]Note: This mod requires the [url=https://www.nexusmods.com/stardewvalley/mods/7739]Advanced Loot Framework[/url]\uFEFF mod to be installed.[/b][/i]\n<br />\n<br />This mod makes Skull Cave treasure chest loot fully customizable, via the config.json file created when you first run the mod. Here is the default config.json created:\n<br />\n<br />[code]{\n<br />\u00A0 \"EnableMod\": true,\n<br />\u00A0 \"MaxItems\": 5,\n<br />\u00A0 \"ItemsBaseMaxValue\": 100,\n<br />\u00A0 \"MinItemValue\": 20,\n<br />\u00A0 \"MaxItemValue\": -1,\n<br />\u00A0 \"CoinBaseMin\": 20,\n<br />\u00A0 \"CoinBaseMax\": 100,\n<br />\u00A0 \"IncreaseRate\": 0.2,\n<br />\u00A0 \"ItemListChances\": {\n<br />\u00A0\u00A0\u00A0 \"MeleeWeapon\": 100,\n<br />\u00A0\u00A0\u00A0 \"Shirt\": 0,\n<br />\u00A0\u00A0\u00A0 \"Pants\": 0,\n<br />\u00A0\u00A0\u00A0 \"Hat\": 0,\n<br />\u00A0\u00A0\u00A0 \"Boots\": 100,\n<br />\u00A0\u00A0\u00A0 \"BigCraftable\": 100,\n<br />\u00A0\u00A0\u00A0 \"Ring\": 100,\n<br />\u00A0\u00A0\u00A0 \"Seed\": 100,\n<br />\u00A0\u00A0\u00A0 \"Mineral\": 100,\n<br />\u00A0\u00A0\u00A0 \"Relic\": 100,\n<br />\u00A0\u00A0\u00A0 \"Cooking\": 0,\n<br />\u00A0\u00A0\u00A0 \"Fish\": 0,\n<br />\u00A0\u00A0\u00A0 \"BasicObject\": 0\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />This mod doesn't increase the number of treasure chests you encounter in the mines. If you want to add more treasure chests to the the mines, try [url=https://www.nexusmods.com/stardewvalley/mods/5894]Custom Dungeon Floors[/url]\uFEFF.\n<br />\n<br />\n<br />[size=4][b]Config Variables[/b][/size]\n<br />\n<br />An item list is created when the game starts, containing all the types in [b]ItemListTypes[/b]. It will only add items that have a value between the [b]MinItemValue[/b] and [b]MaxItemValue[/b].\n<br />\n<br />If you set [b]MinItemValue[/b] or [b]MaxItemValue[/b] to 0 or less, they are disabled.\n<br />\n<br />When the player enters a treasure chest floor in Skull Cave, this mod determines the chest's total item value based on the formula:\n<br />\n<br />[code]ItemsBaseMaxValue * (mineLevel - 120)^IncreaseRate\n<br />[/code]\n<br />\n<br />Basically, [b]ItemsBaseMaxValue[/b] is the maximum gold the treasure can be worth at the first Skull Cave floor (mine floor 121). [b]IncreaseRate[/b] determines how fast this ceiling scales per floor.\n<br />\n<br />Coin rewards are determined similarly, but their base value is first randomized based on the min and max above.\n<br />\n<br />Items are chosen for the chest randomly until [b]a) [/b]the number of items in the chest reaches [b]MaxItems[/b],\u00A0 [b]b)[/b] the items' total value reaches the chest's calculated max value minus [b]MinItemValue[/b] (making another addition impossible), or [b]c)[/b] the list of all possible items has been exhausted.\n<br />\n<br />[b]ItemListChances[/b] determines the chance that an item type  can be placed in the chest once it is selected at random as a potential item. The number is a percent chance, so 0 means that type of item will never be allowed to be in a chest, and 100 means it will always be added. \n<br />\n<br />\n<br />[size=4][b]Other Chest Mods[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7710]Overworld Chests[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7694]Fishing Chests Expanded[/url]\uFEFF\n<br />[/list]\n<br />\n<br />[size=4][b]Other Underground Mods[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6597]Underground Secrets[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5966]Custom Ore Nodes[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6669]Custom Resource Clumps[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5864]Boss Creatures[/url]\n<br />[/list]\n<br />\n<br />[size=4][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/7739]Advanced Loot Framework[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7685",
+	"Version": "0.3.1",
+	"Updated": "2025-04-14T13:49:23+00:00",
+	"Downloads": [
+		{
+			"Id": 129874,
+			"Type": "Main",
+			"DisplayName": "Treasure Chests Expanded",
+			"FileName": "Treasure Chests Expanded-7685-0-3-1-1744638563.zip",
+			"Description": "Changes:\n<br />\n<br />Update to 1.6 thanks to mouahrara",
+			"Version": "0.3.1",
+			"SizeInBytes": 23122,
+			"Uploaded": "2025-04-14T13:49:23+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.TreasureChestsExpanded",
+					"DisplayName": "Treasure Chests Expanded",
+					"Type": "Smapi",
+					"RelativePath": "TreasureChestsExpanded",
+					"Manifest": {
+						"Name": "Treasure Chests Expanded",
+						"Description": "This customizable mod greatly expands the range of items received in underground treasure chests.",
+						"Author": "aedenthorn",
+						"Version": "0.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TreasureChestsExpanded.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.AdvancedLootFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7685"
+						],
+						"UniqueId": "aedenthorn.TreasureChestsExpanded"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342516562,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394373,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

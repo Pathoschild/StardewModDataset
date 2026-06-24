@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 2631,
+	"Name": "Adjustable Price Hikes",
+	"Author": "Pokeytax",
+	"Description": "[size=6][b][center]Adjustable Price Hikes[/center][/b][/size]Annoyed at how greedy Robin and Clint got with their raw materials prices in Year 2? This is the mod for you! Want to help out the local economy by giving them even [i]more [/i]of your hard-earned cash? This is also the mod for you!\n<br />\n<br />By default, this mod disables all price increases.\n<br />\n<br />[size=5]Install[/size]\n<br />\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into Stardew Valley/Mods.\n<br />[*](optional) Run the game once with SMAPI to generate the config file, then configure desired options in Stardew Valley/Mods/AdjustablePriceHikes/config.json.\n<br />[*]Play the game using SMAPI.\n<br />[/list]\n<br />[size=5]How to use[/size]\n<br />\n<br />The generated config file has several options for use. If you only want to disable all price increases after Year 1, then no configuration needs to be done.\n<br />\n<br />[list]\n<br />[*][b]PriceHikeOn [/b](default \"false\") - If set to \"true\", then prices will increase after Year 1. Keep this at \"false\" if you want no yearly price increases ever.\n<br />[*][b]WoodYear1 [/b](default \"10\") - Sets the Year 1 price for wood at Robin's. Adjusting this price will work even if PriceHikeOn is set to \"false\".\n<br />[*][b]WoodYear2 [/b](default \"50\") - Sets the Year 2+ price for wood at Robin's. This does nothing if PriceHikeOn is \"false\".\n<br />[*][b]WoodIncreasesYearly [/b](default \"false\") - If set to \"true\", then wood will continue to increase in price with each successive year, using the difference in value between WoodYear1 and WoodYear2.\n<br />[i]   \uFEFF[/i]e.g. WoodYear1 is set to 10 and WoodYear2 is set to 25, resulting in a price difference of 15g. Year 3 will increase the price by 15g again, so that wood will now cost 40g. Year 4 will be 55g, Year 5 will be 70g, etc.[/list]\n<br />Each resource (stone, copper, iron, coal, gold) follows the same template as wood. If you want some prices to increase but others to stay the same, then set PriceHikeOn to \"true\" and change the values of [Resource]Year1 and [Resource]Year2 to the same number to keep them from increasing.\n<br />\n<br />e.g. You want wood to increase to 50g but stone to stay at 20g.\n<br />[list]\n<br />[*]Set PriceHikeOn to \"true\"\n<br />[*]Set WoodYear1 to \"10\" and WoodYear2 to \"50\".\n<br />[*]Set both StoneYear1 and StoneYear2 to \"20\".\n<br />[/list]\n<br />[size=5]Compatibility[/size]\n<br />\n<br />Works with Stardew Valley 1.4. Not tested in multiplayer, but it likely needs to be installed for the host as well as each farmhand who wants to use it.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2631",
+	"Version": "1.2",
+	"Updated": "2019-12-01T01:25:09+00:00",
+	"Downloads": [
+		{
+			"Id": 20676,
+			"Type": "Main",
+			"DisplayName": "Adjustable Price Hikes",
+			"FileName": "Adjustable Price Hikes-2631-1-2-1575163509.zip",
+			"Description": "Updated for Stardew Valley 1.4 compatibility.",
+			"Version": "1.2",
+			"SizeInBytes": 12005,
+			"Uploaded": "2019-12-01T01:25:09+00:00",
+			"Mods": [
+				{
+					"Id": "Pokeytax.AdjustablePriceHikes",
+					"DisplayName": "AdjustablePriceHikes",
+					"Type": "Smapi",
+					"RelativePath": "AdjustablePriceHikes",
+					"Manifest": {
+						"Name": "AdjustablePriceHikes",
+						"Description": "Eliminates or adjusts Robin and Clint's price hikes from year 2 onward.",
+						"Author": "Pokeytax",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "2.0.0",
+						"EntryDll": "AdjustablePriceHikes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2631"
+						],
+						"UniqueId": "Pokeytax.AdjustablePriceHikes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407364,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389319,
+		"UploaderId": 57373421,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

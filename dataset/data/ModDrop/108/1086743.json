@@ -1,0 +1,91 @@
+{
+	"Site": "ModDrop",
+	"Id": 1086743,
+	"Name": "Special Orders Tags Extended",
+	"Author": "Atravita",
+	"TagLine": "Adds additional possible required tags for special orders by monkeypatching SpecialOrder.CheckTag. Also adds some debugging tools.",
+	"Description": "Adds additional tags that can be used to constrain the appearance of special orders on the Special Order board.\n\nInstall\n\n1.  Install the latest version of [SMAPI](https://smapi.io).\n\n2.  Download and install [AtraCore](https://www.nexusmods.com/stardewvalley/mods/12932).\n\n3.  Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n\n4.  Run the game using SMAPI.\nFor modders:\ntl;dr Special orders are cached on Sunday night, making it hard to use CP tokens to control how Special Orders show up. I wanted to write a special order that would challenge you to gather a certain number of blackberries, and wrote this so that one special order would only show up in the one week in the year where it's actually, you know, possible.\n\nA full list of tags available, both in vanilla and from this mod, can be found [here](https://github.com/atravita-mods/StardewMods/blob/main/SpecialOrdersExtended/SpecialOrdersExtended/docs/Tags.MD). If there are other tags you want, let me know by opening an issue!\n\nBecause the vanilla game is programmed to return [font=Courier New]false[/font] for any tag it doesn't understand, negated versions of each tag are also provided, letting you use [font=Courier New]!tag[/font] for any tag you want to default to [font=Courier New]true[/font]. This way, if a user does NOT install this mod and you're using a tag that is part of it, you can control whether or not the tag will default to true or false. For example: If you want a quest to show up on Y2 or later if this mod is installed, and to just show up at any time regardless, use [font=Courier New]!year1[/font]. If you want the quest to not show up at all if this mod is not installed, use [font=Courier New]atleastyear_2[/font].\n\nIf you think it'd be nice if players had, say, experience killing serpents before embarking on your quest, but it's not vital, use something like [font=Courier New]!haskilled_Serpent_under_50[/font]. If this mod's installed, the special order will not appear before 50 serpents are killed. If this mod isn't, it'll show up regardless.\n\nAdds a single event command: [font=Courier New]atravita_addSpecialOrder &lt;specialordername&gt;[/font], which lets you add a special order in an event.\n\nAdditionally, adds two console commands to help debug special orders. [font=Courier New]check_tag[/font] will tell you the current value of the tag in question, and [font=Courier New]special_order_pool[/font] will list every special order and tell you if the special order can currently be selected and why if not. [font=Courier New]list_available_stats[/font] will also list all the stats available to the [font=Courier New]stats[/font] tag.\n\nAlso adds a way to override the duration of special orders. Edit the asset [font=Courier New]Mods/atravita_SpecialOrdersExtended_DurationOverride[/font], which is a [font=Courier New]string-&gt;int[/font] dictionary corresponding to the special order quest keys to the duration. Use [font=Courier New]-1[/font] to refer to an infinite duration.\n\nFinally, adds dialogue keys. Their documentation can be found [here](https://github.com/atravita-mods/StardewMods/blob/main/SpecialOrdersExtended/SpecialOrdersExtended/docs/DialogueKeys.MD).\n\n[Changelog](https://github.com/atravita-mods/StardewMods/blob/main/SpecialOrdersExtended/SpecialOrdersExtended/docs/CHANGELOG.MD) and [source](https://github.com/atravita-mods/StardewMods/blob/main/SpecialOrdersExtended/SpecialOrdersExtended).\n\nConfiguration\nRun SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) to configure.\n\n*   [font=Courier New]SurpressUnnecessaryBoardUpdates[/font] prevents the board from trying to update if it's not unlocked yet. Disable this if it causes issues.\n\n*   [font=Courier New]UseTagCache[/font] will use a small internal cache to prevent recalculating tags often.\n\n*   [font=Courier New]AvoidRepeatingQiOrders[/font] will cause completed Qi orders to never appear on the board UNLESS you've finished all of them. Primarily put this one in because I got tired of waiting for Danger in the Deep to show up.\n\nKnown issues:\n\n1.  I suspect (but am not absolutely sure) that if you complete two ship orders at the same time, only one will finish. This should only rarely happen in vanilla because there's only a few quests with ship requirements or have multi-week duration, but if you add a lot of multi-week ship orders you may run into this as well. This mod doesn't affect that part of the code though - it just patches CheckTag.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1086743",
+	"Version": null,
+	"Updated": "2023-01-10T14:33:53.977+00:00",
+	"Downloads": [
+		{
+			"Id": 1313127,
+			"Type": "Main",
+			"DisplayName": "Special Orders Tags Extended",
+			"FileName": "Special Orders Tags Extended.zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.1+/AtraCore 0.1.2",
+			"Version": "1.1.1",
+			"SizeInBytes": 60062,
+			"Uploaded": "2023-01-10T14:33:53.975+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.SpecialOrdersExtended",
+					"DisplayName": "Special Orders Tags Extended",
+					"Type": "Smapi",
+					"RelativePath": "SpecialOrdersExtended",
+					"Manifest": {
+						"Name": "Special Orders Tags Extended",
+						"Description": "Extends the number of tags available for special orders",
+						"Author": "atravita",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "SpecialOrdersExtended.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.1.2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9855",
+							"ModDrop:1086743"
+						],
+						"UniqueId": "atravita.SpecialOrdersExtended"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "69919559679d4530410efee64b5f0448",
+				"md5In": "7aac4abab1ca016a865305f374c03100",
+				"scriptType": 0,
+				"sha256Ex": "1bed156856177b1fe1342a40262c31297a148764c071944708ad7139515f043c",
+				"sha256In": "eca3e6867ef2165f05ca628047cba42ab6b01c1b6716ca6ceb3ad7511ad0352e"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1642156263767,
+		"DateUpdated": 1673361233977,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1642156229407,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1086743/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1086743/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1086743/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1086743/icon_original"
+		},
+		"nexusModID": 9855,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 249973
+	}
+}

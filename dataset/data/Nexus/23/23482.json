@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 23482,
+	"Name": "BulkStaircases2.0",
+	"Author": "bananafruit476",
+	"AuthorLabel": "BananaFruit",
+	"Description": "[b]BulkStaircases[/b] is a [url=https://stardewvalley.net/]Stardew Valley[/url] mod which lets you use multiple [url=https://stardewvalleywiki.com/Staircase]staircases[/url] at once.\n<br />\n<br />[size=5]Install[/size]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Unzip the mod folder into Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Use[/size]\n<br />Press [Shift] + [C] (configurable) to descend mine levels while having staircases in inventory.\n<br />Special levels (e.g. treasure rooms, infested levels,... ) can be configured to not be skipped. By default, all [b]special levels will not be skipped[/b].\n<br />\n<br />[size=5]Configure[/size]\n<br />[size=4]config.json[/size]\n<br />The mod creates a `config.json` file in its mod folder the first time you run it. You can open that\n<br />file in a text editor to configure the mod as well as use ingame\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]. Some options are only available via text editing.\n<br />\n<br />These are the available settings:\n<br />\n<br />[i]\uFEFFNumberOfStaircasesToLeaveInStack[/i]\n<br />Default `0`. Number of staircases that will not be used. In case you may want to use those manually later.\n<br />\n<br />[i]MaxLevelsToSkipPerUse[/i]\n<br />Default `0`. How many levels to skip maximally per use. 0 indicates no restriction.\n<br />\n<br />[i]DoNotSkipSkullCavernLevels[/i]\n<br />Default `[100, 200, 300]`. Which skull cavern levels are not to be skipped.\n<br />\n<br />DoNotSkipMineLevels\n<br />Default `[]`. Which mine levels are not to be skipped.\n<br />\n<br />[i]SkipDinosaurLevels[/i]\n<br />Default `false`. Whether to skip prehistoric floors.\n<br />\n<br />[i]SkipTreasureLevels[/i]\n<br />Default `false`. Whether to skip levels with a treasure.\n<br />\n<br />[i]SkipQuarryDungeonLevels[/i]\n<br />Default `false`. Whether to skip quarry dungeon levels that may appear after having been to the quarry mine.\n<br />\n<br />[i]SkipSlimeLevels[/i]\n<br />Default `false`. Whether to skip slime infested levels.\n<br />\n<br />[i]SkipMonsterLevels[/i]\n<br />Default `false`. Whether to skip monster infested levels.\n<br />\n<br />[i]SkipMushroomLevels[/i]\n<br />Default `false`. Whether to skip mushroom levels.\n<br />\n<br />[i]MonsterFilters[/i]\n<br />Default empty. Dictionary containing monster names and the minimum number of \n<br />these monsters being present for a level not to be skipped.\n<br />For example, the entry\n<br />[code]\uFEFF\u00A0 \"MonsterFilters\": {\n<br />\u00A0\u00A0\u00A0 \"Iridium Bat\": 3,\n<br />\u00A0\u00A0\u00A0 \"Pepper Rex\": 2,\n<br />\u00A0\u00A0\u00A0 \"Dust Spirit\": 5\n<br />\u00A0 },\n<br />[/code]won't skip levels that contain at least 3 Iridium Bats or at least 2 Pepper Rex or at least 5 Dust Spirits.\n<br />[b]!Warning![/b]\n<br />The monster names must be taken from &lt;StardewValleyFolder&gt;&#92;Content (unpacked)&#92;Data&#92;Monsters.json\n<br />For example Dust Sprites are called \"Dust Spirit\" internally.\n<br />\n<br />[i]NodeFilters\n<br />[/i]Default\n<br />[code]\uFEFF\u00A0 \"NodeFilters\": {\n<br />\u00A0 \u00A0 \"Iridium Node\": 0,\n<br />\u00A0 \u00A0 \"Radioactive Node\": 0\n<br />\u00A0 },\n<br />[/code]Adjust the number of these nodes to not skip levels that have at least that many nodes available. For example if you don't want to skip levels with at least 5 iridium nodes or at least 3 radioactive nodes, the settings would be:\n<br />[code]\uFEFF\u00A0 \"NodeFilters\": {\n<br />\u00A0 \u00A0 \"Iridium Node\": 5,\n<br />\u00A0 \u00A0 \"Radioactive Node\": 3\n<br />\u00A0 },[/code]\n<br />\n<br />[i]ToggleKey[/i]\n<br />The configured controller, keyboard, and mouse buttons (see [url=https://stardewvalleywiki.com/Modding:Key_bindings]key bindings[/url]).\n<br />You can separate multiple buttons with commas. The default value is `LeftShift + C` to descend the levels.\n<br />\n<br />[url=https://github.com/BananaFruit476/BulkStaircases]Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23482",
+	"Version": "2.0.1",
+	"Updated": "2025-08-19T07:52:22+00:00",
+	"Downloads": [
+		{
+			"Id": 140514,
+			"Type": "Main",
+			"DisplayName": "BulkStaircases",
+			"FileName": "BulkStaircases-23482-2-0-1-1755589942.zip",
+			"Description": "",
+			"Version": "2.0.1",
+			"SizeInBytes": 20817,
+			"Uploaded": "2025-08-19T07:52:22+00:00",
+			"Mods": [
+				{
+					"Id": "BananaFruit.BulkStaircases",
+					"DisplayName": "Bulk Staircases",
+					"Type": "Smapi",
+					"RelativePath": "BulkStaircases",
+					"Manifest": {
+						"Name": "Bulk Staircases",
+						"Description": "Use staircases in bulk",
+						"Author": "BananaFruit",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BulkStaircases.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:23482"
+						],
+						"UniqueId": "BananaFruit.BulkStaircases"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342527202,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410170,
+		"UploaderId": 204793517,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

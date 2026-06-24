@@ -1,0 +1,100 @@
+{
+	"Site": "Nexus",
+	"Id": 10945,
+	"Name": "NPC Hair Dye",
+	"Author": "violetlizabet",
+	"Description": "[size=6][color=#F50F00]C[/color] [color=#F58200]O[/color] [color=#FEF727]L[/color] [color=#24EB24]O[/color] [color=#24BEEB]R[/color] [color=#AC62E3]S[/color][/size]\n<br />[size=3]A new craze is sweeping Pelican Town—all the villagers are getting their hair dyed! From a [color=#E8AF7F]subtle light brown[/color] to a [color=#FF3AD5]vibrant neon pink[/color] to a [color=#38BB34]lovely deep green[/color], everyone is sporting new colors! A highly flexible and configurable mod to let you change the hair color of any NPC in the game.\u00A0[/size]\n<br />\n<br />[size=5][u]What This Mod Does[/u][/size]\n<br />This mod allows you to dye any villager's hair any color, via config options. It uses ImagEd to take the existing hair color and shade it whatever color you select in the hair color config option for each villager.\u00A0\n<br />\n<br />[u][size=5]Possible Mod Uses[/size][/u][list]\n<br />[*]Give everyone a bright neon hair color\n<br />[*]Natural hair colors for everyone\n<br />[*]Reduce the number of redheads in town\n<br />[*]Make everyone a redhead\n<br />[*]Distinguish villagers more easily\n<br />[*]Give your least favorite characters ugly hair colors\n<br />[*]Give your favorite characters the prettiest colors\n<br />[/list]If you come up with a configuration you really like, you're welcome to upload the config.json so that other people can use it.\u00A0\n<br />\n<br />[size=5][u]How to Configure[/u][/size]\n<br />[size=3]There are a few main config options:\n<br />[/size][list]\n<br />[*]\uFEFF[b][size=3]LightweightMode[/size][/b]: This\uFEFF turns off some hair edits to improve load times. Setting this to\u00A0true may cause visual inconsistencies, especially during events. By default, it is false.\n<br />[*][b][size=3]AutoCompat[/size][/b]:\u00A0Automatically turns off hair recolors for characters when you have a specific hair recolor mod installed for them, based on a list of known CP hair recolor mods. By default, it is true.\n<br />[*][b][size=3]ColorfulHair[/size][/b]:\u00A0Controls which NPCs have colorful hair. NPCs are selectable both individually and in groups. Selecting a group colors all hair in the group regardless of individual selections.\u00A0The default is \"[b]All[/b]\", and you can put in multiple options, separated by commas. The allowable groups are \"\uFEFF[b]All[/b]\" (every NPC), \"[b][size=2]Bachelors[/size][/b]\" (the 6 male marriage candidates), \"[b]Bachelorettes[/b]\" (the 6 female marriage candidates), \"[b]FriendableNPCs[/b]\" (non-marriageable NPCs who are friendable), and \"[b]OtherNPCs[/b]\" (non-friendable NPCs). You can also specify each NPC by name. Some NPC names that might not be obvious: \"\uFEFFMariner\", \"Mermaid\", \"MrQi\", \"ProfSnail\", \"TravelingCart\".\u00A0\n<br />[*][b][size=3]HairColor(Name)[/size][/b] for each NPC: Lets you set the hair color for each NPC. Recommended format is \"#HHHHHH\" where HHHHHH is a hex code (you can use a color picker website like\u00A0[url=https://htmlcolorcodes.com]https://htmlcolorcodes.com[/url]\uFEFF to find the hex code for the color you want). You can view a preview of what the characters look like with the default colors in the images tab of the mod page.\n<br />[/list]\n<br />For easier configuration, you can install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url], which lets you edit these from within the game. [b]I recommend you edit these from the title page only[/b], as editing within the game can cause lag when it reapplies the colors.\u00A0\n<br />\n<br />[size=5][u]Compatibility[/u][/size]\n<br />[b][color=#FB7302]This mod is not compatible with any other mods that change the shape of an NPC's hair. For easier compatibility, every NPC can be toggled on and off individually or in groups.[/color][/b] If you have a mod that already recolors a character's hair, the AutoCompat option turns off recoloring for that character, if it's one of the known mods that does that. Feel free to let me know if there's any mods that change hair color that I missed.\n<br />\n<br />I am not currently planning to add compatibility with any modded NPCs or with any other portrait mods. It took me about 40 hours to make the basic functionality of this mod, between image editing, json writing, and testing. The amount of work needed to add compatibility would be enough for another standalone mod. If you are interested in making those mods yourself, I am happy to give you tips on how to do it.\n<br />\n<br />[size=5][u]Translations[/u][/size]\n<br />Right now this mod does not have any translations provided (other than English). It is structured in the i18n format, so if you want to provide me with translation jsons based on default.json, I can include them with this mod.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10945",
+	"Version": "1.0.0",
+	"Updated": "2022-02-05T22:21:44+00:00",
+	"Downloads": [
+		{
+			"Id": 50394,
+			"Type": "Main",
+			"DisplayName": "NPC Hair Dye 1.0.0",
+			"FileName": "NPC Hair Dye 1.0.0-10945-1-0-0-1644099704.zip",
+			"Description": "Initial release with all character sprites/portraits functional, event sprites and CC sprites in separate jsons, nonfunctional emojis patches included.",
+			"Version": "1.0.0",
+			"SizeInBytes": 476904,
+			"Uploaded": "2022-02-05T22:21:44+00:00",
+			"Mods": [
+				{
+					"Id": "violetlizabet.ContentPatcher.HairDye",
+					"DisplayName": "NPC Hair Dye",
+					"Type": "ContentPack",
+					"RelativePath": "NPC Hair Dye",
+					"Manifest": {
+						"Name": "NPC Hair Dye",
+						"Description": "A mod to dye any villager's hair any color.",
+						"Author": "violetlizabet",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Candidus42.ImagEd",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Candidus42.AbigailHairDye",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "banana.GreenHairedAbigail",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Mitokandria.PinkHairedHaley",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "violetlizabet.ContentPatcher.BrownHairedJodi",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "violetlizabet.ContentPatcher.AuburnLeah",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Zushi.LeahCityStyle",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "kingliamb.DarkHairLeah",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Mymlala.MagentaLeah",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DSVTeam.AddOnPack.AirynCaroline",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DSVTeam.AddOnPack.BittybeePenny",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10945"
+						],
+						"UniqueId": "violetlizabet.ContentPatcher.HairDye"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342437082,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397633,
+		"UploaderId": 120958053,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

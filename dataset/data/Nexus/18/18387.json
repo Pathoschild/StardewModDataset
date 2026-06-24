@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 18387,
+	"Name": "Map Editor Extended",
+	"Author": "aedenthorn",
+	"Description": "This is a remake of Map Editor that adds a menu for picking tiles and adding tilesheets as well as fixing some issues with the old mod. \n<br />\n<br />\n<br />[size=5][b]Basic Usage[/b][/size]\n<br />\n<br />This mod provides a simple means of non-destructively editing a map while in-game by selecting an existing tile on the map and copying it to another tile.\n<br />\n<br />To start editing, press the activation hotkey (default [b]F10[/b]).\n<br />\n<br />To copy a tile, select a tile with the copy key (default [b]Right Mouse Button[/b], then move to the target tile and press the paste key (default [b]Left Mouse Button[/b]).\n<br />\n<br />To keep non-conflicting tile layers on the target when pasting, hold down the layer mod key (default [b]Left Shift[/b]).\n<br />\n<br />To rotate the currently copied tiles, use the rotate keys (default [b]Right[/b] and [b]Left[/b]).\u00A0 To flip instead, hold down the layer mod key (default [b]Left Shift[/b]). Flipping switches between none, horizontal, and vertical flip.\n<br />\n<br />To revert a change, highlight it and press the revert hotkey (default [b]Delete[/b]).\n<br />\n<br />To reset the current map entirely, hold down the revert modifier (default [b]Left Shift[/b]) and pres the revert hotkey.\n<br />\n<br />To stop editing, press the activation hotkey again or [b]Esc[/b].\n<br />\n<br />\n<br />[size=5][b]Advanced[/b][/size]\n<br />\n<br />[size=4][b]Custom Tile Changes[/b][/size]\n<br />\n<br />Once you have selected a tile to copy, you can use the scroll wheel or customizable scroll buttons (default [b]Up[/b] and [b]Down[/b] arrow keys) to pick a tile index from the tile's tile sheet. \n<br />\n<br />The copied tile actually can contain tiles for multiple layers, so scrolling will only change the tile index for a single layer at a time.\n<br />\n<br />To change which layer you are affecting with the scroll wheel, hold down the layer mod key\u00A0(default [b]Left Shift[/b]) while using the scroll wheel.\n<br />\n<br />For maps with multiple tile sheets, you can change the selected tile's tile sheet (for the current selected layer) by holding down the sheet mod \n<br />key\u00A0(default [b]Left Alt[/b]) while scrolling.\n<br />\n<br />Changing tile index and tile sheet will not work for animated tiles.\n<br />\n<br />\n<br />[b][size=5]Tile Menu[/size][/b]\n<br />\n<br />This mod introduces a fully-functional tile picker that reads all tilesheets for the current location and lets you select individual tiles for individual layers. To open the menu, click on the little green arrow tab on the left side of the screen, or press the menu toggle button (default [b]T[/b]) while the mod is active.\n<br />\n<br />To select a tile from a tilesheet, first set the current layer from the layers list, then select a tile from the tilesheet and it will be set for the current layer. You cannot currently add new layers with this mod, but I'll probably add that feature in the future.\n<br />\n<br />To clear a layer's tile, hover of the layer in the list and press the Remove hotkey (default [b]Delete[/b])\n<br />\n<br />You can zoom and drag the tilesheet image using the mouse.\n<br />\n<br />To add a tilesheet to the current map, press the green plus at the top of the menu. The mod will present a list of all unique tilesheets found in the game, including those added by mods. If you remove a mod after using its tilesheet, the added tiles just won't show.\n<br />\n<br />\n<br />[size=5][b]Data Storage[/b][/size]\n<br />\n<br />This mod stores map edits in JSON text files, so deleting the mod will completely erase all edits with no repercussions on your save file.\n<br />\n<br />There are three types of JSON file the mod will pull edits from:\n<br />\n<br />[list]\n<br />[*]Per-save files in a subfolder called [b]data[/b] in the mod's folder - edits in this file will only affect the corresponding save.\n<br />[*]Custom global files in a subfolder called [b]custom [/b]in the mod's folder - edits in these files will affect all saves.\n<br />[*]A single global file in the mod's folder called [b]map_data.json[/b] - edits in this file will affect all saves.\n<br />[/list]\n<br />\n<br />[b]Per-save:[/b]\n<br />\n<br />The per-save file overrides both other types of file, and files in the custom folder override the main global file.\n<br />\n<br />Per-save files are created when you first make an edit and all edits are saved to a corresponding save file, unless you turn off [b]UseSaveSpecificEdits[/b] in the config.\n<br />\n<br />\n<br />[b]Custom:[/b]\n<br />\n<br />If you want to use custom global files, you must create the [b]custom[/b] folder yourself ([b]Mods&#92;MapEdit&#92;custom&#92;[/b]).\n<br />\n<br />Custom global files can be named whatever you want - if you are given data files from others, this is where they should go. You can send someone your per-save file this way, for example.\n<br />\n<br />\n<br />[b]Global:[/b]\n<br />\n<br />Edits are stored to the main global file if [b]UseSaveSpecificEdits[/b] is off and [b]IncludeGlobalEdits[/b] is on. If both are on, edits go to the per-save file, but edits in the main global file are loaded as well.\n<br />\n<br />\n<br />You can reload map edits from the data files by activating the mod using the hotkey\u00A0(default [b]F10[/b]) and pressing the refresh key (default [b]F5[/b]).\n<br />\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />\n<br />The mod should work with all farm types, though it may have trouble editing the Farm House or maps modified by certain mods.\n<br />\n<br />The mod copies and pastes everything except the Paths layer, and includes any tile properties like warps, water, dirt, etc.\n<br />\n<br />The tile menu has limited ability to create animated tiles, but I'm not sure that's going to be easy to fully implement. Hold down shift when copying a tile from the tilesheet to add the tile as a part of an animated tile (this is experimental at the moment).\n<br />\n<br />Map edits are saved immediately to a JSON file\u00A0corresponding to the current save game\u00A0\u00A0 (or a global file if per-save edits is turned off) and are persistent as long as the mod is enabled.\n<br />\n<br />The mod probably doesn't propagate changes to other players in multiplayer.\n<br />\n<br />Tile pasting replaces all layers so if you just want to change a single layer, copy the tile from the map first, then change a layer \n<br />tile in the tile menu, then paste it back where you copied it from.\n<br />\n<br />\n<br />[b][size=5]Demonstration[/size][/b]\n<br />\n<br />Here's a video of the mod in action:\n<br />\n<br />[youtube]Z8YPZxKul7I[/youtube]\n<br />\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can customize this mod by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18387",
+	"Version": "1.4.2",
+	"Updated": "2026-01-18T16:07:28+00:00",
+	"Downloads": [
+		{
+			"Id": 153996,
+			"Type": "Main",
+			"DisplayName": "Map Editor",
+			"FileName": "Map Editor-18387-1-4-2-1768752448.zip",
+			"Description": "Changes:\n<br />\n<br />Fix for removed dictionary key",
+			"Version": "1.4.2",
+			"SizeInBytes": 44755,
+			"Uploaded": "2026-01-18T16:07:28+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MapEdit",
+					"DisplayName": "Map Editor Extended",
+					"Type": "Smapi",
+					"RelativePath": "MapEdit",
+					"Manifest": {
+						"Name": "Map Editor Extended",
+						"Description": "Enables in-game editing of map tiles.",
+						"Author": "aedenthorn",
+						"Version": "1.4.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MapEdit.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:18387"
+						],
+						"UniqueId": "aedenthorn.MapEdit"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342540684,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342405075,
+		"UploaderId": 18901754,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

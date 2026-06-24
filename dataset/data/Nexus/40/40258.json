@@ -1,0 +1,51 @@
+{
+	"Site": "Nexus",
+	"Id": 40258,
+	"Name": "MiniWhenTokens",
+	"Author": "jkysa88",
+	"Description": "Do NOT edit / delete this mod’s i18n filesDo NOT edit, replace, [b]or delete[/b] any i18n files included in this mod.\n<br />[b]If you delete them, this mod will NOT work.\n<br />[/b]\n<br />They are required files and are not meant to be used as your dialogue source.\n<br />\n<br />Important: Any dialogue you write inside this mod’s i18n will NOT work.\n<br />\n<br />Those entries exist only for reference/testing, not for real output.\n<br />\n<br />✅ Put your dialogue in your own mod’s i18n or in Content Patcher (EditData), and make sure the final displayed string contains\n<br />\n<br /> [code][[Token:...]][/code].\n<br />\n<br /> [code][[Token:...]][/code] parts.\n<br />\n<br />Supported Tokens (Mini Version Only)This mini build supports [b]only[/b] these tokens:\n<br />\n<br />1) Indoor / Outdoor[code][[IO:in]][/code] / [code][[IO:out]][/code]\n<br />[list]\n<br />[*][code]in[/code] = indoors\n<br />[*][code]out[/code] = outdoors\n<br />(also accepts [code]indoor/indoors[/code], [code]outdoor/outdoors[/code])[/list]Example:\n<br />[list]\n<br />[*][code][[IO:in]]It's indoors.[/code]\n<br />[*][code][[IO:out]]It's outside.[/code]\n<br />[/list][line]2) Time[code][[T:...]][/code]\n<br />Time checks are based on [b]current game time[/b] ([code]Game1.timeOfDay[/code]).\n<br />Presets[list]\n<br />[*][code][[T:morning]][/code] : 06:00–11:59\n<br />[*][code][[T:noon]][/code] : 12:00–12:59\n<br />[*][code][[T:afternoon]][/code]\n<br /> : 13:00–17:59[*][code][[T:evening]][/code] : 18:00–21:59\n<br />[*][code][[T:night]][/code] : 22:00–05:59 (wraps past midnight)\n<br />[/list]Negation[list]\n<br />[*][code][[T:!night]][/code] : shows only if it’s [b]NOT[/b] night\n<br />[*][code][[T:!morning]][/code] : shows only if it’s [b]NOT[/b] morning\n<br />[/list]Numeric comparisons (HHMM, 24h)[list]\n<br />[*][code][[T:&gt;=1800]][/code] : 18:00 or later\n<br />[*][code][[T:&lt;0900]][/code] : before 09:00\n<br />[*][code][[T:==1200]][/code] : exactly 12:00\n<br />[/list]Ranges (HHMM-HHMM)[list]\n<br />[*][code][[T:0600-0900]][/code] : 06:00–09:00\n<br />[*][code][[T:2300-0200]][/code] : 23:00–02:00 (wraps past midnight)\n<br />[/list]OR conditions (comma-separated)[list]\n<br />[*][code][[T:morning,evening]][/code] : morning [b]or[/b] evening\n<br />[*][code][[T:&gt;=2200,&lt;0600]][/code] : 22:00+ [b]or[/b] before 06:00 (numeric “night”)\n<br />[/list][line]3) Location[code][[L:...]][/code]\n<br />Checks the player’s [b]current location[/b] using simple keywords.\n<br />Examples:\n<br />[list]\n<br />[*][code][[L:town]]...[/code]\n<br />[*][code][[L:farm]]...[/code]\n<br />[*][code][[L:saloon]]...[/code]\n<br />[*][code][[L:forest]]...[/code]\n<br />[/list]Note: Location matching is [b]loose/keyword-based[/b] (mini implementation).\n<br />[line]4) NPC Heart Level (Speaker)[code][/code][b]4) NPC Heart Level (Friendship Hearts)[/b]\n<br />[code][[H:...]][/code]\n<br />By default, this checks the [b]speaker NPC’s[/b] heart level:\n<br />[list]\n<br />[*][code][[H:&gt;=8]]...[/code]\n<br />[/list]✅ This mod also supports checking [b]a specific NPC by name[/b] (not necessarily the speaker):\n<br />[list]\n<br />[*][code][[H:Shane&gt;=8]]...[/code]\n<br />[*][code][[H:Alex&lt;4]]...[/code]\n<br />[/list]This checks the player’s friendship hearts with that named NPC, even if someone else is speaking.\n<br />[[H:Shane&gt;=8]]Shane trusts you enough. II Default\n<br />[line]5) Nearby NPC[code][[NPCNear:...]][/code]\n<br />Checks whether specific NPCs are near the player.\n<br />Examples:\n<br />[list]\n<br />[*][code][[NPCNear:Haley]]...Haley is\u00A0within 5 tiles.\n<br />[/code]\n<br />[*][code][[NPCNear:Haley,Alex,r=8]]...Haley and Alex is\u00A0within 8 tiles.\n<br />[/code]\n<br />[/list][code]r=8 is\u00A0within 5 tiles,\n<br />[/code] \uFEFF[[NPCNear:Gus,this scope=loc]]Gus is currently on the map.\n<br />\n<br />\n<br />[line]How Token Combining Works (AND)If you place multiple tokens in a row, they work as [b]AND[/b]:\n<br />[list]\n<br />[*]All conditions must match for the text to show.\n<br />[*]Order does not matter.\n<br />[/list]Example:\n<br />[code][[L:forest]][[IO:in]][[T:morning]]Inside Marnie’s Ranch in the morning.[/code]\n<br />[line]How [code]II[/code] Works (Branching / First Match Wins)You can place multiple candidates in one line using [b][code]II[/code][/b]:\n<br />[list]\n<br />[*]The mod checks candidates [b]from left to right[/b]\n<br />[*]The [b]first matching[/b] candidate is shown\n<br />[/list]Example:\n<br />[code][[T:morning]]Morning II [[L:forest]][[IO:in]]Forest interior (Marnie’s Ranch) II [[L:forest]][[IO:out]]Cindersap Forest (outdoors) II Default[/code]\n<br />[line]Quick Examples[list]\n<br />[*]Indoor/Outdoor\n<br />[code][[IO:in]]Indoors.[/code][code][[IO:out]]Outdoors.[/code][*]Time\n<br />[code][[T:&gt;=1800]]After 6 PM.[/code][code][[T:2300-0200]]Late night.[/code][*]Location\n<br />[code][[L:saloon]]Crowded here.[/code][*]Heart\n<br />[code][[H:&gt;=8]]Okay, you can talk now.[/code][*]Nearby NPC\n<br />[code][[NPCNear:Alex,r=5]]Alex is working out again?[/code][/list][line]FAQ (Please Read Before Asking)[b]Q: “Content Patcher says there is no content.json.”[/b]\n<br />A: You installed this like a CP pack. [b]Don’t.[/b] This is a [b]SMAPI mod[/b] (DLL). Put it in your [b]Mods[/b] folder like any other SMAPI mod.\n<br />[b]Q: “Nothing happens.”[/b]\n<br />A: Make sure your dialogue line actually contains tokens like [code][[T:...]][/code] in the [b]final output text[/b] (after CP/i18n).\n<br />[b]Q: “Do I have to use i18n?”[/b]\n<br />A: No. Works with i18n or CP. It reads the final displayed dialogue string.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40258",
+	"Version": "1.0.0.",
+	"Updated": "2025-12-13T18:26:31+00:00",
+	"Downloads": [
+		{
+			"Id": 150530,
+			"Type": "Main",
+			"DisplayName": "MiniWhenToken",
+			"FileName": "MiniWhenToken-40258-1-1-0-1765650391.zip",
+			"Description": "Mini Version",
+			"Version": "1.1.0",
+			"SizeInBytes": 30627,
+			"Uploaded": "2025-12-13T18:26:31+00:00",
+			"Mods": [
+				{
+					"Id": "Heeya.MiniWhenTokens",
+					"DisplayName": "MiniWhenTokens",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "MiniWhenTokens",
+						"Description": "Mini token engine",
+						"Author": "Heeya",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MiniWhenTokens.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Heeya.MiniWhenTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537218,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426946,
+		"UploaderId": 897634,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,123 @@
+{
+	"Site": "Nexus",
+	"Id": 7365,
+	"Name": "Stardew Valley SMAPI Mod Manager",
+	"Author": "Akago",
+	"Description": "1.4 Update:\n<br />There were some bugs to be had with multilevel directories and how to dealt with internal parts of the mod with a manifest. These have now been fixed!\n<br />\n<br />1.3 Update:\n<br />Made to manage the directories better and to fix some bugs and compatibility issues, this version should hopefully be the last one for a while, unless someone else makes a suggestion I feel would benefit the program to add. (I've said that before, haha)\n<br />\n<br />1.2.1 Update:\n<br />Just some bug fixes that were breaking the sub directory usage.\n<br />\n<br />1.2 Update:\n<br />So, another update rolls out. I'm going strong with this. I took some more suggestions from the feedback. \n<br />\n<br />The program now deals with multi-directory issues, doing so by checking each folder for a manifest.json. Any sub-directories of the folder with the manifest.json won't be counted and are considered part of that mod. The downside is the names in the listbox can get long, so I compensated for this by adding a text label below them that shows the full name of the last clicked mod.\n<br />\n<br />A button to open the Mods folder you're currently targeting has been added. (If you download the first 1.2 version, uh, forgot to rebuild after adding this. Please redownload if you don't see it)\n<br />\n<br />The update alerts are less grating. It will only alert when there's an update, or if it can't connect to the internet to check.\n<br />\n<br />There is a list of recent loadouts now. The last 20 loadouts that were saved or loaded will be under file &gt; recent loadouts.\n<br />\n<br />The bug where you had to manually enter .load is fixed.\n<br />\n<br />1.1 Update:[s]\n<br />[/s]So, there was an idea in the comments I couldn't resist adding. You can now save loadouts and load them to change the mods! Any mods not specified in the .load file will be added to their current status location (if they're disabled, they'll be put there and so on). I also fixed a bug with multiple selection moves. By the by, a detail I forgot to mention for the last update is there is an updating system. It just compares a SHA256 code embedded in the program to the key file on the github repo and will offer to link you to this page if they don't match. Simple, but effective, I hope. As always, please report any bugs and they'll be stomped as soon as I can manage. I've tried to be more thorough on my error messages so I can get plenty of info from errors. Enjoy everyone!\n<br />\n<br />[s][/s]1.0 Update:[s]\n<br />[/s]So, I found something out about SMAPI that I don't think is very well known. That is, mod folders that have a period in front of them are ignored. So, one thing I've wanted is a manager for all the mods I've loaded so I can easily switch them in and out. Finding out that SMAPI ignores these folders meant I could build a tool that would add and remove the period for me[s]. And thus, this simple mod manager was born. It was written in C# to start with, though I may do a different language since currently its only compatible with WIndows. [/s]Guess what folks! We're rocking python now to make a Mac compatible version.\n<br />\n<br />The function is fairly simple. Mods that are enabled are on the left, mods that are disabled are on the right. Select any mods that you want to change from one setting to the other and press the arrow pointing at the opposite box. The program will change the name, adding or removing the period in front depending on where its moving, and move the mod into the opposing category.[s]\n<br />\n<br />I'll be cleaning it up and working on it more as time goes on, but for now I'm quite happy with how it turned out.[/s] Big update just rolled out, I'm fairly happy with it and will be mostly doing bug fixes now.\n<br />[s]\n<br />The steam location button will automatically pull up the location \"C:&#92;Program Files (x86)&#92;Steam&#92;steamapps&#92;common&#92;Stardew Valley&#92;Mods&#92;\" or.\"C:&#92;Program Files&#92;Steam&#92;steamapps&#92;common&#92;Stardew Valley&#92;Mods&#92;\" Just for convenience sake. It will alert if it can't find either of these and you'll have to browse to your mod folder manually. [/s]The Steam button will try to locate the Stardew Valley folder whether its on Mac or Windows!\n<br />\n<br />If you're interested in the source code, https://github.com/Akaie/StardewSMAPIModManager I've uploaded it here on my Github.\n<br />\n<br />I'll be leaving the old version 0.5.0.3 up, but consider this new version 1.0. We're moving up in the world.\n<br />\n<br />Oh and it now saves the location between sessions. But on Mac, it saves this file in /Users/&lt;your user name&gt;/Library/Application Support/ so be aware if that folder doesn't exist, things may break.\n<br />\n<br />[s]Edit:\n<br />Also, I don't know what's triggering the \"Some suspicious files\" mark with Nexus. I'm including links to Virus Total for both the Mac and Windows version zips to reassure everyone.\n<br />\n<br />https://www.virustotal.com/gui/file/ed497cede5eedf53094c2de75cd33e071ff245a84540f144ac48d57dfe64f500/detection\n<br />https://www.virustotal.com/gui/file/d412f02a006c6dd19deda2201bf19028b8860c9d2c49488436775e206fa9db7c/detection\n<br />\n<br />I'm using something called pyinstaller to make the EXE files. Apparently that can trigger this because of the bootloaders sometimes being used for viruses.\n<br />\n<br />https://stackoverflow.com/questions/43777106/program-made-with-pyinstaller-now-seen-as-a-trojan-horse-by-avg\n<br />\n<br />I'm also going to submit for a false positive report with AVG and I'll post the emails in a few days when I get a reponse. If you're not comfortable using the new windows version, please stick to the old version for now.\n<br />\n<br />I may resort to keeping two versions of the code around if this can't be dealt with. Wish me luck!\n<br />\n<br />[/s]All of this is now a non-issue. I'm still going to deal with the false positive with AVG, but I found another Python to Exe compiler that does not trigger false positives! Ct_Freeze, come on down, haha.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7365",
+	"Version": "1.4",
+	"Updated": "2021-01-12T05:24:04+00:00",
+	"Downloads": [
+		{
+			"Id": 35420,
+			"Type": "Main",
+			"DisplayName": "MacOS Version - Stardew Valley SMAPI Mod Manager",
+			"FileName": "MacOS Version - Stardew Valley SMAPI Mod Manager-7365-1-4-1610428668.zip",
+			"Description": "1.4 major bug fix with multilevel sub-directories, the handling of internal parts of the mod with manifests (they are now properly ignored as SMAPI does), and general refactoring to clean things up.",
+			"Version": "1.4",
+			"SizeInBytes": 15207496,
+			"Uploaded": "2021-01-12T05:17:48+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Stardew SMAPI Mod Manager",
+					"Type": "Invalid",
+					"RelativePath": "Stardew SMAPI Mod Manager",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "Stardew SMAPI Mod Manager.app\\Contents",
+					"Type": "Invalid",
+					"RelativePath": "Stardew SMAPI Mod Manager.app\\Contents",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342422108,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 35421,
+			"Type": "Main",
+			"DisplayName": "Windows 10 x64 Version - Stardew Valley SMAPI Mod Manager",
+			"FileName": "Windows 10 x64 Version - Stardew Valley SMAPI Mod Manager-7365-1-4-1610428795.zip",
+			"Description": "1.4 major bug fix with multilevel sub-directories, the handling of internal parts of the mod with manifests (they are now properly ignored as SMAPI does), and general refactoring to clean things up.",
+			"Version": "1.4",
+			"SizeInBytes": 12668195,
+			"Uploaded": "2021-01-12T05:19:55+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "35421",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342422109,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 35422,
+			"Type": "Main",
+			"DisplayName": "Windows 10 x86 Version - Stardew Valley SMAPI Mod Manager",
+			"FileName": "Windows 10 x86 Version - Stardew Valley SMAPI Mod Manager-7365-1-4-1610428978.zip",
+			"Description": "1.4 major bug fix with multilevel sub-directories, the handling of internal parts of the mod with manifests (they are now properly ignored as SMAPI does), and general refactoring to clean things up. For you 32-bit users out there!",
+			"Version": "1.4",
+			"SizeInBytes": 11741335,
+			"Uploaded": "2021-01-12T05:22:58+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "35422",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342422110,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 35423,
+			"Type": "Main",
+			"DisplayName": "Windows 7 x86 Version - Stardew Valley SMAPI Mod Manager",
+			"FileName": "Windows 7 x86 Version - Stardew Valley SMAPI Mod Manager-7365-1-4-1610429044.zip",
+			"Description": "1.4 major bug fix with multilevel sub-directories, the handling of internal parts of the mod with manifests (they are now properly ignored as SMAPI does), and general refactoring to clean things up.",
+			"Version": "1.4",
+			"SizeInBytes": 7778572,
+			"Uploaded": "2021-01-12T05:24:04+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "35423",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342422111,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394053,
+		"UploaderId": 17295749,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

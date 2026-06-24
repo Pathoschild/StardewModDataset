@@ -1,0 +1,68 @@
+{
+	"Site": "Nexus",
+	"Id": 47496,
+	"Name": "Godly Hand - Animation Builder and Spritesheet Creator - Custom NPC Tool",
+	"Author": "Aerishiph",
+	"AuthorLabel": "CatAttack2004",
+	"Description": "[b]GODLY HAND[/b] Animation Builder — Sneak Peek Release\n<br />[BETA]\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[b]\uD83D\uDCCC Main Purpose[/b]\n<br />This is a sneak peek at two components of [b]Godly Hand[/b] — a full all-in-one NPC creator coming to Nexus. This release includes the Animation Builder and the Sprite Maker — the tools that replace the two most painful parts of building a custom NPC spritesheet.\n<br />If you have ever made a custom NPC, you know the loop. You need an animation, so you open your image editor, manually count which frame is which, write out frame numbers by hand in a JSON file, get one wrong, load the game with SMAPI, watch your NPC do something broken, go back to the JSON, fix it, reload, repeat. There is no preview. There is no way to see what you built before you are in the game.\n<br />Upload spritesheet → click frames → watch it play back → export JSON. That is the Animation Builder.\n<br />Draw frame by frame in layers → copy to sheet → export PNG. That is the Sprite Maker.\n<br />Use them together — draw your spritesheet in the Sprite Maker, export it as a PNG, load it into the Animation Builder, and build your animation sequences. The whole pipeline in one browser tab.\n<br />Interested in other modding tools? Check out the rest of the Godly Hand rollout:\n<br />[list]\n<br />[*]Coordinate Picker: https://www.nexusmods.com/stardewvalley/mods/47616[/*]\n<br />[*]Debug Commands: https://www.nexusmods.com/stardewvalley/mods/47582[/*]\n<br />[/list]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[b]⚙️ Animation Builder Features[/b]\n<br />[b]\uD83C\uDFAC Real-time animation preview at actual game speed[/b] The preview canvas plays your animation at the exact speed it will run in game — no guessing, no reloading. The game divides the speed value by 10 internally, so speed=200 runs at 20ms per frame. The preview matches this exactly. The label tells you the actual milliseconds per frame as you type.\n<br />[b]\uD83D\uDDBC️ Visual frame picker from your actual spritesheet[/b] Upload your spritesheet PNG and every frame is sliced and displayed in a grid — your actual pixels, not placeholder boxes. Blue border = selected. Green border = already in the current sequence. Click any frame to add it. Click a frame tag in the sequence panel to remove it. Edit the raw sequence by hand if you prefer.\n<br />[b]\uD83D\uDCCB Build multiple named animations[/b] One file can hold as many named animations as you need. Each has its own name, frame sequence, speed, and loop delay. Names must match your schedule entries exactly — the tool makes this visible so you don't forget.\n<br />[b]\uD83D\uDD0D Syntax check before you generate[/b] One button runs a full check before any JSON is produced. It catches missing names, empty sequences, duplicate animation names, frame numbers beyond the spritesheet bounds, and names containing spaces that would silently break schedule matching. Errors and warnings are shown clearly before you ever touch the output.\n<br />[b]\uD83D\uDCC2 Load an existing Animations.json to edit[/b] Already have an animations file? Load it directly. All animations parse into the builder ready to modify. Wrong format or broken JSON gets a clear error modal explaining exactly what went wrong — invalid JSON syntax and wrong file format are reported separately.\n<br />[b]\uD83D\uDCE5 Load JSON without a spritesheet[/b] You do not need a spritesheet loaded to check an existing file. Load any Animations.json and run the syntax checker immediately. A notice tells you that frame picking and preview require a spritesheet — but validation works standalone. Useful for auditing someone else's mod or checking an old file.\n<br />[b]⬇ Download or copy the output[/b] Generate once and get both options — [b]Download Animations.json[/b] saves the file directly to your computer, ready to drop into your mod folder. Copy puts it on your clipboard. The tool also keeps a backup of your previous output every time you regenerate, accessible with one click.\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[b]\uD83C\uDFA8 Sprite Maker Features[/b]\n<br />[b]\uD83D\uDD8C️ 16×32 pixel canvas with layer system[/b] Draw directly at the correct Stardew NPC frame size. The canvas scales up to 18px per pixel for comfortable drawing. Default layers are Skin, Hair, Clothes, and Details — each painted independently, composited together on the canvas. Add, rename, reorder, or delete layers. Toggle visibility with the eye icon.\n<br />[b]\uD83C\uDFA8 Color panel with skin tones and hair colours[/b] Three color modes — a full [b]color wheel[/b] for any custom color, a [b]skin tone swatch panel[/b] with 14 tones from pale to deep, and a [b]hair color swatch panel[/b] with 19 colors covering natural shades and fantasy options. Save any color to a personal saved swatches row that persists through your session.\n<br />[b]\uD83D\uDD32 Lasso select and move[/b] Draw a freehand selection around any pixels. The selected area lifts from the active layer and can be dragged to a new position. Apply to commit the move or cancel to restore. Everything within the selection moves as a unit.\n<br />[b]\uD83E\uDEA3 Draw, Erase, Fill, and Opacity[/b] Standard draw and erase tools plus a flood fill. Opacity slider from 1–100% blends the painted color over whatever is already on that pixel — useful for shading and color layering. Works with draw and fill.\n<br />[b]\uD83D\uDCCB Adult and Child templates[/b] Click [b]Template[/b] to open a frame picker showing all 16 frames of the adult or child base sprite — rendered from your actual template PNGs with transparent backgrounds. Select one frame and it loads into the active layer as an editable starting point. Child templates are fully supported with age-appropriate row layouts and no adult-only hardcoded slots.\n<br />[b]\uD83D\uDCC4 Sheet slots with frame reference[/b] Each frame you draw gets copied to a sheet slot. Slots are labelled with their frame number range (f0–f3, f4–f7, etc.) and the corresponding row name (Front Walk, Right Walk, Row 4, etc.) so you always know which row you are building. Edit any slot to reload it into the canvas with all layers intact.\n<br />[b]\uD83D\uDCC2 Load an existing spritesheet to edit[/b] Already have a spritesheet PNG? Load it directly. The tool validates it is 64px wide and slices it into individual frames. Each frame becomes a slot with a Base layer containing the original pixels, plus empty Hair, Clothes, and Details layers ready to paint on.\n<br />[b]⬇ Export as a valid Stardew spritesheet[/b] Download the finished sheet as a single [b]64px wide PNG[/b] with 4 frames per row — exactly the format Stardew Valley expects. Minimum height is 128px even if fewer frames are filled. Empty slots export as transparent. The file is ready to use in your mod immediately.\n<br />[b]\uD83D\uDDC2️ Assembly view[/b] Switch to the Assembly tab to see your current frame composited at 1×, 2×, 3×, 4×, and 6× zoom. Toggle layer visibility from here. Jump directly to any layer in the Draw tab by clicking it. Copy to sheet from either tab.\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[b]\uD83D\uDCE5 Installation[/b]\n<br />This tool runs entirely in your browser. There is nothing to install.\n<br />[b]HTML version — recommended for most users[/b]\n<br />[list]\n<br />[*]Download GodlyHand_AnimationBuilder.html[/*]\n<br />[*]Open it in Chrome, Firefox, or Edge[/*]\n<br />[*]Done — no setup required[/*]\n<br />[/list][b]JSX version — for Claude / React environments[/b]\n<br />[list]\n<br />[*]Download GodlyHand_AnimationBuilder.jsx[/*]\n<br />[*]Drop it into Claude.ai or any React sandbox and run it[/*]\n<br />[/list]Both versions are identical in functionality. No internet connection required after downloading.\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[b]\uD83D\uDCCB Requirements[/b]\n<br />[b]Your NPC spritesheet PNG[/b] Must be exactly [b]64px wide[/b] and a multiple of [b]32px tall[/b]. Each frame is 16×32px with 4 frames per row. If you are using the Sprite Maker to draw your spritesheet from scratch this is handled automatically. If you are bringing your own file, check the dimensions in any image editor before loading.\n<br />[b]A modern browser[/b] Chrome, Firefox, or Edge. No internet connection required after downloading the file.\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[b]\uD83D\uDC99 Shout Outs[/b]\n<br />[b]Miss Coriel — Miss Coriel's NPC Creator[/b] The 64px wide, 4 frames per row spritesheet format this tool uses follows the standard established by Miss Coriel's NPC Creator. The reference diagram in the Spritesheet Ref tab is built around this layout. [url=https://www.nexusmods.com/stardewvalley/mods/2358]→ Miss Coriel's NPC Creator[/url]\n<br />[b]Rafseazz and mamaesh — Ridgeside Village[/b] The scale and complexity of Ridgeside Village — 50+ NPCs, each with schedules and animations — is a constant reminder of what these tools are for and what they can enable. [url=https://www.nexusmods.com/stardewvalley/mods/7286]→ Ridgeside Village[/url]\n<br />[b]Claude — Anthropic[/b] Development assistant throughout. Built the animation builder, sprite maker layer system, lasso-move tool, real-time preview, syntax checker, skin tone and hair colour palettes, adult and child templates, and all export and import logic.\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />[center][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47496",
+	"Version": "1",
+	"Updated": "2026-06-16T21:36:12+00:00",
+	"Downloads": [
+		{
+			"Id": 170975,
+			"Type": "Main",
+			"DisplayName": "Godly Hand   Animation Builder",
+			"FileName": "d1/30/6e/d1306e8f-5a1e-4074-ac9b-82b73ed9e866",
+			"Description": "Contains everything you need to get started:<br /><br />• GodlyHand_AnimationBuilder.html <br />• GodlyHand_AnimationBuilder.jsx",
+			"Version": "1",
+			"SizeInBytes": 86957,
+			"Uploaded": "2026-06-12T19:06:56+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Godly Hand - Animation Builder",
+					"Type": "Invalid",
+					"RelativePath": "Godly Hand - Animation Builder",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557663,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 171512,
+			"Type": "Main",
+			"DisplayName": "Godly Hand   Animation Builder",
+			"FileName": "0e/1e/ba/0e1eba99-c861-4e9e-baf9-96ade8478313",
+			"Description": "Contains everything you need to get started:\n\n• GodlyHand_AnimationBuilder.html\n• GodlyHand_AnimationBuilder.jsx",
+			"Version": "1.1",
+			"SizeInBytes": 94741,
+			"Uploaded": "2026-06-16T21:36:12+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "171512",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558200,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434184,
+		"UploaderId": 50948201,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

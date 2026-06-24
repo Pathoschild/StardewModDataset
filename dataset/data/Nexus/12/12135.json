@@ -1,0 +1,93 @@
+{
+	"Site": "Nexus",
+	"Id": 12135,
+	"Name": "Profiler",
+	"Author": "SinZ163",
+	"AuthorLabel": "SinZ",
+	"Description": "The original feature was simple logging whenever important gameloop milestones happened, logging the time since mod initialization\u00A0(both as the first handler and last, measuring time taken by all mods):\n<br />1. \"GameLaunched\" fires\n<br />2. \"LoadStagechanged\" fires (for all the intermediate lifecycles)\n<br />3. \"SaveLoaded\" fires\n<br />4. \"DayStarted\" fires\n<br />\n<br />The main feature is logging individual event handlers whenever they pass a individual time threshold (defaulted to 10ms, adjustable in config), along with the entire event taking an additional time threshold (defaulted to 100ms) and logging the time taken for every handler for the given event.\n<br />\n<br />New in 2.0 is building logical stack traces showing the stack of nested events when things exceed the timing thresholds in config, along with Content Pack support and API's to add additional event types on any C# function along with collecting optional details to add context.\n<br />\n<br />In addition, I have built a website which entirely locally in the browser can parse SMAPI Logs and when Profiler2 is present unlocks visualizations\u00A0to show the breakdown of what Profiler has logged and where certain performance spikes exist. The website will be updated in future with more features and better visualizations\u00A0[url=https://stardew.361zn.is/]Stardew Utilities - SinZ (361zn.is)[/url]\n<br />\n<br />\n<br />Source:\u00A0[url=https://github.com/SinZ163/StardewMods/tree/main/Profiler]StardewMods/Profiler at main · SinZ163/StardewMods (github.com)[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12135",
+	"Version": "2.0.0",
+	"Updated": "2024-01-27T00:24:40+00:00",
+	"Downloads": [
+		{
+			"Id": 64489,
+			"Type": "Optional",
+			"DisplayName": "Profiler Example Content Pack",
+			"FileName": "Profiler Example Content Pack-12135-1-0-0-beta1-1672459224.zip",
+			"Description": "@PackExample",
+			"Version": "1.0.0-beta1",
+			"SizeInBytes": 1018,
+			"Uploaded": "2022-12-31T04:00:24+00:00",
+			"Mods": [
+				{
+					"Id": "SinZ.Profiler.ExamplePack",
+					"DisplayName": "(Profiler) Example Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "[Profiler] Example Content Pack",
+					"Manifest": {
+						"Name": "(Profiler) Example Content Pack",
+						"Description": "Demonstrates how Content Packs can add logging to existing types",
+						"Author": "SinZ",
+						"Version": "1.0.0-beta1",
+						"MinimumApiVersion": "3.15.0",
+						"ContentPackFor": {
+							"UniqueId": "SinZ.Profiler"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:12135@PackExample"
+						],
+						"UniqueId": "SinZ.Profiler.ExamplePack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342451177,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 80866,
+			"Type": "Main",
+			"DisplayName": "Profiler",
+			"FileName": "Profiler Example Content Pack-12135-2-0-0-1706315080.zip",
+			"Description": "Main file for Profiler",
+			"Version": "2.0.0",
+			"SizeInBytes": 26445,
+			"Uploaded": "2024-01-27T00:24:40+00:00",
+			"Mods": [
+				{
+					"Id": "SinZ.Profiler",
+					"DisplayName": "Profiler",
+					"Type": "Smapi",
+					"RelativePath": "Profiler",
+					"Manifest": {
+						"Name": "Profiler",
+						"Description": "Logs when the game loop goes between states and when event handlers take too long",
+						"Author": "SinZ",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "Profiler.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:12135"
+						],
+						"UniqueId": "SinZ.Profiler"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342467554,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398823,
+		"UploaderId": 8420039,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

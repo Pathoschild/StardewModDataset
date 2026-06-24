@@ -1,0 +1,90 @@
+{
+	"Site": "ModDrop",
+	"Id": 1068101,
+	"Name": "Atras Interaction Tweaks - aka Stop Rug Removal",
+	"Author": "Atravita",
+	"TagLine": "A collection of little tweaks: don't pick up rugs if there's something on them! Place grass under things! Confirmation on bomb placement! Right click the butterfly hutch to spawn more butterflies! Gates no longer randomly pop off!",
+	"Description": "A collection of little tweaks: don't pick up rugs if there's something on them! Place grass under things! Confirmation on bomb placement! Right click the butterfly hutch to spawn more butterflies! Gates no longer randomly pop off!\n\nInstallation\n\n1.  Install the latest version of [SMAPI](https://smapi.io).\n\n2.  Download and install [AtraCore](https://www.nexusmods.com/stardewvalley/mods/12932).\n\n3.  Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n\n4.  Run the game using SMAPI.\nUninstallation\nSimply delete from Mods folder.\n\nConfiguration and Features.\nEither run this SMAPI with this mod installed once or use [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098). __You will need to load into a save to edit some options with GMCM.__\n\n*   Configuration option [font=Courier New]Enable[/font] disables the whole mod if needed.\n\n*   [font=Courier New]PreventRugRemoval[/font] prevents accidental removal of rugs if there's something on the rug.\n\n*   Allows placement of rugs outside, if [font=Courier New]CanPlaceRugsOutside[/font] is set to true. By default, you will not be able to plant on rugs, nor will grass spread on rugs. But there's a setting for that: [font=Courier New]PreventPlantingOnRugs[/font].\n\n*   Prevents you from removing items from tables unless the [font=Courier New]FurniturePlacementKey[/font] is held down. (Default is [font=Courier New]LeftShift + Z[/font]). You can disable this behavior by deselecting [font=Courier New]PreventRemovalFromTable[/font].\n\n*   [font=Courier New]PlaceGrassUnder[/font] lets you place grass starters under most objects, like fences. Note that this is a low-priority right click interaction, so basically anything else will take precedence. (In particular, trying to place a grass starter in the Deconstructor will deconstruct it unless the Deconstructor was processing something else). This is disabled if [Smart Building's Building Mode](https://www.nexusmods.com/stardewvalley/mods/11158) is on - that mod does a better job placing grass under things anyways.\n\n*   Prevents gates from popping off if you hold right click near them (again, unless [font=Courier New]FurniturePlacementKey[/font] is held down.)\n\n*   [font=Courier New]JukeboxesEverywhere[/font] allow jukeboxes to be played most places. (Some maps have dedicated music that will override the jukebox).\n\n*   [font=Courier New]PhoneSpeedUpFactor[/font] speeds up phone calls.\n\n*   [font=Courier New]GoldenCoconutsOffIsland[/font] allows golden coconuts to spawn from any palm tree as long as you've found one. (off by default).\n\n*   [font=Courier New]SaveBombedForage[/font] saves any forage that gets hit by a bomb - it just gets dropped next to your character instead. (off by default)\n\n*   [font=Courier New]HideCrabPots[/font] causes crab pots to be hidden during events and festivals.\n\n*   Right click any butterfly hutch to spawn another butterfly! (Not tested yet with Norman's Better Butterfly Hutch, but I read through their code and I cannot see where they'd possibly conflict. We don't touch the same methods at all...)\nBomb confirmation: By default safe areas require confirmation, and dangerous areas do not. (You can confirm for a single bomb or the map, in which case you will not be asked again until you go to a different map.) Safe areas include the farmhouses, the farm, the town, and the Ginger Island farm. Dangerous areas include the mines and volcano, Everywhere else is considered dangerous if there's a single monster on the map and safe otherwise; this is meant to cover mod-added areas. This is fully configurable (including whether or not to confirm in multiplayer separate from singleplayer). (You will need to load into a save first to configure these options though, since the locations list is not populated otherwise.)\n\nWarp confirmation: works similarly to bomb confirmation. Note: the return specter confirm is disabled if you have [Better Return Specter](https://www.nexusmods.com/stardewvalley/mods/11610) to avoid mod conflicts - you can just use that mod to return if you accidentally warp anyways.\n\nAdditional features: baby fruit trees will no longer be killed by the hoe. The volcano chests will not give out the same item twice in a row. Slot machine has bet1k and bet10k buttons. Badly formatted special orders are less likely to crash the quest menu. Children who escape the farmhouse are returned. You can ask Elliott for a non-alcoholic drink, a feature I think only I care about.\n\nAdditionally\nTranslations would be very welcome! DM me or submit a pull request.\n\n*   Much thanks to\n\n    *   Vigor for the Portuguese translation!\n\n    *   [Angel4Killer](https://github.com/angel4killer) for the Russian translation!\n\n    *   [Mistyspring](https://github.com/misty-spring) for the Spanish translation!\n\n    *   Korean translation by park4934 can be found here: https://blog.naver.com/park971202/222878509680\n\n*   [Source](https://github.com/atravita-mods/StardewMods/blob/main/StopRugRemoval/StopRugRemoval)\n\n*   [Changelog](https://github.com/atravita-mods/StardewMods/blob/main/StopRugRemoval/StopRugRemoval/docs/changelog.md)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1068101",
+	"Version": null,
+	"Updated": "2023-04-13T12:49:07.303+00:00",
+	"Downloads": [
+		{
+			"Id": 1390873,
+			"Type": "Main",
+			"DisplayName": "Atra's Interaction Tweaks (formerly StopRugRemoval)",
+			"FileName": "Atra's Interaction Tweaks (formerly StopRugRemoval).zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.2+/AtraCore 0.2.3+",
+			"Version": "1.1.3",
+			"SizeInBytes": 153839,
+			"Uploaded": "2023-04-13T12:49:07.301+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.StopRugRemoval",
+					"DisplayName": "Atra's Interaction Tweaks",
+					"Type": "Smapi",
+					"RelativePath": "StopRugRemoval",
+					"Manifest": {
+						"Name": "Atra's Interaction Tweaks",
+						"Description": "A few interaction tweaks: prevents accidental rug removal, prevents gates from popping off, and some other things.",
+						"Author": "atravita",
+						"Version": "1.1.3",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "StopRugRemoval.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.2.3",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10192",
+							"ModDrop:1068101"
+						],
+						"UniqueId": "atravita.StopRugRemoval",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "095f84761b3aabfcd8f0cc6377db5718",
+				"md5In": "fe836620d5619840150d837a09a4941c",
+				"scriptType": 0,
+				"sha256Ex": "9b7f049fa5d5c1ba9043c81dc16a6193454a47d6734469aec38169b7269601b1",
+				"sha256In": "a5ac36d3c11e86dfdb3c1201e8392062e8bf4dafea0bdc09ff52c712f77d5785"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1639601407733,
+		"DateUpdated": 1681390147303,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1639596603420,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1068101/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1068101/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1068101/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1068101/icon_original"
+		},
+		"nexusModID": 10192,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 249973
+	}
+}

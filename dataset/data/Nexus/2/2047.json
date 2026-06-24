@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 2047,
+	"Name": "Price drops",
+	"Author": "Skuld",
+	"AuthorLabel": "skuldomg",
+	"Description": "[b]NEWS[/b]\n<br />\n<br />[list]\n<br />[*][b]Updated for SMAPI 3.0. Now requires at least SMAPI 2.10.1. [/b]Thanks to Pathoschild for creating the update!\n<br />\n<br />[*]There are some bugs related to letters being sent repeatably but discounts should work properly. If you experience multiple of the same letters or other related oddities, feel free to report them.\n<br />[/list]\n<br />[b]WHAT THIS DOES\n<br />\n<br />[/b]Adds discounts to all shops if you have a good relationship with the owner. Discounts come in three levels, 10% at three hearts, 25% at seven hearts and 50% at ten hearts. Should work for all regular shops, including Robin's buildings (except for the house upgrade, planned for a later release). Robin will also offer resource discounts for buildings.\n<br />\n<br />Details on whose shops are currently affected:\n<br />\n<br />[list]\n<br />[*]Robin (buildings, ie. Coops, Silos, Barns, and so on)\n<br />[*]Robin (regular shop, ie. furniture etc.)\n<br />[*]Marnie (animals and supplies)\n<br />[*]Pierre\n<br />[*]Harvey\n<br />[*]Gus\n<br />[*]Clint (regular shop and tool upgrades)\n<br />[*]Sandy\n<br />[*]Willy\n<br />[*]Krobus\n<br />[*]Dwarf\n<br />[*]Wizard\n<br />[/list]\n<br />[b]REQUIREMENTS[/b]\n<br />\n<br />[list]\n<br />[*]Stardew Valley (1.3.x)\n<br />[*]SMAPI 2.7 or higher\n<br />[/list]\n<br />[b]COMPATIBILITY\n<br />[/b]\n<br />Should be compatible with anything that adds new shop content no problem, since this mod only updates existing prices with a discount percentage.\u00A0\n<br />Mods that edit existing prices / needed resources are likely to conflict.\n<br />\n<br />[b]CONFIGURATION\n<br />[/b]\n<br />You can change the discounts and heart levels at which they are triggered in the config.json file. They correspond to each other, ie. heartLevel1 = 3, disc1 = 10 means the player receives a 10% discount from 3 hearts upwards. Change to what you feel is fair.\n<br />\n<br />They must be in ascending order, ie. heartLevel1 and disc1 have to be the lowest values, 3 the highest. You can also use this configuration to increase prices beyond their base value, ie. heartLevel1 = 0, disc1 = 125 means the player has to pay 125% of the original price if he has 0 hearts with the store owners.\n<br />\n<br />New option for bonus discounts. Those should be minor discounts that trigger under certain circumstances, for example marrying an NPC that is related to or is a shop owner.\n<br />\n<br />You can add the names of custom NPCs with shops to the config file. Just replace the place holder strings from the customNPCs list with the names of your shop owners or add new ones (format: \"NPC1\", \"NPC2\", \"NPC3\").\n<br /> [b]Important:[/b]\u00A0The shop owner will of course have to be an NPC with which you can earn hearts.\n<br />\n<br />[b]THANKS TO\n<br />[/b]\n<br />[list]\n<br />[*]An, for writing all the letter texts!\n<br />[*]Pathoschild, who put me on the right track for accessing the shops and of course for his work on SMAPI in the first place.\n<br />[/list]\n<br />[b]TO DO\n<br />\n<br />[/b][list]\n<br />[*]Add discount for house upgrades at Robin's\n<br />[*]Possibly add various other rewards for better relationships with NPCs, ie. make Clint upgrade your tools faster etc.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2047",
+	"Version": "1.0.7",
+	"Updated": "2019-01-26T21:28:02+00:00",
+	"Downloads": [
+		{
+			"Id": 14146,
+			"Type": "Main",
+			"DisplayName": "priceDrops-v1-0-7",
+			"FileName": "priceDrops-v1-0-7-2047-1-0-7-1548538082.rar",
+			"Description": "- Update for SMAPI 3.0\n<br />- Enabled translations for letter text\n<br />- Other internal changes\n<br /><br />Thank you to Pathoschild for the update!",
+			"Version": "1.0.7",
+			"SizeInBytes": 20225,
+			"Uploaded": "2019-01-26T21:28:02+00:00",
+			"Mods": [
+				{
+					"Id": "skuldomg.priceDrops",
+					"DisplayName": "Price Drops",
+					"Type": "Smapi",
+					"RelativePath": "priceDrops",
+					"Manifest": {
+						"Name": "Price Drops",
+						"Description": "Introduces discounts at shops when the player has a good relationship with the shop owner.",
+						"Author": "skuldomg",
+						"Version": "1.0.7",
+						"MinimumApiVersion": "2.10.1",
+						"EntryDll": "priceDrops.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2047"
+						],
+						"UniqueId": "skuldomg.priceDrops"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342400834,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388735,
+		"UploaderId": 121421,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

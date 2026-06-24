@@ -1,0 +1,102 @@
+{
+	"Site": "Nexus",
+	"Id": 12836,
+	"Name": "Dynamic Dialogues framework",
+	"Author": "mistyspring",
+	"Description": "[size=3][u][b]This mod is a framework / tool for modders[/b][/u]\n<br />\n<br />\"Dynamic dialogues\" makes dialogues more customizable via CP.\n<br />Some dialogue features are only avaiable to SMAPI mods- this mod lets you use them easily.\n<br />[b]\n<br />Features:[/b]\n<br />[/size][list]\n<br />[*][size=3]Location specific dialogue[/size]\n<br />[*][size=3]Time specific dialogue[/size]\n<br />[*][size=3](+notifs)[/size]\n<br />[*][size=3]Custom greetings when passing by a NPC.[/size]\n<br />[*][size=3]Ask NPC questions (when there's nothing else to talk about).[/size]\n<br />[/list][size=3]\n<br />[b]Dialogue features:[/b]\n<br />[/size][list]\n<br />[*][size=3]Shake[/size]\n<br />[*][size=3]Emote[/size]\n<br />[*][size=3]Jump[/size]\n<br />[*][size=3]Face a new direction[/size]\n<br />[*][size=3]Say the dialogue as a bubble[/size]\n<br />[*]Force/ Sa[size=3]y dialogue when you're not in the location[/size]\n<br />[/list][size=3]\n<br />All of this fully configurable. [/size]\n<br />[size=3]\n<br />Example of a patch:[/size]\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"mistyspring.dynamicdialogues/Dialogues/Lewis\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"exampleEdit\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Time\": \"630\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Dialogue\": \"@?! It's 6:30!\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"IsBubble\": \"true\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"ClearOnMove\": \"true\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Jump\": \"true\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Shake\": 1000\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 }\n<br />[/code]\n<br />[size=3][url=https://github.com/misty-spring/StardewMods/tree/main/DynamicDialogues]Documentation and source code[/url] are avaiable in github.[/size]\n<br />\n<br />[size=3]\n<br />[url=https://ko-fi.com/mistyspring]\n<br />[/url][url=https://ko-fi.com/mistyspring][img]https://64.media.tumblr.com/1e06bee51b073224105aadd3b2df00bb/ce5c30fe86a2d83a-c5/s250x400/f2322c0d678a64c3d09bdf7cee5599b2003109ad.png[/img][/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12836",
+	"Version": "1.7.2",
+	"Updated": "2025-01-21T23:45:36+00:00",
+	"Downloads": [
+		{
+			"Id": 57156,
+			"Type": "Optional",
+			"DisplayName": "CP example",
+			"FileName": "Example content pack-12836-1-0-0-1657347353.zip",
+			"Description": "contains patches shown in the video demo, and some more.",
+			"Version": "1.0.0",
+			"SizeInBytes": 1296,
+			"Uploaded": "2022-07-09T06:15:53+00:00",
+			"Mods": [
+				{
+					"Id": "mistyspring.testpackfordd",
+					"DisplayName": "Example",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Dialogues test",
+					"Manifest": {
+						"Name": "Example",
+						"Description": "Example content pack for Dynamic Dialogues.",
+						"Author": "mistyspring",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.14.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mistyspring.dynamicdialogues",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:12836"
+						],
+						"UniqueId": "mistyspring.testpackfordd"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342443844,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 123057,
+			"Type": "Main",
+			"DisplayName": "Dynamic Dialogues framework",
+			"FileName": "Dynamic Dialogues framework-12836-1-7-2-1737503136.zip",
+			"Description": "For changes, see [url=https://github.com/misty-spring/StardewMods/blob/main/DynamicDialogues/Changes%20for%201.6.md]here[/url]",
+			"Version": "1.7.2",
+			"SizeInBytes": 59822,
+			"Uploaded": "2025-01-21T23:45:36+00:00",
+			"Mods": [
+				{
+					"Id": "mistyspring.dynamicdialogues",
+					"DisplayName": "Dynamic dialogues framework",
+					"Type": "Smapi",
+					"RelativePath": "DynamicDialogues",
+					"Manifest": {
+						"Name": "Dynamic dialogues framework",
+						"Description": "Framework which allows for more dynamic dialogues.",
+						"Author": "mistyspring",
+						"Version": "1.7.2",
+						"MinimumApiVersion": "4.0.0-alpha",
+						"EntryDll": "DynamicDialogues.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"nexus:12836"
+						],
+						"UniqueId": "mistyspring.dynamicdialogues"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509745,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399524,
+		"UploaderId": 130944333,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

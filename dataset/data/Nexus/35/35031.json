@@ -1,0 +1,78 @@
+{
+	"Site": "Nexus",
+	"Id": 35031,
+	"Name": "AutoTranslator",
+	"Author": "mahsouto",
+	"Description": "[size=6][b][center]AutoTranslator - A\uFEFFI-Powered i18n Translation Mod[/center][/b][/size]\n<br />AutoTranslator is a completely redesigned SMAPI mod that specializes in automatic translation of mod i18n files using multiple AI providers. Now more stable, faster, and accurate than ever before.\n<br />\n<br />[size=5][b]Key Features[/b][/size]\n<br />\n<br />[size=4][b]i18n Specialization[/b][/size]\n<br />• [b]i18n-only translations[/b] - Removed unstable dynamic asset features\n<br />• [b]Automatic source language detection[/b] - Doesn't assume everything is in English\n<br />• [b]Support for `default/` structure[/b] - Translates complete `i18n/default/` folders\n<br />• [b]Token preservation[/b] - Keeps variables like `$query`, `{{player}}`, `{0}` untranslated\n<br />\n<br />[size=4][b]Multiple AI Providers[/b][/size]\n<br />• [b]OpenAI[/b] - GPT-4o-mini (recommended)\n<br />• [b]DeepSeek[/b] - deepseek-chat model\n<br />• [b]Anthropic[/b] - Claude 3.5 Sonnet\n<br />• [b]Google[/b] - Gemini 1.5 Pro\n<br />\n<br />[size=4][b]Smart Updates[/b][/size]\n<br />• [b]Smart Updates[/b] - Only translates modified files or new keys\n<br />• [b]Change detection[/b] - Automatically compares modification dates\n<br />• [b]Partial translation[/b] - Adds only missing keys\n<br />• [b]Case-sensitive comparisons[/b] - Prevents duplicate keys\n<br />\n<br />[size=4][b]Robustness and Stability[/b][/size]\n<br />• [b]Robust error handling[/b] - Detailed logs and automatic recovery\n<br />• [b]Key validation[/b] - Prevents dictionary errors\n<br />• [b]Safe JSON loading[/b] - Consistent handling of corrupted files\n<br />• [b]Automatic retries[/b] - Fallback system for API errors\n<br />\n<br />[size=5][b]Supported Formats[/b][/size]\n<br />\n<br />[size=4][b]Traditional Format[/b][/size]\n<br />[code]\n<br />YourMod/\n<br />├── i18n/\n<br />│   ├── default.json  (or en.json)\n<br />│   └── es.json       (generated automatically)\n<br />[/code]\n<br />\n<br />[size=4][b]New `default/` Format[/b][/size]\n<br />[code]\n<br />YourMod/\n<br />├── i18n/\n<br />│   ├── default/\n<br />│   │   ├── items.json\n<br />│   │   ├── quests.json\n<br />│   │   └── dialogue.json\n<br />│   └── es/          (generated automatically)\n<br />│       ├── items.json\n<br />│       ├── quests.json\n<br />│       └── dialogue.json\n<br />[/code]\n<br />\n<br />[size=5][b]Quick Setup[/b][/size]\n<br />\n<br />[size=4][b]Minimal Configuration (OpenAI)[/b][/size]\n<br />[code]\n<br />{\n<br />  \"AIProvider\": \"openai\",\n<br />  \"OpenAIApiKey\": \"your-api-key-here\",\n<br />  \"OpenAIModel\": \"gpt-4o-mini\",\n<br />  \"UseGeneralLocale\": true,\n<br />  \"EnableSmartUpdates\": true,\n<br />  \"VerboseI18nLogging\": false\n<br />}\n<br />[/code]\n<br />\n<br />[size=4][b]DeepSeek Configuration (Budget-Friendly)[/b][/size]\n<br />[code]\n<br />{\n<br />  \"AIProvider\": \"deepseek\",\n<br />  \"DeepSeekApiKey\": \"your-api-key-here\",\n<br />  \"DeepSeekModel\": \"deepseek-chat\",\n<br />  \"CallDelayMs\": 500\n<br />}\n<br />[/code]\n<br />\n<br />[size=4][b]Anthropic Configuration (High Quality)[/b][/size]\n<br />[code]\n<br />{\n<br />  \"AIProvider\": \"anthropic\",\n<br />  \"AnthropicApiKey\": \"your-api-key-here\",\n<br />  \"AnthropicModel\": \"claude-3-5-sonnet-20240620\",\n<br />  \"CallDelayMs\": 1000\n<br />}\n<br />[/code]\n<br />\n<br />[size=4][b]Google Gemini Configuration (Versatile)[/b][/size]\n<br />[code]\n<br />{\n<br />  \"AIProvider\": \"google\",\n<br />  \"GoogleApiKey\": \"your-api-key-here\",\n<br />  \"GoogleModel\": \"gemini-1.5-pro\",\n<br />  \"CallDelayMs\": 600\n<br />}\n<br />[/code]\n<br />\n<br />[size=5][b]How to Use[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install the mod in your `Mods/` folder\n<br />[*]Configure your AI provider and API key in `config.json`\n<br />[*]Start Stardew Valley and load a save file\n<br />[*]The mod will automatically detect and translate i18n files from all mods\n<br />[*]Translations are saved as physical files (no cache)\n<br />[/list]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />• [b]API Key[/b] from at least one supported provider\n<br />\n<br />[size=5][b]Pro Tips[/b][/size]\n<br />\n<br />• [b]OpenAI GPT-4o-mini[/b] offers the best quality-to-price ratio\n<br />• [b]DeepSeek[/b] is extremely cost-effective for large volumes\n<br />• [b]Enable `EnableSmartUpdates`[/b] for automatic mod updates\n<br />• [b]Use `VerboseI18nLogging: true`[/b] for debugging\n<br />• [b]Configure `CallDelayMs`[/b] according to your API limits\n<br />\n<br />[size=5][b]Links[/b][/size]\n<br />\n<br />• [url=https://platform.openai.com/api-keys]OpenAI API Keys[/url]\n<br />• [url=https://platform.deepseek.com/api_keys]DeepSeek API Keys[/url]\n<br />• [url=https://console.anthropic.com/]Anthropic Claude API[/url]\n<br />• [url=https://aistudio.google.com/app/apikey]Google Gemini API Keys[/url]\n<br />\n<br />[line]\n<br />[b]Support\u00A0[/b]\n<br />[center]If you enjoy AutoTranslator and want to support development, please consider a small contribution:\n<br />\n<br />[url=https://ko-fi.com/mahs223778][/url][url=https://ko-fi.com/mahs223778][/url][url=https://ko-fi.com/mahs223778][img]https://cdn.ko-fi.com/cdn/kofi5.png?v=2[/img]\n<br />[/url]\n<br />\n<br />[b]Ko-fi:[/b] https://ko-fi.com/mahs223778\n<br />\n<br />Your support helps maintain and improve this mod. Thank you! \uD83D\uDE4F\n<br />\n<br />[size=4][b]⭐ Like the mod? Leave an endorsement and share![/b][/size][/center]\n<br />[line]\n<br />[b]Notes[/b]\n<br />[list]\n<br />[*]The description has been translated from Spanish.\n<br />[/list]\n<br />\n<br />[b]Documentation:[/b] Full setup guide included in download\n<br />\n<br />[quote][b]Note:[/b] This mod requires API access to translation services. Usage costs depend on your chosen provider and translation volume. Always monitor your API usage and set spending limits on provider dashboards.[/quote]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35031",
+	"Version": "2.0.2",
+	"Updated": "2025-09-09T19:48:20+00:00",
+	"Downloads": [
+		{
+			"Id": 142560,
+			"Type": "Optional",
+			"DisplayName": "config.json",
+			"FileName": "config.json-35031-1-0-0-1757431649.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 546,
+			"Uploaded": "2025-09-09T15:27:29+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "142560",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342529248,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 142591,
+			"Type": "Main",
+			"DisplayName": "AutoTranslate",
+			"FileName": "AutoTranslate-35031-2-0-2-1757447300.zip",
+			"Description": "v2.0.2:\n<br />\n<br /> i18n translation only. \n<br />\n<br />Smart file updates. \n<br />\n<br />Fixed duplicate keys. \n<br />\n<br />Auto-capitalized locale folders. \n<br />\n<br />Better AI prompts. 70% faster, 60% less memory. \n<br />\n<br />Removed unstable features for maximum stability.\n<br />\n<br />\n<br />\n<br />See Changelog",
+			"Version": "2.0.2",
+			"SizeInBytes": 1185672,
+			"Uploaded": "2025-09-09T19:48:20+00:00",
+			"Mods": [
+				{
+					"Id": "mahsouto.AutoTranslator",
+					"DisplayName": "AutoTranslator",
+					"Type": "Smapi",
+					"RelativePath": "AutoTranslator",
+					"Manifest": {
+						"Name": "AutoTranslator",
+						"Description": "Automatically translates Stardew Valley mods, game assets, and Content Patcher content using multiple AI providers (OpenAI, DeepSeek, Anthropic, Google Gemini). Supports i18n files, EditAsset interception, and real-time Content Patcher translation with intelligent caching.",
+						"Author": "mahsouto",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AutoTranslator.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:35031"
+						],
+						"UniqueId": "mahsouto.AutoTranslator"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342529279,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421719,
+		"UploaderId": 206125728,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

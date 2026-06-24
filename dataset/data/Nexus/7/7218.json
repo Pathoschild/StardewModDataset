@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 7218,
+	"Name": "ImagEd",
+	"Author": "candidus42",
+	"Description": "Provides the token\u00A0ImageEd/Recolor which takes an image to recolor and optionally a mask and a desaturation mode. The final image loaded by ContentPatcher is created as following:\n<br />\n<br />[list]\n<br />[*]The source image is loaded, either from content pack or from game content.\n<br />[*]A sub image of the source image is extracted using the given mask. If no mask is given, a copy is created.\n<br />[*]The extracted sub image is optionally desaturized using the given mode (HSV, HSL, HSI or Luma, see\u00A0[url=https://en.wikipedia.org/wiki/HSL_and_HSV]HSL_and_HSV[/url]\u00A0for details on the algorithms).\n<br />[*]The desaturized image is multiplied with the given color.\n<br />[*]The result is written to disk so it can loaded by ContentPatcher.\n<br />[/list]\n<br />ImagEd/Recolor takes up to 8 arguments:\n<br />\n<br />[list=1]\n<br />[*]Content pack that uses recoloring. This is usually the content pack that contains the current config.json but a custom CP token doesn't have that information so we must provide it.\n<br />[*]Asset name.\n<br />[*]Source image or \"gamecontent\" to load a vanilla asset.\n<br />[*]Mask image or \"none\". Mask is supposed to be a grayscale image so we always desaturate it (mode is DesaturateLuma).\n<br />[*]Blend color in #RRGGBB format ([Hex triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet)). The non-standard format #RRGGBBAA is supported to set an alpha value.\n<br />[*]Desaturation mode: DesaturateHSV, DesaturateHSL, DesaturateHSI, DesaturateLuma or None. This is an optional argument, default is None.\n<br />[*]Flip mode: FlipHorizontally, FlipVertically, FlipBoth or None. This is an optional argument, default is None. Attention: This feature is not useful in most cases, especially not for NPCs. The whole image is flipped so if you flip a sprite sheet all sprite indexes are wrong afterwards. Also keep in mind that the flipped image is always a combination of base image and overlay because flipping an overlay without its base image wouldn't make sense. Nonetheless you can do cool things with flipping. You have been warned :-)\n<br />[*]Brightness: Float value that will be multiplied with the extracted image before color blending. Use a value bigger than 1.0 to brighten the image. This is an optional argument, default is 1.0.\n<br />[/list]\n<br />Source code and examples on [url=https://github.com/mus-candidus/ImagEd]GitHub\n<br />[/url]\n<br />For a mod that actually uses this, see [url=https://www.nexusmods.com/stardewvalley/mods/5218]Random Flower Queen[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7218",
+	"Version": "1.4.0",
+	"Updated": "2022-09-15T17:24:01+00:00",
+	"Downloads": [
+		{
+			"Id": 60336,
+			"Type": "Main",
+			"DisplayName": "ImagEd",
+			"FileName": "ImagEd-7218-1-4-0-1663262641.zip",
+			"Description": "Minimum SMAPI version is 3.14 now, fixed SMAPI deprecation warnings for future compatibility. No longer compatible with SDV 1.4 .",
+			"Version": "1.4.0",
+			"SizeInBytes": 20752,
+			"Uploaded": "2022-09-15T17:24:01+00:00",
+			"Mods": [
+				{
+					"Id": "Candidus42.ImagEd",
+					"DisplayName": "ImagEd",
+					"Type": "Smapi",
+					"RelativePath": "ImagEd",
+					"Manifest": {
+						"Name": "ImagEd",
+						"Description": "Provides image recoloring for CP",
+						"Author": "Candidus42",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "ImagEd.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.26.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 7218"
+						],
+						"UniqueId": "Candidus42.ImagEd"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342447024,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393906,
+		"UploaderId": 75865403,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

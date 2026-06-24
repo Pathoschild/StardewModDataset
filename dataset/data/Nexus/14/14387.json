@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 14387,
+	"Name": "Light Mod",
+	"Author": "aedenthorn",
+	"Description": "[size=5][b]Light Manipulation\n<br />[/b][/size]\n<br />To adjust the intensity of an object's light source, hover over its base tile and use the scroll wheel. For smaller incremental changes, hold down [b]Left Shift[/b] or for even smaller changes\u00A0[b]Left Control. [/b]This also works for ambient light glows (sunlight, etc.).\n<br />\n<br />To adjust the radius of an object's light, hover over its base tile and use the scroll wheel while holding down [b]Left Alt[/b]. For smaller incremental changes, hold down\u00A0[b]Left Shift[/b]\u00A0or for even smaller changes\u00A0[b]Left Control[/b].\n<br />\n<br />To turn a light on or off manually, hover over its base tile and press the middle mouse button. Note that lights will not turn on during the day time.\n<br />\n<br />\n<br />[size=5]Custom Light Sources\n<br />[/size]\n<br />You can use Content Patcher to add a custom light source that uses either one of the game's 9 built-in light textures, or create your own png file to use as a light texture.\n<br />\n<br />Here is an example of both:\n<br />\n<br />[code]{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.LightMod/dictionary\",\n<br />         \"Entries\": {\n<br />            \"Plush Bunny\": {\n<br />               \"color\": {\n<br />                  \"R\": 150,\n<br />                  \"G\": 50,\n<br />                  \"B\": 50,\n<br />                  \"A\": 255\n<br />               },\n<br />               \"textureIndex\": 4,\n<br />               \"radius\": 1,\n<br />               \"offset\": {\n<br />                  \"X\": 32,\n<br />                  \"Y\": 0\n<br />               },\n<br />               \"isLamp\": true\n<br />            },\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"Wicked Statue\": {\n<br />               \"color\": {\n<br />                  \"R\": 255,\n<br />                  \"G\": 255,\n<br />                  \"B\": 255,\n<br />                  \"A\": 255\n<br />               },\n<br />               \"texturePath\": \"CLSWickedStatueLight\",\n<br />               \"textureFrames\": 20,\n<br />               \"frameWidth\": 240,\n<br />               \"frameSeconds\": 0.1,\n<br />               \"radius\": 2,\n<br />               \"offset\": {\n<br />                  \"X\": 32,\n<br />                  \"Y\": 0\n<br />               },\n<br />               \"isLamp\": true\n<br />            }\n<br />\n<br />         }\n<br />      },\n<br />      {\n<br />         \"Action\": \"Load\",\n<br />         \"Target\": \"CLSWickedStatueLight\",\n<br />         \"FromFile\": \"assets/purple.png\"\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />\n<br />If you specify a texture path, it will ignore textureIndex. Valid texture indexes (for lights without custom texture files) are:\n<br />\n<br />[list]\n<br />[*]1 (lantern)\n<br />[*]2 (window)\n<br />[*]4 (sconce)\n<br />[*]5 (cauldron)\n<br />[*]6 (indoor window)\n<br />[*]7 (projector)\n<br />[*]8 (fish tank)\n<br />[/list]\n<br />\n<br />Animated textures can use the following extra fields:\n<br />[b]            \n<br />textureFrames[/b] refers to how many frames animated textures have. Place frames horizontally in a single row on the graphics file.\n<br />[b]frameWidth[/b]\u00A0is how many pixels wide each frame is on the sheet.\n<br />[b]frameSeconds[/b]\u00A0is how many seconds each frame should last.\n<br />\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can edit the\u00A0config.json\u00A0file that is created when first running the game or use GMCM.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14387",
+	"Version": "0.3.0",
+	"Updated": "2022-11-12T12:13:26+00:00",
+	"Downloads": [
+		{
+			"Id": 62682,
+			"Type": "Main",
+			"DisplayName": "Light Mod",
+			"FileName": "Light Mod-14387-0-3-0-1668255206.zip",
+			"Description": "Changes:\n<br /><br />Added support for light glows",
+			"Version": "0.3.0",
+			"SizeInBytes": 27495,
+			"Uploaded": "2022-11-12T12:13:26+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.LightMod",
+					"DisplayName": "Light Mod",
+					"Type": "Smapi",
+					"RelativePath": "LightMod",
+					"Manifest": {
+						"Name": "Light Mod",
+						"Description": "Light Mod.",
+						"Author": "aedenthorn",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "LightMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14247"
+						],
+						"UniqueId": "aedenthorn.LightMod",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "LightMod"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449370,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401075,
+		"UploaderId": 18901754,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

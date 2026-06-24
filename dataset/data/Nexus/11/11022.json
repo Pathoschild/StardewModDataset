@@ -1,0 +1,121 @@
+{
+	"Site": "Nexus",
+	"Id": 11022,
+	"Name": "Almanac",
+	"Author": "KhloeLeclair",
+	"AuthorLabel": "Khloe Leclair",
+	"Description": "Almanac provides an in-game book with useful information about different subjects, including a weather forecast for the entire year, guidance on how long it takes crops to grow, local notices like birthdays and festivals, and even reports from the Adventurer's Guild.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Download any optional files to add support for other mods you are using.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />By default, you don't actually have an Almanac. You need to wait, and Pierre should give you one. (Though, you can also just forcibly enable it in settings if the event is bugged or you're just impatient!)\n<br />\n<br />Once you've got an Almanac, open it from your inventory menu or press the hotkey (F7 by default) to open it. Then just pick a page and explore.\n<br />\n<br />[size=3]This is an early release.[/size]\n<br />\n<br />I still don't know how well this mod will work with other mods that add content, and I'm hoping to get lots of user reports to help me expand this into a truly amazing in-game tool. Let's build something really neat!\n<br />\n<br />On that note, if anyone is interested in helping translate, or maybe making some more interesting events for the mod, I'd be interested in the help. I'm a UX programmer, not a designer...\n<br />\n<br />[size=5]Pierre, Where's My Almanac?[/size]\n<br />There are three separate events for the Almanac that unlock different pages. They are as follows:\n<br />\n<br />[spoiler]\n<br />Pierre gives you the basic [b]Ferngill Farmer's Almanac[/b] when:\n<br />[list]\n<br />[*]You have earned at least 1,000 gold.\n<br />[*]You enter your farm between 6am and 7am.\n<br />[*]It's not a festival day, a Wednesday, or rainy.\n<br />[/list]\n<br />[/spoiler]\n<br />\n<br />[spoiler]\n<br />The wizard gives you the [b]Magical Almanac[/b] when:\n<br />[list]\n<br />[*]You already have the basic Almanac.\n<br />[*]You are a member of the Adventurer's Guild.\n<br />[*]You have at least two hearts of friendship with the wizard.\n<br />[*]You enter your farm between 6am and 5pm.\n<br />[*]It's not a festival day or rainy.\n<br />[/list]\n<br />[/spoiler]\n<br />\n<br />[spoiler]\n<br />Willy gives you the [b]Fern Islands Almanac[/b] when:\n<br />[list]\n<br />[*]You already have the basic Almanac.\n<br />[*]You have fixed his boat to unlock the island.\n<br />[*]You have at least two hearts of friendship with Willy.\n<br />[*]You enter Willy's shop between 8am and 5pm.\n<br />[*]It's not a festival day.\n<br />[/list]\n<br />[/spoiler]\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.5 on Linux/Mac/Windows.\n<br />[*]Does not work on Android, which has a separate menu system\n<br />[*]Works with [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF.\n<br />[*]Works in single player and multiplayer.\n<br />[*]Works with mods that do weird unnatural things to make seasons longer or shorter\n<br />[*]Works with crops added by JsonAssets\n<br />[*][i]Sort of works[/i] with crops added by Dynamic Game Assets. They only show up if they're currently grow-able, due to an API limitation.\n<br />[*]Is hopefully compatible with most mods, but please let me know what you find out.\n<br />[/list]\n<br />\n<br />[size=5]Known Issues[/size]\n<br />[list]\n<br />[*]The weather forecast will not work with other mods that change how weather is calculated, and should be disabled in config.\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/Almanac]Source code[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/Almanac/CHANGELOG.md]Changelog[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/Almanac/ModAPI.cs]For Devs: C# API[/url]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/Almanac/author-guide.md]For Mod Authors: Author Guide[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11022",
+	"Version": "0.18.1",
+	"Updated": "2022-11-14T19:34:58+00:00",
+	"Downloads": [
+		{
+			"Id": 52371,
+			"Type": "Optional",
+			"DisplayName": "DynamicGameAssets Support",
+			"FileName": "DynamicGameAssets Support-11022-1-1-0-1648102053.zip",
+			"Description": "This is a support mod that adds support for crops added via DynamicGameAssets. @DGA\n<br /><br /><br /><br /><br />This is not required, but is recommended if you use DynamicGameAssets.",
+			"Version": "1.1.0",
+			"SizeInBytes": 209807,
+			"Uploaded": "2022-03-24T06:07:33+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.almanacdga",
+					"DisplayName": "Almanac: DGA Support",
+					"Type": "Smapi",
+					"RelativePath": "AlmanacDGA",
+					"Manifest": {
+						"Name": "Almanac: DGA Support",
+						"Description": "Adds support for Dynamic Game Assets crops to Almanac.",
+						"Author": "Khloe Leclair",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AlmanacDGA.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.almanac",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.DynamicGameAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11022@DGA"
+						],
+						"UniqueId": "leclair.almanacdga"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342439059,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62760,
+			"Type": "Main",
+			"DisplayName": "Almanac",
+			"FileName": "Almanac-11022-0-18-1-1668454498.zip",
+			"Description": "This is the @Main release.",
+			"Version": "0.18.1",
+			"SizeInBytes": 817537,
+			"Uploaded": "2022-11-14T19:34:58+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.almanac",
+					"DisplayName": "Almanac",
+					"Type": "Smapi",
+					"RelativePath": "Almanac",
+					"Manifest": {
+						"Name": "Almanac",
+						"Description": "Adds an Almanac for the player, with forecasts, planting dates, and other calendar information useful for a farmer.",
+						"Author": "Khloe Leclair",
+						"Version": "0.18.1",
+						"MinimumApiVersion": "3.17.0",
+						"EntryDll": "Almanac.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.LuckSkill",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.MoreGiantCrops",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "leclair.giantcroptweaks",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11022@Main"
+						],
+						"UniqueId": "leclair.almanac"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449448,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397710,
+		"UploaderId": 138772588,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

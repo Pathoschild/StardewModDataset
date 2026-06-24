@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 21588,
+	"Name": "The Return Of Custom Backpack Framework",
+	"Author": "platinummyr",
+	"AuthorLabel": "aedenthorn and platinummyr",
+	"Description": "This is an update of [url=https://www.nexusmods.com/stardewvalley/mods/13826]Custom Backpack Framework[/url] to support Stardew Valley 1.6 I have so far only done minimal testing, but it appears to be working ok. It is highly likely that any new 1.6 content which loads the inventory will not be patched properly to load the extended inventory slots.\n<br />\n<br />With this mod you can customize the backpack upgrade system, allowing for larger backpacks beyond 36 slots!\n<br />\n<br />This mod adds scroll capability to the inventory grid. Scroll using the mouse scroll wheel, up and down arrow keys, or up and down on a \n<br />controller. You can also click on the arrow keys and scroll bar with the\n<br /> mouse.\n<br />\n<br />There is also a + button beside the inventory grid to show an expanded view of the inventory.\n<br />\n<br />This mod doesn't change backpack upgrades by itself. You need a mod that uses this framework, such as [url=https://www.nexusmods.com/stardewvalley/mods/21591/]The Return Of More Backpack Upgrades\n<br />[/url]\n<br />You can also manually set your backpack size using the SMAPI console, e.g.:\n<br />\n<br />[code]custombackpack 60[/code]\n<br />to set your backpack slots to 60. Only use multiples of 12.\n<br />\n<br />[b][size=5]Content Patcher\n<br />[/size][/b]\n<br />An example content.json file would be:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.CustomBackpack/dictionary\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"24\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"name\": \"Large Backpack\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"cost\": 2000,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CPCustomBackpacks/backpacks\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"textureRect\": \n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\":0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\":0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Width\": 12,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Height\":14\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"Load\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.CPCustomBackpacks/backpacks\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"FromFile\": \"assets/backpacks.png\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}[/code]\n<br />[b]textureRect[/b] refers to the part of the texture used for the specific backpack.\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Implements a [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] interface to change config settings in-game.\n<br />\n<br />I ported this from Aedenthorn's original mod at  [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url], and the new source is now available at [url=https://github.com/jacob-keller/CustomBackpackFramework/]https://github.com/jacob-keller/CustomBackpackFramework/[/url]\n<br />\n<br />If you have any issues please report them here and I'll do my best to patch things up. I have only done minimal testing currently.\n<br />\n<br />[size=5]Changelog[/size]\n<br />\n<br />[size=4]v1.0.0\n<br />[/size]\n<br />Initial release, port of the original mod to support Stardew Valley 1.6.0\n<br />\n<br />[size=4]v1.0.1\n<br />[/size]\n<br />Minor release fixing an issue with Generic Mod Menu API. This version was\n<br />published to NexusMods but the code was unfortunately never published to\n<br />GitHub.\n<br />\n<br />[size=4]v1.1.0[/size]\n<br />\n<br />Add support for the GetScroll API method to enable interop with Convenient\n<br />Inventory. Thanks to alanperrow for this work.\n<br />\n<br />Update the Pathoschild.Stardew.ModBuildConfig to latest stable version\n<br />4.4.0.\n<br />\n<br />[size=5]Credits[/size]\n<br />\n<br />* Aedenthorn for the original mod, and for making it open source\n<br />* platinummyr for updating to Stardew Valley 1.6\n<br />* alanperrow for the GetScroll API",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21588",
+	"Version": "1.1.0",
+	"Updated": "2025-10-19T05:14:13+00:00",
+	"Downloads": [
+		{
+			"Id": 145945,
+			"Type": "Main",
+			"DisplayName": "Custom Backpack Framework",
+			"FileName": "Custom Backpack Framework-21588-1-1-0-1760850853.zip",
+			"Description": "Version 1.1.0\n<br />\n<br />\n<br />\n<br />Adds support for GetScroll API to enable interop with Convenient Inventory.",
+			"Version": "1.1.0",
+			"SizeInBytes": 35059,
+			"Uploaded": "2025-10-19T05:14:13+00:00",
+			"Mods": [
+				{
+					"Id": "platinummyr.CustomBackpackFramework",
+					"DisplayName": "The Return of Custom Backpack Framework",
+					"Type": "Smapi",
+					"RelativePath": "CustomBackpackFramework",
+					"Manifest": {
+						"Name": "The Return of Custom Backpack Framework",
+						"Description": "Custom Backpack Framework (originally by aedenthorn) made compatible with Stardew Valley 1.6",
+						"Author": "platinummyr",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomBackpackFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21588"
+						],
+						"UniqueId": "platinummyr.CustomBackpackFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532633,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408276,
+		"UploaderId": 67207931,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,131 @@
+{
+	"Site": "ModDrop",
+	"Id": 598755,
+	"Name": "Farm Type Manager (FTM)",
+	"Author": "EscaMMC",
+	"TagLine": "Allows farmers and modders to automatically spawn customizable forage, ore, and other resources anywhere in the game.",
+	"Description": "**Farm Type Manager** allows players and modders to spawn customizable features from each of Stardew's farm types. It can automatically create forage, items, ore, monsters, and large objects (stumps, logs, boulders, meteorites, and giant crops) on any map in the game. Users can configure the number of objects spawned per day, which areas or terrain types they can spawn on, the chances of spawning each object type, and more.\n\nIt also supports content packs, allowing other mods to configure spawning automatically.\n\n\uD83C\uDF10 In other languages: [zh (中文)](https://github.com/Esca-MMC/FarmTypeManager/blob/master/docs/readme_zh.md)\n\n- - - - -\n### Installation\n- - - - -\n1. **Install the latest version of SMAPI.**\n2. **Download FarmTypeManager** from the Download tab, GitHub, or NexusMods.\n3. **Unzip FarmTypeManager** into the *Stardew Valley/Mods* folder.\n\nIf you use other mods that require Farm Type Manager, then you're all set!\n\nIf you want to customize Farm Type Manager's settings yourself, see the instructions below.\n\n**Notes for multiplayer:** I recommend that **all players** have this mod installed. If only the host has this mod, other players might encounter SMAPI errors and be unable to see/interact with some objects and monsters.\n\nOnly the host's spawn settings will be used in multiplayer. Console commands should still function normally.\n\n- - - - -\n### Options\n- - - - -\nFarm Type Manager has a few basic \"global\" options, such as a limit to the number of monsters allowed in each area. To edit these options: \n\n1. **Run the game** using SMAPI.\n2. **Open the config.json file** in the *Stardew Valley/Mods/FarmTypeManager* folder and edit its settings. Refer to the Mod Settings section of the GitHub readme for more info.\n\nAlternatively, you can install Generic Mod Config Menu (GMCM) and edit these settings in Stardew's main menu (look for a gear icon). The menu should display tooltips to explain each setting.\n\n- - - - -\n### Translation\n- - - - -\nFarm Type Manager supports translation of its [GMCM](https://www.nexusmods.com/stardewvalley/mods/5098) options menu.\n\nThe mod will load a file from the *FarmTypeManager/i18n* folder that matches the current language code. If no matching translation exists, it will use *default.json*.\n\nSee the Stardew Valley Wiki's [Modding:Translations](https://stardewvalleywiki.com/Modding:Translations) page for more information. Please feel free to submit translation files through GitHub, Nexus Mods, ModDrop, or Discord.\n\nThe mod currently includes these translations:\n\n[English](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/default.json)\n[Chinese (Simplified)](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/zh.json) (by [SummerFleur](https://github.com/SummerFleur2997))\n[Dutch](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/nl.json) (by [UnrealThingTriesCode](https://github.com/UnrealThingTriesCode))\n[French](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/fr.json) (by [Fsecho7](https://next.nexusmods.com/profile/Fsecho7))\n[German](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/de.json) (by [777PamPam777](https://next.nexusmods.com/profile/777PamPam777))\n[Portuguese (Brazilian)](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/pt.json) (by [roanrobersson](https://github.com/roanrobersson))\n[Turkish](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/tr.json) (by [Rupurudu](https://github.com/Rupurudu))\n[Ukrainian](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/uk.json) (by [burunduk](https://github.com/burunduk))\n\n- - - - -\n### Customization\n- - - - -\n1. **Run the game** using SMAPI.\n2. **Load the farm** you want to customize or create a new one. This will create files for your character in the Stardew Valley/Mods/FarmTypeManager/data folder.\n3. **Find the .json file** with your character's name on it. Load it with the ConfigEditor.html file in the FarmTypeManager folder, or edit manually with any text editor.\n4. **Customize the file's settings.** For more info, see the Examples below, the Articles tab, or the Settings section of the readme on GitHub.\n5. **Exit your farm and reload it**, or progress to the next in-game day. The mod's settings are updated every morning.\n\n**Note for modders:** To learn about creating content packs for this mod, see the GitHub readme's Content Packs section.\n\n- - - - -\n### Commands\n- - - - -\nThis mod adds the following commands to SMAPI's console:\n\nThe **whereami** command. Enter it to display information about your current location, including:\n\n* The map's name (e.g. \"Farm\" or \"BusStop\")\n* Your current tile's X/Y coordinates\n* The tile's terrain type (e.g. \"Dirt\" or \"Stone\")\n* Whether the tile is \"Diggable\" with tools\n* The tile's spritesheet index number (used to identify \"Quarry\" tiles or set up custom tile-matching)\n\nThe **list_monsters** command. Enter it to display a list of available monster names to use with the MonsterName configuration setting.\n\nThe command will list the primary name of each monster from Stardew Valley itself, and then scan other mods for custom monster classes.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/598755",
+	"Version": null,
+	"Updated": "2025-11-14T17:57:54.527+00:00",
+	"Downloads": [
+		{
+			"Id": 1629000,
+			"Type": "Optional",
+			"DisplayName": "Config Editor v1.23.0",
+			"FileName": "Config Editor v1.23.0.zip",
+			"Description": "The ConfigEditor.html file. Download and extract anywhere to use. \n\nProvides a graphical web interface to edit content packs (content.json) or personal farm settings (FarmTypeManager/data). \n\nSee GitHub releases for update notes.",
+			"Version": "1.23.0-rc",
+			"SizeInBytes": 76183,
+			"Uploaded": "2024-07-27T23:32:50.591+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "1629000",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "375f41c11bd93d67f6f63de3054840b8",
+				"md5In": "8125aa2bfd491540ae352088ad77041c",
+				"scriptType": 0,
+				"sha256Ex": "bbf409cf4536b8211d8bd3316fa803205ba818471b7ed541122d8a68732803ea",
+				"sha256In": "6e7ab0f449649dd256305f83ea5a8b17b2d442b5c7825f934d6f3766fd949a20"
+			}
+		},
+		{
+			"Id": 1765509,
+			"Type": "Main",
+			"DisplayName": "Farm Type Manager v1.26.1",
+			"FileName": "Farm Type Manager v1.26.1.zip",
+			"Description": "Main file. Designed for Stardew Valley v1.6.15.",
+			"Version": "1.26.1",
+			"SizeInBytes": 133975,
+			"Uploaded": "2025-11-14T17:57:54.527+00:00",
+			"Mods": [
+				{
+					"Id": "Esca.FarmTypeManager",
+					"DisplayName": "Farm Type Manager (FTM)",
+					"Type": "Smapi",
+					"RelativePath": "FarmTypeManager",
+					"Manifest": {
+						"Name": "Farm Type Manager (FTM)",
+						"Description": "Allows custom spawning of content from each farm type: forage, large objects, ore, and monsters",
+						"Author": "Esca",
+						"Version": "1.26.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmTypeManager.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.0.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Cherry.ExpandedPreconditionsUtility",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3231",
+							"GitHub:Esca-MMC/FarmTypeManager",
+							"ModDrop:598755"
+						],
+						"UniqueId": "Esca.FarmTypeManager"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "6980d0d7dff0bb78080638071752a9a2",
+				"md5In": "8a54e40b6e4aeeeb041a11acf0289b71",
+				"patchNotes": "**Changes:**\n* Limits most of FTM's \"trace\" log messages to verbose mode, significantly reducing log file sizes\n  * To enable verbose mode:\n    * Open this text file: `Stardew Valley\\smapi-internal\\config.json`\n    * Look for this setting: `\"VerboseLogging\": [],`\n    * Add FTM's manifest ID: `\"VerboseLogging\": [\"Esca.FarmTypeManager\"],`\n    * If you need to enable it for multiple mods, separate IDs with commas: `\"VerboseLogging\": [\"Example.Mod\", \"Esca.FarmTypeManager\"],`\n\n**Bug Fixes:**\n* Fixes errors when forage items try to spawn on top of each other, e.g. if content packs use `\"StrictTileChecking\": \"None\"`\n  * Reported by shuangxue123\n\nDesigned for Stardew Valley v1.6.15.",
+				"scriptType": 0,
+				"sha256Ex": "0b388cc93931f3c46609eedc55ac2ba6357ba6ed1b6adba0e2ae0f291db0f338",
+				"sha256In": "de2f3715521ec0173aca25ef1016d4c162ee54a4cb86e3e97e31fa5f0889730f"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1563066154010,
+		"DateUpdated": 1763143074527,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1563064737910,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/598755/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/598755/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/598755/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/598755/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 124419
+	}
+}

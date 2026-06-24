@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 14508,
+	"Name": "Custom Mine Cart Steam",
+	"Author": "aedenthorn",
+	"Description": "This is just a small mod, basically used if you change the location of the minecarts in the Bus Stop, etc. to draw the steam in the proper location.\n<br />\n<br />To set custom steam, use Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.CustomMineCartSteam/dictionary\",\n<br />         \"Entries\": {\n<br />            \"aedenthorn.CMCSExampleCP/1\": {\n<br />               \"location\": \"BusStop\",\n<br />   \uFEFF\uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"replaceSteam\": \"true\",\n<br />               \"position\": {\n<br />                  \"X\": 456,\n<br />                  \"Y\": 144\n<br />               }\n<br />            }\n<br />         }\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />\n<br />This moves the steam in the Bus Stop 64 pixels to the right.\n<br />\n<br />You can also tweak the steam or just add arbitrary temporary animated sprites by adding other fields, e.g.:\n<br />\n<br />[code]\uFEFF{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.CustomMineCartSteam/dictionary\",\n<br />         \"Entries\": {\n<br />            \"aedenthorn.CMCSExampleCP/2\": {\n<br />               \"location\": \"BusStop\",\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"replaceSteam\": \"true\",\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"position\": {\n<br />                  \"X\": 520,\n<br />                  \"Y\": 208\n<br />               },\n<br />               \"animationRow\": 27,\n<br />               \"color\": {\n<br />                  \"R\": 255,\n<br />                  \"G\": 255,\n<br />                  \"B\": 255\n<br />               },\n<br />               \"animationLength\": 8,\n<br />               \"flipped\": \"true\",\n<br />               \"animationInterval\": 60,\n<br />               \"animationLoops\": 999999,\n<br />               \"sourceRectWidth\": -1,\n<br />               \"layerDepth\": 1,\n<br />               \"sourceRectHeight\": -1,\n<br />               \"delay\": 0\n<br />            }\n<br />         }\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />\n<br />You can ALSO go even further and load an arbitrary texture as a temporary animated sprite using even more parameters, e.g.:\n<br />\n<br />[code]\uFEFF{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.CustomMineCartSteam/dictionary\",\n<br />         \"Entries\": {\n<br />            \"aedenthorn.CMCSExampleCP/3\": {\n<br />               \"location\": \"BusStop\",\n<br />               \"replaceSteam\": \"false\",\n<br />               \"position\": {\n<br />                  \"X\": 520,\n<br />                  \"Y\": 208\n<br />               },\n<br />               \"texturePath\": \"Characters&#92;&#92;Junimo\",\n<br />               \"sourceRect\": {\n<br />                  \"X\": 0,\n<br />                  \"Y\": 109,\n<br />                  \"Width\": 16,\n<br />                  \"Height\": 19\n<br />               },\n<br />               \"animationLength\": 8,\n<br />               \"animationInterval\": 40,\n<br />               \"animationLoops\": 999999,\n<br />               \"color\": {\n<br />                  \"R\": 255,\n<br />                  \"G\": 255,\n<br />                  \"B\": 255,\n<br />                  \"A\": 255\n<br />               },\n<br />               \"flipped\": \"false\",\n<br />               \"flicker\": \"false\",\n<br />               \"alphaFade\": 0,\n<br />               \"scale\": 4,\n<br />               \"scaleChange\": 0,\n<br />               \"rotation\": 0,\n<br />               \"rotationChange\": 0.1,\n<br />               \"motion\": {\n<br />                  \"X\": 0.22,\n<br />                  \"Y\": -2\n<br />               },\n<br />               \"acceleration\": {\n<br />                  \"X\": 0,\n<br />                  \"Y\": 0.01\n<br />               },\n<br />               \"local\": \"false\",\n<br />               \"layerDepth\": 1\n<br />            }\n<br />         }\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />[size=5]\n<br />[b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14508",
+	"Version": "0.1.4",
+	"Updated": "2022-11-21T00:15:23+00:00",
+	"Downloads": [
+		{
+			"Id": 63008,
+			"Type": "Main",
+			"DisplayName": "Custom Mine Cart Steam",
+			"FileName": "Custom Mine Cart Steam-14508-0-1-4-1668989723.zip",
+			"Description": "Changes:\n<br /><br />Fix for multiple sprites",
+			"Version": "0.1.4",
+			"SizeInBytes": 10643,
+			"Uploaded": "2022-11-21T00:15:23+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomMineCartSteam",
+					"DisplayName": "CustomMineCartSteam",
+					"Type": "Smapi",
+					"RelativePath": "CustomMineCartSteam",
+					"Manifest": {
+						"Name": "CustomMineCartSteam",
+						"Description": "CustomMineCartSteam.",
+						"Author": "aedenthorn",
+						"Version": "0.1.4",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "CustomMineCartSteam.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14508"
+						],
+						"UniqueId": "aedenthorn.CustomMineCartSteam",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomMineCartSteam"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449696,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401196,
+		"UploaderId": 18901754,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,156 @@
+{
+	"Site": "Nexus",
+	"Id": 6162,
+	"Name": "Pufferfish Chickens",
+	"Author": "gzhynko",
+	"Description": "This mod adds Pufferfish chicken as a new coop animal with its own eggs, which can be turned into the Pufferfish mayonnaise.\n<br />\n<br />The pufferfish egg can be obtained from Willy in a new event which occurs on the Farm map if the following conditions are met:\n<br />[list]\n<br />[*]The weather is sunny.\n<br />[*]The player has at least one free inventory slot.\n<br />[*]The player has at least 50 friendship points with Willy.\n<br />[*]The player have played for at least 42 days.\n<br />[/list]\n<br />[b]Note: [/b]Translations are not accepted.\n<br />\n<br />[size=4]Installation[/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url]\uFEFF\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\uFEFF,\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url]\uFEFF and [url=https://www.nexusmods.com/stardewvalley/mods/3296]BFAV[/url].\n<br />[*]Download this mod and unzip all its folders into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=4]Uninstallation[/size]\n<br />[list=1]\n<br />[*]Get rid of all the items this mod adds (Pufferfish eggs and Pufferfish mayonnaise).\n<br />[*]Sell all the Pufferfish chickens.\n<br />[*]Proceed with removing the mod folders.\n<br />[/list]\n<br />\n<br />[size=4]Compatibility\n<br />[/size][list]\n<br />[*]Compatible with SMAPI 3.12 and higher (the latest version is recommended).\n<br />[*]Compatible with Stardew Valley 1.5 and higher.\n<br />[/list]\n<br />\n<br />Pufferfish Chickens is\u00A0[url=https://github.com/gzhynko/StardewMods/tree/master/Pufferfish%20Chickens]open-source[/url]\u00A0and is licensed under the\u00A0[url=https://github.com/gzhynko/StardewMods/blob/master/LICENSE]0BSD License[/url]\uFEFF.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6162",
+	"Version": "1.0.4",
+	"Updated": "2021-08-13T13:44:06+00:00",
+	"Downloads": [
+		{
+			"Id": 43874,
+			"Type": "Main",
+			"DisplayName": "Pufferfish Chickens",
+			"FileName": "Pufferfish Chickens-6162-1-0-4-1628862246.zip",
+			"Description": "The main file for this mod.\n<br /><br />SMAPI 3.12 or newer is required for this mod to work.",
+			"Version": "1.0.4",
+			"SizeInBytes": 22090,
+			"Uploaded": "2021-08-13T13:44:06+00:00",
+			"Mods": [
+				{
+					"Id": "GZhynko.IncubatePufferfishEggs",
+					"DisplayName": "IncubatePufferfishEggs",
+					"Type": "Smapi",
+					"RelativePath": "IncubatePufferfishEggs",
+					"Manifest": {
+						"Name": "IncubatePufferfishEggs",
+						"Description": "Provides logic for the Pufferfish Chickens mod.",
+						"Author": "GZhynko",
+						"Version": "1.0.4",
+						"MinimumApiVersion": "3.12.0",
+						"EntryDll": "IncubatePufferfishEggs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6162"
+						],
+						"UniqueId": "GZhynko.IncubatePufferfishEggs"
+					}
+				},
+				{
+					"Id": "GZhynko.Pufferfish_Chickens",
+					"DisplayName": "Pufferfish Chickens",
+					"Type": "ContentPack",
+					"RelativePath": "[BFAV] Pufferfish Chickens",
+					"Manifest": {
+						"Name": "Pufferfish Chickens",
+						"Description": "Adds the pufferfish chicken as a new coop animal.",
+						"Author": "GZhynko",
+						"Version": "1.0.4",
+						"ContentPackFor": {
+							"UniqueId": "Paritee.BetterFarmAnimalVariety"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "GZhynko.Pufferfish_Chickens"
+					}
+				},
+				{
+					"Id": "GZhynko.CP.Pufferfish_Chickens",
+					"DisplayName": "(CP) Pufferfish Chickens",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Pufferfish Chickens",
+					"Manifest": {
+						"Name": "(CP) Pufferfish Chickens",
+						"Description": "Adds a new Farm event.",
+						"Author": "GZhynko",
+						"Version": "1.0.4",
+						"MinimumApiVersion": "3.12.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "GZhynko.CP.Pufferfish_Chickens"
+					}
+				},
+				{
+					"Id": "GZhynko.JsonAssets.Pufferfish_Chickens",
+					"DisplayName": "New items for Pufferfish Chickens",
+					"Type": "ContentPack",
+					"RelativePath": "[JA] Pufferfish Chickens",
+					"Manifest": {
+						"Name": "New items for Pufferfish Chickens",
+						"Description": "Adds pufferfish eggs and mayonnaise.",
+						"Author": "GZhynko",
+						"Version": "1.0.4",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "GZhynko.JsonAssets.Pufferfish_Chickens"
+					}
+				},
+				{
+					"Id": "6480.PFM.Pufferfish_Chickens",
+					"DisplayName": "(PFM) Pufferfish Chickens",
+					"Type": "ContentPack",
+					"RelativePath": "[PFM] Pufferfish Chickens",
+					"Manifest": {
+						"Name": "(PFM) Pufferfish Chickens",
+						"Description": "Allows pufferfish eggs to be made into mayo",
+						"Author": "6480",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.12.0",
+						"ContentPackFor": {
+							"UniqueId": "Digus.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Digus.ProducerFrameworkMod",
+								"MinimumVersion": "1.4.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "GZhynko.JsonAssets.Pufferfish_Chickens",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "6480.PFM.Pufferfish_Chickens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342430562,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392850,
+		"UploaderId": 89464633,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

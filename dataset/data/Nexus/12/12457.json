@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 12457,
+	"Name": "Farmhouse Visits",
+	"Author": "mistyspring",
+	"Description": "[size=4][u][b][img]https://64.media.tumblr.com/785d35b3be0f896a00a15d75dda8cdd7/ce5c30fe86a2d83a-f2/s500x750/1beb627f765f66b71244722a60c626be42124c99.png[/img][/b][/u][/size]\n<br />[u][b]\n<br />[size=3]English:[/size][/b][/u][size=3] \n<br />This mod allows villagers to visit when you're in the farmhouse, in a similar fashion to a certain animal game.\n<br />\n<br />[/size][size=3][b][u][size=3][u][b]Español[/b][/u][/size]:[/u][/b] \n<br />Este mod permite que los NPC te visiten cuando estás en tu casa, similar a un cierto juego de animales. \n<br />\n<br />[b][u]The mod is avaiable in spanish, english, and:[/u][/b]\n<br />[/size][list]\n<br />[*][size=3]Turkish (by BURAKMESE)[/size]\n<br />[*][size=3]Chinese (by SHIZHI01420142)[/size]\n<br />[*][size=3]Russian (by [/size][size=3]crybaby00000[/size])\n<br />[*][size=3]Portuguese (by BrasileiroTop)[/size]\n<br />[*][size=3]Thai (by watchakorn-18k)\n<br />[/size]\n<br />[/list]\n<br />[img]https://64.media.tumblr.com/374a97664edd56f783a6a2813aba0038/ce5c30fe86a2d83a-59/s400x600/01a21347740cdc17d2f3372a28b43bbdf4278485.png[/img]\n<br />\n<br />[u][b][size=3]English:[/size][/b][/u][list]\n<br />[*][size=3]Compatible with mod farmhouses / mod npcs[/size]\n<br />[*][size=3]More hearts = more likely to visit[/size]\n<br />[*][size=3]Blacklist option[/size]\n<br />[*][size=3]Custom start/end hours[/size]\n<br />[*][size=3][size=3]Custom[/size] chance (for every 10 minutes)[/size]\n<br />[*][size=3]Works on multiplayer[/size]\n<br />[*][size=3](Optional) visits bring gifts[/size]\n<br />[*][size=3]NPCs can ask for permission to enter[/size]\n<br />[/list][size=3]\n<br />[u][b]Español[/b][/u][b][u]:[/u][/b] \n<br />[/size][list]\n<br />[*][size=3][size=3]Compatible con casas mod / npcs mod[/size][/size]\n<br />[*][size=3][size=3]Más corazones = mas probable que visite[/size][/size]\n<br />[*][size=3][size=3]Lista negra[/size][/size]\n<br />[*][size=3][size=3]Horas de inicio/termino custom[/size][/size]\n<br />[*][size=3][size=3][size=3]Probabilidad custom (por cada 10 min.)[/size][/size][/size]\n<br />[*][size=3][size=3][size=3]Funciona en multijugador[/size][/size][/size]\n<br />[*][size=3][size=3][size=3]Los regalos (de visita) son opcionales[/size][/size][/size]\n<br />[*][size=3][size=3][size=3]Los PNJs pueden pedir permiso para entrar[/size][/size][/size]\n<br />[/list]\n<br />\n<br />[img]https://64.media.tumblr.com/f95133a89c36c50f18ca98e9183f9a82/ce5c30fe86a2d83a-34/s500x750/f71edb63ddb02d6deb5a1845272162d4ce609647.png[/img]\uFEFF\n<br />[u][b][size=3]English:[/size][/b][/u][size=3] \n<br />[color=#ff0000][b]NOTICE:[/b][/color] Schedules are loaded every in-game day, please don't use CP's \"Update\"[size=3][size=3] field.[/size][/size]\n<br />You can add custom visits via ContentPatcher, like this:\n<br />\n<br />[/size][size=3][b][u][size=3][u][b]Español[/b][/u][/size]:[/u][/b] \n<br />[b][color=#ff0000]AVISO:[/color][/b] Las rutinas se cargan cada día, si usas \"Update\" no se registrará.\n<br />Puedes agregar visitas custom usando [/size][size=3]ContentPatcher, así:\n<br />[code]{\n<br />    \"Action\": \"EditData\",\n<br />    \"Target\": \"mistyspring.farmhousevisits/Schedules\",\n<br />    \"Entries\": {\n<br />        \"George\": {\n<br />            \"From\": 700,\n<br />            \"To\": 1000,\n<br />            \"EntryDialogue\": \"Hi, @. What are you young kids getting up to?\",\n<br />            \"ExitDialogue\": \"It's getting cold...#$b# I have to go. Goodbye, @.\",\n<br />            \"Dialogues\": [\n<br />                \"This house isn't so bad...\",\n<br />                \"%George is looking at you as you work.\"\n<br />            ]\n<br />        }\n<br />    }\n<br />}[/code]\n<br />\n<br />[img]https://64.media.tumblr.com/09a1e108e3315a12ea464e7c1a10cc95/ce5c30fe86a2d83a-0d/s400x600/f6ed1545f0565408e462d2636028a08ff845ff28.png[/img]\n<br />[code]{\n<br />    \"LogName\": \"Add visit\",\n<br />    \"Action\": \"EditData\",\n<br />    \"Target\": \"mistyspring.farmhousevisits/Schedules\",\n<br />    \"Entries\": {\n<br />        \"NAME\": {\n<br />            \"From\": ,    \uFEFF   \uFEFF   \uFEFF   \uFEFF\u00A0 //start hour\n<br />            \"To\": ,    \uFEFF   \uFEFF   \uFEFF\u00A0    \uFEFF\u00A0 //end hour. if empty, defaults to max visit time\n<br />            \"EntryQuestion\": \"\",    \uFEFF//text when knocking (optional)\n<br />            \"EntryBubble\": \"\",    \uFEFF\u00A0 //text over head (optional)\n<br />            \"EntryDialogue\": \"\",    \uFEFF//text after entering\n<br />            \"ExitDialogue\": \"\",    \uFEFF //text when leaving\n<br />            \"Dialogues\":    \uFEFF   \uFEFF   \uFEFF\u00A0 //dialogues (loaded every 10 min (optional))\n<br />            [\n<br />                \"\",\n<br />                \"\",\n<br />                \"\",\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"\",\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"\"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 //...etc (any amount).\n<br />            ]\n<br />        }\n<br />    },\n<br />    \"When\": {\n<br />      \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\u00A0\u00A0 //contentpatcher conditions\n<br />    }\n<br />}\n<br />[/code]\n<br />\n<br />[url=https://ko-fi.com/mistyspring]\n<br />[/url][url=https://ko-fi.com/mistyspring][img]https://64.media.tumblr.com/1e06bee51b073224105aadd3b2df00bb/ce5c30fe86a2d83a-c5/s250x400/f2322c0d678a64c3d09bdf7cee5599b2003109ad.png[/img][/url]\n<br />[/size]\n<br />([url=https://github.com/misty-spring/FarmhouseVisits]github[/url])",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12457",
+	"Version": "1.8.2",
+	"Updated": "2024-10-23T01:07:43+00:00",
+	"Downloads": [
+		{
+			"Id": 61319,
+			"Type": "Optional",
+			"DisplayName": "Farmhouse visits - 1.5 legacy",
+			"FileName": "Farmhouse visits-12457-1-7-2-1665274230.zip",
+			"Description": "This is the last 1.5 version of the mod, left up in case anyone doesn't use 1.6 yet",
+			"Version": "1.7.2",
+			"SizeInBytes": 75384,
+			"Uploaded": "2022-10-09T00:10:30+00:00",
+			"Mods": [
+				{
+					"Id": "mistyspring.farmhousevisits",
+					"DisplayName": "Farmhouse visits",
+					"Type": "Smapi",
+					"RelativePath": "FarmhouseVisits",
+					"Manifest": {
+						"Name": "Farmhouse visits",
+						"Description": "Mod that allows villagers to visit you.",
+						"Author": "mistyspring",
+						"Version": "1.7.2",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "FarmVisitors.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"nexus:12457"
+						],
+						"UniqueId": "mistyspring.farmhousevisits"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448007,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 113991,
+			"Type": "Main",
+			"DisplayName": "Farmhouse Visits",
+			"FileName": "Farmhouse Visits-12457-1-8-2-1729645663.zip",
+			"Description": "- Bug fixes\n<br />- Villagers won't visit on Town's passive festivals\n<br />- Enabled compat with the unofficial non-destructible NPCs",
+			"Version": "1.8.2",
+			"SizeInBytes": 109511,
+			"Uploaded": "2024-10-23T01:07:43+00:00",
+			"Mods": [
+				{
+					"Id": "mistyspring.farmhousevisits",
+					"DisplayName": "Farmhouse visits",
+					"Type": "Smapi",
+					"RelativePath": "FarmhouseVisits",
+					"Manifest": {
+						"Name": "Farmhouse visits",
+						"Description": "Mod that allows villagers to visit you.",
+						"Author": "mistyspring",
+						"Version": "1.8.2",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "FarmhouseVisits.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"nexus:12457"
+						],
+						"UniqueId": "mistyspring.farmhousevisits"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342500679,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399145,
+		"UploaderId": 130944333,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 6892,
+	"Name": "Warp Binder",
+	"Author": "Ambedrake",
+	"AuthorLabel": "SnowFire kVala",
+	"Description": "[b][size=3]Summary[/size][/b]\n<br />This mod allows for warp configuration files to be created and loaded at the start of the game, it also doubles as a library for use in my other mods. Currently it accepts .warp and .roam files (though manual import is possible via command line), and a number of related console commands.\n<br />\n<br />[b][size=3]Installation[/size][/b]\n<br />Extract the folder in the zip file to your Mods folder\n<br />\n<br />[b][size=3]Usage[/size][/b]\n<br />\n<br />[b]Configuration[/b]\n<br />Run the game once with the mod installed for a default config file to be added to the folder, by default there are no folders added to the detection list to protect against issues. Once it is created, add the folders you want to look for warps in to the \"CustomWarpFolders\" array as strings and make sure that the folder exists inside of this mods folder. Place any .warp/.roam files you have inside the folders as you please and they will be loaded at run time.\n<br />\n<br />[b]Warp Files[/b]\n<br />\n<br />Warp files are just text files that have an extension of .warp for a standard warp, or .roam for a roaming warp. These files contain a JSON representation of a warp to register, with the roaming type being considerably more complicated. Below in the Example file contents you can see the structure between the two are considerably different, and while you can technically get set a roaming warp to behave like a standard warp, the standard warp consumes considerably less processing time so is recommended for any single point to point warps you want to add.\n<br />\n<br />[b][i]NOTE: v.1.0.0 Warp files ARE NOT compatible with v.1.1.0 due to expansions made to the warp system[/i][/b]\n<br />\n<br />[b]Warp File Parameters[/b]\n<br />[b]Shared Parameters[/b]\n<br />ID (String):\n<br />This is the name of the warp and is useful when attempting to make changes via the command line arguments or debugging.\n<br />CooldownInSeconds (Integer):\n<br />This is the amount of seconds required to pass between warps, please do not set below 2.\n<br />SelfDeleteFile (Boolean):\n<br />This will mark the file to self destruct once depleted. This requires OneTimeUse set to true, roaming warps will delete on depletion of Origin or Target locations.\n<br />NPCUseAllowed (Boolean):\n<br />Future use, this will flag a warp as able to be triggered by an NPC\n<br />\n<br />[b]Standard Only Parameters[/b]\n<br />OriginVector (String):\n<br />A string with 2 comma separated integers, this sets the X and Y of the Origin. (Trigger tile)\n<br />OriginMap (String):\n<br />The map name for the Origin coordinates.\n<br />OriginRotation (Integer 0&lt;=n&lt;=3):\n<br />Future Use, the rotation required to trigger the warp.\n<br />TargetVector (String):\n<br />A string with 2 comma separated integers, this sets the X and Y of the Target.\n<br />TargetMap (String):\n<br />The map name for the Target coordinates\n<br />TargetRotation (Integer 0&lt;=n&lt;=3):\n<br />The rotation of the player after warping.\n<br />\n<br />[b]Roaming Only Parameters[/b]\n<br />OriginLocations (Object):\n<br />A set of locations that this warp can originate at.\n<br />TargetLocations (Object):\n<br />A set of locations that this warp can target.\n<br />StartingOriginID (String):\n<br />The ID of the origin warp to start with when the game loads.\n<br />StartingTargetID (String):\n<br />The ID of the target warp to start with when the game loads.\n<br />OriginRoamingPattern (Pattern Enum):\n<br />The shift pattern to apply to the origin roaming mechanics.\n<br />TargetRoamingPattern (Pattern Enum):\n<br />The shift pattern to apply to the target roaming mechanics.\n<br />\n<br />[b]Roaming Locations[/b]\n<br />Key (String):\n<br />The key should match the locations ID\n<br />ID (String):\n<br />This locations ID string, Origin and Target locations can have the same key with out interference.\n<br />Location (String):\n<br />A string with 2 comma separated integers, this sets the X and Y of the location.\n<br />Map (String):\n<br />The locations Map name\n<br />Rotation (Integer 0&lt;=n&lt;=3):\n<br />The rotation of the character for this location, this currently only effects Target locations but is required for both entry types.\n<br />OneTimeUse (boolean):\n<br />Sets this location as one time use, if true the system will dynamically disable this location after being used once. For self destructing files either all Origin or all Target locations will be required to be marked as one time use.\n<br />\n<br />[b]Roaming Pattern Enums[/b]\n<br />        RANDOM,\n<br />        LINEAR_REPEAT,\n<br />        LINEAR_SINGLE,\n<br />        LINEAR_SKIP_1,\n<br />        LINEAR_SKIP_2,\n<br />        ALPHABETICAL,\n<br />        ALPHABETICAL_SINGLE,\n<br />        ALPHABETICAL_REVERSE,\n<br />        ALPHABETICAL_REVERSE_SINGLE,\n<br />        STATIC\n<br />\n<br />[b]Commands[/b]\n<br />A number of commands have been entered into the game, the commands themselves as well as their descriptions can be set in the i18n language file. This assists in ensuring that commands and usage data makes sense in a localized way, as well as allowing users to define the trigger commands in order to avoid conflicts with other mods. \n<br />\n<br />Command Types Included:\n<br />\n<br />Get Warp Dictionary as Json:\n<br />Converts the current warp dictionary into a JSON string to the console\n<br />\n<br />Load Warp File:\n<br />Loads a single warp file\n<br />\n<br />Load Warp Json:\n<br />Loads a json string written into the console as a warp (Ad Hoc Warps)\n<br />\n<br />Get Player Location:\n<br />Gets the players tile X, Y, and Map. Currently attempts to get rotation but rotation does not fully function yet.\n<br />\n<br />Get Game Locations:\n<br />Gets a list of map names that are not indoors. Useful for writing warp files, especially if you need to be able to use a map editor to find certain coordinates.\n<br />\n<br />Export Warp File:\n<br />Allows for a warp in the warp dictionary to be exported to a generated warp file.\n<br />\n<br />Reload Warps:\n<br />Clears the warp dictionary and reloads all warps from currently existing warp files.\n<br />\n<br />Sync With Host:\n<br />(v.1.2.4)\n<br />Forces the client to resync the warp dictionary with the host, commonly used if the host has manually edited the warp dictionary in any way or if the client has desynchronized for any reason such as major lag spikes at the exact same time as a warp being triggered.\n<br />\n<br />\n<br />[b][size=3]Conclusion[/size][/b]\n<br />\n<br />This mod was made to support another set of projects that I am working on, but as it is simple and useful I figured I would share it with others.\n<br />\n<br />[b][size=3]Warp File Content Examples[/size][/b]\n<br />\n<br />Example .warp File contents:\n<br />\n<br />[code]\n<br />{\n<br />   \"ID\":               \"DemoWarpStandard_SVE\",\n<br />   \"CooldownInSeconds\":   5,\n<br />   \"SelfDeleteFile\":      false,\n<br />   \"NPCUseAllowed\":      false,\n<br />   \"OneTimeOnly\":         false,\n<br />   \"OriginVector\":         \"72, 12\",\n<br />   \"OriginMap\":         \"Farm\",\n<br />   \"OriginRotation\":      2,\n<br />   \"TargetVector\":         \"60, 15\",\n<br />   \"TargetMap\":         \"Farm\",\n<br />   \"TargetRotation\":      2\n<br />}\n<br />[/code]\n<br />\n<br />Example .roam File contents:\n<br />\n<br />[code]\n<br />{\n<br />   \"ID\":               \"DemoWarpRoaming_SVE\",\n<br />   \"CooldownInSeconds\":   5,\n<br />   \"SelfDeleteFile\":      false,\n<br />   \"NPCUseAllowed\":      false,\n<br />   \"OriginLocations\":{\n<br />      \"RightUpperTrail\":{\n<br />         \"ID\":          \"RightUpperTrail\",\n<br />         \"Location\":    \"70, 12\",\n<br />         \"Map\":         \"Farm\",\n<br />         \"Rotation\":      0,\n<br />         \"OneTimeUse\":   false\n<br />         },\n<br />      \"HouseDoor\":{\n<br />         \"ID\":         \"HouseDoor\",\n<br />         \"Location\":      \"64, 15\",\n<br />         \"Map\":         \"Farm\",\n<br />         \"Rotation\":      2,\n<br />         \"OneTimeUse\":   true\n<br />      }\n<br />   },\n<br />   \"StartingOriginID\":      \"RightUpperTrail\",\n<br />   \"OriginRoamingPattern\":   \"RANDOM\",\n<br />   \"TargetLocations\":{\n<br />      \"HouseDoor\":{\n<br />         \"ID\":         \"HouseDoor\",\n<br />         \"Location\":      \"64, 15\",\n<br />         \"Map\":         \"Farm\",\n<br />         \"Rotation\":      2,\n<br />         \"OneTimeUse\":   false\n<br />      },\n<br />      \"TownHall\":{\n<br />         \"ID\":         \"TownHall\",\n<br />         \"Location\":      \"53, 21\",\n<br />         \"Map\":         \"Town\",\n<br />         \"Rotation\":      0,\n<br />         \"OneTimeUse\":   false\n<br />      },\n<br />      \"Mines\":{\n<br />         \"ID\":         \"Mines\",\n<br />         \"Location\":      \"79, 4\",\n<br />         \"Map\":         \"Mountain\",\n<br />         \"Rotation\":      0,\n<br />         \"OneTimeUse\":   false\n<br />      }\n<br />   },\n<br />   \"StartingTargetID\":      \"Mines\",\n<br />   \"TargetRoamingPattern\":   \"ALPHABETICAL_REVERSE\"\n<br />}\n<br />[/code]\n<br />[b][size=4]Content Packs[/size][/b]\n<br />\n<br />As of (1.5.0) Warp Binder now supports content packs. To create a content pack follow the standard procedures located in the SMAPI documentation and target your manifest to SnowFire.Warp_Binder as the target mod. The add a \"content.json\" file listing your warp files relative to your content packs folder with your warp packs listed under the \"WarpPacks\" key, while the name of the individual 'Packs' in this object is not actually used for anything I added it in order to help creators organize their sets of warp points.\n<br />\n<br />Example\n<br />[code]\uFEFF{\n<br />   \"WarpPacks\":{\n<br />      \"WolfPack\":\n<br />         [\n<br />            \"Wolf/WolfDemo.roam\",\n<br />            \"Wolf/WolfDemo.warp\"\n<br />         ],\n<br />      \"BassPack\":\n<br />         [\n<br />            \"Bass/FishingHole.warp\"\n<br />         ]\n<br />      }\n<br />}\n<br />[/code]\n<br />\n<br />[b]Recognitions[/b]\n<br />\n<br />I would like to put in a thank you to the following users, as their work has impacted my ability to do these little projects drastically and really need to be given some credit.\n<br />\n<br />- Platonymous\n<br />\n<br />[b]Bug Catchers[/b]\n<br />\n<br />Because they are the unsung heroes of the software development world.\n<br />\n<br />- ty2manie\n<br />[b]\n<br />Discord / Comms[/b]\n<br />\n<br />I can be found lurking in these two Discord servers, though in the Stardew Valley server I tend to keep to the Making and Using mods sections for obvious reasons. While I may not be in voice chat during the day (I work 0800-1700 Pacific Time) I do check in via my phone.\n<br />\n<br />[url=https://discord.gg/stardewvalley]Stardew Valley Discord[/url]\n<br />\n<br />[url=https://discord.gg/JbP4Tg]NightSong Discord\n<br />\n<br />[/url][url=https://discord.gg/Cm4cE6]The Vales[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6892",
+	"Version": "1.5.1",
+	"Updated": "2020-10-13T01:29:24+00:00",
+	"Downloads": [
+		{
+			"Id": 31621,
+			"Type": "Optional",
+			"DisplayName": "Demo Warps",
+			"FileName": "Demo Warps-6892-Test-1601756678.zip",
+			"Description": "This is a demo static warp and roaming warp used in testing, may be useful when learning to write warp files. As this mod is being tested in the SVE/IF2R environment these refer to locations that are valid in those mods.",
+			"Version": "1.2.4-Optional-DemoWarpFiles",
+			"SizeInBytes": 828,
+			"Uploaded": "2020-10-03T20:24:38+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "31621",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342418309,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 31818,
+			"Type": "Main",
+			"DisplayName": "Warp Binder",
+			"FileName": "Warp Binder-6892-1-5-1-1602552564.zip",
+			"Description": "HotFix - Forgot to bundler interface assembly with mod.\n<br /><br />[i]Warning: If you are playing in verbose mode this can get very chatty in the console.[/i]",
+			"Version": "1.5.1",
+			"SizeInBytes": 433718,
+			"Uploaded": "2020-10-13T01:29:24+00:00",
+			"Mods": [
+				{
+					"Id": "SnowFire.Warp_Binder",
+					"DisplayName": "Warp Binder Library",
+					"Type": "Smapi",
+					"RelativePath": "Warp Binder",
+					"Manifest": {
+						"Name": "Warp Binder Library",
+						"Description": "This library provides the necessary components for other mods to dynamically bind map warp points.",
+						"Author": "SnowFire kVala",
+						"Version": "1.5.1",
+						"MinimumApiVersion": "2.11.0",
+						"EntryDll": "Warp_Binder.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6892"
+						],
+						"UniqueId": "SnowFire.Warp_Binder"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342418506,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393580,
+		"UploaderId": 97844303,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

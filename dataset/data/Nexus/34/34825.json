@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 34825,
+	"Name": "(Spanish) Crops Need Light",
+	"Author": "Hayato2236",
+	"AuthorLabel": "Traducido por Hayato2236",
+	"Description": "[img]https://staticdelivery.nexusmods.com/mods/1303/images/34772/34772-1749638422-15480865.png[/img]\n<br />\n<br />[center][size=5]\uFEFF[/size][b][size=5]Crops Need Light[/size][/b][/center][b]\n<br />[/b][b]Nota del modder:[/b] \n<br />Creé este mod porque estaba diseñando un mapa de granja que tiene una gran zona de cueva, y pensé—bueno, se siente un poco demasiado poderoso tener acceso a lo que básicamente es un invernadero grande justo al comienzo del juego. ¿No sería más lindo y justo si no pudiera cultivar cultivos en esa cueva a menos que tuviera algunas luces de cultivo?\n<br />\n<br />No conocía ningún mod existente que hiciera esto, así que hice Crops Need Light. Con este mod, las áreas interiores que no sean invernaderos requerirán luces de cultivo (o lámparas normales) para que los cultivos tengan suficiente luz para crecer. Los creadores de mapas también pueden configurar manualmente otras ubicaciones para que sean zonas de poca luz, lo que significa que funcionarán igual: los jugadores tendrán que fabricar y colocar luces de cultivo para poder hacer crecer cultivos en esos lugares.\n<br />\n<br />[center]-----------------------------------------------------------------[/center][size=3][b]Contenido[/b][/size]\n<br />[list]\n<br />[*]2 luces de cultivo fabricables: la luz de cultivo básica se desbloquea en nivel 2 de agricultura, mientras que la luz de cultivo de lujo se aprende en nivel 7.\n<br />[*]Luces de cultivo personalizables: la luz básica puede configurarse en 7 colores de madera diferentes, y la luz de lujo tiene 3 estilos para elegir.\n<br />[*]1 cultivo nuevo: El nuevo [i]Hongo Esponjoso de Cueva[/i] no es como otros cultivos: ¡solo puede crecer donde no hay luz! Los hongos esponjosos son una delicadeza rara, y no encontrarás sus semillas en tiendas. Tendrás que obtener semillas de hongo esponjoso colocando hongos esponjosos en la envasadora de semillas.\n<br />[*]\n<br />\n<br />[/list][b]¿Necesitas ayuda para encontrar hongos esponjosos?\n<br />[/b][SPOILER]Solo pueden aparecer en el Bosque Secreto en días lluviosos durante el verano. Sin embargo, no comienzan a aparecer hasta que hayas desbloqueado la Caverna Calavera.[/SPOILER]\n<br />\n<br />[b]Multijugador\n<br />[/b]No he probado este mod en modo multijugador. Supongo que debería funcionar bien si todos los jugadores tienen este mod instalado con las mismas configuraciones en su archivo, pero no estoy seguro. ¡Avísame cómo te va!\n<br />\n<br />[b]Compatibilidad\n<br />[/b]Aunque me gustaría que mi mod fuera compatible con todo, me imagino que no es así. Haré una lista aquí de mods incompatibles a medida que los descubra.\n<br />\n<br />[b]Problemas conocidos y planes futuros\n<br />[/b][b]Arbustos y arbustos de té: [/b]Actualmente, estos no se ven afectados por [i]Crops Need Light[/i], así que crecerán según las reglas originales del juego. Estoy interesado en cambiar esto, pero necesito descubrir cómo hacerlo, ya que tienen reglas diferentes a los árboles y cultivos. No es una prioridad alta para mí, así que puede que pase un tiempo antes de que haga algo al respecto.\n<br />\n<br />[b]Árboles y árboles frutales: [/b][i]Crops Need Light[/i] debería evitar que los jugadores planten árboles en zonas de poca luz si no son árboles adaptados a esas condiciones, pero no lo he probado realmente. Tampoco impedirá que los árboles ya plantados sigan creciendo o produciendo frutos. Si esto es un problema, siempre puedes cortar los árboles existentes.\n<br />\n<br />[center][b][size=4]Para autores de mods\n<br />[/size][/b][/center][b]\n<br />[/b][b]Cómo crear áreas de poca luz\n<br />[/b]Para hacer que una ubicación sea un \"área de poca luz\", tienes dos opciones:\n<br />\n<br />[b]Opción 1:[/b] Si tu mapa es una ubicación interior (el mapa no tiene la propiedad Outdoors), pero no es un invernadero (el mapa tampoco tiene la propiedad IsGreenhouse), entonces Crops Need Light la tratará automáticamente como un área de poca luz mientras el jugador tenga activada la opción de configuración \"Tratar las ubicaciones interiores como áreas de poca luz\". Si tienes una ubicación interior que quieres que tenga luz plena, solo debes poner IsGreenHouse en true en las propiedades del mapa.\n<br />\n<br />[b]Opción 2:[/b] Si quieres que tu ubicación requiera luces de cultivo aunque esté al aire libre, o incluso si los jugadores tienen desactivada la opción automática de áreas interiores de poca luz, puedes usar el campo personalizado\u00A0\"glossamer.CropsNeedLight_LowLightArea\": \"true\"\u00A0en la entrada de datos de tu ubicación para hacer que sea un área de poca luz. Aquí hay un ejemplo de cómo se vería en un mod usando Content Patcher:\n<br />\n<br />[code][code]{\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Data/Locations\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"{{ModId}}_ExampleCave\": {\n<br />\u00A0 \u00A0 \u00A0 \"DisplayName\": \"Cueva Ejemplo\",\n<br />\u00A0 \u00A0 \u00A0 \"CreateOnLoad\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"MapPath\": \"Maps/{{ModId}}_ExampleCave\"\n<br />\u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \"CanPlantHere\": true,\n<br />\u00A0 \u00A0 \u00A0 \"CustomFields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"glossamer.CropsNeedLight_LowLightArea\": \"true\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}[/code][/code]\n<br />[b]Cómo hacer que los cultivos toleren la poca luz\n<br />[/b]Crops Need Light también permite que los cultivos ignoren las condiciones de iluminación: crecerán igual en áreas de poca luz o con mucha luz y no necesitarán luces de cultivo. A estos les llamo \"cultivos tolerantes a poca luz\".\n<br />\n<br />Para hacer que un cultivo sea tolerante a poca luz, puedes añadir el campo personalizado\u00A0\"glossamer.CropsNeedLight_LowLightCrop\": \"true\"\u00A0en la entrada de datos del cultivo.\n<br />\n<br />Si quieres que tu cultivo solo crezca en áreas de poca luz, entonces usa ese mismo campo personalizado pero con el valor\u00A0\"I\"\u00A0(i mayúscula, como en iglú), así\n<br />\n<br />\"glossamer.CropsNeedLight_LowLightCrop\": \"I\"\n<br />\n<br />Aquí tienes un ejemplo de entrada de datos para un cultivo con este campo personalizado:\n<br />\n<br />[code][code]{[/code][code]\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Data/Crops\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"{{ModId}}_ExampleCropSeeds\": {\n<br />\u00A0 \u00A0 \u00A0 \"Seasons\": [\"spring\"],\n<br />\u00A0 \u00A0 \u00A0 \"DaysInPhase\": [1, 2, 2, 3],\n<br />\u00A0 \u00A0 \u00A0 \"HarvestItemId\": \"{{ModId}}_ExampleCrop\",\n<br />\u00A0 \u00A0 \u00A0 \"Texture\": \"Mods/{{ModId}}/crops\",\n<br />\u00A0 \u00A0 \u00A0 \"SpriteIndex\": 0,\n<br />\u00A0 \u00A0 \u00A0 \"CustomFields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"glossamer.CropsNeedLight_LowLightCrop\": \"true\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}[/code][/code]\n<br />[b]Cómo crear luces de cultivo\n<br />[/b]Primero, todas las luces de cultivo deben tener la propiedad IsLamp en su entrada de big craftables configurada en true.\n<br />\n<br />Luego, puedes usar el campo personalizado\u00A0\"glossamer.CropsNeedLight_GrowLightRadius\": \"4\"\u00A0en la entrada de big craftables para hacerlas luces de cultivo. Puedes cambiar el número 4 por el rango (en casillas) que quieras que tenga tu luz de cultivo.\n<br />\n<br />[b]Ejemplo de entrada de datos para una luz de cultivo:[/b]\n<br />\n<br />[code]{\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Data/BigCraftables\",\n<br />\u00A0 \"Entries\": {\n<br />    \"{{ModId}}_ExampleGrowLight\": {\n<br />      \"Name\": \"{{ModId}}_ExampleGrowLight\",\n<br />      \"DisplayName\": \"Luz de Cultivo Ejemplo\",\n<br />      \"Description\": \"Esta es una luz de cultivo de ejemplo.\",\n<br />      \"IsLamp\": true,\n<br />      \"CustomFields\": {\n<br />      \u00A0 \"glossamer.CropsNeedLight_GrowLightRadius\": \"6\"\n<br />      }\n<br />    }\n<br />\u00A0 }\n<br />}[/code]\n<br />[b]Nota\n<br />[/b]No es necesario que Crops Need Light sea una dependencia para que estas configuraciones funcionen, y tu mod no se romperá si un jugador tiene tu mod pero no Crops Need Light. Es seguro incluir estas configuraciones en tus cultivos o ubicaciones para compatibilidad con Crops Need Light sin requerir que los jugadores instalen este mod.\n<br />\n<br />[b]Instalación de la traducción[/b]\n<br />Descomprime, copia la carpeta [b]CropsNeedLight\u00A0[/b]y pegala en [b][i]stardew valley/mods[/i][/b], reemplaza si lo solicita",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34825",
+	"Version": "1.0.0",
+	"Updated": "2025-06-13T13:01:52+00:00",
+	"Downloads": [
+		{
+			"Id": 134580,
+			"Type": "Main",
+			"DisplayName": "CropsNeedLight Spanish v1.0.0",
+			"FileName": "CropsNeedLight Spanish v1.0.0-34825-1-0-0-1749819712.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 2328,
+			"Uploaded": "2025-06-13T13:01:52+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "CropsNeedLight\\CropsNeedLight\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "CropsNeedLight\\CropsNeedLight\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "CropsNeedLight\\[CP] CropsNeedLight\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "CropsNeedLight\\[CP] CropsNeedLight\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342521268,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421513,
+		"UploaderId": 180180273,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

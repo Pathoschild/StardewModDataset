@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 19454,
+	"Name": "FastLoads",
+	"Author": "spajus",
+	"Description": "[b]Warning[/b]: This mod is [b]incompatible with SpriteMaster[/b], which modifies the same core StardewValley code that has the performance bottleneck. You have to use either SpriteMaster or this mod, but not both.\n<br />\n<br />[b]How It Works: [/b]This mod patches a couple of very inefficient methods in Stardew Valley core. These methods were accounting for more than a half of total game load time. The methods are used to generate NPC routes, so the more NPCs you'd have, the slower the game would load. This mod builds an efficient cache by hashing all routes, then patches the route rebuild logic to use the cache. This performance issue seems to be fixed in Stardew Valley v1.6.\n<br />\n<br />Twitter thread discussing the details of this mod: [url=https://twitter.com/dev_spajus/status/1733122991943250182]https://twitter.com/dev_spajus/status/1733122991943250182[/url]\uFEFF\n<br />\n<br />[b]How Did I Find This Bottleneck[/b]: I used [url=https://superluminal.eu/]Superluminal profiler[/url] to capture what modded Stardew Valley was doing and analyzed the data. If you make mods, games, or any kind of software, please use tools like this and take performance seriously, don't make the players suffer long wait times and don't waste electricity. Computers are extremely fast, and there is no excuse for loading times that take more than a few seconds! There are many more inefficiencies in modded Stardew Valley, and loading times could be brought down to a few seconds for most hardware, but unfortunately it won't be as easy as fixing two small methods like I did here, and each developer should do it individually in their own code.\n<br />\n<br />[b]What This Mod Does Not Do[/b]: It does not improve game boot time. It does not improve overall performance. It only affects start of new game, load of saved game, and certain screen to screen transitions that involve rebuilding NPC routes in the background.\n<br />\n<br />[b]Potential Side Effects: [/b]Depending on the number and type of mods you have, there is a low chance (less than 0.001%) for two NPC routes to have a hash collision in the cache. If that happens, some NPCs may get missing. There are built-in debugging options to ensure this does not happen, but you have to enable them through the configuration. See next section.\n<br />\n<br />[b]Configuration: [/b]You can enable \"Detect Collisions\" and \"Abort On Collision\" configuration options to ensure there are no missing NPC behaviors. The game could load slightly slower with collision detection on low-end hardware.\n<br />\n<br />[b]Source code: [url=https://github.com/spajus/stardew-valley-fast-loads]https://github.com/spajus/stardew-valley-fast-loads[/url]\uFEFF\n<br />[/b][b]\n<br />Misc: [/b]The game I'm working on full time: [url=https://store.steampowered.com/app/1380910/Stardeus/]Stardeus[/url] - a sci-fi space colony simulator where you can also grow crops.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19454",
+	"Version": "1.0.3",
+	"Updated": "2023-12-10T08:46:14+00:00",
+	"Downloads": [
+		{
+			"Id": 79344,
+			"Type": "Main",
+			"DisplayName": "FastLoads.zip",
+			"FileName": "FastLoads.zip-19454-1-0-3-1702197974.zip",
+			"Description": "",
+			"Version": "1.0.3",
+			"SizeInBytes": 14933,
+			"Uploaded": "2023-12-10T08:46:14+00:00",
+			"Mods": [
+				{
+					"Id": "spajus.fastloads",
+					"DisplayName": "FastLoads",
+					"Type": "Smapi",
+					"RelativePath": "FastLoads",
+					"Manifest": {
+						"Name": "FastLoads",
+						"Description": "Fixes core performance issue that makes Stardew Valley slow to load with large expansions",
+						"Author": "spajus",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "FastLoads.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19454",
+							"GitHub:spajus/stardew-valley-fast-loads"
+						],
+						"UniqueId": "spajus.fastloads"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342466032,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406142,
+		"UploaderId": 195300371,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

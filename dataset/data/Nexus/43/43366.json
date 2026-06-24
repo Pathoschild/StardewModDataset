@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 43366,
+	"Name": "Quality Tricks",
+	"Author": "iamsaulc",
+	"Description": "[center][size=5][b][u]Quality Tricks[/u][/b][/size][/center]\n<br />[left][b]T[/b]ransfers the input quality to the output of any machine. Iridium egg → Iridium mayonnaise. Works with all vanilla and modded machines and products. Compatible with Automate.[/left]\n<br />\n<br />[b][u]Requirements[/u][/b]\n<br />\n<br />* SMAPI 4.0+\n<br />* Stardew Valley 1.6+\n<br />\n<br />[b][u]Installation[/u][/b]\n<br />\n<br />* Download the .zip file and extract it.\n<br />* Copy the QualityTricks folder into Stardew Valley/Mods/.\n<br />* Launch the game with SMAPI. You should see in the console:\n<br />\n<br />[quote][i][Quality Tricks] Quality Tricks loaded.[/i][/quote]\n<br />\n<br />[b][u]Compatibility[/u][/b]\n<br />\n<br />* All vanilla machines\n<br />* Machines and products from other mods\n<br />* Automate\n<br />* Overnight processing\n<br />* Multiplayer\n<br />* Window and Linux\n<br />*\u00A0Producer Framework Mod\n<br />*\u00A0PFMAutomate\n<br />\n<br />[b][u]How it works[/u][/b]\n<br />\n<br />Uses Harmony to intercept the moment an item is inserted into a machine, stores its quality, and applies it to the output once the machine finishes. The logic is completely generic: it does not need to know the machine type or product, so it works automatically with any mod that uses Stardew Valley's standard machine system.\n<br />\n<br />[color=#f4f4f4][center][b]This mod does not change what each machine produces, only the quality of the result.[/b][/center][/color]\n<br />\n<br />[b][u]Configuration to exclude machines.[/u][/b]\n<br />\n<br />Configuration to exclude machines from quality transfer. Machine IDs can be written using the full format like “(BC)163” or simply using the number or mod ID, such as “163” or “Amichwan.DinoExpanded_GeneticFuser”. Both formats work. By default, Cask (163) and Seed Maker (25) are excluded.\n<br />\n<br />Default:\n<br />\n<br />[i][quote]{\n<br />  \"ExcludedMachineIDs\": [\n<br />    \"(BC)163\",\n<br />    \"(BC)25\"\n<br />  ]\n<br />}[/quote][/i]\n<br />\n<br />[b][u]Report Bugs[/u][/b]\n<br />\n<br />To report an error, please use the appropriate section and provide as many details as possible about the issue encountered. It is also essential to attach the error log, which should be uploaded to the following link: [url=https://smapi.io/log][SMAPI log parser][/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43366",
+	"Version": "1.1.1",
+	"Updated": "2026-04-01T21:11:56+00:00",
+	"Downloads": [
+		{
+			"Id": 163107,
+			"Type": "Main",
+			"DisplayName": "QualityTricks",
+			"FileName": "QualityTricks-43366-1-1-1-1775077916.zip",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 21688,
+			"Uploaded": "2026-04-01T21:11:56+00:00",
+			"Mods": [
+				{
+					"Id": "IamSaulC.QualityTricks",
+					"DisplayName": "Quality Tricks",
+					"Type": "Smapi",
+					"RelativePath": "QualityTricks",
+					"Manifest": {
+						"Name": "Quality Tricks",
+						"Description": "Makes artisan machines output the same quality as their input item. Works with all machines including modded ones.",
+						"Author": "IamSaulC",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "QualityTricks.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:43366"
+						],
+						"UniqueId": "IamSaulC.QualityTricks"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549795,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430054,
+		"UploaderId": 192696206,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

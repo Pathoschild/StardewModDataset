@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 7710,
+	"Name": "Overworld Chests",
+	"Author": "aedenthorn",
+	"Description": "[i][b]Note: This mod requires the [url=https://www.nexusmods.com/stardewvalley/mods/7739]Advanced Loot Framework[/url] mod to be installed.[/b][/i]\n<br />\n<br />So... I've been obsessed with chests lately! After picking up Genshin Impact, I really appreciated how full of chests that game's world really is. Here's an attempt to bring that sort of lootfest to Stardew Valley!\n<br />\n<br />This mod spawns random chests to all locations (except farmhouses) in the Stardew Valley world, and respawns them on a regular basis (every seven days by default).\n<br />\n<br />Chests should disappear once they are emptied.\n<br />\n<br />[b]Warning: doesn't play nicely with Convenient Chests yet. Should work fine with Automate and Chests Anywhere.[/b]\n<br />\n<br />Here is the default config.json file (created in this mod's folder when you first run the game with this mod installed):\n<br />\n<br />[code]{\n<br />\u00A0 \"EnableMod\": true,\n<br />\u00A0 \"AllowIndoorSpawns\": true,\n<br />\u00A0 \"OnlyAllowLocations\": \"\",\n<br />\u00A0 \"DisallowLocations\": \"\",\n<br />\u00A0 \"RoundNumberOfChestsUp\": false,\n<br />\u00A0 \"RespawnInterval\": 7,\n<br />\u00A0 \"ChestDensity\": 0.0001,\n<br />\u00A0 \"MaxMult\": 100,\n<br />\u00A0 \"MaxItems\": 5,\n<br />\u00A0 \"ItemsBaseMaxValue\": 100,\n<br />\u00A0 \"MinItemValue\": 20,\n<br />\u00A0 \"MaxItemValue\": -1,\n<br />\u00A0 \"CoinBaseMin\": 20,\n<br />\u00A0 \"CoinBaseMax\": 100,\n<br />\u00A0 \"RarityChance\": 0.2,\n<br />\u00A0 \"IncreaseRate\": 0.3,\n<br />\u00A0 \"ItemListChances\": {\n<br />\u00A0\u00A0\u00A0 \"MeleeWeapon\": 100,\n<br />\u00A0\u00A0\u00A0 \"Shirt\": 0,\n<br />\u00A0\u00A0\u00A0 \"Pants\": 0,\n<br />\u00A0\u00A0\u00A0 \"Hat\": 0,\n<br />\u00A0\u00A0\u00A0 \"Boots\": 100,\n<br />\u00A0\u00A0\u00A0 \"BigCraftable\": 100,\n<br />\u00A0\u00A0\u00A0 \"Ring\": 100,\n<br />\u00A0\u00A0\u00A0 \"Seed\": 100,\n<br />\u00A0\u00A0\u00A0 \"Mineral\": 100,\n<br />\u00A0\u00A0\u00A0 \"Relic\": 100,\n<br />\u00A0\u00A0\u00A0 \"Cooking\": 0,\n<br />\u00A0\u00A0\u00A0 \"Fish\": 0,\n<br />\u00A0\u00A0\u00A0 \"BasicObject\": 0\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />[b]OnlyAllowLocations[/b] is a comma-separated list of location names to ONLY spawn chests. e.g.: \"Forest,Woods\"\n<br />[b]DisallowLocations [/b]is a comma-separated list of location names to NOT spawn chests. e.g.: \"Farm,Town\"\n<br />Use one or the other. No spaces allowed in the list.\n<br />\n<br />[b]RoundNumberOfChestsUp [/b]means to round fractions up, so pretty much any location no matter how small will have at least one chest. Otherwise, it will round down and small locations will likely have no chests.\n<br />\n<br />Chest density of 1.0 would mean every free spot on the map would have a chest.\n<br />\n<br />If you have [url=https://www.nexusmods.com/stardewvalley/mods/7685]Treasure Chests Extended[/url] installed (which I recommend for this mod), the rest of the variables will affect the quality of the chests. [b]\n<br />\n<br />MaxMult[/b] refers to the highest multiplier of the base values allowed for a chest. The actual multiplier will be determined randomly, affected by [b]RarityChance[/b], which affects the spread of values (use decimal values between 0 and 1, lower decimals favour less valuable chests), and [b]IncreaseRate[/b], which determines the curve of value increase based on the multiplier (use decimal values between 0 and 1, lower decimals means diminishing returns on the mult).\n<br />\n<br />[b]CoinBaseMin[/b] and [b]CoinBaseMax [/b]are the random base range of coins (before the random multiplier is applied).\n<br />\n<br />[b]Rarity[/b] determines how likely a chest is to be closer to the max level; 1.0 would mean a linearly random distribution, whereas 0.1 means it is much more likely to get a common chest.\n<br />\n<br />[b]ItemListChances[/b] determines the chance that an item type  can be placed in the chest once it is selected at random as a potential item. The number is a percent chance, so 0 means that type of item will never be allowed to be in a chest, and 100 means it will always be added. \n<br />\n<br />With [url=https://www.nexusmods.com/stardewvalley/mods/7685]Treasure Chests Extended[/url]\uFEFF installed, this mod also provides colouring based on chest level - dark gray for common chests, brown for bronze chests, silver for silver chests, gold for gold chests, and purple for the highest end chests.\n<br />\n<br />\n<br />[size=4][b]Other Chest Mods[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7685]Treasure Chests Expanded[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7694]Fishing Chests Expanded[/url]\uFEFF\n<br />[/list]\n<br />\n<br />[size=4][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/7739]Advanced Loot Framework[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7710",
+	"Version": "0.5.4",
+	"Updated": "2025-04-13T04:45:06+00:00",
+	"Downloads": [
+		{
+			"Id": 129765,
+			"Type": "Main",
+			"DisplayName": "Overworld Chests",
+			"FileName": "Overworld Chests-7710-0-5-4-1744519506.zip",
+			"Description": "Changes:\n<br />\n<br />Update to 1.6 thanks to mouahrara",
+			"Version": "0.5.4",
+			"SizeInBytes": 27834,
+			"Uploaded": "2025-04-13T04:45:06+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.OverworldChests",
+					"DisplayName": "Overworld Chests",
+					"Type": "Smapi",
+					"RelativePath": "OverworldChests",
+					"Manifest": {
+						"Name": "Overworld Chests",
+						"Description": "Spawns random treasure chests throughout the Stardew Valley world every set number of days.",
+						"Author": "aedenthorn",
+						"Version": "0.5.4",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "OverworldChests.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.AdvancedLootFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7710"
+						],
+						"UniqueId": "aedenthorn.OverworldChests"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342516453,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394398,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

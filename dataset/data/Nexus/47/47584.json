@@ -1,0 +1,95 @@
+{
+	"Site": "Nexus",
+	"Id": 47584,
+	"Name": "Simple Cooking",
+	"Author": "aedenthorn",
+	"Description": "[youtube]PmK3yT1-p5U[/youtube]\n<br />\n<br />[b][size=5][u]Overview[/u][/size][/b]\n<br />\n<br />This mod lets you place raw fish or vegetables on a [url=https://stardewvalleywiki.com/Campfire]campfire [/url]or any\u00A0[url=https://stardewvalleywiki.com/Wooden_Brazier]brazier [/url]and receive grilled versions.\n<br />\n<br />Grilled items retain the quality of the raw item.\u00A0\n<br />\n<br />By default, grilled items sell for 1.5x as much and restore 1.25x as much stamina and health as raw counterparts.\n<br />\n<br />\n<br />[b][size=5][u]Usage[/u][/size][/b]\n<br />\n<br />To cook an item, hold it, walk next to the fire and press the tool use button (e.g. Left Mouse Button).\n<br />\n<br />Grilling takes 10 minutes for vegetables and fish.\n<br />\n<br />Leaving vegetables or fish on for 30 minutes or more will cause them to be burnt.\n<br />\n<br />Burnt items divide the price and edibility by the respective multipliers.\n<br />\n<br />Turning off the fire will pause cooking.\n<br />\n<br />Cooked items emit light smoke that gets darker as they approach burnt state.\n<br />\n<br />You can add categories or items to the config file to make them grillable.\n<br />\n<br />There is an optional file in the Files section that lets this mod work with [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url], meaning you can put a chest full of raw grillables beside a fire and come back later to a chest full of grilled items.\n<br />\n<br />\n<br />[b][size=5][u]Advanced[/u][/size][/b]\n<br />\n<br />[b][size=4]Custom Cookables[/size][/b]\n<br />\n<br />You can add Item IDs or even entire categories as grillable items in the config file, e.g.:\n<br />\n<br />\u00A0 \"GrillableItems\": [ \"myRawThing\", \"myOtherRawThing\" ],\n<br />\n<br />These items will work like veggies and fish, with Grilled and Burnt products.\n<br />\n<br />You can set any object to be a custom cookable using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.SimpleCooking/cookable\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"74\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ProductID\": \"(O)279\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BurntID\": \"(O)305\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PlacedSound\": \"clank\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CookedSound\": \"yoba\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BurntSound\": \"debuffHit\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ShowSmoke\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CookTime\": 60,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BurntAt\": 3\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]\n<br />This makes Prismatic Shards cookable, producing Magic Rock Candy (or Void Eggs if burnt). Cook time is in minutes, \"Burned\" is a multiplier for CookTime, so in this case 60 minutes to cook, 180 minutes until burnt. Use the [b][url=https://stardewvalleywiki.com/Modding:Items#Item_IDs]Unqualified Item ID[/url][/b] for the key.\n<br />\n<br />\n<br />[b][size=4]Custom Cookers[/size][/b]\n<br />\n<br />You can set any placeable object to be cooker using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.SimpleCooking/cooker\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"(O)93\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 8,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": -24,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Z\": 9.5\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]\n<br />This makes ordinary torches into cookers. Note that most objects can't be turned on and off like the campfire and braziers, but can still be designated as cookers. Use the [b][url=https://stardewvalleywiki.com/Modding:Items#Item_IDs]Qualified Item ID[/url][/b] for the key.\n<br />\n<br />\n<br />[u][size=5][b]Technical[/b][/size][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47584",
+	"Version": "0.4.3",
+	"Updated": "2026-06-18T00:18:59+00:00",
+	"Downloads": [
+		{
+			"Id": 171185,
+			"Type": "Optional",
+			"DisplayName": "SimpleCookingAutomate",
+			"FileName": "1f/16/e7/1f16e76a-e510-4d0c-9859-d23699dd86ad",
+			"Description": "Optional support for Automate",
+			"Version": "0.1.1",
+			"SizeInBytes": 21930,
+			"Uploaded": "2026-06-14T06:19:51+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.SimpleCookingAutomate",
+					"DisplayName": "Simple Cooking Automate",
+					"Type": "Smapi",
+					"RelativePath": "SimpleCookingAutomate",
+					"Manifest": {
+						"Name": "Simple Cooking Automate",
+						"Description": "Simple Cooking Automate.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SimpleCookingAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.SimpleCooking",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:47584Automate"
+						],
+						"UniqueId": "aedenthorn.SimpleCookingAutomate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557873,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 171650,
+			"Type": "Main",
+			"DisplayName": "SimpleCooking",
+			"FileName": "cc/0a/ca/cc0aca29-4ed8-4829-b310-7dedc2396420",
+			"Description": "Changes:\n\nFixed quality\n",
+			"Version": "0.4.3",
+			"SizeInBytes": 29533,
+			"Uploaded": "2026-06-18T00:18:59+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.SimpleCooking",
+					"DisplayName": "Simple Cooking",
+					"Type": "Smapi",
+					"RelativePath": "SimpleCooking",
+					"Manifest": {
+						"Name": "Simple Cooking",
+						"Description": "Simple Cooking.",
+						"Author": "aedenthorn",
+						"Version": "0.4.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SimpleCooking.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47584"
+						],
+						"UniqueId": "aedenthorn.SimpleCooking"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558338,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434272,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

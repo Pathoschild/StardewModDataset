@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 3256,
+	"Name": "TehCore",
+	"Author": "TehPers",
+	"Description": "For [b]SDV[/b] 1.5.5+ and [b]SMAPI[/b] 3.13.0+\n<br />\n<br />A core mod with the goal of enabling high levels of compatibility between mods.\n<br />\n<br />[b]Features:[/b]\n<br />\n<br />[list]\n<br />[*]Expose complex mod APIs. TehCore adds dependency injection for mods through [url=https://github.com/ninject/ninject/wiki]Ninject[/url]. Need to expose an IComplexApi interface that SMAPI's mod registry doesn't support? Expose it through your mod's service container, and anyone can request it easily and even have it automatically injected into their classes if they want.\n<br />[*]Support items of any type with namespaced keys! By using the namespace registry, mods can create items of any type (objects, weapons, tools, etc.) and even create items added through Json Assets or Dynamic Game Assets through string-based keys.\n<br />[list]\n<br />[*]Use namespaced keys in your configs! You can let users create content packs for your mods using any item exposed through an item namespace by using namespaced keys.\n<br />[*]Mods can also register their own namespaces. Add support for your custom items to [b]every [/b]TehCore-based mod by registering a custom namespace for them. You can even make TehCore an optional dependency while doing this!\n<br />[/list][*]Create commented JSON files. Enhance your configs by adding descriptions to each of the settings.\n<br />[/list]\n<br />[size=5]API[/size]\n<br />\n<br />The API docs are still a work in progress. Check back soon for updated docs.\n<br />\n<br />[size=5]Source code &amp; License[/size]\n<br />\n<br />This mod is licensed under MIT License. The source code and full license text can be found on the [url=https://github.com/TehPers/StardewValleyMods/tree/full-rewrite]GitHub repository[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3256",
+	"Version": "1.1.0",
+	"Updated": "2022-05-21T05:29:13+00:00",
+	"Downloads": [
+		{
+			"Id": 54664,
+			"Type": "Main",
+			"DisplayName": "TehCore 1.1.0",
+			"FileName": "TehCore 1.1.0-3256-1-1-0-1653110953.zip",
+			"Description": "For SDV 1.5.5 and SMAPI 3.14.x",
+			"Version": "1.1.0",
+			"SizeInBytes": 343189,
+			"Uploaded": "2022-05-21T05:29:13+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.Core",
+					"DisplayName": "TehCore",
+					"Type": "Smapi",
+					"RelativePath": "TehPers.Core",
+					"Manifest": {
+						"Name": "TehCore",
+						"Description": "Utility mod for creating highly compatible mods",
+						"Author": "TehPers",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "TehPers.Core.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3256",
+							"ModDrop:1071149"
+						],
+						"UniqueId": "TehPers.Core",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342441352,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389944,
+		"UploaderId": 3994776,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

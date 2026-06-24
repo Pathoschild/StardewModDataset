@@ -1,0 +1,114 @@
+{
+	"Site": "Nexus",
+	"Id": 45258,
+	"Name": "Multi Save Checkpoint",
+	"Author": "NoobSama101",
+	"Description": "[b]Multi Save Checkpoint[/b] is a companion mod for [b]Multi Save - Continued[/b]. It lets you create checkpoint-style backup saves manually with one hotkey, or automatically at a configurable interval.\n<br />\n<br />There are two editions:\n<br />\n<br />[list]\n<br />[*][b]Standard Edition[/b] — uses Stardew Valley's normal save flow first, then asks Multi Save - Continued to create a backup checkpoint.[/*]\n<br />[*][b]QuickSave Edition[/b] — uses QuickSave to capture the current live game state, then asks Multi Save - Continued to create a backup checkpoint.[/*]\n<br />[/list]\n<br />[b]Choose only one edition.[/b]\n<br />\n<br />Do not install Standard Edition and QuickSave Edition together.\n<br />\n<br />[b]Which edition should I use?[/b]\n<br />\n<br />[b]Standard Edition[/b]\n<br />\n<br />Choose this edition for vanilla, lightly modded, or quality-of-life focused setups.\n<br />\n<br />[list]\n<br />[*]Uses Stardew Valley's normal save process.[/*]\n<br />[*]Good for vanilla or light mod lists.[/*]\n<br />[*]Good for quality-of-life mod setups.[/*]\n<br />[*]Does not require QuickSave.[/*]\n<br />[*]Manual and automatic checkpoints use the normal Stardew Valley save flow.[/*]\n<br />[*]When restored through Multi Save - Continued, loading behaves as a normal Stardew Valley save.[/*]\n<br />[*]You start at 6:00 AM, but your saved progress is preserved.[/*]\n<br />[/list]\n<br />This edition is closer to a [b]safe progress checkpoint system[/b] than a true save-anywhere quickload system.\n<br />\n<br />[b]QuickSave Edition[/b]\n<br />\n<br />Choose this edition for heavier mod lists, QuickSave-compatible modpacks, or players who want to use QuickSave and Multi Save - Continued together.\n<br />\n<br />[list]\n<br />[*]Uses QuickSave to capture the current live game state.[/*]\n<br />[*]Good for heavy mod lists and QuickSave-compatible setups.[/*]\n<br />[*]Good if you already use QuickSave and want Multi Save backup points from it.[/*]\n<br />[*]Can restore the live checkpoint automatically when a pending marker is found.[/*]\n<br />[*]Requires QuickSave.[/*]\n<br />[*]Uses extra safety checks, file validation, rollback support, and restore-loop protection.[/*]\n<br />[/list]\n<br />This edition is more advanced and more live-state focused than the Standard Edition.\n<br />\n<br />[b]Automatic backups[/b]\n<br />\n<br />Both editions support optional automatic backups.\n<br />\n<br />[list]\n<br />[*]Automatic backups are disabled by default.[/*]\n<br />[*]You can enable them in Generic Mod Config Menu or the config file.[/*]\n<br />[*]The automatic backup interval can be configured from 2 to 15 minutes.[/*]\n<br />[*]The recommended interval is 5 minutes.[/*]\n<br />[*]Manual checkpoints reset the automatic backup timer.[/*]\n<br />[*]Automatic backups wait until the game is in a safe state before starting.[/*]\n<br />[*]If the game is busy, in a menu, in dialogue, in an event, in a transition, or otherwise unsafe, the automatic backup waits and retries later.[/*]\n<br />[/list]\n<br />[b]Important difference[/b]\n<br />\n<br />[list]\n<br />[*][b]Standard Edition[/b] saves through Stardew Valley's normal save flow.[/*]\n<br />[*][b]QuickSave Edition[/b] saves through QuickSave first, then syncs that state into a Multi Save backup.[/*]\n<br />[/list]\n<br />Use [b]Standard Edition[/b] if you want the simpler vanilla-save method.\n<br />\n<br />Use [b]QuickSave Edition[/b] if you specifically want QuickSave-based live checkpoints and Multi Save backups together.\n<br />\n<br />[b]Features[/b]\n<br />\n<br />[list]\n<br />[*]Create checkpoint saves with one hotkey.[/*]\n<br />[*]Optional automatic checkpoint backups.[/*]\n<br />[*]Creates Multi Save - Continued backup save points.[/*]\n<br />[*]Configurable hotkey.[/*]\n<br />[*]Configurable automatic backup interval.[/*]\n<br />[*]Optional HUD messages.[/*]\n<br />[*]Generic Mod Config Menu support.[/*]\n<br />[*]Enable / disable option.[/*]\n<br />[*]Detailed SMAPI log messages with clear error codes.[/*]\n<br />[*]Compatibility and safety checks for modded setups.[/*]\n<br />[/list]\n<br />[b]Standard Edition features[/b]\n<br />\n<br />[list]\n<br />[*]Uses Stardew Valley's normal save process.[/*]\n<br />[*]Keeps normal overnight saves unchanged.[/*]\n<br />[*]Tracks the vanilla save menu before creating a Multi Save backup.[/*]\n<br />[*]Supports manual and automatic normal-save checkpoints.[/*]\n<br />[*]Good for vanilla, lightly modded, or quality-of-life mod setups.[/*]\n<br />[/list]\n<br />[b]QuickSave Edition features[/b]\n<br />\n<br />[list]\n<br />[*]Uses QuickSave to capture the current live game state.[/*]\n<br />[*]Supports manual and automatic QuickSave checkpoints.[/*]\n<br />[*]Automatically restores a pending live checkpoint marker when loading the save.[/*]\n<br />[*]Deletes the live checkpoint marker after restore is confirmed.[/*]\n<br />[*]Protects against infinite auto-load loops.[/*]\n<br />[*]Validates QuickSave files before syncing.[/*]\n<br />[*]Uses temp files, backup files, retries, and rollback support for safer file syncing.[/*]\n<br />[*]Blocks checkpoint creation during menus, dialogue, minigames, screen transitions, events, unsafe locations, and non-host multiplayer use.[/*]\n<br />[/list]\n<br />[b]What this mod does not do[/b]\n<br />\n<br />[list]\n<br />[*]The Standard Edition is not a true quickload mod.[/*]\n<br />[*]The Standard Edition does not restore your exact tile, second, animation, open menu, event state, or temporary game state.[/*]\n<br />[*]Neither edition replaces Stardew Valley's normal overnight save behavior.[/*]\n<br />[*]You should not install both editions at the same time.[/*]\n<br />[/list]\n<br />[b]Default hotkey[/b]\n<br />\n<br />[list]\n<br />[*][b]F6[/b][/*]\n<br />[/list]\n<br />You can change the hotkey through Generic Mod Config Menu or the config file.\n<br />\n<br />[b]Automatic backup default[/b]\n<br />\n<br />[list]\n<br />[*]Automatic backups are [b]disabled by default[/b].[/*]\n<br />[*]Default interval: [b]5 minutes[/b].[/*]\n<br />[*]Available interval: [b]2 to 15 minutes[/b].[/*]\n<br />[/list]\n<br />[b]Requirements[/b]\n<br />\n<br />[b]Standard Edition[/b]\n<br />\n<br />[list]\n<br />[*][b]SMAPI[/b][/*]\n<br />[*][b]Multi Save - Continued[/b][/*]\n<br />[/list]\n<br />[b]QuickSave Edition[/b]\n<br />\n<br />[list]\n<br />[*][b]SMAPI[/b][/*]\n<br />[*][b]Multi Save - Continued[/b][/*]\n<br />[*][b]QuickSave[/b][/*]\n<br />[/list]\n<br />[b]Optional[/b]\n<br />\n<br />[list]\n<br />[*][b]Generic Mod Config Menu[/b] — for editing settings in-game[/*]\n<br />[/list]\n<br />[b]Recommended download choice[/b]\n<br />\n<br />[list]\n<br />[*]Download [b]Standard Edition[/b] for vanilla, lightly modded, or quality-of-life focused setups.[/*]\n<br />[*]Download [b]QuickSave Edition[/b] for heavy mod lists, QuickSave-compatible modpacks, or if you want to use QuickSave and Multi Save - Continued together.[/*]\n<br />[/list]\n<br />Again: [b]choose only one edition.[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45258",
+	"Version": "1.2.0",
+	"Updated": "2026-04-26T17:08:37+00:00",
+	"Downloads": [
+		{
+			"Id": 165672,
+			"Type": "Main",
+			"DisplayName": "Multi Save Checkpoint - QuickSave Edition 1.1.0",
+			"FileName": "Multi Save Checkpoint - QuickSave Edition 1.1.0-45258-1-1-0-1777216052.zip",
+			"Description": "Uses QuickSave to capture the current live game state, then asks Multi Save - Continued to create a backup. Ideal for players who want to use QuickSave and Multi Save together.<br /><br />Update Key: @QuickSaveEdition",
+			"Version": "1.1.0",
+			"SizeInBytes": 43843,
+			"Uploaded": "2026-04-26T15:07:32+00:00",
+			"Mods": [
+				{
+					"Id": "NoobSama101.MultiSaveCheckpointQuickSaveEdition",
+					"DisplayName": "Multi Save Checkpoint - QuickSave Edition",
+					"Type": "Smapi",
+					"RelativePath": "MultiSaveCheckpointQuickSaveEdition",
+					"Manifest": {
+						"Name": "Multi Save Checkpoint - QuickSave Edition",
+						"Description": "QuickSave Edition: use QuickSave to capture the current live game state, then ask Multi Save - Continued to create manual or automatic backup save points.",
+						"Author": "NoobSama101",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.5.0",
+						"EntryDll": "MultiSaveCheckpointQuickSaveEdition.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "recon88.MultiSave",
+								"MinimumVersion": "1.0.5",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DLX.QuickSave",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:45258@QuickSaveEdition"
+						],
+						"UniqueId": "NoobSama101.MultiSaveCheckpointQuickSaveEdition"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552360,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 165687,
+			"Type": "Main",
+			"DisplayName": "MultiSaveCheckpoint 1.2.0",
+			"FileName": "MultiSaveCheckpoint 1.2.0-45258-1-2-0-1777223317.zip",
+			"Description": "Creates a daytime checkpoint using Stardew Valley's standard save flow, then prompts Multi Save - Continued to generate a backup. Ideal for vanilla or lightly modded setups, such as quality-of-life mods.<br /><br />Update Key: @StandardEdition",
+			"Version": "1.2.0",
+			"SizeInBytes": 31620,
+			"Uploaded": "2026-04-26T17:08:37+00:00",
+			"Mods": [
+				{
+					"Id": "NoobSama101.MultiSaveCheckpoint",
+					"DisplayName": "Multi Save Checkpoint - Standard Edition",
+					"Type": "Smapi",
+					"RelativePath": "MultiSaveCheckpoint",
+					"Manifest": {
+						"Name": "Multi Save Checkpoint - Standard Edition",
+						"Description": "Standard Edition: create manual or automatic daytime checkpoint saves with Stardew Valley's normal save flow, then ask Multi Save - Continued to create backup save points.",
+						"Author": "NoobSama101",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.5.0",
+						"EntryDll": "MultiSaveCheckpoint.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "recon88.MultiSave",
+								"MinimumVersion": "1.0.5",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:45258@StandardEdition"
+						],
+						"UniqueId": "NoobSama101.MultiSaveCheckpoint"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552375,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431946,
+		"UploaderId": 66744196,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

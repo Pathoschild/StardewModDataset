@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 32015,
+	"Name": "Better Weapon Stats",
+	"Author": "snakebytestudios",
+	"AuthorLabel": "Snake",
+	"Description": "This mod shows more useful weapon stats on the weapon tooltips. It overrides the existing tooltips to show the new stats. (See images.)\n<br />\n<br />[size=4][b]Background[/b][/size]\n<br />\n<br />I always felt like the vanilla tooltips were especially confusing, perhaps even intentionally so as to contribute to the overall mystical feel of the game. For example, you could have a sword with -4 Speed be somehow faster than a club with +4 Speed. And also, the critical chance and power values didn't convey at all how they affected your damage. +2 Critical Chance? +25 Critical Power? What do those values even mean?? So, I just always used whatever sword had the most damage since they felt the most powerful. But are they?\n<br />\n<br />[size=4][b]Changes[/b][/size]\n<br />\n<br />This mod will demystify all those ambiguous weapon stat values by showing critical chance as a percent, critical power as a multiplier, and speed in attacks per second. It will also calculate out the average damage per hit, taking into account buffs, critical hits, professions, and enchantments; and it will calculate the DPS (damage per second) by multiplying the average damage by the attack speed. Finally, it will show the knockback value for all weapons (and call it \"Knockback\" instead of \"Weight\"), taking buffs into account.\n<br />\n<br />[size=4][b]Multiplayer Compatibility[/b][/size]\n<br />\n<br />You can use this mod as either the host or the client in a co-op session independently of whether or not the host or all clients have the mod installed (or even have SMAPI installed). Only players with the mod installed will see the additional weapons stats.\n<br />\n<br />[size=4][b]Caveats[/b][/size]\n<br />\n<br />If a weapon has enchantments on it that would affect its base stats, you will actually have to equip the weapon to see those stats updated. That means selecting it on your toolbar.\n<br />\n<br />Also, you will probably find that your intuitions were correct and swords are still the best weapons to use. Although, their DPS can be misleading as it's very difficult to click that fast and also land every hit when dealing with knockback. I wonder if I should make a mod to rebalance all the weapons so they're all useful for some playstyle/strategy. Hmm.\n<br />\n<br />Another caveat that I should mention is that this mod reproduces a lot of code from the base game and is thus highly susceptible to breaking or becoming inaccurate due to changes made in game updates. However, since it's only a visual mod, there's no chance that your weapons will be broken or your save corrupted. Further, it should also work with any modded weapons (as long as they don't change how weapons work), although I haven't explicitly tested it as such.\n<br />\n<br />Regarding translations, I did add some for the languages supported by the game. If they're not good then feel free to correct them in the comments.\n<br />\n<br />[size=4][b]Technical Details[/b][/size]\n<br />\n<br />While I'm at it, I feel I should provide some insight into how some of the weapon stats actually work in the vanilla game. It is rather a mess of scattered code that no one else should have to invest time in deciphering.\n<br />[list]\n<br />[*]For weapon speeds, the values given are all relative to a base value for each weapon type (basically clubs are naturally slower than the other weapons). Also, for some reason, the values are divided by two when they're displayed. But the base values go through a multitude of modifiers, plus 400, times 1.3 here, divide by 5 there (but only for one weapon type), then times 2. Eventually, the calculated weapon speed ends up getting used in the attack animation, but it's only used for the last frame of the animation. Notice how all swords and clubs animate their attack with the same speed until the last frame where the \"swipe\" effect is shown (the swoosh accent of the weapon passing through the air). You can check my mod's code and its comments for more specifics if you're curious.\n<br />[*]For critical chance, the numbers are actually percentage points, luckily. They just don't have any notation to indicate as such.\n<br />[*]For critical \"power\" (multiplier), the displayed values are multiplied by 2 and then added to 3 (the base multiplier for all melee weapons).\n<br />[*]If any of these stats are not shown, it's because they're just using the base values for their weapon type. But the base values are not shown anywhere in the vanilla game.\n<br />[/list]\n<br />[size=4][b]Links[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://github.com/slserpent/Stardew-Valley-Mods]Source code[/url]\uFEFF\n<br />[*][url=https://www.snakebytestudios.com/projects/mods/stardew-valley-mods/]More of my Stardew mods[/url]\uFEFF\n<br />[/list][size=4][b]\n<br />Thanks[/b][/size]\n<br />\n<br />[list]\n<br />[*]ILSpy and everyone that wrote the basic tutorials for Stardew modding that helped me get going quickly\n<br />[*]My girlfriend for asking me which weapon was better (for which I didn't really have a clear answer). \n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32015",
+	"Version": "1.0",
+	"Updated": "2025-06-17T11:34:50+00:00",
+	"Downloads": [
+		{
+			"Id": 134876,
+			"Type": "Main",
+			"DisplayName": "Better Weapon Stats",
+			"FileName": "Better Weapon Stats-32015-1-0-1750160090.zip",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 19379,
+			"Uploaded": "2025-06-17T11:34:50+00:00",
+			"Mods": [
+				{
+					"Id": "Snake.WeaponStats",
+					"DisplayName": "Better Weapon Stats",
+					"Type": "Smapi",
+					"RelativePath": "WeaponStats",
+					"Manifest": {
+						"Name": "Better Weapon Stats",
+						"Description": "Shows more useful weapon stats on weapon tooltips, overriding the existing tooltips to show them.",
+						"Author": "Snake",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WeaponStats.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:32015"
+						],
+						"UniqueId": "Snake.WeaponStats"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342521564,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418703,
+		"UploaderId": 116308623,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

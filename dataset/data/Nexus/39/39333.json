@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 39333,
+	"Name": "Reordered Tools",
+	"Author": "iwantasecretgarden",
+	"Description": "[b][size=3][b][size=3][quote]There [u]is[/u] a correct order for tools, and the \"organize\" button does not know it! [/quote][/size][/b]\n<br />[/size][size=4]Tired of your tools going back into their slots in the wrong order? Tired of clicking and moving your axe and scythe to the appropriate slots so you can activate them using their hotkey number? Now there's a fix for that! Bind your tools to their correct places! [/size][size=3]\n<br />\n<br />[/size][/b][size=3]Think of it like a toolbelt perfectly slung around your farmer's waist with each slot labeled with what goes where. There are 7 customizable tool slots, which you can delete if you don't want all of them. (Not everyone carries a fishing pole, weapon, or watering can everywhere). \n<br />\n<br />The default tool order is:[/size][list=1]\n<br />[*][size=3]Pickaxe[/size]\n<br />[*][size=3]Axe[/size]\n<br />[*][size=3]Hoe[/size]\n<br />[*][size=3]Scythe[/size]\n<br />[*][size=3]Watering Can[/size]\n<br />[*][size=3]Fishing Pole[/size]\n<br />[*][size=3]Weapon / Slingshot (sorted by maximum damage per second)[/size]\n<br />[/list][size=3]\n<br />Tools can be reordered in game by pressing\u00A0[b]F12.\u00A0[/b][/size][size=3]\n<br />\n<br />[b][u]Interoperability[/u][/b]\n<br />This is a small mod\u00A0that does not affect gameplay. It is [u]not[/u]\u00A0accessible through the Generic Mods Configuration Menu [GMCM]. \n<br />\n<br />Why's that? Maximum adaptability to all folks using Windows, Mac, and Linux. If you're like me, you've organized your mods folder into subcategories to more easily sort your dozens ([s]hundreds?[/s]) of mods. This prevents .dll packets from finding the GMCM path, meaning it will prevent this mod working in-game. My workaround outside of GMCM is unglamorous and not what I wanted for my first published mod (so be nice, please!), but it's the only way I could get the tool reorder to work accounting for varied GMCM file paths.\u00A0\n<br />\n<br />[size=3][b][u]How To Change Tool Order[/u][/b][/size][/size]\n<br />[i]Also available in the ReadMe file.\n<br />[/i]\n<br />Note items stored in chests are ignored (the mod only reorders items you physically carry).\n<br />\n<br />1. Open the config.json file with a text editor.\n<br />\n<br />You will see this:\n<br />\n<br />[code]{\n<br />\u00A0 \"Hotkey\": \"F12\",\n<br />\u00A0 \"ToolOrder\": [\n<br />    \"Pickaxe\",\n<br />    \"Axe\",\n<br />    \"Hoe\",\n<br />    \"Scythe\",\n<br />    \"Watering Can\",\n<br />    \"Fishing Rod\",\n<br />    \"Weapons\"\n<br />\u00A0 ]\n<br />}[/code]\n<br />\n<br />Each entry corresponds to a toolbar slot, starting from slot 1 up to slot 12 (max toolbar size).\n<br />You can include as many as 12 slots or as few as 1! To disable a slot, simply delete the line.\n<br />\n<br />* Do not change the name of the tool in any way. The file is built to accept all iterations of the axe / fishing rod / weapons. You can also bind custom items if you type the item name exactly as shown in-game (case-insensitive). Spaces and colons do not matter. You can find specific item names on the Stardew Valley wiki, or if you're adapting another mod item, in that mod's description.\u00A0 You can also change the hotkey that reorders the tool in game by substituting something else for F12.\n<br />\n<br />Example: If I wanted to only bind 3 tools in a different order, I could bind (1) axe, (2) hoe, and (3) watering can. I could also decide to activate them with Y. Then I would type in the config.json file:\n<br />\n<br />[code]\n<br />{\n<br />\u00A0 \"Hotkey\": \"Y\",\n<br />\u00A0 \"ToolOrder\": [\n<br />    \"Axe\",\n<br />    \"Hoe\",\n<br />    \"Watering Can\",\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />Please note that if you have another mod that uses Y as a hotkey, it will likely take precedence over this mod, so F12 was selected as a little used hotkey binding as the default reordering key.\u00A0\n<br />[size=3]\n<br />Hope this helps save anyone's sanity. And if anyone figures out a GMCM workaround for finding .dll files anywhere on a Mac (or Linux or Windows) operating system, don't be afraid to leave a comment here &amp; we can work together to push a new update!\u00A0[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39333",
+	"Version": "1.1",
+	"Updated": "2025-11-15T20:51:30+00:00",
+	"Downloads": [
+		{
+			"Id": 148158,
+			"Type": "Main",
+			"DisplayName": "Reordered Tools",
+			"FileName": "Reordered Tools-39333-1-1-1763239890.zip",
+			"Description": "Binds tools in a specified order activated by a hotkey. * New update allows up to 12 items (not just tools) added to config.json so long as the item name is exact.",
+			"Version": "1.1",
+			"SizeInBytes": 9297,
+			"Uploaded": "2025-11-15T20:51:30+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Reordered Tools",
+					"Type": "Invalid",
+					"RelativePath": "Reordered Tools",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				},
+				{
+					"Id": "iwantasecretgarden.ReorderedTools",
+					"DisplayName": "ReorderedTools",
+					"Type": "Smapi",
+					"RelativePath": "Reordered Tools_",
+					"Manifest": {
+						"Name": "ReorderedTools",
+						"Description": "Restore your tools to pre-set toolbar slots using a hotkey. Configurable ONLY in config.json file for maximum cross-platform compatibility.",
+						"Author": "iwantasecretgarden",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ReorderedTools.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "iwantasecretgarden.ReorderedTools"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534846,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426021,
+		"UploaderId": 206086155,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

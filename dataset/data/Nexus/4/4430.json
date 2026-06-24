@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 4430,
+	"Name": "What Are You Missing",
+	"Author": "PrivateButtface",
+	"Description": "[center][size=4][b]Intro\n<br />[/b][/size][/center]\n<br />I made this mod for two main reasons: to help me complete the community center in the first year and to reduce the amount of times I had to go look something up on the wiki.\u00A0\n<br />\n<br />[center][size=4][b]What does it do?\n<br />[/b][/size][/center]The basic idea of the mod is that it compares what the player has to what the player could have in the current season and then shows you what you are missing.\u00A0\n<br />When the item you are missing is a fish, hover over the text \"Info\" to get the information on the fish (how/where/when to catch the fish). When the item is a recipe/cooked item, hover over the text \"Info\" to get the information on the recipe (health restored, energy restore, buffs, buff duration, ingredients). If an ingredient has a ~ in front of it, then you are missing that ingredient. The values it displays for the energy/health are what the game actually gives you (it can be different than what would be shown in the tool tip).\u00A0If you're like me, I like to have at least 5 of every item that I can get so I never run out. The mod can be configured to ensure that you have X amount of every item (except for the items you can only have 1 of).\u00A0In addition you can specify whether you want to know about the amount of common quality items or whatever the highest quality is for that item. \n<br />\n<br />NOTE: it checks to see if there is enough time to grow crops or if you have the greenhouse unlocked before displaying it (it won't show you crops that you can't finish growing before the season ends).\n<br />\n<br />It can also be configured to show only the fish that are available that day or all the fish for that season.\n<br />\n<br />The default button to bring up the menu is F2.\n<br />\n<br />[center][size=4][b]The Configuration Options\n<br />[/b][/size][/center][b]\"button\" [/b]: What button is pressed to bring up the menu - default is F2\n<br />\n<br />[b]\"ShowItemsFromLockedPlaces\"[/b] : Whether or not you want items that are from locked places like the secret woods or desert to be shown regardless of whether not you have unlocked the area - default is true\n<br />\n<br />[b]\"ShowAllFishFromCurrentSeason\"[/b] : Whether or not you want to see fish all the fish for the season regardless of whether or not you can actually catch it that day -\n<br />default is false\n<br />\n<br />[b]\"AlwaysShowAllFish\" [/b]: For the All fish Tab - whether or not to show all fish regardless of how many you have (e.g you have 6 pike and the \"CommonAmount\" config option is set to 5 if \"AlwaysShowAllFish\" is false then it won't show you a pike, if its true then it will) - default is false\n<br />\n<br />[b]\"ShowAllRecipes\"[/b] : Whether or not to show all recipes regardless of whether or not you actually know the recipe - default is false\n<br />\n<br />[b]\"AlwaysShowAllRecipes\"[/b] : Whether or not to show all recipes regardless of how many you have (like AlwaysShowAllFish) - default is false\n<br />\n<br />[b]\"CommonAmount\"[/b] : How many of each item (common rarity) you would like to have. If you have more than this amount, the item will not show up in the menu\u00A0-default is 5\n<br />\n<br />[b]\"HighestQualityAmount\"[/b] : How many of each item (the highest rarity for that item) you would like to have. If you have more than this amount, the item will not show up menu\u00A0 -default is 5\n<br />\n<br />[b]\"FishHighestQuality\"[/b]: The highest quality for fish, since it can be hard to get iridium you can choose. 4 for iridium, 2 for gold, 1 for silver, 0 for common. Default is 4 (iridium).\n<br />\n<br />[b]\"DoNotShowCaughtFish\"[/b] : Whether or not you want fish you've caught to show up in the menu. This takes precedence over how many you are missing (also affects the community center tabs - if you have caught the fish before and its needed for a bundle but this option is set to true then it will NOT show up in the community center tabs). E.g, you set common amount to 5 and you haven't caught a pike yet, the menu will show you are missing 5 normally. If you catch a pike and this option is true then even though you don't have 5 pike it won't show you pike in the menu. Default is false.\n<br />\n<br />[b]\"IgnoreQuality\":[/b]\u00A0If you don't care about having x amount of an item in both the common quality and the highest quality this option when set to true will just count how many of an item you have ignoring the quality. Uses the CommonAmount config variable. Can be true or false, default is true.\u00A0\n<br />\n<br />These options can be configured in the config file that is generated after the first time the mod is loaded.\u00A0\n<br />\n<br />\n<br />[center][size=4][b]What Are the Tabs ?[/b][/size][/center]The menu is divided into 8 tabs: \n<br />\n<br />1. Items specific to the current season (meaning any item that cannot be obtained in every season and is available in this season - so something like ancient fruit which is available in Spring, Summer, and Fall will show up in if the current season is any of those)\n<br />\n<br />2. Items you are missing for the community center that are specific to the season (following the same rule as above - not common to all seasons and can be obtained in current season)\n<br />\n<br />3. Items that you are missing for the community center that are common to all seasons,\n<br />\n<br />4. Items that are needed for the community center which you are missing and can be bought at the travelling cart\n<br />\n<br />5. Items that are seasonal (not common to all seasons but can be from any season - i.e. if you don't have ancient fruit and the travelling cart is selling ancient seeds it will show you that you are missing ancient fruit even if you are in winter) that are available to purchase from the travelling merchant\n<br />\n<br />6. Recipes that you know how to cook\n<br />\n<br />7. All of the fish in the game (so you can track your overall progress and always know where to find a fish)\n<br />\n<br />8. All of the crops in the game (so you can track your overall progress, it will show you crops you can't buy yet)\n<br />\n<br />\n<br />[center][size=4][b]Mod Compatibility[/b][/size][b]\n<br />[/b][/center][size=2]The mod should work with any other mod that adds fish, crops, and fruit trees! This includes mods like \"More New Fish\", and the PPJA mods.\u00A0 It will also work with any mod that changes the community center bundles.[/size]\n<br />\n<br />\n<br />[b][size=4][center]Multiplayer[/center][/size][/b]\n<br />It should work in multiplayer, but whoever wants to use it needs to install it. It will not go through each players inventory so if someone else is holding an item in their hot-bar/bag it may show up as missing to you.\n<br />[b]\n<br />\n<br />[/b][center][size=4][b]Languages/Translation\n<br />[/b][/size][/center]Currently has some language support for all languages, but is also fully translated for Spanish thanks to\u00A0Lidia Arroyo Purroy.\n<br />\n<br />It is set up to be translated easily using the regular smapi format (with i18n), so translators are welcome! Just contact me and I can help you get sorted out.[center]\n<br />\n<br />\n<br />[size=4][b]Extra Info[/b][/size][/center]\n<br />It may not play well with controllers on pc yet, it was meant for a keyboard and mouse.\n<br />\n<br />I have not tested it extensively yet as I only have so much time, so if you find any bugs or have any suggestions for improvements please let me know!\n<br />\n<br />See the source code here:\u00A0[url=https://github.com/LukeSeewald/PublicStardewValleyMods/tree/master/PublicStardewMods/WhatAreYouMissing]https://github.com/LukeSeewald/PublicStardewValleyMods/tree/master/PublicStardewMods/WhatAreYouMissing[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4430",
+	"Version": "2.6.6",
+	"Updated": "2023-05-02T22:39:50+00:00",
+	"Downloads": [
+		{
+			"Id": 70521,
+			"Type": "Main",
+			"DisplayName": "What Are You Missing",
+			"FileName": "What Are You Missing-4430-2-6-6-1683067190.zip",
+			"Description": "Contains the files need by SMAPI to load the mod.",
+			"Version": "2.6.6",
+			"SizeInBytes": 71491,
+			"Uploaded": "2023-05-02T22:39:50+00:00",
+			"Mods": [
+				{
+					"Id": "PrivateButtface.WhatAreYouMissing",
+					"DisplayName": "What Are You Missing",
+					"Type": "Smapi",
+					"RelativePath": "WhatAreYouMissing",
+					"Manifest": {
+						"Name": "What Are You Missing",
+						"Description": "Tells you what items you're missing that are specific to the day/season (and how to get it if it's a fish!) as well as what you're missing from the community center that is available (broken down into items specific to the current season and common in all seasons).",
+						"Author": "PrivateButtface",
+						"Version": "2.6.6",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "WhatAreYouMissing.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4430"
+						],
+						"UniqueId": "PrivateButtface.WhatAreYouMissing"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342457209,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391118,
+		"UploaderId": 67492991,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 42114,
+	"Name": "Skull Cavern Time Fix For Multiplayer",
+	"Author": "Sisko0",
+	"AuthorLabel": "Sisko",
+	"Description": "[size=6][b]Skull Cavern Time Fix for Multiplayer[/b][/size]\n<br />\n<br />Fixes the Skull Cavern time slowdown mechanic in multiplayer when using a headless host bot.\n<br />\n<br />[b][size=5]The Problem[/size][/b]\n<br />\n<br />In vanilla multiplayer Stardew Valley, time only slows down in Skull Cavern when [b]ALL[/b] players are inside it. When running a dedicated server with a host bot (like \"Always On Server\" mod), this breaks because the host bot never enters the cavern.\n<br />\n<br />[size=5][b]The Solution[/b][/size]\n<br />\n<br />This mod completely ignores the host bot and applies proportional time slowdown based on real players only:\n<br />\n<br />Formula:[b]\n<br />\n<br />[/b] [code]2000ms × (real players in SC / total real players)[/code]\n<br />\n<br />[size=4][b]Examples[/b][/size]\n<br />\n<br />[b]Solo play with host bot:[/b]\n<br />- You in cavern = 100% slowdown (2000ms)\n<br />- You outside = 0% slowdown\n<br />\n<br />[b]You + partner with host bot:[/b]\n<br />- Both in cavern = 100% slowdown (2000ms)\n<br />- One in cavern = 50% slowdown (1000ms)\n<br />- Neither in cavern = 0% slowdown\n<br />\n<br />[b][size=4]Installation[/size][/b]\n<br />\n<br />1. Install [url=https://smapi.io/]SMAPI[/url] 4.0.0+\n<br />2. Extract mod folder to [b]Stardew Valley/Mods[/b]\n<br />3. Launch game through SMAPI\n<br />\n<br />[b]For Docker/headless servers:[/b] See the [url=https://github.com/ZeynelKoca/stardew-skull-cavern-multiplayer]Source Code[/url] for Docker integration guide.\n<br />\n<br />[b][size=4]Configuration[/size][/b]\n<br />\n<br />Auto-generated [b]config.json[/b]:\n<br />\n<br />[code]{\n<br />\u00A0 \"Enabled\": true,\n<br />\u00A0 \"VerboseLogging\": false\n<br />}[/code]\n<br />Enable VerboseLogging to see detailed time adjustment messages in SMAPI console.\n<br />[b]\n<br />Requirements\n<br />[/b]\n<br />- Stardew Valley 1.6+\n<br />- SMAPI 4.0.0+\n<br />- Multiplayer mode (mod only works on the host/server)\n<br />\n<br />[b]Compatibility[/b]\n<br />\n<br />Should work with all mods including Always On Server, Auto Load Game, TimeSpeed, etc.\n<br />\n<br />[b]Source Code[/b]\n<br />\n<br />[url=https://github.com/ZeynelKoca/stardew-skull-cavern-multiplayer]Available on GitHub[/url] under MIT License.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42114",
+	"Version": "1.0.0",
+	"Updated": "2026-02-07T21:20:28+00:00",
+	"Downloads": [
+		{
+			"Id": 156200,
+			"Type": "Main",
+			"DisplayName": "Skull Cavern Time Fix for Multiplayer",
+			"FileName": "Skull Cavern Time Fix for Multiplayer-42114-1-0-0-1770499228.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 11409,
+			"Uploaded": "2026-02-07T21:20:28+00:00",
+			"Mods": [
+				{
+					"Id": "ZeynelKoca.SkullCavernTimeFixMultiplayer",
+					"DisplayName": "Skull Cavern Time Fix for Multiplayer",
+					"Type": "Smapi",
+					"RelativePath": "SkullCavernTimeFixMultiplayer",
+					"Manifest": {
+						"Name": "Skull Cavern Time Fix for Multiplayer",
+						"Description": "Fixes Skull Cavern time slowdown in multiplayer by ignoring the host bot. Applies proportional slowdown based on real players only.",
+						"Author": "ZeynelKoca",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SkullCavernTimeFixMultiplayer.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ZeynelKoca.SkullCavernTimeFixMultiplayer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342542888,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428802,
+		"UploaderId": 277927981,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,149 @@
+{
+	"Site": "Nexus",
+	"Id": 8204,
+	"Name": "Garbage Day",
+	"Author": "LeFauxMatt",
+	"Description": "[img]https://i.imgur.com/Ulr2XSt.png[/img]\n<br />This mod turns all the garbage cans into storages which collect trash throughout the week. This also allows map modders to add more garbage cans on maps other than the Town.\n<br />[youtube]HkzI1rORggo[/youtube]\n<br />\n<br />[img]https://i.imgur.com/GPXxDLK.png[/img]\n<br />[list]\n<br />[*]Garbage Cans can be accessed as storages.\n<br />[*]More Garbage Cans can be added to maps.\n<br />[*]Customize loot items for each Garbage Can.\n<br />[/list]\n<br />\n<br />[img]https://i.imgur.com/lG4kcA2.png[/img]\n<br />For ease of use, it is recommended to set config options from [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />[img]https://i.imgur.com/fMhu2q8.png[/img]\n<br />See [url=https://github.com/LeFauxMatt/StardewMods/tree/develop/GarbageDay#translations]here[/url] for the current status on translations.\n<br />\n<br />Feel free to visit me on my\u00A0[url=https://lxnq.to/discord]Discord server[/url]\u00A0for announcements and early access to beta releases of my mods.\n<br />You can also request help from me on the Stardew Valley discord in [url=https://discord.com/channels/137344473976799233/1272025932932055121]#modded-tech-support[/url]\uFEFF (ping me @LeFauxMatt).\n<br />\n<br />[url=https://github.com/LeFauxMatt/GarbageDay/]Source[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8204",
+	"Version": "3.3.0",
+	"Updated": "2025-02-08T01:38:05+00:00",
+	"Downloads": [
+		{
+			"Id": 82598,
+			"Type": "Optional",
+			"DisplayName": "Garbage Day CP",
+			"FileName": "Garbage Day CP-8204-3-1-0-1710831431.zip",
+			"Description": "@CP content pack for converting specific garbage cans when OnByDefault is set to false.\n<br /><br />Requires the main mod to be installed to work.",
+			"Version": "3.1.0",
+			"SizeInBytes": 1159,
+			"Uploaded": "2024-03-19T06:57:11+00:00",
+			"Mods": [
+				{
+					"Id": "furyx639.GarbageDayCP",
+					"DisplayName": "(CP) Garbage Day",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Garbage Day",
+					"Manifest": {
+						"Name": "(CP) Garbage Day",
+						"Description": "Adds data to each vanilla garbage so that they will be converted into Garbage Day chests.",
+						"Author": "furyx639",
+						"Version": "3.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.GarbageDay",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8204@CP"
+						],
+						"UniqueId": "furyx639.GarbageDayCP",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469286,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 124573,
+			"Type": "Main",
+			"DisplayName": "Garbage Day",
+			"FileName": "Garbage Day-8204-3-3-0-1738978685.zip",
+			"Description": "[url=https://github.com/LeFauxMatt/GarbageDay/releases]Change Log[/url]",
+			"Version": "3.3.0",
+			"SizeInBytes": 102941,
+			"Uploaded": "2025-02-08T01:38:05+00:00",
+			"Mods": [
+				{
+					"Id": "furyx639.GarbageCan",
+					"DisplayName": "Garbage Can",
+					"Type": "ContentPack",
+					"RelativePath": "GarbageDay\\Garbage Can",
+					"Manifest": {
+						"Name": "Garbage Can",
+						"Description": "Adds a garbage can chest to the game.",
+						"Author": "furyx639",
+						"Version": "3.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.ExpandedStorage",
+								"MinimumVersion": "3.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8204",
+							"CurseForge:871837",
+							"ModDrop:1547204",
+							"GitHub:LeFauxMatt/GarbageDay"
+						],
+						"UniqueId": "furyx639.GarbageCan",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "furyx639.GarbageDay",
+					"DisplayName": "Garbage Day",
+					"Type": "Smapi",
+					"RelativePath": "GarbageDay\\GarbageDay",
+					"Manifest": {
+						"Name": "Garbage Day",
+						"Description": "Turns the town trash cans into chests.",
+						"Author": "LeFauxMatt",
+						"Version": "3.3.0",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.14",
+						"EntryDll": "GarbageDay.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.ExpandedStorage",
+								"MinimumVersion": "3.2.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.14.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8204",
+							"CurseForge:871837",
+							"ModDrop:1547204",
+							"GitHub:LeFauxMatt/GarbageDay"
+						],
+						"UniqueId": "furyx639.GarbageDay",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342511261,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394892,
+		"UploaderId": 1643034,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

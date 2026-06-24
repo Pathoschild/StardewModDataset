@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 21514,
+	"Name": "Forage Crops",
+	"Author": "KronosTitanAnthem",
+	"AuthorLabel": "Kronosta",
+	"Description": "[b]THIS MOD IS ONLY AVAILABLE FOR 1.6\n<br />\n<br />The first mod using this is now available! Check out\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22057]Cloudberries As Forage[/url]\u00A0(by me)![/b]\n<br />\n<br />To make a custom forage crop, make a seed item, then make a crop, both as normal.\n<br />\n<br />Then, add the key \"Kronosta.ForageCrops/Spawns\" to the CustomFields of the crop, with the value being a space-separated list of object-type unqualified item ids. You'll still need a HarvestItemId entry; that will be the harvest if something goes wrong.\n<br />\n<br />Example:\n<br />[code]{\n<br />    \"Format\": \"2.0.0\",\n<br />    \"Changes\": [\n<br />      \u00A0 {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"Data/Objects\",\n<br />            \"Entries\": {\n<br />                \"{{ModId}}_ShellSeeds\": {\n<br />                  \u00A0 \"Name\": \"{{ModId}}_ShellSeeds\",\n<br />                  \u00A0 \"DisplayName\": \"Shell Seeds\",\n<br />                  \u00A0 \"Description\": \"A packet of shell seeds.\",\n<br />                  \u00A0 \"Type\": \"Basic\",\n<br />                  \u00A0 \"Category\": -74,\n<br />                  \u00A0 \"Price\": 10,\n<br />                  \u00A0 \"Texture\": \"Data/Crops\", //CHANGE TEXTURE NAME\n<br />                  \u00A0 \"SpriteIndex\": 0         //CHANGE SPRITE INDEX\n<br />                }\n<br />            }\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"Data/Crops\",\n<br />            \"Entries\": {\n<br />                \"seedtest\": {\n<br />                  \u00A0 \"Seasons\": [ \"spring\", \"summer\", \"fall\", \"winter\" ],\n<br />                  \u00A0 \"DaysInPhase\": [ 1, 1 ],\n<br />                  \u00A0 \"HarvestItemId\": \"{{ModId}}_Error\",            \u00A0 //FALLBACK HARVEST\n<br />                  \u00A0 \"Texture\": \"{{InternalAssetKey:crops.png}}\",    \u00A0//CHANGE TEXTURE NAME\n<br />                  \u00A0 \"SpriteIndex\": 0,                              \u00A0 //CHANGE SPRITE INDEX\n<br />                  \u00A0 \"CustomFields\": {\n<br />                        \"Kronosta.ForageCrops/Spawns\": \"392 393 394\" //PUT HARVEST ITEM IDS HERE\n<br />                  \u00A0 }\n<br />                }\n<br />            }\n<br />      \u00A0 }\n<br />    ]\n<br />}\n<br />[/code]\n<br />Source code is\u00A0[url=http://github.com/kronosta/Stardew-Mods/tree/main/ForageCrops]here[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21514",
+	"Version": "1.0.0",
+	"Updated": "2024-04-01T01:21:38+00:00",
+	"Downloads": [
+		{
+			"Id": 87773,
+			"Type": "Main",
+			"DisplayName": "ForageCrops-1.0.0",
+			"FileName": "ForageCrops-1.0.0-21514-1-0-0-1711934498.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 11572,
+			"Uploaded": "2024-04-01T01:21:38+00:00",
+			"Mods": [
+				{
+					"Id": "Kronosta.ForageCrops",
+					"DisplayName": "Forage Crops",
+					"Type": "Smapi",
+					"RelativePath": "ForageCrops",
+					"Manifest": {
+						"Name": "Forage Crops",
+						"Description": "Adds a way for Content Patcher packs to add custom crops that behave like Wild Seeds.",
+						"Author": "Kronosta",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ForageCrops.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Kronosta.ForageCrops"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342474461,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408202,
+		"UploaderId": 112585088,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

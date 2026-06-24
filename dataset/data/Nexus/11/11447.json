@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 11447,
+	"Name": "Actually Lucky Rabbit's Foot",
+	"Author": "cbingiel",
+	"AuthorLabel": "Chelsea Bingiel",
+	"Description": "[size=4]-~-ACTUALLY LUCKY RABBIT'S FOOT!-~-[/size]\n<br />\n<br />With this mod, carrying around a rabbits foot will actually affect your luck bonus.\n<br />\n<br />[size=4]--DEPENDENCIES--[/size]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI - Stardew Modding API[/url]\n<br />\n<br />(if you are new to modding Stardew Valley and hesitant, please just give SMAPI a shot. Sounds like an ordeal, it's really easy, just a few clicks and folder maneuverings and you'll be ready to go :) )\n<br />\n<br />[size=4]--DETAILS ON LUCK BONUS--[/size]\n<br />Out of the box, carrying around a rabbit's foot confers a &lt;rabbit foot quality&gt; * 1 + 1 luck bonus. This is a passive bonus, you won't see a luck bonus display but it's there. This table shows the bonuses by quality of rabbit's foot:\n<br />QUALITY\u00A0\u00A0 \u00A0|\u00A0\u00A0 \u00A0LUCK BONUS\n<br />0-star\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0   \uFEFF+1\n<br />silver\u00A0\u00A0 \u00A0\u00A0\u00A0    \uFEFF\u00A0 +2\n<br />gold\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0   \uFEFF\u00A0 +3\n<br />purple\u00A0\u00A0 \u00A0\u00A0\u00A0    \uFEFF+4\n<br />\n<br />This mod affects your luck much like eating or drinking, so it shouldn't affect things like morning drop rates or certain fishing treasure rarity the way Daily Luck does. See the [url=https://stardewvalleywiki.com/Luck]Stardew Valley wiki entry for \"Luck\"[/url] for more details on how luck works.\n<br />\n<br />The effects of this mod should stack with food, drink, and wearables that give luck. You can [url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Logging#Verbose_logging]turn on verbose mode for SMAPI[/url] and press the L key at any time to see what your current luck bonus is.\n<br />\n<br />For this beta version, whenever your luck bonus is 20 or higher the luck report will display as a warning to show you that your luck may be in absurd territory. This could indicate an error with adjusting your luck bonus, or perhaps you have found a legitimate way to be extremely lucky! You may also have other mods installed that affect your luck bonus, which could push your bonus beyond regular levels.\n<br />\n<br />[size=4]--CONFIGURATION--[/size]\n<br />By default, the luck bonus is pretty potent! A gold star rabbit's foot is on par with constantly having the effect of eating a Lucky Lunch. \n<br />\n<br />If you don't want the bonus to have quite a punch, you can edit the quality multiplier by opening the luckyRabbitsFootConfig.json file, included in the mod folder. This is a double value, meaning you can use a decimal point. When calculated, the modifier will round down to the nearest integer.\n<br />\n<br />For example, setting \"QualityMultiplier\" = 0 will result in any rabbit's foot of any quality only giving a luck bonus of +1.\n<br />\n<br />Setting the \"QualityMultiplier\" = 0.5 would result in the following table:\n<br />QUALITY\u00A0\u00A0 \u00A0|\u00A0\u00A0 \u00A0LUCK BONUS\n<br />0-star\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0   \uFEFF+1\n<br />silver\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0   \uFEFF+1\n<br />gold\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0   \uFEFF +2\n<br />purple\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 +2",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11447",
+	"Version": "1.0.0-beta.3",
+	"Updated": "2022-03-27T13:29:51+00:00",
+	"Downloads": [
+		{
+			"Id": 52493,
+			"Type": "Main",
+			"DisplayName": "LuckyRabbitsFoot 1.0.0-beta.3",
+			"FileName": "LuckyRabbitsFoot 1.0.0-beta.3-11447-1-0-0-beta-3-1648387791.zip",
+			"Description": "1.0.0-beta.3 fixes:\n<br />-sorting would actually choose the lowest quality foot in your inventory if you have multiple, fixed to choose the highest quality\n<br />-fixed build to set the config file in the zip folder automatically\n<br />-improved luck report to show",
+			"Version": "1.0.0-beta.3",
+			"SizeInBytes": 10269,
+			"Uploaded": "2022-03-27T13:29:51+00:00",
+			"Mods": [
+				{
+					"Id": "ChelseaBingiel.LuckyRabbitsFoot",
+					"DisplayName": "LuckyRabbitsFoot",
+					"Type": "Smapi",
+					"RelativePath": "LuckyRabbitsFoot",
+					"Manifest": {
+						"Name": "LuckyRabbitsFoot",
+						"Description": "Makes carrying around a rabbit's foot actually lucky!",
+						"Author": "Chelsea Bingiel",
+						"Version": "1.0.0-beta.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "LuckyRabbitsFoot.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11447"
+						],
+						"UniqueId": "ChelseaBingiel.LuckyRabbitsFoot"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342439181,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398135,
+		"UploaderId": 141939673,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

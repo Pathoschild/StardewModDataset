@@ -1,0 +1,103 @@
+{
+	"Site": "Nexus",
+	"Id": 40750,
+	"Name": "Pet Coats",
+	"Author": "aedenthorn",
+	"Description": "With this mod you can create a content pack to add \"coats\" to individual pet breeds that will be selectable during new game creation.\n<br />\n<br />To change a pet's coat during new game creation, either click on the pet's icon, or hold down the mod key (default: [b]Left Shift[/b]) when pressing the change pet arrow keys.\n<br />\n<br />You can also change an individual pet's coat in-game by hovering over the pet, holding down the coat key (default [b]Left Control[/b]) and scrolling with the mouse.\n<br />\n<br />You can also change an individual pet's breed in-game by hovering over the pet, holding down the breed key (default [b]Left Alt[/b]) and scrolling with the mouse.\n<br />\n<br />You can also change an individual pet's type in-game by hovering over the pet, holding down the type key (default [b]Right\u00A0Alt[/b]) and scrolling with the mouse.\n<br />\n<br />\n<br />[b][size=5]Content Packs\n<br />[/size][/b]\n<br />There are three ways you can add a coat for a specific breed:\n<br />\n<br />[list]\n<br />[*]Replacing the breed's entire texture (you will need to provide an icon texture as well)\n<br />[*]Swapping specific colors in the breed's default texture\n<br />[*]Tinting the breed's texture using a specific color (this can be combined with one of the other two methods)\n<br />[/list]\n<br />You can set a DisplayName\u00A0to be shown as the tooltip title when hovering over the pet icon.\n<br />\n<br />\n<br />[size=4][b]Replacement Example:[/b][/size]\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0\u00A0\"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.PetCoats/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\":\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}.GermanShepard\":\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\":\"German Shepard\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PetType\":\"Dog\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PetBreed\":\"1\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"TexturePath\":\"{{ModId}}.GermanShepard/texture\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"IconTexturePath\":\"{{ModId}}.GermanShepard/iconTexture\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"Load\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"{{ModId}}.GermanShepard/texture\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/GermanShepard.png\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"Load\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"{{ModId}}.GermanShepard/iconTexture\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/GermanShepardIcon.png\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />\n<br />[/code]\n<br />\n<br />[b][size=4]Swap Example:\n<br />[/size][/b]\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.PetCoats/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\":\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}.GermanShepard\":\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\":\"German Shepard\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PetType\":\"Dog\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PetBreed\":\"1\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Swap\":{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"81,34,16\":\"57,35,27\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"125,54,25\":\"83,63,55\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"56,19,2\":\"39,21,13\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"39,21,13\":\"255,174,78\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"202,109,25\":\"165,120,79\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />[/code]\n<br />Swap keys and values should be 3 or 4 0-255 values (R,G,B,A - A is optional). It will match exact colors for each key and replace each pixel with the given value.\n<br />\n<br />\n<br />[b][size=4]Tint example:[/size][/b]\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.PetCoats/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}.BorderCollie\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"Border Collie\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PetType\": \"Dog\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PetBreed\": \"3\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Tint\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"R\": 155,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"G\": 155,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"B\": 155\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />[/code]\n<br />\n<br />[b][size=5]Technical\n<br />[/size][/b]\n<br />Requires Content Patcher.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40750",
+	"Version": "0.2.0",
+	"Updated": "2026-01-02T02:09:29+00:00",
+	"Downloads": [
+		{
+			"Id": 152083,
+			"Type": "Optional",
+			"DisplayName": "Pet Coats Example Content Pack",
+			"FileName": "Pet Coats Example Content Pack-40750-0-1-0-1767319049.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 1306,
+			"Uploaded": "2026-01-02T01:57:29+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PetCoatsCP",
+					"DisplayName": "(CP) (Pet Coats) Pet Coats Examples",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] [Pet Coats] Pet Coats Examples",
+					"Manifest": {
+						"Name": "(CP) (Pet Coats) Pet Coats Examples",
+						"Description": "Pet Coats CP.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.7.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "aedenthorn.PetCoats",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "aedenthorn.PetCoatsCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342538771,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 152084,
+			"Type": "Main",
+			"DisplayName": "Pet Coats",
+			"FileName": "Pet Coats-40750-0-2-0-1767319769.zip",
+			"Description": "Changes:\n<br />\n<br />Added key to change pet type\n<br />Nexus ID",
+			"Version": "0.2.0",
+			"SizeInBytes": 23619,
+			"Uploaded": "2026-01-02T02:09:29+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PetCoats",
+					"DisplayName": "Pet Coats",
+					"Type": "Smapi",
+					"RelativePath": "PetCoats",
+					"Manifest": {
+						"Name": "Pet Coats",
+						"Description": "Pet Coats.",
+						"Author": "aedenthorn",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PetCoats.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40750"
+						],
+						"UniqueId": "aedenthorn.PetCoats"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342538772,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427438,
+		"UploaderId": 18901754,
+		"CategoryId": 8,
+		"Adult": false
+	}
+}

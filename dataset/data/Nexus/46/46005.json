@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 46005,
+	"Name": "Monster Health Bars",
+	"Author": "Moon7th",
+	"AuthorLabel": "MoonOvO777",
+	"Description": "[size=5][b][size=4]\uD83D\uDD04 Updating from 1.0 to 1.1[/size][/b][/size]\n<br />[list=1]\n<br />\n<br />[*][size=5][b]Close the game. [/b][/size][/*]\n<br />[*][size=5][b]Extract the new zip into your [i]Mods[/i] folder, overwriting old files. Your [i]config.json[/i] is preserved. [/b][/size][/*]\n<br />[*][size=5][b](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for the new in-game settings UI. [/b][/size][/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Monster Health Bars[/b][/size]\u00A0\n<br />A lightweight UI mod that shows a health bar and current/max HP numbers above any monster you've already damaged. The bar only appears after the first hit, keeping your screen clean while still giving you the info you need to plan your next swing.\u00A0\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Smart \"damaged-only\" display[/b] — bars only show after a monster takes damage, so peaceful exploration stays uncluttered. [/*]\n<br />[*][b]Accurate HP tracking[/b] — works correctly with monsters whose actual HP exceeds the base [i]MaxHealth[/i] value (Mummies, certain slime variants, etc.). The mod observes each monster's true peak HP instead of trusting the base stat. [/*]\n<br />[*][b]Mummy-aware[/b] — handles Mummy fake-death and revive without showing a stuck or empty bar. [/*]\n<br />[*][b]Segmented colors[/b] — green when healthy, gold when wounded, red when in danger. Thresholds configurable. [/*]\n<br />[*][b]Smooth damage animation[/b] — a trailing white bar shows exactly how much HP was just chipped off, MOBA-style. [/*]\n<br />[*][b]Clean number readout[/b] — current/max HP printed above the bar with a black outline so it's readable on any background. [/*]\n<br />[*][b]Fully configurable[/b] — bar size, position, font scale, colors, smoothing speed, and more, all via [i]config.json[/i]. [/*]\n<br />[*][b]Safe[/b] — only renders during normal gameplay; hides during cutscenes and farm events. [/*]\n<br />[/list][size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI 4.0.0+[/url]. [/*]\n<br />[*]Download this mod and unzip it. [/*]\n<br />[*]Drop the [b]MonsterHealthBars[/b] folder into your [b]Stardew Valley/Mods/[/b] folder. [/*]\n<br />[*]Launch the game via SMAPI. [/*]\n<br />[/list][size=4][b]Configuration[/b][/size] After running the game once, edit [b]Mods/MonsterHealthBars/config.json[/b]:\n<br />[code]{ \"Enabled\": true, \"BarWidth\": 64, \"BarHeight\": 10, \"VerticalOffset\": 14, \"ShowNumbers\": true, \"NumberScale\": 1.0, \"OnlyShowDamaged\": true, \"HealthyThreshold\": 0.70, \"DangerThreshold\": 0.30, \"EnableSmoothing\": true, \"SmoothCatchUpPerSecond\": 1.5, \"SmoothDelaySeconds\": 0.25 }[/code][list]\n<br />[*][b]OnlyShowDamaged[/b] — set to [i]false[/i] to always show bars on every monster. [/*]\n<br />[*][b]HealthyThreshold / DangerThreshold[/b] — color band cutoffs (0~1). [/*]\n<br />[*][b]EnableSmoothing[/b] — toggle the trailing damage animation. [/*]\n<br />[*][b]SmoothCatchUpPerSecond[/b] — bigger = the trail catches up faster. [/*]\n<br />[/list]Restart the game to apply changes. [size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6+ [/*]\n<br />[*]SMAPI 4.0.0+ [/*]\n<br />[*]Single player and multiplayer (renders client-side only). [/*]\n<br />[*]Should be compatible with virtually all other mods — this one only draws an extra UI layer and never modifies game state. [/*]\n<br />[/list][size=4][b]Console Commands[/b][/size] Type [b]hpdebug[/b] in the SMAPI console to print the current location's monster HP info — handy for reporting bugs.\n<br />\n<br />[size=4][b]v1.1.0[/b][/size] [b]New[/b]\n<br />[list]\n<br />[*]Added in-game config menu (requires [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]). Adjust everything from [b]ESC → gear icon[/b]. No more editing [i]config.json[/i] or restarting the game. [/*]\n<br />[*]Auto bilingual menu: Chinese game language shows Chinese, everything else shows English. [/*]\n<br />[*]New [b]Bar Opacity[/b] slider (20% ~ 100%) to fade the bars to taste. [/*]\n<br />[*]New [b]Only Show Damaged Monsters[/b] toggle. When disabled, bars are shown on every monster on screen.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46005",
+	"Version": "1",
+	"Updated": "2026-05-18T08:36:45+00:00",
+	"Downloads": [
+		{
+			"Id": 167961,
+			"Type": "Main",
+			"DisplayName": "MonsterHealthBars 1.1.0",
+			"FileName": "MonsterHealthBars 1.1.0-46005-1-1-0-1779093405.zip",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 18286,
+			"Uploaded": "2026-05-18T08:36:45+00:00",
+			"Mods": [
+				{
+					"Id": "Moon7th.MonsterHealthBars",
+					"DisplayName": "Monster Health Bars",
+					"Type": "Smapi",
+					"RelativePath": "MonsterHealthBars",
+					"Manifest": {
+						"Name": "Monster Health Bars",
+						"Description": "Shows a health bar and HP numbers above monsters that have been damaged.",
+						"Author": "Moon7th",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MonsterHealthBars.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Moon7th.MonsterHealthBars"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342554649,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432693,
+		"UploaderId": 283902026,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

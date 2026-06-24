@@ -1,0 +1,1318 @@
+{
+	"Site": "Nexus",
+	"Id": 23843,
+	"Name": "Farming Level Affects Harvest",
+	"Author": "dyanosis",
+	"Description": "Your Farming level affects how much harvest you get from certain crops. It's one of the least used fields in the game (only used by Rice and Blueberries), so I gave it more purpose. Highly configurable from 10% more to 100% more (with name denoting how much you'll get based on your farming level).\n<br />\n<br />[color=#e69138][size=4][i][b]NOTE: [/b][/i][i]If a mod changes a crop into a bush (like Cornucopia or\u00A0Grapes of Ferngill), this mod [b]will not [/b]affect those crops. Examples include grapes from Grapes of Ferngill. You can fix this by disabling bushes in that specific mod. Bushes are not modifiable in quite the same way as crops, so I currently have no way to deliver on requests to make it work for bushes.[/i][/size][/color]\n<br />\n<br />If you want this to work with a modded crop, let me know which one and I'll look into it.\n<br />\n<br />I made this mod in the spirit of how someone, who is very good at farming, might be better at harvesting and cultivating various crops vs someone who is not.\n<br />\n<br />[b]NEW [/b]- I made a similar mod, that could be a companion mod to this one, that increases your crop yield regardless of your farming level. You can find it [b][url=https://www.nexusmods.com/stardewvalley/mods/24401]here[/url][/b].\n<br />\n<br />[b]Terms used:[/b]\n<br />[list]\n<br />[*][b]A hint[/b]\u00A0- 10% increase[/*]\n<br />[*][b]Slight\u00A0[/b]- 20% increase[/*]\n<br />[*][b]A tad[/b]\u00A0- 30% increase[/*]\n<br />[*][b]A bit[/b]\u00A0- 40% increase[/*]\n<br />[*][b]Some\u00A0[/b]- 50% increase[/*]\n<br />[*][b]A fair amount\u00A0[/b]- 60% increase[/*]\n<br />[*][b]Quite a bit\u00A0[/b]- 70% increase[/*]\n<br />[*][b]Bountiful\u00A0[/b]- 80% increase[/*]\n<br />[*][b]A lot\u00A0[/b]- 90% increase[/*]\n<br />[*][b]Abundance\u00A0[/b]- 100% increase[/*]\n<br />[*][b]Partial Insanity [/b]- 250% increase[/*]\n<br />[*][b]Full Insanity[/b] - 500% increase[/*]\n<br />[/list]\n<br />[b]Note[/b] - You can go much higher than 100% by editing the config. There is one other mod I've seen that increases the yield of one crop (I think it was carrots or something) by 400%, which is a 5x increase. I chose smaller values because, as you can see from the Potato comparison, 100% increase is [b][u]A LOT[/u][/b]. 44 -&gt; 228. That's a 418% increase. I tried it with higher values and it lags the game because there were so many crops to harvest.\u00A0\n<br />\n<br />[b]Config:[/b]\n<br />[list]\n<br />[*][b]Enabled [/b]- Whether the mod works. Default [b]true[/b].[/*]\n<br />[*][b]Ancient Fruit[/b] - A hint (10%)[/*]\n<br />[*][b]Coffee [/b]- Some\u00A0(50%)[/*]\n<br />[*][b]Strawberry [/b]- A tad\u00A0(30%)[/*]\n<br />[*][b]Garlic [/b]- Quite a bit\u00A0(70%)[/*]\n<br />[*][b]Cauliflower [/b]- Slightly\u00A0(20%)[/*]\n<br />[*][b]Potato [/b]- Bountiful\u00A0(80%)[/*]\n<br />[*][b]Blueberry[/b] - Bountiful\u00A0(80%)[/*]\n<br />[*][b]Starfruit [/b]- A hint\u00A0(10%)[/*]\n<br />[*][b]Melon[/b] - A hint\u00A0(10%)[/*]\n<br />[*][b]Tomato [/b]- A bit\u00A0(40%)[/*]\n<br />[*][b]Broccoli [/b]- A fair amount\u00A0(60%)[/*]\n<br />[*][b]Cranberries [/b]- Abundance\u00A0(100%)[/*]\n<br />[*][b]Grape[/b] - A hint\u00A0(10%)[/*]\n<br />[*][b]Pumpkin[/b] - A hint\u00A0(10%)[/*]\n<br />[*][b]Pineapple[/b] - Slightly (20%)[/*]\n<br />[*][b]All other vanilla crops [/b]- A hint (10%)[/*]\n<br />[/list]\n<br />[b]Fun fact [/b]- Having Potatoes set to [b]Abundance[/b], being at level 13 farming (via Food), and harvesting potatoes in the Greenhouse will get you thousands of potatoes, which is very good money. That said, use as you will. This mod is to show that it CAN be done, not that it's a great idea.\n<br />If you have a suggestion, leave a Post and I'll respond when I can! :D\n<br />\n<br />For those of you who don't want to remember that the terms are listed from lowest percentage (10%) to highest percentage (500%) in 10% increments (until Partial/Full Insanity at 250% and 500%), use the version under [b]Optional Files[/b]. You only need one or the other, not both.\n<br />\n<br />For those of you using the compatibility versions (such as SVE, Cornucopia, etc) - This mod will overwrite any changes that those mods make to the\u00A0[b]HarvestMaxIncreasePerFarmingLevel [/b]field in [b]Data/Crops[/b]. Some of these mods, like\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22728]Wildflour's Atelier Goods[/url],\u00A0also utilize the\u00A0[b]ExtraHarvestChance [/b]field which may cause your harvests to be much bigger than expected (though I don't really see this as being a bad thing). This mod does not modify the\u00A0[b]ExtraHarvestChance[/b]\u00A0field at all, so YMMV (your mileage may vary) on how big your harvests are.\n<br />\n<br />[b]Translations:\n<br />[/b]Added the ability for you all to assist with config translations. To make things easier, you really only need to translate the crop names for everything and the config values for the main file and the [b]Percentage Config[/b]\u00A0file. Once you do that, I can apply those same config changes to all versions so you don't have to do so for each and every one.\n<br />\n<br />To submit a translation, please post your updates to the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/23843/?tab=forum&amp;topic_id=14141893]Translations[/url]\u00A0topic under [b]FORUM[/b]\u00A0so we can keep things organized and keep the discussions tab from getting overrun with translation files.\n<br />\n<br />Thank you for any assistance you provide! If you assist, your name will appear in the credits section below!\n<br />\n<br />[size=5][img]https://i.imgur.com/suHzq2E.png[/img][/size]\n<br />\n<br />[list]\n<br />[*]Install the latest version of\u00A0[url=https://smapi.io/]SMAPI[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\uFEFF.[/*]\n<br />[*]Unzip the mod folder into\u00A0Stardew Valley/Mods.[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list]\uFEFF\n<br />[img]https://i.imgur.com/M7KlO44.png[/img]\n<br />\n<br />[list]\n<br />[*]Compatible with...\n<br />[list]\n<br />[*]Stardew Valley 1.6 or later;[/*]\n<br />[*]Linux, macOS, and Windows;[/*]\n<br />[*]single-player and multiplayer[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/19508]Cornucopia - More Crops [/url]\uFEFFvia the Optional download\u00A0[b]Farming Level Affects Harvest - Cornucopia[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url][b]\u00A0[/b]via the Optional download\u00A0[b]Farming Level Affects Harvest - SVE[/b][/*]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/20598]Lumisteria's Serene Meadow[/url]\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - SereneMeadow[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22728]Wildflour's Atelier Goods[/url]\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - ateliercrops[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5787]East Scarp[/url]\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - EastScarp[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/20290]Cornucopia - More Flowers[/url]\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - CornucopiaFlowers[/b][/*]\n<br />[*]\uFEFF\uFEFF\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/9600]Visit Mount Vapius[/url]\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - MtVapius[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8762]Magical Crops[/url][b]\u00A0[/b]via Optional download\u00A0[b]Farming Level Affects Harvest - MagicalCrops[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/16999]Quaint Living - Flower Garden 2[/url][b]\u00A0[/b]via Optional download\u00A0[b]Farming Level Affects Harvest - Quaint[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22490]Bonster's Combined Crops and Recipes[/url][b]\u00A0[/b]via Optional download\u00A0[b]Farming Level Affects Harvest - BFV[/b][/*]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/27049]Wildflour's Atelier Goods - An Artisan Goods Expansion[/url]\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - ateliergoods[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8684]Grapes of Ferngill[/url]\uFEFF\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest -\u00A0ferngrapes[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8828]Forage of Ferngill[/url]\uFEFF\uFEFF\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest - fernflowers[/b]\u00A0and\u00A0[b]Farming Level Affects Harvest - fernroots[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/11111]Sunberry Village[/url]\uFEFF\uFEFF\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0-\u00A0Sunberry[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21484]MBF More Crops Fruits and Forage[/url]\uFEFF\uFEFF\uFEFF\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0-\u00A0MBF[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/16772]JP's Dreaming of Strawberries[/url]\uFEFF\uFEFF\uFEFF\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0-\u00A0StrawberryWay[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/32742]Stoner Valley[/url]\uFEFF\uFEFF\uFEFF\uFEFF\u00A0via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0-\u00A0StonerValley[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/15100]Seven Deadly Sins[/url]\uFEFF[b]\uFEFF\uFEFF\uFEFF\uFEFF\u00A0[/b]via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0-\u00A0SevenSins[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22743]Alchemistry\u00A0[/url]\uFEFFvia Optional download[b]\u00A0Farming Level Affects Harvest\u00A0-\u00A0Alchemistry[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/13883]Eli and Dylan[/url]\uFEFF\uFEFF via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0- EliDylan[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28023]Rose's Cruelty Free Meat[/url][b]\u00A0[/b]via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0-\u00A0CruelFree[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28289]Rose's Dream Crops[/url][b]\u00A0[/b]via Optional download\u00A0[b]Farming Level Affects Harvest\u00A0- DreamCrops[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/20340]Growable Forage and Crop Bushes[/url][b]\u00A0[/b]via Optional download[b]\u00A0Farming Level Affects Harvest\u00A0-\u00A0GrowForage[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/20884]Grains Overhull[/url][b]\u00A0[/b]via Optional download[b]\u00A0Farming Level Affects Harvest\u00A0-\u00A0GrainsOH[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5912]Stardew Vineyard[/url][b]\u00A0[/b]via Optional download[b]\u00A0Farming Level Affects Harvest\u00A0-\u00A0SDVineyard[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22376]Uncle Iroh Approved Tea[/url][b]\u00A0[/b]via Optional download[b]\u00A0Farming Level Affects Harvest\u00A0-\u00A0ApprovedTea[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8630]Walk to the Desert Redux[/url][b]\u00A0[/b]via Optional download[b]\u00A0Farming Level Affects Harvest\u00A0-\u00A0WalkDesert[/b][/*]\n<br />[/list][/*]\n<br />[*]No known mod conflicts.[/*]\n<br />[/list]\n<br />[b]Credits:[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/3228494]kidhedera[/url][b]\u00A0[/b]for the nice feedback and suggestion to add compatibilities for\u00A0\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/20598]Lumisteria's Serene Meadow[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22728]Wildflour's Atelier Goods[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/33933990]Pufuc[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/users/408538]Olioster[/url]\u00A0for the idea to create a version that had easier-to-remember/understand config terms[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/69475763]DummyAccount03[/url]\u00A0for the\u00A0\uFEFFsuggestion to add compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/69475763]DummyAccount03[/url]\u00A0and [url=https://www.nexusmods.com/stardewvalley/users/206211708]OliverCaleb[/url]\u00A0for the\u00A0\uFEFFsuggestion to add compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/19508]Cornucopia - More Crops[/url]\uFEFF[/*]\n<br />[*][url=https://www.nexusmods.com/users/3917664]Nephatrine[/url]\u00A0for the suggestion on my\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22815]More Giant Crop Locations[/url]\u00A0mod to add compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5787]East Scarp[/url][/*]\n<br />[*][url=https://www.nexusmods.com/users/204413537]TIANWANGDUNMOGU[/url]\u00A0for translating the main file and percentage config optional file to Chinese\uFEFF[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/43708807]Stavetskaya[/url]\u00A0for the suggestion to add compatibilities for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/9600]Visit Mount Vapius[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/20290]Cornucopia - More Flowers[/url][/*]\n<br />[*][url=https://www.nexusmods.com/users/23255504]CelesteTheBunny[/url]\u00A0for the suggestion to add compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/8762]Magical Crops[/url][/*]\n<br />[*][url=https://www.nexusmods.com/users/41155365]badcomet[/url]\u00A0for the suggestion to add compatibility\u00A0for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/16999]Quaint Living - Flower Garden 2[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/83352573]13000Bees[/url]\u00A0for the suggestion to add compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22490]Bonster's Combined Crops and Recipes[/url][/*]\n<br />[*][url=https://www.nexusmods.com/users/39234095]OldestDreamer[/url]\u00A0for the suggestion to update the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/27049]Wildflour's Atelier Goods - An Artisan Goods Expansion[/url][/*]\n<br />[*][url=https://www.nexusmods.com/users/41155365]badcomet[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/27049][/url][url=https://www.nexusmods.com/stardewvalley/mods/8684]Grapes of Ferngill[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/8828]Forage of Ferngill[/url][/*]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/users/70846498]Elle12345[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/11111]Sunberry Village[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/13000Bees]13000Bees[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/11111][/url][url=https://www.nexusmods.com/stardewvalley/mods/16772]JP's Dreaming of Strawberries[/url]\uFEFF\uFEFF\uFEFF\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/21484]MBF More Crops Fruits and Forage[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/KonekoT26]KonekoT26[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/11111][/url][url=https://www.nexusmods.com/stardewvalley/mods/16772][/url][url=https://www.nexusmods.com/stardewvalley/mods/32742]Stoner Valley[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/Chocoronron]Chocoronron[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/15100]Seven Deadly Sins[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/DocDemonCat]DocDemonCat[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22743]Alchemistry[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/Nawang013]Nawang013[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22743][/url][url=https://www.nexusmods.com/stardewvalley/mods/13883]Eli and Dylan[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/yazorasan]yazorasan[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/28023]Rose's Cruelty Free Meat[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/28289]Rose's Dream Crops[/url][/*]\n<br />[*][url=https://next.nexusmods.com/profile/j3nesis]j3nesis[/url]\u00A0for the suggestion to add the compatibility for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/20340]Growable Forage and Crop Bushes[/url]\uFEFF,\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/20884]Grains Overhull[/url]\uFEFF,\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5912]Stardew Vineyard[/url]\uFEFF,\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22376]Uncle Iroh Approved Tea[/url]\uFEFF, and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/8630]Walk to the Desert Redux\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF[/url]\uFEFF[/*]\n<br />[/list]\uFEFF\uFEFFLike this mod? [url=https://next.nexusmods.com/profile/dyanosis/mods]Check out my other mods![/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23843",
+	"Version": "1.2.4",
+	"Updated": "2026-04-29T00:35:15+00:00",
+	"Downloads": [
+		{
+			"Id": 101364,
+			"Type": "Main",
+			"DisplayName": "Farming Level Affects Harvest",
+			"FileName": "Farming Level Affects Harvest-23843-1-2-4-1716862561.zip",
+			"Description": "Added 5% increments with more phrases. If you don't like the phrases, then use the Percentage Config download under Optional Files",
+			"Version": "1.2.4",
+			"SizeInBytes": 22050,
+			"Uploaded": "2024-05-28T02:16:01+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest",
+					"DisplayName": "(CP) Farming Level Affects Harvest",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.2.4",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:23843"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488052,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101365,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - Percentage Config",
+			"FileName": "Farming Level Affects Harvest - Percentage Config-23843-1-2-4-1716862653.zip",
+			"Description": "Added 5% increments. Use this file if you want phrase like \"10% Increased\" instead of \"A hint\". If you want more interesting phrases, use the main file.",
+			"Version": "1.2.4",
+			"SizeInBytes": 23438,
+			"Uploaded": "2024-05-28T02:17:33+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest",
+					"DisplayName": "(CP) Farming Level Affects Harvest",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.2.4",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:23843"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488053,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101366,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - ateliercrops",
+			"FileName": "Farming Level Affects Harvest - ateliercrops-23843-1-0-4-1716862730.zip",
+			"Description": "Adds compatibility for Atelier Crops crops. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br /><br />Note: By default, all crops are 10%.\n<br /><br />Manifest Key: @ateliercrops",
+			"Version": "1.0.4",
+			"SizeInBytes": 12387,
+			"Uploaded": "2024-05-28T02:18:50+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.ateliercrops",
+					"DisplayName": "(CP) Farming Level Affects Harvest - ateliercrops",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - ateliercrops",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - ateliercrops",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.4",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "wildflour.ateliercrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Atelier.Cauldron",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@ateliercrops"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.ateliercrops"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488054,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101367,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - Cornucopia",
+			"FileName": "Farming Level Affects Harvest - Cornucopia-23843-1-0-2-1716862899.zip",
+			"Description": "Adds compatibility for Cornucopia More Crops. You only need this file for things to work. No need to combine or have the main/other optional files.\n<br /><br />Manifest Key: @Cornucopia",
+			"Version": "1.0.2",
+			"SizeInBytes": 29467,
+			"Uploaded": "2024-05-28T02:21:39+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.Cornucopia",
+					"DisplayName": "(CP) Farming Level Affects Harvest - Cornucopia",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - Cornucopia",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - Cornucopia",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@Cornucopia"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.Cornucopia"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488055,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101368,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - CornucopiaFlowers",
+			"FileName": "Farming Level Affects Harvest - CornucopiaFlowers-23843-1-0-1-1716863013.zip",
+			"Description": "Adds compatibility for Cornucopia flowers. You DO NOT need the main files for this to work. Just download this file like you normally would, unzip it into your Mods folder!\n<br /><br />Note: By default, all flowers are 10%.\n<br /><br />Manifest Key: @CornucopiaFlowers",
+			"Version": "1.0.1",
+			"SizeInBytes": 17646,
+			"Uploaded": "2024-05-28T02:23:33+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.CornucopiaFlowers",
+					"DisplayName": "(CP) Farming Level Affects Harvest - CornucopiaFlowers",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - CornucopiaFlowers",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - CornucopiaFlowers",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@CornucopiaFlowers"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.CornucopiaFlowers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488056,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101370,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - MagicalCrops",
+			"FileName": "Farming Level Affects Harvest - MagicalCrops-23843-1-0-1-1716863080.zip",
+			"Description": "Adds compatibility for shekurika's Magical Crops. You DO NOT need the main files for this to work. Just download this file like you normally would, unzip it into your Mods folder!\n<br /><br />Note: By default, all crops are 10%.\n<br /><br />Manifest Key: @MagicalCrops",
+			"Version": "1.0.1",
+			"SizeInBytes": 5305,
+			"Uploaded": "2024-05-28T02:24:40+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.MagicalCrops",
+					"DisplayName": "(CP) Farming Level Affects Harvest - MagicalCrops",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - MagicalCrops",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - MagicalCrops",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "shekurika.MagicalCrops.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@MagicalCrops"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.MagicalCrops"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488058,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101371,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - MtVapius",
+			"FileName": "Farming Level Affects Harvest - MtVapius-23843-1-0-1-1716863105.zip",
+			"Description": "Adds compatibility for Lumisteria's Mt Vapius. You DO NOT need the main files for this to work. Just download this file like you normally would, unzip it into your Mods folder!\n<br /><br />Note: By default, all crops are 10%.\n<br /><br />Manifest Key: @MtVapius",
+			"Version": "1.0.1",
+			"SizeInBytes": 16214,
+			"Uploaded": "2024-05-28T02:25:05+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.MtVapius",
+					"DisplayName": "(CP) Farming Level Affects Harvest - MtVapius",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - MtVapius",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - MtVapius",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Lumisteria.MtVapius",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@MtVapius"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.MtVapius"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488059,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101372,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - SereneMeadow",
+			"FileName": "Farming Level Affects Harvest - SereneMeadow-23843-1-0-2-1716863149.zip",
+			"Description": "Added i18n support. If you'd like to provide translations, message me or post them in the comments.\n<br /><br /><br />Manifest Key: @SereneMeadow",
+			"Version": "1.0.2",
+			"SizeInBytes": 11931,
+			"Uploaded": "2024-05-28T02:25:49+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.SereneMeadow",
+					"DisplayName": "(CP) Farming Level Affects Harvest - SereneMeadow",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - SereneMeadow",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - SereneMeadow",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Lumisteria.SereneMeadow",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@SereneMeadow"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.SereneMeadow"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488060,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101373,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - SVE",
+			"FileName": "Farming Level Affects Harvest - SVE-23843-1-0-2-1716863180.zip",
+			"Description": "Added i18n support. If you'd like to provide translations, message me or post them in the comments.\n<br /><br />Manifest Key: @SVE",
+			"Version": "1.0.2",
+			"SizeInBytes": 5356,
+			"Uploaded": "2024-05-28T02:26:20+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.SVE",
+					"DisplayName": "(CP) Farming Level Affects Harvest - SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - SVE",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - SVE",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@SVE"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.SVE"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488061,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 102954,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - Quaint",
+			"FileName": "Farming Level Affects Harvest - Quaint-23843-1-0-0-1717778694.zip",
+			"Description": "Adds compatibility for Quaint Living 2. You DO NOT need the main files for this to work. Just download this file like you normally would, unzip it into your Mods folder!\n<br /><br />Note: By default, all flowers are 10%.\n<br /><br />Manifest Key: @Quaint",
+			"Version": "1.0.0",
+			"SizeInBytes": 8891,
+			"Uploaded": "2024-06-07T16:44:54+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.Quaint",
+					"DisplayName": "(CP) Farming Level Affects Harvest - Quaint",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - Quaint",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - Quaint",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PC.CP.QL.FlowerGarden2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@Quaint"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.Quaint"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342489642,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 110440,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - BFV",
+			"FileName": "Farming Level Affects Harvest - BFV-23843-1-0-0-1725176526.zip",
+			"Description": "Adds compatibility for Bonster's Combined Crops and Recipes. You DO NOT need the main files for this to work. Just download this file like you normally would, unzip it into your Mods folder!\n<br />\n<br />Note: By default, all crops are 10%.\n<br />\n<br />Manifest Key: @BFV",
+			"Version": "1.0.0",
+			"SizeInBytes": 23611,
+			"Uploaded": "2024-09-01T07:42:06+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.BFV",
+					"DisplayName": "(CP) Farming Level Affects Harvest - BFV",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - BFV",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - BFV",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "BFV.CombinedCrops",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@BFV"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.BFV"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342497128,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 119998,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - ateliergoods",
+			"FileName": "Farming Level Affects Harvest - ateliergoods-23843-1-0-0-1734985808.zip",
+			"Description": "Adds compatibility for Atelier Goods crops. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />Note: By default, all crops are 10%.\n<br />\n<br />Manifest Key: @ateliergoods",
+			"Version": "1.0.0",
+			"SizeInBytes": 7921,
+			"Uploaded": "2024-12-23T20:30:08+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.ateliergoods",
+					"DisplayName": "(CP) Farming Level Affects Harvest - ateliergoods",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - ateliergoods",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - ateliergoods",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Wildflour.AtelierGoods",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Atelier.Cauldron",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DLX.Bundles",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "selph.ExtraMachineConfig",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "hxw.tilesheets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@ateliergoods"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.ateliergoods"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506686,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 120011,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - ferngrapes",
+			"FileName": "Farming Level Affects Harvest - ferngrapes-23843-1-0-1-1734988804.zip",
+			"Description": "Adds compatibility for Grapes of Ferngill crops. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @ferngrapes",
+			"Version": "1.0.1",
+			"SizeInBytes": 4804,
+			"Uploaded": "2024-12-23T21:20:04+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.ferngrapes",
+					"DisplayName": "(CP) Farming Level Affects Harvest - ferngrapes",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - ferngrapes",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - ferngrapes",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "StunkyMcDoo.GrapesofFerngill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@ferngrapes"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.ferngrapes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506699,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 120015,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - fernflowers",
+			"FileName": "Farming Level Affects Harvest - fernflowers-23843-1-0-0-1734989730.zip",
+			"Description": "Adds compatibility for Forage of Ferngill flowers. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @fernflowers",
+			"Version": "1.0.0",
+			"SizeInBytes": 6066,
+			"Uploaded": "2024-12-23T21:35:30+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.fernflowers",
+					"DisplayName": "(CP) Farming Level Affects Harvest - fernflowers",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - fernflowers",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - fernflowers",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "StunkyMcDoo.WildFlowersofFerngill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@fernflowers"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.fernflowers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506703,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 120016,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - fernroots",
+			"FileName": "Farming Level Affects Harvest - fernroots-23843-1-0-0-1734989777.zip",
+			"Description": "Adds compatibility for Forage of Ferngill roots. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @fernroots",
+			"Version": "1.0.0",
+			"SizeInBytes": 2818,
+			"Uploaded": "2024-12-23T21:36:17+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.fernroots",
+					"DisplayName": "(CP) Farming Level Affects Harvest - fernroots",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - fernroots",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - fernroots",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "StunkyMcDoo.RootsofFerngill.cp",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@fernroots"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.fernroots"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506704,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 132185,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - Sunberry",
+			"FileName": "Farming Level Affects Harvest - Sunberry-23843-1-0-0-1747111596.zip",
+			"Description": "Adds compatibility for Sunberry Village crops. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @Sunberry",
+			"Version": "1.0.0",
+			"SizeInBytes": 4986,
+			"Uploaded": "2025-05-13T04:46:36+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.Sunberry",
+					"DisplayName": "(CP) Farming Level Affects Harvest - Sunberry",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - Sunberry",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - Sunberry",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "skellady.SBVCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@Sunberry"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.Sunberry"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342518873,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 145631,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - StrawberryWay",
+			"FileName": "Farming Level Affects Harvest - StrawberryWay-23843-1-0-0-1760591874.zip",
+			"Description": "Dreaming of Strawberries crops compatibility. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @StrawberryWay",
+			"Version": "1.0.0",
+			"SizeInBytes": 5324,
+			"Uploaded": "2025-10-16T05:17:54+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.StrawberryWay",
+					"DisplayName": "(CP) Farming Level Affects Harvest - StrawberryWay",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - StrawberryWay",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - StrawberryWay",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Juanpa98ar.TSW",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@StrawberryWay"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.StrawberryWay"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532319,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 145632,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - MBF",
+			"FileName": "Farming Level Affects Harvest - MBF-23843-1-0-0-1760591967.zip",
+			"Description": "More Crops Fruits and Forage crops compatibility. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @MBF",
+			"Version": "1.0.0",
+			"SizeInBytes": 8458,
+			"Uploaded": "2025-10-16T05:19:27+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.MBF",
+					"DisplayName": "(CP) Farming Level Affects Harvest - MBF",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - MBF",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - MBF",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Aldino112.MBF",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@MBF"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.MBF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532320,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 145635,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - StonerValley",
+			"FileName": "Farming Level Affects Harvest - StonerValley-23843-1-0-0-1760592936.zip",
+			"Description": "Stoner Valley crops compatibility. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @StonerValley",
+			"Version": "1.0.0",
+			"SizeInBytes": 4057,
+			"Uploaded": "2025-10-16T05:35:36+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.StonerValley",
+					"DisplayName": "(CP) Farming Level Affects Harvest - StonerValley",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - StonerValley",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - StonerValley",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "BongWater.StonerValleyCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@StonerValley"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.StonerValley"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532323,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 145741,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - SevenSins",
+			"FileName": "Farming Level Affects Harvest - SevenSins-23843-1-0-0-1760671857.zip",
+			"Description": "Seven Deadly Sins crops compatibility. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @SevenSins",
+			"Version": "1.0.0",
+			"SizeInBytes": 6646,
+			"Uploaded": "2025-10-17T03:30:57+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.SevenSins",
+					"DisplayName": "(CP) Farming Level Affects Harvest - SevenSins",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - SevenSins",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - SevenSins",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ricehit.SevenDeadlySinsCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@SevenSins"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.SevenSins"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532429,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 153696,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - EliDylan",
+			"FileName": "Farming Level Affects Harvest - EliDylan-23843-1-0-0-1768546631.zip",
+			"Description": "Eli and Dylan crops compatibility. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @EliDylan",
+			"Version": "1.0.0",
+			"SizeInBytes": 3862,
+			"Uploaded": "2026-01-16T06:57:11+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.EliDylan",
+					"DisplayName": "(CP) Farming Level Affects Harvest - EliDylan",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - EliDylan",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - EliDylan",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "TenebrousNova.EliDylan.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@EliDylan"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.EliDylan"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342540384,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161201,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - ApprovedTea",
+			"FileName": "Farming Level Affects Harvest - ApprovedTea-23843-1-0-0-1773940871.zip",
+			"Description": "Adds compatibility for Uncle Iroh Approved Tea crops. You DO NOT need the main file. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @ApprovedTea",
+			"Version": "1.0.0",
+			"SizeInBytes": 3774,
+			"Uploaded": "2026-03-19T17:21:11+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.ApprovedTea",
+					"DisplayName": "(CP) Farming Level Affects Harvest - ApprovedTea",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - ApprovedTea",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - ApprovedTea",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "slimerrain.uncleirohapprovedteacp",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@ApprovedTea"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.ApprovedTea"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547889,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161202,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - CruelFree",
+			"FileName": "Farming Level Affects Harvest - CruelFree-23843-1-0-0-1773940941.zip",
+			"Description": "Adds compatibility for Rose's Cruelty Free Meat crops. You DO NOT need the main files. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @CruelFree",
+			"Version": "1.0.0",
+			"SizeInBytes": 10632,
+			"Uploaded": "2026-03-19T17:22:21+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.CruelFree",
+					"DisplayName": "(CP) Farming Level Affects Harvest - CruelFree",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - CruelFree",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - CruelFree",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Roseloves109.RosasCruelfreeMeat",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@CruelFree"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.CruelFree"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547890,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161203,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - DreamCrops",
+			"FileName": "Farming Level Affects Harvest - DreamCrops-23843-1-0-0-1773941012.zip",
+			"Description": "Adds compatibility for Rose's Dream Crops. You DO NOT need the main files. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @DreamCrops",
+			"Version": "1.0.0",
+			"SizeInBytes": 9172,
+			"Uploaded": "2026-03-19T17:23:32+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.DreamCrops",
+					"DisplayName": "(CP) Farming Level Affects Harvest - DreamCrops",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - DreamCrops",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - DreamCrops",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Roseloves109.DreamCrops",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@DreamCrops"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.DreamCrops"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547891,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161204,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - GrainsOH",
+			"FileName": "Farming Level Affects Harvest - GrainsOH-23843-1-0-0-1773941068.zip",
+			"Description": "Adds compatibility for Grains Overhull crops. You DO NOT need the main files. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @GrainsOH",
+			"Version": "1.0.0",
+			"SizeInBytes": 3389,
+			"Uploaded": "2026-03-19T17:24:28+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.GrainsOH",
+					"DisplayName": "(CP) Farming Level Affects Harvest - GrainsOH",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - GrainsOH",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - GrainsOH",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "slimerrain.grainsoverhullcp",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@GrainsOH"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.GrainsOH"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547892,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161205,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - SDVineyard",
+			"FileName": "Farming Level Affects Harvest - SDVineyard-23843-1-0-0-1773941128.zip",
+			"Description": "Adds compatibility for Stardew Vineyard flowers. You DO NOT need the main files. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @SDVineyard",
+			"Version": "1.0.0",
+			"SizeInBytes": 7974,
+			"Uploaded": "2026-03-19T17:25:28+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.SDVineyard",
+					"DisplayName": "(CP) Farming Level Affects Harvest - SDVineyard",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - SDVineyard",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - SDVineyard",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "amburr.stardewvineyard",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@SDVineyard"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.SDVineyard"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547893,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161206,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - WalkDesert",
+			"FileName": "Farming Level Affects Harvest - WalkDesert-23843-1-0-0-1773941232.zip",
+			"Description": "Adds compatibility for Walk to the Desert Redux crops. You DO NOT need the main files. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @WalkDesert",
+			"Version": "1.0.0",
+			"SizeInBytes": 1864,
+			"Uploaded": "2026-03-19T17:27:12+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.WalkDesert",
+					"DisplayName": "(CP) Farming Level Affects Harvest - WalkDesert",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - WalkDesert",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - WalkDesert",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Tarniyar.CP.WalkToDesert",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@WalkDesert"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.WalkDesert"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547894,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161213,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - GrowForage",
+			"FileName": "Farming Level Affects Harvest - GrowForage-23843-1-0-0-1773947201.zip",
+			"Description": "Adds compatibility for Growable Forage and Crop Bushes. You DO NOT need the main files. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @GrowForage",
+			"Version": "1.0.0",
+			"SizeInBytes": 2848,
+			"Uploaded": "2026-03-19T19:06:41+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.GrowForage",
+					"DisplayName": "(CP) Farming Level Affects Harvest - GrowForage",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - GrowForage",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - GrowForage",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.GrowableForage",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@GrowForage"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.GrowForage"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547901,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 163807,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - Alchemistry",
+			"FileName": "Farming Level Affects Harvest - Alchemistry-23843-1-0-1-1775662217.zip",
+			"Description": "Alchemistry crops compatibility. You DO NOT need the main files for this to work. Just download this file like your normally would, unzip it into your Mods folder and enjoy!\n<br />\n<br />By default, all crops are 10%.\n<br />\n<br />Manifest Key: @Alchemistry",
+			"Version": "1.0.1",
+			"SizeInBytes": 6985,
+			"Uploaded": "2026-04-08T15:30:17+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.Alchemistry",
+					"DisplayName": "(CP) Farming Level Affects Harvest - Alchemistry",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - Alchemistry",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - Alchemistry",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Morghoula.AlchemistryCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@Alchemistry"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.Alchemistry"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550495,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 165911,
+			"Type": "Optional",
+			"DisplayName": "Farming Level Affects Harvest - EastScarp",
+			"FileName": "Farming Level Affects Harvest - EastScarp-23843-1-0-4-1777422915.zip",
+			"Description": "Fixed incorrectly named crop seed entries. Also fixed the mod dependency list.<br /><br />Manifest Key: @EastScarp",
+			"Version": "1.0.4",
+			"SizeInBytes": 7774,
+			"Uploaded": "2026-04-29T00:35:15+00:00",
+			"Mods": [
+				{
+					"Id": "Dyanosis.FarmingAffectsHarvest.EastScarp",
+					"DisplayName": "(CP) Farming Level Affects Harvest - EastScarp",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Farming Level Affects Harvest - EastScarp",
+					"Manifest": {
+						"Name": "(CP) Farming Level Affects Harvest - EastScarp",
+						"Description": "This mod encourages eating food that increases Farming level to increase the farm yield of various crops.",
+						"Author": "Dyanosis",
+						"Version": "1.0.4",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Lemurkat.EastScarp",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23843@EastScarp"
+						],
+						"UniqueId": "Dyanosis.FarmingAffectsHarvest.EastScarp"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552599,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410531,
+		"UploaderId": 175644354,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

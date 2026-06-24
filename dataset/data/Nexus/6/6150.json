@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 6150,
+	"Name": "Greenhouse Entry Mod",
+	"Author": "pancham138",
+	"Description": "[b][color=#00ff00][size=3]Descriptions:[/size][/color][/b]\n<br />This mod can help players who customized their Greenhouse such as replacing their Greenhouse interior for a bigger area but their entry warp location not aligned with new door location. Using this mod for such case will greatly help by setting a new entry warp location for the new Greenhouse in a config file.\n<br />\n<br />[b][color=#00ff00][size=3]How it works?[/size][/color][/b]\n<br />This mod is triggered when a player warped from Farm into Greenhouse, which using tile location {X: 10, Y:23} as default entry warp location for vanilla Greenhouse. If the player is using a custom Greenhouse mod, such as from a Content Patcher's content pack mod, or a standalone mod, or even a mod that replace Greenhouse using XNB replacing method, but entry warp location changed from the default assigned tile, then the player will still be warped to default tile and that can be problematic if that tile in a weird position for the custom Greenhouse.\n<br />\n<br />By using this mod, you can change the entry warp location to any tile you desired by setting them in the config.json. After that, everytime you warped into Greenhouse, you will be correctly warped to desired location that is aligned with new door location in the Greenhouse.\n<br />\n<br />This mod will correctly detect if you warped to entry warp location tile in Greenhouse, which is\u00A0{X: 10, Y:23} by default, then it will change your location to correct location based on configured entry warp location (see Configurations below). Unfortunately, this mod will not check if your configured entry warp location contains a tile that is not passable, so you have to set the correct location yourself and made sure that tile is passable.\n<br />\n<br />You can even change which direction your farmer will face when entering the Greenhouse, but that should be unnecessary unless your Greenhouse door positioned other than bottom/south.\n<br />\n<br />[b][color=#00ff00][size=3]Configurations:[/size][/color][/b]\n<br />[list]\n<br />[*][b]DisableMod[/b] = [i]true[/i] | [i]false[/i] (default: false).\u00A0This will disable the mod obviously, without the need to remove the mod.\n<br />[*][b]EntryX[/b] = [i]number[/i] (default: 10). Entry point for tile X.\n<br />[*][b]EntryY[/b] = [i]number[/i] (default: 23). Entry point for tile Y.\n<br />[*][b]EntryFacingDirection[/b] = [i]Up[/i] | [i]Down[/i] | [i]Left[/i] | [i]Right[/i] (default: Up). The direction the player will face when entering the Greenhouse.\n<br />[/list]\n<br />[color=#00ff00][size=3][b]SMAPI Console Commands:[/b][/size][/color]\n<br />[code]/ghem reload[/code]\n<br />   \uFEFFThis will reload mod config mid-game\n<br />[code]/ghem location &lt;x&gt; &lt;y&gt;[/code]\n<br />   \uFEFFThis will set your custom entry location to &lt;x&gt; &lt;y&gt; tile and then save it to config file. Can only be executed inside Greenhouse.\n<br />[code]/ghem location[/code]\n<br />   \uFEFFThis will set your custom entry location to your player character location tile and then save it to config file. Can only be executed inside Greenhouse.\n<br />[code]/ghem debug[/code]\n<br />   \uFEFFThis will show debug information about current entry location that was set, and also farmer's current location\n<br />\n<br />There are more commands available, just type [code]/ghem[/code] in the console to read available commands.\n<br />It is better to install [url=https://www.nexusmods.com/stardewvalley/mods/2092]Chat Commands[/url] mod so you can test the commands in-game directly without having to alt-tabbing to SMAPI Console window.\n<br />\n<br />[size=3][b][color=#00ff00]Requirements:[/color]\n<br />[/b][/size][list]\n<br />[*]Stardew Valley 1.4 or later [b](not tested yet against Stardew Valley 1.5)[/b]\n<br />[*][url=https://smapi.io/]SMAPI[/url]\uFEFF 3.5.0 [b](not tested yet against SMAPI that compatibles with Stardew Valley 1.5)[/b]\n<br />[/list]\n<br />[color=#00ff00][size=3][b]Notes:[/b][/size][/color]\n<br />[list]\n<br />[*]This mod is only tested for Stardew Valley 1.4.5 version, but it should work with any 1.4 version.\n<br />[*]This mod is only tested for SMAPI 3.5.0. Please, test lower version yourself and then post a bug report if you found any.\n<br />[*]This mod is only tested for singleplayer. You can test it for multiplayer, but I'm not guaranteeing it will work. Maybe it will works as long as both host and every farmhand installed this mod, or it will works only for any player who installed this mod.\n<br />[/list]\n<br />[size=3][b][color=#00ff00]Compatibility:[/color]\n<br />[/b][/size]This mod is compatible with the following Greenhouse related mods out-of-the-box (as of May 23th):\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3969](CP) Oasis Greenhouse[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3464]Custom Greenhouse[/url]\uFEFF\n<br />[/list]\n<br />You can add other mods manually to data.json by using existing format in data.json. You must set its [b]UniqueID[/b], [b]MinimumVersion[/b],\u00A0[b]EntryX[/b], and [b]EntryY[/b] for it to work.\u00A0I have not tested many Greenhouse mods other than mentioned above.\n<br />\n<br />If you found any Greenhouse mods that you want this mod to support out-of-the-box, please tell me the mod details including [b]Name[/b], [b]Author[/b], [b]UniqueID[/b], and\u00A0[b]Version[/b]\u00A0taken from its [b]manifest.json[/b]\u00A0file, and also its supposed entry location ([b]tile X[/b] and [b]tile Y[/b]).\n<br />\n<br />Currently this mod will only detect if you warped from \"Farm\" location area into \"Greenhouse\" location area, so any other mods that can teleport you directly into Greenhouse from anywhere, this mod will not correcting your location [u]after warped if[/u] you warped from outside the \"Farm\". The \"Farm\" here includes any location name that contains \"Farm\", \"Barn\", \"Coop\" and \"SlimeHutch\".\n<br />\n<br />Other compatibiliy:\n<br />- IFR2 (based on comment post from\u00A0[url=https://www.nexusmods.com/users/86453268]ilsanionadil[/url]\uFEFF), you need to set it manually unfortunately.\n<br />- Also will works with any Greenhouse mod as long as the entry warp location unchanged.\n<br />\n<br />[b][color=#00ff00][size=3]Bug Reports:[/size][/color][/b]\n<br />Please, post any bug reports to [b][url=https://www.nexusmods.com/stardewvalley/mods/6150?tab=bugs]Bugs[/url] [/b]page instead of Posts page. Include your smapi log file by using [url=https://smapi.io/log]SMAPI log parser[/url] feature.\n<br />\n<br />[color=#00ff00][size=3][b]Credits:[/b][/size][/color]\n<br />Credits to [url=https://www.nexusmods.com/stardewvalley/users/1552317]Pathoschild[/url] for SMAPI and some pieces of source code I used from\n<br />[list]\n<br />[*][url=https://github.com/Pathoschild/StardewMods/blob/8e74555a322703ef97a9c726c5a9ff56ecf8162b/DebugMode/ModEntry.cs#L161]DebugMode/ModEntry.cs#MovePlayerFrom[/url]\uFEFF\n<br />[*][url=https://github.com/Pathoschild/StardewMods/blob/8e74555a322703ef97a9c726c5a9ff56ecf8162b/DebugMode/Framework/PlayerDirection.cs]DebugMode/Framework/PlayerDirection.cs[/url]\uFEFF\n<br />[/list]\n<br />Credits to [url=https://www.nexusmods.com/stardewvalley/users/63649496]Forkmaster[/url] for his Custom Greenhouse mod as base idea of this mod",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6150",
+	"Version": "1.0.0",
+	"Updated": "2020-05-23T12:23:12+00:00",
+	"Downloads": [
+		{
+			"Id": 27389,
+			"Type": "Main",
+			"DisplayName": "GreenhouseEntryMod",
+			"FileName": "GreenhouseEntryMod-6150-1-0-0-1590236592.zip",
+			"Description": "First version",
+			"Version": "1.0.0",
+			"SizeInBytes": 8897,
+			"Uploaded": "2020-05-23T12:23:12+00:00",
+			"Mods": [
+				{
+					"Id": "Pancham138.GreenhouseEntryMod",
+					"DisplayName": "Greenhouse Entry Mod",
+					"Type": "Smapi",
+					"RelativePath": "GreenhouseEntryMod",
+					"Manifest": {
+						"Name": "Greenhouse Entry Mod",
+						"Description": "Allows to set custom entry point of Greenhouse.",
+						"Author": "Pancham138",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "GreenhouseEntryMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6150"
+						],
+						"UniqueId": "Pancham138.GreenhouseEntryMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342414077,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392838,
+		"UploaderId": 58395491,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

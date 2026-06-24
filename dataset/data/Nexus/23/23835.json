@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 23835,
+	"Name": "Turbo - Alter Game Speed",
+	"Author": "PrimmR",
+	"Description": "[b]Turbo - A mod that allows you to alter the game's execution speed[/b]\n<br />\n<br />This tool is mainly intended to be used by mod developers, e.g. to reduce the waiting involved with checking custom NPC's schedules.\n<br />\n<br />This is a spiritual successor to the [url=https://www.nexusmods.com/stardewvalley/mods/7211]GameSpeed[/url] mod, which sadly isn't compatible with Stardew Valley 1.6. \n<br />The source code for this mod is available [url=https://tinkery.primmr.dev/PrimmR/Turbo/]here[/url]\uFEFF.\n<br />Please see the video tab for a demonstration of the mod!\n<br />\n<br />[i]Please note: I am not responsible for any damage this causes to your game/save.[/i]\n<br />[i]Always back everything up before you decide to start messing around with the fabric of time.[/i]\n<br />\n<br />[b]Usage[/b]\n<br />This mod provides two main functions: setting the execution speed of the game and setting how the in-game clock responds to the speed change.\n<br />\n<br />The execution speed is measured as a multiplier of the regular game speed, with values within the range (0, 1) representing slower execution, and values greater than one representing a greater speed of execution.  \n<br />This mod keeps the speed in the range [0.25, 32], as running the game at speeds beyond these makes it very difficult to control.\n<br />\n<br />The behaviour of the in-game clock is saved between sessions and can have one of three states:\n<br />\n<br />[list]\n<br />[*][b]Regular (0):[/b] The clock increments proportionally with game speed\n<br />[/list][list]\n<br />[*][b]Constant (1):[/b] The clock increments at a constant rate, regardless of game speed\n<br />[/list][list]\n<br />[*][b]Frozen (2):[/b] The clock is frozen\n<br />[/list]\n<br />[b]In Game[/b]\n<br />This mod adds 4 actions that can be triggered in-game through keyboard input. The default keybinds can be edited in the [i]config.json[/i] file.\n<br />\n<br />[b]Decrement Speed (&lt;): [/b]Halves the current game speed[b]\n<br />Increment Speed (&gt;):[/b] Doubles the current game speed\n<br />[b]Reset Speed (;):[/b] Sets the game speed to 1x\n<br />[b]Cycle Clock Mode ('):[/b] Cycles through the clock mode options\n<br />\n<br />[b]SMAPI Console[/b]\n<br />This mod also includes 2 SMAPI console commands that can be used in place of the in-game keybinds:\n<br />\n<br />[i]set_speed &lt;value&gt;[/i]\n<br />[i]set_clock_mode &lt;value&gt;[/i]\n<br />\n<br />[i]The former command allows you to select any speed for the game to run at, which includes values outside of the 'safe range'. So make sure you double check your input before pressing enter![/i]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23835",
+	"Version": "1.1.0",
+	"Updated": "2025-04-20T16:33:27+00:00",
+	"Downloads": [
+		{
+			"Id": 130505,
+			"Type": "Main",
+			"DisplayName": "Turbo - 1.1.0",
+			"FileName": "Turbo - 1.1.0-23835-1-1-0-1745166807.zip",
+			"Description": "Latest Version",
+			"Version": "1.1.0",
+			"SizeInBytes": 19464,
+			"Uploaded": "2025-04-20T16:33:27+00:00",
+			"Mods": [
+				{
+					"Id": "Primm.Turbo",
+					"DisplayName": "Turbo",
+					"Type": "Smapi",
+					"RelativePath": "Turbo",
+					"Manifest": {
+						"Name": "Turbo",
+						"Description": "Control the execution speed of the game",
+						"Author": "Primm",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Turbo.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:PrimmR/Turbo"
+						],
+						"UniqueId": "Primm.Turbo"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342517193,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410523,
+		"UploaderId": 169919803,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

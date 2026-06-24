@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 32527,
+	"Name": "Fish Pond Aquaponics - Hydroponics and Aquaculture",
+	"Author": "zombifier",
+	"AuthorLabel": "Selph aka zombifier",
+	"Description": "[quote]Aquaponics - a farming system that combines hydroponics (growing plants in water) with aquaculture (raising fish). Nutrient-rich wastewater from aquaculture is fed to hydroponically grown crops, which in turn filter out toxic waste and allows the water to be recycled for continued use by the aquatic animals.[/quote]\n<br />\n<br />Are you bothered by how big fish ponds are, and how they're inferior to just using that space to grow crops? This mod answers that question by saying \"why not both?\" and allows you to plant crops in them, granting benefits to both fish and crops.\n<br />\n<br />[b]How to plant:[/b]\n<br />[list]\n<br />[*] First, upgrade your fish pond with a hydroponics tank at Robins. This costs 15,000g, 200 wood, 10 iron bars and 1 iridium bar.\n<br />[*] Once upgraded, interact with an upgraded pond while holding 10 crop seeds or bush saplings (amount is configurable) of one type. See specific details in the collapsible below:\n<br />[/list]\n<br />[spoiler]\n<br />[*]You can only grow one type of crops at a time, and they must be planted at the same time.\n<br />[*]Mixed seeds are not allowed, however wild forage seeds are allowed.\n<br />[*]Visually, the pond will always show 8 seeds, regardless of how many were planted. This is only a visual effect - the hydroponics tank, like other SDV buildings, are bigger on the inside!\n<br />[*]Crops will follow location planting rules. You can't plant out of season crops, unless the pond is built on Ginger Island or an indoor buildable location.\n<br />[*]Ancient Fruits cannot be planted in the hydroponics tank - its roots are too deep, unfortunately. Mods that allow ancient fruits in garden pots however will also work with the hydroponics tank.\n<br />[/spoiler]\n<br />[list]\n<br />[*] Once the crops are ready for harvest, interact with the fish pond to instantly harvest them and add the harvest to your inventory. Multiple harvest crops will continue to grow.\n<br />[*] To clear the pond of crops so you can grow new crops, right click to open the pond menu, and click the button above the \"Empty Pond\" button (See screenshot in Image tab). If the pond is growing bushes, you'll get the saplings back.\n<br />[/list]\n<br />\n<br />[b]Benefits of aquaponics:[/b]\n<br />[list]\n<br />[*] For crops, the crops are always watered (obviously), and benefits from both quality boost and growth speed equal to Deluxe Fertilizer and Hyper Speed-Gro combined. The downsides are that crop fairies ignore aquaponics crops and they can't grow giant.\n<br />[*]For bushes, the bushes grow 25% faster and give 50% more output on average.\n<br />[*] For fish, new fish spawns 25% faster, and have a 50% chance to have its produce stack count doubled (stacks additively with Golden Animal Cracker). This only applies if there are crops growing within the tank.\n<br />[/list]\n<br />\n<br />[b]Installation instruction:[/b][list]\n<br />[*] Download and install [url=https://smapi.io]SMAPI[/url]\uFEFF\n<br />[*] Unzip this mod into the game's Mods folder.\n<br />[/list]\n<br />\n<br />[b]Uninstallation instructions:\n<br />[/b]\n<br />Before removing this mod, either demolish all upgraded aquaponics ponds, or run this console command to downgrade all aquaponics pond to the base version: [code]selph.aquaponics_downgradeallaquaponicsponds[/code]\n<br />\n<br />[b]Mod compatibility:\n<br />[/b]This mod should be compatible with every other mod, with special interactions noted below:\n<br />\n<br />[list]\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/20600]Buildable Ginger Island[/url]: \uFEFFIMPORTANT: Also install [url=https://www.nexusmods.com/stardewvalley/mods/23934]Fixed Ginger Island Beach Garden Pot[/url]\uFEFF for aquaponics pond on Ginger Islands to accept crops!\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/29422]Fish Pondering - Smaller Fish Ponds[/url]\uFEFF: Fully compatible, the hydroponic tanks will be scaled down appropriately.\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/url]\uFEFF: No issues, however some information may be inaccurate:\n<br />[list]\n<br />[*]The fish's spawn time will not show the 25% increase. This is because from a technical perspective this mod makes the spawn timer have a 25% chance to  count down by two days instead of just one.\n<br />[*]Crop lookup inside a pond is currently not supported. That would need a code change to Lookup Anything.\n<br />[/list][*] [url=https://www.nexusmods.com/stardewvalley/mods/24356]Aquarism[/url]\uFEFF or [url=https://www.nexusmods.com/stardewvalley/mods/31753]Better Fish Pond[/url]\uFEFF: Should be fully compatible, but let me know if you see any issues.\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url]\uFEFF: Crop plant and harvest is not currently supported by Automate.\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/28184]Big Fish Pond[/url]\uFEFF: You must choose to upgrade a base pond to either a big pond or an aquaponics pond. A big pond unfortunately cannot have an aquaponics tank attached. If you wish to change a big pond to an aquaponics pond, open the pond's menu and this command to downgrade it to the base pond:\n<br />[code]selph.aquaponics_downgradepond\n<br />[/code][/list]\n<br />[b]Retexturing Guide\n<br />[/b]\n<br />The aquaponics tank is split into 5 textures for layering purposes, under the following asset names:\n<br />[list]\n<br />[*] [code]Mods/selph.Aquaponics/AquaponicsTankFront[/code]: The front texture, drawn above everything else.\n<br />[*] [code]Mods/selph.Aquaponics/AquaponicsTank[/code]: The side texture, drawn below crops but above water.\n<br />[*] [code]Mods/selph.Aquaponics/AquaponicsTankWater[/code]: The monochrome water texture, will be colored according to the pond's water color. The game's shimmering water effects from `Tilesheets/cursors` will be drawn on top.\n<br />[*] [code]Mods/selph.Aquaponics/AquaponicsTankWaterHighlights[/code]: The light reflection near the water's edge. Not colored as intensely as the main water.\n<br />[*] [code]Mods/selph.Aquaponics/AquaponicsTankBack[/code]: The bottom of the tank, drawn below everything else.\n<br />[/list]\n<br />\n<br />Support for skin-specific tank textures can come in the future is there is demand.\n<br />\n<br />[url=https://github.com/zombifier/My_Stardew_Mods/tree/master/Aquaponics]Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32527",
+	"Version": "1.1.3",
+	"Updated": "2025-05-31T17:04:26+00:00",
+	"Downloads": [
+		{
+			"Id": 133586,
+			"Type": "Main",
+			"DisplayName": "Fish Pond Aquaponics",
+			"FileName": "Fish Pond Aquaponics-32527-1-2-0-1748711066.zip",
+			"Description": "1.2.0: Supports Tea Bushes and more bugfixes. See changelog for details.",
+			"Version": "1.2.0",
+			"SizeInBytes": 38314,
+			"Uploaded": "2025-05-31T17:04:26+00:00",
+			"Mods": [
+				{
+					"Id": "selph.Aquaponics",
+					"DisplayName": "Fish Pond Aquaponics",
+					"Type": "Smapi",
+					"RelativePath": "Aquaponics",
+					"Manifest": {
+						"Name": "Fish Pond Aquaponics",
+						"Description": "Adds a fish pond upgrade that allows crop growing, with mutual benefits for both crops and fish produce.",
+						"Author": "selph",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.9",
+						"EntryDll": "Aquaponics.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:32527"
+						],
+						"UniqueId": "selph.Aquaponics"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520274,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342419215,
+		"UploaderId": 24394309,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

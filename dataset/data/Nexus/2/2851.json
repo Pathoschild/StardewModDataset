@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 2851,
+	"Name": "SLIGHTLY More Foraging",
+	"Author": "RedClairefield",
+	"Description": "The intent of this mod is to open up map areas slightly in order to bring more usefulness to existing areas.\n<br />\n<br />Current edits:\n<br />[list]\n<br />[*]Backwoods (area immediately north of the farm) has more foraging space and a warp from the upper part of the cliffs to the bus street/tunnel area.\n<br />[*]Forest has added access to some (but not all) clifftop areas.\n<br />[*]Railroad has added access to the north cliff. Summit warp is currently blockaded.\n<br />[*]Mountain \"islands\" have been merged into one so that the trees can be felled onto land and you don't just have to lose that wood and sap.\n<br />[*]Farm Cave has an added basement with a 1-tile spa. You can also fish here (as it is water) but the rate for trash is 100% and you can't get any fish.\n<br />[/list]\n<br />This is different from a previous (currently hidden) effort to open up maps in that it has NO additional warps on maps that LEAVE THE MAP on any maps that NPCs can path to. This, for whatever reason, cause issue with NPC pathing. For example if I were to add a warp from the Forest to the Beach and vice versa (which several mods currently do) the NPCs that path in those areas would attempt to use those warps, but not know what to do with them. Depending on the accessibility of the warps, this will break the NPCs pathing in one of two ways:\n<br />[list=1]\n<br />[*]They will reach the end of a currently navigable path (the shore of the beach) and stay there until the world is reset (by sleeping) OR\n<br />[*]Upon using the new warp, they will no longer path sensibly and will simply walk in a straight line eternally, mowing down any physical object that's in their way and walking on water and other non-land tiles with blatant disregard for physical laws. Eventually, they will disappear from the map entirely and despawn.\n<br />[/list]Given this issue and no known fix for it, this mod will be avoiding warps that do this. Currently the only warps that are safe are minecart warps (though I have not thoroughly experimented with them) and warps that do not exit the map (warping from Forest to Forest or Beach to Beach).\n<br />Please note that bushes, once generated, can not be easily destroyed and changing the map file doesn't do it. For the best experience, you should start a new game after installing this mod. If you adamantly refuse to start a new map, at least use a bush removal tool like the one provided [url=https://www.nexusmods.com/stardewvalley/mods/2364?tab=files]here[/url]\uFEFF\n<br />\n<br />Other Compatibility:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1149]Karmylla's Immersive Map Edits[/url]\uFEFF is, as of writing this, fully compatible and I strongly suggest adding it.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1147]Karmylla's Farm Cave Edits[/url]\uFEFF will conflict, sadly. If you prefer those edits but still want the foraging edits from this mod, simply go into this mod's folder and delete the following code from Content.json\n<br />[/list][code]{\n<br />\"Action\": \"Load\",\n<br />\"Target\": \"Maps/FarmCave\",\n<br />\"FromFile\": \"assets/FarmCave.tbin\"\n<br />},[/code]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1504]Expanded Access Maps[/url]\uFEFF has mixed compatibility and it is advised you choose either this mod or that one.\n<br />\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2851",
+	"Version": "1",
+	"Updated": "2018-09-30T23:04:38+00:00",
+	"Downloads": [
+		{
+			"Id": 11807,
+			"Type": "Main",
+			"DisplayName": "More foraging",
+			"FileName": "More foraging-2851-1-7.7z",
+			"Description": "Removed Mountain edits",
+			"Version": "1.7",
+			"SizeInBytes": 33849,
+			"Uploaded": "2018-09-30T23:04:38+00:00",
+			"Mods": [
+				{
+					"Id": "rc.foragingmaps",
+					"DisplayName": "RC Foraging",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] SLIGHTLY More Foraging",
+					"Manifest": {
+						"Name": "RC Foraging",
+						"Description": "Some light map edits using vanilla resources.",
+						"Author": "RedClairefield",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "rc.foragingmaps"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342398495,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389539,
+		"UploaderId": 1668554,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

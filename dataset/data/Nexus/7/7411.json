@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 7411,
+	"Name": "Combine Machines",
+	"Author": "SlayerDharok",
+	"Description": "[size=3][img]https://i.imgur.com/aLEhwVx.png[/img]\n<br />\n<br />Lets you merge multiple copies of the same machine into a single copy that can process items faster, to save space on your farm.[/size]\n<br />\n<br />For example, combining 2 furnaces creates a single furnace that can process 197% materials at a time (Not quite 200% since there is a small penalty applied for each quantity that you combine, although this penalty can be edited in the [b]config.json[/b] file). You can continue adding furnaces to it to make it even stronger.\n<br />\n<br />This helps reduce clutter and the need to devote large sections of your farm to a bunch of the same machine. I also found it annoying to collect my outputs from several machines in a row.\n<br />\n<br />[b][size=4]HOW TO USE[/size][/b]\n<br />[list=1]\n<br />[*]Open your inventory (machines must be combined from within your inventory, NOT while they are already placed on the ground!)\n<br />[*]Click a machine to select it\n<br />[*]Click another copy of the same machine while holding down [color=red][b][size=5]CTRL[/size][/b][/color] to combine them\n<br />[*]You can also split the machine back to its original state by placing it on a tile, then hitting it with a pickaxe to \"un-place\" it\n<br />[/list]\n<br />All types of machines can be combined - furnaces, bee houses, worm bins, mayonnaise machines, kegs etc.\n<br />\n<br />[img]https://i.imgur.com/4o6wzEQ.gif[/img]\uFEFF\n<br />\n<br />In the above example, I combine 4 furnaces into 1. This gives it 382% processing power, so when I insert ore into it, it will take roughly 5*3.82=19 ore. When it's done processing, I'll receive either 4 copper bars (82% chance) or 3 copper bars (18% chance) (This means I'll still average 3.82 bars per processing cycle). By hitting it with a pickaxe to un-place it, it gets split back into 4 separate furnaces.\n<br />\n<br />[b]Additional notes:[/b]\n<br />[list][*][b]Automate[/b]: If using the [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url] mod, consider setting the [b]ProcessingMode[/b] in your config.json file to [b]\"IncreaseSpeed\"[/b]. If you set it to [b]\"MultiplyItems\"[/b], you will receive multiplied outputs but your inputs won't be multiplied due to technical limitations. (This mod is only able to detect and respond to when inputs are inserted into machines through vanilla game functions, not when it occurs due to Automate)\n<br />[*][b]Crab Pots[/b]: If [b]ProcessingMode[/b] is set to [b]\"MultiplyItems\"[/b], a combined crab pot won't take extra bait due to technical limitations, but you'll still receive extra outputs. If [b]ProcessingMode[/b] is set to [b]\"IncreaseSpeed\"[/b], then the crab pot will process items between 6:00am and 12:00am (18-hour day cycle, so you aren't expected to stay up extra late to collect outputs). If your combined crab pot has, for example, 360% processing power, then it would attempt to produce new ouputs once every 18.0/3.6=5.0 hours (300 minute intveral). Meaning it would check if it should produce an item at 6:00am (start of day), 11:00am (6+5), 4:00pm (6:+5*2), and 9:00pm (6+5*3).\n<br />[*]EDIT: in game version 1.6, Crab Pots will now always use IncreaseSpeed mode due to new bugs with MultiplyItems.\n<br />[*][b]Scarecrows[/b]: If you combine scarecrows, then it will increase the # of covered tiles. The radius of a combined scarecrow is given by: [i]radius = Round(base_radius * square_root(processing_power))[/i]. It scales with the square root of the processing power because the processing power is multiplying the # of tiles, not the radius. (Doubling the radius would quadruple the # of tiles in range).\n<br />[*][b]Casks[/b]: Due to technical limitations, casks always use [b]ProcessingMode[/b]=[b]\"IncreaseSpeed\"[/b]. A cask's output can only mature by up to 1 quality-level per day. So, for example, if you had an item in the cask that would normally take 28 days to go from regular to gold quality (+2 quality levels), then a combined cask with 2800% processing power would still require 2 days instead of 1.\n<br />[/list]\n<br />[b]Config Settings:[/b]\n<br />[size=2](After the first time you run the mod, a [b]config.json[/b] file will automatically be created with default settings in the same folder that you install the mod to)[/size]\n<br />[size=2]Note: You can use the SMAPI console command [b]combine_machines_reload_config[/b] to dynamically reload your config settings without needing to restart the game[/size]\n<br />\n<br />Main settings:\n<br />[list][*][b]CombinePenalty[/b]: [i]Default value = [b]0.03[/b][/i]. A penalty to the processing power for each machine you combine. If set to 0.03, then the processing power loses 3% with each successive machine you add together. 2 machines = 197% (-3%), 3 machines = 291% (-3%, -6%), 4 machines = 382% (-3%, -6%, -9%) etc.\n<br />[*][b]MinimumEffect[/b]: [i]Default value = [b]0.25[/b][/i]. The minimum boost to processing power that adding an additional machine will give. If [b]CombinePenalty[/b] is set to 0.03, then after adding 25 copies together I'd be getting +25% per additional machine added (100%-25*3%=25%). Since that is the [b]MinimumEffect[/b], it won't go any lower. Adding a 26th machine to together will still give +25% instead of +22%.\n<br />[*][b]CombineKeyNames[/b]: [i]Default value = a list containing [b]LeftControl[/b] and [b]RightControl[/b][/i]. The names of the keys that must be pressed to combine two machines. (Only one key in the list needs to be held)\n<br />[*][b]ProcessingMode[/b]: [i]Default value = [b]\"MultiplyItems\"[/b][/i], Possible values are [b]\"MultiplyItems\"[/b] or [b]\"IncreaseSpeed\"[/b]. If set to [b]\"MultiplyItems\"[/b], then a combined machine will process multiple quantity of the same item each cycle, but each cycle will have the regular duration. If set to [b]\"IncreaseSpeed\"[/b], then a combined machine will process the normal amount of items per cycle, but each processing cycle will be faster. For example, if Processing Power = 200%, then using [b]\"MultiplyItems\"[/b] allows you to process 2 bars at a time with a furnace, whereas using [b]\"IncreaseSpeed\"[/b] allows your furnace to process 1 bar at a time, but it finishes smelting twice as fast.\n<br />[*][b]ProcessingModeExclusions[/b]: [i]Default value = empty list[/i]. This list should contain names of machines that you want to use the opposite processing mode on. For example, if [b]ProcessingMode[/b] is set to [b]\"MultiplyItems\"[/b], and [b]ProcessingModeExclusions[/b] is set to [b][ \"Furnace\", \"Worm Bin\" ][/b], then all machines EXCEPT Furnaces and Worm Bins will use mode = [b]\"MultiplyItems\"[/b], while Furnaces and Worm Bins will instead use mode = [b]\"IncreaseSpeed\"[/b]\n<br />[/list]\n<br />Additional settings that mostly don't matter:\n<br />[spoiler][list][*][b]NumberOpacity[/b]: [i]Default value = [b]1.0[/b][/i]. An alpha to use when rendering the number of combined machines. Recommended value = [b]1.0[/b] (100% opacity, 0% transparency)\n<br />[*][b]DrawToolTip[/b]: [i]Default value = [b]true[/b][/i]. Possible values are [b]true[/b] or [b]false[/b]. If set to [b]false[/b], then a tooltip will not be displayed when hovering over a machine placed on a tile. Recommended value = [b]true[/b].\n<br />[*][b]ToolTipOffset[/b]: [i]Default value = [b]\"0, 0\"[/b][/i]. Possible values are a comma separated coordinate: \"x, y\". An offset from the mouse cursor to use when positioning the tooltip. If you have other mods that display tooltips when hovering over a machine, you may want to change this offset so that the tooltips don't get drawn on top of each other. Note that in the context of computer graphics, the positive Y-axis is down instead of up.\n<br />[*][b]ToolTipShowDuration[/b]: [i]Default value = [b]true[/b][/i]. Possible values are [b]true[/b] or [b]false[/b]. If set to [b]true[/b], then the tooltip will display the days until aged to iridium quality (for casks) or the minutes until finished processing (for other types of machines, if the [b]ProcessingMode[/b] is set to [b]\"IncreaseSpeed\"[/b]).\n<br />[*][b]ToolTipShowQuantity[/b]: [i]Default value = [b]true[/b][/i]. Possible values are [b]true[/b] or [b]false[/b]. If set to [b]true[/b], then the tooltip will display the produced item quantity if the [b]ProcessingMode[/b] is set to [b]\"MultiplyItems\"[/b]\n<br />[*][b]AllowCombiningScarecrows[/b]: [i]Default value = [b]true[/b][/i]. Possible values are [b]true[/b] or [b]false[/b]. If set to [b]false[/b], then you will not be able to combine scarecrows to increase their radius, and vanilla game logic for handling scarecrows and spawning crows will not be patched. The patches to the game code are somewhat significant for this feature, so if you're having any issues, consider setting this to [b]false[/b].\n<br />[*][b]FurnaceMultiplyCoalInputs[/b]: [i]Default value = [b]true[/b][/i]. Possible values are [b]true[/b] or [b]false[/b]. Only relevant if furnaces are using [b]ProcessingMode[/b]=[b]\"MultiplyItems\"[/b]. If [b]true[/b], then combined furnaces will consume 1 coal per bar produced. If [b]false[/b], furnaces will only consume 1 coal per processing cycle, regardless of how many bars are produced. Set this to [b]false[/b] if you're feeling a bit cheaty and want to use less coal.\n<br />[/list][/spoiler]\n<br />[url=https://github.com/Videogamers0/SDV-CombineMachines]Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7411",
+	"Version": "1.10.1",
+	"Updated": "2024-04-21T05:28:55+00:00",
+	"Downloads": [
+		{
+			"Id": 84330,
+			"Type": "Main",
+			"DisplayName": "Combine Machines 1.10.1",
+			"FileName": "Combine Machines 1.10.1-7411-1-10-1-1711171765.zip",
+			"Description": "For use with Stardew Valley game version 1.6 or later.",
+			"Version": "1.10.1",
+			"SizeInBytes": 48073,
+			"Uploaded": "2024-03-23T05:29:25+00:00",
+			"Mods": [
+				{
+					"Id": "SlayerDharok.CombineMachines",
+					"DisplayName": "Combine Machines",
+					"Type": "Smapi",
+					"RelativePath": "CombineMachines",
+					"Manifest": {
+						"Name": "Combine Machines",
+						"Description": "Use multiple copies of the same machine on each other to combine their processing capabilities.",
+						"Author": "SlayerDharok",
+						"Version": "1.10.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CombineMachines.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7411"
+						],
+						"UniqueId": "SlayerDharok.CombineMachines"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342471018,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94112,
+			"Type": "Main",
+			"DisplayName": "Combine Machines 1.11.0-beta4",
+			"FileName": "Combine Machines 1.11.0-beta4-7411-1-11-0-beta4-1713677335.zip",
+			"Description": "Beta version. Drastically overhauled the mod's logic to (hopefully) fix a ton of subtle issues that started occurring with the 1.6 game update.",
+			"Version": "1.11.0-beta4",
+			"SizeInBytes": 47795,
+			"Uploaded": "2024-04-21T05:28:55+00:00",
+			"Mods": [
+				{
+					"Id": "SlayerDharok.CombineMachines",
+					"DisplayName": "Combine Machines",
+					"Type": "Smapi",
+					"RelativePath": "CombineMachines",
+					"Manifest": {
+						"Name": "Combine Machines",
+						"Description": "Use multiple copies of the same machine on each other to combine their processing capabilities.",
+						"Author": "SlayerDharok",
+						"Version": "1.11.0-beta4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CombineMachines.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7411"
+						],
+						"UniqueId": "SlayerDharok.CombineMachines"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342480800,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394099,
+		"UploaderId": 1946434,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

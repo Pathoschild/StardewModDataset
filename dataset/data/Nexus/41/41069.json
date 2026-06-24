@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 41069,
+	"Name": "AI Dialogue Generation Module",
+	"Author": "ph3nylalanine",
+	"Description": "AI Dialogue Mod 是一个为《星露谷物语》制作的 SMAPI 模组。\n<br />AI Dialogue Mod is a SMAPI mod for Stardew Valley.\n<br />它会使用 OpenAI 兼容接口或 Anthropic 风格接口，为 NPC 生成更符合人物性格、当前季节、天气、时间、地点和玩家关系的对话。\n<br />It uses OpenAI-compatible or Anthropic-style APIs to generate NPC dialogue that better matches each character’s personality, season, weather, time, location, and relationship with the player.\n<br />NPC 不再只是重复固定台词，而是可以根据当前情境自然回应。\n<br />NPCs no longer only repeat fixed lines; they can respond naturally to the current situation.\n<br />玩家可以开启右键自由输入模式，直接对 NPC 输入自己想说的话。\n<br />Players can enable right-click free chat and type their own messages directly to NPCs.\n<br />AI 会参考 NPC 人设、最近对话上下文、好感度和本地精华记忆，让回复更像一次连续的交流。\n<br />The AI uses NPC profiles, recent dialogue context, friendship, and compact local memories to make conversations feel more continuous.\n<br />模组内置轻量 NPC 记忆系统，会把对话压缩成本地摘要，而不是无限保存完整聊天记录。\n<br />The mod includes a lightweight NPC memory system that stores compact local summaries instead of unlimited full chat logs.\n<br />玩家可以在游戏内配置菜单中调整上下文条数、记忆上限、温度、Top P、最大回复长度、是否启用思考模式等选项。\n<br />Players can configure context size, memory limits, temperature, Top P, max response length, thinking mode, and more in the in-game config menu.\n<br />本模组不需要 Generic Mod Config Menu，内置主菜单和背包菜单配置入口。\n<br />This mod does not require Generic Mod Config Menu and includes its own config button on the title menu and inventory menu.\n<br />支持 OpenAI 风格与 Anthropic 风格两种接口。\n<br />It supports both OpenAI-style and Anthropic-style API formats.\n<br />DeepSeek、OpenAI 兼容服务和 Anthropic Messages API 都可以通过配置使用。\n<br />DeepSeek, OpenAI-compatible services, and the Anthropic Messages API can all be used through configuration.\n<br />右键自由对话还支持轻量邀约。\n<br />Right-click free chat also supports lightweight invitations.\n<br />如果玩家邀请高好感 NPC 去海边、酒吧、山间湖边、秘密森林等地点，NPC 可以根据语义和好感度决定是否接受。\n<br />If the player invites a high-friendship NPC to places like the beach, saloon, mountain lake, or Secret Woods, the NPC can decide whether to accept based on wording and friendship.\n<br />NPC 可以临时跟随玩家，也可以在约定时间前往目的地。\n<br />NPCs can temporarily follow the player or go to a destination at a scheduled time.\n<br />这些行动不会永久覆盖原版日程，结束后 NPC 会尝试回到正常安排。\n<br />These actions do not permanently overwrite vanilla schedules, and NPCs will try to return to their normal routines afterward.\n<br />中文环境会优先使用中文人物参考资料。\n<br />Chinese game environments use Chinese character reference data first.\n<br />英文和其他语言环境目前会使用英文参考资料，并让 AI 按当前语言尽量回复。\n<br />English and other language environments currently use English reference data, while the AI tries to reply in the current game language.\n<br />[b]主要功能 / Features[/b]\n<br />[list]\n<br />[*]AI NPC 对话生成[/*]\n<br />[*]AI-generated NPC dialogue[/*]\n<br />[*]右键自由输入聊天[/*]\n<br />[*]Right-click typed free chat[/*]\n<br />[*]本地 NPC 精华记忆[/*]\n<br />[*]Local compact NPC memory[/*]\n<br />[*]游戏内配置菜单[/*]\n<br />[*]In-game config menu[/*]\n<br />[*]OpenAI 兼容接口支持[/*]\n<br />[*]OpenAI-compatible API support[/*]\n<br />[*]Anthropic Messages API 支持[/*]\n<br />[*]Anthropic Messages API support[/*]\n<br />[*]DeepSeek 配置支持[/*]\n<br />[*]DeepSeek configuration support[/*]\n<br />[*]温度、Top P、最大 Token、思考模式等参数可调[/*]\n<br />[*]Adjustable temperature, Top P, max tokens, thinking mode, and more[/*]\n<br />[*]NPC 邀约与临时跟随[/*]\n<br />[*]NPC invitations and temporary following[/*]\n<br />[*]中文和英文人物参考资料[/*]\n<br />[*]Chinese and English character reference data[/*]\n<br />[/list][b]安装要求 / Requirements[/b]\n<br />需要 Stardew Valley 1.6。\n<br />Requires Stardew Valley 1.6.\n<br />需要 SMAPI 4.x。\n<br />Requires SMAPI 4.x.\n<br />需要可用的 AI API Key。\n<br />Requires a valid AI API key.\n<br />不需要 Generic Mod Config Menu。\n<br />Generic Mod Config Menu is not required.\n<br />[b]安装方法 / Installation[/b]\n<br />先安装 SMAPI。\n<br />Install SMAPI first.\n<br />将\u00A0AIDialogueMod\u00A0文件夹放入 Stardew Valley 的\u00A0Mods\u00A0文件夹。\n<br />Place the\u00A0AIDialogueMod\u00A0folder into Stardew Valley’s\u00A0Mods\u00A0folder.\n<br />启动游戏后，在主菜单或背包菜单右上角点击\u00A0AI配置。\n<br />After launching the game, click\u00A0AI配置\u00A0in the top-right of the title menu or inventory menu.\n<br />填写 API Key、接口风格、Endpoint 和模型名称。\n<br />Fill in the API key, API style, endpoint, and model name.\n<br />[b]注意事项 / Notes[/b]\n<br />AI 回复速度取决于网络、服务商和模型。\n<br />AI response speed depends on your network, provider, and model.\n<br />API 调用可能产生费用，请查看你的服务商计费规则。\n<br />API calls may cost money, so check your provider’s billing rules.\n<br />请不要分享自己的 API Key。\n<br />Do not share your API key.\n<br />本模组不会上传本地 NPC 记忆文件，记忆保存在你的本地 Mod 文件夹中。\n<br />This mod does not upload local NPC memory files; memories are stored in your local mod folder.\n<br />邀约和跟随功能是轻量实现，可能会受到节日、剧情、特殊地图和原版 NPC 行为影响。\n<br />Invitation and following features are lightweight and may be affected by festivals, events, special maps, and vanilla NPC behavior.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41069",
+	"Version": "2.0.1",
+	"Updated": "2026-05-28T05:24:15+00:00",
+	"Downloads": [
+		{
+			"Id": 169252,
+			"Type": "Main",
+			"DisplayName": "AIDialogueMod",
+			"FileName": "AIDialogueMod-41069-2-0-2-1779945855.zip",
+			"Description": "AI 偶尔会生成对话选项框，你的选择将直接影响 NPC 的下一句回复<br /><br />The AI may occasionally generate dialogue choice options; your selection will directly influence the NPC’s next response<br /><br /><br /><br />支持多语言与双语显示，对话内容可根据语言环境自动适配<br /><br />Supports multilingual and bilingual output, with dialogue adapt",
+			"Version": "2.0.2",
+			"SizeInBytes": 67082,
+			"Uploaded": "2026-05-28T05:24:15+00:00",
+			"Mods": [
+				{
+					"Id": "phenyl.AIDialogueMod",
+					"DisplayName": "AI Dialogue Mod",
+					"Type": "Smapi",
+					"RelativePath": "AIDialogueMod",
+					"Manifest": {
+						"Name": "AI Dialogue Mod",
+						"Description": "AI-generated NPC dialogue, free typed chat, compact NPC memory, and lightweight invite/follow actions.",
+						"Author": "phenyl",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AIDialogueTestMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "phenyl.AIDialogueMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555940,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427757,
+		"UploaderId": 225235749,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

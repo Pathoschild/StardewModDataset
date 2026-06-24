@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 7634,
+	"Name": "Slime Produce",
+	"Author": "Intermark",
+	"Description": "[b][size=5]Overview[/size][/b]\n<br />[size=2]Whenever a slime ball spawns in a hutch, it will be assigned a color randomly chosen from one of the slimes in the hutch. When broken, it will drop items based on its color. By default, these items are essentially the same as the color-specific drops for slimes in vanilla.[/size]\n<br />\n<br />\n<br />\n<br />[size=5][b]Default Drops\n<br />[/b][/size][size=2]Below are the default drops for each color of slime, in order of priority. If a slime is first-generation, then it was hatched from an egg as opposed to being bred. A slime's special number is a random integer between 0 and 99 inclusive, which is assigned to it when it hatches/spawns.\n<br />\n<br />[/size][b][size=3]Tiger Slime Drops[/size][/b]\n<br />[list]\n<br />[*][size=2]15-25 Sap[/size]\n<br />[*][size=2]1-2 Jade[/size]\n<br />[*][size=2]4-8 Ginger (65%)[/size]\n<br />[*][size=2]5-10 Cinder Shards (50%, first-generation only)[/size]\n<br />[*][size=2]1-2 Magma Caps (33%, first-generation only)[/size]\n<br />[*][size=2]1-2 Dragon Teeth (33%, first-generation only)[/size]\n<br />[/list]\n<br />[b][size=3]White Slime Drops (R,G,B &gt; 230)[/size][/b]\n<br />[list]\n<br />[*][size=2]2-4 Refined Quartz (only if R is odd)[/size]\n<br />[*][size=2]2-4 Refined Quartz (only if both R and G are odd, stacks with previous drop)[/size]\n<br />[*][size=2]10-20 Iron Ore (only if both R and G are even)[/size]\n<br />[*][size=2]1-2 Diamonds (only if R,G,B are all even OR R,G,B are all 255)[/size]\n<br />[/list]\n<br />[b][size=3]Purple Slime Drops (R &gt; 150, G &lt; 50, B &gt; 180)[/size][/b]\n<br />[list]\n<br />[*][size=2]5-10 Iridium Ore (only if special number is divisible by 4 (if first-generation) or is even (otherwise))[/size]\n<br />[*][size=2]1 Iridium Bar (7.2%, only if first-generation and special number satisfies condition above)[/size]\n<br />[/list]\n<br />[b][size=3]Black Slime Drops (R,G,B &lt; 80)[/size][/b]\n<br />[list]\n<br />[*][size=2]5-10 Coal[/size]\n<br />[*][size=2]1-2 Neptunite (5%)[/size]\n<br />[*][size=2]1-2 Bixite (5%)[/size]\n<br />[/list]\n<br />[b][size=3]Yellow Slime Drops (R &gt; 200, Green &gt; 180, Blue &lt; 50)[/size][/b]\n<br />[list]\n<br />[*][size=2]10-20 Gold Ore[/size]\n<br />[/list]\n<br />[b][size=3]Red Slime Drops (R &gt; 220, 150 &gt; G &gt; 90, B &lt; 50)[/size][/b]\n<br />[list]\n<br />[*][size=2]10-20 Copper Ore[/size]\n<br />[/list]\n<br />[b][size=3]Grey Slime Drops (R,G,B &gt; 150)[/size][/b]\n<br />[list]\n<br />[*][size=2]20-40 Stone[/size]\n<br />[/list]\n<br />\n<br />\n<br />[size=5][b]Configuration[/b]\n<br />[/size][size=2]Color-specific slime ball drops are fully customizable (though they will always drop slime and have a chance to drop petrified slime). The fields in the config files are as follows:[/size]\n<br />\n<br />[size=3][b]EnableSpecialWhiteSlimeDrops (default true)[/b]\n<br />[/size][size=2]Because the drops for white slimes (i.e. those with RGB values all greater than 230) are handled specially in the code, the same had to be done for white slime ball drops. If you'd like to specify your own drops for white slime balls, or don't want them to drop special items, set this to false.[/size]\n<br />\n<br />[b][size=3]EnableSpecialPurpleSlimeDrops (default true)[/size]\n<br />[/b][size=2]Same situation as above but for purple slimes (Red &gt; 150, Green &lt; 50, Blue &gt; 180).[/size]\n<br />\n<br />[size=3][b]EnableSpecialTigerSlimeDrops (default true)[/b][/size]\n<br />[size=2]Tiger slimes are a special kind of slime whose color is technically white, so they have to be handled specially. If you want to specify your own tiger slime drops, or don't want them to drop special items, set this to false. The color {R: 255, G: 128, B: 0} must fall within the color range of your custom drop table (see below) for the items in said drop table to drop from slime balls produced by tiger slimes.[/size]\n<br />\n<br />[size=3][b]EnableSpecialColorDrops (default false)[/b][/size]\n<br />[size=2]When enabled, this allows slime balls with colors corresponding to one of the\u00A0[url=https://stardewcommunitywiki.com/Dyeing#Dye_Strength]dye colors[/url]\uFEFF to drop a random item from the list of items which share that dye color. This may or may not be balanced, so it's disabled by default, but I considered it a fun enough feature to keep it.[/size]\n<br />\n<br />[size=3][b]SpecialColorMinDrop (default 1)[/b][/size]\n<br />[size=2]This is an integer which represents the minimum number of colored items which have the chance to drop if EnableSpecialColorDrops is true. Very large values may cause lag or crashes, so keep it reasonable. This value is inclusive.[/size]\n<br />\n<br />[size=3][b]SpecialColorMaxDrop (default 1)[/b][/size]\n<br />[size=2]Same as above, but this is the maximum number of items that can drop. This value is inclusive.[/size]\n<br />\n<br />[size=3][b]SpecialColorDropChance (default 0.05)[/b]\n<br />[/size][size=2]The chance a colored item will drop if\u00A0EnableSpecialColorDrops is true. This should be a value between 0 and 1 inclusive.[/size]\n<br />\n<br />\n<br />\n<br />[size=5][b]Drop Tables\n<br />[/b][/size][size=2]The final entry in the configuration file is a list of drop tables. Each drop table has two fields: [b]colorRange[/b] and [b]itemDrops[/b]. \n<br />\n<br />The [b]colorRange[/b] field contains three pairs of integers between 0 and 255, one for each of a color's red, green, and blue components. The first number in each pair is the minimum value a color can take, and the second is the maximum value. These values are inclusive.\n<br />\n<br />The [b]itemDrops[/b] field is a list of objects, each of which contains four values: [b]parentSheetIndex[/b], [b]minDrop[/b], [b]maxDrop[/b], and [b]dropChance[/b]. The parentSheetIndex represents the item ID of the item dropped, as enumerated\u00A0[url=https://stardewids.com/]here[/url]\uFEFF. As above, the minDrop and maxDrop represent the minimum and maximum number of this item which can drop (these values are also inclusive). The dropChance is a number between 0 and 1 inclusive which represents the chance the specified item will drop.\n<br />\n<br />When a slime ball is broken, it will check in the config file to see if its color falls within any colorRanges in the list of drop tables. If it does fall within a colorRange, it will then drop additional items as specified in the list of itemDrops.\u00A0If it falls within multiple colorRanges, it will use the first from the top. Importantly, if the slime ball falls within the definition of white or purple above, or if it was left by a tiger slime, it will not look in the config file for drops. If you want it to, you should set the relevant config option to false, as described above.[/size]\n<br />\n<br />\n<br />\n<br />[size=5][b]Contact[/b][/size]\n<br />[size=2]Please feel free to contact me through the Forum tab of this mod or through the official Stardew Valley Discord (@exotico) to make requests or suggest balance changes/improvements! Additionally, you can find the source code on [url=https://github.com/andraemon/SlimeProduce]Github[/url].[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7634",
+	"Version": "1.3.3",
+	"Updated": "2023-01-27T19:29:00+00:00",
+	"Downloads": [
+		{
+			"Id": 65783,
+			"Type": "Main",
+			"DisplayName": "Slime Produce 1.3.3",
+			"FileName": "Slime Produce 1.3.3-7634-1-3-3-1674847740.zip",
+			"Description": "Fixed an issue that could cause duplicate item drops in multiplayer.\n<br /><br />For use with Stardew Valley v1.5.5+ and SMAPI v3.14+.",
+			"Version": "1.3.3",
+			"SizeInBytes": 27871,
+			"Uploaded": "2023-01-27T19:29:00+00:00",
+			"Mods": [
+				{
+					"Id": "exotico.SlimeProduce",
+					"DisplayName": "Slime Produce",
+					"Type": "Smapi",
+					"RelativePath": "SlimeProduce",
+					"Manifest": {
+						"Name": "Slime Produce",
+						"Description": "Slime balls in the Slime Hutch drop extra items depending on the color of the slimes in the Hutch.",
+						"Author": "exotico",
+						"Version": "1.3.3",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "SlimeProduce.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7634"
+						],
+						"UniqueId": "exotico.SlimeProduce"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342452471,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394322,
+		"UploaderId": 54865627,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

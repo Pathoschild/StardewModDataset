@@ -1,0 +1,126 @@
+{
+	"Site": "Nexus",
+	"Id": 4703,
+	"Name": "Pond Painter",
+	"Author": "MouseyPounds",
+	"Description": "[b]Description:\n<br />\n<br />[color=#ffff00]Pond Painter[/color][/b] is a SMAPI mod which supports custom coloring of fish ponds via content packs. Ponds are colored based on population &amp; the same context tags used in the game's pond definitions. The optional files contain an example pack which colors based mainly on the original location of the fish. There is also an option to color ponds based on their inhabitants' \"dye\" color which can be used alone or as a supplement to a content pack. This (and some other options) can be set in the [i]config.json[/i] file which is created the first time the game is launched with the mod installed.\n<br />\n<br />\n<br />[b]Installation:[/b]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url].\n<br />[*]Unzip the download and place the included [color=#b6d7a8][code]PondPainter[/code][/color] folder into your [color=#b6d7a8][code]Mods[/code][/color] folder.\n<br />[/list]\n<br />\n<br />[b]Configuration:\n<br />[/b]\n<br />[list]\n<br />[*][color=#6d9eeb][b]Enable_Custom_Pond_Coloring[/b][/color]\u00A0-- [color=#b4a7d6][i]true[/i]\u00A0[/color](default) or [i][color=#b4a7d6]false[/color][/i]. Controls the content pack functionality. The only reason to set false is if you want to temporarily disable the content packs without removing them or renaming their folders.\n<br />[*][color=#6d9eeb][b]Enable_Animations[/b][/color]\u00A0-- [color=#b4a7d6][i]true[/i]\u00A0[/color] or [i][color=#b4a7d6]false[/color][/i] (default). Allows content packs to specify animated colors too. This feature is experimental and is also completely disabled in multiplayer because pond colors are synched. \n<br />[*][color=#6d9eeb][b]Auto_Color_Other_Ponds_by_Dye_Color_of_Inhabitants[/b][/color]\u00A0-- [color=#b4a7d6][i]true[/i]\u00A0[/color](default) or [i][color=#b4a7d6]false[/color][/i]. With this enabled, any pond that does not have a custom color from a content pack will be colored based on what's in it. This can also be used exclusively if the custom coloring is disabled or no content packs are installed.\n<br />[*][color=#6d9eeb][b]Minimum_Population_For_Auto_Coloring[/b][/color]\u00A0-- integer value which defaults to [color=#b4a7d6][i]1[/i]\u00A0[/color]. Causes the auto coloring to not occur until a certain number of fish are present.\n<br />[/list]\n<br />\n<br />[b]Additional Information:\n<br />[/b]\n<br />[list]\n<br />[*]Pond coloring is generally done at the start of every day, so if a content pack defines different colors for different population levels, manually adding fish to the pond may not immediately trigger any changes.\n<br />[*]In multiplayer, animated colors are disabled and the mod will only work for the host. Clients will still see the changed colors even if they don't have the mod.\n<br />[*]When creating content packs, colors can be specified by 6-digit hex code (e.g '#fcba03'), 3-digit hex code (e.g. '#fb0') or [url=http://www.foszor.com/blog/xna-color-chart/]XNA Color Name[/url]. See the Pond Painter Examples pack in the Optional Files for more details on making content packs.\n<br />[/list]\n<br />\n<br />[b]Compatibility:\n<br />[/b]\n<br />[list]\n<br />[*][b][color=#ffff00]Pond Painter[/color][/b] requires [url=https://smapi.io]SMAPI[/url] version 3.0.0 or higher and should work with Stardew Valley 1.4 or higher.\n<br />[/list]\n<br />\n<br />[b]Source Code Repository:\n<br />[/b]\n<br />[url=https://github.com/MouseyPounds/stardew-mods/tree/master/Pond%20Painter]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4703",
+	"Version": "1.0.1",
+	"Updated": "2019-12-04T05:48:56+00:00",
+	"Downloads": [
+		{
+			"Id": 20747,
+			"Type": "Optional",
+			"DisplayName": "Pond Colors by Water Type (Content Pack)",
+			"FileName": "Pond Colors by Water Type (Content Pack)-4703-1-0-0-1575258051.zip",
+			"Description": "A content pack for Pond Painter that colors ponds mainly based on the water type. Ocean fish &amp; freshwater fish have different shades of blue, shellfish have a sandy color, submarine fish a very deep blue, etc. Also preserves vanilla special pond colors.",
+			"Version": "1.0.0",
+			"SizeInBytes": 1474,
+			"Uploaded": "2019-12-02T03:40:51+00:00",
+			"Mods": [
+				{
+					"Id": "MouseyPounds.PondColorsByWaterType",
+					"DisplayName": "Pond Colors By Water Type",
+					"Type": "ContentPack",
+					"RelativePath": "[PP]PondColorsByWaterType",
+					"Manifest": {
+						"Name": "Pond Colors By Water Type",
+						"Description": "Colors ponds in various shades of blue and green by whether the fish is a river fish, ocean fish, etc.",
+						"Author": "MouseyPounds",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "MouseyPounds.PondPainter"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "MouseyPounds.PondColorsByWaterType"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407435,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 20798,
+			"Type": "Main",
+			"DisplayName": "Pond Painter",
+			"FileName": "Pond Painter-4703-1-0-0-1575349078.zip",
+			"Description": "Removed Colormine dependency to fix loading issues on Linux/Mac.",
+			"Version": "1.0.1",
+			"SizeInBytes": 26810,
+			"Uploaded": "2019-12-03T04:57:58+00:00",
+			"Mods": [
+				{
+					"Id": "MouseyPounds.PondPainter",
+					"DisplayName": "Pond Painter",
+					"Type": "Smapi",
+					"RelativePath": "PondPainter",
+					"Manifest": {
+						"Name": "Pond Painter",
+						"Description": "More colors for fishing ponds",
+						"Author": "MouseyPounds",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "PondPainter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4703"
+						],
+						"UniqueId": "MouseyPounds.PondPainter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407486,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 20873,
+			"Type": "Optional",
+			"DisplayName": "Pond Painter Examples (Commented Content Pack)",
+			"FileName": "Pond Painter Examples (Commented Content Pack)-4703-1-0-0-1575438536.zip",
+			"Description": "This is a heavily-commented content pack which aims to illustrate the different features of the mod. It's meant mainly as a reference guide and starting point for experimentation in developing your own Pond Painter content packs.",
+			"Version": "1.0.0",
+			"SizeInBytes": 8141,
+			"Uploaded": "2019-12-04T05:48:56+00:00",
+			"Mods": [
+				{
+					"Id": "MouseyPounds.PondPainterExamples",
+					"DisplayName": "Pond Painter Examples",
+					"Type": "ContentPack",
+					"RelativePath": "[PP]PondPainterExamples",
+					"Manifest": {
+						"Name": "Pond Painter Examples",
+						"Description": "An example pack illustrating the different ways to define pond colors with Pond Painter.",
+						"Author": "MouseyPounds",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "MouseyPounds.PondPainter"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "MouseyPounds.PondPainterExamples"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407561,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391391,
+		"UploaderId": 3604264,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

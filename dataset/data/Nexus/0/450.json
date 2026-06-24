@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 450,
+	"Name": "XmlSerializerRetool",
+	"Author": "persival",
+	"Description": "[size=4][size=4][size=3][color=#ff0000][size=4]Please Note: This mod is not yet compatible with Stardew Valley v1.1[/size][/color][/size][/size]\r<br />\r<br />This is a required mod for [/size][url=http://www.nexusmods.com/stardewvalley/mods/438/?][size=4]Persival&#39;s BundleMod[/size][/url]\r<br />\r<br />[size=4][u]IMPORTANT CAVEAT:\r<br />[/u][b]Once you use the XmlSerializerRetool mod and save your game, it will from then on need \r<br />the XmlSerializerRetool mod to de-serialize...or &#34;load&#34; from your XML \r<br />save file. So if you are leery about using this mod, you should back up \r<br />your saved games before installing it.[/b][/size]\r<br />\r<br />\r<br />[u][size=4]What it fixes:[/size]\r<br />[/u][size=4]This exception may appear in the [url=https://github.com/ClxS/SMAPI/releases/tag/0.40.0]SMAPI[/url] console after your character goes to sleep (saving your game). The crux of the problem is the part in green. The C# Derived &#34;StarValley.Characters.Junimo&#34; class was not included in the type lists in the game&#39;s XmlSerializer. \r<br />[/size]\r<br />[color=#ff0000][size=1][07:07:15.220 AM] [ERROR] An error occurred in the overridden update loop: System.InvalidOperationException: There was an error generating the XML document. ---&gt; System.InvalidOperationException:[color=#00ff00] The type StardewValley.Characters.Junimo was not expected.[/color] Use the XmlInclude or SoapInclude attribute to specify types that are not known statically.\r<br />\u00A0\u00A0 at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterSaveGame.Write35_NPC(String n, String ns, NPC o, Boolean isNullable, Boolean needType)\r<br />\u00A0\u00A0 at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterSaveGame.Write63_CommunityCenter(String n, String ns, CommunityCenter o, Boolean isNullable, Boolean needType)\r<br />\u00A0\u00A0 at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterSaveGame.Write85_GameLocation(String n, String ns, GameLocation o, Boolean isNullable, Boolean needType)\r<br />\u00A0\u00A0 at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterSaveGame.Write127_SaveGame(String n, String ns, SaveGame o, Boolean isNullable, Boolean needType)\r<br />\u00A0\u00A0 at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterSaveGame.Write128_SaveGame(Object o)\r<br />\u00A0\u00A0 --- End of inner exception stack trace ---\r<br />\u00A0\u00A0 at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)\r<br />\u00A0\u00A0 at StardewValley.SaveGame.&lt;getSaveEnumerator&gt;d__0.MoveNext()\r<br />\u00A0\u00A0 at StardewValley.Menus.SaveGameMenu.update(GameTime time)\r<br />\u00A0\u00A0 at StardewValley.Game1.updateActiveMenu(GameTime gameTime)\r<br />\u00A0\u00A0 at StardewModdingAPI.Inheritance.SGame.Update(GameTime gameTime)\r<br />[/size][/color]\r<br />[size=4]So when the game finally goes to save all of the session-persistent data it believes needs to be stored in the XML save file, it finds a Junimo instance in the session and has no clue how to store that data type into an XML file\u00A0 ...this is what causes the exception above. So we need to tell the XmlSerializer to include that Junimo type class as well as all the other required types, but there are no direct methods (that I could find) by which to modify an existing XmlSerializer instance in this way. So I created a Mod that includes the Jumino class as well as any other complex class I could discern was necessary. The result is a mod that will rarely ever cause the above exception.\r<br />[b]\r<br />[/b][/size][u]Installation Instructions:\r<br />[/u]Unpack the XmlSerizlizerRetool.zip file into the Mods directory created by SMAPI\r<br />\r<br />Your /mods file structure should look like this:\r<br />[color=#ffff00]\r<br />\u00A0../mods/XmlSerializerRetool/XmlSerializerRetool.dll\r<br />\u00A0../mods/XmlSerializerRetool/manifest.json\r<br />[/color]\r<br />[u]Required Software: \r<br />[/u]Stardew Valley v1.07 (Game)\r<br />[url=https://github.com/ClxS/SMAPI]SMAPI v4.0[/url] (Stardew Valley Mod API)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/450",
+	"Version": "0.01a",
+	"Updated": "2016-06-25T13:31:21+00:00",
+	"Downloads": [
+		{
+			"Id": 1603,
+			"Type": "Main",
+			"DisplayName": "XmlSerializerRetool - final release.zip",
+			"FileName": "XmlSerializerRetool - final release.zip-450-0-01a.zip",
+			"Description": "Fixes storage issues due to opening Junimo menu outside of Community Center.",
+			"Version": "0.01a",
+			"SizeInBytes": 4631,
+			"Uploaded": "2016-06-25T13:31:21+00:00",
+			"Mods": [
+				{
+					"Id": "",
+					"DisplayName": "XmlSerializerRetool",
+					"Type": "Smapi",
+					"RelativePath": "XmlSerializerRetool",
+					"Manifest": {
+						"Name": "XmlSerializerRetool",
+						"Description": "This fixes a problem that occurs when an object that was not previously serialized needs to be due to a Mod. This is a required Mod for Persival's BundleMod and may actually fix other mods that return XmlSerializer Exceptions due to class-types missing from the current XmlSerializer",
+						"Author": null,
+						"Version": "0.1.0",
+						"EntryDll": "XmlSerializerRetool.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "",
+						"OtherFields": {
+							"Authour": "Persival",
+							"PerSaveConfigs": false
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342388291,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387138,
+		"UploaderId": 994835,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

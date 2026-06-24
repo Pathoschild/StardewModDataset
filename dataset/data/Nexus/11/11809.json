@@ -1,0 +1,130 @@
+{
+	"Site": "Nexus",
+	"Id": 11809,
+	"Name": "Ribeena's Vehicles",
+	"Author": "ribeena",
+	"Description": "Replaces the mayors car to an old Ford style, Joja truck to an Isuzu style, the movie theatre car with a muscle style, caravan to an Australian style classic, the traveller's cart is more physically possible (less busy), Sebastian's bike (much less childish/baloony), Willy's boat to more of a fishing vessel, and the bus to a more modern look (significant changes listed below).\u00A0Seasonal graphics are included on many vehicles, options to toggle whether a vehicle replacement happens can be done in config.json (I recommend using GMCM).\n<br />\n<br />Significant changes to the bus for Calico desert\n<br />[list]\n<br />[*]follows seasons\n<br />[*] dilapidated state prior to unlocking\n<br />[*]door/entry moved\n<br />[*]doors open and close automatically depending on where you/Pam are (no more always open door!)\n<br />[*]animated wheels\n<br />[/list]Don't want cool animations? Just don't install \"BusSpriteAdjust\" and the vanilla bus will be there\n<br />\n<br />Changes to Willy's boat\n<br />[list]\n<br />[*]Now gently bobs up and down (broken anchor stays in place)\n<br />[*]wider graphics (sized a bit more like a fishing boat)\n<br />[*]adjusted lights to match image\n<br />[/list]Don't want cool animations? Just don't install \"BoatSpriteAdjust\" and the vanilla boat will be there\n<br />[line]\n<br />[b]Compatibility[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5255]Earthy Recolour[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/1869]Starblue[/url]\uFEFF for snow etc applies automatically\n<br />[*]Earthy Recolour, Starblue style for bus etc are config options (use [url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url]\uFEFF)\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1965]Elle's town creatures[/url]\uFEFF option for cart's pig\n<br />[*]Not [url=https://www.nexusmods.com/stardewvalley/mods/3753]SVE [/url]\uFEFFcompatible (though unclear as to why not)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2905]BusLocations[/url]\uFEFF partially working with [url=https://github.com/ribeena/BusLocations/releases/tag/RELEASE]unofficial update[/url]\n<br />[*]Others[list]\n<br />[*]Likely to not work with any other bus mods.\n<br />[*]Should be fine with map mods that don't change position of the bus - the bus changes modify a few tiles where the bus rests, which are targeted.\n<br />[*]Adds a sprite on LooseSprites/Cursor next to Pam driving which might cause issues\n<br />[*]Not compatible/no options for other colour palettes changers not listed above\n<br />[/list]\n<br />[/list][line]\n<br />\n<br />Want to fix up BusSpriteAdjust's code? The [url=https://github.com/ribeena/StardewValleyMods/tree/main/busSpriteMod/BusSpriteAdjust]source is here[/url]... :'D Was way more complicated than I wanted (i was thinking a hundred lines of code, not 700+!)\n<br />\n<br />You can get BoatSpriteAdjust's [url=https://github.com/ribeena/StardewValleyMods/tree/main/busSpriteMod/BoatSpriteMode]code here[/url].\n<br />\n<br />\n<br />[line]\n<br />Enjoy my stuff? You can [url=https://ko-fi.com/ribeena]buy me a coffee[/url] to say thanks.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11809",
+	"Version": "1.0.0",
+	"Updated": "2022-12-21T03:36:28+00:00",
+	"Downloads": [
+		{
+			"Id": 64171,
+			"Type": "Main",
+			"DisplayName": "Vehicle Replacements",
+			"FileName": "Vehicle Replacements-11809-1-0-0-1671593788.zip",
+			"Description": "Minor fix of depreciated code, updated to full version number as no bugs reported for awhile.",
+			"Version": "1.0.0",
+			"SizeInBytes": 622073,
+			"Uploaded": "2022-12-21T03:36:28+00:00",
+			"Mods": [
+				{
+					"Id": "ribeena.boatspriteadjuster",
+					"DisplayName": "Boat Sprite Adjuster",
+					"Type": "Smapi",
+					"RelativePath": "BoatSpriteAdjust",
+					"Manifest": {
+						"Name": "Boat Sprite Adjuster",
+						"Description": "Improves the way Willy's boat renders'",
+						"Author": "ribeena",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BoatSpriteAdjust.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11809"
+						],
+						"UniqueId": "ribeena.boatspriteadjuster"
+					}
+				},
+				{
+					"Id": "ribeena.busspriteadjuster",
+					"DisplayName": "Bus Sprite Adjuster",
+					"Type": "Smapi",
+					"RelativePath": "BusSpriteAdjust",
+					"Manifest": {
+						"Name": "Bus Sprite Adjuster",
+						"Description": "Changes the way the bus renders the door, position of it etc",
+						"Author": "ribeena",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BusSpriteAdjust.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "hootless.BusLocations",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "FlashShifter.SVECode",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ribeena.busspriteadjuster"
+					}
+				},
+				{
+					"Id": "ribeena.vehicles",
+					"DisplayName": "ribeena's vehicles",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] ribeena's vehicles",
+					"Manifest": {
+						"Name": "ribeena's vehicles",
+						"Description": "Realistic vehicles for every season!",
+						"Author": "ribeena",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.11.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ribeena.busspriteadjuster",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ribeena.boatspriteadjuster",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "minervamaga.CP.eemieMapRecolour",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Lita.StarblueValley",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "stardewfoliageredone",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Acerbicon.Recolor",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DaisyNiko.EarthyRecolour",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11809"
+						],
+						"UniqueId": "ribeena.vehicles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342450859,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398497,
+		"UploaderId": 1686938,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

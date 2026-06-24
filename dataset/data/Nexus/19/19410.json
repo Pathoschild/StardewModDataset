@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 19410,
+	"Name": "No Quarry",
+	"Author": "gredfe",
+	"AuthorLabel": "mlambley",
+	"Description": "The quarry levels which occasionally appear in the regular mines are a personal pet peeve of mine. There are many rocks so it takes a while to find a ladder, the rocks are all at maximum HP for some reason, there are rarely any resources (copper, iron, etc.), the mobs are quick and they hurt.\n<br />\n<br />This is a basic mod which tells the game  \"Player has never seen the quarry mine\". The eliminates the chance for quarry levels to appear while you're in the regular mines. Please note that this does not affect the actual quarry in any way.\n<br />\n<br />By removing them, it makes my game more enjoyable, and it can make your game more enjoyable as well.\n<br />\n<br />The actual change is to set:\n<br />\n<br />[code]\uFEFFStardewValley.Farmer.hasOrWillReceiveMail(\"VisitedQuarryMine\") = false\n<br />[/code]\n<br />I've confirmed that this will not cause side-effects in the base game (as of 1.6) since there is no other place where the game checks whether or not you've seen the quarry mine. However, it will affect any other mods which check whether you've seen the quarry mine.\n<br />\n<br />[b]1.6 note:[/b] The quarry levels aren't nearly as painful as they were in 1.5, but they're still worth removing in my opinion.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19410",
+	"Version": "1.0.0",
+	"Updated": "2023-12-04T12:35:50+00:00",
+	"Downloads": [
+		{
+			"Id": 79123,
+			"Type": "Main",
+			"DisplayName": "NoQuarry",
+			"FileName": "NoQuarry-19410-1-0-0-1701693350.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 9124,
+			"Uploaded": "2023-12-04T12:35:50+00:00",
+			"Mods": [
+				{
+					"Id": "mlambley.NoQuarry",
+					"DisplayName": "NoQuarry",
+					"Type": "Smapi",
+					"RelativePath": "NoQuarry",
+					"Manifest": {
+						"Name": "NoQuarry",
+						"Description": "Prevents quarry levels from spawning in the mines.",
+						"Author": "mlambley",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "NoQuarry.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:19410"
+						],
+						"UniqueId": "mlambley.NoQuarry"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342465811,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406098,
+		"UploaderId": 182123832,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

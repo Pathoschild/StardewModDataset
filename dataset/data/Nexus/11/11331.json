@@ -1,0 +1,95 @@
+{
+	"Site": "Nexus",
+	"Id": 11331,
+	"Name": "Industrialization Settings For Utility Grid",
+	"Author": "666bloodynex666",
+	"Description": "Adds Utility Grid settings for each of the machines added by Industrialization. This makes the machines consume or generate power and water as appropriate.\n<br />[b]\n<br />Utility Grid Settings ([/b][i]P means power, W means water[/i][b]):[/b]\n<br />[u]Generators[/u]:\n<br />[list]\n<br />[*]JojaCola Generator (+5P)\n<br />[*]Combustion Generator (+20P)\n<br />[*]Solar Generator (+10P)\n<br />[/list][u]Consumers[/u]:\n<br />[list]\n<br />[*]Alternator Electric Furnace (-10P)\n<br />[*]Auto Miner (-20P)\n<br />[*]Ceramic Kiln (-5P)\n<br />[*]Chromium Furnace (-20P)\n<br />[*]Combustion Miner (-5P)\n<br />[*]Electric Furnace (-5P)\n<br />[*]Garden Cloche (-10P, -5W)\n<br />[*]Gem Polisher (-20P)\n<br />[*]Hay Bin (-5P)\n<br />[*]Hay Rehydrator (-5P, -1W)\n<br />[*]Industrial Distillery (-5P)\n<br />[*]Mineral Washer (-20P, -5W)\n<br />[*]Preservative Press (-5P)\n<br />[*]Pulverizer (-5P)\n<br />[*]Rock Crusher (-5P)\n<br />[*]Tree Cloche (-5P)\n<br />[/list]\n<br />[b]Other Changes:\n<br />[/b][list]\n<br />[*]Auto Miners and Solar Generators now produce throughout the day as opposed to once each morning, Solar Generators still only work between 6AM and 7PM. This should improve their PFMAutomate support.\n<br />[/list]\n<br />[b]Credits:[/b]\n<br />This mod grew out of tweaking and trying to solve issues when using iarspider's [url=https://www.nexusmods.com/stardewvalley/mods/10632]Utility Grid for Industrialization[/url]\uFEFF. The Content Patcher module is largely copied from there, with a few tweaks (made Solar Generators produce power [was consuming] and Garden Cloches consume water).\n<br />aedenthorn's\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/10197]Utility Grid[/url]\uFEFF and its documentation, obviously.\n<br />kazuakisama's [url=https://www.nexusmods.com/stardewvalley/mods/5102]Industrialization for PFM[/url]\u00A0for its cool machines and their default values.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11331",
+	"Version": "1.0.3",
+	"Updated": "2022-03-18T03:20:38+00:00",
+	"Downloads": [
+		{
+			"Id": 52104,
+			"Type": "Main",
+			"DisplayName": "IndustrializationUtilityGrid",
+			"FileName": "IndustrializationUtilityGrid-11331-1-0-3-1647573638.zip",
+			"Description": "Fixed Solar Generators to produce only in the daytime and updated manifest files according to their actual version.",
+			"Version": "1.0.3",
+			"SizeInBytes": 4202,
+			"Uploaded": "2022-03-18T03:20:38+00:00",
+			"Mods": [
+				{
+					"Id": "666bloodynex666.IndustrializationUtilityGridCP",
+					"DisplayName": "(CP) Industrialization Settings for Utility Grid",
+					"Type": "ContentPack",
+					"RelativePath": "IndustrializationUtilityGrid\\[CP] Industrialization Settings for Utility Grid",
+					"Manifest": {
+						"Name": "(CP) Industrialization Settings for Utility Grid",
+						"Description": "CP Industrialization Settings For Utility Grid",
+						"Author": "666bloodynex666",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "3.12.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.UtilityGrid",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Kazuakisama.PFM.Industrialization",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11331"
+						],
+						"UniqueId": "666bloodynex666.IndustrializationUtilityGridCP"
+					}
+				},
+				{
+					"Id": "666bloodynex666.IndustrializationUtilityGridPFM",
+					"DisplayName": "(PFM) Industrialization Settings for Utility Grid",
+					"Type": "ContentPack",
+					"RelativePath": "IndustrializationUtilityGrid\\[PFM] Industrialization Settings for Utility Grid",
+					"Manifest": {
+						"Name": "(PFM) Industrialization Settings for Utility Grid",
+						"Description": "PFM Industrialization Settings for Utility Grid",
+						"Author": "666bloodynex666",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Digus.ProducerFrameworkMod",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Kazuakisama.PFM.Industrialization",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11331"
+						],
+						"UniqueId": "666bloodynex666.IndustrializationUtilityGridPFM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342438792,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398019,
+		"UploaderId": 6545196,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

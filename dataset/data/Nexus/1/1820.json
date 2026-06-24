@@ -1,0 +1,139 @@
+{
+	"Site": "Nexus",
+	"Id": 1820,
+	"Name": "TMXL Map Toolkit",
+	"Author": "Platonymous",
+	"Description": "[center][heading]TMXL Map Toolkit[/heading] by Platonymous[/center][line]\n<br />Formerly named TMXLoader.\u00A0Renamed [b]TMXL Map Toolkit [/b]as the pure .tmx-file-loading part of this mod is now part of SMAPI (3.2+)\n<br />\n<br />[u]New in 1.8.4[/u]\n<br />\n<br />[b]Image Layers for Buildables[/b]\n<br />To use Image layers their name has to end with \"UNIQUEID\" like \"MyLayer-UNIQUEID\", though not on indoor-maps.\n<br />[b]Coloring for Buildables\n<br />[/b]To allow coloring, the Image Layer needs to have two properties: \"Color\" holding a default rgba value like \"255 255 255 255\" for white and a \"ColorId\" proptery which can be anything. All layers that share a \"ColorId\" property will be colored the same way.\n<br />\n<br />[u]New in 1.8.0:[/u]\n<br />[b]Buildables:[/b]\n<br />Buildables can be build or removed by pressing F2 (can be changed in the config file)\n<br />To remove the last Buildable placed on the map press BACKSPACE while having the menu open.\n<br />Regular buildable Map edits:\n<br />[code]\uFEFF\"buildables\": [\n<br />    {\n<br />      \"id\":\"Platonymous.Buildable\",\n<br />      \"name\": \"Buildable\",\n<br />      \"file\": \"assets/Buildable.tmx\",\n<br />      \"iconFile\": \"assets/icon.png\",\n<br />      \"removeEmpty\":false,\n<br />      \"price\":10000,\n<br />   \uFEFF   \uFEFF\"set:\": \"Others\"\n<br />    },\n<br />\u00A0 ]\n<br />[/code]\n<br />Buildings:\n<br />[code]\"buildables\": [\n<br />    {\n<br />      \"id\":\"Platonymous.SomeBuilding\",\n<br />      \"name\": \"Some Building\",\n<br />       \uFEFF\"file\": \"assets/SomeBuilding.tmx\",\n<br />      \"indoorsFile\":\"assets/SomeBuildingInterior.tmx\",\n<br />      \"exitTile\":[1,3],\n<br />       \uFEFF\"iconFile\": \"assets/SomeIcon.png\",\n<br />      \"removeEmpty\":false,\n<br />   \uFEFF   \uFEFF\"buildItems\":[\n<br />         {\n<br />         \"index\":388,\n<br />         \"stack\":100\n<br />         },\n<br />         {\n<br />         \"name\":\"Parsnip\",\n<br />         \"stack\":1\n<br />         }\n<br />   \uFEFF   \uFEFF],\n<br />      \"price\":10000\n<br />    }\n<br />\u00A0 ]\n<br />[/code]\n<br />exitTile is the point where a player would warp to when exiting a building. to warp to that point use the Action or TouchAction\u00A0[code]ExitBuildable\u00A0[/code]on the map or (with 1.8.8+) use BUILDINGLOCATION EXITXY in the Warp property, like \"Warp\" : \"9 24 BUILDLOCATION EXITXY\".\n<br />On the Buildable (exterior) every INDOORS or UNIQUEID used in properties will be replaced by the generated values. to warp to the interior use for exp:\n<br />[code]Warp 14 3 INDOORS[/code]\n<br />\n<br />[u]New in 1.4.2:[/u]\n<br />Setting festival spots for NPCs that don't have one.\u00A0\n<br />[u][i]Format festival spots:[/i][/u]\n<br />  [code]\"festivalSpots\": \n<br />      \uFEFF[  \n<br />   \uFEFF   \uFEFF   \uFEFF{\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"name\": \"Sandy\",\n<br />   \uFEFF   \uFEFF      \uFEFF\"map\": \"Town-Fair\",\u00A0\n<br />         \uFEFF   \uFEFF\uFEFF\"position\": [19, 35],\n<br />         \uFEFF   \uFEFF\uFEFF\"direction\": 1\n<br />         \uFEFF}\n<br />      \uFEFF][/code]\n<br />\n<br />[u][b]New in 1.4.0:[/b][/u]\n<br />Added a simpler way to add spouse rooms using the [u]Spouse Room Template[/u]\u00A0that you find under optional files\n<br />if you create a mod with the template, [b][u]do not[/u] include the towninterior.png file when releasing it.\n<br />[/b]\n<br />[b]Important change in Version 1.3.0:[/b]\n<br />TMXL now uses SMAPI ContentPacks, which means all packs go directly into the mod folder and the ContentPack for the two Examples has to be downloaded seperately (Optional Files).\n<br />\n<br />Includes two examples both ports of\u00A0[url=https://www.nexusmods.com/stardewvalley/users/3153665?tab=user+files]UlithiumDragons Mods (Cut Content &amp; Jungle Temple)[/url].\n<br />\n<br />Additional Layers and new TileActions will also work in maps not imported with TMXL.\n<br />\n<br />[center][img]https://imgur.com/T5Eybda.png[/img][/center]\n<br />\n<br />[b][u]Json Structure of ContenPacks content.js:[/u][/b]\n<br />[spoiler]\n<br />{\n<br />\u00A0 \"addMaps\":[color=#999999] // New Maps[/color]\n<br />\u00A0 [\u00A0\u00A0\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"name\": \"JungleTempleExterior\", [color=#999999]// Name of the new Location\u00A0[/color]\n<br />\u00A0 \u00A0 \u00A0 \"file\": \"JungleTempleExterior.tmx\", [color=#999999]// Filename inside the ContentPacks folder[/color]\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 ...\n<br />\u00A0 ],\n<br />\u00A0 \"mergeMaps\":[color=#999999] // Replace parts of Maps[/color]\n<br />\u00A0 [\u00A0\u00A0\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"name\": \"Woods\", [color=#999999]// Map to merge into[/color]\n<br />   \u00A0 \"file\": \"Woods.tmx\",\u00A0\n<br />   \u00A0 \"sourceArea\": [0,0,12,12], [color=#999999]// Area on your Map that you want to place (x, y, width, height)[/color]\n<br />   \u00A0 \"position\": [0,0], [color=#999999]// Position were the new Content should be placed on the map (x, y)[/color]\n<br />\u00A0 \u00A0 \u00A0 \"addWarps\":\u00A0\u00A0[color=#999999]// add Warps (\"entryX entryY TargetLocation exitX exitY\")[/color]\n<br />\u00A0 \u00A0 \u00A0 [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"7 -1 JungleTempleExterior 14 34\",\n<br />\u00A0 \u00A0 \u00A0 ....\n<br />\u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0\"removeWarps\":\u00A0\u00A0[color=#999999]// removes existing Warps (\"entryX entryY TargetLocation exitX exitY\")[/color]\n<br />\u00A0 \u00A0 \u00A0 [\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"7 -1 JungleTempleExterior 14 34\",\n<br />\u00A0 \u00A0 \u00A0 ....\n<br />\u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0...\n<br />\u00A0 ],\n<br />\"replaceMaps\":\u00A0[color=#999999]// Fully replace Maps[/color]\n<br />\u00A0 [\u00A0\u00A0\n<br />\u00A0 \u00A0{\n<br />\u00A0 \u00A0 \u00A0 \"name\": \"Woods\", // Map to replace\n<br />   \u00A0 \"file\": \"Woods.tmx\",\u00A0\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0...\n<br />\u00A0 ],\n<br />\u00A0 \"onlyWarps\": [color=#999999]// Only change Warps\n<br />\u00A0 \u00A0[[/color]\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"name\": \"BusStop\",\u00A0\n<br />\u00A0 \u00A0 \u00A0 \"addWarps\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"12 8 CityBus 2 6\"\n<br />\u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ],\n<br />\"scripts\":[\"script.lua\"]\n<br />}\n<br />[/spoiler][u][b]Additional Features:[/b]\n<br />[spoiler]\n<br />[/u]\n<br />[u]Drawing more than just the standart layers:\n<br />[/u]Add the property [b]Draw/DrawAbove or DrawBefore\u00A0[/b]to the layer you want to see drawn in the game, the value needs to be the layer that is it drawn after/before, for exp. [b]Back[/b] if you want another Back-Layer.\n<br />\n<br />Added TileActions (1.0.1), used either in the Action or TouchAction Property.\n<br />And since 1.1.0 you can also use the map property \"EntryAction\" which will be triggered whenever the player enters the map.\n<br />[b]\n<br />Say[/b] YourText\n<br />[i]Same as Message used to work but without the \" \"\n<br />\n<br />[b]Say Dwarvish[/b]\u00A0YourText\n<br />[i]Same as Say but shows the text in dwarvish if the player doesn't have the translation guide.[/i][/i]\n<br />\n<br />\n<br />[b]SwitchLayers[/b] Layer1:Layer2\n<br />Switches two layers, even layers that aren't actually drawn.\n<br />[b]\n<br />SwitchLayers [/b]Layer1:Layer2[b]:14:17[/b]\n<br />[i]Switches only the specified Tile between layers x:y[/i]\n<br />\n<br />[b]SwichLayers[/b] Layer1:Layer2:1[b]-[/b]5:5[b]-[/b]7\n<br />[i]Switches the specified Area between layers x1-x2:y1-y2\n<br />\n<br />[/i]SwitchLayers Actions can be combined by just writting them one after the other exp:\u00A0\n<br />SwitchLayers Buildings:BuildingsOpen:4:6-9 Buildings:BuildingsOpen:9:5 Front:FrontOpen:4:6-9 AlwaysFront:AlwaysFrontOpen:4:6-9\n<br />\n<br />[b]Lock [/b]1 380\n<br />[i]Invokes a TileAction if the Active object is of the specified index Lock amount index\n<br />Requires further properties on the same tile:\n<br />[/i]\n<br />[b]Success [/b][i]Action triggered when using the right object in at least the right amount[/i]\n<br />[b]Failure [/b][i]Action triggerd when using the wrong object or not enough[/i]\n<br />[b]Default [/b][i]Action triggered when holding no object[/i]\n<br />\n<br />(New in 1.1.0)\n<br />[b]Lua[/b][i] YourFolderName YourFunction\n<br />Invokes a function from any of your lua scripts\n<br />\n<br />Lua functions must take three paramters: location, tileposition &amp; layerid\n<br />\n<br />[u][b]Lua Examples[/b]\n<br />[spoiler]\n<br />[/u]pc = false\n<br />function startPC(location, tilepos, layer)\n<br />   if pc then\n<br />      Game1.playSound(\"coin\")\n<br />      TMX.getTile(location,\"Front\",36, 12).TileIndex = 991\n<br />      pc = false\n<br />   else\n<br />      Game1.playSound(\"stardrop\")\n<br />      TMX.getTile(location,\"Front\",[i]36, 12[/i]).TileIndex = 1153\n<br />      pc = true\n<br />   end\n<br />end\n<br />[/i][/spoiler]\n<br />\n<br />[u]Additionally every Action (and TouchAction) can be set conditional by adding the following properties to the same Tile:\n<br />[/u][b]Condition [/b][i]A condition either in the format of an event condition ([url=https://stardewvalleywiki.com/Modding:Event_data#Event_preconditions]Event preconditions[/url]) or if prefixed by [b]PC [/b]a playerconditon (but not mixed yet)[/i]\n<br />[b]Fallback[/b][i]Action triggered if the condition isn't met (optional)\n<br />\n<br />[/i]Player conditions currently supported:\u00A0catPerson ,\u00A0isMale ,\u00A0exhausted ,\u00A0hasGreenhouse ,\u00A0hasRustyKey ,\u00A0hasSkullKey ,\u00A0hasUnlockedSkullDoor ,\u00A0hasDarkTalisman ,\u00A0hasMagicInk ,\u00A0running ,\u00A0usingTool ,\u00A0usingSlingshot ,\u00A0bathingClothes ,\u00A0stardewHero ,\u00A0hasClubCard ,\u00A0canUnderstandDwarves\n<br />\n<br />Conditions and PlayerConditions can be prefixed with [b]NOT [/b]the invert them.\n<br />\n<br />\n<br />Actions are still very limited but will be expanded on. If you're in need of a specific TileAction you can suggest it to me on the [url=https://discord.gg/KCJHWhX]SMAPI Discort[/url] (@Routine)\n<br />\n<br />[u]SMAPI Mods can add their own Tileactions using PyTK:\n<br />[/u]using PyTK.Types;\n<br />TileAction Say = new TileAction(\"Say\", sayAction).register();\n<br />[/spoiler]\n<br />\n<br />\n<br />[b]Known Bugs:[/b]\n<br />\n<br />Draw/DrawBefore/DrawAbove doesn't always work with the Front layer.\n<br />\n<br />\n<br />[u]Changed save serializer Warning\n<br />[/u]SMAPI warns that this mod \"may corrupt your save files, or make them unusable if\u00A0you uninstall\" it.\n<br />This is because TMXL accesses properties that COULD be used to change the serializer in that way, but doesn't actually change it.\n<br />So despite what the warning says, your save files will not be corrupted or become unusable when using or uninstalling this mod.\n<br />\n<br />[center][img]https://imgur.com/b8d5H2A.png[/img]\uFEFF\n<br />If you have any questions you can usually find me on the [url=https://stardewvalleywiki.com/Modding:Community#Discord]Stardew Valley Discord[/url]\uFEFF under the username [b]Routine[/b]#8715\n<br />[img]https://imgur.com/u7Unylz.png[/img]\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.[/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/1820",
+	"Version": "1.24.1",
+	"Updated": "2024-02-26T13:37:32+00:00",
+	"Downloads": [
+		{
+			"Id": 67640,
+			"Type": "Main",
+			"DisplayName": "TMXL Map Toolkit",
+			"FileName": "TMXL Map Toolkit-1820-1-24-1-1678205044.zip",
+			"Description": "",
+			"Version": "1.24.1",
+			"SizeInBytes": 409870,
+			"Uploaded": "2023-03-07T16:04:04+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.TMXLoader",
+					"DisplayName": "TMXL Map Toolkit",
+					"Type": "Smapi",
+					"RelativePath": "TMXLoader",
+					"Manifest": {
+						"Name": "TMXL Map Toolkit",
+						"Description": "Load TMX Maps into the Game",
+						"Author": "Platonymous",
+						"Version": "1.24.1",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "TMXLoader.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:1820"
+						],
+						"UniqueId": "Platonymous.TMXLoader",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "Stardew-Valley-Mods",
+								"User": "Platonymous",
+								"Directory": "_releases",
+								"ModFolder": "TMXLoader"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342454328,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 79319,
+			"Type": "Optional",
+			"DisplayName": "TMXL Map Toolkit - Test3 1.5.6",
+			"FileName": "TMXL Map Toolkit - Test3 1.5.6-1820-1-24-1-test3-1702146585.zip",
+			"Description": "Only for testing",
+			"Version": "1.24.1-test3",
+			"SizeInBytes": 389265,
+			"Uploaded": "2023-12-09T18:29:45+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.TMXLoader",
+					"DisplayName": "TMXL Map Toolkit",
+					"Type": "Smapi",
+					"RelativePath": "TMXLoader",
+					"Manifest": {
+						"Name": "TMXL Map Toolkit",
+						"Description": "Load TMX Maps into the Game",
+						"Author": "Platonymous",
+						"Version": "1.24.1",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "TMXLoader.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1820"
+						],
+						"UniqueId": "Platonymous.TMXLoader"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342466007,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 81863,
+			"Type": "Optional",
+			"DisplayName": "TMXL Map Toolkit",
+			"FileName": "TMXL Map Toolkit-1820-1-24-3-alpha-20240226-1708954652.zip",
+			"Description": "For the upcoming Stardew Valley 1.6 only. Don't use this version unless you're testing the game's alpha version.",
+			"Version": "1.24.3-alpha.20240226",
+			"SizeInBytes": 412362,
+			"Uploaded": "2024-02-26T13:37:32+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.TMXLoader",
+					"DisplayName": "TMXL Map Toolkit",
+					"Type": "Smapi",
+					"RelativePath": "TMXLoader",
+					"Manifest": {
+						"Name": "TMXL Map Toolkit",
+						"Description": "Load TMX Maps into the Game",
+						"Author": "Platonymous",
+						"Version": "1.24.3-alpha.20240226",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "TMXLoader.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1820"
+						],
+						"UniqueId": "Platonymous.TMXLoader"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468551,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388508,
+		"UploaderId": 42440425,
+		"CategoryId": 16,
+		"Adult": false
+	}
+}

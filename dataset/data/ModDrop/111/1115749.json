@@ -1,0 +1,251 @@
+{
+	"Site": "ModDrop",
+	"Id": 1115749,
+	"Name": "Better Crafting",
+	"Author": "Khloe Leclair",
+	"TagLine": "A new crafting UI with support for customizable categories and favorites. Easy bulk crafting. Better Workbench functionality. And, optionally, constructing buildings right from the crafting menu using an extra mod.",
+	"Description": "Better Crafting adds a new customizable crafting UI with support for customizable categories, favorites, and a uniform grid size. There is easy bulk crafting. It also prevents use of a workbench from keeping chests locked when playing in multiplayer, and expands the workbench to connect to more than just the directly adjacent chests. On top of that, it provides a framework for content authors to create more powerful recipes and custom crafting stations.\n\n![](https://staticdelivery.nexusmods.com/mods/1303/images/11115/11115-1646435543-2040024488.png)\n\nInstall\n\n1.  [Install the latest version of SMAPI](https://smapi.io).\n\n2.  Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n\n3.  Run the game using SMAPI.\n\nHow to use\nBy default, both the crafting and cooking interfaces are replaced. Just use them like you normally would.\n\nIf you want to favorite or un-favorite a recipe, you can press F while hovering over it. Controller users can press Back. You can also change these bindings as you please. You can easily see which items are favorites because they'll have a silver star.\n\nWant to craft a lot of something? Right-click to open the Bulk Crafting menu! It lets you enter a specific quantity, and shows you how much of your resources it'd take to craft.\n\nCategories are displayed along the left side of the crafting interface. There are default categories, but they can be customized by clicking a new button to the right. When customizing categories, right-click an item to make it the icon for that category. Categories are per-user in multiplayer saves.\n\nAs of version 1.3.0, categories can have rules to automatically add matching recipes to the category. As of version 2.5.0, you can now combine manually selected recipes with rules.\n\nWhen cooking, this mod also lets you choose whether or not you want to use Qi Seasoning to enhance the quality of the food.\n\nBy using Generic Mod Config Menu, or editing the config file, you can enable or disable the replacement of Crafting and Cooking menus separately. Also, holding a key (Left-Shift by default) when opening a crafting menu will prevent it from being replaced.\n\nBut what if I don't like it?\nIn case you don't like the tabbed look with categories, good news! You don't need to use categories! Just go into settings and turn them off, and it'll look just like the built-in crafting menu, just with the other added features.\n\nCompatibility\n\n*   Works with Stardew Valley 1.6 on Linux/Mac/Windows.\n\n*   Does not work on Android, which has a separate menu system\n\n*   Works with [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) .\n\n*   Works in single player and multiplayer.\n\n*   May have issues with mods that add custom recipes, depending on how their items are added. Please report incompatible mods so I can work with the developers to add support.\n\n*   Works with [Better Chests](https://www.nexusmods.com/stardewvalley/mods/9791)  and [Item Bags](https://www.nexusmods.com/stardewvalley/mods/5382) .\n\n*   Works with mods that increase the backpack size.\nKnown Issues\n\n*   Does not work with the craft from nearby chests feature of Convenient Chests. However, Better Crafting has its own version of that to use. You will need to configure it, though.\nSee also\n\n*   [Source code](https://github.com/KhloeLeclair/StardewMods/tree/main/BetterCrafting)\n\n*   [Changelog](https://github.com/KhloeLeclair/StardewMods/blob/main/BetterCrafting/CHANGELOG.md)\n\n*   [For Devs: Content Authoring Guide](https://github.com/KhloeLeclair/StardewMods/tree/main/BetterCrafting/author-guide.md)\n\n*   [For Devs: C# API](https://github.com/KhloeLeclair/StardewMods/blob/main/BetterCrafting/IBetterCrafting.cs)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1115749",
+	"Version": null,
+	"Updated": "2025-03-27T04:41:12.093+00:00",
+	"Downloads": [
+		{
+			"Id": 1317744,
+			"Type": "Main",
+			"DisplayName": "Craftable Buildings",
+			"FileName": "Craftable Buildings.zip",
+			"Description": "This file adds support for crafting @Buildings directly from the crafting menu. Buildings are finished instantly, which is a bit cheaty so this is an optional feature for those who want it.",
+			"Version": "1.3.0",
+			"SizeInBytes": 297780,
+			"Uploaded": "2023-01-18T19:39:44.083+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.bcbuildings",
+					"DisplayName": "Better Crafting: Buildings",
+					"Type": "Smapi",
+					"RelativePath": "BCBuildings",
+					"Manifest": {
+						"Name": "Better Crafting: Buildings",
+						"Description": "Adds support for crafting farm buildings to Better Crafting.",
+						"Author": "Khloe Leclair",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "BCBuildings.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.bettercrafting",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11115@Buildings",
+							"ModDrop:1115749@Buildings"
+						],
+						"UniqueId": "leclair.bcbuildings"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "e6f72c69ac2ab7bfa26ac47a85febafc",
+				"md5In": "56c8b6484c307071cef2cb4b1d90b647",
+				"scriptType": 0,
+				"sha256Ex": "66a4feb362a0134c4ba8c7afff9d831963ca938813ff3963b36b2479cee03e31",
+				"sha256In": "0309ba0e860de43c26227e217acb525ce21dfd9f8e7a11d037e36ffc10cb3ba8"
+			}
+		},
+		{
+			"Id": 1566770,
+			"Type": "Optional",
+			"DisplayName": "Magic Workbench",
+			"FileName": "Magic Workbench.zip",
+			"Description": "Introduces a Magic Workbench, which lets you craft using all the chests within adjacent buildings. Requires Content Patcher. You have Content Patcher, right? I mean, who doesn't?\n\n@MBench",
+			"Version": "1.0.0",
+			"SizeInBytes": 3920,
+			"Uploaded": "2024-04-04T00:34:48.133+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.bcmagicbench",
+					"DisplayName": "Better Crafting: Magic Workbench",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] BetterCrafting - Magic Workbench",
+					"Manifest": {
+						"Name": "Better Crafting: Magic Workbench",
+						"Description": "Introduces a Magic Workbench, which lets you craft using all the chests within adjacent buildings.",
+						"Author": "Khloe Leclair",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.bettercrafting",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11115@MBench",
+							"ModDrop:1115749@MBench"
+						],
+						"UniqueId": "leclair.bcmagicbench"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "fb15c11127c140fc38622cab74435cb0",
+				"md5In": "1a617fc0ba73d8e63f4f385fc6e2b626",
+				"scriptType": 0,
+				"sha256Ex": "3f74d926ff28056251aff06518a2dbfc114b42d5622053d2fa962c802b266d5b",
+				"sha256In": "f0fdcf5e1475dda28f0003958558e29db7c4def4c5fdc1e4fc6c52bcb0ef774c"
+			}
+		},
+		{
+			"Id": 1654277,
+			"Type": "Optional",
+			"DisplayName": "Craftable Buildings",
+			"FileName": "Craftable Buildings.zip",
+			"Description": "This file adds support for crafting @Buildings directly from the crafting menu. Buildings are finished instantly, which is a bit cheaty so this is an optional feature for those who want it.\n\nCompatible with Stardew Valley 1.6.9+.",
+			"Version": "2.7.2",
+			"SizeInBytes": 140454,
+			"Uploaded": "2024-11-05T00:37:48.249+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.bcbuildings",
+					"DisplayName": "Better Crafting: Buildings",
+					"Type": "Smapi",
+					"RelativePath": "BCBuildings",
+					"Manifest": {
+						"Name": "Better Crafting: Buildings",
+						"Description": "Adds support for crafting farm buildings to Better Crafting.",
+						"Author": "Khloe Leclair",
+						"Version": "2.7.2",
+						"MinimumApiVersion": "4.1.0-beta",
+						"MinimumGameVersion": "1.6.9",
+						"EntryDll": "BCBuildings.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.bettercrafting",
+								"MinimumVersion": "2.14.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11115@Buildings",
+							"ModDrop:1115749@Buildings"
+						],
+						"UniqueId": "leclair.bcbuildings",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "b4a8d8bb713b04514cfa05043739ad5f",
+				"md5In": "f4210f3e74b0b2414660ff9080b1ba84",
+				"scriptType": 0,
+				"sha256Ex": "8745800116c81b54e16f37a1b298986db24edaf56cb9b10b96550c3f666dc4f4",
+				"sha256In": "a8f2c716b163b2469b50aadca01ec980c89c2847ac5b770f41b7a612e8cdb3e6"
+			}
+		},
+		{
+			"Id": 1697895,
+			"Type": "Main",
+			"DisplayName": "Better Crafting",
+			"FileName": "Better Crafting.zip",
+			"Description": "Supports Stardew Valley 1.6.15+.\n\nThis is the @Main release.",
+			"Version": "2.18.0",
+			"SizeInBytes": 540055,
+			"Uploaded": "2025-03-27T04:41:12.093+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.bettercrafting",
+					"DisplayName": "Better Crafting",
+					"Type": "Smapi",
+					"RelativePath": "BetterCrafting",
+					"Manifest": {
+						"Name": "Better Crafting",
+						"Description": "Replaces the vanilla crafting menu with an improved reimplementation with support for favorites, categories, and that doesn't lock nearby chests in multiplayer.",
+						"Author": "Khloe Leclair",
+						"Version": "2.18.0",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "BetterCrafting.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11115@Main",
+							"ModDrop:1115749@Main"
+						],
+						"UniqueId": "leclair.bettercrafting",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "0c26eee456b93b18ad047145f1a9957f",
+				"md5In": "1b59de904e8c502ef349a5db00d0f09b",
+				"scriptType": 0,
+				"sha256Ex": "973557995cfe2e14f1d3c20d5ded3fff5151c93771958b989f61002b4c0e5328",
+				"sha256In": "a559843dfdfaaaed4d9bbad3aea5fb4e8f3ffb5f45a66001a7da94bdf79ce19b"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1646040910273,
+		"DateUpdated": 1743050472093,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1645997732990,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1115749/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1115749/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1115749/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1115749/icon_original"
+		},
+		"nexusModID": 11115,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": false,
+		"userID": 291917
+	}
+}

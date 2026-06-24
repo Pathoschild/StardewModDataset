@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 2811,
+	"Name": "Prairie King Prizes (Lootboxes)",
+	"Author": "OfficialRenny",
+	"AuthorLabel": "Renny",
+	"Description": "This mod adds a lootbox mechanic to the game using the coins that you receive from the Journey of the Prairie King game as currency.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install at least version 4.0 of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />\"Gus has installed a new machine at the Saloon and it looks like some kind of dispenser. The Journey of the Prairie King minigame has also gotten an update and now gives you spendable tokens!\n<br />Hmm, it seems like those tokens can only be used in this newfangled machine which seems to give you random items in return.\"\n<br />\n<br />There are two different tiers of lootboxes, basic and premium. Basic tier costs 10 Prairie King tokens and the Premium costs 50. The Premium Tier has a higher chance of dropping rarer items. This can all be tweaked via the config, and you are able make your own lootboxes and prize lists, more information can be found in the 1.1.0 notes below.\n<br />\n<br />\n<br />[size=5]Update Notes\n<br />[/size][quote][size=5]1.2.0[/size]\n<br />[size=3]Updated for SDV 1.6 and SMAPI 4.0\n<br />[/size]Targeting .NET Core 6 now\n<br />Made some changes to the Prizes in the config, where the ID is now a string instead of a number\n<br />[size=5]1.1.0[/size]\n<br />After 5 years on the East Coast, it was time to go home...\n<br />Notable changes:\n<br />[list]\n<br />[*] Updated the mod to target .NET Core 5 (Apparently SDV 1.5.5 upgraded to this)\n<br />[*] Overhauled Lootbox System\n<br />[*]   \uFEFF\uFEFFThis is now fully customizable\n<br />[/list][list]\n<br />[*]   \uFEFFOnce a config.json is created, you can make changes to any of the Lootboxes (e.g. create new types with their own names, prize pools and costs)\n<br />[*]   \uFEFFA lootbox consists of a \"key\" (just a simple, unique, name for identification), a name (what it's called in the dialogue menu), cost, and a list of prize pools.\n<br />[*]   \uFEFFA prize pool consists of a name (not currently used anywhere, except for some commands covered later), a chance/weight, and a list of 'Prizes'\n<br />[/list][list]\n<br />[*]   \uFEFFThis chance/weight value is very neat, and is basically the chance for a particular prize pool to be picked compared relatively to the other pools. E.g. the \"Basic\" lootbox has 5x tiers with the following weights: 0.4, 0.3, 0.2, 0.099, and 0.001. As these all add up to 1, they can be treated as a % to get the tier (e.g. 0.4 = 40%), however these do not need to add up to any value in particular. For example, if you were to add a brand new prize pool with a chance of 1.0 into that list, this new prize pool will have a 50% chance of being picked when a lootbox is rolled.\n<br />[*]   \uFEFFA 'prize' consists of the the item ID, a quantity, and an optional quality value (a 0/1/2/4 value, where 0 = Base Quality, 1 = Silver Star, 2 = Gold Star, 4(!) = Iridium Star, anything else is likely to break)\n<br />[*]   \uFEFFWhen picking a lootbox, a prize pool is chosen based on the weight, and the prize is picked from the prize pool's list. These prizes have an equal chance to be picked amongst each other, though you can always add duplicate prizes to shift the odds.\n<br />[*] Added a few utility commands\n<br />[*]   \uFEFF\u00A0`gettokens` shows you how many tokens you have. (an old one but still listed here)\n<br />[*]   \uFEFF\u00A0`addtokens &lt;value&gt;` adds a &lt;value&gt; of tokens to your total (can be negative to subtract).\n<br />[*]   \uFEFF\u00A0`settokens &lt;value&gt;` sets your tokens to a specified value\n<br />[*]   \uFEFF\u00A0`lootbox list` lists all of the lootboxes and their costs\n<br />[*]   \uFEFF\u00A0`lootbox list &lt;key&gt;` lists all of the prize pools within a lootbox and the prizes within them\n<br />[*]   \uFEFF\u00A0`lootbox simulate &lt;key&gt; &lt;times: 1&gt;` rolls a lootbox &lt;times&gt; number of times (once by default), and lists all of the prizes you've won, as well as the stats for how many times a prize pool was picked and how often it was picked as a percentage.\n<br />[*] Added a way to set the Token Machine's position and the map it appears in\n<br />[*]   \uFEFFBy default this is at X: 34, Y: 17, in the \"Saloon\" map, to fit it between the two game machines in the Saloon.\n<br />[*]   \uFEFFFor now, the tile underneath the machine will always be replaced by a similar tile to the ones under the two other machines (wooden boards with a slight shadow at the top), may need to look into this and see how else I can get a similar shadow without replacing the entire tile.\n<br />[/list]\n<br />[size=4]1.0.6 and earlier...[/size]\n<br />[size=2]Lost to the ages...[/size][/quote]\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6 on Linux/Mac/Windows.\n<br />[*]Works in single player, should work in multiplayer (Untested).\n<br />[*][s]Would NOT work with major Saloon replacements as the token machine gets created between the two existing arcade machines.[/s]\n<br />[*][s]   \uFEFF[/s]Should no longer be relevant, if you run into any issues with Saloon replacements, feel free to tweak to coordinates in the config.\n<br />[/list]\n<br />[url=https://github.com/OfficialRenny/PrairieKingPrizes]Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2811",
+	"Version": "1.2.0-beta.1",
+	"Updated": "2024-10-28T21:41:02+00:00",
+	"Downloads": [
+		{
+			"Id": 114450,
+			"Type": "Main",
+			"DisplayName": "Prairie King Prizes",
+			"FileName": "Prairie King Prizes-2811-1-2-0-beta-1-1730151662.zip",
+			"Description": "Updated for SDV 1.6 / SMAPI 4.0+\n<br />\n<br />Should still work as-is, but if you've made changes the loot tables they may cause an error and be lost as I had to change how item IDs are saved",
+			"Version": "1.2.0-beta.1",
+			"SizeInBytes": 22919,
+			"Uploaded": "2024-10-28T21:41:02+00:00",
+			"Mods": [
+				{
+					"Id": "renny.prairiekingprizes",
+					"DisplayName": "Prairie King Prizes",
+					"Type": "Smapi",
+					"RelativePath": "PrairieKingPrizes",
+					"Manifest": {
+						"Name": "Prairie King Prizes",
+						"Description": "Lets you earn prizes by playing Prairie King.",
+						"Author": "Renny",
+						"Version": "1.2.0-beta.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PrairieKingPrizes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2811"
+						],
+						"UniqueId": "renny.prairiekingprizes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342501138,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389499,
+		"UploaderId": 20346404,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

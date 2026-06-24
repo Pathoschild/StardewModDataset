@@ -1,0 +1,129 @@
+{
+	"Site": "Nexus",
+	"Id": 38900,
+	"Name": "Font Smasher",
+	"Author": "ichortower",
+	"Description": "[size=3][b]Font Smasher[/b] is a framework for mod authors to use to replace or extend the vanilla game fonts in an author-facing way, intended so that modmakers can more easily ensure any additional glyphs they require are present and supported.\n<br />\n<br />[url=https://github.com/ichortower/FontSmasher/blob/prod/docs/author-guide.md]Author Guide[/url]\n<br />\n<br />[url=https://github.com/ichortower/FontSmasher]Source Code (GitHub)[/url]\n<br />\n<br />\n<br />[/size][size=5][b][u]Goal (or: Why?)[/u][/b][/size][size=3]\n<br />\n<br />First of all, the vanilla fonts aren't amenable to extension. Consider the bold (dialogue) font:\n<br />\n<br />[list]\n<br />[*] Relies on integer sprite indexes on a single shared texture, so is prone to collisions\n<br />[*] Uses (nearly) a character's Unicode code point as an index, except when it has hardcoded exceptions, so some collisions are already baked in\n<br />[/list]\n<br />And consider the sprite (interface) fonts:\n<br />\n<br />[list]\n<br />[*] No ability to edit or extend, only to replace wholesale using an XNB\n<br />[*] Typically loaded before Content Patcher comes online and kept in cache for the whole session, so difficult to edit\n<br />[/list]\n<br />Second, while [url=https://www.nexusmods.com/stardewvalley/mods/12467]Font Settings[/url] is a perfectly cromulent mod and solves some of the same problems as Font Smasher (lack of specific glyphs and/or desire to use different letterforms), it does so in a user-facing way: it is fully controlled by the user and is opaque to mod authors, so if a content modder wants to use extra diacritics or other special characters not supported by the base game, the only recourse available is to ask users to configure a font that includes the desired glyphs. Not only does this add steps, it leaves the user and the modder unable to use the default fonts, if they happen to like them.\n<br />\n<br />Font Smasher's purpose is to address both of these issues. It allows modders to add glyphs to and/or edit glyphs in the base fonts (or [url=https://www.nexusmods.com/stardewvalley/mods/38902]go ham and replace them all[/url]), so they can set a dependency on a particular font mod that provides the glyphs, or even include the Font Smasher data directly in their own mod and eliminate the difficulty altogether.\n<br />\n<br />Speaking of Font Settings...\n<br />\n<br />\n<br />[/size][size=5][b][u]Compatibility[/u][/b][/size][size=3]\n<br />\n<br />This mod almost certainly isn't compatible with Font Settings, since (I presume) that mod reimplements font rendering in most/all situations and probably negates or interferes with the changes I had to make to font rendering.\n<br />\n<br />In addition, right now this mod only partially supports Chinese, Japanese, and Korean: the BmFont type used for those languages' dialogue fonts is not supported, but they also use SpriteFonts for SpriteFont1 and SmallFont, and those do work. However, their default sprite fonts are very different from the latin ones, so it's probably better to treat them separately.\n<br />\n<br />\n<br />[/size][size=5][b][u]How to Use[/u][/b][/size][size=3]\n<br />\n<br />As a user, you will need [url=https://smapi.io]SMAPI 4.1.10+[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]. Install this mod like any other, by unzipping it into your Mods folder, and let the mods that require it do their work.\n<br />\n<br />This mod comes bundled with a sample content pack (FontSmasherSamplePack) which is intended for mod authors. If you don't need it, it is safe to delete.\n<br />\n<br />As a mod author, this framework provides data assets which your mod should edit in order to give it information about the glyphs you want to add or change. At this time, you are expected to use Content Patcher for this. I may add a C# API and/or better support for SMAPI's content API in the future, but I suspect using Content Patcher will suffice for almost everyone.\n<br />\n<br />For details about the data assets and how to use them, see [url=https://github.com/ichortower/FontSmasher/blob/prod/docs/author-guide.md]the author guide[/url].\n<br />\n<br />\n<br />[/size][size=5][b][u]Special Thanks[/u][/b][/size][size=3]\n<br />\n<br />[list]\n<br />[*] Abagaianye in particular, for the snipe.\n<br />[*] Everyone on the Stardew Valley and Stardew Modmakers' discords, in general.\n<br />[/list]\n<br />[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38900",
+	"Version": "1.1.1",
+	"Updated": "2025-12-03T17:13:13+00:00",
+	"Downloads": [
+		{
+			"Id": 149766,
+			"Type": "Main",
+			"DisplayName": "FontSmasher-1.1.1",
+			"FileName": "FontSmasher-1.1.1-38900-1-1-1-1764781924.zip",
+			"Description": "Removed debug message accidentally left in the 1.1.0 release.",
+			"Version": "1.1.1",
+			"SizeInBytes": 35184,
+			"Uploaded": "2025-12-03T17:12:04+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.FontSmasher",
+					"DisplayName": "Font Smasher",
+					"Type": "Smapi",
+					"RelativePath": "FontSmasher",
+					"Manifest": {
+						"Name": "Font Smasher",
+						"Description": "A framework for adding and editing glyphs in the latin-alphabet game fonts.",
+						"Author": "ichortower",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "FontSmasher.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38900",
+							"GitHub:ichortower/FontSmasher"
+						],
+						"UniqueId": "ichortower.FontSmasher"
+					}
+				},
+				{
+					"Id": "ichortower.FontSmasherSamplePack",
+					"DisplayName": "Font Smasher Sample Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "FontSmasherSamplePack",
+					"Manifest": {
+						"Name": "Font Smasher Sample Content Pack",
+						"Description": "Adds support for some extra diacritics (a-, e-, i-, o-, and u-with-macron, and y-with-circumflex), as an example of how to make a font mod using Font Smasher.",
+						"Author": "ichortower",
+						"Version": "1.1.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ichortower.FontSmasher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38900",
+							"GitHub:ichortower/FontSmasher"
+						],
+						"UniqueId": "ichortower.FontSmasherSamplePack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536454,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 149767,
+			"Type": "Optional",
+			"DisplayName": "FontSmasherSamplePack-1.1.1",
+			"FileName": "FontSmasherSamplePack-1.1.1-38900-1-1-1-1764781993.zip",
+			"Description": "Just the sample pack.\n<br />Fixed wrong version number in manifest.",
+			"Version": "1.1.1",
+			"SizeInBytes": 5652,
+			"Uploaded": "2025-12-03T17:13:13+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.FontSmasherSamplePack",
+					"DisplayName": "Font Smasher Sample Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "FontSmasherSamplePack",
+					"Manifest": {
+						"Name": "Font Smasher Sample Content Pack",
+						"Description": "Adds support for some extra diacritics (a-, e-, i-, o-, and u-with-macron, and y-with-circumflex), as an example of how to make a font mod using Font Smasher.",
+						"Author": "ichortower",
+						"Version": "1.1.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ichortower.FontSmasher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38900",
+							"GitHub:ichortower/FontSmasher"
+						],
+						"UniqueId": "ichortower.FontSmasherSamplePack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536455,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425588,
+		"UploaderId": 188952864,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

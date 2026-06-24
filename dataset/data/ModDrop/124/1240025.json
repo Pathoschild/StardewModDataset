@@ -1,0 +1,221 @@
+{
+	"Site": "ModDrop",
+	"Id": 1240025,
+	"Name": "Little Witch Academia Constanze NPC",
+	"Author": "Noxide",
+	"TagLine": "English translated mod for the NPC Constanze of Little Witch Academia.",
+	"Description": "English translated mod for the NPC Constanze of Little Witch Academia. The original was created by CrazyGaboScientist, with his permission I was able to translate this.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1240025",
+	"Version": null,
+	"Updated": "2022-09-26T15:31:58.1+00:00",
+	"Downloads": [
+		{
+			"Id": 1258432,
+			"Type": "Main",
+			"DisplayName": "[NPC] Constanze ",
+			"FileName": "[NPC] Constanze .zip",
+			"Description": "English translated mod for the NPC Constanze of Little Witch Academia. The original was created by CrazyGaboScientist, with his permission I was able to translate this.",
+			"Version": "0.0.2",
+			"SizeInBytes": 15086588,
+			"Uploaded": "2022-09-26T15:22:15.827+00:00",
+			"Mods": [
+				{
+					"Id": "Pathoschild.ContentPatcher",
+					"DisplayName": "Content Patcher",
+					"Type": "Smapi",
+					"RelativePath": "Constanze Regular\\ContentPatcher",
+					"Manifest": {
+						"Name": "Content Patcher",
+						"Description": "Loads content packs which edit game data, images, and maps without changing the game files.",
+						"Author": "Pathoschild",
+						"Version": "1.28.1",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "ContentPatcher.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1915"
+						],
+						"UniqueId": "Pathoschild.ContentPatcher"
+					}
+				},
+				{
+					"Id": "Platonymous.CustomMusic",
+					"DisplayName": "CustomMusic",
+					"Type": "Smapi",
+					"RelativePath": "Constanze Regular\\CustomMusic",
+					"Manifest": {
+						"Name": "CustomMusic",
+						"Description": "Changes the games music",
+						"Author": "Platonymous",
+						"Version": "1.9.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CustomMusic.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3043"
+						],
+						"UniqueId": "Platonymous.CustomMusic",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "Stardew-Valley-Mods",
+								"User": "Platonymous",
+								"Directory": "_releases",
+								"ModFolder": "CustomMusic"
+							}
+						}
+					}
+				},
+				{
+					"Id": "Crazy_Gabo_Scientist.ConstanzeMusic",
+					"DisplayName": "ConstanzeMusic",
+					"Type": "ContentPack",
+					"RelativePath": "Constanze Regular\\CustomMusicConstanze",
+					"Manifest": {
+						"Name": "ConstanzeMusic",
+						"Description": "Music for Constanze",
+						"Author": "Crazy_Gabo_Scientist",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.CustomMusic",
+							"MinimumVersion": "1.0.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:166616661999"
+						],
+						"UniqueId": "Crazy_Gabo_Scientist.ConstanzeMusic"
+					}
+				},
+				{
+					"Id": "Cherry.ExpandedPreconditionsUtility",
+					"DisplayName": "Expanded Preconditions Utility",
+					"Type": "Smapi",
+					"RelativePath": "Constanze Regular\\ExpandedPreconditionsUtility",
+					"Manifest": {
+						"Name": "Expanded Preconditions Utility",
+						"Description": "A condition checking system designed for use by other mods, in the format of event preconditions",
+						"Author": "Cherry",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "ExpandedPreconditionsUtility.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6529"
+						],
+						"UniqueId": "Cherry.ExpandedPreconditionsUtility"
+					}
+				},
+				{
+					"Id": "Cherry.ShopTileFramework",
+					"DisplayName": "Shop Tile Framework",
+					"Type": "Smapi",
+					"RelativePath": "Constanze Regular\\ShopTileFramework",
+					"Manifest": {
+						"Name": "Shop Tile Framework",
+						"Description": "Define new shops as custom tile properties",
+						"Author": "Cherry",
+						"Version": "1.0.9",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ShopTileFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Cherry.ExpandedPreconditionsUtility",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5005"
+						],
+						"UniqueId": "Cherry.ShopTileFramework"
+					}
+				},
+				{
+					"Id": "Constanze.Crazy_Gabo_Scientist",
+					"DisplayName": "Constanze's Custom NPC Mod",
+					"Type": "ContentPack",
+					"RelativePath": "Constanze Regular\\[LWA] Constanze NPC",
+					"Manifest": {
+						"Name": "Constanze's Custom NPC Mod",
+						"Description": "A mod that adds our beautiful technology lover witch Constanze to Stardew Valley",
+						"Author": "Crazy_Gabo_Scientist",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:166616661999"
+						],
+						"UniqueId": "Constanze.Crazy_Gabo_Scientist"
+					}
+				},
+				{
+					"Id": "Constanze_Workshop.Crazy_Gabo_Scientist",
+					"DisplayName": "Constanze_Workshop",
+					"Type": "ContentPack",
+					"RelativePath": "Constanze Regular\\[Shop] Constanzes_Workshop",
+					"Manifest": {
+						"Name": "Constanze_Workshop",
+						"Description": "Mod that adds the ability to buy things from Constanze.",
+						"Author": "Crazy_Gabo_Scientist",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.9.0",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.ShopTileFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:166616661999"
+						],
+						"UniqueId": "Constanze_Workshop.Crazy_Gabo_Scientist"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "2ca0dc8fc8875993d56ac365e56d41fe",
+				"md5In": "df7718f4c55538ec0824daf72951fdf0",
+				"scriptType": 0,
+				"sha256Ex": "bb03528cddd603df970533a97dedd4ea666908db5ad8dfb4aa1a3cfc737e1ea8",
+				"sha256In": "d6e82abc965eda97dce224efe09fea97074f5a5d16081a04e55fe248b412ca07"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1664206318100,
+		"DateUpdated": 1664206315430,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1664205626570,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1240025/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1240025/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1240025/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1240025/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 319175
+	}
+}

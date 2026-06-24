@@ -1,0 +1,87 @@
+{
+	"Site": "Nexus",
+	"Id": 584,
+	"Name": "Crab Net",
+	"Author": "jwdred",
+	"Description": "[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]About[/b][/color][/size][/font][/color]\r<br />\u00A0\r<br />Do you find yourself picking up and placing your crab pots everysingle time you empty them? \u00A0And every single time you bait them?\u00A0\u00A0And even when you&#39;re trying to place them? \u00A0Let&#39;s face it,\u00A0ConcernedApe may have been concerned about a great many things, but &#34;How\u00A0easy is it to use crab pots&#34; must not have been one of them. \u00A0Can you\u00A0image a world where you simply pressed a button and all your crab pots were\u00A0emptied and baited, and those little shrimps and periwinkles were deposited\u00A0right into your inventory? \u00A0Crab Net makes that dream a reality.\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Quick Setup[/b][/color][/size][/font][/color]\r<br />\u00A0\r<br />1. Unzip the mod and put into your &#34;Mods&#34; folder.\r<br />2. If you want to use this like a trainer, change the config.json settings: enableMessages: false, free: true, chargeForBait: false.\r<br />3. If you want the mod to charge you, but you couldn&#39;t care less about the dialogues and such, change config.json settings: enableMessages: false.\r<br />4. Start up the SMAPI executable, and enjoy all the free time you&#39;re going to have now that you&#39;re not mucking around with crab pots.\r<br />\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Configuration[/b][/color][/size][/font][/color]\r<br />\u00A0\r<br />The configuration file defaults to the following settings.\r<br />\u00A0\r<br />{\r<br />\u00A0&#34;keybind&#34;: &#34;H&#34;,\r<br />\u00A0&#34;enableLogging&#34;: false,\r<br />\u00A0 &#34;enableMessages&#34;: true,\r<br />\u00A0&#34;free&#34;: false,\r<br />\u00A0&#34;costPerCheck&#34;: 1,\r<br />\u00A0&#34;costPerEmpty&#34;: 10,\r<br />\u00A0&#34;chargeForBait&#34;: true,\r<br />\u00A0&#34;preferredBait&#34;: 685,\r<br />\u00A0&#34;whoChecks&#34;: &#34;spouse&#34;,\r<br />\u00A0&#34;chestCoords&#34;: &#34;73, 14&#34;,\r<br />\u00A0&#34;bypassInventory&#34;: false,\r<br />\u00A0&#34;allowFreebies&#34;: false\r<br />}\r<br />\u00A0\r<br />[b][u]keybind[/u][/b]: The hot key you want to press to summon your crab bearing minion.\r<br />\u00A0\r<br />[b][u]enableLogging[/u][/b]: Tells the mod whether or not to output logging messages to your SMAPI console. \u00A0Don&#39;t get it\u00A0confused with &#34;enableMessages&#34;.\r<br />\u00A0\r<br />[b][u]enableMessages[/u][/b]: \u00A0Tells the mod whether or not you want feedback about what your worker did, how much it cost,\u00A0etc. \u00A0Disable it if you don&#39;t want to see any dialogues or HUD displays\u00A0after pressing the hot key.\r<br />\u00A0\r<br />[b][u]free[/u][/b]: \u00A0This setting overrides all other cost settings. \u00A0If you set it to true, then all other cost settings will be ignored and you can\u00A0have all your trash brought to you and not find your self a single &#39;g&#39; poorer.\u00A0\u00A0It&#39;s the same thing as setting all the other cost settings to 0.\r<br />\u00A0\r<br />[b][u]costPerCheck[/u][/b]: \u00A0Assuming &#34;free&#34; is set to false, you will be charged this amount for every pot that you have placed in\u00A0Stardew Valley.\r<br />\u00A0\r<br />[b][u]costPerEmpty[/u][/b]: \u00A0This is the amount that it will cost you to have the contents of your pots retrieved. \u00A0If there&#39;s nothing to\u00A0retrieve, you will not be charged anything for that crab pot. \u00A0\r<br />[b][u]\r<br />chargeForBait[/u][/b]: \u00A0This tells CrabNet whether you want to pay for bait or not. \u00A0The arrangement you have\u00A0between you and your pot checker is nobody&#39;s business but your own, and there\u00A0are certainly some master baiters in Pelican Town who include the bait in their\u00A0service.\r<br />\u00A0\r<br />[b][u]preferredBait[/u][/b]: \u00A0The ID of the bait you like to use. \u00A0The only 2 I know about are 685 (regular bait, and\u00A0the default), and 774 a.k.a. &#39;wild bait&#39;. \u00A0Yes, this allows you to use\u00A0Linus&#39; bait recipe before he teaches it to you. \u00A0If you feel bad about\u00A0that, then use 685. \u00A0Or increase the &#34;costPerEmpty&#34;, and call it\u00A0a royalty fee for Linus. \u00A0Or set &#34;whoChecks&#34; (see below) to\u00A0Linus, and he might use his own special bait out of disgust for the\u00A0alternative.\r<br />\u00A0\r<br />[b][u]whoChecks[/u][/b]: \u00A0This is an immersion setting.\u00A0The default is &#34;spouse&#34;, which means messages displayed will\u00A0indicate that your chosen spouse has done this task. \u00A0If they wear the\u00A0pants in your family, then you might consider setting it to something else,\u00A0like &#34;Shane&#34; or &#34;Haley&#34;. \u00A0If the name is not\u00A0recognized, then it will be used verbatim (if you set it to &#34;Captain\u00A0Underpants&#34;, who to my knowledge is not a character in this game, this mod\u00A0shall say &#34;Captain Underpants did such and such). \u00A0However, if the\u00A0name is one of the characters AND messages are enabled, you&#39;ll get to see their\u00A0mug every time you press the button.\r<br />\u00A0\r<br />[b][u]chestCoords[/u][/b]: \u00A0These are the secret coordinates of a chest that you have placed on the farm grounds (not inside a building), into\u00A0which Captain Underpants will deposit the contents of your crab pots if you\u00A0don&#39;t have enough room in your inventory. \u00A0The default setting is the tile\u00A0to the immediate right of the sell box: &#34;73,14&#34;.\r<br />\u00A0\r<br />[b][u]bypassInventory[/u][/b]: \u00A0If you really,really like the chest idea, you can set bypassInventory to true, and your\u00A0helper will attempt to deposit your daily catch into the chest first. \u00A0If\u00A0there is no chest, or the chest is full, they will fall back to putting it in\u00A0your inventory.\r<br />\u00A0\r<br />[b][u]allowFreebies[/u][/b]: \u00A0This setting basically tells the mod to be unforgiving in charging its fees. \u00A0If it&#39;s\u00A0set to false (the default) you will not get much slack. \u00A0If you can&#39;t\u00A0afford to pay for the service, there&#39;s an immediate strike and the rest of the\u00A0work will go undone. \u00A0Setting it to true will give your hunter-gatherer a\u00A0little more compassion for the plight of the young farmer (whether they deserve\u00A0it or not).\r<br />\u00A0\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Customization[/b][/color][/size][/font][/color]\r<br />\u00A0\r<br />Because it matters to some...\r<br />\r<br />The dialog.xnb file will allow you to customize the dialog to your liking. \u00A0I&#39;ve also included the dialog.yaml source file, but the mod\u00A0will read it from the XNB file. \u00A0If you don&#39;t know how to do it, google\u00A0&#34;how to unpack and repack stardew valley mods&#34;. \u00A0Anyway...\r<br />\u00A0\r<br />The dialogue elements are arranged in a name_index format.\u00A0If the name starts with a capital &#39;X&#39;, that means those messages need to\u00A0stay roughly in that order and in the same format for the dialog to make sense.\u00A0\u00A0The number is important.\r<br />\u00A0\r<br />All other elements can be added to, and modified because they are used randomly at the appropriate place in the dialogue. \u00A0You have to\u00A0use the same &#34;name&#34; from the &#34;name_id&#34; that are already in\u00A0the file, but you can add to and remove so long as all the numbers in a\u00A0particular group are unique.\r<br />\u00A0\r<br />Also you&#39;ll see that I added a few names down at the bottom,&#34;Shane_1&#34;, &#34;Shane_2&#34;, &#34;Leah_1&#34;, for example.\u00A0\u00A0You can add any other Stardew characters dialog to the file in that same\u00A0format. \u00A0Those dialogues will be merged in with the &#34;smalltalk&#34;\u00A0group if your &#34;whoChecks&#34; is set to one of the characters.\r<br />\u00A0\r<br />Most of the notation that existing SDV dialogs use will work(for example @ is replaced by the name of the farmer). \u00A0There&#39;s also\u00A0notation added to use values from this mod in the dialog, they are (along with\u00A0a description)\r<br />\u00A0\r<br />[b]%%numTotal%%[/b]\u00A0\u00A0- \u00A0The total crab pots you have placed.\r<br />[b]%%numChecked%%[/b]\u00A0\u00A0- \u00A0The number of crab pots that were checked.\r<br />[b]%%numEmptied%%[/b]\u00A0\u00A0- \u00A0The number of crab pots that were emptied.\r<br />[b]%%numBaited%%[/b]\u00A0\u00A0- \u00A0The number of crab pots that were baited.\r<br />[b]%%notChecked%%[/b]\u00A0\u00A0- \u00A0The number of crab pots that were not checked (because you didn&#39;t have the money)\r<br />[b]%%notEmptied%%[/b]\u00A0\u00A0- \u00A0The number of crab pots that were not emptied (because you didn&#39;t have the money or the inventory space)\r<br />[b]%%notBaited%%[/b]\u00A0\u00A0- \u00A0The number of crab pots that were not baited(because of no money, or else they&#39;ve already been baited)\r<br />[b]%%runningTotal%%[/b]\u00A0\u00A0- \u00A0The total accrued costs.\r<br />[b]%%spouse%%[/b]\u00A0\u00A0- \u00A0The farmer&#39;s spouse&#39;s name (if married), the value of whoChecks otherwise.\r<br />\u00A0\r<br />The dialog groups in the file, and a quick explanation of when each are used:\r<br />\u00A0\r<br />Xdialog - Some specific dialogs used when the spouse or non-character check the pots.\r<br />greeting - Greetings the checker will use when addressing the farmer.\r<br />unfinishedmoney - Comments the character checker will make when they weren&#39;t able to finish on account of no money.\r<br />freebies - Comments the character checker will make when allowFreebies is true, and the cost of services was more than the farmer has on\u00A0hand.\r<br />unfinishedinventory - Comments the character checker will make when they weren&#39;t able to finish on account of not having anywhere to deliver\u00A0the goods.\u00A0\r<br />smalltalk & character names - Comments that are thrown in at the end of most conversations.\r<br />\u00A0\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Notes[/b][/color][/size][/font][/color]\r<br />\u00A0\r<br />This was written and tested against SMAPI 0.40.1.1 for StardewValley 1.1.\r<br />\u00A0\r<br />I also tested this using Advanced Location Loader, however, I didn&#39;t try adding any crab pots to the locations loaded by it... so I don&#39;t\u00A0know if that works yet. \u00A0I&#39;m not even sure if crab pots work in those or\u00A0not, never tried.\r<br />\u00A0\r<br />This mod will take into consideration your skill perks (no bait needed for your crab pots, and so forth).\r<br />\u00A0\r<br />[color=#111111][font=Verdana, Arial, Helvetica, sans-serif][size=4][color=#ffcc33][b]Changelog[/b][/color][/size][/font][/color]\r<br />\u00A0\r<br />1.0.1: Attempted to fix a problem where the crab pot images sprites would start freaking out after a few days. \u00A0Please let me know if\u00A0anyone experiences anything like that with version 1.0.1.\r<br />1.0.2: Added some features: chest overflow, stricter credit rules,more immersive dialog.\r<br />1.0.3: Fixed a bug in the dialogue system which was preventing normal game dialogue with your checker after having them check your crab pots.\r<br />1.0.4: Fixed (I hope) a bug where the dialogues would not load unless your mod was in your Stardew Valley/Mods folder.\r<br />\u00A0",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/584",
+	"Version": "1.0.5",
+	"Updated": "2018-07-10T12:37:57+00:00",
+	"Downloads": [
+		{
+			"Id": 5147,
+			"Type": "Main",
+			"DisplayName": "CrabNet.1.0.5.zip",
+			"FileName": "CrabNet.1.0.5.zip-584-1-0-5.zip",
+			"Description": "Updated for SMAPI 2.0",
+			"Version": "1.0.5",
+			"SizeInBytes": 28848,
+			"Uploaded": "2017-08-12T13:38:45+00:00",
+			"Mods": [
+				{
+					"Id": "jwdred.CrabNet",
+					"DisplayName": "Crab Net",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "Crab Net",
+						"Description": "Wouldn't it be nice if there were a way to empty crab pots quickly without accidentally picking up the pot too?",
+						"Author": "jwdred",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "1.15.0",
+						"EntryDll": "CrabNet.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "jwdred.CrabNet"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342391835,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 10065,
+			"Type": "Main",
+			"DisplayName": "CrabNet.1.1.zip",
+			"FileName": "CrabNet.1.1.zip-584-1-1.zip",
+			"Description": "For Stardew Valley 1.3",
+			"Version": "1.1",
+			"SizeInBytes": 29106,
+			"Uploaded": "2018-07-10T12:37:57+00:00",
+			"Mods": [
+				{
+					"Id": "jwdred.CrabNet",
+					"DisplayName": "Crab Net",
+					"Type": "Smapi",
+					"RelativePath": "CrabNet",
+					"Manifest": {
+						"Name": "Crab Net",
+						"Description": "Wouldn't it be nice if there were a way to empty crab pots quickly without accidentally picking up the pot too?",
+						"Author": "jwdred",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "2.6.0-beta",
+						"EntryDll": "CrabNet.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:584"
+						],
+						"UniqueId": "jwdred.CrabNet"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342396753,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387272,
+		"UploaderId": 35568295,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"Site": "ModDrop",
+	"Id": 827770,
+	"Name": "Sprint and Dash Redux",
+	"Author": "LittleRaskol",
+	"TagLine": "Allow sprinting and combat dashing with configurable costs and durations.",
+	"Description": "This is an extension of OrSpeeder's excellent [Sprint and Dash mod](https://www.nexusmods.com/stardewvalley/mods/235/). It adds the following functions to the game:\n\n* Sprinting: Moving faster than usual in exchange for stamina while moving. By default, this uses the Space Key to toggle this behavior on or off, but it can be configured to only activate when the key is held down.\n* Dashing: A temporary skill-scaling powerup that buffs your speed, attack power, and defense for a time, with an associated cooldown/vulnerability phase. Think of it as a combat panic button. By default activated with the Q Key.\n* Getting winded: Progressive stamina drain over time such that the longer you sprint for, the more stamina you will lose every second.\n\nGamepad/controller users: Although I use the word \"key\" throughout this description, under the hood the code can recognize controller buttons too. The only limitation (for now) is some logic used to detect whether you are running still expects a key. Since I think 99% of users probably autorun, this will likely not matter.\n\n**Configuration**\n\nNote that while this section refers to the config file, you can change settings in game using the [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) interface.\n\nSprint and Dash Mod Redux can be configured in the following ways:\n\n* SprintKey: Button used to activate sprinting. [See this page for info on how to set buttons](https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings).\n* DashKey: Button used to activate the dash. [See this page for info on how to set buttons](https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings)\n* StamCost: Measured in points of stamina, how much sprinting costs per second. By default, this is 2. Minimum is 1, lower values will be treated as 1.\n* DashDuration: Measured in seconds. By default this is 4 seconds. Note that the cooldown will last for 2.5x as long as whatever you set its length to (i.e., by default 10 seconds). Minimum is 1 second, maximum is 10 seconds. Values beyond the maximum will be treated as the maximum. Values below the minimum (e.g., 0) will turn the dash feature off.\n* WindedStep: Measured in seconds. By default, this is 5 seconds. Set to 0 to ignore/deactivate this system. Explained in more depth below.\n* QuitSprintingAt: Stop player from sprinting when stamina drops to a percentage of max stamina equal to this value. Default is 30. Minimum is 0, lower values will be treated as 0.\n* ToggleMode: Whether to use the sprint (and normal \"run\") keys as a toggle, where pressing once turns it on until you press again to turn it off. By default, this is true. Note that this will turn the run key into a toggle, due to the need to avoid applying the sprint buff while walking. (I kind of assume everyone is using autorun tbh.) When set to false, you only sprint while the button is pressed.\n\nFinally, there are two \"hidden\" config items that are advanced and not needed by most players. These do not appear in the config file by default but can be added.\n\n* TimeInterval: How often, in seconds, to actually perform regeneration calculations. By default this is 0.1, meaning every tenth of a second (or about 6 game ticks). This value is validated such that we always end up with an interval between 1 and 60 ticks (inclusive), therefore it makes no sense to enter more than 1, or 0 or less. This setting is not really useful unless you have major performance issues. The higher this number is, the less frequently the mod will do any real calculations and therefore the less work it makes your computer do. The lower this number is, though, the more responsive the mod will be to changes in state. Setting this value too low may cause some issues if you rapidly press the sprint key for some reason.\n* VerboseMode: By default it is \"false\" and controls whether to output regular calibration data.\n\n**Getting Winded**\n\nThis system puts a brake on sprinting for long periods of time beyond the basic per-second stamina cost. The idea is that the longer you sprint for, the more it tires you out, making you \"winded\" after a certain amount of time set by the config value.\n\nFor every (windedStep) seconds you run, the stamina cost per second of running increases by 100% of the base. For example, at the default config values: for the first five seconds, it costs 2 stam/sec, then after that for the next five (6-10) seconds, 4 stam/sec, then after that for the next five (11-15) seconds, 6 stam/sec, etc... It will also keep track of your sprint time if you sprint for less than the step time, and pick back up where you left off. No cheesing with 4-second sprint bursts!\n\nYou will also need to take a bit of a break from sprinting if you want this to go away. It takes one second to lower the penalty by 100% of base. Continuing the example above: when you stop sprinting, if you immediately start again, the 6 stam/sec cost remains. If you stop sprinting for 1 second, it goes down to 4/sec, and if you stop sprinting for another second, it goes down to 2/sec (base).\n\n**Permissions**\n\nI don't really care if you redistribute it or alter it or use it in compilations. I'd ask that you give credit to myself and OrSpeeder, that's all. It has the same GNU Public License 3 (with permissions to modify and redistribute given credit and notice of alteration) as the original and the source code is included in the download as a resource.\n\n**Credits**\n\nThis is an adaption of the work of OrSpeeder, who created the original Sprint and Dash Mod. I recommend checking his version of the mod out if this isn't your thing, or to check out his other mods.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/827770",
+	"Version": null,
+	"Updated": "2020-09-21T13:03:47.647+00:00",
+	"Downloads": [
+		{
+			"Id": 838424,
+			"Type": "Main",
+			"DisplayName": "SprintAndDashRedux-2.1.0",
+			"FileName": "SprintAndDashRedux-2.1.0.zip",
+			"Description": "Allow sprinting and combat dashing with configurable costs and durations.",
+			"Version": "2.1.0",
+			"SizeInBytes": 28546,
+			"Uploaded": "2020-09-17T12:24:54.886+00:00",
+			"Mods": [
+				{
+					"Id": "littleraskol.SprintAndDashRedux",
+					"DisplayName": "Sprint and Dash Mod Redux",
+					"Type": "Smapi",
+					"RelativePath": "SprintAndDashRedux",
+					"Manifest": {
+						"Name": "Sprint and Dash Mod Redux",
+						"Description": "Lets you sprint and combat dash, with progressive stamina drain.",
+						"Author": "littleraskol",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SprintAndDashRedux.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Chucklefish:4201",
+							"Nexus:560"
+						],
+						"UniqueId": "littleraskol.SprintAndDashRedux"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "b6f193c61e87c33cc720c5a12447186f",
+				"md5In": "b32ca7778031af96f3675cd9c37f55df",
+				"patchNotes": "Settings can now be changed in game using Generic Mod Config Menu.",
+				"scriptType": 0,
+				"sha256Ex": "6f072e3cac0ecc51c995162f71e930481482b36cd54bc26ff2dfe20e9a489728",
+				"sha256In": "c2a27a59e9d39294392f03e303133be4e212cb7cf162f5b78e3e42a735c66b4f"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1600345773623,
+		"DateUpdated": 1600693427647,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1600345351443,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/827770/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/827770/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/827770/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/827770/icon_original"
+		},
+		"notice": "Requires SMAPI.",
+		"dateNoticeUpdated": "2020-09-17T08:29:26.4907169-04:00",
+		"isNoticeEnabled": true,
+		"isUploadedByAuthor": true,
+		"userID": 186428
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 8193,
+	"Name": "CCRMAutomate",
+	"Author": "Digus",
+	"Description": "[size=3][size=3][b]Current version[/b]: 1.1.1[/size]\n<br />[list]\n<br />[*][size=2]Update to SV 1.6[/size]\n<br />[*][size=2]Update to CCRM 1.5[/size]\n<br />[*][size=2]Update to Automate 2.0[/size]\n<br />[/list][b]\n<br />Objective:[/b][/size]\n<br />To integrate the Custom Crystalarium Mod with Automate.\n<br />\n<br />[size=3][b]Installation:[/b][/size]\n<br />[list=1]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]Install the latest version of SMAPI[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2516]Unzip the Custom Crystalarium Mod[/url] into /Stardew Valley/Mods.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1063]Unzip the Automate[/url] into /Stardew Valley/Mods.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8193]Unzip the CCRMAutomate[/url] into /Stardew Valley/Mods.\n<br />[/list]\n<br />[size=3][b][size=3][size=3][b]Config options:[/b][/size]\n<br />[/size][/b][size=3][size=2]Run the game at least one with the mod installed to create the config.json file. You can edit this file to change the configuration.[/size][/size][b][size=3][size=2]\n<br />[/size][/size][/b][list]\n<br />[*][size=2]\"[b]EnableAutomateClonerInput[/b]\": ([b]false[/b]|true) Enable or disable automating input for cloners. This only work for custom cloners, not the crystalarium.[/size]\n<br />[/list][b]\n<br />How does it work:[/b][/size]\n<br />This mod uses the Automate API to add support to custom cloners.\n<br />\n<br />This is a standalone mod because I don't want to make Custom Crystalarium Mod depend on Automate.\n<br />Also, it isn't an optional file in the main Custom Crystalarium page because this mod might need to update when Automate updates, and the only way for SMAPI can keep track of the updates and notify the player when they are needed, it's to have its own page with its own version tracking.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8193",
+	"Version": "1.1.1",
+	"Updated": "2024-04-09T07:04:00+00:00",
+	"Downloads": [
+		{
+			"Id": 90640,
+			"Type": "Main",
+			"DisplayName": "CCRMAutomate-v1.1.1",
+			"FileName": "CCRMAutomate-v1.1.1-8193-1-1-1-1712646240.zip",
+			"Description": "Update to SV 1.6",
+			"Version": "1.1.1",
+			"SizeInBytes": 13587,
+			"Uploaded": "2024-04-09T07:04:00+00:00",
+			"Mods": [
+				{
+					"Id": "Digus.CCRMAutomate",
+					"DisplayName": "CCRMAutomate",
+					"Type": "Smapi",
+					"RelativePath": "CCRMAutomate",
+					"Manifest": {
+						"Name": "CCRMAutomate",
+						"Description": "Integrate Custom Crystalarium Mod to Automate",
+						"Author": "Digus",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CCRMAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.CustomCrystalariumMod",
+								"MinimumVersion": "1.5.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"MinimumVersion": "2.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8193"
+						],
+						"UniqueId": "Digus.CCRMAutomate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342477328,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394881,
+		"UploaderId": 2186381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

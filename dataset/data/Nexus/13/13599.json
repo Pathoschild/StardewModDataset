@@ -1,0 +1,226 @@
+{
+	"Site": "Nexus",
+	"Id": 13599,
+	"Name": "HD Portraits Patches for PyTK",
+	"Author": "purplexpresso",
+	"Description": "[size=4][b]INTRODUCTION[/b]:[/size]\n<br />HD Portraits make Stardew Valley quite beautiful — yet, nearly all of them are require using PyTK to scale the image. While PyTK is a powerful toolset, for those looking to run a lighter load order may be dissuaded from adding it to their game. Although\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/10971]HD Portraits by tlitookilakin[/url]\u00A0exists and is a great alternative, this is quite new and few portrait artists have adapted their content packs to use it.\u00A0\n<br />\n<br />Until today!\u00A0\n<br />\n<br />Thanks to many kind mod authors, I have gotten permission to repackage their mods into versions compatible with HD Portraits. Now, you don't have to choose between performance and beauty. View \"optional files\" to see what has been converted! I hope to convert every PyTK-based HD Portrait, so please send any my way and I'll talk with the original author!\n<br />\n<br />[size=4][b]HOW TO USE PATCHES:[/b][/size]\n<br />[list=1]\n<br />[*]Go to optional files, and download the patches of any mods you want.\n<br />[*]Unless stated otherwise, download the original mods\u00A0\n<br />[*]Merge my files over the original mod's files, or use a VFS like Mod Organizer 2 to handle conflicts for you automatically\n<br />[*]Make sure HD Portraits, Content Patcher, and SMAPI is installed in your mods folder\n<br />[*]Boot the game, and enjoy :)\n<br />[/list]\n<br />I did this by developing a python script that generates the appropriate metadata to allow PyTK-based portrait mods to be used used with HD Portraits. All you have to do is point the script to the directory where your Content Pack-based mod is, run the script which takes less than a second, and now you can use those portraits without PyTK! This converts those Content Packs in a non-destructive way so if you change your mind, all you have to do is rename some files and you're back to normal. No junimos\u00A0harmed in the process. The patcher is\u00A0available, under \"main files\".\n<br />\n<br />[size=4][b]HOW TO USE PATCHER:[/b][/size]\n<br />[list=1]\n<br />[*][url=https://www.python.org/downloads/]Install Python 3.10+ on your computer.[/url]\uFEFF\n<br />[*]Using pip or your preferred package manager,\u00A0[url=https://pypi.org/project/json5/]install json5.[/url]\n<br />[*]Run the script, specifying the path to mod folder with --path \"[folder]\"\n<br />[list]\n<br />[*]If you need any additional help, run [code]python portrait_patcher.py --help[/code], which explains all the options the script has to offer.\n<br />[/list][*]Ensure SMAPI, Content Patcher, and HD Portraits are installed in your Mods folder.\n<br />[*]You're done!\n<br />[/list]\n<br />Example:\n<br />[code]python portrait_patch.py --path \"D:/Games/Stardew Valley/Mods/[CP] HD 4K HDR Portraits\"[/code]\n<br />\n<br />[size=3][b]Internal Mode[/b]:[/size]\n<br />[list]\n<br />[*]What is Internal Mode?\n<br />[list]\n<br />[*]Internal mode is the default way the script runs, generating the relevant files inside the given mod folder.\n<br />[*]It modifies content.json (to add the appropriate targets) and manifest.json (to remove the PyTK dependency so the Content Pack can load), though both these files are backed up in the folder with the extension .bak in case you want to restore them.\n<br />[*]This is definitely the easiest way to do things — however, I would recommend you experiment with copy mode.\n<br />[/list][*]How do I use Internal Mode?[list]\n<br />[*] Internal mode is the default setting on the script, but can be manually specified with --mode internal.\n<br />[/list]\n<br />[/list]Example:\n<br />[code]python portrait_patch.py --mode internal --path \"D:/Games/Stardew Valley/Mods/[CP] Linus Tech Tips HD Portraits\"[/code]\n<br />\n<br />[size=3][b]Copy Mode (Advanced)[/b][/size]:\n<br />[list]\n<br />[*]What is Copy Mode?\n<br />[list]\n<br />[*]Rather than generating files inside the folder, copy mode generates all the new files inside a separate folder.\n<br />[*]This is useful if you're interested in just distributing the metadata files, or are using a mod manager like Mod Organizer 2 (strongly recommended!) which has a Virtual Filesystem and allow you to safely overwrite files without actually overwriting them while controlling file priority.\n<br />[*]It also keeps the original mod completely untouched.\n<br />[/list][*]How to use Copy Mode:\n<br />[list]\n<br />[*]Specify --mode copy while running the script.\n<br />[*]By default, this generates a folder inside the Content Pack folder called\u00A0\"Patched HD Portraits\". You should move this elsewhere.\n<br />[*]Alternatively, you can specify the directory where the files are generated with ---copy_dir \"[directory]\".\n<br />[/list][/list]\n<br />Example:\n<br />[code]python portrait_patch.py --mode copy --path \"D:/Modding/MO2StardewValley/Mods/4K HD Portraits\" --copy_dir \"D:/Modding/MO2StardewValley/Mods/HDPortraitPatch\"[/code]\n<br />\n<br />[size=4][b]DISCLAIMERS[/b]:[/size]\n<br />[list]\n<br />[*][size=2]The script was written with Python 3.10.4, and requires the json5 python library to be installed on your computer. Lower versions of python may work, but\u00A0YMMV. Please bug report!\u00A0[/size]\n<br />[*][size=2]As of 9/20/22, I am at college and have a rule not to game, so I cannot bug test, so please report and I will do their best to fix it.[/size]\n<br />[*]I have tested this on several HD Portrait Mods, but definitely not all of them. Please leave a bug report with the link to the specific portraits and I will take a look at them!\n<br />[*][size=2][size=2]If you are a mod author, and would like to use this tool to convert your mod, please reach out! I have a few ideas for potential optimizations to make, but would like to make sure that there is active interest.\u00A0[/size][/size]\n<br />[*][size=2]This script is licensed under GPL v3.0. Feel free to make modifications, granted you follow the terms of the license. I will eventually publish the script on GitHub for bug reports and pull requests — it is currently in a private repo on my personal github, in the interest of privacy I will likely transfer it to a new account and make it public.[/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13599",
+	"Version": "1.3.0",
+	"Updated": "2022-09-20T22:23:47+00:00",
+	"Downloads": [
+		{
+			"Id": 59689,
+			"Type": "Optional",
+			"DisplayName": "Marioguy28's Talkohlooeys Style Portraits for Boarding House - HDPatch",
+			"FileName": "Marioguy28's Talkohlooeys Style Portraits for Boarding House - HDPatch-13599-1-0-0-1662077161.zip",
+			"Description": "Marioguy28's incredible Talkohlooeys Style Portraits for Boarding House, converted for HD Portraits. Now as a Content Patcher Mod that does not need to overwrite any files. Please go support and endorse the artist!\n<br /><br /><br />@TalkohlooeysBoardingHouseHDP",
+			"Version": "1.0.0",
+			"SizeInBytes": 1626576,
+			"Uploaded": "2022-09-02T00:06:01+00:00",
+			"Mods": [
+				{
+					"Id": "TalkohlooeysBoardingHouseHDP",
+					"DisplayName": "Talkohlooeys Style Portraits for Boarding House - HDP Conversion",
+					"Type": "ContentPack",
+					"RelativePath": "Talkohlooeys Style Portraits for Boarding House - HDPatch\\[CP] Talkohlooeys Style Portraits for Boarding House",
+					"Manifest": {
+						"Name": "Talkohlooeys Style Portraits for Boarding House - HDP Conversion",
+						"Description": "Marioguy28's Talkohlooeys Style Portraits for Boarding House, converted for HDP",
+						"Author": "Marioguy28",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.14.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "CPBoardingHouse",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "STFBuffaloRanch",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "tlitookilakin.HDPortraits",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13599@TalkohlooeysBoardingHouseHDP"
+						],
+						"UniqueId": "TalkohlooeysBoardingHouseHDP",
+						"OtherFields": {
+							"PortedBy": "purplexpresso",
+							"GeneratedBy": "Generated by Portrait Patcher 1.3.0, by purplexpresso. Licensed under GPLv3."
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342446377,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 59691,
+			"Type": "Main",
+			"DisplayName": "HD Portrait Patcher",
+			"FileName": "HD Portrait Patcher-13599-1-3-0-1662077636.zip",
+			"Description": "Main Python Script. See main page on how to run.",
+			"Version": "1.3.0",
+			"SizeInBytes": 3551,
+			"Uploaded": "2022-09-02T00:13:56+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "59691",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342446379,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 60591,
+			"Type": "Optional",
+			"DisplayName": "lunakatt's DCBurger style portraits for (various) - HDPatch",
+			"FileName": "lunakatt's DCBurger style portraits for (various) - HDPatch-13599-1-0-0-1663712627.zip",
+			"Description": "lunakatt's amazing DCBurger style portraits for various mods, now converted into HD Portraits! See requirements for which mods were converted. Please go support and endorse the artist!",
+			"Version": "1.0.0",
+			"SizeInBytes": 33448,
+			"Uploaded": "2022-09-20T22:23:47+00:00",
+			"Mods": [
+				{
+					"Id": "lunakatt.lunakattsDCBurgerStylePortraitsforEastScarp-EastScarpe",
+					"DisplayName": "lunakatt's DCBurger Style Portraits for East Scarp (East Scarpe)",
+					"Type": "ContentPack",
+					"RelativePath": "lunakatt\\[CP] lunakatt's DCBurger style portraits for East Scarp (East Scarpe)",
+					"Manifest": {
+						"Name": "lunakatt's DCBurger Style Portraits for East Scarp (East Scarpe)",
+						"Description": "Portraits for East Scarp's NPCs in the style of DCBurger's Portrait Mod.",
+						"Author": "lunakatt",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "tlitookilakin.HDPortraits",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"9612"
+						],
+						"UniqueId": "lunakatt.lunakattsDCBurgerStylePortraitsforEastScarp-EastScarpe",
+						"OtherFields": {
+							"GeneratedBy": "Generated by Portrait Patcher 1.3.0, by purplexpresso. Licensed under GPLv3."
+						}
+					}
+				},
+				{
+					"Id": "lunakatt.lunakattsDCBurgerStylePortraitsforLifeCycle",
+					"DisplayName": "lunakatt's DCBurger Style Portraits for Life Cycle",
+					"Type": "ContentPack",
+					"RelativePath": "lunakatt\\[CP] lunakatt's DCBurger style portraits for Life Cycle",
+					"Manifest": {
+						"Name": "lunakatt's DCBurger Style Portraits for Life Cycle",
+						"Description": "Portraits for Life Cycle NPCs in the style of DCBurger's Portrait Mod.",
+						"Author": "lunakatt",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "tlitookilakin.HDPortraits",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"9225"
+						],
+						"UniqueId": "lunakatt.lunakattsDCBurgerStylePortraitsforLifeCycle",
+						"OtherFields": {
+							"GeneratedBy": "Generated by Portrait Patcher 1.3.0, by purplexpresso. Licensed under GPLv3."
+						}
+					}
+				},
+				{
+					"Id": "lunakatt.lunakattsDCBurgerStylePortraitsforSVE",
+					"DisplayName": "lunakatt's DCBurger Style Portraits for SVE",
+					"Type": "ContentPack",
+					"RelativePath": "lunakatt\\[CP] lunakatt's DCBurger style portraits for SVE",
+					"Manifest": {
+						"Name": "lunakatt's DCBurger Style Portraits for SVE",
+						"Description": "Portraits for Stardew Valley Expanded NPCs in the style of DCBurger's Portrait Mod.",
+						"Author": "lunakatt",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "tlitookilakin.HDPortraits",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"9029"
+						],
+						"UniqueId": "lunakatt.lunakattsDCBurgerStylePortraitsforSVE",
+						"OtherFields": {
+							"GeneratedBy": "Generated by Portrait Patcher 1.3.0, by purplexpresso. Licensed under GPLv3."
+						}
+					}
+				},
+				{
+					"Id": "lunakatt.lunakattsDCBurgerStylePortraitsforWilfordNPC",
+					"DisplayName": "lunakatt's DCBurger Style Portraits for Wilford NPC",
+					"Type": "ContentPack",
+					"RelativePath": "lunakatt\\[CP] lunakatt's DCBurger style portraits for Wilford NPC",
+					"Manifest": {
+						"Name": "lunakatt's DCBurger Style Portraits for Wilford NPC",
+						"Description": "Portraits for Wilford - New Custom NPC in the style of DCBurger's Portrait Mod.",
+						"Author": "lunakatt",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "tlitookilakin.HDPortraits",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"9141"
+						],
+						"UniqueId": "lunakatt.lunakattsDCBurgerStylePortraitsforWilfordNPC",
+						"OtherFields": {
+							"GeneratedBy": "Generated by Portrait Patcher 1.3.0, by purplexpresso. Licensed under GPLv3."
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342447279,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400287,
+		"UploaderId": 84382788,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

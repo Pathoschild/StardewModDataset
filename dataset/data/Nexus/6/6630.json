@@ -1,0 +1,109 @@
+{
+	"Site": "Nexus",
+	"Id": 6630,
+	"Name": "Custom Spouse Patio",
+	"Author": "aedenthorn",
+	"Description": "[b]Notice: this mod is now obsolete, please use [url=https://www.nexusmods.com/stardewvalley/mods/10889]Custom Spouse Patio Redux[/url]\uFEFF instead.[/b]\n<br />\n<br />\n<br />This mod was originally part of [url=https://www.nexusmods.com/stardewvalley/mods/6227]Multiple Spouses[/url], but it seems like it will be useful generally for any spouse, so I am moving it into this new mod (and making it better along the way!).\n<br />\n<br />This mod is a simple framework. It doesn't do anything by itself; you will have to create and install a content pack for it. Either that or bug your custom NPC spouse's creator to create a custom spouse patio content pack for their NPC.\n<br />\n<br />[b]There is now a [url=https://www.nexusmods.com/stardewvalley/mods/7775]Custom Spouse Patio Wizard[/url] that will allow you to create simple spouse patios without any knowledge of JSON. [/b]Install it as well as this mod, and follow the instructions on that mod page. The wizard will not allow you to make advanced customization, but once you've set up simple tilesheets with it, you can edit the json file after to tweak it as you like.\n<br />\n<br />[b]NOTE: If you want help with this mod, please  visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url]. I can't help you in the Nexus posts, it's too awkward.[/b]\n<br />\n<br />[size=5][b]Simple Usage[/b][/size]\n<br />\n<br />For a single vanilla spouse, you can adapt the example content pack in the [url=https://www.nexusmods.com/stardewvalley/mods/6630?tab=files]Files tab[/url]. Install this mod, install the content pack, then edit the content pack's[b] content.json[/b] file, which looks like this:\n<br />\n<br />\n<br />[code]\n<br />{\n<br />\u00A0\u00A0\u00A0 \"areas\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Emily\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 location: \n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"X\": 69,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Y\": 7\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"useDefaultTiles\": true,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"useTilesOf\": \"Emily\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 }\n<br />}\n<br />\n<br />[/code]\n<br />\n<br />This tells the mod to create a spouse area for Emily at tile 73,11, using her default patio area tiles. Just change the name and location coordinates to fit your spouse.\n<br />\n<br />[b]useTilesOf[/b] is an optional key that lets you specify a different set of default tiles to use. Just change this to some other VANILLA spouse's name.\n<br />\n<br />Vanilla spouse areas are 3x3 tiles, and \"location\" refers to the top left tile.\n<br />\n<br />You can also specify a custom NPC offset; you will have to do this for custom NPCs - vanilla spouses have default locations within the spouse area, but you can override them as well. Use [b]npcOffset[/b] with X and Y values, just like [b]location[/b] (see the example with Sophia below).\n<br />\n<br />To find tile coordinates, you can use [url=https://www.nexusmods.com/stardewvalley/mods/679]Debug Mode[/url]. You can check your json at [url=https://smapi.io/json]https://smapi.io/json[/url] \n<br />\n<br />\n<br />[size=5][b]Advanced Usage[/b][/size]\n<br />\n<br />For a more complex example, allowing for custom tiles, custom tile sheets, and multiple spouse patio areas take a look at the example content pack's [b]content_complex.json[/b] (replace the [b]content.json[/b] with it or just copy the contents over). That file has spouse areas for multiple spouses, including Sophia, and loads a custom tile sheet from a png:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"areas\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Emily\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 73,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 11\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"useDefaultTiles\": true,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"useTilesOf\": \"Emily\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Haley\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 74,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 7\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"useDefaultTiles\": true,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"useTilesOf\": \"Haley\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Sophia\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 77,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 11\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"useDefaultTiles\": false,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"specialTiles\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 77,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 12\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"layer\": \"Front\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tilesheet\": \"CustomTileSheet\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileIndex\": 0\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 77,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 13\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"layer\": \"Buildings\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tilesheet\": \"CustomTileSheet\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileIndex\": 4\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 78,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 13\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"layer\": \"Buildings\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tilesheet\": \"CustomTileSheet\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileIndex\": 6\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 79,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 13\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"layer\": \"Buildings\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tilesheet\": \"CustomTileSheet\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileIndex\": 7\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 80,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 12\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"layer\": \"Front\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tilesheet\": \"CustomTileSheet\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileIndex\": 1\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"location\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 80,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 13\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"layer\": \"Buildings\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tilesheet\": \"CustomTileSheet\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileIndex\": 5\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0],\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"npcOffset\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 2\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"npcAnimation\": \"Sophia_Farm1\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\"tileSheetsToAdd\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"CustomTileSheet\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"path\": \"assets/custom_tile_sheet.png\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"width\": 4,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"height\": 2,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileWidth\": 16,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"tileHeight\": 16\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0}\n<br />}\n<br />[/code]\n<br />\n<br />This tells the mod to do the following for Sophia:\n<br />\n<br />[list=1]\n<br />[*]create her spouse area at 77,11\n<br />\n<br />[*]don't use default tiles for her spouse area (she doesn't have any anyway),\n<br />\n<br />[*]add a list of special tiles at the given coordinates, on the given layer, using the given tile sheet name (see Custom Tile Sheets below)\n<br />\n<br />\n<br />[*]place Sophia at an offset from 77,11 of 1,2 (i.e. at 78,13)\n<br />\n<br />[*]play an animation from the animations list called \"Sophia_Farm1\" (this is an animation provided by SVE). \n<br />[/list]\n<br />Spouse areas will only show for NPCs married to the farmer, so there is no harm in creating a content pack for your NPC, in case the player marries them.\n<br />\n<br />\n<br />[size=5][b]Custom Tile Sheets[/b][/size]\n<br />\n<br />The above example also adds a custom tile sheet called \"CustomTileSheet\" from a custom png included in the content pack, allowing the addition of custom tile graphics.\n<br />\n<br />Custom tile sheets need to specify width and height in tiles, so this tile sheet is 64 pixes (4 x 16) wide and 32 pixels (2 x 16) tall. To refer to a tile index in a custom tile, count from left to right, starting at 0. So the tile indexes in the example tilesheet are:\n<br />\n<br />0 1 2 3\n<br />4 5 6 7\n<br />\n<br />You can take a look at the png file in the example content pack and compare it to Sophia's spouse area in the fall screenshot to understand more clearly.\n<br />\n<br />You can also use the [b]{season}[/b] tag in your tilesheet's path, e.g.\n<br />\n<br /> [b]\"path\": \"assets/custom_tile_sheet_{season}.png\",[/b]\n<br />\n<br />and then use four separate png files for the four seasons, i.e.:\n<br />\n<br />[b]assets/custom_tile_sheet_spring.png[/b]\n<br />[b]assets/custom_tile_sheet_summer.png[/b]\n<br />[b]assets/custom_tile_sheet_fall.png[/b]\n<br />[b]assets/custom_tile_sheet_winter.png[/b]\n<br />\n<br />\n<br />If you are using [url=https://www.nexusmods.com/stardewvalley/mods/6227]Multiple Spouses[/url], please use this mod as well, as I have removed this functionality from that mod in the latest version.\n<br />\n<br />\n<br />[size=5][b]Technical:[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6630",
+	"Version": "0.10.0",
+	"Updated": "2021-08-02T12:04:12+00:00",
+	"Downloads": [
+		{
+			"Id": 36340,
+			"Type": "Optional",
+			"DisplayName": "Custom Patio Example Content Pack",
+			"FileName": "Custom Patio Example Content Pack-6630-0-3-0-1611315620.zip",
+			"Description": "",
+			"Version": "0.3.0",
+			"SizeInBytes": 3738,
+			"Uploaded": "2021-01-22T11:40:20+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomPatioExample",
+					"DisplayName": "Custom Patio Example Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "[CSP] Custom Patio Example",
+					"Manifest": {
+						"Name": "Custom Patio Example Content Pack",
+						"Description": "Adds custom spouse patios.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.CustomSpousePatio",
+							"MinimumVersion": "0.1.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.CustomSpousePatio",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.CustomPatioExample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342423028,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 43542,
+			"Type": "Main",
+			"DisplayName": "Custom Spouse Patio",
+			"FileName": "Custom Spouse Patio-6630-0-10-0-1627905852.zip",
+			"Description": "Changes:\n<br /><br />Update for SMAPI 3.12",
+			"Version": "0.10.0",
+			"SizeInBytes": 24444,
+			"Uploaded": "2021-08-02T12:04:12+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomSpousePatio",
+					"DisplayName": "Custom Spouse Patio",
+					"Type": "Smapi",
+					"RelativePath": "CustomSpousePatio",
+					"Manifest": {
+						"Name": "Custom Spouse Patio",
+						"Description": "Lets you create a custom spouse patio.",
+						"Author": "aedenthorn",
+						"Version": "0.10.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "CustomSpousePatio.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6630"
+						],
+						"UniqueId": "aedenthorn.CustomSpousePatio",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomSpousePatio"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342430230,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393318,
+		"UploaderId": 18901754,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

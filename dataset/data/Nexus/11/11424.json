@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 11424,
+	"Name": "MinecartPatcher",
+	"Author": "vibrantruin",
+	"Description": "[i][b][size=5]MinecartPatcher[/size][/b][/i]\n<br />\n<br />\u00A0Need custom minecarts? Look no further!\n<br />\n<br />[size=4][b]Note for 1.6:[/b][/size]\n<br />Note that for 1.6, a similar behavior is built into the vanilla game. If your mod depends on this, when updating to 1.6, please use the new vanilla functionality (it's very similar, and will be better supported). Details here: [url=https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.6#Custom_minecarts]https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.6#Custom_minecarts[/url]\n<br />\u00A0\n<br />[size=4][b]What does it do?[/b][/size]\n<br />It replaces the minecart destination menu with a nearly identical clone, which operates based on simple content data. You can use content patcher to add new minecarts, or edit the vanilla minecarts.\n<br />[i][b]\n<br />Notably, while the mod doesn't require Content Patcher to run, it offers no features by itself beyond a reimplementation of the vanilla content with no real advantages.\u00A0 Content Patcher and other mods will be required to make this do anything interesting.[/b][/i]\n<br />\u00A0\n<br />[size=4][b]How does it work?[/b][/size]\n<br />It detects minecarts by checking the tile ids used. It then compares this to its list of defined minecarts, and if one exists, it treats it as that one, presenting the menu and excluding the currently selected cart from that list. \n<br />\n<br />[size=4][b]Does this work in multiplayer[/b][/size][size=4][b]?[/b][/size]\n<br />Yes.\n<br />\u00A0\n<br />[size=4][b]Does this work on Android[/b][/size][size=4][b]?[/b][/size]\n<br />Not at this time.\n<br />\u00A0\n<br />[size=4][b]Adding new minecarts[/b][/size]\n<br />You can add new minecarts just by placing the tiles- the tile ID checks will detect the new minecart. To make the mod service it, you'll need to add a content entry for it. Multiple minecarts on the same map should be at least 15 tiles apart. The landing point of a minecart must be within 5 tiles of the minecart itself to be detected properly. If your minecart does not provide a content entry, it will fallback to vanilla handling,\u00A0 meaning you can still create your own private networks of minecarts using other mods or techniques, and this mod should not interfere with them.\n<br />\u00A0\n<br />[b][size=4]Editing vanilla minecarts[/size][/b]\n<br />The vanilla minecarts have been reimplemented using content entries. The following keys pertain to the vanilla carts: \"minecartpatcher.busstop\", \"minecartpatcher.town\", \"minecartpatcher.mines\", and \"minecartpatcher.quarry\". They make use of an optional parameter, VanillaPassthrough, which causes the minecart to pass this string as a vanilla dialogue response key, triggering the game's native handling, e.g. \"Minecart_Bus\". If the VanillaPassthrough parameter is present, the LandingPoint and LocationName are ignored. You can edit those reimplementations and remove this parameter to relocate or otherwise tamper with the parameters of those vanilla minecarts.\n<br />\u00A0 \u00A0\n<br />[size=4][b]Example syntax to add a minecart with Content Patcher is as follows:\u00A0 [/b][/size]\n<br />\u00A0\n<br />[code]\u00A0{\n<br />    \"Format\": \"1.25.0\",\n<br />    \"Changes\": [\n<br />      \u00A0 {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"MinecartPatcher.Minecarts\",\n<br />            \"Entries\": {\n<br />                \"morecarts.islandnorth\": {\n<br />                  \u00A0 \"LocationName\": \"IslandNorth\",\n<br />                  \u00A0 \"DisplayName\": \"Island North\",\n<br />                  \u00A0 \"LandingPointX\": 19,\n<br />                  \u00A0 \"LandingPointY\": 13,\n<br />                  \u00A0 \"LandingPointDirection\": 2,\n<br />                  \u00A0 \"IsUnderground\": false\n<br />                }\n<br />            }\n<br />      \u00A0 }\n<br />    ]\n<br />\u00A0}\n<br />[/code] \n<br />\n<br />[b][size=4]Possible fields[/size][/b]\n<br />[list]\n<br />[*]\u00A0[b]LocationName [/b]- A string. The internal map Name, used to locate warp target. \u00A0\n<br />[*]\u00A0[b]DisplayName[/b] - A string. The display name that will appear in the destination selection menu. \u00A0\n<br />[*]\u00A0[b]LandingPointX[/b] - An integer, the x tile coordinate the player should arrive at. Needs to be within 5 tiles of the cart. \u00A0\n<br />[*]\u00A0[b]LandingPointY [/b]- An integer, the y tile coordinate the player should arrive at. Needs to be within 5 tiles of the cart. \u00A0\n<br />[*]\u00A0[b]LandingPointDirection [/b]- An integer, the direction id the player should arrive facing. \u00A0\n<br />[*]\u00A0[b]IsUnderground [/b]- A boolean. Causes the game to treat this like the mines, muting the music under certain circumstances. \u00A0\n<br />[*]\u00A0[b]MailCondition [/b]- A string.\u00A0 The mail flag ID to test for, e.g. \"ccCraftsRoom\" used for the vanilla Quarry cart. \u00A0\n<br />[*]\u00A0[b]VanillaPassthrough [/b]- A string. Instead of warping the player, it will pass this as a dialogue response to the vanilla handler. Used to reimplement vanilla carts in case other mods have changed their behavior. \u00A0\n<br />[*]\u00A0[b]NetworkId [/b]- A string. If not provided, this cart will connect to the vanilla network. If provided, it will only connect to other carts with the same NetworkId string. \u00A0\n<br />[/list]\n<br />\n<br />[b][left]Special thanks to the incredible CommieKazie for their contributions to the mod! \n<br />(1.2.0, fixing splitscreen co-op and deprecation warnings)[/left][/b]\n<br />\n<br />\n<br />\u00A0[b][size=4]License [/size][/b]\u00A0\n<br />\u00A0License is MIT. Go ham. Source is here: [url=https://github.com/bwdy/SDVModding/tree/main/MinecartPatcher]GitHub\n<br />\n<br />\n<br />[/url][center][url=https://github.com/bwdy/SDVModding/tree/main/MinecartPatcher][/url][url=https://mod.kitchen/][img]https://i.imgur.com/WW0XFoE.png[/img][/url][url=https://discord.gg/adCeFQK][img]https://i.imgur.com/2LRy8sr.png[/img][/url][/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11424",
+	"Version": "1.3.2",
+	"Updated": "2023-05-20T19:35:36+00:00",
+	"Downloads": [
+		{
+			"Id": 71275,
+			"Type": "Main",
+			"DisplayName": "MinecartPatcher",
+			"FileName": "MinecartPatcher-11424-1-3-2-1684611336.zip",
+			"Description": "Another pagination hotfix, this time for an unusual handling when there are exactly 2 carts.",
+			"Version": "1.3.2",
+			"SizeInBytes": 17191,
+			"Uploaded": "2023-05-20T19:35:36+00:00",
+			"Mods": [
+				{
+					"Id": "mod.kitchen.minecartpatcher",
+					"DisplayName": "MinecartPatcher",
+					"Type": "Smapi",
+					"RelativePath": "MinecartPatcher",
+					"Manifest": {
+						"Name": "MinecartPatcher",
+						"Description": "A library for patching Minecarts in Stardew Valley.",
+						"Author": "mod.kitchen",
+						"Version": "1.3.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "MinecartPatcher.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11424"
+						],
+						"UniqueId": "mod.kitchen.minecartpatcher"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342457963,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398112,
+		"UploaderId": 65566526,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

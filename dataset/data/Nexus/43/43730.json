@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 43730,
+	"Name": "Custom Visual Event Command",
+	"Author": "jangkup90",
+	"AuthorLabel": "jengza",
+	"Description": "[b][size=5]Custom Visual Event Command[/size][/b]\n<br />This is a framework mod for Stardew Valley that allows mod creators to easily add visual flair to their custom events. Whether you want to show a static CG image, a looping character animation, or a massive grid-based sprite sheet, this framework handles the heavy lifting.\n<br />\n<br />[b]Key Features[/b]\n<br />[list]\n<br />[*]Custom Event Commands: Introduces /ShowAnim and /StopAnim specifically designed for event scripting.\n<br />[*]Sprite-Sheet Animation Support: Animate characters, visual effects, or large CGs by providing a horizontal or grid-based sprite sheet.\n<br />[*]GPU-Friendly Grid Layouts: Bypass hardware texture size limits for long animations by reading frames from a 2D grid format.\n<br />[*]Pixel-Perfect Auto-Scaling: Automatically calculates the optimal scale to fit the player's screen size while maintaining the original aspect ratio without blurring.\n<br />[*]Content Patcher Integration: Seamlessly loads textures from the game's shared asset pipeline, allowing easy integration with Content Patcher.\n<br />[/list][b][size=4]Installation[/size][/b]\n<br />[list=1]\n<br />[*]Install the latest version of SMAPI.\n<br />\n<br />[*]Download this mod and extract the CustomVisualEventCommand folder into your Stardew Valley/Mods folder.\n<br />\n<br />[*]Launch the game using SMAPI.\n<br />\n<br />[/list][b][size=4]How to Use[/size][/b]\n<br />This framework provides easy-to-use commands that you can inject into any event script.\n<br />\n<br />[b]1. Show Image / Animation[/b]\n<br />Displays an image or plays a looping animation on the screen. The event script will continue running in the background while the image is displayed.\n<br />\n<br />Syntax:\n<br />[code]/ShowAnim [ImageTarget] [TotalFrames] [FrameDelayMs] [Columns][/code]\n<br />[list]\n<br />[*]ImageTarget (Required): The dictionary key/path to your image in the asset pipeline (e.g., MyModName_HeroSprite). Do not use forward slashes (/) in your target name, use underscores (_) instead.\n<br />[*]TotalFrames (Optional): The total number of frames in your sprite-sheet. Defaults to 1 (static image).\n<br />[*]FrameDelayMs (Optional): The delay between each animation frame in milliseconds. Defaults to 100.\n<br />[*]Columns (Optional): The number of columns in your sprite-sheet grid. If omitted, it defaults to the TotalFrames value (treating the image as a single horizontal row). Highly recommended for animations with many frames.\n<br />[/list]Example in Content Patcher:\n<br />[code]\"9999999/DayEvent\": \"none/1 1/farmer 1 1 2/ShowAnim MyName_CoolAnimation 60 100 6/pause 5000/StopAnim/end\"[/code]\n<br />\n<br />[b]2. Stop Animation[/b]\n<br />Removes the currently displayed image or animation from the screen.\n<br />\n<br />Syntax:\n<br />[code]/StopAnim[/code]\n<br />\n<br />[b]Console Commands[/b]\n<br />You can mock and test your visuals in real-time using the SMAPI console. You must load a save file and be in the game world to use this.\n<br />\n<br />Syntax:\n<br />[code]test_anim [ImageTarget] [TotalFrames] [FrameDelayMs] [Columns]\n<br />[/code]\n<br />\n<br />Example for a 60-frame grid animation:\n<br />\n<br />[code]test_anim MyName_CoolAnimation 60 100 6[/code]\n<br />This will trigger a mock cutscene, display your animation for 5 seconds, and then automatically end the event.\n<br />\n<br />Source Code :\u00A0[url=https://github.com/nattaphat010447/CustomVisualEventCommand]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43730",
+	"Version": "0.01A",
+	"Updated": "2026-03-16T09:02:43+00:00",
+	"Downloads": [
+		{
+			"Id": 160721,
+			"Type": "Main",
+			"DisplayName": "CustomVisualEventCommand",
+			"FileName": "CustomVisualEventCommand-43730-0-0-2-1773651763.zip",
+			"Description": "",
+			"Version": "0.0.2",
+			"SizeInBytes": 13300,
+			"Uploaded": "2026-03-16T09:02:43+00:00",
+			"Mods": [
+				{
+					"Id": "Jengza.CustomVisualEventCommand",
+					"DisplayName": "Custom Visual Event Command",
+					"Type": "Smapi",
+					"RelativePath": "CustomVisualEventCommand",
+					"Manifest": {
+						"Name": "Custom Visual Event Command",
+						"Description": "Adds custom event commands for rendering images and spritesheets.",
+						"Author": "Jengza",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomVisualEventCommand.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Jengza.CustomVisualEventCommand"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547409,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430418,
+		"UploaderId": 84732493,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

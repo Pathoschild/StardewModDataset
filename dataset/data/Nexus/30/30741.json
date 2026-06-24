@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 30741,
+	"Name": "Umbrellas",
+	"Author": "monsoonsheep",
+	"Description": "This mod allows for adding custom umbrellas for NPCs to carry. \n<br />It doesn't do anything on its own. [url=https://www.nexusmods.com/stardewvalley/mods/30785]Here's[/url] some of the umbrellas that I made!\uFEFF\n<br />\n<br />[color=#cfe2f3][size=4][b]Requirements[/b][/size][/color]\n<br />Content Patcher\n<br />\n<br />\n<br />[b][color=#c9daf8][size=5]For Mod Authors[/size][/color][color=#6d9eeb][size=5]\n<br />[/size][/color][/b]This mod does 2 things\n<br />- Overlay the umbrella texture on the NPC's sprite (it handles the bobbing up and down when walking)\n<br />- Edits the NPC's sprite, based on the content pack.\n<br />\n<br />With the umbrella model (added via CP), you can add edits to the NPC's sprite to move their hand to make it look like they're holding the umbrella.\n<br />These edits are in the form of Deletes and Copies. Each Delete is a rectangle to erase, and each Copy is a rectangle and a list of points to paste that rectangle onto.\n<br />\n<br />Typically you'd want to erase the parts where the umbrella-holding hand is not in the right place, and copy over the part of the sprite where that hand is in a position that it looks like it may be holding an umbrella and paste it to the other sprites.\n<br />\n<br />If you're making an umbrella for your NPC and you need help with this, message me on Discord at [b]monsoonsheep[/b] and I can help you out! (Sorry I'm not good at explaining the process here)\n<br />\n<br />[b][color=#c9daf8][size=4]Creating an Umbrella Model[/size][/color][/b]\n<br />If you want to make an umbrella model for an NPC, look at the models in the starter pack mod.\n<br />I recommend taking one of the models from my starter pack and going from there.\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/30785]Nexus - Monsoon's Umbrellas Starter Pack\n<br />[/url]\n<br />The umbrella texture is a 56 x 128 image. \n<br />There are 8 cells, 4 on the left and 4 on the right. Each cell is 28 wide and 32 high.\n<br />The left column is the sprites that will be drawn on top of the NPC and the right column are drawn behind.\n<br />The first row is for the character facing down, the second row for right, third for up, and fourth for left.\n<br />\n<br />Here's a guide image for it:\n<br />[img]https://raw.githubusercontent.com/monsoonsheep/StardewMods/e93fd034df7c3abe43cd1b2e45840701c7819bfc/Umbrellas/guide.png[/img]\n<br />\n<br />Adding a model is done through Content Patcher (CP) by targeting fields in the asset \uFEFF[code]Mods/MonsoonSheep.Umbrellas/Umbrellas[/code]\n<br />The key in each entry is the NPC's name (internal name), and the value is an object with the following properties:\n<br />[list]\n<br />[*]\"Texture\": Asset name of the texture to be used (You can use the InternalAssetName token to point to your file)\n<br />[*]\"Offset\": a vector2 indicating an offset for drawing the umbrella\n<br />[*]\"Deletes\": For editing the NPC's sprite, a list of rectangles that specify areas of the NPC's sprite to be replaced with transparent\n<br />[*]\"Copies\": For editing the NPC's sprite, a list of \"Copy\" objects specifying areas to be copy-pasted\n<br />[/list]\n<br />[color=#3d85c6]\n<br />[/color][color=#9fc5e8][size=4][b]JSON Examples:[/b][/size][/color]\n<br />[spoiler]\n<br />A copy is defined with a \"Source\" (Rectangle) and Targets (Array of Vector2's). For example:\n<br />[code]{\n<br />            \u00A0 \"Source\": {\n<br />                \"X\": 58,\n<br />                \"Y\": 25,\n<br />                \"Width\": 4,\n<br />                \"Height\": 3\n<br />            \u00A0 },\n<br />            \u00A0 \"Targets\": [\n<br />                {\n<br />                  \"X\": 57,\n<br />                  \"Y\": 24\n<br />                },\n<br />      \uFEFF   \uFEFF   \uFEFF\u00A0\u00A0\u00A0 \uFEFF{\n<br />                  \"X\": 41,\n<br />                  \"Y\": 23\n<br />                }\n<br />}\n<br />[/code]\n<br />So a full content patcher pack would look like this\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.4.0\",\n<br />\u00A0 \"Changes\": \n<br />\u00A0 [\n<br />    {\n<br />      \"Action\": \"EditData\",\n<br />      \"Target\": \"Mods/MonsoonSheep.Umbrellas/Umbrellas\",\n<br />      \"Entries\": \n<br />      {\n<br />      \u00A0 \"Abigail\": {\n<br />          \"Texture\": \"{{InternalAssetKey: abigail.png}}\",\n<br />\n<br />          \"Deletes\": [\n<br />            {\n<br />            \u00A0 \"X\": 12,\n<br />            \u00A0 \"Y\": 21,\n<br />            \u00A0 \"Width\": 3,\n<br />            \u00A0 \"Height\": 5\n<br />            },\n<br />            {\n<br />            \u00A0 \"X\": 34,\n<br />            \u00A0 \"Y\": 86,\n<br />            \u00A0 \"Width\": 2,\n<br />            \u00A0 \"Height\": 4\n<br />            }\n<br />          ],\n<br />\n<br />          \"Copies\": [\n<br />            {\n<br />            \u00A0 \"Source\": {\n<br />                \"X\": 58,\n<br />                \"Y\": 21,\n<br />                \"Width\": 4,\n<br />                \"Height\": 6\n<br />            \u00A0 },\n<br />            \u00A0 \"Targets\": [\n<br />                {\n<br />                  \"X\": 10,\n<br />                  \"Y\": 21\n<br />                },\n<br />                {\n<br />                  \"X\": 26,\n<br />                  \"Y\": 22\n<br />                }\n<br />            \u00A0 ]\n<br />            },\n<br />            {\n<br />            \u00A0 \"Source\": {\n<br />                \"X\": 27,\n<br />                \"Y\": 54,\n<br />                \"Width\": 3,\n<br />                \"Height\": 4\n<br />            \u00A0 },\n<br />            \u00A0 \"Targets\": [\n<br />                {\n<br />                  \"X\": 11,\n<br />                  \"Y\": 53,\n<br />                }\n<br />            \u00A0 ]\n<br />   \uFEFF   \uFEFF   \uFEFF\u00A0\u00A0 }\n<br />          ]\n<br />      \u00A0 }\n<br />      }\n<br />    }\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />[/spoiler]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30741",
+	"Version": "1.0.0",
+	"Updated": "2025-01-11T17:54:16+00:00",
+	"Downloads": [
+		{
+			"Id": 121950,
+			"Type": "Main",
+			"DisplayName": "Main File",
+			"FileName": "Main File-30741-1-0-0-1736618056.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 16646,
+			"Uploaded": "2025-01-11T17:54:16+00:00",
+			"Mods": [
+				{
+					"Id": "MonsoonSheep.Umbrellas",
+					"DisplayName": "Umbrellas",
+					"Type": "Smapi",
+					"RelativePath": "Umbrellas",
+					"Manifest": {
+						"Name": "Umbrellas",
+						"Description": "NPCs can carry umbrellas! You can make unique umbrellas for characters.",
+						"Author": "MonsoonSheep",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.7",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "Umbrellas.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.12.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:30741"
+						],
+						"UniqueId": "MonsoonSheep.Umbrellas",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342508638,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342417429,
+		"UploaderId": 179694711,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 45182,
+	"Name": "Fishing Streak",
+	"Author": "DrSkyhook",
+	"Description": "[heading]Description[/heading]\n<br />Catch fish consecutively to build a streak and earn rewards at milestone thresholds.\n<br />Fishing Streak adds a lightweight progression system to fishing, with balanced rewards that enhance gameplay without breaking immersion.\n<br />[line]\n<br />[heading]Customization (Rewards Configuration)[/heading]\n<br />All rewards are customizable through:\n<br />Mods/FishingStreak/Data/rewards.user.json\n<br />You can change:\n<br />[list]\n<br />[*]Which streaks give rewards (3, 5, 10, etc.)[/*]\n<br />[*]The chance to receive a reward[/*]\n<br />[*]Category weights (Utility, Materials, Treasure)[/*]\n<br />[*]The items that can drop[/*]\n<br />[*]Stack sizes and drop frequency[/*]\n<br />[/list][line]\n<br />[heading]Adding or Editing Rewards[/heading]\n<br />Rewards are defined using item IDs.\n<br />Example:\n<br />[code]{\n<br />\u00A0 \"QualifiedItemId\": \"(O)166\",\n<br />\u00A0 \"MinStack\": 1,\n<br />\u00A0 \"MaxStack\": 1,\n<br />\u00A0 \"Weight\": 100\n<br />}[/code][list]\n<br />[*][b]QualifiedItemId[/b] → the item (e.g. \n<br />[code](O)166[/code]= Treasure Chest)[/*]\n<br />[*][b]MinStack / MaxStack[/b] → how many you get[/*]\n<br />[*][b]Weight[/b] → how common the item is (higher = more likely)[/*]\n<br />[/list]Lower weight = rarer drop.\n<br />[line]\n<br />[heading]Example: Guaranteed Treasure at Streak 3[/heading]\n<br />[code]\"3\": {\n<br />\u00A0 \"RewardChancePercent\": 100,\n<br />\u00A0 \"UtilityWeight\": 0,\n<br />\u00A0 \"MaterialsWeight\": 0,\n<br />\u00A0 \"TreasureWeight\": 100\n<br />}[/code]This makes streak 3 always give a Treasure reward.\n<br />[line]\n<br />[heading]Mod Compatibility[/heading]\n<br />This mod may work with items from other mods, as long as they use valid item IDs.\n<br />If a reward does not appear, double-check the item ID.\n<br />[line]\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*]SMAPI (latest version)[/*]\n<br />[*]No additional mods required[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45182",
+	"Version": "1",
+	"Updated": "2026-04-20T15:37:32+00:00",
+	"Downloads": [
+		{
+			"Id": 165020,
+			"Type": "Main",
+			"DisplayName": "FishingStreak",
+			"FileName": "FishingStreak-45182-1-0-1-1776699452.zip",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 26398,
+			"Uploaded": "2026-04-20T15:37:32+00:00",
+			"Mods": [
+				{
+					"Id": "DrSkyhook.FishingStreak",
+					"DisplayName": "Fishing Streak",
+					"Type": "Smapi",
+					"RelativePath": "FishingStreak_RELEASE\\FishingStreak",
+					"Manifest": {
+						"Name": "Fishing Streak",
+						"Description": "Catch fish consecutively to build a streak and earn rewards at milestone thresholds. Features fully customizable loot tables with utility, materials, and treasure categories.",
+						"Author": "DrSkyhook",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FishingStreak.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:45182"
+						],
+						"UniqueId": "DrSkyhook.FishingStreak"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342551708,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431870,
+		"UploaderId": 5232228,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}

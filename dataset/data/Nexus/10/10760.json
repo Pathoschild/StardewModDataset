@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 10760,
+	"Name": "Custom Tree Tweaks",
+	"Author": "aedenthorn",
+	"Description": "This mod aims to tweak all things tree.\n<br />\n<br />It has two main functions:\n<br />\n<br />[list]\n<br />[*]it opens up the tree loot system for custom configuration\n<br />[*]it allows trees to grow beyond their maximum size.\n<br />[/list]\n<br />\n<br />[size=5][b]Loot[/b][/size]\n<br />\n<br />Tree loot is a bit complex, so there are several types of loot a tree might drop. \n<br />\n<br />Each type can be set to any item you like, but they are affected specially as follows:\n<br />\n<br />[list]\n<br />[*]wood - amount affected by luck and skills\n<br />[*]sap - dropped specially when a stump is destroyed by non-farmer means\n<br />[*]hardwood - affected by skills and chance\n<br />[*]items - not affected specially, dropped as specified in the json file.\n<br />[/list]\n<br />For each tree type (1-8), you can specify lists of items for each of the above categories both for stumps and trees separately.\n<br />\n<br />The mod is set up by default to mimic the vanilla behaviour for loot dropping, but you can tweak all the values by editing the assets/default.json file as you like.\n<br />\n<br />Alternatively, and more properly, you can override any of the entries in default.json using [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]. The dictionary path to edit is [b]tree_tweaks_dictionary[/b], and the syntax of the dictionary is as follows:\n<br />\n<br />[code]{\n<br />\u00A0 \"1\": {\n<br />    \"stumpWood\": [ { \"id\": \"388\" } ],\n<br />    \"stumpSap\": [ { \"id\": \"92\" } ],\n<br />    \"stumpHardwood\": [],\n<br />    \"stumpItems\": [],\n<br />    \"wood\": [\n<br />      {\n<br />      \u00A0 \"id\": \"388\",\n<br />      \u00A0 \"min\": \"12\",\n<br />      \u00A0 \"max\": \"12\"\n<br />      }\n<br />    ],\n<br />    \"sap\": [\n<br />      {\n<br />      \u00A0 \"id\": \"92\",\n<br />      \u00A0 \"min\": 5,\n<br />      \u00A0 \"max\": 5\n<br />      }\n<br />    ],\n<br />    \"hardwood\": [\n<br />      {\n<br />      \u00A0 \"id\": \"709\",\n<br />      \u00A0 \"min\": 0,\n<br />      \u00A0 \"max\": 0\n<br />      }\n<br />    ],\n<br />    \"items\": [\n<br />      {\n<br />      \u00A0 \"id\": \"309\",\n<br />      \u00A0 \"min\": 1,\n<br />      \u00A0 \"max\": 2\n<br />      }\n<br />    ]\n<br />\u00A0 },\n<br />}[/code]\n<br />\n<br />Entry keys refer to tree type, as follows:\n<br />\n<br />[list=1]\n<br />[*]Oak\n<br />[*]Maple\n<br />[*]Pine\n<br />[*]Winter Tree 1\n<br />[*]Winter Tree 2\n<br />[*]Palm Tree\n<br />[*]Mushroom Tree\n<br />[*]Mahogany Tree\n<br />[/list]\n<br />Each entry can have up to ten sub keys as shown above. For each of the ten keys, the value is a list of item data entries.\n<br />\n<br />Each item data entry can have the following fields:\n<br />\n<br />[list]\n<br />[*]id - the item to drop, can be index or name, should support JA and DGA names\n<br />[*]min - minimum base amount to drop (default 1)\n<br />[*]max - maximum base amount to drop (default 1)\n<br />[*]minQuality - minimum quality item to drop (default 0)\n<br />[*]maxQuality - maximum quality item to drop (default 0)\n<br />[*]mult - final multiplier to multiply loot by (default 1)\n<br />[*]chance - percent chance to drop (default 100)\n<br />[/list]\n<br />An example Content Patcher content.json that makes oak trees output a lot of wood is as follows:\n<br />\n<br />[code]{\n<br />   \u00A0\"Format\": \"1.23.0\",\n<br />   \u00A0\"Changes\": [\n<br />       \u00A0{\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"tree_tweaks_dictionary\",\n<br />            \"Entries\": {\n<br />               \u00A0\"1\": {\n<br />                   \u00A0\"stumpWood\": [\n<br />                        {\n<br />                           \u00A0\"id\": \"388\"\n<br />                        }\n<br />                   \u00A0],\n<br />                   \u00A0\"stumpSap\": [\n<br />                        {\n<br />                           \u00A0\"id\": \"92\"\n<br />                        }\n<br />                   \u00A0],\n<br />                   \u00A0\"stumpHardwood\": [],\n<br />                   \u00A0\"stumpItems\": [],\n<br />                   \u00A0\"wood\": [\n<br />                        {\n<br />                           \u00A0\"id\": \"388\",\n<br />                           \u00A0\"min\": \"120\",\n<br />                           \u00A0\"max\": \"120\"\n<br />                        }\n<br />                   \u00A0],\n<br />                   \u00A0\"sap\": [\n<br />                        {\n<br />                           \u00A0\"id\": \"92\",\n<br />                           \u00A0\"min\": 5,\n<br />                           \u00A0\"max\": 5\n<br />                        }\n<br />                   \u00A0],\n<br />                   \u00A0\"hardwood\": [\n<br />                        {\n<br />                           \u00A0\"id\": \"709\",\n<br />                           \u00A0\"min\": 100,\n<br />                           \u00A0\"max\": 100\n<br />                        }\n<br />                   \u00A0],\n<br />                   \u00A0\"items\": [\n<br />                        {\n<br />                           \u00A0\"id\": \"309\",\n<br />                           \u00A0\"min\": 10,\n<br />                           \u00A0\"max\": 20\n<br />                        }\n<br />                   \u00A0]\n<br />               \u00A0}\n<br />            }\n<br />       \u00A0}\n<br />   \u00A0]\n<br />}[/code]\n<br />\n<br />[size=5][b]Tree Size[/b][/size]\n<br />\n<br />By default this mod increases a tree's size by 0.1% per day once it is fully grown. \n<br />\n<br />By default, oversized trees also produce 0.1% more loot per day over fully grown when chopped down.\n<br />\n<br />By default, maximum days oversized is 100.\n<br />\n<br />You can edit the above variables using [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF, or editing the [b]config.json[/b] file.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10760",
+	"Version": "0.1.1",
+	"Updated": "2022-04-01T11:37:39+00:00",
+	"Downloads": [
+		{
+			"Id": 52671,
+			"Type": "Main",
+			"DisplayName": "Custom Tree Tweaks",
+			"FileName": "Custom Tree Tweaks-10760-0-1-2-1648813059.zip",
+			"Description": "Changes:\n<br /><br />transpiler fix",
+			"Version": "0.1.2",
+			"SizeInBytes": 25179,
+			"Uploaded": "2022-04-01T11:37:39+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.TreeTweaks",
+					"DisplayName": "Tree Tweaks",
+					"Type": "Smapi",
+					"RelativePath": "TreeTweaks",
+					"Manifest": {
+						"Name": "Tree Tweaks",
+						"Description": "Tree Tweaks.",
+						"Author": "aedenthorn",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "TreeTweaks.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10760"
+						],
+						"UniqueId": "aedenthorn.TreeTweaks",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "TreeTweaks"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342439359,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397448,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

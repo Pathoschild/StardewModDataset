@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 4202,
+	"Name": "Reasonable Sheds",
+	"Author": "MaienM",
+	"Description": "The shed is balanced strangely. Once you reach the point where you want to maximize the available space, you're better of building barns. This mods attempts to make the shed more useful and balanced by making it slightly larger, without ruining the intended balance. It does this by increasing the internal size from 11x9 to 13x12. \n<br />\n<br />[size=5]Reasoning\n<br />[/size]The chosen size is not random. It is based on the idea that the shed should be the most efficient way to use the space on your farm if all you care about is... well, space. Read on for the details.\n<br />\n<br />[spoiler]Here is an outline of the various buildings:\n<br />[code]\n<br />Building\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Size on map\u00A0 \u00A0 \u00A0 Size internally\u00A0 \u00A0 \u00A0 Ratio\n<br />Shed\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A021\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A099\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A04.71\n<br />Barn\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 28\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0139\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 4.96\n<br />Big barn\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 28\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0177\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 6.32\n<br />Deluxe barn\u00A0 \u00A0 \u00A0 \u00A028\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0207\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 7.39\n<br />Coop\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 18\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A049\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A02.72\n<br />Big coop\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 18\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A066\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A03.67\n<br />Deluxe coop\u00A0 \u00A0 \u00A0 \u00A018\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0100\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 5.56\n<br />[/code]\n<br />Size on map is the amount of squares used on the farm map (width * height)\n<br />\n<br />Size internally is the amount of squares inside the building that you can actually place things on. Squares that are in use by unmovable decoration/machines (for example, the food parts in the animal buildings) are not counted.\n<br />\n<br />Ratio is just size internally / size on map. This represent how efficient a building is at providing more space.\n<br />\n<br />My assumption in re-balancing the shed is that it should be the most efficient at increasing the amount of usable squares. This is, after all, the sole purpose of the building. The most efficient building in the base game is the Deluxe Barn, providing 7.39 times the amount of used squares. My goal was to roughly match this. \n<br />\n<br />After playing around with various sizes, I settled on 13x12, which results in an inner size of 156 squares, and a ratio of 7.43. This makes the shed marginally better than the deluxe barn, at a lower cost (which seems fair, considering it contains none of the facilities the barn has).\n<br />[/spoiler]\n<br />\n<br />[size=5]Configuration\n<br />[/size]By default, the cost of the shed will not be changed. By editing the config file (which is created after the first run), you can increase or decrease the cost.\n<br />\n<br />[code]\uFEFF{\n<br />   \"Price\": \"15000\",\n<br />   \"Materials\": \"388 300\"\n<br />}\n<br />[/code]\n<br />[code]\uFEFFPrice\u00A0[/code]is the amount of gold required to build the shed.\n<br />\n<br />[code]Materials[/code]\u00A0is a list of material ids and amounts. The first item if the material id, the second one the amount required of that material, the third the next material id, and so on. An example:\n<br />\n<br />[code]388 300 390 100 709 50[/code]\n<br />\n<br />This is 300 times item 388 (wood), 100 times item 390 (stone), and 50 times item 709 (hardwood).",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4202",
+	"Version": "1.1.0",
+	"Updated": "2019-07-14T18:15:22+00:00",
+	"Downloads": [
+		{
+			"Id": 17934,
+			"Type": "Main",
+			"DisplayName": "Reasonable Sheds",
+			"FileName": "Reasonable Sheds-4202-1-1-0-1563128122.zip",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 1833,
+			"Uploaded": "2019-07-14T18:15:22+00:00",
+			"Mods": [
+				{
+					"Id": "maienm.reasonablesheds",
+					"DisplayName": "Reasonable Sheds",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Reasonable Sheds",
+					"Manifest": {
+						"Name": "Reasonable Sheds",
+						"Description": "A larger shed interior that makes it a viable option, in a balanced manner.",
+						"Author": "MaienM",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "2.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4202"
+						],
+						"UniqueId": "maienm.reasonablesheds"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342404622,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390890,
+		"UploaderId": 6392240,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

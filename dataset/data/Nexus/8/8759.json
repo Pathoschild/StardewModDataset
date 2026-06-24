@@ -1,0 +1,120 @@
+{
+	"Site": "Nexus",
+	"Id": 8759,
+	"Name": "24-Hour Clock Patcher",
+	"Author": "pepoluan",
+	"Description": "[font=Trebuchet MS][color=#ffff00][size=3][b]100% of Donation Points (DP) for this mod goes to Doctors without Borders (Médecins sans Frontières)[/b][/size][/color][/font]\n<br />\n<br />There are several 24-hour clock mods available in Nexus.\n<br />\n<br />Some don't work, the others work but causes UI glitches.\n<br />\n<br />This one ... [i][b]simply works.\n<br />\n<br />[/b][/i]It works [u]NOT[/u] by drawing over the HUD elements (the cause behind the aforementioned UI glitches), but by directly patching the game code (using the [i][b]Harmony[/b][/i] framework) where time-formatting is performed.\n<br />\n<br />(Surprise, surprise: The game actually _can_ emit 24-hour clock ... it's just that \"en\" localization is hardcoded to use the archaic \"am/pm\" notation. I took out the whole time-localization code, making the time to be emitted as 'unlocalized' 24-hour notation.)\n<br />\n<br />[b]Important Note:[/b] This mod changes [u][i]mainly[/i][/u] the clock on top right; it also patches [b][font=Courier New]Game1.getTimeOfDayString()[/font][/b] function, but whether the time in texts changes or not totally depends on the text's template.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Installation[/size][/font][/b]\n<br />[list=1]\n<br />[*]Install latest SMAPI\n<br />[*]Download &amp; extract this mod into the \"Mods\" directory\n<br />\n<br />[*]. . .\n<br />[*]Profit!\n<br />[/list]\n<br />\n<br />[b][font=Trebuchet MS][size=5]Customization[/size][/font][/b]\n<br />Nothing. Nada. Zilch. Rien.\n<br />\n<br />Turn it on and that's it. You cannot customize.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Compatibility[/size][/font][/b]\n<br />[i]Very likely[/i] will not be compatible with mods patching the [font=Courier New]StardewValley.Menus.DayTimeMoneyBox.draw[/font] method.\n<br />\n<br />[i]Might[/i] not be compatible with mods patching the [font=Courier New]Game1.getTimeOfDayString()[/font] function.\n<br />\n<br />If you find an incompatible mod, please tell me, so I can coordinate with the conflicting mod's maker for a solution.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Source Code[/size][/font][/b]\n<br />[url=https://sourceforge.net/projects/sdvmod-24h-harmony/]Available on SourceForge.[/url] It is released under the [b]MPL-2.0[/b] license.\n<br />\n<br />Please do not ask me to move it to GitHub; that will never happen.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8759",
+	"Version": "0.3.1",
+	"Updated": "2021-05-24T13:05:27+00:00",
+	"Downloads": [
+		{
+			"Id": 41414,
+			"Type": "Main",
+			"DisplayName": "24H_Clock_Patcher 0.2.0",
+			"FileName": "24H_Clock_Patcher-8759-0-2-0-1621666024.zip",
+			"Description": "Better performance",
+			"Version": "0.2.0",
+			"SizeInBytes": 20430,
+			"Uploaded": "2021-05-22T06:47:04+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.24h",
+					"DisplayName": "24-Hour Clock Harmony",
+					"Type": "Smapi",
+					"RelativePath": "24H-Harmony",
+					"Manifest": {
+						"Name": "24-Hour Clock Harmony",
+						"Description": "Replace clock with 24-hour one, using harmony framework",
+						"Author": "pepoluan",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "24H-Harmony.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8759"
+						],
+						"UniqueId": "pepoluan.24h",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/projects/sdvmod-24h-harmony/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"0.0.2": "Metadata fixening",
+								"0.0.3": "No longer overloads == and !=, more metadata fixening, apply MPL-2.0",
+								"0.0.4": "More informative ModEntry.Entry",
+								"0.0.5": "Removal of disassembly artefacts",
+								"0.1.0": "Also patches getTimeOfDayString, and LOTS of internal improvements",
+								"0.2.0": "LOTS of internal optimization"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428102,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 41461,
+			"Type": "Main",
+			"DisplayName": "24H_Clock_Patcher 0.3.1",
+			"FileName": "24H_Clock_Patcher 0.3.1-8759-0-3-1-1621861527.zip",
+			"Description": "Use a (hopefully) more robust patching strategy. IF YOU EXPERIENCE PROBLEMS PLEASE USE v0.2.0",
+			"Version": "0.3.1",
+			"SizeInBytes": 20945,
+			"Uploaded": "2021-05-24T13:05:27+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.24h",
+					"DisplayName": "24-Hour Clock Harmony",
+					"Type": "Smapi",
+					"RelativePath": "24H-Harmony",
+					"Manifest": {
+						"Name": "24-Hour Clock Harmony",
+						"Description": "Replace clock with 24-hour one, using harmony framework",
+						"Author": "pepoluan",
+						"Version": "0.3.1",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "24H-Harmony.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8759"
+						],
+						"UniqueId": "pepoluan.24h",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/projects/sdvmod-24h-harmony/",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.0.1": "Proof of concept",
+								"0.0.2": "Metadata fixening",
+								"0.0.3": "No longer overloads == and !=, more metadata fixening, apply MPL-2.0",
+								"0.0.4": "More informative ModEntry.Entry",
+								"0.0.5": "Removal of disassembly artefacts",
+								"0.1.0": "Also patches getTimeOfDayString, and LOTS of internal improvements",
+								"0.2.0": "LOTS of internal optimization",
+								"0.2.1": "Remove dead/unreachable code",
+								"0.2.2": "Simplify ModEntry",
+								"0.3.0": "Use more robust patching",
+								"0.3.1": "Internal optimizations"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428149,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395447,
+		"UploaderId": 27024274,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 19931,
+	"Name": "In-Game Profit Calculator",
+	"Author": "6135",
+	"Description": "[size=5][b]Profit Calculator[/b]\n<br />[/size]\n<br />\n<br />This is a simple profit calculator that calculates the profit of a product based on the cost of buying the seed, selling price and the number of units sold and their quality. Provides the ability to select whether the user wants to buy seeds or fertilizer and the quality of said fertilizer. The user can select the day of the season and the season itself. Works for Modded crops.\n<br />\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url]\n<br />[*] Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]. Optional but recommended to allow for more customization of settings.\n<br />[*]Drag and drop the contents of the provided .zip files into the mods folder in the StardewValley game folder, or install using nexus\n<br />[*] Run the game using SMAPI.\n<br />[*] Press \"F8\" to open the calculator. This can be changed in the config file or in the Generic Config Menu.\n<br />[/list]\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />The config file is located in \"[b]Stardew Valley/Mods/ProfitCalculator/config.json[/b]\". It allows you to change the keybind to open the calculator and the time for the tooltip to appear.\n<br />[size=4]\n<br />\n<br />[b]Seed Price Override[/b][/size]\n<br />\n<br />\n<br />The mod will automatically calculate the seed price based on shop stock. However, if you want to override the seed price, you can do so by adding a [b]\"price\"[/b] to the [b]\"SeedPrices.json\"[/b] file in the [b]\"assets\"[/b] folder. The [b]\"price\"[/b] field should be a number. For example, if you want to override the seed price for the potato crop, you would add the following to the [b]\"SeedPrices.json\"[/b] file:\n<br />[code]\n<br />{\n<br />  //\"SeedID\": \"price\"\n<br />  \"475\": 50\n<br />}\n<br />[/code]\n<br />[size=4]\n<br />[b]Manual Crops[/b][/size]\n<br />\n<br />If you want to add a crop that is not in the game, you can do so by adding a [b]\"crop\"[/b] to the [b]\"ManualCrops.json\"[/b] file in the [b]\"assets\"[/b] folder. The [b]\"crop\"[/b] field should be an object with the following fields (this example is for the tea bush crop):\n<br />[code]{\n<br />\u00A0 \"215\": {\n<br />\u00A0\u00A0\u00A0 \"Name\": \"Tea Leaves\", // Name\n<br />\u00A0\u00A0\u00A0 \"HarvestID\": 815, // Harvest ID (Id of item that drops)\n<br />\u00A0\u00A0\u00A0 \"GrowthTime\": 20, //growth time\n<br />\u00A0\u00A0\u00A0 \"RegrowthTime\": 1, //regrowth time\n<br />\u00A0\u00A0\u00A0 \"Seasons\": \"spring summer fall\", //seasons\n<br />\u00A0\u00A0\u00A0 \"SalePrice\": 50, //sale price\n<br />\u00A0\u00A0\u00A0 \"PurchasePrice\": 1500, //purchase price\n<br />\u00A0\u00A0\u00A0 \"MinimumHarvests\": 1, //min harvest\n<br />\u00A0\u00A0\u00A0 \"MaximumHarvests\": 1, //max harvest\n<br />\u00A0\u00A0\u00A0 \"MaxHarvestsIncreasePerFarmingLevel\": 0, //max harvest increase per farming level\n<br />\u00A0\u00A0\u00A0 \"ExtraHarvestChance\": 0.0, //chance for extra harvest\n<br />\u00A0\u00A0\u00A0 \"HasQuality\": false, //affected by quality\n<br />\u00A0\u00A0\u00A0 \"AcceptsFertilizer\": false, //affected by fertilizer\n<br />\u00A0\u00A0\u00A0 \"IsRaisedCrop\": false, //raised crop\n<br />\u00A0\u00A0\u00A0 \"IsBushCrop\": true, //bush crop\n<br />\u00A0\u00A0\u00A0 \"IsPaddyCrop\": false, //paddy crop\n<br />\u00A0\u00A0\u00A0 \"IsGiantCrop\": false //giant crop\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />[size=4]\n<br />[b]Know Issues[/b][/size]\n<br />\n<br />\n<br />[list=1][*]The mod does not take into account the luck based chances of getting extra items.\n<br />[*]Some extra large text may be too small to read. This is because the mod lowers the size of huge text to make it fit in the crop box. If you notice this, please let me know which crop it is and from which mod it is from so I can figure out a proper fix.\n<br />[*]When changing the scale of the game, the main options menu will be scaled but the options will be in the original positions, to fix this you need to close and reopen the options menu. \n<br />[/list]\n<br />[size=3]\n<br />[b]TODO:[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]☑ Add support for Vanilla crops.\n<br />[*]☑ Take Fertilizer into account.\n<br />[*]☑ Take Quality into account.\n<br />[*]☐ Add proper scaling support for options menu.\n<br />[*]☑ Obtain Seed prices from stores\n<br />[*]☑ Add support to multi-drop crops.\n<br />[*]☑ Add support for fruit trees.\n<br />[*]☐ Add options to disable cross season crops.\n<br />[*]☐ Add Support for different types of output. (i.e. Jelly, Wine, Juice, etc.)\n<br />[*]☐ Possibly add easier ways to add manual crops and seed prices maybe through a config menu or command.\n<br />[/list]\n<br />[size=4][b]See also\n<br />\n<br />[/b][/size][list]\n<br />[*][url=https://github.com/6135/StardewValley.ProfitCalculator]Source Code[/url]\n<br />\uFEFF[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19931",
+	"Version": "1.3.2",
+	"Updated": "2025-01-14T23:15:21+00:00",
+	"Downloads": [
+		{
+			"Id": 99620,
+			"Type": "Optional",
+			"DisplayName": "Profit Calculator Vintage",
+			"FileName": "Profit Calculator Vintage-19931-1-0-0-1715963099.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 1242,
+			"Uploaded": "2024-05-17T16:24:59+00:00",
+			"Mods": [
+				{
+					"Id": "6135.ProfitCalculatorVintage",
+					"DisplayName": "Profit Calculator Vintage",
+					"Type": "Invalid",
+					"RelativePath": "ProfitCalculator",
+					"Manifest": {
+						"Name": "Profit Calculator Vintage",
+						"Description": "Vintange Profit Calculator",
+						"Author": "6135",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"Dependencies": [
+							{
+								"UniqueId": "6135.ProfitCalculator",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "6135.ProfitCalculatorVintage"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486308,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 122348,
+			"Type": "Main",
+			"DisplayName": "Profit Calculator 1.3.2",
+			"FileName": "Profit Calculator 1.3.2-19931-1-3-2-1736896521.zip",
+			"Description": "Main mod file.",
+			"Version": "1.3.2",
+			"SizeInBytes": 75477,
+			"Uploaded": "2025-01-14T23:15:21+00:00",
+			"Mods": [
+				{
+					"Id": "6135.ProfitCalculator",
+					"DisplayName": "Profit Calculator",
+					"Type": "Smapi",
+					"RelativePath": "ProfitCalculator",
+					"Manifest": {
+						"Name": "Profit Calculator",
+						"Description": "Adds a Profit Calculator to your game!",
+						"Author": "6135",
+						"Version": "1.3.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ProfitCalculator.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:19931"
+						],
+						"UniqueId": "6135.ProfitCalculator"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509036,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406619,
+		"UploaderId": 4176091,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

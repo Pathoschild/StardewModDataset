@@ -1,0 +1,283 @@
+{
+	"Site": "ModDrop",
+	"Id": 123679,
+	"Name": "Teh's Fishing Overhaul",
+	"Author": "TehPers",
+	"TagLine": "Fishing rework with complete customization, a full API, and support for content packs.",
+	"Description": "**For modern game versions:** Check [this page](https://smapi.io/mods/#teh-s-fishing-overhaul) for an updated version.\n\nFor **SDV** 1.5.5+ and **SMAPI** 3.13.0+\n\nCompletely reworks fishing:\n\n*   Control every aspect of fishing! Configure the chances of hitting fish instead of trash, the difficulty of catching fish, the chances of finding treasure, what fish/treasure/trash you'll find, where you'll find it all, and how the fish behave.\n\n    *   Add new fish, adjust fish behaviors, and control where they can be caught. If you want to be able to catch diamonds, wearable boots, or even fishing rods while fishing, go ahead!\n\n*   Perfect catches are more rewarding. As you get more perfect catches in a row, your streak increases, and fish become more valuable.\n\n*   Optional built-in fishing HUD. See what fish you can catch while you're fishing!\n\n*   Support for [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) , including in-game config editing.\n\n    *   Some complex settings may not be modifiable through GMCM though.\n\n*   Create your own content packs, or install a content pack created by someone else!\n\n    *   Optional content pack included for making legendary fish recatchable.\n\nMost config settings can be modified in-game with [GMCM](https://www.nexusmods.com/stardewvalley/mods/5098). For more fine-tuned control over the settings, the configs can also be modified through their respective `.json` files in the mod's `config` folder.\n\nIf you want to configure which fish, trash, or treasure are available to catch and when you can catch them, [create](https://stardewvalleywiki.com/Modding:Content_packs#Create_a_content_pack) or install a content pack.\n\nContent packs\n\nThis mod supports custom content packs. For more information on how to make a content pack, check the [content pack docs](https://github.com/TehPers/StardewValleyMods/blob/master/docs/TehPers.FishingOverhaul/Content%20Packs.md).\n\n**Recatchable Legendaries:**\n\nAllows legendary fish to be caught more than once. After catching a normal legendary fish, you can catch it again after 7 days. Also, if you have caught any of the legendary fish II, those can also be caught once every 7 days. Make sure to catch every legendary fish II while you have the chance so you can continue to catch them again later!\n\nAPI\n\nTwo APIs are available for this mod:\n\n*   The simplified API can be retrieved through SMAPI's mod registry.\n\n*   The full API can be accessed by using TehCore.\nTo use the API, check out the [api docs](https://github.com/TehPers/StardewValleyMods/blob/master/docs/TehPers.FishingOverhaul/API.md).\n\nSource code &amp; License\n\nThis mod is licensed under MIT License. The source code and full license text can be found on the [github repo](https://github.com/TehPers/StardewValleyMods/).",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/123679",
+	"Version": null,
+	"Updated": "2022-06-05T15:09:33.633+00:00",
+	"Downloads": [
+		{
+			"Id": 1089365,
+			"Type": "Optional",
+			"DisplayName": "Teh's Example Fish Pack 1.0.2",
+			"FileName": "Teh's Example Fish Pack 1.0.2.zip",
+			"Description": "Example content pack showing how to add new fish, trash, and treasure.\n\nId: @TehPers.ExampleFishPack",
+			"Version": "1.0.2",
+			"SizeInBytes": 3714,
+			"Uploaded": "2021-12-24T12:48:25.101+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.ExampleFishPack",
+					"DisplayName": "Teh's Example Fish Pack",
+					"Type": "ContentPack",
+					"RelativePath": "[TFO] TehPers.ExampleFishPack",
+					"Manifest": {
+						"Name": "Teh's Example Fish Pack",
+						"Description": "Example fish pack for Teh's Fishing Overhaul",
+						"Author": "TehPers",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "TehPers.FishingOverhaul"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.24.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.DynamicGameAssets.Example",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:866@TehPers.ExampleFishPack"
+						],
+						"UniqueId": "TehPers.ExampleFishPack",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "27f13476dc44c75175c5a5b77b621e17",
+				"md5In": "dfde23fa907cb2b52c9f29da8288c811",
+				"scriptType": 0,
+				"sha256Ex": "d0345817b5afb37db8a3986f5e61a0c0659c278d020e481cc7463a8cf384eb10",
+				"sha256In": "470dec8e889ef26b2bf987fa3bad82ff3cc597ddc03593e27d4ab9b9da30b763"
+			}
+		},
+		{
+			"Id": 1176645,
+			"Type": "Optional",
+			"DisplayName": "Ridgeside Village Compatability 1.1.0",
+			"FileName": "Ridgeside Village Compatability 1.1.0.zip",
+			"Description": "Adds compatibility with legendary fish + artifacts from Ridgeside Village. Requires Ridgeside Village.\n\nID: @TehPers.RSVTFO",
+			"Version": "1.1.0",
+			"SizeInBytes": 3982,
+			"Uploaded": "2022-05-23T04:03:48.264+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.RSVTFO",
+					"DisplayName": "Ridgeside Village Teh's Fishing Overhaul",
+					"Type": "ContentPack",
+					"RelativePath": "[TFO] TehPers.RSVTFO",
+					"Manifest": {
+						"Name": "Ridgeside Village Teh's Fishing Overhaul",
+						"Description": "Adds special fishing content from Ridgeside Village to TFO.",
+						"Author": "TehPers",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "TehPers.FishingOverhaul",
+							"MinimumVersion": "3.3.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.24.5",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:866@TehPers.RSVTFO"
+						],
+						"UniqueId": "TehPers.RSVTFO",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "802ef80dfd0d4b90f92cc3f8d09c7ab5",
+				"md5In": "21bbdc9f45dabe0c0dfbc3d3238dd7c2",
+				"scriptType": 0,
+				"sha256Ex": "76802639b11eed20ea7274f49d65a6936f1ac7fea637e003c90fc97c46f35573",
+				"sha256In": "5c998db85fc2f0b98d320169829795f6c61bf3f41ddbc88073a0438d100717fc"
+			}
+		},
+		{
+			"Id": 1186702,
+			"Type": "Main",
+			"DisplayName": "Teh's Fishing Overhaul 3.3.2",
+			"FileName": "Teh's Fishing Overhaul 3.3.2.zip",
+			"Description": "For SDV 1.5.5 and SMAPI 3.14.x\n\n\n\nBug fixes. Changelog: https://github.com/TehPers/StardewValleyMods/blob/master/docs/TehPers.FishingOverhaul/CHANGELOG.md",
+			"Version": "3.3.2",
+			"SizeInBytes": 367884,
+			"Uploaded": "2022-06-05T15:09:33.601+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.FishingOverhaul",
+					"DisplayName": "Teh's Fishing Overhaul",
+					"Type": "Smapi",
+					"RelativePath": "TehPers.FishingOverhaul",
+					"Manifest": {
+						"Name": "Teh's Fishing Overhaul",
+						"Description": "Highly customizable overhaul for fishing",
+						"Author": "TehPers",
+						"Version": "3.3.2",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "TehPers.FishingOverhaul.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "TehPers.Core",
+								"MinimumVersion": "1.1.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.24.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.6.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Esca.EMP",
+								"MinimumVersion": "1.1.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:866",
+							"ModDrop:123679"
+						],
+						"UniqueId": "TehPers.FishingOverhaul",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "4cae0f4e9fa8f7244a0e4947f92bae45",
+				"md5In": "85cc89b48f7977bd94840221dae35705",
+				"scriptType": 0,
+				"sha256Ex": "318eb8dabcfbaf8f1de0a118a5d069933269509f544072875bc21e0bc65f4642",
+				"sha256In": "1b145ce93eccd627d5bff793a6ae177483b22a8edd0a75b8abf3d4ae0173293e"
+			}
+		},
+		{
+			"Id": 1186703,
+			"Type": "Optional",
+			"DisplayName": "Recatchable Legendaries 1.1.1",
+			"FileName": "Recatchable Legendaries 1.1.1.zip",
+			"Description": "Allows legendary fish to be caught multiple times (once per week).\n\n\nID: @TehPers.RecatchableLegendaries",
+			"Version": "1.1.1",
+			"SizeInBytes": 3868,
+			"Uploaded": "2022-06-05T15:09:33.632+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.RecatchableLegendaries",
+					"DisplayName": "Recatchable Legendary Fish",
+					"Type": "ContentPack",
+					"RelativePath": "[TFO] TehPers.RecatchableLegendaries",
+					"Manifest": {
+						"Name": "Recatchable Legendary Fish",
+						"Description": "Allows legendary fish to be caught multiple times",
+						"Author": "TehPers",
+						"Version": "1.1.1",
+						"ContentPackFor": {
+							"UniqueId": "TehPers.FishingOverhaul",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.24.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:866@TehPers.RecatchableLegendaries"
+						],
+						"UniqueId": "TehPers.RecatchableLegendaries",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "7346fc9a9be3abda5255390993a1b461",
+				"md5In": "91356da50c16ca4be96bfcfc0b6786fa",
+				"scriptType": 0,
+				"sha256Ex": "eed5ee538bc9d948754dff6bb3d3e4e88a86de527e256a01b7ce87824e0d7e6b",
+				"sha256In": "78bad8cf6bdd60aff3179ec5f792e13156100eb4b82c1093faee7d5b47bac6d3"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1486502479447,
+		"DateUpdated": 1654441773633,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/123679/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/123679/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/123679/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/123679/icon_original"
+		},
+		"nexusModID": 866,
+		"notice": "",
+		"dateNoticeUpdated": "2017-12-31T03:57:05.5783596-05:00",
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 65768
+	}
+}

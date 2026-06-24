@@ -1,0 +1,97 @@
+{
+	"Site": "ModDrop",
+	"Id": 1534005,
+	"Name": "Custom Spouse Rooms - Continued",
+	"Author": "Datamancer",
+	"TagLine": "Lets you move and customize your farmhouse's spouse room, and enables multiple spouse rooms for Free Love mod.  Originally created by Aedenthorn",
+	"Description": "This Mod was originally created by Aedenthorn - I have merely updated it to be compatible with 1.6 - Below you will find the original description of the mod, as written by Aedenthorn\n\nThis mod serves as a framework to allow spouse room customization.\n\nWith it, you can customize where a specific character's spouse room is shown, what walls surround it, and where a spouse will stand inside of it.\n\nIt also enables multiple spouse rooms for the Free Love mod. Without any additional data, it will show multiple spouse rooms in a row starting where the vanilla spouse room would show up. You can change the order of the spouse rooms in the config file.\n\n\nTo create custom spouse room data, you will need to create a content pack for this mod.\n\n\nContent Packs\n\nExample manifest.json:\n\n\uFEFF{\n  \"Name\": \"Emily's Custom Spouse Room Content Pack\",\n  \"Author\": \"aedenthorn\",\n  \"Version\": \"0.1.0\",\n  \"Description\": \"\",\n  \"UniqueID\": \"aedenthorn.EmilyRoomCSR\",\n  \"MinimumApiVersion\": \"3.12.0\",\n  \"UpdateKeys\": [ \"\" ],\n  \"ContentPackFor\": {\n    \"UniqueID\": \"aedenthorn.CustomSpouseRooms\",\n    \"MinimumVersion\": \"0.1.0\"\n  },\n  \"Dependencies\": [\n   {\n      \"UniqueID\": \"aedenthorn.CustomSpouseRooms\",\n      \"IsRequired\": true\n   },\n  ]\n}\n\n\nExample content.json:\n\n{\n    \"data\": [\n        {\n            \"name\": \"Emily\",\n            \"upgradeLevel\": 1,\n            \"startPos\": {\n                \"X\": 0,\n                \"Y\": 0\n            },\n            \"spousePosOffset\": {\n                \"X\": 3,\n                \"Y\": 5\n            },\n            \"shellType\": \"custom_spouse_room_closed_left\",\n            \"templateName\": \"Penny\"\n        }\n    ]\n}\n\nThis example puts Emily's spouse room where the kitchen would be in the level one upgraded farmhouse.\n\nPossible fields:\n\nname: the name of the NPC or player spouse\nupgradeLevel: the farmhouse's upgrade level to apply these settings to (set to -1 to use for all upgrade levels)\ntemplateName: the name of the spouse whose spouse room layout you want to use for this spouse (omit to use the spouse's own layout)\nstartPos: the top left corner position of the room's shell on the map\nshellType: the name of the map file in the game's Maps folder to use for the room's shell (see below)\nspousePosOffset: the position of the spouse in the spouse room as an offset from startPos\nislandFarmHouse: if set to true, use this setup for the island farm house rather than the main farm house (doesn't move the spouse).\n\n\nTemplate Names\n\nYou can input the name of any NPC in Data/SpouseRooms to use their spouse room for the named spouse. Modded NPCs must have their spouse room added via this method.\n\n\nShell Types\n\nThe mod comes with four shell types, i.e. map overrides that form the walls and floors around the spouse room area:\n\ncustom_spouse_room_closed_left - for the left side of the map, with a wall on the left side\ncustom_spouse_room_closed_right - for the right side of the map, with a wall on the right side\ncustom_spouse_room_open_left - for the left side of the map, with no wall on either side\ncustom_spouse_room_open_right - for the right side of the map, with no wall on either side\n\nTo create your own shell, edit one of the mod's tmx files using Tiled (the size should stay the same for now) and add it to the game's Maps folder using Content Patcher, then use the file's name in the above content.json file.\n\n\nCustom NPC Spouse Rooms\n\nCustom NPC spouses must use the new Content Patcher method of adding spouse rooms. TMXL loaded spouse rooms will not work.  For more information on creating a Content Patcher spouse room, see the documentation here:\n\nhttps://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.5.5#Custom_spouse_rooms\n\n\nThis mod is a work in progress; there are probably bugs but if they are only visual they should be understood as art.\n\n\nTechnical\n\nRequires SMAPI, uses Harmony.\n\nCompatible with Mod Updater\uFEFF for automatic updates.\n\nCode is at https://github.com/csandwith/StardewValleyMods\n\n\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit the Modding Chat in the Official SV discord server\n\nA list of all Aedenthorn's mods for Stardew Valley is available at https://www.nexusmods.com/stardewvalley/articles/895.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1534005",
+	"Version": null,
+	"Updated": "2024-03-25T16:38:46.794+00:00",
+	"Downloads": [
+		{
+			"Id": 1554967,
+			"Type": "Main",
+			"DisplayName": "CustomSpouseRooms - Continued",
+			"FileName": "CustomSpouseRooms - Continued.zip",
+			"Description": "Updated for SDV 1.6 - new uniqueID: datamancer.CustomSpouseRooms",
+			"Version": "0.9.2",
+			"SizeInBytes": 33291,
+			"Uploaded": "2024-03-25T16:38:46.794+00:00",
+			"Mods": [
+				{
+					"Id": "datamancer.CustomSpouseRooms",
+					"DisplayName": "Custom Spouse Rooms",
+					"Type": "Smapi",
+					"RelativePath": "CustomSpouseRooms",
+					"Manifest": {
+						"Name": "Custom Spouse Rooms",
+						"Description": "Custom spouse rooms.",
+						"Author": "datamancer",
+						"Version": "0.9.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomSpouseRooms.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "aedenthorn.FreeLove",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:20966",
+							"ModDrop:1534005"
+						],
+						"UniqueId": "datamancer.CustomSpouseRooms",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "datamancer",
+								"Directory": "_releases",
+								"ModFolder": "CustomSpouseRooms"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "22a02d973cb39254402524490378ac05",
+				"md5In": "ab9f222162d587f95defb01a81249141",
+				"scriptType": 0,
+				"sha256Ex": "44d5312aba908aca61b6968ea730549ae18b95abd18a8baf2409261d5a167c20",
+				"sha256In": "3137b5538aae20826aea43b57fc1cc901768a098cc661b16101ee200c50d7900"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1711340727487,
+		"DateUpdated": 1711384726793,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1711340443067,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1534005/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1534005/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1534005/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1534005/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 428270
+	}
+}

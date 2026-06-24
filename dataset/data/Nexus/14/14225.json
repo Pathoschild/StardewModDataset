@@ -1,0 +1,72 @@
+{
+	"Site": "Nexus",
+	"Id": 14225,
+	"Name": "SREO - Sports Room Event Overhaul",
+	"Author": "Galgana",
+	"Description": "[u][b]Features[/b][/u]\n<br />[list]\n<br />[*]removes marriage requirement for unlocking the saloon sports room\n<br />[*]makes Alex and Shane\u00A0the primary NPC participants of Part 1 and Part 3\n<br />a previewable txt file is available for potential users to check out the dialogue contents[*]provides 2 methods of completing the sports room: [b]Donor Route[/b]\u00A0(from the original 14-Heart Event) and [b]Miser Route[/b]\n<br />[*]these methods impact:\n<br />1) time elapse between Part 1 and Part 3\n<br />2) event dialogues with Shane and Alex (Part 1 - 2 lines; Part 3 - 2 lines)\n<br />3) prompt displayed in Part 2 message box\n<br />4) friendship points\n<br />[*][b]Donor Route[/b] exclusive event:\n<br />Part 4 reimburses money at a randomly-determined time after seeing Part 3[*]Immersive Scheduling:\n<br />Sunday meetups in the sports room occur [b]only[/b] when gridball season is active in [b]fall and winter[/b];NPC schedules on Sunday [b]revert[/b] to normal/pre-room activities during the off-season ([b]spring and summer[/b]);Affected NPCs: Alex, Shane, George, Kent, Gus.[/list]\n<br />[b]Configuration[/b]\n<br />[u]enableOverwriteAlex14H[/u] ([font=Courier New]default: true[/font])\n<br />[list]\n<br />[*]enables changes to Alex's 14-Heart Events (Parts 1, 2, 3) when [b][font=Courier New]true[/font][/b]\n<br />[*]disables changes to Alex's 14-Heart Events (Parts 1, 2, 3) when [b][font=Courier New]false[/font][/b]\n<br />[/list][u]requireHeartEvent[/u] ([font=Courier New]default: 8[/font])\n<br />[list]\n<br />[*]this value determines minimum hearts and the equivalent heart events required for triggering Part 1\n<br />[*]when set to\u00A0[b]8[/b], the required events are: Alex 8-Heart Event @ beach, Shane 8-Heart Event @ Marnie's ranch\n<br />[*]when set to [b]10[/b], the required events are: Alex 10-Heart Event @ saloon, Shane 10-Heart Event @ bus stop\n<br />[/list][u]chanceDelivery[/u]\u00A0([font=Courier New]default: 0.1[/font])[list]\n<br />[*]this value determines the chance for triggering Part 2 through the [b]Miser Route[/b]\n<br />[*]this value also determines the chance for triggering Part 4 through the [b]Donor Route[/b]\n<br />[*]when all other conditions are met for an event:\n<br />value=0.1 indicates a 10% probability checkvalue=1 is 100% probability[/list]\n<br />[u][b]Compatibility[/b][/u][list]\n<br />[*]Shane's original 14-Heart Event @ town and saloon arcade room\n<br />\n<br />SREO does not interact with these events[*]Mobile App: 14-Heart Events were added in Stardew Valley Version 1.4\n<br />SREO has not been tested on mobile editions of the game;\n<br />unknown compatibility\n<br />[*][[url=https://www.nexusmods.com/stardewvalley/mods/4145]nexus[/url]\uFEFF]\u00A0[b]Tunnelling Ahead - A Post-Marriage Alex Expansion[/b]\n<br />adds new 14-Heart Events that change Alex's spouse schedule;edits to Sunday activities are carried over from this mod when the season is not spring(effectively, SREO interacts with its changes only in summer)[*][[url=https://www.moddrop.com/stardew-valley/mods/487802-immersive-characters-shane]moddrop[/url]\uFEFF]\u00A0[b]Immersive Characters - Shane[/b]\n<br />SREO should override this mod's changes in Part 3;[u]requireHeartEvent[/u]=[b]10[/b]\u00A0is changed to the new Shane 10-Heart Event @ farm;no changes when value=[b]8[/b];no conflicting Sunday scheduling[*][[url=https://www.nexusmods.com/stardewvalley/mods/5117]nexus[/url]\uFEFF]\u00A0[b]Immersive Spouses - Improved Spouse Schedules[/b]\n<br />during off-season Sundays, Alex and/or Shane will revert to this mod's pre-room spouse schedules[*][[url=https://www.nexusmods.com/stardewvalley/mods/8146]nexus[/url]\uFEFF] [b]Platonic Partners and Friendships[/b]\n<br />SREO should override this mod's changes[*][[url=https://www.moddrop.com/stardew-valley/modpacks/8013-diverse-stardew-valley]moddrop[/url]\uFEFF] [b]Diverse Stardew Valley[/b]\u00A0(modpack)\n<br />I'm not aware of any conflicting event edits in this project's constituent mods.Recommended for its NPC options with disability representation[/list]\n<br />!SPOILERS! [u][b]Affected Event IDs and Conditions[/b][/u]\u00A0!SPOILERS!\n<br />\n<br />[u]PART 1\n<br />[/u][font=Courier New]3917587[/font]\n<br />[list]\n<br />[*]Year: 2+\n<br />[*]Season: Summer (gridball pre-season)\n<br />[*]Weather: Sunny\n<br />[*]Location: Farm\n<br />[*]Time: 6 AM - 9 AM\n<br />[*]money: 5000+\n<br />[/list][font=Courier New]giveAlexMoney[/font]\n<br />[list]\n<br />[*]initiates the [b]Donor Route[/b]\n<br />[/list]\n<br />[u]PART 2[/u]\n<br />[font=Courier New]3917589[/font]\n<br />[list]\n<br />[*]Day of Week: Sunday\n<br />[*]Season: Fall or Winter\n<br />[*]Location: Town\n<br />[/list][b]Donor Route[/b]: You decided to give the money\n<br />[list]\n<br />[*]initiates Part 3 as early as 7 Fall\n<br />[/list][b]Miser Route[/b]: You refused to give the money\n<br />[list]\n<br />[*]default configurable 10% chance to initiate any Sunday during Fall or Winter\n<br />[/list]\n<br />[u]PART 3\n<br />[/u][font=Courier New]3917590[/font]\n<br />[list]\n<br />[*]Location: Saloon\n<br />[/list]\n<br />[u]PART 4[/u] (add-on exclusive to [b]Donor Route[/b])\n<br />[font=Courier New]3917591[/font]\n<br />[list]\n<br />[*]Location: Farm\n<br />[*]default configurable 10% chance to receive mail returning the borrowed 5000g\n<br />[/list]\n<br />[b]Credits[/b]\n<br />[url=https://www.nexusmods.com/stardewvalley/users/70148453]Airyn[/url]\u00A0for dialogue in [[url=https://www.nexusmods.com/stardewvalley/mods/14212]nexus[/url]] [b]Fourteen Heart Events For All[/b]\u00A0(Alt Shane and Vanilla Alex files), which became the inspiration of SREO's lines in Part 3 for Alex and Shane (and the text itself was mostly retained from this mod in the opening sentences of the two's character's mini-speeches. Kent's one line also was carried over into SREO). Some coding as provided by\u00A0beyondrecovery was referenced as a template.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14225",
+	"Version": "1.00",
+	"Updated": "2022-10-23T23:12:33+00:00",
+	"Downloads": [
+		{
+			"Id": 61913,
+			"Type": "Main",
+			"DisplayName": "SREO",
+			"FileName": "SREO-14225-1-00-1666566753.zip",
+			"Description": "A rewrite of Alex's 14 Heart Event for double the gridball broadcasting trouble: befriend Shane and Alex to unlock the sports room in the saloon.",
+			"Version": "1.00",
+			"SizeInBytes": 6720,
+			"Uploaded": "2022-10-23T23:12:33+00:00",
+			"Mods": [
+				{
+					"Id": "Galgana.GridballDreamTeam",
+					"DisplayName": "Sports Room Event Overhaul",
+					"Type": "ContentPack",
+					"RelativePath": "Sports Room Event Overhaul\\[CP] Sports Room Event Overhaul",
+					"Manifest": {
+						"Name": "Sports Room Event Overhaul",
+						"Description": "A rewrite of Alex's 14 Heart Event for double the gridball broadcasting trouble: befriend Shane and Alex to unlock the sports room in the saloon.",
+						"Author": "Galgana",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Amaranthacyan.PlatonicPartnersandFriendships",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "tenthousandcats.ImmersiveCShane",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "iss.immersivespouses",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "dunsparce.TunnellingAhead",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14225"
+						],
+						"UniqueId": "Galgana.GridballDreamTeam"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448601,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400913,
+		"UploaderId": 45619517,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

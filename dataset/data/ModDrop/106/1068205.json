@@ -1,0 +1,90 @@
+{
+	"Site": "ModDrop",
+	"Id": 1068205,
+	"Name": "Farm Cave Spawns More Tree Fruit",
+	"Author": "Atravita",
+	"TagLine": "Farm cave spawns more tree fruit.That's it. That's the mod.",
+	"Description": "Modded farm caves don't really play well with how the fruit cave spawns its fruits. In vanilla, each tile has an equal chance to be picked for a spawn, and for modded caves that have large amounts of void in order to implement separate \"rooms\", it's quite likely that the tile picked is a void tile and nothing will be spawned. This is an attempt to help adjust for that by spawning in more fruit - either the four common vanilla forage fruit, or any item that is produced by a fruit tree. Inspired by but very different from Better FarmCave Forage, which uses FTM to spawn in a selection of various fruits.\n\nAny fruit tree's products can be spawned. Mod trees, as long as they're registered with [font=Courier New]Data/fruitTrees[/font], will be used as well. (Tested with RSV and PPJA More Trees). Fruit not associated with a tree will not be produced.\n\nInstallation\n\n1.  Install the latest version of [SMAPI](https://smapi.io).\n\n2.  Download and install [AtraCore](https://www.nexusmods.com/stardewvalley/mods/12932).\n\n3.  Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n\n4.  Run the game using SMAPI.\nMultiplayer\nHost should install mod. Mod does not do anything for farmhands.\n\nSVE compat\nWill also spawn in the MinecartCave and the DeepCave, if [font=Courier New]UseModCaves[/font] is enabled (after 1.0.8). It goes room by room, so if you don't see spawns in MinecartCave and Deepcave try setting the spawn chance lower and the max daily spawns higher.\n\nKnown compatability issues:\nI check for [font=Courier New]Game1.MasterPlayer.caveChoice[/font] to see what farm cave you've picked. If you're using a mod that causes that flag to never be set (such as [Farm Cave Framework](https://www.nexusmods.com/stardewvalley/mods/10506)), this mod will never think the cave is a fruit bat cave. To get around it, you can set either [font=Courier New]Ignore Farm Cave Type[/font] to [font=Courier New]true[/font] or [font=Courier New]Allow Early Farm Cave[/font] to [font=Courier New]true[/font].\n\nFarm Cave Framework is handled seperately - this mod will check to see if that mod's field for cave type contains the word \"bat\" or \"fruit\" and assume that it is a fruit cave. It should be compatible now.\n\nConfiguration:\nRun SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) to configure.\n\n1.  [font=Courier New]MaxDailySpawns[/font]: the maximum number of fruit that will spawn.\n\n2.  [font=Courier New]SpawnChance[/font]: the percent chance any empty square will spawn a fruit, capped by MaxDailySpawns. (Range: 0-100, where 100 means every unoccupied square will have a fruit)\n\n3.  [font=Courier New]TreeFruitChance[/font]: the percent chance any particular spawn will be fruit tree fruit and not common forage. (Range: 0-100, where 100 means every spawn will be a tree fruit)\n\n4.  [font=Courier New]IgnoreFarmCaveType[/font]: if true, will spawn fruit in any farm cave (as long as you've seen the cutscene). If false, requires that the fruit cave be selected.\n\n5.  [font=Courier New]EarlyFarmCave[/font]: if true, will spawn even before the cutscene is seen.\n\n6.  [font=Courier New]UseModCaves[/font]: if true, will spawn fruit in caves added by mods, if they're registered with this mod.\n\n7.  [font=Courier New]UseMineCave[/font]: if true, will spawn fruit in the mine cave entrances as well (if [font=Courier New]MaxDailySpawns[/font] is not hit.)\n\n8.  [font=Courier New]UseVanillaFruitOnly[/font]: use only the six tree fruit that will appear in the fruit bat cave in vanilla. (Yes, this will exlude mangos and bananas.)\n\n9.  [font=Courier New]SeasonalOnly[/font]: limits to just the fruits that are in-season. After all, those bats have to be getting the fruit from somewhere, right?\n\n10.  [font=Courier New]AllowAnyTreeProduct[/font]: if true, allows any product found for any fruit tree to be spawned. If false, will only spawn items that are categorized as fruit in the game.\n\n11.  [font=Courier New]EdiblesOnly[/font]: If true, will only spawn items with a positive value for edibility. Do note that this field is not always perfect; some items that do not seem like they should be edible have positive values for edibility.\n\n12.  [font=Courier New]NoBananasBeforeShrine[/font]: there's an objective in vanilla that requires getting a hold of a banana, which is typically quite hard to do. To avoid trivializing that objective, this setting will prevent bananas from spawning until that objective is complete.\n\n13.  [font=Courier New]PriceCap[/font]: Caps the value of the fruit that can be spawned.\nThe console command [font=Courier New]av.fcs.list_fruits[/font] will tell you which tree fruits are available for spawning.\n\n*   [Source code](https://github.com/atravita-mods/StardewMods/blob/main/FarmCaveSpawn/FarmCaveSpawn) .\n\n*   [Changelog](https://github.com/atravita-mods/StardewMods/blob/main/FarmCaveSpawn/FarmCaveSpawn/docs/CHANGELOG.MD) .\n\nAll donation points for this mod go to [Doctors Without Borders](https://www.doctorswithoutborders.org/). Please consider supporting them if you like this mod!\nLooking for something else? Please consider [my other mods](https://www.nexusmods.com/users/116553368?tab=user+files)!",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1068205",
+	"Version": null,
+	"Updated": "2023-03-24T22:32:55.663+00:00",
+	"Downloads": [
+		{
+			"Id": 1377054,
+			"Type": "Main",
+			"DisplayName": "FarmCaveSpawn",
+			"FileName": "FarmCaveSpawn.zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.2+/AtraCore 0.2.0",
+			"Version": "1.1.3",
+			"SizeInBytes": 33935,
+			"Uploaded": "2023-03-24T22:32:55.662+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.FarmCaveSpawn",
+					"DisplayName": "Farm Cave Spawns More Tree Fruit",
+					"Type": "Smapi",
+					"RelativePath": "FarmCaveSpawn",
+					"Manifest": {
+						"Name": "Farm Cave Spawns More Tree Fruit",
+						"Description": "Spawn more tree fruit in the fruit cave",
+						"Author": "atravita",
+						"Version": "1.1.3",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "FarmCaveSpawn.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.2.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10186",
+							"ModDrop:1068205"
+						],
+						"UniqueId": "atravita.FarmCaveSpawn",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "fbd4f5386426dcf7e3042845457207cc",
+				"md5In": "20f93e47ee2b3292290b31fe68668877",
+				"scriptType": 0,
+				"sha256Ex": "f499f313e82316e799936209799d7fb156d4cb9393698a2d43bdde6023f7a77e",
+				"sha256In": "2670f4721b2e5244bf7b0295d130c90c17257b9f77305e4b0df4f12316f304fe"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1639601334900,
+		"DateUpdated": 1679697175663,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1639601306200,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1068205/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1068205/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1068205/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1068205/icon_original"
+		},
+		"nexusModID": 10186,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 249973
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 6568,
+	"Name": "Mobile Audio Player",
+	"Author": "aedenthorn",
+	"Description": "[b][size=4]Description[/size][/b]\n<br />\n<br />This mod utilizes the Windows Media Player library to play audio files. It should be able to play any audio Windows Media Player can. \n<br />\n<br />The down side, though, is [b]it might only work on Windows[/b]. \n<br />\n<br />The mod displays a list of audio files and a button bar at the bottom.\n<br />\n<br />Clicking on files lets you play/pause them.\n<br />\n<br />Buttons are, from left to right:\n<br />[list]\n<br />[*]Close app (stops playing)\n<br />[*]Prev track\n<br />[*]Rewind (doesn't work yet)\n<br />[*]Play/Pause\n<br />[*]Fast Forward\n<br />[*]Next track\n<br />[*]Minimize app (keeps playing)\n<br />[/list]\n<br />Once one file is finished, by default it starts playing the next file in the list. Once the list is finished playing, it starts from the beginning. These both can be turned off in the [b]config.json[/b] file.\n<br />\n<br />\n<br />[size=4][b]Setup[/b][/size]\n<br />\n<br />Place audio files in the mod's [b]audio[/b] folder (create it if it doesn't exist) and rename them as explained below.\n<br />\n<br />Metadata displayed for tracks is taken from parts of the file names separated by underscores, and the layout is determined by the mod's [b]config.json[/b] file:\n<br />\n<br />[b]ListLineOne: [/b]\"{1}\"\n<br />[b]ListLineTwo: [/b]\"{2} - {3}\"\n<br />\n<br />This means that a file named [b]Title_Artist_Album.mp3[/b] will be displayed as:\n<br />\n<br />[b]Title\n<br />Artist - Album\n<br />[/b]\n<br />You can have as many parts to the file name as you like, and they will replace[b] {#}[/b] placeholders starting with [b]{1}[/b].\n<br />\n<br />Colors and sizes are also modifiable using the mod's [b]config.json[/b] file.\n<br />\n<br />\n<br />[size=4][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/6523]Mobile Phone[/url], does not use Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />If you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6568",
+	"Version": "0.4.1",
+	"Updated": "2020-09-28T22:00:30+00:00",
+	"Downloads": [
+		{
+			"Id": 31497,
+			"Type": "Main",
+			"DisplayName": "Mobile Audio Player",
+			"FileName": "Mobile Audio Player-6568-0-4-1-1601330430.zip",
+			"Description": "Changes:\n<br /><br />Potential fix for background volumes",
+			"Version": "0.4.1",
+			"SizeInBytes": 44372,
+			"Uploaded": "2020-09-28T22:00:30+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MobileAudioPlayer",
+					"DisplayName": "Mobile Audio Player",
+					"Type": "Smapi",
+					"RelativePath": "MobileAudioPlayer",
+					"Manifest": {
+						"Name": "Mobile Audio Player",
+						"Description": "Plays audio files on the mobile phone.",
+						"Author": "aedenthorn",
+						"Version": "0.4.1",
+						"MinimumApiVersion": "3.5.0",
+						"EntryDll": "MobileAudioPlayer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6568"
+						],
+						"UniqueId": "aedenthorn.MobileAudioPlayer",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "MobileAudioPlayer"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342418185,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393256,
+		"UploaderId": 18901754,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

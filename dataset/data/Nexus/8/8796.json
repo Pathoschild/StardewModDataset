@@ -1,0 +1,70 @@
+{
+	"Site": "Nexus",
+	"Id": 8796,
+	"Name": "Damage Overlay",
+	"Author": "pepoluan",
+	"Description": "At first, I made this as a joke mod :P ... then it became clear that this mod is helpful as it visually, continually alerts the player that their farmer's health is low.\n<br />\n<br />Install, and when your health drops below a certain threshold (configurable in config.json), the borders of the game field will become [color=#ff0000][b]red.[/b][/color]\n<br />\n<br />As your health gets lower, the border becomes [color=#ff0000][b]redder[/b][/color].\n<br />\n<br />Until you [s]die[/s] pass out due to loss of blood.\n<br />\n<br />See [b]Video[/b] tab for demo.\n<br />\n<br />\n<br />[color=#ffff00][b][font=Trebuchet MS][size=5]Upgrading from v0.1.0[/size][/font][/b][/color]\n<br />\n<br />Due to the amount of internal changes I made in v0.2.0, you'll have to [b]completely delete v0.1.0[/b] from your Mods folder, then extract the new one over. Sorry about that.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Temporarily Hide the Overlay (v0.7.0+)[/size][/font][/b]\n<br />\n<br />So, you've hit really low health. You ran away. The overlay stays on screen. And it will stay there until you increase your HP above the predefined threshold levels.\n<br />\n<br />Annoying? Of course.\n<br />\n<br />So you can press [font=Courier New][color=#00ffff][b]OemSemicolon[/b][/color][/font] (the semicolon key, usually to the left of the Enter/Return key) to hide the overlay [i]temporarily[/i] ... if your health changes (up or down, doesn't matter), it will automagically appear again.\n<br />\n<br />This hotkey is, of course, customizable via [color=#00ffff][b]config.json[/b][/color]. Just change the value for [font=Courier New]\"[color=#00ffff]temp_hide_hotkey[/color]\"[/font] to something of your liking.\n<br />\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Customization: Blood-vs-Haze[/size][/font][/b]\n<br />\n<br />Open up [color=#00ffff][b]config.json[/b][/color] and change the value for [font=Courier New]\"[color=#00ffff]overlay[/color]\"[/font]. Two built-in 'overlay sets' are provided:\n<br />[list]\n<br />[*][font=Courier New]\"[color=#00ffff]simple[/color]\"[/font] -- red haze border\n<br />[*][font=Courier New]\"[color=#00ffff]bloody[/color]\"[/font] -- blood droplets border &lt;== THIS IS THE DEFAULT\n<br />[/list]\n<br />Since v0.8.1, you can also use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF to change the overlay set from in-game.\n<br />If you want different overlays ... keep reading to the section \"Customization: Your Own Overlay!\"\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Customization: Health Level[/size][/font][/b]\n<br />\n<br />If you think the border came too soon / too late, you can edit the Health% at which the border changes.\n<br />\n<br />First, set the Blood-vs-Haze option as described above.\n<br />\n<br />Then, go to the mod's folder, then into \"assets\", then into the option you chose in blood-vs-haze above.\n<br />\n<br />Open the \"overlay.json\" file. Edit to your liking. The provided overlay.json files are commented so you should be able to intuit what each fields mean.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Customization: Your Own Overlay![/size][/font][/b]\n<br />\n<br />Yes, you can use your own border graphics! There is only one requirement: The center area of the graphics you'll be using [i][b]must[/b][/i] be transparent. If not, you'll cover the game world!\n<br />\n<br />There are 2 ways to do this: Modify the mod directly, or create a Content Pack.\n<br />\n<br />[size=4][b][font=Trebuchet MS]Modify Mod Directly[/font][/b][/size]\n<br />\n<br />Steps:\n<br />[list=1]\n<br />[*]Create a new folder under \"assets\", let's call this \"my_border\"\n<br />[*]Copy the PNG file you want to use into this new folder\n<br />[*]Copy \"overlay.json\" from \"assets/simple\" or \"assets/bloody\" into the new folder\n<br />[*]Edit the \"overlay.json\" to your liking\n<br />[*]Open the \"config.json\", edit the value for \"overlay\" to \"my_border\" (or whatever the name of the new folder you created in Step #1)\n<br />[*]Start Stardew Valley\n<br />[*]If you don't see Errors from \"Damage Overlay\" in the SMAPI Console, then you're done!\n<br />[/list]\n<br />To help you test your changes, a new console command \" [font=Courier New]dover sethp &lt;percentage&gt;[/font] \" have been implemented in v0.8.1.\n<br />[b][font=Trebuchet MS][size=4]Create a Content Pack[/size][/font][/b][font=Trebuchet MS][size=4] (for v0.6.0+)[/size][/font]\n<br />\n<br />Or... create a Content Pack! Take a look at the provided \"DamageOverlay ContentPack Example\" file, and edit to your liking.\n<br />Then edit this mod's config.json to use the overlay name provided by your content pack.\n<br />\n<br />To help you test your changes, a new console command \" [font=Courier New]dover sethp &lt;percentage&gt;[/font] \" have been implemented in v0.8.1\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Source Code[/size][/font][/b]\n<br />\n<br />[b][url=https://sourceforge.net/p/sdvmod-damage-overlay/code/ci/default/tree/]Available on SourceForge.[/url][/b] It is released under the [b]MPL-2.0 License[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8796",
+	"Version": "0.8.1",
+	"Updated": "2021-06-26T19:42:22+00:00",
+	"Downloads": [
+		{
+			"Id": 42554,
+			"Type": "Main",
+			"DisplayName": "DamageOverlay 0.10.0",
+			"FileName": "DamageOverlay 0.10.0-8796-0-10-0-1624736542.zip",
+			"Description": "Now responds to Windows Resize events, add internationalization support\n<br />",
+			"Version": "0.10.0",
+			"SizeInBytes": 964642,
+			"Uploaded": "2021-06-26T19:42:22+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.DamageOverlay",
+					"DisplayName": "Damage Overlay",
+					"Type": "Smapi",
+					"RelativePath": "DamageOverlay",
+					"Manifest": {
+						"Name": "Damage Overlay",
+						"Description": "Damage overlay on low health",
+						"Author": "pepoluan",
+						"Version": "0.10.0",
+						"EntryDll": "DamageOverlay.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8796"
+						],
+						"UniqueId": "pepoluan.DamageOverlay",
+						"OtherFields": {
+							"Meta:Changelog": {
+								"0.0.1": "Proof of Concept",
+								"0.1.0": "Prototype",
+								"0.2.0": "Folder-based overlay 'sets'",
+								"0.3.0": "Respond to WindowResized event",
+								"0.3.1": "Add UpdateKeys",
+								"0.4.0": "Attach to GameLaunched, perform scale calculation outside drawing routine",
+								"0.5.0": "Totally new overlay.json format, change loading & make more robust",
+								"0.6.0": "Preliminary support for content packs, optimize more things",
+								"0.7.0": "Implement temporary hiding of overlay",
+								"0.8.0": "Add support for GMCM",
+								"0.8.1": "Fix for zoom, Add 'dover' command to help debugging, Internal optimizations",
+								"0.9.0": "Add more console commands, add support for internationalization",
+								"0.10.0": "Resize overlay on Window Resize event"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429242,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395484,
+		"UploaderId": 27024274,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

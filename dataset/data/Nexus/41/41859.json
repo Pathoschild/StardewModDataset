@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 41859,
+	"Name": "StardewGPT",
+	"Author": "lorenzxl",
+	"AuthorLabel": "Lorenz Liu",
+	"Description": "[center][size=6][b]StardewGPT[/b][/size][/center]\n<br />\n<br />[quote]This project includes scraped data from [url=https://stardewvalleywiki.com/Stardew_Valley_Wiki]Stardew Valley Wiki[/url], which is licensed under Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0). Consequently, this software and its source code are also licensed under CC BY-NC-SA 3.0. The source code is open sources at [url=https://github.com/lorenz-liu/stardew-gpt]GitHub[/url].[/quote]\n<br />\n<br />[size=5][b]Quick Start[/b][/size]\n<br />\n<br />[b]Important: Configure your Cloudflare API credentials in [i]config.json[/i]![/b]\n<br />\n<br />[code]\n<br />{\n<br />  \"CloudflareAccountId\": \"YOUR_CLOUDFLARE_ACCOUNT_ID\", &lt;- REPLACE\n<br />  \"ApiKey\": \"YOUR_CLOUDFLARE_API_TOKEN\", &lt;- REPLACE\n<br />  \"ApiEndpoint\": \"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/@cf/openai/gpt-oss-120b\",\n<br />  \"Model\": \"@cf/openai/gpt-oss-120b\",\n<br />  \"MaxTokens\": 800,\n<br />  \"Temperature\": 0.3,\n<br />  \"OpenChatKey\": \"K\"\n<br />}\n<br />[/code]\n<br />\n<br />[size=4][b]How to Get Cloudflare API Credentials (Free!)[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] [b]Sign up for Cloudflare[/b]: Go to [url=https://dash.cloudflare.com/sign-up]dash.cloudflare.com[/url] and create a free account.\n<br />[*] [b]Get your Account ID[/b]:\n<br />[list]\n<br />[*] Go to [url=https://dash.cloudflare.com/?to=/:account/workers-and-pages]Workers &amp; Pages[/url].\n<br />[*] Your Account ID is shown on the right side of the page.\n<br />[/list]\n<br />[*] [b]Create an API Token[/b]:\n<br />[list]\n<br />[*] Go to [url=https://dash.cloudflare.com/profile/api-tokens]API Tokens[/url].\n<br />[*] Click \"Create Token\".\uFEFF\n<br />[*]Use the \"Workers AI\" template or create a custom token with \"Workers AI\" permissions.\u00A0\n<br />[*]If using the \"Workers AI\" template, there is no need to modify anything.\u00A0\n<br />[*]Copy the token (you won't be able to see it again!).\n<br />[/list]\n<br />[/list]\n<br />\n<br />[b]Why Cloudflare?[/b]\n<br />[list]\n<br />[*] [color=#27ae60]✔[/color] [b]Free tier[/b]: 10,000 requests per day\n<br />[*] [color=#27ae60]✔[/color] [b]Global availability[/b]: Works worldwide\n<br />[*] [color=#27ae60]✔[/color] [b]Single API key[/b]: One token for both LLM and embeddings\n<br />[*] [color=#27ae60]✔[/color] [b]Fast[/b]: Powered by Cloudflare's global network\n<br />[/list]\n<br />\n<br />[size=5][b]Example Questions[/b][/size]\n<br />\n<br />[list]\n<br />[*] \"Do I have anything in my inventory that matches Abigail's taste of gift?\"\n<br />[*] \"What are the most lucrative crops to farm in Summer?\"\n<br />[*] \"How to catch pufferfishes?\"\n<br />[*] \"When can I harvest my hops?\"\n<br />[*] \"Where to find dust sprites?\"\n<br />[/list]\n<br />\n<br />[i]or simply:[/i]\n<br />[list]\n<br />[*] \"What should I do today?\"\n<br />[/list]\n<br />\n<br />[size=5][b]快速开始[/b][/size]\n<br />\n<br />[b]重要：在 [i]config.json[/i] 中配置你的 Cloudflare API 凭证！[/b]\n<br />\n<br />[code]\n<br />{\n<br />  \"CloudflareAccountId\": \"你的_CLOUDFLARE_账户ID\", &lt;- 替换\n<br />  \"ApiKey\": \"你的_CLOUDFLARE_API令牌\", &lt;- 替换\n<br />  \"ApiEndpoint\": \"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/@cf/openai/gpt-oss-120b\",\n<br />  \"Model\": \"@cf/openai/gpt-oss-120b\",\n<br />  \"MaxTokens\": 800,\n<br />  \"Temperature\": 0.3,\n<br />  \"OpenChatKey\": \"K\"\n<br />}\n<br />[/code]\n<br />\n<br />[size=4][b]如何获取 Cloudflare API 凭证（免费！）[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] [b]注册 Cloudflare[/b]：访问 [url=https://dash.cloudflare.com/sign-up]dash.cloudflare.com[/url] 创建免费账户\n<br />[*] [b]获取账户 ID[/b]：\n<br />[list]\n<br />[*] 进入 [url=https://dash.cloudflare.com/?to=/:account/workers-and-pages]Workers &amp; Pages[/url]\n<br />[*] 你的账户 ID 显示在页面右侧\n<br />[/list]\n<br />[*] [b]创建 API 令牌[/b]：\n<br />[list]\n<br />[*] 进入 [url=https://dash.cloudflare.com/profile/api-tokens]API Tokens[/url]\n<br />[*] 点击 \"Create Token\"（创建令牌）\n<br />[*]使用 \"Workers AI\" 模板或创建具有 \"Workers AI\" 权限的自定义令牌\n<br />[*]如果使用 \"Workers AI\" 模板，无需修改其任何内容\n<br />[*]复制令牌（之后无法再次查看！）\n<br />[/list]\n<br />[/list]\n<br />\n<br />[b]为什么选择 Cloudflare？[/b]\n<br />[list]\n<br />[*] [color=#27ae60]✔[/color] [b]免费额度[/b]：每天 10,000 次请求\n<br />[*] [color=#27ae60]✔[/color] [b]全球可用[/b]：在中国和全球都能使用\n<br />[*] [color=#27ae60]✔[/color] [b]单一密钥[/b]：一个令牌同时用于 LLM 和向量嵌入\n<br />[*] [color=#27ae60]✔[/color] [b]速度快[/b]：由 Cloudflare 全球网络提供支持\n<br />[/list]\n<br />\n<br />[size=5][b]示例问题[/b][/size]\n<br />\n<br />[list]\n<br />[*] \"我的背包里有阿比盖尔喜欢的东西吗？\"\n<br />[*] \"夏天种什么最赚钱？\"\n<br />[*] \"怎么钓河豚？\"\n<br />[*] \"我的啤酒花什么时候能收获？\"\n<br />[*] \"在哪里能找到灰尘精灵？\"\n<br />[/list]\n<br />\n<br />[i]或者直接：[/i]\n<br />[list]\n<br />[*] \"我今天该做什么？\"\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41859",
+	"Version": "1.1.3",
+	"Updated": "2026-02-01T21:46:46+00:00",
+	"Downloads": [
+		{
+			"Id": 155629,
+			"Type": "Main",
+			"DisplayName": "StardewGPT",
+			"FileName": "StardewGPT-41859-1-1-3-1769982406.zip",
+			"Description": "Added a preset message if the user has not set the CloudFlare token correctly.",
+			"Version": "1.1.3",
+			"SizeInBytes": 36744971,
+			"Uploaded": "2026-02-01T21:46:46+00:00",
+			"Mods": [
+				{
+					"Id": "LorenzLiu.StardewGPT",
+					"DisplayName": "StardewGPT",
+					"Type": "Smapi",
+					"RelativePath": "StardewGPT",
+					"Manifest": {
+						"Name": "StardewGPT",
+						"Description": "An in-game ChatGPT-like chatbot for Stardew Valley, built with the latest foundational model and a contextual knowledge base of the game and your game stats.",
+						"Author": "Lorenz Liu",
+						"Version": "1.1.3",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "StardewGPT.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:lorenz-liu/stardew-gpt",
+							"Nexus:41859"
+						],
+						"UniqueId": "LorenzLiu.StardewGPT"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342542317,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428547,
+		"UploaderId": 263112022,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

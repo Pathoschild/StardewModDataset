@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 6722,
+	"Name": "Stronger and More Random Monsters",
+	"Author": "mikemonroe",
+	"AuthorLabel": "None",
+	"Description": "[b]What it does[/b]\n<br />\n<br />This mod aims to make the caving experience more varied and challenging by introducing variation to monster health, damage, movement ([i]duration of random movements[/i]), aggro range, and speed. Some days the caves will be tougher, other days easier (practically always more difficult than native). It's optionally affected by luck, check Daily Luck Modifier section for more details.\n<br />\n<br />[b]\n<br />\n<br />Variation\n<br />\n<br />[/b]The following are the basic changes that can happen to a monster. The changes are applied to native values. Many monsters get additional modifiers to the stats, while some stats may not get affected at all. All the variation that deviates from the basic formulas is documented in the file monster_information.txt that can be found in the assets folder of the mod.\n<br />\n<br />[list=1]\n<br />[*][b]Health [/b]gets a multiplier of 0.8 to 1.6\n<br />[*][b]Damage[/b] gets a multiplier of 1.0 to 4.0\n<br />[*][b]Duration of random movements[/b] parameter gets a multiplier of 0.5 to 1.5\n<br />[*][b]Aggro range[/b] gets 1, 0, or -1 added to it\n<br />[*][b]Speed[/b] gets 1, 0, or -1 added to it (with chance favoring the positive value)\n<br />[/list]\n<br />Speed values are generally low and as a result small changes have relatively big effect (finer adjustments are not possible).\n<br />\n<br />\n<br />\n<br />[b]Daily Luck Modifier\u00A0[/b]\n<br />\n<br />Each distinct non-neutral luck level, that is luck levels that are aknowledged in the fortune teller's channel, adds a 15% positive or negative buff to monster health and damage. For example on a very lucky day the HP and damage get a 30% debuff. The modifier is applied after the usual randomization (effectually). The difference between a very unlucky and very lucky day is 60%, which can make a big difference to the difficulty.\u00A0\n<br />\n<br />The modifier isn't affected by luck that is gained/lost during the day.\n<br />\n<br />Can be disabled in the config.\n<br />\n<br />\n<br />\n<br />[b]Config\n<br />\n<br />[/b]\"LessDamage\" option can be set to true in the config.json (generated in the mod folder after launching the game with the mod enabled), with it the maximum damage is 3x native value (absent additional multipliers to damage).\n<br />\n<br />\"NewMonsters\" option can be set to true or false in the config.json to either enable or disable the mod from modifying the 1.5 monsters. Default is true.\n<br />\n<br />\"AllowLuckModifier\" option can be set to true or false in the config.json to either enable the luck modifier or disable it. Default is true.\n<br />\n<br />\n<br />\n<br />[b]Compatibility\n<br />\n<br />[/b]With other Content Patcher mods that change monster data whichever mod loads last will overwrite some or all changes made by the other mod depending on the specifics of how the mods change the values. This mod only edits the mentioned 5 parameters, so it won't overwrite loot table modifications for example.\n<br />\n<br />\n<br />\n<br />[b]Suggested mods[/b]\n<br />\n<br />Try out [url=https://www.nexusmods.com/stardewvalley/mods/6894]Angel's weapon rebalance mod[/url]\uFEFF, it could make your life easier.\n<br />\n<br />\n<br />\n<br />[b]Caveats/Limitations[/b]\n<br />\n<br />The mod is well-tested for pre 1.5 monsters and I feel it is fine for them. The game can apply buffs to them under some circumstances and that can make them very strong, but I can't do anything about it. \n<br />\n<br />Please feel free to report problems and give balance suggestions.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6722",
+	"Version": "1.4.0",
+	"Updated": "2024-03-28T08:25:42+00:00",
+	"Downloads": [
+		{
+			"Id": 86393,
+			"Type": "Main",
+			"DisplayName": "Stronger and More Random Monsters",
+			"FileName": "Stronger and More Random Monsters-6722-1-4-0-1711614342.zip",
+			"Description": "1.4 changes\n<br /><br />- Add option to invert the effect of the luck modifier\n<br />- Update content patcher format to 2.0",
+			"Version": "1.4.0",
+			"SizeInBytes": 21897,
+			"Uploaded": "2024-03-28T08:25:42+00:00",
+			"Mods": [
+				{
+					"Id": "None.StrongerRandomMonsters",
+					"DisplayName": "Stronger & More Random Monsters",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Stronger & More Random Monsters",
+					"Manifest": {
+						"Name": "Stronger & More Random Monsters",
+						"Description": "Applies limited randomness to certain monster parameters.",
+						"Author": "None",
+						"Version": "1.4.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6722"
+						],
+						"UniqueId": "None.StrongerRandomMonsters",
+						"OtherFields": {
+							"MinimumAmpiVersion": "3.0"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342473081,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393410,
+		"UploaderId": 44205602,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 15004,
+	"Name": "Last Day To Plant Redux",
+	"Author": "atravita",
+	"Description": "Look, I just wanted a mod of this type to handle the fertilizers from [url=https://www.nexusmods.com/stardewvalley/mods/11837]More Fertilizers[/url], okay?\n<br />\n<br />Inspired by [url=https://www.nexusmods.com/stardewvalley/mods/7917?tab=posts]LastDayToPlant[/url], this mod calculates the last day you can plant certain crops, taking into account fertilizers (including mod fertilizers!)\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url].\n<br />[*]Download and install [url=https://www.nexusmods.com/stardewvalley/mods/12932]AtraCore[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Uninstall[/size]\n<br />Simply delete from your Mods directory.\n<br />\n<br />[size=5]Configuration[/size]\n<br />Run SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to configure.\n<br />\n<br />[list]\n<br />[*][font=Courier New]DisplayOption[/font]: The way you'd like the information presented to you. [font=Courier New]OnFirstWarp[/font] displays it the first time you warp, assuming you have no menus open and no events are happening. [font=Courier New]InMailbox[/font] puts it in your mailbox. [font=Courier New]None[/font] does neither. (The letter is also always present in the mail collections tab, should you ever need to refer back to it. It should always be relatively near the end.)\n<br />[*][font=Courier New]CropsToDisplay[/font]: Which crops should this mod display to you? [font=Courier New]All[/font] displays all for the season, [font=Courier New]Purchaseable[/font] displays crops you can purchase AND crops you've \"seen\", and [font=Courier New]Seen[/font] only displays crops you've seen.\n<br />[*][font=Courier New]FertilizersToDisplay[/font]: Which fertilizers should this mod display to you? [font=Courier New]All[/font] for all relevant fertilizers, [font=Courier New]Seen[/font] for only fertilizers you've seen before. ([font=Courier New]Purchaseable[/font] isn't an option here, since More Fertilizers handles most of its shop logic on its own.)\n<br />[*][font=Courier New]AllowSeedsList[/font]: A list of seeds to always display. Would look something like [font=Courier New][\"Beet Seeds\", \"Cake Plant Seeds\", \"Ancient Ferns Seed\"][/font]. Use the [font=Courier New]internal[/font] name, not the display name. (The ID will also work.)\n<br />[*][font=Courier New]AllowFertilizersList[/font]: A list of fertilizers to always display. Follows the same format as seeds, and also uses the internal name. (Note that most fertilizers for More Fertilizers have long internal names that don't match the display names).\n<br />[/list]\n<br />[size=5]Technical notes:[/size]\n<br />[list]\n<br />[*]Each plant is only checked once per fertilizer. This shouldn't matter unless someone creates a fertilizer that only has a chance of changing the growth time, which as far as I know no one has.\n<br />[*]I assume all paddy crops are grown near water.\n<br />[*]The process used to calculate the number of days for each plant under each condition is fairly slow, and there's nothing I can realistically do about the fact that it's an [font=Courier New]O(mn)[/font] problem. I cache as much as I can, but on my computer first startup takes about 400-500 ms (for about 100 modded crops + about 20 modded fertilizers). About half this time is reflecting into JA to see when crops are purchase-able, so [font=Courier New]Seen[/font] and [font=Courier New]All[/font] are definitely significantly faster. (That said - it's cached, I usually see about 2-20ms on subsequent days.)\n<br />[*]Fertilizers are only displayed if they change the time needed (so things like the Quality Fertilizer are ignored).\n<br />[*]For split-screen - the two players are tracked together for things like [font=Courier New]Seen[/font] fertilizers and crops.\n<br />[*]In multiplayer, if you change professions, you'll temporarily see timing info for both your old profession and new profession.\n<br />[*]I only look at the current month for timing info, so if you have a crop that takes more than an in-game month to grow, this mod will never tell you about it. This is entirely because I structured my caches weird, but at this point I'm not rewriting the whole mod for a handful of crops most people would plant in their greenhouse anyways.\n<br />[*]This mod assumes the month is 28 days. I'll implement support for mods that add longer/shorter months if sufficient people ask.\n<br />[/list]\n<br />[size=5]Future development ideas:[/size]\n<br />[list]\n<br />[*]Displaying this info on the shop menu itself?\n<br />[/list]\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, multiplayer, and split-screen mode. Should be fine if installed for only one player in multiplayer.\n<br />[*]Should be compatible with most other mods. Works for JA crops, but not DGA crops. Works with mods that change the growth time via CP, like [url=https://www.nexusmods.com/stardewvalley/mods/13970?tab=description]Balanced Valley[/url] (except, well, not taking into account crops that take more than a month to grow.) Designed to work with my [url=https://www.nexusmods.com/stardewvalley/mods/11837]More Fertilizers[/url]. Takes into account Walk of Life's Prestiged Agriculturalist.\n<br />[/list]\n<br />[size=5]See also[/size]\n<br />[url=https://github.com/atravita-mods/StardewMods/blob/main/LastDayToPlantRedux/docs/changelog.md]Changelog[/url]\n<br />\n<br />All donation points for this mod go to [url=https://www.againstmalaria.com/]Against Malaria[/url]. Please consider supporting them if you like this mod!\n<br />Looking for something else? Please consider [url=https://www.nexusmods.com/users/116553368?tab=user+files]my other mods[/url]!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15004",
+	"Version": "0.1.1",
+	"Updated": "2023-03-24T20:14:52+00:00",
+	"Downloads": [
+		{
+			"Id": 68500,
+			"Type": "Main",
+			"DisplayName": "LastDayToPlantRedux",
+			"FileName": "LastDayToPlantRedux-15004-0-1-1-1679688892.zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.2+/AtraCore 0.2.0",
+			"Version": "0.1.1",
+			"SizeInBytes": 37965,
+			"Uploaded": "2023-03-24T20:14:52+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.LastDayToPlantRedux",
+					"DisplayName": "Last Day to Plant Redux",
+					"Type": "Smapi",
+					"RelativePath": "LastDayToPlantRedux",
+					"Manifest": {
+						"Name": "Last Day to Plant Redux",
+						"Description": "Tells you the last day to plant various crops, adjusted for fertilizer.",
+						"Author": "atravita",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "LastDayToPlantRedux.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.2.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:15004"
+						],
+						"UniqueId": "atravita.LastDayToPlantRedux",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342455188,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401692,
+		"UploaderId": 116553368,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

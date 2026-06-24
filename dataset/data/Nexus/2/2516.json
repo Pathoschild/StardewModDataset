@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 2516,
+	"Name": "Custom Crystalarium Mod",
+	"Author": "Digus",
+	"Description": "[size=3][b]Current version: [/b]1.5.1[/size]\n<br />[list]\n<br />[*]Update mod to be compatible with Stardew Valley 1.6\n<br />[*]Cloners can now be defined by QualifiedItemId, this replaces the Name when it's present.\n<br />[*]You can now identify the clonables by Qualified Item Ids. That includes big craftables. (you can clone machines)\n<br />[*]New property for the crystalarium and other clonables, to keep the item quality, how it worked before 1.6\n<br />[*]BlockChange is now the default behavior of the crystalarium since that is how vanilla those it, you can disable it in the config.\n<br />[*]Updates for new API of GMCM (again)\n<br />[*]Fix null reference exception when an object with null name was loaded in the game.\n<br />[*]Fix problem with quality configuration\n<br />[*]French i18n by [url=https://www.nexusmods.com/users/745980]Caranud[/url]\uFEFF\n<br />[*]Turkish i18n by Lexith\n<br />[*]German i18n by [url=https://www.nexusmods.com/users/58067946]Th3Tob1[/url]\uFEFF\n<br />[/list][size=3][b]Objective: [/b][/size]\n<br />The first objective of this mod was to add the prismatic shard to the crystalarium as some players wished for. To make it balanced, the shard takes 14 days to be cloned. It makes the prismatic shard slightly worst than the diamond to make money with the crystalarium, so the advantage is a way to get most loved gift consistently. But will take 14 days to get the gem back, and a full month to get a second one.\n<br />Since I was already modding that, is seemed useful and easy to let players choose which ever object they want to place in the crystalarium for cloning. You can even change the current time it takes to clone the gems and minerals.\n<br />Now it can also turn other objects into cloners.\n<br />\n<br />[size=3][b]Compatibility:[/b][/size]\n<br />The mod might conflict with other mods that change how the crystalarium works. It's now compatible with [url=https://www.nexusmods.com/stardewvalley/mods/2428]Prismatic Tools[/url]. No other problems reported so far.\n<br />\n<br />[size=3][b]Installation:[/b][/size][list]\n<br />[*][size=2][url=https://github.com/Pathoschild/SMAPI/releases]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/2516/]Unzip the Custom Crystalarium Mod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/1536/]Unzip the MailFrameworkMod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />[size=3][b]How does it work[/b]:\n<br />[/size][list]\n<br />[*][size=2]After finding your first prismatic shard, you will receive a letter explaining the changes, saying that they were wrong about the effects of the EMF interacting negatively with the shard[/size][size=2]. Since we have a book in the library giving a reason for the prismatic shard not to work, I thought it was needed to rectify the game lore.[/size]\n<br />[*][size=2]The letter is just for flavor though, once you install the mod it should already be working, you can even disable the letter in the config file.[/size]\n<br />[*][size=2]Once you start the game for the first time, the file '\uFEFFCrystalariumData.json' will be created in the 'data' folder of the mod.[/size]\n<br />[*][size=2]Here is an example on how to add more items in the file. This adds the iridium bar with 7 days\u00A0 time to clone, and all trash items will be cloned in 30 minutes: [/size]\n<br />[size=2][code]\uFEFF\uFEFF{\n<br />\u00A0 \"74\": 20160,\n<br />\u00A0  \"337\": 10080,\n<br />\u00A0  \"-20\": 30,\n<br />\u00A0 \"Dinosaur Egg\" : 120\n<br />}\n<br />[/code]\n<br />[/size][*][size=2]The format of the file is an serialization of a C# Dictionary.[/size]\n<br />[*][size=2]You need to place an object Id, Category or Name between double quotation marks, followed by colon and the time on in game minutes to clone the object. If you want another object, you need to place a comma and repeat. Everything needs to be between braces.[/size]\n<br />[*][size=2]A full in game day is 1440 minutes.[/size]\n<br />[*][size=2][size=2]You can find the item ids and categories in this page: [/size][url=https://stardewvalleywiki.com/Modding:Object_data][size=2]https://stardewvalleywiki.com/Modding:Object_data[/size][/url]\uFEFF[/size]\n<br />[*][size=2]There are two config options to change the default way the crystalarium works, these are the options: [/size]\n<br />[list]\n<br />[*][size=2]\u00A0Default: The crystalarium destroy the object to copy it.\u00A0[/size]\n<br />[*][size=2]\u00A0BackOnChange: The crystalarium hold the object to copy it.[/size]\n<br />[*][size=2]\u00A0BackImmediately: The cystalarium scan the object to copy it. [/size]\n<br />[/list][/list]\n<br />[size=3][size=3][b]Config options:[/b][/size]\n<br />[size=2]Run the game at least one with the mod installed to create the config.json file. You can edit this file to change the configuration.\n<br />[/size][/size][list]\n<br />[*][size=2]\"[b]DisableLetter[/b]\": ([b]false[/b]|true) Enable or disable the letter explaining about the change to the crystalarium.[/size]\n<br />[*][size=2][size=2]\"[b]EnableCrystalariumCloneEveryObject[/b]\": ([b]false[/b]|true) Enable or disable the crystalarium accepting every object.[/size][/size]\n<br />[*][size=2][size=2][size=2][size=2]\"[b]DefaultCloningTime[/b]\": ([b]5000[/b]|[size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2]any_number[/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size]) Time in game minutes to clone an undefined object, when \uFEFF[/size][/size][/size][/size][size=2][size=2]EnableCrystalariumCloneEveryObject is true[/size][/size][size=2][size=2][size=2][size=2].[/size][/size][/size][/size]\n<br />[*][size=2][size=2][size=2][size=2]\"[b]KeepQuality[/b]\": [size=2][size=2]([b]false[/b]|true)[/size][/size] [/size][/size][/size][/size][size=2][size=2]If true, [/size]the input quality will be kept for cloned objects.[/size][size=2][size=2][size=2][size=2][/size][/size][/size][/size]\n<br />[*][size=2][size=2]\"[b]BlockChange[/b]\": (false|[b]true[/b]) If true, [/size]you won't be able to change the object inside. You will need to remove the crystalarium from the ground.[/size]\n<br />[*][size=2]\"[b]\uFEFFGetObjectBackOnChange[/b]\": ([b]false[/b]|true) If true, you will get any item you place back from the cystalarium if you place a new item or remove if from the ground.[/size]\n<br />[*][size=2]\"[b]\uFEFFGetObjectBackImmediately[/b]\": ([b]false[/b]|true) If true, the crystalarium will let you get the item you placed back immediately. Also, the [size=2]\uFEFFGetObjectBackOnChange[/size] option will be ignored.[/size]\n<br />[*][size=2]\"[b]OverrideContentPackGetObjectProperties[/b]\": [size=2] ([b]false[/b]|true)[/size] If true, the \"GetObjectBack\" properties of the cloners will be overridem by the ones in this config file.[/size]\n<br />[/list][size=3][b]\n<br />Internationalization:[/b][/size]\n<br />[size=2]This mod is compatible with SMAPI support to i18n files. It has an official translation for pt-BR and Spanish, but you can translating for your language following this instructions: [url=https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation]https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation[/url]\n<br />\n<br />[/size][size=3][b]Uninstall:[/b][/size][list]\n<br />[*][size=2]Delete the mod from the installation folder.[/size]\n<br />[/list]\n<br />[size=3][b]Special Thanks:[/b][/size]\n<br />[list]\n<br />[*][url=https://community.playstarbound.com/members/takizuzufu.974882/]Takizuzufu[/url] - Who requested for the prismatic shard to be compatible with the crystalarium at the official forums. \n<br />[*][url=https://community.playstarbound.com/members/coldazrael.983574/]coldazrael[/url] - Who requested for the crystalarium to give the item back if you accidentally hit it with the pickaxe.\n<br />[*][url=https://community.playstarbound.com/members/harukot.1009432/]HaruKo[/url] - Who translated the mod to Spanish\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/48693548]KAYA[/url]\uFEFF - Who translated the mod to Korean\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/27323031]martin66789[/url] - Who translated the mod to Hungarian\n<br />[*] Everyone on the modding discord channel that are always super helpful\n<br />[/list]\n<br />[size=3][b]For more info:[/b][/size]\n<br />https://community.playstarbound.com/threads/custom-crystalarium-mod.147463/\n<br />\n<br />[size=3][b]My Other Mods:[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1538]Animal Husbandry Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2360]Everlasting Baits And Unbreakable Tackles Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2374]Water Retaining Field Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2594]Crop Transplant Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2642]Custom Cask Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4664/]Custom Kissing Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4711]Borderless Wood Floor Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4992]Custom Producer Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7842/]Mail Services Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8178/]Arcane Table Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8292/]Gem Lamp Posts Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8413]Advanced Casks Mod[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2516",
+	"Version": "1.5.1",
+	"Updated": "2024-05-17T04:02:31+00:00",
+	"Downloads": [
+		{
+			"Id": 99545,
+			"Type": "Main",
+			"DisplayName": "CustomCrystalariumMod-v1.5.1",
+			"FileName": "CustomCrystalariumMod-v1.5.1-2516-1-5-1-1715918551.zip",
+			"Description": "Fix and i18n",
+			"Version": "1.5.1",
+			"SizeInBytes": 31227,
+			"Uploaded": "2024-05-17T04:02:31+00:00",
+			"Mods": [
+				{
+					"Id": "DIGUS.CustomCrystalariumMod",
+					"DisplayName": "Custom Crystalarium Mod",
+					"Type": "Smapi",
+					"RelativePath": "CustomCrystalariumMod",
+					"Manifest": {
+						"Name": "Custom Crystalarium Mod",
+						"Description": "Adds a way to customize the crystalarium machine. Adds a way to create custom cloners using content packs.",
+						"Author": "Digus",
+						"Version": "1.5.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomCrystalariumMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.MailFrameworkMod",
+								"MinimumVersion": "1.16.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:2516"
+						],
+						"UniqueId": "DIGUS.CustomCrystalariumMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486233,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389204,
+		"UploaderId": 2186381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

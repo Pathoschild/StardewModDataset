@@ -1,0 +1,140 @@
+{
+	"Site": "Nexus",
+	"Id": 10045,
+	"Name": "Mineral Lamps",
+	"Author": "undare",
+	"Description": "A expansion mod for [url=https://www.nexusmods.com/stardewvalley/mods/9346]Organic Lamps\u00A0[/url]\u00A0&lt;--(Required)\n<br />Want more lamps?\n<br />-[b][url=https://www.nexusmods.com/stardewvalley/mods/13235/]Neon Signs[/url][/b]\u00A0add-on\n<br />Want to start decorating faster?\n<br />-[url=https://www.nexusmods.com/stardewvalley/mods/13204]Catalogues are Cheap[/url]\n<br />\n<br />Adds 7 colored lamps based on minerals.\n<br />\n<br />All recipes needs :\n<br />-10 [color=#999999]stone[/color] units\n<br />-The mineral of the lamp :\n<br />   \uFEFF+[color=#dd7e6b]Helvite[/color]\n<br />   \uFEFF+[color=#f6b26b]Orpiment[/color]\n<br />   \uFEFF+[color=#ffe599]Pyrite[/color]\n<br />   \uFEFF+[color=#b6d7a8]Jamborite[/color]\n<br />   \uFEFF+[color=#a4c2f4]Kyanite[/color]\n<br />   \uFEFF+[color=#ea9999]Dolomite[/color]\n<br />   \uFEFF+[color=#b4a7d6]Obsidian[/color]\n<br />\n<br />-To install just get the listed mods on \"Requirements\"\n<br />And unpack this .rar file inside your \"Mods\" folder\n<br />\n<br />-The location of the Mineral Bench is the same as the \"Organic Lamps\" mod.\n<br />On Robin´s workshop behind her counter in her house.\n<br />\n<br />\n<br />They all can be powered with a [color=#ffe599]Sap [/color]unit.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10045",
+	"Version": "1.0.0",
+	"Updated": "2021-11-02T17:32:06+00:00",
+	"Downloads": [
+		{
+			"Id": 46779,
+			"Type": "Main",
+			"DisplayName": "Mineral Lamps",
+			"FileName": "Mineral Lamps-10045-1-0-0-1635874326.rar",
+			"Description": "-Initial Release\n<br /><br />-7 Mineral Based Lamps\n<br />-English/Spanish support",
+			"Version": "1.0.0",
+			"SizeInBytes": 100592,
+			"Uploaded": "2021-11-02T17:32:06+00:00",
+			"Mods": [
+				{
+					"Id": "Undare.LampWorkshopMineralCCS",
+					"DisplayName": "Lamp Workshop Mineral CCS Component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_MineralLamps\\[CCS]LWML_CCS_Component",
+					"Manifest": {
+						"Name": "Lamp Workshop Mineral CCS Component",
+						"Description": "Enables crafting spot for Mineral Lamps.",
+						"Author": "Undare",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.CustomCraftingStations"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Undare.LampWorkshopMineralCCS"
+					}
+				},
+				{
+					"Id": "Undare.LampWorkshopMineralCP",
+					"DisplayName": "LampWorkshop Mineral CP component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_MineralLamps\\[CP]LWML_CP_Component",
+					"Manifest": {
+						"Name": "LampWorkshop Mineral CP component",
+						"Description": "Adds Mineral Lamps - locationPatch",
+						"Author": "Undare",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopJA",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopPFM",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopCCS",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10045"
+						],
+						"UniqueId": "Undare.LampWorkshopMineralCP"
+					}
+				},
+				{
+					"Id": "Undare.LampWorkshopMineralJA",
+					"DisplayName": "LampWorkshop Mineral JA component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_MineralLamps\\[JA]LWML_JA_Component",
+					"Manifest": {
+						"Name": "LampWorkshop Mineral JA component",
+						"Description": "Adds the Mineral Machines to the lamp Workshop",
+						"Author": "Undare",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Undare.LampWorkshopMineralJA"
+					}
+				},
+				{
+					"Id": "Undare.LampWorkshopMineralPFM",
+					"DisplayName": "LampWorkshop Mineral Lamps PFM component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_MineralLamps\\[PFM]LWML_PFM_Component",
+					"Manifest": {
+						"Name": "LampWorkshop Mineral Lamps PFM component",
+						"Description": "Adds the lamp workshop Rules and Config for the machines for the Mineral Lamps",
+						"Author": "Undare",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Digus.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Digus.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Undare.LampWorkshopMineralPFM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342433467,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396733,
+		"UploaderId": 12004908,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}

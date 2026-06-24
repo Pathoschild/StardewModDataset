@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 9651,
+	"Name": "Custom Warp Points",
+	"Author": "aedenthorn",
+	"Description": "This mod lets you easily change the tile destination for any existing warp connecting any two maps.\u00A0 \n<br />\n<br />This mod does not let you create new warp points - it just lets you change destinations for existing warp points.\n<br />\n<br />Custom warp points can be either specified in the config.json file or using Content Patcher.\n<br />\n<br />\n<br />[size=5][b]Syntax[/b][/size]\n<br />\n<br />The syntax for warp points is\n<br />\n<br />[b]\"&lt;WarpPointToChange&gt;\": \"&lt;NewX&gt;,&lt;NewY&gt;\"[/b]\n<br />\n<br />\n<br />There are three possible ways of specifying a warp point to change:\n<br />\n<br />[list]\n<br />[*][b]&lt;OriginMapName&gt;,&lt;DestinationMapName&gt;[/b]\n<br />[*][b]&lt;OriginMapName&gt;,&lt;DestinationMapName&gt;,&lt;VanillaX&gt;,&lt;VanillaY&gt;[/b]\n<br />[*][b]&lt;DestinationMapName&gt;,&lt;VanillaX&gt;,&lt;VanillaY&gt;[/b]\n<br />[/list]\n<br />[b]VanillaX [/b]and [b]VanillaY [/b]refer to the original destination tile point. This is useful if there are two destination points connecting the same two maps.\n<br />\n<br />So, for example, to change the warp point from the farm to the farm cave from 8,11 to 8,10 , you could use one of the following:\n<br />\n<br />[code]\"Farm,FarmCave\":\"8,10\"\n<br />\"Farm,FarmCave,8,11\":\"8,10\"\n<br />\"FarmCave,8,11\":\"8,10\"\n<br />[/code]\n<br />\n<br />[size=5][b]Usage[/b][/size]\n<br />\n<br />[size=3][b]config.json[/b][/size]\n<br />\n<br />Edit this mod's config.json file (created after running the game with it installed). Example:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"EnableMod\": true,\n<br />\u00A0 \"AdditionalWarpDictFilePath\": \"CustomWarpPoints\",\n<br />\u00A0 \"WarpDict\": { \"Farm,FarmCave,8,11\":\"8,10\" }\n<br />}\n<br />[/code]\n<br />\n<br />[size=3][b]Content Patcher[/b][/size]\n<br />\n<br />You can create a Content Patcher mod that adds custom warp points by referencing the file path specified in [b]AdditionalWarpDictFilePath[/b].E.g.:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \"Changes\": [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"CustomWarpPoints\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Farm,FarmCave,8,11\":\"8,10\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0 ]\n<br />}\n<br />[/code]\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], doesn't use Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9651",
+	"Version": "0.1.0",
+	"Updated": "2021-09-15T11:59:51+00:00",
+	"Downloads": [
+		{
+			"Id": 45258,
+			"Type": "Main",
+			"DisplayName": "Custom Warp Points",
+			"FileName": "Custom Warp Points-9651-0-1-0-1631707191.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 7674,
+			"Uploaded": "2021-09-15T11:59:51+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomWarpPoints",
+					"DisplayName": "Custom Warp Points",
+					"Type": "Smapi",
+					"RelativePath": "CustomWarpPoints",
+					"Manifest": {
+						"Name": "Custom Warp Points",
+						"Description": "Lets you change the default warp points between maps.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.12.0",
+						"EntryDll": "CustomWarpPoints.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9651"
+						],
+						"UniqueId": "aedenthorn.CustomWarpPoints",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomWarpPoints"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342431946,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396339,
+		"UploaderId": 18901754,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

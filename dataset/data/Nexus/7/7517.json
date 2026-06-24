@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 7517,
+	"Name": "Custom Tokens",
+	"Author": "TheMightyAmondee",
+	"Description": "[size=5]Custom Tokens\n<br />\n<br />[/size]Custom Tokens is a mod that provides some additional tokens for [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url], extending what can be done.\n<br />\n<br />[b][size=3]Custom Tokens registers the following tokens:\n<br />[/size][/b]\n<br />Location Tokens:\n<br />[list]\n<br />[*]MineLevel, minelevel the player is currently on\n<br />[*]VolcanoFloor, volcanofloor the player is currently on\n<br />[*]DeepestMineLevel, the deepest minelevel reached by the player, this includes Skull Cavern floors\n<br />[*]DeepestVolcanoFloor, the deepest volcano floor reached by the player\n<br />[*]DeepestNormalMineLevel, the deepest normal minelevel reached by the player\n<br />[*]DeepestSkullCavernMineLevel, the deepest skull cavern minelevel reached\n<br />[/list]\n<br />Marriage Tokens:[list]\n<br />[*]Anniversary of the player, split into two tokens, AnniversaryDay and AnniversarySeason\n<br />[*]YearsMarried, total number of years married\n<br />[*]DaysMarried,\u00A0total number of days married\n<br />[/list]\n<br />Quest Tokens:[list]\n<br />[*]QuestIDsCompleted, a list of quest ids that the player has completed\n<br />[*]QuestsCompleted, the total number of quests completed\n<br />[*]SOIDsCompleted, a list of the special orders the player has completed, this includes qi challenges\n<br />[*]SOCompleted, total number of different special orders completed\n<br />[/list]\n<br />Death and Exhaustion Tokens:[list]\n<br />[*]DeathCount, total number of times the player has died\n<br />[*]DeathCountMarried, an extension of DeathCount that tracks how many times a player has died after being married.\n<br />[*]DeathCountPK, (provides a more accurate value than the DeathCount token for use in the PlayerKilled event)\n<br />[*]DeathCountMarriedPK, an extension of DeathCountPK that tracks how many times a player has died after being married.\n<br />[*]PassOutCount, how many times a player has passed out.\n<br />[/list]\n<br />Advanced Tokens:\n<br />[list]\n<br />[*]Child, holds information about the player's children, requires input arguments to work.\n<br />[/list]\n<br />See the\u00A0[url=https://github.com/TheMightyAmondee/CustomTokens/blob/master/README.md]README[/url] on github for more information about tokens\n<br />\n<br />[b]Version 1.6.0:\n<br />[/b]- Updated for 1.6 compatibility\n<br />[b]Version 1.5.1:\n<br />[/b]- This version adds a few more location tokens for deepest levels in the normal mines, skull cavern and volcano.\n<br />\n<br />[b]Using Custom Tokens:\n<br />[/b]\n<br />- SMAPI 4.0 or above must be installed.\n<br />- Ensure Custom Tokens is listed as a dependency in your content pack\n<br />- Tokens used must be prefixed with the mod's unique ID e.g\u00A0TheMightyAmondee.CustomTokens/MineLevel\n<br />- Many tokens require an update rate of OnLocationChange, OnTimeChange or both in order to work properly\n<br />\n<br />[list][/list][b]The Child Token:[/b]\n<br />\n<br />This token takes exactly 3 input arguments. They are not case sensitive.\n<br />\n<br />The first argument, player, gives the player type. It must be one of host (the main player) or local (the current player that may be a farmhand). E.g player=host\n<br />\n<br />The second argument, childindex, gets the index of the child to get the value for. It must be numeric, starting from 0. 0 represents the player's oldest child, 1 the second oldest and so on. E.g childindex=1\n<br />\n<br />The third argument gives the name of the value you want. This can be either birthdayday, birthdayseason, daysold, darkskinned or hat.\n<br />\n<br />- birthdayday and birthdayseason get the day of the month and the season the child was born on respectively\n<br />- daysold gives the child's current age in days\n<br />- darkskinned gives true if the child uses the dark skinned sprite and false otherwise\n<br />- hat gives the name of the hat the child is currently wearing. Note: this is always \"Party Hat\" for all three party hat colours.\n<br />\n<br />If no suitable values are found, the token will be equal to \"null\".\n<br />\n<br />Example of a full token with input arguments: [code]TheMightyAmondee.CustomTokens/Child:player=host|childindex=0|birthdayday\n<br />[/code]\u00A0\n<br />This token returns the day of the month the first born child of the host player was born on.\n<br />\n<br />The README on github goes into this token in further detail if needed.\n<br />\n<br />[b]Getting old or current save files up to speed (Version 1.3.1 and below):\n<br />[/b]\n<br />Old or current save files require some additional set-up. This isn't strictly necessary and only needs to be done if the relevant tokens are used but may result in incorrect token values.\n<br />\n<br />A per-save JSON file will be generated after the day is started for each save so the mod can track values not tracked by the game. This is found in the data folder located in the mod folder. These values can be adjusted as needed as they will have an initial value of 0, which may not be accurate for older saves. Ensure the old tracker value is also updated to the same value as the current tracker value when changing values.\n<br />\n<br />While the mod can determine whether most quests have been completed, some quest ids from previously completed quests in old save files need to be added manually to the save's JSON file in AdditionalQuestsCompleted. Custom quest ids can also be added here. \n<br />\n<br />\u00A0Depending on what quests have previously been completed, the field should look something like this:\u00A0 \"AdditionalQuestsCompleted\": [6,16,128,130]\u00A0\n<br />\n<br />[list]\n<br />[*]If you have completed \"Getting Started\", add 6\n<br />[*]If you have entered the Adventurer's Guild, add 16\n<br />[*]If you have done secret note 25 (Abigail), add 128\n<br />[*]If you have done secret note 25 (Caroline), add 129\n<br />[*]If you have finished \"The Pirate's Wife\", add 130\n<br />[/list]\n<br />\n<br />[b]Config:[/b]\n<br />- AllowDebugging adds a single debug command so the values of the tokens can be viewed in the SMAPI console. When enabled typing \"tracker\" in the console will display a list of token values\n<br />- ResetDeathCountMarriedWhenDivorced will cause the DeathCountMarried token to reset to 0 when divorced, default is true\n<br />\n<br />\n<br />[url=https://github.com/TheMightyAmondee/CustomTokens]Source code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7517",
+	"Version": "1.6.2",
+	"Updated": "2025-03-09T22:47:48+00:00",
+	"Downloads": [
+		{
+			"Id": 127073,
+			"Type": "Main",
+			"DisplayName": "Custom Tokens",
+			"FileName": "Custom Tokens-7517-1-6-2-1741560468.zip",
+			"Description": "Requires SMAPI 4.0 or above. Content Patcher not required but the mod is quite useless without it.",
+			"Version": "1.6.2",
+			"SizeInBytes": 23952,
+			"Uploaded": "2025-03-09T22:47:48+00:00",
+			"Mods": [
+				{
+					"Id": "TheMightyAmondee.CustomTokens",
+					"DisplayName": "Custom Tokens",
+					"Type": "Smapi",
+					"RelativePath": "CustomTokens",
+					"Manifest": {
+						"Name": "Custom Tokens",
+						"Description": "Provides some custom tokens for use with Content Patcher",
+						"Author": "TheMightyAmondee",
+						"Version": "1.6.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7517"
+						],
+						"UniqueId": "TheMightyAmondee.CustomTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513761,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394205,
+		"UploaderId": 95739353,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

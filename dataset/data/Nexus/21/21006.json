@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 21006,
+	"Name": "Dialogue Display Tweaks - Configurable Dialogue Box UI",
+	"Author": "ItsBenter",
+	"Description": "[img]https://i.imgur.com/LQeyWhM.png[/img]\n<br />Inspired by [url=https://www.nexusmods.com/stardewvalley/mods/11662]Advanced Dialogue Display[/url], this mod adds configurable informational features for the\u00A0dialogue box while trying to maintain the usual looks.\n<br />\n<br />[b][color=#e69138]Info Box[/color][/b]\n<br />Adds a row on top of the dialogue box to display friendship indicator, hearts, and gift indicator. Can be configured to disappear when in events (requires [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url]\uFEFF) and when talking to non-social NPCs (requires [url=https://www.nexusmods.com/stardewvalley/mods/27100]BETAS[/url]).\n<br />[img]https://i.imgur.com/iouUZIi.png[/img]\n<br />[b][color=#e69138]\n<br />Hearts[/color][/b]\n<br />Show hearts with the current NPCs talked.\u00A0Behave the same as in the social tab.\u00A0\n<br />[img]https://i.imgur.com/KcOPc4q.png[/img]\n<br />[b][color=#e69138]\n<br />Friendship Indicator[/color][/b]\n<br />Refers to the animated icon on right side of the character portrait. Can be disabled or moved to the Info Box.\n<br />\n<br />[color=#e69138][b]Gift Indicator[/b][/color]\n<br />Shows the amount of gifts given in the week. Behave the same as in the social tab. Can be placed in the Info Box or the Bottom Left of the dialogue box.\n<br />[img]https://i.imgur.com/0Em063J.png[/img]\n<br />[img]https://i.imgur.com/EkNLPSm.png[/img]\n<br />\n<br />[img]https://i.imgur.com/CqcVhaz.png[/img]\n<br />[list]\n<br />[*]This mod should work with UI recolors.\n<br />[/list]\n<br />[img]https://i.imgur.com/HNm7QJU.png[/img]\n<br />1. Can I use this mod in an ongoing save?\n<br />Yes, you can. The mod will take effect immediately after added.\n<br />\n<br />2. Can I remove this mod in an ongoing save?\n<br />Yes, you can. There'll be no issue\n<br />\n<br />[img]https://i.imgur.com/WtvzZ9s.png[/img]\n<br />[list]\n<br />[*][url=https://next.nexusmods.com/profile/Shockah]Shockah[/url]\uFEFF\u00A0created C# component used in trigger action to reload this mod patch\n<br />[*]UI recolors used in mod images are [url=https://www.nexusmods.com/stardewvalley/mods/17912]VPR-Inspired UI[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/17323]Lavender Dreams UI Recolor[/url]\u00A0and [url=https://www.nexusmods.com/stardewvalley/mods/6899]Portrait Frame Variations\n<br />[/url]\n<br />[/list]\n<br />[url=https://github.com/itsbenter/DialogueDisplayTweaks]source[/url]\n<br />[size=1]\n<br />Tiny reminder: endorse the mod if you like it. It means more people will see it, and it makes the author happy. :)\u00A0[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21006",
+	"Version": "1.0.1",
+	"Updated": "2025-10-18T11:33:35+00:00",
+	"Downloads": [
+		{
+			"Id": 145853,
+			"Type": "Main",
+			"DisplayName": "Dialogue Display Tweaks",
+			"FileName": "Dialogue Display Tweaks-21006-1-0-1-1760787215.zip",
+			"Description": "- Fixed lag when opening dialogue box when many content patcher content pack mods are installed",
+			"Version": "1.0.1",
+			"SizeInBytes": 14223,
+			"Uploaded": "2025-10-18T11:33:35+00:00",
+			"Mods": [
+				{
+					"Id": "ItsBenter.DialogueDisplayTweaks.CP",
+					"DisplayName": "Dialogue Display Tweaks",
+					"Type": "ContentPack",
+					"RelativePath": "DialogueDisplayTweaks\\[CP] DialogueDisplayTweaks",
+					"Manifest": {
+						"Name": "Dialogue Display Tweaks",
+						"Description": "Some tweaks for dialogue display.",
+						"Author": "ItsBenter",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Mangupix.DialogueDisplayFrameworkContinued",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Spiderbuttons.BETAS",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21006"
+						],
+						"UniqueId": "ItsBenter.DialogueDisplayTweaks.CP",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "ItsBenter.DialogueDisplayTweaks",
+					"DisplayName": "Dialogue Display Tweaks (DLL)",
+					"Type": "Smapi",
+					"RelativePath": "DialogueDisplayTweaks\\[DLL] DialogueDisplayTweaks",
+					"Manifest": {
+						"Name": "Dialogue Display Tweaks (DLL)",
+						"Description": "Add trigger action used for Dialogue Display Tweaks.",
+						"Author": "ItsBenter",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.2.0",
+						"EntryDll": "DialogueDisplayTweaks.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21006"
+						],
+						"UniqueId": "ItsBenter.DialogueDisplayTweaks"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532541,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407694,
+		"UploaderId": 41011220,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

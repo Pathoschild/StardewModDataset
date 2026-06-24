@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 28203,
+	"Name": "Object Import Map - Continued",
+	"Author": "CyanFire",
+	"AuthorLabel": "aedenthorn",
+	"Description": "This is a continuation of [url=https://next.nexusmods.com/profile/aedenthorn/about-me?gameId=1303]aedenthorn[/url]'s [url=https://www.nexusmods.com/stardewvalley/mods/10965]Object Import Map[/url] mod.\n<br />\n<br />\n<br />This mod lets you use tmx map files to import the following items directly onto the current location's map:\n<br />\n<br />[list]\n<br />[*]Fully-grown trees\n<br />[*]Ordinary objects \n<br />[*]Fully-grown crops\n<br />[*]Planted seeds\n<br />[*]Pre-tuned flute blocks (and preset tones using [url=https://github.com/mouahrara/aedenthorn/tree/master]Advanced Flute Blocks (Unofficial)[/url]\uFEFF)\n<br />[*]Preset drum blocks\n<br />[*]Flooring tiles\n<br />[*]Train Tracks (using the [url=https://www.nexusmods.com/stardewvalley/mods/28049]Train Tracks - Continued[/url]\uFEFF mod)\n<br />[/list]\n<br />To import premade object import maps:\n<br />\n<br />[list]\n<br />[*]Place the map in this mod's assets folder and name it [b]import.tmx [/b]or for additional map files as long as the map file name starts with [b]import[/b], it can be named anything eg. [b]importtest.tmx, import_new.tmx [/b]etc, etc. It has to be in the [b].tmx[/b] format.\n<br />[*]The map file(s) must have a map property named [b]Location [/b]with the name of the location that you want to import the map file(s) into.\n<br />[*]Go to the target location in-game and type [b]/importmap[/b] and hit [b]Enter[/b]. If the current location name matches what's in the [b]Location[/b] map property, the map file(s) will be imported.\n<br />[/list]\n<br />If you want to empty the current location's map first, you can type [b]/nukemap[/b] and press [b]Enter[/b]. This nukes pretty much everything on the map minus NPCs and buildings.\n<br />\n<br />If you want to remove everything that you have imported into the current location's map, you can type [b]/clearimportmap[/b] and press [b]Enter[/b].\n<br />\n<br />[youtube]F7wmJvBciIk[/youtube]\n<br />\n<br />\n<br />[size=5][b]Creating Maps[/b][/size]\n<br />\n<br />This part assumes you know [url=https://stardewvalleywiki.com/Modding:Maps#Using_Tiled]how to use Tiled with Stardew Valley maps[/url].\n<br />\n<br />Copy the map file into the mod's assets folder and add \n<br />layers according to what type of thing you want to import. \n<br />\n<br />Add the corresponding tilesheets as well and link them to the png files in this mod's assets folder. \n<br />\n<br />You may have to redirect the existing tilesheets to files in this mod's assets folder in order to make them show properly.\n<br />\n<br />Add the proper tiles from the proper tilesheet to the proper layer and save the map.\n<br />\n<br />There is an example map called EXAMPLE_import.tmx file included in the assets folder that you can use as a guide.\n<br />\n<br />\n<br />[b][size=4]Trees[/size][/b]\n<br />\n<br />To add trees, create a tile layer called [b]Trees[/b] and use the Paths tilesheet to add trees according to the tree symbols on the Paths tilesheet.\u00A0 Tree types are as follows:\n<br />\n<br />[list]\n<br />[*]1 - Oak\n<br />[*]2 - Maple\n<br />[*]3 - Pine\n<br />[*]6 - Desert Palm\n<br />[*]7 - Ginger Island Palm\n<br />[*]9 - Mahogany\n<br />[/list]\n<br />\n<br />[b][size=4]Objects[/size][/b]\n<br />\n<br />To add objects, create a tile layer called [b]Objects [/b]and add tiles using a tilesheet with the [b]springobjects.png[/b] as its source. \n<br />\n<br />Lots of objects should not really be spawned this way, but some of them turn out okay.\n<br />\n<br />\n<br />[size=4][b]Crops and Seed[/b][/size][b][size=4]s[/size][/b]\n<br />\n<br />To add crops and seeds, use the [b]Objects[/b] layer as above and add the corresponding tile from [b]springobjects.png[/b]. \n<br />\n<br />Seed packets spawned this way will be planted, and produce that has a corresponding seed will be planted fully-grown.\n<br />\n<br />\n<br />[size=4][b]Flute and Drum Blocks[/b][/size]\n<br />\n<br />For flute blocks, create a tile layer called [b]FluteBlocks[/b] and add tiles using a tilesheet with the [b]fluteblocks.png[/b] file as its source.\n<br />\n<br />Flute block tunes can be changed if you have Advanced Flute Blocks installed.\n<br /> The twelve rows of tiles in the tilesheet correspond to the following \n<br />tones:\n<br />\n<br />[list]\n<br />[*]flute\n<br />[*]toyPiano\n<br />[*]crystal\n<br />[*]clam_tone\n<br />[*]toolCharge\n<br />[*]telephone_buttonPush\n<br />[*]miniharp_note\n<br />[*]newArtifact\n<br />[*]select\n<br />[*]dustMeep\n<br />[*]Duck\n<br />[*]pig\n<br />[/list]\n<br />Note that some of these tones are pitched differently from each other.\n<br />\n<br />For drum blocks, create a tile layer called [b]DrumBlocks[/b] and add tiles using a tilesheet with the [b]drumblocks.png[/b] file as its source.\n<br />\n<br />Drum block indexes (1-7) correspond to the seven drum sounds made by drum blocks.\n<br />\n<br />\n<br />[size=4][b]Flooring[/b][/size]\n<br />\n<br />To add flooring, create a tile layer called [b]Flooring [/b]and add tiles using a tilesheet with the [b]flooring.png[/b] file as its source. \n<br />\n<br />There are 17 different types of flooring.\n<br />\n<br />\n<br />[size=4][b]Train Tracks[/b][/size]\n<br />\n<br />To add train tracks, create a tile layer called [b]TrainTracks [/b]and add tiles using a tilesheet with the [b]traintracks.png[/b] file as its source. \n<br />\n<br />To trigger a speed change on a specific tile, create an object layer called [b]TrainTracks[/b] and add an object called [b]TileData[/b] with a custom property called [b]Speed[/b], and set the value of the property to a positive integer.\n<br />\n<br />To trigger automatic turns on forked tiles, use the [b]TrainTracks[/b] object layer as above and add an object called [b]TileData[/b] with a custom property called [b]Switches[/b].\n<br />\n<br />The value for the Switches property should be a comma-separated list of [b]&lt;FacingDirection&gt;:&lt;TurnDirectionList&gt;[/b].\n<br />\n<br />[b]&lt;FacingDirection&gt;[/b]\u00A0 should be a number 0 - 3 (0 = up, 1 = right, etc.).\n<br />[b]\n<br />&lt;TurnDirectionList&gt;[/b] should be a list of numbers 0 - 3 as above separated by spaces.\n<br />\n<br />E.g.:[b] 0:1 3,2:1 3[/b] means if the train enters the tile facing up (0) or down (2), the first\n<br /> time it should turn to the right of the screen (1) and the second time \n<br />it should turn to the left of the screen (3).\n<br />\n<br />You must have the [url=https://www.nexusmods.com/stardewvalley/mods/28049]Train Tracks - Continued[/url] mod installed to add train tracks.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Code is at [url=https://github.com/CyanFireUK/StardewValleyMods]https://github.com/CyanFireUK/StardewValleyMods[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28203",
+	"Version": "1.0.5",
+	"Updated": "2024-12-30T18:28:14+00:00",
+	"Downloads": [
+		{
+			"Id": 120677,
+			"Type": "Main",
+			"DisplayName": "Object Import Map - Continued",
+			"FileName": "Object Import Map - Continued-28203-1-0-5-1735583294.zip",
+			"Description": "Added the ability to import more than one .tmx file, see the mod description page for updated usage information.",
+			"Version": "1.0.5",
+			"SizeInBytes": 743863,
+			"Uploaded": "2024-12-30T18:28:14+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.ImportMap",
+					"DisplayName": "Import Map",
+					"Type": "Smapi",
+					"RelativePath": "ImportMap",
+					"Manifest": {
+						"Name": "Import Map",
+						"Description": "Import Map.",
+						"Author": "aedenthorn & CyanFire",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "ImportMap.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10965"
+						],
+						"UniqueId": "aedenthorn.ImportMap"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342507365,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414891,
+		"UploaderId": 3490737,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

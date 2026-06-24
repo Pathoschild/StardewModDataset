@@ -1,0 +1,83 @@
+{
+	"Site": "Nexus",
+	"Id": 39133,
+	"Name": "Rebalanced Resource Shops",
+	"Author": "Damentia",
+	"Description": "[font=Arial][size=3]I made this mod primarily to make some usually unpurchasable resources available for purchase at their respective shops, including the usual Year 2+ price increases.\n<br />\n<br />[b]Robin’s Carpenter Shop\n<br />[/b]\n<br />New resources become available as your [b]Foraging skill[/b] improves:[/size][/font][list]\n<br />[*][font=Arial][size=3][b]Hardwood[/b] – Unlocks at Foraging Level 6[/size][/font]\n<br />[*][font=Arial][size=3][b]Clay[/b] – Unlocks immediately (no skill requirement)[/size][/font]\n<br />[*][font=Arial][size=3][b]Fibre[/b] – Unlocks immediately (no skill requirement)[/size][/font]\n<br />[*][font=Arial][size=3][b]Moss[/b] – Unlocks at Foraging Level 9[/size][/font]\n<br />[/list][size=3][font=Arial]\n<br />[/font][font=Arial][b]Clint’s Blacksmith[/b]\n<br />\n<br />Additional ores unlock with your [b]Mining skill[/b]:[/font][/size][list]\n<br />[*][font=Arial][size=3][b]Iridium Ore[/b] – Unlocks at Mining Level 7[/size][/font]\n<br />[*][font=Arial][size=3][b]Radioactive Ore[/b] – Unlocks at Mining Level 10[/size][/font]\n<br />[/list][size=3][font=Arial]\n<br />[/font][font=Arial]You’ll receive a mail notification when each new resource becomes available in the shops (Requires MFM).\n<br />\n<br />In addition, this mod adds configuration options for building and crafting materials, including [b]Wood[/b], [b]Stone[/b], [b]Coal[/b], [b]Copper Ore[/b], [b]Iron Ore [/b]and\u00A0[b]Gold Ore,\u00A0[/b]allowing you to set individual prices for Year 1 and Year 2+.\n<br />\n<br />By default, these use the\u00A0vanilla shop prices, but you can adjust them freely.\u00A0\n<br />\n<br />I also included a config option for the price of [b]Hay\uFEFF[/b]\u00A0from Marnie's for completeness sake, but like the base game this only has a Year 1 price, there is no price increase.\u00A0\n<br />\n<br />[/font][font=Arial]To install just extract the zip and put it into your [b]Mods[/b] folder. \n<br />\n<br />Requires:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1536]Mail Framework Mod[/url]\u00A0(Optional:\u00A0\uFEFFDelete the\u00A0[MFM] folder if you'd rather not install Mail Framework\u00A0Mod or just don't want the extra mails)\n<br />[/list][/font][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39133",
+	"Version": "1.0.0",
+	"Updated": "2025-11-07T14:14:33+00:00",
+	"Downloads": [
+		{
+			"Id": 147433,
+			"Type": "Main",
+			"DisplayName": "Rebalanced Resource Shops",
+			"FileName": "Rebalanced Resource Shops-39133-1-0-0-1762524873.zip",
+			"Description": "Initial Release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 9485,
+			"Uploaded": "2025-11-07T14:14:33+00:00",
+			"Mods": [
+				{
+					"Id": "Damentia.RebalancedShops",
+					"DisplayName": "Rebalanced Shops",
+					"Type": "ContentPack",
+					"RelativePath": "RebalancedShops\\[CP] Rebalanced Shops",
+					"Manifest": {
+						"Name": "Rebalanced Shops",
+						"Description": "Rebalances shop prices and adds new materials to various shops",
+						"Author": "Damentia",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:39133"
+						],
+						"UniqueId": "Damentia.RebalancedShops"
+					}
+				},
+				{
+					"Id": "Damentia.RebalancedShopsForMailFrameworkMod",
+					"DisplayName": "(MFM) Rebalanced Shops",
+					"Type": "ContentPack",
+					"RelativePath": "RebalancedShops\\[MFM] Rebalanced Shops",
+					"Manifest": {
+						"Name": "(MFM) Rebalanced Shops",
+						"Description": "Adds mail notifications from Robin and Clint when new materials become available in their shops.",
+						"Author": "Damentia",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.8.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod",
+							"MinimumVersion": "1.16.0-alpha"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Damentia.RebalancedShops",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "Damentia.RebalancedShopsForMailFrameworkMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534121,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425821,
+		"UploaderId": 2612004,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 25270,
+	"Name": "Is Gus Visiting Ginger Island Today",
+	"Author": "EggplantSalty",
+	"AuthorLabel": "SaltyEggplant",
+	"Description": "This mod allows you to know whether Gus will visiting Ginger Island that day by calling him on the phone. If he's going to the Island, when you're calling him, he will mention it briefly besides the original dialogue.\n<br />\n<br />\uFEFFIt relies on [b]Content Patcher[/b], so be sure to have it installed before using this mod.\n<br />\n<br />This mod consists of 2 parts: the folder without [CP] prefix provides a token for Content Patcher to identify whether Gus is on Ginger Island, and the other folder with that prefix changes Gus's dialogue on the phone.\u00A0\n<br />\n<br />[b]How to use it[/b]: download the \"Is-Gus-Visiting-Island\" folder, copy and paste it into the [b]Mods[/b] folder of Stardew Valley. For more information, check the [b]official wiki page:\u00A0[/b]https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started\n<br />\n<br />It hasn't been tested roughly, and feel free to report any issues you encounter while using it.\u00A0This mod is in [b]English[/b] and [b]Chinese[/b], so feel free to provide translations of other languages (it only changed 5 new lines lol).\n<br />\n<br />Special thanks to @Cycloalkanes for bringing up the idea and @QICAO for testing this mod and providing images.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/25270",
+	"Version": "1.0.1",
+	"Updated": "2024-06-20T06:39:45+00:00",
+	"Downloads": [
+		{
+			"Id": 104451,
+			"Type": "Main",
+			"DisplayName": "Is-Gus-Visiting-Ginger-Island",
+			"FileName": "Is-Gus-Visiting-Ginger-Island-25270-1-0-1-1718865585.zip",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 22695,
+			"Uploaded": "2024-06-20T06:39:45+00:00",
+			"Mods": [
+				{
+					"Id": "SaltyEggplant.IsGusVisitingIsland",
+					"DisplayName": "Is Gus Visiting Island",
+					"Type": "Smapi",
+					"RelativePath": "Is-Gus-Visiting-Island\\IsGusVisitingIsland",
+					"Manifest": {
+						"Name": "Is Gus Visiting Island",
+						"Description": "Let's you know whether Gus is on Ginger Island or not by calling him.",
+						"Author": "SaltyEggplant",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "IsGusVisitingIsland.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:25270"
+						],
+						"UniqueId": "SaltyEggplant.IsGusVisitingIsland"
+					}
+				},
+				{
+					"Id": "SaltyEggplant.IsGusVisitingIslandByPhone",
+					"DisplayName": "Is Gus Visiting Island by Phone",
+					"Type": "ContentPack",
+					"RelativePath": "Is-Gus-Visiting-Island\\[CP] IsGusVisitingIsland",
+					"Manifest": {
+						"Name": "Is Gus Visiting Island by Phone",
+						"Description": "Let's you know whether Gus is on Ginger Island or not by calling him.",
+						"Author": "SaltyEggplant",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "SaltyEggplant.IsGusVisitingIsland",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:25270"
+						],
+						"UniqueId": "SaltyEggplant.IsGusVisitingIslandByPhone"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342491139,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411958,
+		"UploaderId": 206304252,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

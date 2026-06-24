@@ -1,0 +1,114 @@
+{
+	"Site": "Nexus",
+	"Id": 40386,
+	"Name": "Mod Folder Cleaner - Find Duplicates and Clean Junk Files",
+	"Author": "ZeroXPatch",
+	"Description": "Code at:\u00A0https://github.com/ZeroXPatch/Projects-for-Nexus-Mod/blob/main/StardewModsCleaner.py\n<br />\n<br />[b][size=5][center][color=#ffff00]Stardew Mods Cleaner[/color][/center][/size][/b]\n<br />[url=https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=downloads][center]https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=downloads[/center][/url]\n<br />\n<br />Stardew Mods Cleaner is a small desktop utility that scans your Stardew Valley [b]Mods[/b] folder and helps clean up harmless clutter and common installation mistakes.\n<br />\n<br />Nothing is deleted automatically. By default, all cleanup actions move files into a restoreable Trash folder.\n<br />\n<br />This tool does not modify game files, save files, or mod content.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/40386/40386-1766207777-1210773015.png[/img]\n<br />\n<br />[line][b][color=#00ff00]What this tool flags and why\n<br />[/color][/b]\n<br />OS metadata files (safe)These files often come from the creator’s operating system or ZIP extraction and are common in Nexus downloads.\n<br />Examples:\n<br />[list]\n<br />[*][code].DS_Store[/code]\n<br />[*][code]Thumbs.db[/code], [code]ehthumbs.db[/code]\n<br />[*][code]._*[/code] (macOS AppleDouble files)\n<br />[*][code]Icon[/code]\n<br />[*][code]__MACOSX[/code] folder\n<br />[/list]These files are not used by Stardew Valley or SMAPI.\n<br />\n<br />[b]Default: auto-selected, safe to remove.[/b]\n<br />[line][b][color=#00ff00]Empty top-level folders (safe)\n<br />[/color][/b]\n<br />Empty folders directly inside the Mods folder, usually left behind after removing or updating mods.\n<br />\n<br />[b]Default: auto-selected, safe to remove.[/b]\n<br />[line][b][color=#00ff00]Duplicate mods (same SMAPI UniqueID)\n<br />[/color][/b]\n<br />Detects multiple installed copies of the same mod using [code]manifest.json[/code] UniqueID, not folder name.\n<br />These can cause version conflicts or unexpected behavior.\n<br />[b]Not auto-selected. User review required.[/b]\n<br />[line][b][color=#00ff00]Nested “Mods/Mods” folders\n<br />[/color][/b]\n<br />Detects mods extracted one folder too deep, which can prevent them from loading correctly.\n<br />The tool can flatten these folders by moving valid mod folders into the correct location.\n<br />[b]Not auto-selected. User review required.[/b]\n<br />[line][b][color=#00ff00]Archive leftovers (optional)\n<br />[/color][/b]\n<br />ZIP/RAR/7Z files left in the Mods folder after extraction.\n<br />[b]Off by default. Optional cleanup.[/b]\n<br />[line][b][color=#00ff00]Safety notes\n<br />\n<br />[/color][/b][list]\n<br />[*]All actions use a restoreable Trash folder by default\n<br />[*]Each item shows a “Why is this flagged?” explanation\n<br />[*]No mod logic or assets are modified\n<br />[/list]\n<br />\n<br />\n<br />[b][color=#ff0000][size=3]Advanced Version includes the following (Use with Caution) :\u00A0\n<br />[/size][/color][/b]\n<br />[b][color=#ffff00]CAUTION: Include desktop.ini\n<br />[/color][/b]\n<br />[b]What it is:[/b] [code]desktop.ini[/code] is a Windows Explorer metadata file that stores folder display settings (folder icon, view mode, localized name, etc.).\n<br />\n<br />[b]Why it’s flagged:[/b] It’s not used by Stardew Valley or SMAPI. It’s “system noise” that sometimes appears inside mod folders.\n<br />\n<br />[b]Is it safe to remove?\n<br />[/b]\n<br />Usually yes for the game, but:\n<br />[list]\n<br />[*]It can remove custom folder view/icon settings in Windows Explorer.\n<br />[*]Windows may recreate it later.\n<br />[*]Some mod authors might include it for cosmetic folder presentation.\n<br />[/list][b]Why it’s caution:[/b] It’s harmless for gameplay, but affects Windows folder appearance and can confuse people when it reappears.\n<br />[line][b][color=#ffff00]CAUTION: Log clutter inside mod folders (log.txt, *.log, *.trace, *.bak)\n<br />[/color][/b]\n<br />[b]What it is:[/b] Log and backup files created by mods or tools. Common examples:\n<br />[list]\n<br />[*][code]log.txt[/code]\n<br />[*][code]something.log[/code]\n<br />[*][code]trace.log[/code]\n<br />[*][code]*.bak[/code], [code]*.old[/code]\n<br />[/list][b]\n<br />Why it’s flagged:[/b] These files can grow over time and create clutter, especially if a mod writes logs every session.\n<br />\n<br />[b]Is it safe to remove?\n<br />[/b]\n<br />Often yes, but:\n<br />[list]\n<br />[*]Logs can be useful when diagnosing crashes or reporting issues.\n<br />[*]Some mods intentionally ship a log/readme-like file (rare, but possible).\n<br />[/list][b]Why it’s caution:[/b] Removing them won’t usually break anything, but you might delete information you wanted for troubleshooting.\n<br />[line][b][color=#ffff00]CAUTION: Dev/build folders (bin/, obj/, .vs/, .git/, pycache/ etc.)\n<br />[/color][/b]\n<br />[b]What it is:[/b] Folders used for development, builds, or source control, such as:\n<br />[list]\n<br />[*][code]bin/[/code], [code]obj/[/code] (compiled build output)\n<br />[*][code].vs/[/code] (Visual Studio settings)\n<br />[*][code].git/[/code] (Git repository)\n<br />[*][code]__pycache__/[/code] (Python cache)\n<br />[*][code]node_modules/[/code] (JavaScript dependencies)\n<br />[/list][b]\n<br />Why it’s flagged:[/b] These folders are not needed for normal gameplay and can take up space or clutter the Mods directory.\n<br />\n<br />[b]Is it safe to remove?\n<br />[/b]\n<br />For players: usually safe.\n<br />\n<br />For mod authors: not always safe, because it may remove:\n<br />\n<br />[list]\n<br />[*]source control history ([code].git[/code])\n<br />[*]project settings ([code].vs[/code])\n<br />[*]local build outputs you still want\n<br />[/list][b]Why it’s caution:[/b] It can delete important development files if the user is a mod author or keeps source projects inside Mods.\n<br />\n<br />[b][color=#ffff00]Multiple manifest.json inside one top-level mod folder (Caution)\n<br />[/color][/b]\n<br />This tool can flag a top-level mod folder when it contains [b]more than one [code]manifest.json[/code][/b] somewhere inside it.\n<br />\n<br />[b]Why this happens[/b]\n<br />[list]\n<br />[*]You extracted a mod update [b]on top of an existing folder[/b], leaving an old version inside.\n<br />[*]A ZIP was extracted with an extra wrapper folder, creating [b]nested copies[/b].\n<br />[*]An old backup/version folder was kept inside the mod directory.\n<br />[/list][b]Why it matters[/b]\n<br />[list]\n<br />[*]It usually indicates [b]leftover versions[/b] or [b]nested installs[/b], which can confuse manual troubleshooting.\n<br />[*]In some cases it can lead to duplicate/incorrect loading depending on how the folders are arranged.\n<br />[/list][b]Safety[/b]\n<br />[list]\n<br />[*]This is marked as [b]CAUTION[/b] and is [b]not auto-selected[/b].\n<br />[*]Some mod authors intentionally bundle multiple manifests (less common), so you should review the listed manifest paths before removing anything.\n<br />[/list][b]What the tool shows[/b]\n<br />[list]\n<br />[*]The top-level folder being flagged\n<br />[*]A list of [b]every [code]manifest.json[/code] path[/b] found inside, so you can quickly spot the extra copy and decide what to keep.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40386",
+	"Version": "1.0",
+	"Updated": "2025-12-24T20:30:31+00:00",
+	"Downloads": [
+		{
+			"Id": 150922,
+			"Type": "Main",
+			"DisplayName": "Mod folder Cleaner - For Most User",
+			"FileName": "Mod folder Cleaner-40386-1-0-1766113956.zip",
+			"Description": "maximize window when used\n<br />\n<br />:) Stable version - For most user, has everything except ini junk, log clutter junk, and dev/build leftover clean up function.",
+			"Version": "1.0",
+			"SizeInBytes": 11320614,
+			"Uploaded": "2025-12-19T03:12:36+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "150922",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537610,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 151024,
+			"Type": "Main",
+			"DisplayName": "Mod folder Cleaner - Advanced User Only",
+			"FileName": "Mod folder Cleaner - Advanced User Only-40386-1-1Advanced-1766212787.zip",
+			"Description": "maximize window when used\n<br />For Advanced user, including basic function + advanced cleanup : ini junk, log clutter, and Dev/build junks.\n<br />\n<br />1.1 added in Detect “multiple manifest.json inside one top-level mod folder”\n<br />\n<br />",
+			"Version": "1.1Advanced",
+			"SizeInBytes": 11322571,
+			"Uploaded": "2025-12-20T06:39:47+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "151024",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537712,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 151025,
+			"Type": "Optional",
+			"DisplayName": "Mod Clean Advanced - CN",
+			"FileName": "Mod Clean Advanced - CN-40386-1-1AdcancedCN-1766213626.zip",
+			"Description": "使用时请窗口最大化\n<br />\n<br />中文版，请小心使用高级功能",
+			"Version": "1.1AdcancedCN",
+			"SizeInBytes": 11323835,
+			"Uploaded": "2025-12-20T06:53:46+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "151025",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537713,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 151384,
+			"Type": "Optional",
+			"DisplayName": "Mod Folder Cleaner - Advanced - Mac",
+			"FileName": "Mod Folder Cleaner - Advanced - Mac-40386-1-1AdvancedMac-1766608231.zip",
+			"Description": "My attempt to build a Mac version using Github",
+			"Version": "1.1AdvancedMac",
+			"SizeInBytes": 9688888,
+			"Uploaded": "2025-12-24T20:30:31+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "151384",
+					"Type": "Invalid",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342538072,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427074,
+		"UploaderId": 141646868,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

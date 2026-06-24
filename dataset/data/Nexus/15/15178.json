@@ -1,0 +1,388 @@
+{
+	"Site": "Nexus",
+	"Id": 15178,
+	"Name": "JA-CP Kuma and Minecraft",
+	"Author": "pittayakuma",
+	"Description": "添加了几种我的世界花、煤炭 铁 金 青金石 红石 绿宝石 钻石 石英矿物和对应的可摆放的方块，并可以和原版矿物进行交换。不和其他模组的物品冲突。\n<br />添加了位于杂货店上方的熊熊杂货摊（笑）特别感谢 @Ankou54 绘制的肖像和小人！ 虽然说并木有打算做成可结婚的NPC或者别的什么的....杂货摊摊主！\n<br />\n<br />来自热爱或者说是曾经热爱Minecraft的老年咸熊(MCID:Aqua_kuma)倾情制作！\n<br />Bilibili-小火龙果果\n<br />\n<br />[color=#00ff00][b]作物 Crops[/b]\n<br />\n<br />Lily pad 莲叶\n<br />Tulip 郁金香\n<br />Allium 绒球葱\n<br />Cornflower 矢车菊\n<br />Dandelion 蒲公英\n<br />Glow Berries 发光浆果\n<br />Lily of the Valley 铃兰\n<br />Orchid 兰花\n<br />Poppy 虞美人[/color]\n<br />\n<br />\n<br />[color=#7f6000][b]矿物、矿物块及可放置的矿物块机器 Minerals ,Machines and Blocks\n<br />[/b][/color]\n<br />[color=#ffd966]Coal 煤\n<br />Iron 铁\n<br />Gold 金\n<br />Lapis 青金石\n<br />Emerald 绿宝石\n<br />Diamond 钻石\n<br />Quartz 石英\n<br />Redstone 红石\n<br />\n<br />[/color]附赠一瓶熊窝特产蜂蜜 XD",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15178",
+	"Version": "1.0.0",
+	"Updated": "2023-01-24T05:47:01+00:00",
+	"Downloads": [
+		{
+			"Id": 65550,
+			"Type": "Main",
+			"DisplayName": "JA Kuma and Minecraft",
+			"FileName": "JA Kuma and Minecraft-15178-1-0-0-1674488182.rar",
+			"Description": "主要的模组文件，建议使用中文",
+			"Version": "1.0.0",
+			"SizeInBytes": 455804,
+			"Uploaded": "2023-01-23T15:36:22+00:00",
+			"Mods": [
+				{
+					"Id": "pittayakuma.KumaNPC.CON",
+					"DisplayName": "Minecraft Nodes",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[CON]MC minerals Nodes",
+					"Manifest": {
+						"Name": "Minecraft Nodes",
+						"Description": "Add some Minecraft nodes",
+						"Author": "pittayakuma",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.7.5",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.CustomOreNodes",
+							"MinimumVersion": "0.5.3"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "pittayakuma.KumaNPC.JA",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DIGUS.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "pittayakuma.KumaNPC.CON"
+					}
+				},
+				{
+					"Id": "pittayakuma.KumaNPC.CP",
+					"DisplayName": "(CP) Kuma NPC",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[CP] Kuma-头像对话日程",
+					"Manifest": {
+						"Name": "(CP) Kuma NPC",
+						"Description": "Adds NPC Kuma and shop.",
+						"Author": "pittayakuma",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.CustomNPCExclusions",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Raffadax.Trees",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Raffadax.Crops",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.KumaNPC.CP"
+					}
+				},
+				{
+					"Id": "pittayakuma.KumaNPC.JA",
+					"DisplayName": "(JA) Minecraft Crops",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[JA] MC Items",
+					"Manifest": {
+						"Name": "(JA) Minecraft Crops",
+						"Description": "Adds Minecraft Crops and some items to the game.",
+						"Author": "pittayakuma",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.13.4",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cherry.ShopTileFramework",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DIGUS.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.KumaNPC.JA"
+					}
+				},
+				{
+					"Id": "pittayakuma.KUMANPC.PFM",
+					"DisplayName": "(PFM) Kuma Minecraft Production",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[PFM] MC Produce Rule工匠物品产出",
+					"Manifest": {
+						"Name": "(PFM) Kuma Minecraft Production",
+						"Description": "Adds producer code for Minecraft machines.",
+						"Author": "pittayakuma",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Digus.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "pittayakuma.KUMANPC.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.KUMANPC.PFM"
+					}
+				},
+				{
+					"Id": "pittayakuma.kumashop.STF",
+					"DisplayName": "(STF) Kuma Shop",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[STF] Kuma Shop-商店",
+					"Manifest": {
+						"Name": "(STF) Kuma Shop",
+						"Description": "Adds kuma shop for mods fix",
+						"Author": "pittayakuma",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.ShopTileFramework",
+							"MinimumVersion": "1.0.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.ExpandedStorage",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "pittayakuma.KumaNPC.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.kumashop.STF"
+					}
+				},
+				{
+					"Id": "pittayakuma.kumashop.TMX",
+					"DisplayName": "(TMX) Kuma Shops",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[TMX] Kuma Shop-地图显示",
+					"Manifest": {
+						"Name": "(TMX) Kuma Shops",
+						"Description": "Adds kuma shop tiles for mods fix.",
+						"Author": "pittayakuma",
+						"Version": "2.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.TMXLoader"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Raffadax.Trees",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Raffadax.Crops",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.kumashop.TMX"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342452238,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 65581,
+			"Type": "Main",
+			"DisplayName": "JA Kuma and Minecraft",
+			"FileName": "JA Kuma and Minecraft-15178-1-0-0-1674539221.rar",
+			"Description": "消了音效红字",
+			"Version": "1.0.0",
+			"SizeInBytes": 455785,
+			"Uploaded": "2023-01-24T05:47:01+00:00",
+			"Mods": [
+				{
+					"Id": "pittayakuma.KumaNPC.CON",
+					"DisplayName": "Minecraft Nodes",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[CON]MC minerals Nodes",
+					"Manifest": {
+						"Name": "Minecraft Nodes",
+						"Description": "Add some Minecraft nodes",
+						"Author": "pittayakuma",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.7.5",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.CustomOreNodes",
+							"MinimumVersion": "0.5.3"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "pittayakuma.KumaNPC.JA",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DIGUS.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "pittayakuma.KumaNPC.CON"
+					}
+				},
+				{
+					"Id": "pittayakuma.KumaNPC.CP",
+					"DisplayName": "(CP) Kuma NPC",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[CP] Kuma-头像对话日程",
+					"Manifest": {
+						"Name": "(CP) Kuma NPC",
+						"Description": "Adds NPC Kuma and shop.",
+						"Author": "pittayakuma",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.CustomNPCExclusions",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Raffadax.Trees",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Raffadax.Crops",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.KumaNPC.CP"
+					}
+				},
+				{
+					"Id": "pittayakuma.KumaNPC.JA",
+					"DisplayName": "(JA) Minecraft Crops",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[JA] MC Items",
+					"Manifest": {
+						"Name": "(JA) Minecraft Crops",
+						"Description": "Adds Minecraft Crops and some items to the game.",
+						"Author": "pittayakuma",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.13.4",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cherry.ShopTileFramework",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DIGUS.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.KumaNPC.JA"
+					}
+				},
+				{
+					"Id": "pittayakuma.KUMANPC.PFM",
+					"DisplayName": "(PFM) Kuma Minecraft Production",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[PFM] MC Produce Rule工匠物品产出",
+					"Manifest": {
+						"Name": "(PFM) Kuma Minecraft Production",
+						"Description": "Adds producer code for Minecraft machines.",
+						"Author": "pittayakuma",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Digus.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "pittayakuma.KUMANPC.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.KUMANPC.PFM"
+					}
+				},
+				{
+					"Id": "pittayakuma.kumashop.STF",
+					"DisplayName": "(STF) Kuma Shop",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[STF] Kuma Shop-商店",
+					"Manifest": {
+						"Name": "(STF) Kuma Shop",
+						"Description": "Adds kuma shop for mods fix",
+						"Author": "pittayakuma",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.ShopTileFramework",
+							"MinimumVersion": "1.0.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "furyx639.ExpandedStorage",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "pittayakuma.KumaNPC.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.kumashop.STF"
+					}
+				},
+				{
+					"Id": "pittayakuma.kumashop.TMX",
+					"DisplayName": "(TMX) Kuma Shops",
+					"Type": "ContentPack",
+					"RelativePath": "Kuma\\[TMX] Kuma Shop-地图显示",
+					"Manifest": {
+						"Name": "(TMX) Kuma Shops",
+						"Description": "Adds kuma shop tiles for mods fix.",
+						"Author": "pittayakuma",
+						"Version": "2.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.TMXLoader"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Raffadax.Trees",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Raffadax.Crops",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "pittayakuma.kumashop.TMX"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342452269,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401866,
+		"UploaderId": 94921353,
+		"CategoryId": 14,
+		"Adult": false
+	}
+}

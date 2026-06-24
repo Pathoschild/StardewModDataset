@@ -1,0 +1,127 @@
+{
+	"Site": "Nexus",
+	"Id": 18047,
+	"Name": "Eek - A mildly startled creature for Custom Companions",
+	"Author": "0Logophile0",
+	"AuthorLabel": "Logophile",
+	"Description": "[font=Comic Sans MS][size=4]E[/size][/font][font=Comic Sans MS][size=4]EK! wanders the underground, forever discombobulated and startled by the weird noises and creatures around him. In this mod, the farmer can encounter Eek. That's it. (For now).\n<br />[/size][/font]\n<br />Additional file included to add Eek to your Aquarium. This is optional and not needed for the mod to work.\n<br />\n<br />\n<br />[color=#3d85c6][size=3][u][b]REQUIREMENTS[/b][/u]:[/size][/color]\n<br />[list]\n<br />[*]SMAPI\n<br />[*]Content Patcher\n<br />[*]Custom Companions\n<br />[/list]\n<br />\n<br />[b][u][color=#3d85c6][size=3]COMPATIBILITY:[/size][/color][/u][/b]\n<br />No known incompatibilities (tested in save with 500+ mods)\n<br />\n<br />[color=#e69138][b]WARNING:[/b][/color] This mod edits a game map. If another mod edits or makes changes to the same map, this mod may not work.\n<br />\n<br />\n<br />[color=#3d85c6][size=3][b][u]INSTALLATION[/u][/b][/size][/color]\n<br />[list=1]\n<br />[*]Download this mod and required dependencies.\n<br />\n<br />[*]Unzip and place into your MODS folder\n<br />\n<br />[*]Play!\n<br />\n<br />[/list]\n<br />\n<br />Original Eek art created by ichortower. Eek is perfeekt thanks to you.\n<br />\n<br />Many thanks to the lovely people on the #Modded-Farmers channel in the Stardew Valley Discord, without whom Eek would have never been released. Special pufferchick squees for server users CeruleanSpadille, Vinillavin, ichortower, Lex (Sydney), and the insomniac. Pufferchick trophies awarded to server users Dr. Elizabeth MathPerson, Ch0opera, and KediDili for helping me keep Eek in one dimension. And thank you to all the others who've provided support.\n<br />\n<br />All donation points earned from this mod will go to the Donation Drive to help the Victims of the War in Ukraine",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18047",
+	"Version": "1.0.0",
+	"Updated": "2023-09-01T04:54:04+00:00",
+	"Downloads": [
+		{
+			"Id": 75158,
+			"Type": "Optional",
+			"DisplayName": "Eekfish for Aquariums",
+			"FileName": "Eekfish for Aquariums-18047-1-0-0-1693113243.zip",
+			"Description": "Optional file to add Eek as a retexture for the eel aquarium sprite.",
+			"Version": "1.0.0",
+			"SizeInBytes": 5993,
+			"Uploaded": "2023-08-27T05:14:03+00:00",
+			"Mods": [
+				{
+					"Id": "Logophile.eekfish",
+					"DisplayName": "Eekfish, an Aquarium Fish Retexture",
+					"Type": "ContentPack",
+					"RelativePath": "EekFish",
+					"Manifest": {
+						"Name": "Eekfish, an Aquarium Fish Retexture",
+						"Description": "Simply replaces the eel sprite for the aquarium.",
+						"Author": "Logophile/ichortower",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Logophile.eekfish"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342461846,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 75385,
+			"Type": "Main",
+			"DisplayName": "Eek for Custom Companions",
+			"FileName": "Eek for Custom Companions-18047-1-0-0-1693544044.zip",
+			"Description": "Eek is alive! (Minor edit for Linux users)",
+			"Version": "1.0.0",
+			"SizeInBytes": 14290,
+			"Uploaded": "2023-09-01T04:54:04+00:00",
+			"Mods": [
+				{
+					"Id": "Logophile.EekCC",
+					"DisplayName": "Eek! for Custom Companions",
+					"Type": "ContentPack",
+					"RelativePath": "CC Eek\\[CC] Eek",
+					"Manifest": {
+						"Name": "Eek! for Custom Companions",
+						"Description": "A discombobulated eel friend",
+						"Author": "Logophile",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.6.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.CustomCompanions",
+							"MinimumVersion": "1.4.3"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus 18047"
+						],
+						"UniqueId": "Logophile.EekCC"
+					}
+				},
+				{
+					"Id": "Logophile.EekCP",
+					"DisplayName": "Eek! A smol friend for Custom Companions",
+					"Type": "ContentPack",
+					"RelativePath": "CC Eek\\[CP] Eek",
+					"Manifest": {
+						"Name": "Eek! A smol friend for Custom Companions",
+						"Description": "Spawns a harmless smol friend in the game",
+						"Author": "Logophile",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "PeacefulEnd.CustomCompanions",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Logophile.EekCC",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus 18047"
+						],
+						"UniqueId": "Logophile.EekCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342462073,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342404735,
+		"UploaderId": 179090667,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

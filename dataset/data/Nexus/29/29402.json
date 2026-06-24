@@ -1,0 +1,80 @@
+{
+	"Site": "Nexus",
+	"Id": 29402,
+	"Name": "Buff Crops - Get Buffs by Leaving Crops Planted",
+	"Author": "DecidedlyHuman",
+	"Description": "[size=3]Code:\u00A0\n<br />[img]https://img.shields.io/github/license/DecidedlyHuman/StardewValleyMods[/img]\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/79440738-1763029182.png[/img]\n<br />This mod gives you various buffs depending on the crops you have planted and fully grown on your farm. Giant crops are more potent, giving you more reason than just looks to keep them around.\n<br />\n<br />I [i]highly recommend[/i]\u00A0pairing this with [url=https://www.nexusmods.com/stardewvalley/mods/5221]6480's Giant Crops[/url]. This mod comes with buff values for those new giant crops pre-loaded.\n<br />\n<br />[b]This is the first version, so balance in the included default pack might be a little wonky. [i]Please let me know if you have any suggestions![/i][/b]\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/79440738-1763028878.png[/img][/size]\n<br />[list]\n<br />[*][size=3][size=3]Added a config to enable debug logging.[/size][/size][/*]\n<br />[*][size=3][size=3]Crops should now only contribute to buffs when fully grown as they were originally meant to. Oops![/size][/size][/*]\n<br />[/list][size=3]\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/79440738-1763029577.png[/img]\n<br />[size=3]Each fully grown crop that's planted on your farm contributes a small amount towards a buff. In the included sample pack, a single garlic crop, for example, contributes 0.01 towards speed, and 0.01 towards combat level. So if you have 100 planted garlic, you'll get a +1 buff to speed, and a +1 buff to combat level.[/size]\n<br />\n<br />[size=3]Different types of crops give different buffs, and they all combine at the start of each day.[/size]\n<br />\n<br />[size=5][b]Modding[/b][/size]\n<br />[size=3]Mod authors can easily add buffs to their own crops like so:[/size]\n<br />[/size]\n<br />[code]\uFEFF\"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/Crops\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Fields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 // SPRING\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"476\": { // Garlic\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CustomFields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DH.BuffCrops.BuffContribution\": \"Speed 0.01 CombatLevel 0.01\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />][/code][size=3]\n<br />[size=3]Valid buffs:[/size][/size]\n<br />[quote][size=3]CombatLevel\n<br />FarmingLevel\n<br />FishingLevel\n<br />MiningLevel\n<br />LuckLevel\n<br />ForagingLevel\n<br />MaxStamina\n<br />MagneticRadius\n<br />Speed\n<br />Defense\n<br />Attack\n<br />Immunity\n<br />AttackMultiplier\n<br />KnockbackMultiplier\n<br />WeaponSpeedMultiplier\n<br />CriticalChanceMultiplier\n<br />CriticalPowerMultiplier\n<br />WeaponPrecisionMultiplier[/size][/quote][size=3]\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/79440738-1763029247.png[/img]\n<br />[size=3]Source on GitHub: [/size][url=https://github.com/DecidedlyHuman/StardewValleyMods]https://github.com/DecidedlyHuman/StardewValleyMods[/url]\n<br />[size=3]Bugs/issues on GitHub: [/size][url=https://github.com/DecidedlyHuman/StardewValleyMods/PlayerCoordinates/issues]https://github.com/DecidedlyHuman/StardewValleyMods/issues[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29402",
+	"Version": "1.0.2",
+	"Updated": "2025-06-09T15:02:22+00:00",
+	"Downloads": [
+		{
+			"Id": 134305,
+			"Type": "Main",
+			"DisplayName": "Buff Crops",
+			"FileName": "Buff Crops-29402-1-0-2-1749481342.zip",
+			"Description": "* Added a config to enable debug logging.\n<br />\n<br />* Crops should now only contribute to buffs when fully grown as they were originally meant to. Oops!",
+			"Version": "1.0.2",
+			"SizeInBytes": 59625,
+			"Uploaded": "2025-06-09T15:02:22+00:00",
+			"Mods": [
+				{
+					"Id": "DecidedlyHuman.BuffCrops",
+					"DisplayName": "Buff Crops",
+					"Type": "Smapi",
+					"RelativePath": "BuffCrops\\BuffCrops",
+					"Manifest": {
+						"Name": "Buff Crops",
+						"Description": "Give yourself a reason to keep crops fully grown on your farm. Maybe giant crops will be more potent?",
+						"Author": "DecidedlyHuman",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.1.7",
+						"EntryDll": "BuffCrops.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:29402"
+						],
+						"UniqueId": "DecidedlyHuman.BuffCrops",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "DH.BuffCrops.BuffCropDataPack",
+					"DisplayName": "(CP) Buff Crops Data",
+					"Type": "ContentPack",
+					"RelativePath": "BuffCrops\\[CP] Crop Buff Data",
+					"Manifest": {
+						"Name": "(CP) Buff Crops Data",
+						"Description": "Loads vanilla crops up with buff data.",
+						"Author": "DecidedlyHuman",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "6480.giantcrops",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "DH.BuffCrops.BuffCropDataPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520993,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416090,
+		"UploaderId": 79440738,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

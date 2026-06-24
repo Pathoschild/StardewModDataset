@@ -1,0 +1,138 @@
+{
+	"Site": "Nexus",
+	"Id": 10322,
+	"Name": "Rejuvenating Forest",
+	"Author": "CorruptedSpoon",
+	"AuthorLabel": "Team Timber",
+	"Description": "[font=Arial][size=5][left]Introduction[/left][/size][/font]The Rejuvenating forest is out of control with overgrowth that is preventing the Wizard's brother, the Twizard, from returning home. Explore in order to find the source of the growth, and tame the forest. As a reward, you will learn to craft a new magic fertilizer.\n<br />[font=Arial][size=5]\n<br />Features[/size][/font]\n<br />[list]\n<br />[*]This mod adds a custom questline, which includes a new area: the Rejuvenating Forest.\u00A0\n<br />[*]You can find the entrance to the Rejuvenating Forest in the secret woods.\n<br />[*]Talk to Terrence the Explorer and the Twizard who can aid you in your quest.\n<br />[*]Gather an abundance of materials such as wood, fiber, hardwood, and more.\n<br />[*]Deep in the forest, you can find the source of the overgrowth and quell it.\n<br />[*]Once the source is returned to the Twizard, you will be rewarded with a magic fertilizer that has fast growing properties.\n<br />[/list][font=Arial]\n<br />[/font][font=Arial][size=5]Installation\n<br />[/size][/font]1. Install the latest version of [url=https://smapi.io/]SMAPI[/url].\n<br />2. Download the mod, and unzip the folder's contents in the [font=Courier New]Stardew Valley/Mods[/font] folder.\n<br />3. Install additional dependencies:\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\uFEFF,\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1720]JSON Assets[/url],\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6414]Quest Framework[/url].\n<br />4. \uFEFFRun the game by launching StardewValley/StardewModdingAPI.exe\n<br />[img]https://cdn.discordapp.com/attachments/879790874693869568/919712765357199441/unknown.png[/img]\n<br />your Mods directory should look like this\n<br />\n<br />[size=5]\uFEFFGetting Started[/size]\n<br />[font=Verdana][size=2]You can begin the quest by finding a letter from the Twizard in the mailbox[/size][/font][font=Trebuchet MS][size=2].[/size][/font]\n<br />[font=Arial]\n<br />[/font][img]https://media.discordapp.net/attachments/879790874693869568/919716721194045460/unknown.png[/img]\n<br />\n<br />\n<br />[i]“This mod was created as a team project for a game modding class within The School of Interactive Games and Media \n<br />(IGM) at Rochester Institute of Technology in Rochester NY. IGM provides an educational environment that supports \n<br />and encourages creative and collaborative academic inquiry by both faculty and students. IGM’s programs, \n<br />coursework, research, and development efforts provide students with the knowledge and skills to pursue meaningful \n<br />and rewarding careers in media-centric, interactive software development, while simultaneously advancing the field \n<br />and helping to provide a well-rounded educational experience.”[/i]\n<br />\n<br />\n<br />\n<br />[img]https://i.imgur.com/Fx5A3wy.png[/img]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10322",
+	"Version": "1.0.0",
+	"Updated": "2021-12-12T01:17:27+00:00",
+	"Downloads": [
+		{
+			"Id": 48014,
+			"Type": "Main",
+			"DisplayName": "Rejuvenating Forest 1.0.0",
+			"FileName": "Rejuvenating Forest 1.0.0-10322-1-0-0-1639271847.zip",
+			"Description": "Make sure to use the latest version of SMAPI.",
+			"Version": "1.0.0",
+			"SizeInBytes": 94472,
+			"Uploaded": "2021-12-12T01:17:27+00:00",
+			"Mods": [
+				{
+					"Id": "TeamTimber.RejuvenatingForest",
+					"DisplayName": "Rejuvenating Forest",
+					"Type": "Smapi",
+					"RelativePath": "RejuvenatingForest",
+					"Manifest": {
+						"Name": "Rejuvenating Forest",
+						"Description": "<description goes here>",
+						"Author": "Team Timber",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "RejuvenatingForest.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "TeamTimber.RejuvenatingForest"
+					}
+				},
+				{
+					"Id": "TeamTimber.RejuvenatingForest_ContentPatcher",
+					"DisplayName": "Terrence Explorer NPC",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] RejuvenatingForest_ContentPatcher",
+					"Manifest": {
+						"Name": "Terrence Explorer NPC",
+						"Description": "A collection of RejuvenatingForest's Maps and NPCs to be added via ContentPatcher",
+						"Author": "Team Timber",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "TeamTimber.Reward",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "TeamTimber.RejuvenatingForest_ContentPatcher"
+					}
+				},
+				{
+					"Id": "TeamTimber.HOTF",
+					"DisplayName": "Heart of the Forest Item",
+					"Type": "ContentPack",
+					"RelativePath": "[JA] Heart",
+					"Manifest": {
+						"Name": "Heart of the Forest Item",
+						"Description": "Heart of the Forest Item.",
+						"Author": "Team Timber",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "TeamTimber.HOTF"
+					}
+				},
+				{
+					"Id": "TeamTimber.Reward",
+					"DisplayName": "Magic Fertilizer",
+					"Type": "ContentPack",
+					"RelativePath": "[JA] Reward",
+					"Manifest": {
+						"Name": "Magic Fertilizer",
+						"Description": "Magic Fertilizer.",
+						"Author": "Team Timber",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "TeamTimber.Reward"
+					}
+				},
+				{
+					"Id": "TeamTimber.quest",
+					"DisplayName": "Rejuvenating Forest Quest",
+					"Type": "ContentPack",
+					"RelativePath": "[QF] ForestQuest",
+					"Manifest": {
+						"Name": "Rejuvenating Forest Quest",
+						"Description": "The quest to return the heart of the forest to the Wizard",
+						"Author": "Team Timber",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PurrplingCat.QuestFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "TeamTimber.quest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342434702,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397010,
+		"UploaderId": 60985226,
+		"CategoryId": 27,
+		"Adult": false
+	}
+}

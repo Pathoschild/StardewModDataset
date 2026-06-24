@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 31362,
+	"Name": "Penny Schedule Fix",
+	"Author": "barrichelly",
+	"Description": "The code responsible for loading a character's schedule makes 3 exceptions for those who are married with a profession. Those 3 NPCs are Maru, Harvey, and Penny. Penny's job relies on the schedule of 2 other NPCs: Jas and Vincent. Normally, Penny lectures on Tuesdays, Wednesdays, and Fridays, unless it is the 9th, the 23rd, or it is raining. This is incorporated into her non-married schedule, however when she is married, the code neglects to check for these cases:\n<br />\n<br />\n<br />[code]if (isMarried())\n<br />{\n<br />   \uFEFF...\n<br />   \uFEFFif (base.Name == \"Penny\")\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 switch (dayName)\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 case \"Tue\":\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 case \"Wed\":\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 case \"Fri\":\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 goto IL_0205;\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 ...\n<br />}\n<br />...\n<br />IL_0205:\n<br />if (TryLoadSchedule(\"marriageJob\"))\n<br />{\n<br />\u00A0\u00A0\u00A0 return true;\n<br />}\n<br />[/code]\n<br />\n<br />The code snippet above is the original code snippet responsible for the bug. As you can see, for Penny, if she is married, and it is either \"Tue\", \"Wed\", or \"Fri\", it will \"goto IL_205\", which loads her job schedule, with no check for the cases mentioned previously. This mod uses a Harmony patch Postfix to essentially add an additional check for rain, if its the 9th, or if its the 23rd, and if so, clears her schedule causing her to spend the day at home.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31362",
+	"Version": "1.0.0",
+	"Updated": "2025-01-31T23:58:28+00:00",
+	"Downloads": [
+		{
+			"Id": 123982,
+			"Type": "Main",
+			"DisplayName": "PennyScheduleFix",
+			"FileName": "PennyScheduleFix-31362-1-0-0-1738367908.zip",
+			"Description": "Unpack and drop into your Stardew Valley Mods folder.",
+			"Version": "1.0.0",
+			"SizeInBytes": 9621,
+			"Uploaded": "2025-01-31T23:58:28+00:00",
+			"Mods": [
+				{
+					"Id": "barrichelly.PennyScheduleFix",
+					"DisplayName": "Penny Schedule Fix",
+					"Type": "Smapi",
+					"RelativePath": "PennyScheduleFix",
+					"Manifest": {
+						"Name": "Penny Schedule Fix",
+						"Description": "Prevents a married Penny from teaching non-existent kids on certain days",
+						"Author": "barrichelly",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PennyScheduleFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:31273"
+						],
+						"UniqueId": "barrichelly.PennyScheduleFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342510670,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418050,
+		"UploaderId": 24144704,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

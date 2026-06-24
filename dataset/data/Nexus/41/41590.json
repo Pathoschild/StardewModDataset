@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 41590,
+	"Name": "DW - Window Pack",
+	"Author": "Es0terick",
+	"AuthorLabel": "Esoterick",
+	"Description": "[size=5][b]Mod Showcase:[/b][/size]\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />[b][size=4]Seasonal Balcony Doors:[/size][/b]\n<br />[img]https://i.imgur.com/ruwnRDr.gif[/img]\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />[size=4][b]Window Showcase:[/b][/size]\n<br />[img]https://i.imgur.com/O66euiN.gif[/img]\n<br />\n<br />\n<br />\n<br />\n<br />[font=Arial][size=5]This is the official content pack and template for [b][url=https://www.nexusmods.com/stardewvalley/mods/35690?tab=description]Dynamic Windows[/url][/b]. It is designed to show modders how to plug custom window frames into the Dynamic Windows ecosystem so their designs can benefit from the full range of engine features. This includes weather particle simulations, dynamic backgrounds, and interactive open and close mechanics. By using this framework, your windows will also support environmental effects like critters flying inside, floor puddles, cold breath, and more to come!\n<br />\n<br />\n<br />[/size]\n<br />\n<br />[/font][size=5][font=Arial]While this mod specifically showcases new windows, the system is designed to be modular allowing you to focus on content packs of just new window frames, backgrounds, greenhouse backgrounds, or window sfx.\n<br />\n<br />\n<br />[quote][color=#ff7700]\uFEFFHow this works[/color][/quote][/font]\n<br />This is for content creators or anyone just curious.\n<br />\n<br />The reason Dynamic Windows needs specific windows to be loaded is because it is checking the Alpha values of the texture asset in question, the windows. Most window mods, or all window mods, have the background baked into the window frame. For the purpose of my mod specifically there is no way to determine where the wood is and where the background ends. This is important for the immersion of actually looking outside into a '3d ' space.\n<br />\n<br />By loading in window assets with just the frame design, and the glass panes with an Alpha value between 15-175[/size][size=2](1)[/size][size=5], it will be registered as glass and the mask will be saved for that window object[/size][size=2](2)[/size][size=5]. Calling the mask the simulation displays only on the glass area, properly occluding behind the wooden areas or ANY opaque areas.\u00A0[/size]\n<br />\n<br />\n<br />[size=4]*(1) The scan will also ignore any shadows for windows that meet the alpha range, but it must be all black. This is something being worked on.\n<br />\n<br />(2) To save on performance it caches the new masks on the first time it is called.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41590",
+	"Version": "1.0.0",
+	"Updated": "2026-01-24T03:12:28+00:00",
+	"Downloads": [
+		{
+			"Id": 154661,
+			"Type": "Main",
+			"DisplayName": "DW - Content Pack",
+			"FileName": "DW - Content Pack-41590-1-0-0-1769224348.zip",
+			"Description": "[Initial Release]",
+			"Version": "1.0.0",
+			"SizeInBytes": 44818,
+			"Uploaded": "2026-01-24T03:12:28+00:00",
+			"Mods": [
+				{
+					"Id": "Esoterick.DWWindowPack",
+					"DisplayName": "(DW) Window Pack",
+					"Type": "ContentPack",
+					"RelativePath": "[DW] - Window Pack",
+					"Manifest": {
+						"Name": "(DW) Window Pack",
+						"Description": "A simple template to help get started on writing custom dw-content.json",
+						"Author": "Esoterick",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Esoterick.DynamicWindows",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Esoterick.DWWindowPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342541349,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428278,
+		"UploaderId": 74683713,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

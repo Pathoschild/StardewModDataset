@@ -1,0 +1,85 @@
+{
+	"Site": "ModDrop",
+	"Id": 664153,
+	"Name": "Weather Illnesses",
+	"Author": "Koihime Nakamura",
+	"TagLine": "This mod adds stamina drains in severe weather, like in Harvest Moon. Has integrations with Climates of Ferngill to use it's custom weather.",
+	"Description": "Weather Illnesses\n\nChangelog\nSee the [Changelog](https://github.com/Sakorona/SDVMods/blob/master/WeatherIllnesses/CHANGELOG.md) on Github\n\nRequirements\n- SMAPI 3.0+\n- Stardew Valley 1.4+\n\nNotes\n- If Generic Mod Config Menu is installed, will work with it.\n\nAcknowledgements\n- Sky for the Korean translation\n\nMultiplayer\n\nWorks fine, each player needs it.\n\nThis Mod Does:\n- Going out in storms, blizzards, frosts and heatwaves is now more perilous, as it drains your stamina. Thankfully,\n    a 'Muscle Remedy' has been found to cure even the hardiest flu\n- If it's too cold outside, you'll get sick in your farmhouse without. Better use that fireplace!!\n\nStamina System\n\n__Very Important: Read this before you alter StaminaDrain in the config!__\n\nRather than a fixed penalty for certain conditions, this now calculates a multiplier based on the conditions prevailing.\n\nEvery ten minutes, the mod checks to see if you've been outside for a certain percentage of the last 10 minutes. By default, it's set to 65%. (This percentage is calculated by counting the ticks you've been outside and the total number in the span to account for time change mods). Then, it generates a random number and tests it against a chance to get sick. By default, this is 70%. In addition, this must be during certain weather conditions:\n*Temperature: Frost or Heatwave (as defined in the config file, see the readme for more information)\n*Weathers: Lightning\n*Special Weathers: Thundersnow, Blizzard\n(NB: While you incur a stamina penalty for being sick in fog, it deliberately does not trigger this.)\n\nThe penalties are **cumulative** - that is, they add up to the final multiplier.\n*Lightning : +100% ( 1)\n*Thundersnow: +100% (1)\n*Thundersnow (nighttime): +50% (.5)\n*Foggy: +50% (.5)\n*Foggy (nightime) +25% (.25)\n*Blizzard: +125% (1.25)\n*Blizzard: **White Out**+245% (2.45)\n*Thunder Frenzy: +185% (1.85)\n*Blizzard (nighttime) +50% (.5)\n*Frost (nightime): +125% (1.25) - this is not during the winter. [During winter, the frost penalty is untriggered, but inside, you will get a generic (100%) sickness drain]\n*Heatwave (daytime): +125% (1.25)\n\nThe calculated number is then rounded __down__\n\nFor example, therefore, if you're out during a storm, with the base of 2, you only take a stamina penalty of 2. But if it's also a heatwave, your penatly is now (+1+1.25)=*2.25 or 4.5. So a penalty of 4.\nIf you're out in a blizzard during the day, it's *1.25 or 2.5 rounded down to 2. If you're out in that blizzard at night, another .5 (1.25+.5) is added making it 1.75 or 3.5 rounded down to 3.\n\n(This does mean a foggy blizzard at night is (+.5+.25+1.25+.5 or *2.25), and if you somehow get this in fall, would be *3.5. And somehow, if you get a whiteout, it would be *3.25 and *4.5!)\n\nOptions Config\n\n- `AffectedOutside` - The percentage outside you need to be within a 10 minute span to be affected by stamina events.\n Defaults to '.65', valid values are between 0 and 1. To turn stamina drains off entirely, set it to 0. Do not recommend setting to 1.\n\n - `SickMoreThanOnce` - This setting controls whether or not you can get sick once you have cured yourself. Default: `false`. Valid: `true, false`\n\n - `StaminaDrain` - This is an int containing the default stamina drain for hazardous events. See the writeup (soon) for more information. Default is '2'. Valid range is any number between foo and bar.'\n\n  - `ChanceOfGettingSick` - Controls the chance you'll get sick when conditions are matched. Default is set to '.7' for (70% chance). Valid Range is 0 to 1.\n\n  -`TooColdInside` - Double specifying the max temperature threshold to be too cold inside. Default is `8.4` (C). Valid Range is -100 to 100, really.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/664153",
+	"Version": null,
+	"Updated": "2020-12-27T02:06:45.9+00:00",
+	"Downloads": [
+		{
+			"Id": 883533,
+			"Type": "Main",
+			"DisplayName": "Weather Illnesses",
+			"FileName": "Weather Illnesses.zip",
+			"Description": "Updated for SDV 1.5 with assorted fixes",
+			"Version": "1.1.7",
+			"SizeInBytes": 84053,
+			"Uploaded": "2020-12-27T02:06:45.898+00:00",
+			"Mods": [
+				{
+					"Id": "KoihimeNakamura.WeatherIllnesses",
+					"DisplayName": "Weather Illnesses",
+					"Type": "Smapi",
+					"RelativePath": "WeatherIllnesses",
+					"Manifest": {
+						"Name": "Weather Illnesses",
+						"Description": "Restores the old Harvest Moon tradition of bad weather making you sick.",
+						"Author": "Sakorona",
+						"Version": "1.1.7",
+						"MinimumApiVersion": "3.6.0",
+						"EntryDll": "WeatherIllnesses.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:2210"
+						],
+						"UniqueId": "KoihimeNakamura.WeatherIllnesses"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "acf5d0303d238f07c36bf304ada21a7e",
+				"md5In": "abbfd655f7faa8b25849a66feace2bcd",
+				"scriptType": 0,
+				"sha256Ex": "b8746b7a674893b947b73ea7aeeb743ca67187d86ab589a72f84e1e86762058f",
+				"sha256In": "6d934c5375969f1d1374b22085a348016f5ed6c884e7050e25caf3c8ed89874b"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1574816590557,
+		"DateUpdated": 1609034805900,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1574816586157,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/664153/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/664153/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/664153/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/664153/icon_original"
+		},
+		"nexusModID": 2210,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66259
+	}
+}

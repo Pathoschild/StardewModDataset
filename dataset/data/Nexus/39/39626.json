@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 39626,
+	"Name": "Extra Event Commands",
+	"Author": "tsubasamoon",
+	"Description": "[center][size=6][b]Extra Event Commands[/b][/size]\n<br />[i]Expand your event scripting possibilities[/i][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Overview[/b][/size]\n<br />\n<br />Extra Event Commands adds powerful new event commands to Stardew Valley, giving content creators more control over cutscenes and events. Rotate characters, display text bubbles over the farmer, adjust farmer transparency, change farmer sprites dynamically, and more!\n<br />\n<br />[line][size=5][b]\n<br />Features\n<br />\n<br />\uD83D\uDD04 Character Rotation\n<br />[/b][/size][size=3]Rotate the farmer and NPCs to any angle during events - perfect for dramatic camera work, unique perspectives, or creative scene composition.\n<br />Commands:[/size][size=5][b]\n<br />\n<br />[/b][/size][size=3][b]rotate[/b] [character] [degrees] - Rotate farmer or any NPC (e.g., rotate Farmer 180, rotate Penny 90)\n<br />[b]resetRotation[/b] [character] - Reset specific character's rotation\n<br />[b]rotateFarmer[/b] [degrees] - Backward compatible shorthand for rotating the farmer\n<br />[b]resetFarmerRotation[/b] - Backward compatible shorthand for resetting farmer rotation\n<br />\n<br />Compatible with Fashion Sense! Works for both farmers and NPCs![/size][size=5][b]\n<br />\n<br />\uD83D\uDC55 Clothing Control\n<br />[/b][/size][size=3]Toggle individual clothing items and accessories on/off during events - create wardrobe changes, reveal moments, or customize appearance for specific scenes.\n<br />Commands:[/size][size=5][b]\n<br />\n<br />[/b][/size][size=3][b]stripClothing[/b] [items...] - Strip all clothing (no args) or specific items (shirt, pants, shoes, hat, sleeves, accessory)\n<br />[b]restoreClothing[/b] [items...] - Restore all or specific clothing items\n<br />[b]strip[/b] [items...] / wear [items...] - Short aliases with argument support\n<br />[b]stripAll / wearAll[/b] - Always strip/restore everything (ignores arguments)\n<br />\n<br />Supported items: shirt, pants, shoes, hat, sleeves, accessory, accessory0, accessory1, accessory2\n<br />Full Fashion Sense compatibility with support for all 3 accessory slots!\n<br />[/size][size=5][b]\n<br />\uD83C\uDFAD Custom Sprite Changing\n<br />[/b][/size][size=3]Change the farmer's appearance to any sprite sheet with automatic positioning of hair, accessories, and clothing layers - ideal for extending farmer poses with a custom farmer spritesheet, works similarly to the changeSprite command in the base game.\n<br />Commands:\n<br />\n<br />[b]changeFarmerSprite[/b] [spriteName] - Switch to custom sprites (loads Characters/Farmer_[spriteName] and Characters/Farmer_[spriteName]_pants)\n<br />[b]resetFarmerSprite [/b]- Restore original appearance\n<br />\n<br />Features:\n<br />\n<br />Automatic hair/accessory positioning with intelligent offset calculation\n<br />Manual offset configuration via JSON for pixel-perfect positioning\n<br />Hot-reload config system for rapid iteration\n<br />Seamlessly integrates with default and Fashion Sense clothing system[/size][size=5][b]\n<br />\n<br />\uD83D\uDCCF Layer Positioning\n<br />[/b][/size][size=3]Control whether the farmer renders in front of or behind NPCs - essential for proper visual storytelling and spatial relationships.\n<br />Commands:\n<br />\n<br />[b]farmerAbove[/b] [npcName] - Render farmer in front of NPC\n<br />[b]farmerBelow[/b] [npcName] - Render farmer behind NPC\n<br />[b]resetLayers[/b] - Clear layer overrides\n<br />\n<br />Fashion Sense compatible - all clothing layers follow farmer position[/size][size=5][b]\n<br />\n<br />\uD83C\uDFAA Temp Actor Layering\n<br />[/b][/size][size=3]Position temporary actors with precise control over their render order and screen placement - draw actors as UI overlays guaranteed to be on top of everything.\n<br />Commands:\n<br />\n<br />[b]tempActorAtTile[/b] [actorName] [tileX] [tileY] - Position at map coordinates (moves with camera)\n<br />[b]tempActorAtScreen[/b] [actorName] [screenX] [screenY] - Fixed screen positioning (doesn't move with camera)\n<br />[b]resetTempActors[/b] - Clear all actor overrides\n<br />\n<br />Automatically moves original actors off-screen to prevent double-drawing[/size][size=5][b]\n<br />\n<br />\uD83D\uDCAC Text Bubbles\n<br />[/b][/size][size=3]Display text above the farmer's head, just like NPCs - perfect for reactions, thoughts, or dialogue.\n<br />Commands:\n<br />\n<br />[b]farmerTextAboveHead[/b] &#92;\"text&#92;\" [style] [duration] [preTimer] - Show text bubble\n<br />\n<br />style: 0 = shaking, 2 = normal (default: 2)\n<br />duration: milliseconds (default: 3000)\n<br />preTimer: delay in milliseconds (default: 0)\n<br />uses default if no style duration or preTimer argument\n<br />\n<br />\n<br />Examples:\n<br />\n<br />[b]farmerTextAboveHead[/b] &#92;\"Hello!&#92;\" - Show \"Hello!\" for 3 seconds\n<br />[b]farmerTextAboveHead[/b]\u00A0&#92;\"Watch out!&#92;\" 0 2000 - Shaking text for 2 seconds\n<br />[b]farmerTextAboveHead[/b]\u00A0&#92;\"...&#92;\" 2 5000 1000 - Normal text for 5 seconds after 1 second delay\n<br />\n<br />Automatically adjusts position when farmer is rotated[/size][size=5][b]\n<br />\n<br />\uD83D\uDC7B Transparency Control\n<br />[/b][/size][size=3]Make the farmer semi-transparent or invisible - ideal for ghost effects, dream sequences, or stealth scenes.\n<br />Commands:\n<br />\n<br />[b]farmerOpacity[/b] [0.0-1.0] - Set transparency (0 = invisible, 1 = fully visible)\n<br />[b]resetFarmerOpacity[/b] - Restore full visibility\n<br />\n<br />Examples:\n<br />\n<br />[b]farmerOpacity[/b] 0 - Completely invisible\n<br />[b]farmerOpacity[/b] 0.5 - 50% transparent\n<br />[b]farmerOpacity[/b] 0.3 - 70% transparent (30% visible)\n<br />\n<br />Works with vanilla and Fashion Sense clothing[/size][size=5][b][size=3]\n<br />[/size][line]\n<br />[size=5][b]Configuration[/b][/size]\n<br />[/b][/size]\n<br />Sprite Offset ConfigurationFor custom farmer sprites, you can create [code]FarmerSpriteConfig*.json[/code] files in any mod folder with manual offset configurations for per-frame hair placement:\n<br />{\n<br />\u00A0 \"Sprites\": {\n<br />\u00A0 \u00A0 \"[spriteName]\": {\n<br />\u00A0 \u00A0 \u00A0 \"OffsetsMale\": [[x, y], [x, y], ...],\n<br />\u00A0 \u00A0 \u00A0 \"OffsetsFemale\": [[x, y], [x, y], ...]\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}If no config files are in the Extra Event Commands mod folder, an example config will be created on game startup. The mod automatically scans all mod folders and merges configurations. If no manual offsets are provided, intelligent auto-calculation is used. The category \"spriteName\" follows the same format as the Farmer_[spriteName] used in the content pack used to load your custom farmer sprite.\n<br />[size=5][size=3]\n<br />[/size][b][line]\n<br />[size=5][b]Requirements[/b][/size]\n<br />[/b][/size][size=3]\n<br />[/size][list]\n<br />[*][size=3]SMAPI 3.0 or higher[/size]\n<br />[*][size=3]Stardew Valley 1.6 or higher[/size]\n<br />[*]NoDress by AlexGoD or similar mod (if you want truly naked farmer)\n<br />[/list][size=3][b]\n<br />[/b][b]\n<br />[line][/b][/size][size=5][b]\n<br />Credits &amp; Thanks[/b][/size][size=3]\n<br />\n<br />[/size][list]\n<br />[*][size=3]Thanks to the SMAPI team for the amazing modding framework[/size]\n<br />[*][size=3]Thanks to Fashion Sense developers for clothing mod compatibility[/size]\n<br />[*][size=3]Thanks to the Stardew Valley modding community[/size]\n<br />[/list][size=3][b]\n<br />[/b][b]\n<br />[/b][/size][size=5][b][line]\n<br />[b]Source Code[/b][/b][/size][b]\n<br />\n<br />Available on GitHub:\u00A0[url=https://github.com/tsubasamoon13-ux/ExtraEventCommands/blob/main/README.md]Extra Event Commands[/url]\n<br />\n<br />[line]\n<br />\n<br />[/b][center][b][size=4]Enjoy creating more dynamic and expressive events![/size][/b][/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39626",
+	"Version": "1.0.5",
+	"Updated": "2025-12-07T18:59:19+00:00",
+	"Downloads": [
+		{
+			"Id": 150084,
+			"Type": "Main",
+			"DisplayName": "Extra Event Commands",
+			"FileName": "Extra Event Commands-39626-1-0-5-1765133396.zip",
+			"Description": "Updated the config to include the option to remove automatic hair offset for custom farmer sprites. Includes the options to disable it for individual frames or all frames.",
+			"Version": "1.0.5",
+			"SizeInBytes": 39752,
+			"Uploaded": "2025-12-07T18:49:57+00:00",
+			"Mods": [
+				{
+					"Id": "tsubasamoon.ExtraEventCommands",
+					"DisplayName": "Extra Event Commands",
+					"Type": "Smapi",
+					"RelativePath": "Extra Event Commands",
+					"Manifest": {
+						"Name": "Extra Event Commands",
+						"Description": "Adds extra event commands that rotates the farmer, strips and wears clothing on the farmer including Fashion Sense, change the Farmer to render above or below an NPC, add a changeFarmerSprite command for the farmer similar to the NPC one, add tempActor commands that render temporary actors above all objects.",
+						"Author": "tsubasamoon",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Extra Event Commands.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:39626"
+						],
+						"UniqueId": "tsubasamoon.ExtraEventCommands"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536772,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 150086,
+			"Type": "Optional",
+			"DisplayName": "Example Pack",
+			"FileName": "Example Pack-39626-1-0-5-1765133959.zip",
+			"Description": "Intended for mod authors.\n<br />\n<br />\n<br />\n<br />Optional download containing a content pack with empty farmer and pants assets and content.json on how to load assets for changeFarmerSprite to use.\n<br />\n<br />\n<br />\n<br />Includes readme for different male and female asset loading options.",
+			"Version": "1.0.5",
+			"SizeInBytes": 7593,
+			"Uploaded": "2025-12-07T18:59:19+00:00",
+			"Mods": [
+				{
+					"Id": "tsubasamoon.changeFarmerSpriteExample",
+					"DisplayName": "Content Patcher Example For Extra Event Commands changeFarmerSprite",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Example Pack",
+					"Manifest": {
+						"Name": "Content Patcher Example For Extra Event Commands changeFarmerSprite",
+						"Description": "Example Pack for loading custom farmer and corresponding pants assets for changeFarmerSprite command",
+						"Author": "tsubasamoon",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:39626"
+						],
+						"UniqueId": "tsubasamoon.changeFarmerSpriteExample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536774,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426314,
+		"UploaderId": 6863411,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

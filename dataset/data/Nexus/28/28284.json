@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 28284,
+	"Name": "Cross-Mod Compatibility Tokens (CMCT)",
+	"Author": "Spiderbuttons",
+	"Description": "Cross-Mod Compatibility tokens adds some special, custom Content Patcher tokens that lets you (if you are a mod author) access the config values, translations, and dynamic tokens from other mods, including mods that are not made for Content Patcher specifically. These can be useful if you really have no other way to ensure perfect compatibility between your mod and theirs if you need to change things depending on any of the aforementioned values.\n<br />\n<br />[b][size=5]Installation[/size][/b]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Extract the mod into Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list][b][size=5]Usage For Players[/size][/b]\n<br />This mod does nothing on its own. There is no benefit to installing this as a user if another mod that you are using does not require it.\n<br />\n<br />[b][size=5]Usage For Content Patcher Mod Authors[/size][/b]\n<br />This mod adds four tokens:\n<br />\n<br />[list]\n<br />[*]Spiderbuttons.CMCT/Config\n<br />[*]Spiderbuttons.CMCT/Translation\n<br />[*]Spiderbuttons.CMCT/Dynamic\n<br />[*]Spiderbuttons.CMCT/Asset\n<br />[/list]Each of these tokens will let you grab the config values, translation strings, dynamic token values, or internal asset keys respectively. All four of them [i]require[/i] input arguments. The first input argument will always be the UniqueID of the mod you are trying to get the value from. The second input argument will depend on the token in question:\n<br />\n<br />[list]\n<br />[*]Config: The name of the config value to find. If the config value is nested, you must include the full config path based on the JSON structure.\n<br />[*]Translation: The i18n key of the translation you want. It will always grab the translation for the currently selected language.\n<br />[*]Dynamic: The name of the dynamic token.\n<br />[*]Asset: The path of the asset from the other mod relative to [i]their[/i] manifest.json file.\n<br />[/list]If you use any of these tokens, you [i][b]must[/b][/i] set the other mod as a dependency. If you don't, it [i]might[/i] work, but it also might throw some weird errors at you. Here are four examples, one for each of the tokens, using [url=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/18177]Hat Mouse Lacey[/url]\uFEFF, and [url=https://www.nexusmods.com/stardewvalley/mods/21526]Button's Extra Books[/url] for demonstration:\n<br />\n<br />[list]\n<br />[*]{{Spiderbuttons.CMCT/Config: Pathoschild.LookupAnything, Controls.ToggleSearch}}\n<br />[*]{{Spiderbuttons.CMCT/Translation: ichortower.HatMouseLacey, houseDisplayName}}\n<br />[*]{{Spiderbuttons.CMCT/Dynamic: ichortower.HatMouseLacey, Lacey}}\n<br />[*]{{Spiderbuttons.CMCT/Asset: Spiderbuttons.ButtonsExtraBooks, assets/Books/sheet.png}}\n<br />[/list]\n<br />[b][size=5]Limitations[/size][/b]\n<br />Currently, there are two main things that I would consider limitations:\n<br />\n<br />[list=1]\n<br />[*]Translations that take in tokens as input (i.e. i18n values that have their own {{tokens}} inside the i18n itself) do not work correctly and will only grab the literal string with the token still present with the braces.\n<br />[*]Dynamic tokens are only initialized when a save is loaded, not when the game is launched. This may or may not matter to you at all.\n<br />[/list]It's also worth mentioning that you should use the Dynamic token [i]as sparingly as possible[/i]. Without getting too technical about how Content Patcher works, due to the way I had to implement the token, they will always signal that they should have their changes propagated even if the dynamic token it is checking from another mod did not change. This is not that bad if your token only updates OnDayStart like tokens do by default, but can potentially get expensive if you are updating it OnTimeChange or OnLocationChange!\n<br />\n<br />[b][size=5][url=https://github.com/Spiderbuttons/CrossModConfigTokens]Source Code[/url][/size][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28284",
+	"Version": "1.1.2",
+	"Updated": "2024-10-04T21:29:49+00:00",
+	"Downloads": [
+		{
+			"Id": 112642,
+			"Type": "Main",
+			"DisplayName": "Cross-Mod Compatibility Tokens",
+			"FileName": "Cross-Mod Compatibility Tokens-28284-1-1-2-1728077389.zip",
+			"Description": "Fixed: Some patches not being properly updated when another mods config changes.",
+			"Version": "1.1.2",
+			"SizeInBytes": 22187,
+			"Uploaded": "2024-10-04T21:29:49+00:00",
+			"Mods": [
+				{
+					"Id": "Spiderbuttons.CMCT",
+					"DisplayName": "Cross-Mod Compatibility Tokens",
+					"Type": "Smapi",
+					"RelativePath": "CrossModCompatibilityTokens",
+					"Manifest": {
+						"Name": "Cross-Mod Compatibility Tokens",
+						"Description": "Grab config values, translations, dynamic tokens, and internal assets from other mods with special Content Patcher tokens.",
+						"Author": "Spiderbuttons",
+						"Version": "1.1.2",
+						"EntryDll": "CrossModCompatibilityTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28284"
+						],
+						"UniqueId": "Spiderbuttons.CMCT"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342499330,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414972,
+		"UploaderId": 177615852,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

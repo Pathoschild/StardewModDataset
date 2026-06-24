@@ -1,0 +1,146 @@
+{
+	"Site": "Nexus",
+	"Id": 9659,
+	"Name": "Stats As Tokens",
+	"Author": "sophiesalacia",
+	"AuthorLabel": "sophie",
+	"Description": "[center][size=5][b]Stats As Tokens\n<br />[/b][/size][/center][center][i]by sophie\n<br />[/i][/center]\n<br />[b]This mod has no effect on gameplay by itself.[/b] It provides more options to people using Content Patcher to create patches, and as such may be a required dependency of any such content packs. \n<br />\n<br />This mod adds all stats (tracked internally by the game) as Content Patcher tokens, for use in your Patches. This means you can do such things as: have NPCs comment on stats (see the header image), lock content/changes behind arbitrary stat numbers, give players custom rewards for milestones reached, trigger special events based on stats, and more!\n<br />\n<br />Note: I am aware the banner art is garbage. It's low on my priority list.\n<br />\n<br />[size=5]Installation\n<br />[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Add this mod as a dependency to your [font=Courier New]manifest.json[/font].\n<br />[*]Reference the custom token as shown below.\n<br />[/list]\n<br />\n<br />[size=5]Documentation[/size]\n<br />\n<br />Visit [url=https://github.com/dtomlinson-ga/StatsAsTokens#readme]GitHub[/url] for up-to-date documentation, including a detailed breakdown of all available tokens added by this mod.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.4 on Windows. Linux/Mac have not been tested, but should work. 1.5.5 beta versions have not been tested extensively, but should work. Earlier game versions should work, but have not been tested. Please report any issues you encounter.\n<br />[*]Works in single player[s] and multiplayer. Again, multiplayer has not been extensively tested, so please report any issues you encounter.[/s] Kind of works in multiplayer but doesn't save data for anybody but the host unfortunately. I am working on a rewrite which will address this and other issues.\n<br />[/list]\n<br />[size=5]Source code:\n<br />[/size] Available [url=https://github.com/dtomlinson-ga/StatsAsTokens]here[/url].\n<br />\n<br />[size=5]See also:[/size]\n<br />My [url=https://www.nexusmods.com/stardewvalley/mods/8690]Configurable Special Orders Unlock[/url] mod, \n<br />My [url=https://www.nexusmods.com/stardewvalley/mods/9444]Configurable Bundle Costs[/url] mod, and\n<br />My [url=https://www.nexusmods.com/stardewvalley/mods/8450]Early Community Upgrades[/url] mod for additional Town customization.\n<br />\n<br />[size=5]Special Thanks to:[/size]\n<br />[list]\n<br />[*]Pathoschild, blueberry, and numerous others on the SDV discord for their assistance and support\n<br />[*]PaulDunstan for their extremely thorough and helpful feedback\n<br />[*]TaelFayre for their invaluable assistance tracking down several bugs\n<br />[*]you :)\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9659",
+	"Version": "0.5.7",
+	"Updated": "2023-01-20T18:14:27+00:00",
+	"Downloads": [
+		{
+			"Id": 45370,
+			"Type": "Optional",
+			"DisplayName": "Stats As Tokens Example CP Patch",
+			"FileName": "Stats As Tokens Example Patch-9659-0-2-1-1631945125.zip",
+			"Description": "Fixed missing comma.\n<br /><br />This example mod indicates how to utilize the Stats and MonstersKilled tokens to obtain player stats for use in patches.",
+			"Version": "0.2.1",
+			"SizeInBytes": 1082,
+			"Uploaded": "2021-09-18T06:05:25+00:00",
+			"Mods": [
+				{
+					"Id": "Vertigon.StatsAsTokensExample",
+					"DisplayName": "Stats As Tokens Example Mod",
+					"Type": "ContentPack",
+					"RelativePath": "StatsAsTokensExample",
+					"Manifest": {
+						"Name": "Stats As Tokens Example Mod",
+						"Description": "Demonstrates how to utilize the Stats token.",
+						"Author": "Vertigon",
+						"Version": "0.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Vertigon.StatsAsTokens",
+								"MinimumVersion": "0.2.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Vertigon.StatsAsTokensExample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342432058,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 45371,
+			"Type": "Optional",
+			"DisplayName": "Stats As Tokens Example DGA Pack",
+			"FileName": "Stats As Tokens Example DGA Pack-9659-0-1-0-1631945560.zip",
+			"Description": "Credits to TaelFayre for this small example mod which demonstrates how to utilize Stats As Tokens to conditionally add a DGA item to a shop.\n<br /><br />DGA is required for this pack to function.",
+			"Version": "0.1.0",
+			"SizeInBytes": 2641,
+			"Uploaded": "2021-09-18T06:12:40+00:00",
+			"Mods": [
+				{
+					"Id": "TaelF.FurnitureA",
+					"DisplayName": "Random Furniture Pack",
+					"Type": "ContentPack",
+					"RelativePath": "Furniture test",
+					"Manifest": {
+						"Name": "Random Furniture Pack",
+						"Description": "Trying out DGA",
+						"Author": "TaelFayre",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.DynamicGameAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Vertigon.StatsAsTokens",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "TaelF.FurnitureA",
+						"OtherFields": {
+							"DGA.FormatVersion": 2,
+							"DGA.ConditionsFormatVersion": "1.23.0"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342432059,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 65403,
+			"Type": "Main",
+			"DisplayName": "Stats As Tokens",
+			"FileName": "Stats As Tokens-9659-0-5-7-1674238467.zip",
+			"Description": "Fixed issues with dinosaur eggs laid stat.\n<br /><br />Requires Content Patcher v1.23.0 or higher.\n<br />Requires SMAPI v3.14.0 or higher.",
+			"Version": "0.5.7",
+			"SizeInBytes": 32017,
+			"Uploaded": "2023-01-20T18:14:27+00:00",
+			"Mods": [
+				{
+					"Id": "Vertigon.StatsAsTokens",
+					"DisplayName": "Stats As Tokens",
+					"Type": "Smapi",
+					"RelativePath": "StatsAsTokens",
+					"Manifest": {
+						"Name": "Stats As Tokens",
+						"Description": "Exposes all stats tracked by the game, as well as some custom ones and miscellaneous other tokens, for use by CP packs.",
+						"Author": "Vertigon",
+						"Version": "0.5.7",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "StatsAsTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.23.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9659"
+						],
+						"UniqueId": "Vertigon.StatsAsTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342452091,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396347,
+		"UploaderId": 6976914,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

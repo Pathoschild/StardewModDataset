@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 46976,
+	"Name": "FarmPriceGuide",
+	"Author": "LookX",
+	"AuthorLabel": "NTW",
+	"Description": "FarmPriceGuide - 星露谷物语作物价格指南\n<br />\n<br />作物价格指南是一款便捷的游戏内悬浮面板，展示星露谷全部作物的完整价格数据。按快捷键打开可排序、可筛选的价格表格，查看四种品质售价、各商店种子购买价（Pierre、Sandy、夜市、Joja 等）、日均收益和季节预计收益——帮你精准决策每季种什么回报最高。\n<br />\n<br />FarmPriceGuide is a convenient in-game overlay that displays comprehensive pricing data for every crop in Stardew Valley. Press a hotkey to open a sortable, filterable table showing sell prices across all four quality tiers, seed purchase prices from every shop (Pierre, Sandy, Night Market, Joja, etc.), daily profit, and estimated seasonal profit — helping you decide exactly what to plant each season for maximum return.\n<br />\n<br />---\n<br />\n<br />安装步骤 / Installation:\n<br />\n<br />1. 安装 SMAPI 4.0 或更高版本。https://smapi.io\n<br />2. 下载 FarmPriceGuide，将 FarmPriceGuide 文件夹解压到 Stardew Valley/Mods 目录。\n<br />3. （可选）安装 Generic Mod Config Menu，可在游戏内修改快捷键和调试日志开关。https://www.nexusmods.com/stardewvalley/mods/5098\n<br />4. 通过 SMAPI 启动游戏。\n<br />\n<br />1. Install SMAPI 4.0 or later. https://smapi.io\n<br />2. Download FarmPriceGuide and extract the FarmPriceGuide folder into your Stardew Valley/Mods directory.\n<br />3. (Optional) Install Generic Mod Config Menu to change the hotkey and toggle debug logging in-game. https://www.nexusmods.com/stardewvalley/mods/5098\n<br />4. Launch the game via SMAPI.\n<br />\n<br />---\n<br />\n<br />核心功能 / Features:\n<br />\n<br />- 四种品质售价 — 普通、银星、金星、铱星四种品质的售价，按正确倍率计算（×1.25 / ×1.5 / ×2.0）。\n<br />- 多商店种子价格 — 每个作物的种子单元格堆叠显示所有售卖该种子的商店及其价格（Pierre、Sandy、Joja、夜市、旅行货车、姜岛商人、沙漠节等），Pierre 正价优先于节日打折价。\n<br />- 加工品价格 — 点击「加工价」按钮弹出选项面板，一键切换查看果酒（小桶，水果）、果汁（小桶，蔬菜）、果酱（罐头瓶）的售价。不支持该加工的作物自动显示 \"--\"。\n<br />- 加工时间计算 — 日收益和季节预计收益已计入加工耗时（果酒 7 天 / 果汁 4 天 / 果酱 2 天）。\n<br />- 兼容 Mod 作物 — 从 Game1.cropData 和 ItemRegistry 自动加载数据，完全兼容 Content Patcher、Cornucopia 等 Mod 添加的作物。\n<br />- 季节筛选 + 应季标识 — 可按春/夏/秋/冬或\"当前季节\"模式筛选，绿色\"应季\"标记显示此刻可种植的作物。\n<br />- 多列排序 — 点击表头按售价、成熟天数、日均收益、季收益排序，再次点击切换升序/降序。\n<br />- 自动推荐 — 当季收益最高的作物高亮并显示金色\"荐\"标签。\n<br />- 悬停提示 — 鼠标悬停在截断的名称、缩写季节或种子价格上时，显示完整信息。\n<br />- 动态价格更新 — 种子价格通过 ShopBuilder.GetShopStock() 从游戏内部商店系统获取，实时刷新。\n<br />- 自适应布局 — 面板占屏幕 90% 宽高，虚拟滚动确保 100+ 作物流畅浏览。\n<br />- 可配置 — 默认快捷键 P，可通过 GMCM 修改；调试日志开关也在 GMCM 中提供。\n<br />\n<br />- All four quality sell prices — normal, silver, gold, and iridium quality prices for every crop, calculated from base price with proper multipliers (×1.25 / ×1.5 / ×2.0).\n<br />- Seed prices from all shops — each crop's cell shows every shop that sells its seeds with their price (Pierre, Sandy, Joja, Night Market, Traveling Cart, Island Trader, Desert Festival, and more). Pierre's regular price is prioritized over discount/festival pricing.\n<br />- Processed prices — click the \"Craft\" button to open a popup panel and toggle between raw, wine (keg, fruit), juice (keg, vegetable), and jelly (preserves jar) prices. Crops that cannot be processed in the selected mode automatically show \"--\".\n<br />- Processing time included — daily profit and estimated seasonal profit include processing time (wine 7 days / juice 4 days / jelly 2 days).\n<br />- Mod crop compatible — automatically loads data from Game1.cropData and ItemRegistry, fully compatible with crops added by Content Patcher, Cornucopia, and other mods.\n<br />- Season filter with in-season indicator — filter by Spring/Summer/Fall/Winter or \"Current Season\" mode; a green marker shows which crops can be planted right now.\n<br />- Multi-column sorting — click column headers to sort by sell price, days to maturity, daily profit, or estimated seasonal profit. Click again to toggle ascending/descending.\n<br />- Auto-recommendation — the most profitable crop for the current season is highlighted with a golden badge.\n<br />- Hover tooltips — hover over any truncated name, abbreviated season, or seed price cell to see the full information.\n<br />- Dynamic price updates — seed prices are captured from the actual shop stock via ShopBuilder.GetShopStock() and refreshed in real time.\n<br />- Adaptive layout — the panel takes up 90% of the screen width and height, with virtual scrolling for smooth performance even with 100+ crops.\n<br />- Configurable — default hotkey is P; change it via GMCM. A debug log toggle is also available in GMCM.\n<br />\n<br />---\n<br />\n<br />快捷键 / Hotkeys:\n<br />\n<br />P（可配置） — 打开/关闭价格列表\n<br />Esc — 关闭列表\n<br />\n<br />P (configurable) — Toggle price list\n<br />Esc — Close list\n<br />\n<br />---\n<br />\n<br />兼容性 / Compatibility:\n<br />\n<br />- 星露谷物语 1.6+ / Stardew Valley 1.6+\n<br />- SMAPI 4.0+\n<br />- 兼容其他 Mod 添加的作物 / Compatible with crops added by other mods\n<br />- 可选依赖 / Optional dependency: Generic Mod Config Menu\n<br />\n<br />---\n<br />\n<br />更新日志 / Changelog:\n<br />\n<br />[1.1.0] 2026-06-06\n<br />- 新增加工价格弹出面板（原始/果酒/果汁/果酱四种模式）\n<br />- 加工价格区分作物类型（水果→果酒、蔬菜→果汁）\n<br />- 日收益/月收益跟随加工模式并计入加工耗时（果酒7天/果汁4天/果酱2天）\n<br />- 不适用当前加工的作物显示 \"--\"\n<br />- 提取全部 UI 文本至 i18n/default.json（中文）和 i18n/en.json（英文），支持 SMAPI 自动语言切换\n<br />- 修复加工弹出面板被表头点击截获的问题\n<br />- 修复快捷键在标题画面也可唤出的问题\n<br />- 缩短英文翻译以适配 UI 容器宽度\n<br />\n<br />Added processed-price popup panel (raw / wine / juice / jelly)\n<br />Processing prices are filtered by crop type (fruit → wine, vegetable → juice)\n<br />Daily and seasonal profits now include processing time (wine 7d / juice 4d / jelly 2d)\n<br />Crops that cannot use the selected mode show \"--\"\n<br />Extracted all UI text to i18n/default.json (Chinese) and i18n/en.json (English) with SMAPI auto-language switching\n<br />Fixed popup options being intercepted by header clicks\n<br />Fixed hotkey working on title screen\n<br />Shortened English translations to fit UI bounds\n<br />\n<br />[1.0.1] 2026-06-05\n<br />- 新增 i18n 国际化，提取 PriceMenu 中文菜单文本至 default.json/en.json\n<br />- Added i18n, extracted PriceMenu Chinese text to default.json/en.json\n<br />\n<br />[1.0.0]\n<br />- 初版发布 / Initial release\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46976",
+	"Version": "1.1.0",
+	"Updated": "2026-06-07T10:58:45+00:00",
+	"Downloads": [
+		{
+			"Id": 170367,
+			"Type": "Main",
+			"DisplayName": "FarmPriceGuide 1.2.1",
+			"FileName": "FarmPriceGuide 1.2.1-46976-1-2-1-1780829925.zip",
+			"Description": "",
+			"Version": "1.2.1",
+			"SizeInBytes": 44606,
+			"Uploaded": "2026-06-07T10:58:45+00:00",
+			"Mods": [
+				{
+					"Id": "NTW.FarmPriceGuide",
+					"DisplayName": "FarmPriceGuide",
+					"Type": "Smapi",
+					"RelativePath": "FarmPriceGuide",
+					"Manifest": {
+						"Name": "FarmPriceGuide",
+						"Description": "按快捷键查看所有作物的四种品质售价、各商店种子价格、日均收益和季节预计收益，支持筛选排序，帮助做出最佳种植决策。",
+						"Author": "NTW",
+						"Version": "1.2.1",
+						"EntryDll": "FarmPriceGuide.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "NTW.FarmPriceGuide"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557055,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433664,
+		"UploaderId": 182007582,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 47339,
+	"Name": "Text Replace",
+	"Author": "aedenthorn",
+	"Description": "If you're just a mod user, don't read further, just install the mod.\n<br />\n<br />I made this mod to let me easily [url=https://www.nexusmods.com/stardewvalley/mods/47340?published=1]turn Grandpa into Grandma[/url]; I was just going to make a mod for that purpose, but then it seemed better to make my changes through Content Patcher so others could edit them if they liked. But that didn't quite work, so I had to make a mod that reinvalidated some early cached content, etc., and so this mod was born. Sorry for making you download more things.\n<br />\n<br />Use this mod like this:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.TextReplace/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"aedenthorn.Grandma\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Replacements\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Strings/StringsFromCSFiles\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Event.cs.1308\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Grandpa\": \"Grandma\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"my boy\": \"my dear\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />Under \"Replacements\", the key is the file path, the value is another dictionary; its keys are the file's entry keys and each value is another dictionary whose keys are the string to be replaced and the values are the replacements.\n<br />\n<br />Text Replace makes its changes exceptionally late, so it should in theory be able to override changes made by other Content Patcher mods.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47339",
+	"Version": "0.1.1",
+	"Updated": "2026-06-09T02:24:54+00:00",
+	"Downloads": [
+		{
+			"Id": 170544,
+			"Type": "Main",
+			"DisplayName": "TextReplace",
+			"FileName": "TextReplace-47339-0-1-1-1780971894.zip",
+			"Description": "",
+			"Version": "0.1.1",
+			"SizeInBytes": 19619,
+			"Uploaded": "2026-06-09T02:24:54+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.TextReplace",
+					"DisplayName": "TextReplace",
+					"Type": "Smapi",
+					"RelativePath": "TextReplace",
+					"Manifest": {
+						"Name": "TextReplace",
+						"Description": "TextReplace.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TextReplace.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47339"
+						],
+						"UniqueId": "aedenthorn.TextReplace"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557232,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434027,
+		"UploaderId": 18901754,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 12446,
+	"Name": "Adjustable Building Costs",
+	"Author": "Skalaki13",
+	"AuthorLabel": "Skalaki",
+	"Description": "This is a small mod that allows you to change the price of all buildings available in Robin's shop. I wanted to make the game harder for me, and increasing the cost for every building allowed me to achieve this goal :)\n<br />\n<br />[b]!!! Now updated for Stardew Valley 1.6 !!!\n<br />[/b]\n<br />You can change the following parameters for each individual building:\n<br />[list]\n<br />[*]Money required\n<br />[*]Items needed - you can change the cost to any item whatsoever\n<br />[*]Days necessary for completing the build\n<br />[/list][b]Instructions[/b]\n<br />[list=1]\n<br />[*]Make sure you have the latest version of SMAPI installed\n<br />[*]Download, and unzip this mod into your Mods folder\n<br />[*]Run the game once with the mod installed to generate a `Config.json`, which defaults to vanilla values\n<br />[*]Edit the config with the values you want (alternatively, you can use the GMCM to change all building options)\n<br />[/list][color=#f1f1f1]\n<br />The config.json follows this structure:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"Buildings\": {\n<br />\u00A0 \u00A0 \"Coop\": {\n<br />\u00A0 \u00A0 \u00A0 \"GoldCost\": 4000,\n<br />\u00A0 \u00A0 \u00A0 \"BuildItems\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemID\": 388,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Amount\": 300\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemID\": 390,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Amount\": 100\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 \"DaysToBuild\": 2\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \"Big Coop\": {\n<br />\u00A0 \u00A0 \u00A0 \"GoldCost\": 10000,\n<br />\u00A0 \u00A0 \u00A0 \"BuildItems\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemID\": 388,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Amount\": 400\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemID\": 390,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Amount\": 150\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 \"DaysToBuild\": 2\n<br />\u00A0 \u00A0 },\n<br />   \uFEFF...\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />[/color]You can add any building to the list, only the ones inside will actually be changed. For the required items, you can also place any item you want, check the wanted Item Ids here -&gt;\u00A0https://eduanttunes.github.io/stardew_valley_ids/\n<br />\n<br />Haven't tested with modded buildings, but it should work as well, as long as you introduce a new key in the Config.json with the name of the new buildings.\n<br />\n<br />This is my very first mod! Please send me any feedback you have about this!\n<br />\n<br />Source: [url=https://github.com/MiguelLucas/StardewValleyMods/tree/master/AdjustableBuildingCosts]Github[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12446",
+	"Version": "2.0.0",
+	"Updated": "2024-10-28T18:22:42+00:00",
+	"Downloads": [
+		{
+			"Id": 114435,
+			"Type": "Main",
+			"DisplayName": "AdjustableBuildingCosts",
+			"FileName": "AdjustableBuildingCosts-12446-2-0-0-1730139762.zip",
+			"Description": "Added compatibility with SDV 1.6\n<br />Added integration with Generic Mod Config Menu",
+			"Version": "2.0.0",
+			"SizeInBytes": 18525,
+			"Uploaded": "2024-10-28T18:22:42+00:00",
+			"Mods": [
+				{
+					"Id": "Skalaki.AdjustableBuildingCosts",
+					"DisplayName": "Adjustable Building Costs",
+					"Type": "Smapi",
+					"RelativePath": "AdjustableBuildingCosts",
+					"Manifest": {
+						"Name": "Adjustable Building Costs",
+						"Description": "Changes the prices, items and duration necessary for Robin's buildings",
+						"Author": "Skalaki",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AdjustableBuildingCosts.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:12446"
+						],
+						"UniqueId": "Skalaki.AdjustableBuildingCosts"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342501123,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399134,
+		"UploaderId": 3356439,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

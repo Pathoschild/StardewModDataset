@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 28014,
+	"Name": "Crab Net REDUX",
+	"Author": "klatuprism",
+	"AuthorLabel": "prism99-jwdred",
+	"Description": "This is a continuation of the original version of[url=https://www.nexusmods.com/stardewvalley/mods/584] Crab Net[/url].\u00A0 I have\u00A0 re-factored the code to be 1.6 compatible, added [url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url]\uFEFF integration to allow in game mod configuration, and added multi-lingual support for dialogue and configuration labels.\n<br />\n<br />[size=4][b]About[/b][/size]\n<br />\u00A0\n<br />Do you find yourself picking up and placing your crab pots every single time you empty them? \u00A0And every single time you bait them?\u00A0\u00A0And even when you're trying to place them? \u00A0Let's face it,\u00A0ConcernedApe may have been concerned about a great many things, but \"How\u00A0easy is it to use crab pots\" must not have been one of them. \u00A0Can you\u00A0image a world where you simply pressed a button and all your crab pots were\u00A0emptied and baited, and those little shrimps and periwinkles were deposited\u00A0right into your inventory? \u00A0Crab Net makes that dream a reality.\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\u00A0\n<br />The configuration file defaults to the following settings.\n<br />\u00A0\n<br />{\n<br />\u00A0\"keybind\": \"H\",\n<br />\u00A0\"enableLogging\": false,\n<br />\u00A0 \"enableMessages\": true,\n<br />\u00A0\"free\": false,\n<br />\u00A0\"costPerCheck\": 1,\n<br />\u00A0\"costPerEmpty\": 10,\n<br />\u00A0\"chargeForBait\": true,\n<br />\u00A0\"preferredBait\": 685,\n<br />\u00A0\"whoChecks\": \"spouse\",\n<br />\u00A0\"chestCoords\": \"73, 14\",\n<br />\u00A0\"bypassInventory\": false,\n<br />\u00A0\"allowFreebies\": false\n<br />}\n<br />\u00A0\n<br />[b][u]keybind[/u][/b]: The hot key you want to press to summon your crab bearing minion.\n<br />\u00A0\n<br />[b][u]enableLogging[/u][/b]: Tells the mod whether or not to output logging messages to your SMAPI console. \u00A0Don't get it\u00A0confused with \"enableMessages\".\n<br />\u00A0\n<br />[b][u]enableMessages[/u][/b]: \u00A0Tells the mod whether or not you want feedback about what your worker did, how much it cost,\u00A0etc. \u00A0Disable it if you don't want to see any\u00A0 dialogues or HUD displays\u00A0after pressing the hot key.\n<br />\u00A0\n<br />[b][u]free[/u][/b]: \u00A0This setting overrides all other cost settings. \u00A0If you set it to true, then all other cost settings will be ignored and you can\u00A0have all your trash brought to you and not find your self a single 'g' poorer.\u00A0\u00A0It's the same thing as setting all the other cost settings to 0.\n<br />\u00A0\n<br />[b][u]costPerCheck[/u][/b]: \u00A0Assuming \"free\" is set to false, you will be charged this amount for every pot that you have placed in\u00A0Stardew Valley.\n<br />\u00A0\n<br />[b][u]costPerEmpty[/u][/b]: \u00A0This is the amount that it will cost you to have the contents of your pots retrieved. \u00A0If there's nothing to\u00A0retrieve, you will not be charged anything for that crab pot. \u00A0\n<br />[b][u]\n<br />chargeForBait[/u][/b]: \u00A0This tells CrabNet whether you want to pay for bait or not. \u00A0The arrangement you have\u00A0between you and your pot checker is nobody's \n<br />business but your own, and there\u00A0are certainly some master baiters in Pelican Town who include the bait in their\u00A0service.\n<br />\u00A0\n<br />[b][u]preferredBait[/u][/b]: \u00A0The ID of the bait you like to use. \u00A0The only 2 I know about are 685 (regular bait, and\u00A0the default), and 774 a.k.a. 'wild bait'. \u00A0Yes, this \n<br />allows you to use\u00A0Linus' bait recipe before he teaches it to you. \u00A0If you feel bad about\u00A0that, then use 685. \u00A0Or increase the \"costPerEmpty\", \n<br />and call it\u00A0a royalty fee for Linus. \u00A0Or set \"whoChecks\" (see below) to\u00A0Linus, and he might use his own special bait out of disgust for the\u00A0alternative.\n<br />\u00A0\n<br />[b][u]whoChecks[/u][/b]: \u00A0This is an immersion setting.\u00A0The default is \"spouse\", which means messages displayed will\u00A0indicate that your chosen spouse has done this task. \u00A0If they wear the\u00A0pants in your family, then you might consider setting it to something else,\u00A0like \"Shane\" or \"Haley\". \u00A0If the name is not\u00A0recognized, then it will be used verbatim (if you set it to \"Captain\u00A0Underpants\", who to my knowledge is not a character in this game, this mod\u00A0shall say \"Captain Underpants did such and such).\u00A0 However, if the\u00A0name is one of the characters AND messages are enabled, you'll get to see their\u00A0mug every time you press the button.\n<br />\u00A0\n<br />[b][u]chestCoords[/u][/b]: \u00A0These are the secret coordinates of a chest that you have placed on the farm grounds (not inside a building), into\u00A0which Captain Underpants \n<br />will deposit the contents of your crab pots if you\u00A0don't have enough room in your inventory. \u00A0The default setting is the tile\u00A0to the immediate right of the sell box: \"73,14\".\n<br />\u00A0\n<br />[b][u]bypassInventory[/u][/b]: \u00A0If you really,really like the chest idea, you can set bypassInventory to true, and your\u00A0helper will attempt to deposit your daily catch into \n<br />the chest first. \u00A0If\u00A0there is no chest, or the chest is full, they will fall back to putting it in\u00A0your inventory.\n<br />\u00A0\n<br />[b][u]allowFreebies[/u][/b]: \u00A0This setting basically tells the mod to be unforgiving in charging its fees. \u00A0If it's\u00A0set to false (the default) you will not get much slack. \n<br />\u00A0If you can't\u00A0afford to pay for the service, there's an immediate strike and the rest of the\u00A0work will go undone. \u00A0Setting it to true will give your hunter-gatherer a\u00A0little more compassion for the plight of the young farmer (whether they deserve\u00A0it or not).\n<br />\n<br />Source Code: [url=https://github.com/Prism-99/stardewvalley-jwdred]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28014",
+	"Version": "1.1.5",
+	"Updated": "2024-09-19T22:43:28+00:00",
+	"Downloads": [
+		{
+			"Id": 111639,
+			"Type": "Main",
+			"DisplayName": "Crab Net REDUX",
+			"FileName": "Crab Net REDUX-28014-1-1-5-1726785808.zip",
+			"Description": "Requires SMAPI 4.",
+			"Version": "1.1.5",
+			"SizeInBytes": 25258,
+			"Uploaded": "2024-09-19T22:43:28+00:00",
+			"Mods": [
+				{
+					"Id": "prism99.jwdred.CrabNet",
+					"DisplayName": "Crab Net",
+					"Type": "Smapi",
+					"RelativePath": "CrabNet-REDUX",
+					"Manifest": {
+						"Name": "Crab Net",
+						"Description": "Wouldn't it be nice if there were a way to empty crab pots quickly without accidentally picking up the pot too?",
+						"Author": "prism99.jwdred",
+						"Version": "1.1.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CrabNet-REDUX.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28014"
+						],
+						"UniqueId": "prism99.jwdred.CrabNet"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342498327,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414702,
+		"UploaderId": 82835898,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

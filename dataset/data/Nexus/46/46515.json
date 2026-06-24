@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 46515,
+	"Name": "SpaceCore Texture Fix",
+	"Author": "GREEDIII",
+	"Description": "แก้ไขข้อผิดพลาด ArgumentException ที่เกิดขึ้นใน SpaceCore\n<br />เมื่อมี content pack หลายตัว (เช่น Animated Fish,\n<br />AnimatedGemstones, Animated Food) เพิ่ม texture override\n<br />ที่มี key ซ้ำกัน\n<br />\n<br />[วิธีติดตั้ง]\n<br />1. ติดตั้ง SpaceCore ก่อน (จำเป็น)\n<br />2. แตกไฟล์ zip แล้ววางโฟลเดอร์ SpaceCoreTextureFix\n<br />\u00A0 ลงในโฟลเดอร์ Mods\n<br />\n<br />\n<br />[หมายเหตุ / Note]\n<br />mod นี้ทำงานโดยการดัก error ที่เกิดขึ้นใน SpaceCore \n<br />ไม่ให้ทำให้เกมพัง แต่ไม่ได้แก้ต้นเหตุที่ content pack \n<br />หลายตัวส่ง texture ซ้ำกัน\n<br />\n<br />ผลที่อาจเกิดขึ้น:\n<br />- ถ้าโชคดี: ทุกอย่างทำงานปกติ animation แสดงครบ\n<br />- ถ้าโชคร้าย: texture บางตัวอาจไม่แสดงหรือ animation \n<br />\u00A0 บางส่วนอาจหายไป\n<br />\n<br />ถ้าพบปัญหา texture หายหลังติดตั้ง mod นี้ \n<br />ให้ลองถอด content pack พวก Animated ออกทีละตัว \n<br />เพื่อหาตัวที่ขัดแย้งกันครับ\n<br />\n<br />---\n<br />\n<br />Fixes the ArgumentException crash in SpaceCore when multiple\n<br />animated content packs add duplicate texture override keys.\n<br />\n<br />[Installation]\n<br />1. Install SpaceCore (required)\n<br />2. Extract zip and place SpaceCoreTextureFix folder into Mods folder\n<br />\n<br />[Note]\n<br />This mod works by catching the ArgumentException error \n<br />in SpaceCore before it crashes the game. However, it does \n<br />not fix the root cause — which is multiple animated content \n<br />packs registering duplicate texture override keys.\n<br />\n<br />Possible outcomes after installing:\n<br />- Best case: Everything works normally, all animations \n<br />\u00A0 display correctly as intended\n<br />- Worst case: Some textures or animations may not display \n<br />\u00A0 correctly if the conflict is severe enough that entries \n<br />\u00A0 were skipped during loading\n<br />\n<br />If you notice missing or broken animations after installing \n<br />this mod, try removing animated content packs one by one \n<br />to identify which ones are conflicting with each other.\n<br />\n<br />Affected content packs are typically in the Animated series \n<br />(Animated Fish, Animated Food and Drinks, AnimatedGemstones, \n<br />Animated Mining Pack, etc.)\n<br />\n<br />This mod is a temporary workaround. If SpaceCore fixes this \n<br />bug in a future update, this mod will no longer be necessary \n<br />and can be safely removed.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46515",
+	"Version": "1.0.0",
+	"Updated": "2026-05-21T10:04:45+00:00",
+	"Downloads": [
+		{
+			"Id": 168349,
+			"Type": "Main",
+			"DisplayName": "SpaceCoreTextureFix 1.0.0",
+			"FileName": "SpaceCoreTextureFix 1.0.0-46515-1-0-0-1779357885.rar",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 10320,
+			"Uploaded": "2026-05-21T10:04:45+00:00",
+			"Mods": [
+				{
+					"Id": "Me.SpaceCoreTextureFix",
+					"DisplayName": "SpaceCore Texture Fix",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "SpaceCore Texture Fix",
+						"Description": "Fixes duplicate texture key crash in SpaceCore",
+						"Author": "Me",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpaceCoreTextureFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Me.SpaceCoreTextureFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555037,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433203,
+		"UploaderId": 190149729,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

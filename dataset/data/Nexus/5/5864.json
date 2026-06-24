@@ -1,0 +1,128 @@
+{
+	"Site": "Nexus",
+	"Id": 5864,
+	"Name": "Boss Creatures",
+	"Author": "aedenthorn",
+	"Description": "[b]Please respond to my poll if you are interested in helping improve this mod!\n<br />\n<br />[url=https://forums.nexusmods.com/index.php?/topic/8672983-custom-boss-creatures-poll/]https://forums.nexusmods.com/index.php?/topic/8672983-custom-boss-creatures-poll/[/url][/b]\n<br />\n<br />This mod brings boss creatures into Stardew Valley. \n<br />\n<br />\n<br />[size=4][size=5][b]Bosses[/b][/size]\n<br />\n<br />[/size]At present it adds [b]seven[/b] new boss creatures:\n<br />\n<br />[list]\n<br />[*]A [b]Skull Boss[/b] that shoots fireballs\n<br />[*]A [b]Serpent Boss[/b] that breathes fire\n<br />[*]A [b]Bug Boss[/b] that spawns tough flies and casts defense debuffs on you\n<br />[*]A [b]Ghost Boss[/b] that spawns tough ghosts (that debuff attack on hit) and casts a freeze debuff at you\n<br />[*]A [b]Skeleton Boss[/b] that shoots rapid-fire bones that light on fire when it gets to 1/2 health\n<br />[*]A [b]SquidKid Boss[/b] that shoots ice blocks and calls down lightning\n<br />[*]A [b]Slime Boss[/b] with tentacles that pull you in that spawns slimes when it gets hit\n<br />[/list]\n<br />Here's a YouTube video of each of the bosses in action:\n<br />\n<br />[youtube]IH4430V6jdQ[/youtube]\n<br />\n<br />[b][size=4][size=5]Spawning[/size]\n<br />\n<br />[/size][/b]By default, the bosses will only spawn on monster floors in the dungeon (and in the Crimson Badlands if you have SVE).\n<br />\n<br />You can add chances for the bosses to spawn in various places by editing the config.json file (a default version should be created the first time you start the game with the mod installed).\n<br />\n<br />There is also a \"weight\" setting for each boss (default weight is 1.0) that adjusts the chance that a boss is each type. Higher weight = higher chance.\n<br />\n<br />You can optionally install the [url=https://www.nexusmods.com/stardewvalley/mods/5894/\uFEFF]Custom Dungeon Floors[/url] mod as it allows you to set more frequent monster floors with bosses.\n<br />\n<br />\n<br />[size=5][b]Difficulty[/b][/size]\n<br />\n<br />Difficulty mainly affects boss HP and damage.\n<br />\n<br />Boss difficulty can be adjusted in the config file. Difficulty is multiplied by the level of the mine in which you are in, as follows:\n<br />\n<br />[b]difficulty = BaseUndergroundDifficulty * mineLevel / 100[/b]\n<br />\n<br />where [b]BaseUndergroundDifficulty[/b] is a float that can be set in the config.json (1 = default) and [b]mineLevel [/b]starts counting from level 1 in the mines, and continues at 121 in the first level of Skull Cave. So, a boss on the first level of Skull Cave would have a 1.21x difficulty multiplier, and a boss on the 50th level of the mines would have a 0.5x difficulty multiplier.\n<br />\n<br />Above ground, difficulty is a random value (default between 0.75x and 1.25x, customizable in config.json).\n<br />\n<br />\n<br />[size=5][b]Sprites[/b][/size]\n<br />\n<br />By default, this mod uses the sprites of the monsters they are based on, scaled up. You can override the defaults by setting\u00A0[b]UseAlternateTextures[/b] to [b]true[/b] in the config.json file and loading custom sprites for each [b]&#92;Characters&#92;Monsters&#92;&lt;MonsterType&gt;Boss[/b]. The optional files section has an example [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] mod that you can use as a template to do this. \n<br />\n<br />There is also a fully-functional HD sprite mod in the optional files section courtesy of\u00A0[url=https://www.nexusmods.com/stardewvalley/users/9139916]DustBeauty[/url] - since the sprites in it are twice as big, you must set the width and height of each boss type to [b]twice [/b]the default value in order to make it work (along with setting [b]UseAlternateTextures[/b] to [b]true[/b]). \n<br />\n<br />Sprite [b]scale [/b]can be set in the config.json file for each boss type (1.0 = same size as the ordinary monster, 2.0 = twice as big, etc.). Don't alter the [b]width [/b]and [b]height [/b]of the bosses unless you're using custom sprites as explained above.\n<br />\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />\n<br />[list]\n<br />[*]Bosses get more powerful once they reach 1/2 health, just warning ya\n<br />[*]Bosses drop lots of random loot, I just gave them the loot tables of all monsters combined (bc I'm lazy, that's why). The loot table is in [b]assets/boss_loot.json[/b] if you want to create a better loot list. The format of the entries is \"[b]ObjectID/DropChance[/b]\". For now the list is universal to every boss. \n<br />[*]Loot amount and drop chances are affected by difficulty multiplier.\n<br />[*]Some of the bosses are pretty darn tough... if you don't have late game weapons and lots of healing edibles, you'll probably get trounced\n<br />[*]The Slime Boss will destroy stuff it passes over so beware letting it spawn on your farm!\n<br />[*]Boss hitboxes are a bit messed up with scaled sprites, I'm trying to fix them.\n<br />[/list]\n<br />Feedback on tweaking the bosses is welcome; I didn't spend a lot of time adjusting their stats, and lots of things can be adjusted (HP, speed, damage, etc.).\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], doesn't use Harmony.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5864",
+	"Version": "1.6.1",
+	"Updated": "2025-10-24T06:04:35+00:00",
+	"Downloads": [
+		{
+			"Id": 26649,
+			"Type": "Optional",
+			"DisplayName": "Example Custom Sprites",
+			"FileName": "Example Custom Sprites-5864-0-1-0-1588333420.zip",
+			"Description": "This is an example Content Patcher mod that overrides the default sprites for the Boss Creatures mod. It contains a recolour of the BugBoss, but you could add more custom sprites (see Sprites in the mod description)",
+			"Version": "0.1.0",
+			"SizeInBytes": 18546,
+			"Uploaded": "2020-05-01T11:43:40+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.BossCreaturesSprites",
+					"DisplayName": "(CP) Boss Creatures Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] BossCreaturesSprites",
+					"Manifest": {
+						"Name": "(CP) Boss Creatures Sprites",
+						"Description": "Alters sprites for the Boss Creatures mod",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "2.5.5",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.3.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.BossCreaturesSprites"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342413337,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 26661,
+			"Type": "Optional",
+			"DisplayName": "HD Boss Creatures by DustBeauty",
+			"FileName": "HD Boss Creatures-5864-0-1-0-1588348916.zip",
+			"Description": "This is a Content Patcher mod that provides HD boss textures. To make this mod work, you will have to edit the Boss Creatures config.json file - set UseAlternateTextures to true and set the width and height for each boss type to 2x default size.",
+			"Version": "0.1.0",
+			"SizeInBytes": 151750,
+			"Uploaded": "2020-05-01T16:01:56+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.BossCreaturesSprites",
+					"DisplayName": "(CP) Boss Creatures Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] BossCreaturesSpritesHD",
+					"Manifest": {
+						"Name": "(CP) Boss Creatures Sprites",
+						"Description": "Alters sprites for the Boss Creatures mod",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "2.5.5",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.3.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.BossCreaturesSprites"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342413349,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 146373,
+			"Type": "Main",
+			"DisplayName": "Boss Creatures",
+			"FileName": "Boss Creatures-5864-1-6-1-1761285875.zip",
+			"Description": "Changes:\n<br />\n<br />NRE fix\n<br />\n<br />\n<br />\n<br />",
+			"Version": "1.6.1",
+			"SizeInBytes": 54748,
+			"Uploaded": "2025-10-24T06:04:35+00:00",
+			"Mods": [
+				{
+					"Id": "Aedenthorn.BossCreatures",
+					"DisplayName": "Boss Creatures",
+					"Type": "Smapi",
+					"RelativePath": "BossCreatures",
+					"Manifest": {
+						"Name": "Boss Creatures",
+						"Description": "Spawns boss creatures in dungeons and around Stardew Valley.",
+						"Author": "aedenthorn",
+						"Version": "1.6.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "BossCreatures.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5864"
+						],
+						"UniqueId": "Aedenthorn.BossCreatures"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533061,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392552,
+		"UploaderId": 18901754,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

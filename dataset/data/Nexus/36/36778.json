@@ -1,0 +1,80 @@
+{
+	"Site": "Nexus",
+	"Id": 36778,
+	"Name": "Sharogg's Panoramas (MMAP)",
+	"Author": "Sharogg",
+	"Description": "[b]For players[/b]: This mod doesn't do anything on its own but may be required by other mods. Be aware that the panorama is not fully displayed on screenshots.\n<br />\n<br />\n<br />[b]For modders[/b]: This is my attempt at recreating the panorama from DaisyNiko's tilesheets for MMAP (created from my own modified vanilla assets). Due to how the panorama is displayed, this mod doesn't actually add the panorama entry for MMAP, but comes with a template that can be adjusted according to map size. The template may (and should) be copied to your own mod, however the png assets that the panorama is made up of are loaded into the game by this mod may not be redistributed, instead listing this mod as a requirement.\n<br />\n<br />[b]HOW TO USE[/b]\n<br />\n<br />Besides the actual mod there is an example folder that you should download. Inside you will find an example content.json and a panorama.json. Unless you want to do some more advanced customization, you do not necessarily need to touch the panorama.json, although you may want to \"bake in\" some options that I have left customizable through config/dynamic tokens in the content.json by doing a simple find and replace.\n<br />\n<br />In the content.json you will find some configs about if you want to have sun, moon and clouds visible in the panorama which you can leave there if you want mod users to have the option, or alternatively make permanent. They are called upon in DynamicTokens so if you want to make them permanent you will need to edit those. (The transition for the sunset is not entirely smooth so it is maybe a bit of a personal preference).\n<br />\n<br />Then there are six numerical parameters which do not actually need to be config options (and shouldn't be left as such) but I put them as configs so you can easily change them in game to adjust and see the effect when testing your mod (you need to exit and reenter the map you are working on to see the effect). There are 3 sets of example values that make the panorama look and move slightly differently which you can use as a starting point and adjust according to your map size. Things to look out for is how it will look at different resolutions/zoom levels and if the bottom of the panorama will peek out at some point while you move across the map. It is a bit tricky to describe how exactly the parameters work but I will try my best:\n<br />\n<br />Horizon/Mountain Position: sets the position of the water line and the mountains respectively, counted from the bottom. The values are quite different due to different resolutions of the textures. (MMAP parameter: DrawOffset)\n<br />\n<br />Percent offset: Added to make it work better over different zoom levels/resolutions, changes the position of the textures \n<br />(horizon/mountain position) slightly by a percentage of the viewport (your window) size.\u00A0(MMAP parameter: DrawPercentOffset)\n<br />\n<br />Horizon/Mountains/Celestial objects Offset rate: this sets the rate at which the panorama \"moves\" as you walk vertically across the map (horizontally is baked in directly as this isn't so dependent on map size). Generally the mountains should have the highest rate horizon a bit lower and sun/moon even lower (negative rates, so technically highest rate means lowest value I guess). (MMAP parameter: DrawViewportOffset)\n<br />\n<br />You'll notice that these configs lead back directly to dynamic tokens, which in turn are read directly by the panorama.json. I did that so it wouldn't be necessary to change all these values in the panorama.json directly when the value is found and the config removed. However, I'm not sure if this might have a performance impact to have \"unnecessary\" dynamic tokens, so it might be a good idea to bake these things into the panorama.json directly.\n<br />\n<br />I realize that this is a bit complicated, so let me know if something is unclear and needs more explanation. It is also a good idea to look into MMAPs documentation for panoramas if you want to get a better understanding. You will need to add the panorama to your map according to those instructions.\n<br />\n<br />Be sure to add MMAP as a required dependency to your mod!\n<br />\n<br />Feel free to use this as a base to make your own variation of the panorama (this mod as requirement if using my assets!). I might play around with adding more TAS like birds, different kind of clouds etc in the future. If you don't want the floating clouds you can also safely remove that section from the panorama.json.\n<br />\n<br />[b]Credits [/b]to DaisyNiko for a lot of inspiration from the tilesheet version.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36778",
+	"Version": "1.0.0",
+	"Updated": "2025-08-18T11:14:27+00:00",
+	"Downloads": [
+		{
+			"Id": 140437,
+			"Type": "Main",
+			"DisplayName": "Sharogg's Panoramas",
+			"FileName": "Sharogg's Panoramas-36778-1-0-0-1755514058.zip",
+			"Description": "Actual mod - players download only this",
+			"Version": "1.0.0",
+			"SizeInBytes": 968314,
+			"Uploaded": "2025-08-18T10:47:38+00:00",
+			"Mods": [
+				{
+					"Id": "Sharogg.Panoramas",
+					"DisplayName": "Sharogg's Panoramas for MMAP",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Sharogg's Panoramas",
+					"Manifest": {
+						"Name": "Sharogg's Panoramas for MMAP",
+						"Description": "Assets for creating panoramas with MMAP.",
+						"Author": "Sharogg",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:36778"
+						],
+						"UniqueId": "Sharogg.Panoramas"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342527125,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 140442,
+			"Type": "Optional",
+			"DisplayName": "Example files",
+			"FileName": "Example files-36778-1-0-0-1755515667.zip",
+			"Description": "Example files for mod makers - players don't need to download this",
+			"Version": "1.0.0",
+			"SizeInBytes": 2713,
+			"Uploaded": "2025-08-18T11:14:27+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Sharogg's Panoramas - Example files",
+					"Type": "Invalid",
+					"RelativePath": "Sharogg's Panoramas - Example files",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342527130,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423466,
+		"UploaderId": 59674311,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

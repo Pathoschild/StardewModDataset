@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 39657,
+	"Name": "Inches To Metric Save Converter",
+	"Author": "PinkSerenity",
+	"AuthorLabel": "Pink Serenity",
+	"Description": "Since ConcernedApe is American the game uses inches internally. It's only when the sizes are displayed that the game checks the current language, and if it isn't English (to be precise, the vanilla English), the game will convert them into metric just for displaying the text. That means all the sizes in the save files are still in inches.\n<br />\n<br />The logic of\u00A0the mod \"[url=https://www.nexusmods.com/stardewvalley/mods/3760]Inches to Metric System[/url]\" (at least up to 1.9.1) is to manually convert the fish sizes by multiplying them by 2.54. This value gets also stored permanently in the save files. Unfortunately, when switching to a language other than vanilla English (either another language like German, or the English language setting provided by \"24H Clock Language\") the game would again attempt to convert the values, leading to a double conversion that almost triples the size of the fish.\n<br />\n<br />Similarly, when removing the mod (why would you do that, it's great), all new fish would have their old values and would be much smaller than the fish that were recorded so far.\n<br />\n<br />That's where this mod comes in:\n<br />\n<br />When you load a save file you will be asked whether you want to convert saved fish sizes. Confirming that will divide all fish sizes by 2.54 (rounded down with a minimum size of 1). This corresponds to a size in inches, similar to how the vanilla game internally uses inches for saving fish data.\n<br />\n<br />Unfortunately, you still have to finish the day in order for the changes to get saved.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39657",
+	"Version": "1.0.0",
+	"Updated": "2025-11-25T10:47:37+00:00",
+	"Downloads": [
+		{
+			"Id": 149006,
+			"Type": "Main",
+			"DisplayName": "Inches To Metric Save Converter",
+			"FileName": "ITMSC-39657-1-0-0-1764067657.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 11309,
+			"Uploaded": "2025-11-25T10:47:37+00:00",
+			"Mods": [
+				{
+					"Id": "PinkSerenity.InchesToMetricSaveConverter",
+					"DisplayName": "Inches To Metric Save Converter",
+					"Type": "Smapi",
+					"RelativePath": "InchesToMetricSaveConverter",
+					"Manifest": {
+						"Name": "Inches To Metric Save Converter",
+						"Description": "This is meant to be used with the \"Inches to Metric System\" mod, or, to be precise, on an old save where the fish sizes in the collection where converted to metric using the old method.",
+						"Author": "Pink Serenity",
+						"Version": "1.0.0",
+						"EntryDll": "InchesToMetricSaveConverter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "PinkSerenity.InchesToMetricSaveConverter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535694,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426345,
+		"UploaderId": 87101053,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

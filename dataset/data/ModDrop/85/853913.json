@@ -1,0 +1,83 @@
+{
+	"Site": "ModDrop",
+	"Id": 853913,
+	"Name": "Custom Death Penalty Plus",
+	"Author": "TheMightyAmondee",
+	"TagLine": "Fully customise the death penalty and pass out penalty",
+	"Description": "An upgraded version of CatCattyCat's Customizable Death Penalty Mod that includes more customisation. As of 1.1.0 the pass out penalty is also fully customisable.\n\nVersion 1.6.0\n- Stardew Valley 1.6 compatibility\n\nVersion 1.5.1\n- Generic Mod Config Menu support added thanks to ayalfishey on github!\n\nVersion 1.5.0\n- Now with translation support. Feel free to translate the mod and send me the files for addition (best place to reach me is on the mod page). Full credit given, obviously!\n- Added Italian, Spanish and French, thanks to AlixNauts!\n\nUsing the config, it is possible to:\n\nDeath penalty\n- Disable item loss\n- Set a capped amount of money to lose (money lost will never be greater than this value)\n- Set a percentage of money, health and/or energy to restore\n\nPass out penalty\n- Set a capped amount of money to lose (money lost will never be greater than this value)\n- Set a percentage of money and/or energy to restore\n\nOther penalties\n- Set a more realistic penalty for dying\n- Set a friendship change with Harvey and Maru (separately)\n- Make the place you end up after dying a little more variable than either Harvey's or the mines (this won't work in split-screen)\n- Apply a random debuff on death for 60 seconds (on Ginger Island the debuff is always \"Burnt\")\n\nBy default:\n\n\nDeath penalty\n- Item loss is disabled\n- Money loss is capped at 500g\n- Amount of money restored is 95% \n- Amount of health restored is 50%\n- Amount of energy restored is 10%\n\nPass out penalty\n- Money loss is capped at 500g\n- Amount of money restored is 95% \n- Amount of energy restored is 50%\n\nOther penalties\n- Waking up in the clinic the next day is disabled\n- No friendship change for Harvey and Maru\n- Different warp locations are disabled\n- No debuffs will be applied\n\nUsing this mod:\n\nSet-up:\n- To install, simply unzip the download file into your Mods folder. SMAPI must be installed\n- The game must be run at least once with the mod to generate the config file. This is then found in the CustomDeathPenaltyPlus folder\n\nAccepted config values:\n- When modifying the config file, any percentages should be given in decimal form (e.g 50% is 0.50). These are the percentages to restore, not lose\n- RestoreItems will take a value of true or false\n- WakeupNextDayinClinic will take a value of true or false\n- MoneyLossCap will only take a positive whole number, 0 included\n- HarveyFriendshipChange will take a whole number, 0 included. Don't worry about setting the value too low, friendship lost will never be more than the current friendship level (250 = 1 heart)\n- IMPORTANT: MoreRealisticWarps and WakeupNextDayinClinic conflict and so cannot both be true. The mod will disable MoreRealisticWarps if both are true.\n\nAdditional Information:\n- The mod will detect if a value is invalid and use the default value to avoid issues. Generally, the percentage values should be between 0 and 1 to be valid\n- The mod makes some minor changes to the PlayerKilled event and some mail entries that may be overwritten by other mods, penalties should still apply even if this occurs.\n- Friendship changes will apply if you wake up in the clinic, this includes when WakeupNextDayinClinic is true. It only applies on Tuesdays and Thursdays for Maru.\n- MoreRealisticWarps will warp you to the entrance of the Skull Cavern if you die in the Skull Cavern and your farmhouse if you die on your farm (this includes the farmhouse and the farmcave).\n\nThe best place to post about issues and bugs is on this mod page or on the Nexus mod page. You can also reach me on discord at themightyamondee \n\nCredit to CatCattyCat for creating Customizable Death Penalty. The mod this is based on.\n",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/853913",
+	"Version": null,
+	"Updated": "2024-03-20T06:24:52.967+00:00",
+	"Downloads": [
+		{
+			"Id": 1547328,
+			"Type": "Main",
+			"DisplayName": "Custom Death Penalty Plus",
+			"FileName": "Custom Death Penalty Plus.zip",
+			"Description": "Fully customise the penalty for dying and passing out. Includes some extra options for added difficulty if desired.",
+			"Version": "1.6.0",
+			"SizeInBytes": 36388,
+			"Uploaded": "2024-03-20T06:24:52.967+00:00",
+			"Mods": [
+				{
+					"Id": "TheMightyAmondee.CustomDeathPenaltyPlus",
+					"DisplayName": "Custom Death Penalty Plus",
+					"Type": "Smapi",
+					"RelativePath": "CustomDeathPenaltyPlus",
+					"Manifest": {
+						"Name": "Custom Death Penalty Plus",
+						"Description": "Fully customisable penalty for dying and passing out.",
+						"Author": "TheMightyAmondee",
+						"Version": "1.6.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomDeathPenaltyPlus.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7069",
+							"ModDrop:853913"
+						],
+						"UniqueId": "TheMightyAmondee.CustomDeathPenaltyPlus"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "d2dfe9029a23df6d05400f0f387450d1",
+				"md5In": "0ab5a139298012a613df6d91e02ade91",
+				"patchNotes": "Updated for 1.6",
+				"scriptType": 0,
+				"sha256Ex": "99a327c2d1566b2f6d80f46ff517ecce0514009db2569b2edcf9078623717dea",
+				"sha256In": "ba201142d38a155b2f70e955ca4fb5e99775104c5cfe8a74842f1ca6fc879c20"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1606037802490,
+		"DateUpdated": 1710915892967,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1606036884807,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/853913/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/853913/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/853913/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/853913/icon_original"
+		},
+		"notice": "SMAPI is required for this mod to work, minimum api version of 3.13.0",
+		"dateNoticeUpdated": "2023-09-06T03:51:42.097506-04:00",
+		"isNoticeEnabled": true,
+		"isUploadedByAuthor": true,
+		"userID": 198696
+	}
+}

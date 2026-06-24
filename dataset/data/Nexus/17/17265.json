@@ -1,0 +1,166 @@
+{
+	"Site": "Nexus",
+	"Id": 17265,
+	"Name": "Unlockable Bundles",
+	"Author": "DeLiXxN",
+	"AuthorLabel": "DeLiXx",
+	"Description": "[font=Verdana][size=4][b]For Players\n<br />[/b][/size]- - - - - - - - - - -\n<br />\n<br />[size=3]Setup[/size][/font][list=1]\n<br />[*][font=Verdana]Install\u00A0[url=https://smapi.io/]SMAPI[/url][/font]\n<br />[*][font=Verdana]Unpack Unlockable Bundles\u00A0in your Mods Folder[/font]\n<br />[*][font=Verdana]Unpack your content pack\u00A0in your Mods Folder[/font]\n<br />[*][font=Verdana]Make sure you've installed all requirements of the content pack[/font]\n<br />[*][font=Verdana]Start the game using the SMAPI Launcher[/font]\n<br />[/list][font=Verdana]\n<br />[/font][font=Verdana][size=3]Multiplayer[/size]\n<br />\n<br />All Players need to have both Unlockable Bundles and matching content packs installed.\n<br />Mismatching versions will cause issues. It is recommended to keep your mods updated to the latest version.\n<br />\n<br />[color=#6aa84f][size=5]✔[/size][/color] [size=4]Multiplayer[/size]\n<br />[color=#6aa84f][size=5]✔[/size][/color] [size=4]Gamepad[/size]\n<br />[color=#6aa84f][size=5]✔[/size][/color] [size=4]Clean Savefiles[/size]\n<br />[color=#6aa84f][size=5]✔[/size][/color][size=4] Android Support[/size]\n<br />\n<br />[size=4][b]For Content Creators\n<br />[/b][/size]- - - - - - - - - - - - - - - - - - -\n<br />\n<br />Create your own Unlockable Bundles content pack for your project within minutes and benefit from a variety of bundle types and customizability. Not quite sure what to do with it yet? No problem! Just snoop through the Demo provided in the downloads section at your own pace.\n<br />\n<br />Please refer to the gitlab wiki for documentation:\n<br />[url=https://gitlab.com/delixx/stardew-valley/unlockable-bundles/-/wikis/home]https://gitlab.com/delixx/stardew-valley/unlockable-bundles/-/wikis/home\n<br />[/url]\uFEFF\n<br />How does it work?\n<br />Just add \"DLX.Bundles\" in your manifest dependencies and append the\u00A0UnlockableBundles/Bundles asset.\n<br />Here's how that could look using content patcher\n<br />\n<br />[/font]{\n<br />\u00A0\u00A0[color=#ffe599]\"Format\"[/color]:\u00A0[color=#ffe599]\"2.6.0\"[/color],\n<br />\u00A0\u00A0[color=#ffe599]\"Changes\"[/color]: [\n<br />{\n<br />[color=#ffe599]\"Action\"[/color]:\u00A0[color=#ffd966]\"EditData\"[/color],\n<br />[color=#ffe599]\"Target\"[/color]:\u00A0[color=#ffd966]\"UnlockableBundles/Bundles\"[/color],\n<br />[color=#ffe599]\"Entries\"[/color]: {\n<br />[color=#ffe599]\"MyModName.Bridge\"[/color]: {\u00A0[color=#b6d7a8]//The bundle key has to be unique![/color]\n<br />\uFEFF   \uFEFF   \uFEFF   \uFEFF\u00A0 [color=#ffe599]\"ShopType\":[color=#ffd966] \"Dialogue\"[/color][/color][color=#ffe599],[/color] [color=#b6d7a8]//The bundle type [/color]\n<br />\u00A0\u00A0[color=#ffe599]\"Location\"[/color]:\u00A0[color=#ffd966]\"Farm\"[/color],\u00A0[color=#b6d7a8]//You can use the [i]ub location[/i] command in the smapi console to get the current location name[/color]\n<br />\u00A0\u00A0[color=#ffe599]\"BundleDescription\"[/color]:\u00A0[color=#ffd966]\"Do you want to build a bridge?\"[/color],\n<br />\u00A0\u00A0[color=#ffe599]\"ShopPosition\"[/color]:\u00A0[color=#ffd966]\"18, 8\"[/color],\u00A0[color=#b6d7a8]//The coordinates of the bundle shop the player interacts with[/color]\n<br />\uFEFF   \uFEFF   \uFEFF   \uFEFF\u00A0\u00A0[color=#ffe599]\"ShopTexture\":[/color][color=#ffd966]\"[color=#ffd966]{{InternalAssetKey: [color=#ffd966][color=#ffd966]assets/BridgeChunk.png[/color][/color]}}[/color]\",[/color][color=#b6d7a8] //A game asset containing the bundles shop texture[/color]\n<br />[color=#b6d7a8]      \u00A0 [/color]   \uFEFF   \uFEFF[color=#ffe599]\"DrawQuestionMark\"[/color][color=#b6d7a8]: [/color][color=#a4c2f4]true[/color][color=#b6d7a8], //Draws a yellow question mark above the shop texture[/color]\n<br />[color=#b6d7a8]      \u00A0 [/color]   \uFEFF[color=#ffe599]   \uFEFF\"QuestionMarkOffset\":[/color][color=#ffd966] \"32, 32\",[/color]\n<br />\u00A0\u00A0[color=#ffe599]\"Price\"[/color]: {\n<br />[color=#ffe599]\"Money\"[/color]:\u00A0[color=#a4c2f4]25000[/color],\n<br />\"[color=#ffe599]388\"[/color]:\u00A0[color=#a4c2f4]200[/color],\u00A0[color=#b6d7a8]//388 is the ItemID for Wood[/color]\n<br />[color=#ffe599]\"390\"[/color]:\u00A0[color=#a4c2f4]35[/color],\u00A0[color=#b6d7a8]//390 is the ItemID for Stone[/color]\n<br />\uFEFF   \uFEFF   \uFEFF   \uFEFF   [color=#ffe599]\uFEFF\"91:gold\":[/color][color=#a4c2f4]10[/color][color=#b6d7a8], //91 is the ItemID for Banana[/color]\n<br />\u00A0 },\n<br />\u00A0\u00A0[color=#ffe599]\"EditMap\"[/color]:\u00A0[color=#ffd966]\"{{InternalAssetKey: [color=#ffd966]assets/BridgePatch.tmx[/color]}}\"[/color],\u00A0[color=#b6d7a8]//A map patch that will be applied after purchase[/color]\n<br />\u00A0\u00A0[color=#ffe599]\"EditMapPosition\"[/color]:\u00A0[color=#ffd966]\"9, 6\"[/color]\u00A0[color=#b6d7a8]//The top left coordinates of where the EditMap patch will be applied[/color]\n<br />}\n<br />}\n<br />}\n<br />]\n<br />}",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17265",
+	"Version": "4.3.1",
+	"Updated": "2026-05-15T13:46:01+00:00",
+	"Downloads": [
+		{
+			"Id": 159533,
+			"Type": "Optional",
+			"DisplayName": "Demo Pack for Content Creators",
+			"FileName": "Demo Pack for Content Creators-17265-4-3-0-1772977149.zip",
+			"Description": "4.3.0 @DEMO\n<br />\n<br />A demo for content creators.\n<br />Requires Custom Farm Loader and Content Patcher to be installed.",
+			"Version": "4.3.0",
+			"SizeInBytes": 67606,
+			"Uploaded": "2026-03-08T13:39:09+00:00",
+			"Mods": [
+				{
+					"Id": "DeLiXx.CFL_UB_Demo",
+					"DisplayName": "UB Demo Farm",
+					"Type": "ContentPack",
+					"RelativePath": "DEMO Unlockable Bundles\\[CFL] DEMO Unlockable Bundles",
+					"Manifest": {
+						"Name": "UB Demo Farm",
+						"Description": null,
+						"Author": "DeLiXx",
+						"Version": "4.3.0",
+						"ContentPackFor": {
+							"UniqueId": "DeLiXx.Custom_Farm_Loader",
+							"MinimumVersion": "2.1.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:????"
+						],
+						"UniqueId": "DeLiXx.CFL_UB_Demo"
+					}
+				},
+				{
+					"Id": "DeLiXx.UB_Demo",
+					"DisplayName": "DEMO Unlockable Bundles",
+					"Type": "ContentPack",
+					"RelativePath": "DEMO Unlockable Bundles\\[CP] DEMO Unlockable Bundles",
+					"Manifest": {
+						"Name": "DEMO Unlockable Bundles",
+						"Description": null,
+						"Author": "DeLiXx",
+						"Version": "4.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DLX.Bundles",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:17265@DEMO"
+						],
+						"UniqueId": "DeLiXx.UB_Demo"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342546221,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 159540,
+			"Type": "Optional",
+			"DisplayName": "Unlockable Bundles Android",
+			"FileName": "Unlockable Bundles Android-17265-4-3-0-1772978107.zip",
+			"Description": "4.3.0-android.1 @Android\n<br />\n<br />Compiled against:\n<br />- StardewValley_1.6.15.0\n<br />- SMAPI-4.3.2.1-(1762834431)",
+			"Version": "4.3.0",
+			"SizeInBytes": 1242864,
+			"Uploaded": "2026-03-08T13:55:08+00:00",
+			"Mods": [
+				{
+					"Id": "DLX.Bundles",
+					"DisplayName": "Unlockable Bundles Android",
+					"Type": "Smapi",
+					"RelativePath": "Unlockable Bundles",
+					"Manifest": {
+						"Name": "Unlockable Bundles Android",
+						"Description": "Framework for custom bundles",
+						"Author": "DeLiXx",
+						"Version": "4.3.0-android.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Unlockable Bundles.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.2.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:17265@Android"
+						],
+						"UniqueId": "DLX.Bundles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342546228,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 167635,
+			"Type": "Main",
+			"DisplayName": "Unlockable Bundles",
+			"FileName": "Unlockable Bundles-17265-4-3-1-1778852761.zip",
+			"Description": "4.3.1 @MAIN<br /><br />- Added Lookup Anything Support PR by Chu<br />- Added BookPackageTexture &amp; position properties for CCBundle books<br />- Added CCBundle Property BundleIconAssetSource<br />- CCBundle pages now draw using ShopColor<br />- Exposed TileLocation to .NET API<br />- ..",
+			"Version": "4.3.1",
+			"SizeInBytes": 1179154,
+			"Uploaded": "2026-05-15T13:46:01+00:00",
+			"Mods": [
+				{
+					"Id": "DLX.Bundles",
+					"DisplayName": "Unlockable Bundles",
+					"Type": "Smapi",
+					"RelativePath": "Unlockable Bundles",
+					"Manifest": {
+						"Name": "Unlockable Bundles",
+						"Description": "Framework for custom bundles",
+						"Author": "DeLiXx",
+						"Version": "4.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Unlockable Bundles.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.2.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:17265@MAIN"
+						],
+						"UniqueId": "DLX.Bundles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342554323,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342403953,
+		"UploaderId": 109248658,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

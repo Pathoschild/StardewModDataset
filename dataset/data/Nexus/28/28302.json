@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 28302,
+	"Name": "Vegas' Configurable Monster Stats",
+	"Author": "VegasOctober",
+	"Description": "[size=5][b]Description[/b][/size]\n<br />During some recently modded playthroughs, I found a couple of different mods that let you make enemies in Stardew stronger. I tried out several of them, and found they all left something lacking (in my opinion, anyway). The changes were either too dramatic, or too difficult to configure. I could quadruple all enemies damage across the board, which resulted in far too high a difficulty spike, or I could spend an hour configuring over 250 individual values and who knows how many hours trying to tweak the stats to what felt like struck a good balance to what I was looking for. As usual, when something wasn't performing the way I wanted, I opted to write my own instead, and share it here for all to hopefully enjoy.\n<br />\n<br />This mod lets you blanket edit some basic stats of most monsters in Stardew Valley, specifically their Health, Damage, Defense, Speed, and Aggro Range. It also applies some amount of random variation to these stats to mix things up (also configurable). This allows you with just a few configuration options make large, meaningful combat changes across the entire game highly targeted to the kind and level of difficulty change you're looking for, ranging from much easier to much harder. The stats all work as multipliers, meaning enemies with lower values will have less of a change and enemies with higher values will see more of a change. The goal here was to allow a smooth difficulty curve to be applied across the entire game - for example, when configured so that enemies will all deal 25% more damage, for a Green Slime that might only be an extra point of damage, but Mummies or Iridium Bats may be a change of +8 or so. Same goes for health multipliers - you'll see smaller changes on enemies with less health, but a +50% health boost and a +50% randomness variation applied to a Tiger Slime could see an additional 500+ health. Slower enemies will see less change to their speed than faster enemies for the same reason, etc.\n<br />\n<br />The calculations also ensure that all enemies will always have at least 1 health, 1 damage, 1 aggro range, and 1 speed. This means that you'll always have a minimum level of challenge, even with large reductions plus large randomness applied. You'll never get a situation where enemies refuse to attack you or sit completely still.\n<br />\n<br />There are a few exceptions to these changes, however. For example, \"surprise enemies\", like Duggies, Rock Crabs, Dwarvish Sentries, and False Magma Caps don't have their aggro ranges adjusted at all, so they'll remain just as much of a surprise when engaged.\u00A0\n<br />\n<br />[size=4]Things Configurable Monster Stats Does\u00A0[i]Not[/i]\u00A0Do[/size]\n<br />\n<br />This mod isn't able to change certain monster stats that are specially calculated or otherwise overridden by specific functions within Stardew Valley itself. For example, the defense on the Armored Bugs in Skull Caverns bypasses any monster stat setting. Many mods leverage similar methods for new monsters added in those mods as well, and in those instances I was similarly unable to change those monster stats. (More details related to modded monsters are referenced in the Compatibility section.) In any case, I'm looking into how to overcome this limitation.\n<br />\n<br />This mod does\u00A0[i]not[/i]\u00A0allow one to change any stats outside of health, damage, defense, speed, or aggro range.This includes loot dropped, experience, or dodge chance, for example. I would be willing to include additional stats for modification if folks desire, so long as it's not too complicated.\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install the latest version of\u00A0[url=https://smapi.io/]SMAPI[/url]\uFEFF\n<br />[*]Install the latest version of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\n<br />[*]Download and unzip this mod into the\u00A0[font=Courier New]Mods[/font]\u00A0folder\n<br />[*]Run the game using SMAPI\n<br />[/list]\n<br />[b][size=5]Configuration[/size]\n<br />[/b]This mod comes with a wide variety of configuration options for each configurable stat. The details for those are listed below.\n<br />\n<br />[font=Courier New]Health Multiplier[/font]: A multiplier to the enemies health\uFEFF. Has the same configuration options and calculations as Damage and Defense Multiplier (below)[font=Courier New]\n<br />Damage Multiplier[/font]: A multiplier to the enemies damage. Has the same configuration options and calculations as Health and Defense Multiplier (below)\n<br />[font=Courier New]Defense Multiplier[/font]:\u00A0A multiplier to the enemies defense. Has the same configuration options and calculations as Health and Damage Multiplier (below)\n<br />[list]\n<br />[*][font=Courier New]No Change[/font] = no change to the value\n<br />[*][font=Courier New]Small Reduction[/font] = 20% reduction to the value\n<br />[*][font=Courier New]Moderate Reduction[/font] = 50% reduction to the value\n<br />[*][font=Courier New]Large Reduction[/font] = 90% reduction to the value\n<br />[*][font=Courier New]Small Increase[/font] = 20% increase to the value\n<br />[*][font=Courier New]Moderate Increase[/font] = 50% increase to the value\n<br />[*][font=Courier New]Large Increase[/font] = 100% increase to the value\n<br />[*][font=Courier New]Huge Increase[/font] = 200% increase to the value\n<br />[/list]\n<br />Due to some game implementation and calculation details, the following 2 values are more impactful, so the larger change options (Large Reduction and Huge Increase) have been removed. Otherwise, these are exactly the same as above.\n<br />[font=Courier New]Speed Multiplier[/font]: A multiplier to the enemies speed. Has the same configuration options and calculations as Aggro Range Multiplier (below)\n<br />[font=Courier New]Aggro Range Multiplier[/font]: A multiplier to the enemies range before they attack the player. Has the same configuration options and calculations as Speed Multiplier (below)[list]\n<br />[*][font=Courier New]No Change[/font] = no change to the value\n<br />[*][font=Courier New]Small Reduction[/font] = 20% reduction to the value\n<br />[*][font=Courier New]Moderate Reduction[/font] = 50% reduction to the value\n<br />[*][font=Courier New]Small Increase[/font] = 20% increase to the value\n<br />[*][font=Courier New]Moderate Increase[/font] = 50% increase to the value\n<br />[*][font=Courier New]Large Increase[/font] = 100% increase to the value\n<br />[/list]\n<br />Lastly, all calculations will leverage some form of variation, just to mix things up a little bit.\n<br />[font=Courier New]Randomness Impact[/font]: A random amount of variance applied to the final calculation.[list]\n<br />[*][font=Courier New]Small Variance[/font]\u00A0= a range of plus or minus 10% to the value - resulting in about a 22% difference between the\u00A0lowest\u00A0and\u00A0highest\u00A0possible values\n<br />[*][font=Courier New]Moderate Variance[/font]\u00A0= a range of plus or minus 25% to the value - resulting in about a 67% difference between the\u00A0lowest\u00A0and\u00A0highest\u00A0possible values\n<br />[*][font=Courier New]Large Variance[/font]\u00A0= a range of plus or minus 50% to the value - resulting in about a 200% difference between the\u00A0lowest\u00A0and\u00A0highest\u00A0possible values\n<br />[*][font=Courier New]Huge Variance[/font]\u00A0= a range of plus or minus 90% to the value - resulting in about an 1800% difference between the\u00A0lowest\u00A0and\u00A0highestpossible values\n<br />[/list]\n<br />[b][size=5]Compatibility\n<br />[/size][/b]This mod is compatible with Stardew Valley 1.6.\n<br />\n<br />As of right now, I don't know how to apply these calculations to monsters that are added from other mods, as those monsters are usually added dynamically in a way that makes it extremely difficult (or maybe impossible?) for Content Patcher to adjust. I want to look into this more, specifically for the more popular mods and those mods that I use (Stardew Valley Expanded and Ridgeside Village are top of my priority list), but currently these sadly remain unsupported. Any values these mods change will remain unaffected by the modifications.\n<br />\n<br />On the bright side, any values that these mods reference from the base-game stats [i]will[/i]\u00A0be affected, as this mod affects said base-game stats.\n<br />\n<br />In short: Your mileage may vary for modded monsters, but I want to look more into if this is possible.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28302",
+	"Version": "1.0.0",
+	"Updated": "2024-10-03T01:07:03+00:00",
+	"Downloads": [
+		{
+			"Id": 112482,
+			"Type": "Main",
+			"DisplayName": "Configurable Monster Stats",
+			"FileName": "Configurable Monster Stats-28302-1-0-0-1727917623.zip",
+			"Description": "- Initial version",
+			"Version": "1.0.0",
+			"SizeInBytes": 2601,
+			"Uploaded": "2024-10-03T01:07:03+00:00",
+			"Mods": [
+				{
+					"Id": "VegasOctober.ConfigurableMonsterStats",
+					"DisplayName": "Configurable Monster Stats",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Configurable Monster Stats",
+					"Manifest": {
+						"Name": "Configurable Monster Stats",
+						"Description": "A highly configurable way to change the health, damage, defense, speed, and aggro range of monsters, allowing for a change in combat difficulty.",
+						"Author": "VegasOctober",
+						"Version": "1.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 28302"
+						],
+						"UniqueId": "VegasOctober.ConfigurableMonsterStats"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342499170,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414990,
+		"UploaderId": 50021956,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

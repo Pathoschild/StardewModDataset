@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 13225,
+	"Name": "Random Start Day",
+	"Author": "idermailer",
+	"Description": "Randomize start day, and fix aftermath.\n<br />The moving day can be to spring 1st ~ winter 28th, and actual game start from next day. If you moved a season's last day, season will change in next day.\n<br />\n<br />[b][size=3]When do the year numbers go up?[/size][/b]\n<br />No matter when you start, the year goes up at the [u]end of winter[/u].\n<br />\n<br />[b][size=3]Some events don't happen on time?[/size][/b]\n<br />Those events occur based on the number of days played. It was intended.\n<br />\n<br />--------\n<br />Uses SMAPI, uses Harmony.\n<br />source code is [url=https://github.com/idermailer/RandomStartDay]here[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13225",
+	"Version": "2.3.0",
+	"Updated": "2024-11-07T09:05:31+00:00",
+	"Downloads": [
+		{
+			"Id": 115526,
+			"Type": "Main",
+			"DisplayName": "Random Start Day",
+			"FileName": "Random Start Day-13225-2-3-0-1730970331.zip",
+			"Description": "",
+			"Version": "2.3.0",
+			"SizeInBytes": 94229,
+			"Uploaded": "2024-11-07T09:05:31+00:00",
+			"Mods": [
+				{
+					"Id": "idermailer.RandomStartDay",
+					"DisplayName": "Random Start Day",
+					"Type": "Smapi",
+					"RelativePath": "RandomStartDay\\RandomStartDay",
+					"Manifest": {
+						"Name": "Random Start Day",
+						"Description": "Moving day is not fixed anymore",
+						"Author": "idermailer",
+						"Version": "2.3.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "RandomStartDay.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:13225"
+						],
+						"UniqueId": "idermailer.RandomStartDay"
+					}
+				},
+				{
+					"Id": "idermailer.RandomStartDayContentPatch",
+					"DisplayName": "Random Start Day_Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "RandomStartDay\\[CP]RandomStartDay_Content Patch",
+					"Manifest": {
+						"Name": "Random Start Day_Content Pack",
+						"Description": "content pack for random start day",
+						"Author": "idermailer",
+						"Version": "2.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "idermailer.RandomStartDay",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:-1"
+						],
+						"UniqueId": "idermailer.RandomStartDayContentPatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342502214,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399913,
+		"UploaderId": 84419453,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 37738,
+	"Name": "Invite Code Webhook",
+	"Author": "Gr33nBug",
+	"Description": "[size=6]Multiplayer Invite Webhook for Stardew Valley[/size]\n<br />\n<br />[size=3]A [url=https://smapi.io/]SMAPI[/url] mod that automatically sends your [b]Stardew Valley multiplayer invite code[/b] to a [b]Discord webhook[/b] when you load a save. The message can be updated or marked as expired after a customizable period of time.[/size]\n<br />\n<br />[size=5]Features\n<br />[/size][list]\n<br />[*][size=3]Sends multiplayer invite code to Discord on save load.[/size]\n<br />[/list][list]\n<br />[*][size=3]Automatically updates the Discord message if the invite changes.[/size]\n<br />[/list][list]\n<br />[*][size=3]Optionally marks the message as expired after a configurable number of minutes.[/size]\n<br />[/list][list]\n<br />[*][size=3]Remembers the message ID so it can update or expire the correct message.[/size]\n<br />[/list][list]\n<br />[*][size=3]Fully customizable message text, color, thumbnail, and timing via config.json[/size]\n<br />[/list][size=5]Installation[/size][size=3]\n<br />[/size][list=1]\n<br />[*][size=3]Install SMAPI for Stardew Valley.[/size]\n<br />[*][size=3]Download this mod and unzip it into your Mods folder.[/size]\n<br />[*][size=3]Launch the game once to generate a default config.json if you don't have one already.[/size]\n<br />[*][size=3]Open config.json with a text editor like notepad and configure the file with your discord webhook url and the other parameters to your liking.[/size]\n<br />[/list][size=3]\n<br />[/size][size=5]Configuration\n<br />[/size][size=3]The configuration file config.json\u00A0is created in the mod folder after first launch. You can edit it to customize behavior and appearance.[/size][size=5]\n<br />[/size][code]\uFEFF{\n<br />\"WebhookUrl\": \"https://discord.com/api/webhooks/your-webhook-id\",\n<br />\"InviteTitle\": \"Multiplayer Invite Code\",\n<br />\"InviteDescription\": \"Join the game with code: **{inviteCode}**\",\n<br />\"InviteColor\": 3447003,\n<br />\"InviteFooter\": \"Invite Code is valid while the game is open\",\n<br />\"ExpiredTitle\": \"Invite Expired\",\n<br />\"ExpiredDescription\": \"The multiplayer invite code is no longer valid.\",\n<br />\"ExpiredColor\": 15158332,\n<br />\"ExpiredFooter\": \"Thanks for playing!\",\n<br />\"ImageUrl\": \"https://stardewvalleywiki.com/mediawiki/images/b/bc/Krobus_Happy.png\",\n<br />\"ExpirationMinutes\": 5\n<br />}\n<br />[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37738",
+	"Version": "0.0.2",
+	"Updated": "2025-09-18T14:51:53+00:00",
+	"Downloads": [
+		{
+			"Id": 143277,
+			"Type": "Main",
+			"DisplayName": "InviteCodeWebhook",
+			"FileName": "InviteCodeWebhook-37738-0-0-2-1758207113.zip",
+			"Description": "",
+			"Version": "0.0.2",
+			"SizeInBytes": 29874,
+			"Uploaded": "2025-09-18T14:51:53+00:00",
+			"Mods": [
+				{
+					"Id": "GreenBug.InviteCodeWebhook",
+					"DisplayName": "Invite Code Webhook",
+					"Type": "Smapi",
+					"RelativePath": "InviteCodeWebhook",
+					"Manifest": {
+						"Name": "Invite Code Webhook",
+						"Description": "Sends multiplayer invite code to Discord via webhook.",
+						"Author": "GreenBug",
+						"Version": "0.0.2",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "InviteCodeWebhookMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:37738"
+						],
+						"UniqueId": "GreenBug.InviteCodeWebhook"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342529965,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342424426,
+		"UploaderId": 4799418,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

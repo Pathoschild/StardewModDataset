@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 32012,
+	"Name": "Hammer or Club Heavy Attack Always Crits (No Longer Maintained)",
+	"Author": "Darkmushu1",
+	"Description": "I'm quitting modding to explore other things in life, whoever wants to take over the project and or maintain just let me know and I can add a redirect link here to your Nexus mod page. \n<br />\n<br />[b]What this mod does:[/b]\n<br />Hammer special attack will always crit, and apply the weapon's critical multiplier damage.\u00A0 Normally Hammer special attack can't apply crits ever.\n<br />To reduce overpower ness the crit chance has been added to the config file and can be reduced to 0 if you prefer to rely on the weapon's normal crit chance.\n<br />Mod was requested by: [b][url=https://next.nexusmods.com/profile/Universkiller]Universkiller[/url]\n<br />[/b]\n<br />[youtube]zKR3qV_wUfA[/youtube]\n<br />[b]Requires [/b]\n<br />SMAPI\n<br />\n<br />\n<br />[b]Config File[/b]\n<br />ApplyAdditionalCritMultiplierDamage - Adds on top of weapon's base crit multiplier\n<br />ApplyAdditionalCritChance -Adds on top of weapon's based crit chance.\n<br />\n<br />[b]Formula[/b]\n<br />[b]Weapon base crit chance +\u00A0ApplyAdditionalCritChance\u00A0[/b] will be added before\n<br />the calculation for additional crit chance from rings, luck, buffs, and professions.\n<br />\n<br />This is also true for the muliplier.\n<br />\n<br />\n<br />[b]Compatibility[/b]\n<br />\n<br />Mod will not be compatible with other mods that have patched \"TriggerClubFunction\" event.\n<br />I had prefix harmony patched: MeleeWeapon.triggerClubFunction\u00A0 with return = false so\u00A0 original function will never run.\n<br />\n<br />[b]Caveat[/b]\n<br />\n<br />A caveat to using this mod is that although it should work in multiplayer, but the animation effect that other players see when main player uses the special attack will not show show for other players. There's a protected class code that'll need a work around and I do not plan to work on at this time.\n<br />\n<br />[b]Source code\n<br />[/b][url=https://github.com/jessevang/HammerHeavyAttackAlwaysCrits]Here[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32012",
+	"Version": "1.0.1",
+	"Updated": "2025-03-02T18:13:04+00:00",
+	"Downloads": [
+		{
+			"Id": 126403,
+			"Type": "Main",
+			"DisplayName": "HammerHeavyAttacksAlwaysCrits V1.0.0",
+			"FileName": "HammerHeavyAttacksAlwaysCrits-32012-1-0-0-1740861031.zip",
+			"Description": "Initial Release",
+			"Version": "1.0.0",
+			"SizeInBytes": 14337,
+			"Uploaded": "2025-03-01T20:30:31+00:00",
+			"Mods": [
+				{
+					"Id": "Darkmushu1.HammerHeavyAttackAlwaysCrits",
+					"DisplayName": "HammerHeavyAttackAlwaysCrits",
+					"Type": "Smapi",
+					"RelativePath": "HammerHeavyAttackAlwaysCrits",
+					"Manifest": {
+						"Name": "HammerHeavyAttackAlwaysCrits",
+						"Description": "Always Crits on Hammer when using the Heavy Attack",
+						"Author": "Darkmushu1",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "HammerHeavyAttackAlwaysCrits.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:32012"
+						],
+						"UniqueId": "Darkmushu1.HammerHeavyAttackAlwaysCrits"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513091,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 126477,
+			"Type": "Main",
+			"DisplayName": "HammerHeavyAttackAlwaysCrits V1.0.1",
+			"FileName": "HammerHeavyAttackAlwaysCrits-32012-1-0-1-1740939184.zip",
+			"Description": "Added Crit Chance to Config file to allow user to reduce from 100 to 0 to only apply normal weapon's crit chance.",
+			"Version": "1.0.1",
+			"SizeInBytes": 15480,
+			"Uploaded": "2025-03-02T18:13:04+00:00",
+			"Mods": [
+				{
+					"Id": "Darkmushu1.HammerHeavyAttackAlwaysCrits",
+					"DisplayName": "HammerHeavyAttackAlwaysCrits",
+					"Type": "Smapi",
+					"RelativePath": "HammerHeavyAttackAlwaysCrits",
+					"Manifest": {
+						"Name": "HammerHeavyAttackAlwaysCrits",
+						"Description": "Always Crits on Hammer when using the Heavy Attack",
+						"Author": "Darkmushu1",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "HammerHeavyAttackAlwaysCrits.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:32012"
+						],
+						"UniqueId": "Darkmushu1.HammerHeavyAttackAlwaysCrits"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513165,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418700,
+		"UploaderId": 40343530,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

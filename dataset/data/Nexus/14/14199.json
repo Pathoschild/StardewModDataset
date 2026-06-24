@@ -1,0 +1,303 @@
+{
+	"Site": "Nexus",
+	"Id": 14199,
+	"Name": "Monster Chef NEW Recipes",
+	"Author": "jiaoping656",
+	"AuthorLabel": "Pepsizero",
+	"Description": "This is the first self-made mod in my life, 100 new recipes, 4 fish and 9 crops from the Chinese mobile game: Monster Chef . \n<br />In the future, all 310 dishes will be updated, as well as more crops and new machines.\n<br />Most of the art and settings refer to the wiki of Monster Chef:\n<br />https://wiki.biligame.com/mosterchef/%E9%A6%96%E9%A1%B5\n<br />(Because most of the dishes are Chinese food, and my English is not good, if anyone wants to translate into other languages, don’t need to tell me, just mark the source, and the translation will be released!)\n<br />\n<br />\n<br />\n<br />这是我人生中的第一个自己制作的模组，来自中国手机游戏：黑暗料理王的100个新食谱，4条鱼以及9个作物。\n<br />后续会把310道料理全部更新完成，以及更多的作物和新机器。\n<br />大部分的美术和设定参考了黑暗料理王的wiki：\n<br />https://wiki.biligame.com/mosterchef/%E9%A6%96%E9%A1%B5\n<br />（因为大部分料理是中餐，而且我的英文水平不好，如果有任何想要翻译成其他语言的人，不用告诉我，直接标注出处，翻译发布就可以了！）",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14199",
+	"Version": "1.3.0",
+	"Updated": "2022-11-12T09:37:18+00:00",
+	"Downloads": [
+		{
+			"Id": 62676,
+			"Type": "Main",
+			"DisplayName": "Monster Chef 1.3.0",
+			"FileName": "Monster Chef 1.3.0-14199-1--3-0-1668245558.rar",
+			"Description": "Updated 28 new recipes ,2crops and  2 new fish for crab pot.",
+			"Version": "1.3.0",
+			"SizeInBytes": 304552,
+			"Uploaded": "2022-11-12T09:32:38+00:00",
+			"Mods": [
+				{
+					"Id": "MonsterChefFish.Pepsi.CP",
+					"DisplayName": "Monster chef: Fish",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[CP] Monster Chef Fish",
+					"Manifest": {
+						"Name": "Monster chef: Fish",
+						"Description": "Add some crab pot fish",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MonsterChefFish.Pepsi.CP"
+					}
+				},
+				{
+					"Id": "MonsterChefCrops.Pepsi",
+					"DisplayName": "Monster chef: Crops",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[JA] Monster Chef Crops",
+					"Manifest": {
+						"Name": "Monster chef: Crops",
+						"Description": "Add some fantastic crops",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "MonsterChefCrops.Pepsi"
+					}
+				},
+				{
+					"Id": "MonsterChefFish.Pepsi.JA",
+					"DisplayName": "Monster chef: Fish",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[JA] Monster Chef Fish",
+					"Manifest": {
+						"Name": "Monster chef: Fish",
+						"Description": "Adds new crab pots fish",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "MonsterChefFish.Pepsi.JA"
+					}
+				},
+				{
+					"Id": "MonsterChefRecipes.Pepsi",
+					"DisplayName": "Monster chef: New Recipes",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[JA] Monster Chef Recipes",
+					"Manifest": {
+						"Name": "Monster chef: New Recipes",
+						"Description": "Recipes from the mobile game Monster chef",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.ANIMALHUSBANDRYMOD",
+								"MinimumVersion": "2.6.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "MonsterChefCrops.Pepsi",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "MonsterChefFish.Pepsi.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "MonsterChefRecipes.Pepsi"
+					}
+				},
+				{
+					"Id": "Monsterchef.PepsiforMFM",
+					"DisplayName": "(MFM) Monster chef",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[MFM] Monster chef",
+					"Manifest": {
+						"Name": "(MFM) Monster chef",
+						"Description": "Allows recipes to be mailed to the player.",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MonsterChefRecipes.Pepsi",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "Monsterchef.PepsiforMFM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449364,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62677,
+			"Type": "Optional",
+			"DisplayName": "Monster Chef 1.3.0 for PPJA fresh meat",
+			"FileName": "Monster Chef 1.3.0 for PPJA fresh meat-14199-1-3-0-1668245838.rar",
+			"Description": "Compatibility for PPJA fresh meat, for those who don't want to kill their own animals.",
+			"Version": "1.3.0",
+			"SizeInBytes": 304546,
+			"Uploaded": "2022-11-12T09:37:18+00:00",
+			"Mods": [
+				{
+					"Id": "MonsterChefFish.Pepsi.CP",
+					"DisplayName": "Monster chef: Fish",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[CP] Monster Chef Fish",
+					"Manifest": {
+						"Name": "Monster chef: Fish",
+						"Description": "Add some crab pot fish",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MonsterChefFish.Pepsi.CP"
+					}
+				},
+				{
+					"Id": "MonsterChefCrops.Pepsi",
+					"DisplayName": "Monster chef: Crops",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[JA] Monster Chef Crops",
+					"Manifest": {
+						"Name": "Monster chef: Crops",
+						"Description": "Add some fantastic crops",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "MonsterChefCrops.Pepsi"
+					}
+				},
+				{
+					"Id": "MonsterChefFish.Pepsi.JA",
+					"DisplayName": "Monster chef: Fish",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[JA] Monster Chef Fish",
+					"Manifest": {
+						"Name": "Monster chef: Fish",
+						"Description": "Adds new crab pots fish",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "MonsterChefFish.Pepsi.JA"
+					}
+				},
+				{
+					"Id": "MonsterChefRecipes.Pepsi",
+					"DisplayName": "Monster chef: New Recipes",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[JA] Monster Chef Recipes",
+					"Manifest": {
+						"Name": "Monster chef: New Recipes",
+						"Description": "Recipes from the mobile game Monster chef",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "paradigmnomad.freshmeat",
+								"MinimumVersion": "3.0.3",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "MonsterChefCrops.Pepsi",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "MonsterChefFish.Pepsi.JA",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "MonsterChefRecipes.Pepsi"
+					}
+				},
+				{
+					"Id": "Monsterchef.PepsiforMFM",
+					"DisplayName": "(MFM) Monster chef",
+					"Type": "ContentPack",
+					"RelativePath": "MonsterChef\\[MFM] Monster chef",
+					"Manifest": {
+						"Name": "(MFM) Monster chef",
+						"Description": "Allows recipes to be mailed to the player.",
+						"Author": "Pepsizero",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MonsterChefRecipes.Pepsi",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14199"
+						],
+						"UniqueId": "Monsterchef.PepsiforMFM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449365,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400887,
+		"UploaderId": 96856463,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

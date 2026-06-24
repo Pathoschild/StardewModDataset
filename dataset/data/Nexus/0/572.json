@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 572,
+	"Name": "Point-And-Plant",
+	"Author": "jwdred",
+	"Description": "[b][size=3]About[/size][/b]\r<br />\r<br />If you hate the mechanics/timing of planting seeds (especially when your walking speed is increased by other mods) then this is the mod for you. \u00A0Via 4 hotkeys, which you can enable and disable to your needs, it&#39;s as simple as pointing, plowing, planting, growing, and harvesting.\r<br />\r<br />[b][size=3]Configuration[/size][/b]\r<br />\r<br />Hot keys default to this configuration (Sorry, I use \u00A0the mouse with my left hand, so don&#39;t use my A,S,D keys for movement)\r<br />\r<br />Z - plow your plot. (plowKey)\r<br />A - Plant the currently selected seed. (plantKey)\r<br />S - Force-grow the planted seeds. (growKey)\r<br />D - Harvest the fully grown crops. (harvestKey)\r<br />\r<br />You can also configure how large of an area you want each action to encompass. \u00A0Defaults are:\r<br />\r<br />Plow: 3 x 6 plot, extending SE of the mouse. \u00A0(plowWidth & plowHeight. \u00A0These must be set to a minimum of 1.)\r<br />Plant: square with a radius of 4, centered on the mouse. \u00A0(plantRadius. \u00A0A radius of 0 will act upon a single tile, pointed at by the mouse)\r<br />Grow: square with a radius of 4, centered on the mouse. \u00A0(growRadius. \u00A0A radius of 0 will act upon a single tile, pointed at by the mouse)\r<br />Harvest: square with a radius of 4 centered on the mouse. \u00A0(harvestRadius. \u00A0A radius of 0 will act upon a single tile, pointed at by the mouse)\r<br />\r<br />I haven&#39;t tested this using absurdly large values, although I think it should handle them gracefully provided they are less than 2^32.\r<br />\r<br />Configuration settings plowEnabled, plantEnabled, growEnabled, and harvestEnabled do what you probably expect they would.\r<br />\r<br />Configuration setting &#34;fertilizer&#34; allows you to specify which fertilizer to use when planting your seeds. \u00A0Use the following values:\r<br />0 - No fertilizer (this is the default if you let SMAPI generate the config for you during the first run)\r<br />368 - Basic Fertilizer\r<br />369 - Quality Fertilzer (this is the default in the included config.json file)\r<br />370 - Basic Retaining Soil\r<br />371 - Quality Retaining Soil\r<br />465 - Speed-Gro\r<br />466 - Deluxe Speed Grow\r<br />\r<br />Configuration setting &#34;loggingEnabled&#34; will enable or disable printing error messages to your SMAPI console.\r<br />\r<br />[size=3][b]Notes[/b][/size]\r<br />\r<br />This was written and tested against SMAPI 0.40.1.1-2 for Stardew Valley 1.1.\r<br />\r<br />I like to use this with mods that allow all crops to be \u00A0harvested with a scythe, but it will work without it. \u00A0If you don&#39;t have such a mod installed, clicking &#34;harvest&#34; on a non-scythe crop will not affect scythe-only crops in the harvest radius, and vice-versa.\r<br />\r<br />[url=http://i.imgur.com/431tUI3.gif]Animated GIF depicting what this mod does\r<br />\r<br />[/url][b][size=3]Changelog\r<br />[/size][/b]\r<br />1.0.2: Added a loggingEnabled configuration setting. \u00A0Also included the .pdb file for better troubleshooting.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/572",
+	"Version": "1.0.3",
+	"Updated": "2018-07-10T12:39:46+00:00",
+	"Downloads": [
+		{
+			"Id": 10067,
+			"Type": "Main",
+			"DisplayName": "PointAndPlant.1.1.zip",
+			"FileName": "PointAndPlant.1.1.zip-572-1-1.zip",
+			"Description": "For Stardew Valley 1.3",
+			"Version": "1.1",
+			"SizeInBytes": 17801,
+			"Uploaded": "2018-07-10T12:39:46+00:00",
+			"Mods": [
+				{
+					"Id": "jwdred.PointAndPlant",
+					"DisplayName": "Point-and-Plant",
+					"Type": "Smapi",
+					"RelativePath": "PointAndPlant",
+					"Manifest": {
+						"Name": "Point-and-Plant",
+						"Description": "Plant and harvest from the comfort of your front porch!",
+						"Author": "jwdred",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "2.6.0-beta",
+						"EntryDll": "PointAndPlant.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:572"
+						],
+						"UniqueId": "jwdred.PointAndPlant"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342396755,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387260,
+		"UploaderId": 35568295,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

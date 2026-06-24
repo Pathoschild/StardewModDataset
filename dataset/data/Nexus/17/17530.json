@@ -1,0 +1,76 @@
+{
+	"Site": "Nexus",
+	"Id": 17530,
+	"Name": "Picross Arcade Mod",
+	"Author": "KeDili",
+	"AuthorLabel": "KediDili",
+	"Description": "[size=3][b]Features:[/b]\n<br />[list]\n<br />[*]A fresh and new arcade game to be played in either Gus' saloon or Qi's Casino [b](SVE compatible &lt;.&lt;)[/b]\n<br />[*]When played in the Casino, awards you Qi coins, if you didn't know and played in Gus' it's fine! Instead you'll just get all of what you were supposed to get when you arrive to the Casino next time.\n<br />[*]20 pre-included picrosses to be solved! (I'll include instructions on how to add some yourself!)\n<br />[*]This mod was inspired from the summer hat house event in Stardew Valley Discord! (Because the website they used for picrosses was kinda finicky, so I decided to make something that'd work better than it) (The event ended a while ago!)\n<br />[*]Click [url=https://picross.fandom.com/wiki/Tips_%26_Strategies]here [/url]\uFEFFfor a good picross guide!\n<br />[/list][b]Configuation:[/b][list]\n<br />[*]The only thing in the config is the Scale field, which is used for setting how big the picross will be in the arcade game. Default value is 3.\n<br />[/list]\n<br />[b]How do I add picrosses to this mod?[/b]\n<br />[list=1]\n<br />[*]Install a text-editor that can edit .json files(I used [url=https://notepad-plus-plus.org/downloads/]Notepad++[/url]\uFEFF, for free) and an image-editor that supports .png files (I used [url=https://www.gimp.org/]GIMP[/url]\uFEFF, for free)\n<br />[*]Create a picrosses.json file consisting of entries like:\n<br />[code][\n<br />\uFEFF   \uFEFF{\n<br />   \uFEFF   \uFEFF\"Name\": \"MyFirstPicross\", //must be different from all picrosses!\n<br />   \uFEFF   \uFEFF\"DrawingPath\": \"assets/MyFirstPicross.png\" //Points at where is your picross' solution so the mod can read it!\n<br />   \uFEFF},\n<br />   \uFEFF{\n<br />   \uFEFF   \uFEFF\"Name\": \"MySecondPicross\", //This is how you add a second one!\n<br />   \uFEFF   \uFEFF\"DrawingPath\": \"assets/MySecondPicross.png\",\n<br />      \uFEFF//Picross' dimensions depend on what\u00A0dimension your solution image has.\u00A0So if it's a 5x5, the picross ingame will be 5x5 as well, or 8x15 will\u00A0make it 8x15 as well!\uFEFF   \n<br />   \uFEFF   \uFEFF\"MustBeSolvedFirst\": [ \"MyFirstPicross\"] //This is needed only if you want to make second picross require the first one to be solved. Otherwise ignore it!\n<br />   \uFEFF}\n<br />]\n<br />[/code][*]Create .pngs with dimensions you wish (I'd believe that you want to keep it as smaller numbers like 1-digits or very small ones with 2-digits, since it'll be much larger in-game for visibility!), for what counts as a \"cross\" or \"paint\", pure white(255, 255, 255) and pure black(0, 0, 0) are \"crosses\", and any other color is \"paints\"!\n<br />[*]Create a manifest.json so that SMAPI knows what your mod is! See [url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Manifest]this link[/url]\uFEFF for how to add one.\n<br />[/list][/size][b][size=3]Translations:\n<br />[/size][/b][size=3]   \uFEFFI didn't make the mod translatable because I didn't believe it'd get that kind of interest. Let me know and I'll make it possible! (It might not happen immediately, I have other projects as well!)\n<br />\n<br />[b]Source Code:\n<br />[/b][url=https://github.com/KediDili/SMAPicross]Here[/url] it is![/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17530",
+	"Version": "1.0.2",
+	"Updated": "2023-08-16T06:48:16+00:00",
+	"Downloads": [
+		{
+			"Id": 74648,
+			"Type": "Main",
+			"DisplayName": "The Picrosser",
+			"FileName": "The Picrosser-17530-1-0-2-1692168496.zip",
+			"Description": "Check the changelog for more info.",
+			"Version": "1.0.2",
+			"SizeInBytes": 309578,
+			"Uploaded": "2023-08-16T06:48:16+00:00",
+			"Mods": [
+				{
+					"Id": "KediDili.ThePicrosser",
+					"DisplayName": "Picrosser",
+					"Type": "Smapi",
+					"RelativePath": "PicrossArcadeMod\\Picrosser",
+					"Manifest": {
+						"Name": "Picrosser",
+						"Description": "Allows you to play picross in Qi's casino and Gus' saloon.",
+						"Author": "KediDili",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "Picrosser.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17530"
+						],
+						"UniqueId": "KediDili.ThePicrosser"
+					}
+				},
+				{
+					"Id": "KediDili.Test",
+					"DisplayName": "Test Picrosser",
+					"Type": "ContentPack",
+					"RelativePath": "PicrossArcadeMod\\TestingPack",
+					"Manifest": {
+						"Name": "Test Picrosser",
+						"Description": "<One or two sentences about the mod>",
+						"Author": "KediDili",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "KediDili.ThePicrosser"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "KediDili.Test"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342461336,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342404218,
+		"UploaderId": 108727003,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

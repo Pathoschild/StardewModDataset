@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 25055,
+	"Name": "Secret Note Framework",
+	"Author": "ichortower",
+	"Description": "[b][u][size=6]Secret Note Framework[/size][/u][/b]\n<br />[size=3]\n<br />This framework is a tool for mod authors to use to easily add highly-customizable Secret Notes to their mods for players to find.\n<br />\n<br />[b]If you are a user[/b]: you are probably here to fulfill requirements for another mod. Download, unzip, and enjoy!\n<br />\n<br />[b]If you are a mod author[/b]: please consult the [url=https://github.com/ichortower/SecretNoteFramework/blob/prod/docs/author-guide.md]author guide[/url]\uFEFF for documentation and examples, and please find me (ichortower) on the [url=https://discord.gg/stardewvalley]Stardew Valley discord server[/url] if you need help. To report a bug, please use the Bugs tab or [url=https://github.com/ichortower/SecretNoteFramework]the GitHub repository[/url].\n<br />\n<br />Special thanks, as always, to everyone on the Stardew Valley discord.\n<br />\n<br />[/size]\n<br />[size=5][b][u]Capabilities[/u][/b][/size]\n<br />[size=3]\n<br />In addition to avoiding conflicts with other mods, here are some things you can do with this mod that are difficult or impossible to do normally:\n<br />\n<br />[list]\n<br />[*](optionally) specify complex eligibility conditions on a note-by-note basis with game state queries\n<br />[*]determine the specific locations (or location contexts) where your notes can appear\n<br />[*]use different (custom) items to represent different sets of notes, as desired\n<br />[*]specify your own assets for note content and formatting, including image notes\n<br />[*]create notes with an image as well as a small amount of text\n<br />[*]set any number of trigger actions to be run when a note is first read\n<br />[/list]\n<br />[/size]\n<br />[size=5][b][u]Requirements[/u][/b][/size]\n<br />[size=3]\n<br />[list]\n<br />[*]Stardew Valley 1.6.9+\n<br />[*]SMAPI 4.1+\n<br />[*]Content Patcher is highly recommended for authors. It's not [i]required[/i], but you already have it\n<br />[/list]\n<br />[/size]\n<br />[size=5][b][u]Why?[/u][/b][/size]\n<br />\n<br />[size=3]Secret Notes are one of the few types of game data left in Stardew Valley 1.6 that are required to have integer IDs. Right away, this means any two mods that wish to add secret notes face a coordination problem, but there are some other issues too:[/size]\n<br />\n<br />[list]\n<br />[*][size=3]the ID is overloaded and also determines the type of note it is (any ID &gt;= 1000 is a Journal Scrap and spawns in the Island location context; any lower ID spawns elsewhere)[/size]\n<br />[*][size=3]the ID also determines the note's label in the collection menu[/size]\n<br />[*][size=3]all secret notes must share the same image texture (for picture notes)[/size]\n<br />[*][size=3]the secret notes tab in the collection menu knows there are only 38 notes, and is set up to draw only one page[/size]\n<br />[*][size=3]I probably forgot some, secret notes are not ideal[/size]\n<br />[/list]\n<br />[size=3]I discovered these infelicities when I set out to add some secret notes to [url=https://www.nexusmods.com/stardewvalley/mods/18177]one of my other mods[/url], and I couldn't resist trying to fix the problem, so here we are.[/size]\n<br />\n<br />\n<br />[size=5][b][u]Translation Credits[/u][/b][/size]\n<br />\n<br />[size=3]The following non-English languages are included with the mod and supported out of the box:[/size]\n<br />\n<br />[list]\n<br />[*][size=3]French (courtesy [url=https://next.nexusmods.com/profile/caranud?gameId=1303]Caranud[/url]\uFEFF)[/size]\n<br />[*][size=3]Japanese (by ichortower)[/size]\n<br />[*][size=3]Korean (courtesy [url=https://next.nexusmods.com/profile/ja3b2?gameId=1303]JA3B2[/url]\uFEFF)[/size]\n<br />[/list]\n<br />[size=3]My heartfelt thanks to these contributors.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/25055",
+	"Version": "1.2.1",
+	"Updated": "2026-01-14T14:34:56+00:00",
+	"Downloads": [
+		{
+			"Id": 153525,
+			"Type": "Main",
+			"DisplayName": "SecretNoteFramework-1.2.1",
+			"FileName": "SecretNoteFramework-1.2.1-25055-1-2-1-1768401296.zip",
+			"Description": "Fixed the Content Patcher token not working correctly, and added a Chinese translation (thanks, Kdmcx!)",
+			"Version": "1.2.1",
+			"SizeInBytes": 37547,
+			"Uploaded": "2026-01-14T14:34:56+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.SecretNoteFramework",
+					"DisplayName": "Secret Note Framework",
+					"Type": "Smapi",
+					"RelativePath": "SecretNoteFramework",
+					"Manifest": {
+						"Name": "Secret Note Framework",
+						"Description": "A framework allowing mods to add their own Secret Notes.",
+						"Author": "ichortower",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "SecretNoteFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:25055",
+							"GitHub:ichortower/SecretNoteFramework"
+						],
+						"UniqueId": "ichortower.SecretNoteFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342540213,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411743,
+		"UploaderId": 188952864,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

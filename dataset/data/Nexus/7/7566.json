@@ -1,0 +1,83 @@
+{
+	"Site": "Nexus",
+	"Id": 7566,
+	"Name": "Ferngill Revenue Service - A Taxes and Bills Mod",
+	"Author": "KarratKake",
+	"Description": "[size=5][b][color=#ff0000][color=#00ff00]Now updated for 1.6!!!!!!![/color][/color][/b][/size][size=2][b][size=4][color=#ff0000][size=2]\n<br />[/size][/color][/size][/b]\n<br />Ferngill Revenue Service is a taxes/bills mod built for Stardew 1.5+. On the 2nd of every month, players will receive an invoice from the FRS for a variety of configurable bills.\n<br />\n<br />[b]Taxes[/b]: Players will be taxed based on their income earned. Earning more money will put you in a higher tax bracket, and increase the percentage of your income that is taken each month.\n<br />[b]Water Bill[/b]: Players will be charged for the number of sprinklers they've used on their farm. The system keeps track of how many sprinklers you've deployed over the course of the month, so you can't cheat the system by breaking all your sprinklers on the 1st!\n<br />[b]Electric Bill[/b]: Players will be charged for the number of buildings they own, the level of your farmhouse, and how many machines are on your property, as well as for a completed Greenhouse. If you have PathosChild's Tractor Mod, you will be billed for your tractor as well. Silos, Wells, and Shipping Bins are not counted for the purposes of this bill.\n<br />\n<br />Your balance will be automatically deducted from your money. If you can't afford it, you will go into debt. While you are in debt, the FRS will seize your Shipping Bin revenue until you're settled up. You will get a letter in the morning with the amount the FRS have taken, and your outstanding balance. This only applies to Shipping Bin revenue, so you can still make money by selling to Pierre and Willy and the like. Be warned, though: If you leave your debt unpaid for more than 2 weeks, the FRS will shut your water off, and your sprinklers will stop working until you pay up!\n<br />\n<br />Most of the values in the mod are configurable to customize your experience! The default numbers should offer players a challenging but fair experience, but feel free to tune them to your liking, and share your favorite configurations in the comments!\n<br />\n<br />Pressing P will show your current bill and current debt in the SMAPI console.\n<br />\n<br />[size=4]Modded Machines:\n<br />[size=2]FRS is compatible with machines from Artisan Valley, Industrialization, Baker's Life, Artisanal Soda Makers, and Shaved Ice and Frozen Treats, and Raffadax. If you are a modder and would like to add FRS compatibility to your mod, see below. Users can also add machines by directly editing data.json.[/size][/size][/size]\n<br />\n<br />[size=4]Config:[/size]\n<br />\n<br />[size=2][b]DoTaxes: [/b]Whether or not the player is charged Taxes. Defaults to true.\n<br />[b]DoWater: [/b]Whether or not the player is charged for Water. Defaults to true.\n<br />[b]DoElectric: [/b]Whether or not the player is charged for Electric. Defaults to true.\n<br />[b]TaxBracketSize: [/b]The size of the tax brackets. When your monthly income enters a new tax bracket, the percentage taxed of your income will increase. Tax bracket is calculated each month, so it is possible to decrease your tax bracket. Defaults to 50000.\n<br />[b]MaximumTax: [/b]No matter how high your tax bracket becomes, you will never be taxed more than this. Defaults to .7, or 70%.\n<br />[b]TaxHandicap: [/b]Increase this to decrease your tax bracket and make your experience easier. Make it negative to bump your tax bracket up, and make your game more difficult. Defaults to 0.\n<br />[b]SprinklerBase: [/b]The base cost for each sprinkler. [b]Note:[/b] Regular sprinklers count as 1 sprinkler, but Quality Sprinklers count as 3, and Iridium Sprinklers count as 9. If your water bill is way higher than you're expecting, this is likely why. Defaults to 20.\n<br />[b]SprinklerMargin: [/b]A scaling percentage of the Sprinkler's base cost that is added to the bill. See equations below for more details. Defaults to .1\n<br />[b]BuildingsBase: [/b]The base cost for each Farm building. Defaults to 500.\n<br />[b]BuildingsMargin: [/b]A scaling percentage of the Building's base cost that is added to the bill[b]. [/b]See equations below for more details.\n<br />[b]HouseMultiplier: [/b]What your upgrade level is multiplied by before being cubed. Your first house upgrade is not billed. See equations below for more details. Defaults to 10.\n<br />[b]DoMachines: [/b]Whether or not the player is charged for machines. Defaults to true.\n<br />[b]WonkyMachines: [/b]Whether or not the mod uses 1.0 machine detection or not. This will override the default machine detection. Some people may prefer it as it lends a little bit of a dynamic twist to the Electric Bill, but it isn't compatible with automate. See below for more details. Defaults to false.\n<br />[b]KegsUseElectricity:[/b] Whether or not 'analogue' machines like Kegs, Casks, and Preserves Jars are counted towards the electric bill. Turn this off to preserve the flavor of the mod, but keep it on for a far more balanced experience. Defaults to true.\n<br />[b]MachinesBase: [/b]The base cost for each Machine (more or less). See below for more details. Defaults to 10.\n<br />[b]MachinesMargin:[/b] [/size][size=2]A scaling percentage of the Machine's base cost that is added to the bill. See equations below for more details.\n<br />[b]GreenhouseCost:[/b] How much is added to your electric bill if you have a working Greenhouse. Defaults to 10000.\n<br />[b]TractorCost: [/b]How much is added to your electric bill if you have a Tractor. Defaults to 20000.[/size]\n<br />\n<br />[size=4]Equations:\n<br />[size=2]Taxes =\u00A0 = moneyEarned * (MaximumTax / (1 + Math.Pow(1.7, -1 * (TaxBracket - 4 - TaxHandicap))))\n<br />   \uFEFFThis produces a sigmod (S-shaped) curve that approches MaximumTax.\n<br />[b]NOTE:[/b] As of 1.3.0, [url=https://www.nexusmods.com/stardewvalley/mods/8111]Walk of Life[/url]'s [i]Conservationist[/i] tax breaks will reduce this tax up to a maximum of 50% reduction.\n<br />\n<br />[/size][/size][size=2]WaterBill = (Sprinklers * SprinklerBase) + ((Sprinklers * SprinklerBase) * (SprinklerMargin * Sprinklers))\n<br />   \uFEFFFor example, at default values, 1 Sprinkler would cost you 20 base plus 2 (Margin of 10% * 1 sprinkler), for a total of 22. However, 2 Sprinklers would cost 48: 2 * 20 (base) plus 20% (Margin * 2). This way, the cost of many sprinklers is much greater than the cost of those sprinklers individually. This allows smaller farms a lot of room to grow but quickly becomes punishing towards industrial sized farms that use a lot of sprinklers. Remember that Quality Sprinklers count as 3, and Iridium Sprinklers count as 9.\n<br />\n<br />ElectricBill = (Buildings* BuildingsBase) + ((Buildings * BuildingsBase) * (BuildingsMargin * Buildings))\n<br />   \uFEFFPLUS (Machines * MachinesBase) + ((Machines * MachinesBase) * (MachinesMargin * Machines))\n<br />   \uFEFFPLUS (houseUpgradeLevel * HouseMultiplier)^3\n<br />   \uFEFFPLUS GreenhouseCost (if you have the greenhouse).\n<br />\n<br />Update as of 1.1: This note now only applies to the WonkyMachines calculation.\n<br />A note about machines: Machines are actually very hard to count, because in the code they are basically treated like furniture with functions. The code does, however, have a way to get the number of machines [i]that are currently ready to harvest[/i]. My workaround has been to keep track of how many machines are ready to harvest at one time, and basically assuming that that number is roughly how many machines you have/are using. Obviously not all machines will be reflected this way, and this may have some strange interactions with Automate. This is why I have included a toggle specifically for machines, if this way of counting is not to your liking. Still, the end result will be that the more machines you have, the more you should be charged, so I've left it defaulted to true.\n<br />\n<br />[size=4]Note to modders:[/size]\n<br />As mentioned above, a number of modded machines have been hardcoded into FRS. If your mod is not included, and you'd like to make it compatible with FRS, you can call the public methods [font=Courier New]addToMachineWhitelist(List&lt;string&gt;)[/font] and [font=Courier New]addToKegWhitelist(List&lt;string&gt;)[/font]. By passing a List of the names of your modded machines, FRS will include those machines in the Electric Bill calculations.\n<br />\n<br />[size=5]Install[/size][list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Install the latest version of Content Patcher.[/url]\n<br />[*]Download this mod and unzip it into Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5 on Linux/Mac/Windows\n<br />[*]Works in single player. Untested in multiplayer, may have some strange interactions.\n<br />[/list]\n<br />[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7566",
+	"Version": "1.3.2",
+	"Updated": "2025-01-15T01:36:01+00:00",
+	"Downloads": [
+		{
+			"Id": 122361,
+			"Type": "Main",
+			"DisplayName": "Ferngill Revenue Service",
+			"FileName": "Ferngill Revenue Service-7566-1-3-2-hotfix-1736904961.zip",
+			"Description": "Added missing content folder",
+			"Version": "1.3.2-hotfix",
+			"SizeInBytes": 24348,
+			"Uploaded": "2025-01-15T01:36:01+00:00",
+			"Mods": [
+				{
+					"Id": "KarratKake.FerngillRevenueService",
+					"DisplayName": "FerngillRevenueService",
+					"Type": "Smapi",
+					"RelativePath": "FerngillRevenueService",
+					"Manifest": {
+						"Name": "FerngillRevenueService",
+						"Description": "Keep your gameplay difficult and engaging with taxes and bills",
+						"Author": "KarratKake",
+						"Version": "1.3.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "FerngillRevenueService.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7566"
+						],
+						"UniqueId": "KarratKake.FerngillRevenueService"
+					}
+				},
+				{
+					"Id": "KarratKake.CPFerngillRevenueService",
+					"DisplayName": "(CP) Ferngill Revenue Service",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Ferngill Revenue Service",
+					"Manifest": {
+						"Name": "(CP) Ferngill Revenue Service",
+						"Description": "CP Data for Ferngill Revenue Service",
+						"Author": "KarratKake",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "KarratKake.FerngillRevenueService",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "KarratKake.CPFerngillRevenueService"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509049,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394254,
+		"UploaderId": 23066219,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

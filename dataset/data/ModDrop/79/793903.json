@@ -1,0 +1,132 @@
+{
+	"Site": "ModDrop",
+	"Id": 793903,
+	"Name": "Custom Walls And Floors (CWF)",
+	"Author": "Platonymous",
+	"TagLine": "Add Walls and Floors via Content Pack.",
+	"Description": "2.1.2 Fixes connected rooms in FHR\n\n2.1.1 Fixes a bug where sometimes the walls mess up custom farmhouse walls on non-wall tiles\n(if that happened, you can use the console command reset_walls to remove all custom walls and floors, save &amp; reload after that)\n\n2.1.0 Multiplayer update, all players need to have the_same version of the mod and the same packs_ for this to work.\n\n**2.0.0** Reworking of the mod. Works with older content packs, but**does not load prior saved walls/floors,** so they need to be placed again.\n\n1.1.2 adds support for animated Tiles, see Template file to see how this is done.\nIf you don't want animated tiles you do not need to include a settings.json file.\n\n1.1.2 changes how the data is stored so, after updating, your walls and floors will have to be placed again on older saves.\n\nTo create a ContentPack for CWF, write a standard manifest.json and add a \"walls.png\" and/or \"floors.png\" file.\nYou can download a simple template under Optional Files.\nAdded Custom Walls and Floors can be obtained through the Wallpaper Catalogue.\n\nCustom W&amp;Fs are added, they do no override vanilla W&amp;Fs.\nWithout ContentPacks this Mod does nothing.\n<s>Custom Walls &amp; Floors does not work in Multiplayer.</s>\n\nRequires SMAPI &amp; PyTK.\n\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/793903",
+	"Version": null,
+	"Updated": "2020-06-02T07:43:51.12+00:00",
+	"Downloads": [
+		{
+			"Id": 802001,
+			"Type": "Optional",
+			"DisplayName": "CWF Content Pack Template",
+			"FileName": "CWF Content Pack Template.zip",
+			"Description": "Content Packs go directly into the Mods folder",
+			"Version": "1.1.2",
+			"SizeInBytes": 19680,
+			"Uploaded": "2020-06-02T07:43:41.16+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomWallsAndFloors.Test",
+					"DisplayName": "CustomWallsAndFloors Template",
+					"Type": "ContentPack",
+					"RelativePath": "[CWF]Template",
+					"Manifest": {
+						"Name": "CustomWallsAndFloors Template",
+						"Description": "Adds Walls and Floors",
+						"Author": "Platonymous",
+						"Version": "1.1.2",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.CustomWallsAndFloors",
+							"MinimumVersion": "1.1.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Platonymous.CustomWallsAndFloors.Test"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".modd",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "963aec41e7b449802196277f1f587aef",
+				"md5In": "4069ffe70a08cb10360a722fb8643fc1",
+				"scriptType": 0,
+				"sha256Ex": "d68a38c6b6f8bbdf337c6183456dfdef6649842d970e9d80f00464a3d005ea22",
+				"sha256In": "f00a3fa5ed4cfa409e92e1f9221a4848bfaaa1eaf7f5d719e862d723663945d4"
+			}
+		},
+		{
+			"Id": 802011,
+			"Type": "Main",
+			"DisplayName": "Custom Walls And Floors Redux",
+			"FileName": "Custom Walls And Floors Redux.zip",
+			"Version": "2.1.7",
+			"SizeInBytes": 35806,
+			"Uploaded": "2020-06-02T07:43:44.84+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomWallsAndFloors",
+					"DisplayName": "CustomWallsAndFloorsRedux",
+					"Type": "Smapi",
+					"RelativePath": "CustomWallsAndFloorsRedux",
+					"Manifest": {
+						"Name": "CustomWallsAndFloorsRedux",
+						"Description": "Add custom Walls and Floors to SDV",
+						"Author": "Platonymous",
+						"Version": "2.1.7",
+						"MinimumApiVersion": "3.2.0",
+						"EntryDll": "CustomWallsAndFloorsRedux.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.Toolkit",
+								"MinimumVersion": "1.12.19",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3010"
+						],
+						"UniqueId": "Platonymous.CustomWallsAndFloors"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "6afde5c579b71c07f01747c7b14ed18f",
+				"md5In": "9dfaac6b23c9bfaf7de8cdf7214db61e",
+				"scriptType": 0,
+				"sha256Ex": "2df4aea7cc93a548a942ae30c08bcc9d12ca8ef91980a6027ca01c7ffcd1019d",
+				"sha256In": "ead030fc2ae35e0c236faa2cafc03c5667c39340ff0603a082b33003796122c2"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1591083831120,
+		"DateUpdated": 1591083819407,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1591083819407,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/793903/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/793903/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/793903/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/793903/icon_original"
+		},
+		"nexusModID": 3010,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

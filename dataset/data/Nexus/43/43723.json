@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 43723,
+	"Name": "(BirthdayCTGSQ) Boxosoup's Birthday Conversation Topic and Game State Query",
+	"Author": "boxosoup",
+	"Description": "How to use the mod for players only:\n<br />\n<br />This doesn't work on multiplayer!\n<br />= When you load a new save, without your birthday register, a menu will pop up once you are in the game\n<br />- Simply click the month, and date, and click okay.\n<br />- If you want to change your birthday, then you can do F7 to bring up the menu, (changeable via config.json)\n<br />\n<br />To summarize: just install and it'll work.\n<br />\n<br />\n<br />Mods that use this framework:\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/38008]Tilly the librarian[/url]\uFEFF Birthday dialogue and event\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/43724]BirthdayCTGSQ Vanilla Content Pack[/url]\uFEFF All the vanilla NPCs will have birthday dialogue\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/39402]NPC Pei Ming[/url]\u00A0I love this npc! Very funny and silly. Adds dialogue\n<br />\n<br />Feel free to let me know if you want to add your mod to this list.\n<br />\n<br />\n<br />Translations:\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/43934]PTBR[/url] by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/59340891]Maatsuki[/url]!\n<br />Zh by \uFEFF[url=https://www.nexusmods.com/profile/Shenyifan]Shenyifan[/url]!\n<br />\n<br />Clarification:\n<br />\n<br />My mod has nothing to do with the original birthday mod. It is completely different. I don't recommend having the original birthday mod if you use this mod.\n<br />\n<br />Common questions:\n<br />\n<br />- Is this compatible with the original Bday mod?\n<br />\n<br />Technically yes. But the original Bday mod will break vanilla by itself.\n<br />\n<br />Explanation: The original Bday overwrites dialogue, so any first dialogue you interact with the NPC (such as gifts, or conversation\n<br />topics) will be completely overwritten. This is not because of my mod.\n<br />\n<br />- Differences between the original Bday mod?\n<br />\n<br />There is no gift giving or letters by default. You can have birthdays on festival days, unlike the original birthday mod. This is a framework/tool lets modders do their own custom version using the GSQ. If you are a modder and want to add those features I will explain how to do it below.\u00A0\n<br />\n<br />What this mod does:\n<br />- Gives the player a birthday\n<br />- Lets modders easily do events and dialogue related to the birthday\n<br />- Doesn't overwrite NPC dialogue\n<br />\n<br />How to use the mod for Modders only:\n<br />\n<br />If you are a player, you don't need to care about this.\n<br />\n<br />First: An [url=https://www.nexusmods.com/stardewvalley/mods/43724]example content pack[/url] for dialogue\n<br />\n<br />- You can use the conversation topic \"boxosoup.birthday_birthday\"\n<br />\n<br />- the game state query is called \"boxosoup.birthday_IS_BIRTHDAY\"\n<br />\n<br />Let's say you're a modder that wants to add a gift to their dialogue:\n<br />\n<br />1. use the\u00A0[url=https://stardewvalleywiki.com/Modding:Dialogue#Special_tokens]item token[/url]\uFEFF\u00A0in your dialogue.\u00A0\n<br />\n<br />\n<br />[code]\n<br />{\n<br />\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Characters/Dialogue/YourNPC\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"boxosoup.birthday_birthday\": \"Hi have a rock! #[(O)39]\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />}[/code]\n<br />\n<br />If you want to add the letter thing from the original birthday mod:\n<br />\n<br />2. Use a trigger action \"ondaystarted\" with condition\u00A0\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/TriggerActions\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\uFEFF\u00A0\u00A0 \uFEFF\u00A0\u00A0 \uFEFF\"{{ModId}}_birthdayletter\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Id\": \"{{ModId}}_birthdayletter\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Trigger\": \"DayStarted\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Condition\": \"boxosoup.birthday_IS_BIRTHDAY\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Actions\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 //Your actions here, you would put addmail or whatever you want here\n<br />]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }[/code]\n<br />For making a birthday event, you'd just use the same thing as any other condition.\n<br />\n<br />You can read more about [url=https://stardewvalleywiki.com/Modding:Dialogue#Conversation_topics]conversation topics[/url] and [url=https://stardewvalleywiki.com/Modding:Game_state_queries]game state queries[/url] in the stardew wiki.\n<br />\n<br />\n<br />Source code:\u00A0[url=https://github.com/boxosoup/Birthday]https://github.com/boxosoup/Birthday[/url]\n<br />\n<br />Credits:\n<br />[url=https://www.nexusmods.com/stardewvalley/users/32171640]Alpha_Omegasis[/url] for the inspiration, and bits of the birthday UI\n<br />[url=https://www.nexusmods.com/profile/mushymato?gameId=1303]mushymato[/url] for encouraging me to do it in the first place, and a reference point\n<br />[url=https://www.nexusmods.com/profile/atravita]atravita[/url] for some guidance and fixing the config code\n<br />\n<br />\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43723",
+	"Version": "1.1.0",
+	"Updated": "2026-03-27T16:58:33+00:00",
+	"Downloads": [
+		{
+			"Id": 162401,
+			"Type": "Main",
+			"DisplayName": "BirthdayCTGSQ",
+			"FileName": "BirthdayCTGSQ-43723-1-1-0-1774630713.zip",
+			"Description": "Feel free to let me know if you use this framework for your mod, I can put it on the list. Changes: attempted to add support for gamepad. Fixed update key. Fixed keybind. Added ZH translation thanks Shenyifan",
+			"Version": "1.1.0",
+			"SizeInBytes": 24186,
+			"Uploaded": "2026-03-27T16:58:33+00:00",
+			"Mods": [
+				{
+					"Id": "boxosoup.birthday",
+					"DisplayName": "Birthday",
+					"Type": "Smapi",
+					"RelativePath": "Birthday",
+					"Manifest": {
+						"Name": "Birthday",
+						"Description": "Add a birthday",
+						"Author": "boxosoup",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "Birthday.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:43723"
+						],
+						"UniqueId": "boxosoup.birthday"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549089,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430411,
+		"UploaderId": 274387732,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

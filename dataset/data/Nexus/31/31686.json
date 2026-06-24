@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 31686,
+	"Name": "Festival Feedback",
+	"Author": "nunnovyerbizniz",
+	"AuthorLabel": "OnionNinja",
+	"Description": "[b][size=3]This is a tool for mod developers. It may be required as a dependency for their mods. It does nothing on its own![/size][/b]\n<br />\n<br />[size=5][b]What It Does[/b][/size]\n<br />\n<br />[size=3]This mod creates conversation topics which last for a single day after the festival, based on the items placed in the pot at the Luau and the items submitted for judging at the Stardew Valley Fair.\n<br />\n<br />This was done in order to expose these items to Content Pack creators, as they were previously only accessible via C#, and to make them persist a little longer than the festival day itself.\n<br />\n<br />Conversation topics can be used in any Game State Query to trigger events, mail, dialogue, etc.\n<br />\n<br />Topics are generated as the player goes to sleep.\n<br />\n<br />[/size][size=5][b]Installation[/b][/size][size=3]\n<br />[/size]\n<br />[size=3]Install SMAPI.\n<br />Download this mod and unzip to the Mods folder created by SMAPI.[/size]\n<br />\n<br />[size=5][b]Topic Format[/b][b] (for Mod Developers)\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=3]Each item submitted generates two dialogue topics, one with the quality of the item and one without.[/size]\n<br />[*][size=3]In the code excerpts below, {year}, {ItemId} and {quality} are placeholders for actual data, quality being an integer of 0 = Normal, 1 = Silver, 2 = Gold, 4 = Iridium.[/size]\n<br />[*][size=3]As these are discussion topics they will automatically spawn memory events at one day, one week, two weeks, four weeks, eight weeks and 104 days, so you can also make use of those. (e.g., Lewis could say, \"No funny business with mushrooms again this year!\")[/size]\n<br />[*][size=3]Luau topics take the format of:[/size]\n<br />[list]\n<br />[*][size=3][code]FestivalFeedback_\uFEFFY{year}_LuauIngredient_{ItemId}[/code][/size]\n<br />[*][size=3][code]FestivalFeedback_Y{year}_LuauIngredient_{ItemId}_Q{quality}[/code][/size]\n<br />[/list][*][size=3]Stardew Fair Grange topics take the format of:[/size]\n<br />[list]\n<br />[*][code]FestivalFeedback_\uFEFFY{year}_GrangeDisplay_{ItemId}[/code]\n<br />[*][code]FestivalFeedback_\uFEFFY{year}_GrangeDisplay_{ItemId}_Q{quality}[/code]\n<br />[/list][*][size=3]Grange Display topics are created for each display slot which contains an item.[/size]\n<br />[*][size=3]Topics are not generated if the player leaves the festival before soup tasting/grange judging.[/size]\n<br />[/list]\n<br />[b][size=5]Source[/size][/b]\n<br />[size=3][url=https://github.com/scriptsforweirdos/FestivalFeedback]Github[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31686",
+	"Version": "1.1.0",
+	"Updated": "2025-03-04T00:53:05+00:00",
+	"Downloads": [
+		{
+			"Id": 126596,
+			"Type": "Main",
+			"DisplayName": "FestivalFeedback.zip",
+			"FileName": "FestivalFeedback.zip-31686-1-1-0-1741049585.zip",
+			"Description": "Primary file for this mod. This is a framework mod and will not do anything on its own.",
+			"Version": "1.1.0",
+			"SizeInBytes": 12589,
+			"Uploaded": "2025-03-04T00:53:05+00:00",
+			"Mods": [
+				{
+					"Id": "OnionNinja.FestivalFeedback",
+					"DisplayName": "Festival Feedback",
+					"Type": "Smapi",
+					"RelativePath": "FestivalFeedback",
+					"Manifest": {
+						"Name": "Festival Feedback",
+						"Description": "Creates single day conversation topics based on Luau Ingredients and Stardew Fair Grange Displays.",
+						"Author": "OnionNinja",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FestivalFeedback.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:31686"
+						],
+						"UniqueId": "OnionNinja.FestivalFeedback"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513284,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418374,
+		"UploaderId": 54294362,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

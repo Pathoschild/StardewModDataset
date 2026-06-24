@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 44244,
+	"Name": "Location Furniture",
+	"Author": "aedenthorn",
+	"Description": "[color=#ffffff][size=5][b]Description[/b][/size][/color]\n<br />\n<br />[color=#ffffff]This mod adds functionality similar to the\u00A0[url=https://stardewvalleywiki.com/Modding:Maps#Farmhouse_interior]FarmHouseFurniture[/url]\u00A0map property. It recognizes the map property\u00A0[b]LocationFurniture[/b]\u00A0with a value syntax similar to that of [b]FarmHouseFurniture[/b]:[/color]\n<br />\n<br />[color=#ffffff][b]LocationFurniture [&lt;furniture ID&gt; &lt;tile X&gt; &lt;tile Y&gt; &lt;rotations&gt; &lt;can move&gt;][/b][/color]\n<br />\n<br />[color=#ffffff]e.g.:[/color]\n<br />\n<br />[color=#ffffff][b]720 27 64 1 false[/b][/color]\n<br />\n<br />[color=#ffffff]The above will add a brown couch at 25,63 that is rotated one rotation and immovable.[/color]\n<br />\n<br />\n<br />[size=5][b]Usage[/b][/size]\n<br />\n<br />The easiest way to use this mod is by creating a content patcher patch, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditMap\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Maps/Town\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MapProperties\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"LocationFurniture\": \"720 27 64 1 false\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />\n<br />[b][size=5]Misc[/size][/b]\n<br />\n<br />Thanks to sexyness for the idea.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44244",
+	"Version": "0.2.0",
+	"Updated": "2026-03-29T01:53:56+00:00",
+	"Downloads": [
+		{
+			"Id": 162591,
+			"Type": "Main",
+			"DisplayName": "LocationFurniture 0.1.0",
+			"FileName": "LocationFurniture 0.1.0-44244-0-2-0-1774749236.zip",
+			"Description": "Changes:\n<br />\n<br />Added support for modded furniture",
+			"Version": "0.2.0",
+			"SizeInBytes": 14499,
+			"Uploaded": "2026-03-29T01:53:56+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.LocationFurniture",
+					"DisplayName": "Location Furniture",
+					"Type": "Smapi",
+					"RelativePath": "LocationFurniture",
+					"Manifest": {
+						"Name": "Location Furniture",
+						"Description": "A framework for letting you add furniture to any location at the beginning of the game.",
+						"Author": "aedenthorn",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LocationFurniture.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "aedenthorn.LocationFurniture"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549279,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430932,
+		"UploaderId": 18901754,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

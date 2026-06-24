@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 6011,
+	"Name": "Casual Life - Realtime Clock",
+	"Author": "adverserath",
+	"Description": "[size=5]Brief[/size]\n<br />This mod is all about giving you a more casual gameplay for Stardew Valley, by slowing the game loop down. However it is fully customisable to keep the normal speed, and just use the realtime clock instead, or even just use the lighting.\n<br />\n<br />This is completely open source, you can see all the code in my github mirror link. The mod is using harmony in SMAPI to override the base game methods from\n<br />decompiled code. I'm not aware of any issues other than android compatibility, but I will try to fix anything I come across.\n<br />\n<br />[size=5]Features[/size]\n<br />\n<br />[list]\n<br />[]Game day length is now 42% longer than default, passing 10 minutes every 10 seconds instead of 7 seconds.[/][]Clock will update once per second increasing the time in minutes.[/][]Dynamic seasonal lighting system – calculates ambient light based on day length throughout the 112-day year, time of day, and subtle seasonal hues.[/][]Switch clock to 24h by right clicking the quest icon or edit the config.json to set by default[/][]Allow skull cavern time slowdown for Multiplayer when all players are present in the dungeon. By default Stardew disabled the Skull Cavern slow down in multiplayer games, because people would be outside the dungeon at the same time. The sensible thing was to just check if all players are in the dungeon together and let the slowdown happen.[/][]Now works with Generic Mod Config[/][/list]\n<br />[size=5]Config Options[/size]\n<br />\n<br />There are 5 optional settings in the config file:\n<br />\n<br />[color=#ff7700][b]ControlDayLightLevels[/b]\n<br />A complete overhaul of the game's lighting system that respects the seasons. The brightness and color of outdoor light smoothly transitions across the 112-day year:\n<br />\n<br />[b]Day Length:[/b] Sunrise and sunset times shift gradually from winter (9:00 AM rise, 5:00 PM set) to summer (5:30 AM rise, 9:00 PM set), peaking at the solstices on day 14 of each season.\n<br />\n<br />[b]Brightness:[/b] Winter days are noticeably darker than summer days at the same time of day, creating seasonal atmosphere. Peak midday brightness varies from about 50% in winter to full brightness in summer.\n<br />\n<br />[b]Seasonal Hues:[/b] Each season tints the ambient light:\n<br />— Spring: cool, fresh green-white light\n<br />— Summer: warm golden sunlight\n<br />— Fall: amber-orange tones\n<br />— Winter: cool blue-tinted darkness\n<br />\n<br />The transitions are smooth and continuous, creating a natural progression through the year. [i]Some evenings may seem darker—this is intentional to create contrast with bright days. Buildings and covered areas use the vanilla lighting system.[/i][/color]\n<br />\n<br />[color=#bf9000][b]ControlDayWithKeys[/b]\n<br />Adds keyboard controls for quickly adjusting time, day, and season. Useful for testing the lighting at different times of year:[/color]\n<br />\n<br />[code]Ctrl+F1-F12 - sets AM times\n<br />Ctrl+Shift + F1-F12 - Sets PM times\n<br />Up Arrow - Increase Season\n<br />Down Arrow - Decrease Season\n<br />Left Arrow - Reduce Day by 1\n<br />Right Arrow - Increase Day by 1[/code]\n<br />[color=#f1c232][b]MillisecondsPerSecond[/b]\n<br />Intended mod speed is to have this at 1000ms, so each clock change happens on each second.\n<br />If this is set to 700ms then the game will run at \"Stardew Valley Speed\".\n<br />It can also be extended outwards (e.g. 2000ms) to make days last twice as long. This works really well for young children or even people with additional needs that don't want to worry about the time running short on the day.[/color]\n<br />\n<br />[color=#f9cb9c][b]DisplaySunTimes[/b]\n<br />Each morning you will get a popup notification showing the sunrise and sunset times for that day under the custom lighting system.[/color]\n<br />\n<br />[color=#f1c232][b]Is24HourDefault[/b]\n<br />Forces the clock to display in 24-hour format.[/color]\n<br />\n<br />[color=#9fc5e8]From the comments, there are a few issues within the Android version of the game. I don't own the game on android, but when I do I'll see if I can fix it.[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6011",
+	"Version": "v1.6.15",
+	"Updated": "2025-03-24T16:36:09+00:00",
+	"Downloads": [
+		{
+			"Id": 128202,
+			"Type": "Main",
+			"DisplayName": "Casual Life (plus Android)",
+			"FileName": "Casual Life (plus Android)-6011-v1-6-14-1742834169.zip",
+			"Description": "* Updated to fix Android. Can slow time down, but clock will be missing 0 digit in minutes.\n<br />* Can disable all harmony, for performance gains. Keeps the slowdown, but disables the clock updates every second",
+			"Version": "v1.6.14",
+			"SizeInBytes": 35299,
+			"Uploaded": "2025-03-24T16:36:09+00:00",
+			"Mods": [
+				{
+					"Id": "Adverserath.CasualLife",
+					"DisplayName": "Casual Life",
+					"Type": "Smapi",
+					"RelativePath": "CasualLife",
+					"Manifest": {
+						"Name": "Casual Life",
+						"Description": "Slow down game time and update by minutes",
+						"Author": "adverserath",
+						"Version": "1.6.14",
+						"MinimumApiVersion": "4.1.6",
+						"EntryDll": "CasualLife.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6011"
+						],
+						"UniqueId": "Adverserath.CasualLife"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342514890,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392699,
+		"UploaderId": 624416,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

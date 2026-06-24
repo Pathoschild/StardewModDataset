@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 24623,
+	"Name": "Limited Regrowable Crop Harvests",
+	"Author": "Adradis",
+	"Description": "Limited Regrowable Crop Harvests alters the way regrowable crops work in Stardew Valley, adding an upper limit to the number of times they can be harvested. It features several configuration options, including multiple methods of calculating the limit. It only affects planted crops, not bushes or trees.\n<br />\n<br />Designed for use in \"hard mode\" packs, particularly alongside mods that make seeds difficult to acquire. Acts as a nerf to regrowable crops in greenhouses, particularly Ancient Fruit. \n<br />\n<br />Implements [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF for easy configuration changes.\n<br />\n<br />[img]https://i.imgur.com/lwAoWHt.png[/img]\n<br />Fixed, Dynamic, and Override options for how to calculate the harvest limit.\n<br />\n<br />- Fixed: Crops will only grow a specific number of times, editable in the Config\n<br />- Harvests per Season: The number of times a crop can be harvested is equal to 28 / Regrow Days\n<br />- (Hard) Harvests per Season: The number of times a crop can be harvested is equal to 28 / (Regrow Days * 2)\n<br />- Override: If a crop contains a new limit from Content Patcher, it will use this value instead\n<br />\n<br />Gentle Junimos: If set, Junimos gently harvest crops, preventing them from being damaged and counting against the harvest limit\n<br />\n<br />[img]https://i.imgur.com/KHUqao9.png[/img]\n<br />Multiple randomization options for harvest limits: None, Per Crop, Total.\n<br />\n<br />- None: No randomization is used for the number of harvests.\n<br />- Per Crop: All copies of a crop planted on the same day will have the same number of harvests.\n<br />- Total: Every crop planted will have a random number of harvests, based on the randomization values set in the config.\n<br />\n<br />[img]https://i.imgur.com/llqW9Gm.png[/img]\n<br />- Content Patcher to allow for harvest overrides, see below for the expected field.\n<br />- All custom crops that are regrowable.\n<br />\n<br />If adding an override to the number of harvests, add the following to the crop JSON.\n<br />\n<br />[code]\"CustomFields\": {\n<br />\u00A0\u00A0\u00A0 \"HarvestOverride\": \"Value\"\n<br />}\n<br />[/code]\n<br />where Value is the number of times a crop should be harvested.\n<br />\n<br />If Value is set to \"-1\", it will allow for infinite harvests.\n<br />\n<br />[img]https://i.imgur.com/YrRtvtH.png[/img]\n<br />- Mods that add new ways to harvest. Tested with Tractor Mod, your mileage may vary for other mods.\n<br />- Mods that use Harmony to patch crop planting and harvesting. Limited Regrowable Crop Harvests has a minimal patch footprint, but it's possible other mods that make changes to those methods could cause issues.\n<br />\n<br />\n<br />[url=https://github.com/Adradis/StardewMods/tree/stable/LimitedHarvests]Source[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24623",
+	"Version": "1.1.0",
+	"Updated": "2024-05-30T22:33:04+00:00",
+	"Downloads": [
+		{
+			"Id": 101838,
+			"Type": "Main",
+			"DisplayName": "Limited Harvests",
+			"FileName": "Limited Harvests-24623-1-1-0-1717108384.zip",
+			"Description": "Built for Stardew 1.6+, PC.\n<br /><br /><br />Untested elsewhere.",
+			"Version": "1.1.0",
+			"SizeInBytes": 17850,
+			"Uploaded": "2024-05-30T22:33:04+00:00",
+			"Mods": [
+				{
+					"Id": "Adradis.LimitedHarvests",
+					"DisplayName": "Limited Regrowable Crop Harvests",
+					"Type": "Smapi",
+					"RelativePath": "LimitedHarvests",
+					"Manifest": {
+						"Name": "Limited Regrowable Crop Harvests",
+						"Description": "Gives regrowable crops an upper limit on harvests before the plant dies.",
+						"Author": "Adradis",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "LimitedHarvests.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 24623"
+						],
+						"UniqueId": "Adradis.LimitedHarvests"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488526,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411311,
+		"UploaderId": 17484304,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

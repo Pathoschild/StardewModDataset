@@ -1,0 +1,89 @@
+{
+	"Site": "ModDrop",
+	"Id": 1071149,
+	"Name": "TehCore",
+	"Author": "TehPers",
+	"TagLine": "A core mod with the goal of enabling high levels of compatibility between mods.",
+	"Description": "For **SDV** 1.5.5+ and **SMAPI** 3.13.0+\n\nA core mod with the goal of enabling high levels of compatibility between mods.\n\n**Features:**\n\n*   Expose complex mod APIs. TehCore adds dependency injection for mods through [Ninject](https://github.com/ninject/ninject/wiki). Need to expose an IComplexApi interface that SMAPI's mod registry doesn't support? Expose it through your mod's service container, and anyone can request it easily and even have it automatically injected into their classes if they want.\n\n*   Support items of any type with namespaced keys! By using the namespace registry, mods can create items of any type (objects, weapons, tools, etc.) and even create items added through Json Assets or Dynamic Game Assets through string-based keys.\n\n    *   Use namespaced keys in your configs! You can let users create content packs for your mods using any item exposed through an item namespace by using namespaced keys.\n\n    *   Mods can also register their own namespaces. Add support for your custom items to **every** TehCore-based mod by registering a custom namespace for them. You can even make TehCore an optional dependency while doing this!\n\n*   Create commented JSON files. Enhance your configs by adding descriptions to each of the settings.\nAPI\n\nThe API docs are still a work in progress. Check back soon for updated docs.\n\nSource code &amp; License\n\nThis mod is licensed under MIT License. The source code and full license text can be found on the [GitHub repository](https://github.com/TehPers/StardewValleyMods/tree/full-rewrite).",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1071149",
+	"Version": null,
+	"Updated": "2022-05-21T19:07:03.747+00:00",
+	"Downloads": [
+		{
+			"Id": 1175428,
+			"Type": "Main",
+			"DisplayName": "TehCore 1.1.0",
+			"FileName": "TehCore 1.1.0.zip",
+			"Description": "For SDV 1.5.5 and SMAPI 3.14.x",
+			"Version": "1.1.0",
+			"SizeInBytes": 344714,
+			"Uploaded": "2022-05-21T19:07:03.745+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.Core",
+					"DisplayName": "TehCore",
+					"Type": "Smapi",
+					"RelativePath": "TehPers.Core",
+					"Manifest": {
+						"Name": "TehCore",
+						"Description": "Utility mod for creating highly compatible mods",
+						"Author": "TehPers",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "TehPers.Core.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3256",
+							"ModDrop:1071149"
+						],
+						"UniqueId": "TehPers.Core",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "0ccc85ca80598be0e36f2f52e5d71370",
+				"md5In": "e9e58f7f8e897424ced8312c1c854b55",
+				"scriptType": 0,
+				"sha256Ex": "6e0ff8f9610aeb49354bd8a2a51001a52f556e1c037159aca574d1b57e3d77c3",
+				"sha256In": "219b10dd3a6c42a2d4dc6c13eaa3cff33b1039dfd51d1875cf02f6ee10470345"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1640070010513,
+		"DateUpdated": 1653160023747,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1640069990763,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1071149/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1071149/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1071149/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1071149/icon_original"
+		},
+		"nexusModID": 3256,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 65768
+	}
+}

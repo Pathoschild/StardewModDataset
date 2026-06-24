@@ -1,0 +1,81 @@
+{
+	"Site": "Nexus",
+	"Id": 44456,
+	"Name": "Wild Truffles",
+	"Author": "tigerchatoyance",
+	"AuthorLabel": "tigerchatoyance and BurritoBlankie",
+	"Description": "What it says on the tin, this mod spawns truffles in the Secret Woods.\n<br />\n<br />The mod has now been updated to [CP] to allow for a config that will be generated for you upon start-up that lets the user adjust the truffle spawn amount on the fly, to a maximum of 55 per day! A truffle lasts for 7 in game days before it despawns, so be aware of that so you don't overwhelm your poor woods! :) Thank you so much to\u00A0[url=https://www.nexusmods.com/profile/BurritoBlankie]BurritoBlankie[/url] for putting in all that time and effort to convert the mod to Content Patcher! The new file contains both [CP] and [FTM] folders and you need both for the mod to function.\n<br />\n<br />It *should* work with mods that change the layout of the Secret Woods, though I only tested with vanilla, Stardew Valley Maps Retouched, and\n<br />Stardew Valley Expanded (the western woods included). Just plunk the main file into your Mods folder and you should be good to go.\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/3231]Farm Type Manager[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url]\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />[b][FOR THE PREVIOUS 1.0.0 [FTM] VERSION ONLY][/b]\n<br />By default, the mod will spawn at most 1 truffle per day (but sometimes none). If you want to change this, edit the value next to\u00A0\"MaximumSpawnsPerDay\"\u00A0in the content.json. You can change the MinimumSpawnsPerDay this way too.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44456",
+	"Version": "1.0.1",
+	"Updated": "2026-04-03T01:10:37+00:00",
+	"Downloads": [
+		{
+			"Id": 163254,
+			"Type": "Main",
+			"DisplayName": "Wild Truffles",
+			"FileName": "Wild Truffles-44456-1-0-1-1775178637.zip",
+			"Description": "Updated to CP.",
+			"Version": "1.0.1",
+			"SizeInBytes": 4505,
+			"Uploaded": "2026-04-03T01:10:37+00:00",
+			"Mods": [
+				{
+					"Id": "tigerchatoyance.wildtrufflespatcher",
+					"DisplayName": "(CP) Wild Truffles",
+					"Type": "ContentPack",
+					"RelativePath": "Wild Truffles\\[CP] Wild Truffles",
+					"Manifest": {
+						"Name": "(CP) Wild Truffles",
+						"Description": "Allows truffles to spawn in the forest.",
+						"Author": "tigerchatoyance and BurritoBlanket",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "tigerchatoyance.wildtrufflespatcher"
+					}
+				},
+				{
+					"Id": "tigerchatoyance.wildtruffles",
+					"DisplayName": "(FTM) Wild Truffles",
+					"Type": "ContentPack",
+					"RelativePath": "Wild Truffles\\[FTM] Wild Truffles",
+					"Manifest": {
+						"Name": "(FTM) Wild Truffles",
+						"Description": "Allows truffles to spawn in the forest.",
+						"Author": "tigerchatoyance and BurritoBlanket",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.26.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "tigerchatoyance.wildtrufflespatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44456"
+						],
+						"UniqueId": "tigerchatoyance.wildtruffles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549942,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431144,
+		"UploaderId": 2136867,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

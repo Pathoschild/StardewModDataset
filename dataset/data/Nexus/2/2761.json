@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 2761,
+	"Name": "Artifact System Fixed",
+	"Author": "Ilyaki",
+	"Description": "[b]Short summary[/b]: This mod fixes a major bug that makes some artifacts extremely difficult to obtain. It replaces the artifact and geode system to make it more fair, and reduces the chance of duplicates.\n<br />\n<br />[b][size=4]Installation[/size][/b]\n<br />[list=1][*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Unzip the mod folder into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=4][b]Long Summary[/b][/size]\n<br />(Please read this if you want to understand what the mod does)\n<br />\n<br />\n<br />Interestingly, the mythical rarity surrounding some of the artifacts is not intentional game design but rather due to a typo in some item descriptions...\n<br />\n<br />The chances for finding an artifact are written in two places. Firstly, each artifact describes in which locations it can be found and the chance of it being found there. (I call this the primary table). Secondly, each location (e.g. Farm, BusStop, Town etc.) has a list of artifacts and their chance of being found there. (Secondary table).\n<br />The method the game uses to choose an artifact to spawn is by running through the primary table, and checking each item's chance. If nothing is found, it will run through the possible items in the secondary table.\n<br />\n<br />The biggest bug is in the primary table. For these eleven artifacts: [color=#ffff00]{ Prehistoric Scapula, Prehistoric Tibia, Prehistoric Skull, Skeletal Hand, Prehistoric Rib, Prehistoric Vertebra, Skeletal Tail, Nautilus Fossil, Amphibian Fossil, Palm Fossil, Trilobite }[/color], [b][color=#ff7700]the list of drop chances is written on the wrong line, so the game doesn't read it![/color][/b] This renders the eleven artifacts unobtainable from the primary table. Eight of the items are written in the secondary table, so they can be obtained from artifact dig spots. The remaining three: [color=#ffff00]Skeletal Tail, Nautilus Fossil and Amphibian Fossil[/color] are completely unobtainable from artifact dig spots! You can only find them through the mines or fishing chests.\n<br />This is the main bug this mod patches.\n<br />\u00A0\n<br />There are a few more quirks in the system though.\n<br />\n<br />Firstly, the probability method for choosing an artifact goes through each item in the table, reads its chance, and if that chance is met the artifact will spawn.\n<br />This isn't fair because artifacts lower in the list will only be selected if all the artifacts above in the list have NOT been chosen - which has an effective decrease on their chance.\n<br />\n<br />I solved this by completely replacing the selection method with weighted probabilities. As an example, if item A and B both have weight of 3 and item C has a weight of 6, A/B will have probability 25% and C has 50%\n<br />This has the benefit of being quite flexible by changing a few variables in the config.\n<br />\n<br />While this isn't a bug, it is fair to say most people dislike finding duplicate artifacts. To reduce the chance of duplicates, [color=#ff7700][b]every time an artifact is found, its weight is multiplied by a number[/b](0.3)[/color]. You will notice this effect a lot in the long run when hunting for the final few artifacts.\n<br />Note that since the times an artifact is found(not donated) is saved by the game, not the mod, you can add this to an existing world and the artifacts you have found many times will see significantly less spotlight.\n<br />\n<br />Also, there is a 20% chance for the chosen artifact from the primary table to be replaced with a Lost Book (or Mixed Seeds if you have found all the books!). I changed this to only replace if nothing is found in the primary table.\n<br />\n<br />\n<br />As for geodes, the system is fairer as it gives an equal chance to all minerals (except Prismatic Shard which has a flat 0.4% chance from Omni Geodes). \n<br />However, this is still susceptible to duplicates. As with artifacts, I replaced the system with weighted probability. [color=#ff7700][b]Every time a mineral is found its weight is multiplied by 0.3[/b][/color]\n<br />\n<br />\n<br />These are all the changes the mod makes to the artifact system. You can tweak the system in the config.json; see config_help.txt for the descriptions of each option.\n<br />I balanced the system to what I felt was fair, but let me know if you have a better settings file.\n<br />\n<br />The mod works per player, so in a multiplayer game all players who want the mod patches need to install the mod. There won't be any errors if some players have it installed and others don't.\n<br />\n<br />-----\n<br />\n<br />[url=https://github.com/Ilyaki/ArtifactSystemFixed]Source code[/url]\n<br />\n<br />The mod patches the game with [url=https://github.com/pardeike/Harmony/]Harmony[/url]. If you make mods be sure to check it out.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2761",
+	"Version": "1.0.1",
+	"Updated": "2018-11-19T19:09:19+00:00",
+	"Downloads": [
+		{
+			"Id": 12710,
+			"Type": "Main",
+			"DisplayName": "ArtifactSystemFixed 1.0.1",
+			"FileName": "ArtifactSystemFixed 1.0.1-2761-1-0-1-1542654559.zip",
+			"Description": "For SMAPI 2.8+ / Stardew Valley 1.3.32+",
+			"Version": "1.0.1",
+			"SizeInBytes": 65552,
+			"Uploaded": "2018-11-19T19:09:19+00:00",
+			"Mods": [
+				{
+					"Id": "Ilyaki.ArtifactSystemFixed",
+					"DisplayName": "ArtifactSystemFixed",
+					"Type": "Smapi",
+					"RelativePath": "ArtifactSystemFixed",
+					"Manifest": {
+						"Name": "ArtifactSystemFixed",
+						"Description": "Fixes bugs with the artifact system, and replaces the RNG drop system with weighted probabilities.",
+						"Author": "Ilyaki",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "2.8.0",
+						"EntryDll": "ArtifactSystemFixed.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2761"
+						],
+						"UniqueId": "Ilyaki.ArtifactSystemFixed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342399398,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389449,
+		"UploaderId": 50404951,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

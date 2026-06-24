@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 40174,
+	"Name": "Ingredient Yeeter (ban items from  category ingredients)",
+	"Author": "Nereithr",
+	"Description": "[center]\uFEFF[size=6]Ingredient Yeeter (ban items from category ingredients)\n<br />\n<br />[/size][/center][size=5]What is this?[/size]\n<br />\n<br />A simple SMAPI Harmony mod for Stardew Valley 1.6 that prevents a configurable list of blocked items from ever matching [i]category ingredients[/i] in crafting/cooking recipes without changing anything about the item itself. A category ingredient is an ingredient that is defined with a category such as Fish (Any) instead of one specific item and matches any item included in that category.\n<br />\n<br />Why is this mod potentially useful? If you are just using the three vanilla categories (Fish, Milk, Eggs) like vanilla or most mods, it's not. However, a mod or content pack might want to actively utilize non-vanilla category ingredients and that's where issues can crop up due to the haphazard way in which items are categorized:\n<br />\n<br />[list]\n<br />[*]You might want to use category_syrup (Tapping products, which is two actual syrups + Oak/Pine Resins) and category_greens (Forage, which is 99% perfectly good cooking ingredients except for Sap) in your new SVE-compatible cooking content pack, but suddenly your salads can be made with Sap instead of Leeks and Mushrooms and your sweets can take Pine Tar as a substitute for Birch/Maple Syrup.\n<br />[*]You might want to use category_gem (Gem (Any)) for a recipe that calls for any cut gem, but that category also includes extremely plentiful foraged minerals such as Quartz and Frozen Tears.\n<br />[*]You might, of course, just want to prevent some vanilla items from ever matching the standard category ingredients (Fish/Egg/Milk). Think Snails don't deserve to be seafood? Temporarily store your Legendary Fish in the fridge and want to ban them from matching Fish (Any) recipes? Think Void Eggs don't belong in standard pancakes and are only meant for [i]Void Pancakes[/i]?\n<br />[/list]\n<br />To my knowledge, with the current limitations, there are only two easy ways + one hard way to solve this issue:\n<br />\n<br />[list]\n<br />[*]Recategorize the offending items to a different category in your mod/content pack. Item category is tied to a whole bunch of stuff in game, so this leads to unforeseen consequences. You may not be able to sell the items to the same vendors you used to. Professions such as Tapper, Blacksmith and Prospector may stop affecting these items. The items may disappear from their rightful spot in the Collections tab and reappear elsewhere. Other mods likely also expect vanilla game stuff to have vanilla categories and might not appreciate that Legend is now category_vegetable. But the bigger issue is that if the player ever wants to install/uninstall the mod (or toggle item categories with an option) on an existing save file, they are in for a headache. Stardew Valley stores entire objects within its savefiles instead of doing what, for example, Minecraft does, which is to store just the item ID and some NBT data/data components. As a result, all existing instances of the item will keep their category even if the mod affecting the items is added/removed.\n<br />[*]Do what this mod does and harmony patch the method responsible for recipe matching in a fairly rudimentary fashion, which is explained in the paragraph below.\n<br />[*]Harmony patch everything crafting-related in the game to properly support Context Tags (this is [i]quite[/i] a bit harder than what this mod does) and deal with the fallout of breaking all assumptions about how recipes function for other mods.\n<br />[/list]\n<br />Somehow, to my surprise, this works with BetterCrafting, including its new right click crafting UI and shift click crafting. Note that this was a cursory glance (I don't use that mod's UIs), so take this with a grain of salt.\n<br />\n<br />Ultimately neither of the easy solutions is perfect, because perfect would be the devs enabling the use of Context Tags (which already exist but are barely used) in recipes, which is hopefully where we are headed with 1.7.\n<br />\n<br />[size=5]How it works (and mod compat)[/size]\n<br />\n<br />This mod allows you to define a list of qualified Item IDs (BannedIDs) in config.json (or GMCM, but I [i]really[/i] recommend config.json, because I can't into GMCM and so it is currently just one input field for a string with comma-separated values, versus config.json's much more intuitive array of strings). These banned items will never match their respective category ingredient, but they will still match perfectly fine if they are called for directly. The default banned items are: (O)159,(O)160,(O)163,(O)682,(O)775,(O)92,(O)725,(O)726 which are all unique Legendary Fish + Sap, Oak Resin and Pine Tar. I.e with the default settings:\n<br />\n<br />[list]\n<br />[*]You can't craft Sashimi out of your Glacierfish :^)\n<br />[*]A \"Potato Salad\" cooking recipe that wants a Potato + any forage item (category_greens) will now match any forage item in the player's inventory except for Sap.\n<br />[*]A \"Le Fishe au la Sève\" cooking recipe that wants a Sap + any fish item (category_fish) will still match Sap in the player's inventory perfectly well but won't match the Legend.\n<br />[*]A \"Legendary Dinner\" recipe that calls for Legend and some Prismatic Shards will work perfectly well.\n<br />[/list]\n<br />Additionally, this mod prefixes (read: runs its own method instead of) the method responsible for checking how many items you can craft so that the game can estimate the amount properly for the new matching logic. The patched method is a carbon copy of the vanilla method except for the added logic and shouldn't impact any recipes that don't use banned items. Regardless, this makes it so the original method never actually runs (unless the new method errors out, which it shouldn't), so if you have any issues with tooltips (particularly if other mods patch this method), disable this in the options. The downside of doing so is that the game will miscalculate the amount of items it can craft in the affected recipes if you have BannedIDs in your inventory and it might not play well with mods like BetterCrafting which may rely on accurate information being fed to them by vanilla methods.\n<br />\n<br />This mod only affects standard crafting/cooking recipes. Machines already fully support both game state queries and Context Tags for input matching/filtering.\n<br />\n<br />Regardless, if you plan on extensively using category ingredients in crafting/cooking recipes, you might be interested in a mod such as [url=https://www.nexusmods.com/stardewvalley/mods/11115]Better Crafting[/url], which improves crafting menus dramatically and fixes the way [i]most[/i] non-vanilla category ingredients are displayed in its improved menus. Alternatively, you might want [url=https://www.nexusmods.com/stardewvalley/mods/40166]Category Ingredient Display Fix[/url], a 1.6 fork of [url=https://www.nexusmods.com/stardewvalley/mods/11400]Fix Categories in Recipes[/url]. Both of these mods fix the way non-vanilla category ingredients are displayed in vanilla crafting menus and the Collections menu.\u00A0\n<br />\n<br />[size=5]How to install/use[/size]\n<br />\n<br />Requires SMAPI\n<br />\n<br />[list=1]\n<br />[*]Unzip the folder containing the .dll and manifest.json into your [font=Courier New]Stardew Valley&#92;Mods[/font] folder.\n<br />[*]Change banned items in the config to your liking.\n<br />[*]Notice (hopefully) that your category-ingredient-using recipe doesn't match with banned items.\n<br />[*]Rejoice.\n<br />[/list]\n<br />[size=5]Source[/size]\n<br />\n<br />[url=https://github.com/Nereithr/IngredientYeeter]GitHub repository[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40174",
+	"Version": "1.0.0",
+	"Updated": "2025-12-12T01:29:28+00:00",
+	"Downloads": [
+		{
+			"Id": 150404,
+			"Type": "Main",
+			"DisplayName": "Ingredient Yeeter",
+			"FileName": "Ingredient Yeeter-40174-1-0-0-1765502968.zip",
+			"Description": "Install like any other Stardew Valley mod.",
+			"Version": "1.0.0",
+			"SizeInBytes": 14721,
+			"Uploaded": "2025-12-12T01:29:28+00:00",
+			"Mods": [
+				{
+					"Id": "Nereithr.IngredientYeeter",
+					"DisplayName": "Ingredient Yeeter",
+					"Type": "Smapi",
+					"RelativePath": "IngredientYeeter",
+					"Manifest": {
+						"Name": "Ingredient Yeeter",
+						"Description": "Lets you configure items that should not match their category ingredients in recipes.",
+						"Author": "Nereithr",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "IngredientYeeter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40174"
+						],
+						"UniqueId": "Nereithr.IngredientYeeter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537092,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426862,
+		"UploaderId": 132366928,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}

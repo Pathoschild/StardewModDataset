@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 24278,
+	"Name": "Custom TV Channel",
+	"Author": "shghc03",
+	"AuthorLabel": "chieeri323",
+	"Description": "[b]This mod allows you to add channels to your TV in Stardew Valley[/b]\n<br />\n<br />\n<br />[b][i]   \uFEFF   \uFEFF   \uFEFF[size=5]If you want to know how to create a content pack, you can download the sample content pack in the optional file[/size][/i][/b][size=5]\n<br />\n<br />[/size][size=3]\n<br />[/size][b][size=3]manifest.json[/size]\n<br />[/b]\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0\u00A0 \"Name\": \"Your Mod Name\",\n<br />\u00A0\u00A0\u00A0 \"Author\": \"Your Name\",\n<br />\u00A0\u00A0\u00A0 \"Version\": \"1.0.0\",\n<br />\u00A0\u00A0\u00A0 \"Description\": \"One or two sentences about the mod.\",\n<br />\u00A0\u00A0\u00A0 \"UniqueID\": \"YourName.YourModName\",\n<br />\u00A0\u00A0\u00A0 \"UpdateKeys\": [],\n<br />\u00A0\u00A0\u00A0 \"ContentPackFor\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"UniqueID\": \"chieeri323.customtvchannel\"\n<br />\u00A0\u00A0\u00A0 }\n<br />}\n<br />[/code]\uFEFF\n<br />[size=3]\n<br />\n<br />\n<br />[b]content.json（Examples）[/b][/size]\n<br />[code]{\n<br />\u00A0 \"channelInfos\": [\n<br />   \u00A0{\n<br />      \"Channelkey\": \"testchannel2\",\n<br />      \"ChannelName\": \"xxx channel\",\n<br />      \"ChannelDescription\": \"Welcome to xxx TV channel\",\n<br />      \"ShowDays\":\"Mon\",\n<br />      \"ChannelType\":{\n<br />          \uFEFF\"currentChannel\": 10,\n<br />          \uFEFF\"ScreenFile\":\"assets/Mod_Namescreen.png\",\n<br />          \uFEFF\"animation\":{\n<br />            \uFEFF\"AnimationInterval\": 150,\n<br />            \uFEFF\"AnimationLength\":2\n<br />          \uFEFF\u00A0},\n<br />          \uFEFF\u00A0\"ad\":{\n<br />   \uFEFF   \uFEFF      \uFEFF\uFEFF\"RandomQuestion\":{\n<br />            \uFEFF   \"10101\":{\"ADPrice\":9999,\"ItemID\":[\"(O)373\"],\"QuestionText\":\"Do you want to buy A pumpkin? Only&lt;&gt;G!\"},\n<br />            \uFEFF   \"2233\":{\"ADPrice\":9999,\"ItemID\":[\"(O)373\"],\"QuestionText\":\"Do you want to buy A pumpkin? Only&lt;&gt;G\"}\n<br />            \uFEFF},\n<br />            \uFEFF\"Select1\" : \"Yeeeees!\",\n<br />            \uFEFF\"Select2\" : \"NO.\"\n<br />   \uFEFF   \uFEFF    \uFEFF\uFEFF}\n<br />\n<br />      \uFEFF}\n<br />    }\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />[b]Tips:\n<br />[/b]\n<br />   \uFEFFAll channels are rebroadcast every two years，In the fields Tips and Question, 1 and 8 represent the days of the year (Stardew Valley has 112 days in a year).\n<br />   \uFEFFIf the ScreenFile and Animation are not set, the default image is used.\n<br />\n<br />[b][size=3]Possible fields:\n<br />[/size][/b]\n<br />[list=1]\n<br />[*][b]ChannelName : [/b][i]The name of the channel displayed when watching TV[/i]\n<br />[*][b]ChannelDescription:[/b] [i]The contents of the dialog box when selecting a TV channel[/i]\n<br />[*][b]ShowDays: [/b][i]The date on which the weekly channel is displayed in the game[/i]\n<br />[*][b]ChannelType.[/b]\uFEFF[b]currentChannel :[/b][i] Must be set, cannot be 2,3,4,5,6,666,9999, in order not to conflict with other content packages, use a number as the prefix (e.g. 2427801,2427802).[/i]\n<br />[*][b][b]ChannelType.[/b]ScreenFile :[/b][i] If there is an animation for the channel, this is the relative path of the image[/i]\n<br />[*][b][b]ChannelType.[/b]animation: [/b][i]Sets the length and interval of the animation[/i]\n<br />[*][b]ChannelType.normal: [/b][i]A type of TV channel[/i]\n<br />[*][i][b]ChannelType.normal[/b][/i][b].[/b][b]Tips[/b][i][b]：[/b]The content to display after selecting the channel, where the key is the game date (maximum value 224) and the value is the display text[b][/b][/i]\n<br />\n<br />[*][b]ChannelType.[/b][b]ad: [/b][i]A type of TV channel[/i]\n<br />[*][b]ChannelType.ad.Question:[/b][i]After selecting the channel, the problem dialog box displayed in the game, the key is the game date, the maximum is 224 (because it will be replayed every two years).[/i]\n<br />[*][b]ChannelType.ad.RandomQuestion:[/b][i]When RandomQuestion is used instead of Question, a random dictionary is selected for the date displayed on the channel[/i]\n<br />[*][b]Select1,2[/b][i][b] :The display name of the two options in the problem dialog box[/b][/i]\n<br />\n<br />[/list]\n<br />[b][size=4]Plans for future updates：\n<br />\n<br />[/size][/b][list=1]\n<br />[*]Add new channel types and let players add new recipes\n<br />[*]Add new channel types that allow players to receive quests via TV\n<br />\n<br />[/list]\n<br />Screen image（42x28 pixels）：\n<br />[img]https://www.freeimg.cn/i/2024/05/20/664a8883671dd.png[/img]\n<br />If you want to draw a three-frame animation, you need three times the width\n<br />（Mechanical translation. I don't understand English very well）",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24278",
+	"Version": "1.0",
+	"Updated": "2024-05-21T03:49:53+00:00",
+	"Downloads": [
+		{
+			"Id": 100168,
+			"Type": "Main",
+			"DisplayName": "CTC 1.11 -FIX-",
+			"FileName": "CTC 1.11 -FIX--24278-1-11-1716195627.zip",
+			"Description": "Fixed an issue where a player could purchase items repeatedly when using RandomQuestion（I forgot to write the conditional. haha...）",
+			"Version": "1.11",
+			"SizeInBytes": 19312,
+			"Uploaded": "2024-05-20T09:00:27+00:00",
+			"Mods": [
+				{
+					"Id": "chieeri323.customtvchannel",
+					"DisplayName": "CustomTVChannel",
+					"Type": "Smapi",
+					"RelativePath": "CustomTVChannel",
+					"Manifest": {
+						"Name": "CustomTVChannel",
+						"Description": "...",
+						"Author": "chieeri323",
+						"Version": "1.11.0",
+						"EntryDll": "customtvchannel.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "chieeri323.customtvchannel",
+						"OtherFields": {
+							"UpdateKey": [
+								"Nexus:24278"
+							]
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486856,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 100282,
+			"Type": "Optional",
+			"DisplayName": "Sample Content Pack",
+			"FileName": "Sample Content Pack-24278-1-11-1716263393.zip",
+			"Description": "",
+			"Version": "1.11",
+			"SizeInBytes": 4449,
+			"Uploaded": "2024-05-21T03:49:53+00:00",
+			"Mods": [
+				{
+					"Id": "chieeri323.channeladd",
+					"DisplayName": "Channel_Added",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]Channel_Added",
+					"Manifest": {
+						"Name": "Channel_Added",
+						"Description": "One or two sentences about the mod.",
+						"Author": "chieeri323",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "chieeri323.customtvchannel"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "chieeri323.channeladd"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486970,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410966,
+		"UploaderId": 206048409,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

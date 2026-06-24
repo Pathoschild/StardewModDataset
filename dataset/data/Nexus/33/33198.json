@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 33198,
+	"Name": "GeminiDialogChat(AI)",
+	"Author": "zhiwoweihe",
+	"AuthorLabel": "yangzhenxu",
+	"Description": "# GeminiDialog\n<br />为 Stardew Valley 的 NPC 添加由 Gemini AI 驱动的动态对话！靠近 NPC，按 R 键即可与他们展开独特的、基于游戏上下文的聊天，感受更沉浸的社交体验。此外，NPC 之间还会根据环境和关系进行随机对话，增添城镇的活力！注意：本mod需要vpn，请玩家自行配置~\n<br />---\n<br />## 功能\n<br />- **AI 驱动的对话**：与 NPC 进行个性化聊天，内容根据 NPC 性格、玩家好感度、季节、天气等动态生成。\n<br />- **R 键交互**：靠近 NPC（默认 2 格）按 R 键，选择“聊天”进入对话窗口，或“普通对话”体验原版风格。\n<br />- **NPC 间对话**：NPC 在附近时会显示气泡对话，反映他们的关系和个性。\n<br />- **对话历史**：保存与每个 NPC 的最近对话，随时回顾。\n<br />- **可配置选项**：通过 `config.json` 调整交互距离、冷却时间、历史记录上限等。\n<br />- **API Key 输入**：首次使用弹出界面，轻松输入 Gemini API Key。\n<br />---\n<br />## 安装\n<br />1. **[安装 SMAPI](https://smapi.io)**（需要版本 4.0.8 或更高）。\n<br />2. 从 Nexus Mods 下载并解压 `GeminiDialog` 文件夹到 `Stardew Valley/Mods`。\n<br />3. 运行游戏，首次加载会弹出 API Key 输入窗口。\n<br />4. 获取 Gemini API Key：\n<br />\u00A0 \u00A0- 访问 [Google Cloud Console](https://console.cloud.google.com/)。\n<br />\u00A0 \u00A0- 创建项目，启用 Generative Language API，生成 API Key。\n<br />\u00A0 \u00A0- 在游戏内输入，或编辑 `Mods/GeminiDialog/config.json` 的 `GeminiApiKey`。\n<br />---\n<br />## 使用方法\n<br />- **触发交互**：靠近 NPC，按 R 键弹出菜单（“聊天”、“普通对话”、“取消”）。\n<br />- **聊天窗口**：输入消息，与 NPC 进行 AI 对话，支持滚轮查看历史。\n<br />- **配置**：编辑 `Mods/GeminiDialog/config.json`：\n<br />\u00A0 - `ProximityDistance`：交互距离（默认 2.0 格）。\n<br />\u00A0 - `CooldownSeconds`：交互冷却（默认 15 秒）。\n<br />\u00A0 - `MaxDialogHistoryEntries`：历史记录上限（默认 20 条）。\n<br />- **NPC 对话**：NPC 靠近时显示气泡对话（冷却 60 秒）。\n<br />---\n<br />## 兼容性\n<br />- 支持 Stardew Valley 1.6.15。\n<br />- 兼容单人及多人模式（主机需安装模组）。\n<br />- 无已知模组冲突，但建议备份存档。\n<br />- 需要网络连接以访问 Gemini API。\n<br />---\n<br />## 已知问题\n<br />- 首次加载可能因网络延迟导致 API Key 测试较慢。\n<br />- 极少数情况下，NPC 气泡对话可能显示默认内容（“嗨，你好！”）。\n<br />- 遇到问题请查看 `SMAPI-latest.txt` 并在“Bugs”选项卡报告。\n<br />---\n<br />## 未来计划\n<br />- 增强 NPC 专属对话提示。\n<br />- 支持离线对话缓存。\n<br />- 优化多人模式同步。\n<br />---\n<br />## 鸣谢\n<br />- **SMAPI 团队**：提供模组框架。\n<br />- **Newtonsoft.Json**：JSON 处理。\n<br />- **Gemini AI**：智能对话支持。\n<br />- **社区**：感谢测试和反馈！\n<br />---\n<br />## 许可\n<br />- 开源项目，欢迎贡献（GitHub 链接待补充）。\n<br />- 禁止商业用途。\n<br />---\n<br />*享受与星露谷居民的智能对话吧！请在 Nexus Mods 点赞支持！*\n<br />群号：912819891\u00A0 欢迎大家进来吹水，有需要我会添加功能！",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/33198",
+	"Version": "1.0.0",
+	"Updated": "2025-04-13T13:06:42+00:00",
+	"Downloads": [
+		{
+			"Id": 129799,
+			"Type": "Main",
+			"DisplayName": "StardewAIChat",
+			"FileName": "StardewAIChat-33198-1-0-0-1744549602.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 38053,
+			"Uploaded": "2025-04-13T13:06:42+00:00",
+			"Mods": [
+				{
+					"Id": "Yzx.GeminiDialog",
+					"DisplayName": "GeminiDialog",
+					"Type": "Smapi",
+					"RelativePath": "StardewGeminiChat",
+					"Manifest": {
+						"Name": "GeminiDialog",
+						"Description": "Adds dynamic Gemini-powered dialog to Stardew Valley NPCs.",
+						"Author": "Yzx",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GeminiDialog.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Yzx.GeminiDialog"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342516487,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342419886,
+		"UploaderId": 167054093,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

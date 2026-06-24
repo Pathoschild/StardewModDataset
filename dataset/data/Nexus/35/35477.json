@@ -1,0 +1,104 @@
+{
+	"Site": "Nexus",
+	"Id": 35477,
+	"Name": "Ladder Chance Framework",
+	"Author": "pneuma163",
+	"Description": "[size=3][b]For players[/b]: this mod does nothing on its own. If another mod asked you to install it, follow the \"How to install\" instructions below and feel free to read further if the questions below interest you.\n<br />\n<br />Players and mod authors may also be interested in the example content pack [b]Customizable Multipack in Optional files[/b] which uses Ladder Chance Framework and includes various config options, but be thoughtful (see the first FAQ) about which ones you want to apply:\n<br />[/size]\n<br />[list=1]\n<br />[*][size=3]A config to set a multiplier to the chance for a ladder - one for the Mines, one for Skull Cavern.[/size]\n<br />[*][size=3]A config to guarantee a ladder at the end of the spiral or snake rooms.[/size]\n<br />[*][size=3]A config to set a challenge of requiring the player to break every stone before a ladder will spawn.[/size]\n<br />[*][size=3]A config to boost the chance of a ladder from monster kills if the player has\u00A0completed the Skull Cavern level 100 quest.[/size]\n<br />[*][size=3]A config to guarantee a ladder on a mostly empty floor when no ladder has spawned yet.[/size]\n<br />[*][size=3]A config to increase the chance of a ladder from jade nodes.[/size]\n<br />[/list]\n<br />[size=3]You must have a content pack or a mod that asked you to download Ladder Chance Framework for it to do anything. The main file on its own does nothing in your game.[/size]\n<br />\n<br />[size=3][b]For mod authors[/b]: see the [url=https://codeberg.org/pneuma163/StardewValleyMods/src/branch/main/Ladder%20Chance%20Framework/author-guide.md]mod author guide[/url].[/size]\n<br />\n<br />[size=5]How to install:[/size][list=1]\n<br />[*][size=3][url=https://smapi.io]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=3]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].[/size]\n<br />[*][size=3]Run the game using SMAPI.[/size]\n<br />[/list][size=3]If you need additional help installing the mod, the [url=https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started]Stardew Valley wiki[/url]\uFEFF has more detailed instructions.\n<br />To uninstall the mod, delete this mod's folder from your Mods folder.\n<br />\n<br />[/size][size=5][b]FAQ:[/b][/size][size=3]\n<br />[/size]\n<br />[size=4][b]What happens if Ladder Chance Framework (LCF) gets multiple changes to the chance of a ladder/shaft at a stone/monster?[/b][/size]\n<br />\n<br />That depends, but LCF tries to compromise based on expectations. One mod can make multiple changes, but let's say you have mods A, B, and C installed and each one makes one change.\n<br />\n<br />Mod A says that breaking any stone or node with a basic pickaxe gives a ladder 20% of the time.\n<br />Mod B says that breaking a diamond node gives a ladder 90% of the time\n<br />Mod C which says that breaking any stone or node in the center of a spiral floor gives a ladder 100% of the time.\n<br />\n<br />If you break a diamond node with a basic pickaxe on the outer part of the spiral floor (or anywhere on another floor), your chance of a ladder will be the average of mods A and B's conditions, or 55%. If you break a diamond node with a basic pickaxe in the center of a spiral floor, your chance of a ladder will no longer be the average of the three (70%) but instead it will be 100% because mod C expects that \"always\" means always. If none of the mods' conditions apply - for example you break a gold node with an iron pickaxe on some non-spiral floor, your chance of a ladder will be whatever vanilla (or unrelated mods) has set it to be.\n<br />\n<br />[size=4][b]Can multiple ladders or shafts (holes) spawn?[/b][/size]\n<br />\n<br />In vanilla Stardew, there are broadly speaking three categories of relevant objects: ladders from stones, ladders from monsters, and shafts from either stones or monsters. You can only get one ladder from stones. You can get multiple ladders from enemies. You can get multiple shafts (from stones or enemies). Shafts do not prevent ladders from spawning. If a floor spawns with a ladder by default (floors 12, 52, or 92, or treasure rooms in Skull Cavern) then stones can still yield ladders. If a floor spawns with a ladder because of an additional check the game did (any floor anywhere) then additional ladders will not spawn. See [url=https://stardewvalleywiki.com/The_Mines#Ladders]the wiki's page on The Mines[/url] for more detail.\n<br />\n<br />Mods that use LCF can change this. See the [url=https://codeberg.org/pneuma163/StardewValleyMods/src/branch/main/Ladder%20Chance%20Framework/author-guide.md]mod author's guide[/url] for how to change this logic.\n<br />\n<br />[b][size=4]Mod compatibility and interactions[/size][/b]\n<br />\n<br />Another mod that does not use LCF may cause you to get or prevent you from getting a ladder depending on how that mod is coded. LCF specifically interacts with the code that runs when a player (or something) breaks a stone (or node) or kills a monster in the Mines or Skull Cavern. The focus of LCF is the [i]chance[/i] that the game uses, not the actual creation of ladders. (For mod authors, LCF currently inserts code into MineShaft.checkStoneForItems\u00A0and MineShaft.monsterDrop\u00A0and may prevent a shaft from being created in MineShaft.doCreateLadderDown under very specific circumstances)\n<br />\n<br />[url=https://codeberg.org/pneuma163/StardewValleyMods/src/branch/main/Ladder%20Chance%20Framework]source code[/url]\n<br />[url=https://codeberg.org/pneuma163/StardewValleyMods/src/branch/main/Ladder%20Chance%20Framework/author-guide.md]mod author's guide[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35477",
+	"Version": "1.1.0",
+	"Updated": "2025-07-18T22:45:57+00:00",
+	"Downloads": [
+		{
+			"Id": 136954,
+			"Type": "Optional",
+			"DisplayName": "Customizable Ladder Chance Multipack",
+			"FileName": "Customizable Ladder Chance Multipack-35477-1-0-0-1752378780.zip",
+			"Description": "Optional - see description tab",
+			"Version": "1.0.0",
+			"SizeInBytes": 2915,
+			"Uploaded": "2025-07-13T03:53:00+00:00",
+			"Mods": [
+				{
+					"Id": "pneuma163.LCFCustomizableMultipack",
+					"DisplayName": "Customizable Ladder Chance Multipack",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Customizable Ladder Chance Multipack",
+					"Manifest": {
+						"Name": "Customizable Ladder Chance Multipack",
+						"Description": "Various configurable changes to the chances of ladders and shafts in the Mines or Skull Cavern.",
+						"Author": "pneuma163",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "pneuma163.LadderChanceFramework",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:-1"
+						],
+						"UniqueId": "pneuma163.LCFCustomizableMultipack",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342523642,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 137482,
+			"Type": "Main",
+			"DisplayName": "Ladder Chance Framework",
+			"FileName": "Ladder Chance Framework-35477-1-1-0-1752878757.zip",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 30083,
+			"Uploaded": "2025-07-18T22:45:57+00:00",
+			"Mods": [
+				{
+					"Id": "pneuma163.LadderChanceFramework",
+					"DisplayName": "Ladder Chance Framework",
+					"Type": "Smapi",
+					"RelativePath": "LadderChanceFramework",
+					"Manifest": {
+						"Name": "Ladder Chance Framework",
+						"Description": "A framework mod to change the chances of a ladder or a shaft",
+						"Author": "pneuma163",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.3.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "LadderChanceFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:35477"
+						],
+						"UniqueId": "pneuma163.LadderChanceFramework",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342524170,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342422165,
+		"UploaderId": 134910173,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

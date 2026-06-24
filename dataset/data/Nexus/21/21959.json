@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 21959,
+	"Name": "Tilt-Shift - Native Effect Shader",
+	"Author": "misterwu",
+	"Description": "[size=4][b][center][font=Arial][color=#93c47d]Compatible with 1.6+[/color][/font][font=Arial][color=#ffff00][color=#efefef]\n<br />[size=4][b][color=#93c47d]Native Shader - no ReShade needed[/color][color=#ffff00][color=#efefef]\n<br />[/color][/color][/b][/size][/color][/color][/font][font=Arial][color=#ffd966]Requires SMAPI 4.0+[/color][/font][/center][/b][/size]\n<br />[center][color=#b6d7a8][font=Trebuchet MS][size=4][b]Lo[/b][/size][/font][font=Trebuchet MS][size=4][b]oks best on low world zoom-levels (75% - [color=#b6d7a8][font=Trebuchet MS][size=4][b]90%[/b][/size][/font][/color])\n<br />\n<br />[/b][/size][/font][/color][/center][b][color=#6fa8dc][size=1][size=5][b][color=#6fa8dc][size=1][size=5]What does this mod do?\n<br />[/size][/size][/color][/b][/size][/size][/color][/b][size=3]This mod adds a highly customizable effect shader. It mimics the [url=https://en.wikipedia.org/wiki/Tilt%E2%80%93shift_photography]tilt-shift effect[/url] to add some depth to the visuals of the game. All you need is SMAPI (and Generic Mod Config Menu for customization)! No ReShade needed! Unlike ReShade, it ignores the UI so you can enjoy enhanced visuals without sacrificing readability of the UI. Use Vortex or [url=https://www.nexusmods.com/stardewvalley/mods/10455]Stardrop [/url]for easy install and update notifications!\n<br />\n<br />[/size][b][color=#6fa8dc][size=1][size=5]Compatibility[/size][/size][/color][/b][size=3]\n<br />This mod should work with mods that do not mess with the drawing cycle of the game. As of now I know of no mod that does that, so [b]it should be compatible with almost everything.[/b][/size]\n<br />\n<br />[b]Confirmed compatibility with:\n<br />[/b][list]\n<br />[*]Stardew Valley Expanded, East Scarp and Ridgeside Village\n<br />[*]Dynamic Reflections\n<br />[*]Dynamic Night Time\n<br />[*]Visible Fish\n<br />[*]More Grass\n<br />[*]Wind Effects\n<br />[*]Content Patcher\n<br />[*]Clear Glasses\n<br />[*]ReShade Mods\n<br />[*][i](Almost) Everything![/i]\n<br />[/list][b]Incompatible with:[/b]\n<br />[list]\n<br />[*] Project Danger Weather (under investigation)\n<br />[*]Weather Wonders (under investigation)\n<br />[*][i][s]No incompatibilities known[/s]. Please post a comment if you find any[/i]\n<br />[/list]\n<br />[left][size=5][color=#6fa8dc][b]Customization[/b][/color][/size][/left]You can change the settings with [b]Generic Mod Config Menu [/b](optional dependency) or by manually changing the values in the config.json file.\n<br />\n<br />[list]\n<br />[*][color=#efefef]Enable / Disable the effect globally or in specific locations / conditions[/color]\n<br />[*][color=#efefef]Customize the shader effect to your liking with different parameters[/color]\n<br />[*][color=#efefef]C[/color]ustomize the dynamic fading effect\n<br />[*]And more!\n<br />[/list]\n<br />Every option has an explanation tooltip to help you understand the effect the change has!\n<br />\n<br />I use the following configuration: Chex / Automatic, x4 radius, 0.25 effect offset, 1.0 strength, 2 passes, 1.7 sample offset. \n<br />[u]You\u00A0 can find this preset in the optional files section[/u][b][size=5][color=#6fa8dc]\n<br />\n<br />[/color][/size][/b][b][size=5][color=#6fa8dc][b][size=5][color=#6fa8dc]Translations[/color][/size][/b][/color][/size][/b]\n<br />[b][size=3]Included[/size][/b]\n<br />[list]\n<br />[*]English\n<br />[*]German\n<br />[/list][b][size=3]Standalone[/size][size=5][color=#6fa8dc]\n<br />[/color][/size][/b][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/22432]Chinese (by\u00A0901109)  [/url]\uFEFF\n<br />[/list]\n<br />[b][size=5][color=#6fa8dc]Performance\n<br />[/color][/size][/b]The performance while using this mod depends on your computer's specs and the setting you use. Modern systems should be able to run the shader with no performance loss even with high shader settings.\n<br />\n<br />You can use the following guide to optimize your settings if you experience a performance drop.\n<br />\n<br />[b]Sample Points used (lower is faster):[/b][b]\n<br /> at a 4x radius[/b]\n<br />[font=Courier New]\uFEFF   \uFEFF- \uFEFF2D Gaussian &amp; Box:\u00A0\u00A0\u00A0 81\n<br />[/font][font=Courier New]   \uFEFF- 2D Chex:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 25\n<br />[/font][font=Courier New]   \uFEFF- 1D Gaussian &amp; Box:\u00A0\u00A0\u00A0 18[/font]\n<br />\n<br />[b]at a 10x radius\n<br />[/b][font=Courier New]   \uFEFF- \uFEFF2D Gaussian &amp; Box:\u00A0\u00A0\u00A0 441\n<br />   \uFEFF- 2D Chex:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 103\n<br />   \uFEFF- 1D Gaussian &amp; Box:\u00A0\u00A0\u00A0 42[/font]\n<br />\n<br />[b]How are sample points calculated:[/b]\n<br />[font=Courier New]   \uFEFF- \uFEFF2D Gaussian &amp; Box:\u00A0\u00A0\u00A0 (radius * 2 + 1) * [font=Courier New](radius * 2 + 1)[/font]\n<br />   \uFEFF- 1D Gaussian &amp; Box:\u00A0\u00A0\u00A0 [font=Courier New](radius * 2 + 1) + [font=Courier New](radius * 2 + 1)\n<br />   \uFEFF- Chex has fixed values:\n<br />   \uFEFF\u00A0 x2: 9; x3: 17; x4: 25; x5: 35; x6: 47; x7: 59; x8: 67; x9: 83; x10: 103[/font][/font][/font]\n<br />\n<br />[b]Performance value (lower is faster):\n<br />[/b][font=Courier New]   \uFEFF- Gaussian: \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 1.10\n<br />[/font][font=Courier New]   \uFEFF- Chex:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 1.02\n<br />   \uFEFF- Box:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 1.00\n<br />\n<br />\n<br />[/font][b]2D Sample area visualization[/b][spoiler][img]https://i.imgur.com/ddIu9ej.png[/img][/spoiler]\uFEFF\n<br />\n<br />You can calculate the performance of your setting like this (The lower the result, the faster your setting):\n<br />[font=Courier New](sample points * performance value) * shader passes[/font]\uFEFF\n<br />\n<br />[b][size=5][color=#6fa8dc]Maintenance[/color][/size][/b]\n<br />This mod is pretty easy to maintain. It uses as few dependencies as possible and own methods where it can.\n<br />There are two cases in which the mod becomes broken,  in which i will try to update the mod as soon as possible.\n<br />[list]\n<br />[*]SMAPI Display EventHooks get changed\n<br />[*]Stardew Valley gets updated to a new version of MonoGame (Shader files become incompatible)\n<br />[/list] I will make the code public so it can be maintained by the community, should i ever decide not to maintain this mod anymore,\n<br />\u00A0\n<br />[left][b][size=5][color=#6fa8dc]F.A.Q.[/color][/size][/b][/left][b]Why not release it as a ReShade mod / preset?\n<br />[/b]You can achieve this effect with ReShade (which is version independent) too, but it would apply the effect to the whole screen, even the UI. And\n<br /> because its blurring the top / bottom portion of the screen, it would make the UI hard to read.\n<br />\n<br />[b]Why do you recommend using Vortex? Other mod authors say it will break my game!?[/b]\n<br />I recommend it because you can remove or update any mod very easily. [u]Mod authors saying that Vortex \"loses\" files have no idea what they are talking about[/u]. Vortex has a very safe and reliable method of deploying (linking) files and missing files and faulty installations come from user error or wrong mod packaging. [u]Manual installation is always more prone to errors[/u]. I'm using Vortex since it came out for every game i mod. I never had any problems or game breaking issues! \n<br />\n<br />[size=3][b][size=5][size=5][b][color=#ff0000]Known Issues[/color][/b][/size][/size][/b][/size]\n<br />[size=3]See sticky @ posts tab.[/size][size=2]\n<br />\n<br />[/size][size=3]Check out my ReShade Mod that was used in the screenshots: [url=https://www.nexusmods.com/stardewvalley/mods/12019]Back To Nature ReShade[/url]\uFEFF[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21959",
+	"Version": "1.6.5",
+	"Updated": "2024-12-21T07:34:46+00:00",
+	"Downloads": [
+		{
+			"Id": 96753,
+			"Type": "Optional",
+			"DisplayName": "Tilt-Shift - Author's Preset",
+			"FileName": "Tilt-Shift - Author's Preset-21959-1-6-2-1714599205.zip",
+			"Description": "My own preset.\n<br />Just install with Vortex or drag and drop into the mod folder (and overwrite if config.json already exists)",
+			"Version": "1.6.3",
+			"SizeInBytes": 624,
+			"Uploaded": "2024-05-01T21:33:25+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Tilt-Shift - Native Effect Shader",
+					"Type": "Invalid",
+					"RelativePath": "Tilt-Shift - Native Effect Shader",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342483441,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 119750,
+			"Type": "Main",
+			"DisplayName": "Tilt-Shift - Native Effect Shader",
+			"FileName": "Tilt-Shift - Native Effect Shader-21959-1-6-5-1734766486.zip",
+			"Description": "- Fixed (again!) special UI elements being blurred in special locations and events\n<br />- Updated to newest SMAPI ModBuildConfig and Generic Mod Config Headers\n<br />- Tweaked some settings' descriptions\n<br />- Changed default settings\n<br />- Added more debug messages",
+			"Version": "1.6.5",
+			"SizeInBytes": 87760,
+			"Uploaded": "2024-12-21T07:34:46+00:00",
+			"Mods": [
+				{
+					"Id": "misterwu.tiltshifteffect",
+					"DisplayName": "Tilt Shift Effect",
+					"Type": "Smapi",
+					"RelativePath": "Tilt-Shift - Native Effect Shader",
+					"Manifest": {
+						"Name": "Tilt Shift Effect",
+						"Description": "Tilt shift effect shader for Stardew Valley",
+						"Author": "misterwu",
+						"Version": "1.6.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TiltShiftEffect.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21959"
+						],
+						"UniqueId": "misterwu.tiltshifteffect"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506438,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408647,
+		"UploaderId": 2815635,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 7805,
+	"Name": "Nicknames for Npcs",
+	"Author": "undare",
+	"Description": "[b][color=#93c47d][size=5]About[/size][/color]\n<br />[size=4]After you make the changes on the content file, this will change the [color=#a4c2f4]display name[/color] of the npc on the [color=#f9cb9c]dialogue boxes[/color] and [color=#f9cb9c]relationship window[/color].[/size]\n<br />[size=4]It won´t change dialogue or events, and it wont mess up events, as this [color=#dd7e6b]doesn´t[/color] change the \"Id-name\" of the npc.[/size]\n<br />\n<br />[size=4]Not to be confused with [/size][color=#c27ba0][size=3]Jonqora[/size][/color][size=4]´s [/size][size=3][url=https://www.nexusmods.com/stardewvalley/mods/6489?tab=files&amp;file_id=29344]Custom Spouse Nicknames[/url]\uFEFF[/size] ([size=3]That changes how npcs call your farmer.[/size])\n<br />\n<br />[size=4]It plays well with the event command \"ChangeName\". (You still target the id-name, and not the visual name)[/size]\n<br />\n<br />\n<br />\n<br />[color=#f6b26b][size=5]Usage[/size][/color]\n<br />[size=4]Inside this mod folder you will need to open the \"content.json\" file and edit the npc name to one of your liking and save. \n<br />They are marked with a comment marked with a comment for easy search.\n<br />(I use [color=#93c47d]Notepad+[/color])\n<br />[/size]\n<br />[size=4]Then, change its \"config.json\" option to \"[color=#a2c4c9]true[/color]\". (On either, the config file or on the [/size][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF[size=4] screen if you have it installed.)[/size]\n<br />[size=4](As a reminder, the config file is generated after you launch the game for the first time with this mod installed.)[/size]\n<br />\n<br />\n<br />\n<br />[size=5][color=#ffd966]Example[/color][/size]\n<br />[size=4]If i want to change the nickname for \"Alex\" to \"BigBoy\",[/size]\n<br />\n<br />\n<br />-I go to the content.json\n<br />-Find the field \"11:\" and change its value\n<br />-Then save\n<br />\n<br />//////////////////////\n<br />      {\n<br />         \"LogName\": \"Alex Nickname\",\u00A0 \u00A0///Alex\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"Data/NPCDispositions\",\n<br />         \"Fields\": {\n<br />            \"Alex\":    {\n<br />                  11: \"Bigboy\", // &lt;----- Nickname Change the value between the \"\" And set the Alex value to true in the config or mcn menu.\n<br />                  },\n<br />               \u00A0 },\n<br />         \"When\":\n<br />            {\n<br />            \"ModActive\": \"true\",\n<br />            \"Alex\": \"true\"\n<br />            },\n<br />      },\n<br />[b]//////////////////////\n<br />[/b]\n<br />\n<br />[size=4]then i need to either:\n<br />[/size]\n<br />[size=4]-Go to the config file and set \"Alex\" to \"true\"[/size]\n<br />[size=4]or[/size]\n<br />[size=4]-if you have [/size][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF[size=4], you can just check the box in the \"Alex\" field.[/size]\n<br />\n<br />[size=4]By defaul, all the options are set to \"[color=#f9cb9c]false[/color]\".[/size]\n<br />[size=4]This is because other mods may change other npcs´s visual names or id names. So you can be \"Selective\" on wich one you want active.\n<br />\n<br />\n<br />[color=#dd7e6b]Minor Issue[/color] :\n<br />Long names cause the words to go outside of the dialogue box. (As you can see in the last screenshot)\n<br />So maybe keep it at 14 characters or less.[/size][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7805",
+	"Version": "1.0.0",
+	"Updated": "2021-01-25T04:27:22+00:00",
+	"Downloads": [
+		{
+			"Id": 36574,
+			"Type": "Main",
+			"DisplayName": "Npc Nicknames",
+			"FileName": "Npc Nicknames-7805-1-0-0-1611548842.rar",
+			"Description": "-First release, 34 npcs",
+			"Version": "1.0.0",
+			"SizeInBytes": 2425,
+			"Uploaded": "2021-01-25T04:27:22+00:00",
+			"Mods": [
+				{
+					"Id": "Undare.Nicknames",
+					"DisplayName": "NPC Nicknames",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]Nicknames",
+					"Manifest": {
+						"Name": "NPC Nicknames",
+						"Description": "Change the display name of an npc on the content file.",
+						"Author": "Undare",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.10.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.6.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7805"
+						],
+						"UniqueId": "Undare.Nicknames"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342423262,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394493,
+		"UploaderId": 12004908,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

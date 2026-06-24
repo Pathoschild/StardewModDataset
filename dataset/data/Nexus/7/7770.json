@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 7770,
+	"Name": "Just Relax",
+	"Author": "Goldenrevolver",
+	"Description": "[size=3][color=#6aa84f]Compatible with Stardew Valley 1.6.1 and SMAPI 4.0.1. Source available on Github:\n<br />[/color][url=https://github.com/Goldenrevolver/Stardew-Valley-Mods]https://github.com/Goldenrevolver/Stardew-Valley-Mods[/url]\n<br />\n<br />\n<br />Regenerate health and stamina while in bed in singleplayer\u00A0(just like in multiplayer in the base game) and always while sitting (with the speed of being in bed in multiplayer from the base game).\n<br />\n<br />Yes, I know, the sitting regen feature has already been done by at least two mods that got popular when 1.5 launched:\n<br />[/size][list]\n<br />[*][size=3][url=https://www.nexusmods.com/stardewvalley/mods/7334]Sit For Stamina[/url]\uFEFF by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/38902465]Entoarox[/url][/size]\n<br />[*][size=3][url=https://www.nexusmods.com/stardewvalley/mods/7336]Sit N' Relax Rest Your Butt[/url]\u00A0by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/3946892]MissCoriel[/url][/size]\n<br />[/list][size=3]\n<br />But at the time I made this mod as a personal mod, the former was regening in menus and was regening every player in multiplayer leading to stacking effects when multiple people used the mod, while the latter got really \"advanced\", as the author said themselves, which was not in my interest.\n<br />\n<br />From playing so much multiplayer, I also\u00A0got annoyed in singleplayer that I couldn't regen while I'm in my bed without ending the day (by not fully moving in or declining the popup). While there was the mod\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6778]Singleplayer sleep[/url]\uFEFF\u00A0by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/62752131]MindMeltMax[/url], idea by [url=https://www.nexusmods.com/stardewvalley/users/8049772]Draylon[/url], it was not updated and I only found it after getting the idea.\n<br />\n<br />\n<br />So long story short, I made this mod as short and as simple as I could; so simple that I bet quite a few non programmers can understand the source code:\n<br />\n<br />\n<br />[/size][code][size=3]// if we are in bed and in singleplayer (because multiplayer already has healing) or we are sitting\n<br />if ((Game1.player.isInBed &amp;&amp; !Game1.IsMultiplayer) || Game1.player.isSitting)\n<br />{\n<br />   \uFEFF// 'pause when inactive' only works when you are in singleplayer, not when you are alone in multiplayer (unlike menu pause)\n<br />   \uFEFFbool outOfFocusPaused = Game1.multiplayerMode == Game1.singlePlayer &amp;&amp; !Game1.game1.IsActive &amp;&amp; Game1.options.pauseWhenOutOfFocus;\n<br />   \uFEFF\n<br />   // if the game is not paused in singleplayer and half a second passed (same regen rate as bed in multiplayer)\n<br />   if (!(Game1.player.hasMenuOpen &amp;&amp; !Game1.IsMultiplayer) &amp;&amp; !outOfFocusPaused\u00A0&amp;&amp; !Game1.paused &amp;&amp; args.Ticks % 30 == 0)\n<br />   {\n<br />\u00A0 \u00A0 \u00A0 \u00A0// add one stamina\n<br />      if (Game1.player.Stamina &lt; Game1.player.maxStamina)\n<br />      {\n<br />         Game1.player.Stamina++;\n<br />      }\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0// add one health\n<br />      if (Game1.player.health &lt; Game1.player.maxHealth)\n<br />      {\n<br />         Game1.player.health++;\n<br />      }\n<br />   }\n<br />}\n<br />[/size]\n<br />[/code][size=3]\n<br />\n<br />All source code is my own creation or belongs to the base game. If you think I am violating copyright please send me a personal message and we can sort it out.\n<br />\n<br />There is no config file. Enjoy!\n<br />\n<br />\n<br />Requirements:\n<br />[url=https://smapi.io/]SMAPI[/url]: I built version 1.1 of this mod based on version 4.0.1. It should be compatible with a few future versions and a few prior version. You can get the latest version of SMAPI\u00A0[url=https://smapi.io/]here[/url].\n<br />\n<br />\n<br />Installation:\n<br />Install SMAPI. Then extract the content of the downloaded zip file into the SMAPI\u00A0mods folder and start the game via the SMAPI launcher or Steam if you have set the launch option for SMAPI in Steam.\n<br />\n<br />\n<br />Updating:\u00A0\n<br />Simply delete the prior version and install the new one.\n<br />\n<br />\n<br />Uninstallation:\n<br />You can delete this mod from your mods folder at any time to remove the features.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7770",
+	"Version": "1.1",
+	"Updated": "2024-03-20T13:13:44+00:00",
+	"Downloads": [
+		{
+			"Id": 83233,
+			"Type": "Main",
+			"DisplayName": "Just Relax 1.1",
+			"FileName": "Just Relax 1.1-7770-1-1-1710940424.zip",
+			"Description": "Updated for 1.6",
+			"Version": "1.1",
+			"SizeInBytes": 9220,
+			"Uploaded": "2024-03-20T13:13:44+00:00",
+			"Mods": [
+				{
+					"Id": "Goldenrevolver.JustRelax",
+					"DisplayName": "Just Relax",
+					"Type": "Smapi",
+					"RelativePath": "JustRelax",
+					"Manifest": {
+						"Name": "Just Relax",
+						"Description": "Regenerate health and stamina while in bed in singleplayer and always while sitting (with the speed of sleeping in multiplayer)",
+						"Author": "Goldenrevolver",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "JustRelax.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7770"
+						],
+						"UniqueId": "Goldenrevolver.JustRelax"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469921,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394458,
+		"UploaderId": 5347339,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

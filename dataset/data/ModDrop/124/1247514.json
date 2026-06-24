@@ -1,0 +1,135 @@
+{
+	"Site": "ModDrop",
+	"Id": 1247514,
+	"Name": "Fishing Nets",
+	"Author": "MindMeltMax",
+	"TagLine": "Adds a fish net object which catches fish overnight",
+	"Description": "**About :**\nAdds a fishing net object which can be used just like a crab pot to catch fish overnight when provided with bait.\nJust like with crab pots, the need for bait is removed when the player has the \"Luremaster\" profession. Additionally, if the Quality Bait mod is installed, a random quality will be selected when not provided with bait.\n\nThe nets come with multiple texture variants: 2 new animated ones, and the original pre-2.0 texture for nostalgia.\nThese can be switched out in the config or through GMCM.\n\n**How to obtain :**\nRecipe unlocks at level 6 Fishing. By default, the recipe requires 3 iron bars and 30 fiber.\n\n**Compatible With :**\n**Automate** - requires optional file [Fish Nets - Automate\n](https://www.nexusmods.com/stardewvalley/mods/13819?tab=files#file-container-optional-files)**Better Crafting** - <s>requires optional file Fish Nets - Better Crafting</s> Integrated into main mod as of 2.0.0\n**More New Fish** - Adds more catchable fish\n**Ridgeside Village, Stardew Valley Expanded, East Scarp** - Tested with these major extensions, keep in mind, not all areas provide anything catchable\n**Quality Bait** - Adds quality options to catches\n**Json Assets** - Any mod that adds fish / bait through JA should work\n**Dynamic Game Assets** - <s>Any mod that adds fish / bait through DGA should work</s> As of 2.0.0, DGA is considered deprecated and will no longer be supported\n**Alternative Textures** - Change the net's texture through AT (for 2.0.0+, animations do not need to be added through AT, this is handled internally, just providing the texture will do)\n**Save Anywhere Redux** - <s>Net's are saved before SAR saves and load back in after save (No catches for mid-day saves)</s> No additional support needed as of 2.0.0, works out of the box\n\n**(Partially) Incompatible With :**\n**The Daily Newspaper** - <s>Mod uses item id 931, change the id of fishnets for compatibility</s> No longer an issue since 1.1.5\n**MARGO** - Won't break, but won't interact with each other (MARGO skills don't work for fishnets)\n\n**How to install :**\n1. Install [Smapi](http://stardewvalleywiki.com/Modding:Installing_SMAPI)\n2. Unzip the file and place it in the mod folder\n\n[[Source Code]](https://github.com/MindMeltMax/Stardew-Valley-Mods/tree/main/Fishnets)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1247514",
+	"Version": null,
+	"Updated": "2024-05-29T16:35:55.873+00:00",
+	"Downloads": [
+		{
+			"Id": 1606982,
+			"Type": "Main",
+			"DisplayName": "Fish Nets",
+			"FileName": "Fish Nets.zip",
+			"Version": "2.1.0",
+			"SizeInBytes": 36478,
+			"Uploaded": "2024-05-29T16:35:55.828+00:00",
+			"Mods": [
+				{
+					"Id": "MindMeltMax.Fishnets",
+					"DisplayName": "Fishnets",
+					"Type": "Smapi",
+					"RelativePath": "Fishnets",
+					"Manifest": {
+						"Name": "Fishnets",
+						"Description": "Place in water to catch fish over night",
+						"Author": "MindMeltMax",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Fishnets.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"nexus:13819"
+						],
+						"UniqueId": "MindMeltMax.Fishnets"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "81fe1884b63d14fc61c2c914d65f851f",
+				"md5In": "e9b2bba092975f0825039f63022a2143",
+				"scriptType": 0,
+				"sha256Ex": "1331db0a8f44e0a9f40cfb64ead0876fe4e3ecaa4b61bf59fd9499552b45492a",
+				"sha256In": "11ce1669613316cee5988b4f04cae448c2ed8b3d9d664dafbb26c8c7d2a8ec79"
+			}
+		},
+		{
+			"Id": 1606983,
+			"Type": "Optional",
+			"DisplayName": "Fish Nets - Automate",
+			"FileName": "Fish Nets - Automate.zip",
+			"Description": "An integration for Automate.\n\nRequires both Automate and Fish Nets to be installed to run\n\nRequires at least version 2.1.0 of Fish Nets\n\n@Automate",
+			"Version": "1.1.1",
+			"SizeInBytes": 11894,
+			"Uploaded": "2024-05-29T16:35:55.871+00:00",
+			"Mods": [
+				{
+					"Id": "MindMeltMax.Fishnets.Automate",
+					"DisplayName": "Fishnets - Automate",
+					"Type": "Smapi",
+					"RelativePath": "Fishnets - Automate",
+					"Manifest": {
+						"Name": "Fishnets - Automate",
+						"Description": "An Automate integration for fishnets",
+						"Author": "MindMeltMax",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Fishnets - Automate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "MindMeltMax.Fishnets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:13819@Automate"
+						],
+						"UniqueId": "MindMeltMax.Fishnets.Automate"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "bcab3898b211d7ab92f222d599725da4",
+				"md5In": "3fd913c2e396f123db3d706292b84e4c",
+				"scriptType": 0,
+				"sha256Ex": "2bd102a7572ce1a064fa1b7b38539c07dcccc9a01a717bdadd0c0374b6f67f93",
+				"sha256In": "a7f652cbea2ce33d2a425468acba754f97f3cadd128c3b6f69183fca73f418ab"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1665523431790,
+		"DateUpdated": 1717000555873,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1665523423677,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1247514/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1247514/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1247514/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1247514/icon_original"
+		},
+		"nexusModID": 13819,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 197977
+	}
+}

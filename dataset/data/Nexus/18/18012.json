@@ -1,0 +1,111 @@
+{
+	"Site": "Nexus",
+	"Id": 18012,
+	"Name": "Fish Roe Hatchery",
+	"Author": "Applepatapon",
+	"Description": "[img]https://imgur.com/p64u85d.png[/img]\n<br />\n<br />\uFEFFThis mod adds a machine called the 'Roe Hatchery' which allows the player to get a fish from their roes.\n<br />\n<br />There are 3 types of Roe Hatchery, Basic, Advanced and Master.\n<br />[list]\n<br />[*]Basic Roe Hatchery takes 1 week.   \uFEFF   \uFEFF[Costs 20 Wood, 1 Clay, and 2 Iron Bars]\n<br />[*]Advanced Roe Hatchery takes 4 days.   \uFEFF\u00A0[Costs 10 Wood, 5 Hardwood, 1 Refined Quartz, 2 Gold Bars]\n<br />[*]Master Roe Hatchery takes 1 day.   \uFEFF   \uFEFF[Costs 15 Hardwood, 3 Refined Quartz, 2 Iridium Bars]\n<br />[/list]\n<br />To obtain the recipe for the Roe Hatchery, you will have to do the following(You will receive a letter the day after meeting the requirements)\n<br />[list]\n<br />[*]Basic: Build a fish pond.\u00A0\n<br />[*]Advanced: Unlocked 'Basic Roe Hatchery' recipe. Fishing level 3.\n<br />[*]Master:\u00A0Unlocked 'Advanced Roe Hatchery' recipe. Fishing level 7.\n<br />[/list]\n<br />[size=5]Notes\n<br />[/size]If you use Lookup Anything, you will see that the machines produce Sunfish. This is just visual and you will receive the correct fish.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1720]Install Json Assets[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6529]Install\u00A0Expanded Preconditions Utility[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4970]Install Producer Framework Mod[/url].\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1536]Install Mail Framework Mod[/url].\uFEFF\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1348]Install SpaceCore[/url].\uFEFF\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18012",
+	"Version": "1.1.0",
+	"Updated": "2024-04-11T18:39:23+00:00",
+	"Downloads": [
+		{
+			"Id": 91353,
+			"Type": "Main",
+			"DisplayName": "Applepatapon's Roe Hatchery v1.1.0",
+			"FileName": "Applepatapon's Roe Hatchery v1.1.0-18012-1-1-0-1712860763.rar",
+			"Description": "Fixed \"Working\" animation bug(This might be temporary, as JsonAsset changed it so that it needs both form in 1 image, but we will see)\n<br />Fixed not being able to get recipes of Advanced Roe Hatchery and Master Roe Hatchery",
+			"Version": "1.1.0",
+			"SizeInBytes": 13167,
+			"Uploaded": "2024-04-11T18:39:23+00:00",
+			"Mods": [
+				{
+					"Id": "Applepatapon.JARoeHatchery",
+					"DisplayName": "(JA)RoeHatchery",
+					"Type": "ContentPack",
+					"RelativePath": "RoeHatchery\\[JA]RoeHatchery",
+					"Manifest": {
+						"Name": "(JA)RoeHatchery",
+						"Description": "[JA]Adds a machine which allows the player to get a fish from their roes.",
+						"Author": "Applepatapon",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Digus.ProducerFrameworkMod",
+								"MinimumVersion": "1.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Applepatapon.JARoeHatchery"
+					}
+				},
+				{
+					"Id": "Applepatapon.MFMRoeHatchery",
+					"DisplayName": "(MFM)Roe Hatchery",
+					"Type": "ContentPack",
+					"RelativePath": "RoeHatchery\\[MFM]RoeHatchery",
+					"Manifest": {
+						"Name": "(MFM)Roe Hatchery",
+						"Description": "[MFM]Adds a machine which allows the player to get a fish from their roes.",
+						"Author": "Applepatapon",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Applepatapon.JARoeHatchery",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "Applepatapon.MFMRoeHatchery"
+					}
+				},
+				{
+					"Id": "Applepatapon.PFMRoeHatchery",
+					"DisplayName": "(PFM)RoeHatchery",
+					"Type": "ContentPack",
+					"RelativePath": "RoeHatchery\\[PFM]RoeHatchery",
+					"Manifest": {
+						"Name": "(PFM)RoeHatchery",
+						"Description": "[PFM]Adds a machine which allows the player to get a fish from their roes.",
+						"Author": "Applepatapon",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Digus.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Applepatapon.JARoeHatchery",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "Applepatapon.PFMRoeHatchery"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342478041,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342404700,
+		"UploaderId": 187746327,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

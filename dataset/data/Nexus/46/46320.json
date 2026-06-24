@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 46320,
+	"Name": "StardewMCP",
+	"Author": "shylux",
+	"Description": "[img]https://staticdelivery.nexusmods.com/mods/1303/images/46320/46320-1779311656-1349234631.png[/img]\n<br />\n<br />A SMAPI mod that runs a local MCP (Model Context Protocol) server inside Stardew Valley, letting AI assistants like Claude interact with your live game. Ask AI to check what crops need watering, teleport you somewhere, give you items, or just describe what's around you.\n<br />\n<br />Because MCP is an open protocol, StardewMCP is not just for chatting with an AI — it's a bridge between your game and anything that speaks MCP. Hook it up to a Twitch integration so viewers can vote on what happens next. Let a Discord bot relay messages from your friends directly into the game world. Build a companion app that reacts to your in-game state. Automate a farming routine from a script. The mod exposes the game; what you connect it to is up to you.\n<br />\n<br />[quote][b]Safety:[/b] By default all tools are active, including ones that modify your game. These are as powerful as any cheat or debug tool and can break things if misused. If you only want the AI to observe your game without making any changes, set [font=Courier New]OnlyAllowObserveTools: true[/font] in [font=Courier New]config.json[/font] — this restricts the mod to read-only tools only.[/quote]\n<br />[quote][b]A note on quality:[/b] This mod was built by an experienced software engineer primarily to explore AI code assistant capabilities and the MCP server protocol — not as a serious C# or modding project. It is only my second Stardew mod and C# is not my home turf. The code was written with significant AI assistance as part of that experiment. Bugs are likely, but the mod should generally work.[/quote]\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />This mod can be safely added to or removed from an existing save at any time.\n<br />\n<br />1. Install SMAPI if you haven't already.\n<br />2. Download the mod and put it\u00A0into your [font=Courier New]Mods[/font] directory.\n<br />3. Launch the game through SMAPI. The mod starts an HTTP server on [font=Courier New]http://localhost:24842[/font] automatically.\n<br />4. Add the server to your MCP client config (e.g. Claude Desktop's [font=Courier New]claude_desktop_config.json[/font]):\n<br />\n<br />[code]{\n<br />\u00A0 \"mcpServers\": {\n<br />\u00A0 \u00A0 \"stardew\": {\n<br />\u00A0 \u00A0 \u00A0 \"url\": \"http://localhost:24842\"\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}[/code]\n<br />5. Start a conversation with your AI — it will discover all available tools automatically.\n<br />\n<br />[size=4][b]Tools[/b][/size]\n<br />\n<br />[size=3][b]Player[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]get_player_info[/font] — Location, tile, health, energy, money[/*]\n<br />[*][font=Courier New]get_player_inventory[/font] — Everything in the player's inventory with stack sizes[/*]\n<br />[*][font=Courier New]add_item_to_inventory[/font] — Add an item by name[/*]\n<br />[*][font=Courier New]remove_item_from_inventory[/font] — Remove an item by name[/*]\n<br />[*][font=Courier New]equip_item[/font] — Equip a hat, boots, ring, shirt, pants, or trinket. Leave item_name empty to clear a slot[/*]\n<br />[*][font=Courier New]set_health[/font] — Set current health[/*]\n<br />[*][font=Courier New]add_money[/font] — Add or remove gold (negative to remove)[/*]\n<br />[*][font=Courier New]set_speed[/font] — Set extra movement speed on top of the base[/*]\n<br />[*][font=Courier New]set_skill_level[/font] — Set farming / fishing / foraging / mining / combat level (0–10)[/*]\n<br />[*][font=Courier New]add_recipe[/font] — Unlock a crafting or cooking recipe by name[/*]\n<br />[*][font=Courier New]add_profession[/font] — Add a profession by numeric ID[/*]\n<br />[*][font=Courier New]add_walnut[/font] — Add golden walnuts (Ginger Island currency)[/*]\n<br />[*][font=Courier New]upgrade_house[/font] — Set farmhouse upgrade level (0 = starter, 3 = cellar)[/*]\n<br />[*][font=Courier New]toggle_invincible[/font] — Toggle damage immunity on/off[/*]\n<br />[*][font=Courier New]player_emote[/font] — Play an emote bubble (heart, sad, happy, etc.)[/*]\n<br />[*][font=Courier New]send_hud_message[/font] — Show a notification in the HUD[/*]\n<br />[*][font=Courier New]show_speech_bubble[/font] — Show a speech bubble above an NPC or monster[/*]\n<br />[*][font=Courier New]teleport_player[/font] — Warp to any location, optionally at specific coordinates[/*]\n<br />[/list]\n<br />[size=3][b]World &amp; Time[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]get_game_time[/font] — Current season, day, year, and time of day[/*]\n<br />[*][font=Courier New]set_time[/font] — Set the clock (e.g. 8am, 2:30pm, 1800)[/*]\n<br />[*][font=Courier New]set_date[/font] — Change day, season, and/or year[/*]\n<br />[*][font=Courier New]advance_day[/font] — Skip to the start of the next day[/*]\n<br />[*][font=Courier New]pause_time[/font] — Toggle the in-game clock on/off[/*]\n<br />[*][font=Courier New]get_weather[/font] — Today's weather and tomorrow's forecast[/*]\n<br />[*][font=Courier New]set_weather[/font] — Change weather: sunny, rain, thunderstorm, snow, windy[/*]\n<br />[*][font=Courier New]warp_to_mine_floor[/font] — Teleport directly to a mine floor (121+ = Skull Cavern)[/*]\n<br />[*][font=Courier New]get_location_names[/font] — List all valid location names[/*]\n<br />[*][font=Courier New]get_location_warps[/font] — List all exit tiles in a location with their destinations[/*]\n<br />[*][font=Courier New]get_walkable_tiles[/font] — Walkability grid centred on a tile, with warp markers[/*]\n<br />[*][font=Courier New]get_surroundings[/font] — Scan nearby NPCs, items, machines, crops, buildings, and interactive tiles[/*]\n<br />[*][font=Courier New]clear_tile[/font] — Remove trees, bushes, grass, rocks, twigs, or weeds from a specific tile[/*]\n<br />[/list]\n<br />[size=3][b]NPCs &amp; Relationships[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]get_npc_info[/font] — Friendship, schedule, birthday, and relationship status[/*]\n<br />[*][font=Courier New]get_npc_location[/font] — Where a specific NPC is right now[/*]\n<br />[*][font=Courier New]get_all_npc_locations[/font] — Location of every villager[/*]\n<br />[*][font=Courier New]get_npc_gift_preferences[/font] — Loved and liked gifts for an NPC[/*]\n<br />[*][font=Courier New]get_all_friendships[/font] — Friendship summary for every NPC you've met[/*]\n<br />[*][font=Courier New]get_upcoming_birthdays[/font] — Birthdays in the next N days[/*]\n<br />[*][font=Courier New]get_spouse_info[/font] — Detailed info about your spouse[/*]\n<br />[*][font=Courier New]set_npc_relationship[/font] — Set friendship hearts with any NPC[/*]\n<br />[/list]\n<br />[size=3][b]Farm[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]get_farm_info[/font] — Crop state, buildings, animals, and machines on the farm[/*]\n<br />[*][font=Courier New]grow_crops[/font] — Advance all crops in the current location by N days[/*]\n<br />[*][font=Courier New]befriend_animals[/font] — Set farm animal friendship in the current location[/*]\n<br />[/list]\n<br />[size=3][b]Community Center &amp; Progression[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]get_bundle_status[/font] — Every bundle with item-by-item donation status and rewards, organised by room[/*]\n<br />[*][font=Courier New]complete_community_center[/font] — Mark all Community Center rooms as done[/*]\n<br />[*][font=Courier New]set_mail_flag[/font] — Add or remove a mail flag to unlock game features[/*]\n<br />[*][font=Courier New]manage_quest[/font] — Add, complete, remove, or clear quests by ID[/*]\n<br />[/list]\n<br />[size=3][b]Items &amp; World State[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]find_item[/font] — Search chests, furniture, and the ground for an item by name[/*]\n<br />[*][font=Courier New]list_items[/font] — List every stored item in the world[/*]\n<br />[*][font=Courier New]list_registry_items[/font] — Browse the game's item registry by type[/*]\n<br />[/list]\n<br />[size=3][b]Audio &amp; Effects[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]play_music[/font] — Change the background music track (e.g. spring1, rain, FlowerDance). Use \"none\" to stop[/*]\n<br />[*][font=Courier New]play_sound[/font] — Play a one-shot sound effect by name, with optional pitch adjustment[/*]\n<br />[*][font=Courier New]play_effect[/font] — Play a visual effect at a tile position: flash, glow, rainbow, sparkle, lightning[/*]\n<br />[/list]\n<br />[size=3][b]Fishing[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]get_catchable_fish[/font] — List all fish catchable right now based on season, time, weather, and fishing level. Filter by location or see all at once[/*]\n<br />[*][font=Courier New]get_fish_schedule[/font] — Show every location and season a specific fish can be caught, with time window and weather conditions[/*]\n<br />[/list]\n<br />[size=3][b]Monsters[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]spawn_monster[/font] — Spawn one or more monsters at a position[/*]\n<br />[*][font=Courier New]kill_all_monsters[/font] — Remove all monsters from the current location[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46320",
+	"Version": "1",
+	"Updated": "2026-05-20T21:34:00+00:00",
+	"Downloads": [
+		{
+			"Id": 168285,
+			"Type": "Main",
+			"DisplayName": "StardewMCP",
+			"FileName": "StardewMCP-46320-1-1779312840.zip",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 87354,
+			"Uploaded": "2026-05-20T21:34:00+00:00",
+			"Mods": [
+				{
+					"Id": "shylux.StardewMCP",
+					"DisplayName": "StardewMCP",
+					"Type": "Smapi",
+					"RelativePath": "StardewMCP",
+					"Manifest": {
+						"Name": "StardewMCP",
+						"Description": "MCP server - lets AI assistants interact with a running Stardew Valley game.",
+						"Author": "shylux",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewMCP.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "shylux.StardewMCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342554973,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433008,
+		"UploaderId": 30008015,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

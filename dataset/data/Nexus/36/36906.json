@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 36906,
+	"Name": "Stardew Open World",
+	"Author": "aedenthorn",
+	"Description": "[b][size=5]Introduction[/size][/b]\n<br />\n<br />[youtube]zAH-A418Hl8[/youtube]\n<br />\n<br />This mod has been in the works for literal years! Finally I got around to finishing the core of it, so here it is in all its monstrous glory for your testing pleasure.\n<br />\n<br />This mod adds a very, very big game location to the game. By default it is 100,000,000 tiles in size (10,000x10,000), but I have done basic testing at 100,000x100,000 as well.\u00A0\n<br />\n<br />To visit the open world, you will need to have unlocked the quarry and enter the open world through the back of the quarry cave. I may add an easier to access entrance at some point.\n<br />\n<br />You can also type [code]debug warp StardewOpenWorld 5000 9998[/code] into the command console window to warp there.\n<br />\n<br />[b][size=5]Features[/size][/b]\n<br />\n<br />The open world contains the following as of now:\n<br />\n<br />[list]\n<br />[*]Mixed Forests\n<br />[*]Rock, Ore, and Gem Outcrops\n<br />[*]Lakes\n<br />[*]Grassy Fields\n<br />[*]Berry Bushes\n<br />[*]Forage Crops\n<br />[*]Treasure Chests (requires [url=https://www.nexusmods.com/stardewvalley/mods/7739]this mod[/url]\uFEFF)\n<br />[*]Monsters\n<br />[/list]\n<br />To some extent, everything goes up in level as you travel further North (harder monsters, better treasure, higher quality ores, etc.).\n<br />\n<br />By default, the map stays the same every time you visit in a given save. You can have it change randomly every day in the config.\n<br />\n<br />There is a rough map of the nearby area if you open the map page while in the open world.\n<br />\n<br />\n<br />[b][size=5]Customization[/size][/b]\n<br />\n<br />It is possible for mods to add maps to a coordinate in the open world.\n<br />\n<br />It is also possible for mods to add or change monster spawns.\n<br />\n<br />There is a huge config file that is honestly a bit of a mess, but basically the mod is highly configurable.\n<br />\n<br />\n<br />[b][size=5]Known Issues[/size][/b]\n<br />\n<br />[list]\n<br />[*]Taking map screenshots of the open world crashes the game.\n<br />[*]Lake and outcrop generation is a bit boxy still, may need to find a way to make rounder blobs.\n<br />[*]Tree selection is not quite as it should be I think, but I'm not sure you'll notice offhand.\n<br />[*]Level increase as you go North may need some tweaking.\n<br />[*]The map is flat, no mountains or hills yet (lakes where difficult enough).\n<br />[*]Objects, trees, monsters, etc., will respawn if you move far enough away and return; the mod doesn't currently remember trees you've cut down, monsters you've killed, etc. It's kind of like the mines in that way.\n<br />[*]Building and leaving stuff in the open world may be problematic, I haven't tested that yet, but it does try to leave stuff you place manually.\n<br />[*]Viewing the map takes a bit of time as it tries its best to squeeze a ton of info into a very small space.\n<br />[*]There are most likely tons of bugs still to be ironed out, but most should theoretically be confined to when you are actually in the open world.\n<br />[/list]\n<br />\n<br />[b][size=5]Technical Stuff[/size][/b]\n<br />\n<br />The size of the open world breaks a lot of how the vanilla game works so a lot of messing around had to be done in order to allow for such a big location. The actual map is only 1 tile in size; actual tile and object info is stored in 100x100 chunks until needed. Objects and monsters are loaded and unloaded as you move from chunk to chunk.\n<br />\n<br />Caching, building, and loading is done to some extent on-the-fly; the mod tries its best to space cache, build, and load activity over time to reduce stuttering. It seems pretty smooth at the moment, but more testing is definitely needed.\n<br />\n<br />Adding maps to the open world using content patcher is very easy, but probably needs a lot more testing as well:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.StardewOpenWorld/landmarks\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_Example\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MapPath\": \"Maps/Forest\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MapPosition\":{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\":5000,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\":5000\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />[/code]\n<br />This adds the entire vanilla forest map near the middle of the open world.\n<br />\n<br />Adding monster spawns can be done by targetting\u00A0[b]\"aedenthorn.StardewOpenWorld/monsters\"[/b]. You can also edit the [b]monsters.json[/b] file generated in the mod folder on startup. The format is the same either way.\n<br />\n<br />[b][size=5]Disclaimer\n<br />[/size][/b]\n<br />Here be dragons.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36906",
+	"Version": "0.7.0",
+	"Updated": "2025-09-04T12:01:33+00:00",
+	"Downloads": [
+		{
+			"Id": 142015,
+			"Type": "Main",
+			"DisplayName": "Stardew Open World",
+			"FileName": "Stardew Open World-36906-0-7-0-1756987293.zip",
+			"Description": "Changes:\n<br />\n<br />Added artifact spots\n<br />NRE fix",
+			"Version": "0.7.0",
+			"SizeInBytes": 90626,
+			"Uploaded": "2025-09-04T12:01:33+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.StardewOpenWorld",
+					"DisplayName": "Stardew Open World",
+					"Type": "Smapi",
+					"RelativePath": "StardewOpenWorld",
+					"Manifest": {
+						"Name": "Stardew Open World",
+						"Description": "Stardew Open World.",
+						"Author": "aedenthorn",
+						"Version": "0.7.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewOpenWorld.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:36906"
+						],
+						"UniqueId": "aedenthorn.StardewOpenWorld"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528703,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423594,
+		"UploaderId": 18901754,
+		"CategoryId": 16,
+		"Adult": false
+	}
+}

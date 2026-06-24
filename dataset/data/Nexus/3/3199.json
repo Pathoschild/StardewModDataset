@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 3199,
+	"Name": "Battle Royalley",
+	"Author": "Ilyaki",
+	"Description": "[img]https://dl.dropboxusercontent.com/s/q1imuomiztx4np2/BattleRoyalley.gif[/img]\uFEFF\n<br />[i]^ High-level tactical gameplay \n<br />\n<br />[youtube]K5IrjnwLRtc[/youtube][/i]\n<br />\n<br />[img]https://dl.dropboxusercontent.com/s/oeng51mznxi1crt/TheGame.png[/img]\uFEFF\n<br />\n<br />[list]\n<br />[*][size=3]Everyone will be scattered over Stardew Valley at the start of the game. [/size]\n<br />[*][size=3]You can find swords, slingshots, bombs, healing items and sometimes horses or even [i][b]hats[/b][/i] in chests spawned around the map.[/size]\n<br />[*][size=3]Chop trees and craft fences to use as cover.[/size]\n<br />[*][size=3]Hide behind trees/bushes/etc. for surprise attacks.[/size]\n<br />[*][size=3]The world border will gradually close in on a location.[/size]\n<br />[*][size=3][b]Last farmer standing wins.[/b][/size]\n<br />[*][size=3]In spectator mode, press M and click on a map location to teleport your view there[/size]\n<br />[/list]\n<br />[img]https://dl.dropboxusercontent.com/s/9vrnkiwuogqmgql/Installation.png[/img]\uFEFF\n<br />\n<br />[list=1]\n<br />[*]\uFEFFInstall SMAPI: [url=http://www.smapi.io]www.smapi.io[/url]\uFEFF\n<br />[*]Unzip the BattleRoyalley.zip into your Stardew Valley folder. You should now have a folder Stardew Valley&#92;Mods_BattleRoyalley\n<br />[*]When you want to play the mod, double click the [b]BattleRoyalley.bat[/b] file on Windows. On Linux run [b]BattleRoyalley.sh[/b]. On Mac run [b]BattleRoyalley.command[/b].\n<br />[size=2]\u00A0~ If you want to play the vanilla game/your normal mods setup [size=1](not that you would ever want to anymore)[/size], launch the game however you usually would.\n<br />\u00A0~ Do NOT play a normal save file with the mod installed; it may break your save.\n<br />[size=1]\u00A0~ If the scripts don't work on Mac/Linux, let me know. You can move the BattleRoyale from Mods_BattleRoyalley to Mods and launch SMAPI the usual way as a temporary fix.[/size]\n<br />[/size]\n<br />[*]Optional mods: Social Tab Patch, Server Browser. Install by dropping into Mods_BattleRoyalley\n<br />[/list]\n<br />[img]https://dl.dropboxusercontent.com/s/7o33yem51kkq8ip/HowToPlay.png[/img]\uFEFF\n<br />\n<br />[list=1]\n<br />[*]Join a server with the mod installed. [color=#00ff00]Highly recommended to use [url=https://www.nexusmods.com/stardewvalley/mods/3227/]Server Browser[/url]\uFEFF to find a server. (Remeber to place the Server Browser folder inside Mods_BattleRoyalley, not Mods.)[/color]\n<br />\n<br />\n<br />[*]Wait for the next round to start\n<br />[/list]\n<br />[img]https://dl.dropboxusercontent.com/s/nlzpv7ld8u7980v/ServerHost.png[/img]\uFEFF\n<br />\n<br />[list=1]\n<br />[*]Install the Battle Royalley mod\n<br />[*]Host a Co-op world. You can use the world I provided in the files section, or use your own. You will probably want to create a world with the mines area, the railroad, and the beach bridge unlocked.\n<br />[*]Run [b]br_setNumberOfPlayerSlots &lt;player slots&gt;[/b], e.g. br_setNumberOfPlayerSlots 100 to set the number of player slots.\n<br />[*]Invite players by sharing your invite code, IP, or using the [url=https://www.nexusmods.com/stardewvalley/mods/3227/]Server Browser[/url]\uFEFF mod.\n<br />\n<br />[*]To start the game, press right control or run br_start in the SMAPI console.\n<br />[/list]\n<br />[img]https://dl.dropboxusercontent.com/s/azjmux5yxphpglm/ServerConfig.png[/img]\uFEFF\n<br />\n<br />You can configure config.json, spawns.json, chests.json and stormPhases.json in the BattleRoyale mod directory.\n<br />\u00A0[b]config.json[/b]\n<br />\u00A0 ~ Set [i]ShouldHostParticipate[/i] to false if you want the host player to afk all round.\n<br />\u00A0 ~ Set [i]TimeInSecondsBetweenRounds[/i] to -1 if you want to disable auto starting rounds.\n<br />\u00A0[b]spawns.json[/b]\n<br />\u00A0 ~ This file contains all the spawn locations for the players. To set a new one, just follow the pattern in the file.\n<br />\u00A0\u00A0\u00A0 To find your tile location in game, press Right Alt. It will be pasted in the SMAPI console.\n<br />\u00A0[b]chests.json[/b]\n<br />\u00A0 ~ Works the same as spawns.json, but for chest spawn placements. Note that chests will not always spawn. The amount of chest that spawns depends on the amount of online players.\n<br />\u00A0[b]stormPhases.json[/b]\n<br />\u00A0 ~ During the game, multiple storm (the yellow cloud) phases will run consecutively.\n<br />\u00A0 ~ Each phase contains multiple game locations (e.g. the Mayor's house) that will cover from 0% to 100% in the duration of the phase.\n<br />\u00A0 ~ After each phase, there is a delay before the next phase begins.\n<br />\u00A0 ~ In stormPhases.json you can create as many phases as you like, with delays, durations and their list of locations.\n<br />\u00A0 ~ For CloseIn rectangles, X1/Y1 [b]must[/b] be the top left corner and X2/Y2 [b]must[/b] be the bottom right corner\n<br />\n<br />[url=https://github.com/Ilyaki/BattleRoyalley]Source code[/url]\n<br />\n<br />[b][color=#00ff00]Please leave a like if you like the mod :)[/color][/b][color=#00ff00]\n<br />Feel free to post your discord servers hosting the mod in the Posts or Forum section.\n<br />Funny-snek occasionally hosts Battle Royalley on his server: https://discordapp.com/invite/bg8Uaxn\n<br />[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3199",
+	"Version": "1.0.4",
+	"Updated": "2019-03-02T06:38:00+00:00",
+	"Downloads": [
+		{
+			"Id": 13516,
+			"Type": "Optional",
+			"DisplayName": "World file for hosting",
+			"FileName": "World file for hosting-3199-1-0-0-1546200260.zip",
+			"Description": "You can use this world for hosting the mod. Extract it into %APPDATA%&#92;StardewValley&#92;Saves",
+			"Version": "1.0.0",
+			"SizeInBytes": 459753,
+			"Uploaded": "2018-12-30T20:04:20+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "GameHost_204797717",
+					"Type": "Invalid",
+					"RelativePath": "GameHost_204797717",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342400204,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 14839,
+			"Type": "Main",
+			"DisplayName": "Battle Royalley 1.0.4",
+			"FileName": "Battle Royalley 1.0.4-3199-1-0-4-1551508680.zip",
+			"Description": "Tested on SMAPI 2.11 / Stardew Valley 1.3.36",
+			"Version": "1.0.4",
+			"SizeInBytes": 174298,
+			"Uploaded": "2019-03-02T06:38:00+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "14839",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342401527,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389887,
+		"UploaderId": 50404951,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

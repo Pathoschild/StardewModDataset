@@ -1,0 +1,51 @@
+{
+	"Site": "Nexus",
+	"Id": 30791,
+	"Name": "ValleyTalk - Traduction Francaise - BETA",
+	"Author": "dandm1",
+	"Description": "[b][size=5]Introduction en Français[/size][/b]\n<br />[size=3]ValleyTalk est un mod innovant pour Stardew Valley qui utilise l'intelligence artificielle pour générer des dialogues en temps réel. Ce mod ajoute une dimension dynamique et imprévisible aux interactions avec les personnages du jeu, rendant chaque partie unique et immersive.\n<br />\n<br />Le pack de traduction française pour ValleyTalk est conçu pour permettre aux joueurs francophones de profiter pleinement de cette expérience enrichie. Cette version est une preuve de concept fonctionnelle de l'internationalisation (i18n) dans ValleyTalk. Cependant, il est important de noter que la traduction a été réalisée de manière automatique et peut ne pas être parfaitement alignée avec la terminologie canonique du jeu.\n<br />\n<br />Le pack est distribué avec des droits entièrement ouverts, encourageant les locuteurs natifs ou ceux ayant une meilleure maîtrise du français à apporter des améliorations. Les contributions de la communauté sont essentielles pour affiner la traduction et garantir une expérience de jeu fluide et authentique pour tous les joueurs francophones.\n<br />\n<br />[/size][size=3]Pour installer le pack, veuillez décompresser le fichier ZIP fourni et copier les contenus dans leurs dossiers respectifs : le dossier \"i18n\" dans le dossier \"i18n\" de ValleyTalk et le dossier \"/assets/bio/\" dans le dossier correspondant de votre installation de ValleyTalk.[/size]\n<br />\n<br />[size=5][b]English Description of i18n Structure[/b][/size]\n<br />[size=3]This translation pack for ValleyTalk is presented as a proof of concept for i18n in ValleyTalk.\u00A0 It consists of a French i18n file with French language versions of all of the prompts, and automatically translated French versions of each of the character biographies and the game summary.\n<br />\n<br />It is released with full modification and update rights, and you are welcome to use it as a template for translations in French or other languages.\u00A0 I produced a version in French as it is the language in which I am able to check the outputs somewhat, even if I can't hand-write good inputs.\n<br />\n<br />The default.json file under i18n contains all of the elements of the prompt which is used to prompt ValleyTalk.\u00A0 A few notes on updating this:\n<br />[/size][list]\n<br />[*][size=3]Normal Stardew ${...^...}$ syntax can be used where the prompt needs to be different because of gender of the farmer.\u00A0 This should also work with three part syntax for a non-binary farmer (untested).[/size]\n<br />[*][size=3]There are a lot of places in the v0.1 of this translation where this syntax is used unnecessarily, due to the machine translation.[/size]\n<br />[*][size=3]As normal with i18n the mod will fall back to the default language (English) for any resources it cannot find in French.[/size]\n<br />[*][size=3]Where the prompt lines need to be different because of the gender of the NPC the farmer is talking to, separate lines can be used in the i18n file suffixing .maleNpc or .femaleNpc.\u00A0 The mod will look first for a male or a female version (in the set language first and then falling back to the default language) and if they are not present it will use the non-gendered version.\u00A0 e.g. if the farmer is poor and talking to a wife the prompt will first look for wealthPoor.femaleNpc in either French or English, and if neither of those exists look for wealthPoor in French before falling back to wealthPoor in English.[/size]\n<br />[*][size=3]Several of the lines have elements that are constructed externally first before inserting into the string - like marriage sentiment which firstly picks up whether the farmer is married or has a roommate.[/size]\n<br />[*][size=3]Many of the lines have tokens in double braces {{...}} which get replaced during generation.\u00A0 The token itself should not be translated.[/size]\n<br />[*][size=3]You are welcome to adjust the content of the prompts to suit how you want to play the game.\u00A0 Be aware that most of the commercial LLMs are sensitive to NSFW content, so you may hit problems if you go too far that way.[/size]\n<br />[/list][size=3]\n<br />The biography and game summary files in assets/bio are translated in much the same way, and reflect details of the game and metadata for the individual characters.\u00A0 The elements in this file are:\n<br />[/size][list]\n<br />[*][size=3]Biography - the main biography for the villager, which is included in each prompt for that villager.[/size]\n<br />[*][size=3]ExtraPortraits - a list of the Stardew portraits available for that character beyond the core three happy / sad / neutral.\u00A0\u00A0[/size]\n<br />[*][size=3]Unique - a description of the character's unique portrait - if it is useful to add on to the list of portraits.\u00A0 Can also be included using an extra portrait with a key of 'u'.[/size]\n<br />[*][size=3]Preoccupations - a list of things that the character may randomly have been thinking about before the conversation.\u00A0 Used in conjunction with loved and hated gifts to add more randomness.[/size]\n<br />[*][size=3]Dialogue - a list of additional dialogue for the character, which is added to the original dialogue created by Concerned Ape when prompting the mod on each character's voice. Entered in the same format as a content patcher file (just as a list of dialogue keys and strings- see example on Abigail).[/size]\n<br />[*][size=3]HomeLocationBed - specifies that the place the villager is shown starting the day is in bed (seems to be about 50:50).[/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30791",
+	"Version": "0.1.0",
+	"Updated": "2025-01-11T20:04:45+00:00",
+	"Downloads": [
+		{
+			"Id": 121960,
+			"Type": "Main",
+			"DisplayName": "ValleyTalk Traduction Francaise",
+			"FileName": "ValleyTalk Traduction Francaise-30791-0-1-0-1736625885.zip",
+			"Description": "A zip containing the main i18n file and character profiles.",
+			"Version": "0.1.0",
+			"SizeInBytes": 101977,
+			"Uploaded": "2025-01-11T20:04:45+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fr-FR\\assets\\bio",
+					"Type": "Invalid",
+					"RelativePath": "fr-FR\\assets\\bio",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				},
+				{
+					"Id": null,
+					"DisplayName": "fr-FR\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "fr-FR\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342508648,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342417479,
+		"UploaderId": 112125483,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

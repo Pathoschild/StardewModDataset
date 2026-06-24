@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 36940,
+	"Name": "Imagical Animal Theme Music Framework",
+	"Author": "imagicalfantasy",
+	"AuthorLabel": "Imagical Fantasy",
+	"Description": "[center][size=6][b]Imagical Animal Theme Music[/b][/size][/center]\n<br />[center]A framework for custom barn &amp; coop background music[/center]\n<br />\n<br />[size=5][b]✨ Features[/b][/size]\n<br />[list]\n<br />[*] Per-animal music (different tracks for each animal type)\n<br />[*] Day/Night variations (awake vs sleeping animals)\n<br />[*] Seasonal overrides (spring, summer, fall, winter)\n<br />[*] Priority system (highest priority wins if multiple animals are present)\n<br />[*] Restore previous track when leaving\n<br />[*] Content Patcher support for easy configuration\n<br />[/list]\n<br />[size=5][b]\uD83D\uDCE6 What this mod does NOT do[/b][/size]\n<br />This is a [b]framework[/b]. By itself, it won't change any music.\n<br />You need a [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] pack or custom patch.\n<br />\n<br />[size=5][b]⚙️ Requirements[/b][/size]\n<br />[list]\n<br />[*] [url=https://smapi.io/]SMAPI[/url]\n<br />[*] (Optional) [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\n<br />[/list]\n<br />[size=5][b]\uD83D\uDCD6 Installation[/b][/size]\n<br />[list=1]\n<br />[*] Install the latest version of [url=https://smapi.io/]SMAPI[/url].\n<br />[*] Download and extract this mod into your Mods folder.\n<br />[*]Install a content pack that defines music cues.\n<br />[*] Launch the game and enjoy!\n<br />[/list]\n<br />[size=5][b]\uD83D\uDEE1️ Compatibility[/b][/size]\n<br />[list]\n<br />[*] Works with Stardew Valley 1.6+\n<br />[*] Multiplayer safe (each player handles their own barn music)\n<br />[*] Compatible with most music mods\n<br />[/list]\n<br />[size=5][b]\uD83D\uDCD1 Example: Content Patcher configuration[/b][/size]\n<br />Here’s how you can define custom music for animals with Content Patcher:\n<br />\n<br />[code]\n<br />{\n<br />    \"Changes\": [\n<br />        {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"Data/AudioChanges\",\n<br />            \"Entries\": {\n<br />                \"cow_day_theme\": {\n<br />                    \"ID\": \"cow_day_theme\",\n<br />                    \"Category\": \"Music\",\n<br />                    \"FilePaths\": [\n<br />                        \"{{AbsoluteFilePath: music/cow_day_theme.ogg}}\"\n<br />                    ],\n<br />                    \"StreamedVorbis\": true,\n<br />                    \"Looped\": true\n<br />                },\n<br />                \"cow_night_theme\": {\n<br />                    \"ID\": \"cow_night_theme\",\n<br />                    \"Category\": \"Music\",\n<br />                    \"FilePaths\": [\n<br />                        \"{{AbsoluteFilePath: music/cow_night_theme.ogg}}\"\n<br />                    ],\n<br />                    \"StreamedVorbis\": true,\n<br />                    \"Looped\": true\n<br />                }\n<br />            }\n<br />        },\n<br />        {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"Imagical.AnimalThemeMusic/Musics\",\n<br />            \"Entries\": {\n<br />                \"CowGroup\": {\n<br />                    \"MusicCue\": \"cow_day_theme\",\n<br />                    \"MusicCueSleeping\": \"cow_night_theme\",\n<br />                    \"MusicMode\": \"RestoreAfter\",\n<br />                    \"Entities\": [\n<br />                        \"White Cow\",\n<br />                        \"Brown Cow\"\n<br />                    ]\n<br />                },\n<br />                \"PigGroup\": {\n<br />                    \"MusicMode\": \"RestoreAfter\",\n<br />                    \"Entities\": [\n<br />                        \"Pig\"\n<br />                    ],\n<br />                    \"Seasons\": {\n<br />                        \"Spring\": {\n<br />                            \"MusicCue\": \"spring1\",\n<br />                            \"MusicCueSleeping\": \"spring1\"\n<br />                        },\n<br />                        \"Summer\": {\n<br />                            \"MusicCue\": \"abigailflute\",\n<br />                            \"MusicCueSleeping\": \"abigailflute\"\n<br />                        },\n<br />                        \"Fall\": {\n<br />                            \"MusicCue\": \"breezy\",\n<br />                            \"MusicCueSleeping\": \"breezy\"\n<br />                        },\n<br />                        \"Winter\": {\n<br />                            \"MusicCue\": \"winter1\",\n<br />                            \"MusicCueSleeping\": \"winter1\"\n<br />                        }\n<br />                    }\n<br />                }\n<br />            }\n<br />        }\n<br />    ]\n<br />}\n<br />[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36940",
+	"Version": "1.0.2",
+	"Updated": "2025-09-03T13:22:48+00:00",
+	"Downloads": [
+		{
+			"Id": 141914,
+			"Type": "Main",
+			"DisplayName": "ImagicalAnimalThemeMusic_1_0_2",
+			"FileName": "ImagicalAnimalThemeMusic_1_0_2-36940-1-0-2-1756905768.zip",
+			"Description": "",
+			"Version": "1.0.2",
+			"SizeInBytes": 25764,
+			"Uploaded": "2025-09-03T13:22:48+00:00",
+			"Mods": [
+				{
+					"Id": "Imagical.ImagicalAnimalThemeMusic",
+					"DisplayName": "ImagicalAnimalThemeMusic",
+					"Type": "Smapi",
+					"RelativePath": "ImagicalAnimalThemeMusic",
+					"Manifest": {
+						"Name": "ImagicalAnimalThemeMusic",
+						"Description": "ImagicalAnimalThemeMusic.",
+						"Author": "Imagical Fantasy",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ImagicalAnimalThemeMusic.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Imagical.ImagicalAnimalThemeMusic"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528602,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423628,
+		"UploaderId": 16912849,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

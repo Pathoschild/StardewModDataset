@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 10704,
+	"Name": "Custom Picture Frames",
+	"Author": "aedenthorn",
+	"Description": "This mod is a framework for creating picture frame furniture that can display custom-made snap-shots created using an in-game interface.\n<br />\n<br />This mod does not contain any frames, you will need to install at least one custom frames content pack, e.g.:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10705]Wooden Picture Frames[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10709/]Alternative Picture Frames[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10706]Aster's Royalcore Custom Picture Frames[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/10725]Industrial Custom Picture Frames and Windows[/url]\uFEFF\n<br />[/list]\n<br />For information on creating your own frames, see below.\n<br />\n<br />\n<br />[b][size=5]Taking Snapshots[/size][/b]\n<br />\n<br />Once you have installed some frames, you can take a snapshot to use in a specific frame by pressing the interface hotkey ([b]default: F10[/b]).\u00A0 \n<br />\n<br />This will cause a frame to be shown next to the mouse cursor. To choose a different frame, press the frame switch key ([b]default: F11[/b]).\n<br />\n<br />Move the cursor so the frame outlines the subject and press the snapshot key ([b]default: F12[/b]).\n<br />\n<br />Press [b]Esc[/b] or the interface hotkey to cancel taking a snapshot.\n<br />\n<br />[b][i]Note: Changing the game zoom lets you take zoomed in or out photos.[/i][/b]\n<br />\n<br />\n<br />[b][size=5]Assigning Snapshots[/size][/b]\n<br />\n<br />To assign a snapshot to a frame of the same type used to take the snapshot, hover over the frame in-game and press the change picture hotkey ([b]default: F11[/b]).\n<br />\n<br />You can take multiple snapshots for a given frame size and switch through them all for an individual placed frame using the change picture hotkey.\n<br />\n<br />Snapshots are specific to each save game.\n<br />\n<br />\n<br />[size=5][b]Deleting [/b][/size][b][size=5]Snapshots[/size][/b]\n<br />\n<br />If you hover over a frame with a snapshot currently set and press the delete hotkey ([b]default: Delete[/b]), it will delete the snapshot file from the disk.\n<br />\n<br />\n<br />[b][size=5]Creating Frames[/size][/b]\n<br />\n<br />You can use [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] to create the frame furniture and tell this mod about your frames. The Content Patcher syntax for telling this mod about your frames is as follows, e.g.:\n<br />\n<br />[code]{\n<br />   \u00A0\"Format\": \"1.23.0\",\n<br />   \u00A0\"Changes\": [\n<br />       \u00A0{\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"custom_picture_frame_dictionary\",\n<br />            \"Entries\": {\n<br />               \u00A0\"MyFrame16x32\":\"MyPictureFrames/MyFrame16x32\" \n<br />            }\n<br />       \u00A0},\n<br />       \u00A0{\n<br />            \"Action\": \"Load\",\n<br />            \"Target\": \"MyPictureFrames/MyFrame16x32\",\n<br />            \"FromFile\": \"assets/MyFrame16x32.png\"\n<br />      \u00A0 }\n<br />   \u00A0]\n<br />}[/code]\n<br />[b]custom_picture_frame_dictionary[/b] is this mod's frame dictionary path. Entry keys should be the furniture ID. Entry values are your made-up path used to tell Content Patcher which png file to use for the texture.\n<br />\n<br />The mod attempts to find and map transparent enclosed pixels to show the snapshot. All pixels within the frame texture that\n<br />\n<br />a) are completely transparent, and\n<br />b) are a part of a group of enclosed transparent pixels\n<br />\n<br />will be used to show the snapshot. If you have enclosed transparent parts that you don't want to be used to show the snapshot, you can set those pixels to any color with 1% opacity.\n<br />\n<br />\n<br />You can edit all the config variables using [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF, or editing the [b]config.json[/b] file.\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10704",
+	"Version": "0.5.0",
+	"Updated": "2026-01-10T23:40:33+00:00",
+	"Downloads": [
+		{
+			"Id": 153060,
+			"Type": "Main",
+			"DisplayName": "Custom Picture Frames",
+			"FileName": "Custom Picture Frames-10704-0-5-0-1768088433.zip",
+			"Description": "Changes:\n<br />\n<br />Update for 1.6",
+			"Version": "0.5.0",
+			"SizeInBytes": 22282,
+			"Uploaded": "2026-01-10T23:40:33+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomPictureFrames",
+					"DisplayName": "Custom Picture Frames",
+					"Type": "Smapi",
+					"RelativePath": "CustomPictureFrames",
+					"Manifest": {
+						"Name": "Custom Picture Frames",
+						"Description": "Custom Picture Frames.",
+						"Author": "aedenthorn",
+						"Version": "0.5.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomPictureFrames.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10704"
+						],
+						"UniqueId": "aedenthorn.CustomPictureFrames"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342539748,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397392,
+		"UploaderId": 18901754,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

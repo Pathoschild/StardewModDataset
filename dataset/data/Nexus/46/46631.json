@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 46631,
+	"Name": "True Rune - Modder Toolkit",
+	"Author": "Riou0903",
+	"Description": "[heading]Stop guessing. Start knowing.[/heading]\n<br />\n<br />You've stared at a portrait index wondering which number maps to [font=Courier New]$13[/font]. You've restarted the game five times just to verify a mail flag was set. You've scrolled through a wall of SMAPI log output looking for a single schedule entry.\n<br />\n<br />[b]True Rune: Modder Toolkit is the debug console you always wished SMAPI shipped with.[/b]\n<br />\n<br />Eleven focused commands, all under one [font=Courier New]rune_[/font] namespace. One drop-in install. No configuration needed. Open the SMAPI console, type a command, get the answer — and get back to building your mod.\n<br />\n<br />[size=2][i]Note on image placeholders: lines marked [ SCREENSHOT ] need a real screenshot URL once you upload images to the Nexus Images tab. Replace SCREENSHOT_URL_HERE with the URL Nexus gives you after upload.[/i][/size]\n<br />\n<br />[img]SCREENSHOT_URL_HERE[/img]\n<br />[size=1][i][ SCREENSHOT 1 — rune_portrait Haley all: in-game dialogue cycling every portrait frame, each labelled with its index and $ code ][/i][/size]\n<br />\n<br />[heading]The problems it solves[/heading]\n<br />[list]\n<br />[*][b]\"Which portrait index is the happy face?\"[/b]\n<br />Type [font=Courier New]rune_portrait Haley all[/font] and it cycles every frame right in the in-game dialogue box — labelled with both the numeric index and the [font=Courier New]$[/font] code. No more spreadsheet. No more trial and error.\n<br />[/*]\n<br />[*][b]\"Is my mail flag actually set after that cutscene?\"[/b]\n<br />[font=Courier New]rune_mailbox[/font] dumps your entire [font=Courier New]mailReceived[/font], [font=Courier New]mailForTomorrow[/font], and [font=Courier New]mailbox[/font] state in one shot. Filter by prefix to cut the noise: [font=Courier New]rune_mailbox MyMod_[/font].\n<br />[/*]\n<br />[*][b]\"Why isn't this event triggering?\"[/b]\n<br />[font=Courier New]rune_listallevents[/font] searches across every loaded [font=Courier New]Data/Events/*[/font] location. Find it by ID, location name, or a keyword from its precondition. Then [font=Courier New]rune_triggerevent[/font] to force-fire it on the spot, bypassing all conditions.\n<br />[/*]\n<br />[*][b]\"Where is Haley supposed to be at 1400?\"[/b]\n<br />[font=Courier New]rune_schedule Haley[/font] prints the active schedule key and every time-stamped entry. Faster and cleaner than tailing the SMAPI log.\n<br />[/*]\n<br />[*][b]\"Does this work with my SVE / East Scarp / Ridgeside NPCs?\"[/b]\n<br />Yes. [font=Courier New]rune_npc_list[/font] uses [font=Courier New]Utility.ForEachVillager[/font] — every loaded NPC, vanilla or custom, shows up with internal name, display name, and current location.[/*]\n<br />[/list]\n<br />[img]SCREENSHOT_URL_HERE[/img]\n<br />[size=1][i][ SCREENSHOT 2 — SMAPI console showing rune_mailbox output with mailReceived / mailForTomorrow / mailbox sections clearly separated ][/i][/size]\n<br />\n<br />[heading]Every command at a glance[/heading]\n<br />\n<br />[b]Portraits[/b]\n<br />[list]\n<br />[*][font=Courier New]rune_portrait &lt;NPC&gt; (code|number|all)[/font] — Preview any single portrait frame in-game, or cycle every frame in sequence[/*]\n<br />[*][font=Courier New]rune_portrait_dump &lt;NPC&gt;[/font] — Export the full portrait sheet as a PNG to [font=Courier New]Mods/TrueRune.ModderToolkit/portraits/[/font][/*]\n<br />[/list]\n<br />[b]NPCs &amp; Schedules[/b]\n<br />[list]\n<br />[*][font=Courier New]rune_npc_list[/font] — Every loaded NPC: internal name, display name, current location. Works with all custom NPC frameworks.[/*]\n<br />[*][font=Courier New]rune_schedule &lt;NPC&gt;[/font] — Active schedule key plus every time-stamped entry for that NPC today[/*]\n<br />[/list]\n<br />[b]Mail Flags[/b]\n<br />[list]\n<br />[*][font=Courier New]rune_mailbox [prefix][/font] — Full mail state: [font=Courier New]mailReceived[/font] + [font=Courier New]mailForTomorrow[/font] + [font=Courier New]mailbox[/font], filterable[/*]\n<br />[*][font=Courier New]rune_listflags [prefix][/font] — All flags currently set on the player; filter by prefix[/*]\n<br />[*][font=Courier New]rune_listallflags [prefix][/font] — Every letter ID in [font=Courier New]Data/mail[/font] — the closest thing to a complete flag registry[/*]\n<br />[/list]\n<br />[b]Dialogue Answers[/b]\n<br />[list]\n<br />[*][font=Courier New]rune_listanswers [prefix][/font] — All [font=Courier New]$q[/font] answers currently on record[/*]\n<br />[/list]\n<br />[b]Events[/b]\n<br />[list]\n<br />[*][font=Courier New]rune_listevents [prefix][/font] — Every event ID in [font=Courier New]eventsSeen[/font][/*]\n<br />[*][font=Courier New]rune_listallevents [filter][/font] — Search [font=Courier New]Data/Events/*[/font] by location, ID, or precondition text[/*]\n<br />[*][font=Courier New]rune_triggerevent &lt;id&gt;[/font] — [b]Force-fire any event by ID.[/b] Warps you to its location and starts it immediately, ignoring all preconditions[/*]\n<br />[/list]\n<br />[size=2][i]Setting individual state (a single mail flag, a [font=Courier New]$q[/font] answer, or marking one event seen) is already covered by Stardew's built-in [font=Courier New]debug[/font] commands, so the Toolkit deliberately doesn't duplicate them: use [font=Courier New]debug seenMail &lt;id&gt;[/font], [font=Courier New]debug question &lt;id&gt;[/font], and [font=Courier New]debug seenEvent &lt;id&gt;[/font] (append [font=Courier New]false[/font] to clear). The Toolkit focuses on the inspection and search commands vanilla doesn't give you.[/i][/size]\n<br />\n<br />[img]SCREENSHOT_URL_HERE[/img]\n<br />[size=1][i][ SCREENSHOT 3 — rune_schedule output in SMAPI console showing active schedule key and time-stamped entries for an NPC ][/i][/size]\n<br />\n<br />[heading]Grows with the rest of the family[/heading]\n<br />The Toolkit is the single home for [b]every[/b] True Rune console command. Install one of the True Rune framework mods alongside it and an extra command group lights up automatically — no extra setup, and the frameworks themselves register no console commands of their own:\n<br />[list]\n<br />[*][b]True Rune: Events[/b] → [font=Courier New]rune_event_run|unsee|eligible|list|reload[/font] — trigger, inspect eligibility, list by content pack, and hot-reload event JSON[/*]\n<br />[*][b]True Rune: Schedules[/b] → [font=Courier New]rune_sched_list|try|apply|points|festivals|smoke|reload[/font] — inspect candidates, dry-run resolution, reapply, and hot-reload schedule JSON[/*]\n<br />[*][b]True Rune: Dialogue[/b] → [font=Courier New]rune_dlg_list|try|clearusage|reload[/font] — list rules, dry-run the next line, reset usage counters, and hot-reload replacement JSON[/*]\n<br />[/list]Each group appears only when its framework is detected at game launch. Missing framework = those commands simply don't show up. No errors, no noise.\n<br />\n<br />[img]SCREENSHOT_URL_HERE[/img]\n<br />[size=1][i][ SCREENSHOT 4 — rune_npc_list output showing a mix of vanilla and custom NPC mod characters with their locations ][/i][/size]\n<br />\n<br />[heading]Zero friction to install[/heading]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] 4.0.0+[/*]\n<br />[*]Unzip into [font=Courier New]Stardew Valley/Mods/[/font][/*]\n<br />[*]Launch the game — the commands are live immediately[/*]\n<br />[/list]No config required. All commands work the moment the game loads a save. Optionally install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to toggle verbose logging from the pause menu. Type [font=Courier New]help &lt;command&gt;[/font] in the SMAPI console for inline usage on any command.\n<br />\n<br />[heading]Built for how mod authors actually work[/heading]\n<br />[list]\n<br />[*][b]No restarts.[/b] Set a flag, clear it, check the result — all without leaving the session. Iterate in seconds, not minutes.[/*]\n<br />[*][b]No registry coupling.[/b] Works against vanilla [font=Courier New]mailReceived[/font] / [font=Courier New]dialogueQuestionsAnswered[/font] / [font=Courier New]eventsSeen[/font] directly. No extra setup. No dependencies beyond SMAPI.[/*]\n<br />[*][b]Works alongside content packs.[/b] Patch your CP mod, reload with [font=Courier New]patch reload[/font], verify state with a rune command — the loop is tight.[/*]\n<br />[*][b]AI-assistant ready.[/b] Paste this page into Claude, ChatGPT, or Cursor and ask it to generate the flag/answer setup for a specific test scenario. The command surface is intentionally machine-readable.[/*]\n<br />[*][b]Custom NPC friendly.[/b] SVE, East Scarp, Ridgeside Village, and any other framework — if SMAPI loaded it, rune commands see it.[/*]\n<br />[/list]\n<br />[heading]Compatibility[/heading]\n<br />[list]\n<br />[*]SMAPI 4.0.0+ / Stardew Valley 1.6+[/*]\n<br />[*]Compatible with all custom NPC frameworks (SVE, East Scarp, Ridgeside, etc.)[/*]\n<br />[*]Single-player. Multiplayer not tested.[/*]\n<br />[/list]\n<br />[heading]Part of the True Rune family[/heading]\n<br />This is mod [b]#1[/b] of the True Rune modding framework. It's designed to be useful standalone — and even more powerful once the rest of the family ships:\n<br />[list]\n<br />[*][b]True Rune: Dialogue[/b] [i](coming next)[/i] — Runtime dialogue replacement with priority stacking, conversation windows, rotation pools, and per-line max-use quotas. Author rich NPC dialogue without patching Asset files.[/*]\n<br />[*][b]True Rune: Events[/b] [i](coming soon)[/i] — JSON-driven event authoring. Write event scripts in a structured format with editor tooling, then let the framework compile and inject them.[/*]\n<br />[/list]The Toolkit is where you'll verify that Dialogue and Events are doing exactly what you expect.\n<br />\n<br />[heading]Support the project[/heading]\n<br />This mod is free and MIT-licensed. If it saves you an hour of log-tailing or a dozen game restarts, consider buying me a coffee:\n<br />[url=https://ko-fi.com/riouvalley][b]ko-fi.com/riouvalley[/b][/url]\n<br />\n<br />[heading]License[/heading]\n<br />MIT — free to fork, reuse, and redistribute. Attribution appreciated but not required.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46631",
+	"Version": "1",
+	"Updated": "2026-06-03T15:00:06+00:00",
+	"Downloads": [
+		{
+			"Id": 168755,
+			"Type": "Main",
+			"DisplayName": "TrueRune.ModderToolkit 1.0.1",
+			"FileName": "TrueRune.ModderToolkit 1.0.1-46631-1-0-1-1779634860.zip",
+			"Description": "Adds **rune_*** console commands to SMAPI: portrait viewer, NPC enumeration, mail flag helpers, dialogue answer helpers, schedule and mailbox dumps.",
+			"Version": "1.0.1",
+			"SizeInBytes": 26718,
+			"Uploaded": "2026-05-24T15:01:00+00:00",
+			"Mods": [
+				{
+					"Id": "Riou.TrueRune.ModderToolkit",
+					"DisplayName": "True Rune: Modder Toolkit",
+					"Type": "Smapi",
+					"RelativePath": "TrueRune.ModderToolkit",
+					"Manifest": {
+						"Name": "True Rune: Modder Toolkit",
+						"Description": "Console commands for Stardew Valley mod authors: portrait viewer, NPC enumeration, mail flag helpers, dialogue answer helpers, mailbox + schedule dumps.",
+						"Author": "Riou",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TrueRune.ModderToolkit.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46631"
+						],
+						"UniqueId": "Riou.TrueRune.ModderToolkit"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555443,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 169963,
+			"Type": "Main",
+			"DisplayName": "TrueRune.ModderToolkit 2.0.0",
+			"FileName": "TrueRune.ModderToolkit 2.0.0-46631-1-1780498806.zip",
+			"Description": "",
+			"Version": "2.0.0",
+			"SizeInBytes": 31698,
+			"Uploaded": "2026-06-03T15:00:06+00:00",
+			"Mods": [
+				{
+					"Id": "Riou.TrueRune.ModderToolkit",
+					"DisplayName": "True Rune: Modder Toolkit",
+					"Type": "Smapi",
+					"RelativePath": "TrueRune.ModderToolkit",
+					"Manifest": {
+						"Name": "True Rune: Modder Toolkit",
+						"Description": "Console commands for Stardew Valley mod authors: portrait viewer, NPC enumeration, mail flag helpers, dialogue answer helpers, mailbox + schedule dumps.",
+						"Author": "Riou",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TrueRune.ModderToolkit.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46631"
+						],
+						"UniqueId": "Riou.TrueRune.ModderToolkit"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556651,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433319,
+		"UploaderId": 58636256,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,105 @@
+{
+	"Site": "Nexus",
+	"Id": 35126,
+	"Name": "Dateable Robin for 1.6",
+	"Author": "Hyperfocist",
+	"Description": "[b]Dateable Robin[/b]\n<br />\n<br />This mod makes Robin romanceable. After progressing through her heart events, you’ll learn more about her relationship with Demetrius.\n<br />\n<br />[b]One event includes a dialogue choice that determines whether she becomes dateable.[/b]\n<br />\n<br />As your relationship grows, her living situation and festivals are updated along the way.\n<br />\n<br />If you marry her, she’ll continue working as the town carpenter; you’ll still be able to purchase buildings and upgrades as usual.\n<br />\n<br />I've done some testing with Stardew Valley Expanded and Ridgeside Village, and haven't run into any problems so far.\n<br />\n<br />This also works on Android. You don't have to do anything special, just use the regular version of the mod.\n<br />\n<br />There is an option to disable this mod's portraits.\u00A0\uFEFFIf selected, this mod's portraits won't be used and thus won't conflict with portrait mods. Note: This mod includes an added portrait (love/blushing) that other portrait mods are unlikely to have. The game will show their version of Robin's neutral portrait instead.\u00A0Use GMCM to control this, or edit config.json in the plugin's main directory.\n<br />\n<br />There is also an option to disable this mod's sprites.\u00A0f selected, this mod's sprites won't be used and thus won't conflict with sprite mods.\n<br />Note: Some things will look weird if you do, though. She won't have a kissing sprite; an exercise sprite will show up instead. Wedding &amp; dance sprites will also be broken.\n<br />\n<br />[b]\n<br />Features:[/b]\n<br />[list]\n<br />[*]Five custom heart events[/*]\n<br />[*]~100 lines of new dialogue[/*]\n<br />[*]One new portrait[/*]\n<br />[*]Spouse room and custom patio (which isn't great and is targeted for improvement in the future)[/*]\n<br />[*]New sprites for Flower Dance, wedding, and kissing[/*]\n<br />[*]Festival updates (8 total)[/*]\n<br />[*]Revised dialogue for Demetrius, Maru, and Sebastian[/*]\n<br />[*]i18n support has been added and translations are welcome[/*]\n<br />[/list]\n<br />Known limitations / To-Do:\n<br />[list]\n<br />[*]Spouse patio is still a work in progress.[/*]\n<br />[*]Robin's kissing sprite doesn't work with mods that update sprites, you'll see an exercise sprite instead.[/*]\n<br />[/list][b]\n<br />Translations:[/b]\n<br />[list]\n<br />[*]Translations are welcome, there is no need to ask permission. You can access the code here:\u00A0[url=https://github.com/hyperfocist/CP-Dateable-Robin]\uFEFFhttps://github.com/hyperfocist/CP-Dateable-Robin[/url]\uFEFF[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35126",
+	"Version": "1.0.8",
+	"Updated": "2026-05-03T23:05:10+00:00",
+	"Downloads": [
+		{
+			"Id": 155846,
+			"Type": "Optional",
+			"DisplayName": "Dateable Robin Divorce Helper",
+			"FileName": "Dateable Robin Divorce Helper-35126-1-0-0-1770165979.zip",
+			"Description": "If your mod stack doesn't allow Robin’s social status to update from married to single, then adding this companion mod may help. It was created by Nexusmods author beldavid1 to solve the issue in their case, and they kindly offered to share it.",
+			"Version": "1.0.0",
+			"SizeInBytes": 11437,
+			"Uploaded": "2026-02-04T00:46:19+00:00",
+			"Mods": [
+				{
+					"Id": "Beldavid.DateableRobin.DivorceHandler",
+					"DisplayName": "Dateable Robin - Divorce Handler",
+					"Type": "Smapi",
+					"RelativePath": "Dateable Robin",
+					"Manifest": {
+						"Name": "Dateable Robin - Divorce Handler",
+						"Description": "Ensures Robin and Demetrius are properly unmarried after divorce events.",
+						"Author": "Beldavid",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "DateableRobin.DivorceHandler.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "hyperfocist.dateablerobin",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ApryllForever.CPPolyamorySweet",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Beldavid.DateableRobin.DivorceHandler"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342542534,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 166383,
+			"Type": "Main",
+			"DisplayName": "CP Dateable Robin",
+			"FileName": "CP Dateable Robin-35126-1-0-8-1777849510.zip",
+			"Description": "This resolves the SMAPI error that starts with: \"Failed to load Room for Robin;\"",
+			"Version": "1.0.8",
+			"SizeInBytes": 2108198,
+			"Uploaded": "2026-05-03T23:05:10+00:00",
+			"Mods": [
+				{
+					"Id": "Hyperfocist.DateableRobin",
+					"DisplayName": "Dateable Robin for 1.6",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Dateable Robin",
+					"Manifest": {
+						"Name": "Dateable Robin for 1.6",
+						"Description": "A mod that lets you date (and marry) Robin.",
+						"Author": "Hyperfocist",
+						"Version": "1.0.8",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.CPPolyamorySweet",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:35126",
+							"https://github.com/hyperfocist/CP-Dateable-Robin"
+						],
+						"UniqueId": "Hyperfocist.DateableRobin"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553071,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421814,
+		"UploaderId": 241724963,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

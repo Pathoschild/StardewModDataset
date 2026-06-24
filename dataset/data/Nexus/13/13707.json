@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 13707,
+	"Name": "Week Starts Sunday",
+	"Author": "aedenthorn",
+	"Description": "This mod is quite simple, making the game recognize Day One of each month as Sunday and adjusting the calendar accordingly.\n<br />\n<br />Under the hood, it modifies the calendar textures to rearrange the day of week labels. It is set to do this \"late\", so it probably maybe possibly works with reskinned calendars. It should theoretically work with every language.\n<br />\n<br />It also detects and patches Content Patcher to agree that Sunday is the first day of the week for the [b]DayOfWeek [/b]token.\n<br />\n<br />It may cause issues with mods that do their own independent day-of-week calculations for whatever reason. Mods that use the game's built-in day-of-week methods should receive the modified day.\n<br />\n<br />Methods patched are:\n<br />\n<br />[b]Game1.shortDayNameFromDayOfSeason\n<br />Game1.shortDayDisplayNameFromDayOfSeason\n<br />WorldDate.DayOfWeek[/b]\n<br />[b]ContentPatcher.Framework.TokenSaveReader.GetDayOfWeek[/b]\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13707",
+	"Version": "0.1.0",
+	"Updated": "2022-09-08T23:29:28+00:00",
+	"Downloads": [
+		{
+			"Id": 60019,
+			"Type": "Main",
+			"DisplayName": "Week Starts Sunday",
+			"FileName": "Week Starts Sunday-13707-0-1-0-1662679768.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 9290,
+			"Uploaded": "2022-09-08T23:29:28+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.WeekStartsSunday",
+					"DisplayName": "WeekStartsSunday",
+					"Type": "Smapi",
+					"RelativePath": "WeekStartsSunday",
+					"Manifest": {
+						"Name": "WeekStartsSunday",
+						"Description": "WeekStartsSunday.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "WeekStartsSunday.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13707"
+						],
+						"UniqueId": "aedenthorn.WeekStartsSunday",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "WeekStartsSunday"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342446707,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400395,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

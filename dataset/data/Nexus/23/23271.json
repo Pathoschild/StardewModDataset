@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 23271,
+	"Name": "Actually Lucky Rabbit's Foot (Rebooted)",
+	"Author": "Locked15",
+	"AuthorLabel": "cbingeil and Locked15",
+	"Description": "[b][size=5]ACTUALLY LUCKY RABBIT'S FOOT![/size][/b]\n<br />With this mod, carrying around a rabbit's foot will actually affect your luck bonus.\n<br />\n<br />[b][size=5]DEPENDENCIES[/size][/b]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI - Stardew Modding API[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\n<br />\n<br />[size=4][b]HOW IT WORKS?[/b][/size]\n<br />Out of the box, carrying around a rabbit's foot confers:\n<br />[code]({Rabbit's_Foot_Quality} + {Base_Luck_Bonus}) * {Rabbit's_Foot_Quantity_For_Quality} + {Original_Luck} = {Your_Actual_Luck}[/code]\n<br />For example, you're carrying 2 feet (one silver and one common) with original luck 0 on default settings (with count multiplier set to 'True'):\n<br />[code]({0} + {1}) * {1} = 1 // For Common Foot;\n<br />({1} + {1}) * {1} = 2 // For Silver Foot;\n<br />{1} + {2} + {0} = {3} // Final Luck.\n<br />[/code]\n<br />\n<br />This is a passive bonus. By default, it can be seen as any other buff. If you want you can disable its visibility.\n<br />This table shows the default bonuses by quality of rabbit's foot:\n<br />   \uFEFFQUALITY\u00A0\u00A0 \u00A0|\u00A0\u00A0 \u00A0\u00A0 LUCK BONUS\n<br />[list]\n<br />[*]Common   \uFEFF\u00A0 +1\n<br />[/list][list]\n<br />[*]Silver   \uFEFF   \uFEFF+2\n<br />[/list][list]\n<br />[*]Gold   \uFEFF   \uFEFF +3\n<br />[/list][list]\n<br />[*]Iridium   \uFEFF\u00A0\u00A0\u00A0\u00A0 +4\n<br />[/list]\n<br />[size=4][b]DETAILS[/b][/size]\n<br />[u]This mod IS ABSOLUTELY SAFE to add in mid-game. \n<br />And the same for remove![/u]\n<br />\n<br />It's compatible with [url=https://www.nexusmods.com/stardewvalley/mods/521]Luck Skill[/url] mod.\n<br />\n<br />[size=4][b]CONFIGURATION[/b][/size]\n<br />You can either manually edit a config file, or use Generic Mod Config to do it directly in-game.\n<br />\n<br />Options:\n<br />[list]\n<br />[*]Base Luck Value (default: 1) — Base luck, which you get by rabbit's foot itself (without its quality);\n<br />[*]Custom Buff Icon ID (default: 21) — Icon ID for this buff. You can specify any icon within Buff icon sprites;\n<br />[*]Quality Multiplier (default: 1.0) — Multiplier that affects bonus by every quality. For example, with value set to \"2.0\" you will get +7 Luck from Iridium foot (base quality bonus is +3 for Iridium);\n<br />[*]Show Buff Icon (default: True) — Allow you to hide the buff icon;\n<br />[*]Apply Count Multiplier (default: False) — With this option, you will get luck buff from EVERY foot in your inventory. For example, 4 Iridium Foots you'll gain +16 luck bonus. Without this option, only the best single bonus will apply;\n<br />[*]Compatibility Mode (default: 'BaseGame') — You can specify compatibility of the buff properties. For example, 'BetterArtisanGoods' changes the source and display name of the buff (to Four-Leaf Clover);\n<br />[*]Player Luck Log (default: 'True') — Defines, if log messages \uFEFFwith your current luck level will be shown or not;\n<br />[*]Player Absurd Luck Log (default: 'True') — Defines, if optional tag will be \n<br />[/list][b][size=4]\n<br />TRANSLATION[/size][/b]\n<br />[list]\n<br />[*]English — +;\n<br />[*]Russian — +;\n<br />[*]French — +.\n<br />[/list]\n<br />[b][size=4]ORIGIN[/size][/b]\n<br />The original version of this mod was made by [url=https://www.nexusmods.com/stardewvalley/users/141939673]cbingeil[/url] and available [url=https://www.nexusmods.com/stardewvalley/mods/11447]here[/url]\uFEFF.\n<br />This is an updated version made because the original mod has a permissive license.\n<br />\n<br />Source code can be found [b][url=https://github.com/Locked15/SDV_LRF-Rebooted]here[/url]\uFEFF[/b].\n<br />Latest available GitHub release can found [url=https://github.com/Locked15/SDV_LRF-Rebooted/releases/latest]there[/url]\uFEFF.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23271",
+	"Version": "V1.1.2",
+	"Updated": "2024-05-31T09:14:27+00:00",
+	"Downloads": [
+		{
+			"Id": 101895,
+			"Type": "Main",
+			"DisplayName": "LRF-Rebooted V1.1.2",
+			"FileName": "LRF-Rebooted V1.1.2-23271-V1-1-2-1717146867.zip",
+			"Description": "So, as the title says...\n<br />Your luck value bonus now calculates correctly (+4 Luck on Iridium with Default settings instead of +5).",
+			"Version": "V1.1.2",
+			"SizeInBytes": 21400,
+			"Uploaded": "2024-05-31T09:14:27+00:00",
+			"Mods": [
+				{
+					"Id": "ChelseaBingiel.LuckyRabbitsFoot",
+					"DisplayName": "Lucky Rabbit's Foot (Rebooted)",
+					"Type": "Smapi",
+					"RelativePath": "LuckyRabbitsFoot-Rebooted",
+					"Manifest": {
+						"Name": "Lucky Rabbit's Foot (Rebooted)",
+						"Description": "Makes carrying around a rabbit's foot actually lucky!",
+						"Author": "Chelsea Bingiel and Locked15",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LuckyRabbitsFoot-Rebooted.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11447",
+							"Nexus:23271",
+							"GitHub:Locked15/SDV_LRF-Rebooted"
+						],
+						"UniqueId": "ChelseaBingiel.LuckyRabbitsFoot"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488583,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342409959,
+		"UploaderId": 44835082,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

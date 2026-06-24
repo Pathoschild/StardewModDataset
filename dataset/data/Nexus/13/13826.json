@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 13826,
+	"Name": "Custom Backpack Framework",
+	"Author": "aedenthorn",
+	"Description": "With this mod you can customize the backpack upgrade system, allowing for larger backpacks beyond 36 slots!\n<br />\n<br />This mod adds scroll capability to the inventory grid. Scroll using the mouse scroll wheel, up and down arrow keys, or up and down on a controller. You can also click on the arrow keys and scroll bar with the mouse.\n<br />\n<br />There is also a + button beside the inventory grid to show an expanded view of the inventory.\n<br />\n<br />This mod does change backpack upgrades by itself. You need a mod that uses this framework, like [url=https://www.nexusmods.com/stardewvalley/mods/13827]More Backpack Upgrades[/url].\n<br />\n<br />\n<br />[youtube]YwCpYcetTYA[/youtube]\n<br />\n<br />\n<br />You can create your own Content Patcher mod to set custom backpack upgrades like [url=https://www.nexusmods.com/stardewvalley/mods/13827]More Backpack Upgrades[/url].\n<br />\n<br />You can also manually set your backpack size using the SMAPI console, e.g.:\n<br />\n<br />[b]custombackpack 60[/b]\n<br />\n<br />to set your backpack slots to 60. Only use multiples of 12.\n<br />\n<br />\n<br />[b][size=5]Content Patcher\n<br />[/size][/b]\n<br />An example content.json file would be:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.CustomBackpack/dictionary\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"24\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"name\": \"Large Backpack\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"cost\": 2000,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.CPCustomBackpacks/backpacks\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"textureRect\": \n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\":0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\":0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Width\": 12,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Height\":14\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"Load\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.CPCustomBackpacks/backpacks\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"FromFile\": \"assets/backpacks.png\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />\n<br />[b]textureRect[/b] refers to the part of the texture used for the specific backpack.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Implements a [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] interface to change config settings in-game.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13826",
+	"Version": "2.0.1",
+	"Updated": "2025-07-24T01:24:48+00:00",
+	"Downloads": [
+		{
+			"Id": 138037,
+			"Type": "Main",
+			"DisplayName": "Custom Backpack Framework",
+			"FileName": "Custom Backpack Framework-13826-2-0-1-1753320288.zip",
+			"Description": "Changes:\n<br />\n<br />Fix for 1.6",
+			"Version": "2.0.1",
+			"SizeInBytes": 36738,
+			"Uploaded": "2025-07-24T01:24:48+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomBackpack",
+					"DisplayName": "Custom Backpack Framework",
+					"Type": "Smapi",
+					"RelativePath": "CustomBackpack",
+					"Manifest": {
+						"Name": "Custom Backpack Framework",
+						"Description": "CustomBackpack.",
+						"Author": "aedenthorn",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomBackpack.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:13826"
+						],
+						"UniqueId": "aedenthorn.CustomBackpack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342524725,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400514,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

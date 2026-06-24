@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 40490,
+	"Name": "DISCO (Dynamic Item Sprite CompOsitor)",
+	"Author": "mushymato",
+	"Description": "Full name: [b]D[/b]ynamic [b]I[/b]tem [b]S[/b]prite [b]C[/b]omp[b]O[/b]sitor\n<br />\n<br />Mod that allow content packs to give items and big craftables dynamic sprites.\n<br />This mod is sort of an (E)BAGI successor with more features such as the ability to work on any flavored items and support for big craftable items.\n<br />\n<br />See [url=https://github.com/Mushymato/DynamicItemSpriteCompositor]author guide[/url] for how to make a content pack.\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />For each content pack you have, you can enable/disable the textures as desired from DISCO's configuration page. Some content packs may offer a variety of options for each entry which can also be set here.\n<br />\n<br />There is also a configuration for displaying the mini-icon representing the preserve item, which comes in 3 modes:\n<br />* Hidden: The mini-icon is never shown\n<br />* Pack Defined: The mini-icon is shown only if a content pack defines how to show the mini-icon.\n<br />* Always: The mini-icon is shown for all flavored items, even if they don't have any DISCO rules.\n<br />\n<br />[size=5][b]Multiplayer[/b][/size]\n<br />It's ok to not match the DISCO packs exactly.\n<br />\n<br />In particular you can...\n<br />* have DISCO installed and play with someone without DISCO\n<br />* have completely different DISCO packs\n<br />* have the same DISCO packs, but choose different settings\n<br />\n<br />[size=5][b]Using DISCO with (E)BAGI Mods[/b][/size]\n<br />Aside from content packs made directly for DISCO, you can also have (E)BAGI packs load via DISCO by editing their [b]manifest.json[/b] slightly:\n<br />\n<br />Example [b]manifest.json[/b] based on [url=https://www.nexusmods.com/stardewvalley/mods/23373]Fancy Artisan Goods EBAGI[/url]\n<br />\n<br />[code]{\n<br />// No change needed:\n<br />\"Name\": \"Fancy Artisan Goods Icons fix for EBAGI\",\n<br />\"Author\": \"Aimon111\",\n<br />\"Version\": \"2.0.0\",\n<br />\"Description\": \"Fix for Better Artisan Goods icons mod (jelly, honey and pickles)\",\n<br />\"UniqueID\": \"Aimon111.FancyArtisanGoodsIconsEBAGI\",\n<br />\"UpdateKeys\": [\n<br />\"Nexus:23373\"\n<br />],\n<br />\"MinimumApiVersion\": \"4.0.0\",\n<br />\n<br />// Part to change:\n<br />\"ContentPackFor\": {\n<br />\"UniqueID\": \"mushymato.DISCO\"\n<br />},\n<br />}[/code]\n<br />\n<br />Doing this has the following benefits:\n<br />* You can use DISCO's config menu to enable/disable packs easily.\n<br />* You get to use DISCO's mini-icons, which works on all items.\n<br />* You can mix and match DISCO/EBAGI packs this way without compatibility concerns.\n<br />\n<br />See the [url=https://github.com/Mushymato/DynamicItemSpriteCompositor/blob/main/docs/bagi-shim.md]documentation[/url] for more info on this feature.\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI[/*]\n<br />[*]Download and extract this mod to the Mods folder[/*]\n<br />[/list]\n<br />[url=https://github.com/Mushymato/DynamicItemSpriteCompositor/tree/main][b]Source Code[/b][/url]\n<br />\n<br />\n<br />[size=5][b]Mod in Screenshot[/b][/size]\n<br />The example mod used in the screenshots is the [url=https://github.com/Mushymato/DynamicItemSpriteCompositor/tree/main/ContentPacks/ZH's%20DISCO]unreleased ZH EBAGI -&gt; DISCO conversion[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40490",
+	"Version": "1.0.0",
+	"Updated": "2026-01-30T03:15:05+00:00",
+	"Downloads": [
+		{
+			"Id": 155255,
+			"Type": "Main",
+			"DisplayName": "DISCO",
+			"FileName": "DISCO-40490-1-0-0-1769742905.zip",
+			"Description": "SDV 1.6.15+, initial release",
+			"Version": "1.0.0",
+			"SizeInBytes": 61757,
+			"Uploaded": "2026-01-30T03:15:05+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.DISCO",
+					"DisplayName": "DISCO",
+					"Type": "Smapi",
+					"RelativePath": "DynamicItemSpriteCompositor",
+					"Manifest": {
+						"Name": "DISCO",
+						"Description": "Dynamic Item Sprite Compositor: a mod for giving items dynamic sprites.",
+						"Author": "mushymato",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.4.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "DynamicItemSpriteCompositor.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40490",
+							"GitHub:Mushymato/DynamicItemSpriteCompositor"
+						],
+						"UniqueId": "mushymato.DISCO",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342541943,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427178,
+		"UploaderId": 18790269,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

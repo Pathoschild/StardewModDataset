@@ -1,0 +1,82 @@
+{
+	"Site": "Nexus",
+	"Id": 37172,
+	"Name": "Net Ball For Nature In The Valley",
+	"Author": "XanCreations",
+	"Description": "[center][color=#00ccff][size=5][b]Net Ball for Nature In The Valley[/b][/size]\n<br />[size=2][i]By XanCreations[/i][/size][/color][/center]\n<br />\n<br />[center][b]Version:[/b] 1.0.3\n<br />[b]Compatibility:[/b] Stardew Valley [1.6+] • Content Patcher • Nature In The Valley and other NITV mods[/center]\n<br />\n<br />[center][img]https://i.imgur.com/wjvBO8m.png[/img][/center]\n<br />\n<br />[b][color=#00ffff]Description:[/color][/b]\n<br />Adds a throwable [b]Net Ball[/b] you can buy from [b]Ivy[/b] at the Insectarium shop. This concept is based on how Pokémon has you throw balls to catch them.\n<br />It can be thrown into any body of water to catch creatures that spawn on/in the water. There is also an\u00A0[b]upgraded [/b]version\u00A0with a larger radius which becomes available after completing the Community Center or Jojamart Forms.\n<br />\n<br />Please note:\u00A0I only did this for water tiles since they can be hard to reach with a short range Catching Net. I am not currently working on a ball throw catching mechanic for land-based creatures at this stage, as I like the concept of the Catching Net.\n<br />\n<br />[b][color=#00ffff][size=2]New Feature![/size][/color][/b]\n<br />I've added the ability to spawn water creatures using the Net Ball when there aren't any present nearby. This makes the Net Ball just a little more worth the cost without it being too overpowered.\n<br />\n<br />[b][color=#00ffff]How it works:[/color][/b]\n<br />[list]\n<br />[*]You can buy Net Balls from [b]Ivy’s Insectarium Shop.[/b]\n<br />[*] You throw them into water at the creature. Try to be as accurate as possible as it can miss.\n<br />[*] [b]Progression[/b]: First Net Ball requires certain NITV creature donations. You can enable the config using GMCM to turn off the donation requirement if you prefer or you aren't spawning NITV's base creatures.\n<br />[*]The upgraded version\u00A0unlocks after completing Community Center or Jojamart.\n<br />[*][b]Spawn Chance:[/b] Throwing a Net Ball in the water in an area where there are no water creatures nearby will spawn a water creature.\n<br />[*]Net Ball has 20% chance to spawn a creature | Net Ball☆ has a 40% chance to spawn a creature.\n<br />[*]Spawn chance is also weighted by rarity -&gt; High rarity will spawn less, lower rarity will spawn more.\n<br />[/list]\n<br />[left]        [img]https://i.imgur.com/v9C0n9z.gif[/img]        [img]https://i.imgur.com/RssaFl9.gif[/img][/left]\uFEFF\uFEFF\n<br />[b][color=#00ffff]Installation:[/color][/b]\n<br />[list=1]\n<br />[*] Install [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/30138]Nature In The Valley[/url].\n<br />[*] Extract [b]NITVNetBall[/b] into:\n<br />[code]StardewValley&#92;Mods&#92;NITVNetBall\n<br />[/code][*]Launch via SMAPI.\n<br />[/list]\n<br />\n<br />[b][color=#00ffff]Configuration (Optional):[/color][/b]\n<br />Use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] or edit:  \n<br />[code]Mods&#92;NITVNetBall&#92;[CP] NITV Net Ball&#92;config.json[/code]- This is how you skip the donation requirement and access the Net Ball straight away.\n<br />\n<br />[b][color=#00ffff]Multiplayer &amp; Split-Screen:[/color][/b]\n<br />- I've tested it and at least for me, it works in multiplayer and split-screen. I tried to make sure to invoke the catch method per player. If you notice any desync or other issues, please comment and let me know.\n<br />\n<br />[b][color=#00ffff]Controller Compatibility:[/color][/b]\n<br />I added compatibility for controller as well. I gave gamepads a larger radius since using a joystick to aim can feel a bit jarring.\n<br />\n<br />[b][color=#00ffff]Credits:[/color][/b]\n<br />- Inspired by the concept of Pokéballs from Pokémon.\n<br />[b][size=2]Pokémon assets and all intellectual property belong to Nintendo / Game Freak / The Pokémon Company (This is a fan project, no copyright infringement intended)[/size][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37172",
+	"Version": "1.0.3",
+	"Updated": "2026-01-11T21:59:11+00:00",
+	"Downloads": [
+		{
+			"Id": 153172,
+			"Type": "Main",
+			"DisplayName": "NITVNetBall",
+			"FileName": "NITVNetBall-37172-1-0-3-1768168751.zip",
+			"Description": "PLEASE ENSURE TO COMPLETELY DELETE THE OLD NITVNetBall FOLDER FIRST!\n<br />\n<br />You'll need to redo your config settings again, sorry!\n<br />\n<br />This allows compatibility with my newly updated Catchable Pokemon mod.",
+			"Version": "1.0.3",
+			"SizeInBytes": 133883,
+			"Uploaded": "2026-01-11T21:59:11+00:00",
+			"Mods": [
+				{
+					"Id": "Xan.NITVNetBall",
+					"DisplayName": "NITVNetBall",
+					"Type": "Smapi",
+					"RelativePath": "NITVNetBall\\[C#] NITV Net Ball",
+					"Manifest": {
+						"Name": "NITVNetBall",
+						"Description": "Adds a new item that makes catching water creatures easier.",
+						"Author": "Xan",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NITVNetBall.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Nature.NatureInTheValley",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Xan.NITVNetBall"
+					}
+				},
+				{
+					"Id": "Xan.NITVNetBallContent",
+					"DisplayName": "NITVNetBallContent",
+					"Type": "ContentPack",
+					"RelativePath": "NITVNetBall\\[CP] NITV Net Ball",
+					"Manifest": {
+						"Name": "NITVNetBallContent",
+						"Description": "Creates the Net Ball to be purchased from the Insectarium shop.",
+						"Author": "Xan",
+						"Version": "1.0.3",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Nature.NatureInValleyContent",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:37172"
+						],
+						"UniqueId": "Xan.NITVNetBallContent"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342539860,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423860,
+		"UploaderId": 156878008,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

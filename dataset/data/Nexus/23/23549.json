@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 23549,
+	"Name": "Moolah 1.6 Fix",
+	"Author": "Supergato664",
+	"AuthorLabel": "aedenthorn and supergato664",
+	"Description": "This mod allows the game to store money beyond the vanilla limit of two billion (Int32.MaxValue).[s]\n<br />\n<br />[/s]With this mod there is basically* no limit to how much money you can own.\n<br />\n<br />It also lets you customize and display a separator (default [b]comma[/b]) every set number of digits (default [b]3[/b]).\n<br />\n<br />[size=2]* The amount is stored in a string, which can hold just over two-billion \n<br />digits, so that's the technical upper limit. A googol has 101 digits. \n<br />Your computer will run out of memory and / or you will be dead by the \n<br />time this limit is reached.\n<br />[/size]\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />\n<br />This mod doesn't fix the fact that things like prices still use Int32 and \n<br />have a maximum of ~2.1 billion. If for some reason you want to add or \n<br />subtract more than this in one go, you can use the SMAPI API.\n<br />[size=2]\n<br />\n<br />[size=5][b]SMAPI API[/b][/size]\n<br />[/size]\n<br />There are two methods in the API:\n<br />\n<br />[b]AddMoolah(Farmer f, BigInteger add);[/b]\n<br />\n<br />and\n<br />\n<br />[b]GetTotalMoolah(Farmer f);[/b]\n<br />\n<br />You don't need to pass a [b]BigInteger[/b] to [b]AddMoolah[/b]; any integer-type number will work, as long as it has less than ~2.1 billion digits.\n<br />\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can customize this mod by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Original code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />[b][size=5]Credits[/size]\n<br />[/b]All credits go to the original mod author, aedenthorn. I simply updated it to 1.6.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23549",
+	"Version": "1.0",
+	"Updated": "2024-05-02T04:35:45+00:00",
+	"Downloads": [
+		{
+			"Id": 96845,
+			"Type": "Main",
+			"DisplayName": "Moolah 1.6 Fix",
+			"FileName": "Moolah 1.6 Fix-23549-1-0-1714624545.rar",
+			"Description": "Updated mod for Stardew Valley 1.6",
+			"Version": "1.0",
+			"SizeInBytes": 24138,
+			"Uploaded": "2024-05-02T04:35:45+00:00",
+			"Mods": [
+				{
+					"Id": "supergato664.Moolah",
+					"DisplayName": "Moolah 1.6 Fix",
+					"Type": "Smapi",
+					"RelativePath": "Moolah",
+					"Manifest": {
+						"Name": "Moolah 1.6 Fix",
+						"Description": "Moolah 1.6 Fix",
+						"Author": "aedenthorn",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "Moolah.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:23549"
+						],
+						"UniqueId": "supergato664.Moolah"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342483533,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410237,
+		"UploaderId": 53516096,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

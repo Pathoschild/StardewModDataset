@@ -1,0 +1,51 @@
+{
+	"Site": "Nexus",
+	"Id": 38959,
+	"Name": "FriendshipTokens",
+	"Author": "jkysa88",
+	"Description": "Friendship Tokens — Invisible Dialogue RewardsA tiny utility that lets content packs grant friendship directly from dialogue text.\n<br />Write [[FT:+250]] in a line → player sees nothing → +250 friendship is applied once for that box.\n<br />\n<br />Invisible tokens: [[FT:+/-N]] or [[FT:Name:+/-N]] are stripped before rendering.\n<br />\n<br />One-time per box: We sum all tokens across pages and apply once.\n<br />\n<br />Targeted boosts: [[FT:Robin:+30]] raises Robin even if Shane is speaking.\n<br />\n<br />Event-friendly: Works in most event speak/dialogue lines.\n<br />\n<br />Multiplayer-safe: Each client applies friendship to their own farmer.\n<br />\n<br />Why this is useful\n<br />\n<br />No event spaghetti. No custom code. Translators and dialogue modders can tune relationship pacing right inside i18n.\n<br />\n<br />Usage\n<br />Basic syntax\n<br />\n<br />Current speaker: [[FT:+250]], [[FT:-40]]\n<br />\n<br />Target by name: [[FT:Shane:+250]] or [[FT:Shane+250]] (case-insensitive, internal or display name)\n<br />\n<br />\uD83D\uDCA1 250 points = 1 heart (vanilla).\n<br />\n<br />Content Patcher / i18n examples\n<br />{\n<br />  \"OnlyShane.sample.1\": \"…Fine. Take it. [[FT:+40]]\",\n<br />  \"OnlyShane.sample.2\": \"Tell Robin I tried. [[FT:Robin:+20]]\"\n<br />}\n<br />\n<br />\n<br />EditData example\n<br />\n<br />{\n<br />  \"Action\": \"EditData\",\n<br />  \"Target\": \"Characters/Dialogue/Shane\",\n<br />  \"Entries\": {\n<br />    \"Introduction\": \"Think you're a good friend in Stardew Valley? [[FT:+250]] [[FT:Robin:+250]]\"\n<br />  }\n<br />}\n<br />\n<br />Event example\n<br />.../speak Shane \"Okay… this is yours. [[FT:+120]]\"/\n<br />message \"Robin nods. [[FT:Robin:+30]]\"/...\n<br />\n<br />\n<br />First line: +120 to the speaker (Shane).\n<br />\n<br />Second line: message has no speaker, but the targeted token still grants +30 to Robin.\n<br />\n<br />How it works (in short)\n<br />\n<br />Tokens are removed at construction and right before rendering the text.\n<br />\n<br />We sum tokens per dialogue box (across pages) and apply once:\n<br />\n<br />Current-speaker tokens apply when a speaker exists.\n<br />\n<br />Targeted tokens ([[FT:Name:±N]]) apply as soon as the NPC can be resolved.\n<br />\n<br />UI never shows the tokens.\n<br />\n<br />Limitations\n<br />\n<br />No speaker = no “current speaker” bonus. Letters/TV/signs don’t have a speaker.\n<br />→ Targeted tokens still work there ([[FT:Name:+N]]), but [[FT:+N]] does not.\n<br />\n<br />Mods that replace the dialogue UI with a custom class might need a small compatibility patch.\n<br />\n<br />Recommended values\n<br />\n<br />Small flavor line: ±10 ~ ±40\n<br />\n<br />Meaningful moment: ±60 ~ ±120\n<br />\n<br />Scene highlight (confession/apology): up to +250 (≈ 1 heart)\n<br />\n<br />Penalties generally lower than rewards for player comfort.\n<br />\n<br />Requirements\n<br />\n<br />SMAPI 4.x (or newer)\n<br />\n<br />Installation\n<br />\n<br />Install or update SMAPI.\n<br />\n<br />Drop this mod into Mods/.\n<br />\n<br />Run the game. In SMAPI console you should see:\n<br />\n<br />[FT] Patched N DialogueBox ctors + getCurrentString()\n<br />\n<br />Compatibility &amp; Multiplayer\n<br />\n<br />Works with vanilla and CP dialogue.\n<br />\n<br />Co-op: each player’s client applies friendship to their own farmer—no double-counting.\n<br />\n<br />Troubleshooting\n<br />\n<br />Token text appears on screen → Another UI is rendering without DialogueBox. Tell me which mod; I’ll add a hook.\n<br />\n<br />Friendship didn’t change\n<br />\n<br />The line had no speaker and you used [[FT:+N]] → by design. Use [[FT:Name:+N]].\n<br />\n<br />Check SMAPI Trace: look for [FT] &lt;Name&gt; +N.\n<br />\n<br />Target name not found → Use the NPC’s internal or display name (case-insensitive). The mod retries while the box is open.\n<br />\n<br />FAQ\n<br />\n<br />Q. Is this a cheat?\n<br />A. It’s a tool. Authors choose values. We also apply once per box to prevent abuse.\n<br />\n<br />Q. Does it work in events?\n<br />A. Yes for most speak lines. message/letters/TV need targeted tokens.\n<br />\n<br />Roadmap\n<br />\n<br />Optional per-NPC daily cap\n<br />\n<br />Optional heart-range gating (only active between X~Y hearts)\n<br />\n<br />Optional box-level default target ([[FT@Shane]])\n<br />\n<br />Permissions &amp; Credits\n<br />\n<br />Author: jkysa88\n<br />\n<br />\n<br />\n<br />\n<br />Suggested tags (Nexus)\n<br />\n<br />Utilities, Frameworks, Gameplay, SMAPI, Dialogue, Content Patcher, Rewards, Friendship, Tokens, Lightweight, Multiplayer",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38959",
+	"Version": "1.0.0",
+	"Updated": "2025-10-30T19:16:33+00:00",
+	"Downloads": [
+		{
+			"Id": 146856,
+			"Type": "Main",
+			"DisplayName": "FriendshipTokens",
+			"FileName": "FriendshipTokens-38959-1-0-0-1761851793.zip",
+			"Description": "main file",
+			"Version": "1.0.0",
+			"SizeInBytes": 14235,
+			"Uploaded": "2025-10-30T19:16:33+00:00",
+			"Mods": [
+				{
+					"Id": "heeya.FriendshipTokens",
+					"DisplayName": "FriendshipTokens",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "FriendshipTokens",
+						"Description": "대사 안의 토큰을 읽어 즉시 호감도를 변동.",
+						"Author": "jkysa88",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FriendshipTokens.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "heeya.FriendshipTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533544,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425647,
+		"UploaderId": 897634,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

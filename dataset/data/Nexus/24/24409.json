@@ -1,0 +1,100 @@
+{
+	"Site": "Nexus",
+	"Id": 24409,
+	"Name": "Ars Venefici",
+	"Author": "HeyImAmethyst",
+	"Description": "Ars Venefici is a Stardew Valley mod that adds the ability to craft and cast spells with a spell book!\n<br />\n<br />The functionality for the spell making is a port of the spell making functionality from the [url=https://www.curseforge.com/minecraft/mc-mods/ars-magica-legacy]Ars Magica Legacy Mod for Minecraft[/url] to C# (I asked for permision to turn this into a Stardew Mod and got the okay to do so!).\n<br />\n<br />Took inspiration from the [url=https://www.curseforge.com/minecraft/mc-mods/ars-nouveau]Ars Nouveau mod for Minecraft[/url] to make spells using a spell book format.\n<br />\n<br />Some functionality for some spell parts is based on some spells from the [url=https://www.nexusmods.com/stardewvalley/mods/2007]Magic mod by spacechase0[/url].\n<br />The cutscene of the wizard giving you a spell book is also based on the learning magic cutscene from the magic mod.\n<br />The professions in this mode are also based on the professions from the magic mod.\n<br />\n<br />\n<br />[center]------------------------------------------------------------------------------------------------------------------------------------------[/center]\n<br />\n<br />[center][size=6][color=#ff0000]Warning![/color][/size][/center]\n<br />[center]\n<br />[size=5][color=#f4cccc]This mod doesn't not work completely well in multiplayer! There are some bugs with spells not fully working!\n<br />I tried taking a look at related multiplayer bugs but I don't have a clue on how to fix them.\n<br />If you have experience in c# and and want to try and help me fix these bugs, feel free to take a look at the source code linked at the bottom, and submit a pull request with your fix! I would greatly appreciate it![/color][/size]\n<br />[/center]\n<br />\n<br />[center]------------------------------------------------------------------------------------------------------------------------------------------[/center]\n<br />\n<br />[b]Install[/b]\n<br />\n<br />- Make sure the game is updated to the latest version.\n<br />- Install the latest version of [url=https://smapi.io/]SMAPI[/url]\n<br />- Install [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url].\n<br />- Install [url=https://www.nexusmods.com/stardewvalley/mods/7831]Mana Bar[/url].\n<br />- Install [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].\n<br />- Install this mod.\n<br />- Run the game using SMAPI.\n<br />\n<br />[b]Uninstall[/b]\n<br />- Simply delete the mod from your mods folder.\n<br />\n<br />\n<br />[b]Learning Wizardry[/b]\n<br />\n<br />To gain access to crafting spells and the wizardry skill, you need to be at 4 hearts with the wizard. Then you need to simply enter his tower. If [url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url] is installed, you will need to enter the new custom basement the mod adds to his tower.\n<br />\n<br />[b]Using magic[/b]\n<br />\n<br />- Press shift and 'B' to open the spell book menu.The spell book menu will show you all the different spell parts you can use (But it will be blank the first time you open it. You need to use the magic altar to learn new spell parts). To create a spells, you will need to place one or multiple shapes, which are squares, into each shape group on the spell page you are on.\n<br />\u00A0\u00A0\u00A0 - Each shape group can hold up to 4 shapes/modifiers and if you want a spell to have more than one shape group, they have to be filled in order (Left to right) with no empty ones in between (the spell will not be valid and will not cast if that happens).\n<br />- Then you will need to place one or multiple components, which are octagons, into the spell grammar section of the page.\n<br />- You can change the way shapes, and components behave with modifiers, which are diamonds.\n<br />- Be sure to give your spell a name. Once you have created your spell, you can close your spell book and the spell will be saved.\n<br />- A spell label that show the current selected spell will appear on the screen once the spell book menu is closed. It can be moved with shift + the D3 button (can be changed in the config)\n<br />- Use 'Z' and 'X' to move through your list of spells. You can also use shift and 'Z' and shift and 'X' to cycle through a spell's shape groups\n<br />- Once you have the spell you want, you will be able to cast it. To cast a spell, press Q.\n<br />- These controls can be adjusted in Ars Venefici's config file or if you have [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] installed, a section for the Ars Venefici config should appear in its menu, allowing you to edit the config values in game.\n<br />\n<br />[b]Professions[/b]\n<br />\n<br />You gain magic XP by casting spells. Leveling up increases your mana regen amount, and unlocks some professions:\n<br />\n<br />- Level 5: Mana Efficiency (Total mana cost of spells is reduced by about a third).\n<br />\u00A0\u00A0\u00A0 - Level 10: Mana Efficiency (Total mana cost of spells is reduced by about half).\n<br />\u00A0\u00A0\u00A0 - Level 10: Mana Conservation (25% chance of spells not costing any mana).\n<br />- Level 5: Mana Regen I (doubles base mana regen amount).\n<br />\u00A0\u00A0\u00A0 - Level 10: Mana Regen II (triples base mana regen amount).\n<br />\u00A0\u00A0\u00A0 - Level 10: Mana Reserve (+500 max mana).\n<br />\n<br />[b]Replenishing Mana[/b]\n<br />\n<br />Your mana will regen over time. Each level you gain for wizardry as well as the Mana Efficiency professions will inrease the mana regen amount. You can also replenish some mana by eating a food item that has a custom field for regenerating mana.\n<br />[b]\n<br />\u00A0How Mana is Calculated\n<br />\n<br />[/b]Every shape and modifier is multiplied together to create a multiplier value. Every compenent is added together to create a cost value. Then those two values are multiplied together to get the final mana cost.\n<br />\n<br />[b]\u00A0Adding New Items That Replenish Mana\n<br />[/b]\n<br />As of version 1.13, to add new items that replenish mana you would have to add an additional context tag.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/39117]See MoonSlime's mana bar API for more information[/url].\n<br />\n<br />[url=https://stardewvalleywiki.com/Modding:Items#Define_a_custom_item]Take a look at this wiki page for a guide to add in custom items via Content Patcher[/url]\uFEFF.\n<br />\n<br />[b]Rune Table\n<br />[/b]\n<br />Version 1.10 adds a new machine called a rune table. It will allow you to make different colored runes! You would need to craft a blank rune (which is a crafting recipe unlocked if you have learned wizardry) and an additional item (similar to how the furnace needs coal and the ore you need to smelt). To make any of the colored runes, an item with the color you are looking for needs to be placed into the table. So if you want a red rune, you need to have a red item (like a strawberry for example) and right click the table with it, while having a blank rune in your inventory. Some of the new items added with this mod can be used to make runes as well!\n<br />\n<br />Any item that has a color context tag that the rune table is able to make a rune for can be used. If you have [url=https://www.nexusmods.com/stardewvalley/mods/541?tab=description]LookupAnything[/url], the item information menu should tell you if an item can be used to make a colored rune.\n<br />\n<br />[b]Affinities[/b]\n<br />\n<br />Version 1.14 adds the affinity mechanic from Ars Magica 2 mod, with some changes to fit with Stardew Valley. As you cast spells with a certain affinity for an element, you will also gain affinity to that element. As you gain affinity in one element, you lose affinity in the rest. How much progress is lost is determined by the affinity's direct opposite affinity, adjacent affinities, minor opposite affinities, and major opposite affinities. You gain some new abilities or effects when you reach a certain threshold.\n<br />\n<br />New essence items have been added. The essences start dropping from monsters at wizardry level 3. Once you pick up any essence for the first time, you will get a notification hinting you need to go to the wizard. Go to the wizard with any essence in your inventory (enter the basement if you have Stardew Valley Expanded installed) and a cutscene will play explaining affinities you should get some new recipes.\n<br />\n<br />Essences are used to craft affinity tomes to boost an affinity around 10% while also reducing your progress in all other affinities by around 10%. You can get most of the essences from slaying monsters with 2 only obtainable through crafting (may change in the future its a bit clunky but its okay for now). All of the essences can be multiplied through a crafting recipe corresponding to the their affinity type.\n<br />\n<br />A new affinities tab has been added to the magic altar menu. You can use this tab to see which affinities you are attuned to. Once you reach 1.0 in any affinity your progress will lock and you wont be able to progress into another affinity (may change in the future. Let me know if you guys want a toggle to turn the locking on or off or to leave it off.)\n<br />\n<br />[b]Affinity Behavior[/b]\n<br />\n<br />[spoiler]\n<br />EARTH\n<br />[list]\n<br />[*]Direct Opposite : AIR[/*]\n<br />[*]Major Opposites : WATER, ARCANE, LIFE, LIGHTNING[/*]\n<br />[*]Minor Opposites : NATURE, FIRE[/*]\n<br />[/list]\n<br />WATER\n<br />[list]\n<br />[*]Direct Opposite : FIRE[/*]\n<br />[*]Major Opposites : LIGHTNING, EARTH, ARCANE, DARKNESS[/*]\n<br />[*]Minor Opposites : AIR, ICE[/*]\n<br />[/list]\n<br />AIR\n<br />[list]\n<br />[*]Direct Opposite : EARTH[/*]\n<br />[*]Major Opposites : NATURE, FIRE, ICE, DARKNESS[/*]\n<br />[*]Minor Opposites : WATER, ARCANE[/*]\n<br />[/list]\n<br />FIRE\n<br />[list]\n<br />[*]Direct Opposite : WATER[/*]\n<br />[*]Major Opposites : AIR, ICE, NATURE, LIFE[/*]\n<br />[*]Minor Opposites : EARTH, LIGHTNING[/*]\n<br />[/list]\n<br />NATURE\n<br />[list]\n<br />[*]Direct Opposite : ARCANE[/*]\n<br />[*]Major Opposites : AIR, DARKNESS, LIGHTNING, FIRE[/*]\n<br />[*]Minor Opposites : LIFE, EARTH[/*]\n<br />[/list]\n<br />ICE\n<br />[list]\n<br />[*]Direct Opposite : LIGHTNING[/*]\n<br />[*]Major Opposites : LIFE, FIRE, AIR, ARCANE[/*]\n<br />[*]Minor Opposites : WATER, DARKNESS[/*]\n<br />[/list]\n<br />LIGHTNING\n<br />[list]\n<br />[*]Direct Opposite : ICE[/*]\n<br />[*]Major Opposites : WATER, DARKNESS, NATURE, EARTH[/*]\n<br />[*]Minor Opposites : LIFE, FIRE[/*]\n<br />[/list]\n<br />LIFE\n<br />[list]\n<br />[*]Direct Opposite : DARKNESS[/*]\n<br />[*]Major Opposites : ARCANE, ICE, FIRE, EARTH[/*]\n<br />[*]Minor Opposites : NATURE, LIGHTNING[/*]\n<br />[/list]\n<br />ARCANE\n<br />[list]\n<br />[*]Direct Opposite : NATURE[/*]\n<br />[*]Major Opposites : LIFE, EARTH, WATER, ICE[/*]\n<br />[*]Minor Opposites : AIR, DARKNESS[/*]\n<br />[/list]\n<br />DARKNESS\n<br />[list]\n<br />[*]Direct Opposite : LIFE[/*]\n<br />[*]Major Opposites : NATURE, LIGHTNING, WATER, AIR[/*]\n<br />[*]Minor Opposites : ARCANE, ICE[/*]\n<br />[/list]\n<br />[b]Abilities and Effects[/b]\n<br />\n<br />Resistance to attacks from any monster. Starts at fire affinity at 0.1. Damage reduction based on depth.\n<br />Resistance to attacks from any monsters with a fire affinity. Starts at fire affinity at 0.1. Damage reduction based on depth. Stacks with the resistance ability.\n<br />Additional damage to undead monsters (skeletons and mummies). Starts at life affinity 0.1. Additional damage based on depth.\n<br />Weak to attacks from monsters with an arcane affinity. Starts at arcane affinity 0.5. Additional damage based on depth.\n<br />Health and stamina regeneration. Starts at life affinity 0.6. Additional regeneration based on depth[b].[/b][/spoiler]\n<br />\n<br />[b]Adding New Spell Parts[/b]\n<br />\n<br />Version 1.12.0 add the ability to add custom spell parts! You would need to have some knowledge of c# and making a smapi mod to use the mod template I have created. I have placed comments inside the code to help you with the process to creating new spell parts.\n<br />\n<br />[color=#ff7700][url=https://github.com/HeyImAmethyst/ArsVeneficiSpellPartModTemplate]Spell Part Mod Template[/url][/color]\n<br />\n<br />[b]Console Commands\n<br />[/b]\n<br />[spoiler][color=#ffff00]player_togglewizardry[/color]\u00A0 [color=#ff7700]&lt;true | false&gt;[/color] : Toggles the player's the ability to cast spells\n<br />[color=#ffff00]player_learnspellpart [/color][color=#ff7700]&lt;spellpartId&gt; [/color]: \u00A0Allows the player to learn a spell part\n<br />[color=#ffff00]player_forgetspellpart\u00A0[/color][color=#ff7700]&lt;spellpartId&gt;[/color] : Allows the player to forget a spell part\n<br />[color=#ffff00]player_learnallspellparts [/color]: Allows the player to learn all spell parts\n<br />[color=#ffff00]player_forgetallspellparts[/color] : Allows the player to forget all spell parts\n<br />[color=#ffff00]player_knowsspellpart[/color] [color=#ff7700]&lt;spellpartId&gt;[/color] : Checks if a player knows a spell part\n<br />\n<br />[color=#ffff00]save_manapointsperlevel[/color] [color=#ff7700]&lt;numberValue&gt;[/color] : Sets the amount of mana players have per Wizardry level\n<br />[color=#ffff00]save_manaregenrate[/color] [color=#ff7700]&lt;numberValue&gt; [/color]: Sets the mana regen rate of players\n<br />[color=#ffff00]save_enableinfinitemana [/color][color=#ff7700]&lt;true | false&gt;[/color] : Toggles infinate mana\n<br />[color=#ffff00]save_enablegrowsickness[/color]\u00A0 [color=#ff7700]&lt;true | false&gt;[/color] : Toggles the grow sickness debuff\n<br />\n<br />[color=#ffff00]save_growsicknessdurationmillisecondslessthanlevelsix[/color] [color=#ff7700]&lt;numberValue&gt;[/color] : \u00A0Sets the grow sickness debuff duration for Wizardry levels less than level 6\n<br />\n<br />[color=#ffff00]save_growsicknessdurationmillisecondsgreaterthanorequaltolevelsix[/color] [color=#ff7700]&lt;numberValue&gt;[/color] : Sets the grow sickness debuff duration for Wizardry levels greater than or equal to level 6\n<br />\n<br />[color=#ffff00]save_growsicknessdurationmillisecondsgreaterthanorequaltoleveleight [/color][color=#ff7700]&lt;numberValue&gt; [/color]: Sets the grow sickness debuff duration for Wizardry levels greater than or equal to level 8\n<br />\n<br />[color=#ffff00]save_growsicknessdurationmillisecondsgreaterthanorequaltolevelten[/color] [color=#ff7700]&lt;numberValue&gt;[/color] : Sets the grow sickness debuff duration for Wizardry levels greater than or equal to level 10\n<br />\n<br />[color=#ffff00]save_hastebasevalueamount[/color] [color=#ff7700]&lt; numberValue &gt;[/color] : Sets the base amount value for the haste affect\n<br />[color=#ffff00]save_enablepvp[/color] [color=#ff7700]&lt;true | false&gt;[/color] : Toggles pvp\n<br />\n<br />[color=#ffff00]save_savedata[/color]: Returns the save data values for this mod[/spoiler]\n<br />\n<br />[b]List of Spell Part Ids[/b]\n<br />\n<br />[spoiler]\n<br />[b][size=4]Shapes[/size][/b]\n<br />self\n<br />projectile\n<br />touch\n<br />ethereal_touch\n<br />aoe\n<br />zone\n<br />wave\n<br />wall\n<br />rune\n<br />channel\n<br />contingency_damage\n<br />contingency_health\n<br />cone\n<br />beam\n<br />\n<br />[b][size=4]Components[/size][/b]\n<br />dig\n<br />plow\n<br />grow\n<br />harvest\n<br />create_water\n<br />explosion\n<br />blink\n<br />light\n<br />heal\n<br />life_drain\n<br />life_tap\n<br />physical_damage\n<br />magic_damage\n<br />frost_damage\n<br />lightning_damage\n<br />fire_damage\n<br />haste\n<br />regeneration\n<br />mana_regeneration\n<br />dispel\n<br />forge\n<br />shield\n<br />summon\n<br />\n<br />[b][size=4]Modifiers[/size][/b]\n<br />damage\n<br />range\n<br />bounce\n<br />piercing\n<br />velocity\n<br />healing\n<br />duration\n<br />mining_power\n<br />effect_power[/spoiler]\n<br />[b]Translation Credits[/b]\n<br />\n<br />French translations by Caranud on Nexus\n<br />Chinese translations by\u00A0 Awassakura on Nexus\n<br />Korean translations by Bamma77 on Nexus\n<br />\n<br />[b]Additional Notes[/b]\n<br />\n<br />Ars Venefici seems to roughly translate to 'The Art of Wizardry' or 'The Art of Sorcery' based on translating using google and using some Latin translation sites to see if the words are accurate. I wanted to use 'Ars' in the name as a refrence to Ars Magica Legacy, the original Ars Magica Mod by AWildCanadianEh, and Ars Nouveau. If there is a more accurate translation of 'The Art of Wizardry' or 'The Art of Sorcery' that includes the word 'Ars' please let me know ^^'\uFEFF\n<br />\n<br />Sprites used for the beam and aoe shapes are by [url=https://bdragon1727.itch.io/free-effect-and-bullet-16x16]BDragon1727[/url]\n<br />[b][url=https://www.youtube.com/watch?v=m18nUqzWIbE&amp;t=282s]Video Tutorial[/url][/b]\n<br />[url=https://github.com/HeyImAmethyst/Ars-Venefici]Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24409",
+	"Version": "1",
+	"Updated": "2026-05-29T23:56:48+00:00",
+	"Downloads": [
+		{
+			"Id": 169425,
+			"Type": "Main",
+			"DisplayName": "ArsVenefici 1.14.0",
+			"FileName": "ArsVenefici 1.14.0-24409-1-1780099008.zip",
+			"Description": "REMINDER TO BACKUP THE PREVIOUS VERSION'S SAVES FOLDER LOCATED IN THE SAME PLACE AS THE DLL! THIS HOLDS YOUR SPELLS FOR EACH SAVE!<br /><br />See changelog for more info on the latest changes.",
+			"Version": "1.14.0",
+			"SizeInBytes": 4192588,
+			"Uploaded": "2026-05-29T23:56:48+00:00",
+			"Mods": [
+				{
+					"Id": "HeyImAmethyst.ArsVenefici",
+					"DisplayName": "Ars Venefici",
+					"Type": "Smapi",
+					"RelativePath": "ArsVenefici\\ArsVenefici",
+					"Manifest": {
+						"Name": "Ars Venefici",
+						"Description": "This mod adds magic to Stardew Valley.",
+						"Author": "HeyImAmethyst",
+						"Version": "1.14.0",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "ArsVenefici.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"MinimumVersion": "1.21.2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.2.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "mistyspring.ItemExtensions",
+								"MinimumVersion": "1.12.3",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Kronosta.ForageCrops",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:24409"
+						],
+						"UniqueId": "HeyImAmethyst.ArsVenefici"
+					}
+				},
+				{
+					"Id": "HeyImAmethyst.CP.ArsVenefici",
+					"DisplayName": "(CP) Ars Venefici",
+					"Type": "ContentPack",
+					"RelativePath": "ArsVenefici\\[CP] Ars Venifici",
+					"Manifest": {
+						"Name": "(CP) Ars Venefici",
+						"Description": "Content Patcher content pack for Ars Venefici",
+						"Author": "HeyImAmethyst",
+						"Version": "1.12.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mistyspring.ItemExtensions",
+								"MinimumVersion": "1.11.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "HeyImAmethyst.CP.ArsVenefici"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556113,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411097,
+		"UploaderId": 72482428,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

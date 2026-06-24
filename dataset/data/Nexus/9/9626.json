@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 9626,
+	"Name": "Custom Decoration Areas",
+	"Author": "aedenthorn",
+	"Description": "This mod is a framework that allows mod authors to create content packs that either add / replace flooring and wallpapering rectangles to compatible game locations.\n<br />\n<br />\n<br />[b][size=5]Basic Use[/size][/b]\n<br />\n<br />If someone makes a content pack for this mod, install this mod and their content pack.\n<br />\n<br />\n<br />[b][size=5]Making Content Packs[/size][/b]\n<br />\n<br />[size=3][b]Content Pack Files[/b][/size]\n<br />\n<br />Content packs contain a [b]manifest.json[/b] file and a [b]content.json[/b] file.\u00A0 The [b]manifest.json[/b] file looks something like this:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"Name\": \"Saloon Content Pack for Custom Walls and Floors\",\n<br />\u00A0 \"Author\": \"aedenthorn\",\n<br />\u00A0 \"Version\": \"0.1.0\",\n<br />\u00A0 \"Description\": \"\",\n<br />\u00A0 \"UniqueID\": \"aedenthorn.CWFSaloonPack\",\n<br />\u00A0 \"MinimumApiVersion\": \"3.12.0\",\n<br />\u00A0 \"ContentPackFor\": {\n<br />\u00A0\u00A0\u00A0 \"UniqueID\": \"aedenthorn.CustomWallsAndFloors\",\n<br />\u00A0\u00A0\u00A0 \"MinimumVersion\": \"0.1.0\"\n<br />\u00A0 },\n<br />\u00A0 \"Dependencies\": [\n<br />\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"UniqueID\": \"aedenthorn.CustomWallsAndFloors\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"IsRequired\": true\n<br />\u00A0\u00A0 },\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />The [b]content.json[/b] file looks something like this:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0\u00A0 \"data\": \n<br />\u00A0\u00A0\u00A0 [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"name\": \"Saloon\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"replaceFloors\": false,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"replaceWalls\": false,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"replaceNonDecorationTiles\": true,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"getFloorsFromFile\":\"\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"getWallsFromFile\":\"\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"floors\": \n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"X\":1,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Y\":17,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Width\":28,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Height\":7\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"walls\": \n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"X\":3,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Y\":1,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Width\":9,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Height\":3\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"floorsOmit\": \n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"wallsOmit\": \n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ]\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 ]\n<br />}\n<br />[/code]\n<br />Each entry in \"data\" defines a set of floors and walls to add to a game location.\n<br />\n<br />[b]name[/b] is the name of the game location. As of now, the mod works with decoratable locations ([b]FarmHouse[/b] and [b]Shed[/b]) and ordinary game locations, including the following vanilla locations:\n<br />\n<br />[list]\n<br />[*]JoshHouse\n<br />[*]HaleyHouse\n<br />[*]SamHouse\n<br />[*]Blacksmith\n<br />[*]Saloon\n<br />[*]Trailer\n<br />[*]Hospital\n<br />[*]HarveyRoom\n<br />[*]ElliottHouse\n<br />[*]ScienceHouse\n<br />[*]SebastianRoom\n<br />[*]Tent\n<br />[*]AnimalShop\n<br />[*]LeahHouse\n<br />[*]SandyHouse\n<br />[*]WitchSwamp\n<br />[*]WitchHut\n<br />[*]WitchWarpCave\n<br />[*]BathHouse_Entry\n<br />[*]BathHouse_MensLocker\n<br />[*]BathHouse_WomensLocker\n<br />[*]Greenhouse\n<br />[*]SkullCave\n<br />[*]Backwoods\n<br />[*]Tunnel\n<br />[*]Trailer_big\n<br />[*]Sunroom\n<br />[*]LeoTreeHouse\n<br />[/list]\n<br />This mod will turn any of the above ordinary locations into a decoratable location if included in a content pack for this mod. That may have unexpected consequences, so you may want to limit your use of this mod to locations that are already decoratable (FarmHouse and Shed, and any modded decoratable locations). Of course, that takes away half the fun of this mod.\n<br />\n<br />Other locations are not ordinary, so they will have to be adapted individually to work with the mod (I might get around to that some day).\n<br />\n<br />If [b]replaceFloors [/b]or [b]replaceWalls[/b] are set to true, it will remove any walls and floors defined by the vanilla game. Otherwise it will add new walls and floors to the game's list for that location. This is only applicable to decoratable locations like [b]FarmHouse [/b]and [b]Shed[/b]. These keys can be omitted (default is [b]false[/b])\n<br />\n<br />If [b]replaceNonDecorationTiles[/b] is set to false, the mod will ignore any tiles that are not already wallpaper or flooring tiles. This key can be omitted (default is [b]true[/b]).\n<br />\n<br />If [b]getFloorsFromFile[/b] or [b]getWallsFromFile[/b] is set to a relative file path, the mod will look for that resource in the game content. This allows modders to create Content Patcher mods with all the CP wizardry around relationships, marriages, seasons, etc. If you don't know how this works, you can learn about it from the Content Patcher docs. The file retrieved should be a JSON array of rectangle objects, e.g.:\n<br />\n<br />[code]\uFEFF[\n<br />\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\":1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\":1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Width\":5,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Height\":3\n<br />\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\":6,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\":1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Width\":5,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Height\":3\n<br />\u00A0\u00A0 \u00A0}\n<br />]\n<br />[/code]\n<br />These keys can be omitted (default is to take the list of floors and walls from the [b]content.json[/b] file directly).\n<br />\n<br />[b]floorsOmit[/b] and [b]wallsOmit[/b] are lists of rectangles that specify areas to skip, allowing for irregularly-shaped floors and walls.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9626",
+	"Version": "0.4.1",
+	"Updated": "2021-09-14T02:28:06+00:00",
+	"Downloads": [
+		{
+			"Id": 45215,
+			"Type": "Main",
+			"DisplayName": "Custom Decoration Areas",
+			"FileName": "Custom Decoration Areas-9626-0-4-1-1631586486.zip",
+			"Description": "Please completely remove old versions of this mod before updating as the name and folder name have changed.\n<br /><br />Thank you.",
+			"Version": "0.4.1",
+			"SizeInBytes": 15736,
+			"Uploaded": "2021-09-14T02:28:06+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomWallsAndFloors",
+					"DisplayName": "Custom Decoration Areas",
+					"Type": "Smapi",
+					"RelativePath": "CustomDecorationAreas",
+					"Manifest": {
+						"Name": "Custom Decoration Areas",
+						"Description": "Lets you define custom decoratable wall and floor areas.",
+						"Author": "aedenthorn",
+						"Version": "0.4.1",
+						"MinimumApiVersion": "3.12.0",
+						"EntryDll": "CustomDecorationAreas.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9626"
+						],
+						"UniqueId": "aedenthorn.CustomWallsAndFloors",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomDecorationAreas"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342431903,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396314,
+		"UploaderId": 18901754,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

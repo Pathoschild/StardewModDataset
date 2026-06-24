@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 4556,
+	"Name": "Fix Dice",
+	"Author": "bambimenot",
+	"AuthorLabel": "Ashley",
+	"Description": "Fix Dice overrides pseudo-random number generation in the game's code, forcing it to use more mathematically correct seed inputs. This is done by overriding the seed given to new System.Random instances with outputs from a central System.Random instance.\n<br />\n<br />In the source code, the game will try to \"seed\" the random number generator with bad input, which will produce demonstrably non-random outputs. For instance, the slot machine mini game in the casino re-seeds every lever pull with \"times played slots + days played + unique id for this game.\" The result of the expression is the same as the value used in the previous lever pull, plus one. Because of this, many consecutive games will produce a predictable win/loss pattern (LLLLLLLWLWLW... repeating) as seen here: https://www.youtube.com/watch?v=Z3DrzHecmk0\n<br />\n<br />The specific length and pattern produced by the slot machine is dependent on several factors:\n<br />[list]\n<br />[*]How many times you've played the slot machine\n<br />[*]How many days you've played on the save file\n<br />[*]The unique id generated when you created the save file\n<br />[*]Your daily luck (as indicated by the fortune teller + luck modifying foods)\n<br />[*]Your luck level (the invisible sixth skill which is leveled silently every time you perform a random action)\n<br />[/list]\n<br />This bug affects many different parts of the game. The vendor in the sewer is seeded by \"days played + (unique id / 2)\", which again produces the same seed as the day before plus one. Breaking rocks is seeded by \"x * 1000 + y + days played + unique id / 2\" with no regard for order of operations. Breaking a rock directly above or below another rock will use the same seed plus or minus one, which again produces non-random values. Crop harvests. Random events. Mine shaft slime floors. This bug affects many, if not all, of the platforms that Stardew Valley is released on. \n<br />\n<br />This mod fixes the problem, which greatly improves the experience of the game. I hope to see a fix rolled out for all versions of the game some day.\n<br />\n<br />Fix Dice is a one line fix, so it should be compatible with every version of the game and have very few conflicts with other mods.\n<br />\n<br />Version 1.1.2 fixes a bug in selecting an NPC for events like Feast of the Winter Star, and the tool charge-up sound effect. May potentially introduce other bugs and break backwards compatibility. Version 1.0.1 is available for download if any issues arise.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4556",
+	"Version": "1.1.1",
+	"Updated": "2019-11-13T19:56:06+00:00",
+	"Downloads": [
+		{
+			"Id": 19472,
+			"Type": "Main",
+			"DisplayName": "FixDice 1.0.1",
+			"FileName": "FixDice 1.0.1-4556-1-0-1-1570799418.zip",
+			"Description": "Improved randomizing technique",
+			"Version": "1.0.1",
+			"SizeInBytes": 2536,
+			"Uploaded": "2019-10-11T13:10:18+00:00",
+			"Mods": [
+				{
+					"Id": "ashley.fixdice",
+					"DisplayName": "FixDice",
+					"Type": "Smapi",
+					"RelativePath": "FixDice",
+					"Manifest": {
+						"Name": "FixDice",
+						"Description": "Fixes the extremely broken random number generation",
+						"Author": "Ashley",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "FixDice.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4556"
+						],
+						"UniqueId": "ashley.fixdice"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342406160,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 19912,
+			"Type": "Main",
+			"DisplayName": "FixDice",
+			"FileName": "FixDice-4556-1-1-2-1573674966.zip",
+			"Description": "Possibly fixes the tool charge-up sound bug. Includes the fix to Feast of the Winter Star.",
+			"Version": "1.1.2",
+			"SizeInBytes": 3014,
+			"Uploaded": "2019-11-13T19:56:06+00:00",
+			"Mods": [
+				{
+					"Id": "ashley.fixdice",
+					"DisplayName": "FixDice",
+					"Type": "Smapi",
+					"RelativePath": "FixDice",
+					"Manifest": {
+						"Name": "FixDice",
+						"Description": "Fixes the extremely broken random number generation",
+						"Author": "Ashley",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "FixDice.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4556"
+						],
+						"UniqueId": "ashley.fixdice"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342406600,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391244,
+		"UploaderId": 75110273,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,81 @@
+{
+	"Site": "Nexus",
+	"Id": 22564,
+	"Name": "Demetrius Solo Dancing",
+	"Author": "DrSpartacus",
+	"AuthorLabel": "DrSpactacus",
+	"Description": "I always found it weird that Demetrius would go the saloon on a Friday night and dance by himself if Robin was busy building, which for most players I'd imagine is a pretty common occurrence in Spring of Year 1 if you're trying to get that coop and barn up as quick as possible. \n<br />\n<br />So, I decided to fix it but it turned out to be a slightly more complicated fix than your usual schedule edit with Content Patcher. Because there's no condition check to tell you if Robin is busy, I had to write a SMAPI mod to check if she was building something and register that as a token for use in Content Patcher.\n<br />\n<br />Anyway, long story short it works! This mod will dynamically edit Demetrius' normal Friday schedule to stop him dancing alone in the Saloon if Robin is busy. Instead he'll just stay home for the night (if you've got suggestions for other shenanigans he could get up to let me know).\n<br />\n<br />Some things to keep in mind:\n<br />[list]\n<br />[*]This mod should be compatible with just about everything. If you have issues let me know.\n<br />[*]I'm not sure if this mod is compatible with Android or multiplayer. I'd be grateful if someone could test that for me.\n<br />[/list]\n<br />[color=#00ffff][size=4]For Mod Authors - Token Use[/size][/color]\n<br />For other modders out there, you can use the token in this mod for your own CP mods. See the CP Git page for more details on how to use tokens.\n<br />[color=#00ff00]{{NateMod.RobinBuildingToken/RobinBuilding}}[/color] will be either \"True\" or \"False\" as a string.\n<br />\n<br />I also made one for the wizard just in case anyone finds it useful.\n<br />[color=#00ff00]{{NateMod.RobinBuildingToken/WizardBuilding}}[/color] will be either \"True\" or \"False\" as a string.\n<br />\n<br />Just remember to add this mod as a dependency in your manifest:\n<br />\n<br />\"Dependencies\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"UniqueID\": \"NateMod.RobinBuildingToken\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"IsRequired\": true\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0]\n<br />\n<br />Also, if I'm not responsive in the comments section please don't take it personally, I just tend not to check in that regularly.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/22564",
+	"Version": "1.1",
+	"Updated": "2024-07-15T22:18:21+00:00",
+	"Downloads": [
+		{
+			"Id": 106901,
+			"Type": "Main",
+			"DisplayName": "Demetrius Solo Dancing",
+			"FileName": "Demetrius Solo Dancing-22564-1-1-1721081901.7z",
+			"Description": "",
+			"Version": "1.1",
+			"SizeInBytes": 9931,
+			"Uploaded": "2024-07-15T22:18:21+00:00",
+			"Mods": [
+				{
+					"Id": "NateMod.RobinBuildingToken",
+					"DisplayName": "RobinBuildingToken",
+					"Type": "Smapi",
+					"RelativePath": "RobinBuildingToken",
+					"Manifest": {
+						"Name": "RobinBuildingToken",
+						"Description": "Returns whether Robin is currently building something on the Farm and allows that to be used as a token in CP.",
+						"Author": "NateMod",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "RobinBuildingToken.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "NateMod.RobinBuildingToken"
+					}
+				},
+				{
+					"Id": "NateMod.DemetriusSoloDancing",
+					"DisplayName": "Demetrius Solo Dancing",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Demetrius Solo Dancing",
+					"Manifest": {
+						"Name": "Demetrius Solo Dancing",
+						"Description": "Stops Demetrius dancing alone when Robin is building stuff for you",
+						"Author": "NateMod",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "NateMod.RobinBuildingToken",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "NateMod.DemetriusSoloDancing"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342493589,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342409252,
+		"UploaderId": 4477631,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

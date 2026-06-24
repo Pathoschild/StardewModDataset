@@ -1,0 +1,138 @@
+{
+	"Site": "CurseForge",
+	"Id": 577730,
+	"Name": "NPC Adventures",
+	"Author": "PurrplingCat",
+	"PageUrl": "https://www.curseforge.com/stardewvalley/mods/npc-adventures",
+	"Version": null,
+	"Updated": "2024-01-19T12:02:15.443+00:00",
+	"Downloads": [
+		{
+			"Id": 4530011,
+			"Type": "Main",
+			"DisplayName": "NPC Adventures 1.0.2 - Polycule",
+			"FileName": "NPC Adventures 1.0.2.zip",
+			"Version": "1.0.2",
+			"SizeInBytes": 418099,
+			"Uploaded": "2023-05-09T16:01:43.51+00:00",
+			"Mods": [
+				{
+					"Id": "purrplingcat.npcadventure",
+					"DisplayName": "NPC Adventures",
+					"Type": "Smapi",
+					"RelativePath": "NPC Adventures\\NpcAdventure",
+					"Manifest": {
+						"Name": "NPC Adventures",
+						"Description": "It's time to adventure! Go to an adventure with Pelican Town's villagers!",
+						"Author": "PurrplingCat",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "NpcAdventure.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PurrplingCat.QuestFramework",
+								"MinimumVersion": "1.4.3",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cherry.ExpandedPreconditionsUtility",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Digus.CustomKissingMod",
+								"MinimumVersion": "1.2.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4582"
+						],
+						"UniqueId": "purrplingcat.npcadventure",
+						"OtherFields": {
+							"Components": [
+								"PurrplingCat.NpcAdventure.Content",
+								"PurrplingCat.NpcAdventure.Quests"
+							]
+						}
+					}
+				},
+				{
+					"Id": "PurrplingCat.NpcAdventure.Content",
+					"DisplayName": "NPC Adventures - Content",
+					"Type": "ContentPack",
+					"RelativePath": "NPC Adventures\\[CP] NPC Adventures",
+					"Manifest": {
+						"Name": "NPC Adventures - Content",
+						"Description": "NPC Adventures content for Content Patcher",
+						"Author": "PurrplingCat",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.13.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "purrplingcat.npcadventure",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4582"
+						],
+						"UniqueId": "PurrplingCat.NpcAdventure.Content"
+					}
+				},
+				{
+					"Id": "PurrplingCat.NpcAdventure.Quests",
+					"DisplayName": "NPC Adventures - Quests",
+					"Type": "ContentPack",
+					"RelativePath": "NPC Adventures\\[QF] NPC Adventures",
+					"Manifest": {
+						"Name": "NPC Adventures - Quests",
+						"Description": "Adventure quests for NPC Adventures",
+						"Author": "PurrplingCat",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "3.13.0",
+						"ContentPackFor": {
+							"UniqueId": "PurrplingCat.QuestFramework",
+							"MinimumVersion": "1.4.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "purrplingcat.npcadventure",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "PurrplingCat.NpcAdventure.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4582"
+						],
+						"UniqueId": "PurrplingCat.NpcAdventure.Quests"
+					}
+				}
+			],
+			"OtherFields": {
+				"ReleaseType": 1,
+				"FileGroupType": 1,
+				"gameVersions": [
+					"1.5.6"
+				]
+			}
+		}
+	],
+	"OtherFields": {
+		"Authors": [
+			{
+				"Id": 103061248,
+				"Name": "PurrplingCat"
+			}
+		],
+		"DateCreated": "2022-02-09T15:11:52.263+00:00",
+		"DateReleased": "2023-05-09T16:01:43.51+00:00",
+		"DateModified": "2024-01-19T12:02:15.443+00:00",
+		"slug": "npc-adventures"
+	}
+}

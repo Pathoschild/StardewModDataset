@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 4024,
+	"Name": "HD Sprites",
+	"Author": "ninthworld",
+	"Description": "[size=4][b]This mod is not longer being updated. Go check out [url=https://www.nexusmods.com/stardewvalley/mods/4922?tab=description]SpriteMaster[/url] for less bugs, more mod compatibility, and higher resolution scaling!\n<br />[/b][/size]\n<br />\n<br />[img]https://i.imgur.com/DWtRl9m.png[/img]\n<br />\n<br />[b][size=5]Information[/size][/b][size=2]\n<br />   \uFEFFThis mod replaces almost all of the game's base textures with smoother looking versions that are twice the resolution. Every texture was run through an image resizing program that uses an upscaling algorithm called 2xBR to not only quadruple the number of pixels in the texture, but also to give it that smooth, vectorized look.\n<br />[/size]\n<br />[b][size=5]Installation[/size][/b][list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url]\uFEFF\n<br />[*][size=2]Download the latest version of HD Sprites from the files tab above.[/size]\n<br />[*][size=2]Extract the ZIP file into your Stardew Valley/Mods folder.[/size]\n<br />[/list]\n<br />[b][size=5]Content Packs[/size][/b][size=2]\n<br />   As of HD Sprites \uFEFFv1.2, to add a content pack to this mod, follow these instructions.\n<br />   \uFEFF[i][b]Content pack must contain PNG images and be compatible with Content Patcher by Pathoschild to work with HD Sprites.[/b][/i]\n<br />[/size][list=1]\n<br />[*][size=2]Find the content pack you want to work with this mod in your Stardew Valley/Mods folder.[/size]\n<br />[*][size=2]Open that content pack's manifest.json file and copy its [code]UniqueID [/code]entry.[/size]\n<br />[*][size=2]Open the HD Sprites config.json file and paste that UniqueID under the [code]LoadContentPacks [/code]section so that it looks something like this:[/size]\n<br />[/list]   [code]\uFEFF\n<br />   \uFEFF\"LoadContentPacks\": {\n<br />       \uFEFF\"Elle.SeasonalBuildings\": true,\n<br />   \uFEFF}\n<br />[/code]\n<br />[size=2]   \uFEFFThat's it! Just run the modded game like normal and your content packs should appear upscaled. Any changes you make to the content pack's content.json or config.json will also be applied to the upscaled version automatically.\n<br />[/size]\n<br />[b][size=5]Configuration[/size][/b][size=2]\n<br />   \uFEFF\uFEFFThis mod has a config.json file you can use to disable everything from individual assets, to entire sections of assets, to the entire mod. \n<br />You can toggle the mod On/Off ingame using the F10 key by default. This key can be changed or disabled in the config if it interferes with another mod.[/size]\n<br />\n<br />[b][size=3]HD Sprites Mod - Source Code -\u00A0\uFEFF[url=https://github.com/ninthworld/HDSprites]https://github.com/ninthworld/HDSprites[/url][/size][/b][b][b]\n<br />[/b]\n<br />[size=5]Credit[/size][/b]\n<br />[list]\n<br />[*][size=2]Platonymous - ScaledTexture2D and SpriteBatchFix Harmony patch classes -\u00A0[url=https://github.com/Platonymous/Stardew-Valley-Mods/blob/master/PyTK]PyTK mod[/url][/size]\n<br />[*][size=2]Pathoschild - Content Patcher documentation and source -\u00A0[url=https://github.com/Pathoschild/StardewMods/tree/stable/ContentPatcher]Content Patcher mod[/url]\uFEFF[/size]\n<br />[*][size=2]draivin - XNB extractor tool -\u00A0[url=https://github.com/draivin/XNBNode]XNB Node[/url][/size]\n<br />[*][size=2]Salmakis - Image resizer tool for 2xBR filter -\u00A0[url=https://github.com/Salmakis/ImageFilterCollection]ImageFilter[/url][/size]\n<br />[*][size=2]Ascari - 2xBR filter in JavaScript -\u00A0[url=https://github.com/carlosascari/2xBR-Filter/blob/master/xbr.js]2xBR Filter[/url]\uFEFF[/size]\n<br />[/list][list]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4024",
+	"Version": "1.4.0",
+	"Updated": "2019-11-28T04:31:02+00:00",
+	"Downloads": [
+		{
+			"Id": 20505,
+			"Type": "Main",
+			"DisplayName": "HD Sprites v1.4.0",
+			"FileName": "HD Sprites v1.4.0-4024-1-4-0-1574915462.zip",
+			"Description": "* Compatible with Stardew Valley 1.4 and SMAPI 3.0.0\n<br />* \"LooseSprites/Cursors\" now works (finally)",
+			"Version": "1.4.0",
+			"SizeInBytes": 34145869,
+			"Uploaded": "2019-11-28T04:31:02+00:00",
+			"Mods": [
+				{
+					"Id": "NinthWorld.HDSprites",
+					"DisplayName": "HDSprites",
+					"Type": "Smapi",
+					"RelativePath": "HDSprites",
+					"Manifest": {
+						"Name": "HDSprites",
+						"Description": "Makes the game's textures smoother and higher resolution.",
+						"Author": "NinthWorld",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "HDSprites.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Alek.MegaStorage",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4024"
+						],
+						"UniqueId": "NinthWorld.HDSprites"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407193,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390712,
+		"UploaderId": 11867358,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

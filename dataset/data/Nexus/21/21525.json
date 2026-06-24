@@ -1,0 +1,488 @@
+{
+	"Site": "Nexus",
+	"Id": 21525,
+	"Name": "Custom Spouse Room Locations",
+	"Author": "kevinkidwell",
+	"Description": "This mod was inspired by [url=https://www.nexusmods.com/stardewvalley/mods/17699]Split Spouse Rooms[/url] that I used before 1.6 and my absolute need to move my spouse rooms around.\n<br />\n<br />You can find a full ReadMe on the [url=https://github.com/kevinkidwell/customspouseroomlocations]Custom Spouse Room Locations Github Repo[/url].\n<br />\n<br />[b]----------------------------------------[/b]\n<br />\n<br />[size=4][b]Details:[/b][/size]\n<br />[list]\n<br />[*]Download the file that corresponds with the farmhouse mod that you are using, if any. If you aren't using a farmhouse mod, download the Main file.\n<br />[*]Each file is fully contained and don't rely on one another, so only download the file that you need.\n<br />\n<br />[/list]\n<br />[b]----------------------------------------[/b]\n<br />\n<br />[size=4][b]What does it do?[/b][/size]\n<br /> [list][*]Replaces map files for (hopefully) seamless visuals when you move spouse rooms around\n<br />[*]Configuration options for where you want your spouse room(s) to move\n<br />[*]Config file to define what spouse rooms go where\n<br />[*]Configuration for minor visual fixes to apply along with these map edits\n<br />    [/list][b]----------------------------------------[/b]\n<br />\n<br />[size=4][b]What’s in the mod folder?[/b][/size]\n<br /> [list][*]Two folders, one for CP and one for PSR.\n<br />[*]The CP folder is required for map edits. Includes various visual assets, maps, and configuration setup.\n<br />[*]The PSR folder is required to move spouse rooms around. Includes a content file to edit spouse room locations.\n<br />    [/list][b]----------------------------------------[/b]\n<br />\n<br />[size=4][b]Dependencies:[/b][/size]\n<br />[b]   \uFEFFRequired:[/b]\n<br />   \uFEFF   \uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/1915]\uFEFFContent Patcher[/url] \n<br />   \uFEFF   \uFEFF[url=”https://www.nexusmods.com/stardewvalley/mods/20599”]PolyamorySweet[/url], specifically Polyamory Sweet Rooms\n<br />\n<br />  [b]   \uFEFFRecommended:[/b]\n<br />   \uFEFF   \uFEFF[url=”https://www.nexusmods.com/stardewvalley/mods/5098”]GMCM[/url] for configuration \n<br />   \uFEFF   \uFEFF[url=”https://www.nexusmods.com/stardewvalley/mods/20599”]\uFEFFPolyamorySweet[/url] for multiple spouses\n<br />\n<br />[b]----------------------------------------[/b]\n<br />\n<br />[size=4][b]Compatibility:[/b][/size][b]\n<br />   This mod has been updated to be compatible with the following mods:\n<br />   \uFEFF   \uFEFF\n<br />   \uFEFF   [url=https://www.nexusmods.com/stardewvalley/mods/17526]\uFEFFLnh's First Farmhouse[/url] - @LFF\n<br />   \uFEFF   [url=https://www.nexusmods.com/stardewvalley/mods/17386]Seasonal Garden Farmhouse v2[/url] - @SGF\n<br />   \uFEFF   \uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/17627]Lune FarmHouse[/url] - @LFH\n<br />      [url=https://www.nexusmods.com/stardewvalley/mods/16438]Aimon's Tidy Cozy Farmhouse[/url] - @ATC\n<br />   \uFEFF   \uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/14411]Aimon's Fancy Farmhouse[/url] - @AFF\n<br />\n<br />[b]----------------------------------------[/b]\n<br />\n<br />[size=4]How to Edit:\n<br />[/size][/b]\n<br />   \uFEFF1. Open the [PSR] Custom Spouse Room Locations folder\n<br />   \uFEFF2. Find the example-content.json file\n<br />   \uFEFF3. Duplicate that file and rename it content.json\n<br />   \uFEFF4. Follow the information provided here for the different variables, placement information, and examples.\n<br />\n<br />   \uFEFF[b]General information:[/b]\n<br />   \uFEFF   \uFEFF1. All spouse rooms are 7 blocks wide (X) and 12 blocks tall (Y)\n<br />   \uFEFF   \uFEFF2. Templated data shows the starter placement for each location that you can place a room  \n<br />   \uFEFF   \uFEFF3. If you are using farmhouse mods, look for that section to see the starting positions for your specific modded room locations  \n<br />   \uFEFF   \uFEFF4. Remove or comment out any unused placements\n<br />\n<br />[b]   \uFEFFPlacement Information:[/b]\n<br />   \uFEFF   \uFEFF\uFEFF\uFEFFAll placements have this layout for informational purposes:\n<br />   \uFEFF   \uFEFF   \uFEFF// Mod name or vanilla    \uFEFF   \uFEFF\n<br />   \uFEFF   \uFEFF   \uFEFF// The location of this room, corresponds to config     \uFEFF   \n<br />   \uFEFF   \uFEFF   \uFEFF\uFEFF// How many rooms you can place in this location    \uFEFF   \uFEFF\n<br />   \uFEFF   \uFEFF   \uFEFF// Shell templates you can use here[b]   \uFEFF\n<br />   \uFEFF\n<br />   \uFEFF   \uFEFFExample:[/b]\n<br />   \uFEFF   \uFEFF   \uFEFF// VANILLA\n<br />      \uFEFF\uFEFF   \uFEFF// UPPER\n<br />   \uFEFF   \uFEFF   \uFEFF// As many rooms to the right as you want\n<br />      \uFEFF\uFEFF   \uFEFF// “custom_spouse_room_closed_right”, “custom_spouse_room_open_right\n<br />\n<br />   \uFEFF   \uFEFF   \uFEFF{\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0   \uFEFF “name”: “SpouseName”, &lt;— This is the name of the spouse whose room you are placing\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0   \uFEFF “startPos”: {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0   \uFEFF   \uFEFF “X”: 68, &lt;— This is the starting x-axis for this room\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF   \uFEFF“Y”: 2 &lt;— This is the starting y-axis for this room\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF},\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF“spousePosOffset”: { &lt;— Sets the offset of the spouse within the room from PSR (I don’t tend to touch this)\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF   \uFEFF“X”: 3,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF   \uFEFF“Y”: 3\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF},\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF“shellType”: “custom_spouse_room_closed_right”, &lt;— This is the type of room shell for this specific spouse room\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0    \uFEFF},\n<br />\n<br />   [b]   \uFEFFStarting Position Variables:[/b]   [b]\n<br />   \uFEFF   \uFEFF   \uFEFFVanilla:\n<br />[b]   \uFEFF   \uFEFF      \uFEFFUpper[/b]:[/b] X:68, Y:2[b]\n<br />[/b][b]            \uFEFF\uFEFFLower Right[/b]: X:49, Y:33\n<br />[b]      \uFEFF   \uFEFF   \uFEFF\uFEFFLower Left[/b]: X:30, Y:33\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFSeasonal Garden Farmhouse v2:[/b]\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFAttic[/b]: X:7, Y:56\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFLarge Room[/b]: X:69, Y:56\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFMain Floor Left[/b]: X:8, Y:8\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFMain Floor Right[/b]: X:69, Y:21\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFLnh's First Farmhouse:[/b]\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFMain Floor[/b]: X:49, Y:0\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFSouth Room[/b]: X:50, Y:92\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFSoutheast Room Right[/b]: X:39, Y:197\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFF[b]Southeast Room Upper Left[/b][/b]: X:10, Y:195\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFSoutheast Room Lower Left[/b]: X:10, Y:208\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFLune FarmHouse:[/b]\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFUpper Room[/b]: X:7, Y:8\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFKitchen Cellar - Small[/b]: X:7, Y:30\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFKitchen Cellar - Large[/b]: X:7, Y:33\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFUpper Right Room[/b]: X:61, Y:8\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFSouthern Room - Small[/b]: X:58, Y:30\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFSouthern Room - Large[/b]: X:58, Y:33\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFAimon's Tidy Cozy Farmhouse:[/b]\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFLeft bedroom[/b]: X:7, Y:19\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   \uFEFFRight bedroom[/b]: X:46, Y:32\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFAimon's Fancy Farmhouse:[/b]\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   Main Floor Left[/b]: X:7, Y:19\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   Upper Floor Left[/b]: X:7, Y:52\n<br />[b]   \uFEFF   \uFEFF   \uFEFF   Attic Right[/b]: X:36, Y:105\n<br />\n<br />\n<br />[b]   \uFEFF   \uFEFFShell Type Variables:[/b]\n<br />\uFEFF[b]   \uFEFF   \uFEFF   \uFEFFcustom_spouse_room_open_right[/b]:   \n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFVanilla: Lower right or Upper, with another spouse room to the right of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFSGFv2: Large room or Main Floor Right, with another spouse room to the right of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLNH: Main Floor, South Room, Southeast Room Right, with another spouse room to the right of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLune: Upper Right Room, Southern Room - Small, Southern Room - Large, with another spouse room to the right of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFATC: Right bedroom, with another spouse room to the right of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFAFF: Attic Right, with another spouse room to the right of it.\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFcustom_spouse_room_closed_right[/b]:\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFVanilla: Lower right or Upper, AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFSGFv2: Large Room or Main Floor Right, AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLNH: Main Floor, South Room, Southeast Room Right,  AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLune: Upper Right Room, Southern Room - Small, Southern Room - Large,  AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFATC: Right bedroom, AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFAFF: Attic Right, AND it's the only or last spouse room in the row.\n<br />\n<br />[b]   \uFEFF   \uFEFF   \uFEFFcustom_spouse_room_open_left[/b]:\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFVanilla: Lower left, with another room to the left of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFSGFv2: Attic or Main Floor Left, with another room to the left of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLNH: Southeast Room Upper Left or Southeast Room Lower Left, with another room to the left of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLune: Upper Room, Kitchen Cellar - Small, Kitchen Cellar - Large, with another room to the left of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFATC: Left bedroom, with another room to the left of it.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFAFF: Main Floor Left or Upper Floor Left, with another room to the left of it.\n<br />\n<br />[b]   \uFEFF   \uFEFF   custom_spouse_room_closed_left[/b]:\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFVanilla: Lower left, AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFSGFv2: Attic or Main Floor Left, AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLNH: Southeast Room Upper Left or Southeast Room Lower Left, AND it's the only or last spouse room.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFFLune: Upper Room, Kitchen Cellar - Small, Kitchen Cellar - Large,  AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFATC: Left bedroom, AND it's the only or last spouse room in the row.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFFAFF: Main Floor Left or Upper Floor Left, AND it's the only or last spouse room in the row.\n<br />[b]\n<br />----------------------------------------\n<br />\n<br />[size=4]Notes:[/size][/b][size=4]\u00A0\u00A0 [/size][list]\n<br />[*]This was created primarily for my personal use and so may have some bugs. Let me know if you find any and I'm willing to try and fix them!\n<br />[*]This is intended for the fully upgraded farmhouse (including Southern Room and Expanded Upper Room, with edits for Cubby) but may work as long as you only have one of those sections. Compatibility for other mods may be added in the future.\n<br />[/list]\n<br />[b]----------------------------------------\n<br />\n<br />[size=4]Get in Touch:[/size][/b]\n<br />   \uFEFFIf you want to get in touch with me with any questions, concerns, suggestions, etc.:\n<br />   \uFEFF   \uFEFFFeel free to post in the Discussion tab here\n<br />   \uFEFF   \uFEFFMessage me on Discord @kevinkidwell or tag me in the SDV Discord",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21525",
+	"Version": "2.0.1",
+	"Updated": "2024-04-24T03:20:40+00:00",
+	"Downloads": [
+		{
+			"Id": 94359,
+			"Type": "Main",
+			"DisplayName": "Custom Spouse Room Locations",
+			"FileName": "Custom Spouse Room Locations-21525-2-0-1-1713738757.zip",
+			"Description": "v2.0.0 - This is a major refactor and breaks each compatibility into its own file. Download the file that matches the farmhouse mod you are using, if any.\n<br /><br />This file is for the Vanilla farmhouse. Use this if you aren't using farmhouse mods.",
+			"Version": "2.0.1",
+			"SizeInBytes": 32215,
+			"Uploaded": "2024-04-21T22:32:37+00:00",
+			"Mods": [
+				{
+					"Id": "kevinkidwell.csrlocations_cp",
+					"DisplayName": "(CP) Custom Spouse Room Locations",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations\\(CP) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(CP) Custom Spouse Room Locations",
+						"Description": "Edit the Vanilla farmhouse map to allow for new spouse room locations",
+						"Author": "kevinkidwell",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_cp"
+					}
+				},
+				{
+					"Id": "kevinkidwell.csrlocations_psr",
+					"DisplayName": "(PSR) Custom Spouse Room Locations",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations\\(PSR) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(PSR) Custom Spouse Room Locations",
+						"Description": "Set the location for your custom spouse rooms in the Vanilla farmhouse",
+						"Author": "kevinkidwell",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "ApryllForever.PolyamorySweetRooms",
+							"MinimumVersion": "1.1.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_psr"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481047,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94420,
+			"Type": "Optional",
+			"DisplayName": "Custom Spouse Room Locations - AFF",
+			"FileName": "Custom Spouse Room Locations - AFF-21525-2-0-2-1713755559.zip",
+			"Description": "v2.0.0 - This is a major refactor and breaks each compatibility into its own file. Download the file that matches the farmhouse mod you are using, if any.\n<br />v2.0.2 - Fixes manifest ID error\n<br /><br />This file is for Aimon's Fancy Farmhouse.\n<br /><br />Manifest Key: @AFF",
+			"Version": "2.0.2",
+			"SizeInBytes": 9318,
+			"Uploaded": "2024-04-22T03:12:39+00:00",
+			"Mods": [
+				{
+					"Id": "kevinkidwell.csrlocations_cp_AFF",
+					"DisplayName": "(CP) Custom Spouse Room Locations - Aimon's Fancy Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @AFF\\(CP) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(CP) Custom Spouse Room Locations - Aimon's Fancy Farmhouse",
+						"Description": "Edit the map in Aimon's Fancy Farmhouse to allow for new spouse room locations",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Aimon111.RedesignedFarmHouseLayoutAlt",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@AFF"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_cp_AFF"
+					}
+				},
+				{
+					"Id": "kevinkidwell.csrlocations_psr_AFF",
+					"DisplayName": "(PSR) Custom Spouse Room Locations - Aimon's Fancy Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @AFF\\(PSR) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(PSR) Custom Spouse Room Locations - Aimon's Fancy Farmhouse",
+						"Description": "Set the location for your custom spouse rooms within Aimon's Fancy Farmhouse",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "ApryllForever.PolyamorySweetRooms",
+							"MinimumVersion": "1.1.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Aimon111.RedesignedFarmHouseLayoutAlt",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@AFF"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_psr_AFF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481108,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94421,
+			"Type": "Optional",
+			"DisplayName": "Custom Spouse Room Locations - ATC",
+			"FileName": "Custom Spouse Room Locations - ATC-21525-2-0-2-1713755590.zip",
+			"Description": "v2.0.0 - This is a major refactor and breaks each compatibility into its own file. Download the file that matches the farmhouse mod you are using, if any.\n<br />v2.0.2 - Fixes manifest ID error\n<br /><br />This file is for Aimon's Tidy Cozy Farmhouse.\n<br /><br />Manifest Key: @ATC",
+			"Version": "2.0.2",
+			"SizeInBytes": 9998,
+			"Uploaded": "2024-04-22T03:13:10+00:00",
+			"Mods": [
+				{
+					"Id": "kevinkidwell.csrlocations_cp_ATC",
+					"DisplayName": "(CP) Custom Spouse Room Locations - Aimon's Tidy Cozy Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @ATC\\(CP) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(CP) Custom Spouse Room Locations - Aimon's Tidy Cozy Farmhouse",
+						"Description": "Edit the map in Aimon's Tidy Cozy Farmhouse to allow for new spouse room locations",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Aimon111.AimonsTidyCozyFarmhouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@ATC"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_cp_ATC"
+					}
+				},
+				{
+					"Id": "kevinkidwell.csrlocations_psr_ATC",
+					"DisplayName": "(PSR) Custom Spouse Room Locations - Aimon's Tidy Cozy Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @ATC\\(PSR) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(PSR) Custom Spouse Room Locations - Aimon's Tidy Cozy Farmhouse",
+						"Description": "Set the location for your custom spouse rooms within Aimon's Tidy Cozy Farmhouse",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "ApryllForever.PolyamorySweetRooms",
+							"MinimumVersion": "1.1.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Aimon111.AimonsTidyCozyFarmhouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@ATC"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_psr_ATC"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481109,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94423,
+			"Type": "Optional",
+			"DisplayName": "Custom Spouse Room Locations - LFH",
+			"FileName": "Custom Spouse Room Locations - LFH-21525-2-0-2-1713755654.zip",
+			"Description": "v2.0.0 - This is a major refactor and breaks each compatibility into its own file. Download the file that matches the farmhouse mod you are using, if any.\n<br />v2.0.2 - Fixes manifest ID error\n<br /><br />This file is for Lune FarmHouse\n<br /><br />Manifest Key: @LFH",
+			"Version": "2.0.2",
+			"SizeInBytes": 11940,
+			"Uploaded": "2024-04-22T03:14:14+00:00",
+			"Mods": [
+				{
+					"Id": "kevinkidwell.csrlocations_cp_LFH",
+					"DisplayName": "(CP) Custom Spouse Room Locations - Lune FarmHouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @LFH\\(CP) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(CP) Custom Spouse Room Locations - Lune FarmHouse",
+						"Description": "Edit the map in Lune FarmHouse to allow for new spouse room locations",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Lu.B17.LuneFarmhouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@LFH"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_cp_LFH"
+					}
+				},
+				{
+					"Id": "kevinkidwell.csrlocations_psr_LFH",
+					"DisplayName": "(PSR) Custom Spouse Room Locations - Lune FarmHouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @LFH\\(PSR) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(PSR) Custom Spouse Room Locations - Lune FarmHouse",
+						"Description": "Set the location for your custom spouse rooms within Lune FarmHouse",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "ApryllForever.PolyamorySweetRooms",
+							"MinimumVersion": "1.1.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Lu.B17.LuneFarmhouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@LFH"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_psr_LFH"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481111,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94424,
+			"Type": "Optional",
+			"DisplayName": "Custom Spouse Room Locations - SGF",
+			"FileName": "Custom Spouse Room Locations - SGF-21525-2-0-2-1713755676.zip",
+			"Description": "v2.0.0 - This is a major refactor and breaks each compatibility into its own file. Download the file that matches the farmhouse mod you are using, if any.\n<br />v2.0.2 - Fixes manifest ID error\n<br /><br />This file is for Seasonal Garden Farmhouse\n<br /><br />Manifest Key: @SGF",
+			"Version": "2.0.2",
+			"SizeInBytes": 19727,
+			"Uploaded": "2024-04-22T03:14:36+00:00",
+			"Mods": [
+				{
+					"Id": "kevinkidwell.csrlocations_cp_SGF",
+					"DisplayName": "(CP) Custom Spouse Room Locations - Seasonal Garden Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @SGF\\(CP) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(CP) Custom Spouse Room Locations - Seasonal Garden Farmhouse",
+						"Description": "Edit the map in Seasonal Garden Farmhouse to allow for new spouse room locations",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DustBeauty.SeasonalGardernFarmhouse.v2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "CF.FarmhouseFixes",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@SGF"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_cp_SGF"
+					}
+				},
+				{
+					"Id": "kevinkidwell.csrlocations_psr_SGF",
+					"DisplayName": "(PSR) Custom Spouse Room Locations - Seasonal Garden Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @SGF\\(PSR) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(PSR) Custom Spouse Room Locations - Seasonal Garden Farmhouse",
+						"Description": "Set the location for your custom spouse rooms within Seasonal Garden Farmhouse",
+						"Author": "kevinkidwell",
+						"Version": "2.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "ApryllForever.PolyamorySweetRooms",
+							"MinimumVersion": "1.1.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DustBeauty.SeasonalGardernFarmhouse.v2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@SGF"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_psr_SGF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481112,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94911,
+			"Type": "Optional",
+			"DisplayName": "Custom Spouse Room Locations - LFF",
+			"FileName": "Custom Spouse Room Locations - LFF-21525-2-0-3-1713928840.zip",
+			"Description": "v2.0.3: Fix missing tilesheet issue\n<br /><br />This file is for Lnh's First Farmhouse\n<br /><br />Manifest Key: @LFF",
+			"Version": "2.0.3",
+			"SizeInBytes": 15717,
+			"Uploaded": "2024-04-24T03:20:40+00:00",
+			"Mods": [
+				{
+					"Id": "kevinkidwell.csrlocations_cp_LFF",
+					"DisplayName": "(CP) Custom Spouse Room Locations - Lnh's First Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @LFF\\(CP) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(CP) Custom Spouse Room Locations - Lnh's First Farmhouse",
+						"Description": "Edit the map in Lnh's First Farmhouse to allow for new spouse room locations",
+						"Author": "kevinkidwell",
+						"Version": "2.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Lnh.FarmHouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@LFF"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_cp_LFF"
+					}
+				},
+				{
+					"Id": "kevinkidwell.csrlocations_psr_LFF",
+					"DisplayName": "(PSR) Custom Spouse Room Locations - Lnh's First Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "Custom Spouse Room Locations @LFF\\(PSR) Custom Spouse Room Locations",
+					"Manifest": {
+						"Name": "(PSR) Custom Spouse Room Locations - Lnh's First Farmhouse",
+						"Description": "Set the location for your custom spouse rooms within Lnh's First Farmhouse",
+						"Author": "kevinkidwell",
+						"Version": "2.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "ApryllForever.PolyamorySweetRooms",
+							"MinimumVersion": "1.1.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Lnh.FarmHouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21525@LFF"
+						],
+						"UniqueId": "kevinkidwell.csrlocations_psr_LFF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481599,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408213,
+		"UploaderId": 111975963,
+		"CategoryId": 19,
+		"Adult": false
+	}
+}

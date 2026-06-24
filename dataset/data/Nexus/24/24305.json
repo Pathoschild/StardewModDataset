@@ -1,0 +1,71 @@
+{
+	"Site": "Nexus",
+	"Id": 24305,
+	"Name": "Item Checker",
+	"Author": "HitaxasTV",
+	"Description": "This mod does a few things. The first is an in game item locator. Pressing O (will be configurable soon) will open up a \"Locate Item\" search box. Typing the item ID or the item's display name into the bar and pressing enter will tell you the location of the item, if it exists in either a player's inventory or a chest. If it is in a chest, it will also display a pointing finger on the chest that contains the item\n<br />\n<br />\n<br />The next thing this mod does is that it adds a few game state queries for use with trigger actions.\n<br />\n<br />For checking if the player owns a specific item (can be in their inventory, or a chest):\n<br />\n<br />[code]\u00A0\"Condition\": \"ItemChecker.HasItemID &lt;item ID&gt; &lt;true/false&gt;\"[/code]\n<br />\n<br />\u00A0to their trigger action. Replace &lt;item ID&gt; with the desired item ID (no &lt;&gt;), and replace &lt;true/false&gt; with either true or false (no &lt;&gt;)\n<br />\n<br />\n<br />\n<br />For checking if the player has a specific item selected in the hotbar:\n<br />\n<br />[code]\u00A0\"Condition\": \"ItemChecker.IsItemSelected &lt;item ID&gt; &lt;true/false&gt;\"[/code]\n<br />\n<br />Replace &lt;item ID&gt; with the desired item ID (no &lt;&gt;), and replace &lt;true/false&gt; with either true or false (no &lt;&gt;)\n<br />\n<br />\n<br />\n<br />For checking if the player has a specific tool selected in the hotbar:\n<br />\n<br />[code]\u00A0\"Condition\": \"ItemChecker.IsToolEquipped &lt;item ID&gt; &lt;true/false&gt;\"[/code]\n<br />\n<br />Replace &lt;item ID&gt; with the desired item ID (no &lt;&gt;), and replace &lt;true/false&gt; with either true or false (no &lt;&gt;)\n<br />\n<br />\n<br />To use these GSQs with Content Patcher you would need to check for the condition a bit differently.\n<br />First, you would need [url=https://www.nexusmods.com/stardewvalley/mods/9296]Esca's Modding Plugins (EMP)[/url] and have that mod listed as one of your mods dependencies.\n<br />An example of how to use the queries:\n<br />[code]\n<br />          \"When\": {\n<br />                \"Esca.EMP/GameStateQuery: ItemChecker.HasItemID 74 true\": \"true\"\n<br />                },[/code]\n<br />\n<br />This will tell CP to only run the action if the item with ID 74 (a prismatic shard) is owned by the player. Inversely, if you want to check for the opposite case you would change the first true case to false.\n<br />\n<br />\n<br />This mod also adds a unique trigger action that can be used:\n<br />\n<br />[code]\uFEFF\"Trigger\": \"ICM\"\n<br />[/code]\n<br />\n<br />This trigger checks for if an item has been added or removed from the player's inventory.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24305",
+	"Version": "1.5",
+	"Updated": "2024-05-31T13:59:21+00:00",
+	"Downloads": [
+		{
+			"Id": 101921,
+			"Type": "Main",
+			"DisplayName": "Item Checker",
+			"FileName": "Item Checker-24305-1-5-1717163961.zip",
+			"Description": "Fixed manifest",
+			"Version": "1.5",
+			"SizeInBytes": 38543,
+			"Uploaded": "2024-05-31T13:59:21+00:00",
+			"Mods": [
+				{
+					"Id": "Hitaxas.Items.DLL",
+					"DisplayName": "ItemChecker",
+					"Type": "Smapi",
+					"RelativePath": "Item Checker\\ItemChecker",
+					"Manifest": {
+						"Name": "ItemChecker",
+						"Description": "Adds a new GSQ and trigger action for use with other mods",
+						"Author": "Hitaxas",
+						"Version": "1.5.0",
+						"EntryDll": "Item Checker.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 24305"
+						],
+						"UniqueId": "Hitaxas.Items.DLL"
+					}
+				},
+				{
+					"Id": "Hitaxas.Items2.DLL",
+					"DisplayName": "ItemLocator",
+					"Type": "Smapi",
+					"RelativePath": "Item Checker\\ItemLocator",
+					"Manifest": {
+						"Name": "ItemLocator",
+						"Description": "Test to see if I can invoke commands from game chat",
+						"Author": "Hitaxas",
+						"Version": "1.5.0",
+						"EntryDll": "ItemLocator.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: "
+						],
+						"UniqueId": "Hitaxas.Items2.DLL"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488609,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410993,
+		"UploaderId": 3646000,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

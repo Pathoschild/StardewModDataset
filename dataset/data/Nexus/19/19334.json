@@ -1,0 +1,100 @@
+{
+	"Site": "Nexus",
+	"Id": 19334,
+	"Name": "Normalize AI for Inworld AI Mod",
+	"Author": "Platonymous",
+	"Description": "[center][heading]Normalize AI[/heading] by Platonymous\n<br />[line]AI DIalogues are shown with a Dialoguebox.\n<br />Generates Random Dialogue so you can talk to an NPC forever without using chat.\n<br />Adds contentpack support for adding or altering Brains.\n<br />[size=2]\uFEFF\n<br />[/size][b]Important: Made for the Stardew Valley 1.6 alpha, experimental version for 1.5.6 available in optional files. (0.9.0)![/b]\n<br />[img]https://imgur.com/T5Eybda.png[/img]\n<br />The mod on it's own does nothing.\n<br />With\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/16816?tab=description]Inworld's AI Villagers[/url]\uFEFF installed, it alters the mod in the following ways:\n<br />\n<br />AI Dialogue is shown in a Dialoguebox not a speech-bubble or in chat.\n<br />You can continueously talk to an NPC and a new random dialouge will be created,\n<br />this way you can have the AI powered dialogues without having to use the chat.\n<br />(chat prompts still work if you want specific dialogue)\n<br />\n<br />[u]1.1.0-alpha fixes some bugs and adds a way to initiate Dialogue from a specific prompt:[/u]\n<br />In Events you can use the command [b]NAI_Prompt[/b] followed by the name of the npc, followed by your prompt to initiate an AI dialogue.\n<br />(which could be a question you want the NPC to answer or a statement you want them to make)\n<br />Example: [code].../NAI_Prompt Abigail Talk about Sam's hair/...\n<br />[/code]\n<br />For Dialogues from the dictionary you can write [b]NAI_Prompt:[/b] followed by your prompt instead of specific dialogue, when injecting dialogue to an NPC.\n<br />Example:\n<br />[code]\"spring_2\":\"NAI_Prompt:Talk about Sam's hair\"\n<br />[/code]\n<br />\n<br />[i]Inworld is buid on OpenAI's GPT-3, so you can engeneer your prompt beyond just initiating a normal chat.[/i]\n<br />\n<br />\n<br />(1.2.0-alpha/1.3.0-alpha)\n<br />Added auto translation for different languages\n<br />[s]not for chat prompted dialogue([/s]1.3.0-aplha), does not work in all languages\n<br />prompts for NAI_Prompt dialogue still need to be written in english.\n<br />1.3.0-alpha also gives the ai more context for their responses\n<br />\n<br />Additionally the mod can be targeted by contentpacks to add or alter brains without manual edits required by the player.\n<br />The contentpacks need to include a manifest.json and a config.json\n<br />\n<br />Example:\u00A0[/center]manifest.json\n<br />[code]      {\n<br />\u00A0 \u00A0 \"Name\": \"AI Character\",\n<br />\u00A0 \u00A0 \"Author\": \"ModAuthor\",\n<br />\u00A0 \u00A0 \"Version\": \"1.0.0\",\n<br />\u00A0 \u00A0 \"Description\": \"Talk to my inworld.ai powered Character!\",\n<br />\u00A0 \u00A0 \"UniqueId\": \"ModAuthor.ModId\",\n<br />\u00A0 \u00A0 \"UpdateKeys\": [ \"Nexus:0000\" ],\n<br />\u00A0 \u00A0 \"ContentPackFor\": {\n<br />\u00A0 \u00A0 \"UniqueID\": \"Platonymous.NormalizeAI\"\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />[left]config.json\n<br />[code]      {\n<br />\u00A0 \"brains\": {\n<br />\u00A0 \u00A0 \"MyCharacter\": {\n<br />\u00A0 \u00A0 \u00A0 \"character\": \"mycharacter\",\n<br />\u00A0 \u00A0 \u00A0 \"workspace\": \"...\",\n<br />\u00A0 \u00A0 \u00A0 \"api\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"key\": \"...\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"secret\": \"...\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}\n<br />[/code][/left][center][img]https://imgur.com/b8d5H2A.png[/img]\uFEFF\n<br />If you have any questions or feature requests you can usually find me on the [url=https://stardewvalleywiki.com/Modding:Community#Discord]Stardew Valley Discord[/url]\uFEFF under the username [b]Routine[/b]#8715\n<br />[img]https://imgur.com/u7Unylz.png[/img]\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.[/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19334",
+	"Version": "1.3.2-alpha.20240219",
+	"Updated": "2024-02-19T07:35:05+00:00",
+	"Downloads": [
+		{
+			"Id": 81551,
+			"Type": "Main",
+			"DisplayName": "Normalize AI",
+			"FileName": "Normalize AI-19334-1-3-2-alpha-20240219-1708326512.zip",
+			"Description": "For Stardew Valley 1.6 only.",
+			"Version": "1.3.2-alpha.20240219",
+			"SizeInBytes": 21250,
+			"Uploaded": "2024-02-19T07:08:32+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.NormalizeAI",
+					"DisplayName": "NormalizeAI",
+					"Type": "Smapi",
+					"RelativePath": "NormalizeAI",
+					"Manifest": {
+						"Name": "NormalizeAI",
+						"Description": "Make AI Villages more vanilla friendly",
+						"Author": "Platonymous",
+						"Version": "1.3.2-alpha.20240219",
+						"MinimumApiVersion": "4.0.0-alpha",
+						"EntryDll": "NormalizeAI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PogDerson.Inworld",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19334"
+						],
+						"UniqueId": "Platonymous.NormalizeAI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468239,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 81553,
+			"Type": "Optional",
+			"DisplayName": "Normalize AI",
+			"FileName": "Normalize AI-19334-0-9-0-1708328105.zip",
+			"Description": "Experimental version for 1.5.6.\n<br />No Event support.",
+			"Version": "0.9.0",
+			"SizeInBytes": 20557,
+			"Uploaded": "2024-02-19T07:35:05+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.NormalizeAI",
+					"DisplayName": "NormalizeAI",
+					"Type": "Smapi",
+					"RelativePath": "NormalizeAI",
+					"Manifest": {
+						"Name": "NormalizeAI",
+						"Description": "Make AI Villages more vanilla friendly",
+						"Author": "Platonymous",
+						"Version": "0.9.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "NormalizeAI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PogDerson.Inworld",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19334"
+						],
+						"UniqueId": "Platonymous.NormalizeAI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468241,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406022,
+		"UploaderId": 42440425,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

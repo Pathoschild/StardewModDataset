@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 8821,
+	"Name": "Non-Replacing Hair Resource",
+	"Author": "malic18",
+	"AuthorLabel": "malic",
+	"Description": "This modders resource adds one non-replacing demo hairstyle through Content Patcher.\n<br />\n<br />I felt too many mods replace hairstyles or append new hairstyles to the end of the hairstyles image, in a way that having multiple hair packs would conflict.\n<br />This mod uses a SDV 1.5 feature that allows writing into the Data/HairData asset to define custom hairstyles.\n<br />[b]With this method, modders can add as many hairstyles as they want and their mods will not conflict with each other.[/b]\n<br />No hairstyles.png overwriting necessary. No Get Glam necessary.\n<br />\n<br />This mod is intended to be used as a modders resource for other mod-makers.\n<br />\n<br />[b][u][size=4]How it works[/size][/u][/b]\n<br />We insert a hairstyle spritesheet into the Characters/Farmer/ asset folder with CP.\n<br />It can be named anything as long as its consistent within our content.json.\n<br />\n<br />Then we insert lines of data into the Data/HairData asset. Each line defines a new hairstyle.\n<br />\n<br />Data/HairData uses the following format:\n<br />[code]\"100\": \"hairstyles2/0/0/true/-1/false\",[/code]\n<br />The table name (100) is a unique ID. We need ours to be unique.\n<br />This ID cannot be larger than 2,147,483,647 (the maximum value of Int32)\n<br />A common trend with NPC events is to start with the last 4 digits of your NexusMods profile ID, so that is what I've done in this demo.\n<br />\n<br />Then we have the following entries, separated by slashes:\n<br />0 - The filename for the file we added to Characters/Farmer/, without filetype.\n<br />1 - The tile position for our hairstyle sprite, x coordinate.\n<br />2 - The tile position for our hairstyle sprite, y coordinate.\n<br />3 - If we have a unique left sprite or not. If false, it uses the right hair flipped. If false, we need a fourth sprite.\n<br />4 - Either a unique ID of a separate hairstyle for when player is wearing a hat, or -1 to hide hair.\n<br />5 - \"is bald style\". Currently, just set false.\n<br />6 - unused\n<br />7 - unused\n<br />8 - unused\n<br />\n<br />[b][u][size=4]Notes[/size][/u][/b]\n<br />[s]We're likely still limited to ~336 hairstyles with this method, but this is untested. Spacecore may solve this if it occurs.\n<br />[/s]Users have shown this mod supports more than 700+ hairstyles, so we are not limited to 336. \n<br />\n<br />[b][u][size=4]Credits[/size][/u][/b]\n<br />Art by Charles Gabriel. Slightly modified. Under CC-BY 3.0 - https://opengameart.org/content/16x18-rpg-characters-hair-clothing-pack\n<br />\n<br />[b][u][size=4]Changelog[/size][/u][/b]\n<br />v1.0.0 - Initial release",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8821",
+	"Version": "1.0.0",
+	"Updated": "2021-05-28T23:44:07+00:00",
+	"Downloads": [
+		{
+			"Id": 41629,
+			"Type": "Main",
+			"DisplayName": "Non-Replacing Hair Resource",
+			"FileName": "Non-Replacing Hair Resource-8821-1-0-0-1622245447.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 7176,
+			"Uploaded": "2021-05-28T23:44:07+00:00",
+			"Mods": [
+				{
+					"Id": "malic.cp.nonreplacinghairresource",
+					"DisplayName": "Non-Replacing Hair Resource",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Non-Replacing Hair Resource",
+					"Manifest": {
+						"Name": "Non-Replacing Hair Resource",
+						"Description": "A modders resource to add hair without replacing",
+						"Author": "Malic",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8821"
+						],
+						"UniqueId": "malic.cp.nonreplacinghairresource"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428317,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395509,
+		"UploaderId": 60065796,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

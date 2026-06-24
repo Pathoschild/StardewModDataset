@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 6358,
+	"Name": "Custom Fixed Dialogue",
+	"Author": "aedenthorn",
+	"Description": "After downloading [url=https://www.nexusmods.com/stardewvalley/mods/5295]Mister Ginger[/url], I saw that the game tries to make him use hoomen speech because the response to dumpster diving is hardcoded for all adult NPCs. This mod unhardcodes such strings, letting you create versions specific to a certain NPC, so that when they are the one saying the dialogue, it displays a custom version in your content pack instead.\n<br />\n<br />\n<br />[b][size=4]Usage[/size][/b]\n<br />\n<br />To create a Content Patcher pack that works with this mod, you first need to know the keys (i.e. the labels) for the strings (i.e. the text) you want to change. For a list of keys that this mod can change, please see [url=https://www.nexusmods.com/stardewvalley/articles/503]this article[/url].\n<br />\n<br />Once you've found the text you want to create a custom version of for a specific NPC, you can add the key for it to your NPC's dialogue file, following these rules:\n<br />\n<br />[list]\n<br />[*]For string keys from [b]Characters[/b][b].json[/b], add [b]\"[b]Characters[/b]_\"[/b] to the beginning. I.e. \"[b]WipedMemory[/b]\" becomes \"[b]Characters_WipedMemory[/b]\".\n<br />[*]For string keys from [b]ExtraDialogue.json[/b], add [b]\"ExtraDialogue_\"[/b] to the beginning. I.e. \"\uFEFF[b]Town_DumpsterDiveComment_Adult[/b]\" becomes [b]\"ExtraDialogue_Town_DumpsterDiveComment_Adult\".[/b]\n<br />[*]For string keys from [b]Strings&#92;StringsFromCSFiles.json[/b] just use the exact key from the file. E.g. [b]\"NPC.cs.4420\"[/b] or [b]\"Event.cs.1503\"[/b].\n<br />[/list]\n<br />Once you have the proper key, you can use [b][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/b] to create a custom version for a specific NPC as though it were an ordinary dialogue string from [b]Characters&#92;Dialogue&#92;&lt;YourNPC&gt;[/b]. For example, the string in the screenshot above requires a content patcher mod with a [b]content.json[/b] patch like:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0\u00A0 \"Changes\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"Target\": \"Characters/Dialogue/MisterGinger\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"ExtraDialogue_Town_DumpsterDiveComment_Adult\": \"Mr. Ginger thinks you should stop rooting around in HIS trash bins.$s\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 ]\u00A0\u00A0\u00A0 \uFEFF\n<br />}\n<br />\n<br />[/code]If the text is used for an NPC without a custom version, it simply reverts to using the default generic string. \n<br />\n<br />Because the mod expects all these strings to be used solely for NPC dialogue, it replaces text with an identifier tag. If a string is used outside of character dialogue, you might accidentally see a tag instead of text. Let me know if you see anything strange and I can patch it.\n<br />\n<br />\n<br />[size=4][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6358",
+	"Version": "2.4.5",
+	"Updated": "2026-04-05T05:31:03+00:00",
+	"Downloads": [
+		{
+			"Id": 163473,
+			"Type": "Main",
+			"DisplayName": "Custom Fixed Dialogue",
+			"FileName": "Custom Fixed Dialogue-6358-2-4-5-1775367063.zip",
+			"Description": "Changes:\n<br />\n<br />version uptick",
+			"Version": "2.4.5",
+			"SizeInBytes": 18553,
+			"Uploaded": "2026-04-05T05:31:03+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomFixedDialogue",
+					"DisplayName": "Custom Fixed Dialogue",
+					"Type": "Smapi",
+					"RelativePath": "CustomFixedDialogue",
+					"Manifest": {
+						"Name": "Custom Fixed Dialogue",
+						"Description": "Custom fixed dialogue.",
+						"Author": "aedenthorn",
+						"Version": "2.4.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomFixedDialogue.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6358"
+						],
+						"UniqueId": "aedenthorn.CustomFixedDialogue"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550161,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393046,
+		"UploaderId": 18901754,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

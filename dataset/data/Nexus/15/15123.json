@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 15123,
+	"Name": "Moolah Money Mod",
+	"Author": "aedenthorn",
+	"Description": "This mod allows the game to store money beyond the vanilla limit of two billion (Int32.MaxValue).\n<br />\n<br />[s]The new limit is 9,223,372,036,854,775,807  (Int64.MaxValue)\n<br />\n<br />[/s]With this mod there is basically* no limit to how much money you can own.\n<br />\n<br />It also lets you display a separator (default [b]comma[/b]) every set number of digits (default [b]3[/b]).\n<br />\n<br />[size=2]* The amount is stored in a string, which can hold just over two-billion digits, so that's the technical upper limit. A googol has 101 digits. Your computer will run out of memory and / or you will be dead by the time this limit is reached.\n<br />[/size]\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />\n<br />This mod doesn't fix the fact that things like prices still use Int32 and have a maximum of ~2.1 billion. If for some reason you want to add or subtract more than this in one go, you can use the SMAPI API.\n<br />[size=2]\n<br />\n<br />[size=5][b]SMAPI API[/b][/size]\n<br />[/size]\n<br />There are two methods in the API:\n<br />\n<br />[b]AddMoolah(Farmer f, BigInteger add);[/b]\n<br />\n<br />and\n<br />\n<br />[b]GetTotalMoolah(Farmer f);[/b]\n<br />\n<br />You don't need to pass a [b]BigInteger[/b] to [b]AddMoolah[/b]; any integer-type number will work, as long as it has less than ~2.1 billion digits.\n<br />\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can customize this mod by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15123",
+	"Version": "0.7.0",
+	"Updated": "2026-06-18T13:21:58+00:00",
+	"Downloads": [
+		{
+			"Id": 171693,
+			"Type": "Main",
+			"DisplayName": "Moolah",
+			"FileName": "07/91/0e/07910e0d-ed79-4c49-8fec-135f44c1114e",
+			"Description": "Changes:\n\nMod compat thanks to mouahrara",
+			"Version": "0.7.0",
+			"SizeInBytes": 27224,
+			"Uploaded": "2026-06-18T13:21:58+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MoolahMoneyMod",
+					"DisplayName": "Moolah Money Mod",
+					"Type": "Smapi",
+					"RelativePath": "MoolahMoneyMod",
+					"Manifest": {
+						"Name": "Moolah Money Mod",
+						"Description": "Removes the 2 billion max money limit and adds a comma separator to the money display.",
+						"Author": "aedenthorn",
+						"Version": "0.7.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "MoolahMoneyMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:15123"
+						],
+						"UniqueId": "aedenthorn.MoolahMoneyMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558381,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401811,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

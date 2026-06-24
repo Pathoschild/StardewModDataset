@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 42669,
+	"Name": "Decay Control",
+	"Author": "semper1dem",
+	"Description": "[center][size=5][b]Decay Control[/b][/size]\n<br />[i]Take back control over Stardew Valley's decay systems.[/i][/center]\n<br />[size=4][b]Overview[/b][/size]\n<br />Fences rotting away overnight and tilled soil reverting to dirt are charming in theory, but on a large farm they become a never-ending maintenance chore. Decay Control gives you precise, per-type control over how fast - or slow - these systems run, without removing the mechanic entirely unless that's what you want.\n<br />Every setting defaults to vanilla behavior, so you only change what bothers you.\n<br />\n<br />[line]\n<br />[size=4][b]Features[/b][/size]\n<br />[size=3][b]Fence Decay[/b][/size]\n<br />Set an independent decay rate multiplier for each fence type. Multipliers apply on top of the vanilla tick - set one to [b]0.0[/b] for immortal fences, [b]0.5[/b] to double their lifespan, or [b]2.0[/b] to make them decay twice as fast.\n<br />[size=3][b]Soil Decay[/b][/size]\n<br />Vanilla soil decay isn't fully predictable or safely replaceable, so this mod takes a non-destructive approach: vanilla runs first, then an optional extra roll gives soil a second chance to survive. Each type of soil has its own enable toggle, so you can leave either untouched entirely.\n<br />[b]Watered Soil Retention[/b] - After the game dries out watered soil overnight, a configurable chance can re-water it before morning. Set to [b]1.0[/b] for guaranteed retention, or something lower if you want to keep a little uncertainty. Disabled by default.\n<br />[b]Tilled Soil Survival[/b] - After the game destroys bare tilled soil (no crop planted), a configurable chance restores the tile. Set to [b]1.0[/b] and bare tilled soil will never revert to dirt. Disabled by default.\n<br />[size=3][b]Farm Animal Friendship Decay[/b][/size]\n<br />Control how much friendship farm animals lose at day-end when neglected. Vanilla applies three penalties: [b]Not Fed[/b] (-20), [b]Trapped outside overnight[/b] (-20), and [b]Not pet/talked to[/b] (-5 to -10 by the formula 10 - friendship/200). Each has its own multiplier: [b]1.0[/b] = vanilla, [b]0[/b] = no decay from that cause, [b]0.5[/b] = half decay. Set all three to [b]0[/b] for no animal friendship decay.\n<br />[size=3][b]Planned for future releases[/b][/size]\n<br />[list]\n<br />[*]Path Decay Control - wear rate for flooring and paths\n<br />[*]Friendship Decay Control - weekly NPC friendship point loss\n<br />[/list]\n<br />[line]\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.0.0 or newer\n<br />[*]Stardew Valley 1.6.x\n<br />[/list]\n<br />[b]Optional:[/b] [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] - adds a full in-game settings page under Mod Options. Without it, configure via [b]config.json[/b] in the mod folder.\n<br />\n<br />[line]\n<br />[size=4][b]Configuration[/b][/size]\n<br />A [b]config.json[/b] is created in the mod folder on first launch. All values can also be changed in-game via Generic Mod Config Menu without restarting.\n<br />[code]\n<br />{\n<br />  \"WoodFenceMultiplier\": 1.0,\n<br />  \"StoneFenceMultiplier\": 1.0,\n<br />  \"IronFenceMultiplier\": 1.0,\n<br />  \"HardwoodFenceMultiplier\": 1.0,\n<br />  \"EnableWateredSoilRetention\": false,\n<br />  \"WateredSoilRetentionChance\": 0.5,\n<br />  \"EnableTilledSoilSurvival\": false,\n<br />  \"TilledSoilSurvivalChance\": 0.5,\n<br />  \"AnimalNotFedDecayMultiplier\": 1.0,\n<br />  \"AnimalTrappedOutsideDecayMultiplier\": 1.0,\n<br />  \"AnimalNotPettedDecayMultiplier\": 1.0\n<br />}\n<br />[/code]\n<br />[line]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*][color=green]✔[/color] Stardew Valley 1.6.x\n<br />[*][color=green]✔[/color] Multiplayer safe (host settings apply)\n<br />[*][color=green]✔[/color] Safe to add or remove mid-save\n<br />[*][color=green]✔[/color] Works alongside fence retexture/reskin mods\n<br />[*][color=green]✔[/color] Stacks with Retaining Soil fertilizer\n<br />[*][color=yellow]⚠[/color] Do not use alongside other fence, soil, or animal friendship decay mods (e.g. No Fence Decay Redux, Tilled Soil Decay) - pick one\n<br />[*][color=yellow]⚠[/color] Uses Harmony for animal friendship decay; SMAPI may show a stability warning - this is normal\n<br />[/list]\n<br />[line]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42669",
+	"Version": "0.3.0",
+	"Updated": "2026-02-25T15:22:46+00:00",
+	"Downloads": [
+		{
+			"Id": 158144,
+			"Type": "Main",
+			"DisplayName": "Decay Control",
+			"FileName": "Decay Control-42669-0-3-0-1772032966.zip",
+			"Description": "",
+			"Version": "0.3.0",
+			"SizeInBytes": 23135,
+			"Uploaded": "2026-02-25T15:22:46+00:00",
+			"Mods": [
+				{
+					"Id": "semper1dem.DecayControl",
+					"DisplayName": "Decay Control",
+					"Type": "Smapi",
+					"RelativePath": "DecayControl",
+					"Manifest": {
+						"Name": "Decay Control",
+						"Description": "Granular control over decay rates in Stardew Valley. Supports per-type fence decay multipliers and soil decay probability controls. Path and friendship decay planned for future releases.",
+						"Author": "semper1dem",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DecayControl.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "semper1dem.DecayControl",
+						"OtherFields": {
+							"GameVersion": "1.6.0"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544832,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429357,
+		"UploaderId": 25888550,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,71 @@
+{
+	"Site": "Nexus",
+	"Id": 9843,
+	"Name": "Coin Collector",
+	"Author": "aedenthorn",
+	"Description": "[youtube]tE6Fb0xsIIY[/youtube]\n<br />\n<br />\n<br />[b][size=5]Description[/size][/b]\n<br />\n<br />This mod adds a new gameplay mechanic to Stardew Valley - coin collection!\n<br />\n<br />Every day, the mod randomly buries coins in diggable locations around Stardew Valley. Coins can be dug up with the hoe.\n<br />\n<br />To find coins, purchase a metal detector from Pierre's store and equip it. When you are near a coin, it will beep. The beeps will become louder and higher pitched as you approach the coin.\n<br />\n<br />There is also a green indicator pointing the direction to the nearest coin.\n<br />\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />\n<br />You can configure the following variables by editing the mod's config.json file (created in [b]Mods&#92;CoinCollector[/b] after running the game once):\n<br />\n<br />\"EnableMod\": true,\u00A0 - set to false to disable the mod\n<br />\"BlipAudioPath\": \"assets/blip.wav\",\u00A0 - change to switch to your own blip sound file\n<br />\"BlipAudioVolume\": 1.0,\u00A0 - audio volume multiplier\n<br />\"BlipAudioIncreasePitch\": true,\u00A0 - increase blip pitch when closer to coin\n<br />\"RequireMetalDetector\": true,\u00A0 - if set to false, you don't have to equip the metal detector to detect coins\n<br /> \"MetalDetectorID\": \"MetalDetector\",\u00A0\u00A0 - DGA id for metal detector\n<br />\"RequireMetalDetectorSwing\": false,\u00A0 - if set to true, blips will only occur when you swing the metal detector like a weapon\n<br />\"EnableIndicator\": true,\u00A0 - set to false to turn off the green dot showing the way\n<br />\"SecondsPerPoll\": 1,\u00A0 - wait this many seconds per blip\n<br />\"MapHasCoinsChance\": 0.5,\u00A0 - chance between 0 and 1 fo each map to have coins\n<br />\"MinCoinsPerMap\": 1, \n<br />\"MaxCoinsPerMap\": 5,\n<br />\"IndicatorSprite\": 7,\u00A0 - which projectile sprite to use for the indicator\n<br />\"IndicatorLength\": 3.0,\u00A0 - indicator tail length\n<br />\"IndicatorSpeed\": 10.0,\u00A0 - indicator movement speed\n<br />\"LuckFactor\": 0.1,\u00A0 - multiplier for player's luck level, adds more coins per map\n<br />\"MaxPixelPingDistance\": 800.0\u00A0 - max distance in pixels to detect coins\n<br />\n<br />\n<br />[b][size=5]Notes[/size][/b]\n<br />\n<br />This mod is just a framework, and doesn't contain any coins itself. [url=https://www.nexusmods.com/stardewvalley/mods/9844]Click here for a beginner coin pack with a set of four Yoba coins[/url].\n<br />\n<br />This mod uses[url=https://www.nexusmods.com/stardewvalley/mods/9365] Dynamic Game Assets[/url] to create coins and the metal detector. It is a requirement.\n<br />\n<br />This mod also requires [b]SDV 1.5.5[/b] and [b]SMAPI 3.13[/b] or greater.\n<br />\n<br />\n<br />[b][size=5]Creating New Coins\n<br />[/size][/b]\n<br />To create your own coin set, check out [url=https://www.nexusmods.com/stardewvalley/mods/9844]my Yoba coin pack[/url]. It has two parts, one for creating the coin objects using DGA, and the other for telling this mod about them.\n<br />\n<br />Your Coin Collector content pack should be similar to mine, just change the details in [b]manifest.json[/b], and create your own [b]content.json[/b]. The entries in [b]content.json[/b]'s data field look like this:\n<br />\n<br />[code]\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"aedenthorn.YobaCoinPackDGA/YobaIridium\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"setName\": \"Yoba\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"rarity\": 0.05,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"isDGA\": true,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"parentSheetIndex\": -1,\n<br />   \uFEFF   \uFEFF   \uFEFF \"locations\":[]\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />[/code]\n<br />If [b]isDGA[/b] is set to true, it ignores the [b]parentSheetIndex[/b] field, and the id should be the DGA [b]packID/ObjectID[/b]. If you want to create a diggable treasure from a vanilla asset, set isDGA to false and add the object's [b]parentSheetIndex[/b] and it will ignore the [b]id[/b] field. \n<br />\n<br />[b]rarity[/b] is relative - coins with lower rarity number have less chance to be buried relative to higher rarity number.\n<br />\n<br />[b]setName[/b] doesn't do anything yet, but might open up the possibility of achievements or something.\n<br />\n<br />[b]locations[/b] is a list of location names where the coin can spawn. Leave it empty or omit this field to allow the coin to spawn anywhere.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/9365]Dynamic Game Assets[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9843",
+	"Version": "0.3.0",
+	"Updated": "2022-01-08T22:05:20+00:00",
+	"Downloads": [
+		{
+			"Id": 49063,
+			"Type": "Main",
+			"DisplayName": "Coin Collector",
+			"FileName": "Coin Collector-9843-0-3-0-1641679520.zip",
+			"Description": "Changes:\n<br /><br />Added location field",
+			"Version": "0.3.0",
+			"SizeInBytes": 232523,
+			"Uploaded": "2022-01-08T22:05:20+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CoinCollector",
+					"DisplayName": "Coin Collector",
+					"Type": "Smapi",
+					"RelativePath": "CoinCollector",
+					"Manifest": {
+						"Name": "Coin Collector",
+						"Description": "Lets you buy a metal detector and dig up and collect rare and precious coins.",
+						"Author": "aedenthorn",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.12.0",
+						"EntryDll": "CoinCollector.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.DynamicGameAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9843"
+						],
+						"UniqueId": "aedenthorn.CoinCollector",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CoinCollector"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342435751,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396531,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

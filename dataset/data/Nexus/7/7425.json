@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 7425,
+	"Name": "Time Freezes at Midnight",
+	"Author": "JBtheShadow",
+	"Description": "This is a mod for those of us who have played the old Harvest Moon on the Super Nintendo and got too spoiled by the ability of doing all of the non time sensitive chores during night time.\n<br />\n<br />[s]Technically the mod doesn't [i]freeze[/i] time, all it does is whenever the game time's updated to beyond 12:00 AM it will reset it back to 12:00 AM (by default)[/s]. [i]By default this mod will prevent time from ticking forward as soon as it hits midnight (configurable).[/i]\u00A0The old method of updating the time back to midnight as soon as the clock advances is still available, just set UseOldMethod to true in the config file.\n<br />\n<br />Known issues with the old method is that setting the value to 11:50PM (2350) will have the game keep telling the player it's getting late (each time it ticks forward to 12:00 only to immediately revert back to 11:50). Setting the value to 1:50AM (2550) would have you collapse the moment the clock ticked forward, too. Another side effect is that all your machines would continue to work when time's supposed to be [i]frozen[/i], which could lead to unintentional cheating.\n<br />\n<br />With the newer method, since time actually [i]freezes[/i] now, machines also halt their progress until the next day (untested, but should be true) and the \"it's getting late\" message should only show up once, too. A value of 1:50AM (2550) shouldn't cause you to pass out but there's nothing I can at the moment to prevent that from happening if the clock reaches 2AM.\n<br />\n<br />Most likely not compatible with any other mods that change time mechanics, like allowing you to stay up past 2AM.\u00A0Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF,\n<br />recommended if you don't want to edit the config file directly.\n<br />\n<br />For the brave, included in the mod package is a readme with hopefully a good enough explanation of the human readable times and their equivalent in game value (for example, if you want to set the time to 1:20AM you have to set the config to 2520).\n<br />\n<br />I figure someday I probably should just change the config to have a more human readable value and leave the figuring out to the mod itself, but alas I didn't when I first made it and I'm wary of changing the config class now. Ah well.\n<br />\n<br />The basic mod functionality was tested in both single player and multiplayer. I haven't yet checked how NPC or building schedules are affected by it, but hopefully they're mostly intact.\n<br />\n<br />Source code:\u00A0[url=https://github.com/jbtheshadow/StardewValleyMods]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7425",
+	"Version": "1.3.0",
+	"Updated": "2025-02-28T21:03:12+00:00",
+	"Downloads": [
+		{
+			"Id": 126299,
+			"Type": "Main",
+			"DisplayName": "Time Freezes at Midnight 1.4.0",
+			"FileName": "Time Freezes at Midnight 1.4.0-7425-1-4-0-1740776592.zip",
+			"Description": "Updated mod for SMAPI 4.1.10\n<br />\n<br />Compatible with Generic Mod Config 1.14.1",
+			"Version": "1.4.0",
+			"SizeInBytes": 15891,
+			"Uploaded": "2025-02-28T21:03:12+00:00",
+			"Mods": [
+				{
+					"Id": "JBtheShadow.TimeFreezesAtMidnight",
+					"DisplayName": "Time Freezes at Midnight",
+					"Type": "Smapi",
+					"RelativePath": "TimeFreezesAtMidnight",
+					"Manifest": {
+						"Name": "Time Freezes at Midnight",
+						"Description": "Time stops advancing at 12:00 AM (by default)",
+						"Author": "JBtheShadow",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "TimeFreezesAtMidnight.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7425"
+						],
+						"UniqueId": "JBtheShadow.TimeFreezesAtMidnight"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342512987,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394113,
+		"UploaderId": 58353381,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

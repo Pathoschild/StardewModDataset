@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 30835,
+	"Name": "ValleyTalk - Infinite Dialogue - Chinese Translation",
+	"Author": "JayMushui",
+	"Description": "[b]任何涉及模组本体翻译的问题请通过邮箱联系我 [/b][u]jaymushui@outlook.com[/u][b]（本人仅为mod本体与作者介绍翻译，不提供任何关于模组对话API的获取和配置教程，也请勿通过联系方式打扰\uD83D\uDEAB）[/b]\n<br />\n<br />[b][size=4]该翻译文件的主要用处是\n<br />1.使用中文对AI大模型进行适配该模组需求的调教引导以达到更贴合中文使用者orAI以中文进行深度思考的方式\n<br />2.翻译一些设置的键名[/size][/b]\n<br />\n<br />[b]\n<br />部分内容选取自原Mod页面介绍翻译）[/b]\n<br />[b][center][size=4]功能特点[/size][/center][/b]\n<br />[list]\n<br />[*]全方位情境响应：与任何村民交谈时，他们会像往常一样根据友谊等级和季节做出反应，同时还会考虑其他诸多因素，包括天气、时间、所在位置、在场的其他人、社区活动、包裹完成情况、对收到礼物的感受以及与玩家的过往经历。\n<br />[*]配偶专属互动：与配偶交谈时，他们还会了解农场当前的建筑、动物、作物、宠物、孩子情况以及婚姻幸福度等更多信息。\n<br />[*]记忆与回溯：村民和配偶会记住过去的对话，并在未来的交流中提及。\n<br />[*]角色性格一致：所有村民的回应都符合其角色性格。\n<br />[*]深度交流：农场主能够与村民进行长时间的来回对话，深入探索他们的性格特点和彼此间的关系。\n<br />[*][b]兼容性：可以与其他对话模组和自定义非玩家角色（NPC）一起运行 —— 不过在对话生成过程中不会使用它们。注意：从 0.6.0 版本开始，如果安装了任何内容包模组，这些模组将不会被用于对话生成，自定义 NPC 将使用其默认对话。[/b]\n<br />[/list][b]\n<br />译者注：涉及到其他修改原版对话的mod时，该mod将不会对被修改对话的角色起作用/未在[code]assets&#92;bio\n<br />[/code][/b][b]内配置对应英文名称的Prompt人设内容的自定义角色也无法使用，[/b]\n<br />[list]\n<br />[*][b]多模型支持：适用于所有主要的大语言模型供应商，包括免费选项。[/b]\n<br />[/list][b]\n<br />译者注：本人仅为mod本体与作者介绍翻译，不提供任何关于模组对话API的获取和配置教程，也请勿通过联系方式打扰\uD83D\uDEAB\n<br />请通过作者原文介绍的[u]Model Providers[/u]章节获取模型API教程\n<br />\n<br />[/b][list]\n<br />[*]经典与创新结合：将贴合情境的对话与标准（或修改后的）事件和节日对话相结合。\n<br />[/list]\n<br />[center][b][size=4]局限性[/size][/b][/center]\n<br />本模组仍在开发中，计划添加许多额外功能，包括：\n<br />\n<br />[list]\n<br />[*]翻译支持[b]（译者注：该模组便是中文支持）[/b]\n<br />[*]节日对话\n<br />[*]对建筑内房间的了解\n<br />[*]为 SVE 村民提供完整传记 - 需得到 SVE 作者的批准\n<br />[*]配偶知晓农场主的财务状况\n<br />[*]了解农场主的时间分配\n<br />[*]在游戏早期，使与谢恩（Shane）和贾斯（Jas）的对话与官方设定的回应更一致\n<br />[*]当对话表明村民应该送礼物时，村民实际送出礼物\n<br />[/list]\n<br />目前也存在一些技术限制：\n<br />\n<br />[list]\n<br />[*]响应速度：与村民交谈时的响应速度必然比官方对话慢，在生成回应时屏幕会冻结。通常这需要几秒钟时间，但具体速度取决于所使用的供应商。\n<br />[*]控制器操作问题：当使用控制器（游戏手柄等）进行游戏且对话变长时，选择对话会出现问题。这似乎是基础游戏中的一个 bug，可以使用鼠标选择所需的回应。\n<br />[/list]\n<br />[b][center][size=4]安装[/size][/center][/b]\n<br />[b]需要：[/b]\n<br />[list]\n<br />[*]游戏1.6.14 版本（请注意，由于这是一个代码补丁，更高版本可能会出现问题）\n<br />[*]SMAPI 4.1.7\n<br />[*]（可选）通用模组配置菜单 1.14.1\n<br />[/list]\n<br />本模组已在 Windows 和 Linux 上进行测试，与其他平台的兼容性未知。\n<br />\n<br />[list=1]\n<br />[*]下载 zip 文件和本界面的翻译文件。确保已安装所需的前提条件。\n<br />[*]将 zip 文件的内容解压到模组文件夹中一个名为 “[CP] ValleyTalk Base” 的文件夹内，再用本翻译文件解压覆盖原文件。\n<br />[*]按照[b]作者教程[/b]获取语言大模型API，并修改config.json 文件。\n<br />[/list]\n<br />MOD有三个配置选项，允许用户配置生成对话的显示频率。对于每个选项，频率的指定范围是从 0（从不显示）到 4（始终显示）。这三个字段分别是：\n<br />\n<br />[list]\n<br />[*]婚姻频率（MarriageFrequency）：与配偶交谈时使用ValleyTalk的频率。\n<br />[*]送礼频率（GiftFrequency）：送礼物时使用ValleyTalk的频率。\n<br />[*]常规频率（GeneralFrequency）：其他任何对话中使用ValleyTalk的频率。\n<br />[/list]\n<br />用户还可以在DisableCharacters中，以逗号分隔的角色名称列表形式，指定不应应用此模组的角色列表。\n<br />\n<br />[b][center][size=4]免责声明[/size][/center]\n<br />MOD支持的场景范围非常广泛，很难进行全面测试。可能仍然存在一些 bug，请在作者原页面的POST中提出。\n<br />\n<br />本中文翻译文件界面所使用的大语言模型为\u00A0Mistral的open-mixtral-8x22b-2404模型\n<br />\n<br />此模组依赖于人工智能以特定格式返回响应，有时无法返回对话，通常是因为所使用的模型出现了问题，或者模型经过训练后拒绝参与正在讨论的对话。如果发生拒绝回答的情况，模组将重试至多四次获取有效响应后放弃。这可能会导致比平常更长的延迟和更高的成本。\n<br />\n<br />使用未经审查且包含不适宜内容的语言模型时，所带来的响应结果，原作者与我均不承担任何后果。[/b][b]\n<br />[/b][b]\n<br />[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30835",
+	"Version": "1.4.0.2-ZH",
+	"Updated": "2025-11-27T07:01:41+00:00",
+	"Downloads": [
+		{
+			"Id": 149169,
+			"Type": "Main",
+			"DisplayName": "ValleyTalk - Infinite Dialogue - Chinese",
+			"FileName": "ValleyTalk - Infinite Dialogue - Chinese-30835-1-4-0-2-ZH-1764226901.zip",
+			"Description": "",
+			"Version": "1.4.0.2-ZH",
+			"SizeInBytes": 12896,
+			"Uploaded": "2025-11-27T07:01:41+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "ValleyTalk\\[CP] ValleyTalk Base\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "ValleyTalk\\[CP] ValleyTalk Base\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535857,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342417523,
+		"UploaderId": 84614518,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

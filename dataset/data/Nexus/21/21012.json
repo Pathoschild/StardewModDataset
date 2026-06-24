@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 21012,
+	"Name": "Darkroom Portrait Shop",
+	"Author": "AgentLyoko",
+	"AuthorLabel": "Agent Lyoko",
+	"Description": "[b][i][center]1.6 SPOILERS WITH THIS MOD! Do NOT proceed unless you are willing to be spoiled.[/center][/i][/b]\n<br />\n<br />With the release of Stardew Valley 1.6, you are now able to get portraits of your spouse with 14 hearts from them from the Travelling Cart. Given you can get one every Friday and Sunday, you might eventually end up with a mass of portraits of your spouse, which is fantastic! Unfortunately, you’re restricted to only being able to buy two a week (one on Friday, one on Sunday) and you can only get a portrait of your spouse, not any of the other bachelors or bachelorettes. It’s also a bit odd having the Travelling Cart lady sell them (where’s she getting the portraits from, exactly? It’s a nice touch to have them, but their acquisition is a little weird).\n<br />\n<br />Enter this mod! Darkroom Portrait Shop is meant to act as a (lore friendly) way to acquire portraits, with a couple configurable options.\n<br />\n<br />[b][center]How does it work?[/center][/b]\n<br />\n<br />How you acquire the portraits depends on the config mode you have it set to. There are two main categories, with access configured to either 4 hearts with Haley (default) or just when Haley’s room is unlocked (2 hearts):\n<br />\n<br />Immediate:  Setting the config to ‘buy portraits immediately’ will have Haley set up a shop where you can buy anyone’s portrait after they are at 8 hearts at Haley’s dark room door. Yes, you can just buy the portraits, direct from the one person in the Valley who would be best at taking photos of a villager! (This is the less immersion friendly option, but if you don’t want the system the Immersion mode takes, this is the method for you!) For simplicity and to be similar to vanilla, you are only able to buy one per day.\n<br />\n<br />Immersion: Haley’s been looking for something to do around Pelican Town, and the Travelling Cart has come around selling portrait frames! She’s set up a ticket system with which to have people come around and get their portrait taken, but there haven’t been any takers so far, so she’s sending a mail to you to maybe gain some interest from you. At her dark room door, she’s setting up a ticket shop and selling “Portrait Tickets” (for the same price as vanilla), with the price lowering if you have her at high hearts (and lowering further if you’ve married her and have her at 14 hearts, because your marriage is pretty solid).\n<br />Once you buy a portrait ticket, you can gift it to any villager you have high hearts with. If you try and give it to someone who barely knows you, expect the ticket to be rejected with some dialogue on how it’d be uncomfortable having their photo in the house of a stranger. (Imagine if your picture was in Clint’s room, for example, or some other person you don’t know well. It’d be kind of weird!) But if they’re high hearts, they’ll accept the portrait ticket, and after a two day delay you’ll get a nice mail from the bachelor/ette in question with an extra portrait for you!\n<br />\n<br />The dialogues (and mails) will change accordingly when married to the NPC, if you divorce the NPC while the portrait is in progress (you monster), and if you have mods like Platonic Partners and Friendships installed. If there’s interest, I can add dating variants, but at present (for simplicity) it is just the above three scenarios.\n<br />\n<br />There are two immersion configs – the first requires you only gift the portrait ticket once, and afterwards the portrait will be added to Haley’s shop to buy (one per day). The other – the default config – requires a portrait ticket to be gifted each time you want a portrait (since realistically Haley won’t be keeping portraits around forever!). Regardless, you can still gift the portrait ticket regardless of the mode – so if you’d like to see the other mails again, you can do so!\n<br />\n<br />Otherwise, that’s about it. A few notes to answer some likely questions, however:\n<br />\n<br />[b][center]Who can I use the portrait ticket on, exactly?[/center][/b]\n<br />\n<br />Baseline, this mod supports the 12 marriage candidates along with (as of 1.6.3) Krobus (which was great timing - there was a previous Krobus portrait mod that I was planning on potentially adding compatibility with, but 1.6.3 made that unnecessary!). At present, every other character is automatically rejected if they can receive gifts, with two exceptions separated out - Sandy will always reject but has been placed in a separate patch for now, and the Wizard will always reject unless SVE (which has a Magnus portrait) is installed.\n<br />\n<br />[b][center]Does the portrait ticket count toward a character's gift limit?[/center]\n<br />[/b]\n<br />\n<br />Unfortunately, at present, yes. Until or unless there is a mod or functionality that allows it to be gifted similar to Stardrop Tea, it will be counted toward a character's gift limit for the week. If this is an issue, it's advised to use a mod that changes gift limits.\n<br />\n<br />[b][center]Can I use the portrait ticket on someone who isn’t marriageable, like Gus, and get their portrait?[/center][/b]\n<br />\n<br />Nope! If the vanilla NPC doesn’t have a portrait, there’s a global reject dialogue that fires when you attempt to gift them it, because the item doesn’t exist. That doesn’t mean the system isn’t robust, though – if you have a Gus portrait, just give Gus a relevant accept portrait ticket dialogue (and null the reject) and create a relevant trigger action system to give you the portrait. (If SpaceCore is installed, add them to the portrait ticket whitelist as well!)\n<br />\n<br />Note this limitation doesn't exist if you have the new mod \"[url=https://www.nexusmods.com/stardewvalley/mods/36270]Say Cheese - Framed Portraits for Vanilla NPCs[/url]\", which adds those portraits! If you want the non-marriageables to have portraits, use that mod alongside this one!\n<br />\n<br />[b][center]Can this be used on modded marriage candidates if they have a portrait?[/center][/b]\n<br />\n<br />A similar thing to non-marriageable vanilla NPCs, this mod cannot auto-detect if a portrait exists, so modded characters will treat the Portrait Ticket as a neutral gift (since it would require specific dialogue to run the necessary trigger action system) unless SpaceCore is installed. However, other content packs (or updates to this, if it’s requested) can add the ability to respond to the portrait ticket and have them send you their portrait.\n<br />\n<br />[b][center]Why is SpaceCore listed as “optional, but highly recommended?”[/center][/b]\n<br />\n<br />The portrait ticket acts as any other item in the game – it can be gifted to anyone and acts as a gift, so even if I can write reject dialogues for every vanilla NPC, I can’t account for modded ones, so the portrait ticket will be treated as a neutral gift without SpaceCore. It’s not game breaking, but it might be a little weird.\n<br />SpaceCore, however, allows this mod to use its whitelist system instead! With SpaceCore installed, the global reject line will fire for anyone who isn’t in the whitelist system. This means it will be globally applied for the portrait ticket, so you won’t end up accidentally gifting it to someone who can’t get their photo taken.  (This does mean if you want a modded character to accept the ticket, you will have to patch the whitelist for the ticket with it installed.) Since SpaceCore is fairly ubiquitous (and required for SVE, RSV, and ES), I figure it’s a safe bet for the big expansion mods to not have a problem with this mod.\n<br />\n<br />[b][center]Why did you choose Haley for the portrait shop? Couldn’t Leah have painted a portrait rather than Haley taking photos for portraits?[/center][/b]\n<br />\n<br />Aside from the ease of “developing” portraits immersion wise (there’s a darkroom, and a shop needs to be set up), Leah already generally has a fair amount of connectivity with Pelican Town (especially with her 8 heart event!) Haley, meanwhile, only really gets that connection in her 14 heart – this way, she’s able to open up her own portrait shop even if she’s not married, and it gives more interaction with the fellow bachelor/ettes of the town. (And lastly – the portraits are of the character’s (vanilla) sprite, exactly. It’s much more likely it’s a photo than a painting!)\n<br />\n<br />[b][center]Why a ticket?[/center][/b]\n<br />\n<br />Watsonian explanation: Taking a ticket and giving a down payment means the person getting their portrait taken can just walk on in, have the ‘receipt’, and get their portrait taken, no fuss. It’s a simple system and only people who Haley trusts can access the ticketing system anyway – she’s not about to give a public thing for portraits!\n<br />\n<br />Doylist explanation: I can’t do art, and I needed a way to have the player give something to the NPC in order to get them the portrait in a meaningful, non-shop way. The prize ticket existed as an item in vanilla, so it was what I used prior to 1.1.0. However, thanks to [url=https://next.nexusmods.com/profile/MissSweetBean?gameId=1303]MissSweetBean[/url], the portrait ticket now has its own art!\n<br />\n<br />[b][center]I just got someone to 8 hearts and they’re not accepting the portrait ticket! What gives?[/center][/b]\n<br />\n<br />Due to Content Patcher’s update rate, the dialogues only alter on day start unless otherwise specified. Specifying otherwise would make this mod have an insane performance impact, so I’ve elected to keep it at day start. The next day after you get someone to 8 hearts, you can give them the ticket.\n<br />\n<br />More will be added to this section if necessary. For now, enjoy the mod (and 1.6!)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21012",
+	"Version": "1.1.0",
+	"Updated": "2025-08-05T00:21:10+00:00",
+	"Downloads": [
+		{
+			"Id": 139222,
+			"Type": "Main",
+			"DisplayName": "Darkroom Portrait Shop",
+			"FileName": "Darkroom Portrait Shop-21012-1-1-0-1754353270.zip",
+			"Description": "Adds a unique sprite for the Portrait Ticket courtesy of MissSweetBean!",
+			"Version": "1.1.0",
+			"SizeInBytes": 26124,
+			"Uploaded": "2025-08-05T00:21:10+00:00",
+			"Mods": [
+				{
+					"Id": "agentlyoko.darkroomportraitshop",
+					"DisplayName": "Darkroom Portrait Shop",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Darkroom Portrait Shop",
+					"Manifest": {
+						"Name": "Darkroom Portrait Shop",
+						"Description": "Adds a shop to Haley's darkroom door to obtain the bachelor/ette portraits from 1.6!",
+						"Author": "Agent Lyoko",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21012"
+						],
+						"UniqueId": "agentlyoko.darkroomportraitshop"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342525910,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407700,
+		"UploaderId": 156514218,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

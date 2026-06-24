@@ -1,0 +1,93 @@
+{
+	"Site": "Nexus",
+	"Id": 25267,
+	"Name": "Custom Blessings Framework",
+	"Author": "Tomokisan1",
+	"AuthorLabel": "Tomokisan",
+	"Description": "Allow mod developers to easily add blessings from statues of blessings.\n<br />\n<br />You just need to create a content pack (see :\u00A0[url=https://stardewvalleywiki.com/Modding:Content_packs]https://stardewvalleywiki.com/Modding:Content_packs[/url]) for this mod\u00A0containing a assets/blessings.json file.\n<br />\n<br />There is a sample :\n<br />\n<br />[img]https://i.ibb.co/4KSYKJ9/Capture-d-e-cran-2024-06-23-a-20-19-55.png[/img]\n<br />\n<br />\n<br />[size=6]Documentation :[/size]\n<br />\n<br />The configuration consist of an associative array of key -&gt; subarray in the JSON format.\n<br />\n<br />[size=4]key of the array[/size][list]\n<br />[*]The id of the custom blessing\n<br />[/list][color=#f1f1f1]\n<br />[size=4]Type[/size]\n<br />[list]\n<br />[*]One of this : \"simple\", \"custom\" or \"both\"\n<br />[*]\"simple\" : Apply the effects in \"\uFEFFEffects\" array\n<br />[*]\"custom\" : Call the method in \"\uFEFFCustomMethod\" and that's all\n<br />[*]\"both\":\u00A0\uFEFFApply the effects in \"\uFEFFEffects\" array +\u00A0Call the method in \"\uFEFFCustomMethod\"\n<br />[/list]\n<br />[size=4]DisplayName[/size][/color][list]\n<br />[*]The default name of the blessing if there is no translation for it (see below how translation work)\n<br />[/list]\n<br />\uFEFF\uFEFF\uFEFF[size=4]Description[/size]\n<br />[list]\n<br />[*][size=2]The default description of the blessing if there is no translation for it (see below how translation work)[/size]\n<br />[/list]\n<br />\uFEFF\uFEFF[size=4]CustomMethod[/size]\n<br />[list]\n<br />[*][size=2]The custom method to call if \"Type\" = custom or both in form of\u00A0\uFEFF\"&lt;full type name&gt;: &lt;method name&gt;\", else leave it empty[/size]\n<br />[/list]   \uFEFF\n<br />   \uFEFFThe following parameters are passed to the method :\u00A0\n<br />\n<br />[list=1]\n<br />[*]   \uFEFFStardewValley.Object currentStatue -&gt; The current used statue object\n<br />[*]   \uFEFFFarmer who -&gt; The Farmer object\n<br />[*]   \uFEFFGameLocation location -&gt; The location object\n<br />[*]   \uFEFFDictionary&lt;string, float&gt; blessingEffects -&gt; The array of effects of the json configuration in the \"Effects\" key\n<br />\n<br />[/list]\n<br />Here is an example of custom method :\u00A0\n<br />\n<br />[img]https://i.ibb.co/CHf7V5s/Capture-d-e-cran-2024-06-23-a-10-20-37.png[/img]\uFEFF[list=1]\n<br />\n<br />[/list][size=2]\n<br />[list]\n<br />[*]The method could return a Buff object or null as you want/need, if you return a Buff object it will be applied as is, if you return null a Buff object will be built using json configuration (with effects if Type = \"both\", without effects if Type = \"custom\")\u00A0\n<br />[/list][/size]\n<br />[size=4]CustomTexture[/size]\n<br />[list]\n<br />[*][size=2]true or false : define if you will use your own image for the blessing or one of the default one (see TileSheets/\uFEFFBuffsIcons.png on the game datas)[/size]\n<br />[/list]\n<br />\uFEFF\uFEFF[size=4]IconTexture[/size]\n<br />[list]\n<br />[*][size=2]Relative path to your png asset used as custom texture for this blessing, used if \"\uFEFFCustomTexture\" = true, else leave it empty[/size]\n<br />[/list]\n<br />[size=4]IconSpriteIndex[/size]\n<br />[list]\n<br />[*][size=2]Index of the sprite on the tilesheet if you use default texture tilesheet (if \"\uFEFFCustomTexture\" = false), else leave it at -1[/size]\n<br />[/list][size=2]\n<br />\n<br />[/size][size=4]Mimic[/size]\n<br />[list]\n<br />[*][size=2]This one let you reuse a native blessing, simply type the name of a native blessing (\uFEFFstatue_of_blessings_X, X = 0-6) it will apply it and ignore others configuration, if you don't need it leave it empty[/size]\n<br />[size=2]This key exist because when you use the framework, except if there is an error loading your config (in that case it will fallback to the native behavior and blessings), it will overwrite the defaults blessings[/size][/list]\n<br />[size=4]Effects[/size]\n<br />[list]\n<br />[*][size=2]The list of effects to be applied in this blessing if \"Type\" = simple or both, you can use a negative number to set a debuff[/size]\n<br />[/list][size=2]\n<br />There is a list of all currently supported effects :\n<br />\n<br />\n<br />[img]https://i.ibb.co/zN5DSkw/Capture-d-e-cran-2024-06-23-a-20-13-58.png[/img]\n<br />\n<br />Explanation of each effect :\n<br />\n<br />[/size]\n<br />[spoiler]\n<br />\uFEFF\"FarmingLevel\" =&gt; The level of Farming of the player\n<br />\"FishingLevel\" =&gt; The level of Fishing of the player\n<br />\"MiningLevel\"\u00A0\uFEFF=&gt; The level of Mining of the player\n<br />\"LuckLevel\"\uFEFF\u00A0=&gt; The level of Luck of the player\n<br />\"ForagingLevel\"\uFEFF\u00A0=&gt; The level of Foraging of the player\n<br />\"MaxStamina\"\uFEFF\u00A0=&gt; The maximum stamina amount of the player\n<br />\"MagneticRadius\"\uFEFF\u00A0=&gt; The radius around the player that attract items on the ground (like monsters loots or wood when you chop a tree)\n<br />\"Speed\"\uFEFF\u00A0=&gt; The movement speed of the player\n<br />\"Defense\"\uFEFF\u00A0=&gt; The defense of the player, better defense means less HP loss when damages occur\n<br />\"Attack\"\uFEFF\u00A0=&gt; The attack of the player\n<br />\"CombatLevel\"\uFEFF\u00A0=&gt; The level of Combat of the player\n<br />\"Immunity\"\uFEFF\u00A0=&gt; It's the\u00A0\uFEFF\uFEFFplayer resistance to negative effects\n<br />\"AttackMultiplier\" =&gt; A multiplier applied to the attack power of the player\n<br />\"KnockbackMultiplier\" =&gt;\u00A0\uFEFFA multiplier applied to the knockback monsters endure when hit by the player\n<br />\"WeaponSpeedMultiplier\" =&gt;\u00A0\uFEFFA multiplier applied to the\u00A0\uFEFF\uFEFFplayer's weapon swing speed\n<br />\"CriticalChanceMultiplier\" =&gt; A\u00A0\uFEFFmultiplier applied to the player's critical hit chance\n<br />\"CriticalPowerMultiplier\" =&gt; A\u00A0\uFEFFmultiplier applied to the player's critical hit damage\n<br />\"WeaponPrecisionMultiplier\" =&gt;\u00A0\uFEFFA\u00A0multiplier applied to the player's weapon accuracy.\uFEFF\uFEFF\uFEFF\n<br />\"\uFEFFMaxHealth\" =&gt; The maximum health points of the player\n<br />\"RegenHealth\" =&gt; Amount of life points regen/lost each second\n<br />\"RegenStamina\"\uFEFF\u00A0=&gt; Amount of stamina points regen/lost each second[/spoiler]\n<br />\n<br />You can set only the effects you need, they aren't all required.\n<br />\n<br />[b]Note : The custom blessing (Buff) will have an in in-game id as follow :\u00A0statue_of_blessings_c_X, where X = the key in the array, except if you use a custom method that return a Buff object, in that case you are responsible to set it's id.[/b]\n<br />\n<br />[size=5][b]Translation :\n<br />\n<br />[/b][/size]\uFEFFThe translation configuration consist of an associative array of key (the key must correspond to the key of the blessing you want to translate in the blessings.json file) -&gt; language code -&gt; subarray in the JSON format.\n<br />\n<br />The file must be next to the blessings.json and be named translate.json, there is a sample :\n<br />\n<br />[img]https://i.ibb.co/Zg4Y7tm/Capture-d-e-cran-2024-06-18-a-20-06-01.png[/img]\n<br />\n<br />I give you in files section a content pack sample.\n<br />\n<br />[b]Note : Each content pack is taken into account and all json are \"merged\", but if a key is in common, the one used is the key from the content pack loaded the most lately.[/b]\n<br />\n<br />This mod is compatible with my other mod :\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\n<br />\n<br />\n<br />My mods :\u00A0\n<br />\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/26845]SWAPI - Stardew Valley Web API[/url]\uFEFF\u00A0: Let your game send events to a custom web server.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24765]highRollerSlots[/url]\u00A0:\u00A0Add possibility to bet more in slots machines.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24254]geodeCrusherPlus[/url]\u00A0:\u00A0Add ability to geode crusher to crush any geode, including mysteryboxes, Artifact Trove and golden coconuts.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24885]\uFEFFTV Shopping channel[/url]\u00A0:\u00A0\uFEFFAdd a TV shopping channel.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24982]Prize Machine Custom Prizes[/url]\u00A0:\u00A0Let you easily fully customize the prize list of Prize Machine.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\uFEFF\u00A0\uFEFF:\u00A0Allow you to get one blessing by statue per day instead of only one blessing per day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25267]Custom Blessings Framework[/url]\uFEFF :\u00A0\uFEFFAllow mod developers to easily add blessings from statues of blessings.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26260]Custom Wake Up Time[/url]\uFEFF\u00A0:\u00A0Let you configure the wake up time for each day.\n<br />\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/26371]Anti Tool Exhaustion[/url]\uFEFF\u00A0:\u00A0Prevent you to become exhausted from an accidental tool use.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/25267",
+	"Version": "1.2.4",
+	"Updated": "2024-09-17T13:12:44+00:00",
+	"Downloads": [
+		{
+			"Id": 104819,
+			"Type": "Optional",
+			"DisplayName": "customBlessingsFrameworkCPSample",
+			"FileName": "customBlessingsFrameworkCPSample-25267-1-1-0-1719166250.zip",
+			"Description": "Sample content pack for the Custom Blessings Framework",
+			"Version": "1.1.0",
+			"SizeInBytes": 3693,
+			"Uploaded": "2024-06-23T18:10:50+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.customBlessingsFrameworkCPSample",
+					"DisplayName": "customBlessingsFrameworkCPSample",
+					"Type": "ContentPack",
+					"RelativePath": "customBlessingsFrameworkCPSample",
+					"Manifest": {
+						"Name": "customBlessingsFrameworkCPSample",
+						"Description": "",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "tomokisan.customBlessingsFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "tomokisan.customBlessingsFrameworkCPSample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342491507,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 111447,
+			"Type": "Main",
+			"DisplayName": "customBlessingsFramework",
+			"FileName": "customBlessingsFramework-25267-1-2-4-1726578764.zip",
+			"Description": "",
+			"Version": "1.2.4",
+			"SizeInBytes": 21711,
+			"Uploaded": "2024-09-17T13:12:44+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.customBlessingsFramework",
+					"DisplayName": "customBlessingsFramework",
+					"Type": "Smapi",
+					"RelativePath": "customBlessingsFramework",
+					"Manifest": {
+						"Name": "customBlessingsFramework",
+						"Description": "Allow mod developers to easily add blessings from statues of blessings.",
+						"Author": "Tomokisan",
+						"Version": "1.2.4",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "customBlessingsFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:25267"
+						],
+						"UniqueId": "tomokisan.customBlessingsFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342498135,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411955,
+		"UploaderId": 205391183,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

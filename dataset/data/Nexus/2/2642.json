@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 2642,
+	"Name": "Custom Cask Mod",
+	"Author": "Digus",
+	"Description": "[size=3][b]Current version: 1.6.3[/b][/size][b]\n<br />[/b][size=2][list]\n<br />[*]Update mod to be compatible with Stardew Valley 1.6\n<br />[*]Changing the implementation to add Machine data, instead of patching the time method.\n<br />[*]New property QualifiedItemId to identify custom agers. (Name property still works)\n<br />[*]Ageable and caskable list now supports Qualified Item Ids\n<br />[*]Support to fairy dust in custom agers.\n<br />[*]Turkish translation by Lexith\n<br />[*]Changing loading order to avoid warning\n<br />[*]Chaging to Generic Mod Config Menu new api.\n<br />[*]Fix null reference exception when the game have a object with null name loaded.\n<br />[*]New config property to enable to age every custom ager anywhere.\n<br />[*]Fix error where a qualified item id if not loaded by the game would be registered as a category.\n<br />\n<br />[/list][/size]\n<br />[size=3][b]Objective: [/b][/size]\n<br />This mod was suggested in a post on the [url=https://www.nexusmods.com/stardewvalley/mods/2516/?tab=posts#comment-62073807]Custom Crystalarium Mod[/url] page. An user thought it would be cool to increase juice quality like you could with wine.\n<br />So I researched for common aged products not already present in the game and added them as a default option. (juice is not one of them)\n<br />But of course people can set any \"Object\" to be aged by the cask.\n<br />\n<br />[size=3][b]Compatibility:[/b][/size]\n<br />This mod can conflict with other mods changing the behavior of the cask. No problem reported so far.\n<br />It's now currently compatible with the Automate mod.\n<br />\n<br />[size=3][b]Installation:[/b][/size][list]\n<br />[*][size=2][url=https://github.com/Pathoschild/SMAPI/releases]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/2642/]Unzip the Custom Cask Mod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/1536/]Unzip the MailFrameworkMod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />[size=3][b]How does it work[/b]:\n<br />[/size][list]\n<br />[*][size=2]If you have MFM installed, once you get the cellar or enable casks anywhere, you will receive a letter from the farmers association encouraging the aging of artisan goods, and \"reminding\" [/size][size=2]that pickles and maple syrup can also be aged. They also say with \"external help\" you can adjust the cask to increase the quality of most objects or for it to work anywhere.[/size]\n<br />[*][size=2]The letter is just for flavor though, once you install the mod it should[/size][size=2] already be working, you can even disable the letter in the config file.[/size]\n<br />[*][size=2]If you enable the cask anywhere but do not have the recipe for the cask, the letter will come with the recipe. (require MFM)[/size]\n<br />[*][size=2]Once you start the game for the first time, the file '\uFEFFCaskData.json' will be created in the 'data' folder of the mod.[/size]\n<br />[*][size=2]Here is an example on how to add more items in the file. This adds the[/size][size=2] juice with 56 days to age from no quality to iridium, and all milk items will age in 14 days: [/size]\n<br />[size=2][code]\uFEFF\uFEFF{\n<br />\u00A0 \"\uFEFF342\": 2.66,\n<br />\u00A0 \"724\": 2.0,\n<br />\u00A0 \"350\": 1.0,\n<br />\u00A0 \"\uFEFF-6\": 4.0,\n<br />\u00A0 \"Oil\": 1.66\n<br />}\n<br />[/code][/size][*][size=2]The format of the file is an serialization of a C# Dictionary.[/size]\n<br />[*][size=2]You need to place an object Id, Category or Name between double quotation marks,[/size][size=2] followed by colon and the rate to age an item.[/size][size=2] If you want another object, you need to place a comma and repeat.[/size][size=2] Everything needs to be between braces.[/size]\n<br />[*][size=2]Dividing 56 by the rate, you get the number of days to age an item from no quality to iridium quality. So a rate of 1 will take 56 days(2 seasons), a rate of 2 will give you 28 day, a rate of 56 will only take one day.[/size]\n<br />[*][size=2]You can find the item ids and categories in this page: [url=https://stardewvalleywiki.com/Modding:Object_data]https://stardewvalleywiki.com/Modding:Object_data[/url]\uFEFF[/size]\n<br />[*][size=2]It will patch [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate [/url]\uFEFFmod using Harmony framework. It only change it's dictionary so that the configured items and aging rates are considered when it's placing the items in the cask. So it will only work for items configured with Ids, since categories is not supported by Automate.[/size]\n<br />[/list][size=3][b]Content pack for modders[/b]:[/size]\n<br />[list]\n<br />[*][size=2]Content pack format is the same as the CaskData.json on the mods folder. The mod just merge both files.[/size]\n<br />[*][size=2]There is a template in the mods folder for the CaskData.json file.[/size]\n<br />[*][size=2]You can also set Custom Agers on the [size=2][size=2]AgersData.json[/size][/size], that will make different objects behave as casks.[/size]\n<br />[*][size=2][size=2]There is a template in the mods folder for the AgersData.json file.[/size][/size]\n<br />[*][size=2]In the files there is a lot of \"comments\" with examples and explanations.[/size]\n<br />[*][size=2]There is also a template for the manifest file on the same folder.[/size]\n<br />[/list][size=3][size=3][b]Config options:[/b][/size]\n<br />[size=2]Run the game at least one with the mod installed to create the config.json file. You can edit this file to change the configuration.\n<br />[/size][/size][list]\n<br />[*][size=2]\"[b]DisableLetter[/b]\": ([b]false[/b]|true) Enable or disable the letter explaining the changes.[/size]\n<br />[*][size=2]\"[b]EnableCasksAnywhere[/b]\": ([b]false[/b]|true) Enable or disable the casks accepting items anywhere.[/size]\n<br />[*][size=2][size=2]\"[b]EnableCustomAgersAnywhere[/b]\": ([b]false[/b]|true) Enable or disable the custom agers accepting items anywhere.[/size][/size]\n<br />[*][s][size=2][size=2]\"[b]DisableAutomateCompatibility[/b]\": ([b]false[/b]|true) Enable or disable compatibility with [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url]\uFEFF mod. No need to disable it if you don't have the Automate mod installed, it will detect it automatically. [/size][/size][/s]\n<br />[*][size=2][size=2][size=2]\"[b]EnableMoreThanOneQualityIncrementPerDay[/b]\": (false|[b]true[/b]) Enable or disable the casks increasing more than one quality lever per day. The default is true for legacy propose. Because of the new item that can used on casks to make it produce faster, the code was changed to allow only one quality increase per maturity check. [/size][/size][/size]\n<br />[*][size=2][size=2][size=2][size=2]\"[b]EnableCaskAgeEveryObject[/b]\": ([b]false[/b]|true) Enable or disable the casks accepting [size=2][size=2]every object.[/size][/size][/size][/size][/size][/size]\n<br />[*][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2]\"[b]DefaultAgingRate[/b]\": [/size][/size][/size][/size][size=2][size=2][size=2][size=2]([b]1[/b]|[size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2][size=2]any_number[/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size]) Aging rate used for undefined object, when [/size][/size][/size][/size][size=2][size=2][size=2][size=2]EnableCaskAgeEveryObject[/size][/size][/size][/size] [size=2][size=2]is true[/size][/size][size=2][size=2][size=2][size=2].[/size][/size][/size][/size][/size][/size][/size][/size]\n<br />[/list][size=3][b]Internationalization:[/b][/size]\n<br />[size=2]This mod is compatible with SMAPI support to i18n files. It has an official translation for pt-BR, but you can translating for your language following this instructions: [url=https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation]https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation[/url]\n<br />\n<br />[/size][size=3][b]Uninstall:[/b][/size][list]\n<br />[*][size=2]Delete the mod from the installation folder.[/size]\n<br />[*][size=2]Custom Agers will still finish aging products and behave as regular casks until they are removed from the floor.[/size]\n<br />[/list]\n<br />[size=3][b]Special Thanks:[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/47798833]Trantula45[/url] - Who suggested a similar mod to the [url=https://www.nexusmods.com/stardewvalley/mods/2516]Custom Crystalarium Mod[/url]\uFEFF, to work for casks.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/1552317]Pathoschild[/url]\uFEFF - For helping me implement the compatibility with his [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url]\uFEFF mod.\n<br />[*] Everyone on the modding discord channel that are always super helpful\n<br />[/list]\n<br />[size=3][b]For more info:[/b][/size]\n<br />[url=https://community.playstarbound.com/threads/custom-cask-mod.148111/]https://community.playstarbound.com/threads/custom-cask-mod.148111/[/url]\n<br />\n<br />[size=3][b]My Other Mods:[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1538]Animal Husbandry Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2360]Everlasting Baits And Unbreakable Tackles Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2374]Water Retaining Field Mod[/url]\uFEFF\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/2516]Custom Crystalarium Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2594]Crop Transplant Mod[/url]\uFEFF\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/4664/]Custom Kissing Mod[/url]\uFEFF\n<br />[/list][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4711]Borderless Wood Floor Mod[/url]\n<br />[/list][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4992]Custom Producer Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7842/]Mail Services Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8178/]Arcane Table Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8292/]Gem Lamp Posts Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8413]Advanced Casks Mod[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2642",
+	"Version": "1.6.3",
+	"Updated": "2024-05-19T07:41:41+00:00",
+	"Downloads": [
+		{
+			"Id": 99969,
+			"Type": "Main",
+			"DisplayName": "CustomCaskMod-v1.6.3",
+			"FileName": "CustomCaskMod-v1.6.3-2642-1-6-3-1716104501.zip",
+			"Description": "Fixes qualified id category error.",
+			"Version": "1.6.3",
+			"SizeInBytes": 33295,
+			"Uploaded": "2024-05-19T07:41:41+00:00",
+			"Mods": [
+				{
+					"Id": "DIGUS.CustomCaskMod",
+					"DisplayName": "Custom Cask Mod",
+					"Type": "Smapi",
+					"RelativePath": "CustomCaskMod",
+					"Manifest": {
+						"Name": "Custom Cask Mod",
+						"Description": "Adds ways to customize the casks.",
+						"Author": "Digus",
+						"Version": "1.6.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomCaskMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.MailFrameworkMod",
+								"MinimumVersion": "1.16.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.12.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:2642"
+						],
+						"UniqueId": "DIGUS.CustomCaskMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486657,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389330,
+		"UploaderId": 2186381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

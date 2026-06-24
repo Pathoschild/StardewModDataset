@@ -1,0 +1,186 @@
+{
+	"Site": "Nexus",
+	"Id": 15152,
+	"Name": "LittleNPCs",
+	"Author": "candidus42",
+	"Description": "Turns your children into little NPCs. Does not provide any assets. Assets must be provided by content packs.\n<br />\n<br />[b]Use a content pack[/b]\n<br />\n<br />Replacement NPCs for your children must be provided by content packs. A popular content pack is [url=https://www.nexusmods.com/stardewvalley/mods/5436]The Farmer's Children[/url]. Note that this one consists of two content packs and you need both.\n<br />\n<br />[b]Create a content pack[/b]\n<br />\n<br />For creating a content pack see [url=https://stardewvalleywiki.com/Modding:NPC_data]NPC data[/url]\u00A0in the Stardew Valley Wiki. Note that NPCDispositions must not be provided by your content pack, these are generated and handled internally by the mod.\n<br />\n<br />Starting from version 1.1, the mod provides 2 ContentPatcher tokens:\n<br />\n<br />[list]\n<br />[*]Candidus42.LittleNPCs/FirstLittleNPC\n<br />[*]Candidus42.LittleNPCs/SecondLittleNPC\n<br />[/list]\n<br />Every token supports these arguments:\n<br />\n<br />[list]\n<br />[*]Name\n<br />[*]DisplayName\n<br />[*]Gender\n<br />[*]BirthSeason\n<br />[*]BirthDay\n<br />[*]Age\n<br />[/list]\n<br />The 1.0 tokens are still there but will be removed in the next release.\n<br />\n<br />Only one argument can be given at a time. Token arguments are passed after a colon. For example, if you want the internal name of FirstLittleNPC, use\n<br />[i]{{Candidus42.LittleNPCs/FirstLittleNPC: Name}}[/i]\n<br />\n<br />In your content pack, use these tokens instead of hard-coded names and genders.\n<br />\n<br />[b]Convert a ChildToNPC content pack[/b]\n<br />\n<br />Content packs for the unmaintained\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/4568]ChildToNPC[/url] mod are supposed to be easily convertible, even though some tokens are not provided.\n<br />\n<br />See\u00A0[url=https://github.com/mus-candidus/LittleNPCs/blob/main/README.md]README.md[/url]\u00A0for details.\n<br />\n<br />[b]Notes[/b]\n<br />\n<br />For technical reasons NPC conversion happens at 6:10. You might be able to see your unconverted children before. This is expected behavior.\n<br />\n<br />Special thanks to\u00A0[url=https://www.nexusmods.com/stardewvalley/users/68088657]lemurkat[/url]\u00A0for suggestions and\u00A0bug reports. That really helps to improve this mod :-)\n<br />\n<br />Source code on\u00A0[url=https://github.com/mus-candidus/LittleNPCs]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15152",
+	"Version": "2.1.3",
+	"Updated": "2026-05-19T20:30:19+00:00",
+	"Downloads": [
+		{
+			"Id": 79135,
+			"Type": "Optional",
+			"DisplayName": "LittleNPCs",
+			"FileName": "LittleNPCs-15152-1-1-4-1701719054.zip",
+			"Description": "Last version compatible with SDV 1.5 . Fixed issues with spaces in NPC names.",
+			"Version": "1.1.4",
+			"SizeInBytes": 34324,
+			"Uploaded": "2023-12-04T19:44:14+00:00",
+			"Mods": [
+				{
+					"Id": "Candidus42.LittleNPCs",
+					"DisplayName": "LittleNPCs",
+					"Type": "Smapi",
+					"RelativePath": "LittleNPCs",
+					"Manifest": {
+						"Name": "LittleNPCs",
+						"Description": "Turns your children into little NPCs.",
+						"Author": "Candidus42",
+						"Version": "1.1.4",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "LittleNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.26.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 15152"
+						],
+						"UniqueId": "Candidus42.LittleNPCs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342465823,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 141630,
+			"Type": "Main",
+			"DisplayName": "LittleNPCs",
+			"FileName": "LittleNPCs-15152-2-1-3-1756669928.zip",
+			"Description": "Replacement of broken release 2.1.2\n<br />- Rollback of changed CP token ready checks.\n<br />- Fixed birthday calculation\n<br />- Improved logging",
+			"Version": "2.1.3",
+			"SizeInBytes": 42321,
+			"Uploaded": "2025-08-31T19:52:08+00:00",
+			"Mods": [
+				{
+					"Id": "Candidus42.LittleNPCs",
+					"DisplayName": "LittleNPCs",
+					"Type": "Smapi",
+					"RelativePath": "LittleNPCs",
+					"Manifest": {
+						"Name": "LittleNPCs",
+						"Description": "Turns your children into little NPCs.",
+						"Author": "Candidus42",
+						"Version": "2.1.3",
+						"MinimumApiVersion": "4.1.2",
+						"EntryDll": "LittleNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.4.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 15152"
+						],
+						"UniqueId": "Candidus42.LittleNPCs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528318,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 160790,
+			"Type": "Optional",
+			"DisplayName": "LittleNPCs",
+			"FileName": "LittleNPCs-15152-2-2-0-beta-20260316-1773694157.zip",
+			"Description": "Beta for Content pack authors, supports up to four children.\n<br />- Add custom mod API\n<br />- Prepare i18n support",
+			"Version": "2.2.0-beta.20260316",
+			"SizeInBytes": 47915,
+			"Uploaded": "2026-03-16T20:49:17+00:00",
+			"Mods": [
+				{
+					"Id": "Candidus42.LittleNPCs",
+					"DisplayName": "LittleNPCs",
+					"Type": "Smapi",
+					"RelativePath": "LittleNPCs",
+					"Manifest": {
+						"Name": "LittleNPCs",
+						"Description": "Turns your children into little NPCs.",
+						"Author": "Candidus42",
+						"Version": "2.2.0-beta.20260316",
+						"MinimumApiVersion": "4.1.2",
+						"EntryDll": "LittleNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.4.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 15152"
+						],
+						"UniqueId": "Candidus42.LittleNPCs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547478,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 168166,
+			"Type": "Optional",
+			"DisplayName": "LittleNPCs",
+			"FileName": "LittleNPCs-15152-2-2-0-beta-20260519-1779222619.zip",
+			"Description": "Beta for Content pack authors, supports up to four children.<br />-Fix bug of resetting character data on core asset reload",
+			"Version": "2.2.0-beta.20260519",
+			"SizeInBytes": 48413,
+			"Uploaded": "2026-05-19T20:30:19+00:00",
+			"Mods": [
+				{
+					"Id": "Candidus42.LittleNPCs",
+					"DisplayName": "LittleNPCs",
+					"Type": "Smapi",
+					"RelativePath": "LittleNPCs",
+					"Manifest": {
+						"Name": "LittleNPCs",
+						"Description": "Turns your children into little NPCs.",
+						"Author": "Candidus42",
+						"Version": "2.2.0-beta.20260519",
+						"MinimumApiVersion": "4.1.2",
+						"EntryDll": "LittleNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.4.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 15152"
+						],
+						"UniqueId": "Candidus42.LittleNPCs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342554854,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401840,
+		"UploaderId": 75865403,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

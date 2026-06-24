@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 4898,
+	"Name": "Eating food or crops restores health and stamina over time plus enables sprinting",
+	"Author": "abslam",
+	"AuthorLabel": "Abs",
+	"Description": "[size=5]The mod adds 2 fully customizable mechanics with controller support:[/size]\n<br />\n<br />[list=1]\n<br />[*][size=4]Health and Stamina regeneration buffs after eating:[img]https://i.imgur.com/094HlVq.gif[/img][/size]\n<br />[*][size=4]Sprinting (Because you know. Gotta go fast):[/size]\n<br />[img]https://i.imgur.com/9W5vyFx.gif[/img]\uFEFF\n<br />[/list]\n<br />Both mechanics are fully customizable with the config.json file, here are the defaults:\n<br />\n<br />{\n<br />\u00A0 \"SprintingEnabled\": true, // Enables or disables the sprinting mechanic. [code]false [/code]to disable it.\n<br />\u00A0 \"SprintingSpeed\": 3, // Speed gained when sprinting. the bigger the number the faster you go.\n<br />\u00A0 \"SprintingConsumesStamina\": true, // If sprinting consumes stamina. [code]false\u00A0[/code]to disable stamina drain when sprinting.\n<br />\u00A0 \"StaminaConsumedWhenSprintingPerSecond\": 10.0, // Units of stamina per second consumed.\n<br />\u00A0 \"StaminaDrainingDecreasesWithPhysicalSkillLevels\": true, // for each foraging, mining and combat level the stamina consumption decreases 0.2 being 6 at max level. [code]false [/code]to disable skills reducing the stamina draining.\n<br />\u00A0 \"StaminaRegenerationIncreasesWithPhysicalSkillLevels\": false, // If you want to scale the amount of stamina regenerated per second with\u00A0foraging, mining and combat levels\n<br />\u00A0 \"FoodNeededToRegenStamina\": true, // You need to eat food to regenerate stamina.\u00A0[code]false [/code]if you don't want to eat to start regenerating stamina.\n<br />\u00A0 \"StaminaRegenerationEnabled\": true, // By default you regenerate stamina after eating. [code]false [/code]if you don't want to regenerate stamina at all.\n<br />\u00A0 \"FoodNeededToRegenHealth\": true,\u00A0 // You need to eat food to regenerate health.\u00A0[code]false\u00A0[/code]if you don't want to eat to start regenerating health.\n<br />\u00A0 \"HealthRegenerationEnabled\": true,\u00A0// By default you regenerate health after eating.\u00A0[code]false\u00A0[/code]if you don't want to regenerate health at all.\n<br />\u00A0 \"SecondsToRegainStaminaAfterUsingIt\": 5,\u00A0\u00A0// Seconds in which you won't gain stamina after performing an action that decreases it.\n<br />\u00A0 \"RemoveHealthRegenerationAfterGettingHit\": true, // By default if you get hit the buff of health regeneration will dissapear. [code]false [/code]if you want to keep the buff after being hit\n<br />[img]https://imgur.com/f466V66.gif[/img]\n<br />\u00A0 \"SecondsToRegainHealthAfterGettingHit\": 5, //\u00A0Seconds in which you won't gain health after being hit.\n<br />\u00A0 \"StaminaRegenerationPerSecond\": 5.0, // Total of stamina gained per second if the buff is active\n<br />\u00A0 \"HealthRegenerationPerSecond\": 5,\u00A0// Total of stamina gained per second if the buff is active\n<br />\u00A0 \"HoursRegeneratingHealthAfterEating\": 2, // The duration of the buff in \"In-Game hours\"\n<br />\u00A0 \"HoursRegeneratingStaminaAfterEating\": 2,\u00A0// The duration of the buff in \"In-Game hours\"\n<br />\u00A0 \"SprintKey\": \"LeftShift\", // Key to activate the sprint (you have to hold it), if you want to change it pick one of this [url=https://docs.microsoft.com/en-us/dotnet/api/system.windows.input.key?view=netframework-4.8]Key constants[/url]\uFEFF by default it's left shift, you will have to change the ingame \"run\" key to any other for the sprint to work (the run key walks by default).\n<br />\u00A0 \"SprintButton\": \"LeftStick\", // Button to activate the sprint (you have to hold it), by default it's clicking the left stick. if you want to change it, pick one of this\u00A0[url=https://imgur.com/JKR4Xp5]buttons[/url]\uFEFF.\n<br />\u00A0 \"RegenPercentajeOfFood\": [b]true[/b], // Regenerates a percentage\u00A0of the stamina and health of the food instead of a flat value\n<br />\u00A0 \"PercentajeOfFoodStatsRegenerated\": [b]5.0[/b], // The amount of health and stamina regenerated per second of the food eaten now can be with decimals!\u00A0[img]https://i.imgur.com/UhySHJR.png[/img]\uFEFF in 1.1.2\n<br />}",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4898",
+	"Version": "1.1.2",
+	"Updated": "2020-05-16T13:33:05+00:00",
+	"Downloads": [
+		{
+			"Id": 27191,
+			"Type": "Main",
+			"DisplayName": "Sprint health and stamina regen v1.1.2",
+			"FileName": "Sprint health and stamina regen v1.1.2-4898-1-1-2-1589635985.zip",
+			"Description": "",
+			"Version": "1.1.2",
+			"SizeInBytes": 14857,
+			"Uploaded": "2020-05-16T13:33:05+00:00",
+			"Mods": [
+				{
+					"Id": "abs.SprintNRegen",
+					"DisplayName": "SprintNRegen",
+					"Type": "Smapi",
+					"RelativePath": "SprintNRegen",
+					"Manifest": {
+						"Name": "SprintNRegen",
+						"Description": "Sprint health and stamina regeneration",
+						"Author": "Abs",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "SprintNRegen.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4898"
+						],
+						"UniqueId": "abs.SprintNRegen"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342413879,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391586,
+		"UploaderId": 3626893,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

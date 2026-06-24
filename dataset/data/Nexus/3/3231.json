@@ -1,0 +1,95 @@
+{
+	"Site": "Nexus",
+	"Id": 3231,
+	"Name": "Farm Type Manager (FTM)",
+	"Author": "EscaMMC",
+	"AuthorLabel": "Esca-MMC",
+	"Description": "Despite the name, [b]Farm Type Manager (FTM)[/b] is a framework that allows other mods to spawn objects and monsters anywhere in the game. It can also customize objects and monsters in unique ways. Modders can configure or randomize the number of objects spawned per day, where and when they spawn, and more.\n<br />\n<br />FTM supports content packs, allowing other mods to configure spawning automatically. If any of your other mods come with \"[FTM]\" folders, they will automatically use FTM to spawn custom content.\n<br />\n<br />\uD83C\uDF10 In other languages: [url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/docs/readme_zh.md]zh (中文)[/url]\n<br />[line]\n<br />[b][size=4]Installation[/size][/b]\n<br />\n<br />1. [b]Install the latest version of SMAPI.[/b]\n<br />2.\u00A0[b]Install the latest version of Content Patcher.[/b]\n<br />3. [b]Download FarmTypeManager[/b][b].[/b]\n<br />4. [b]Unzip FarmTypeManager[/b] into the [i]Stardew Valley/Mods[/i] folder.\n<br />\n<br />If you have other mods that require FTM, then you're all set!\n<br />\n<br />[b]Notes for multiplayer[/b]: [b]All players[/b] should have this mod installed. If only the host has this mod, other players might encounter SMAPI errors or be unable to see/interact with some objects and monsters.\n<br />\n<br />Only the host's spawn settings will actually be used in multiplayer. Console commands should generally work for all players.\n<br />[line]\n<br />[size=4][b]Options[/b][/size]\n<br />\n<br />FTM has a few basic \"global\" options for players, such as a limit to the number of monsters allowed in each area. To edit these options:\n<br />\n<br />1. [b]Run the game[/b] using SMAPI.\n<br />2. [b]Open the config.json file[/b] in the [i]Stardew Valley/Mods/FarmTypeManager[/i] folder and edit its settings. Refer to the [url=https://github.com/Esca-MMC/FarmTypeManager#mod-settings]Mod Settings[/url] section on Github for more info.\n<br />\n<br />Alternatively, you can install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu (GMCM)[/url] and edit these settings in Stardew's main menu (look for a gear icon). The menu should display tooltips to explain each setting.\n<br />[line]\n<br />[b][size=4]Translation[/size][/b]\n<br />\n<br />FTM supports translation of its GMCM setting names and descriptions.\n<br />\n<br />The mod will load a file from the [i]FarmTypeManager/i18n[/i] folder that matches the current language code. If no matching translation exists, it will use [i]default.json[/i].\n<br />\n<br />See the Stardew Valley Wiki's [url=https://stardewvalleywiki.com/Modding:Translations]Modding:Translations[/url] page for more information. Please feel free to submit translation files by linking them in a comment, submitting a GitHub pull request, or any other method.\n<br />\n<br />The mod currently includes these translations:\n<br />\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/default.json]English[/url]\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/zh.json]Chinese (Simplified)[/url] (by [url=https://github.com/SummerFleur2997]SummerFleur[/url])\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/nl.json]Dutch[/url] (by [url=https://github.com/UnrealThingTriesCode]UnrealThingTriesCode[/url])\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/fr.json]French[/url] (by [url=https://next.nexusmods.com/profile/Fsecho7]Fsecho7[/url])\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/de.json]German[/url] (by [url=https://next.nexusmods.com/profile/777PamPam777]777PamPam777[/url])\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/pt.json]Portuguese (Brazilian)[/url] (by [url=https://github.com/roanrobersson]roanrobersson[/url])\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/tr.json]Turkish[/url] (by [url=https://github.com/Rupurudu]Rupurudu[/url])\n<br />[url=https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/i18n/uk.json]Ukrainian[/url] (by [url=https://github.com/burunduk]burunduk[/url])\n<br />[line]\n<br />[size=4][b]Customization[/b][/size]\n<br />\n<br />FTM is mainly used by content pack mods, but it can be also customized for personal use. To change settings for a specific character:\n<br />\n<br />1. [b]Run the game[/b] using SMAPI.\n<br />2. [b]Load the farm[/b] you want to customize or create a new one. This will create files for your character in the [i]Stardew Valley/Mods/FarmTypeManager/data[/i] folder.\n<br />3. [b]Find the .json file[/b] with your character's name on it. Load it with the [b]ConfigEditor.html[/b] file in the [i]FarmTypeManager[/i] folder, or edit manually with any text editor.\n<br />4. [b]Customize the file's settings.[/b] For more info, see the Config Editor's tooltips or the [url=https://github.com/Esca-MMC/FarmTypeManager]GitHub readme[/url].\n<br />5. [b]Exit your farm and reload it[/b], or progress to the next in-game day. The mod's settings are updated every morning.\n<br />\n<br />[b]Modders:[/b] To learn about creating FTM content packs, see the [url=https://github.com/Esca-MMC/FarmTypeManager]GitHub readme[/url]. The [url=https://github.com/Esca-MMC/FarmTypeManager#content-packs]Content Packs[/url] section explains how to start a new content pack.\n<br />[line]\n<br />[size=4][b]Commands[/b][/size]\n<br />\n<br />This mod adds the following commands to SMAPI's console:\n<br />\n<br />The [b]whereami[/b] command. Enter it to display information about your current location, including:\n<br />\n<br />[list]\n<br />[*]The map's name (e.g. \"Farm\" or \"BusStop\")[/*]\n<br />[*]Your current tile's X/Y coordinates[/*]\n<br />[*]The tile's terrain type (e.g. \"Dirt\" or \"Stone\")[/*]\n<br />[*]Whether the tile is \"Diggable\" with tools[/*]\n<br />[*]The tile's spritesheet index number (used to identify \"Quarry\" tiles or set up custom tile-matching)[/*]\n<br />[/list]\n<br />The [b]list_monsters[/b] command. Enter it to display a list of available monster names to use with the MonsterName configuration setting.\n<br />\n<br />The command will list the primary name of each monster from Stardew Valley itself, and then scan other mods for custom monster classes.\n<br />\n<br />The [b]remove_items[/b] command. Enter it to delete an item or object directly in front of the player. This can be useful for certain objects that players can't remove normally, e.g. \"permanent\" objects spawned by mods.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3231",
+	"Version": "1.26.1",
+	"Updated": "2025-11-14T17:55:30+00:00",
+	"Downloads": [
+		{
+			"Id": 107932,
+			"Type": "Optional",
+			"DisplayName": "Config Editor v1.23.0",
+			"FileName": "Config Editor v1.23.0-3231-1-23-0-1722123262.zip",
+			"Description": "The ConfigEditor.html file. Download and extract anywhere to use.\n<br />\n<br />\n<br />Provides a graphical web interface to edit content packs (content.json) or personal farm settings (FarmTypeManager/data).\n<br />\n<br />\n<br />See GitHub releases for update notes.",
+			"Version": "1.23.0",
+			"SizeInBytes": 78417,
+			"Uploaded": "2024-07-27T23:34:22+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "107932",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342494620,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 148044,
+			"Type": "Main",
+			"DisplayName": "Farm Type Manager v1.26.1",
+			"FileName": "Farm Type Manager v1.26.1-3231-1-26-1-1763142930.zip",
+			"Description": "* Reduces SMAPI log sizes by limiting most FTM trace messages to verbose mode\n<br />* Fixes errors when forage items try to spawn on top of each other, e.g. when packs disable tile checking (reported by shuangxue123)\n<br />\n<br />Designed for Stardew Valley v1.6.15.",
+			"Version": "1.26.1",
+			"SizeInBytes": 133975,
+			"Uploaded": "2025-11-14T17:55:30+00:00",
+			"Mods": [
+				{
+					"Id": "Esca.FarmTypeManager",
+					"DisplayName": "Farm Type Manager (FTM)",
+					"Type": "Smapi",
+					"RelativePath": "FarmTypeManager",
+					"Manifest": {
+						"Name": "Farm Type Manager (FTM)",
+						"Description": "Allows custom spawning of content from each farm type: forage, large objects, ore, and monsters",
+						"Author": "Esca",
+						"Version": "1.26.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmTypeManager.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.0.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Cherry.ExpandedPreconditionsUtility",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3231",
+							"GitHub:Esca-MMC/FarmTypeManager",
+							"ModDrop:598755"
+						],
+						"UniqueId": "Esca.FarmTypeManager"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534732,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389919,
+		"UploaderId": 56561342,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

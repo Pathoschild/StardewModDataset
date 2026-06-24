@@ -1,0 +1,107 @@
+{
+	"Site": "Nexus",
+	"Id": 3043,
+	"Name": "Custom Music",
+	"Author": "Platonymous",
+	"Description": "[u]Changes in 1.1:[/u]\n<br />- Supports .wav files\n<br />- if you change \"convert:\" in the config file to true (by default it is false) CM will convert all .ogg files to .wav. This will take up additional diskspace and make the first loading slightly longer, but after the conversion, the loading times will be drasticly reduced.\n<br />(the config.json files gets created on first launch)\n<br />\n<br />To create a ContentPack for CM, write a standard\u00A0manifest.json and add a content.json file.\n<br />You can download a simple template under Optional Files.\n<br />\n<br />\n<br />manifest.json example:\n<br />[code]\uFEFF{\n<br />\u00A0 \"Name\": \"Custom Music Template\",\n<br />\u00A0 \"Author\": \"Platonymous\",\n<br />\u00A0 \"Version\": \"1.0.0\",\n<br />\u00A0 \"Description\": \"Template for Custom Music\",\n<br />\u00A0 \"UniqueID\": \"Platonymous.CustomMusic.Template\",\n<br />\u00A0 \"ContentPackFor\": {\n<br />\u00A0 \u00A0 \"UniqueID\": \"Platonymous.CustomMusic\",\n<br />\u00A0 \u00A0 \"MinimumVersion\": \"1.0.0\"\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />\n<br />content.json example:\n<br />[code]\uFEFF{\n<br />   \"Music\" : [\n<br />   {\n<br />      \"Id\": \"MainTheme\",\n<br />      \"File\": \"theme.ogg\",\n<br />      \"Loop\": true,\n<br />      \"Ambient\": false\n<br />   },\n<br />   {\n<br />      \"Id\": \"spring_day_ambient\",\n<br />      \"File\": \"ambience.ogg\",\n<br />      \"Loop\": true,\n<br />      \"Ambient\": true\n<br />   },\n<br />   {\n<br />      \"Id\": \"title_night\",\n<br />      \"File\": \"select.ogg\",\n<br />      \"Loop\": true,\n<br />      \"Ambient\": false\n<br />   }\n<br />   ]\n<br />}[/code]\n<br />[code]\uFEFF\n<br />[/code]Id: The Id the games uses for the Song this is going to replace\n<br />(List of Ids by Cane:\u00A0[url=https://docs.google.com/spreadsheets/d/1CpDrw23peQiq-C7F2FjYOMePaYe0Rc9BwQsj3h6sjyo/edit#gid=1007418291]Google Doc[/url])\n<br />\n<br />File: Your music file (currently supports .ogg &amp; .wav)\n<br />\n<br />Loop: If it should loop\n<br />\n<br />Ambient: Whether or not this is an ambient sound\n<br />\n<br />Requires SMAPI.\n<br />\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3043",
+	"Version": "1.9.0",
+	"Updated": "2022-02-06T04:05:20+00:00",
+	"Downloads": [
+		{
+			"Id": 12668,
+			"Type": "Optional",
+			"DisplayName": "CM Content Pack Template",
+			"FileName": "CM Content Pack Template-3043-1-0-3-1542509302.zip",
+			"Description": "Goes right into the Mod folder",
+			"Version": "1.0.3",
+			"SizeInBytes": 11395211,
+			"Uploaded": "2018-11-18T02:48:22+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomMusic.Template",
+					"DisplayName": "Custom Music Template",
+					"Type": "ContentPack",
+					"RelativePath": "[CM]Template",
+					"Manifest": {
+						"Name": "Custom Music Template",
+						"Description": "Template for Custom Music",
+						"Author": "Platonymous",
+						"Version": "1.0.3",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.CustomMusic",
+							"MinimumVersion": "1.0.3"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Platonymous.CustomMusic.Template"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342399356,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 50410,
+			"Type": "Main",
+			"DisplayName": "Custom Music",
+			"FileName": "Custom Music-3043-1-9-0-1644120320.zip",
+			"Description": "",
+			"Version": "1.9.0",
+			"SizeInBytes": 171630,
+			"Uploaded": "2022-02-06T04:05:20+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomMusic",
+					"DisplayName": "CustomMusic",
+					"Type": "Smapi",
+					"RelativePath": "CustomMusic",
+					"Manifest": {
+						"Name": "CustomMusic",
+						"Description": "Changes the games music",
+						"Author": "Platonymous",
+						"Version": "1.9.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CustomMusic.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3043"
+						],
+						"UniqueId": "Platonymous.CustomMusic",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "Stardew-Valley-Mods",
+								"User": "Platonymous",
+								"Directory": "_releases",
+								"ModFolder": "CustomMusic"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342437098,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389731,
+		"UploaderId": 42440425,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

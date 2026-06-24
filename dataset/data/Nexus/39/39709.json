@@ -1,0 +1,66 @@
+{
+	"Site": "Nexus",
+	"Id": 39709,
+	"Name": "Stardew Translation Sync - Compare Old Translation with Latest English Default JSON",
+	"Author": "ZeroXPatch",
+	"Description": "[b][size=5][center][color=#00ff00]Stardew Translation Sync - Compare Old Translation with Latest English Default JSON[/color]\n<br />[color=#ffff00]\uD83D\uDC38星露谷翻译同步器：旧翻译对比最新英文版Default JSON\uD83D\uDC38\n<br />[/color][/center][/size][center][color=#ff7700]Credits: My whole Day\n<br />[/color][/center][center]\n<br />[img]https://i.imgur.com/xEv7iRE.png[/img][/center]\n<br />\n<br />[color=#00ffff]✨ Overview 概览[/color]\n<br />[/b]\n<br />A desktop helper for Stardew Valley translators and modders. （专为星露谷模组翻译者,作者和玩家打造的桌面小工具。）\n<br />\n<br />Compare your old translation against the latest English default for missing keys, extra keys and token mismaches, so you know if your translated json is up to date in terms of keys. （让你的旧翻译一键对比最新英文默认版，查出缺少键，多键，还是占位符不匹配，这样你就能了解你现在这个翻译json的键数是不是最新的了）\n<br />\n<br />[b][color=#00ffff]\uD83D\uDD27 Who is this for? 适合谁使用？\n<br />\n<br />[/color][/b][list]\n<br />[*]Translators maintaining\u00A0Chinese / other language forks\u00A0of popular mods. （维护热门模组\u00A0简中或其他语言版本\u00A0的翻译者。）\n<br />[/list]\n<br />[color=#ffff00]如果你是玩家，你现在可以用这个工具来告诉翻译者哪句话该翻译了，或该去除了，或者量少的话你自己可以动动手指自己翻译啦.\n<br />[/color]\n<br />[color=#ffff00]如果你是翻译作者，可以用这个工具来比较最新版本的default json和旧的翻译文件，这样可以快速知道你需不需要翻译。而且你也可以把这个软件推给其他人叫他们自己查XD\n<br />[/color]\n<br />如果你是mod作者，可以用这个工具来。。。我不知道可以干嘛\n<br />\n<br />[img]https://i.imgur.com/DwIPwnF.png[/img]\n<br />\n<br />[line][b][color=#00ffff]\uD83D\uDCA1 What this tool does\u00A0工具有什么用\n<br />[/color][/b]\n<br />[list]\n<br />[*]Compare your [b]old translated JSON[/b] against the [b]latest English default JSON[/b]. （将你[b]之前的翻译版 JSON[/b] 与 [b]最新英文默认 JSON[/b] 进行逐项对比。）\n<br />[*]Show you which keys are [b]missing, extra, or changed tokens[/b]. （清楚标出哪些键是[b]缺少的、多余的，或占位符发生变化[/b]。）\n<br />[*]Tolerate Stardew-style JSON quirks: [code]// comments[/code] and trailing commas are accepted. （自动兼容星露谷风格 JSON：支持 [code]// 注释[/code] 和末尾多余逗号，不再动不动报错。）\n<br />[*]Export a clean [b]“to translate” list[/b] for your workflow or for sending to other translators. （一键导出[b]待翻译列表[/b]，方便自己用或发给协作翻译。）\n<br />[/list]This is an external Windows utility, not a SMAPI mod, so it never touches your save files. （这是一个 Windows 外部工具，而不是 SMAPI 模组，不会修改任何存档或游戏文件。）\n<br />[line][b][color=#00ffff]\uD83E\uDDF6 Key Features 主要功能\n<br />[/color][/b]\n<br />1. Translated Version vs Latest English Default 比对旧翻译与最新英文默认版[list]\n<br />[*][b]Input 1 – Latest English Default.json[/b]\n<br />Load the newest English [code]i18n[/code] / JSON file from the mod author. （导入模组作者发布的最新版英文 [code]i18n[/code] / JSON 文件。）[*][b]Input 2 – Your Old Translated JSON[/b]\n<br />Load the translation you created in the past. （导入你之前做好的翻译 JSON。）[*]The tool flattens nested objects so keys like [code]menu.title[/code] or [code]Strings&#92;UI:SomeKey[/code] are compared correctly. （工具会自动“拍平”嵌套结构，保证像 [code]menu.title[/code] 或 [code]Strings&#92;UI:SomeKey[/code] 这样的键都能正确比对。）\n<br />[/list][line][b][color=#00ffff]2. Missing / Extra Keys\u00A0抓出缺少与多余的键\n<br />[/color][/b]\n<br />[list]\n<br />[*]Shows all [b]keys that exist in English but not in your translation[/b] – these are your new lines to translate. （列出英文里有、翻译里没有的所有键——这就是你需要补翻的新文本。）\n<br />[*]Shows [b]keys that only exist in your translation[/b] – usually leftovers from older versions or typos. （列出只存在于翻译文件中的键——通常是旧版本遗留或键名打错。）\n<br />[*]Summary box at the top tells you counts at a glance: missing, extra, token mismatches. （顶部摘要会显示缺少键、多余键和占位符异常的数量，一眼看清工作量。）\n<br />[/list][line][b][color=#00ffff]3. Token Safety Check\u00A0占位符安全检查\n<br />[/color][/b]\n<br />[list]\n<br />[*]Detects mismatched format tokens like [code]{0}[/code], [code]{1}[/code], [code]{{name}}[/code], etc. （检测 [code]{0}[/code]、[code]{1}[/code]、[code]{{name}}[/code] 等格式占位符在翻译中是否被删掉或改错。）\n<br />[*]Prevents classic crash issues where a translation breaks interpolation. （避免因为翻译删错占位符导致游戏或模组在运行时直接报错。）\n<br />[*]For each problematic key, it shows English text, translated text, and token lists. （对每个有问题的键，会同时显示英文原文、翻译文本和两边的占位符列表。）\n<br />[/list][line][color=#00ffff][b]4. Stardew-Friendly JSON Parsing\u00A0兼容星露谷习惯的 JSON 语法\n<br />[/b][/color]\n<br />[list]\n<br />[*]Automatically strips [code]// comments[/code] outside of strings, so you can keep your notes. （自动忽略字符串外的 [code]// 注释[/code]，方便你在 JSON 里写备注。）\n<br />[*]Ignores illegal trailing commas before [code]}[/code] or [code]][/code], just like the game does. （自动忽略对象和数组末尾的“多余逗号”，与游戏本体的宽松写法保持一致。）\n<br />[*]If something is still badly broken, the error will show up clearly in the log window. （如果还有别的严重错误，工具会在日志窗口中清楚显示行号与原因。）\n<br />[/list][line][b][color=#00ffff]5. Export “To Translate” List 导出待翻译列表\n<br />[/color][/b]\n<br />[list]\n<br />[*]Export report as [b]JSON[/b] or [b]plain text[/b]. （支持导出为 [b]JSON[/b] 报告或 [b]纯文本[/b]。）\n<br />[*]Includes:\n<br />[list]\n<br />[*]Keys missing in the translation, with English text. （翻译中缺少的键及其英文原文。）\n<br />[*]Keys where tokens don’t match between English and translation. （占位符不一致的所有键及其详细对比。）\n<br />[*]Extra / unused keys present only in the translation file. （只在翻译中存在的多余键。）\n<br />[/list][*]Perfect for tracking progress or sharing with collaborators. （非常适合用来跟踪翻译进度，或发给协作翻译伙伴一起处理。）\n<br />[/list][line]\uD83D\uDD79️ Usage 使用方法[list=1]\n<br />[*][b]Download &amp; extract[/b] the tool anywhere outside your Mods folder. （下载并解压工具到任意位置，建议不要放在 Mods 里。）\n<br />\n<br />[*]Run the [code].exe[/code] or [code]python[/code] script to open the window. （运行 [code].exe[/code] 或 Python 脚本，打开工具界面。）\n<br />\n<br />[*]Click [b]“Latest English Default.json (最新英文默认版 JSON)”[/b] and choose the newest English file from the mod. （点击“Latest English Default.json（最新英文默认版 JSON）”，选择模组里最新的英文 JSON 文件。）\n<br />\n<br />[*]Click [b]“Your Old Translated JSON (你之前的旧翻译 JSON)”[/b] and choose your existing translation file. （点击“Your Old Translated JSON（你之前的旧翻译 JSON）”，选择你原来的翻译文件。））\n<br />\n<br />[*]Hit [b]“Compare Files (比对文件)”[/b] to see missing/extra keys and token issues. （点击“Compare Files（比对文件）”，查看缺少键、多余键和占位符问题。）\n<br />\n<br />[*]When you’re ready, click [b]“Export To-Translate List (导出待翻译列表)”[/b] to generate a report. （准备好后，点击“Export To-Translate List（导出待翻译列表）”生成报告。）\n<br />[/list][list]\n<br />[/list][line][b][color=#00ffff]\uD83D\uDCE6 Compatibility &amp; Notes 兼容性与注意事项\n<br />[/color][/b]\n<br />[list]\n<br />[*]This is a [b]standalone utility[/b], not loaded by SMAPI. （这是一个完全独立的小工具，不通过 SMAPI 加载。）\n<br />[*]Works with any Stardew Valley mod that uses JSON / [code]i18n[/code]\n<br /> files. （适用于任何使用 JSON / [code]i18n[/code] 文件的星露谷模组。）[*]The tool never edits files\n<br />[/list]\n<br />\n<br />Code at:\u00A0https://github.com/ZeroXPatch/Projects-for-Nexus-Mod",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39709",
+	"Version": "1.0",
+	"Updated": "2025-11-27T01:33:44+00:00",
+	"Downloads": [
+		{
+			"Id": 149153,
+			"Type": "Main",
+			"DisplayName": "StardewTranslationSync",
+			"FileName": "StardewTranslationSync-39709-1-0-1764207169.zip",
+			"Description": "exe format",
+			"Version": "1.0",
+			"SizeInBytes": 11213249,
+			"Uploaded": "2025-11-27T01:32:49+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "149153",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535841,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 149154,
+			"Type": "Optional",
+			"DisplayName": "Testing Sample - Default Json and Zh.Json",
+			"FileName": "Testing Sample - Default Json and Zh.Json-39709-1-0-1764207224.zip",
+			"Description": "files for you to test. Should have one extra key, and one missing key.\n<br />给你测试用的文件，一个多加的键和一个少了的键，（结果）",
+			"Version": "1.0",
+			"SizeInBytes": 733,
+			"Uploaded": "2025-11-27T01:33:44+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "149154",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535842,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426397,
+		"UploaderId": 141646868,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

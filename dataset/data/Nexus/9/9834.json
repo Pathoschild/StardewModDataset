@@ -1,0 +1,154 @@
+{
+	"Site": "Nexus",
+	"Id": 9834,
+	"Name": "Alternative Textures example packs and conversion tools",
+	"Author": "Asterisk555",
+	"Description": "If you're only just starting with making Alternative Textures content packs makes sure you've\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/9246]read everything available on the mod pages[/url]\u00A0first, especially since there is an in-depth wiki linked in the description, and an example pack\uFEFF in the files tab which is actually quite easy to read.\n<br />\n<br />These are mostly just extra example packs, though the \"all furniture tools\" is something I made when I was mass converting furniture mods to AT for personal use, and it has ReadMe instructions inside it.\n<br />\n<br />I moved a lot of the example packs to\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/12028]Vanilla for Alternative Textures[/url]\uFEFF because I thought that would be less confusing for people who want to convert just a few items, and not huge megapacks. But if you [i]are[/i]\u00A0doing a megapack the old mod description and python tutorial in the optional files might be useful to you.\n<br />\n<br />old mod description: [spoiler]\n<br />I did my best to make the instructions easy to understand, and everything should be very quick to use, but if you are only converting a small number of files or aren't comfortable with using scripts to automate things this may not be for you cause some of the things here have a bit of a learning curve. They were really handy for me though because I've had to process over\u00A06,764 images so far.\n<br />\n<br />Each file has a \"read me\" with instructions, sources, and links. I've also created a [url=https://stardewmodding.wiki/wiki/Converting_CP_or_CF_mods_to_AT_packs]wiki[/url] page for common bugs, which is a wiki that is open to all modders to edit so if you learn anything or think the instructions could be clearer you can add it to the page too.\n<br />\n<br />The CP mod I used as my banner Yellog's and is no longer available on nexus but you can get an unofficial version [url=https://stardewvalleywiki.com/Modding:Using_XNB_mods#Alternatives_using_Content_Patcher]here\n<br />[/url]\n<br />From the Read me:\n<br />\n<br />FOR CONVERTING FURNITURE MODS TO Alternative Textures PACKS\n<br />This pack includes a few tools, and links to tool, to help make converting spritesheets to AT packs easier.\n<br />I primarily use these to mass convert old CP mods.\n<br />--------------------------\n<br />The tools I use include:\n<br />1. Pathos' split stardew valley spritesheet, which can be manually edited to generate filenames \"texture_0,1,2,3\" etc if you change the name section to:\n<br />editor.Image.Save(Path.Combine(exportPath, \"texture_\" + name + \".png\"));\n<br />link: [url=https://gist.github.com/Pathoschild/f53fe224f87bf349ad85726dc05c477b]https://gist.github.com/Pathoschild/f53fe224f87bf349ad85726dc05c477b[/url]\n<br />2. For image pricessing: Furniture grids that make it easier to crop spritesheets manually if I have to.\u00A0[url=https://github.com/alessandrofrancesconi/gimp-plugin-bimp]BIMP plugin[/url]\u00A0for GIMP to format multiple images quickly.\u00A0[url=https://imagemagick.org/]Image Magick[/url]\u00A0for when the number of images gets really obscene, but you have to be ready to learn a few basic things about command prompts to use it.\n<br />3. Windows Powershell to automatically name files in all folders quickly. A text file with the commands is included in this folder\n<br />If you're comfortable downloading programs then try\u00A0[url=https://www.bulkrenameutility.co.uk/]Bulk Rename[/url]\u00A0or\u00A0[url=https://www.advancedrenamer.com/]Advanced Renamer[/url], or you can look for something else. But I will not guarantee the digital hygiene of any downloads.\n<br />4. My sorted \"AT template\" pack, also included, which organises furniture items by function and dimensions.\n<br />I have a separate one which separates items which aren't available in the furniture catalogue and are therefore difficult for players to have multiple of.\n<br />5. This example pack with previews of how each furniture .png should look\n<br />link: [url=https://www.nexusmods.com/stardewvalley/mods/9572/]https://www.nexusmods.com/stardewvalley/mods/9572/[/url]\n<br />--------------------------\n<br />\n<br />Note: These tools are due for an update, what I need to add in the future:\n<br />1. Always start split textures as texture_0 unless you have a good reason not to\n<br />2. Image examples for everything\n<br />3. I have more powershell commands (specifically for sorting and image dump into sorted folders)\n<br />4. Image Magick commands (for resizing images and adding masks and seasonal overlays)\n<br />\n<br />5. A disclaimer saying that even though a lot of my mods have the items individually tagged you don't have to do that! Doing a quick variation number is extrememly fast and easy. I just like to do manual variations for that extra level of user friendliness. And I automate it too! If all your images are named before you start you can use this command to get a list of file names, and then use a macro, find-replace, or excel to add in this missing parts:\n<br />\n<br />type CMD in the windows explorer navigation bar\n<br />[code]dir /b &gt; List.txt[/code]\n<br />Gives you a list of all files in a folder\n<br />\n<br />6. If you want to retexture something there's no example for you can find the name of it in your game files. If you're gonna be doing a lot of modding anyway it's worth unpacking all your files using\u00A0[url=https://stardewvalleywiki.com/Modding:Editing_XNB_files#Unpack_game_files]Stardew XNB Hack[/url]\uFEFF, and then from there if you search those files for, say, \"craftables\" you'll get a document that lists all the different craftables. There'll be a lot of extra game info in those documents but you only really need the name.\n<br />7. To work with Linux operating systems the capital letters are important. \"Texture\" folder and \"texture.json\" and \"texture_0.png\"\n<br />8. If you're dealing with multiple layers in GIMP the\u00A0\u00A0[url=https://github.com/khalim19/gimp-plugin-export-layers]export as layers plugin[/url]\u00A0can be pretty handy.\n<br />9. I should probably have more folder templates with images in them?\n<br />10. There's more than just furniture packs on this page now and I should maybe cover the other categories.\n<br />\n<br />[/spoiler]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9834",
+	"Version": "3.0",
+	"Updated": "2022-05-22T19:50:56+00:00",
+	"Downloads": [
+		{
+			"Id": 46015,
+			"Type": "Optional",
+			"DisplayName": "Walls and floors grid white",
+			"FileName": "Grid for walls and floors - white-9834-1-0-1633911206.zip",
+			"Description": "Grid for isolating different walls and floors using GIMP or another image editing software with layer function. Example mod for furniture and wallpapers: https://www.nexusmods.com/stardewvalley/mods/9852",
+			"Version": "1.0",
+			"SizeInBytes": 6883,
+			"Uploaded": "2021-10-11T00:13:26+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "46015",
+					"Type": "Invalid",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342432703,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 53300,
+			"Type": "Optional",
+			"DisplayName": "Tutorial for adding a lot of keywords to manual variations",
+			"FileName": "Tutorial for adding a lot of keywords to manual variations-9834-1-0-1650153670.zip",
+			"Description": "This is a completely optional step when creating a content pack! The unique ID of a mod is automatically used as keywords and that is enough for most small mods.",
+			"Version": "1.0",
+			"SizeInBytes": 302876,
+			"Uploaded": "2022-04-17T00:01:10+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Adding a lot of keyword to manual variations",
+					"Type": "Invalid",
+					"RelativePath": "Adding a lot of keyword to manual variations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342439988,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 53791,
+			"Type": "Main",
+			"DisplayName": "All furniture tools",
+			"FileName": "All furniture tools-9834-3-2-1651235118.zip",
+			"Description": "All modding tools for converting furniture with Read me instructions inside the folders. Now updated with items not in the furniture catalogue separated! And fixed a few files that were in the wrong place in the old version.",
+			"Version": "3.2",
+			"SizeInBytes": 541336,
+			"Uploaded": "2022-04-29T12:25:18+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "AT Furniture tools 3.2\\Colour co-ordinated Furniture grid",
+					"Type": "Invalid",
+					"RelativePath": "AT Furniture tools 3.2\\Colour co-ordinated Furniture grid",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				},
+				{
+					"Id": "YOURNAME.ATFurniturePackSAMPLE",
+					"DisplayName": "(AT) SAMPLE Furniture Pack",
+					"Type": "ContentPack",
+					"RelativePath": "AT Furniture tools 3.2\\Folder Templates\\[AT] all in one template",
+					"Manifest": {
+						"Name": "(AT) SAMPLE Furniture Pack",
+						"Description": "Alternative Textures content pack for furniture: SAMPLE.",
+						"Author": "YOURNAME",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YOURNAME.ATFurniturePackSAMPLE"
+					}
+				},
+				{
+					"Id": "YOURNAME.ATFurniturePackSAMPLE",
+					"DisplayName": "(AT) SAMPLE Furniture Pack",
+					"Type": "ContentPack",
+					"RelativePath": "AT Furniture tools 3.2\\Folder Templates\\[AT] sorted template",
+					"Manifest": {
+						"Name": "(AT) SAMPLE Furniture Pack",
+						"Description": "Alternative Textures content pack for furniture: SAMPLE.",
+						"Author": "YOURNAME",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YOURNAME.ATFurniturePackSAMPLE"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342440479,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 54749,
+			"Type": "Optional",
+			"DisplayName": "AT Manual Variation texture keyword template",
+			"FileName": "AT Manual Variation texture keyword template-9834-1-0-1653249056.zip",
+			"Description": "Manual variation template for texture.json\n<br />I normally use this with a python script, which has a tutorial here too, but \"find and replace\" in notepad++ can also serve you well, example of final result: https://www.nexusmods.com/stardewvalley/mods/12002",
+			"Version": "1.0",
+			"SizeInBytes": 1809,
+			"Uploaded": "2022-05-22T19:50:56+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "54749",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342441437,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396522,
+		"UploaderId": 71424903,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

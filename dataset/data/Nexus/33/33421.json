@@ -1,0 +1,171 @@
+{
+	"Site": "Nexus",
+	"Id": 33421,
+	"Name": "CloudSync",
+	"Author": "FawazT",
+	"Description": "[size=6]Installation[/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url]\uFEFF[/*]\n<br />[*]Download focustense's\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/28870]StardewUI[/url]\uFEFF mod[/*]\n<br />[*]Download the main mod and a cloud provider extension[/*]\n<br />[*]Optionally, download\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/33653]Global Config Settings Rewrite[/url]\uFEFF\uFEFF to preserve your settings[/*]\n<br />[/list]\n<br />\n<br />[size=6]Features[/size]\n<br />[list]\n<br />[*]Upload and download your saves from cloud storage services[/*]\n<br />[*]Backup your saves when uploading[/*]\n<br />[*]Automatically upload your save after sleeping[/*]\n<br />[*]Get a warning if an existing save has more progress when uploading or downloading[/*]\n<br />[*]Support for adding your own cloud storage service using a\u00A0[url=https://github.com/FawazTakahji/CloudSync/tree/main/ExampleExtension]custom extension[/url]\uFEFF mod[/*]\n<br />[/list]\n<br />\n<br />[size=6]FAQ[/size]\n<br />[size=4]My settings keep getting reset[/size]\n<br />When transferring the save between pc and mobile the pc settings will get reset, to solve this issue you should download the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/33653]Global Config Settings Rewrite[/url] mod and enable the Apply on load option\n<br />\n<br />\n<br />[size=6]Todo[/size]\n<br />[list]\n<br />[*]Add support for other cloud storage services[/*]\n<br />[/list]\n<br />[center][url=https://github.com/FawazTakahji/CloudSync-Mobile][size=6]Mobile App[/size][/url]\n<br />[url=https://github.com/FawazTakahji/CloudSync][size=6]Source Code[/size][/url]\n<br />\n<br />[url=https://ko-fi.com/fawaztk][img]https://staticdelivery.nexusmods.com/mods/1303/images/44531/44531-1775072004-4486670.png[/img][/url][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/33421",
+	"Version": "1.2.2",
+	"Updated": "2026-05-23T19:40:49+00:00",
+	"Downloads": [
+		{
+			"Id": 151280,
+			"Type": "Main",
+			"DisplayName": "CloudSync",
+			"FileName": "CloudSync-33421-1-2-2-1766506949.zip",
+			"Description": "This is the main mod, you need to download a cloud provider mod along with it to use it, it won't work by itself.\n<br />\n<br />Changes:\n<br />- Add close button to home screen on mobile\n<br />- Fix opening links with xdg-open on linux\n<br />\n<br />Keys: @Main",
+			"Version": "1.2.2",
+			"SizeInBytes": 81955,
+			"Uploaded": "2025-12-23T16:22:29+00:00",
+			"Mods": [
+				{
+					"Id": "FawazT.CloudSync",
+					"DisplayName": "CloudSync",
+					"Type": "Smapi",
+					"RelativePath": "CloudSync",
+					"Manifest": {
+						"Name": "CloudSync",
+						"Description": "A mod that allows you to sync your saves across multiple devices using cloud storage services like Dropbox, and Google Drive.",
+						"Author": "FawazT",
+						"Version": "1.2.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CloudSync.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"MinimumVersion": "0.6.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Gaphodil.GlobalConfigSettings",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "FawazT.GlobalConfigSettingsRewrite",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:33421@Main",
+							"GitHub:FawazTakahji/CloudSync"
+						],
+						"UniqueId": "FawazT.CloudSync"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537968,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 168652,
+			"Type": "Main",
+			"DisplayName": "CloudSync Dropbox",
+			"FileName": "CloudSync Dropbox-33421-1-2-2-1779565048.zip",
+			"Description": "This adds Dropbox support to the main mod<br /><br />Changes:<br />- Fix negative offset timezones not being recognized in backups<br /><br />Keys: @Dropbox",
+			"Version": "1.2.2",
+			"SizeInBytes": 1705596,
+			"Uploaded": "2026-05-23T19:37:28+00:00",
+			"Mods": [
+				{
+					"Id": "FawazT.CloudSync.Dropbox",
+					"DisplayName": "CloudSync Dropbox",
+					"Type": "Smapi",
+					"RelativePath": "CloudSync.Dropbox",
+					"Manifest": {
+						"Name": "CloudSync Dropbox",
+						"Description": "An extension for CloudSync that adds support for Dropbox.",
+						"Author": "FawazT",
+						"Version": "1.2.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CloudSync.Dropbox.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "FawazT.CloudSync",
+								"MinimumVersion": "1.2.2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "focustense.StardewUI",
+								"MinimumVersion": "0.6.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:33421@Dropbox"
+						],
+						"UniqueId": "FawazT.CloudSync.Dropbox",
+						"OtherFields": {
+							"IsCloudSyncExtension": true,
+							"CloudProvider": "Dropbox"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555340,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 168653,
+			"Type": "Main",
+			"DisplayName": "CloudSync Google Drive",
+			"FileName": "CloudSync Google Drive-33421-1-3-1-1779565249.zip",
+			"Description": "This adds Google Drive support to the main mod<br /><br />Changes:<br />- Fix negative offset timezones not being recognized in backups<br /><br />Keys: @GoogleDrive",
+			"Version": "1.3.1",
+			"SizeInBytes": 601859,
+			"Uploaded": "2026-05-23T19:40:49+00:00",
+			"Mods": [
+				{
+					"Id": "FawazT.CloudSync.GoogleDrive",
+					"DisplayName": "CloudSync Google Drive",
+					"Type": "Smapi",
+					"RelativePath": "CloudSync.GoogleDrive",
+					"Manifest": {
+						"Name": "CloudSync Google Drive",
+						"Description": "An extension for CloudSync that adds support for Google Drive.",
+						"Author": "FawazT",
+						"Version": "1.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CloudSync.GoogleDrive.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "FawazT.CloudSync",
+								"MinimumVersion": "1.2.2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "focustense.StardewUI",
+								"MinimumVersion": "0.6.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:33421@GoogleDrive"
+						],
+						"UniqueId": "FawazT.CloudSync.GoogleDrive",
+						"OtherFields": {
+							"IsCloudSyncExtension": true,
+							"CloudProvider": "Google Drive"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555341,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342420109,
+		"UploaderId": 26745429,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

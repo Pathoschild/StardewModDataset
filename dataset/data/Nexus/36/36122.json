@@ -1,0 +1,94 @@
+{
+	"Site": "Nexus",
+	"Id": 36122,
+	"Name": "Pet Clothes",
+	"Author": "aedenthorn",
+	"Description": "This is a framework that allows modders to use Content Patcher to designate items (clothing or otherwise) as clothing items for their pets.\u00A0\n<br />\n<br />Sprites must be created for each pet type and breed the clothes can be given to. For example:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.PetClothes/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"(S)1033\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Cat1\": \"{{InternalAssetKey: assets/shirt/cat1_green.png}}\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />[/code]\n<br />This designates the green shirt as wearable by the \"1\" breed of the \"Cat\" pet and points to a png file with the clothing overlay.\u00A0 The png file should use the cat1.png file in the game content as a guide.\n<br />\n<br />Note that you need to use the item's\u00A0[url=https://stardewvalleywiki.com/Modding:Items#Item_IDs]QualifiedItemId[/url]\uFEFF for the entry key.\n<br />\n<br />Only one clothing piece can be worn by an animal at a time, but hats are independantly controlled by the vanilla game, so a hat and clothes can be worn together.\n<br />\n<br />To remove clothes worn by a pet, hold down the modifier key (default [b]Left Alt[/b]) and interact with the pet.\n<br />\n<br />I have included an example content pack in the optional file for reference, but I'm not a pixel artist so I don't recommend actually using my crappy example in-game.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36122",
+	"Version": "0.1.0",
+	"Updated": "2025-07-29T06:37:42+00:00",
+	"Downloads": [
+		{
+			"Id": 138599,
+			"Type": "Main",
+			"DisplayName": "Pet Clothes",
+			"FileName": "Pet Clothes-36122-0-1-0-1753769932.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 16274,
+			"Uploaded": "2025-07-29T06:18:52+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PetClothes",
+					"DisplayName": "PetClothes",
+					"Type": "Smapi",
+					"RelativePath": "PetClothes",
+					"Manifest": {
+						"Name": "PetClothes",
+						"Description": "Pet Clothes.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "PetClothes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:36122"
+						],
+						"UniqueId": "aedenthorn.PetClothes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342525287,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 138600,
+			"Type": "Optional",
+			"DisplayName": "Example Content Pack",
+			"FileName": "Example Content Pack-36122-0-1-0-1753771062.zip",
+			"Description": "Use for reference only, the sprites are pretty crappy.",
+			"Version": "0.1.0",
+			"SizeInBytes": 12440,
+			"Uploaded": "2025-07-29T06:37:42+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PinkCollar",
+					"DisplayName": "(CP) (PC) Examples",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] [PC] Examples",
+					"Manifest": {
+						"Name": "(CP) (PC) Examples",
+						"Description": "[CP] [PC] Examples.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:?"
+						],
+						"UniqueId": "aedenthorn.PinkCollar"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342525288,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342422810,
+		"UploaderId": 18901754,
+		"CategoryId": 8,
+		"Adult": false
+	}
+}

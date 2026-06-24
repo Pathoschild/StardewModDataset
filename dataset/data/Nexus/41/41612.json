@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 41612,
+	"Name": "TileSense - Map Development and Tile Property Inspector",
+	"Author": "kurotori1788c",
+	"Description": "TileSense - 地图开发辅助与图块属性观测工具\n<br />\u00A0TileSense - Map Development and Tile Property Inspector\n<br />\u00A01. 简介 / Introduction\n<br />TileSense 是一款专为《星露谷物语》Mod 创作者和地图制作者设计的 SMAPI 辅助工具。它提供了实时像素级对齐网格、图块属性扫描和跨层级数据可视化功能，旨在解决传统地图编辑中难以追踪的图块属性叠加和图库坐标问题。\n<br />TileSense is a SMAPI helper tool designed specifically for Stardew Valley modders and map makers. It provides real-time pixel-perfect alignment grids, tile property scanning, and cross-layer data visualization to solve issues with tracking tile property stacking and tileset coordinates.\n<br />![TileSense_Survey_74_104](https://picgo---typora.oss-cn-shanghai.aliyuncs.com/img/20260125114803070.png)\n<br />---\n<br />\u00A02. 简略版 (Quick Overview)\n<br />\u00A0中文版\n<br />\u00A0网格显示: 开启 16x16 像素对齐网格。\n<br />\u00A0图块扫描: 点击任意位置，立即查看所有图层（Back, Buildings, Front, AlwaysFront, Paths）的图块 ID 及属性。\n<br />\u00A0属性预览: 实时显示图块的 `Passable`、`Impassable` 等自定义属性。\n<br />\u00A0快速存证: 一键保存带有测绘数据的截图。\n<br />\u00A0English\n<br />\u00A0Grid Overlay: 16x16 pixel-aligned grid.\n<br />\u00A0Tile Scanner: Click anywhere to see tile IDs and properties across all layers (Back, Buildings, Front, AlwaysFront, Paths).\n<br />\u00A0Property Preview: Real-time display of custom properties like `Passable`, `Impassable`, etc.\n<br />\u00A0Quick Snapshot: One-click to save screenshots with mapping data.\n<br />\u00A0![TileSense_Survey_34_59](https://picgo---typora.oss-cn-shanghai.aliyuncs.com/img/20260125114803148.png)\n<br />---\n<br />\u00A03. 详细版 (Detailed Features)\n<br />\u00A0功能详解 / Detailed Features\n<br />| 功能 / Feature\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0| 描述 / Description\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0|\n<br />| ---------------------------------- | ------------------------------------------------------------ |\n<br />| 高精度坐标转换 (Precision)\u00A0 \u00A0 \u00A0| 使用浮点运算处理缩放，确保在不同 UI 缩放比例下鼠标点击位置依然精准。 / Uses float math to handle zoom levels, ensuring mouse clicks remain precise regardless of UI scale. |\n<br />| 全图层堆栈 (Layer Stacking)\u00A0 \u00A0 | 自动提取鼠标位置下所有地图图层的信息，包括对象 (Objects) 和环境特征 (TerrainFeatures)。 / Extracts info from all map layers, including Objects and TerrainFeatures. |\n<br />| 视觉高亮 (Visual Highlighting) | 在世界中通过红框实时标记与选中图块相同的实例。 / Highlights identical tile instances in the world with red boxes. |\n<br />| 截图系统 (Snapshot)\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | 生成带有坐标标记的调查报告截图，并支持在游戏中直接打开截图文件夹。 / Generates survey report screenshots with coordinates and supports opening the folder in-game. |\n<br />\u00A0操作说明 / Controls\n<br />\u00A0F2: 切换测绘模式 / Toggle Mapping Mode。\n<br />\u00A0左键点击 (Left Click): 选择图块并查看详细属性 / Select tile and view detailed properties。\n<br />\u00A0F12 / UI 按钮: 保存当前视图截图 / Take a snapshot of the current view。\n<br />\u00A0 ![TileSense_Survey_4_6](https://picgo---typora.oss-cn-shanghai.aliyuncs.com/img/20260125114803002.png)\n<br />\u00A0\u00A0\n<br />\u00A0前置 Mod / Requirements\n<br />\u00A0SMAPI (4.0.0+)\n<br />\u00A0Generic Mod Config Menu (可选/Optional, 用于调整网格透明度及快捷键)\n<br />---\n<br />\u00A04. 注意事项 / Important Notes\n<br />1. 性能提示: 图块扫描仅在手动点击触发时运行，日常游戏性能开销极低。\n<br />2. 兼容性: 本 Mod 仅在 Windows 环境下经过完整路径测试，支持大部分地图类 Mod。\n<br />---\n<br />\u00A05. AI 辅助开发声明 / AI Coding Disclosure\n<br />本 Mod 是通过人类开发者与 AI (Gemini) 协同编写完成的。\n<br />\u00A0人类职责: 架构设计、功能需求定义、核心逻辑审计以及 Stardew Valley API 的集成验证。\n<br />\u00A0AI 职责: 样板代码生成、特定逻辑优化 (如 UI 渲染布局计算) 以及文档编写。\n<br />This mod was developed in collaboration with AI (Gemini).\n<br />\u00A0Human Role: Architecture design, functional requirements definition, core logic auditing, and Stardew Valley API integration validation.\n<br />\u00A0AI Role: Boilerplate code generation, specific logic optimization (e.g., UI rendering layout calculations), and documentation.\n<br />![TileSense_Survey_29_21](https://picgo---typora.oss-cn-shanghai.aliyuncs.com/img/20260125114803110.png)\n<br />![TileSense_Survey_63_101](https://picgo---typora.oss-cn-shanghai.aliyuncs.com/img/20260125114803190.png)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41612",
+	"Version": "1.0.0",
+	"Updated": "2026-01-25T03:55:04+00:00",
+	"Downloads": [
+		{
+			"Id": 154770,
+			"Type": "Main",
+			"DisplayName": "TileSense - Map Development and Tile Property Insp",
+			"FileName": "TileSense - Map Development and Tile Property Insp-41612-1-0-0-1769313304.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 26523,
+			"Uploaded": "2026-01-25T03:55:04+00:00",
+			"Mods": [
+				{
+					"Id": "Kurotori1788c.TileSense",
+					"DisplayName": "TileSense",
+					"Type": "Smapi",
+					"RelativePath": "Kurotori1788c.TileSense",
+					"Manifest": {
+						"Name": "TileSense",
+						"Description": "A high-precision map implementation tool aimed at solving 16x16 pixel alignment, layer property stacking, and tileset coordinate tracing.",
+						"Author": "Kurotori1788c",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Kurotori1788c.TileSense.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Kurotori1788c.TileSense"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342541458,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428300,
+		"UploaderId": 136871073,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

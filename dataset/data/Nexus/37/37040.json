@@ -1,0 +1,74 @@
+{
+	"Site": "Nexus",
+	"Id": 37040,
+	"Name": "Wedding Reminder",
+	"Author": "handwrittenhello",
+	"Description": "Have you ever shown up to your wedding in the campiest clothes Pelican Town has to offer by accident? Do you want a celebratory message the day before your wedding to pop up on the screen?\n<br />\n<br />[img]https://i.ibb.co/4wyjDwV6/image.png[/img]\n<br />Wedding Reminder sends a message to the HUD the morning of your wedding, and every time you re-enter the farmhouse that day, to make sure you don't forget your big day tomorrow.\u00A0\n<br />\n<br />There are existing entries for every vanilla spouse you can marry, and additional entries with custom messages can be added via Content Patcher.\u00A0\n<br />\n<br />[size=4][u]For Players[/u][/size]\n<br />How to install:\u00A0\n<br />1. Ensure you have SMAPI installed\n<br />2. Download the file from here or Github\n<br />3. Unzip the mod folder into\u00A0[font=Courier New]Stardew Valley/Mods[/font]. Make sure both the C# and CP folders are included.\n<br />4. Launch the game using SMAPI\n<br />\n<br />[size=4][u]For Mod Authors[/u][/size]\n<br />To add or edit custom keys, target handwrittenhello.weddingReminder/HUDMessage and write your desired entry. The key [b]must [/b]be the spouse's internal name, or else the default message will show. Example:\u00A0\n<br />\n<br />[code]{\uFEFF\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"handwrittenhello.weddingReminder/HUDMessage\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />   \u00A0 \u00A0 \u00A0\"Leah\": \"I want Leah's entry to say this instead!\",\n<br />   \u00A0 \u00A0 \u00A0\"{{ModId}}_MyInternalNPCName\": \"You're getting married to MyNPCName tomorrow!\"\n<br />\u00A0 \u00A0 }\n<br />}[/code]\n<br />Source code can be found [url=https://github.com/nbeymer99/WeddingReminder]here on Github[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37040",
+	"Version": "1.0.0",
+	"Updated": "2025-08-28T03:47:36+00:00",
+	"Downloads": [
+		{
+			"Id": 141307,
+			"Type": "Main",
+			"DisplayName": "WeddingReminder_v1.0.0",
+			"FileName": "WeddingReminder_v1.0.0-37040-1-0-0-1756352856.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 13785,
+			"Uploaded": "2025-08-28T03:47:36+00:00",
+			"Mods": [
+				{
+					"Id": "handwrittenhello.weddingReminder",
+					"DisplayName": "Wedding Reminder",
+					"Type": "Smapi",
+					"RelativePath": "WeddingReminderCombined\\WeddingReminder",
+					"Manifest": {
+						"Name": "Wedding Reminder",
+						"Description": "Sends a reminder the day before your wedding.",
+						"Author": "handwrittenhello",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WeddingReminder.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:37040"
+						],
+						"UniqueId": "handwrittenhello.weddingReminder"
+					}
+				},
+				{
+					"Id": "handwrittenhello.weddingReminder.CP",
+					"DisplayName": "Wedding Reminder (CP)",
+					"Type": "ContentPack",
+					"RelativePath": "WeddingReminderCombined\\[CP]WeddingReminder",
+					"Manifest": {
+						"Name": "Wedding Reminder (CP)",
+						"Description": "Sends a reminder the day before your wedding.",
+						"Author": "handwrittenhello",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:37040"
+						],
+						"UniqueId": "handwrittenhello.weddingReminder.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342527995,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423728,
+		"UploaderId": 68019645,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

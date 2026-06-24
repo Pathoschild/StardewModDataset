@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 21068,
+	"Name": "Mailbox Menu Continued",
+	"Author": "temisthem",
+	"AuthorLabel": "aedenthorn and temisthem",
+	"Description": "Updated\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14439]Mailbox Menu[/url]\u00A0by aedenthorn to run on 1.6.\n<br />New Features:\n<br />[list]\n<br />[*]Compatible with Mail Services Mod\n<br />[*]Compatible with Romancable Rasmodia (English only)\n<br />[*][b]Beta:[/b] Sender names are translated to localized names\n<br />[*][b]Beta:[/b] Mail with no title or \"???\" title will can display a makeshift title based on mail contents\n<br />[/list]Known Bugs:\n<br />[list]\n<br />[*]Opening a letter that contains an item with a full inventory will cause the item to be lost\n<br />[*]Opening a letter that contains a Stardrop will cause the Stardrop to be lost (workaround: disable the mod for that day when you open the letter)\n<br />[*]Certain senders are not translatable since they do not have an actual name in the game content (e.g. \"Hat Mouse, \"Stardew Valley Tribune\"). I recommend using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/15118?tab=posts](CP) Zilch's Envelopes for Mailbox Menu[/url]\u00A0as these change the sender names to '#', so only translatable names should appear\n<br />[/list][b][size=6]Compatible with:[/size][/b]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/7842?tab=posts]Mail Services Mod[/url]\u00A0\n<br />[list]\n<br />[*] Note that when using this with Mail Services, the Mailbox Menu will only open when there is 0 new mail and there is no currently held item that would trigger an action from Mail Services.\n<br />[/list]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/21017]Mobile Phone Continued[/url]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/15118?tab=posts](CP) Zilch's Envelopes for Mailbox Menu[/url]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/8265]Romanceable Rasmodia\n<br />\n<br />[/url]Mods that add in or change NPCs will likely not be compatible.\n<br />\n<br />[size=6][b]Multiplayer Compatibility:[/b][/size]\n<br />\n<br />Only makes client-side changes, so it will only affect those who have it installed.\n<br />\n<br />[b][size=6]Source Code:[/size][/b]\n<br />\n<br />If you want to help make this mod better, or maybe you think my code sucks and you can do better, visit my repo\u00A0[url=https://github.com/kqrse/StardewValleyMods-aedenthorn]here[/url].\n<br />\uFEFF\n<br />[b][size=6]Permissions Disclaimer:[/size][/b]\n<br />\n<br />Aedenthorn has retired from SDV modding and has removed all restrictions on permissions concerning their mods.\n<br />This announcement can be found [url=https://discord.com/channels/137344473976799233/156109690059751424/1194051284177801307]here [/url]in the Stardew Valley Modding Discord server.\n<br />\n<br />Aedenthorn's [url=https://github.com/aedenthorn/StardewValleyMods]Stardew Valley Mod repo[/url] uses the GPL-3 license which allows derivative works to be allowed without requiring permission, given that they remain free, open source, and also use the same GPL-3 license.\n<br />\n<br />[size=6][b]Original Description:[/b][/size]\n<br />\n<br />With this mod, when you interact with your mailbox, a menu with all new and old mail will pop up.\n<br />\n<br />Old mail can be filtered by sender.\n<br />\n<br />Alone, this mod displays every mail envelope using a generic icon. You can change the generic icon, or use custom icons for individual letters or senders using Content Patcher.\n<br />\n<br />Custom envelope packs include:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14447]Custom Envelopes for Mailbox Menu[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/15118](CP) Zilch's Envelopes for Mailbox Menu[/url]\uFEFF\n<br />[/list]\n<br />Note: for now, modded mail using Mail Framework Mod will be displayed as vanilla rather than through the menu, as I'm not able to access that mod's functionality.\n<br />\n<br />[size=5][b]Content Patcher[/b][/size]\n<br />\n<br />There are two dictionaries that keep track of mail data: one for NPCs and one for individual letters. The Content Patcher paths are:\n<br />\n<br />aedenthorn.MailboxMenu/npcs\n<br />aedenthorn.MailboxMenu/letters\n<br />\n<br />The dictionary for NPCs can be used to specify a generic envelope icon for every letter sent by a specific sender (whether they are an actual NPC or not).\n<br />\n<br />The dictionary for letters can be used to specify an envelope icon for specific mail IDs. It is also used to tell the mod the name of the sender of each letter (the mod has an internal list for all vanilla mail that it pre-adds to this dictionary, letting it know the name of the sender of each vanilla mail item).\n<br />\n<br />Syntax for either list is the same, though the fields used depend on the data you're using:\n<br />\n<br />[code]\uFEFF{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.MailboxMenu/npcs\",\n<br />         \"Entries\": {\n<br />\n<br />            \"Abigail\": {\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"texturePath\": \"aedenthorn.CPMBMEnvelopes/Abigail\",\n<br />               \"scale\": 1,\n<br />               \"frames\": 1,\n<br />               \"frameWidth\": 0,\n<br />               \"frameSeconds\": 0\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF}\n<br />         }\n<br />      },\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.MailboxMenu/letters\",\n<br />         \"Entries\": {\n<br />            \"MyLetterFromAbigail\": {\n<br />               \"sender\": \"Abigail\"\n<br />            },\n<br />            \"abbySpiritBoard\": {\n<br />               \"texturePath\": \"aedenthorn.CPMBMEnvelopes/AbigailSpecial\",\n<br />               \"scale\": 1,\n<br />               \"frames\": 1,\n<br />               \"frameWidth\": 0,\n<br />               \"frameSeconds\": 0\n<br />            }\n<br />         }\n<br />      },\n<br />   \uFEFF\uFEFF   \uFEFF{\n<br />         \"Action\": \"Load\",\n<br />         \"Target\": \"aedenthorn.CPMBMEnvelopes/Abigail\",\n<br />         \"FromFile\": \"assets/Abigail.png\"\n<br />      },\n<br />   \uFEFF   \uFEFF{\n<br />         \"Action\": \"Load\",\n<br />         \"Target\": \"aedenthorn.CPMBMEnvelopes/AbigailSpecial\",\n<br />         \"FromFile\": \"assets/AbigailSpecial.png\"\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />The above tells the mod that generic letters from Abigail should use the content pack's png file for the envelope; that the letter with the ID \"MyLetterFromAbigail\" is from Abigail, and that the letter with the ID\u00A0abbySpiritBoard should use a special png file from the content pack.\n<br />\n<br />You can omit the other fields unless you need them:\n<br />\n<br />[list]\n<br />[*]scale\u00A0is for icons that are not 256 pixels wide (e.g. 64x64). This will scale the icon if set to anything besides 1.\n<br />[*]frames\u00A0is used for animated icons - place the frames horizontally on the png file.\n<br />[*]frameWidth\u00A0is how many pixels wide each animated frame is.\n<br />[*]frameSeconds\u00A0is how many seconds (or decimal part) each frame should last.\n<br />[/list]\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can edit the\u00A0config.json\u00A0file that is created when first running the game or use GMCM.\n<br />\n<br />\n<br />[b][size=5]Technical[/size][/b]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21068",
+	"Version": "0.3.7",
+	"Updated": "2024-04-16T20:59:05+00:00",
+	"Downloads": [
+		{
+			"Id": 89754,
+			"Type": "Main",
+			"DisplayName": "Mailbox Menu",
+			"FileName": "Mailbox Menu-21068-0-3-7-1712435094.zip",
+			"Description": "Now compatible with Romanceable Rasmodia\n<br />Updated manifest",
+			"Version": "0.3.7",
+			"SizeInBytes": 620690,
+			"Uploaded": "2024-04-06T20:24:54+00:00",
+			"Mods": [
+				{
+					"Id": "tem696969696969.MailboxMenu",
+					"DisplayName": "Mailbox Menu Continued",
+					"Type": "Smapi",
+					"RelativePath": "MailboxMenu",
+					"Manifest": {
+						"Name": "Mailbox Menu Continued",
+						"Description": "A menu to view new and old mail.",
+						"Author": "aedenthorn, tem696969696969",
+						"Version": "0.3.7",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MailboxMenu.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21068"
+						],
+						"UniqueId": "tem696969696969.MailboxMenu"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342476442,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 92921,
+			"Type": "Optional",
+			"DisplayName": "Mailbox Menu Beta",
+			"FileName": "Mailbox Menu Beta-21068-0-3-8-beta2-1713301145.zip",
+			"Description": "- Autotranslate name for Mister Qi\n<br /><br />- Show translated name at the top of the mailbox when selecting a sender",
+			"Version": "0.3.8-beta2",
+			"SizeInBytes": 625113,
+			"Uploaded": "2024-04-16T20:59:05+00:00",
+			"Mods": [
+				{
+					"Id": "tem696969696969.MailboxMenu",
+					"DisplayName": "Mailbox Menu Continued",
+					"Type": "Smapi",
+					"RelativePath": "MailboxMenu",
+					"Manifest": {
+						"Name": "Mailbox Menu Continued",
+						"Description": "A menu to view new and old mail.",
+						"Author": "aedenthorn, tem696969696969",
+						"Version": "0.3.8-beta2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MailboxMenu.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21068"
+						],
+						"UniqueId": "tem696969696969.MailboxMenu"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342479609,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407756,
+		"UploaderId": 134915073,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

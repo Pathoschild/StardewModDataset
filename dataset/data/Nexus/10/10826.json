@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 10826,
+	"Name": "Pierre's Roulette Shop",
+	"Author": "MCXVS",
+	"Description": "[center][code]\uFEFF[/code]\uFEFF[img]https://i.imgur.com/9p7to0m.png[/img]\uFEFF[/center]\n<br />In my never-ending quest of trying to declutter shops on heavy modlists, I decided to make this small mod, based on my previous one Seed Shortage.\n<br />\n<br />This is intended for people who use a lot of seed mods like Cornucopia and many others, and need to scroll approximately 3 hours and 21 minutes just to get to saplings, or seek a slightly harder and/or more random experience.\n<br />\n<br />This one basically uses a pseudo-random to randomize Pierre's stock of seeds every day. You can set the daily number of different seeds and saplings you want and you can choose to add or remove any shop you want by using their [url=https://stardewvalleywiki.com/Modding:Shops]shop ID[/url].\n<br />\n<br />Has the nice side effect to make the telephone actually more useful !\n<br />\n<br />The mod is open source. Here is the [url=https://github.com/xynerorias/pierres-roulette]source code[/url].\u00A0I deleted the old version's repo as it was more of a shame to keep this up now that I'm a bit more educated in computer science.\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/1oNZ322.png[/img]\uFEFF[/center]\n<br />This is a simple SMAPI mod, so just install it as you would with any other mod.\n<br />\n<br />[list]\n<br />[*]Install [url=http://smapi.io]SMAPI[/url]\uFEFF\n<br />[*]Install the mod.\n<br />[*]Done.\n<br />[/list]\n<br />If you do not know how to install mods, [url=https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started]refer to this guide[/url].\n<br />\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/keW1EAR.png[/img]\uFEFF[/center]\n<br />\n<br />It is recommended to use the [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to configure the mod. You can however configure it manually if you so with by editing the config.json.\u00A0\n<br />\n<br />There's a couple of configs you can change to tweak the mod to your liking:\n<br />\n<br />[b]\uFEFFModEnabled[/b] : This is basically the master switch for the mod. If disabled, nothing will happen.\n<br />[i]Default : true[/i]\n<br />\n<br />[b]Owners [ ][/b] : This is a string array. You need to specify the [url=https://stardewvalleywiki.com/Modding:Shops]shop ID[/url]\u00A0of the shop you want to have the mod applied to. Supports mod-added shops if you add the correct ID.\n<br />[i]Default : [ \"SeedShop\", \"Sandy\" ][/i]\n<br />\n<br />[b]\uFEFFSeedsEnabled[/b] : Enables/disables the mod for seeds.\n<br />[i]Default : true[/i]\n<br />\n<br />[b]SeedStock[/b] : A value between 0 and 64. Sets how many seeds should be in the shop's inventory at maximum. If set to 0, it will remove all the seeds, and if set to a value higher than the shop's seed stock, it will not do anything. Does nothing if SeedsEnabled if false.\n<br />[i]Default : 4[/i]\n<br />\n<br />[b]\uFEFFSaplingsEnabled[/b] : Enables/disables the mod for saplings.\n<br />[i]Default : true[/i]\n<br />\n<br />[b]SaplingStock[/b] : A value between 0 and 64. Sets how many saplings should be in the shop's inventory at maximum. If set to 0, it will remove all the saplings, and if set to a value higher than the shop's sapling stock, it will not do anything. Does nothing is SaplingsEnabled if false.\n<br />[i]Default : 2\n<br />\n<br />If you want more than 64 seeds or saplings in you shops, Yoba helps you...[/i]\n<br />\n<br />\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/QKb0gx0.png[/img]\uFEFF[/center]\uFEFF\n<br />\n<br />[s]This mod is literally compatible with anything. In terms of mod compatibility, it's compatible with every crop/seed mods out there and should even be compatible with all the mods affecting the shops. As for game compatibility, unless CA somehow completely changes how shops behave, which is pretty unlikely, this mod will also always be compatible with the latest Stardew version.[/s]\n<br />\n<br />So this aged poorly, 1.6 actually broke everything and this is a complete rewrite. It is compatible with every Content Patcher mod but I do not yet know about compatibility with other SMAPI mods editing the shop's seeds/saplings stocks.\n<br />\n<br />If you find any bug/incompatibility, please make a post in the [b]BUGS[/b] section, or [url=https://github.com/xynerorias/pierres-roulette/issues]post an issue on GitHub[/url].\n<br />\n<br />\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/w7VVyOE.png[/img]\uFEFF\uFEFF[/center]\n<br />For the first release a couple years ago :\n<br />[i][url=https://www.nexusmods.com/users/69153238]   \uFEFFShekurika[/url] for giving me the idea of adding a seed to the random\n<br />[url=https://www.nexusmods.com/stardewvalley/users/111722573]   \uFEFFXxHarvzBackxX[/url] for cleaning my dirty code\n<br />   \uFEFFAnd... that's it. I actually made this one without much help this time so if you like it, please endorse it !\n<br />\n<br />[/i]For this new complete rewrite :\n<br />   \uFEFFAll the professors I had at my university. Crazy how with a bachelor in computer science, you actually know what you're doing.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10826",
+	"Version": "2.0",
+	"Updated": "2025-11-16T01:09:36+00:00",
+	"Downloads": [
+		{
+			"Id": 148176,
+			"Type": "Main",
+			"DisplayName": "Pierre's Roulette Shop",
+			"FileName": "Pierre's Roulette Shop-10826-2-1-1763255376.zip",
+			"Description": "Fixed seed and sapling detection + Cornucopia compat",
+			"Version": "2.1",
+			"SizeInBytes": 17469,
+			"Uploaded": "2025-11-16T01:09:36+00:00",
+			"Mods": [
+				{
+					"Id": "xynerorias.pierresroulette",
+					"DisplayName": "Pierre's Roulette Shop",
+					"Type": "Smapi",
+					"RelativePath": "Pierre's Roulette",
+					"Manifest": {
+						"Name": "Pierre's Roulette Shop",
+						"Description": "Makes Pierre's stock of seed random everyday in an attempt to declutter it when you have lots of crop mods.",
+						"Author": "Xynerorias",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PierresRoulette.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10826"
+						],
+						"UniqueId": "xynerorias.pierresroulette"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534864,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397514,
+		"UploaderId": 6546516,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 39568,
+	"Name": "Nature In The Valley Multiplayer Support",
+	"Author": "XanCreations",
+	"AuthorLabel": "Xan",
+	"Description": "[color=#00ccff][center][size=5][/size][/center][/color][center][color=#00ccff][size=5][b]Nature In The Valley Multiplayer Support[/b][/size]\n<br />[size=2][i]By XanCreations[/i][/size]\n<br />[size=2][i][/i][/size][/color]\n<br />\n<br />\n<br />[b]Version:[/b]\u00A01.0.0\n<br />[b]Compatibility:[/b]\u00A0Stardew Valley [1.6+] • Nature In The Valley and other NITV mods[/center]\n<br />\n<br />[color=#00ffff][b]Description:[/b][/color]\n<br />This is a [b]multiplayer / split-screen compatibility patch[/b] for [b]Nature In The Valley[/b]. This does not modify how the framework or NITV mods function. This instead uses Harmony to fix several multiplayer and split-screen quirks that affected how the creatures spawn when more than one player is present in the game.\u00A0In online co-op, only the [b]host[/b] needs this mod. In local split-screen, it runs for the shared game instance on that machine.\n<br />\n<br />\n<br />[color=#00ffff][b]What do I need to do?\n<br />[/b][/color]You don't need to do anything -&gt; Just simply install and enjoy!\n<br />\n<br />\n<br />[color=#00ffff][b]Installation:[/b][/color]\n<br />[list=1]\n<br />[*]Ensure\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/30138]Nature In The Valley[/url]\u00A0is installed (it is called \"[Gen]NatureInTheValley\" in your mods folder)\n<br />[*]Extract\u00A0NITVMultiplayerPatch\u00A0into your mods folder. It will end up being:\n<br />[code]StardewValley&#92;Mods&#92;NITVMultiplayerPatch\n<br />[/code][*]Launch via SMAPI.\n<br />[/list]\n<br />\n<br />[color=#00ffff][b]Recommendations![/b][/color]\n<br />In the Nature In The Valley config you may need to focus on the following for stability purposes:\n<br />\n<br />[list]\n<br />[*][b]Spawn Rate Multiplier:[/b] This affects how fast creatures spawn and I would highly recommend leaving it at 1 (default). You could go up to 2 but I wouldn't recommend going much higher than this.\u00A0Higher spawn rates will hit NITV’s global creature cap more quickly, especially with multiple players, which can temporarily stop new spawns until some creatures are removed when a player leaves a location.\n<br />[*][b]Creature Limit Multiplier:[/b] This affects the maximum amount of creatures that can spawn in the game. At first I thought this was per location but it is actually a global value from a global list of creatures. The more players you have the higher this should be set. For example, two players -&gt; set it to at least 2, but I would suggest setting it to double.\n<br />E.g. (2 players -&gt; 4) (3 players -&gt; 6) (4 players -&gt; 8). Just be aware if you do this and your Spawn Rate Multiplier is high, you might overpopulate one location. The reason is explained below as well.[/list]\n<br />\n<br />[b][color=#00ffff]What were the issues and what was fixed?[/color][/b]\n<br />[list]\n<br />[*][b]Issue:[/b] When [i]any[/i] player changed location, NITV’s clean-up would despawn creatures in other maps. This meant your bugs/critters would vanish just because another player walked somewhere else.\n<br />[*][b][u]Solution:[/u]\u00A0[/b]Every spawned creature is tagged with the farmer who spawned it, and the patch also tracks which farmer \"owns\" each location on the client. When players warp, NITV’s clean-up (removing creatures) is only allowed to run on that location’s [b]owner screen[/b], instead of on every screen. That stops multiple screens fighting over the same global creature list and greatly reduces the “my friend warped and everything vanished” problem. This shouldn't interfere with NITV's internal caps and counters either.\n<br />[*][b]Issue:[/b]\u00A0NITV uses shared fields for spawn rules (cap, chance, which creatures can appear). Every warp rewrote those fields for the new location, and the 1-second spawn tick then reused whatever settings were written last. For example, it would spawn \"Farm\" creatures at the Bus Stop or vice versa.\n<br />[*][b][u]Solution:[/u][/b]\u00A0The patch captures a separate spawn config per location the first time NITV actually spawns creatures there. This then reapplies the correct config for your current location during NITV’s 1-second tick. After each spawn, it refreshes that location’s saved config. To put it simply, each map consistently spawns the creatures it is supposed to, regardless of where other players are. One minor issue however is specifically in split-screen, where both screens share a global list of creatures and so you may see creatures from one screen in another screen and vice versa - this is explained in Known Limitations.\n<br />[*][b]Issue:[/b]\u00A0NITV caches tree/bush/stump/water positions globally. In split-screen, if Player 2 warped into a different map, those cached positions were updated for that map, and then they were reused when Player 1 spawned in their own map. Therefore, you would see a \"bush\" creature appearing on a random ground tile.\n<br />[u][b]Solution[/b]:[/u]\u00A0Just before each call to TrySpawnFromArea, the patch recomputes tree/bush/stump/water positions for that exact location and updates NITV’s internal caches. That keeps bush/tree/stump/water-type spawns attached to the right tiles in the right map.[/list]\n<br />\n<br />[b][color=#00ffff]Known Limitations:[/color][/b]\n<br />[list]\n<br />[*]The creature cap is global. This means that one player can sit in a location and let creatures spawn until the global cap is reached. Therefore, NITV will not spawn more creatures anywhere else, regardless of this patch. Having the spawn rate multiplier set low and the creature cap multiplier set high will help with this issue. As it currently stands, this is not something I can currently fix without doing some invasive coding that may break spawning altogether.\u00A0This is how NITV itself is designed (one global creature list and one global cap). This patch deliberately avoids rewriting that core behaviour.\n<br />[*]Player ownership of creatures spawned in a location is both a blessing and curse.\u00A0Player ownership of creatures spawned in a location is mainly used internally for tracking and for deciding which screen should run NITV’s clean-up. Other players can still interact with and catch creatures that someone else spawned. However, NITV will still clean up creatures in a location once everyone eventually leaves that map, and when players return, new spawns will be created according to that location’s config. The exact timing of when “old” creatures disappear is still governed by NITV’s own logic; this patch just makes that behaviour more consistent and less likely to be affected by other players changing location.\n<br />[*]In split-screen, players that share a location increase NITV creature animation speeds. How it works is that\u00A0NITV’s update/animation logic effectively runs once per screen. So, if two players occupy the same location, the shared creatures animate faster than normal. I tried to\u00A0limit animation ticks to a single \"owner\" screen, but that caused more serious issues, such as stalled animations and broken interactions. So this has to be left off the table until a better solution comes along.\n<br />[*]Creatures are shared per location, not per screen. This is specifically a split-screen limitation and it is to do with how Stardew Valley handled per screen and how NITV is hardcoded. If Player 1 spawns creatures in one map and Player 2 spawns creatures in another map, both players will see each others spawns or the spawns can get mixed. This is how Stardew’s shared world state works and how NITV's global creature list spawns them. Making creatures truly “per screen only” would require a much deeper rewrite of the framework.\n<br />[/list]\n<br />\n<br />[b][color=#00ffff]Feedback:[/color][/b]\n<br />Please comment and leave feedback! It would mean a lot to me to eventually get Nature In The Valley completely multiplayer stable with no bugs at all. This may be a long process but I am hopeful with the progress made so far. Thanks!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39568",
+	"Version": "1.0.0",
+	"Updated": "2025-11-22T23:49:02+00:00",
+	"Downloads": [
+		{
+			"Id": 148769,
+			"Type": "Main",
+			"DisplayName": "NITVMultiplayerPatch",
+			"FileName": "NITVMultiplayerPatch-39568-1-0-0-1763855342.zip",
+			"Description": "Extract NITVMultiplayerPatch into your mods folder.\n<br />Please ensure to read the information I have provided on the main page to understand what this patch does.",
+			"Version": "1.0.0",
+			"SizeInBytes": 15631,
+			"Uploaded": "2025-11-22T23:49:02+00:00",
+			"Mods": [
+				{
+					"Id": "Xan.NITVMultiplayerPatch",
+					"DisplayName": "NITV Multiplayer Patch",
+					"Type": "Smapi",
+					"RelativePath": "NITVMultiplayerPatch",
+					"Manifest": {
+						"Name": "NITV Multiplayer Patch",
+						"Description": "Patch Nature In The Valley creature despawns for multiplayer/split-screen",
+						"Author": "Xan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NITVMultiplayerPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Nature.NatureInTheValley",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Xan.NITVMultiplayerPatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535457,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426256,
+		"UploaderId": 156878008,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

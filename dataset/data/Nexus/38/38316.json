@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 38316,
+	"Name": "World Atlas",
+	"Author": "AlanBF",
+	"Description": "This mod adds a map picker on the Map Tab of the menu or when you directly open it.\n<br />\n<br />\n<br />\n<br />[size=5][b]How it works[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]The mod detects every location added, picking the location/position/region info directly from the game.[/*]\n<br />[*]Check in data.json if the info for a certain region is added by the user, to modify it's name and visibility.[/*]\n<br />[*]If the map is not in data.json, it adds the region, so the user can update the info if they want.[/*]\n<br />[*]It then appears in the map.[/*]\n<br />[/list]\n<br />[size=5][b]How to configure data.json[/b][/size]\n<br />\n<br />Example 1: The main map region of a mod. Map called \"Mod.Main_Region\". It would be added as\n<br />[spoiler]\n<br />Original\n<br />[code]{\n<br />\u00A0 \u00A0 \"Id\": \"Mod.Main_Region\",\n<br />\u00A0 \u00A0 \"Name\": \"Mod.Main_Region\",\n<br />\u00A0 \u00A0 \"IsVisible\": true,\n<br />\u00A0 \u00A0 \"PageNum\": 0\n<br />}[/code]\n<br />Since it is the main map, we want to show it in the main hub, and fix it's name, becoming something like\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Id\": \"Mod.Main_Region\",\n<br />\u00A0 \u00A0 \"Name\": \"Main Region\",\n<br />\u00A0 \u00A0 \"IsVisible\": true,\n<br />\u00A0 \u00A0 \"PageNum\": 0\n<br />}[/code][/spoiler]\n<br />\n<br />Example 2: The secondary region of a mod, maybe some hunting ground or thing not always used.\n<br />[spoiler]\n<br />Original\n<br />[code]{\n<br />\u00A0 \u00A0 \"Id\": \"Mod.Hunting_Region\",\n<br />\u00A0 \u00A0 \"Name\": \"Mod.Hunting_Region\",\n<br />\u00A0 \u00A0 \"IsVisible\": true,\n<br />\u00A0 \u00A0 \"PageNum\": 0\n<br />}[/code]\n<br />Since it is not a main map, we might want to add it in the secondary tab and fix it's name, becoming something like\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Id\": \"Mod.Hunting_Region\",\n<br />\u00A0 \u00A0 \"Name\": \"Hunting Grounds\",\n<br />\u00A0 \u00A0 \"IsVisible\": true,\n<br />\u00A0 \u00A0 \"PageNum\": 1\n<br />}[/code][/spoiler]\n<br />\n<br />Example 3: A map added just for a moment, for a very specific quest that is never visited again.\n<br />[spoiler]\n<br />Original\n<br />[code]{\n<br />\u00A0 \u00A0 \"Id\": \"Mod.Quest_Alexandria\",\n<br />\u00A0 \u00A0 \"Name\": \"Mod.Quest_Alexandria\",\n<br />\u00A0 \u00A0 \"IsVisible\": true,\n<br />\u00A0 \u00A0 \"PageNum\": 0\n<br />}[/code]\n<br />Since it is not a useful map, we might just hide it. Since it's hidden we don't need to modify anything else.\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Id\": \"Mod.Quest_Alexandria\",\n<br />\u00A0 \u00A0 \"Name\": \"Mod.Quest_Alexandria\",\n<br />\u00A0 \u00A0 \"IsVisible\": false,\n<br />\u00A0 \u00A0 \"PageNum\": 0\n<br />}[/code][/spoiler]\n<br />\n<br />\n<br />[b][size=5]Compatibility[/size]\n<br />[/b]\n<br />[list]\n<br />[*]UI Info Suite[/*]\n<br />[*]Better Game Menu[/*]\n<br />[*]NPC Map Locations[/*]\n<br />[*]Every mod that adds a map (In theory, tell me if there is one that doesn't appear)[/*]\n<br />[*]Every mod that doesn't alter the MapPage[/*]\n<br />[/list]\n<br />[size=5][b]Others[/b][/size]\n<br />\n<br />[url=https://github.com/AlanBF1992/WorldAtlas]Source[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38316",
+	"Version": "1.2.1",
+	"Updated": "2026-06-09T11:21:01+00:00",
+	"Downloads": [
+		{
+			"Id": 170580,
+			"Type": "Main",
+			"DisplayName": "World Atlas",
+			"FileName": "World Atlas-38316-1-2-1-1781004061.zip",
+			"Description": "Fix: Gamepad, Scroll Wheel and Keyboard now check if there are maps before trying to change<br />",
+			"Version": "1.2.1",
+			"SizeInBytes": 63920,
+			"Uploaded": "2026-06-09T11:21:01+00:00",
+			"Mods": [
+				{
+					"Id": "AlanBF.WorldAtlas",
+					"DisplayName": "World Atlas",
+					"Type": "Smapi",
+					"RelativePath": "WorldAtlas",
+					"Manifest": {
+						"Name": "World Atlas",
+						"Description": "See every map on your Map Tab",
+						"Author": "AlanBF",
+						"Version": "1.2.1",
+						"EntryDll": "WorldAtlas.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:38316"
+						],
+						"UniqueId": "AlanBF.WorldAtlas"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557268,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425004,
+		"UploaderId": 29404525,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

@@ -1,0 +1,103 @@
+{
+	"Site": "Nexus",
+	"Id": 11056,
+	"Name": "Particle Effects",
+	"Author": "aedenthorn",
+	"Description": "This framework uses Content Patcher to designate custom particle effects to:\n<br />\n<br />[list]\n<br />[*] farmers wearing specific equipment or wielding specific tools / weapons\n<br />[*]specific-named NPCs\n<br />[*]specific-named objects\n<br />[*]specific coordinates on a named game location\n<br />[/list]\n<br />Since Content Patcher allows for its own customization, the above can be more finely-tuned to, e.g. time, day, season, etc.\n<br />\n<br />\n<br />[b][size=5]Creating Particle Effects[/size][/b]\n<br />Content Patcher syntax should be something like:\n<br />\n<br />[code]\uFEFF\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"Mods/aedenthorn.ParticleEffects/dict\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CPParticleEffects/heartCat\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"type\":\"object\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"name\":\"Statue Of Endless Fortune\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"movementType\":\"random\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"movementSpeed\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"frameSpeed\": 0.05,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"acceleration\":0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"minRotationRate\":0.05,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"maxRotationRate\":0.05,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"particleWidth\":11,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"particleHeight\":10,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"fieldOuterWidth\": 128,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"fieldOuterHeight\":256,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"fieldOffsetY\": -32,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"belowOffset\": 0.001,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aboveOffset\": 0.001,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"minParticleScale\": 2,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"maxParticleScale\": 2,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"particleChance\": 0.1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"maxParticles\": 20,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"minLifespan\": 80,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"maxLifespan\": 160,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"spriteSheetPath\": \"Mods/aedenthorn.ParticleEffects/heart\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"Load\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"Mods/aedenthorn.ParticleEffects/heart\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"FromFile\": \"assets/heart.png\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />[/code]\n<br />\n<br />Don't change \"Target\", that's the mod's dictionary path.\n<br />\n<br />The entry key must be unique.\n<br />\n<br />[size=3][b]Value fields:[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]type: [/b]the type of thing to target; one of \"object\", \"npc\", \"location\", \"hat\", \"shirt\", \"boots\", \"pants\", \"tool\", \"ring\"\n<br />[*][b]name:[/b] the name or id of the specific thing of [b]type[/b] to target\n<br />[*][b]movementType[/b]: how particles move; one of \"none\", \"away\", \"towards\", \"up\", \"down\", \"left\", \"right\", \"random\"\n<br />[*][b]movementSpeed:[/b] how many pixels a particle moves per tick\n<br />[*][b]acceleration:[/b] how many pixels / tick the movement speed increases per tick\n<br />[*][b]frameSpeed[/b]: how many animation frames change per tick (see textures below)\n<br />[*][b]restrictOuter:[/b] whether particles disappear when they move outside the field (default [b]false[/b])\n<br />[*][b]restrictInner: [/b]whether particles disappear when they move inside the inner boundary (default [b]false[/b])\n<br />[*][b]belowOffset:[/b] if set to &gt; 0, allows particles to move behind the thing by the given layer depth offset (default [b]-1[/b])\u00A0\n<br />[*][b]aboveOffset:[/b]\u00A0if set to &gt; 0, allows particles to move in front of the thing by the given layer depth offset (default 0.001)\n<br />[*][b]minRotationRate:[/b] if set to &gt; 0, allows particles to rotate around their center\n<br />[*][b]maxRotationRate: [/b]if set to &gt; 0, allows particles to rotate around their center\n<br />[*][b]minAlpha:[/b] allows transparency (default: [b]1[/b])\n<br />[*][b]maxAlpha: [/b]allows transparency (default: [b]1[/b])\n<br />[*][b]particleWidth: [/b]the width of each particle on the sprite sheet (see textures below)\n<br />[*][b]particleHeight:[/b] the height of each particle on the sprite sheet (see textures below)\n<br />[*][b]fieldOuterRadius:[/b] if set to &gt; 0, specifies a circular particle spawn field and sets the outer radius of the field\n<br />[*][b]fieldInnerRadius: [/b]if set to &gt; 0, sets the inner radius of the field\n<br />[*][b]fieldOuterWidth:[/b] if [b]fieldOuterRadius[/b] is set to 0, designates the outer width of the rectangular particle field\n<br />[*][b]fieldOuterHeight: [/b]if [b]fieldOuterRadius [/b]is set to 0, designates the outer height of the rectangular particle field\n<br />[*][b]fieldInnerWidth:[/b] if set to &gt; 0, sets the inner width of the rectangular particle field\n<br />[*][b]fieldInnerHeight: [/b]if set to &gt; 0, sets the inner height of the rectangular particle field\n<br />[*][b]fieldOffsetX:[/b] for locations, specifies the X coordinate of the field center on the map; for everything else, specifies the field X offset from the thing's center\n<br />[*][b]fieldOffsetY: [/b]for locations, specifies the Y coordinate of the field center on the map; for everything else, specifies the field Y offset from the thing's center\n<br />[*][b]maxParticles:[/b] sets the maximum number of simultaneous particles in a field\n<br />[*][b]minLifespan:[/b] minimum number of ticks a particle lives\n<br />[*][b]maxLifespan: [/b]maximum number of ticks a particle lives\n<br />[*][b]minParticleScale:[/b] minimum scale of each particle in the field\n<br />[*][b]maxParticleScale: [/b]maximum scale of each particle in the field\n<br />[*][b]particleChance:[/b] the chance (0 to 1) that a new particle will be created, checked each tick\n<br />[*][b]spriteSheetPath:[/b] the fake path to this particle's spritesheet, caught by your Content Patcher pack (as in the example above).\n<br />[/list]\n<br />\n<br />[size=5][b]Textures[/b][/size]\n<br />\n<br />Your sprite sheets should be created with frames horizontally and alternatives vertically. \n<br />\n<br />So, say your particles are 3x3 pixels each, each particle has ten frames, and there are five alternative sprites to choose from for each particle, then your sprite sheet texture should be 30x15 pixels in size: ten frames across x five alternatives down.\n<br />\n<br />The mod will choose an alternative randomly for each particle if there are multiple alternatives.\n<br />\n<br />\n<br />[size=5][b]API[/b][/size]\n<br />\n<br />There is a [url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Integrations#Mod-provided_APIs]SMAPI API[/url] you can use in other SMAPI mods. The methods you can access are:\n<br />\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public void [b]BeginFarmerParticleEffect[/b](long farmerID, string key);\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public void [b]EndFarmerParticleEffect[/b](long farmerID, string key);\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public void [b]BeginNPCParticleEffect[/b](string npc, string key);\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public void [b]EndNPCParticleEffect[/b](string npc, string key);\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public void [b]BeginLocationParticleEffect[/b](string location, int x, int y, string key);\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public void [b]EndLocationParticleEffect[/b](string location, int x, int y, string key);\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 public List&lt;string&gt; [b]GetEffectNames[/b]();\n<br />\n<br />[b]x[/b] and [b]y[/b] are pixel positions on the map.\n<br />\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />\n<br />There's an example pack in the files section.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11056",
+	"Version": "0.3.0",
+	"Updated": "2023-09-10T15:35:17+00:00",
+	"Downloads": [
+		{
+			"Id": 50980,
+			"Type": "Optional",
+			"DisplayName": "Particle Effects Examples",
+			"FileName": "Particle Effects Examples-11056-0-1-0-1645134507.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 19148,
+			"Uploaded": "2022-02-17T21:48:27+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CPParticleEffectsExamples",
+					"DisplayName": "(CP) Particle Effects Examples",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Particle Effects Examples",
+					"Manifest": {
+						"Name": "(CP) Particle Effects Examples",
+						"Description": "Pe.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.13.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.CPParticleEffectsExamples"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342437668,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 75765,
+			"Type": "Main",
+			"DisplayName": "Particle Effects",
+			"FileName": "Particle Effects-11056-0-3-0-1694360117.zip",
+			"Description": "Changes:\n<br /><br />Fix for asset loading",
+			"Version": "0.3.0",
+			"SizeInBytes": 23734,
+			"Uploaded": "2023-09-10T15:35:17+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.ParticleEffects",
+					"DisplayName": "Particle Effects",
+					"Type": "Smapi",
+					"RelativePath": "ParticleEffects",
+					"Manifest": {
+						"Name": "Particle Effects",
+						"Description": "Particle Effects.",
+						"Author": "aedenthorn",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "ParticleEffects.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11056"
+						],
+						"UniqueId": "aedenthorn.ParticleEffects",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "ParticleEffects"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342462453,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397744,
+		"UploaderId": 18901754,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

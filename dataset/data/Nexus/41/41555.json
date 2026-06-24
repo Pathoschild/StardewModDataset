@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 41555,
+	"Name": "Space Baby Inventory System",
+	"Author": "bmarquismarkail",
+	"AuthorLabel": "Space Baby",
+	"Description": "Originally made as a way to allow my Vertical Toolbar to function well with other inventory mods, I made this framework to allow modders to have a means to add multiple personal inventories.\n<br />**What is SV_InventorySystem?**\n<br />SV_InventorySystem is a Stardew Valley SMAPI mod framework that enables support for multiple inventories per farmer. Instead of being limited to a single 36-item inventory (or however many slots your backpack mod provides), mods can now hook into this system to provide additional separate inventories that work seamlessly with the game's tool system.\n<br />**How it Works**\n<br />The framework uses Harmony runtime patching to intercept the Farmer class's `CurrentItem`, `ActiveItem`, and `CurrentToolIndex` properties. This means:\n<br />- When you select a tool from any inventory (including extra ones), the game seamlessly retrieves it from the correct inventory\n<br />- Tool use, equipping, and interactions work exactly as they do with the base game inventory\n<br />- No visual glitches or workarounds needed—it's a true integration at the game engine level\n<br />- Multiple mods can each provide their own inventories and they'll all work together\n<br />**Key Features**\n<br />- **Multi-Inventory Manager**: Provides a clean API for adding, retrieving, and managing items across multiple inventories\n<br />- **Harmony Patches**: Automatically intercepts Farmer property access to route to the correct inventory\n<br />- **SMAPI Reflection Fallback**: Includes an alternative SMAPI-based helper for compatibility with different system configurations\n<br />- **Global Index Translation**: Seamlessly translates global tool indices to (inventory, local) pairs so the game always finds the right item\n<br />- **Configurable**: Uses a simple config.json to switch between Harmony and SMAPI reflection approaches\n<br />**For Modders**\n<br />To use this system in your mod:\n<br />1. Add SV_InventorySystem as a dependency in your manifest.json\n<br />2. Call `Helper.ModRegistry.GetApi&lt;IMultiInventoryManager&gt;(\"SpaceBaby.SV_InventorySystem\")` to get the manager\n<br />3. Use `AddInventory(farmer, size)` to add an inventory\n<br />4. Use `GetInventory(farmer, index)` to access any inventory\n<br />5. Use `TranslateGlobalIndex(farmer, index)` to convert tool slots to inventory references\n<br />6. Call `OnToolIndexChanged()` when the farmer selects a different tool\n<br />**Example Integration**\n<br />The included Vertical Toolbar mod demonstrates full integration—it provides 5 extra tool slots that work seamlessly with the multi-inventory system. Items can be dragged between the base inventory and vertical toolbar slots, and tools selected from any slot will activate and function normally.\n<br />**Technical Details**\n<br />- Patches applied: `Farmer.CurrentItem` (getter), `Farmer.ActiveItem` (getter/setter), `Farmer.CurrentToolIndex` (setter)\n<br />- Inventory tracking: Per-farmer using UniqueMultiplayerID for multiplayer safety\n<br />- Performance: Uses efficient dictionary caching with minimal overhead\n<br />- Compatibility: Works with SMAPI 4.0+, Stardew Valley 1.6+\n<br />This framework takes the pain out of multi-inventory support and lets modders focus on their actual features while maintaining full game compatibility.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41555",
+	"Version": "1.0.0",
+	"Updated": "2026-01-26T01:08:40+00:00",
+	"Downloads": [
+		{
+			"Id": 154855,
+			"Type": "Main",
+			"DisplayName": "Space Baby Inventory System",
+			"FileName": "Space Baby Inventory System-41555-1-0-1-1769389720.zip",
+			"Description": "1.0.1: Implemented support for the Global Inventory System to prevent \"Lost and Found\" issues",
+			"Version": "1.0.1",
+			"SizeInBytes": 23924,
+			"Uploaded": "2026-01-26T01:08:40+00:00",
+			"Mods": [
+				{
+					"Id": "SpaceBaby.SV_InventorySystem",
+					"DisplayName": "SB Inventory System",
+					"Type": "Smapi",
+					"RelativePath": "SV_InventorySystem",
+					"Manifest": {
+						"Name": "SB Inventory System",
+						"Description": "A multi-inventory system for Stardew Valley that patches Farmer CurrentItem and ActiveItem properties",
+						"Author": "SpaceBaby",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "SV_InventorySystem.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:41555"
+						],
+						"UniqueId": "SpaceBaby.SV_InventorySystem",
+						"OtherFields": {
+							"TargetPlatform": "Android"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342541543,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428243,
+		"UploaderId": 29214420,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,229 @@
+{
+	"Site": "ModDrop",
+	"Id": 701560,
+	"Name": "PPJA - Tailor Mouse_A JA Clothing Shop",
+	"Author": "Pathoschild",
+	"AuthorLabel": "ProjectPopulateJsonAssets",
+	"TagLine": "Hat mouse's distant cousin has come to the valley to sell clothes, oke poke? Adds a new merchant designed to sell JA clothing.",
+	"Description": "![](https://i.imgur.com/d9xrLFY.png)\n\n![](https://i.imgur.com/asuQXFm.png)\uFEFF\n\nA new building near hat mouse (on the arrow-shaped island to the northeast) that sells clothing added by Json Assets.\n\n![](https://i.imgur.com/rL96BeA.png)\n\nSpecial thanks to Lumina for the stand design!\nExtreme thanks to ChronicleCherry who basically make their [Shop Tile Framework](https://www.nexusmods.com/stardewvalley/mods/5005) mod for us &lt;3\n\n**![](https://i.imgur.com/LKwk9jp.png)\uFEFF\n\n**- Includes coding for packs submitted to authors already &amp; waiting for responses because it's easier. They will not be active without the packs installed.\n**TMXL Version**\nProvided courtesy of mouse#1836. This version is for users **using SVE**. This version will **not **be actively maintained and I will not assist users needing help with the TMXL version. If you need help visit the official SDV Discord or [/r/SMAPI](https://www.reddit.com/r/smapi)\uFEFF.\n\n**Why did you migrate to STF?**\nChronicleCherry made STF largely out of a need we had which was the ability to add entire packs rather than individual items to shops. As with PFM, we want to support creators who make frameworks for us. With STF, we no longer needed to use lua to randomize the shop items &amp; quantity. Finally, as of the initial release, TMXL does not natively support clothing and requires an unofficial update to work.\n\n![](https://i.imgur.com/Eqdpuvd.png)\n\n\uFEFF- Latest version of [Json Assets](https://www.nexusmods.com/stardewvalley/mods/1720)\n- Latest version of [SMAPI](https://stardewvalleywiki.com/Modding:Installing_SMAPI)\n- Latest version of [SpaceCore\n](https://www.nexusmods.com/stardewvalley/mods/1348)- Latest version of [Shop Tile Framework](https://www.nexusmods.com/stardewvalley/mods/5005)\uFEFF\n- Latest version of [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915)\uFEFF\n- Latest version of [Mail Framework Mod](https://www.nexusmods.com/stardewvalley/mods/1536)\n\nAt minimum one of the following clothing packs:\n\n- [(JA) Syds Plaids](https://www.nexusmods.com/stardewvalley/mods/4657)\uFEFF\n- [BB's shirts mod](https://www.nexusmods.com/stardewvalley/mods/3942)\n- [Missy's Shirts\n](https://www.nexusmods.com/stardewvalley/mods/3374?tab=files)- [Coii's Clothing Collection](https://www.nexusmods.com/stardewvalley/mods/3374?tab=files)\n- [Ran's Wedding and Flower Dance Attire](https://www.nexusmods.com/stardewvalley/mods/2864)\n- [Ran's Suits and Tuxedos](https://www.nexusmods.com/stardewvalley/mods/2723)\n- [Lumisteria Clothes](https://www.nexusmods.com/stardewvalley/mods/5760)\n\nThese are the mods that have taken us up on our JA conversions to work in 1.4 or have requested to be added to Tailor Mouse. If you don't have a pack installed it won't load.\n\n![](https://i.imgur.com/kLbxt2U.png)\uFEFF\n\nStep 1. Install SMAPI, Json Assets, SpaceCore, Shop Tile Framework, Content Patcher, Mail Framework Mod, and a minimum of 1 of the listed packs.\nStep 2. Download this mod and extract the zip file anywhere you would like. There are 3 files included in the download:\n\n[CP] Tailor Mouse\n[STF] Tailor Mouse\n[MFM] Tailor Mouse\n\nStep 3. Drag &amp; Drop the extracted folder(s) directly into the /Mods folder.\n\n![](https://i.imgur.com/MnkF0nq.png)\n\n**Shop Only:**\n- Delete the pack from /Mods\n\n**Shop &amp; Shirts:**\n- Delete every existing item made from this mod\n- Remove the corresponding folder(s) inside /Mods",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/701560",
+	"Version": null,
+	"Updated": "2021-03-09T18:54:32.79+00:00",
+	"Downloads": [
+		{
+			"Id": 940389,
+			"Type": "Main",
+			"DisplayName": "Tailor Mouse",
+			"FileName": "Tailor Mouse.zip",
+			"Description": "Adds Turkish translation.\n\nRemove previous folders before installing the new version. Drag + Drop into /Mods",
+			"Version": "2.2.5",
+			"SizeInBytes": 78463,
+			"Uploaded": "2021-03-09T18:54:32.665+00:00",
+			"Mods": [
+				{
+					"Id": "ppja.tailormouse",
+					"DisplayName": "Tailor Mouse Clothing Stand",
+					"Type": "ContentPack",
+					"RelativePath": "[PPJA] Tailor Mouse\\[CP] Tailor Mouse",
+					"Manifest": {
+						"Name": "Tailor Mouse Clothing Stand",
+						"Description": "Adds a clothing stand to purchase items from Json Assets.",
+						"Author": "Project Populate Json Assets",
+						"Version": "2.2.5",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ppja.tailormouse"
+					}
+				},
+				{
+					"Id": "ppja.MFM.tailormouse",
+					"DisplayName": "Tailor Mouse MFM Component",
+					"Type": "ContentPack",
+					"RelativePath": "[PPJA] Tailor Mouse\\[MFM] Tailor Mouse",
+					"Manifest": {
+						"Name": "Tailor Mouse MFM Component",
+						"Description": "Me sell clothes. Okey poke?",
+						"Author": "Project Populate Json Assets",
+						"Version": "2.2.5",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ppja.tailormouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ppja.MFM.tailormouse"
+					}
+				},
+				{
+					"Id": "ppja.tailormousestf",
+					"DisplayName": "Tailor Mouse Clothing Stand",
+					"Type": "ContentPack",
+					"RelativePath": "[PPJA] Tailor Mouse\\[STF] Tailor Mouse",
+					"Manifest": {
+						"Name": "Tailor Mouse Clothing Stand",
+						"Description": "Adds a clothing stand to purchase items from Json Assets.",
+						"Author": "Project Populate Json Assets",
+						"Version": "2.2.5",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.ShopTileFramework"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ppja.tailormouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4798"
+						],
+						"UniqueId": "ppja.tailormousestf"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "4281aa20b70fd27091d2d69b7845e83d",
+				"md5In": "a1e833da155d3eb4b21b4d2c651fb8c9",
+				"scriptType": 0,
+				"sha256Ex": "a1249f72d28185eed8e7de444ad6b83b4f96c92aa6b82736a694e92b678fe7e8",
+				"sha256In": "fc2735a3b7912b8307bc89c85369c71c2a08baf682aa6772e61f868f3e2187af"
+			}
+		},
+		{
+			"Id": 940390,
+			"Type": "Optional",
+			"DisplayName": "Tailor Mouse - POLISH",
+			"FileName": "Tailor Mouse - POLISH.zip",
+			"Description": "@TailorMousePL\n\nTylko dla osób mówiących po polsku\nPolski nie jest językiem SDV w grze. Zastępuje cały plik.\nPrzeciągnij i upuść w / Mods\n\nCredit to: KUNGERMOoN",
+			"Version": "2.2.5",
+			"SizeInBytes": 72036,
+			"Uploaded": "2021-03-09T18:54:32.79+00:00",
+			"Mods": [
+				{
+					"Id": "ppja.tailormouse",
+					"DisplayName": "Tailor Mouse Clothing Stand",
+					"Type": "ContentPack",
+					"RelativePath": "[PPJA] Tailoring Mouse (PL)\\[CP] Tailor Mouse",
+					"Manifest": {
+						"Name": "Tailor Mouse Clothing Stand",
+						"Description": "Adds a clothing stand to purchase items from Json Assets.",
+						"Author": "Project Populate Json Assets",
+						"Version": "2.2.5",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ppja.tailormouse"
+					}
+				},
+				{
+					"Id": "ppja.MFM.tailormouse",
+					"DisplayName": "Tailor Mouse MFM Component",
+					"Type": "ContentPack",
+					"RelativePath": "[PPJA] Tailoring Mouse (PL)\\[MFM] Tailor Mouse",
+					"Manifest": {
+						"Name": "Tailor Mouse MFM Component",
+						"Description": "Me sell clothes. Okey poke?",
+						"Author": "Project Populate Json Assets",
+						"Version": "2.2.5",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ppja.tailormouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ppja.MFM.tailormouse"
+					}
+				},
+				{
+					"Id": "ppja.tailormousestf",
+					"DisplayName": "Tailor Mouse Clothing Stand",
+					"Type": "ContentPack",
+					"RelativePath": "[PPJA] Tailoring Mouse (PL)\\[STF] Tailor Mouse",
+					"Manifest": {
+						"Name": "Tailor Mouse Clothing Stand",
+						"Description": "Adds a clothing stand to purchase items from Json Assets.",
+						"Author": "Project Populate Json Assets",
+						"Version": "2.2.5",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.ShopTileFramework"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ppja.tailormouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4798@TailorMousePL"
+						],
+						"UniqueId": "ppja.tailormousestf"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "e70ab2b73f456f77155046cb15a0c370",
+				"md5In": "4fb5d01eee310a61cc7f61deaf868295",
+				"scriptType": 0,
+				"sha256Ex": "db674a6e4731bc9371d9ab43c955ee5c50cb98cd636690dffa1156ec52095dfc",
+				"sha256In": "8dc2ffe2a02701eb81fd4e9e088af624abca9e5fe8172a8a1b42b2c341a08577"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1577739732250,
+		"DateUpdated": 1615316072790,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateApproved": 1578355645107,
+		"dateCreated": 1577739726750,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/701560/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/701560/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/701560/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/701560/icon_original"
+		},
+		"nexusModID": 4798,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": false,
+		"userID": 66140
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 47476,
+	"Name": "Minecart Travel Menu",
+	"Author": "ringlord174",
+	"Description": "[size=5][b]Minecart Travel Menu[/b][/size]\n<br />\n<br />Replaces the vanilla minecart destination list with a grid travel menu: every destination shows its name and a map preview of where you're going, with the exact arrival spot marked. Fully controller-friendly, fits any window size, and works automatically with mods that add minecart destinations.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Grid menu[/b] with up to 4 columns and 5 rows per page. The grid sizes itself to your destination count and window, and reflows live when the window is resized.[/*]\n<br />[*][b]Stable ordering[/b]: the stop you're boarding from shows as a greyed-out \"You are here\" card instead of vanishing, so destinations keep the same position no matter where you board (vanilla hides it, which shuffles the whole list). With several carts in one location, only the cart you're standing at greys out, so you can still ride between them. Toggleable.[/*]\n<br />[*][b]Favorites[/b]: star stops with right-click (or X on a controller). Favorites float to the top rows of the grid, and a star button beside the close button switches to a favorites-only view, which can also be your default view. Stored per player (so local split-screen co-op players each keep their own stars) and per save in the mod folder, never in the save file.[/*]\n<br />[*][b]Search[/b]: a search box above the grid filters destinations as you type, matching names and region labels; controllers get the on-screen keyboard. The menu can also remember your last destination.[/*]\n<br />[*][b]Built carts as destinations[/b]: constructed minecart buildings (like Better Things' buildable minecart) appear as free destinations wherever you placed them, with arrival right beside the cart. Mod data can only cover fixed spots; this makes player-placed carts fully two-way.[/*]\n<br />[*][b]Map previews[/b]: each card shows a snapshot of the destination's actual map, zoomed toward the arrival spot and marked with a bouncing arrow. A zoom slider goes from 100% (whole map) up to 600%.[/*]\n<br />[*][b]World-map art mode[/b]: turn off \"Rendered Previews Only\" to show the in-game world map instead. Mods that ship world-map art (Stardew Valley Expanded, East Scarp, Ridgeside Village, Sunberry Village and more) resolve automatically, and world-map art is also the automatic fallback for maps too large to render.[/*]\n<br />[*][b]Time-of-day tint[/b]: rendered previews of outdoor maps darken with the in-game clock and weather, so a night trip looks like night; interiors get a softer version of the same light. Applied while drawing, so it costs nothing.[/*]\n<br />[*][b]Region subtitles[/b]: a small strip over each preview names the area from the world map (for example \"East Scarp\" or \"Ridgeside Village\"). Hidden when redundant, and can be turned off.[/*]\n<br />[*][b]Ticket prices[/b] shown on destinations that charge a fee, with unaffordable destinations greyed out. Purchases use the vanilla confirmation flow.[/*]\n<br />[*][b]Quick paging[/b]: left/right arrow buttons with a page indicator, Left/Right arrow keys on keyboard, LB/RB on controller, and the mouse scroll wheel. Pages wrap around, and both bindings are remappable.[/*]\n<br />[*][b]Full controller support[/b]: d-pad/stick navigation between cards, A to select, B to close, with proper cursor snapping.[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6+ and SMAPI 4.0+. Works in singleplayer and multiplayer (the menu is purely client-side and uses the vanilla warp logic).[/*]\n<br />[*]Works automatically with any mod that adds minecart destinations through the standard Data/Minecarts asset, including [url=https://www.nexusmods.com/stardewvalley/mods/11881][b]Integrated Minecarts[/b][/url] (its destination ordering and cross-region warp fix are both respected), [url=https://www.nexusmods.com/stardewvalley/mods/5787]East Scarp[/url], [url=https://www.nexusmods.com/stardewvalley/mods/7286]Ridgeside Village[/url], [url=https://www.nexusmods.com/stardewvalley/mods/11111]Sunberry Village[/url], [url=https://www.nexusmods.com/stardewvalley/mods/3753]Frontier Farm[/url] and more.[/*]\n<br />[*]Plays nice with mods that hook map drawing, such as [url=https://www.nexusmods.com/stardewvalley/mods/12831]Dynamic Reflections[/url].[/*]\n<br />[*]Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/47032]Smart Horses[/url]: when it is installed you can open the grid menu while mounted, and your horse comes along on the trip.[/*]\n<br />[*]If another mod replaces the minecart menu itself, turn off \"Enable Grid Menu\" in the config to restore vanilla behavior.[/*]\n<br />[/list]\n<br />[size=4][b]Configuration[/b][/size]\n<br />Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for an in-game settings UI. Options (defaults in parentheses):\n<br />[list]\n<br />[*][b]Enable Grid Menu[/b] (on): master switch; off restores the vanilla dialogue.[/*]\n<br />[*][b]Show Current Stop[/b] (on): your boarding stop appears greyed out instead of hidden, keeping the grid order stable.[/*]\n<br />[*][b]Remember Last Destination[/b] (off), [b]Favorites[/b] (on), [b]Open to Favorites[/b] (off), [b]Show Search Box[/b] (off), [b]Built Carts as Destinations[/b] (on).[/*]\n<br />[*][b]Max Rows Per Page[/b] (Auto): grid rows per page; Auto fits the window, up to 5.[/*]\n<br />[*][b]Show Map Previews[/b] (on), [b]Render Missing Previews[/b] (on), [b]Rendered Previews Only[/b] (on), [b]Detailed Renders[/b] (off), [b]Characters in Detailed Renders[/b] (on).[/*]\n<br />[*][b]Rendered Preview Zoom[/b] (200%), [b]World-Map Preview Zoom[/b] (1.0).[/*]\n<br />[*][b]Time-of-Day Tint[/b] (on), [b]Region Subtitles[/b] (on).[/*]\n<br />[*][b]Show Ticket Prices[/b] (on), [b]Dim Unaffordable Destinations[/b] (on).[/*]\n<br />[*][b]Previous Page[/b] (Left Arrow or LeftShoulder) and [b]Next Page[/b] (Right Arrow or RightShoulder) bindings.[/*]\n<br />[/list]\n<br />[size=4][b]Console commands[/b][/size]\n<br />[list]\n<br />[*][b]mtm_open [network][/b]: open the travel menu from anywhere, handy for trying out settings.[/*]\n<br />[*][b]mtm_bench [repeats][/b]: render every destination's map and report per-map time and memory, so you can check the cost on your own hardware. For reference, a mid-range PC renders 25 maps in about a quarter of a second, once per day; after that everything comes from the cache.[/*]\n<br />[*][b]mtm_unvisit[/b]: repair tool for saves that used 1.0.x with Detailed Renders enabled, where previewing a map could wrongly mark it as visited (fixed in 1.1.0). 'mtm_unvisit list' shows every minecart destination currently marked visited, 'mtm_unvisit all' unmarks them in bulk, or pass one internal location name; places you genuinely visit are re-marked the moment you walk in.[/*]\n<br />[/list]\n<br />[size=4][b]Notes[/b][/size]\n<br />[list]\n<br />[*]Rendered snapshots draw map tiles only by default. Turn on [b]Detailed Renders[/b] to also draw buildings, trees, placed objects and even villagers into the snapshots, like a tiny screenshot, at a small extra render cost on the first render of each map per day.[/*]\n<br />[*]A destination with neither world-map data nor a renderable map shows a named placeholder card instead.[/*]\n<br />[/list]\n<br />[size=4][b]For mod authors[/b][/size]\n<br />Minecart Travel Menu has a public API so other mods can reuse it: get the map previews and destination cards (with the time-of-day tint, marker, and world-map fallback), query the available networks and destinations, open the menu, hook into menu building (inject, hide or reorder stops, for network sharing) and destination selection (veto a trip), read and toggle favorites, or take over the minecart UI entirely while still using Minecart Travel Menu's rendering. See the [url=https://github.com/pgfrank1/MinecartTravelMenu/blob/master/Api/README.md]API documentation[/url] for the full interface and usage notes.\n<br />\n<br />[size=4][b]Translations[/b][/size]\n<br />Ships with English, German, Spanish, French, Hungarian, Italian, Japanese, Korean, Portuguese (BR), Russian, Turkish and Chinese (simplified). The non-English translations are machine-assisted; corrections from native speakers are very welcome in the comments.\n<br />\n<br />[size=4][b][url=https://github.com/pgfrank1/MinecartTravelMenu]Source Code[/url][/b][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47476",
+	"Version": "1.1.1",
+	"Updated": "2026-06-19T21:25:38+00:00",
+	"Downloads": [
+		{
+			"Id": 171823,
+			"Type": "Main",
+			"DisplayName": "MinecartTravelMenu 1.1.1",
+			"FileName": "52/f4/db/52f4db28-3307-414f-8626-43913cee3bf4",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 92252,
+			"Uploaded": "2026-06-19T21:25:38+00:00",
+			"Mods": [
+				{
+					"Id": "ringlord174.MinecartTravelMenu",
+					"DisplayName": "Minecart Travel Menu",
+					"Type": "Smapi",
+					"RelativePath": "MinecartTravelMenu",
+					"Manifest": {
+						"Name": "Minecart Travel Menu",
+						"Description": "Replaces the minecart destination list with a grid menu showing a map preview of each destination. Controller-friendly, with quick page navigation.",
+						"Author": "ringlord174",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MinecartTravelMenu.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:47476"
+						],
+						"UniqueId": "ringlord174.MinecartTravelMenu"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558511,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434164,
+		"UploaderId": 1757906,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

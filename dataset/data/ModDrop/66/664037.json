@@ -1,0 +1,138 @@
+{
+	"Site": "ModDrop",
+	"Id": 664037,
+	"Name": "Customizable Cart Redux",
+	"Author": "Koihime Nakamura",
+	"TagLine": "This mod allows you to alter many things about the traveling cart in the forest.",
+	"Description": "**Customizable Cart Redux**\n\nThis mod is inspired by yyeahdude. It allows you to set the chances of the traveling cart appearing per day (by setting it from 0 to 1, for example, a 25% chance is .25), the items it contains, and how much it is.\n\n**_Requires:_**\nSMAPI 3.8+\nSDV 1.5+\n\n___**WARNING UPDATING TO 1.4**___\n__**The API has changed. Any mods using this should use the newer API**__\n\n**_Install Instructions_**\nUnzip the archive into the Mods folder\n\n_**Changelog**_\n[Changelog](https://github.com/Sakorona/SDVMods/blob/master/CustomizableCartRedux/CHANGELOG.md)\n\n**_Multiplayer Behavior_**\nThis mod will only work for the main player (i.e the host) in an MP game.\n\n**_Current Config Options_**\nTo configure, open up `config.json` in your mod folder.\n\n- Monday through SundayChance: sets the odds it appears that day of the week\n- AppearOnlyAtStartOfSeason: Will appear only on day 1, regardless of any other settings.\n- AppearOnlyatEndOfSeason: Will appear only on day 28, regardless of any other settings\n- AppearOnlyatStartAndEndOfSeason: Will appear only day 1 and 28, regardless of any other settings\n- AppearOnlyEveryOtherWeek: Will only appear on days 8-14 and 22-28 of the season\n- Use Vanilla Max: The vanilla game stops looking for items at 790. Setting this to false allows PPJA assets\n- Opening Time: The time the cart opens in the morning\n- Closing Time: The time the cart closes in the evening. Use 2400 notation.\n- AmountOfItems: default 12, but can be altered down or up to control how many items appear. Note: The mod will by default set any numbers less than 3 to 3.\n- BlacklistedItems - These items will not appear in the cart. Note: This applies over any items added to AllowedItems.\n- AllowedItems - These items will be permitted to appear in the cart. (This is primarily used to override the prohibited categories.)\n- UseCheaperPricing: Uses a less expensive method of determining the value.\n\n_**API documentation**_\n\nThis mod provides an API if people want to add items to the cart.\n\nThe interface looks like:\n\n    public interface ICustomizableCart\n    {\n        event EventHandler CartProcessingComplete;\n        void AddItem(Item item, int price, int quality);\n    }\n\n___**Important Note**___: `AddItem` is meant for more advanced uses outside of the handler, but we strongly recommend you call it only with the handler.\nThe API defaults the last to 1, but it can be passed in if you want a different number. This interface is from 1.2.2+\n\nIn order to add items, subscribe to the CartProcessingComplete event, and put your logic for adding items there.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/664037",
+	"Version": null,
+	"Updated": "2022-01-04T21:29:33.13+00:00",
+	"Downloads": [
+		{
+			"Id": 882875,
+			"Type": "Main",
+			"DisplayName": "Customizable Cart Redux",
+			"FileName": "Customizable Cart Redux.zip",
+			"Description": "Update for SDV 1.5 features.",
+			"Version": "1.4.2",
+			"SizeInBytes": 72315,
+			"Uploaded": "2020-12-26T16:04:42.291+00:00",
+			"Mods": [
+				{
+					"Id": "KoihimeNakamura.CCR",
+					"DisplayName": "Customizable Cart Redux",
+					"Type": "Smapi",
+					"RelativePath": "CustomizableCartRedux",
+					"Manifest": {
+						"Name": "Customizable Cart Redux",
+						"Description": "Allows you to alter the chances of the traveling cart appearing. Credit to Yyeahdude for the original idea.",
+						"Author": "Sakorona",
+						"Version": "1.4.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CustomizableCartRedux.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1402"
+						],
+						"UniqueId": "KoihimeNakamura.CCR",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "SDVMods",
+								"User": "Sakorona",
+								"Directory": "_releases",
+								"ModFolder": "CustomizableCartRedux"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "ed40b661779287aaf3fc6e2d2de84351",
+				"md5In": "35cb02d26698d81d6685fb0a2ad424be",
+				"scriptType": 0,
+				"sha256Ex": "4541f64cabba79d575cf237048c70d395f7cc6320e58ce124dc6003678a63b07",
+				"sha256In": "f649fad2798f053d364d8824771ec028277ff85f1061f51eb67afa3109c7de46"
+			}
+		},
+		{
+			"Id": 1096312,
+			"Type": "Main",
+			"DisplayName": "CustomizableCartRedux 1.4.4",
+			"FileName": "CustomizableCartRedux 1.4.4.zip",
+			"Description": "Update to fully support SDV 1.5.5",
+			"Version": "1.4.4",
+			"SizeInBytes": 72159,
+			"Uploaded": "2022-01-04T21:28:52.72+00:00",
+			"Mods": [
+				{
+					"Id": "KoihimeNakamura.CCR",
+					"DisplayName": "Customizable Cart Redux",
+					"Type": "Smapi",
+					"RelativePath": "CustomizableCartRedux",
+					"Manifest": {
+						"Name": "Customizable Cart Redux",
+						"Description": "Allows you to alter the chances of the traveling cart appearing. Credit to Yyeahdude for the original idea.",
+						"Author": "Sakorona",
+						"Version": "1.4.4",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CustomizableCartRedux.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1402",
+							"Moddrop:664037"
+						],
+						"UniqueId": "KoihimeNakamura.CCR"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "3cc5500175cfbf607f06532439763a51",
+				"md5In": "431313df6b45236c70a5d9fe65ef7c16",
+				"patchNotes": "- Updated to SDV 1.5.5 (including some 1.5 world gen options now fully supported)\n- Some trace spam removed\n",
+				"scriptType": 0,
+				"sha256Ex": "3a7fc68a07c58776aecec831a7d7e60d608c6b254baf9d9ec0d02b8163964625",
+				"sha256In": "4932ac7e3624037e5f050eda97f44ef77206fe21f3153dd7ee2ee37c308820e1"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1574813083097,
+		"DateUpdated": 1641331773130,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateApproved": 1575069163751,
+		"dateCreated": 1574813079407,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/664037/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/664037/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/664037/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/664037/icon_original"
+		},
+		"nexusModID": 1402,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66259
+	}
+}

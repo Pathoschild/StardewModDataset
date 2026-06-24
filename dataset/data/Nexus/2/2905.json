@@ -1,0 +1,75 @@
+{
+	"Site": "Nexus",
+	"Id": 2905,
+	"Name": "BusLocations",
+	"Author": "Hootless",
+	"Description": "[size=5][size=3]This is a super simple framework that allows modders to easily add their location as a destination for the bus! By default it comes with a content pack that re-adds the Desert as a destination (removing the \"[BL] Desert\" makes the desert inaccessible, so I would recommend not removing it), and more content packs can be added freely! I have no idea what happens if you have too many options to fit on the screen, but if this framework takes off then I'll add some kind of handler for that.\n<br />\n<br />Also known bug: It's possible but very unlikely that when you interact with the ticket machine, it gives you the normal bus dialogue instead of my bus dialogue. If this happens just back out of the dialogue and click the machine again. If it's giving you the wrong dialogue consistently let me know and I'll try to figure it out![/size]\n<br />\n<br />\n<br />\n<br />How to use (Player):[/size]   [size=3]   [/size][size=3]   \n<br />[/size][list]\n<br />[*][size=3]   Download the latest version of BusLocations[/size]\n<br />[/list][list]\n<br />[*][size=3]   Take the \"BusLocations\" and \"[BL] Desert\" folders out of the zip and put them in your /Mods/ folder.[/size]\n<br />[*][size=3]   Done! My mod will do all the heavy lifting from here on out.[/size]\n<br />[/list]\n<br />[size=5]How to use (Modder):[/size]\n<br />[list]\n<br />[*]   \uFEFF[size=3]Take a look at the provided \"[BL] Desert\" example (which is also crucial to be able to go to the Desert!) for formatting examples.[/size]\n<br />[*][size=3]   \uFEFFCreate a folder titled \"[BL] (name)\", inside of it create \"manifest.json\" and \"content.json\" formatted the same way as the example.[/size]\n<br />[*][size=3]   \uFEFFmapname in the content file is the code name of the map - for example \"Desert\", \"Town\", \"Mountain\", etc.[/size]\n<br />[*][size=3]   \uFEFFdisplayname is what will actually show up at the bus machine - don't add the price to the display name![/size]\n<br />[*][size=3]   \uFEFFdestinationX and destinationY are the map coordinates where the player arrives at.[/size]\n<br />[*][size=3]   arrivalFacing is what direction the player will be facing after they arrive. Valid inputs are either 1-4 or 0-3, all I know is that 2 is \"face down\".[/size]\n<br />[*][size=3]   \uFEFFticketPrice is how much it costs to go to your location.[/size]\n<br />[*][size=3]   \uFEFFDistribute your Content Pack like you would any normal mod![/size]\n<br />[/list]\n<br />\n<br />I'd recommend using Advanced Location Loader to be able to easily create maps, and then you should be able to use this mod to create a way into your map!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2905",
+	"Version": "1.2.0",
+	"Updated": "2022-07-14T20:04:39+00:00",
+	"Downloads": [
+		{
+			"Id": 57455,
+			"Type": "Main",
+			"DisplayName": "BusLocations",
+			"FileName": "BusLocations-2905-1-2-0-1657829079.zip",
+			"Description": "Added an API to let other mods make their own animations for departing/arriving from the bus stop. Courtesy of nexusmods user ribeena, who also made the only mod to currently use said API (Ribeena's Vehicles), which is pretty good. Check it out!",
+			"Version": "1.2.0",
+			"SizeInBytes": 13966,
+			"Uploaded": "2022-07-14T20:04:39+00:00",
+			"Mods": [
+				{
+					"Id": "hootless.BusLocations",
+					"DisplayName": "Bus Locations",
+					"Type": "Smapi",
+					"RelativePath": "BusLocations",
+					"Manifest": {
+						"Name": "Bus Locations",
+						"Description": "A framework that lets modders dynamically add new locations for the bus to go to.",
+						"Author": "nanzington",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.15.1",
+						"EntryDll": "BusLocations.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2905"
+						],
+						"UniqueId": "hootless.BusLocations"
+					}
+				},
+				{
+					"Id": "hootless.BLDesert",
+					"DisplayName": "(BL) Desert",
+					"Type": "ContentPack",
+					"RelativePath": "[BL] Desert",
+					"Manifest": {
+						"Name": "(BL) Desert",
+						"Description": "Example content pack for BusLocations, which adds the Desert as a destination.",
+						"Author": "Hootless",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.15.1",
+						"ContentPackFor": {
+							"UniqueId": "hootless.BusLocations"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"N"
+						],
+						"UniqueId": "hootless.BLDesert"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342444143,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389593,
+		"UploaderId": 43879207,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

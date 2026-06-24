@@ -1,0 +1,117 @@
+{
+	"Site": "Nexus",
+	"Id": 28702,
+	"Name": "Mothman",
+	"Author": "aviroen",
+	"Description": "[size=6]My Entry for [url=https://discord.com/channels/137344473976799233/1292662149516103751]Stardew's Spirit's Eve Event[/url] 2024\n<br />[/size]\n<br />Ever wanted a Romanceable Mothman?\n<br />\n<br />Art is heavily inspired by [url=https://juliancallos.tumblr.com/post/181410572366/merry-christmas-from-the-mothman]Julian Callos[/url]\n<br />\n<br />[quote][size=6]Quick and Dirty Walkthrough:[/size]\n<br />[spoiler]\n<br />0 Heart: FALL 26 IN THE TOWN, ANYTIME\n<br />\n<br />2 Heart: IN THE TOWN, ANYTIME, MUST HAVE WATCHED PREVIOUS\n<br />\n<br />4 Heart: ON THE BEACH, ANYTIME, MUST HAVE WATCHED PREVIOUS\n<br />\n<br />6 Heart: IN THE SEWERS, ANYTIME, MUST HAVE 6 HEARTS WITH KROBUS AS WELL, MUST HAVE WATCHED PREVIOUS\n<br />\n<br />8 Heart: IN THE TOWN, BETWEEN 8PM AND 2AM, MUST HAVE 8 HEARTS WITH KROBUS AS WELL, MUST HAVE WATCHED PREVIOUS\n<br />\n<br />10 Heart: IN THE SEWERS, MUST BE FEMALE, MUST HAVE 8 HEARTS WITH KROBUS, MUST HAVE WATCHED PREVIOUS\n<br />\n<br />10 Heart PART 2: IN THE SEWER, 5-6 DAYS AFTER SEEING THE PREVIOUS EVENT\n<br />\n<br />12 Heart: MARRIED, OBVIOUSLY, IN THE TOWN, MUST HAVE WATCHED 10 HEART PART 2\n<br />\n<br />14 Heart: ON THE BEACH, MUST HAVE WATCHED PREVIOUS\n<br />[/spoiler][/quote]\n<br />\n<br />Maybe I'll do a fancier header image.\n<br />\n<br />[quote][size=6]Quick and dirty FAQ[/size]\n<br />[size=5]Why are they only romanceable to women?\n<br />[/size][s]Because this was originally an idea born from a twitter handle. Also I don't make the rules I just follow them.\n<br />[/s]1.0.2 now romanceable to all genders.\n<br />\n<br />[size=5]Why is everything in Pig Latin?[/size]\n<br />Dwarvish wouldn't make sense because they get along with Krobus, and normal speech wouldn't make sense either since they cannot communicate with humans.\n<br />\n<br />[size=5]Do you plan to add more content?[/size]\n<br />Honestly I don't know, this was just something to relieve my stress, [s]I'll think about it.\n<br />[/s]No more content to be added unless I plan to turn this modpage into a full on cryptid expansion, we'll see.\n<br />\n<br />[size=5]What do the Configs Mean? GMCM suggested[/size]\n<br />\"Judge Mode\" will remove all of the requirements for the heart events, as well as unlocking Mothman day 1. The heart events will still play out in order.\n<br />\"English\" will change all of the Pig Latin into plain English for accessibility purposes.[/quote]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28702",
+	"Version": "1.0.6",
+	"Updated": "2024-12-26T06:24:02+00:00",
+	"Downloads": [
+		{
+			"Id": 120246,
+			"Type": "Main",
+			"DisplayName": "Mothman",
+			"FileName": "Mothman-28702-1-0-6-1735194242.zip",
+			"Description": "8 heart events, some Krobus flavor text, mostly speaks in Pig Latin and clicks. Doesn't start speaking Pig Latin until 10 heart pt 2.\n<br />Sprites In Detail not optional to emphasize BIG\n<br />SiDFix.dll included (courtesy of Mushymato)",
+			"Version": "1.0.6",
+			"SizeInBytes": 158032,
+			"Uploaded": "2024-12-26T06:24:02+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.SiDRectFix",
+					"DisplayName": "SiDRectFix",
+					"Type": "Smapi",
+					"RelativePath": "Mothman\\SiDRectFix",
+					"Manifest": {
+						"Name": "SiDRectFix",
+						"Description": "Fix SiD mugshot problem.",
+						"Author": "mushymato",
+						"Version": "1.0.6",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "SiDRectFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "BleakCodex.SpritesInDetail",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "mushymato.SiDRectFix"
+					}
+				},
+				{
+					"Id": "Aviroen.MM",
+					"DisplayName": "Wandering Mothman",
+					"Type": "ContentPack",
+					"RelativePath": "Mothman\\[CP] Mothman",
+					"Manifest": {
+						"Name": "Wandering Mothman",
+						"Description": "A lil mothman mod where he just roams and has some dialogue.",
+						"Author": "Aviroen",
+						"Version": "1.0.6",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Aviroen.MMSiD",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Spiderbuttons.BETAS",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "mushymato.SiDRectFix",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28702"
+						],
+						"UniqueId": "Aviroen.MM"
+					}
+				},
+				{
+					"Id": "Aviroen.MMSiD",
+					"DisplayName": "Wandering Mothman SiD Component",
+					"Type": "ContentPack",
+					"RelativePath": "Mothman\\[SiD] MothmanSiD",
+					"Manifest": {
+						"Name": "Wandering Mothman SiD Component",
+						"Description": "A lil mothman mod where he just roams and has some dialogue.",
+						"Author": "Aviroen",
+						"Version": "1.0.6",
+						"ContentPackFor": {
+							"UniqueId": "BleakCodex.SpritesInDetail"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.22.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "Aviroen.MMSiD"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506934,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342415390,
+		"UploaderId": 94028643,
+		"CategoryId": 24,
+		"Adult": false
+	}
+}

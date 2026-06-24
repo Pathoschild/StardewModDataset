@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 39113,
+	"Name": "EmotionFramework",
+	"Author": "slpOff",
+	"AuthorLabel": "slO",
+	"Description": "Emotion Framework\n<br />\n<br />Overview\n<br />\n<br />Emotion Framework gives every NPC a [b]dynamic mood system[/b] — each day, NPCs start with a random emotional state that affects their dialogue, gift reactions, and interactions with the player.The system creates more organic relationships: some days they’re cheerful and open, others they might be tired, shy, or annoyed.It’s designed to work alone or as a foundation for other mods that add new emotions, portraits, or behaviors.[line]For Players\n<br />\n<br />\n<br />How It Works[list]\n<br />[*]Every morning, each NPC receives a random [b]emotion[/b] (e.g. Good, So-so, Bad, Funny, Shy).\n<br />[*]Emotions directly influence dialogue tone and gift responses.\n<br />[*]Hover your cursor over an NPC and press [b]Z[/b]\u00A0to display their current mood portrait and icon.\n<br />[*]Mood changes reset daily, but mod packs can override or control them dynamically.\n<br />[/list]Example Behaviors[list]\n<br />[*][b]Good[/b]: Higher friendship gain from gifts and conversations.\n<br />[*][b]So-so[/b]: Neutral; acts normally.\n<br />[*][b]Bad[/b]: Easier to upset; dislikes hit harder.\n<br />[*][b]Funny[/b]: Finds odd gifts less offensive.\n<br />[*][b]Shy[/b]: Prefers conversations to gifts that day.\n<br />[/list]Installation[list=1]\n<br />[*]Install the latest [b]SMAPI[/b] version.\n<br />[*]Place the [code]EmotionFramework[/code] folder inside your [code]Mods[/code] directory.\n<br />[*](Optional) Add any content packs that define new emotions.\n<br />[/list]Compatibility[list]\n<br />[*]Fully compatible with Stardew Valley 1.6 and SMAPI 4.x+.\n<br />[*]Other mods can expand this system using the provided API.\n<br />[*]Content Patcher packs can use the built-in [code]\"Emotion\"[/code] token in dialogue or event conditions.\n<br />[/list][line]For Modders\n<br />\n<br />\n<br />Purpose\n<br />\n<br />Emotion Framework is built to let modders [b]add emotional states, alter NPC behavior[/b], and integrate emotions into dialogues, events, or friendship logic.\n<br />It exposes a simple API and a flexible JSON-based content pack format.Main Features[list]\n<br />[*][b]Public API[/b] — read and modify emotions via [code]GetEmotion(npcName)[/code] or [code]SetEmotion(npcName, emotionId)[/code].\n<br />[*][b]Content Pack Support[/b] — easily define new emotions through JSON files.\n<br />[*][b]Content Patcher Token[/b] — automatically exposes [code]\"Emotion\"[/code] as a token for conditional logic.\n<br />[*][b]Automatic Effects[/b] — emotions influence friendship gain, gift reaction, and dialogue responses automatically.\n<br />[/list][line]Example Content Pack\n<br />\n<br />[b]Folder Structure[/b][code]Mods/ └─ EmotionFramework/\n<br /> └─ EmotionFramework_ExtraEmotions/\n<br />      ├─ manifest.json\n<br />      ├─ emotions.json\n<br />      └─ assets/icons/\n<br />           ├─ sleepy.png\n<br />           ├─ angry.png\n<br />           └─ flirty.png\n<br />\n<br />[/code][b]manifest.json[/b][code]{ \n<br />\n<br /> \"Name\": \"Emotion Framework - Extra Emotions\",\n<br /> \"Author\": \"slO\",  \"Version\": \"1.0.0\", \n<br /> \"Description\": \"Adds new emotions for the Emotion Framework mod.\", \n<br /> \"UniqueID\": \"slO.EmotionFramework.ExtraEmotions\", \n<br /> \"ContentPackFor\": { \"UniqueID\": \"slO.EmotionFramework\" }\n<br />\n<br />}\n<br />[/code][b]emotions.json[/b][code]{ \n<br />\n<br /> \"Sleepy\": {    \n<br />\"Id\": \"Sleepy\",    \n<br />\"DisplayName\": \"Sleepy\",    \n<br />\"GiftMultiplier\": 0.8,    \n<br />\"DialogueMultiplier\": 0.7,    \n<br />\"HateGiftExtraMultiplier\": 1.2,    \n<br />\"PortraitIndex\": 3,    \n<br />\"IconPath\": \"assets/icons/sleepy.png\" \n<br /> }, \n<br />\n<br /> \"Angry\": {    \n<br />\"Id\": \"Angry\",    \n<br />\"DisplayName\": \"Angry\",    \n<br />\"GiftMultiplier\": 0.6,    \n<br />\"DialogueMultiplier\": 0.5,    \n<br />\"HateGiftExtraMultiplier\": 1.5,    \n<br />\"PortraitIndex\": 5,    \n<br />\"IconPath\": \"assets/icons/angry.png\" \n<br />}, \n<br />\n<br /> \"Flirty\": {    \n<br />\"Id\": \"Flirty\",    \n<br />\"DisplayName\": \"Flirty\",    \n<br />\"GiftMultiplier\": 1.3,    \n<br />\"DialogueMultiplier\": 1.5,    \n<br />\"HateGiftExtraMultiplier\": 0.8,    \n<br />\"PortraitIndex\": 2,    \n<br />\"IconPath\": \"assets/icons/flirty.png\" \n<br /> }\n<br />\n<br />}\n<br />[/code]This file defines new emotions, their behavior multipliers, and optional portrait index or icon.\n<br />Modders can include as many custom states as they like.[line]Extension Points\n<br />\n<br />[b]1. EmotionManager API\n<br />[/b]\n<br />Other mods can access the EmotionManager through the mod registry to get or set emotions dynamically.[b]2. Content Packs\n<br />[/b]\n<br />Add new moods by shipping an [code]emotions.json[/code] file and optional icons or portraits.[b]3. Portrait Renderer\n<br />[/b]\n<br />The built-in HUD system displays emotion portraits and icons above NPCs when pressing [b]Z[/b].[b]4. Content Patcher Integration\n<br />[/b]\n<br />Use emotions in conditional logic with:[code]\"When\": { \"Emotion\": \"Good\" }[/code][line]Technical Notes[list]\n<br />[*]Requires [b]SMAPI 4.0 or later[/b]\n<br />[*]Built on [b].NET 6.0[/b]\n<br />[*]Uses [code]IClickableMenu.drawTextureBox()[/code] for dialogue-style frames\n<br />[*]Portraits are automatically cropped using [code]PortraitIndex[/code]\n<br />[*]If a portrait is missing, only the icon is rendered above the NPC\n<br />[/list][line]Suggested Uses[list]\n<br />[*]Emotion-specific dialogues or events\n<br />[*]Gifts that change meaning depending on mood\n<br />[*]Custom portrait variations per emotion\n<br />[*]Mood-based friendship systems\n<br />[/list][line]License &amp; Credits\n<br />\n<br />Emotion Framework is an independent open mod framework.\n<br />It can run on its own or alongside other mods that build upon it.\n<br />Feel free to create and publish content packs or API integrations — just credit the original framework in your description.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39113",
+	"Version": "1.0.0",
+	"Updated": "2025-11-06T21:28:27+00:00",
+	"Downloads": [
+		{
+			"Id": 147387,
+			"Type": "Main",
+			"DisplayName": "EmotionFramework",
+			"FileName": "EmotionFramework-39113-1-0-0-1762464456.zip",
+			"Description": "please let me know your bugs :)",
+			"Version": "1.0.0",
+			"SizeInBytes": 19571,
+			"Uploaded": "2025-11-06T21:27:36+00:00",
+			"Mods": [
+				{
+					"Id": "slO.EmotionFramework",
+					"DisplayName": "EmotionFramework",
+					"Type": "Smapi",
+					"RelativePath": "EmotionFramework",
+					"Manifest": {
+						"Name": "EmotionFramework",
+						"Description": "EmotionFramework",
+						"Author": "slO",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EmotionFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:39113"
+						],
+						"UniqueId": "slO.EmotionFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534075,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 147388,
+			"Type": "Optional",
+			"DisplayName": "ExamplePacks",
+			"FileName": "ExamplePacks-39113-1-0-0-1762464507.zip",
+			"Description": "Example Packs for EmotionFramework",
+			"Version": "1.0.0",
+			"SizeInBytes": 1865,
+			"Uploaded": "2025-11-06T21:28:27+00:00",
+			"Mods": [
+				{
+					"Id": "slO.EmotionFramework.ExtraEmotions",
+					"DisplayName": "Emotion Framework - Extra Emotions Pack",
+					"Type": "ContentPack",
+					"RelativePath": "ExamplePacks",
+					"Manifest": {
+						"Name": "Emotion Framework - Extra Emotions Pack",
+						"Description": "Adds extra custom emotions for the Emotion Framework mod.",
+						"Author": "slO",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "slO.EmotionFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "slO.EmotionFramework.ExtraEmotions"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534076,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425801,
+		"UploaderId": 231048348,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,136 @@
+{
+	"Site": "Nexus",
+	"Id": 20401,
+	"Name": "Start In Ginger Island",
+	"Author": "mistyspring",
+	"Description": "[size=3][size=3]You wake up stranded in the island, only with a tent and some starter items. This mod has difficulty settings. [b][size=3][size=3]\n<br />Multiplayer compatible[/size][/size][/b]\n<br />\n<br />[b][u]Features[/u][/b]:\n<br />[/size][/size][list]\n<br />[*][size=3]Configurable difficulty[/size]\n<br />[*][size=3]Pirate \"Clint\" (tool upgrade / geodes)[/size]\n<br />[*][size=3]Pirates' weapon seller / item recovery[/size]\n<br />[*][size=3]4 new weapons[/size]\n<br />[*][size=3]Repair willy's boat to return to society[/size]\n<br />[/list][size=3]\n<br />As you progress through the island, the mod changes. Pros of starting in the island:[list]\n<br />[*]Learn dwarvish faster!\n<br />[*]Immediate tool upgrades. No need to wait 3 days!\n<br />[*]All the benefits of Ginger Island, early game\n<br />[*]Ostrich Coop on the island (buildable)\n<br />[*]Peace and quiet\n<br />[/list][/size]\n<br />[size=3][size=3]For hints on how to progress, see the mod articles. [/size][/size][b]\n<br />\n<br />[/b][size=3][b][u]Caveats[/u][/b]\n<br />[/size][list]\n<br />[*][size=3]If you unlock the boat and you still can't get back to town, try sleeping and restarting the game. (As of now, it's unknown why this happens)[/size]\n<br />[/list]\n<br />[size=3]If you like what i do, [url=https://ko-fi.com/mistyspring][b]consider buying me a coffee [/b][b]♥.[/b][/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/20401",
+	"Version": "1.2.0",
+	"Updated": "2024-10-11T00:20:45+00:00",
+	"Downloads": [
+		{
+			"Id": 83356,
+			"Type": "Optional",
+			"DisplayName": "FTM component",
+			"FileName": "FTM component-20401-1-0-0-1710958001.zip",
+			"Description": "Spawns a new resource type in island north. @FTM",
+			"Version": "1.0.0",
+			"SizeInBytes": 1422,
+			"Uploaded": "2024-03-20T18:06:41+00:00",
+			"Mods": [
+				{
+					"Id": "mistyspring.GingerIslandStartFTM",
+					"DisplayName": "GI start - FarmTypeManager",
+					"Type": "ContentPack",
+					"RelativePath": "[FTM] Ginger Island Start",
+					"Manifest": {
+						"Name": "GI start - FarmTypeManager",
+						"Description": "Adds extra wood type in the island",
+						"Author": "mistyspring",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.14.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mistyspring.GingerIslandStartCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:20401@FTM"
+						],
+						"UniqueId": "mistyspring.GingerIslandStartFTM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342470044,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 113115,
+			"Type": "Main",
+			"DisplayName": "Ginger Island Start",
+			"FileName": "Ginger Island Start-20401-1-2-0-1728606045.zip",
+			"Description": "Bug fixes\n<br />Added new tree type\n<br />Added new furniture",
+			"Version": "1.2.0",
+			"SizeInBytes": 98275,
+			"Uploaded": "2024-10-11T00:20:45+00:00",
+			"Mods": [
+				{
+					"Id": "mistyspring.GingerIslandStart",
+					"DisplayName": "Start in Ginger Island",
+					"Type": "Smapi",
+					"RelativePath": "GingerIslandStart",
+					"Manifest": {
+						"Name": "Start in Ginger Island",
+						"Description": "Makes you start in ginger island.",
+						"Author": "mistyspring",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "GingerIslandStart.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "mistyspring.ItemExtensions",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:20401"
+						],
+						"UniqueId": "mistyspring.GingerIslandStart"
+					}
+				},
+				{
+					"Id": "mistyspring.GingerIslandStartCP",
+					"DisplayName": "Start in GI - ContentPatcher",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Ginger Island Start",
+					"Manifest": {
+						"Name": "Start in GI - ContentPatcher",
+						"Description": "ContentPatcher component of \"Start in Ginger Island\".",
+						"Author": "mistyspring",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.14.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mistyspring.GingerIslandStart",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "mistyspring.ItemExtensions",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:-1"
+						],
+						"UniqueId": "mistyspring.GingerIslandStartCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342499803,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407089,
+		"UploaderId": 130944333,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

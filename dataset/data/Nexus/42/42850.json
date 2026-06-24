@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 42850,
+	"Name": "Cloud Sync",
+	"Author": "advxrsary",
+	"AuthorLabel": "advx",
+	"Description": "[size=4][b]CloudSync[/b][/size]\n<br />\n<br />Sync your Stardew Valley saves, mod configs, and mod data to a self-hosted cloud via WebDAV.\n<br />Works with Nextcloud, ownCloud, and any WebDAV-compatible storage.\n<br />\n<br />[size=3][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Auto-sync on save/load[/b] -- uploads after saving, downloads newer saves on load\n<br />[*][b]Cloud restore[/b] -- force download from cloud via console command or config toggle\n<br />[*][b]Mod config sync[/b] -- keeps mod settings in sync across machines (only for installed mods)\n<br />[*][b]Mod data sync[/b] -- syncs per-save mod data folders\n<br />[*][b]Cloud icon[/b] -- shows a cloud indicator on the save load screen for saves that exist in the cloud, with a tooltip on hover\n<br />[*][b]Manual sync hotkey[/b] -- press F6 (configurable) to trigger sync anytime\n<br />[*][b]Conflict resolution[/b] -- compares timestamps, creates local backups before overwriting\n<br />[*][b]GMCM support[/b] -- configure everything in-game via Generic Mod Config Menu\n<br />[/list]\n<br />\n<br />[size=3][b]Setup[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI and drop the CloudSync folder into your Mods directory\n<br />[*]Launch the game once to generate config.json\n<br />[*]Edit config.json or use GMCM to set your WebDAV server URL, username, and password\n<br />[*]That's it -- saves will sync automatically\n<br />[/list]\n<br />\n<br />[size=3][b]Configuration[/b][/size]\n<br />[code]\n<br />NextcloudUrl\u00A0 \u00A0 \u00A0 \u00A0 -- WebDAV server base URL (e.g. https://cloud.example.com)\n<br />Username\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 -- WebDAV username\n<br />Password\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 -- WebDAV password\n<br />RemotePath\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 -- Remote folder path (default: /StardewSync)\n<br />SyncSaves\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0-- Sync save files (default: true)\n<br />SyncModConfigs\u00A0 \u00A0 \u00A0 -- Sync mod config.json files (default: true)\n<br />SyncModData\u00A0 \u00A0 \u00A0 \u00A0 \u00A0-- Sync mod data folders (default: true)\n<br />AutoSyncOnSave\u00A0 \u00A0 \u00A0 -- Auto-upload after saving (default: true)\n<br />AutoSyncOnLoad\u00A0 \u00A0 \u00A0 -- Auto-download on load if cloud is newer (default: true)\n<br />AlwaysDownloadFromCloud -- Always use cloud version on load (default: false)\n<br />ManualSyncKey\u00A0 \u00A0 \u00A0 \u00A0-- Hotkey for manual sync (default: F6)\n<br />MaxBackups\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 -- Local backups to keep before overwriting (default: 3)\n<br />TimeoutSeconds\u00A0 \u00A0 \u00A0 -- HTTP request timeout (default: 30)\n<br />ShowHudNotifications -- Show HUD messages for sync status (default: true)\n<br />[/code]\n<br />\n<br />[size=3][b]Console Commands[/b][/size]\n<br />[list]\n<br />[*][b]cloudsync upload[/b] -- manually upload current save\n<br />[*][b]cloudsync download[/b] -- download if cloud version is newer\n<br />[*][b]cloudsync restore[/b] -- force download from cloud (ignores timestamps)\n<br />[*][b]cloudsync status[/b] -- show sync status and connection info\n<br />[/list]\n<br />\n<br />[size=3][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]SMAPI 4.0+\n<br />[*]Stardew Valley 1.6+\n<br />[*]A WebDAV server (Nextcloud, ownCloud, etc.)\n<br />[*]Generic Mod Config Menu (optional, for in-game settings)\n<br />[/list]\n<br />\n<br />[size=3][b]Compatibility[/b][/size]\n<br />Works alongside other mods including MultiSave. The cloud icon is positioned to avoid overlapping with other save slot buttons.\n<br />\n<br />[size=3][b]Source Code[/b][/size]\n<br />Open source:\u00A0[url=https://github.com/advxrsary/stardew-nextcloud]github.com/advxrsary/stardew-nextcloud[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42850",
+	"Version": "0.1.0",
+	"Updated": "2026-02-25T21:16:10+00:00",
+	"Downloads": [
+		{
+			"Id": 158189,
+			"Type": "Main",
+			"DisplayName": "CloudSync",
+			"FileName": "CloudSync-42850-0-1-0-1772054170.zip",
+			"Description": "SMAPI mod for syncing saves, mod configs and mod data to Nextcloud/WebDAV. Requires SMAPI 4.0+ and Stardew Valley 1.6+.",
+			"Version": "0.1.0",
+			"SizeInBytes": 45057,
+			"Uploaded": "2026-02-25T21:16:10+00:00",
+			"Mods": [
+				{
+					"Id": "advx.CloudSync",
+					"DisplayName": "CloudSync",
+					"Type": "Smapi",
+					"RelativePath": "CloudSync",
+					"Manifest": {
+						"Name": "CloudSync",
+						"Description": "Sync saves, mod configs, and mod data to Nextcloud via WebDAV",
+						"Author": "advx",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CloudSync.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "advx.CloudSync"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544877,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429538,
+		"UploaderId": 230789457,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

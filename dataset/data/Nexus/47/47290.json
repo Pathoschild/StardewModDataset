@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 47290,
+	"Name": "Light Switches",
+	"Author": "aedenthorn",
+	"Description": "[youtube]rHNNbKmPWGk[/youtube]\n<br />\n<br />[u][size=5][b]Overview[/b][/size][/u]\n<br />\n<br />This mod makes the game's new [url=https://stardewvalleywiki.com/Light_Switch]Light Switch[/url]\u00A0furniture function as an actual light switch.\n<br />\n<br />Interact with a switch to turn it on or off. Switches are off by default (shown by the switch facing down).\n<br />\n<br />Turning a switch on will light up the entire location at night, as bright as day time by default.\n<br />\n<br />Turning on one switch will turn off all other switches in the location; each switch can be configured with different colors.\n<br />\n<br />You can change the on and off sounds in the config.\n<br />\n<br />\n<br />[u][size=5][b]Color and Scheduling[/b][/size][/u]\n<br />\n<br />To adjust the brightness or color of the light, hover over the placed switch and press the color key (default [b]C[/b]). This will open up a color picker; the bottom slider adjusts brightness, middle slider adjusts saturation, and top slider adjusts hue.\n<br />\n<br />The color picker now has additional entries for scheduling on and off times. Times should be entered in 24h time, e.g. 1300, 2400, etc. 1AM would be 2500. These times will be checked whenever the time changes (e.g. every ten mintues in-game). Light switches will be toggled off if the new time is after \"Off Time\", but will only be toggled on if the new time is exactly the \"On Time\".\n<br />\n<br />\n<br />[u][size=5][b]Custom Light Switches[/b][/size][/u]\n<br />\n<br />You can set any furniture to act as a light switch using Content Patcher.\u00A0 You can set custom on and off textures, and there are optional fields for creating prismatic and strobe effects.\n<br />\n<br />Target the dictionary at \"aedenthorn.LightSwitches/dict\". entries should be e.g.:\n<br />\n<br />[code]\"MyFurnitureId\":\n<br />{\n<br />\u00A0 \u00A0 \"OffTexture\": \"PathToOffTexture\",\n<br />\u00A0 \u00A0 \"OnTexture\": \"PathToOnTexture\"\n<br />}[/code]\n<br />You can omit either of the texture entries to use the furniture's default texture. Textures should be the same size as the furniture's default tilesheet, just make them transparent apart from the furniture's source rect (see the mod's [b]assets/on.png[/b] for an example, which follows the game's furniture_3 tilesheet).\n<br />\n<br />If you want to use the optional fields, here's an example:\n<br />\n<br />[code]\"MyFurnitureId\":\n<br />{\n<br />\u00A0 \u00A0 \"OffTexture\": \"PathToOffTexture\",\n<br />\u00A0 \u00A0 \"OnTexture\": \"PathToOnTexture\",\n<br />\u00A0 \u00A0 \"Prismatic\": true,\n<br />\u00A0 \u00A0 \"PrismaticStart\": \"#FF0000\",\n<br />\u00A0 \u00A0 \"PrismaticEnd\": \"#00FF00\",\n<br />\u00A0 \u00A0 \"PrismaticSpeed\": 2,\n<br />\u00A0 \u00A0 \"StrobeSpeed\": 500\n<br />}[/code]\n<br />StrobeSpeed is in milliseconds.\n<br />\n<br />\n<br />\n<br />[u][size=5][b]Technical[/b][/size][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47290",
+	"Version": "0.2.1",
+	"Updated": "2026-06-22T11:05:59+00:00",
+	"Downloads": [
+		{
+			"Id": 172144,
+			"Type": "Main",
+			"DisplayName": "LightSwitches",
+			"FileName": "f4/13/26/f41326a1-379a-4f61-8d4e-f1f9541403e2",
+			"Description": "Changes:\n\nGMCM fix",
+			"Version": "0.2.1",
+			"SizeInBytes": 28227,
+			"Uploaded": "2026-06-22T11:05:59+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.LightSwitches",
+					"DisplayName": "Light Switches",
+					"Type": "Smapi",
+					"RelativePath": "LightSwitches",
+					"Manifest": {
+						"Name": "Light Switches",
+						"Description": "Light Switches.",
+						"Author": "aedenthorn",
+						"Version": "0.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LightSwitches.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47290"
+						],
+						"UniqueId": "aedenthorn.LightSwitches"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558832,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433978,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

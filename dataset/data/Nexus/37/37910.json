@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 37910,
+	"Name": "Custom NPC Festival Additions",
+	"Author": "3lfuun",
+	"AuthorLabel": "elfuun",
+	"Description": "[b]Custom NPC Festival Additions (CNFA)\u00A0[/b]is the new, superseding mod to my original Flower Dance Fix Mod (FDF).\n<br />\n<br />CNFA aims to increase\u00A0customization of festivals, events, and minigames, and to allow for custom NPCs to participate in minigames and events.\n<br />\n<br />[b]Features\n<br />[/b]\n<br />Currently, CNFA only targets the Spring 24 Flower Dance Festival, allowing for a custom number of dancer pairs, custom NPC participation in the dance, and randomized pairs of NPC dancers.\n<br />\n<br />[b]Configuration[/b]\n<br />[left]\uFEFF[/left]Mod settings currently can only be configured by changing the values in the mod's the config.json file, included in the mod folder. Current available settings are:\n<br />\n<br />EnableCNFAspring24(default: true)\n<br />[list]\n<br />[*]If true, allows CNFA to make changes to the Flower Dance main event, occurring on Spring 24, after speaking to Lewis.\n<br />[*]If false, prevents CNFA from making any changes to the Flower Dance.\n<br />[/list]\n<br />CNFAspring24NumberDancerPairs\u00A0(default: 6)\n<br />[list]\n<br />[*]Change the total number of pairs of dancers allowed to dance. Limited to a maximum of 17 pairs total.\n<br />[/list]\n<br />CNFAspring24RandomizeDancersInPairs\u00A0(default: true)\n<br />[list]\n<br />[*]If true, NPCs are paired with the opposite sex at random.\n<br />[*]If false, NPCs pairs are generated using a \"Love Interest\" pairing, if one is available.\u00A0This method prioritizes matching a character with the \"love interest\" value for that character's Data/Characters.json entry (field 13), provided that both characters have each-other as their love interest, and both characters are available in the dancer selection pool. Any NPCs without a valid love interest will be paired with the opposite sex at random. Currently does not work for same-sex couples.\n<br />[/list]\n<br />CNFAspring24Blacklist\n<br />[list]\n<br />[*]A user-configured list of NPCs by name, separated by a comma and a space, which will not be selected to dance in the flower dance.\n<br />[i]Example: \"Emily, Sebastian, Leah\"[/i][/list]\n<br />[b]Upcoming Features\n<br />\n<br />[/b]In the near future, the following features related to the Spring 24 Flower Dance Festival are expected to be completed:\n<br />[list]\n<br />[*]Custom sprites and animations for all flower dance participants\n<br />[*]Mixed-gendered dance lines, allowing for female NPCs to dance the male part and vice versa\n<br />[*]A dance pair whitelist and blacklist, allowing players to pair up NPCs however they please, or prevent pairs of NPCs from forming\n<br />[*]A GUI mod configuration menu, accessible with or without Generic Mod Config Menu\n<br />[*]Complex tokens for mod authors (accessible through Content Patcher) that record and save the previous two years' dance pairs, allowing for customized dialogue and events based on the results of the flower dance pairings\n<br />[*]Implementation of content pack integration, allowing for mod authors to provide custom flower dance spritesheets and animations, and to pass prepared pairs of dancers to the dancer pair whitelist and blacklist\n<br />[/list]\n<br />Following the completion of the Spring 24 Flower Dance Festival features, additional festivals will be modded to further increase the flexibility of festivals towards custom NPCs and to increase replayability. You can expect to see these features, amongst others:\n<br />[list]\n<br />[*]Spring 13 Egg Hunt Festival - Customized NPC participation in egg hunt, variable egg hunt difficulty, tokens based on results\n<br />[*]Fall 16 Stardew Fair Festival - Customized NPC participation in grange competition, tokens based on results\n<br />[*]Winter 8 Ice Festival - Customized NPC participation in ice fishing competition, variable ice fishing contest difficulty, tokens based on results\n<br />[/list]\uFEFF\uFEFF\n<br />[b]FAQs[/b]\n<br />\n<br />Why is this mod currently in beta?\n<br />[list]\n<br />[*]As this is the first release for CNFA, I expect there to be errors or malfunctions in my coding that I simply haven't discovered yet while bug testing. I am hoping that players using the 1.0.0-beta version of the mod will be able to find all the edge cases I wasn't able to, so that any existing bugs can be ironed out before an official release.\u00A0Additionally, many of the features I had hoped to include with a full release (specifically those mentioned for the Spring 24 Flower Dance Festival!) are not complete yet. In spite of this, I would like to release something that at least covers the basic features I had initially set out to create. Following an official 1.0.0 release, I will maintain a beta branch for all future versions, which I will provide to mod authors ahead of release so that they may create or edit CNFA content packs prior to the release of a new version. Note that this mod page is a work-in-progress as well- as the mod updates, more screenshots and documentation will be added! Additionally, full documentation of CNFA content packs and all added tokens will be available on the GitHub wiki, once created.\n<br />[/list]\n<br />Why did you make this mod instead of updating FDF?\n<br />[list]\n<br />[*]After Stardew Valley 1.6 became available, many C# mods requiring Harmony became broken. During this time, I had stepped away from modding while attending school. After returning to the modding community, I found that both the amount of effort required to both migrate FDF to the new version of the game and to correct all of my old coding mistakes would be too high- it was easiest to start over with a fresh project. Additionally, I had some ideas about how other festivals in the game could be modded to include custom NPCs in the minigames. After these changes are added, the title of the mod wouldn't be accurate!\n<br />[/list]\n<br />Does this mod still have the glitches present in FDF?\n<br />[list]\n<br />[*]No! I managed to iron out the glitches present in the original FDF that plagued a lot of users, such as the random blank spaces in the dancer lines where characters SHOULD have been, according to the code. Of course, some bugs may still exist. Please report any bugs or issues on this mod page!\n<br />[/list]\n<br />Is this mod open source?\n<br />[list]\n<br />[*]No, but it will be! I am currently struggling to get everything uploaded to GitHub. As soon as the repo is uploaded, a link to the repo on GitHub will be added to the mod page.\n<br />[/list]\n<br />[b]Acknowledgements\n<br />[/b]\n<br />[*][url=https://github.com/kenny2892/StardewValleyMods]Kelly2892[/url]\u00A0- for example code regarding harmony implementation\n<br />[*]Matt123337\uFEFF - for mentorship, and listening to my gripes\n<br />[*][url=https://stardewvalleywiki.com/Modding:Modder_Guide/Get_Started]The Stardew Valley Wiki's Modding Guide[/url]\uFEFF - for general information and laying out step-by-step how to write a mod[\n<br />[*]Stardew Valley Discord Server- for answering quick questions and providing inspiration\n<br />Custom NPCs in the screenshot are from\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/7286]Ridgeside Village![/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37910",
+	"Version": "1.0.0",
+	"Updated": "2025-09-30T01:44:20+00:00",
+	"Downloads": [
+		{
+			"Id": 144213,
+			"Type": "Main",
+			"DisplayName": "Custom NPC Festival Additions - 1.0.0-beta",
+			"FileName": "Custom NPC Festival Additions - 1.0.0-beta-37910-1-0-0-beta-1759196660.zip",
+			"Description": "Custom NPC Festival Additions 1.0.0-beta release, 29 Sept 2025",
+			"Version": "1.0.0-beta",
+			"SizeInBytes": 452466,
+			"Uploaded": "2025-09-30T01:44:20+00:00",
+			"Mods": [
+				{
+					"Id": "elfuun.CustomNPCFestivalAdditions",
+					"DisplayName": "Custom NPC Festival Additions",
+					"Type": "Smapi",
+					"RelativePath": "CustomNPCFestivalAdditions",
+					"Manifest": {
+						"Name": "Custom NPC Festival Additions",
+						"Description": "Increased customization and addition of custom NPCs to festivals, events, and minigames.",
+						"Author": "elfuun",
+						"Version": "1.0.0-beta",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomNPCFestivalAdditions.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "PathosChild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:37910"
+						],
+						"UniqueId": "elfuun.CustomNPCFestivalAdditions"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530901,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342424598,
+		"UploaderId": 74620568,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

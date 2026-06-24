@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 5371,
+	"Name": "Anti-Social NPCs",
+	"Author": "ubererdferkel",
+	"AuthorLabel": "Super Aardvark",
+	"Description": "This mod allows the creation of new NPCs that aren't friends with the player.  They can have a schedule, a portrait, dialog... almost everything a normal villager NPC has.  However, they won't show up on the Social menu and the player can't give them gifts.\n<br />\n<br />[b]This mod does nothing on its own.[/b]  It is a resource for mod makers and content pack creators.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Note on SDV 1.6\n<br />[/size]The upcoming (as of 3/23) version 1.6 of Stardew Valley will have native support for non-social NPCs.\u00A0 Therefore, this mod will be obsolete and unnecessary.\u00A0 If you're a mod author making use of this mod, you can read about the planned features on the SDV wiki, [url=https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.6#Custom_NPCs]here[/url].\n<br />\n<br />[size=5]Instructions for Modders[/size]\n<br />[list=1]\n<br />[*]Create a new NPC as your normally would (e.g. using [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url])\n<br />[*]Do not add the NPC to\u00A0\"Data/NPCGiftTastes\"\n<br />[*]Add the NPC to\u00A0\"Data/AntiSocialNPCs\".\u00A0 The key is the NPC's name, and the value can be anything (e.g., \"true\").\n<br />[*]Add this mod to your mod's dependencies.\n<br />[/list]\n<br />[size=5]Sample Content Patcher Snippet[/size]\n<br />If you're using Content Patcher to make a new NPC named Bob, here's what you would add to the Changes section of your content.json file:\n<br />[code]\n<br />{\n<br />\u00A0 \u00A0\"LogName\": \"Bob's AntiSocial Flag\",\n<br />\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0 \u00A0\"Target\": \"Data/AntiSocialNPCs\",\n<br />\u00A0 \u00A0\"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \"Bob\": true\n<br />\u00A0 \u00A0}\n<br />}\n<br />[/code]\n<br />[size=5]Advanced Use[/size]\n<br />It should be possible to cause an NPC to become friendly with proper use of \"When\" conditionals in Content Patcher.\u00A0 If you add \"Data/NPCGiftTastes\" for your NPC, they will appear on the Social menu the next time the player talks to them.\u00A0\u00A0Removing the NPC from \"Data/AntiSocialNPCs\" will cause them to appear in the Social menu immediately.\u00A0 This functionality is not well tested.\n<br />\n<br />[size=5]Limitations[/size]\n<br />[list]\n<br />[*]Non-social NPCs cannot use \"event\" type dialog.  The most common event of this type is \"Introduction\", which causes NPCs to say something special to the player if they meet in the first six days of the game.\u00A0 Dialog that requires a certain Heart Level will also not be used, for obvious reasons.\u00A0 \n<br />[*]Use of anti-social NPCs in events is untested, but probably works just fine.\n<br />[*]Anti-social NPCs accepting quest turn-ins is untested (let me know if it works!).\n<br />[/list]\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Tested with SMAPI 3.2 (Stardew Valley 1.4)\n<br />[*]Tested with Content Patcher\u00A01.12.0 (optional)\n<br />[*]Compatible with any mod or content framework that uses SMAPI to edit assets.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5371",
+	"Version": "1.0.6",
+	"Updated": "2022-07-01T15:59:23+00:00",
+	"Downloads": [
+		{
+			"Id": 56774,
+			"Type": "Main",
+			"DisplayName": "AntiSocialNPCs",
+			"FileName": "AntiSocialNPCs-5371-1-0-6-1656691163.zip",
+			"Description": "",
+			"Version": "1.0.6",
+			"SizeInBytes": 10238,
+			"Uploaded": "2022-07-01T15:59:23+00:00",
+			"Mods": [
+				{
+					"Id": "SuperAardvark.AntiSocial",
+					"DisplayName": "AntiSocial NPCs",
+					"Type": "Smapi",
+					"RelativePath": "AntiSocialNPCs",
+					"Manifest": {
+						"Name": "AntiSocial NPCs",
+						"Description": "Allows modders to create NPCs that the player can't befriend.",
+						"Author": "Super Aardvark",
+						"Version": "1.0.6",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "AntiSocialNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5371"
+						],
+						"UniqueId": "SuperAardvark.AntiSocial"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342443462,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392059,
+		"UploaderId": 4787570,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

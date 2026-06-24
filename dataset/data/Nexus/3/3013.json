@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 3013,
+	"Name": "Bee House Flower Range Fix",
+	"Author": "kirbster87",
+	"AuthorLabel": "KirbyLink",
+	"Description": "According to many player posts and the Stardew Valley wiki, the Bee Houses should have an intended range similar to:\n<br />\uFEFF[img]https://res.cloudinary.com/kjreeves/image/upload/v1541043197/Inteded_nf7efw.jpg[/img]\n<br />\n<br />However, currently, the range calculations are incorrect and players have reported that the actual range looks like:\n<br />[img]https://stardewvalleywiki.com/mediawiki/images/0/04/Bee_House_Range.png[/img]\uFEFF\n<br />\n<br />Notice the top left and bottom right most tiles are not considered when a Bee House looks for nearby flowers!\n<br />\n<br />------------------------------------------------------------------------------------\n<br />\n<br />Well now this has been fixed! You can now grow flowers in the previously omitted tiles and gain the special honey benefits. Also, the previous implementation always gave preference to the closest left, right, top, and bottom flowers (in that order). Now, the preference is given to the most profitable flower (according to [url=https://stardewvalleywiki.com/Bee_House]Stardew Valley Wiki[/url]\uFEFF). Wild Honey can still be received\u00A0if no grown flower lies within the range of the Bee House.\n<br />\n<br />Enjoy your honey!\n<br />\n<br />------------------------------------------------------------------------------------\n<br />\n<br />Working versions of Stardew Valley:\n<br />- 1.3.32\n<br />\n<br />Installation:\n<br />- Install\u00A0[url=https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started#Getting_started]SMAPI[/url]\n<br />- Unzip this mod to the mods folder\n<br />\n<br />[url=https://github.com/KirbyLink/BeeHouseFix]Git Repository for Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3013",
+	"Version": "1.1.0",
+	"Updated": "2018-11-29T19:29:35+00:00",
+	"Downloads": [
+		{
+			"Id": 12942,
+			"Type": "Main",
+			"DisplayName": "Bee House Range Fix",
+			"FileName": "Bee House Range Fix-3013-1-1-0-1543519775.zip",
+			"Description": "Update for compatibility with SDV 1.3.32",
+			"Version": "1.1.0",
+			"SizeInBytes": 50475,
+			"Uploaded": "2018-11-29T19:29:35+00:00",
+			"Mods": [
+				{
+					"Id": "kirbylink.beehousefix",
+					"DisplayName": "BeeHouseFix",
+					"Type": "Smapi",
+					"RelativePath": "BeeHouseFix",
+					"Manifest": {
+						"Name": "BeeHouseFix",
+						"Description": "Fixes bug preventing top/bottom right tiles of bee house radius to not be checked for flowers.",
+						"Author": "KirbyLink",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "2.0.0",
+						"EntryDll": "beehousefix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3013"
+						],
+						"UniqueId": "kirbylink.beehousefix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342399630,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389701,
+		"UploaderId": 26588659,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

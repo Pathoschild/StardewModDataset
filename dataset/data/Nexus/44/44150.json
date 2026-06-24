@@ -1,0 +1,106 @@
+{
+	"Site": "Nexus",
+	"Id": 44150,
+	"Name": "TrueWindow",
+	"Author": "kaniclub",
+	"Description": "[center][size=6][b][i]TrueWindow[/i][/b][/size][/center]\n<br />[center][i]Add real-time outdoor views to TrueWindow-enabled furniture.[/i][/center]\n<br />\n<br />[center][size=4][url=https://ibb.co/fYkr5gwg][img]https://i.ibb.co/0jCYS7b7/b-simple-9-2-L.png[/img][/url][/size][/center]\n<br />\n<br />[b]TrueWindow is [u]not[/u] a mod that adds new windows by itself.[/b]\n<br />\n<br />It is a feature mod that lets compatible furniture display outdoor scenery inside the glass area.\n<br />\n<br />When you place TrueWindow-enabled furniture indoors, the glass part can show a [b]real-time outdoor view[/b], making it feel like you are actually looking outside.\n<br />\n<br />This means TrueWindow is designed to work together with mods or Content Patcher packs that add [b]TrueWindow-compatible furniture[/b].\n<br />\n<br />[center]\n<br />\n<br />[img]https://i.ibb.co/gZTXDm8H/image.gif[/img][/center]\n<br />[b][size=5]Features[/size][/b]\n<br />\n<br />[list]\n<br />[*]Displays real-time outdoor scenery inside the glass area of compatible furniture\n<br />[*]Makes indoor spaces feel like they have actual windows to the outside\n<br />[*]Lets you adjust the view per location through the furniture settings\n<br />[*]Supports multiple display sources\n<br />[*]Real-time location view\n<br />[*]Built-in Mountain image\n<br />[*]Built-in Ocean image\n<br />[*]Built-in Night Sky image\n<br />[*]A custom image defined by a Content Pack\n<br />[*]Lets furniture authors define reserved colors, default view settings, whether right-click config is allowed, and whether furniture glow effects should be rendered\n<br />[/list][center][/center]\n<br />\n<br />[size=5][b]Built-in Image Presets[/b]\n<br />[/size]\n<br />TrueWindow also includes built-in image presets that can be selected as a display source.\n<br />\n<br />[b][center][size=3]Mountain[/size][/center][/b]\n<br />\n<br />[center]\n<br />[img]https://i.ibb.co/hFmRjthq/image.gif[/img][/center]\n<br />\n<br />[center][b][size=3]Ocean[/size][/b][/center]\n<br />[center]\n<br />[img]https://i.ibb.co/zV60r9hQ/image.gif[/img][/url][/center]\n<br />\n<br />[center][size=3][b]Night[/b][b]Sky[/b][/size][/center]\n<br />[center]\n<br />[img]https://i.ibb.co/YFj4CR8B/image.gif[/img][/url][/center]\n<br />\n<br />You can also set your own custom image through a Content Pack by using SpecifiedImage[.\n<br />[center][/center]\n<br />[size=5][b]Important Notes[/b]\n<br />[/size]\n<br />[list]\n<br />[*]TrueWindow is a [b]feature/framework-style mod[/b], not a furniture pack by itself\n<br />[*]At the moment, TrueWindow supports [b]furniture only[/b]\n<br />[*]It does [b]not[/b] currently support buildings, walls, wallpaper, or direct map tile replacement\n<br />[*]To add your own compatible windows, you will usually pair TrueWindow with [b]Content Patcher furniture edits/additions[/b]\n<br />[/list][center][/center]\n<br />\n<br />[size=5][b]Requirements[/b]\n<br />[/size]\n<br />[list]\n<br />[*]SMAPI\n<br />[*]Content Patcher\n<br />[*]Generic Mod Config Menu (optional)\n<br />[/list][url=https://ibb.co/fYkr5gwg][center][/center][center]\uFEFF[/center][/url]\n<br />\n<br />[b][size=6]Settings\n<br />[/size][/b]\n<br />\n<br />TrueWindow has two kinds of settings: [b]main mod settings\u00A0[/b]and\u00A0[b]furniture display settings[/b].\n<br />\n<br />[size=4][b]Main Settings\n<br />[/b][/size]\n<br />[list]\n<br />[*][b]RenderThrottleFrames[/b]\n<br />Minimum number of frames between redraws. Higher values reduce redraw frequency and can improve performance.[*][b]IndoorProbeIntervalTicks[/b]\n<br />How often the mod checks again when no TrueWindow furniture is found in the current indoor area.[*][b]MaxRenderScale[/b]\n<br />Internal upper limit for render scaling.[*][b]MinEditableZoom[/b]\n<br />Minimum zoom value allowed in the furniture display settings.[*][b]MaxEditableZoom[/b]\n<br />Maximum zoom value allowed in the furniture display settings.[/list]\n<br />\n<br />[size=4][b]Furniture Display Settings\n<br />\n<br />[img]https://i.ibb.co/C52Tt0SF/settings.png[/img]\n<br />[/b]\n<br />[/size]\n<br />Right-clicking TrueWindow-enabled furniture lets you change display settings for the current location.  \n<br />These settings are saved in the save data.\n<br />\n<br />[list]\n<br />[*][b][size=3]DisplaySource[/size][/b]\n<br />[size=3]Choose what the furniture displays.[/size][/list][list]\n<br />[*][b][size=3]OffsetX[/size][/b]\n<br />[size=3]Horizontal display offset.[/size][*][b][size=3]OffsetY[/size][/b]\n<br />[size=3]Vertical display offset.[/size][*][b][size=3]Zoom[/size][/b]\n<br />[size=3]Zoom level for the outdoor view or image.[/size][*][b][size=3]ParallaxStrength[/size][/b]\n<br />[size=3]Controls how strongly the view shifts based on player position.[/size][/list][center][/center]\n<br />\n<br />[size=5][b]For Mod Authors / Content Pack Authors[/b]\n<br />[/size]\n<br />If you want to make furniture compatible with TrueWindow, the basic idea is simple:\n<br />\n<br />[list]\n<br />[*]The furniture must be identifiable as a TrueWindow target\n<br />[*]The part of the furniture texture that should display the view must be painted with a reserved color\n<br />[/list]\n<br />\n<br />TrueWindow checks furniture [b]context tags[/b] to determine whether the furniture is compatible.\n<br />\n<br />[size=4][b]Required tag[/b]  \n<br />[/size]truewindow\n<br />\n<br />[size=4][b]Optional tag[/b]  \n<br />[/size]truewindow_id:your_id_here\n<br />\n<br />If truewindow_id is present, TrueWindow uses that ID to look up the matching definition.  \n<br />If it is not present, the furniture's ItemId is used instead.\n<br />\n<br />\n<br />[size=5][b]How the Glass Area Works[/b]\n<br />[/size]\n<br />The part of the furniture texture that should behave like glass must be painted with a [b]reserved color[/b].\n<br />\n<br />The default reserved color is #FF00FF.\n<br />\n<br />Only pixels painted with that color will be treated as the display area.  \n<br />Be careful not to paint the frame or decorative trim with the reserved color unless you want those parts replaced too.\n<br />\n<br />\n<br />[size=5][b]Minimal Setup[/b]\n<br />[/size]\n<br />The smallest possible setup is:\n<br />\n<br />[list]\n<br />[*]Add the truewindow tag to the furniture\n<br />[*]Paint the glass area with #FF00FF\n<br />[*]No truewindow.json is required\n<br />[*]No custom ID is required\n<br />[/list]\n<br />\n<br />Example folder structure:\n<br />\n<br />[code]\uFEFF[CP] YourName.MinimalTrueWindow/\n<br />├─ manifest.json\n<br />├─ content.json\n<br />└─ assets/\n<br />   └─ minimal_window.png[/code]\n<br />[center][/center]\n<br />\n<br />[size=5][b]Full Setup[/b]\n<br />[/size]\n<br />If you want more control, you can use truewindow_id together with truewindow.json.\n<br />\n<br />With the full setup, you can define things like:\n<br />\n<br />[list]\n<br />[*]A specific TrueWindow definition ID\n<br />[*]A custom reserved color\n<br />[*]A default custom image\n<br />[*]Default offsets\n<br />[*]Default zoom\n<br />[*]Parallax strength\n<br />[*]Whether furniture glow effects are rendered\n<br />[*]Whether right-click configuration is allowed\n<br />[/list]\n<br />\n<br />Example folder structure:\n<br />\n<br />[code][CP] YourName.FullTrueWindow/\n<br />├─ manifest.json\n<br />├─ content.json\n<br />├─ truewindow.json\n<br />└─ assets/\n<br />   ├─ full_window.png\n<br />   └─ mountain_view.png\n<br />[/code]\n<br />\n<br />Example SpecifiedImage setting:\n<br />\n<br />[code]\"SpecifiedImage\": \"assets/mountain_view.png\"\n<br />[/code]\n<br />\n<br />You can place the image in the Content Pack root or inside assets, but using a clear relative path such as assets/filename.png is recommended.\n<br />\n<br />\n<br />[size=5][b]Definition File Locations[/b]\n<br />[/size]\n<br />TrueWindow can read definitions from any of the following places:\n<br />\n<br />[list]\n<br />[*]content.json using a TrueWindow section\n<br />[*]truewindow.json\n<br />[*]assets/truewindow.json\n<br />[/list][center][/center]\n<br />\n<br />[size=5][b]Definition Fields[/b]\n<br />[/size]\n<br />[list]\n<br />[*][b]TrueWindowId[/b]\n<br />Identifier used to match the furniture definition.[*][b]ReservedColor[/b]\n<br />The color used for the display area. Defaults to #FF00FF.[*][b]SpecifiedImage[/b]\n<br />A custom image path that can be selected through [b]Specified Image[/b] in the furniture settings.[*][b]RenderLightGlows[/b]\n<br />Whether the furniture's glow effects should be rendered.[*][b]ViewSettings.OffsetX[/b]\n<br />Default horizontal offset.[*][b]ViewSettings.OffsetY[/b]\n<br />Default vertical offset.[*][b]ViewSettings.Zoom[/b]\n<br />Default zoom.[*][b]ViewSettings.ParallaxStrength[/b]\n<br />Default parallax strength.[*][b]AllowRightClickConfig[/b]\n<br />Whether right-click configuration is allowed for that furniture.[/list][center][/center]\n<br />\n<br />[size=5][b]Current Support Scope[/b]\n<br />[/size]\n<br />Currently supported:\n<br />\n<br />[list]\n<br />[*]Furniture: [b]Supported[/b]\n<br />[/list]\n<br />\n<br />Not currently supported:\n<br />\n<br />[list]\n<br />[*]Buildings\n<br />[*]Wall tiles\n<br />[*]Wallpaper\n<br />[*]Direct map tile replacement\n<br />[/list][center][/center]\n<br />\n<br />[size=5][b]Summary[/b]\n<br />[/size]\n<br />TrueWindow is not a mod that adds windows by itself.  \n<br />It is a mod that provides the [b]window-view functionality[/b] for compatible furniture.\n<br />\n<br />If you want to add new windows, use TrueWindow together with a Content Patcher pack or another mod that adds [b]TrueWindow-enabled furniture[/b].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44150",
+	"Version": "1.0.0",
+	"Updated": "2026-03-25T08:24:39+00:00",
+	"Downloads": [
+		{
+			"Id": 161913,
+			"Type": "Main",
+			"DisplayName": "TrueWindow 1.0.0",
+			"FileName": "TrueWindow 1.0.0-44150-1-0-0-1774426742.zip",
+			"Description": "It is a feature mod that lets compatible furniture display outdoor scenery inside the glass area.",
+			"Version": "1.0.0",
+			"SizeInBytes": 68505,
+			"Uploaded": "2026-03-25T08:19:02+00:00",
+			"Mods": [
+				{
+					"Id": "kaniclub.TrueWindow",
+					"DisplayName": "TrueWindow",
+					"Type": "Smapi",
+					"RelativePath": "TrueWindow",
+					"Manifest": {
+						"Name": "TrueWindow",
+						"Description": "Framework mod that renders real-time exterior views inside TrueWindow-enabled furniture.",
+						"Author": "kaniclub",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TrueWindow.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44150"
+						],
+						"UniqueId": "kaniclub.TrueWindow"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342548601,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 161914,
+			"Type": "Optional",
+			"DisplayName": "TrueWindowSample",
+			"FileName": "TrueWindowSample-44150-1-0-0-1774427079.zip",
+			"Description": "Optional Content Patcher pack that adds sample TrueWindow-compatible windows for testing and reference.",
+			"Version": "1.0.0",
+			"SizeInBytes": 6466,
+			"Uploaded": "2026-03-25T08:24:39+00:00",
+			"Mods": [
+				{
+					"Id": "kaniclub.TrueWindowReadyWindowSample.CP",
+					"DisplayName": "TrueWindow Ready Window Sample",
+					"Type": "ContentPack",
+					"RelativePath": "TrueWindowSample\\[CP] TrueWindow Ready Window Sample",
+					"Manifest": {
+						"Name": "TrueWindow Ready Window Sample",
+						"Description": "Sample content pack for a TrueWindow-ready window.",
+						"Author": "kaniclub",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.8.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "kaniclub.TrueWindow",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44150"
+						],
+						"UniqueId": "kaniclub.TrueWindowReadyWindowSample.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342548602,
+				"CategoryId": 3,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430838,
+		"UploaderId": 2578635,
+		"CategoryId": 19,
+		"Adult": false
+	}
+}

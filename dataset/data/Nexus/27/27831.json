@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 27831,
+	"Name": "Tater Toss - Throw Your Loved Ones",
+	"Author": "ichortower",
+	"Description": "[size=3]In Stardew Valley, you can pick up your baby from the crib (once they're big enough to be awake) and toss them into the air. This is fun for them, and hopefully for you, but once they grow older and leave the crib, you can no longer do it. Fortunately, this mod is here to help.[/size]\n<br />\n<br />[size=3]When installed, this mod patches in the ability to toss:\n<br />\n<br />[list]\n<br />[*]Children of crawling and toddling ages\n<br />[*]Farm animals (of any type)\n<br />[*]Pets (of any type)\n<br />[*]Spouses\n<br />[/list]\n<br />More loved ones may become tossable in the future, if I can think of any more.\n<br />\n<br />Source code is available [url=https://github.com/ichortower/TaterToss]on GitHub[/url].\n<br />\n<br />\n<br />[/size][size=5][b][u]Requirements[/u][/b][/size]\n<br />\n<br />[size=3]You will need SMAPI 4.0 or later and Stardew Valley 1.6+. Unzip this mod into your Mods folder as usual, and enjoy![/size]\n<br />\n<br />\n<br />[size=5][b][u]Special Thanks[/u][/b][/size]\n<br />[size=3]\n<br />[/size][list]\n<br />[*][size=3]Airyn, for saving me many headaches by pointing out I could use vanilla animation frames[/size]\n<br />[*][size=3]Airyn (again), for goading me into adding throwable chickens, which became throwable everything[/size]\n<br />[*][size=3]Claire, for having a passion for yeeting[/size]\n<br />[/list]\n<br />\n<br />[size=5][b][u]How to Toss[/u][/b][/size]\n<br />[size=3]\n<br />After exhausting normal interaction with your loved one, interact with them again to toss. This works just like tossing a child from the crib, so you will pause and throw them, then put them down (time will pass during the throw). Loved ones can be tossed only if they are not sleeping, and depending on the type of loved one, certain other restrictions apply:\n<br />\n<br />[list]\n<br />[*]Children: if the\u00A0\"[font=Courier New]UseKeyForChildren[/font]\"\u00A0config setting (see below) is set to true, you will have to hold the throw key while interacting in order to toss.\n<br />[*]Pets: if the\u00A0\"[font=Courier New]UseKeyForPets[/font]\"\u00A0config setting (see below) is set to true, you will have to hold the throw key while interacting in order to toss.\n<br />[*]Farm Animals: you must use the throw key to toss a farm animal.\n<br />[*]Spouses: you must use the throw key to toss a spouse. In addition, you may only throw your own spouse (if you have multiple spouses due to a polyamory mod, it should work for all of them equally, but it won't work on another player's spouse). The spouse must also be an NPC (no throwing other players).\n<br />[/list]\n<br />When you toss any kind of loved one, they will gain a small amount of bonus friendship with you, if possible (once per day).\n<br />\n<br />You can configure the throw key, and in addition you can specify types and/or names of loved ones who should not be throwable using the blocklist option (see below).\n<br />\n<br />\n<br />[/size][size=5][b][u]Configuration[/u][/b][/size]\n<br />\n<br />[size=3]Tater Toss uses the following config values:\n<br />\n<br />[/size][list=1]\n<br />[*][size=3][b]ThrowKey[/b] (default LeftShift):\u00A0which key to hold down in order to toss loved ones who require it. For farm animals, this bypasses the animal menu (renaming, selling, etc.); for spouses, this bypasses kissing (in truth, both work by instantly aborting the action). Pets and children in vanilla do not have an always-available interaction that requires bypassing, but you can choose to require the key if you wish.[/size]\n<br />[*][size=3][b]UseKeyForChildren[/b]\u00A0(default false):\u00A0if set to true, the ThrowKey will also be required in order to throw children. By default (false), no modifier key is needed.[/size]\n<br />[*][size=3][b]UseKeyForPets[/b] (default false):\u00A0if set to true, the ThrowKey will also be required in order to throw pets. By default (false), no modifier key is needed.[/size]\n<br />[*][size=3][b]Blocklist[/b] (default empty):\u00A0a list of strings specifying loved ones who should not be tossed. Each string can represent one of several properties, depending on the type of loved one:[/size]\n<br />[size=3]\n<br />   \uFEFFChildren: an age bracket (\"Crawler\" or \"Toddler\"), or a particular child's name.\n<br />   \uFEFFPets: a type (e.g. \"Cat\"), a breed (e.g. \"ichortower.IchorsCat.Cat\"), or a particular pet's name.\n<br />   \uFEFFFarm Animals: a type (e.g. \"White Cow\") or a particular animal's name.\n<br />   \uFEFFSpouses: an internal name (e.g. \"ichortower.HatMouseLacey_Lacey\") or a display name (e.g. \"Lacey\").\n<br />\n<br />   \uFEFFAny match will prevent the toss and log the block to your SMAPI console. For example, \"Brown Cow\" will block tossing for all brown cows, but \"Zelda\" will block any loved one named Zelda (a child, a pet, a cow, etc.).[/size]\n<br />[/list][size=3]\n<br />These can be set using [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF, but the list option can be a bit cumbersome.\n<br />\n<br />\n<br />[/size][size=5][b][u]Compatibility[/u][/b][/size]\n<br />\n<br />[size=3]This mod uses a set of Harmony patches to do its job, so the usual caveats apply for that (other mods which patch the same methods may conflict). This mod uses only two skipping prefixes, which are to prevent children and pets from trying to walk around during a toss; if a child skips an update like this, it will attempt to update after landing (pets just ignore it).\n<br />\n<br />This should be compatible with any mod that changes the sprites of your children or farm animals, since it uses vanilla animation frames. It should also be compatible with all farm animals, all pets, and all custom NPC spouses, since they all use the same code and I intentionally set it up to work as generically as possible. However, it won't (yet?) work with any of the mods that turn your children into NPCs, since (I believe) they stop being the Child type of NPC, and the NPC toss code only permits spouses.\n<br />\n<br />I am given to understand that this mod lets you toss animals created by\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14493]the MEEP mod[/url], such as\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5787]Baron Munchington[/url]. This was not done on purpose, but it's a feature, not a bug.\n<br />\n<br />I don't yet know of any specific conflicts. Please let me know if you find any!\n<br />\n<br />\n<br />[/size][size=5][b][u]Known Issues[/u][/b][/size]\n<br />\n<br />[size=3][list]\n<br />[*]In multiplayer, when tossing a crawling child, farmhands may see\u00A0swaddled-infant frames instead of crawling ones (after the toss, the child will quickly return to normal). I believe this is also due to inconsistent sync, but I haven't figured out a workaround yet.\n<br />[*]In multiplayer, farmhands may not be able to fully stop a walking toddler when tossing them. Like above, I haven't found a solution yet.\n<br />[*]If an NPC spouse is at a spot with schedule dialogue (which repeats infinitely), there is no way to exhaust interaction with them, so tossing is not possible until they move.\n<br />[/list]\n<br />[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/27831",
+	"Version": "1.3.0",
+	"Updated": "2025-08-01T03:16:11+00:00",
+	"Downloads": [
+		{
+			"Id": 138878,
+			"Type": "Main",
+			"DisplayName": "TaterToss-1.3.0",
+			"FileName": "TaterToss-1.3.0-27831-1-3-0-1754018171.zip",
+			"Description": "Adds the ability to throw pets and spouses, and fixes a few things. See changelog for details.",
+			"Version": "1.3.0",
+			"SizeInBytes": 28349,
+			"Uploaded": "2025-08-01T03:16:11+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.TaterToss",
+					"DisplayName": "Tater Toss - Throw Your Loved Ones",
+					"Type": "Smapi",
+					"RelativePath": "TaterToss",
+					"Manifest": {
+						"Name": "Tater Toss - Throw Your Loved Ones",
+						"Description": "Allows you to throw older children, farm animals, pets, and spouses.",
+						"Author": "ichortower",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TaterToss.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:27831",
+							"GitHub:ichortower/TaterToss"
+						],
+						"UniqueId": "ichortower.TaterToss"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342525566,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414519,
+		"UploaderId": 188952864,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 28551,
+	"Name": "Playable Piano - Instrument Framework",
+	"Author": "Mushroomyx",
+	"AuthorLabel": "Mushroomy",
+	"Description": "This Mod by allows you to play the Dark and the Upright Piano with your Keyboard and playback of MIDI files. Additionally allows Content Packs to add their own stationary and portable Instruments with custom Sound.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]How to use[/size]\n<br />Sit down at either Piano, and press a key on your keyboard, when using a portable Instrument hold the Item and left click.This will open up a menu where you can choose between the Freeplay Mode and the Midi Playback Mode.\n<br />\n<br />[size=4]Freeplay Mode[/size]\n<br />During Freeplay Mode simply press a Key on your Keyboard to play a sound.\n<br />The Keyboard layout emulates a piano, and can be seen in the image below.\n<br />\n<br />[img]https://i.imgur.com/Vaq2Hfp.png[/img]\n<br />\n<br />By pressing [i]Ctrl[/i], [i]Shift[/i]\u00A0and [i]Tab[/i]\u00A0you can switch between lower, middle and upper pitches, giving you a total Pitch-range from C3 to C9.\u00A0\n<br />\n<br />[size=4]Midi Playback Mode[/size]\n<br />In Playback Mode you can automatically play MIDI Files\u00A0([font=Courier New].mid[/font]) located in the Mods songs Folder (\"[font=Courier New]Playable_Piano/assets/songs[/font]\"). Simply click a File from the List and the Playback should start.\n<br />\n<br />[i]Note: If you used a previous Version of this mod, in Version 1.3.0 the songs folder has been moved and thus your songs might not show up. [/i]\n<br />\n<br />[img]https://i.imgur.com/ugVWgT4.png[/img]\n<br />\n<br />[size=5]Customizability[/size]\n<br />You can customize the mod by changing the sound of any Instrument added either by the mod itself, or other Content Packs. \n<br />\n<br />[size=4]Change sound\n<br />[/size]\n<br />If you want to change the sound of the piano, or any other Instrument simply edit the config.json in the Mod\"s Folder.\n<br />The line syntax is as follows\n<br />\n<br />[code]\"&lt;Instrument Name&gt;\": \"&lt;Sound Name&gt;\"\n<br />[/code]\n<br />Simply replace [font= Courier New]&lt;Instrument Name&gt;[/font] with the name of the Instrument and [font= Courier New]&lt;Sound name&gt;[/font] with the name of the sound.\n<br />If you have a custom sound file add it to the [font= Courier New]assets/sounds[/font] folder (only [font= Courier New].wav[/font] files are supported), and write the files name without the extension into the config. If you don't have custom sounds you can add any sound from the base game, those can be found on\u00A0[url=https://www.stardewvalleywiki.com/Modding:Audio#Sound]this Wiki Page[/url].\n<br />\n<br />If, for example, you wanted to turn your Dark Piano into a cat Piano, simply add the following line to the config:\n<br />\n<br />[code]\uFEFF\"Dark Piano\" : \"cat\"\n<br />[/code]\n<br />[size=4]Custom sound file[/size]\n<br />If you want to add a custom sound file, as was shown in the previous section, there are a few things to consider. In order for the Keyboard to align with a Piano Keyboard, the selected [font=Courier New] .wav[/font] file should have a Pitch of C, optimally C6 so the MIDI Playback Notes are correct.\n<br />\n<br />Additionally adding only a single Sound will give you a limited octave range from C5 to C7. To get the full range of supported Pitches you have to add two additional soundfiles, one for low Pitches and one for high.\n<br />\n<br />Adding a [font=Courier New]\"&lt;baseSoundFileName&gt;Low.wav\"[/font], pitched down two octaves, will give you two octaves below the base range .\n<br />Adding a [font=Courier New]\"&lt;baseSoundFileName&gt;High.wav\"[/font], pitched up two octaves, will give you two octaves above the base range.\n<br />\n<br />You don't have to add both files, if you for example only wanted additional lower sounds, you can just add the low pitched sound file.\n<br />When adding these Files it is important, that [b]Low[/b] and [b]High[/b] are properly capitalized, as otherwise the Mod won't recognize them. For the extended ranges, no changes have to be made to the config besides adding the base sound.\n<br />\n<br />[size=5]Mod Authors[/size]\n<br />If you want to add an Instrument to your own Mod you can either use Content Patcher, or you can use the Mod's API.  For more details check out the docs for mod author's on [url=https://github.com/Ash-shroom/Playable_Piano]the mod's github repository[/url].\n<br />[size=4]Content Patcher[/size]\n<br />To add a custom Instrument using Content Patcher, you just have to add the TriggerAction\u00A0[font=Courier New]Mushroomy.PlayablePiano_AddSound &lt;Name/ItemId of your Instrument&gt; &lt;ID of your sound&gt;[/font] to your content.json. This method works for Items and sittable furniture. An Example for a furniture based Instrument, can be found in my [url=https://www.nexusmods.com/stardewvalley/mods/28764]Toy Piano Mod[/url]. Examples for Item Instruments would be my [url=https://www.nexusmods.com/stardewvalley/mods/29173]Playable Ocarina[/url] or my\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/32515]Playable Kalimba[/url] Mod.\n<br />[size=4]C# API[/size]\n<br />If you want to make an Instrument, which can't be added with Content Patcher, f.e. because it is part of the map like [url=https://www.nexusmods.com/stardewvalley/mods/32556]Elliott's Piano[/url], you can use the provided API to directly open the Mod's UI. It contains a single method [font=Courier New]playInstrument[/font] and takes the name of the sound the Instrument should use as it's argument (e.g. toyPiano, Mushroomy.PlayablePiano_Piano, flute).\n<br />[size=4]Sound Files[/size]\n<br />The Mod comes with its own Piano Sound [font=Courier New]Mushroomy.PlayablePiano_Piano[/font] and with additional files for extended pitch ranges for the base games [font=Courier New]toyPiano[/font] and [font=Courier New]flute[/font] sounds. You can use those, if you don't have or don't want to add your own Sounds.\n<br />\n<br />[size=4]Troubleshooting[/size]\n<br />if a custom Instrument Instrument doesn't seem to work even though it should, check the [font=Courier New]config.json[/font] in the Playable Piano Folder. There should be a line for every Instrument the Mod recognizes, with a corresponding sound. If the Instrument doesn't appear in the list, type [font=Courier New]reset_instrument_sounds[/font] into the SMAPI Console and check the config again. If it still doesn't show up, please contact the corresponding Mod author.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6.15 on Linux/macOS/Windows.\n<br />[*]Works in single player, and (mostly) in split-screen mode.\n<br />[*]Works in Multiplayer, if both Players have the Mod installed, and the corresponding Soundfile for an Instrument\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[url=https://github.com/Ash-shroom/Playable_Piano]Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28551",
+	"Version": "1.5.1",
+	"Updated": "2025-09-28T11:51:55+00:00",
+	"Downloads": [
+		{
+			"Id": 144032,
+			"Type": "Main",
+			"DisplayName": "Playable Piano",
+			"FileName": "Playable Piano-28551-1-5-1-1759060315.zip",
+			"Description": "",
+			"Version": "1.5.1",
+			"SizeInBytes": 1808698,
+			"Uploaded": "2025-09-28T11:51:55+00:00",
+			"Mods": [
+				{
+					"Id": "Mushroomy.Playable_Piano",
+					"DisplayName": "Playable_Piano",
+					"Type": "Smapi",
+					"RelativePath": "Playable_Piano",
+					"Manifest": {
+						"Name": "Playable_Piano",
+						"Description": "Makes the Dark and Upright Piano playable",
+						"Author": "Mushroomy",
+						"Version": "1.5.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Playable_Piano.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28551"
+						],
+						"UniqueId": "Mushroomy.Playable_Piano"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530720,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342415239,
+		"UploaderId": 48836523,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

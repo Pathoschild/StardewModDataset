@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 27045,
+	"Name": "LoonCallsMod",
+	"Author": "grahamn1198",
+	"AuthorLabel": "Graham Nelson",
+	"Description": "[b][u][size=3]Installation Instructions[/size][/u][/b]\n<br />[i]SMAPI version 4.0 or higher is required to install and run the Loon Calls Mod.\n<br />\n<br />[list]\n<br />[*]Download mod files and extract LoonCallsMod folder\n<br />[*]Copy the LoonCallsMod folder into your SMAPI mods folder at *..&#92;Steam&#92;steamapps&#92;common&#92;Stardew Valley&#92;Mods*\n<br />[*]Mod will be loaded when opening the game via SMAPI.\n<br />[/list]\n<br />[/i][b][u][size=3]Configuration[/size][/u][/b]\n<br />By default, loon calls will be audible during Spring, Summer, and Fall, between 6pm and midnight, when the player is in the Farm, Mountains, or Forest. These settings can be altered in the config.json file:\n<br />\n<br />[code]\"CallStartTime\": 1800\n<br />\"CallEndTime\": 2400[/code]\n<br />24h time (represented as an integer) at which calls may begin/end being triggered. Ex. 1800 = 18:00 or 6:00pm\n<br />\n<br />[code]\"CallOdds\": 3[/code]\n<br />This defines the likelihood that a call will be played at each time interval (every 10 in-game minutes). Ex. if CallOdds = 3,\u00A0\n<br />there is a 1/3 chance that a call will be triggered at each 10 minute interval. A higher number means a lower chance to hear a call.\n<br />\n<br />[code]\"MinimumCallInterval\": 20[/code]\n<br />This is the minimum amount of time between calls being triggered. By default, a call will not be triggered more than once every 20 in-game minutes.\n<br />\n<br />[code]\"RestrictedSeasons\": [ \"winter\" ][/code]\n<br />String array that defines seasons in which calls are not triggered. Formatted as a comma separated list of season names, all lowercase.\u00A0\n<br />Ex. a value of:[code][ \"winter\" , \"spring\" ]\n<br />[/code]would restrict calls to only Summer and Fall.\n<br />\n<br />[code]\"EnableDebugConsole\": false[/code]\n<br />Enables/disables logging to SMAPI console.\n<br />\n<br />[b]\uFEFFSource code available via\u00A0[url=https://github.com/Graham-Nelson73/LoonCallsMod]GitHub[/url][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/27045",
+	"Version": "1.0.5",
+	"Updated": "2024-08-16T19:25:26+00:00",
+	"Downloads": [
+		{
+			"Id": 109401,
+			"Type": "Main",
+			"DisplayName": "LoonCallsMod",
+			"FileName": "LoonCallsMod-27045-1-0-5-1723836326.zip",
+			"Description": "Ambient Loon calls for Stadrew Valley",
+			"Version": "1.0.5",
+			"SizeInBytes": 1994294,
+			"Uploaded": "2024-08-16T19:25:26+00:00",
+			"Mods": [
+				{
+					"Id": "GrahamNelson.LoonCallsMod",
+					"DisplayName": "LoonCallsMod",
+					"Type": "Smapi",
+					"RelativePath": "LoonCallsMod",
+					"Manifest": {
+						"Name": "LoonCallsMod",
+						"Description": "Adds ambient loon calls which play at random intervals",
+						"Author": "Graham Nelson",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LoonCallsMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:27045",
+							"GitHub:Graham-Nelson73/LoonCallsMod"
+						],
+						"UniqueId": "GrahamNelson.LoonCallsMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342496089,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342413733,
+		"UploaderId": 220908162,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

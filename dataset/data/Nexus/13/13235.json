@@ -1,0 +1,140 @@
+{
+	"Site": "Nexus",
+	"Id": 13235,
+	"Name": "Neon Signs",
+	"Author": "undare",
+	"Description": "[size=3]An\u00A0[b]add-on\u00A0[/b]mod for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/9346]Organic Lamps\u00A0[/url]\u00A0&lt;--([color=#ffe599][b]Required[/b][/color])\n<br />Want more lamps?\n<br />-[url=https://www.nexusmods.com/stardewvalley/mods/10045]Mineral Lamps[/url]\u00A0 add-on\n<br />Want to start decorating faster?\n<br />-[url=https://www.nexusmods.com/stardewvalley/mods/13204]Catalogues are Cheap[/url]\n<br />\n<br />\n<br />\n<br />To craft each of the new lamps, you will only need\u00A0\n<br />-[color=#d5a6bd][b]1 Refined Quartz[/b][/color]\n<br />\n<br />Colors include :\n<br />[b]-[color=#dd7e6b]Red (Apples)[/color]\n<br />-[color=#f6b26b]Orange (Fire)[/color]\n<br />-[color=#ffe599]Yellow (Sun)[/color]\n<br />-White (Stars)\n<br />-[color=#b6d7a8]Green (Leaves)[/color]\n<br />-[color=#6fa8dc]Blue (Moon)[/color]\n<br />-[color=#d5a6bd]Violet (Hearts)[/color][/b]\n<br />\n<br />\n<br />The new crafting station is located in [color=#e69138][b]Robin[/b][/color]´s lamp workshop at the upper top left corner (Black desk with neon lights)\n<br />\n<br />They all can be powered with a\u00A0[color=#ffe599]Sap\u00A0[/color]unit.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13235",
+	"Version": "1.0.0",
+	"Updated": "2022-08-03T00:06:45+00:00",
+	"Downloads": [
+		{
+			"Id": 58394,
+			"Type": "Main",
+			"DisplayName": "Neon Signs",
+			"FileName": "Neon Signs-13235-1-0-0-1659485205.rar",
+			"Description": "FIrst release\n<br />-7 Colored neon signs\n<br />-English/Spanish support",
+			"Version": "1.0.0",
+			"SizeInBytes": 74911,
+			"Uploaded": "2022-08-03T00:06:45+00:00",
+			"Mods": [
+				{
+					"Id": "Undare.LampWorkshopNeonCCS",
+					"DisplayName": "Lamp Workshop NeonSigns CCS Component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_NeonSigns\\[CCS]LWNS_CCS_Component",
+					"Manifest": {
+						"Name": "Lamp Workshop NeonSigns CCS Component",
+						"Description": "Enables crafting spot for Neon Lamps.",
+						"Author": "Undare",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.CustomCraftingStations"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Undare.LampWorkshopNeonCCS"
+					}
+				},
+				{
+					"Id": "Undare.LampWorkshopNeonCP",
+					"DisplayName": "LampWorkshop Neon CP component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_NeonSigns\\[CP]LWNS_CP_Component",
+					"Manifest": {
+						"Name": "LampWorkshop Neon CP component",
+						"Description": "Adds Neon Lamps - locationPatch",
+						"Author": "Undare",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopJA",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopPFM",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Undare.LampWorkshopCCS",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13235"
+						],
+						"UniqueId": "Undare.LampWorkshopNeonCP"
+					}
+				},
+				{
+					"Id": "Undare.LampWorkshopNeonJA",
+					"DisplayName": "LampWorkshop Neon JA component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_NeonSigns\\[JA]LWNS_JA_Component",
+					"Manifest": {
+						"Name": "LampWorkshop Neon JA component",
+						"Description": "Adds the Neon Machines to the lamp Workshop",
+						"Author": "Undare",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Undare.LampWorkshopNeonJA"
+					}
+				},
+				{
+					"Id": "Undare.LampWorkshopNeonPFM",
+					"DisplayName": "LampWorkshop NeonSigns PFM component",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LampWorkshop_NeonSigns\\[PFM]LWNS_PFM_Component",
+					"Manifest": {
+						"Name": "LampWorkshop NeonSigns PFM component",
+						"Description": "Adds the lamp workshop Rules and Config for the machines for the Neon Signs",
+						"Author": "Undare",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Digus.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Digus.ProducerFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Undare.LampWorkshopNeonPFM"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342445082,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399923,
+		"UploaderId": 12004908,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

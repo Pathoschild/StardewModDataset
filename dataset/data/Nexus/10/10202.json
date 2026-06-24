@@ -1,0 +1,133 @@
+{
+	"Site": "Nexus",
+	"Id": 10202,
+	"Name": "Custom Obelisks",
+	"Author": "XxHarvzBackxX",
+	"Description": "[center][size=5][b][u]Custom Obelisks\n<br />[/u][/b][/size]\uFEFF[/center]This framework lets you add your own custom warp obelisks to the Wizard's building menu, as well as your own warp totems via JA.\n<br />\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF[size=4][b]How does it work?\n<br />[/b][/size]This mod works by loading each content pack into a theoretical 'pile' and then sifting through that pile when you open the Wizard's menu, adding each one. It also has to work around Stardew's save serialisation, by using a custom serialisation method that can be seen in more detail in the source code linked below.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   [size=4][b]Can I make a content pack?\n<br />[/b][/size]Of course! Look at the documentation listed below for help with creation of a CO content pack. An example pack that adds a Secret Woods Obelisk is also listed on the files tab for your usage.\n<br />\n<br />\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF[u]Installation[/u]\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   [size=4]1. Download this mod and all of its dependencies from the Nexus files tab.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF2. Drag all the mod folders into your 'Mods' folder.\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF3. Enjoy!\n<br />\n<br />[/size][url=https://github.com/XxHarvzBackxX/Custom-Obelisks]Source code.[/url]\n<br />[url=https://github.com/XxHarvzBackxX/Custom-Obelisks/blob/main/Content-Pack-Guide.md]Content pack creation guide.[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10202",
+	"Version": "1.1.0",
+	"Updated": "2021-11-26T15:44:42+00:00",
+	"Downloads": [
+		{
+			"Id": 47475,
+			"Type": "Main",
+			"DisplayName": "Custom Obelisks",
+			"FileName": "Custom Obelisks-10202-1-1-0-1637941453.zip",
+			"Description": "Custom Obelisks Framework",
+			"Version": "1.1.0",
+			"SizeInBytes": 15674,
+			"Uploaded": "2021-11-26T15:44:13+00:00",
+			"Mods": [
+				{
+					"Id": "harvz.CustomObelisks",
+					"DisplayName": "Custom Obelisks",
+					"Type": "Smapi",
+					"RelativePath": "Custom Obelisks",
+					"Manifest": {
+						"Name": "Custom Obelisks",
+						"Description": "Allows you to add custom obelisks to be sold at the wizard's shop.",
+						"Author": "XxHarvzBackxX",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.5.0",
+						"EntryDll": "Custom Obelisks.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10202"
+						],
+						"UniqueId": "harvz.CustomObelisks"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342434163,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 47476,
+			"Type": "Main",
+			"DisplayName": "Secret Woods Obelisk",
+			"FileName": "Secret Woods Obelisk-10202-1-1-0-1637941482.zip",
+			"Description": "Example content pack.",
+			"Version": "1.1.0",
+			"SizeInBytes": 10191,
+			"Uploaded": "2021-11-26T15:44:42+00:00",
+			"Mods": [
+				{
+					"Id": "harvz.SecretWoodsObeliskCO",
+					"DisplayName": "(CO) Secret Woods Obelisk",
+					"Type": "ContentPack",
+					"RelativePath": "Secret Woods Obelisk\\[CO] Secret Woods Obelisk",
+					"Manifest": {
+						"Name": "(CO) Secret Woods Obelisk",
+						"Description": "Adds a secret woods obelisk to the game. Example pack for CO.",
+						"Author": "XxHarvzBackxX",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "harvz.CustomObelisks"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "harvz.SecretWoodsObeliskCO"
+					}
+				},
+				{
+					"Id": "harvz.SecretWoodsObeliskCP",
+					"DisplayName": "(CP) Secret Woods Obelisk",
+					"Type": "ContentPack",
+					"RelativePath": "Secret Woods Obelisk\\[CP] Secret Woods Obelisk",
+					"Manifest": {
+						"Name": "(CP) Secret Woods Obelisk",
+						"Description": "Adds a secret woods obelisk to the game. Example pack for CO.",
+						"Author": "XxHarvzBackxX",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "harvz.SecretWoodsObeliskCP"
+					}
+				},
+				{
+					"Id": "harvz.SecretWoodsObeliskJA",
+					"DisplayName": "(JA) Secret Woods Totem",
+					"Type": "ContentPack",
+					"RelativePath": "Secret Woods Obelisk\\[JA] Secret Woods Totem",
+					"Manifest": {
+						"Name": "(JA) Secret Woods Totem",
+						"Description": "Adds a secret woods totem to the game. Example pack for CO.",
+						"Author": "XxHarvzBackxX",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "harvz.SecretWoodsObeliskJA"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342434164,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396890,
+		"UploaderId": 111722573,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

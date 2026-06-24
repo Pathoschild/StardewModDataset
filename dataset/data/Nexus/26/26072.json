@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 26072,
+	"Name": "Sprite Sheet Extender",
+	"Author": "ioicaleb",
+	"Description": "PLEASE NOTE! THIS MOD DOES NOT ADD ANY SPRITES. THIS MOD IS A UTILITY TO BE USED BY MOD CREATORS TO ALLOW THEM TO ADD SPRITES. IF YOU ARE NOT MAKING YOUR OWN MOD OR USING THIS AS PART OF SOMEONE ELSE'S MOD, THIS MOD WILL NOT DO ANYTHING AND WILL GIVE YOU AN ERROR.\n<br />\n<br />This mod allows you to expand the farmer sprite sheet beyond the original 125 frame limit. All it requires is adding this mod and then adjusting the config.json file to set the x and y offset to align the hair and clothing with the added sprite. Each sprite needs x AND y coordinates to be added. If not added, events will throw an index out of range error.\n<br />\n<br />--Set Up--\n<br />\n<br />-Open your mod folder\n<br />\n<br />-Open manifest.json\n<br />\n<br />-Add to dependencies :\u00A0\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"UniqueID\": \"mooseybrutale.spriteextender\",\n<br />\u00A0 \u00A0 \u00A0 \"IsRequired\": \"false\"\n<br />\u00A0 \u00A0 }\n<br />\n<br />-Launch SMAPI\n<br />\n<br />-If you have GMCM installed, go to settings and add the number of sprites you are adding to the sprite sheet\n<br />\n<br />\u00A0 \u00A0 -If you are only using one gender, you only need to set one gender. Leaving it at 0 will be fine.\n<br />\n<br />\u00A0 \u00A0 -If you do not have GMCM, these changes can be made in your mod folder in the now added SSXConfig.json file but will require a game restart to take effect.\n<br />\n<br />-Load or start new save\n<br />The mod will automatically add dummy values for the amount of sprites you specified (first time only).\n<br />These values all default to [0,0](Format: [x-offset, y-offset])\n<br />\n<br />Your sprite frames should now be usable!\n<br />\n<br />--Changing Sprite Offset--\n<br />\n<br />If your farmer's hair, clothing and accessories do not line up when using your sprite, you need to change the offset settings.\n<br />\n<br />You can do this by going into the SSXConfig.json file and editing the pair for the sprite or by editing it in the SMAPI console using the setFrameOffset command.\n<br />\n<br />--Console Commands--\n<br />\n<br />setFrameOffset - allows you to modify x and y offset for the indicated sprite\n<br />\u00A0 \u00A0 Changes made will automatically be saved to your SSXConfig.json file and loaded anytime someone loads your mod.\n<br />\u00A0 \u00A0 Format: setFrameOffset &lt;frame index&gt; &lt;x-offset&gt; &lt;y-offset&gt;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 &lt;frame index&gt; - The frame number of the sprite you want to edit. MUST BE GREATER THAN 125!\n<br />\u00A0 \u00A0 \u00A0 \u00A0 &lt;x-offset&gt; The number of pixels to horizontally offset the farmer's hair and clothes (positive right, negative left)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 &lt;y-offset&gt; The number of pixels to vertically offset the farmer's hair and clothes (positive down, negative up)\n<br />\n<br />getFrameOffset - allows you to see what the current offset settings are for the indicated sprite\n<br />\u00A0 \u00A0 &lt;frame index&gt; - The frame number of the sprite you want to check. MUST BE GREATER THAN 125!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/26072",
+	"Version": "1.2.1",
+	"Updated": "2025-03-06T14:58:49+00:00",
+	"Downloads": [
+		{
+			"Id": 126786,
+			"Type": "Main",
+			"DisplayName": "Spritesheet Extender Utility",
+			"FileName": "Spritesheet Extender Utility-26072-1-2-1-1741273129.zip",
+			"Description": "Add conditions to catch if no mods are found to avoid showing error message.",
+			"Version": "1.2.1",
+			"SizeInBytes": 15616,
+			"Uploaded": "2025-03-06T14:58:49+00:00",
+			"Mods": [
+				{
+					"Id": "mooseybrutale.spriteextender",
+					"DisplayName": "Sprite Sheet Extender",
+					"Type": "Smapi",
+					"RelativePath": "SpritesheetExtender",
+					"Manifest": {
+						"Name": "Sprite Sheet Extender",
+						"Description": "Extends parameters to add more sprites to farmer sprite sheet",
+						"Author": "MooseyBrutale",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpritesheetExtender.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:26072"
+						],
+						"UniqueId": "mooseybrutale.spriteextender"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513474,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342412760,
+		"UploaderId": 54003797,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

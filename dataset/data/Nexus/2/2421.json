@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 2421,
+	"Name": "Roc's Reseed Multiplayer",
+	"Author": "rocslayer",
+	"AuthorLabel": "James Overton",
+	"Description": "When you harvest a crop, vanilla or modded, you now get a chance to acquire its seed.\u00A0 Chance is based on farming skill with a default of about 5% with no skill and 33% with lv 10 farming.\u00A0 You can modify the numbers governing these chances in the config file. \n<br />\n<br />Config Options\n<br />\n<br />\u00A0 BaseChanceToGetSeed : 5.0,\u00A0\u00A0\u00A0    \uFEFF% chance everybody gets\n<br />\u00A0 ExtraChancePerFarmSkill : 2.0,    \uFEFF% added based on farmers skill\n<br />\u00A0 ExtraChancePerFarmPerk : 4.0,   \uFEFF% added if you have the Tiller or Agriculturist professions, counts for each\n<br />\u00A0 ExtraChancePerDayToGrow : 0.5,\u00A0\u00A0\u00A0\u00A0 % chance based on how long the crop need to mature, quick crops have a smaller chance\n<br />\u00A0 ReharvestablePenalty : 0.33\u00A0\u00A0\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 % penalty applied to crops that can be harvested more than once, so corn has 1/3 the chance of giving seeds\n<br />\n<br />\u00A0new config options\n<br />\u00A0 ExtraChancePerPlayer : 2.0   \uFEFF   \uFEFFEach player beyond the main player adds 2% to the chance to harvest a seed\n<br />\u00A0 CheatAlwaysGetSeed : false   \u00A0\u00A0\u00A0\u00A0\u00A0 If this is marked true then the mod ignores all chance and always gives you a seed            \n<br />\u00A0 SecondSeedChance : true   \uFEFF   \uFEFF\u00A0 When marked true if you get a seed you get a chance to get a 2nd seed, chance is 33% of base chance\n<br />\n<br />The mod uses the crops data from the\u00A0 Crops.xnb data file, so any mod that adds crop to this file will also work here.\n<br />\n<br />Tested in Stardew Valley 1.3 and SMAPI 2.6\n<br />\n<br />The mod now created the seed at the location of the crop.\u00A0 This fixes the Jumino issue from earlier and the fact that other players can harvest crops.\n<br />\n<br />Note, setting your base chance to 100 wont guarantee a seed.\u00A0 Negative penalties can lower your chances.\u00A0 If you want 100% seed use the new cheat, or set your base chance to at least 300%\n<br />\n<br />In multiplayer the mod is set to only runs on the main players game.\u00A0 It uses the main players stats to determine the seed chances, but any player can trigger the effect when harvesting.\u00A0 If anyone knows how I can get an array of players I could fix this.\u00A0 (make a bug request)\u00A0 Also as the mod only affects the main player the harvest with scythe effect only affects the main player, so other players will have to have the harvest with scythe mod to get that effect.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2421",
+	"Version": "2.0.0",
+	"Updated": "2018-06-19T17:21:19+00:00",
+	"Downloads": [
+		{
+			"Id": 9701,
+			"Type": "Main",
+			"DisplayName": "Roc's Reseed",
+			"FileName": "Roc's Reseed-2421-2-0.zip",
+			"Description": "Main file",
+			"Version": "2.0",
+			"SizeInBytes": 13712,
+			"Uploaded": "2018-06-19T17:21:19+00:00",
+			"Mods": [
+				{
+					"Id": "Roc.Reseed",
+					"DisplayName": "Reseed",
+					"Type": "Smapi",
+					"RelativePath": "StardewReseed",
+					"Manifest": {
+						"Name": "Reseed",
+						"Description": "Allows havesting crops to produce seeds based on your farming skill",
+						"Author": "James Overton",
+						"Version": "2.0.0",
+						"EntryDll": "StardewReseed.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Roc.Reseed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342396389,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389109,
+		"UploaderId": 2865717,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

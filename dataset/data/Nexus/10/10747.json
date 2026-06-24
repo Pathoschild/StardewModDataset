@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 10747,
+	"Name": "SAAT - Audio API and Toolkit",
+	"Author": "ZeroMetres",
+	"AuthorLabel": "ZeroMeters",
+	"Description": "[size=5][b][size=3]Audio API &amp; Audio Management for SMAPI, without any utilization of HarmonyLib.\n<br />[/size][/b][size=2]Add custom music to your mods![/size][/size]\n<br />[line]\n<br />[b][size=5]What does this mod do?[/size][/b]\n<br />\n<br />SAAT is a framework aimed to adding, managing, and modifying audio tracks in Stardew Valley. In addition, it seeks to improve the audio engine at a later date, as XNA / MonoGame's audio engine is lackluster in memory management and support. It aims to be harmony-less.\n<br />\n<br />You can see examples of how to add custom audio tracks from the [url=https://github.com/Dawilly/SAAT]Documentation on Github[/url]\n<br />\n<br />[line]\n<br />[size=4][b]New in v1.1.2:[/b][/size]\n<br />- Fixed a bug that resulted in the warning message \"Could not find a CueDefinition with the name 'title_day' \"\n<br />\n<br />[size=4][b]New in v1.1.1:[/b][/size]\n<br />- A fail-safety feature to prevent the game from crashing when a cue is incorrectly called / not found. \n<br />-- Upon failure, a \"Defaulting Cue\" is played. This cue plays silence. \n<br />- The ability to forcibly add audio tracks to the jukebox. See \"addtojukebox\" command.\n<br />-- This is to cover migrations. Mods that migrated from Custom Music to SAAT will have all custom tracks removed from the jukebox playlist due to the prefix (cm:) notation CM required. SAAT validates all tracks in the jukebox and removes ones that are missing to prevent.\n<br />\n<br />[size=4][b]New in v1.1.0:[/b][/size]\n<br />- Add Audio Track Settings.\n<br />-- You can now set an entry in tracks.json to continuously loop.\n<br />-- You can now set an entry to immediately add itself to the jukebox when a new game is created.\n<br />- The command \"setdebug\" has been renamed to \"audiodebug\", as there is a high possibility of conflict with other mods.\n<br />- The command \"gen_track_json\" has been renamed to \"tracktemplate\".\n<br />- The command \"audio_allocs\" has been renamed to \"audioallocs\".\n<br />- The audioallocs command has had some formatting fixes. \n<br />- The audioallocs command has an optional parameter now. Adding a track id will provide further details for a specific track.\n<br />- Some internal restructuring was done.\n<br />- Documentation update.\n<br />\n<br />[size=4][b]Current Functionality:[/b][/size]\n<br />Allow brand new music and sound effects to be added into Stardew Valley\n<br />Allows music to be added into the jukebox.[size=4][b]\n<br />\n<br />Not Yet Implemented / Upcoming features:[/b][/size]\n<br />\n<br />[b]Audio Track Replacement / Overrides\n<br />[/b]An individual can replace replace existing audio tracks with another, overriding vanilla assets in a non-destructable manner.[b]\n<br />\n<br />Audio Signal Processing (APS or DPS)[/b]\n<br />\n<br />Upcoming feature that will allow for audio to undergo low-pass, high-pass, altered pitch, effects, and more without the need to create another track.\n<br />\n<br />[b]Proper memory management[/b]\n<br />\n<br />This is to be the prime feature of the API. As of now, Stardew Valley relies on XNA / MonoGame to handle memory management for audio. The memory management is poor in design, as it loads all or nothing. Typically, audio is chunked into memory rather than retailing it all at once. This creates a very large consumption of memory.\n<br />\n<br />In example, the winter music tracks are loaded into memory at the beginning of the game. Even if its spring. You won't hear the audio track for 3/4th of the game, yet it is still consuming memory.\n<br />\n<br />Note: This subset of the API / Mod will be written in C. Native is required to ensure performance.\n<br />\n<br />[b]Packed Audio Format[/b]\n<br />\n<br />In conjunction with proper memory management, audio is to be compacted into binary files on a per mod basis. This allows for faster loading / unloading / reloading operating.\n<br />\n<br />It will [b]not be required[/b], but it will optimizes performance. Especially for larger audio files.\n<br />\n<br />[b]Toolkit for Packed Audio Format[/b]\n<br />\n<br />To assist and encourage content creators in optimizing audio for performance, a tool will be provided to create the packed audio format mentioned above.\n<br />\n<br />[url=https://github.com/Dawilly/SAAT]Source Code and Documentation[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10747",
+	"Version": "1.1.2",
+	"Updated": "2022-02-01T02:54:33+00:00",
+	"Downloads": [
+		{
+			"Id": 50147,
+			"Type": "Main",
+			"DisplayName": "SAAT 1.1.2",
+			"FileName": "SAAT 1.1.2-10747-1-1-2-1643684073.zip",
+			"Description": "Fail-Safety feature added.",
+			"Version": "1.1.2",
+			"SizeInBytes": 26747,
+			"Uploaded": "2022-02-01T02:54:33+00:00",
+			"Mods": [
+				{
+					"Id": "ZeroMeters.SAAT.API",
+					"DisplayName": "SAAT.API",
+					"Type": "Smapi",
+					"RelativePath": "SAAT\\SAAT.API",
+					"Manifest": {
+						"Name": "SAAT.API",
+						"Description": "Audio API for SMAPI",
+						"Author": "ZeroMeters",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SAAT.API.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10747"
+						],
+						"UniqueId": "ZeroMeters.SAAT.API"
+					}
+				},
+				{
+					"Id": "ZeroMeters.SAAT.Mod",
+					"DisplayName": "SAAT.Mod",
+					"Type": "Smapi",
+					"RelativePath": "SAAT\\SAAT.Mod",
+					"Manifest": {
+						"Name": "SAAT.Mod",
+						"Description": "Custom Audio Loader & Management for SMAPI",
+						"Author": "ZeroMeters",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SAAT.Mod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "ZeroMeters.SAAT.API",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "ZeroMeters.SAAT.Mod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342436835,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397435,
+		"UploaderId": 136787243,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

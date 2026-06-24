@@ -1,0 +1,162 @@
+{
+	"Site": "Nexus",
+	"Id": 33181,
+	"Name": "bezajel's Nari English Translation and 1.6 Update",
+	"Author": "bezajel",
+	"AuthorLabel": "reque and bezajel",
+	"Description": "Nari is a fun, helpful, and mysterious character whose story I would describe as a metafictional romantic tragedy. The original mod is available [url=https://www.nexusmods.com/stardewvalley/mods/18830]on Nexus in both Korean and Chinese[/url] versions (and [url=https://cafe.naver.com/starvall/423587]on Naver Café in the original Korean[/url]), but hasn't yet been updated to 1.6.\n<br />\n<br />This mod does a number of things:\n<br />\n<br />[list]\n<br />[*]Translates the mod into English;\n<br />[*]Provides 1.6 update and bug-fix patches (for English, Korean, and Chinese versions);\n<br />[*]Offers a few optional immersion and compatibility edits that go beyond the scope of translation.\n<br />[/list]\n<br />I have also drawn a[url=https://www.nexusmods.com/stardewvalley/mods/33177] vanilla-style portrait[/url]\uFEFF that I recommend if you don't want to or can't use the original HD portrait. The optional immersion tweaks in particular are designed to use my version of portraits, and the impact will be lessened by using a portrait with less emotional variance. There are however some very pretty HD portraits linked on the mod's Naver Café page. [b]Please try not to look closely at the portrait files before using the mod[/b], as the last few portraits contain spoilers. I have excluded those portraits from the mod preview images!\n<br />\n<br />\n<br />\n<br />[i][size=4]There is a CP version and four .JSON replacement versions of this mod.\n<br />\n<br />[list]\n<br />[*]CP version:\u00A0   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF \u00A0 \u00A0 \u00A0 \u00A0 \uFEFF✅English translation - ✅Updated for 1.6* - ✅Optional immersion tweaks\n<br />[*]JSON replacement (1.6 version)\u00A0   \uFEFF✅English translation\uFEFF\uFEFF - ✅Updated for 1.6 -\u00A0⛔️Optional immersion tweaks\n<br />[*]JSON replacement (legacy)   \uFEFF \u00A0 \u00A0 \u00A0 \uFEFF✅English translation - ⛔️Updated for 1.6 \u00A0 - ⛔️Optional immersion tweaks\n<br />[*]\uFEFFNari 1.6 - Korean 한국어   \uFEFF   \uFEFF \u00A0 \u00A0 \u00A0 \u00A0 ⛔️English Translation\uFEFF\uFEFF\uFEFF\u00A0- ✅Updated for 1.6 -\u00A0⛔️Optional immersion tweaks\n<br />[*]\uFEFFNari 1.6 - Chinese 中文\uFEFF   \uFEFF   \uFEFF \u00A0 \u00A0 \u00A0 \u00A0 ⛔️English Translation\uFEFF\uFEFF\uFEFF\u00A0- ✅Updated for 1.6 -\u00A0⛔️Optional immersion tweaks\n<br />[/list]\n<br />Please pay attention to the requirements and installation instructions for each, as they are different.[/size][/i]\n<br />\n<br />\n<br />\n<br />[size=5][b]1.6 Update + Bug-Fix[/b]\n<br />[/size]\n<br />\n<br />❗️There was one bug that I was unable to fix in the CP version of this mod, and was only able to fix in the JSON replacement versions. I still recommend the CP version for its' immersion tweaks, so I offer the following suggestions / options:\n<br />\n<br />[spoiler]\n<br />[list]\n<br />[*][b]Beginner way:[/b]\n<br />[/list][b]\n<br />[/b][list]\n<br />[*]Download and use the CP version, but [i]additionally[/i]\u00A0apply one of the replacement versions to the original mod (1.6 is best but either one will do). The file you specifically want to replace is the 'content.json' file.\n<br />[/list]\n<br />\n<br />\n<br />   \uFEFF   \uFEFF[i][b]OR\n<br />\n<br />\n<br />\n<br />[/b][/i][list]\n<br />[*][b]Advanced way:[/b]\u00A0\n<br />[/list][list]\n<br />[*]Open the content.json file of the [u]original mod[/u] (Notepad or TextEdit is fine), find the following patch (block of code):\n<br />[/list]\n<br />[code]   \uFEFF{\n<br />      \"LogName\": \"Dialogue 1\",\n<br />      \"Action\": \"Load\",\n<br />      \"Target\": \"Characters/Dialogue/Nari\",\n<br />      \"FromFile\": \"dialogue/Nari1.json\",\n<br />      \"When\": {\"HasSeenEvent\": \"9654906\"},\n<br />    },\n<br />[/code]\n<br />[list]\n<br />[*]Make sure it matches [b]exactly[/b] - it must be the \"Dialogue 1\" block, not another dialogue block.\n<br />[/list][list]\n<br />[*]Copy the following line of code, and paste it so it replaces the \"When\" line in the content.json file (use ctrl-c and ctrl-v).\n<br />[/list]\n<br />[code]   \uFEFF\"When\": {\"HasSeenEvent |contains=9654906\": true,\"HasSeenEvent |contains=9654908\": false},\n<br />[/code]\n<br />[list]\n<br />[*]Make sure you didn't change anything other than that one line, then save the content.json.\n<br />[/list]\n<br />\n<br />\n<br />   \uFEFF   \uFEFF[b][i]OR[/i][/b]\n<br />\n<br />\n<br />\n<br />[list]\n<br />[*][b]Lazy way:[/b]\n<br />[/list][b]\n<br />[/b][list]\n<br />[*]Just use the CP mod and don't worry about it.\u00A0There is one dialogue file that will fail to load and you will see errors in your SMAPI console after the 10❤️, but the overall experience of a missing dialogue file will be similar to the limited interactions caused by the event (see the event guide below). If you want to read the dialogue lines or see the portraits, open the \"dialogue/NariEnd.json\" file, and refer to the last two pictures on the portrait sheet. Please wait until AFTER you have seen the 10 heart event before doing this.\n<br />[/list][u][/spoiler]\n<br />[/u]\n<br />\n<br />I only updated\u00A0what was necessary for the mod to function fully in its current state.\u00A0\uFEFFI understand that Requeksm does have intentions to update and possibly expand the original mod, with a completely unknown-to-me timeline, but I have no desire to step on their toes.\n<br />\n<br />Specifically, I updated CP format versions, converted character info from the old dispositions system, resolved some conflicting Load patches, and troubleshot some broken dialogue. I specifically did not convert to i18n or replace deprecated event preconditions that were still functional.\n<br />\n<br />\n<br />\n<br />[size=5][b]Immersion Options[/b]\n<br />[/size]\n<br />\n<br />My optional immersion tweaks can be configured in the [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url], or you can edit the 'config.json' file that is created the first time you run the mod. All options are 'true' by default but can be set to 'false' to turn that immersion feature off.\n<br />\n<br />All immersion tweaks are based on my personal perceptions of Nari and her story, and are not necessarily reflective of the original author's intent. That said, I aimed to make as few assumptions as possible, and rather than adding anything new to her story I have tried to apply her story to fill a few gaps that may have been overlooked, or created by game updates.\u00A0\n<br />\n<br />There are four features that you can turn on or off. Details of the changes made by each option are under spoilers.\n<br />\n<br />\n<br />[size=3][u]SocialFeatures[/u][/size]\n<br />[size=3]How Nari is unlocked, and which social features are enabled.[/size]\n<br />\n<br />[spoiler]\n<br />Nari will be hidden from the calendar and social tab until you have met her.\n<br />You will not meet her until you have viewed the 0❤️ event. (This event is very easy to trigger, and sets the scene well).\n<br />Nari can no longer visit the island, but I have shifted the single line of dialogue used in that case to the Green Rain Day.\n<br />Friendship with Nari will not be a requirement for perfection, and she will not appear in the end credits slide show.\n<br />[/spoiler]\n<br />\n<br />\n<br />[size=3][u]DialogueTweaks[/u][/size]\n<br />[size=3]Additional dialogue to avoid generic responses.[/size]\n<br />\n<br />[spoiler]\n<br />Added dialogue for a handful of keys which could otherwise trigger generic responses, such as being hit by a slingshot, dumpster diving, accepting birthday gifts or rejecting bouquets, mermaid pendants, and movie tickets. Nari will not be able to go to the movies.\n<br />[/spoiler]\n<br />\n<br />\n<br />[size=3][u]EventTweaks[/u][/size]\n<br />[size=3]Minor event edits, such as making use of a wider range of portraits.[/size]\n<br />\n<br />[spoiler]\n<br />Nari will show slightly greater variation in facial expressions in events, which are particularly calibrated to my [url=https://www.nexusmods.com/stardewvalley/mods/33177]Vanilla-style Nari Portraits[/url].\n<br />Mr.Qi will show more appropriate facial expressions in the events he appears in, rather than grinning through everything.\n<br />Built in compatibility with extended MrQi portrait sheets from\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/31511]Friendable Mr.Qi[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/16724]Mister Qi is a Real NPC[/url]\uFEFF.\n<br />[/spoiler]\n<br />\n<br />\n<br />[size=3][u]ScheduleTweaks[/u][/size]\n<br />[size=3]Add a light schedule so Nari moves around a bit.[/size]\n<br />\n<br />\uFEFF[spoiler]\n<br />Nari will mostly stay close to her spawn location in the mountains, but she will now move between a few different spots randomly throughout the day.\n<br />When it rains, she will shelter by the Adventurer's Guild, if the way there is clear..\n<br />After her 8❤️ events she will spend Fridays in the Forest, or, in Summer, on the Beach.\n<br />[/spoiler]\n<br />\n<br />\n<br />\n<br />\n<br />[b][size=5]Requirements[/size]\n<br />[/b]\n<br />\n<br />[size=3]For the\u00A0[u]CP version + JSON replacement (1.6 version):\n<br />[/u][/size][size=2]\n<br />[/size][list]\n<br />[*][size=2]Stardew Valley 1.6 - (CP designed and tested on 1.6.14)[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\uFEFF \u00A0-\u00A0(CP designed and tested on\u00A04.2.1)[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF -\u00A0\uFEFF(CP designed and tested on\u00A01.6.1)[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/18830]Custom NPC Nari[/url]\uFEFF 1.1.0 (Korean or Chinese version - CP tested with Korean)[/size]\n<br />[*][size=2](Optional but recommended):\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/33177]Vanilla Nari Portraits[/url]\uFEFF[/size]\n<br />[/list]\n<br />[size=3]For the\u00A0[u]JSON replacement (legacy version)[/u]:\n<br />\n<br />[/size][size=2][list]\n<br />[*]Stardew Valley\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/18830]Custom NPC Nari[/url]\uFEFF 1.1.0 (Korean or Chinese version)\n<br />[*][size=2](Optional but recommended):\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/33177]Vanilla Nari Portraits[/url]\uFEFF\u00A0\uFEFF[/size]\n<br />[/list]\n<br />the JSON replacement (legacy version) is a translation and bug-fix only, provided for users not yet on 1.6. I cannot attest to compatibility.[/size]\n<br />\n<br />\n<br />\n<br />[size=5][b]Installation Instructions\n<br />[/b][/size]\n<br />\n<br />[size=3][u]CP version:[/u][/size]\n<br />\n<br />[list=1]\n<br />[*]Install all the prerequisite mods according to their instructions.\n<br />[*]Download and extract (unzip) the CP version of this mod.\n<br />[*]Move the Folder '\uFEFF[CP] \uFEFFbezajel's Nari English Translation + 1.6 Update' to your Mods folder.\n<br />[*]If you want, follow the instructions listed above under '1.6 Update + Bug-fix' to fix the final bug!\n<br />[*]\uFEFFAll done! - now when you use the original mod + this mod, Nari will speak English.\n<br />[/list]\n<br />\n<br />[u][size=3]JSON replacement versions:\n<br />[/size][/u]\n<br />[list=1]\n<br />[*]Install all the prerequisite mods according to their instructions.\n<br />[*]Locate the original (Korean or Chinese) mod in your Mods folder - it should be named '\uFEFF[CP] Nari'. It could be in a containing folder named '\uFEFFCustom NPC Nari'\n<br />[*]Download and extract (unzip) the JSON replacement version of this mod. This mod only contains the specific files that have been translated..\n<br />[*]Copy and paste the folder '\uFEFF[CP] Nari' from\u00A0[u]this mod[/u], into the same location as that folder of the original mod. Select the option to 'merge' the folders.\n<br />[*]All done! - now when you use the original mod, Nari will speak English (unless you used the Korean or Chinese update).\n<br />[/list]\n<br />\n<br />[size=3][u]Portraits for all versions:[/u][/size]\n<br />\n<br />The original mod uses HD portraits which require additional steps:\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/999]Portraiture[/url]\uFEFF according to that mod's instructions..\n<br />[*]Make a new folder inside the 'Portraits' folder in the Portraiture mod. Name is something like 'Nari Portrait'.\n<br />[*]Copy the file 'Nari.png' from the 'portraits' folder original '[CP] Nari' mod, and paste it inside the folder you made inside Portraiture.\n<br />[*]\uFEFFWhen you first speak to Nari press 'p' while the dialogue box is open and her portrait will load.\n<br />[/list]\n<br />If you don't want to use portraiture and the original portrait, I recommend my [url=https://www.nexusmods.com/stardewvalley/mods/33177]Vanilla Nari Portrait[/url]\uFEFF mod.\n<br />\n<br />\n<br />[size=5][b]Event Guide[/b][/size]\n<br />\n<br />\n<br />[size=3]‼️ Please be aware that this mod contains some noise, glitch, and error effects, forced dialogue choices, a birthday event that becomes unviewable after a certain point, and a final event that . For this reason it's recommended to view event information.\n<br />\n<br />[/size]\uFEFF~~ if you have the SocialFeatures immersion tweak enabled, Nari is unlocked by the 0❤️ event ~~\n<br />\uFEFF~~ if you wish to see the Birthday event you must view it [u]before[/u] the 8❤️ events ~~\n<br />~~ be prepared - the player character is forced to be mean to Nari in the 8❤️ events ~~\n<br />\uFEFF~~ after the 10❤️ event,\u00A0Nari's dialogue becomes fixed and she is no longer giftable\u00A0~~\n<br />\n<br />[size=3]Details below the cut.\n<br />[/size]\n<br />[spoiler]\n<br />\uFEFF\n<br />0❤️ - Backwoods - 1400-2400\n<br />\n<br />4.1❤️ - Mountains - 0600-1100\n<br />\n<br />4.2❤️ - Mountains - 1200-1600 - seen 4.1❤️\n<br />\n<br />4.3❤️ - Mountains - 1700-2000 - seen 4.2❤️\n<br />\n<br />6.1❤️ - Mountains - seen 0❤️\n<br />\n<br />\uFEFF6.2❤️ - Forest - seen 6.1❤️ - 10% chance\n<br />\n<br />~\n<br />\n<br />\uFEFFBirthday\uD83C\uDF81 - Mountain - spring 25 -\u00A0NOT\u00A0seen\u00A08.1❤️, 8.2❤️, or 10❤️ - carry Poppyseed Muffin\n<br />\n<br />~\n<br />\n<br />8.1❤️ - Forest - 1600-2000 - seen 4.3❤️ - seen 6.2❤️ - carry Wheat Flour\n<br />\n<br />8.2❤️ - Beach - 0800-1600 - seen 8.1❤️ - sunny\n<br />\n<br />10❤️ - Mountain - 2400-2600 - seen 6.1❤️ - seen 8.2❤️ - carry Sugar\n<br />\n<br />\n<br />[/spoiler]\n<br />\n<br />\n<br />[size=5][b]Translation FAQ[/b][/size]\n<br />\n<br />\n<br />[b][size=4]What makes you qualified to translate this mod?\n<br />[/size][/b][spoiler]\n<br />Literally nothing. I do not speak Korean. I know I'm not the ideal candidate for this job. However - I have studied linguistics and multiple languages formally and informally. I'm deeply interested in languages and aware of the complexities of translation. I'm a well educated and well travelled native English speaker. I'm extremely meticulous and thorough. I use triangulation methods such as multiple translation sources, backwards translations, translating text at multiple levels (paragraph, sentence, word, morphemes + graphemes as required!), reference to other translated versions, web searches, forum posts and websites linking native speakers to language learners, and anything else I can think of to make sure that the translation is as accurate as it can be. If I get even a whiff of a cultural reference or strange phrase I'll be looking up idioms or reading folklore. I cross reference with Stardew's official translations and make sure I understand the in-game context of dialogue. I go back on translations I've already marked as done and revise them as I've seen repeating motifs or achieve a greater understanding of the characters. I'm proficient enough in CP to not break a mod in the course of translation.\n<br />\n<br />I do my due diligence, and then some.\n<br />[/spoiler]\n<br />[b][size=4]\uFEFFDid you use AI?\n<br />[/size][/b][spoiler]\n<br />Short answer: yes. I used a triangulation of Naver Papago (excellent for Korean), DeepL, and Google Translate. I did NOT just throw the whole file in a translator, give it a cursory glance, and say good to go. I understand the reluctance to use AI in translation (and as an Artist, I'm firmly against AI in Art), but I find [b][i]careful[/i][/b] use of AI as one of the few acceptable uses of AI. Please also read my answer to the above question for more context.\n<br />[/spoiler]\n<br />[b][size=4]Why make a new translation?\n<br />[/size][/b][spoiler]\n<br />There is another English translation of this mod on Nexus. I looked at it. I considered using it. But it didn't meet my standards. It's true I have high standards, but there were errors and comprehension issues in the other translation that I could not overlook, and some places where AI output has clearly been used without correction.\n<br />[/spoiler]\n<br />[b][size=4]What is the difference between this and the other translation?\n<br />[/size][/b][spoiler]\n<br />I can say with confidence that my translation is more thoroughly edited, and less buggy. My mod is more up to date. There are some differences arising from the fact that they translated the Chinese version of the mod, while I translated the original Korean. They have also made some more comprehensive changes, including a schedule that I believe conflicts with some of the dialogue, and a couple of completely re-written events (I don't know if these were written by the translator or translated from a version no longer available). The re-written events are fine, but they deviate further from the original mod than I was willing to go with my translation and immersion tweaks.\n<br />[/spoiler]\n<br />[b][size=4]What if I notice something wrong?\n<br />[/size][/b]\n<br />Please let me know if something is buggy or some dialogue looks wrong. While I have tried to use American English spelling and word choice to fit in with the game, my spellchecker and I use New Zealand English spelling, so something may have slipped through. I was also unable to test every scenario. If you are reporting a bug, please include a [url=https://smapi.io/log]SMAPI log[/url].\n<br />\n<br />\n<br />\n<br />[b][size=5]Acknowledgements\u00A0\n<br />[/size]\n<br />[/b]Thank you to\u00A0[url=https://next.nexusmods.com/profile/requeksm?gameId=1303]requeksm[/url]\uFEFF for creating Nari and granting permission to share this translation.\n<br />\n<br />\n<br />[u]Mods used in Screenshots:\n<br />[/u]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/28978]Kitsch Blue Grass Recolor[/url]\uFEFF\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24540]Starry Sky Interface Reworked[/url]\uFEFF\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/14643]Customizable Heart Relationship Icon[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/33181",
+	"Version": "1.0.0",
+	"Updated": "2025-05-31T12:23:30+00:00",
+	"Downloads": [
+		{
+			"Id": 133537,
+			"Type": "Main",
+			"DisplayName": "(CP) bezajel's Nari English Translation 1.6 Update",
+			"FileName": "(CP) bezajel's Nari English Translation 1.6 Update-33181-1-01-1748673109.zip",
+			"Description": "Content Patcher version for 1.6. Includes English Translation and optional Immersion Tweaks.\n<br />\n<br />For now it is recommended to install this alongside one of the replacement versions, to completely patch a dialogue bug.\n<br />\n<br />\n<br />\n<br />1.0.1 - fix SMAPI errors",
+			"Version": "1.01",
+			"SizeInBytes": 24628,
+			"Uploaded": "2025-05-31T06:31:49+00:00",
+			"Mods": [
+				{
+					"Id": "bezajel.NariEnglish",
+					"DisplayName": "bezajel's Nari English Translation",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] bezajel's Nari English Translation + 1.6 Update",
+					"Manifest": {
+						"Name": "bezajel's Nari English Translation",
+						"Description": "bezajel's English translation and update of Reque's Custom NPC Nari.",
+						"Author": "bezajel",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "reque.nari",
+								"MinimumVersion": "1.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:33181"
+						],
+						"UniqueId": "bezajel.NariEnglish"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520225,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 133565,
+			"Type": "Optional",
+			"DisplayName": "Nari 1.6 Chinese",
+			"FileName": "Nari 1.6 Chinese-33181-1-0-0-1748693992.zip",
+			"Description": "This is a bug-fix and update to 1.6 for the Chinese version of Nari.\n<br />\n<br />1.6版本適用 - 中文翻译\n<br />\n<br />只需要放入mod文件夹替换原mod即可",
+			"Version": "1.0.0",
+			"SizeInBytes": 10723,
+			"Uploaded": "2025-05-31T12:19:52+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Nari 1.6 - Chinese 中文\\[CP] Nari",
+					"Type": "Invalid",
+					"RelativePath": "Nari 1.6 - Chinese 中文\\[CP] Nari",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520253,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 133566,
+			"Type": "Optional",
+			"DisplayName": "Nari 1.6 Korean",
+			"FileName": "Nari 1.6 Korean-33181-1-0-0-1748694056.zip",
+			"Description": "This is a bug-fix and update to 1.6 for the Korean version of Nari.\n<br />\n<br />1.6 호환 업데이트 - 한국어\n<br />\n<br />안에 같은 이름의 폴더에 덮어 쓰기 하시면 됩니다",
+			"Version": "1.0.0",
+			"SizeInBytes": 10752,
+			"Uploaded": "2025-05-31T12:20:56+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Nari 1.6 - Korean 한국어\\[CP] Nari",
+					"Type": "Invalid",
+					"RelativePath": "Nari 1.6 - Korean 한국어\\[CP] Nari",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520254,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 133567,
+			"Type": "Optional",
+			"DisplayName": "Nari English Replacement Version (1.6 Update)",
+			"FileName": "Nari English Replacement Version (1.6 Update)-33181-1-0-0-1748694137.zip",
+			"Description": "JSON Replacement (merge) version, for 1.6.  English translation and bug fixes.\n<br />\n<br />(no changes to mod, zip file edit only)",
+			"Version": "1.0.0",
+			"SizeInBytes": 15850,
+			"Uploaded": "2025-05-31T12:22:17+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "bezajel's Nari English Translation + 1.6 Update - Replacement Version\\[CP] Nari",
+					"Type": "Invalid",
+					"RelativePath": "bezajel's Nari English Translation + 1.6 Update - Replacement Version\\[CP] Nari",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520255,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 133569,
+			"Type": "Optional",
+			"DisplayName": "Nari English Replacement Version (Legacy)",
+			"FileName": "Nari English Replacement Version (Legacy)-33181-1-0-0-1748694210.zip",
+			"Description": "JSON Replacement (merge) version - English translation and bug fixes for older (pre-1.6) game versions.\n<br />\n<br />(no changes to mod, zip file edit only)",
+			"Version": "1.0.0",
+			"SizeInBytes": 15789,
+			"Uploaded": "2025-05-31T12:23:30+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "bezajel's Nari English Translation - Legacy - Replacement Version\\[CP] Nari",
+					"Type": "Invalid",
+					"RelativePath": "bezajel's Nari English Translation - Legacy - Replacement Version\\[CP] Nari",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520257,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342419869,
+		"UploaderId": 239916077,
+		"CategoryId": 24,
+		"Adult": false
+	}
+}

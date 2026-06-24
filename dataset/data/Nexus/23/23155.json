@@ -1,0 +1,78 @@
+{
+	"Site": "Nexus",
+	"Id": 23155,
+	"Name": "Put Batteries In Fish Tanks",
+	"Author": "BadNetCode",
+	"Description": "This is actually two mods. \n<br />[list=1]\n<br />[*]A SMAPI mod that lets you put Battery Packs into Fish Tank objects.\n<br />[*]A Content Patcher mod that adds a car battery to the aquarium sprite sheet.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23155",
+	"Version": "1.0.0",
+	"Updated": "2024-04-24T20:49:16+00:00",
+	"Downloads": [
+		{
+			"Id": 95083,
+			"Type": "Main",
+			"DisplayName": "Put Batteries In Fish Tanks",
+			"FileName": "Put Batteries In Fish Tanks-23155-1-0-0-1713991756.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 10873,
+			"Uploaded": "2024-04-24T20:49:16+00:00",
+			"Mods": [
+				{
+					"Id": "BadNetCode.BatteryForFishTanks",
+					"DisplayName": "Battery for Fish Tanks",
+					"Type": "ContentPack",
+					"RelativePath": "BatteryForFishTanks",
+					"Manifest": {
+						"Name": "Battery for Fish Tanks",
+						"Description": "adds a battery to the aquarium sprites",
+						"Author": "BadNetCode",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "BadNetCode.PutBatteriesInFishTanks",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23155"
+						],
+						"UniqueId": "BadNetCode.BatteryForFishTanks"
+					}
+				},
+				{
+					"Id": "BadNetCode.PutBatteriesInFishTanks",
+					"DisplayName": "Put Batteries in Fish Tanks",
+					"Type": "Smapi",
+					"RelativePath": "PutBatteriesInFishTanks",
+					"Manifest": {
+						"Name": "Put Batteries in Fish Tanks",
+						"Description": "Lets you put batteries in fish tanks",
+						"Author": "BadNetCode",
+						"Version": "1.0.0",
+						"EntryDll": "PutBatteriesInFishTanks.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:23155"
+						],
+						"UniqueId": "BadNetCode.PutBatteriesInFishTanks"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481771,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342409843,
+		"UploaderId": 45351277,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

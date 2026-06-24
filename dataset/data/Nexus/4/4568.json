@@ -1,0 +1,99 @@
+{
+	"Site": "Nexus",
+	"Id": 4568,
+	"Name": "Child To NPC",
+	"Author": "loe2run",
+	"Description": "[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]How to use[/size]\n<br />This is a modding tool. No mods have currently been released which use Child To NPC, so this is currently only for modders.\n<br />\n<br />This mod is dependent on Content Patcher. Child To NPC creates blank-slate NPCs from children, so modders can use Content Patcher to edit these NPCs. This mod makes use of the Content Patcher API, which allows Child To NPC to create its own custom tokens for CP mods.\n<br />\n<br />Most of the information about this mod and how to use it is on my [url=https://github.com/loe2run/ChildToNPC]GitHub page.[/url]\uFEFF Please read the README over there.\n<br />\n<br />When you run the game with Child To NPC in the mod folder, it will automatically convert any children above the (configurable) age requirement into NPCs. Child To NPC also has configurable parent information for each child in its config.json, as well as some behaviors for NPC children. There are optional console commands which make generating new children and aging them easier for modding/testing purposes, which can be enabled through the config.json.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.4 on Linux/Mac/Windows.\n<br />[*]This mod uses Harmony, so there may be interference with other mods using Harmony to patch the same methods. If you notice any issues, please let me know\n<br />[/list]\n<br />[size=5]How to Uninstall[/size]\n<br />To uninstall Child To NPC, remove the Child To NPC folder. Child To NPC doesn't edit a player's save data, so there won't be any issues removing the mod. All children will be returned as normal.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4568",
+	"Version": "1.2.0",
+	"Updated": "2019-11-26T22:07:43+00:00",
+	"Downloads": [
+		{
+			"Id": 19541,
+			"Type": "Optional",
+			"DisplayName": "Example Child NPC Pack",
+			"FileName": "Example Child NPC Pack-4568-1-0-1571335818.zip",
+			"Description": "This content pack gives a simple example for creating Content Patcher packs for new child NPCs.",
+			"Version": "1.0",
+			"SizeInBytes": 4942,
+			"Uploaded": "2019-10-17T18:10:18+00:00",
+			"Mods": [
+				{
+					"Id": "Loe2run.ExampleChildNPCPack",
+					"DisplayName": "Example Child NPC Pack",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Example Child NPC Pack",
+					"Manifest": {
+						"Name": "Example Child NPC Pack",
+						"Description": "A Content Patcher content pack that gives you an example of what Child To NPC can do.",
+						"Author": "Loe2run",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Loe2run.ChildToNPC",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Loe2run.ExampleChildNPCPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342406229,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 20214,
+			"Type": "Main",
+			"DisplayName": "Child To NPC 1.2.0",
+			"FileName": "Child To NPC 1.2.0-4568-1-2-0-1574806063.zip",
+			"Description": "Requires SMAPI 3.0+ and Stardew Valley 1.4+.",
+			"Version": "1.2.0",
+			"SizeInBytes": 90359,
+			"Uploaded": "2019-11-26T22:07:43+00:00",
+			"Mods": [
+				{
+					"Id": "Loe2run.ChildToNPC",
+					"DisplayName": "ChildToNPC",
+					"Type": "Smapi",
+					"RelativePath": "ChildToNPC",
+					"Manifest": {
+						"Name": "ChildToNPC",
+						"Description": "ChildToNPC is a modding tool which converts a child NPC to a normal NPC for the purposes of creating Content Patcher mods.",
+						"Author": "Loe2run",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ChildToNPC.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4568"
+						],
+						"UniqueId": "Loe2run.ChildToNPC"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342406902,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391256,
+		"UploaderId": 54226772,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

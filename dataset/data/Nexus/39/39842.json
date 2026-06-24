@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 39842,
+	"Name": "Health Break Reminder - Real Life Health and Break Alerts",
+	"Author": "ZeroXPatch",
+	"Description": "[center][size=6][b]\uD83C\uDF3F Stardew Valley Health Reminder – Take a Break, Farmer!\n<br />\n<br />[/b][/size]\uD83D\uDE2Dmy FIRST Stardew in-game MOD\uD83D\uDE2D\n<br />[size=3]\n<br />[/size]Currently support 13 Languages\n<br />\n<br />[size=3]Safe to uninstall anytime. Removing it just disables the features.\n<br />\n<br />[/size][size=3][url=https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=endorsements]https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=endorsements[/url][/size][url=https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=downloads][/url][/center]\n<br />\n<br />Long Stardew sessions make time disappear… but your body still lives in the real world. \uD83D\uDCA7\uD83E\uDDD8‍♂️\n<br />  \n<br />[b]Stardew Valley Health Reminder[/b] is a tiny quality-of-life mod that sends a gentle reminder every X [b]real-life minutes[/b] so you can stretch, drink water, rest your eyes, or simply take a break.\n<br />\n<br />Perfect for marathon farming sessions, streaming, or anyone who wants to enjoy the game without forgetting self-care. \uD83C\uDF3E\uD83D\uDC9B\n<br />\n<br />-------------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=4][b]⭐ Features\n<br />\n<br />[/b][/size]2.0 Update added the following new feature:\u00A0\n<br />\n<br />[list]\n<br />[*][b][color=#00ff00]Version 2.0[/color][/b][list]\n<br />[*]Added an in-game config menu so you can tweak reminder settings without leaving Stardew Valley.\n<br />[*]Introduced Strict Mode, which warns you and then automatically closes the game after a 5-minute countdown.\n<br />[*]Added rotating reminder messages to reduce banner blindness and keep breaks feeling fresh.\n<br />[*]Expanded localization support to 13 languages so more players can use the mod in their native language.\n<br />[/list]\n<br />[/list]\n<br />[color=#00ff00]1.0\n<br />[/color][list]\n<br />[*] Reminders based on [b]real time[/b], not in-game time\n<br />[*] Fully configurable interval: every 10, 15, 30, 60+ minutes – your choice\n<br />[*] Choose between a subtle HUD toast or a big popup dialogue\n<br />[*] Lightweight and unobtrusive – does not interrupt gameplay\n<br />[*] Supports translations via an [b]i18n[/b] folder\n<br />[*] Optional custom reminder text\n<br />[/list]\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/39842/39842-1766609023-85981244.jpg[/img]\n<br />\n<br />\n<br />-------------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=4][b]\uD83D\uDCE5 Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] Install the latest version of [b]SMAPI[/b].\n<br />[*] Download this mod and extract it.\n<br />[*] Place the folder [b]StardewValleyHealthReminder[/b] into your [code]Stardew Valley/Mods/[/code] directory.\n<br />[*] Launch Stardew Valley using the SMAPI launcher.\n<br />[/list]\n<br />\n<br />After the first launch, the mod will create a file called [b]config.json[/b] inside:\n<br />\n<br />[code]Stardew Valley/Mods/StardewValleyHealthReminder/[/code]\n<br />\n<br />This file controls how often and how the reminders show.\n<br />\n<br />\n<br />\n<br />[size=4][b]\uD83D\uDEE0️ Configuration (config.json)[/b][/size]\n<br />\n<br />Open [b]config.json[/b] with any text editor (Notepad, Notepad++, VS Code, etc.).\n<br />\n<br />Default example:\n<br />\n<br />[code]\n<br />{\n<br />  \"EnableMod\": true,\n<br />  \"ReminderIntervalMinutes\": 60,\n<br />  \"ReminderMessageOverride\": \"\",\n<br />  \"UsePopupDialogue\": false\n<br />}\n<br />[/code]\n<br />\n<br />Below is what each option does:\n<br />\n<br />[b]• EnableMod[/b]  \n<br />[i]Type:[/i] true / false  \n<br />Master on/off switch for the mod.  \n<br />[code]true[/code] → the mod runs and shows reminders.  \n<br />[code]false[/code] → the mod is completely disabled.\n<br />\n<br />---\n<br />\n<br />[b]• ReminderIntervalMinutes[/b]  \n<br />[i]Type:[/i] integer (number of minutes)  \n<br />How often to show the reminder, in [b]real-world minutes[/b].\n<br />\n<br />Examples:\n<br />[code]\n<br />15  → reminder every 15 minutes\n<br />30  → reminder every 30 minutes\n<br />60  → reminder every 1 real-life hour (default)\n<br />120 → reminder every 2 hours\n<br />[/code]\n<br />\n<br />The timer only counts while a save file is loaded.\n<br />\n<br />---\n<br />\n<br />[b]• ReminderMessageOverride[/b]  \n<br />[i]Type:[/i] string (text)  \n<br />\n<br />Optional custom reminder text. If this is left empty (`\"\"`), the mod uses the translated message from the [b]i18n[/b] folder.\n<br />\n<br />Example:\n<br />[code]\n<br />\"ReminderMessageOverride\": \"Time to stretch and drink some water!\"\n<br />[/code]\n<br />\n<br />---\n<br />\n<br />[b]• UsePopupDialogue[/b]  \n<br />[i]Type:[/i] true / false  \n<br />\n<br />Controls how the reminder appears:\n<br />\n<br />[code]false[/code] → small HUD toast in the top-left (subtle).  \n<br />[code]true[/code]  → large dialogue popup in the center of the screen (hard to miss).\n<br />\n<br />-------------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=4][b]\uD83C\uDF10 Translations (i18n)[/b][/size]\n<br />\n<br />This mod supports SMAPI’s built-in translation system.\n<br />\n<br />The folder structure looks like this:\n<br />\n<br />[code]\n<br />StardewValleyHealthReminder/\n<br /> ├─ manifest.json\n<br /> ├─ Stardew Valley Health Reminder.dll\n<br /> └─ i18n/\n<br />     ├─ default.json\n<br />     ├─ en.json\n<br />     └─ &lt;your-language&gt;.json\n<br />[/code]\n<br />\n<br />The game automatically loads the file that matches your language.  \n<br />If your language isn’t available yet, you can create a new `&lt;language&gt;.json` file using the same keys as [b]default.json[/b].\n<br />\n<br />-------------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=4][b]\uD83D\uDC96 Why use this mod?[/b][/size]\n<br />\n<br />We all know how easy it is to say “just one more day” in Stardew and suddenly it’s 3 AM.  \n<br />This mod is a small nudge that helps you:\n<br />\n<br />[list]\n<br />[*] Stay hydrated\n<br />[*] Stretch and move around\n<br />[*] Rest your eyes\n<br />[*] Avoid burnout during long play sessions\n<br />[/list]\n<br />\n<br />It doesn’t judge, it just reminds. You decide what to do with the time. \uD83D\uDE0A\n<br />\n<br />-------------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=4][b]✅ Tips[/b][/size]\n<br />\n<br />[list]\n<br />[*] For a gentle reminder every hour, set:\n<br />[code]\"ReminderIntervalMinutes\": 60[/code][*] For short focused sessions, try:\n<br />[code]\"ReminderIntervalMinutes\": 25[/code](Perfect for “Pomodoro”-style play.)[*] Streamers can set a custom message like:\n<br />[code]\"ReminderMessageOverride\": \"Chat reminder: posture check &amp; hydrate!\"[/code][/list]\n<br />\n<br />-------------------------------------------------------------------------------------------------------------------\n<br />\n<br />\uD83D\uDC38 Source Code:\u00A0https://github.com/ZeroXPatch/Projects-for-Nexus-Mod/tree/main/Stardew%20Valley%20Health%20Reminder",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39842",
+	"Version": "2.0",
+	"Updated": "2025-12-04T19:09:09+00:00",
+	"Downloads": [
+		{
+			"Id": 149845,
+			"Type": "Main",
+			"DisplayName": "Stardew Valley Health Reminder",
+			"FileName": "Stardew Valley Health Reminder-39842-2-0-1764875349.zip",
+			"Description": "2.0 Huge update!  Please delete your original mod folder. I have updated DLL ID, name... so mod manager wont work",
+			"Version": "2.0",
+			"SizeInBytes": 21598,
+			"Uploaded": "2025-12-04T19:09:09+00:00",
+			"Mods": [
+				{
+					"Id": "ZeroXPatch.StardewValleyHealthReminder",
+					"DisplayName": "Health Reminder",
+					"Type": "Smapi",
+					"RelativePath": "Stardew Valley Health Reminder",
+					"Manifest": {
+						"Name": "Health Reminder",
+						"Description": "Periodic health/break reminders, with optional strict mode that will close Stardew Valley after a countdown.",
+						"Author": "ZeroXPatch",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewValleyHealthReminder.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:00000"
+						],
+						"UniqueId": "ZeroXPatch.StardewValleyHealthReminder"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536533,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426530,
+		"UploaderId": 141646868,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 20624,
+	"Name": "Quality Conversion Engine",
+	"Author": "WoosterUK",
+	"AuthorLabel": "Wooster",
+	"Description": "[quote][b][size=4]Quantity has a quality all its own[/size][/b]\n<br />Are you annoyed by the fact that processing high-quality crops into artisan goods results in [i]less [/i]profit than processing basic ones? Are you irritated that you have to change the way the Seed Maker works to increase seed yield from high-quality crops? Do you think machines that preserve produce quality make high-quality production too easy? Would you like a fair and balanced way to redress these, and similar, issues?\n<br />\n<br />The Quality Conversion Engine is here to help. This machine will convert your high-quality produce into Normal-quality, but more plentiful, items of the same type! No longer will your Iridium Grape convert to a single item of Grape Wine. Introduce a Quality Conversion Engine into your farm's workflow today, and in 30 in-game minutes, that Iridium Grape will turn into two, yes you read that right folks, [i]two [/i]regular quality Grapes. Now you can produce two Grape Wines where once you could only have had one! Doubles all round![/quote][line][size=5][b]Detailed description[/b][/size]\n<br />The machine always returns Normal quality items. For Iridium inputs, the machine will return two items for each one inserted. For lower-quality items, the machine can work either stochastically (default) or deterministically. In stochastic mode, Silver quality items will double in quantity 25% of the time, and Gold quality items will double 50% of the time. In deterministic mode, the machine accepts Silver items in batches of four, and Gold in batches of two, producing five Normal from Silver and three Normal from Gold.\n<br />\n<br />Normal quality items will not feed into the machine (by hand, at least). The overall result is that total value stays the same (for stochastic operation, this is on average, over multiple items), but quantity will increase. All processing times are based on 30 in-game minutes per unit of input. Thus, Iridium quality items result in effectively higher value-conversion rates than Silver.\n<br />\n<br />Here is a worked example, using vanilla figures. Four Grapes would sell for 320g, and four Grape Wines for 960g, making a profit of 640g. Four Silver Grapes would sell for 400g, which reduces the profit from those four Grape Wines to 560g. If, instead, the Silver Grapes are put through a Quality Conversion Engine, then on average you would expect to get five Normal Grapes back (the actual number is random, and would lie between four and eight). You can then turn those five Normal Grapes into five Grape Wines for 1200g, which means your profit on Silver Grapes goes from 640g to 800g. That's a 25% increase in profit from Normal Grapes to Silver, mirroring the 25% increase in value of the Silver Grapes relative to Normal Grapes.\n<br />[line][size=5][b]Development priorities[/b][/size]\n<br />[list=1]\n<br />[*][s]Publication of source on git service, including use of issues tracker for bugs and feature requests.[/s]\n<br />[*][s]Compatibility check for Stardew Valley 1.6.[/s]\n<br />[*][s]Migrate to Content Patcher rather than JSON Assets and Producer Framework Mod. I expect to be able to simplify the data file, and to improve cross-compatibility with other mods.[/s]\n<br />[*][s]Implement animations and sounds during, and on commencement of, operation.[/s]\n<br />[*]Introduction of additional modes of operation: specifically, [s]a deterministic mode where the player can input 4 Silver to convert to 5 Normal, or 2 Gold to convert to 3 Normal; also[/s] an option to wipe quality.\n<br />[*]Additional optionality, such as to adjust[s] processing times, including changing[/s] the basis, and switching from constant time per unit input to constant time per unit (expected) output.\n<br />[*]Option to adjust availability of Engine, from default, through low (skill-based, low bar), to high (quest-based, high bar).\n<br />[*][s]Option to tune the cost per Engine: Low, Medium or High.[/s]\n<br />[*][s]Option to normalise output from vanilla machines such as Loom (which takes quality into account for quantity, but in a value-destructive fashion) and Fish Smoker (which passes quality through to the output).[/s]\n<br />[*]Option to make the Engine slightly value-destructive, as per the Loom, to mitigate the income effect slightly.\n<br />[*]Make a progressive mode where the Engine can be upgraded from less efficient to more.\n<br />[*]Consider an inverter, decreasing quantity and increasing quality.\n<br />\n<br />[/list][line][size=5][b]Known issues and incompatibilities[/b][/size]\n<br />[b]Colours of flowers.[/b] Flower colours currently combine. I would like to change this so that they are preserved, and encourage players to use my [url=https://www.nexusmods.com/stardewvalley/mods/24977]Hue-Nifier[/url] for colour combination, although current research suggests this may not be possible within Content Patcher.\n<br />\n<br />[b]Compatibility with [url=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/url]\uFEFF.[/b] The way that the conversion recipes are implemented means that they do not appear properly in Lookup Anything. In any case, if they did appear, they would be uninformative since all you would see is a recipe that reads Item : Item.\n<br />[i][i]Action[/i]:[/i] There is no obvious fix, and therefore no plan to address this directly.\n<br />[line][url=https://gitlab.com/stardew_valley/quality_conversion_engine]Source code[/url]. Please preferentially use the bug tracker at Gitlab, rather than the comments section here.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/20624",
+	"Version": "2.1.4",
+	"Updated": "2024-10-02T08:07:13+00:00",
+	"Downloads": [
+		{
+			"Id": 112422,
+			"Type": "Main",
+			"DisplayName": "Quality Conversion Engine",
+			"FileName": "Quality Conversion Engine-20624-2-1-4-1727856433.zip",
+			"Description": "Include beachcombing forage, such as Coral, Nautilus Shells and Rainbow Shells.",
+			"Version": "2.1.4",
+			"SizeInBytes": 27064,
+			"Uploaded": "2024-10-02T08:07:13+00:00",
+			"Mods": [
+				{
+					"Id": "Wooster.CP.QualityConversionEngine",
+					"DisplayName": "Quality Conversion Engine",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Quality Conversion Engine",
+					"Manifest": {
+						"Name": "Quality Conversion Engine",
+						"Description": "Provides a machine to convert quality to quantity",
+						"Author": "WoosterUK",
+						"Version": "2.1.4",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:20624"
+						],
+						"UniqueId": "Wooster.CP.QualityConversionEngine"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342499110,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407312,
+		"UploaderId": 45628237,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"Site": "Nexus",
+	"Id": 31259,
+	"Name": "Level For More (Formerly Mine for More) No Longer Maintained",
+	"Author": "Darkmushu1",
+	"Description": "I'm quitting modding to explore other things in life, whoever wants to take over the project and or maintain just let me know and I can add a redirect link here to your Nexus mod page. \n<br />\n<br />[b]What does this mode do?[/b]\n<br />[list]\n<br />[*]Level for more [b]([/b]formerly was named Mine for More) grants you more drops with learned profession that scales with your skill levels. There are some flat rate amount of drops that are added without the need for professions that are all configurable.[/*]\n<br />[*]The mod uncaps max level so you can level up indefinitely.[/*]\n<br />[*]Mod also allows you to mine on day 1.[/*]\n<br />[/list]\n<br />[b]Does it work for all Professions?[/b]\n<br />Not yet, current it works for Mining, and Foraging professions. I have plans to add to Vanilla profession upgrades for Combat, Fishing, and Farming.\n<br />\n<br />[b]Will this mod work with other mods?[/b]\n<br />All but 1 patch uses postfix harmony patches and so it should be compatible with other mods that uses postfixes.\n<br />This mod prefix harmony patches the level gain so that you can level up forever, if other mods has their own EXP system, there is a config option in this mod to turn off this harmony patch (requires hard reboot after saving to apply).\n<br />\n<br />[b]Mining Profession Bonuses[/b]\n<br />[spoiler]\n<br />[b]Miner [/b]- +1 ore per vein. Bonus ores mined that scales with mining level.\n<br />\n<br />[b]Geologist [/b]- Chance for gems to appear in pairs. Bonus Gems mined that scales with mining level.\n<br />\n<br />[b]Blacksmith [/b]- Metal bars worth 50% more. Learns quick smelt recipe that instantly smelt ores to bars but costs more resources.\n<br />\n<br />[b]Prospector [/b]- Chance to find coal doubled. Coal drops from mining scales with mining level. Coal Nodes has a 1% chance to appear in mines.\n<br />\n<br />[b]Excavator [/b]- Chance to find geodes doubled. Geode drops from mining scales with mining level. Geode Nodes has a 1% chance to appear in mines.\n<br />\n<br />[b]Gemologist [/b]- Gems worth 30% more. Gems drops scales with mining level. Gems Nodes has 1% chance to appear in mines.\n<br />[/spoiler]\n<br />\n<br />\n<br />[b]Foraging Profession Bonuses[/b]\n<br />[spoiler]\n<br />[b]Forester [/b](12) – Trees Drop 25% more wood. Adds more wood and seed drops when tree is chopped and stomp destroyed that scales with level. Also increase tree growth speed.\n<br />\n<br />[b]Gatherer [/b](13) – Chance for Double Harvest of Foraged Items. Adds more foraged items picked up per Foraging Level that scales with level.\n<br />\n<br />[b]Lumberjack [/b](14) – All trees have a chance to drop hardwood. Adds a chance hardwood can drop that increases chance per foraging level, this keeps attempting to add a hardwood with every success and reducing success rate each time, success rate and rate reduction scales with foraging level. Also grants more chance a tree can grow to next stage that can occur various times that increase chance that scales with level.\n<br />\n<br />[b]Tapper [/b](15) – Syrups worth 25% more. Additional 25% faster time to tap syrup that scales per level. Adds additional syrup that can be collected once tapped that scales with level.\n<br />\n<br />[b]Botanist[/b](16) – Foraged Items are always highest Quality. Foraged amount picked up are increased by an additional 25%.\n<br />\n<br />[b]Tracker [/b](17)– Location of forgeable items revealed. Foraged amount picked up are increased by an additional 50%.[/spoiler]\n<br />[b]\n<br />Works with[/b]\n<br />[spoiler]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26606]More Custom Gems and Minerals (Unofficial 1.6 CP Conversion)[/url][/spoiler]\n<br />\n<br />[b]For Developers or Trying to Find out if this mod works with my other mods[/b]\n<br />\u00A0\n<br />[spoiler]\n<br />\n<br />[b]Prefix Harmony Patches\u00A0[/b]\n<br />\u00A0 \u00A0StardewValley.Farmer.gainExperience\u00A0 (This prefix returns false and will prevent original and other mod from work, this can be turned off with config option with hard reset)\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (prefix)\n<br />\n<br />\u00A0 \u00A0StardewValley.GameLocation.OnStoneDestroyed\u00A0 (Does not return false so should allow other prefixes to run and work with other mods)\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (prefix)\n<br />\n<br />[b]Postfix Harmony Patches[/b]\n<br />\u00A0 \u00A0StardewValley.TerrainFeatures.Bush.GetShakeOffItem\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\u00A0 \u00A0StardewValley.TerrainFeatures.ResourceClump.destroy\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\u00A0 \u00A0StardewValley.TerrainFeatures.Tree.dayUpdate\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\u00A0 \u00A0StardewValley.TerrainFeatures.Tree.performTreeFall\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\u00A0 \u00A0StardewValley.TerrainFeatures.Tree.UpdateTapperProduct\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\u00A0 \u00A0StardewValley.GameLocation.OnHarvestedForage\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\n<br />\u00A0 \u00A0StardewValley.Locations.MineShaft.createLitterObject\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />\n<br />\u00A0 \u00A0StardewValley.Menus.LevelUpMenu.getProfessionDescription\n<br />\u00A0 \u00A0 \u00A0 - Darkmushu1.LevelForMore (postfix)\n<br />[/spoiler]\n<br />\n<br />[b]Consider endorsing mod this mod was helpful.\n<br />\n<br />[url=https://github.com/jessevang/MineforMore]Source Code[/url][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31259",
+	"Version": "v2.0.5",
+	"Updated": "2025-12-12T20:24:04+00:00",
+	"Downloads": [
+		{
+			"Id": 143730,
+			"Type": "Main",
+			"DisplayName": "Level For More V2.0.5",
+			"FileName": "Level For More V2.0.5-31259-v2-0-5-1758781901.zip",
+			"Description": "Per Comment requests to now have GMCM drag by 0.05 amount instead of 0.1 for various fields. Can keep previous Config File as this doesn't' change Config Format.\n<br />",
+			"Version": "v2.0.5",
+			"SizeInBytes": 98820,
+			"Uploaded": "2025-09-25T06:31:41+00:00",
+			"Mods": [
+				{
+					"Id": "Darkmushu1.LevelForMore",
+					"DisplayName": "Level For More",
+					"Type": "Smapi",
+					"RelativePath": "LevelForMore",
+					"Manifest": {
+						"Name": "Level For More",
+						"Description": "Progression overhaul for Mining, Foraging (and later Combat/Farming/Fishing).",
+						"Author": "Darkmushu1",
+						"Version": "2.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LevelForMore.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:31259"
+						],
+						"UniqueId": "Darkmushu1.LevelForMore"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530418,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 150454,
+			"Type": "Main",
+			"DisplayName": "Config File to replace Original",
+			"FileName": "Config File to replace Original-31259-1-0-0-1765571044.zip",
+			"Description": "More balance config.json file to replace original for a more balance play through. \n<br />No extra drops at start of game only the bonuses from skill levels ups that are still adjustable if you want it toned down which should just be around 10 fields",
+			"Version": "1.0.0",
+			"SizeInBytes": 2781,
+			"Uploaded": "2025-12-12T20:24:04+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "150454",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537142,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342417947,
+		"UploaderId": 40343530,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

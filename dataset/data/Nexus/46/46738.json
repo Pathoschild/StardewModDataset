@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 46738,
+	"Name": "Ginger Island NPC Exclusions - Mod Testing Tool",
+	"Author": "bezajel",
+	"Description": "[size=4]This mod is designed to help Mod Authors testing Beach appearance, resort dialogue, and Custom NPC functionality on Ginger Island. It greatly increases the chance a Custom or selected Vanilla NPC will visit the Island, by excluding all other vanilla NPCs from the Island selection pool.[/size]\n<br />\n<br />This mod may also be used by mod authors (or players) who want to prevent a beach day from interrupting an NPC's regular schedule.\n<br />\n<br />[size=6][b]Players: the main function of this mod is to [u]prevent[/u] NPCs from visiting Ginger Island. Please consider whether this is a function you need before downloading.[/b][/size]\n<br />\n<br />[b][size=5]Installation[/size][/b]\n<br />The only requirement for this mod is Content Patcher (and SMAPI). It is installed as per usual by extracting to your Mods folder. It is recommended to use in a testing environment with only NPCs you wish to test installed.\n<br />\n<br />\n<br />[b][size=5]Function[/size][/b]\n<br />[list]\n<br />[*]This mod edits the Data/Characters entry for all teen or adult NPCs who usually visit the island, and sets their \"CanVisitIsland\" field to [b]false[/b], preventing them from visiting the island.[/*]\n<br />[*]Vanilla NPCs can be added to the AllowList (in the config.json) to exempt them from this data edit. (Allowing them to visit the island as per vanilla behaviour). Adding an NPC to the AllowList will not enable them to visit the island if they would not already do so in vanilla.[/*]\n<br />[*]Only Custom NPCs or vanilla NPCs on the AllowList will be selected by the game to visit the island.[/*]\n<br />[/list]\n<br />[list]\n<br />[*]Future Update: I intend to build in functionality to exclude SVE and (short) lists of other custom NPCs from the island. In the meantime, they can be added to the content file using the existing format.[/*]\n<br />[/list]\n<br />[b][size=5]Usage Notes[/size][/b]\n<br />[list]\n<br />[*]If there are only a couple of custom NPCs, or vanilla NPCs on the AllowList, they will usually visit the island within a few days assuming all other conditions are met. The exception to this is Jas and Vincent, who are rare visitors - see the last point for details.[/*]\n<br />[*]Only NPCs who are social and have CanVisitIsland set to null or true will visit.[/*]\n<br />[*]Willy's boat must be fixed and the resort must be open (restored and not set to closed) for NPCs to visit.[/*]\n<br />[*]NPCs will also not visit the island on festival days or days it is raining on the island.[/*]\n<br />[*]Leo cannot be excluded from the island.[/*]\n<br />[*]Jas and Vincent will only visit the island on certain days (NOT Tue, Wed, Fri), and in a group with certain adults, who must also be enabled. The groups are: Penny, Jas + Vincent; Jody, Sam + Vincent; Jody, Kent, Sam + Vincent; and Marnie, Shane + Jas. The groups have a low rate of selection, making it more difficult to catch Jas + Vincent on the Island. In my play testing, with only Penny, Jas, and Vincent on the AllowList, it took from early Winter to mid Fall the next year before Jas + Vincent came to the island with her.[/*]\n<br />[/list]\n<br />[b][size=5]Configuration[/size][/b]\n<br />Generic Mod Configuration Menu is recommended for configuring this mod, however if you wish to do it the manual way, a config.json will be generated in the mod folder the first time the mod is loaded by SMAPI.\n<br />\n<br />[size=4]EnableMod[/size] -\u00A0Enable or disable changes from this mod. Checkbox (true/false). Default: true (mod enabled).\n<br />\n<br />[size=4]AllowList[/size] - A list of vanilla NPCs to allow on Ginger Island. Comma separated list. Default: blank (no vanilla NPCs allowed).*\n<br />*By default, all teen or adult vanilla\u00A0NPCs who usually visit the Island are prevented from visiting. Adding them to this list will block the data edit that excludes them from the island, but will not make them visit the island unless they are able to in vanilla.\n<br />\n<br />\n<br />[b][size=5]Shout outs[/size][/b]\n<br />[color=#D4D4D8]Abagaignye was the one who first introduced me to this method for testing beach outfits, back when I was making Shirtless Sebby and Shane. They sent me the basic version of the json, which was my first introduction to EditData, and to Data/Characters. According to Aba, they received the code from someone else - they can't\u00A0[/color][color=#d4d4d8]remember who - so I see it as a legacy passed through generations of modders.[/color]\n<br />[color=#d4d4d8]The technique itself is nothing new, I've just given it a config and packaged it as a stand-alone mod for ease of use. Others have found it useful as well, so I thought it worth publishing here.[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46738",
+	"Version": "1",
+	"Updated": "2026-05-26T15:10:12+00:00",
+	"Downloads": [
+		{
+			"Id": 169032,
+			"Type": "Main",
+			"DisplayName": "Ginger Island NPC Exclusions",
+			"FileName": "Ginger Island NPC Exclusions-46738-1-1779808212.zip",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 1788,
+			"Uploaded": "2026-05-26T15:10:12+00:00",
+			"Mods": [
+				{
+					"Id": "bezajel.GIExclusions",
+					"DisplayName": "(TEST)(CP) Ginger Island NPC Exclusions",
+					"Type": "ContentPack",
+					"RelativePath": "[TEST] [CP] Ginger Island NPC Exclusions",
+					"Manifest": {
+						"Name": "(TEST)(CP) Ginger Island NPC Exclusions",
+						"Description": "Test beach portraits and sprites by excluding non-test NPCs from GI.",
+						"Author": "bezajel",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46738"
+						],
+						"UniqueId": "bezajel.GIExclusions"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555720,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433426,
+		"UploaderId": 239916077,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

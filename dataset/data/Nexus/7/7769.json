@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 7769,
+	"Name": "Animals Die - Old Age - Hunger - Illness",
+	"Author": "Goldenrevolver",
+	"Description": "[size=3]Farm animals can die of old age, hunger or illness, like in the old days of harvest moon.[/size]\n<br />\n<br />[size=3][color=#6aa84f]Compatible with Stardew Valley 1.6.1 and SMAPI 4.0.8. Source available on Github:\n<br />[/color][url=https://github.com/Goldenrevolver/Stardew-Valley-Mods]https://github.com/Goldenrevolver/Stardew-Valley-Mods[/url][/size]\n<br />\n<br />\n<br />[size=3][b]Feature 0:[/b] Popup message when an animal dies from one of the below causes or from a wild animal attack in the base game (if you didn't know your animals could die, here you go[url=https://github.com/Goldenrevolver/Stardew-Valley-Mods]\u00A0[/url][url=https://stardewcommunitywiki.com/Animals#Wild_Animal_Attacks]https://stardewcommunitywiki.com/Animals#Wild_Animal_Attacks[/url]\uFEFF). This message can also be translated so if your language isn't included (currently available: english, german, russian, PT-BR) you can add it yourself (look at the i18n folder,\u00A0contact me if you want me to upload it for everyone).[/size]\n<br />\n<br />[size=3][img]https://staticdelivery.nexusmods.com/mods/1303/images/7769/7769-1611288856-2147306864.png[/img]\uFEFF[/size]\n<br />\n<br />\n<br />[size=3][b]Feature 1:[/b] Death by starvation[/size]\n<br />\n<br />[size=3]Starvation is currently pretty simple.\u00A0After not feeding an animal (or letting it eat grass outside)\u00A0for 5 consecutive days, it dies of starvation\u00A0(can be changed in the config). One day of feeding is enough to fully reset starvation.[/size]\n<br />\n<br />[size=3]Keep in mind that if an animal is stuck outside (i.e. you closed the barn/ coop door) and you go to sleep immediately it does not have time to eat grass, it actually needs the time to physically find and eat grass (base game behaviour).[/size]\n<br />\n<br />\n<br />[size=3][b]Feature 1.5:[/b] Death by dehydration[/size] [size=3](requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6196]Animals Need Water[/url]\uFEFF)[/size]\n<br />\n<br />[size=3]As you can imagine this is really similar to starvation. If you have [/size][url=https://www.nexusmods.com/stardewvalley/mods/6196][size=3]Animals Need Water[/size][/url][size=3]\uFEFF installed,\u00A0animals need to drink water either inside their home or outside. After not getting water for 3 consecutive days, it dies of dehydration\u00A0(can be changed in the config).\u00A0One day of drinking is enough to fully reset dehydration.[/size]\n<br />\n<br />[size=3]Also similarly to starvation, keep in mind that if an animal is stuck outside (i.e. you closed the barn/ coop door) and you go to sleep immediately it does not have time to drink water, it actually needs the time to physically walk to water ([url=https://www.nexusmods.com/stardewvalley/mods/6196]Animals Need Water[/url]\uFEFF behaviour).[/size]\n<br />\n<br />\n<br />[size=3][b]Feature 2:[/b] Death by illness[/size]\n<br />\n<br />[size=3]Illness is calculated as a score that increases as bad things happen to the animal and slowly decreases again if it's doing better. Things that increase the illness score by 1 are:[/size]\n<br />[list]\n<br />[*][size=3]not getting fed or not getting water with [url=https://www.nexusmods.com/stardewvalley/mods/6196]Animals Need Water[/url]\uFEFF\u00A0(doesn't stack if both are the case by design, does not apply if death by starvation/ death by dehydration are not enabled)[/size]\n<br />[*][size=3]getting trapped outside[/size]\n<br />[*][size=3]getting trapped outside and it's bad weather or winter (so a total of two points with the previous condition)[/size]\n<br />[*][size=3]barn/ coop door is open, it's not winter, it's bad weather and there is no heater[/size]\n<br />[*][size=3]barn/ coop door is open and it's winter (having a heater doesn't prevent this)[/size]\n<br />[*][size=3]barn/ coop door is closed, it's winter and there is no heater[/size]\n<br />[*][size=3]an animal got killed by a wild animal attack[/size]\n<br />[*][size=3]the animal just gave birth[/size]\n<br />[/list][size=3]\n<br />These values stack, so if an animal was trapped outside overnight in bad weather, witnessed a wild animal attack and also had no grass to eat outside, it's illness score will increase by 4 points in one night.\n<br />\n<br />If none of the cases apply or you have manually petted your animal the previous day, the illness score decreases by 1.\n<br />\n<br />If the illness score of an animal reaches 7, the animal dies (can be changed in the config). If an animal reaches half the score required to die, there will be a message at the start of the day (and every day moving forward as long as it's still the case) that the animal is ill (missing features: an item to heal illness, change the display messages and emotes to consider illness).\u00A0\n<br />\n<br />\n<br />[b]Feature 3:[/b] Death by old age\n<br />\n<br />Old age is a tricky one. In harvest moon the age values were quite low for being a non industrial farm. I did do some research on the ages, but it's a difficult topic and I also changed some values for gameplay-balancing (if you have any balance recommendations let me know). You can change all these values in the config file. Most users probably won't play a save file long enough to experience deaths by old age:\n<br />[/size][list]\n<br />[*][size=3]Cows: 14-16 years[/size]\n<br />[*][size=3]Chickens: 5-7 years[/size]\n<br />[*][size=3]Ducks: 8-12 years[/size]\n<br />[*][size=3]Rabbits: 8-12 years[/size]\n<br />[*][size=3]Goats: 8-12 years[/size]\n<br />[*][size=3]Sheep: 10-12 years[/size]\n<br />[*][size=3]Pigs: 15-20 years[/size]\n<br />[*][size=3]Ostriches: 40-45 years (yes, I was amazed, too)[/size]\n<br />[*][size=3]Dinosaur: 100 years (because I felt like it)[/size]\n<br />[/list][size=3]\n<br />When an animal reaches its minimal age, it has a chance to die every day, increasing with every day passed.\n<br />\n<br />\n<br />[b]Logging: [/b]\n<br />With currently limited ways of displaying the hidden illness, starvation and dehydration stats you may want to see what the mod is actually doing. You can enable extensive logging in the debug console (the window that always opens when you start SMAPI) by enabling verbose logging for SMAPI. To do this, go to your game folder and then the folder\u00A0smapi-internal. Then open config.json and change\u00A0\"VerboseLogging\": false, to\u00A0\"VerboseLogging\": true, (Be careful to not remove the comma after false/true) and save. You should now see whenever I change one of the three stats.\n<br />\n<br />\n<br />[b]Known issues:[/b]\n<br />None.\n<br />\n<br />\n<br />[b]Requirements:[/b]\n<br />[url=https://smapi.io/]SMAPI[/url]: I built version 1.7.3 of this mod based on version 4.0.8. It should be compatible with a few future versions and a few prior version. You can get the latest version of SMAPI\u00A0[url=https://smapi.io/]here[/url].\n<br />\n<br />\n<br />[b]Installation:[/b]\n<br />[color=#f1c232]I can't restore animals that you accidentally lost. Use this mod at your own discretion and make backups of your saves if needed![/color]\n<br />\n<br />Install SMAPI. Then extract the content of the downloaded zip file into the SMAPI\u00A0mods folder and start the game via the SMAPI launcher or Steam if you have set the launch option for SMAPI in Steam. The config file will be generated inside the folder of the mod. Close the game to edit it and restart the game.\n<br />\n<br />You can also optionally use\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF to change the config ingame without the need to close and restart (otherwise you need to restart) but it is not required to be installed.\n<br />\n<br />Of course the dehydration feature requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6196]Animals Need Water[/url]\uFEFF to be installed, but if you don't want to use it, you don't need the mod.\n<br />\n<br />\n<br />[b]Updating:\u00A0[/b]\n<br />Simply delete the prior version, install the new one and check the updated config created after the first startup (Changes require restart to take effect if you have not made them with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]).\n<br />\n<br />\n<br />[b]Uninstallation:[/b]\n<br />You can delete this mod from your mods folder at any time to remove the features.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7769",
+	"Version": "1.7.3",
+	"Updated": "2024-09-03T17:57:28+00:00",
+	"Downloads": [
+		{
+			"Id": 110583,
+			"Type": "Main",
+			"DisplayName": "Animals Die - Old Age - Hunger - Illness 1.7.3",
+			"FileName": "Animals Die - Old Age - Hunger - Illness 1.7.3-7769-1-7-3-1725386248.zip",
+			"Description": "Fixed incompatibility with Animals Need Water API update\n<br />Fixed age config option names in GMCM",
+			"Version": "1.7.3",
+			"SizeInBytes": 33043,
+			"Uploaded": "2024-09-03T17:57:28+00:00",
+			"Mods": [
+				{
+					"Id": "Goldenrevolver.AnimalsDie",
+					"DisplayName": "Animals Die - Old Age, Hunger, Illness",
+					"Type": "Smapi",
+					"RelativePath": "AnimalsDie",
+					"Manifest": {
+						"Name": "Animals Die - Old Age, Hunger, Illness",
+						"Description": "Farm animals can die of old age, hunger or illness",
+						"Author": "Goldenrevolver",
+						"Version": "1.7.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AnimalsDie.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7769"
+						],
+						"UniqueId": "Goldenrevolver.AnimalsDie"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342497271,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394457,
+		"UploaderId": 5347339,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

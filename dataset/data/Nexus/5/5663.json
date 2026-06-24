@@ -1,0 +1,145 @@
+{
+	"Site": "Nexus",
+	"Id": 5663,
+	"Name": "Quality Scrubber",
+	"Author": "Traktori",
+	"Description": "Adds a new machine that can reset the quality of an item. Anything that is either silver, gold or iridium quality gets turned into normal quality items. By default the output is a normal quality version of the input. Some artisan goods have config options for converting them to generic types.\n<br />\n<br />The machine is meant to aide with completing modded community center bundles that require stacks of items of same quality. Also has optional [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url]\uFEFF integration, but you have to be very careful to not wreck your Iridium quality truffle stacks. If you wish to enable it, download both the main file and the optional file named Quality Scrubber Automate Integration.\n<br />\n<br />Here is other mods that achieve similar things as this:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2007]Magic[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3986]Crop Color Combiner[/url]\uFEFF\n<br />[/list]\n<br />\n<br />[size=5]Install[/size][list=1]\n<br />[*]Install the latest versions of\u00A0[url=https://smapi.io/]SMAPI[/url]\uFEFF\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url]\uFEFF and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/4970]Producer Framework Mod[/url]\uFEFF and their requirements.\n<br />[*]Download this mod and unzip it into\u00A0[font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use\n<br />[/size]You unlock the recipe for the machine at Farming level 2. The recipe is 1 Iron Bar and 1 Refined Quartz. To use the machine you simply click it with the item you wish to reset the quality of, and it takes 30 minutes for it to finish processing.\n<br />\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*][size=2]Works with Stardew Valley 1.4.5 on Windows, and probably on Linus and Mac too.[/size]\n<br />[*][size=2]Probably will not work on android. Most likely has the same interaction issue as my furnace.[/size]\n<br />[*][size=2]Should work with all items added through Json Assets, but do report if you find any problems.[/size]\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][size=2][url=https://github.com/Traktori7/StardewValleyMods]Source code[/url]\uFEFF\uFEFF[/size]\n<br />[/list]\n<br />\n<br />[size=5]Credits\n<br />[/size][list]\n<br />[*][url=https://github.com/Jason9896]Jason9896[/url]\u00A0on Github mod ideas\u00A0for the name.\n<br />[*]tikamin557 for the Japanese translation.\n<br />[*]A huge thank you to the contributors of Json Assets and Producer Framework Mod that made my life so much easier and did most of the heavy lifting with this little mod.\n<br />[*][size=2]The wonderful helpers at the Stardew Valley discord who helped me with my questions.[/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5663",
+	"Version": "1.1.0",
+	"Updated": "2020-04-15T01:54:47+00:00",
+	"Downloads": [
+		{
+			"Id": 25475,
+			"Type": "Main",
+			"DisplayName": "Quality Scrubber 1.1.0",
+			"FileName": "Quality Scrubber 1.1.0-5663-1-1-0-1585443213.zip",
+			"Description": "The machine is now able to keep the input's type and not just convert it to generic.",
+			"Version": "1.1.0",
+			"SizeInBytes": 49423,
+			"Uploaded": "2020-03-29T00:53:33+00:00",
+			"Mods": [
+				{
+					"Id": "Traktori.QualityScrubber",
+					"DisplayName": "Quality Scrubber",
+					"Type": "Smapi",
+					"RelativePath": "QualityScrubber\\QualityScrubber",
+					"Manifest": {
+						"Name": "Quality Scrubber",
+						"Description": "Removes quality from processed items.",
+						"Author": "Traktori",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "QualityScrubber.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Traktori.JA.QualityScrubber",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5663"
+						],
+						"UniqueId": "Traktori.QualityScrubber"
+					}
+				},
+				{
+					"Id": "Traktori.JA.QualityScrubber",
+					"DisplayName": "JA Quality Scrubber",
+					"Type": "ContentPack",
+					"RelativePath": "QualityScrubber\\[JA] QualityScrubber",
+					"Manifest": {
+						"Name": "JA Quality Scrubber",
+						"Description": "Adds the Quality Scrubber via Json Assets",
+						"Author": "Traktori",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Traktori.JA.QualityScrubber"
+					}
+				},
+				{
+					"Id": "Traktori.PFM.QualityScrubber",
+					"DisplayName": "(PFM) Quality Scrubber",
+					"Type": "ContentPack",
+					"RelativePath": "QualityScrubber\\[PFM] QualityScrubber",
+					"Manifest": {
+						"Name": "(PFM) Quality Scrubber",
+						"Description": "PFM animations for Quality Scrubber.",
+						"Author": "Traktori",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Traktori.JA.QualityScrubber",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Traktori.PFM.QualityScrubber"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342412163,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 25964,
+			"Type": "Optional",
+			"DisplayName": "Quality Scrubber Automate Integration",
+			"FileName": "Quality Scrubber Automate Integration-5663-1-1-0-1586915687.zip",
+			"Description": "REQUIRES MAIN FILE. Adds Automate support. Install like any other mod. Requires Automate.\n<br /><br /><br />WARNING: Be extremely careful where you plop down the machine if you download this, or you might lose a LOT of money.",
+			"Version": "1.1.0",
+			"SizeInBytes": 7912,
+			"Uploaded": "2020-04-15T01:54:47+00:00",
+			"Mods": [
+				{
+					"Id": "Traktori.AM.QualityScrubber",
+					"DisplayName": "Quality Scrubber for Automate",
+					"Type": "Smapi",
+					"RelativePath": "QualityScrubberAutomate",
+					"Manifest": {
+						"Name": "Quality Scrubber for Automate",
+						"Description": "Integrates the Quality Scrubber with Automate.",
+						"Author": "Traktori",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "QualityScrubberAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Traktori.QualityScrubber",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Traktori.AM.QualityScrubber"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342412652,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392351,
+		"UploaderId": 14099340,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

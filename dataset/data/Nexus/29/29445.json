@@ -1,0 +1,98 @@
+{
+	"Site": "Nexus",
+	"Id": 29445,
+	"Name": "CueSwap",
+	"Author": "mushymato",
+	"Description": "[b][size=5]This is a modder tool, install this only if another mod requires it.[/size][/b]\n<br />\n<br />[size=4][url=https://github.com/Mushymato/CueSwap]Source Code[/url][/size]\n<br />\n<br />[size=5]Purpose[/size]\n<br />\n<br />Sound cues in Stardew Valley are key'd by a string which can be reused in many contexts. For example \"sandyStep\" is used for footsteps, but also as general sfx in menus.\n<br />This mod helps mod authors change certain sound cues in the game without changing every instance of the cue, by changing the key to something else that can be individually targeted.\n<br />\n<br />[size=5]Supported Cues[/size]\n<br />[size=4]Shipping Bin[/size]\n<br />[list]\n<br />[*]doorCreak ⇒ doorCreak.ShippingBin\n<br />[*]doorCreakReverse ⇒ doorCreakReverse.ShippingBin\n<br />[*]Ship ⇒ Ship.ShippingBin\n<br />[/list]\n<br />[size=4]Mini Shipping Bin[/size]\n<br />[list]\n<br />[*]doorCreak ⇒ doorCreak.MiniBin\n<br />[*]doorCreakReverse ⇒ doorCreakReverse.MiniBin\n<br />[*]Ship ⇒ Ship.MiniBin\n<br />[/list]\n<br />[size=4]Shipping Bin (Island Farm)[/size]\n<br />[list]\n<br />[*]doorCreak ⇒ doorCreak.IslandBin\n<br />[*]doorCreakReverse ⇒ doorCreakReverse.IslandBin\n<br />[*]Ship ⇒ Ship.IslandBin\n<br />[/list]\n<br />Additional sound cue replacements must be manually added to this mod, if you have a need for any particular sound please let me know and I'll look into adding it.\n<br />\n<br />[size=5]Modder Features[/size]\n<br />The debug build provide verbose logging of when the sound replacement happens, and provides the console command play_sound &#92;&lt;cue&gt; for playing cues by name.\n<br />\n<br />Transpiler methods in this mod are written with a source generator. The generated source can be viewed in [font=Courier New]CueSwap/obj/Debug/net6.0/generated/CueSwapGenerator/CueSwapGenerator.CueSwapTranspilerGenerator[/font] once you do a build.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29445",
+	"Version": "1.1.0",
+	"Updated": "2025-08-04T20:03:46+00:00",
+	"Downloads": [
+		{
+			"Id": 139200,
+			"Type": "Optional",
+			"DisplayName": "CueSwap - Debug",
+			"FileName": "CueSwap - Debug-29445-1-1-0-1754337799.zip",
+			"Description": "For SDV 1.6.15, extra logging for mod authors.",
+			"Version": "1.1.0",
+			"SizeInBytes": 20738,
+			"Uploaded": "2025-08-04T20:03:19+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.CueSwap",
+					"DisplayName": "CueSwap",
+					"Type": "Smapi",
+					"RelativePath": "CueSwap",
+					"Manifest": {
+						"Name": "CueSwap",
+						"Description": "Swap sound cues in certain context.",
+						"Author": "mushymato",
+						"Version": "1.1.0-Debug",
+						"MinimumApiVersion": "4.2.1",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "CueSwap.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:29445"
+						],
+						"UniqueId": "mushymato.CueSwap",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342525888,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 139201,
+			"Type": "Main",
+			"DisplayName": "CueSwap",
+			"FileName": "CueSwap-29445-1-1-0-1754337826.zip",
+			"Description": "For SDV 1.6.15",
+			"Version": "1.1.0",
+			"SizeInBytes": 20090,
+			"Uploaded": "2025-08-04T20:03:46+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.CueSwap",
+					"DisplayName": "CueSwap",
+					"Type": "Smapi",
+					"RelativePath": "CueSwap",
+					"Manifest": {
+						"Name": "CueSwap",
+						"Description": "Swap sound cues in certain context.",
+						"Author": "mushymato",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.2.1",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "CueSwap.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:29445"
+						],
+						"UniqueId": "mushymato.CueSwap",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342525889,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416133,
+		"UploaderId": 18790269,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

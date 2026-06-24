@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 3279,
+	"Name": "Hair Growth",
+	"Author": "SknTheLisper",
+	"AuthorLabel": "skn",
+	"Description": "[size=3]This is a recreation of my previous Aging Mod:[/size]\n<br />\n<br />\n<br />A simple hair and beard growth mod that changes the hair&#92;beard of the player as time goes on. To cut the hair you can either assign a button(in the config.json file), or use another mod allowing apperance change(the Mirror mod for instance). \n<br />\n<br />[b]Not yet implemented&#92;Planned Feature:[/b]\n<br />Optionally progressivly changes the hair to gray&#92;white(depending on if you have light or dark hair) after x-amount of years.\n<br />\n<br />\n<br />[b][size=4]Installation instructions:[/size][/b][i]\n<br />Download then install\u00A0[url=https://github.com/Pathoschild/SMAPI/releases]SMAPI[/url]\u00A0\n<br />Unzip&#92;Create folder named HungerMod in Stadrew Vallley&#92;Mods&#92;\n<br />Should look like this:\n<br />\u00A0 \u00A0 Stardew Valley&#92;Mods&#92;HairGrowthMod&#92; \u00A0containing these files:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0config.json\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[/i]\u00A0HairGrowthMod.dll\n<br />[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[/i]HairGrowthMod.pdb\n<br />[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[/i]manifest.json\n<br />\n<br />[b][size=4]Update instructions:[/size][/b][i]\n<br />Same as installation, if new features are added that can be configured it will be automatically generated to your config file(No need to manually add it)\u00A0[/i][/i]\n<br />\n<br />\n<br />[b][size=5]Compatibility:\n<br />[/size][/b]Compatible with all mods adding new hair-styles(but you'll have to do some mild-legg work yourself by adding the new hair-styles into the system in the config.json file). As a general rule the hair-id is the hair number at character creation -1.\u00A0 so say you have hairstyle #23,\u00A0 the Id is then 22.\n<br />\n<br />[size=5]\uFEFF[b]Configuration:[/b][/size]\n<br />[i]\u00A0 \"beard_growth\": true, [/i][b]- Whether beard growing system is to be on or not[/b]\n<br />[i]\u00A0 \"hair_growth\": true,[i]\u00A0[/i][b]- Whether hair growing system is to be on or not[/b][/i]\n<br />[i]\u00A0 \"shave_entire_beard\": true,[i]\u00A0[/i][b]- If false, progressivly reduce beard[/b][/i]\n<br />[i]\u00A0 \"allow_female_beard_grow\": false,[i]\u00A0[/i][b]- Make beard grow if you are playing a female character[/b][/i]\n<br />[i]\u00A0 \"require_shares\": true,[i]\u00A0[/i][b]- If true, you need to hold shears before you can cut&#92;shave[/b][/i]\n<br />[i]\u00A0 \"days_to_grow_hair\": 14,[i]\u00A0[/i][b]- How many days it takes to progress to next hair stage[/b][/i]\n<br />[i]\u00A0 \"days_to_grow_beard\": 7,[i]\u00A0[/i][b]- How many days it takesto progress to next beard stage[/b][/i]\n<br />[i]\u00A0 \"hair_id_button\": \"None\",[i]\u00A0[/i][b]- Shows the ID of current hair-style(to make it easier for you to add to the list), change to any key[/b][/i]\n<br />[i]\u00A0 \"shave_button\": \"OemComma\",[i]\u00A0[/i][b]- Key used to shave(need shears with require_shares on true)[/b][/i]\n<br />[i]\u00A0 \"cut_hair_button\": \"OemPeriod\",[i]\u00A0[/i][b]- Key used to cut hair(need shears with require_shares on true)\n<br />\n<br />[i]\u00A0[/i][b]- The list of accessory(beard), and hair IDs in order of growth.[/b][/b][/i]\n<br />[i]\u00A0 \"beard_growth_list\": [[/i]\n<br />[i]\u00A0 \u00A0 -1,[/i]\n<br />[i]\u00A0 \u00A0 3,[/i]\n<br />[i]\u00A0 \u00A0 5,[/i]\n<br />[i]\u00A0 \u00A0 0[/i]\n<br />[i]\u00A0 ],[/i]\n<br />[i]\u00A0 \"hair_growth_list_male\": [[/i]\n<br />[i]\u00A0 \u00A0 7,[/i]\n<br />[i]\u00A0 \u00A0 23,[/i]\n<br />[i]\u00A0 \u00A0 0,[/i]\n<br />[i]\u00A0 \u00A0 4,[/i]\n<br />[i]\u00A0 \u00A0 12,[/i]\n<br />[i]\u00A0 \u00A0 28[/i]\n<br />[i]\u00A0 ],[/i]\n<br />[i]\u00A0 \"hair_growth_list_female\": [[/i]\n<br />[i]\u00A0 \u00A0 23,[/i]\n<br />[i]\u00A0 \u00A0 25,[/i]\n<br />[i]\u00A0 \u00A0 27,[/i]\n<br />[i]\u00A0 \u00A0 29,[/i]\n<br />[i]\u00A0 \u00A0 24,[/i]\n<br />[i]\u00A0 \u00A0 26[/i]\n<br />[i]\u00A0 ][/i]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3279",
+	"Version": "1.0.1",
+	"Updated": "2019-01-19T08:14:46+00:00",
+	"Downloads": [
+		{
+			"Id": 13966,
+			"Type": "Main",
+			"DisplayName": "Hair Growth mod",
+			"FileName": "Hair Growth mod-3279-1-0-1-1547885685.rar",
+			"Description": "A simple hair and beard growth system",
+			"Version": "1.0.1",
+			"SizeInBytes": 9399,
+			"Uploaded": "2019-01-19T08:14:46+00:00",
+			"Mods": [
+				{
+					"Id": "skn.HairGrowthMod",
+					"DisplayName": "Hair Growth",
+					"Type": "Smapi",
+					"RelativePath": "HairGrowthMod",
+					"Manifest": {
+						"Name": "Hair Growth",
+						"Description": "A simple hunger system",
+						"Author": "SKN",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "2.9.0",
+						"EntryDll": "HairGrowthMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3279"
+						],
+						"UniqueId": "skn.HairGrowthMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342400654,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389967,
+		"UploaderId": 51711,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

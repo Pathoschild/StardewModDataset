@@ -1,0 +1,100 @@
+{
+	"Site": "Nexus",
+	"Id": 21414,
+	"Name": "Ferngill Simple Economy",
+	"Author": "VogonTyrant",
+	"AuthorLabel": "Paul Steele",
+	"Description": "[size=5][center]What is it?[/center][/size]Ferngill Simple Economy at its core is a mod that makes Stardew Valley follow the rules of supply and demand. The goal is that there is no longer an optimal crop to be grown to maximize profits by providing some extra financial challenge to the game.\n<br />\n<br />Other economy mods that I've encountered seem to focus on penalizing the player through taxes. Requiring the player to hold money in reserve to be able to pay at a later date. While this mod does penalize a player if only a small set of crops are ever sold, it also rewards players who diversify and capitalize on crops that are in demand. Potentially making those crops sell for a higher value than vanilla.\n<br />\n<br />Ferngill Simple Economy is also designed such that it has implicit support for any mod that adds crops / items. (See the Compatibility section down below)\n<br />\n<br />Above all, the intent of the mod is to make things more fun, not necessarily follow a perfect economic model. You can play this mod by studying the forecast menu for hours each season to maximize profits or you can simply show up to Pierre's and buy seeds that have a favorable supply to still make good returns.\n<br />\n<br />[size=5][center]How It Works[/center][/size][size=4]Supply[/size]\n<br />\n<br />This is the amount of an item that is in the economy. If an item has a high supply it will sell for less than it normally would. However if an item has a low supply value it can potentially sell for more than it normally would.\n<br />\n<br />Supply will change when:\n<br />\n<br />[list]\n<br />[*]You sell an item at a shop\n<br />[*]You sell an item through the shipping bin\n<br />[*]The day ends and daily change is applied (see below)\n<br />[/list]\n<br />Supply will not change when:\n<br />\n<br />[list]\n<br />[*]An item is bought at a shop (unless it is being bought back)\n<br />[/list]\n<br />By default, supply caps at 1000 for price calculations but will still be tracked if you sell more. This means if you sell a lot of an item daily change is unlikely to make the supply go below the \"cap\". Supply is reset for every item at the start of every year.\n<br />\n<br />In the image below, green beans have the lowest supply value so their sale price is relatively better than other vegetables. This doesn't necessarily mean that it is the most profitable. Supply applies a multiplier to the normal sale price of an item. This multiplier is applied in conjunction with things that normally affect price like quality, perks, difficulty settings, and even other mods.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/21414/21414-1711839863-608971690.png[/img]\n<br />\n<br />[size=4]Daily Change[/size]\n<br />\n<br />This is the amount that supply will change every day without the player selling any of the item. It can be both positive and negative. Daily change, just like supply, is different for each item. But it will reset every season unlike supply. This means you can only plan so far ahead in the year.\n<br />\n<br />In the image below, green beans have a negative daily change. This means the supply will lower each day during the season, and in turn prices will be higher the longer you wait to sell in the season.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/21414/21414-1711840563-1946592978.png[/img]\n<br />\n<br />[size=4]Price[/size]\n<br />\n<br />Supply is most of the story when it comes to determining price but there are a couple of points worth mentioning about the price multiplier itself.\n<br />\n<br />[list=1]\n<br />[*]By default, it is possible to have supply low enough for items to sell for higher than they normally would. In my testing, I found that I was getting more money than I normally would in a play-through without this mod.\n<br />[*]By default, price is locked in day to day, meaning it is possible to sell 20,000 parsnips and have all of them fetch the price as if the supply was 0 if that's where it started in the morning. While this may seem to defeat the point of the mod, I found it made an interesting choice that needed to be made while still supporting large volumes of crops being produced. Do you hoard your crops to maximize profits at the detriment of early season cash flow? Or do you sell as soon as possible and hurt yourself if you sell more of the item later in the season.\n<br />[*]All items will have a sell price listed in the menu. This shows how much a normal quality item would sell on the current date. For crops that have growth time, that sale price is divided by the number of days it takes to grow and is displayed under the Sell Price Per Day column. Items without known growth cycles will instead have \"---\" listed. This value does not take into account crops that produce multiple items per harvest. Nor does it take into account regrowth cycles.  Both of these columns do not affect how much an item sells for, they simply provide an easy way to see what crops might be worth growing. To note: cost of seeds is not accounted for in these calculations. There's still a bit of manual work to be done to maximize profits!\n<br />[/list]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/21414/21414-1711894282-914518526.png[/img]\n<br />\n<br />Looking through the entire menu for crops can be a little daunting when purchasing seeds, so the shop will also display the supply for crops that seeds grow. This supply is [b]not[/b] for the seed itself.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/21414/21414-1711833120-1924923088.png[/img]\n<br />\n<br />[size=5]Compatibility[/size]\n<br />\n<br />[size=4]Features[/size]\n<br />\n<br />[list]\n<br />[*]Installing Mid-Save - ✔️ - Your current crops might not be profitable though! I'd recommend installing on season boundaries\n<br />[*]Un-Installing Mid-Save - ✔️ -Prices are altered dynamically so there is no persistent information changed in the vanilla save file\n<br />[*]Multiplayer Support - ✔️ - As of 1.3.0 multiplayer is supported. (split screen not tested).\n<br />[*]Controller Support - ✔️ - As of 1.7.0 controller is supported!. Please report any issues you have!\n<br />[/list]\n<br />[size=4]Mod Compatibility[/size]\n<br />\n<br />As mentioned, one of the key aspects of this mod was that modded crops would seamlessly integrate with the economy. Theoretically every modded item that fits into vanilla item categories should be automatically supported. Here you can see Cornucopia crops automatically being imported.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/21414/21414-1711833120-1819704406.png[/img]\n<br />\n<br />[b]Tested Mods:[/b]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8141]Better Balance[/url] - ✔️\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/13426]Stardew Valley Balance Overhaul[/url] - ✔️\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/19508]Cornucopia - More Crops[/url] - ✔️\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21286]Informant - Updated and Improved[/url] - ✔️\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6166]Overgrown Flowery Interface[/url] - ✔️ - [url=https://www.nexusmods.com/stardewvalley/mods/22472]Ferngill Simple Economy for Flowery Interface[/url]\n<br />[*][url=https://github.com/Annosz/UIInfoSuite2]UIInfoSuite2[/url]- ⚠️ - UIInfoSuite2 also adds a tab to the main menu and they overlap. Setting MenuTabOffset in simple economy to 70 should make both tabs accessible. The mod will attempt to do so automatically if it detects UiInfoSuite2\n<br />[*]Other mods? - ❓ - Please report any compatibility issues you find!\n<br />[/list]\n<br />[size=5]Configuration[/size]\n<br />\n<br />I attempted to make most things in the mod configurable.\n<br />\n<br />Categories of items that are considered in the economy can be customized starting with version 1.2.0\n<br />\n<br />There are also settings to disable any menu integration since it can likely conflict with other mods.\n<br />\n<br />[size=5]Technical Details[/size]\n<br />\n<br />[b]Note:[/b] Knowing how the mod works on a technical level is not necessary to enjoy it. I have tweaked the default settings over six separate multi-year playthroughs, so they are fairly reasonable by default.\n<br />\n<br />[size=4]Randomness[/size]\n<br />\n<br />Ferngill Simple Economy centers around [url=https://en.wikipedia.org/wiki/Normal_distribution]the bell curve[/url] and has two major distributions that affect how prices are calculated.\n<br />\n<br />The default distributions of supply and daily change can be viewed on Wolfram Alpha:\n<br />\n<br />[list]\n<br />[*][url=https://www.wolframalpha.com/input?i=normal+distribution+calculator&amp;assumption=%7B%22F%22%2C+%22NormalProbabilities%22%2C+%22z%22%7D+-%3E%22500%22&amp;assumption=%7B%22F%22%2C+%22NormalProbabilities%22%2C+%22mu%22%7D+-%3E%22500%22&amp;assumption=%7B%22F%22%2C+%22NormalProbabilities%22%2C+%22sigma%22%7D+-%3E%22150%22]Supply[/url]\n<br />[*][url=https://www.wolframalpha.com/input?i=normal+distribution+calculator&amp;assumption=%7B%22F%22%2C+%22NormalProbabilities%22%2C+%22z%22%7D+-%3E%220%22&amp;assumption=%7B%22F%22%2C+%22NormalProbabilities%22%2C+%22mu%22%7D+-%3E%220%22&amp;assumption=%7B%22F%22%2C+%22NormalProbabilities%22%2C+%22sigma%22%7D+-%3E%225%22]Daily Change[/url]\n<br />[/list]\n<br />Each distribution has both a mean and standard deviation that can be customized in the config file. In general, when playing with a crop mod or two, there will almost always be a profitable crop to grow.\n<br />\n<br />[size=4]Categories[/size]\n<br />\n<br />Items are included in the economy based on the category they are under. By default, the included categories are:\n<br />\n<br />[list]\n<br />[*]Forage\n<br />[*]Vegetables\n<br />[*]Minerals\n<br />[*]Fruit\n<br />[*]Fish\n<br />[*]Animal Products\n<br />[*]Artisan Goods\n<br />[*]Basic\n<br />[*]Flowers\n<br />[/list]\n<br />Starting from 1.2.0, categories can be customized in the config menu (recommended) / file.\n<br />\n<br />Some special items (e.g., The Legend) are excluded from the economy model.\n<br />\n<br />[size=4]Miscellaneous Details[/size]\n<br />\n<br />With how the game is coded, generic artisan goods like wines and pickles are technically one item id. To reduce confusion / complexity they are not shown in the menu and are instead calculated given the base item's supply. This also avoids weird situations where supply differences between the base item and artisan item can make processing the item not worth it.\n<br />\n<br />For example, if supply is 0 for strawberries, strawberry wine will have the max multiplier (on top of the normal wine multiplier). While if Blueberries have a maxed supply, Blueberry Wine will have the minimum multiplier.\n<br />\n<br />Special artisan goods (e.g., Caviar) will have their own supply. Rule of thumb: if it's in the menu as its own item, it has its own supply.\n<br />\n<br />[size=5]Contributing[/size]\n<br />\n<br />Interested in contributing? Please read the [url=https://github.com/paulsteele/Ferngill-Simple-Economy/tree/main?tab=contributing-ov-file]https://github.com/paulsteele/Ferngill-Simple-Economy/tree/main?tab=contributing-ov-file[/url]\n<br />\n<br />[size=4]Extensibility[/size]\n<br />\n<br />Starting in version 2.0.0 there is\n<br />\n<br />[list]\n<br />[*]An API for other mods to interact with the economy. See [url=https://github.com/paulsteele/Ferngill-Simple-Economy/blob/main/docs/api-integration.md]the docs[/url] for more details.\n<br />[*]Content Pack support for adding custom rules for items. See [url=https://github.com/paulsteele/Ferngill-Simple-Economy/blob/main/docs/content-packs.md]the docs[/url] more details.\n<br />[/list]\n<br />[size=4]Bug Reporting[/size]\n<br />\n<br />Please report all bugs to [url=https://github.com/paulsteele/Ferngill-Supply-And-Demand/issues]https://github.com/paulsteele/Ferngill-Supply-And-Demand/issues[/url]\n<br />\n<br />[size=4]Localization[/size]\n<br />\n<br />Pull requests are welcome at [url=https://github.com/paulsteele/Ferngill-Supply-And-Demand/pulls]https://github.com/paulsteele/Ferngill-Supply-And-Demand/pulls[/url]\n<br />\n<br />[size=5]License[/size]\n<br />\n<br />The source is available at [url=https://github.com/paulsteele/Ferngill-Supply-And-Demand]https://github.com/paulsteele/Ferngill-Supply-And-Demand[/url] under a [url=https://github.com/paulsteele/Ferngill-Simple-Economy?tab=MIT-1-ov-file]MIT License[/url]. I'd love if you'd submit improvements through a PR on this mod, but you're free to fork and re-upload however you see fit.\n<br />\n<br />[size=5]Credits[/size]\n<br />\n<br />[size=4]Libraries[/size]\n<br />\n<br />[list]\n<br />[*][url=https://numerics.mathdotnet.com/]Math.NET Numerics[/url] - Backing algorithms used to seed data\n<br />[/list]\n<br />[size=4]Contributors[/size]\n<br />\n<br />[list]\n<br />[*]Tooltips - [url=https://github.com/lilyzeiset]https://github.com/lilyzeiset[/url]\n<br />[*]BetterGame Menu Support - [url=https://github.com/KhloeLeclair]https://github.com/KhloeLeclair[/url]\n<br />[*]Compact Searchable Shop Menu Support - [url=https://github.com/Mushymato]https://github.com/Mushymato[/url]\n<br />[*]Configurable Supply / Delta - [url=https://github.com/cidrei]https://github.com/cidrei[/url] &amp; [url=https://github.com/SingularityPotato]https://github.com/SingularityPotato[/url]\n<br />[*]Instant Pricing - [url=https://github.com/BeesQ]https://github.com/BeesQ[/url] &amp; [url=https://github.com/SingularityPotato]https://github.com/SingularityPotato[/url]\n<br />[/list]\n<br />[size=4]Translations[/size]\n<br />\n<br />[list]\n<br />[*]Korean - cheesecats\n<br />[*]French - [url=https://github.com/CaranudLapin]https://github.com/CaranudLapin[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21414",
+	"Version": "2.1.0",
+	"Updated": "2026-05-02T11:09:06+00:00",
+	"Downloads": [
+		{
+			"Id": 166224,
+			"Type": "Main",
+			"DisplayName": "Ferngill Simple Economy",
+			"FileName": "Ferngill Simple Economy-21414-2-1-0-1777720146.zip",
+			"Description": "If upgrading from before 2.0.0. Make sure to delete old files. (Config can be saved)<br />- Removes legendary fish from economy exclusion<br />- Fixes issue where economy transitions 1 day too early (introduced 1.11.0)<br />- Add AddToEconomy content pack item",
+			"Version": "2.1.0",
+			"SizeInBytes": 677918,
+			"Uploaded": "2026-05-02T11:09:06+00:00",
+			"Mods": [
+				{
+					"Id": "paulsteele.fse",
+					"DisplayName": "Ferngill Simple Economy",
+					"Type": "Smapi",
+					"RelativePath": "FerngillSimpleEconomy\\FerngillSimpleEconomy",
+					"Manifest": {
+						"Name": "Ferngill Simple Economy",
+						"Description": "Adds a simplistic economy to Stardew Valley",
+						"Author": "Paul Steele",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ferngillSimpleEconomy.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"ferngill.simple.economy",
+							"Nexus:21414"
+						],
+						"UniqueId": "paulsteele.fse"
+					}
+				},
+				{
+					"Id": "paulsteele.fse.vanilla",
+					"DisplayName": "Ferngill Simple Economy Default Pack",
+					"Type": "ContentPack",
+					"RelativePath": "FerngillSimpleEconomy\\[FSE] Default",
+					"Manifest": {
+						"Name": "Ferngill Simple Economy Default Pack",
+						"Description": "Content Pack for Default FSE items",
+						"Author": "Paul Steele",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "paulsteele.fse"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"ferngill.simple.economy",
+							"Nexus:21414"
+						],
+						"UniqueId": "paulsteele.fse.vanilla"
+					}
+				},
+				{
+					"Id": "paulsteele.fse.mail",
+					"DisplayName": "Ferngill Simple Economy Mail",
+					"Type": "ContentPack",
+					"RelativePath": "FerngillSimpleEconomy\\[MFM] Ferngill Simple Economy Mail",
+					"Manifest": {
+						"Name": "Ferngill Simple Economy Mail",
+						"Description": "Mail content pack for Ferngill Simple Economy",
+						"Author": "Paul Steele",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"ferngill.simple.economy",
+							"Nexus:21414"
+						],
+						"UniqueId": "paulsteele.fse.mail"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552912,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408102,
+		"UploaderId": 3104512,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

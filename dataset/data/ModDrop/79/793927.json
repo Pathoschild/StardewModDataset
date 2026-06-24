@@ -1,0 +1,80 @@
+{
+	"Site": "ModDrop",
+	"Id": 793927,
+	"Name": "Portraiture",
+	"Author": "Platonymous",
+	"TagLine": "Add higher resolution portraits and easily switch between different Portrait Mods.",
+	"Description": "# Portraiture\n\nby Platonymous\n\n\n---\nThis Mod allows you to add Portraits with a higher resolution to the game and easily switch between Portrait Mods.\n**Press P to change Portrait-Set when the DialogBox is open.**\n****Press I to toggle between the larger portrait above the dialogue and the normal one**s when the DialogBox is open**.**\nPress O to fix or unfix a portrait-set selection of a specific NPC**when their DialogBox is open, when fixed they will ignore further set changes and stay as they are.****\nThis Mod itself includes no Portraits.\n\n**Important regarding HDP support (SDV 1.5.6 &amp; 1.6 alpha):**\nIf you download an want to use a HDP content pack with this, put it into the regular mod folder, **NOT** the Portraits folder.\nIf the manifest.json file of that pack has hdp in it's  dependencies, but you do not have hdp installed, remove the dependency and select HDP when picking a portraits-set in game, to have it show up as intended. (This will still work with HDP installed, it does not require the dependency to be set)\nIf you leave or add the HDP dependency to an HDP pack and allow sideloading in Portraitures config.json, Portraiture will attempt to load them and give them there own set, while otherwise HDP contentpacks combine into the HDP set and can't be seperately selected. This only works if the pack has the file-structure that Portraiture requires, which is often the case. Despite that, it is recommended to use the non-sideloaded approach to ensure the portraits work properly.\n(If HDP is installed, the HDP option and Vanilla option in the set selection will look the same)\n\n**Important regarding PyTK:**\nDespite claims to the opposite, this mod does no longer require PyTK unless you use a version older than 1.10.0. Even if a content mod for this claims that it relies on PyTK, it does not\n\n**Version 1.11.8**\nChange __MaxAbovePortraitPercent__ in the config to adjust the size of the abovebox portrait.\nSideloading of HDP Packs is now deactivaded by default. Packs added without the HDP dependency set in the manifest are still loaded in the HDP Portrait option. This can be changed in the config. Packs sideloaded like this may not work as intended by the author as the contentpatcher part is ignored, but unlike non-sideloaded packs have their own option in the portrait selection. Non-sideloaded packs show only in the HDP option and may override each other.\nIf HDP is installed, the HDP and vanilla option should look the same.\n\n**Version 1.11.0**\nSupport for HDP content packs. (Install HDP Packs like normal, not in the Portraits folder)\nNew Above Box Mode (active on default, can be deativated in the config and by pressing the Style-Change key while in a dialogue (Default: I)\nFix portraits to NPCs by pressing the fix/unfix kex (Default: O) If portraits are fixed, they aren't affected by the genral portrait selection. (Saved per SaveFile)\nThis has been already implemented, but I didn't write it here: Press the menu key (Default: M) when in a dialogue to open a portrait selection menu.\nI should also point out that since the last version Portraiture no longer has any other dependencies other then smapi.\n\n**Version 1.6.3 now supports Content Packs**\nContent Packs must contain a manifest.json file but otherwise work exactly like other folders that you would put into Portraiture/Portaits.\nUnlike regular Portrait-Folders, Content Packs can be installed by copying them directly into the Mod Folder.\n\n![](https://imgur.com/T5Eybda.png)\n_How to install a portraits mod with Portraiture:_\n\n**- Download and install Portraiture for your version of SDV**\n(If done correctly the manifest.json should now sit in \"/Mods/Portraiture/manifest.json\")\n\n**- Download a portraits mod you want to use for ex. [this one](https://www.nexusmods.com/stardewvalley/mods/4745/?)**\n\n**- Create a folder in \"Mods/Portraiture/Portraits\" that you name however you like, for ex. \"DCBurger Hi-Res\" and extract the portrait files inside it.**\n(If done correctly the file for Abigail would be located at \"/Mods/Portraiture/Portraits/DCBurger Hi-Res/Abigail.png\")\n\n - Start the game and talk to someone. Once the DialogueBox is open press P to change portraits till you see the right one. It will also shortly show the name of the folder above the left top corner of the DialogueBox, in this case \"DC Burger Hi-Res\". Whatever folder you pick will be saved for all portraits and stay that way after reloading until you change it again yourself.\n\n- You can create as many folders as you like to switch between and fill them with downloaded Portrait Mods or mix your own. **_Also works with Regular XNB Mods. (In that case it should look something like this: \"Mods/Portraiture/Portraits/DCBurger Low-Res/Abigail.xnb\".)_**\n\n- That's it. And if you get tired of reading yourself: try [PelicanTTS](http://www.nexusmods.com/stardewvalley/mods/1079).\n\nVideo by ThatDenverGuy:\n[YouTube](http://www.youtube.com/watch?v=Lo9UhAMoBJs)\n\n_For portrait creators:\n\n_Any size works, but the Dialog Box might open a little slow if your portraits are over 512x512.\nHi-Res spritesheets need to be PNG files and need to be formated exactly as before (just scaled up),\nonly that all png portrait spritesheets must contain at least two portraits, even if the original only had one.\n\n_**How to make a Portraiture mod:**_\n\nThere are two ways to make a mod for portraiture, either as a contentpack or just a folder to copy into Portraiture/Portraits, both work almost the same:\n\nCreate the portrait-spritesheets for the NPCs you want to replace, they should idealy be png files. The aspect ratio of the spritesheet and the layout of the faces needs to be the same as in the original and all faces need to be the same size, which size is up to you. The only difference to the original is that every spritesheet needs to have a least 2 faces (can be the same) even if the original only has one.\nThe new spritesheets needs to be saved with the same name as the original eg. \"Abigail.png\". Copy all your spritesheets into one folder and give it a unique name like \"MyPortraitCollection\". If you don't need it to be a contentpack, your done at this point.\n\nOtherwise you need to add a manifest.json file either next to the portraits, or in a new folder called smth. like \"[P] MyPortraits\" with the folder that includes the spritesheets copied inside it. The manifest would look like this:\n\n``\nAnd then you're done.\n\nSource Code: https://github.com/Platonymous/Stardew-Valley-Mods/![](https://imgur.com/b8d5H2A.png)\nIf you have any questions you can usually find me on the [Stardew Valley Discord](https://stardewvalleywiki.com/Modding:Community#Discord)  under the username **Routine**#8715\n![](https://imgur.com/u7Unylz.png)\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymous)  or on [Patreon](https://www.patreon.com/bePatron?u=406905)  .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/793927",
+	"Version": null,
+	"Updated": "2024-03-04T16:34:39.184+00:00",
+	"Downloads": [
+		{
+			"Id": 1541383,
+			"Type": "Optional",
+			"DisplayName": "Portraiture",
+			"FileName": "Portraiture.zip",
+			"Description": "For Stardew Valley 1.6 only.\n\nHDP Support, install HDP packs into the regular mod folder, remove hdp dependency in the manifest of packs (if present) to avoid sideloading.",
+			"Version": "1.12.1-alpha",
+			"SizeInBytes": 136660,
+			"Uploaded": "2024-03-04T16:34:39.184+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.Portraiture",
+					"DisplayName": "Portraiture",
+					"Type": "Smapi",
+					"RelativePath": "Portraiture",
+					"Manifest": {
+						"Name": "Portraiture",
+						"Description": "Helper Mod for Portraits.",
+						"Author": "Platonymous",
+						"Version": "1.12.1-alpha.20240304",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "Portraiture.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:999"
+						],
+						"UniqueId": "Platonymous.Portraiture"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "3cf8527bfdcd09826c67134219c3eb0e",
+				"md5In": "0b51b6eaa9979f1d188caa449bb0cf4d",
+				"scriptType": 0,
+				"sha256Ex": "0479b000eb51f8aefce078809980cbe7fbb6df2e0c940d6f1764dd27a2f3b7b5",
+				"sha256In": "1cec44149205bcaedf05e68eba311d37f2ff6c808c6e08db793ece78d3242649"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1591088948377,
+		"DateUpdated": 1709570079183,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1591088663977,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/793927/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/793927/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/793927/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/793927/icon_original"
+		},
+		"nexusModID": 999,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

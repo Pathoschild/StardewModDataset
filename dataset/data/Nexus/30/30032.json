@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 30032,
+	"Name": "More Monsters",
+	"Author": "ReddishLunar",
+	"AuthorLabel": "HongAndNineFish",
+	"Description": "[list]\n<br />[*][b][size=3]What this mod does[/size][/b]\n<br />[/list]   \uFEFF   \uFEFFThis mod increases monsters [b]quantity[/b] in each floor\u00A0of t[b]he Mines[/b] and [b]Skull Cavern[/b].\u00A0\n<br />\n<br />   \uFEFF   \uFEFFIn vanilla game, a\u00A0floor\u00A0in the\u00A0Mines will only spawn about [b]20-30 monsters[/b] at most. This mod will make each floor\u00A0in\u00A0the Mines and Skull Cavern    \uFEFF   \uFEFFspawn\u00A0[b]hundreds of monsters[/b]. (Just more\u00A0[b]quantity[/b]. No new types of monsters.) [b]You can also set a range to let it spawn random amount.[/b]\n<br />\n<br />[list]\n<br />[*][b][size=3]Mod Config\u00A0[/size][/b]\n<br />[/list]   \uFEFF   \uFEFFMonsters will spawn more by default. If you need more or less quantity of\u00A0monsters, or you want random quantity,\u00A0you can set it in config file:\n<br /> \n<br />   \uFEFF   \uFEFF\"Stardew Valley&#92;Mods&#92;MoreMonsters&#92;config.json\":\u00A0\n<br />[code]   \uFEFF   \uFEFF{\n<br />\u00A0    \uFEFF   \"MonsterMulty\": 0.2,\n<br />\u00A0    \uFEFF   \uFEFF\"MonsterRandomMulty\": 0.001\n<br />   \uFEFF   \uFEFF}\n<br />[/code]\n<br />   \uFEFF   \uFEFF\"MonsterMulty\" is the spawning rate of monsters. For vanilla game it is 0.002. You can set it to any number between 0 and 1.\n<br />   \uFEFF   \uFEFF\"MonsterRandomMulty\" is extra random\u00A0spawning rate. The extra rate will random between 0 to\u00A0the number you set.\n<br />   \uFEFF   \uFEFFYou need to set it &gt; 0.\n<br />\n<br />   \uFEFF   \uFEFFSo the final\u00A0spawning rate is between\u00A0MonsterMulty to (MonsterMulty +\u00A0MonsterRandomMulty).\n<br />\n<br />[list]\n<br />[*][size=3][b]Conflictions[/b][/size]\n<br />[/list]   \uFEFF   \uFEFFIn theory this mod won't conflict with other combat mods because it only changes one line under SratdewValley.Locations.MineShaft:\n<br />\n<br />[code]   \uFEFF   \uFEFFprivate void populateLevel()\n<br />   \uFEFF   \uFEFF{\n<br />   \uFEFF   \uFEFF// Vanilla line:\n<br />   \uFEFF   \uFEFF// double monsterChance = 0.002 + (double)this.mineRandom.Next(200) / 10000.0;\n<br />   \uFEFF   \uFEFF// Changed to:\n<br />\u00A0    \uFEFF   \uFEFFdouble monsterChance = MonsterMulty + (double)this.mineRandom.Next(MonsterRandomMulty) / 10000.0;\n<br />   \uFEFF   \uFEFF}\n<br />[/code]\n<br />   \uFEFF   \uFEFFBut this mod uses Harmony and hasn't been fully tested for conflictions, so still [b]back up[/b] your save.\u00A0\n<br />\n<br />   \uFEFF   \uFEFFThanks for CatCattyCat's codes on how to use\u00A0Harmony .",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30032",
+	"Version": "1.0.0",
+	"Updated": "2024-12-27T09:41:40+00:00",
+	"Downloads": [
+		{
+			"Id": 120351,
+			"Type": "Main",
+			"DisplayName": "More Monsters",
+			"FileName": "More Monsters-30032-1-1-0-1735292500.rar",
+			"Description": "You can set random amount of monster in this version.",
+			"Version": "1.1.0",
+			"SizeInBytes": 12115,
+			"Uploaded": "2024-12-27T09:41:40+00:00",
+			"Mods": [
+				{
+					"Id": "Hong.MoreMonsters",
+					"DisplayName": "MoreMonsters",
+					"Type": "Smapi",
+					"RelativePath": "MoreMonsters",
+					"Manifest": {
+						"Name": "MoreMonsters",
+						"Description": "More Monsters in Mine Cave",
+						"Author": "Hong",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MoreMonsters.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:30032"
+						],
+						"UniqueId": "Hong.MoreMonsters"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342507039,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416720,
+		"UploaderId": 146121523,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

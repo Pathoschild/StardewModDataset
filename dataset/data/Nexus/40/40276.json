@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 40276,
+	"Name": "NPC Relationship Tags",
+	"Author": "mushymato",
+	"Description": "Allows players to add relationship tags to NPCs, this replaces the normal relationship tags like [font=Courier New](single)[/font], [font=Courier New](dating)[/font] etc. that are shown on the game pause menu social page and the profile page.\n<br />\n<br />There are 2 ways to do this:\n<br />1. Open the social page on the game pause menu, then hold [font=Courier New]RightShift[/font] and click on the NPC to add or edit their tag.\n<br />2. In the profile page of a NPC, press [font=Courier New]RightShift[/font] to add or edit their tag.\n<br />\n<br />You can also add tags to farm animals by going to the animals page on the game pause menu, then hold [font=Courier New]RightShift[/font] and click on the desired animal.\n<br />\n<br />The key used in all cases can be configured via [b]EditTagKey[/b].\n<br />\n<br />At the moment, you cannot tag the player (i.e. yourself).\n<br />\n<br />The tags are stored in global app data instead of config, if you need to reset all tags, use console command [font=Courier New]npc-tag-clear[/font].\n<br />\n<br />All in all these tags are cosmetic only and have zero gameplay impact.\n<br />\n<br />[size=4][b]For Mod Authors[/b][/size]\n<br />You can reference the tag set by the player in various places such as dialogue.\n<br />To do this, use this tokenizable string:\n<br />[code][Mod_NPCTag &lt;npcId&gt; &lt;fallbackValue&gt;]\n<br />[/code]\n<br />For example:\n<br />- Original string: [font=Courier New]Hey we are [Mod_NPCTag Lewis buddies] right?[/font]\n<br />- Resolved, no tag set: [font=Courier New]Hey we are buddies right?[/font]\n<br />- Resolved, Lewis has tag \"pals\": [font=Courier New]Hey we are pals right?[/font]\n<br />\n<br />You can provide default tags to show when the player hasn't set a tag yet, see [url=https://github.com/Mushymato/NPCRelationshipTags/blob/main/DefaultTagExample/content.json]example here[/url]. These tags are also valid for the tokenizable string.\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Download and install SMAPI.\n<br />[*]Download this mod and extract to the Mods folder.\n<br />[/list]\n<br />[size=5][b]Translations[/b][/size]\n<br />[list]\n<br />[*]English\n<br />[*]简体中文\n<br />[/list]\n<br />\n<br />[url=https://github.com/Mushymato/NPCRelationshipTags][size=5][b]Source Code[/b][/size][/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40276",
+	"Version": "1.1.0",
+	"Updated": "2026-01-04T20:30:55+00:00",
+	"Downloads": [
+		{
+			"Id": 152448,
+			"Type": "Main",
+			"DisplayName": "NPC Relationship Tags",
+			"FileName": "NPC Relationship Tags-40276-1-1-1-1767558655.zip",
+			"Description": "For SDV 1.6.15+, see changelogs",
+			"Version": "1.1.1",
+			"SizeInBytes": 25864,
+			"Uploaded": "2026-01-04T20:30:55+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.NPCRelationshipTags",
+					"DisplayName": "NPC Relationship Tags",
+					"Type": "Smapi",
+					"RelativePath": "NPCRelationshipTags",
+					"Manifest": {
+						"Name": "NPC Relationship Tags",
+						"Description": "Add tags to NPCs and farm animals.",
+						"Author": "mushymato",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.3.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "NPCRelationshipTags.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40276",
+							"GitHub:Mushymato/NPCRelationshipTags"
+						],
+						"UniqueId": "mushymato.NPCRelationshipTags",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342539136,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426964,
+		"UploaderId": 18790269,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

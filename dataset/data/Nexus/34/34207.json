@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 34207,
+	"Name": "WaterDepthOverlay",
+	"Author": "Fai0",
+	"Description": "[size=5]Introduction[/size]\n<br />Inspired by\u00A0[url=https://stardewvalleywiki.com/Fishing_Strategy]Fishing_Strategy[/url], I decide to implement\u00A0in-game visual effects of [url=https://stardewvalleywiki.com/Fishing_Strategy#Fishing_Zones]Fishing_Strategy#Fishing_Zones[/url]\uFEFF\uFEFF.\n<br />\n<br />[url=https://github.com/LinHuiGD/StardewValleyMods/blob/main/WaterDepthOverlay/docs/README.zh-Hans.md]简体中文[/url]\n<br />\uFEFF[quote][size=4][b]What is Fishing Zone/Water Depth?[/b][/size]\n<br />Here are\u00A0extracts from\u00A0[url=https://stardewvalleywiki.com/Fishing#Fishing_Zone]Fishing#Fishing_Zone[/url]\n<br />\n<br />Every water tile is assigned a Fishing Zone of 0, 1, 2, 3, or 5\u00A0that controls many aspects of fishing. [b]The further from land (in every direction), the better the zone.[/b]\u00A0The game considers most walkable surfaces, including islands, piers, and stone bridges to be \"[b]land[/b]\"; wooden footbridges are one exception.\n<br />If the bobber lands at least 5 tiles away from any land, it is located in zone 5.\n<br />...\n<br />Higher fishing zone values provide several [b]benefits[/b]:\n<br />[list]\n<br />[*]The chances of catching trash decrease.\n<br />[*]The size and quality ([i]e.g.,[/i]\u00A0normal, silver, or gold) of the fish is on average better.\n<br />[*]The chances of hooking more difficult fish are slightly larger.\n<br />[*]...\n<br />[/list]For ease of understanding, I call the level of fishing zone \"[b]water depth[/b]\" in this mod.[/quote]\n<br />As you can see below, tiles with different water depths will be covered by different color overlays with this mod.\n<br />\n<br />[img]https://i.imgur.com/cMtI7U8.png[/img]\n<br />\n<br />[size=5]How to use?[/size]\n<br />Press\u00A0[font=Courier New][url=https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings#Keyboard]OemQuotes[/url][/font] to enable/disable overlay drawing.(Configable)\n<br />[b]Note:[/b] The overlay will be drawn only when there is [b]at least a fishable water tile[/b] in current map and the player's [b]current tool[/b] is a fishing rod.\n<br />\n<br />[size=5]Config Menu[/size]\n<br />Players can [b]custom colors[/b] of overlay on water tiles\u00A0and preview the blended color\u00A0in\u00A0the mod [b]config menu U[/b]I.\n<br />\n<br />Config menu in Ginger\u00A0Island\n<br />[img]https://i.imgur.com/dfJn3yn.gif[/img]\n<br />\uFEFFConfig menu in\u00A0Volcano Caldera\n<br />[img]https://i.imgur.com/ILrxvwN.gif[/img]\n<br />Further more, overlays can be drawn on unfishable tiles if you like.\n<br />Even if a tile is visible as water, if it is blocked by buildings (such as bridges, houses, shores), players cannot fish there. \n<br />I call it [b]unfishable tile[/b] in this mod.\n<br />\uFEFF[img]https://i.imgur.com/uR3nFY1.png[/img]\n<br />[size=5]New feature[/size]\n<br />[i][b]\uFEFFSince 1.0.2[/b]: The water depth overlay no longer obscures the player's sprite by default.\u00A0\u00A0\n<br />[/i]\n<br />A switch named \"[b]Draw on top[/b]\" has been added to the menu UI. It is off by default. \u00A0\n<br />If you turn it on, the water depth overlay will be drawn on top of the game world. \u00A0\n<br />As a result, the overlay will obscure the rendered game world, including the player's sprite. \u00A0\n<br />A small trade-off: In the default configuration, you can't see the overlay of the fish pond. \u00A0\n<br />Turn on the \"Draw on top\" switch if you want to see it, but then the water depth overlay will obscure the player's sprite again.\uFEFF\n<br />\n<br />[size=5]Examples[/size]\n<br />Here are comparisons of manual editting(probably) and in-game drawing of fishing zones.\n<br />Examples of manual editting([url=https://stardewvalleywiki.com/Fishing_Strategy#Fishing_Zones]wiki[/url]),their images show the\u00A0[url=https://stardewvalleywiki.com/Fishing#Fishing_Zone]Fishing Zone[/url]\u00A0based on the location where the bobber lands, color coded as:\u00A0[img]https://stardewvalleywiki.com/mediawiki/images/1/14/DistanceKey.png[/img]\n<br />[list]\n<br />[*][url=https://stardewvalleywiki.com/mediawiki/images/4/4d/MinesDistances.png]Mine level 20[/url]\uFEFF\n<br />[*][url=https://stardewvalleywiki.com/mediawiki/images/8/87/MountainDistances.png]Mountains[/url]\n<br />[/list]\n<br />Examples of in-game drawing of this mod which\u00A0show the\u00A0water depth\uFEFF(same as Fishing Zone),\u00A0color coded as:[img]https://i.imgur.com/OKXTUBN.png[/img], \"W\" means background color for\u00A0reference of water.\n<br />[list]\n<br />[*][url=https://i.imgur.com/aA7XKeF.png]Mine level 20\u00A0dangerous[/url]\uFEFF\n<br />[*][url=https://i.imgur.com/KWEjXY7.png]\uFEFFMountains[/url]\uFEFF\n<br />[*][url=https://imgur.com/gallery/waterdepthoverlay-aCbYfrw]More examples[/url]\n<br />[/list]\n<br />[size=5]Compatible with...[/size][list]\n<br />[*]Stardew Valley 1.6 or later;\n<br />[*]Windows; (Untested on\u00A0MacOS or Linux)\n<br />[*]single-player;(Untested on\u00A0multiplayer)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3753?tab=description]Stardew Valley Expanded[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8897]Visible Fish[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5815]Fishing Assistant 2[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8808]Infinite Zoom[/url]\uFEFF\n<br />[/list]\n<br />[size=5]Multi-language[/size]\n<br />Contributes are welcome.\n<br />Available translations:English, Chinese\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/LinHuiGD/StardewValleyMods/tree/main/WaterDepthOverlay]Source code[/url]\n<br />[*][url=https://github.com/LinHuiGD/StardewValleyMods/blob/main/WaterDepthOverlay/docs/release-notes.md]Release notes\uFEFF[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34207",
+	"Version": "1.0.3",
+	"Updated": "2025-05-28T15:52:43+00:00",
+	"Downloads": [
+		{
+			"Id": 133316,
+			"Type": "Main",
+			"DisplayName": "WaterDepthOverlay",
+			"FileName": "WaterDepthOverlay-34207-1-0-3-1748447563.zip",
+			"Description": "Improved translations of enable options.",
+			"Version": "1.0.3",
+			"SizeInBytes": 34898,
+			"Uploaded": "2025-05-28T15:52:43+00:00",
+			"Mods": [
+				{
+					"Id": "Fai0.WaterDepthOverlay",
+					"DisplayName": "WaterDepthOverlay",
+					"Type": "Smapi",
+					"RelativePath": "WaterDepthOverlay",
+					"Manifest": {
+						"Name": "WaterDepthOverlay",
+						"Description": "Colorize fishable tiles with varying hues to indicate water depth, helping players select suitable bobber casting points based on water depth/distance and map location.",
+						"Author": "Fai0",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WaterDepthOverlay.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "jltaylor-us.GMCMOptions",
+								"MinimumVersion": "2.1.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:34207"
+						],
+						"UniqueId": "Fai0.WaterDepthOverlay"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520004,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342420895,
+		"UploaderId": 188303760,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 32136,
+	"Name": "Custom Spouse Rooms Continued - Decoratable Spouse Room Fix",
+	"Author": "TheChaosNinja",
+	"Description": "[b][u][size=4]Information\n<br />[/size][/u][/b]\n<br />This is an updated version of [url=https://www.nexusmods.com/stardewvalley/mods/20966]Custom Spouse Rooms Continued[/url] by Datamancer that fixes a bug where the walls would be covered by the flooring of the room if you had multiple spouses AND a mod that changes spouse rooms to be fully decorable, such as [url=https://www.nexusmods.com/stardewvalley/mods/23529]Spouse Room Renovations[/url] or [url=https://www.nexusmods.com/stardewvalley/mods/24272]Spouse Room Free Decoration[/url]. This mod is not required if you only have 1 spouse, or you don't have a mod that renovates spouse rooms. This mod maintains CSR-C's unique ID in the manifest to ensure compatibility with any mod that looks for it, such as Spouse Room Renovations.\n<br />\n<br />For technical details; the bug is caused by CSR's method of creating multiple spouse rooms, which involves filling the entire room with flooring, even behind the walls. While on its own this wouldn't be noticeable, mods that change spouse rooms to have wallpaperable walls cause this flooring to layer on top of the walls. This fix simply changes the function that fills in the flooring for spouse rooms to skip the first few rows of floors that would be covered by the wall.\n<br />\n<br />I have played with this mod in my own games with no issues so far, but do let me know if you believe this change causes any issues. However, this mod is only intended for the vanilla farmhouse with Custom Spouse Room Continued, and used alongside Spouse Room Renovations. I will not be making compatibility for any farmhouse mods or other mods that affect spouse room creation.\n<br />\n<br />[size=4][b][u]Installation\n<br />[/u][/b][/size]\n<br />Delete the CustomSpouseRooms folder from your mod folder, and drop the fixed version into the mod folder. This mod is a replacement update for Custom Spouse Rooms Recontinued.\n<br />\n<br />\n<br />[size=4][b][u]Credit to:[/u][/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/79401883]Datamancer1110[/url] for Custom Spouse Rooms Continued, which this mod is an edit of.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn[/url] for the original Custom Spouse Rooms from way back then.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/users/180914805]clark17936[/url] creator of Spouse Room Renovations who gave advice for this bug and encouraged me to upload this fix here.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32136",
+	"Version": "0.9.5",
+	"Updated": "2025-03-05T19:38:47+00:00",
+	"Downloads": [
+		{
+			"Id": 126732,
+			"Type": "Main",
+			"DisplayName": "Custom Spouse Rooms Continued - Decorate Fix",
+			"FileName": "Custom Spouse Rooms Continued - Decorate Fix-32136-0-9-5-1741203527.zip",
+			"Description": "",
+			"Version": "0.9.5",
+			"SizeInBytes": 32672,
+			"Uploaded": "2025-03-05T19:38:47+00:00",
+			"Mods": [
+				{
+					"Id": "datamancer.CustomSpouseRooms",
+					"DisplayName": "Custom Spouse Rooms Continued - Decoratable Spouse Room Fix",
+					"Type": "Smapi",
+					"RelativePath": "CustomSpouseRooms",
+					"Manifest": {
+						"Name": "Custom Spouse Rooms Continued - Decoratable Spouse Room Fix",
+						"Description": "Fix for flooring on wall bug in Custom Spouse Rooms Continued if you have multiple spouses and any mod that lets you freely decorate spouse rooms.",
+						"Author": "TheChaosNinja",
+						"Version": "0.9.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomSpouseRooms.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "datamancer.CustomSpouseRooms"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513420,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418824,
+		"UploaderId": 3636712,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

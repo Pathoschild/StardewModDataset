@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 27226,
+	"Name": "Wall Decorations",
+	"Author": "zvsmith",
+	"AuthorLabel": "neonwinter",
+	"Description": "[size=3]Are you feeling limited by your options for decorating your walls? Want to hang a calendar in your hallway? Want to hang a painting on a wood panel and then accent it with a downlight? Well, the Wall Decorations mod has got you (and your walls) covered![/size]\n<br />\n<br />[size=4][b]Just use the rotate furniture button when placing wall furniture to cycle between layers - layer whatever you like, however you like![/b][/size][size=4]\n<br />[/size]\n<br />[color=#ffff00][size=5][b]~~New In Version 1.2.0 - Now works with all non-rotatable wall furniture from the vanilla game or any mod pack, including Alternative Textures!~~[/b][/size][/color][size=3]\n<br />[/size]\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][size=3]Three distinct layers of wall decoration, letting you place items behind and in front of the standard wall furniture.[/size]\n<br />[*][size=3]Simply use the rotate furniture button when placing items on your walls to cycle between the layers![/size]\n<br />[*][size=3]Works with all types of wall items, including lights and windows![/size]\n<br />[*][size=3]Works will all non-rotatable wall furniture from the vanilla game or your favourite mods![/size]\n<br />[*][size=3]Lets you place items on the corners (ends) of walls, meaning you can now decorate your hallway, or even hang something across your stairs.[/size]\n<br />[*][size=3]Comes with a catalogue of wall decorations (purchasable at Robin's) for you to use. The catalogue is compatible with [url=https://www.nexusmods.com/stardewvalley/mods/19675]Happy Home Designer[/url]\uFEFF for easier decorating.[/size]\n<br />[/list]\n<br />[b][size=4]Setup / Configuration[/size][/b]\n<br />[size=3]Make sure you have [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] installed, then simply download and unpack Wall Hangings into your Mods folder.[/size]\n<br />[size=3][url=https://www.nexusmods.com/stardewvalley/mods/20628]Calcifer[/url] is required for the custom catalogue, and [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] lets you turn off\u00A0layer change feedback or\u00A0the ability to hang things on wall corners.[/size]\n<br />\n<br />[b][size=4]For Mod / Content Pack Authors[/size][/b][size=3]\n<br />As of version 1.1.0, there are no special requirements for wall furniture to work with the mod!\n<br />[/size]\n<br />[b][size=4]Technical Details / Compatibility Notes[/size][/b]\n<br />[size=3]By my understanding, this mod should be compatible with most other mods, and can be installed or uninstalled on an existing save without issue (although I would suggest removing any of the wall decorations on other layers before uninstalling just to be safe).\n<br />\n<br />The new decoration layers use Harmony to patch the draw method for wall furniture with the new tags, and the rotate method for wall furniture with no rotations, so chances for conflict there should be minimal.\n<br />\n<br />The ability to place furniture on the ends of walls patches the functionality testing valid placement for furniture, but only for wall furniture, so again chances for conflict should be minimal.\n<br />\n<br />As of version 1.2.0, there is a custom transpiler patch to handle layer depth for Alternative Textures. It is a fairly small addition, and seems to work well with Alternative Textures 7.3.0, but transpiler patches are not very robust to changes in the thing they're patching. If you have any issues with earlier or later versions, let me know.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/27226",
+	"Version": "1.2.0",
+	"Updated": "2024-08-31T05:56:45+00:00",
+	"Downloads": [
+		{
+			"Id": 110383,
+			"Type": "Main",
+			"DisplayName": "Wall Decorations 1.2.0",
+			"FileName": "Wall Decorations 1.2.0-27226-1-2-0-1725083805.zip",
+			"Description": "Version 1.2.0 - now compatible with Alternative Textures",
+			"Version": "1.2.0",
+			"SizeInBytes": 99192,
+			"Uploaded": "2024-08-31T05:56:45+00:00",
+			"Mods": [
+				{
+					"Id": "neonwinter.WallDecorations_Base",
+					"DisplayName": "Wall Decorations",
+					"Type": "Smapi",
+					"RelativePath": "WallDecorations\\WallDecorations",
+					"Manifest": {
+						"Name": "Wall Decorations",
+						"Description": "Better wall decorating options",
+						"Author": "neonwinter",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WallDecorations.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.AlternativeTextures",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:27226"
+						],
+						"UniqueId": "neonwinter.WallDecorations_Base"
+					}
+				},
+				{
+					"Id": "neonwinter.WallDecorations",
+					"DisplayName": "(CP) Wall Decorations",
+					"Type": "ContentPack",
+					"RelativePath": "WallDecorations\\[CP] WallDecorations",
+					"Manifest": {
+						"Name": "(CP) Wall Decorations",
+						"Description": "Wall decorations for the WallDecorations mod.",
+						"Author": "neonwinter",
+						"Version": "1.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sophie.Calcifer",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:27226"
+						],
+						"UniqueId": "neonwinter.WallDecorations"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342497071,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342413914,
+		"UploaderId": 6161047,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

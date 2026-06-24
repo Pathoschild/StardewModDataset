@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 38994,
+	"Name": "Spouse Farmhouse Schedules",
+	"Author": "Nikanor24",
+	"AuthorLabel": "Nikanor",
+	"Description": "\uD83C\uDFE1 Spouse Farmhouse Schedules (WIP)\n<br />\n<br />A comprehensive Stardew Valley mod that enhances [b]spouse behavior inside the farm[/b]\u00A0with custom schedules, animations, sprite swapping, and real-time in-game editing.\n<br />\n<br />\n<br />\n<br />[b]New Features (v1.5.0)\n<br />\n<br />[/b]\uD83D\uDD0E Schedule List Filtering[b]\u00A0\n<br />\n<br />[/b]The Schedule Editor now includes a [b]filter bar[/b], making it much easier to navigate and find specific schedule entries, especially for players with large or complex routines.\n<br />\n<br />[line]\uD83D\uDD04 Added[b]\u00A0[/b]Compatibility With [i]Wandering Spouses\n<br />\n<br />[/i]This mod now includes support and integration with the [b][url=https://www.nexusmods.com/stardewvalley/mods/37773?tab=descriptionhttp://]Wandering Spouses[/url][/b] mod by [b][url=https://next.nexusmods.com/profile/dandm1/mods?gameId=1303]dandm1[/url][/b].\n<br />Huge thanks to [b]dandm1[/b] for the amazing work on Wandering Spouses. It provides all the logic needed to let spouses intelligently explore the farm.\n<br />\n<br />You can now:\n<br />[list]\n<br />[*]Set a\u00A0[b]custom schedules[/b] to enable the spouse to wandering, giving the spouse to Wandering Spouses mod control.\n<br />[/list][line]\uD83C\uDF3E Schedules in New Locations\n<br />\n<br />Schedules are no longer limited to the farmhouse.\n<br />\n<br />You can now assign spouse actions in:\n<br />[list]\n<br />[*][b]FarmHouse[/b]\n<br />[*][b]Cellar[/b]\n<br />[*][b]Farm (outdoors)[/b]\n<br />[*][b]Greenhouse[/b]\n<br />[*][b]Farm Buildings[/b] (Coop, Barn, Shed, Slime Hutch)\n<br />[*][b]FarmCave[/b]\n<br />[*][b]PIF rooms[/b]\n<br />[/list]\n<br />[list]\n<br />[/list][line]✨ Features\n<br />\n<br />\uD83C\uDFE0 Smart Spouse Schedules[list]\n<br />[*][b]Custom Farmhouse Routines:[/b] Create detailed daily schedules for each spouse.\n<br />[*][b]Multiple Schedule Sources:[/b] Supports manual schedules and [b]Content Patcher[/b] integration.\n<br />[*][b]Real-Time Execution:[/b] Schedules trigger automatically at specified times.\n<br />[*][b]Flexible Movement:[/b] Uses an advanced [b]pathfinding system with fallbacks[/b] to prevent NPCs from getting stuck.\n<br />[*][b]Multi-Spouse Compatibility:[/b] Fully supports [b]Polyamory[/b] and multiple spouse rooms.\n<br />[/list][line]\uD83C\uDFAD Advanced Animation System[list]\n<br />[*][b]Custom Animations:[/b] Play any animation from the game’s Data/animationDescriptions. (You\u00A0 list in Articles)\n<br />[*][b]Looping Animations:[/b] Option to make animations loop continuously.\n<br />[*][b]Sprite Swapping:[/b] Change NPC sprites dynamically during specific animations or activities.\n<br />[*][b]Dialogue Balloons:[/b] Display short dialogue text above the spouse’s head during animations.\n<br />[/list][line]\uD83D\uDC55 Dynamic Sprite Management[list]\n<br />[*][b]Farmhouse Outfits:[/b] Automatically switch to pajamas or custom farmhouse sprites when inside.\n<br />[*][b]Animation-Specific Sprites:[/b] Use unique sprites for specific animations (e.g., workout, cooking).\n<br />[*][b]Automatic Restoration:[/b] Original sprites are restored when the spouse leaves the farmhouse.\n<br />[*][b]Multi-Spouse Support:[/b] Works seamlessly even with multiple spouses living together.\n<br />[/list][line]\uD83C\uDFAE User-Friendly Interface[list]\n<br />[*][b]In-Game Schedule Editor:[/b]\n<br />Press [b]F2[/b] to open the schedule editor (customizable in settings).Press [b]B[/b] to open the bed assignment editor (customizable\u00A0in settings).[*][b]Real-Time Editing:[/b] Add, edit, or delete schedules while the game is running.\n<br />[*][b]Visual Overview:[/b] Instantly view all schedule entries for each spouse.\n<br />[*][b]Bed Assignment Menu:[/b] Manually assign beds for each spouse — great for multi-spouse setups!\n<br />[*][b]GMCM Integration:[/b] Configure every setting through [b]Generic Mod Config Menu[/b].\n<br />[/list][line]\uD83E\uDDE9 Schedule Conditions (When)\n<br />\n<br />You can use the When field to make schedule entries only trigger under specific conditions.\n<br />Here are the supported formats:\n<br />   \uFEFFempty → always true\n<br />   \uFEFFrain or rain2 → only when it’s raining\n<br />   \uFEFFspring, summer, fall, winter → by season\n<br />   \uFEFFmon, tue, wed, thu, fri, sat, sun → by weekday\n<br />   \uFEFF15 → specific day of the month (e.g., 15th)\n<br />   \uFEFFspring_15 → specific season + day\n<br />   \uFEFFspring_mon → season + weekday\n<br />\n<br />You can list multiple conditions separated by commas, e.g.\n<br />\n<br />[code]\"spring_mon, rain, 15\"[/code]\n<br />\n<br />Only runs if any of them match.\n<br />\n<br />\n<br />[line]⚙️ How It Works\n<br />\n<br />Schedules are triggered on TimeChanged (every 10 in-game minutes).\n<br />\n<br />If the spouse is [b]inside the farmhouse[/b] at that time, they will:\n<br />[list=1]\n<br />[*]Pathfind to the target tile.\n<br />\n<br />[*]Face the specified direction.\n<br />\n<br />[*]Optionally play an animation.\n<br />\n<br />[*]Optionally display a dialogue balloon above their head.\n<br />\n<br />[/list]If the spouse leaves the farmhouse (e.g., external schedule or event), their indoor schedule stops automatically.\n<br />[list]\n<br />[/list][line]\n<br />\uD83D\uDEA7 Upcoming Features\n<br />\n<br />\uD83D\uDD39 Support for [b]multi-floor farmhouse navigation[/b] (second floor, cellar, etc.)\n<br />\uD83D\uDD39 [b]Day/Season/Weather-based schedules[/b] — already implemented, currently being tested\n<br />\uD83D\uDD39 Improve\u00A0[b]pathfinding intelligence[/b] around furniture and obstacles\n<br />\n<br />[line]\uD83E\uDDEA Ongoing Work \n<br />\n<br />I’m improving and testing everything bit by bit.\n<br />\n<br />Please report any bugs or strange behavior — your feedback helps a lot! \uD83D\uDE4F\n<br />\n<br />Known Issues\n<br />\n<br />[list]\n<br />[*]Some parallel actions (e.g., Polyamory kiss animations) may interrupt looping animations.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38994",
+	"Version": "2.0.0",
+	"Updated": "2025-12-20T18:48:43+00:00",
+	"Downloads": [
+		{
+			"Id": 151061,
+			"Type": "Main",
+			"DisplayName": "SpouseFarmhouseSchedules",
+			"FileName": "SpouseFarmhouseSchedules-38994-2-0-0-1766256523.zip",
+			"Description": "",
+			"Version": "2.0.0",
+			"SizeInBytes": 182429,
+			"Uploaded": "2025-12-20T18:48:43+00:00",
+			"Mods": [
+				{
+					"Id": "Nikanor.SpouseFarmhouseSchedules",
+					"DisplayName": "Spouse Farmhouse Schedules",
+					"Type": "Smapi",
+					"RelativePath": "SpouseFarmhouseSchedules",
+					"Manifest": {
+						"Name": "Spouse Farmhouse Schedules",
+						"Description": "Define spouse schedules.",
+						"Author": "Nikanor",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpouseFarmhouseSchedules.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "dandm1.WanderingSpouses",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38994"
+						],
+						"UniqueId": "Nikanor.SpouseFarmhouseSchedules"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537749,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425682,
+		"UploaderId": 262325170,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,97 @@
+{
+	"Site": "Nexus",
+	"Id": 30087,
+	"Name": "Couple Events",
+	"Author": "linkoidDev",
+	"AuthorLabel": "linkoid",
+	"Description": "[size=6][b]Couple Events[/b][/size]\n<br />Couple Events adds events for two farmer players that are married in multiplayer, making the experience of marrying another farmer as interesting and exciting as marrying an NPC. These events are romantic, so you may want to be selective regarding who you choose to experience them with.\n<br />\n<br />[b][size=4]Current Content[/size][/b]\n<br />[list]\n<br />[*]This mod has 7 different events, most of which are based on events you can experience with other NPCs. (I'm a programmer, not a writer.)\n<br />[*]A special birth event (inspired by [url=https://www.nexusmods.com/stardewvalley/mods/6578]kristinthered[/url])\n<br />[*]You can interact with your spouse once a day by right clicking on them, and dialogue will appear. (Currently, dialogue is the same every time.)\n<br />[*]Generic Mod Config Menu can be used to choose custom nicknames for one another. (Both players must configure this)\n<br />[*]Custom portraits can be made for each player, and placed in the [font=Courier New]\uFEFFCoupleEvents.Content/Custom/Portraits/[/font] folder.\n<br />[list]\n<br />[*]Files should be given the same name as the in-game character. So if my farmer was named 'Linkoid', I would save my custom portraits as [font=Courier New]Linkoid.png[/font].\n<br />[*]Portraits for different locations can also be added for each player. (e.g. [font=Courier New]Linkoid_FarmHouse.png[/font], [font=Courier New]Linkoid_Hospital.png[/font], [font=Courier New]Linkoid_[font=Courier New]Beach[/font].png[/font])\n<br />[/list][/list]\n<br />[b][size=4]Future Updates[/size][/b]\n<br />At this point in time, I don't have much inspiration for new content. The future of this mod will largely be based on community response. There may be updates or changes that have significant effects on how the mod is used / played.\n<br />\n<br />[b][size=4]Find Bugs?[/size][/b]\n<br />If you find bugs (which I'm sure there are) there is a bugs tab that you may use, [i]however[/i], I don't check that tab often.\n<br />After reporting a bug, please ping @linkoid on Discord (either in [url=https://discord.gg/yKwt2AWcGF]My Discord Server[/url], or the [url=https://discord.gg/stardewvalley]Stardew Valley Discord server[/url].)\n<br />\n<br />[size=4][b]Adding More Content[/b][/size]\n<br />It is possible to add more events or edit these events.\n<br />If you know how stardew events work, feel free to take a look at the events.yaml file to figure out how to make your own event for couples.\n<br />Feel free to release your own events for couples as well, just make sure to make Couple Events a dependency, as it wont work otherwise.\n<br />\n<br />[b][size=4]Dependencies[/size][/b]\n<br />- Stardew Modding API\n<br />- Content Patcher\n<br />- YAML Adapter for Content Patcher\n<br />\n<br />[b][size=4]Copyright Notice[/size][/b]\n<br />I've used various resources for inspiration and placeholders in this project. These works include:\n<br />- [url=https://jazzybee.itch.io/sdvcharactercreator]Stardew Valley Character Creator[/url] by Poltergeister &amp; Jaz\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/6578]Pregnancy and Birth Events[/url] by kristinthered",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30087",
+	"Version": "0.3.0",
+	"Updated": "2025-01-07T23:11:52+00:00",
+	"Downloads": [
+		{
+			"Id": 121596,
+			"Type": "Main",
+			"DisplayName": "CoupleEvents",
+			"FileName": "CoupleEvents-30087-0-3-0-1736291512.zip",
+			"Description": "",
+			"Version": "0.3.0",
+			"SizeInBytes": 100764,
+			"Uploaded": "2025-01-07T23:11:52+00:00",
+			"Mods": [
+				{
+					"Id": "Linkoid.CoupleEvents",
+					"DisplayName": "Couple Events",
+					"Type": "Smapi",
+					"RelativePath": "CoupleEvents",
+					"Manifest": {
+						"Name": "Couple Events",
+						"Description": "Adds events for two farmer players that are married in multiplayer, making the experience of marrying another farmer as interesting and exciting as marrying an NPC.",
+						"Author": "linkoid",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.17.0",
+						"EntryDll": "CoupleEvents.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:30087"
+						],
+						"UniqueId": "Linkoid.CoupleEvents"
+					}
+				},
+				{
+					"Id": "Linkoid.CoupleEvents.Content",
+					"DisplayName": "Couple Events Content",
+					"Type": "ContentPack",
+					"RelativePath": "CoupleEvents.Content",
+					"Manifest": {
+						"Name": "Couple Events Content",
+						"Description": "Adds events for two farmer players that are married in multiplayer, making the experience of marrying another farmer as interesting and exciting as marrying an NPC.",
+						"Author": "linkoid",
+						"Version": "0.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Linkoid.CoupleEvents",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Linkoid.YetAnother.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "SuperAardvark.AntiSocial",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:30087"
+						],
+						"UniqueId": "Linkoid.CoupleEvents.Content"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342508284,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416775,
+		"UploaderId": 221329755,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

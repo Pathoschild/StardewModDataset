@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 27147,
+	"Name": "Custom Picture Frames-REDUX",
+	"Author": "klatuprism",
+	"AuthorLabel": "Prism 99-aedenthorn",
+	"Description": "[size=3]Updated [url=https://www.nexusmods.com/stardewvalley/mods/10704]Custom Picture Frame[/url]\u00A0\u00A0by aedenthorn to be 1.6 compatible.\u00A0 Now multilingual capable.\n<br />\n<br />[b]Permissions Disclaimer:[/b]\n<br />Aedenthorn has retired from SDV modding and has removed all restrictions on permissions concerning their mods.\n<br />This announcement can be found\u00A0[url=https://discord.com/channels/137344473976799233/156109690059751424/1194051284177801307]here\u00A0[/url]in the Stardew Valley Modding Discord server.\n<br />\n<br />Aedenthorn's\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]Stardew Valley Mod repo[/url]\u00A0uses the GPL-3 license which allows derivative works to be allowed without \n<br />requiring permission, given that they remain free, open source, and also use the same GPL-3 license.\n<br />\n<br />[/size][size=4][b]Original Description[/b][/size][size=3]\n<br />This mod is a framework for creating picture frame furniture that can display custom-made snap-shots created using an in-game interface.\n<br />\n<br />This mod does not contain any frames, you will need to install at least one custom frames content pack, e.g.:\n<br />\n<br />[/size][list]\n<br />[*][size=3][url=https://www.nexusmods.com/stardewvalley/mods/27199]Wooden Picture Frames-REDUX[/url]\uFEFF[/size]\n<br />[*][size=3][url=https://www.nexusmods.com/stardewvalley/mods/27215]Alternative Picture Frames-REDUX[/url]\uFEFF[/size]\n<br />[/list]\n<br />For information on creating your own frames, see below.\n<br />\n<br />\n<br />[b][size=5]Taking Snapshots[/size][/b]\n<br />\n<br />Once you have installed some frames, you can take a snapshot to use in a specific frame by pressing the interface hotkey ([b]default: F10[/b]).\u00A0 \n<br />\n<br />This will cause a frame to be shown next to the mouse cursor. To choose a different frame, press the frame switch key ([b]default: F11[/b]).\n<br />\n<br />Move the cursor so the frame outlines the subject and press the snapshot key ([b]default: F12[/b]).\n<br />\n<br />Press [b]Esc[/b] or the interface hotkey to cancel taking a snapshot.\n<br />\n<br />[b][i]Note: Changing the game zoom lets you take zoomed in or out photos.[/i][/b]\n<br />\n<br />\n<br />[b][size=5]Assigning Snapshots[/size][/b]\n<br />\n<br />To assign a snapshot to a frame of the same type used to take the \n<br />snapshot, hover over the frame in-game and press the change picture \n<br />hotkey ([b]default: F11[/b]).\n<br />\n<br />You can take multiple snapshots for a given frame size and switch through them all for an \n<br />individual placed frame using the change picture hotkey.\n<br />\n<br />Snapshots are specific to each save game.\n<br />\n<br />\n<br />[size=5][b]Deleting [/b][/size][b][size=5]Snapshots[/size][/b]\n<br />\n<br />If you hover over a frame with a snapshot currently set and press the delete hotkey ([b]default: Delete[/b]), it will delete the snapshot file from the disk.\n<br />\n<br />\n<br />[b][size=5]Creating Frames[/size][/b]\n<br />\n<br />You need a [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] pack to tell this mod about your frames. The Content Patcher syntax is as follows, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.3.0\",\n<br />\u00A0 \"Changes\": [ //add the frame to the custom picture framelist\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"custom_picture_frame_dictionary\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"MyFrame16x32\": \"MyPictureFrames/MyFrame16x32\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 }, //add the frame texture\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"Load\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"MyPictureFrames/MyFrame16x32\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"FromFile\": \"assets/MyFrame16x32.png\"\n<br />\u00A0\u00A0\u00A0 }, // add furniture entry\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"Data/Furniture\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"MyFrame16x32\": \"MyFrame16x32/painting/Width Height/Width Height/1/Price/0/My Frame (16x32)/0/MyPictureFrames&#92;&#92;MyFrame16x32\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0 // add shop entry\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"Data/Shops\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"TargetField\": [ \"Carpenter\", \"Items\" ],\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"MyFrame16x32\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Id\": \"MyFrame16x32\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"ItemId\": \"MyFrame16x32\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Price\": Price,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"IgnoreShopPriceModifiers\": true\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 }\n<br />\u00A0 ]\n<br />}\n<br />\n<br />[/code]\n<br />Replace the 'Price' entries in the Furniture and Shop sections with the numeric cost of your frame.\u00A0 Replace the 'Height' and 'Width' entry in the Furniture section with the Tile height and width values of your frame.\n<br />\n<br />The mod attempts to find and map transparent enclosed pixels to show the snapshot. All pixels within the frame texture that\n<br />\n<br />a) are completely transparent, and\n<br />b) are a part of a group of enclosed transparent pixels\n<br />\n<br />will be used to show the snapshot. If you have enclosed transparent parts that you don't want to be used to show the snapshot, you can set those pixels to any color with 1% opacity.\n<br />\n<br />\n<br />You can edit all the config variables using [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF, or editing the [b]config.json[/b] file.\n<br />\n<br />Source Code: [url=https://github.com/Prism-99/Aedenthorn-StardewValleyMods/tree/master/CustomPictureFrames]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/27147",
+	"Version": "0.5.0",
+	"Updated": "2024-08-23T21:39:14+00:00",
+	"Downloads": [
+		{
+			"Id": 109914,
+			"Type": "Main",
+			"DisplayName": "Custom Picture Frames-REDUX",
+			"FileName": "Custom Picture Frames-REDUX-27147-0-5-0-1724449154.zip",
+			"Description": "Requires SMAPI 4.",
+			"Version": "0.5.0",
+			"SizeInBytes": 20887,
+			"Uploaded": "2024-08-23T21:39:14+00:00",
+			"Mods": [
+				{
+					"Id": "prism99.aedenthorn.CustomPictureFrames",
+					"DisplayName": "Custom Picture Frames-REDUX",
+					"Type": "Smapi",
+					"RelativePath": "CustomPictureFrames-REDUX",
+					"Manifest": {
+						"Name": "Custom Picture Frames-REDUX",
+						"Description": "Custom Picture Frames.",
+						"Author": "prism99.aedenthorn",
+						"Version": "0.5.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomPictureFrames-REDUX.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:27147"
+						],
+						"UniqueId": "prism99.aedenthorn.CustomPictureFrames"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342496602,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342413835,
+		"UploaderId": 82835898,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

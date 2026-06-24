@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 47260,
+	"Name": "Choose Your Catch - Pick Any Fish",
+	"Author": "ridwan12dvk",
+	"Description": "[center][size=6][b]Choose Your Catch[/b][/size]\n<br />[size=4]Pick the catch you want. Cast your line. Reel it in.[/size][/center]\n<br />\n<br />[center]Tired of casting for hours hoping for one specific fish? Open a menu, pick what you want to catch, and make it your next catch.[/center]\n<br />\n<br />[size=5][b]What it does[/b][/size]\n<br />\n<br />Press [b]Q[/b] near any fishable water to open the catch menu, pick something from the grid, then fish like normal. Whatever you selected becomes the next valid catch for your character.\n<br />\n<br />The menu covers vanilla fish, most modded fish, and non-fish catches that go through Stardew's standard location fishing data, such as junk, seaweed, crates, and other custom objects.\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Choose your next catch[/b] instead of leaving it to random rolls.\n<br />[*][b]Visual menu[/b] with item sprites and names in a scrollable grid.\n<br />[*][b]Full controller support[/b] for moving around the grid, scrolling, and confirming a pick.\n<br />[*][b]Fish, junk, and custom catches[/b], or flip on a fish-only list if you prefer.\n<br />[*][b]Vanilla and modded content[/b] through standard [code]Data/Locations[/code] and [code]Data/Fish[/code] rules.\n<br />[*][b]Spot-aware filtering[/b] that reads the nearby water, fishing area, cast direction, distance from shore, season, time, weather, fishing level, and rod.\n<br />[*][b]Optional Require Targeted Bait[/b] so a pick is only guaranteed when the matching bait is on your rod (see below).\n<br />[*][b]Stable list[/b] that does not reshuffle or hide eligible catches when you reopen it at the same spot.\n<br />[*][b]Sort and filter tools[/b] for name, price, or uncaught fish first, with a green dot on fish you have not recorded yet.\n<br />[*][b]Quality you control[/b]: Vanilla, Normal, Silver, Gold, or Iridium.\n<br />[*][b]Per-player in multiplayer[/b], each player keeps their own selection.\n<br />[*][b]Back to normal anytime[/b] by choosing [i]Disable / Normal Fishing[/i] at the end of the list.\n<br />[/list]\n<br />[size=5][b]Getting started[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] 4.0.0 or newer.\n<br />[*]Unzip this mod into your [code]Stardew Valley/Mods[/code] folder.\n<br />[*]Launch through SMAPI and load a save.\n<br />[*]Stand near the water you want to fish, face it, and press [b]Q[/b].\n<br />[*]Pick a catch, close the menu, and fish.\n<br />[/list]\n<br />[size=5][b]Require Targeted Bait[/b][/size]\n<br />\n<br />If a guaranteed catch feels too easy, turn on [b]Require Targeted Bait[/b] in the config. Your chosen fish is then only guaranteed when the matching Targeted Bait for that fish is equipped on your rod. Without it, fishing behaves normally and you get a single reminder. Your selection stays active, so you can equip the bait and keep going. The requirement is shared correctly in multiplayer too.\n<br />\n<br />[size=5][b]Sorting and collection tools[/b][/size]\n<br />\n<br />The two controls above the grid change the order of what you see without changing what is available:\n<br />\n<br />[list]\n<br />[*]Name (A-Z)\n<br />[*]Price (High to Low)\n<br />[*]Price (Low to High)\n<br />[*]Uncaught First\n<br />[*]All Catches\n<br />[*]Uncaught Only\n<br />[/list]\n<br />Your sort and filter choices stick while the game is running and reset on restart. Only real fish tracked by the in-game collection can be marked as uncaught, so junk and unsupported items never get a green dot by mistake.\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional but makes changing settings in-game much easier.\n<br />\n<br />[list]\n<br />[*][b]Open target fish menu[/b]: rebind the hotkey. Default is [b]Q[/b].\n<br />[*][b]Allow all fish[/b]: show every known catch instead of only the ones tied to your current location.\n<br />[*][b]Show only fish[/b]: hide junk, seaweed, crates, and other non-fish catches.\n<br />[*][b]Respect spawning rules[/b]: filter by location, water area, season, time, weather, fishing level, rod, and likely cast position.\n<br />[*][b]Require Targeted Bait[/b]: only guarantee the catch when the matching bait is equipped.\n<br />[*][b]Default quality[/b]: Vanilla, Normal, Silver, Gold, or Iridium. Vanilla keeps the game's usual quality behavior.\n<br />[/list]\n<br />[size=5][b]How spot detection works[/b][/size]\n<br />\n<br />Before you cast there is no real bobber yet, so the mod looks at the open-water tile you are most likely to aim for, favoring the way your farmer is facing. That lets the menu tell nearby oceans, lakes, rivers, waterfalls, and special zones apart on maps with several bodies of water.\n<br />\n<br />For the most accurate list, stand close to the water you intend to use, face that direction, and open the menu before casting. Once you have selected a catch, an imperfect pre-cast guess will not cancel it.\n<br />\n<br />[size=5][b]Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6.0 or newer.\n<br />[*]SMAPI 4.0.0 or newer.\n<br />[*]Safe to add to an existing save.\n<br />[*]Multiplayer-safe, with a separate selection for each player.\n<br />[*]Works with vanilla and many modded catches that use standard 1.6 fishing data.\n<br />[*]Built to sit alongside auto-fishing mods without patching them directly.\n<br />[/list]\n<br />Mods that fully replace Stardew's fishing logic or hand out rewards through their own private code may not expose their catches here. Standard location-data fish and object catches have the best compatibility.\n<br />\n<br />[size=5][b]FAQ[/b][/size]\n<br />\n<br />[b]Why does a catch show up even if my exact casting tile might not match?[/b]\n<br />[spoiler]The menu has to predict your cast before a bobber exists, using nearby open water, your facing direction, the fishing area, and shore distance to build the most stable list it can. Once you choose a catch, the mod honors that choice. It will not quietly stop working just because the pre-cast guess was slightly off.[/spoiler]\n<br />\n<br />[b]Why are junk items and crates listed?[/b]\n<br />[spoiler]The mod handles fishing catches, not only fish. Turn on [b]Show only fish[/b] in the config for a fish-only menu.[/spoiler]\n<br />\n<br />[b]Why doesn't a modded item appear?[/b]\n<br />[spoiler]The item has to be exposed through standard Stardew location fishing data. Catches generated entirely by another mod's own code may not be discoverable.[/spoiler]\n<br />\n<br />[b]Why does it tell me to equip Targeted Bait?[/b]\n<br />[spoiler]You have [b]Require Targeted Bait[/b] enabled, but the matching Targeted Bait for your chosen fish is not on your rod. Fishing keeps working normally and the reminder only shows once. Equip the right bait to guarantee the catch, or disable the option in the config.[/spoiler]\n<br />\n<br />[b]Can I change my selection?[/b]\n<br />[spoiler]Yes. Open the menu and pick something else, or choose [i]Disable / Normal Fishing[/i] to go back to normal random fishing.[/spoiler]\n<br />\n<br />[b]Why can't I open the menu while fishing?[/b]\n<br />[spoiler]Changing the target mid-cast can leave the catch in an inconsistent state, so the menu stays locked while you are casting, waiting for a bite, reeling, or pulling a catch from the water. Stop fishing first, then reopen it.[/spoiler]\n<br />\n<br />[size=5][b]More mods by ridwan12dvk[/b][/size]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/47317][b]Why Can't I Catch This Fish?[/b][/url]\n<br />Pick a fish and instantly see whether it is catchable right now. If not, the mod explains the blockers: season, time, weather, location, fishing level, rod restrictions, and special conditions.\n<br />\n<br />[size=5][b]Support[/b][/size]\n<br />\n<br />If you enjoy the mod and want to support future updates, you can buy me a coffee here:\n<br />[url=https://ko-fi.com/ridwan11dvk]ko-fi.com/ridwan11dvk[/url]\n<br />\n<br />[center]If this helps you land the catch you were after, an endorsement goes a long way. Modded fishing setups that need compatibility testing are always welcome.[/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47260",
+	"Version": "1.1.0",
+	"Updated": "2026-06-14T04:52:52+00:00",
+	"Downloads": [
+		{
+			"Id": 171179,
+			"Type": "Main",
+			"DisplayName": "ChooseYourCatch 1.1.0",
+			"FileName": "bc/69/b9/bc69b91a-000b-404c-b932-385621d2836d",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 61362,
+			"Uploaded": "2026-06-14T04:52:52+00:00",
+			"Mods": [
+				{
+					"Id": "venturions.TargetFishSync",
+					"DisplayName": "Choose Your Catch",
+					"Type": "Smapi",
+					"RelativePath": "ChooseYourCatch",
+					"Manifest": {
+						"Name": "Choose Your Catch",
+						"Description": "Choose the fish you want to catch from a visual menu, with auto-fishing and multiplayer support.",
+						"Author": "venturions",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "TargetFishSync.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "venturions.TargetFishSync"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557867,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433948,
+		"UploaderId": 98015383,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}

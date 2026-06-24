@@ -1,0 +1,86 @@
+{
+	"Site": "ModDrop",
+	"Id": 980853,
+	"Name": "Flower Dance Fix",
+	"Author": "elfuun",
+	"TagLine": "Replaces existing Flower Dance code with flexible, dynamic code allowing for altered NPC genders, custom NPCs, and expanded dance participants.",
+	"Description": "**Flower Dance Fix** changes the \"main event\" code of the Flower Dance Festival, allowing for Custom NPCs and edited vanilla NPCs to participate in the dance, and for the pairs of dancers to be randomized. An NPC must be \"datable\", and not a child, to be eligible to participate in the dance.\n\n[align=center]\n![Alt Text](https://imgur.com/UaapzfW.png \"Configuration\")\n[/align]\n\nMod settings can be configured in the `config.json` file included in the mod folder, or on the main menu using the [Generic Mod Config Menu](https://www.moddrop.com/stardew-valley/mods/771692-generic-mod-config-menu). Please check out [the wiki on GitHub\uFEFF](https://github.com/elfuun1/FlowerDanceFix/wiki) for more information about configuring your dance. Current config settings are:\n\n**NPCs Have Random Partners** (default: false)\nIf _false_, NPCs pairs are generated using a \"Love Interest\" pairing, if one is available. This method prioritizes matching a character with the \"love interest\" value for that character's NPC Disposition entry (index 6). Any NPCs without a valid love interest will be paired with the opposite sex at random. Currently does not work for same-sex couples.\nIf _true_, NPCs are paired with the opposite sex at random.\n\n**Allow Tourist Dancers** (default: false)\nIf _false_, NPCs that do not live in the valley will be excluded from the dancer pools. This is calculated using the NPC's \"homeRegion\" value.\nIf _true_, valid NPCs living anywhere are eligible to participate in the dance.\n\n**Blacklist**\nPrevents characters from being selected for dance. Enter blacklist character names separated by a single forward-slash \"/\", with no spaces.\n\n**Max Dance Pairs**\nChange the total number of pairs of dancers allowed to dance. Limited to a maximum of 17 pairs total (34 NPCs total).\n\n[align=center]\n![Alt Text](https://imgur.com/6hkFc2u.png \"Bugs\")\n[/align]\n\nSome custom NPCs (particularly older or abandoned ones) may be missing flower dance sprites, or may have flower dance sprites in the wrong location on their spritesheets. If these NPCs are selected by FDF to dance, they may have incorrect animations, appear as glitched sprites, or not appear at all. Please be assured that this isn't a glitch or a bug that will break your game or ruin your save- it's just a minor graphics error. [A list in the Github wiki](https://github.com/elfuun1/FlowerDanceFix/wiki/Troubleshooting#empty-spots-in-dance-lines--why-isnt-an-npc-showing-up) has a list of mods, NPCs, and retextures that have incorrect or missing flower dance sprites.\n\nThis mod will likely break when used alongside any unmentioned mod that accesses the `Event.setUpFestivalMainEvent()` method.\n\n[align=center]\n![Alt Text](https://imgur.com/944DKo7.png \"Integrations\")\n[/align]\n\nThis mod currently contains integrations for or works along side the following mods:\n\n* **Generic Mod Config Menu**\uFEFF by spacechase0 [[ModDrop]](https://www.moddrop.com/stardew-valley/mods/771692-generic-mod-config-menu) [[Nexus]](https://www.nexusmods.com/stardewvalley/mods/5098)\n* **Flower Dancing** by kelly2892 [[Nexus]](https://www.nexusmods.com/stardewvalley/mods/8107)\n\nSome mods include datable NPCs that will be picked up by FDF as valid partners, even though it doesn't make sense for these NPCs to participate in the dance. It is recommended that you add certain NPCs to FDF's NPC Blacklist up until the point where they would participate in the dance, for the sake of maintaining the plot! See [this list on the Github wiki](https://github.com/elfuun1/FlowerDanceFix/wiki/Mod-Configuration#suggest-configurations-for-certain-mods) for some recommend blacklist settings.\n\n[align=center]\n![Alt Text](https://imgur.com/z4JSgwR.png \"Future Development\")\n[/align]\n\nFurther updates will include:\n* Handling for non-binary NPCs (ie. NPC \"gender\" = 2)\n* Mixed-gendered dance lines (male NPCs dancing in the top row with female NPCs, and vice-versa), with custom sprites\n* Crowd animations (thanks for the idea, foggywizard (discord)!)\n* API for easy mod integration\nSome of these features may exist partially in the mod files, or visible in the mod config menu/json. They are unlikely to work, as they are either incomplete or improperly implemented.\n\n[align=center]\n![Alt Text](https://imgur.com/yDtflJp.png \"Acknowledgments\")\n[/align]\n\n\uFEFF**[Kelly2892](https://github.com/kenny2892/StardewValleyMods)** - for example code regarding harmony implementation\n* **Matt123337\uFEFF** - for mentorship, and listening to my gripes\n* **[The Stardew Valley Wiki's Modding Guide\uFEFF](https://stardewvalleywiki.com/Modding:Modder_Guide/Get_Started)** - for general information and laying out step-by-step how to write a mod\n* **Stardew Valley Discord Server** - for answering quick questions and providing inspiration\n* **[Kdau's Stardew Scroll Generator](https://www.kdau.com/scrollish/)** - for section scrolls\uFEFF\n\nSource code on [Github](https://github.com/elfuun1/FlowerDanceFix)!\uFEFF\uFEFF\nCustom NPCs in the screenshot are from [Ridgeside Village](https://www.nexusmods.com/stardewvalley/mods/7286)!",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/980853",
+	"Version": null,
+	"Updated": "2021-07-02T21:29:52.8+00:00",
+	"Downloads": [
+		{
+			"Id": 995837,
+			"Type": "Main",
+			"DisplayName": "Flower Dance Fix 1.2.1",
+			"FileName": "Flower Dance Fix 1.2.1.zip",
+			"Description": "Replaces existing Flower Dance code with flexible, dynamic code allowing for altered NPC genders, custom NPCs, and expanded dance participants.",
+			"Version": "1.2.1",
+			"SizeInBytes": 22427,
+			"Uploaded": "2021-07-02T21:29:52.799+00:00",
+			"Mods": [
+				{
+					"Id": "FlowerDanceFix.elfuun",
+					"DisplayName": "Flower Dance Fix",
+					"Type": "Smapi",
+					"RelativePath": "Flower Dance Fix 1.2.1",
+					"Manifest": {
+						"Name": "Flower Dance Fix",
+						"Description": "Replaces existing Flower Dance code with flexible, dynamic code allowing for altered NPC genders, custom NPCs, and expanded dance participants.",
+						"Author": "elfuun",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "FlowerDanceFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8535",
+							"ModDrop:980853"
+						],
+						"UniqueId": "FlowerDanceFix.elfuun"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "09e3301653d9f13e8ec3d61c5a347726",
+				"md5In": "96794829afd79395ceef864eddeb16f5",
+				"patchNotes": "Added ModDrop update check key.",
+				"scriptType": 0,
+				"sha256Ex": "d6538d7d711b223c07db0da73e1f0042b43bdb3dc1f266d2485b6becb825090c",
+				"sha256In": "99925f5168125ceb78b218f7beeae208fcb5f9ba5c870fc5979f691fe6f0f999"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1625259021233,
+		"DateUpdated": 1625261392800,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1625258066870,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/980853/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/980853/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/980853/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/980853/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 246192
+	}
+}

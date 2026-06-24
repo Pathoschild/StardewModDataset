@@ -1,0 +1,68 @@
+{
+	"Site": "Nexus",
+	"Id": 34412,
+	"Name": "Farmer Portraits from FS Outfits",
+	"Author": "amillionand1fandoms",
+	"Description": "Do you wish you could change your outfits in Fashion Sense whenever you want, but still have your custom farmer portraits match the outfit you're wearing? If so, this is the mod for you!\n<br />\n<br />[size=4]How do I use this mod?[/size]\n<br />\n<br />   \uFEFF1.\u00A0Download the mod and its requirements ([url=https://www.nexusmods.com/stardewvalley/mods/20713?tab=description]Farmer Portraits for 1.6[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/9969]Fashion Sense[/url]\uFEFF, and [url=https://www.nexusmods.com/stardewvalley/mods/18384]FashionSenseOutfits[/url])\n<br />   \uFEFF2.\u00A0Make yourself some portraits for your farmer and make some outfits in Fashion Sense\n<br />   \uFEFF   \uFEFFa. [url=https://jazzybee.itch.io/sdvcharactercreator]Jazzybee's SDV Character Creator[/url] is a great tool. I used it to very quickly create the Test portraits included in this mod.\n<br />   \uFEFF3. In the Assets folder of Farmer Portraits for FS Outfits, create a folder with the name of your farmer\n<br />   \uFEFF4. Put your basic portraits in that folder. These are the portraits the mod will use any time there's no portrait for the FS outfit you're wearing.\n<br />   \uFEFF   \uFEFFa. You should have portrait.png, portrait_angry.png, portrait_blush.png, portrait_happy.png, portrait_sad.png, portrait_special.png\n<br />   \uFEFF   \uFEFFb. If you do not have these portraits, things will break.\n<br />   \uFEFF5. For portraits that match specific outfits, you should create a folder\u00A0inside your farmer folder\u00A0[b]WITH THE SAME NAME AS THE FASHION SENSE OUTFIT[/b]\n<br />   \uFEFF   \uFEFFa. Each outfit folder also needs to have\u00A0portrait.png, portrait_angry.png, portrait_blush.png, portrait_happy.png, portrait_sad.png, portrait_special.png\n<br />   \uFEFF   \uFEFFb. I cannot emphasize this enough: if the folder name and the outfit name do not match EXACTLY, it will not work.\n<br />   \uFEFF   \uFEFFc. (Capitalization might not matter, actually, but I'm not 100% sure.) Spaces and special characters definitely need to match, though.\n<br />[size=4]\n<br />\n<br />How do I add custom reactions or portraits?\n<br />\n<br />[/size](The following instructions are also present as comments in the Reactions.json and Portraits.Json files within the mod itself.)\n<br />\n<br />[size=3]Adding Custom Reactions to NPCs[/size]\n<br />[spoiler]\n<br />If you do not have a custom reaction for a character, the reactions will default to whatever you have set for reactions in the config of MistySpring's Farmer Portraits for 1.6\n<br />\n<br />Before you start editing reactions, you should make sure you understand that portraits are numbered left-to-right and top-to-bottom,\u00A0starting at 0. You can find the number for any npc portrait by looking at their portrait sheet and counting. (Don't forget zero!) In\u00A0theory, marriageable and regular npcs have standard patterns for which portrait is happy, sad, etc. In practice, this isn't always the\u00A0case, especially with modded npcs. So I suggest you look at the portrait sheet when determining what your farmer's reaction should be.\n<br />\n<br />The farmer portraits are numbered according to what you have in Portraits.json. By default, 0=default, 1=happy, 2=sad, 3=angry, 4=blush, 5=special, and 6+ = whatever extra emotions you added.\n<br />\n<br />Each entry includes the name of the NPC and a list of paired numbers. The first number is the NPC, the second number is the farmer's\u00A0reaction. Note that the name is the game's internal name. This is usually the same, but sometimes for modded NPCs this internal name is\u00A0different. For example, SVE's version of Marlon actually uses the internal name MarlonFay.\n<br />\n<br />See Reactions.Json for two examples, a regular and \"marriageable\" npc (thank you to revenantFun for the examples with explanations!). If you are\u00A0unsure of where to begin, start by copy-pasting one of those entries, changing the names and any numbers that you want to change.\n<br />\n<br />REMEMBER TO ALWAYS CREATE A BACKUP OF YOUR CUSTOM REACTIONS BEFORE UPDATING THE MOD!\n<br />[/spoiler]\n<br />\uFEFF\n<br />[size=3]Adding Extra Portraits for Custom Reactions[/size]\n<br />[spoiler]\n<br />In order to have more portraits, you must have extra portraits and extra sections in the Portraits.json to use each portrait.\n<br />\n<br />\"Target\" lets the picture be treated like a vanilla portrait sheet. You should simply increment the number (portrait5 to portrait6)\u00A0each time you create a new entry. Otherwise leave it the same. Don't skip numbers because that may mess things up. (For instance,\u00A0having portrait8 but not portrait7)\n<br />\n<br />\"FromFile\" tells the mod where to find your portrait. \"assets/{{PlayerName}}/portrait_extra.png\" means the file named \"portrait_extra.png\"\u00A0should be directly inside the folder with the farmer's name, which should be inside the \"assets\" folder. If you wish to add more, just copy\u00A0and paste the code block directly below, increment the number in Target, and replace \"portrait_special\" with the name of your new portrait.\u00A0You can also just replace \"portrait_special\" if you want portrait5 to be something else. But be aware that the default reaction settings in\u00A0Farmer Portraits for 1.6 will still refer to portrait5 as \"Special\".\n<br />\n<br />You can add as many extra portraits as you want but portrait6 and above will not be used unless you also add the reactions themselves. You\u00A0can do that in Reactions.json\n<br />\n<br />If you add extra portraits MAKE SURE that you add the code to both the DEFAULT and OUTFITS sections. You can NOT just copy and paste the whole\u00A0thing without editing, though, because the FromFile path is different for both sections.\n<br />[/spoiler]\n<br />\n<br />\n<br />[size=4]What are some limitations I should know about?\n<br />[/size]\uFEFF\n<br />After changing outfits, you have to wait until the game time ticks over (ie. from 6:20 to 6:30) or enter a new location before the matching portrait will appear.\n<br />\n<br />If you just created a new outfit in Fashion Sense, but your matching portraits aren't showing, it might be because Fashion Sense doesn't consider your character to actually be wearing that outfit. Open up the Fashion Sense menu, go to choose outfits and click on the outfit you just made. That should solve the problem.\n<br />\n<br />\n<br />[size=4]Credits\n<br />[/size]\n<br />Thank you to Aedenthorn for creating the original [url=https://www.nexusmods.com/stardewvalley/mods/11398]Farmer Portraits[/url].\n<br />Thank you to MistySpring for creating [url=https://www.nexusmods.com/stardewvalley/mods/20713?tab=description]Farmer Portraits for 1.6[/url]\n<br />Thank you to revenentFun for letting me use the reaction code from\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/28933]Farmer Portraits - Seasonal Emotional Festivals[/url] as a base.\n<br />Thank you to PeacefulEnd for creating [url=https://www.nexusmods.com/stardewvalley/mods/9969]Fashion Sense[/url]\n<br />Thank you to\u00A0nihilistzsche for creating [url=https://www.nexusmods.com/stardewvalley/mods/18384]FashionSenseOutfits[/url] (This idea would've stayed just an idea without this helpful framework!)\n<br />Thank you to\u00A0saltyDG because if it weren't for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/21226]Farmer 2.0 ESWF[/url], I never would've started using farmer portraits and never would've came up with this idea.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34412",
+	"Version": "1.0.0",
+	"Updated": "2025-06-01T01:16:51+00:00",
+	"Downloads": [
+		{
+			"Id": 133616,
+			"Type": "Main",
+			"DisplayName": "Farmer Portraits from FS Outfits",
+			"FileName": "Farmer Portraits from FS Outfits-34412-1-0-0-1748740611.zip",
+			"Description": "This is the file you need. :)",
+			"Version": "1.0.0",
+			"SizeInBytes": 130531,
+			"Uploaded": "2025-06-01T01:16:51+00:00",
+			"Mods": [
+				{
+					"Id": "amillionand1fandoms.FarmerPortraitsFromFSOutfits",
+					"DisplayName": "Farmer Portraits from FS Outfits",
+					"Type": "ContentPack",
+					"RelativePath": "Farmer Portraits from FS Outfits",
+					"Manifest": {
+						"Name": "Farmer Portraits from FS Outfits",
+						"Description": "Changes portraits depending on which Fashion Sense Outfit is equipped. Also has the ability to customize reactions and emotions.",
+						"Author": "amillionand1fandoms",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.FashionSense",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "nihilistzsche.FashionSenseOutfits",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "mistyspring.aedenthornFarmerPortraits",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:34412"
+						],
+						"UniqueId": "amillionand1fandoms.FarmerPortraitsFromFSOutfits"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520304,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421100,
+		"UploaderId": 44924507,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

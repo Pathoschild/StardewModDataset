@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 18119,
+	"Name": "Fishing Treasure Spawner",
+	"Author": "jangofett44",
+	"AuthorLabel": "jangofett4",
+	"Description": "This mod allows users to spawn fishing treasures anywhere on the map using hotkeys.\n<br />\n<br />\n<br />By default hotkeys are Numpad 0 to Numpad 9 [s]and they are NOT changeable ingame[/s]. Keybinds are now changeable ingame via\u00A0Generic Mod Config Menu.\n<br />\n<br />By default Numpad 0 spawns a fishing zone 0 treasure chest, Numpad 9 spawns a fishing zone 9 treasure chest. As far as I can tell anything over 5 is not used, but is added to mod anyway. Fishing zone represents how far away from the nearest land the bobber was when treasure was caught. 0 being directly below player, 9 being 9 tiles away from the nearest land. Anything player can stand on is counted as a land tile (so bridges are included).\n<br />\n<br />In order for this mod to work player needs to have a fishing rod in their inventory. If the mod can't find a fishing rod, it gives an Iridium rod. Most of the times when this happens, user needs to press the hotkey again to get the treasure (some sort of weird networking related bug I think, I'm not entirely sure).\n<br />\n<br />Mod respects fishing zone, fishing level, fishing rod and season (and any other rules that fishing treasures might have), so you would get low level rewards if you are not fishing level 10, or would not get the rewards you want if you are not in the specific zone to get them (rice shoots for example).\n<br />\n<br />========================================================================================================\n<br />\n<br />[b][size=3][color=#00ff00]NEW[/color]\n<br />[/size][/b]Beta feature: Brute Forcing\n<br />\n<br />With brute forcing you can measure how many tries are needed to get a specific item in a specific fishing zone. All settings are configurable ingame under '[color=#c9daf8][b]Brute Forcing Settings[/b][/color]' section.\n<br />\n<br />By default brute forcer will try to find 'work boots' in fishing zone 5. When the system finds the item, it will write a report to 'bruteforce.csv' next to game executable (configurable), containing information about the previous brute force operation. (By default brute forcer is triggered with 'B' key, configurable)\n<br />\n<br />By default brute forcer will only find the specified item 1 time, this value can be increased in the configuration to gather more information into the report file ('[color=#cfe2f3][b]Brute Force Tries[/b][/color]' setting).\n<br />[color=#e06666][b]Warning[/b][/color]: making this value too high WILL cause your game to crash if the item is hard to find (boots for example). Anything between 10-500 should be safe.\n<br />\n<br />Brute forcing system employs several protections to prevent possible lockups from happening. If a search took more than 100000 tries brute forcer will trigger a first offense warning, if this happens 2 more times brute forcer will stop brute forcing process and prevent a lockup from happening.\n<br />\n<br />If brute forcer is able to find the item in 100000 tries, lockup prevention feature will be disabled as it will know that the configuration is proper and item is possible to get.\n<br />\n<br />If lockup prevention is triggered 3 times, mod will prevent next brute forcing requests until the brute forcing configuration is changed ('[b][color=#c9daf8]Brute Force Item[/color][/b]' or '[b][color=#c9daf8]Brute Force Fishing Zone[/color][/b]').\n<br />\n<br />For example if user wanted to brute force for item 'rice' in any season other than spring, lockup prevention will trigger and this configuration will be blocked until its changed.\n<br />\n<br />This feature is [b]BETA, [/b]it will crash your game, use it at your own risk. Its not optimized well and its quickly put together.\n<br />\n<br />========================================================================================================\n<br />\n<br />This mod is intended as a some sort of RNG checking tool, so you would check the RNG for a specific item, then disable this mod (unless you want to cheat \uD83D\uDE08, which I'm fine with).\n<br />\n<br />[url=https://github.com/jangofett4/FishingTreasureSpawner]Source code[/url]\uFEFF\u00A0is available on github and is pretty self explanatory.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18119",
+	"Version": "1.2.0",
+	"Updated": "2024-06-20T14:42:39+00:00",
+	"Downloads": [
+		{
+			"Id": 104476,
+			"Type": "Main",
+			"DisplayName": "FishingTreasureSpawner 1.2.0",
+			"FileName": "FishingTreasureSpawner 1.2.0-18119-1-2-0-1718894559.zip",
+			"Description": "Updated mod to run on SV 1.6 and SMAPI 4.x.x",
+			"Version": "1.2.0",
+			"SizeInBytes": 18122,
+			"Uploaded": "2024-06-20T14:42:39+00:00",
+			"Mods": [
+				{
+					"Id": "jangofett4.fishingtreasurespawner",
+					"DisplayName": "FishingTreasureSpawner",
+					"Type": "Smapi",
+					"RelativePath": "FishingTreasureSpawner",
+					"Manifest": {
+						"Name": "FishingTreasureSpawner",
+						"Description": "Spawns a treasure chest with a hotkey press",
+						"Author": "jangofett4",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FishingTreasureSpawner.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "jangofett4.fishingtreasurespawner"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342491164,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342404807,
+		"UploaderId": 66312361,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

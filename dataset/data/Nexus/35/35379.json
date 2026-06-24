@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 35379,
+	"Name": "Fattening Farmer Framework",
+	"Author": "GoddessVirtue",
+	"Description": "[size=3]The Fattening Farmer Framework includes all the program logic required to calculate the farmer's weight and change body and clothing sprites based on weight.\u00A0No size assets are included with the base mod. Instead, the FFF provides an interface for content packs to add their assets at any weight the artist chooses.\u00A0The only hard part of making a content pack for the Fattening Farmer Framework is drawing the textures. Body, shirt, and pants textures can be added, and body textures are sorted by gender for increased compatibility.[/size]\n<br />[b][size=4]\n<br />[/size][size=5]Required dependencies:[/size][/b]\n<br />[size=3][url=https://www.nexusmods.com/stardewvalley/mods/2400]Stardew Modding API (SMAPI)[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/size]\n<br />\n<br />[b][size=5]Suggested dependencies:[/size][/b]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5098][size=3]Generic Mod Config Menu\n<br />[/size][/url][size=3][url=https://www.nexusmods.com/stardewvalley/mods/9969]Fashion Sense[/url][/size]\n<br />[b][size=4]\n<br />[/size][size=5][b]Suggested content packs:\n<br />[/b][/size][/b][size=3][url=https://www.nexusmods.com/stardewvalley/mods/35433]Fattening Curvy Girl[/url][/size][b][size=4][b][size=4]\n<br />[/size][/b][/size][/b][size=3][url=https://www.nexusmods.com/stardewvalley/mods/35384]Fattening Fatty Farmer[/url][/size][b][size=4]\n<br />\n<br />[/size][size=5]For mod users:[/size][/b]\n<br />[size=3]Make sure SMAPI and Content Patcher are installed, download \"Fattening Farmer Framework.zip\", and extract it into your mods folder, wherever Stardew Valley is installed. Then add whatever content packs you like.[/size]\n<br />[b]\n<br />[size=5]For mod authors:[/size][/b]\n<br />[size=3]Content packs for the Fattening Farmer Framework use Content Patcher to add assets to Stardew Valley and to add information about their assets to the FFF's data files.\n<br />If you've never made a content pack before, check out [url=https://github.com/Pathoschild/StardewMods/blob/stable/ContentPatcher/docs/author-guide.md#readme]this guide[/url] on making mods with Content Patcher before you read further here.\n<br />\n<br />Make sure your manifest.json file has the following lines:[/size]\n<br />\n<br />[code]   \uFEFF\"ContentPackFor\": {\n<br />      \uFEFF\"UniqueID\": \"Pathoschild.ContentPatcher\"\n<br />   \uFEFF},\n<br />   \uFEFF\"Dependencies\" : [\n<br />      \uFEFF{\n<br />      \uFEFF   \"UniqueID\": \"GoddessVirtue.FatteningFarmerFramework\"\n<br />      \uFEFF}\n<br />   \uFEFF]\n<br />[/code]\n<br />[size=3]Use the Load and EditData actions in your content.json, like so:[/size]\n<br />[code]{\n<br />    \"Format\": \"2.5.0\",\n<br />   \uFEFF\"Changes\": [\n<br />       \uFEFF{\n<br />         \uFEFF \"Action\": \"Load\",\n<br />      \uFEFF    \"LogName\": \"Add a texture to content pipeline\",\n<br />         \uFEFF \"Target\": \"{{ModID}}/texture_asset_name\",\n<br />         \uFEFF \"FromFile\": \"assets/texture_file_name.png\"\n<br />       \uFEFF},\n<br />       \uFEFF{\n<br />      \uFEFF    \"Action\": \"EditData\",\n<br />      \uFEFF    \"LogName\": \"Add data on a texture to female body sizes data for Fattening Farmer Framework\",\n<br />      \uFEFF    \"Target\": \"Mods/FatteningFarmerFramework/Data/FemaleBodySizes\",\n<br />         \uFEFF \"Entries\": {\n<br />         \uFEFF    \"400\": {\n<br />         \uFEFF       \"Weight\": \"400\",\n<br />         \uFEFF       \"ContentPackID\": \"{{ModID}}\",\n<br />         \uFEFF       \"Texture\": \"{{ModID}}/texture_asset_name\"\n<br />            \uFEFF }\n<br />         \uFEFF }\n<br />       \uFEFF}\n<br />   \uFEFF]\n<br />}\n<br />[/code]\n<br />[size=3]This example file adds the texture in your content pack folder at \"assets/texture_file_name.png\" to the list of female body sizes, at weight 400 (pounds, we'll assume for now). So when the player weighs 400 pounds, their body texture will be replaced with texture_file_name.png. The other data files are \"Mods/FatteningFarmerFramework/Data/MaleBodySizes\",\u00A0[size=3]\"Mods/FatteningFarmerFramework/Data/[/size]ShirtSizes\", and\u00A0[size=3]\"Mods/FatteningFarmerFramework/Data/[/size]PantsSizes\".\n<br />\n<br />\"{{ModID}}/texture_asset_name\" is the name for your texture available to the game's code and to the Fattening Farmer Framework. It can be anything, but you probably want it to be unique so it isn't overwritten. That's why I suggest including {{ModID}}, which Content Patcher will automatically replace with your mod's unique ID.\n<br />\n<br />The player weight the texture is for, in this case 400, is repeated twice to improve compatibility. If another content pack also tries to add a 400lb female body, Content Patcher will pick one for the Fattening Farmer Framework to use, and the other won't be loaded. You can use Content Patcher's optional \"Priority\" field if you're worried about users installing another content pack that replaces yours. If a user installs two different 400lb female bodies, the Fattening Farmer Framework has no way to tell which one the user actually wants to see, so it treats the conflict as a problem for the user to deal with. I recommend you take the same approach.\n<br />\n<br />For more detailed instructions and more content pack options, read [url=https://www.nexusmods.com/stardewvalley/articles/3380]this guide[/url].\n<br />\n<br />Have fun![/size]\n<br />\n<br />[size=5][b]Planned future features:[/b][/size]\n<br />[size=3][s]Support for kilograms[/s]\u00A0[b]done[/b]\n<br />[s]Food festival weight gain[/s] [b]done[/b]\n<br />[s]Size calculation on clothing equip/unequip[/s] [b]done[/b]\n<br />[s]Support for content packs that only edit some clothes[/s]\u00A0[b]done[/b]\n<br />[s]Use Fashion Sense to allow super size textures[/s]\u00A0[b]done[/b]\n<br />Make FFF textures visible on save select screen\n<br />Allow content packs to view farmer weight to facilitate dialogue changes\n<br />Support weight gain for items added by Fashion Sense\n<br />[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35379",
+	"Version": "1.3.0",
+	"Updated": "2025-07-24T00:03:27+00:00",
+	"Downloads": [
+		{
+			"Id": 138030,
+			"Type": "Main",
+			"DisplayName": "Fattening Farmer Framework",
+			"FileName": "Fattening Farmer Framework-35379-1-3-0-1753315407.zip",
+			"Description": "The Fattening Farmer Framework includes all the program logic required to calculate the farmer's weight and change body and clothing sprites based on weight. No size assets are included with the base mod.",
+			"Version": "1.3.0",
+			"SizeInBytes": 33447,
+			"Uploaded": "2025-07-24T00:03:27+00:00",
+			"Mods": [
+				{
+					"Id": "GoddessVirtue.FatteningFarmerFramework",
+					"DisplayName": "Fattening Farmer Framework",
+					"Type": "Smapi",
+					"RelativePath": "FatteningFarmerFramework",
+					"Manifest": {
+						"Name": "Fattening Farmer Framework",
+						"Description": "The Fattening Farmer Framework includes all the program logic required to calculate the farmer's weight and change body and clothing sprites based on weight. No size assets are included with the base mod.",
+						"Author": "GoddessVirtue",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FatteningFarmerFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:35379"
+						],
+						"UniqueId": "GoddessVirtue.FatteningFarmerFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342524718,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342422067,
+		"UploaderId": 257199766,
+		"CategoryId": 9,
+		"Adult": true
+	}
+}

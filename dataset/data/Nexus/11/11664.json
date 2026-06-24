@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 11664,
+	"Name": "Highlight Empty Machines",
+	"Author": "atravita",
+	"Description": "Inspired by [url=https://www.nexusmods.com/stardewvalley/mods/6833]Highlighted Jars[/url], this mods colors empty machines so they're easier to spot. Works for every vanilla machine and also [url=https://www.nexusmods.com/stardewvalley/mods/4970]Producer Framework Mod[/url] machines. Additionally, dims \"invalid\" machines (machines in locations they don't currently work - ie casks in locations that are not valid for them, or PFM machines with location/weather/season restrictions.).\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url].\n<br />[*]Download and install [url=https://www.nexusmods.com/stardewvalley/mods/12932]AtraCore[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Uninstall[/size]\n<br />Simply delete from your Mods directory.\n<br />\n<br />[size=5]Configuration[/size]\n<br />Run SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to configure.\n<br />\n<br />[list=1]\n<br />[*]The coloration (both the EmptyColor and InvalidColor) can be set independently. If you have [url=https://www.nexusmods.com/stardewvalley/mods/10505]GMCM Options[/url] installed, these will be color selectors. Otherwise, it'll be a text field where you can enter any color name from Microsoft's long list [url=https://docs.microsoft.com/en-us/dotnet/api/system.drawing.knowncolor?view=net-6.0]here[/url], an HTML color code starting with [font=Courier New]#[/font] (ie [font=Courier New]#FF0000[/font] for red), or list of numbers (ie [font=Courier New]255, 0, 0[/font] for red.)\n<br />[*]Every machine (including PFM machines) can be configured independently. If you have PFM machines, please load into a save before configuring - the PFM machines are not loaded until the save is.\n<br />[/list]\n<br />[size=5]Mods in screenshot[/size]\n<br />The mod machines in the screenshot are from the excellent [url=https://www.nexusmods.com/stardewvalley/mods/5173]Artisanal Soda Makers[/url] by Hadi!\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, multiplayer, and split-screen mode. Should be fine if installed for only one player in multiplayer.\n<br />[*]Should be compatible with most other mods. Tested with [url=https://www.nexusmods.com/stardewvalley/mods/4970]Producer Framework Mod[/url]. Currently does not affect DGA machines; I'll add that in later.\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />\n<br />[list]\n<br />[*] [url=https://github.com/atravita-mods/StardewMods/blob/main/HighlightEmptyMachines/HighlightEmptyMachines/docs/Changelog.md]Changelog[/url]\n<br />[*] [url=https://github.com/atravita-mods/StardewMods/blob/main/HighlightEmptyMachines/HighlightEmptyMachines]Source code[/url]\n<br />[/list]\n<br />Requires SMAPI, uses Harmony.\n<br />\n<br />All donation points for this mod go to [url=https://www.againstmalaria.com/]Against Malaria[/url]. Please consider supporting them if you like this mod!\n<br />Looking for something else? Please consider [url=https://www.nexusmods.com/users/116553368?tab=user+files]my other mods[/url]!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11664",
+	"Version": "0.2.4",
+	"Updated": "2023-03-27T21:33:14+00:00",
+	"Downloads": [
+		{
+			"Id": 68695,
+			"Type": "Main",
+			"DisplayName": "HighlightEmptyMachines",
+			"FileName": "HighlightEmptyMachines-11664-0-2-4-1679952794.zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.2+/AtraCore 0.2.1\n<br /><br /><br />Fix integration with pfm, hopefully correctly this time.",
+			"Version": "0.2.4",
+			"SizeInBytes": 28478,
+			"Uploaded": "2023-03-27T21:33:14+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.HighlightEmptyMachines",
+					"DisplayName": "Highlight Empty Machines",
+					"Type": "Smapi",
+					"RelativePath": "HighlightEmptyMachines",
+					"Manifest": {
+						"Name": "Highlight Empty Machines",
+						"Description": "Highlights empty machines to make them a little more obvious.",
+						"Author": "atravita",
+						"Version": "0.2.4",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "HighlightEmptyMachines.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.2.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Digus.ProducerFrameworkMod",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11664"
+						],
+						"UniqueId": "atravita.HighlightEmptyMachines",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342455383,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398352,
+		"UploaderId": 116553368,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

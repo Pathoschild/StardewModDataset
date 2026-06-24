@@ -1,0 +1,117 @@
+{
+	"Site": "ModDrop",
+	"Id": 1063640,
+	"Name": "SH's Domestic Animals",
+	"Author": "Plurffle",
+	"AuthorLabel": "SmolHooman/Plurffle",
+	"TagLine": "SH’s Domestic Animals is a mod for ConcernedApe’s Stardew Valley. This mod adds a couple of animals in several locations of the game.",
+	"Description": "This was mod was once a little bonus to my previous mod Wild Animals, but I have now decided to separate them into two different mods. You are guaranteed to see the animals as long as you have access to the areas that they spawn in. They tend to wander so you may or may not lose sight of some of them, especially if they wander behind the buildings and bushes.\n\nThese animals don't really do much of anything and are more of just moving decor for your valley that occasionally makes noises. I do hope I'll be able to add some sort of gameplay mechanic or more interactivity with these animals someday, but that idea may take a while (if it even ever gets implemented due to my inexperience with modding).\n\nBelow is the list of animals currently included in the mod:\n[spoiler]\n* A brown cat for Willy\n* A few black cat slimes that stay in the witch's hut/swamp\n* A little green dragon for the wizard\n* A tuxedo cat in the town (if you want more cats in Pelican Town, download the Kitty Cats mod from NexusMods! <3 )\n* David, Abigail's guinea pig + changes his cage depending if he's inside or outside of it\n* Dusty, Alex' dog + changes his box into a dog house (this will automatically be disabled if SVE or Free Dusty mod is installed to avoid conflicts)\n* Emily's parrot companion\n* Rooster + more of Marnie's barn animals\n* Shadow pups in the sewers\n[/spoiler]\n\nFAQs\n[spoiler]\nQ: Is this mod compatible with other mods?\nA: This mod should work with other mods. The only issue is that some animals have a higher chance of getting stuck in trees/bushes added from other mods. This mod should be compatible with Stardew Valley Expanded's map changes, BUT I have decided to disable the dusty features if you have SVE/Free Dusty installed to prevent conflicts.\n\nQ: Is this mod compatible with multiplayer or the mobile version of the game?\nA: I have not gotten the chance to personally test this with multiplayer and on mobile, unfortunately. However, the Custom Companions modding framework is compatible with multiplayer, so that means my mod should be multiplayer-compatible.\n\nQ: Can I use the files from this mod for other mods to upload?\nA: Yep! :D I don't really mind if you reupload my animals for different mods!... Although, I am not entirely sure about how I feel if they were hidden behind a paywall. So, uhh, I'd prefer that these are to remain free. \n\nQ: Can I use older versions of this mod?\nA: If you prefer to use older versions of this mod, you definitely can. They should still work in your game regardless of how old they are, just be sure to use only one copy of this mod at a time. Just a small warning: some older versions may contain unfixed bugs.\n\nQ: I want to use retextures for the animals. Can I use pre-existing retextures that were made before this mod existed? Can I make my own retextures?\nA: Yep! :D All of my animals use vanilla Stardew Valley animals as a base, so all that really matters is the sprite size. (i.e. My foxes use the dog sprites as a base, so you can use any dog/cat retextures to replace them). You can even upload any retextures of my animals if you want! :)\n[/spoiler]\n\nKnown Issues\n[spoiler]\n* SMAPI might prioritize other retexture mods that edit the appearance of Pierre's shop/Abigail's room, which could lead to my guinea pig cage retexture not showing up.  The same applies to Dusty's box house. This is not likely going to break the mod, so the Domestic Animals mod should still work fine and there is no need to worry. However, if problems do arise, you can disable those changes through this mod's config file.\n* You might see Emily's parrot friend clones (one on its perch and another one on the floor) when you just recently finished seeing Emily's heart event that introduces the aforementioned parrot. This will fix itself on the next day, fortunately.\n* Clicking on the parrot's perch will still play the parrot sound effect even if no one is sitting on it. Unfortunately, I do not know how to disable that. Let's pretend the parrot is just reacting to you touching their perch lol.\n* One of Dusty's walking sprites does not display all of the frames. Instead, it just loops the first two.\n* The rooster's pitch changes as I forgot to remove that line of code.\n[/spoiler]",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1063640",
+	"Version": null,
+	"Updated": "2025-07-30T18:40:25.947+00:00",
+	"Downloads": [
+		{
+			"Id": 1735767,
+			"Type": "Main",
+			"DisplayName": "SH's Domestic Animals",
+			"FileName": "SH's Domestic Animals.zip",
+			"Description": "&gt; Added custom guineapig sounds and kitten sounds\n&gt; Fixed duration code in pet version of Abigail's guineapig\n&gt; Tweaked sound frequency for most of the critters",
+			"Version": "1.3.2",
+			"SizeInBytes": 1503912,
+			"Uploaded": "2025-07-30T18:40:25.944+00:00",
+			"Mods": [
+				{
+					"Id": "SmolHooman.DomesticAnimalsCC",
+					"DisplayName": "Domestic Animals",
+					"Type": "ContentPack",
+					"RelativePath": "Domestic Animals\\[CC] Domestic Animals",
+					"Manifest": {
+						"Name": "Domestic Animals",
+						"Description": "Adds domestic animals to your game.",
+						"Author": "plurffle",
+						"Version": "1.3.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.CustomCompanions",
+							"MinimumVersion": "2.4.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "SmolHooman.DomesticAnimalsCC"
+					}
+				},
+				{
+					"Id": "SmolHooman.DomesticAnimals",
+					"DisplayName": "SmolHooman's Domestic Animals",
+					"Type": "ContentPack",
+					"RelativePath": "Domestic Animals\\[CP] Domestic Animals",
+					"Manifest": {
+						"Name": "SmolHooman's Domestic Animals",
+						"Description": "Spawns domestic animals in your game.",
+						"Author": "plurffle",
+						"Version": "1.3.2",
+						"MinimumApiVersion": "3.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.CustomCompanions",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Kana.WeatherWonders",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:10134"
+						],
+						"UniqueId": "SmolHooman.DomesticAnimals"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "b356387260342decadbc1c69be0d1cbf",
+				"md5In": "90ac233a5d8e4aefdb34c7f804ff371f",
+				"scriptType": 0,
+				"sha256Ex": "9f053059c40ae7595b86ee9820912cbf4384ad1c1c7688fce2facdbe40e06c41",
+				"sha256In": "eda4c5449778b92cd9bd29f4acc4d6ab827d76d11eb04883cff26fe8292e9023"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1638721818377,
+		"DateUpdated": 1753900825947,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1638721267843,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1063640/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1063640/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1063640/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1063640/icon_original"
+		},
+		"nexusModID": 10134,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 280047
+	}
+}

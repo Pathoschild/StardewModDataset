@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 6759,
+	"Name": "Custom Phatic Cues for Mobile Phone",
+	"Author": "SasbayWidda",
+	"Description": "[font=Arial]\n<br />[i][b][size=4] ■ TL;DR IN ADVANCE — A.K.A. “ABSTRACT” [/size]\n<br />[/b][/i]\n<br />\n<br /> ► This mod is a Content Pack add-on for Aedenthorn’s\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6523]Mobile Phone[/url]. It replaces generic cues for greetings, reminiscing and goodbyes during a phone call with singular cues for each NPC. As of now, it covers all vanilla and SVE NPCs as well as Mr. Ginger. When you date or wed your favorite townie, their friends’ and families’ attitudes change accordingly. However, if you want said townie to sweet-talk you during phone calls, you’ll need to get creative!\n<br />\n<br />\n<br />\n<br />[i][b] [size=4]■ LONG STORY LONG— A.K.A. “FEATURES” [/size]\n<br />[/b][/i]\n<br />\n<br />● [b]NPCs will greet you and say goodbye in [/b][b]their own way[/b][b] during phone calls![/b]\n<br />● They also have an [b]in-character[/b][b] “reminisce” cue[/b]. (Sam’s too proper “What shall we reminisce about?” is no more.) \n<br />\n<br />● [b]Depending on your relationship [/b][b]status[/b][b] with bachelor/ette/s, [/b][b]these cues [/b][b]can [/b][b]vary[/b] and contribute to a (hopefully) immersive experience: \n<br />\n<br /> → You’ll find [b]blank [/b][b]romantic cues[/b] (dating and marriage) for bachelor/ette/s in the content.json! I’m not saying that I can’t get myself to fill them all given my lack of (that sort of) interest in some of the bachelor/ette/s’ personality ([i]which I do [/i]anyway; sorry Elliott)… \n<br />   First, I suppose it’s a lot of work to date and/or marry [i]all of them[/i] simultaneously (regardless of your use of the Poly mod), so maybe you'll only care about your favorite bachelor/ette/s' cooing. But more importantly, I know the significance of one’s tastes, headcanons, pet names preferences and whatnots: you probably know better than me how you want your Elliott, your Maru, your Sophia or your Shane to woo you with that static voice coming from the electronic flat brick. So put your little hands in that code and go wild! (For details on adding your own romantic cues, check the Addendum in the Articles section.) \n<br />\n<br /> → [b]T[/b][b]heir friends’ and family members’ phone cues [/b][b]will change as well! [/b]For instance, Demetrius and Robin, or George and Evelyn, will respectively mention Maru, Sebastian, or Alex if you’re dating or married to either of them!\n<br />♦ If you don’t want any of that “small village where everybody knows who you’re dating and[i] constantly[/i] feeds you unsubtle hints about it”-feel, or just want to entertain a secret dating relationship for literally [i]any sort of utterly [/i][i]understandable [/i][i]and legitimate reason [/i][i]other than purely romantic[/i][i]…[/i] \n<br />[quote]\n<br />[font=Courier New]{\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"RunForYourLife\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"Events/ExtraCutScenes/DemetriusBadEnding\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\":\n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font]{\n<br />“The Farmer”: “%gives Maru a bouquet”, \n<br />“Demetrius”: “%glaring intensifies”,\n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font]},\n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font]“When”: { \n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font][/font][/font]“Weather”: “BloodMoon”, \n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font][/font][/font]“WelwicksOracle”:“SpiritsArePissedToday”, \n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font][/font][/font]“RobinsAxe”:“LyingInACornerUnsupervised”, \n<br />[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font][font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font]“MountainLake”:“NoWitnesses”,\n<br />[font=Arial][font=Courier New]\u00A0\u00A0[font=Arial][font=Courier New]\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font]\u00A0\u00A0\u00A0\u00A0\u00A0 [/font][/font]},\n<br />},[/font]\uFEFF[/quote]\n<br />… Well. You can conveniently [b]disable social circles’ cue shifting in the config file (“DiscreteDating”)[/b], so no one will find out unless you’re engaged and it’s too late to oppose your union anyway. (Don’t worry, your sweetheart's family will still be nice to your Farmer once they’re married. Secret dating makes up for enough drama on its own already.)\n<br />\n<br />\n<br />\n<br />[i][b] [size=4]■ KNOWN ISSUE —A.K.A. “HOPEFULLY THIS WILL BE THE ONLY ONE”[/size][/b][/i]\n<br />\n<br />\n<br />   If you’re dating or married to multiple characters, they might have one or more people sharing their social circles (e.g. Sam and Maru are both friends with Penny). If you talk to that common family member / friend, there's no way to predict which boyfriend/girlfriend their phone cue will be about. \n<br />\u00A0\u00A0 Suppose I date Victor’s mom, Olivia, as well as all of Victor’s friends (Abigail, Sam, Sebastian and Sophia): it’s highly possible that Victor will casually tell me to say hi to Sebastian or Abigail, instead of asking me to politely greet his mother. Maybe he just doesn’t know you’re dating them all! \n<br />\n<br />   In any case, I guess you probably don’t want sweet Granny Evelyn to bid you such farewells: “It was nice talking to you, dear! Say hello to Alex and\n<br />Haley and Emily and Maru and Sebastian and Penny and Sam and Elliott and Leah and Shane and Marnie and Lewis and Olivia and her son and your pet and your grandfather for me, — [i]will you, dear[/i]?” \n<br />   (But if you want to, that’s okay! I just won’t work through the potentially infinite combinations of code necessary to make this work. Sorry!) \n<br />\n<br />\n<br />\n<br /> [size=4]■ [i][b]ACKNOWLEDGMENTS[/b][/i][/size]   \uFEFF   \uFEFF\n<br />\n<br />\n<br />ConcernedApe for making and updating Stardew Valley. \n<br />PathosChild for the making and maintenance of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] and many other mods. \n<br />[font=Arial]Aedenthorn for  [font=Arial][url=https://www.nexusmods.com/stardewvalley/mods/6523]Mobile Phone[/url][/font]  — and all my thanks for your modding instructions, pedagogy, and your feedback! [/font]\n<br />The Stardew Valley modding community: you’re dynamic and inspiring. I’m drawn back to this game time and again thanks to your efforts and creativity!   \n<br />[font=Arial]\n<br />\n<br />   \uFEFF\n<br />♦ [/font][b]SOME EXTRA CREDITS.[/b] A few personal edits appear in the screenshots. \n<br />\n<br />I used the following assets for portraits: \n<br />\u00A0● Sam is from [url=https://www.nexusmods.com/stardewvalley/mods/657][font=Arial]Sam and the Great Haircut by Thalabee[/font][/url]\uFEFF\n<br />\u00A0● Clint is from [url=https://www.nexusmods.com/stardewvalley/mods/4615 ][font=Arial]Visual Crossing Portrait Overhaul by Crossy\n<br />[/font][/url]\n<br />I mixed these portraits with the clothing assets from the following mod: \n<br />\u00A0●\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2449][font=Arial]Seasonal Villager Outfits by Tanpopnoko, ParadigmNomad and their contributors[/font][/url] \n<br />\n<br />Alex's sprites are also a personal edit. I used assets from the following mods: \n<br />\u00A0● Clothes are from Seasonal Villager Outfits (cf. supra)\n<br />\u00A0● Sprites are from\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/349][font=Arial]Portrait-Accurate Alex by iKeychain\n<br />[/font][/url] \n<br />Aside from my personal edits, the NPCs' sprites you can see in the screenshots are from the following mods: \n<br />\u00A0● Clothes for vanilla NPCs are from Seasonal Villager Outfits (cf. supra)\n<br />\u00A0● Clothes for SVE NPCs are from\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5975][font=Arial]Seasonal Villager for SVE by Poltergeister and Tanpoponoko\n<br />[/font][/url] \n<br />[/font]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6759",
+	"Version": "1.1.0",
+	"Updated": "2020-09-01T07:03:52+00:00",
+	"Downloads": [
+		{
+			"Id": 30836,
+			"Type": "Main",
+			"DisplayName": "Custom Phatic Cues for Mobile Phone",
+			"FileName": "Custom Phatic Cues for Mobile Phone-6759-1-1-0-1598943832.zip",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 7737,
+			"Uploaded": "2020-09-01T07:03:52+00:00",
+			"Mods": [
+				{
+					"Id": "SasbayWidda.CustomPhaticCuesforMobilePhone",
+					"DisplayName": "Custom Phatic Cues for Mobile Phone",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Custom Phatic Cues for Mobile Phone",
+					"Manifest": {
+						"Name": "Custom Phatic Cues for Mobile Phone",
+						"Description": "A Content Pack add-on for Aedenthorn’s Mobile Phone. It replaces generic cues for greetings, reminiscing and goodbyes during a phone call with singular cues for each NPC. Includes vanilla and SVE NPCs as well as Mr. Ginger. Cues vary with your relationship status with bachelor/ette/s, affecting their speech and their friends' & families'. Dating and marriage cues for bachelor/ette/s are left blank and up to the player's tastes, headcanons, pet names preferences and whatnots.",
+						"Author": "SasbayWidda",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6759"
+						],
+						"UniqueId": "SasbayWidda.CustomPhaticCuesforMobilePhone"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342417524,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393447,
+		"UploaderId": 57717391,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

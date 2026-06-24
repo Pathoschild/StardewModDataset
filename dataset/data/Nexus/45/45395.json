@@ -1,0 +1,77 @@
+{
+	"Site": "Nexus",
+	"Id": 45395,
+	"Name": "Elliott Rewritten",
+	"Author": "writertron",
+	"AuthorLabel": "monistarlight",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]This mod will provide a complete overhaul for Elliott's character while still maintaining the style and tone of 'Stardew Valley'. This mod is still in its alpha stages, it contains a major rewrite of Elliott's dialogue as well as two custom heart events; a two-heart and three-heart event.[/color]\n<br />\n<br />Here's how these heart events are triggered:\n<br />2-heart event - Enter the beach between 3pm and 6pm.\n<br />3-heart event - Enter the saloon between 8pm and 10pm.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#D4D4D8]1. Install SMAPI.\n<br />2. Install Content Patcher.\n<br />3. Unzip this mod.\n<br />4. Place both included folders into Stardew Valley/Mods.\n<br />5. Launch the game through SMAPI.[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[color=#D4D4D8]This mod is currently in alpha. Elliott’s early heart events and dialogue are being rewritten first, with more events and polish planned for future updates.[/color]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45395",
+	"Version": "1",
+	"Updated": "2026-04-25T22:06:23+00:00",
+	"Downloads": [
+		{
+			"Id": 165593,
+			"Type": "Main",
+			"DisplayName": "Elliott Rewritten Mod 0.1.0 Alpha",
+			"FileName": "Elliott Rewritten Mod 0.1.0 Alpha-45395-1-1777154783.zip",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 2385108,
+			"Uploaded": "2026-04-25T22:06:23+00:00",
+			"Mods": [
+				{
+					"Id": "writertron.ElliottRewrittenHelper",
+					"DisplayName": "Elliott Rewritten Helper",
+					"Type": "Smapi",
+					"RelativePath": "Elliott Rewritten Helper",
+					"Manifest": {
+						"Name": "Elliott Rewritten Helper",
+						"Description": "Adds custom event commands for the Elliott Rewritten content pack.",
+						"Author": "writertron",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ElliottRewrittenMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "writertron.ElliottRewrittenHelper"
+					}
+				},
+				{
+					"Id": "writertron.ElliottRewrittenMod",
+					"DisplayName": "Elliott Rewritten Mod",
+					"Type": "ContentPack",
+					"RelativePath": "Elliott Rewritten Mod",
+					"Manifest": {
+						"Name": "Elliott Rewritten Mod",
+						"Description": "This mod offers a complete overhaul of the character, Elliott.",
+						"Author": "writertron",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "writertron.ElliottRewrittenHelper",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "writertron.ElliottRewrittenMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552281,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432083,
+		"UploaderId": 285452798,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

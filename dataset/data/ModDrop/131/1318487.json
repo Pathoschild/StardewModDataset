@@ -1,0 +1,174 @@
+{
+	"Site": "ModDrop",
+	"Id": 1318487,
+	"Name": "GameboyArcade",
+	"Author": "drbirbdev",
+	"TagLine": "Play Gameboy Roms in Stardew as arcade machines.  Load Roms as content packs.",
+	"Description": "Allows Gameboy Roms to be loaded as content packs.  Mod authors can create arcade machines, events, and map actions which allow you to play Gameboy Roms.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1318487",
+	"Version": null,
+	"Updated": "2024-11-11T22:49:10.917+00:00",
+	"Downloads": [
+		{
+			"Id": 1657882,
+			"Type": "Main",
+			"DisplayName": "GameboyArcade 1.0.0",
+			"FileName": "GameboyArcade 1.0.0.zip",
+			"Description": "Gameboy emulator running in Stardew Valley",
+			"Version": "1.0.0",
+			"SizeInBytes": 211988,
+			"Uploaded": "2024-11-11T22:49:10.916+00:00",
+			"Mods": [
+				{
+					"Id": "drbirbdev.GameboyArcade",
+					"DisplayName": "Gameboy Arcade",
+					"Type": "Smapi",
+					"RelativePath": "GameboyArcade\\GameboyArcade",
+					"Manifest": {
+						"Name": "Gameboy Arcade",
+						"Description": "A Library for enabling Gameboy Roms to be played as in-game arcade machines.",
+						"Author": "drbirbdev",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.6+09dd92a74f13a3edeccb72242015876d7b5f6463",
+						"MinimumGameVersion": "1.6.13",
+						"EntryDll": "GameboyArcade.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "drbirbdev.BirbCore",
+								"MinimumVersion": "1.1.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.14.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"ModDrop:1318487"
+						],
+						"UniqueId": "drbirbdev.GameboyArcade",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "drbirbdev.GameboyArcadeTemplate.CP",
+					"DisplayName": "(CP) GameboyArcadeTemplate",
+					"Type": "ContentPack",
+					"RelativePath": "GameboyArcade\\[CP] GameboyArcadeTemplate",
+					"Manifest": {
+						"Name": "(CP) GameboyArcadeTemplate",
+						"Description": "Add an event using a minigame.",
+						"Author": "drbirbdev",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"ModDrop:1318487@Template"
+						],
+						"UniqueId": "drbirbdev.GameboyArcadeTemplate.CP"
+					}
+				},
+				{
+					"Id": "drbirbdev.144pTestSuite.GBA",
+					"DisplayName": "(GBA) 144pTestSuite",
+					"Type": "ContentPack",
+					"RelativePath": "GameboyArcade\\[GBA] 144p Test Suite",
+					"Manifest": {
+						"Name": "(GBA) 144pTestSuite",
+						"Description": "Add well known Gameboy emulation test roms that can be run from the SMAPI console",
+						"Author": "drbirbdev",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "drbirbdev.GameboyArcade"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:15194@Tests"
+						],
+						"UniqueId": "drbirbdev.144pTestSuite.GBA"
+					}
+				},
+				{
+					"Id": "drbirbdev.BlarggsTests.GBA",
+					"DisplayName": "(GBA) BlarggsTests",
+					"Type": "ContentPack",
+					"RelativePath": "GameboyArcade\\[GBA] BlarggsTests",
+					"Manifest": {
+						"Name": "(GBA) BlarggsTests",
+						"Description": "Add well known Gameboy emulation test roms that can be run from the SMAPI console",
+						"Author": "drbirbdev",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "drbirbdev.GameboyArcade"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "drbirbdev.BlarggsTests.GBA"
+					}
+				},
+				{
+					"Id": "drbirbdev.GameboyArcadeTemplate.GBA",
+					"DisplayName": "(GBA) GameboyArcadeTemplate",
+					"Type": "ContentPack",
+					"RelativePath": "GameboyArcade\\[GBA] GameboyArcadeTemplate",
+					"Manifest": {
+						"Name": "(GBA) GameboyArcadeTemplate",
+						"Description": "Add a playable minigame from a Gameboy rom.",
+						"Author": "drbirbdev",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "drbirbdev.GameboyArcade"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"ModDrop:1318487@Template"
+						],
+						"UniqueId": "drbirbdev.GameboyArcadeTemplate.GBA"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "e94eef2943aeb7d9a562811a46f632b3",
+				"md5In": "450cf1675443ae9775aa2354d3cd3637",
+				"scriptType": 0,
+				"sha256Ex": "9681244b89d09fb4b64a4ee5a4d0588dbffff903246e8696d18ba10f8508e26d",
+				"sha256In": "0a626af859fe686bddab43931cedb6cf019f9857863022bd2f8f5791c1f213b1"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1675840285120,
+		"DateUpdated": 1731365350917,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1675838578163,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1318487/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1318487/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1318487/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1318487/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 373357
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 3159,
+	"Name": "Better Crab Pots",
+	"Author": "Sonozuki",
+	"Description": "[color=#ff0000][size=5][b]ABANDONED[/b][/size][/color][size=3]\n<br />\n<br />This mod allows you to configure certain\u00A0parts of crab pots.[/size]\n<br />The mod uses item ids to determine the wanted item, you can find a list of them in this website:\u00A0https://stardewids.com/\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io/]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into\u00A0Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Configuration[/size]\n<br />[list]\n<br />[*][size=2][LocationName][/size][size=5]\u00A0[/size]\n<br />[/list]   \uFEFF{   \uFEFFWhatCanBeFound { itemId, chance, quantity} - A list of items that can be found in that water location -\u00A0(https://stardewids.com/ for a list of item IDs)\n<br />   \uFEFFWhatTrashCanBeFound {itemId, chance, quantity} - A list of items that can found in that water location as trash -\u00A0(https://stardewids.com/ for a list of item IDs)\n<br />   \uFEFF}[list]\n<br />[*]EnableTrash: Whether you can find trash or not.\n<br />[*]RequiresBait: Whether you require to bait a crab pot to catch something.\n<br />[*]EnablePassiveTrash: If a crab pot has not been baited but bait is required in the config there is a possibility to randomly get trash.\n<br />[*]PercentageChanceForTrash: The percent chance to find trash when EnablePassiveTrash is true.\n<br />[*]PercentageChanceForTrash: Allows you to select the % chance you have to get trash (int, not decimal) 0 to never get trash, 100 to always get trash.\n<br />[*]EnableBetterQuality: Allows crab pots to product normal, silver, gold, and iridium quality stuff. (Max quality and chance increases with fishing skill).\n<br />[/list]\n<br />Chances: The way chances work is not through percent but through the number of elements. To easier imagine this, imagine all ids are put in a big list (per water type) and each id is put in that list 'chanceConfig' number of times. So if I have an id of '100' with a chance of '1' and an id of '101' with a chance of '3' the list of what a crab pot can find has 4 elements in it, 1 element is 100 and 3 elements are 101, when converting this to percent it would be: 25% of finding an id of 100 and 75% of finding an id of 101.\n<br />\n<br />If you have any questions, suggestions or bug reports you can also contact me directly on discord (typically I'm faster at replying on discord than on Nexus) (Satozaki#0511)\n<br />[size=5]Known Issues[/size][list]\n<br />[*]Rings, boots, and hats are not wearable when found in a crab pot\n<br />[/list]\n<br />[size=5]Extra info[/size][list]\n<br />[*]To uninstall delete\u00A0Stardew Valley/Mods/BetterCrabPots.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3159",
+	"Version": "2.1.0",
+	"Updated": "2019-11-27T12:08:34+00:00",
+	"Downloads": [
+		{
+			"Id": 15901,
+			"Type": "Optional",
+			"DisplayName": "BetterCrabPotsConfigUpdater",
+			"FileName": "BetterCrabPotsConfigUpdater-3159-1-0-0-1555247089.zip",
+			"Description": "A .bat file for converting config files BetterCrabPotsV1 to BetterCrabPotsV2 (Windows Only)",
+			"Version": "1.0.0",
+			"SizeInBytes": 264565,
+			"Uploaded": "2019-04-14T13:04:49+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "BetterCrabPotsConfigUpdater",
+					"Type": "Invalid",
+					"RelativePath": "BetterCrabPotsConfigUpdater",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342402589,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 20420,
+			"Type": "Main",
+			"DisplayName": "BetterCrabPots",
+			"FileName": "BetterCrabPots-3159-2-1-0-1574856514.zip",
+			"Description": "Download BetterCrabPots for SMAPI v3.0 or above",
+			"Version": "2.1.0",
+			"SizeInBytes": 76941,
+			"Uploaded": "2019-11-27T12:08:34+00:00",
+			"Mods": [
+				{
+					"Id": "EpicBellyFlop45.BetterCrabPots",
+					"DisplayName": "Better Crab Pots",
+					"Type": "Smapi",
+					"RelativePath": "BetterCrabPots",
+					"Manifest": {
+						"Name": "Better Crab Pots",
+						"Description": "Allows you to configure crab pots",
+						"Author": "EpicBellyFlop45",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BetterCrabPots.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 3159"
+						],
+						"UniqueId": "EpicBellyFlop45.BetterCrabPots"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407108,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389847,
+		"UploaderId": 48334523,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

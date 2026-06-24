@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 2262,
+	"Name": "Time Multiplier",
+	"Author": "defenthenation",
+	"Description": "[b]Requires:[/b]\n<br />   \uFEFFSMAPI 3.1+\n<br />\n<br />[b]To use this mod[/b], start the farm (single player or co-op). When the farm is fully loaded, go to the SMAPI console and use the following commands:\n<br />\n<br />[b]time_multiplier_toggle[/b] - enables/disables the time multiplier\n<br />   \uFEFFUsage: time_multiplier_toggle\n<br />\n<br />[b]time_multiplier_change[/b] - sets the time multiplier\n<br />   \uFEFFUsage: time_multiplier_change 0.8\uFEFF\n<br />\n<br />[b]The config is saved automatically[/b] after each command. The config file is unique for each character. The mod works for multiplayer, but the host has to enable the mod and set the multiplier.\n<br />\n<br />\n<br />[b]FAQ\n<br />\n<br />Do I have to set the time multiplier when I start a new farm or add this mod to an existing farm?\n<br />[/b]Yes, farms must be configured just once. Once configured, the mod will take care of the rest, including loading your multiplier when you load the farm!\n<br />[b]\n<br />Do I have to set the time rate every time I load my farm?\n<br />[/b]No, the mod handles all that for you based on what you set when you initially configured the farm.\n<br />[b]\n<br />Do clients need the mod for it to work in multiplayer?\n<br />[/b]No, only the host needs the mod as the clock is handled by the host. Clients do not even need the mod installed. Because of this, the mod won't make changes if you are a client.\n<br />\n<br />[b]How does the mod work?[/b]\n<br />\n<br />StardewValley.Game1.gameInterval is an integer that increments based on the game clock (XNA GameTime object) and after 7000 milliseconds, the game clock is incremented by 10 minutes. Game1.gameInterval is then reset to 0.\n<br />\n<br />This mod captures the gameInterval on the tick and compares it with the gameInterval from the previous tick. The delta (change) is then multiplied by the multiplier set by the player. The new delta is then added to the last tick's interval to create this tick's interval.\n<br />\n<br />This is a bit of a hack in order to get into the time mechanics, but the 7 second limit is hardcoded into the function, and this was the only way to hook into the time mechanic of the game.\n<br />\n<br />[url=https://github.com/DefenTheNation/StardewMod-TimeMultiplier]Source\n<br />[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2262",
+	"Version": "1.3",
+	"Updated": "2020-02-19T04:20:55+00:00",
+	"Downloads": [
+		{
+			"Id": 24187,
+			"Type": "Main",
+			"DisplayName": "Time Multiplier",
+			"FileName": "Time Multiplier-2262-1-3-1582086055.zip",
+			"Description": "Updated for SMAPI 3.1",
+			"Version": "1.3",
+			"SizeInBytes": 7526,
+			"Uploaded": "2020-02-19T04:20:55+00:00",
+			"Mods": [
+				{
+					"Id": "DefenTheNation.TimeMultiplier",
+					"DisplayName": "TimeMultiplier",
+					"Type": "Smapi",
+					"RelativePath": "TimeMultiplier",
+					"Manifest": {
+						"Name": "TimeMultiplier",
+						"Description": "Adds a multiplier to the time counter to speed up or slow down the time progression. Recommended values are between 0.5 and 1.5.",
+						"Author": "DefenTheNation",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.1.0",
+						"EntryDll": "TimeMultiplier.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 2262"
+						],
+						"UniqueId": "DefenTheNation.TimeMultiplier"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342410875,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388950,
+		"UploaderId": 5332721,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

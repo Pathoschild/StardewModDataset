@@ -1,0 +1,113 @@
+{
+	"Site": "ModDrop",
+	"Id": 886187,
+	"Name": "Greenhouse Gatherers",
+	"Author": "PeacefulEnd",
+	"TagLine": "Greenhouse Gatherers is a mod for Stardew Valley that adds a way for Junimos to harvest crops inside buildings. ",
+	"Description": "Greenhouse Gatherers is a mod for Stardew Valley that adds a way for Junimos to harvest crops inside buildings.\n\nThe mod adds a new craftable item called the Harvest Statue, which is given by mail after unlocking the Junimo Huts from the Wizard. This statue can only be placed indoors and only one can be placed per building.\n\nOnce placed inside, the Junimos will appear each morning and immediately harvest all available crops, forage products and fruit trees within the building. Right clicking the Harvest Statue will open up a chest-like inventory, allowing you to extract the harvested items.\n\nInstall\n1. Install the latest version of SMAPI.\n2. Install all the dependencies.\n3. Install this mod.\n4. Run the game using SMAPI.\n\nUnlocking the Harvest Statue\nTo unlock the Harvest Statue, you must finish the Goblin Problem Quest. The day after completing the quest, you will be sent the recipe by the Wizard.\n\nAlternatively, you can set the ForceRecipeUnlock config option to true, which will cause the recipe to appear in your mailbox.\n\nCrafting the Harvest Statue\nThe Harvest Statue requires the following ingredients:\n\n    Prismatic Shard x1\n    Stone x350\n    Starfruit x150\n\n\nThe recipe can be changed to your preference by editing the big-craftable.json file under the ...\\GreenhouseGatherers\\GreenhouseGatherers\\[JA] GreenhouseGatherers\\BigCraftables\\Harvest Statue folder.\n\nUsing the Harvest Statue\nOnce per morning, the Junimos will search each building that a Harvest Statue is located in. The Junimos will gather crops, forage products and fruit trees that are ready for harvesting nearby.\n\nIf the Junimos successfully harvested anything, you will get a message in the morning letting you know (the message will tell you what building they harvested from). The Harvest Statue will also have an updated sprite, showing that it contains items.\n\nRight clicking the Harvest Statue will open up a chest-like inventory, allowing you to extract the harvested items.\n\nNote that if the Harvest Statue gets full, the Junimos will eat any excess products they gather! This can disabled within the config if you so wish.\n\nConfigurations\nThis mod creates a config.json under the ...\\GreenhouseGatherers\\GreenhouseGatherers folder. It contains options that you can modify to change how Greenhouse Gatherers interacts with the game.\n\nSee the [GitHub doc here](https://github.com/Floogen/GreenhouseGatherers#configurations) for more config details.\n\nCompatibility\nThis mod has been tested to work with the following mods (as of Stardew Valley v1.5):\n\n    Automate\n    Better Junimos\n    Stardew Valley Expanded (Grandpa's Shed)\n\nSource\n[GitHub](https://github.com/Floogen/GreenhouseGatherers)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/886187",
+	"Version": null,
+	"Updated": "2021-03-20T23:50:15.807+00:00",
+	"Downloads": [
+		{
+			"Id": 947090,
+			"Type": "Main",
+			"DisplayName": "GreenhouseGatherers-1.2.3",
+			"FileName": "GreenhouseGatherers-1.2.3.zip",
+			"Description": "PLEASE NOTE:\nIF UPDATING FROM v1.1.7 OR BELOW, THEN YOU MUST DELETE THE PREVIOUS MOD INSTALL!\n\nThe GreenhouseGatherersAutomate folder is not required unless you have Automate installed.\n\nPlease backup your save if you are using a custom modded location.",
+			"Version": "1.2.3",
+			"SizeInBytes": 55646,
+			"Uploaded": "2021-03-20T23:50:15.805+00:00",
+			"Mods": [
+				{
+					"Id": "PeacefulEnd.GreenhouseGatherers",
+					"DisplayName": "GreenhouseGatherers",
+					"Type": "Smapi",
+					"RelativePath": "GreenhouseGatherers\\GreenhouseGatherers",
+					"Manifest": {
+						"Name": "GreenhouseGatherers",
+						"Description": "Placeable, craftable items that let Junimos harvest crops inside buildings.",
+						"Author": "PeacefulEnd",
+						"Version": "1.2.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "GreenhouseGatherers.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7619"
+						],
+						"UniqueId": "PeacefulEnd.GreenhouseGatherers"
+					}
+				},
+				{
+					"Id": "PeacefulEnd.GreenhouseGatherers.Automate",
+					"DisplayName": "GreenhouseGatherersAutomate",
+					"Type": "Smapi",
+					"RelativePath": "GreenhouseGatherers\\GreenhouseGatherersAutomate",
+					"Manifest": {
+						"Name": "GreenhouseGatherersAutomate",
+						"Description": "Allows custom behavior with Pathoschild's Automate mod.",
+						"Author": "PeacefulEnd",
+						"Version": "1.2.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "GreenhouseGatherersAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.GreenhouseGatherers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "PeacefulEnd.GreenhouseGatherers.Automate"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "97bee811b1f6d28505b5ade16ae94688",
+				"md5In": "e0b1d3d0af8bfca77996f90965d91e3e",
+				"patchNotes": "Fixed issue where saving would fail if a Harvest Statue had a null item stored inside.",
+				"scriptType": 0,
+				"sha256Ex": "b0dc8bf5260789890213d2f6fbe4bb28bfb66f1867e0ee8e21c53fe645571950",
+				"sha256In": "8d48e41b55a6716b6b6d97fd7801131d6b31962ac018af5d92667823bd5aa475"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1610498918117,
+		"DateUpdated": 1616284215807,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1610498362257,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/886187/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/886187/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/886187/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/886187/icon_original"
+		},
+		"notice": "Requires JSON Assets.\n\nNOTE: This mod has only been tested for vanilla and certain modded buildings. See the Compatibility section for full list of validated mods.\n\nPlease backup your save if you are using it in a custom mod location.",
+		"dateNoticeUpdated": "2021-01-12T21:11:55.1346937-05:00",
+		"isNoticeEnabled": true,
+		"isUploadedByAuthor": true,
+		"userID": 209197
+	}
+}

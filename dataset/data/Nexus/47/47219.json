@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 47219,
+	"Name": "Slingshot Forgeable",
+	"Author": "Ice3ICE3",
+	"Description": "[center][size=200][b]Slingshot Forgeable[/b][/size][/center]\n<br />[center][/center]\n<br />[center][/center]\n<br />[b][size=150]Overview[/size][/b]\n<br />\n<br />This mod adds a new blacksmith forging option for slingshots at Clint's tool upgrade shop, allowing players to enhance their slingshots using Prismatic Shards for powerful ranged combat improvements.\n<br />\n<br />Transform your humble slingshot into a formidable weapon capable of dealing significantly increased damage, with full support for tracking forge levels, custom naming, and optional explosive ammo enhancements.\n<br />\n<br />[b][size=150]Features[/size][/b]\n<br />\n<br />[list]\n<br />[*][b]Instant Blacksmith Forging[/b]: Forge your slingshot directly through Clint's tool upgrade menu for [b]2,000g and 1 Prismatic Shard[/b] per level.[/*]\n<br />[*][b]Persistent Forge Levels[/b]: Forge progress is stored directly on the slingshot item using [b]modData[/b], ensuring your upgrades remain safe across saves and updates.[/*]\n<br />[*][b]Damage Boost[/b]: Each forge level adds [b]+25 damage[/b] to all slingshot ammo types.[/*]\n<br />[*][b]Visual Feedback[/b]: The slingshot's name displays the current forge level as [b]+N[/b] (e.g., \"Slingshot+3\").[/*]\n<br />[*][b]Explosive Ammo Options[/b] (configurable):\n<br />\u00A0 \u00A0 [/*]\n<br />[*]Set a fixed blast radius of 5 tiles for all explosive ammo.\n<br />\u00A0 \u00A0 [/*]\n<br />[*]Enable safe explosions that allow explosive ammo to harvest spawned objects (forage, minerals, etc.) and break resource clumps while preserving vanilla drops.[/*]\n<br />[/list]\n<br />[b][size=150]How It Works[/size][/b]\n<br />\n<br />The blacksmith forging option appears in Clint's upgrade shop whenever you have a slingshot in your inventory and Clint is not currently upgrading another tool. This integrates seamlessly into the vanilla blacksmith experience.\n<br />\n<br />Explosive ammo retains the original vanilla explosion behavior and flow. The optional radius and safe explosion features are fully independent of the forging system. Forged projectiles carry their forge level via modData, and the game’s active [i]GameLocation.explode[/i] call is adjusted appropriately rather than overriding [i]BasicProjectile.explodeOnImpact[/i].\n<br />\n<br />Safe explosion mode specifically benefits explosive ammo:\n<br />- Spawned map objects (such as forage and mine floor minerals) are harvested before the vanilla explosion cleanup deletes them.\n<br />- Resource clumps inside the blast radius are broken using proper tool behavior to ensure all vanilla drops are preserved.\n<br />\n<br />[b][size=150]Requirements[/size][/b]\n<br />\n<br />[list]\n<br />[*][b]Stardew Valley 1.6+[/b][/*]\n<br />[*][b]SMAPI 4.0+[/b][/*]\n<br />[*][b]Optional but Recommended[/b]: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for easy configuration of explosive ammo options.[/*]\n<br />[/list]\n<br />[b][size=150]Installation[/size][/b]\n<br />\n<br />1. Install [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] if you haven't already.\n<br />2. Download and install [b]Slingshot Forgeable[/b] using a mod manager (Vortex or ModDrop recommended) or manually extract the archive to your [b]Mods[/b] folder.\n<br />3. (Optional) Install Generic Mod Config Menu for in-game configuration.\n<br />4. Launch the game via SMAPI and enjoy your upgraded slingshots!\n<br />\n<br />[b][size=150]Configuration[/size][/b]\n<br />\n<br />With Generic Mod Config Menu installed, you can easily toggle and adjust:\n<br />- Explosive ammo blast radius override\n<br />- Safe explosion harvesting behavior\n<br />\n<br />The mod is designed to be lightweight, balanced, and fully compatible with existing saves.\n<br />\n<br />[b][size=150]Notes &amp; Compatibility[/size][/b]\n<br />\n<br />- Works with all vanilla slingshots and most modded ammo systems.\n<br />- Forge levels are preserved across tool upgrades and inventory changes.\n<br />- Explosive ammo enhancements apply globally but only affect slingshot-fired explosive projectiles.\n<br />- No known conflicts with major frameworks (Json Assets, Content Patcher, SpaceCore, etc.).\n<br />\n<br />If you encounter any issues, please provide your SMAPI log and a description of the problem.\n<br />\n<br />[b][size=150]Credits &amp; Permissions[/size][/b]\n<br />\n<br />Created for the Stardew Valley community. Feel free to use this mod in modpacks with proper credit.\n<br />\n<br />Thank you for playing with Slingshot Forgeable!\n<br />\n<br />[line]\n<br />[center][b]Make the Slingshot great again![/b][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47219",
+	"Version": "1.1.7",
+	"Updated": "2026-06-23T03:01:30+00:00",
+	"Downloads": [
+		{
+			"Id": 172225,
+			"Type": "Main",
+			"DisplayName": "SlingshotForgeable-1.1.7",
+			"FileName": "6d/d2/38/6dd23834-d98d-4449-941e-95a9e228f46c",
+			"Description": "Add Unlimited Ring Combining function. The first ring keeps the final ring's icon and name, and Clint can combine the first two rings in your backpack.<br />Add Unlimited Enchantments function.",
+			"Version": "1.1.7",
+			"SizeInBytes": 36923,
+			"Uploaded": "2026-06-23T03:01:30+00:00",
+			"Mods": [
+				{
+					"Id": "baimao.SlingshotForgeable",
+					"DisplayName": "Slingshot Forgeable",
+					"Type": "Smapi",
+					"RelativePath": "SlingshotForgeable",
+					"Manifest": {
+						"Name": "Slingshot Forgeable",
+						"Description": "Adds forge quality-of-life options for slingshots, explosive ammo, rings, and enchantments.",
+						"Author": "baimao",
+						"Version": "1.1.7",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SlingshotForgeable.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47219"
+						],
+						"UniqueId": "baimao.SlingshotForgeable"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558913,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433907,
+		"UploaderId": 180845139,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

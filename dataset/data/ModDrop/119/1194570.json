@@ -1,0 +1,81 @@
+{
+	"Site": "ModDrop",
+	"Id": 1194570,
+	"Name": "(Obsolete in 1.6) Fix TVs On Custom Farms",
+	"Author": "hatmouse",
+	"AuthorLabel": "mouse",
+	"TagLine": "This mod scans for broken TVs in farmhouses and cabins and replaces them with working ones. Most players do not need this, but since it only checks if the current farm map is defining its own starting furniture instead of using defaults, it should...",
+	"Description": "![](https://i.imgur.com/LX0Ub6w.gif)![](https://i.imgur.com/ZRedava.gif)\n\nStardew Valley 1.5.5 introduced the [font=Courier New]FarmHouseFurniture[/font] map property for the farm, which allows customization of the starting furniture set for that farm. It also introduced custom farm types, which require that map property in order to place any starting furniture at all. TVs spawned using this property do not function.\n\nThis tiny bug is will be fixed in the next Stardew Valley update, but until then this mod is a small band-aid to auto-fix any broken TVs placed by the [font=Courier New]FarmHouseFurniture[/font] map property. (Whether or not the farm is actually a custom farm type; I lied, but they're the ones that need it most.)\n\nWhen you first create a save, this mod will scan the farmhouse and any cabins you may have pre-built for broken TVs and replace them where needed. When you place a new building via Robin, it will check if it's a cabin so it can fix that, too. It shouldn't be noticeable to have installed, and won't be needed at all come next game update.\n\nInstall\n\n1.  [Install the latest version of SMAPI](https://smapi.io).\n\n2.  Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n\n3.  Run the game using SMAPI.\n\nHow to use\n**For players:** This mod should work automatically when creating a new save, and when placing a new cabin. If it worked, you shouldn't notice anything except a TV that has channels instead of drawers.\n\n**For custom farm makers:** You __can__ just require this mod for worry-free TVs, but if you are already using a workaround and/or just don't want to add this mod as a dependency, you could use Content Patcher's conditions to check if this mod is installed and only then add TVs to the furniture property.\n\nYou can even use CP's TextOperations to avoid replacing the whole furniture list again:\n\n``\n\nThis example patch adds a TV back onto the furniture list for new saves, but only when this mod is installed.\n\nCompatibility\n\n*   Works with Stardew Valley 1.5.5+ on Linux/Mac/Windows.\n\n*   Works in single player and multiplayer, only runs for the host.\n\nSee also\n\n*   [Source code](https://github.com/notevenamouse/StardewMods/tree/main/FixTVsOnCustomFarmTypes)",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1194570",
+	"Version": null,
+	"Updated": "2022-07-10T11:47:00.367+00:00",
+	"Downloads": [
+		{
+			"Id": 1212627,
+			"Type": "Main",
+			"DisplayName": "Fix TVs On Custom Farm Types",
+			"FileName": "Fix TVs On Custom Farm Types.zip",
+			"Description": "Unzip and place folder in your Mods folder.",
+			"Version": "1.0.0",
+			"SizeInBytes": 11378,
+			"Uploaded": "2022-07-10T11:46:41.597+00:00",
+			"Mods": [
+				{
+					"Id": "mouse.FixTVsOnCustomFarmTypes",
+					"DisplayName": "Fix TVs on Custom Farm Types",
+					"Type": "Smapi",
+					"RelativePath": "FixTVsOnCustomFarmTypes",
+					"Manifest": {
+						"Name": "Fix TVs on Custom Farm Types",
+						"Description": "Makes TVs spawned by map property work like TVs instead of dressers.",
+						"Author": "mouse",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "FixTVsOnCustomFarmTypes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:12717"
+						],
+						"UniqueId": "mouse.FixTVsOnCustomFarmTypes"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "a48a76b05e82b3971fb19f4a30d7bed4",
+				"md5In": "89efae8d9384516a2e26683d05b0c56c",
+				"scriptType": 0,
+				"sha256Ex": "902da4d04a2fcafa0099a90c2190ef1683d8ecdd1cebf89aaec464e0a1afd778",
+				"sha256In": "61f30b44a11d35471fa7da47267a92d91a4bcff4829a898873f240d938368017"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1657453620367,
+		"DateUpdated": 1657453601583,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1657453601583,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1194570/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1194570/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1194570/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1194570/icon_original"
+		},
+		"nexusModID": 12717,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": false,
+		"userID": 324606
+	}
+}

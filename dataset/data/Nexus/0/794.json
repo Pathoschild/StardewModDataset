@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 794,
+	"Name": "CleanFarm",
+	"Author": "tstaples",
+	"Description": "On each new day this mod will remove all debris and other items from the farm that you specify in the config (see below).\n<br />\n<br />[b][u]Warning: It may be a good idea to back up your save game as your farm is saved after the items have been removed.[/u][/b]\n<br />\n<br />[size=5]Install[/size][list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />To uninstall this mod you can simply delete the \"CleanFarm\" folder from your Mods directory.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />The 1.3-beta version of this mod will work with SDV 1.3 beta and does work in multiplayer (including if multiple people have it).\n<br />\n<br />Note that if multiple people have this mod in multiplayer and one player has the option on to remove something that another player doesn't then it will still be removed. For example, if the host has RemoveGrass set to false but one of the farmers does, then the grass will still get removed.\n<br />\n<br />I'm still not sure the best way to handle that kind of scenario, perhaps restricting it to only the host is best but I'm not sure. if you have any feedback let me know.\n<br />\n<br />[size=5]Configuration[/size]\n<br />In this mod's\u00A0config.json\u00A0file you will find options to enable/disable which objects are 'cleaned' from your farm. The options are:\n<br />[code]{ \n<br /> \"RemoveGrass\": false,\n<br />  \"RemoveWeeds\": true,\n<br />  \"RemoveStones\": true,\n<br />  \"RemoveTwigs\": true,\n<br />  \"RemoveStumps\": true,\n<br />  \"RemoveSaplings\": true,\n<br />  \"MaxTreeGrowthStageToAllow\": 5, // min 1, max 5\n<br />  \"RemoveLargeLogs\": true,\n<br />  \"RemoveLargeRocks\": true,\n<br />  \"RemoveBushes\": false // Removes the bushes near the shipping container.\n<br />  \"ReportRemovedItemsToConsole\": true // Report extra info about what was removed to the console.\n<br />}\n<br />[/code]\n<br />\n<br />The\u00A0[i]MaxTreeGrowthStageToAllow[/i]\u00A0is only used if\u00A0[i]RemoveSaplings[/i]\u00A0is true. It represents the max growth stage allowed, so any trees with a lower growth stage will be removed. This allows you to remove all seeds but keep existing saplings etc. Only values between 1 and 5 are valid.\n<br />\n<br />The growth stages are:\n<br />[list]\n<br />[*]0 - Seed\n<br />[*]1 - Sprout\n<br />[*]2 - Sapling\n<br />[*]3 - Bush\n<br />[*]4 - Small Tree\n<br />[*]5 - Tree\n<br />[/list]\n<br />For more information on how to modify the config see\u00A0[url=http://canimod.com/guides/using-mods#configuring-mods]this page[/url].\n<br />[size=4]\n<br />[/size][size=4]Console Commands[/size][list]\n<br />[*][b]cf_clean [/b]- Runs the clean command manually.\n<br />[*][b]cf_restore [/b]- Restores the items removed from the last clean command that occured this play session.\n<br />[*][b]cf_rload [/b]- Reloads the mod config so you can change what to remove on the fly.\n<br />[/list]\n<br />[size=4]You can view the release notes [url=https://github.com/tstaples/CleanFarm/blob/master/Release-notes.md]here[/url].[/size]\n<br />Source code is available [url=https://github.com/tstaples/CleanFarm]here[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/794",
+	"Version": "1.4",
+	"Updated": "2019-03-04T02:41:47+00:00",
+	"Downloads": [
+		{
+			"Id": 14893,
+			"Type": "Main",
+			"DisplayName": "CleanFarm 1.4",
+			"FileName": "CleanFarm 1.4-794-1-4-1551667307.zip",
+			"Description": "Fixed deprecation warnings (SMAPI 3.0 compatibility).\n<br />Fixed an issue where some items wouldn't be removed correctly after reloading your config.\n<br />Minor refactoring and cleanup.",
+			"Version": "1.4",
+			"SizeInBytes": 20176,
+			"Uploaded": "2019-03-04T02:41:47+00:00",
+			"Mods": [
+				{
+					"Id": "tstaples.CleanFarm",
+					"DisplayName": "CleanFarm",
+					"Type": "Smapi",
+					"RelativePath": "CleanFarm",
+					"Manifest": {
+						"Name": "CleanFarm",
+						"Description": "Automatically clears debris and other undesireables from your farm each day.",
+						"Author": "tstaples (aka Catman)",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "2.10.2",
+						"EntryDll": "CleanFarm.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:794",
+							"GitHub:tstaples/CleanFarm"
+						],
+						"UniqueId": "tstaples.CleanFarm",
+						"OtherFields": {
+							"PerSaveConfigs": false
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342401581,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387482,
+		"UploaderId": 33546475,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

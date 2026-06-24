@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 38441,
+	"Name": "PerPlayerFarm",
+	"Author": "DerexSV",
+	"Description": "[b]Per Player Farm[/b] creates a separate farm space for each farmhand in multiplayer.\n<br />\n<br />Instead of everyone sharing only the main Farm map, each invited player can have a personal [b]PPF_* farm[/b], with proper entrance redirection and owner-based mailbox behavior. This helps organize multiplayer progression while keeping each player’s space clearer and easier to manage.\n<br />\n<br />[b]Built for:[/b]\n<br />[list]\n<br />[*]Stardew Valley [b]1.6.15+[/b]\n<br />[*]SMAPI [b]4.1.7+[/b]\n<br />[/list]\n<br />Important multiplayer note\n<br />For consistent behavior, host and farmhands should use the same mod version and the same config values.\n<br />\n<br />[b]What this mod does[/b]\n<br />[list]\n<br />[*]Creates and manages per-player farm locations ([b]PPF_*[/b]) in multiplayer.\n<br />[*]Redirects farm entrances so farmhands go to their assigned PPF farm when appropriate.\n<br />[*]Keeps mailbox behavior owner-aware in PPF farms.\n<br />[*]Provides in-game chat commands for cleanup and safe uninstall.\n<br />[*]Includes translation support.\n<br />[/list]\n<br />\n<br />[b]Config (config.json)[/b]\n<br />[list]\n<br />[*][b]WarpToPPFOnHouseExit[/b] (default: [b]true[/b])  \n<br />When enabled, farmhands are redirected to their own PPF farm after leaving their cabin.[*][b]RedirectFarmhandsToPPF[/b] (default: [b]true[/b])  \n<br />When enabled, farm entrances are redirected so farmhands go to their assigned PPF farm.[*][b]OpenTravelMenuKey[/b] (default: [b]K[/b])  \n<br />Key used to open the travel menu.[*][b]DefaultPPFMapType[/b] (default: [b]null[/b])  \n<br />Optional map override for newly created PPF farms. Leave empty/null for normal behavior.  Examples: Maps/Farm, Maps/Farm_Fishing, Maps/Farm_Foraging, Maps/Farm_Mining, Maps/Farm_Combat, Maps/Farm_FourCorners, Maps/Farm_Island, Maps/Farm_Ranching[/list]\n<br />\n<br />[b]Travel menu key behavior[/b]\n<br />[list]\n<br />[*]Default key is [b]K[/b] (changeable in config/GMCM).\n<br />[*]The travel menu only opens while you are in the main [b]Farm[/b] or in a [b]PPF_*[/b] farm.\n<br />[/list]\n<br />\n<br />[b]In-game chat commands[/b]\n<br />To use commands, open the in-game chat by pressing [b]T[/b], then type:\n<br />\n<br />[list]\n<br />[*][b]/ppfclearfarm[/b]\n<br />Clears placed objects and selected terrain features in the current PPF farm.Guest players: can only use this in [b]their own[/b] assigned PPF farm.Host player: can use it in any PPF farm.[*][b]/ppfclearfarm all[/b]\n<br />Host only. Clears all loaded PPF farms.[*][b]/ppfuninstall[/b]\n<br />Host only. Starts uninstall confirmation flow (2-step).[*][b]/ppfuninstall confirm[/b]\n<br />Host only. Confirms uninstall and removes PPF data created by the mod.[/list]\n<br />\n<br />[b]Important before uninstall[/b]\n<br />Before confirming uninstall, move anything important from PPF farms back to the main Farm.\n<br />\n<br />After uninstall:\n<br />[list]\n<br />[*]Save the game\n<br />[*]Close the game\n<br />[*]Remove the mod from your Mods folder\n<br />[/list]\n<br />[b]Tip for moving buildings and animals[/b]\n<br />If you want to move buildings or farm animals between farms, use:\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/20606]Relocate Buildings And Farm Animals[/url]\n<br />\n<br />[b]Translations[/b]\n<br />This mod supports i18n and currently includes:\n<br />[list]\n<br />[*][b]English[/b] ([i]default.json[/i])\n<br />[*][b]Portuguese (Brazil)[/b] ([i]pt.json[/i])\n<br />[/list]\n<br />If you want to add your language, you can create a translation file for it.\n<br />\n<br />[b]FAQ (Quick Answers)[/b]\n<br />\n<br />[b]Q: Is this mod single-player or multiplayer?[/b]\n<br />A: It is designed for [b]multiplayer[/b]. The main feature is per-player PPF farms for farmhands.\n<br />\n<br />[b]Q: Which versions are supported?[/b]\n<br />A: Built for [b]Stardew Valley 1.6.15[/b] and [b]SMAPI 4.1.7+[/b].\n<br />\n<br />[b]Q: Do all players need to install the mod?[/b]\n<br />A: For consistent multiplayer behavior, [b]host and farmhands should all use the mod[/b].\n<br />\n<br />[b]Q: Do host and guests need the same mod config settings?[/b]\n<br />A: [b]Yes.[/b] Keep the mod config values the same for host and farmhands. Different settings can cause inconsistent entrances/warps and unexpected behavior between players.\n<br />\n<br />[b]Q: How do I use commands?[/b]\n<br />A: Press [b]T[/b] in-game to open chat, then type commands like [b]/ppfclearfarm[/b] or [b]/ppfuninstall[/b].\n<br />\n<br />[b]Q: Why can’t a guest clear another player’s PPF farm?[/b]\n<br />A: By design, guests can only clear [b]their own[/b] assigned PPF farm. The host can manage all PPF farms.\n<br />\n<br />[b]Q: What does /ppfuninstall do?[/b]\n<br />A: It removes PPF data created by the mod (host only, with confirmation). Before confirming, move important items/animals back to the main Farm.\n<br />\n<br />[b]Q: Can this mod move buildings or animals between farms?[/b]\n<br />A: Use [url=https://www.nexusmods.com/stardewvalley/mods/20606]Relocate Buildings And Farm Animals[/url] for that.\n<br />\n<br />[b]Source code[/b]\n<br />[url=https://github.com/Jadiael1/PerPlayerFarm]https://github.com/Jadiael1/PerPlayerFarm[/url]\n<br />\n<br />[b]Support / Donate[/b]\n<br />[url=https://jadiael.dev/donate]https://jadiael.dev/donate[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38441",
+	"Version": "0.1.11",
+	"Updated": "2026-02-20T20:58:28+00:00",
+	"Downloads": [
+		{
+			"Id": 157581,
+			"Type": "Main",
+			"DisplayName": "PerPlayerFarm",
+			"FileName": "PerPlayerFarm-38441-0-1-11-1771621108.zip",
+			"Description": "Per Player Farm creates a personal PPF_ farm for each farmhand in multiplayer, redirects farm entrances, keeps mailbox ownership behavior in PPF maps, and includes host commands to clear farms or uninstall all PPF data before removing the mod safely!!",
+			"Version": "0.1.11",
+			"SizeInBytes": 46333,
+			"Uploaded": "2026-02-20T20:58:28+00:00",
+			"Mods": [
+				{
+					"Id": "DerexSV.PerPlayerFarm",
+					"DisplayName": "Per Player Farm",
+					"Type": "Smapi",
+					"RelativePath": "PerPlayerFarm",
+					"Manifest": {
+						"Name": "Per Player Farm",
+						"Description": "Creates farms per player (PPF_<id>), names.",
+						"Author": "DerexSV",
+						"Version": "0.1.11",
+						"MinimumApiVersion": "4.1.7",
+						"EntryDll": "PerPlayerFarm.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.12.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38441"
+						],
+						"UniqueId": "DerexSV.PerPlayerFarm"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544269,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425129,
+		"UploaderId": 115641573,
+		"CategoryId": 16,
+		"Adult": false
+	}
+}

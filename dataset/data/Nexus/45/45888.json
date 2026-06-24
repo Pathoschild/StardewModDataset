@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 45888,
+	"Name": "Quest Completer",
+	"Author": "Spiderbuttons",
+	"Description": "Sometimes you just want to get a quest over with but don't really wanna put in the work for it. Or maybe you\u00A0[i]almost[/i]\u00A0completed a Special Order but didn't quite make it and think you still deserve to have some of the rewards and to check it off your list. Or maybe you just wanna cheat. Regardless of your reasons, this mod adds a little checkmark button to quests to auto-complete them for you.\n<br />\n<br />This mod doesn't simply remove the quest from your journal, it\u00A0[i]actually[/i]\u00A0completes it. If completing the quest is required for progression for the game or some other mod, this will allow you to continue with that progression. If you would receive mail or an item or money or something else, auto-completing a quest with this mod will still grant those rewards, assuming that another mod isn't doing something super custom on their end that this mod cannot account for. This mod will even set some relevant world states for you, like removing the henchman in the swamp if you complete his quest or granting you the club card if you skip through Mr. Qi's riddles.\n<br />\n<br />(For the mod authors out there: This will even handle any action commands in any quest complete dialogue you set up in your quest data that would normally be run as a result of, say, delivering an item to an NPC.)\n<br />\n<br />There are a couple of things that this mod\u00A0[i]won't[/i]\u00A0do. The first is that it will not remove any item delivery objects placed in the world, such as Linus's basket or Robin's axe, but it WILL remove them from your inventory if you have already picked them up. The second thing it won't do is prevent any quest-relevant events from playing. For example, you can auto-complete the quest telling you to go meet Willy for the first time, but it won't give you a fishing rod, and you'll still get the event the next time you go to the beach (where you will then get your fishing rod). It works the same for less important quests like bringing Jodi a bass. An exception to this is the Birdie Quest, which you won't see the event for, because the trigger for that event when you talk to Birdie requires having not completed the quest yet.\n<br />\n<br />Also, like I mentioned earlier, it would be impossible for this mod to account for every possible thing that any other mod in your mod list could do. Any other mod can implement custom behaviour when they detect a quest has been completed and there's no way for me to detect that ahead of time. If you find a specific incompatibility or some unhandled vanilla behaviour, feel free to let me know and I may update this mod to account for it, but please remember that\u00A0[b][size=6]YOU USE THIS MOD AT YOUR OWN RISK[/size][/b]. I am\u00A0[b]NOT[/b]\u00A0guaranteeing that you will never experience any issues as a result of auto-completing a quest with this mod. Any quests that allow you to cancel them should be fine (because if skipping them was a problem, they wouldn't let you cancel), but use your best judgment if the quest you are going to auto-complete is not optional.\n<br />\n<br />[b][size=4]Installation[/size][/b]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].[/*]\n<br />[*]Extract the mod into Stardew Valley/Mods.[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list][b][size=4]Configuration[/size][/b]\n<br />This mod includes three configuration options:\n<br />[list]\n<br />[*]Quest Percentage: This determines what portion of the original reward for the quest you will receive if you auto-complete it. By default, it is set to 0%, meaning that you can auto-complete a quest, but you will not receive any money for doing so. Anything above 0% guarantees a minimum of 1 gold.[/*]\n<br />[*]Special Order Percentage: Same as above but for Special Orders. This will also affect non-monetary rewards, such as friendship, Qi gems, or items. Anything above 0% guarantees a minimum of 1 reward (e.g. 1 Qi gem or 1 friendship point or 1 item). Defaults to 0%.[/*]\n<br />[*]Use Progress: If enabled, your Special Order Percentage will be ignored and instead this mod will calculate how much you should get based on how much progress you made in the Special Order before auto-completing it. For example, if an order requires the delivery of 500 pieces of wood, but you only delivered 400, then you will get 80% of the reward. Defaults to unchecked.[/*]\n<br />[/list]\n<br />[b][url=https://github.com/Spiderbuttons/QuestCompleter]Source Code[/url][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45888",
+	"Version": "1.0.0",
+	"Updated": "2026-05-06T20:16:33+00:00",
+	"Downloads": [
+		{
+			"Id": 166648,
+			"Type": "Main",
+			"DisplayName": "QuestCompleter",
+			"FileName": "QuestCompleter-45888-1-0-0-1778098593.zip",
+			"Description": "Initial release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 27210,
+			"Uploaded": "2026-05-06T20:16:33+00:00",
+			"Mods": [
+				{
+					"Id": "Spiderbuttons.QuestCompleter",
+					"DisplayName": "Quest Completer",
+					"Type": "Smapi",
+					"RelativePath": "QuestCompleter",
+					"Manifest": {
+						"Name": "Quest Completer",
+						"Description": "Instantly complete any quest you have in your quest journal.",
+						"Author": "Spiderbuttons",
+						"Version": "1.0.0",
+						"EntryDll": "QuestCompleter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:45888"
+						],
+						"UniqueId": "Spiderbuttons.QuestCompleter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553336,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432576,
+		"UploaderId": 177615852,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

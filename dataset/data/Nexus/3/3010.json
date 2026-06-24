@@ -1,0 +1,96 @@
+{
+	"Site": "Nexus",
+	"Id": 3010,
+	"Name": "Custom Walls And Floors (CWF)",
+	"Author": "Platonymous",
+	"Description": "2.1.2 Fixes connected rooms in FHR\n<br />\n<br />2.1.1 Fixes a bug where sometimes the walls mess up custom farmhouse walls on non-wall tiles\n<br />(if that happened, you can use the console command reset_walls to remove all custom walls and floors, save &amp; reload after that)\n<br />\n<br />2.1.0 Multiplayer update, all players need to have the[u] same version of the mod and the same packs[/u] for this to work.\n<br />\n<br />[b]2.0.0 [/b]Reworking of the mod. Works with older content packs, but[b] does not load prior saved walls/floors, [/b]so they need to be placed again.\n<br />\n<br />1.1.2 adds support for animated Tiles, see Template file to see how this is done.\n<br />If you don't want animated tiles you do not need to include a settings.json file.\n<br />\n<br />1.1.2 changes how the data is stored so, after updating, your walls and floors will have to be placed again on older saves.\n<br />\n<br />To create a ContentPack for CWF, write a standard\u00A0manifest.json and add a \"walls.png\" and/or \"floors.png\" file.\n<br />You can download a simple template under Optional Files.\n<br />Added Custom Walls and Floors can be obtained through the Wallpaper Catalogue.\n<br />\n<br />Custom W&amp;Fs are added, they do no override vanilla W&amp;Fs.\n<br />Without ContentPacks this Mod does nothing.\n<br />[s]Custom Walls &amp; Floors does not work in Multiplayer.[/s]\n<br />\n<br />Requires SMAPI &amp; PyTK.\n<br />\n<br />\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3010",
+	"Version": "2.1.7",
+	"Updated": "2020-02-20T12:18:51+00:00",
+	"Downloads": [
+		{
+			"Id": 12817,
+			"Type": "Optional",
+			"DisplayName": "CWF Content Pack Template",
+			"FileName": "CWF Content Pack Template-3010-1-1-2-1543033058.zip",
+			"Description": "Content Packs go directly into the Mods folder",
+			"Version": "1.1.2",
+			"SizeInBytes": 19391,
+			"Uploaded": "2018-11-24T04:17:38+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomWallsAndFloors.Test",
+					"DisplayName": "CustomWallsAndFloors Template",
+					"Type": "ContentPack",
+					"RelativePath": "[CWF]Template",
+					"Manifest": {
+						"Name": "CustomWallsAndFloors Template",
+						"Description": "Adds Walls and Floors",
+						"Author": "Platonymous",
+						"Version": "1.1.2",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.CustomWallsAndFloors",
+							"MinimumVersion": "1.1.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Platonymous.CustomWallsAndFloors.Test"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342399505,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 24229,
+			"Type": "Main",
+			"DisplayName": "Custom Walls And Floors Redux",
+			"FileName": "Custom Walls And Floors Redux-3010-2-1-7-1582201131.zip",
+			"Description": "",
+			"Version": "2.1.7",
+			"SizeInBytes": 35305,
+			"Uploaded": "2020-02-20T12:18:51+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomWallsAndFloors",
+					"DisplayName": "CustomWallsAndFloorsRedux",
+					"Type": "Smapi",
+					"RelativePath": "CustomWallsAndFloorsRedux",
+					"Manifest": {
+						"Name": "CustomWallsAndFloorsRedux",
+						"Description": "Add custom Walls and Floors to SDV",
+						"Author": "Platonymous",
+						"Version": "2.1.7",
+						"MinimumApiVersion": "3.2.0",
+						"EntryDll": "CustomWallsAndFloorsRedux.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.Toolkit",
+								"MinimumVersion": "1.12.19",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3010"
+						],
+						"UniqueId": "Platonymous.CustomWallsAndFloors"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342410917,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389698,
+		"UploaderId": 42440425,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

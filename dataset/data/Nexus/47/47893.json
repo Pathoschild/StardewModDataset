@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 47893,
+	"Name": "Configurable Flower Dance Partner Requirement",
+	"Author": "Spiderbuttons",
+	"Description": "[b][size=5]Installation[/size][/b]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].[/*]\n<br />[*]Extract the mod into Stardew Valley/Mods.[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list][b][size=4]Usage for Players[/size][/b]\n<br />Install it and it Just Works™. Make sure to configure it though if you don't like the default setting.\n<br />\n<br />[b][size=4]Usage for Mod Authors[/size][/b]\n<br />You can also set per-NPC friendship requirements by adding it to their character data. If you add an entry to the NPC's CustomFields (inside a Data/Characters edit) where the key is the UniqueID of [i]this [/i]mod and the value is an integer ([b]in friendship points[/b], not hearts!) then this mod will use that number when determining if the player has enough friendship to dance with your NPC.\n<br />\n<br />However, the player can optionally choose to override custom requirements like this and force whatever config value they set to be used instead of your CustomFields data. This is by design and will not be changed.\n<br />\n<br />[b][size=4]Configuration[/size]\n<br />[/b]The mod can be configured with Generic Mod Config Menu. There are two config options.\n<br />\n<br />The first option is a config named \"Friendship Requirement\" with a slider to select how many hearts you need with someone in order for them to accept your dance request. You can change the requirement in increments of 1/10th of a heart. If you choose a fractional heart value that is not x.5, then it may be difficult to tell if you reach the requirements from the social page.\n<br />\n<br />If you edit the config.json directly, the config is stored in friendship points instead of hearts. 250 points = 1 heart.\n<br />\n<br />The maximum hearts is 10, because anything higher than that requires marriage. When you're married, your spouse will always choose to dance with you. [b]The default value is 0[/b], meaning that everyone will always say yes to dancing with you.\n<br />\n<br />The second config option is called \"Override Custom Requirement\" which will force all NPCs to use your \"Friendship Requirement\" config, even if another mod author has given an NPC a custom friendship requirement with the mod author feature described above. If this is not checked, then some NPCs may still reject you despite your \"Friendship Requirement\" setting if your friendship is lower than what another mod author has decided for that NPC.\n<br />\n<br />[b][url=https://github.com/Spiderbuttons/ConfigurableDancePartners][size=5]Source Code[/size][/url][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47893",
+	"Version": "1.0.0",
+	"Updated": "2026-06-20T01:15:12+00:00",
+	"Downloads": [
+		{
+			"Id": 171844,
+			"Type": "Main",
+			"DisplayName": "Configurable Dance Requirement",
+			"FileName": "fe/9b/2b/fe9b2bd2-e414-421d-b63e-cbcd0ba52818",
+			"Description": "Initial release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 21085,
+			"Uploaded": "2026-06-20T01:15:12+00:00",
+			"Mods": [
+				{
+					"Id": "Spiderbuttons.ConfigurableDanceRequirement",
+					"DisplayName": "Configurable Dance Requirement",
+					"Type": "Smapi",
+					"RelativePath": "ConfigurableDanceRequirement",
+					"Manifest": {
+						"Name": "Configurable Dance Requirement",
+						"Description": "Adjust the number of hearts required to dance with someone at the Flower Dance to whatever amount you want.",
+						"Author": "Spiderbuttons",
+						"Version": "1.0.0",
+						"EntryDll": "ConfigurableDanceRequirement.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47893"
+						],
+						"UniqueId": "Spiderbuttons.ConfigurableDanceRequirement"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558532,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434581,
+		"UploaderId": 177615852,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

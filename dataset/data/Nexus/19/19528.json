@@ -1,0 +1,119 @@
+{
+	"Site": "Nexus",
+	"Id": 19528,
+	"Name": "CATastrophic Hunger Crisis",
+	"Author": "YoCorpze",
+	"AuthorLabel": "StarCat",
+	"Description": "[b][size=5]Introduction[/size][/b]\n<br />[size=3]When a hungry cat visits your farm and tasks you with catching some food, you’ll uncover a little secret about the lives of the felines in Stardew Valley.[/size]\n<br />\n<br />[b][size=5]Features[/size][/b]\n<br />[list]\n<br />[*][size=3]This mod adds a whole new custom area for you to discover.[/size]\n<br />[*][size=3]The entrance to the Cat Village is somewhere in the Secret Woods.[/size]\n<br />[*][size=3]Talk to the Black Cat outside your farm to start the quest line.[/size]\n<br />[*][size=3]Be rewarded with custom baits that can help you catch valuable fish.[/size]\n<br />[/list]\n<br />[size=5]Installation[/size]\n<br />[list=1]\n<br />[*][size=3]Install the latest version of SMAPI[/size]\n<br />[*][size=3]Download the mod, and unzip the content in the [i][b]Mods[/b][/i] folder in your Stardew Valley game folder[/size]\n<br />[*][size=3]Install required mods: [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/8827]Quest Essential[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/6414]Quest Framework[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url]\uFEFF, [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url]\uFEFF[/size]\n<br />[*][size=3]Run the game after following the [url=https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Windows]SMAPI installation guide[/url][/size][size=2]\uFEFF[/size]\n<br />[/list]\n<br />[b][size=5]Getting Start[/size][/b]\n<br />[size=3]Talk to the Black Cat found on the Farm. After completing his first request, he will give you directions for where to go next.[/size]\n<br />\n<br />\n<br />[i][size=2]This mod was created as a team project for a game modding class within The School of Interactive Games and Media (IGM)at Rochester Institute of Technology in Rochester NY. IGM provides an educational environment that supports and encourages creative and collaborative academic inquiry by both faculty and students. IGM’s programs,\u00A0 coursework, research, and development efforts provide students with the knowledge and skills to pursue meaningful and rewarding careers in media-centric, interactive software development, while simultaneously advancing the field and helping to provide a well-rounded educational experience.[/size][/i]\n<br />[img]http://i.imgur.com/Fx5A3wy.png[/img]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19528",
+	"Version": "v0.0.1",
+	"Updated": "2023-12-16T01:09:35+00:00",
+	"Downloads": [
+		{
+			"Id": 79508,
+			"Type": "Main",
+			"DisplayName": "CATastrophic Hunger Crisis",
+			"FileName": "CATastrophic Hunger Crisis-19528-0-0-1-1702688975.zip",
+			"Description": "",
+			"Version": "0.0.1",
+			"SizeInBytes": 43594149,
+			"Uploaded": "2023-12-16T01:09:35+00:00",
+			"Mods": [
+				{
+					"Id": "StarCat.FishingBaitModBait",
+					"DisplayName": "SvFishingModBait",
+					"Type": "ContentPack",
+					"RelativePath": "Baits",
+					"Manifest": {
+						"Name": "SvFishingModBait",
+						"Description": "Allows for fishing odds customization.",
+						"Author": "StarCat",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "3.1.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "StarCat.FishingBaitModBait"
+					}
+				},
+				{
+					"Id": "StarCat.CatastrophicHungerCode",
+					"DisplayName": "Catastrophic Hunger Code",
+					"Type": "Smapi",
+					"RelativePath": "StarcatCode",
+					"Manifest": {
+						"Name": "Catastrophic Hunger Code",
+						"Description": "<One or two sentences about the mod>",
+						"Author": "StarCat",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "StarcatCode.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "StarCat.CatastrophicHungerCode"
+					}
+				},
+				{
+					"Id": "StarCat.CatastrophicHunger",
+					"DisplayName": "Catastrophic Hunger",
+					"Type": "ContentPack",
+					"RelativePath": "StarcatMod",
+					"Manifest": {
+						"Name": "Catastrophic Hunger",
+						"Description": "<One or two sentences about the mod>",
+						"Author": "StarCat",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "StarCat.CatastrophicHunger"
+					}
+				},
+				{
+					"Id": "StarCat.CatastrophicHungerQuest",
+					"DisplayName": "Catastrophic Hunger Quest",
+					"Type": "ContentPack",
+					"RelativePath": "[QF] StarcatQuest",
+					"Manifest": {
+						"Name": "Catastrophic Hunger Quest",
+						"Description": "<One or two sentences about the mod>",
+						"Author": "StarCat",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PurrplingCat.QuestFramework"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PurrplingCat.QuestEssentials",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Starcat.FishingBaitModBait",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "StarCat.CatastrophicHungerQuest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342466196,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406216,
+		"UploaderId": 192071145,
+		"CategoryId": 27,
+		"Adult": false
+	}
+}

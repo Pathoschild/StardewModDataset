@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 6609,
+	"Name": "Multiplayer Mod Checker",
+	"Author": "CherryChain",
+	"AuthorLabel": "Cherry",
+	"Description": "This mod helps coordinate mods in multiplayer. When a farmhand joins, the mod compares the mods installed by the host and farmhand, and summarizes any differences it found. Having the exact same mods on all players can often avoid issues in multiplayer.\n<br />\n<br />Only the host player needs the mod installed. (Farmhands can still install it if they want to see the summary too.)\n<br />\n<br />\n<br />[b][size=5]Install[/size][/b]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Unzip the mod folder into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[b][size=5]How to use[/size][/b]\n<br />When a farmhand joins, check the SMAPI console to see a message summarizing whether any mod differences were found.\n<br />\n<br />For the host player, the mod generates two files with more detailed info: a text ([font=Courier New].txt[/font]) file and JSON ([font=Courier New].json[/font]) file. The text file includes instructions and information, but the JSON may be easier to read with large reports. Farmhands just get the text file.\n<br />\n<br />You can optionally open the mod's [font=Courier New]config.json[/font] file in a text editor to change these mod settings:\n<br />[list]\n<br />[*][font=Courier New]HideReportInTrace[/font]: whether the console summary should be written as [font=Courier New]TRACE[/font] instead of [font=Courier New]WARN[/font]. Trace messages are hidden unless you have the \"SMAPI for developers\" version installed. Default false.\n<br />[*][font=Courier New]IgnoredMods[/font]: a list of mod unique IDs to ignore. Some mods don't need to be installed on both the host and farmhand to work (e.g. many aesthetic mods or this mod); adding their IDs to this list on the host's machine will skip checks for them.\n<br />[/list]\n<br />\n<br />[b][size=5]Common questions[/size][/b]\n<br />[quote][size=3][b]Is the mod still compatible?[/b][/size]\n<br />The mod is compatible with Stardew Valley 1.6.15 or later on Linux/macOS/Windows, both single-player and multiplayer.[/quote][quote][size=3][b]Does the mod conflict with any others?[/b][/size]\n<br />There are no known mod conflicts. Feel free to report compatibility issues in the mod comments.[/quote][quote][size=3][b]Can I safely add/remove the mod anytime?[/b][/size]\n<br />Yep. This mod doesn't make any changes to your save data.[/quote]\n<br />\n<br />[b][size=5]See also[/size][/b]\n<br />[list]\n<br />[*][url=https://github.com/ChroniclerCherry/stardew-valley-mods/blob/develop/MultiplayerModChecker/docs/release-notes.md]Release notes[/url]\n<br />[*][url=https://github.com/ChroniclerCherry/stardew-valley-mods/tree/develop]Source code[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6609",
+	"Version": "1.0.5",
+	"Updated": "2026-03-15T22:05:13+00:00",
+	"Downloads": [
+		{
+			"Id": 160653,
+			"Type": "Main",
+			"DisplayName": "Multiplayer Mod Checker 1.0.5",
+			"FileName": "Multiplayer Mod Checker 1.0.5-6609-1-0-5-1773612313.zip",
+			"Description": "Requires SMAPI 4.1.10 or later. See [URL=https://github.com/ChroniclerCherry/stardew-valley-mods/blob/develop/MultiplayerModChecker/docs/release-notes.md#105]release notes[/URL]. Updated by Pathoschild.",
+			"Version": "1.0.5",
+			"SizeInBytes": 30382,
+			"Uploaded": "2026-03-15T22:05:13+00:00",
+			"Mods": [
+				{
+					"Id": "Cherry.MultiplayerModChecker",
+					"DisplayName": "Multiplayer Mod Checker",
+					"Type": "Smapi",
+					"RelativePath": "MultiplayerModChecker",
+					"Manifest": {
+						"Name": "Multiplayer Mod Checker",
+						"Description": "Lets players in a multiplayer game know if there are mismatched mods or mod versions.",
+						"Author": "Cherry",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "MultiplayerModChecker.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6609"
+						],
+						"UniqueId": "Cherry.MultiplayerModChecker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547341,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393297,
+		"UploaderId": 3590100,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

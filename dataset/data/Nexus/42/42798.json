@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 42798,
+	"Name": "QuickSave Automated",
+	"Author": "tbonehunter",
+	"Description": "Uses DeLiXxN's QuickSave API to add automated save capability. Saves can be scheduled anywhere from every 1 to 12 hours of game time, or every 10 to 60 minutes of real time. Auto-detects time-stop mods and switches to real-time intervals when game time is frozen. Highly configurable via GMCM or manual editing of the config.json file created on first use.\u00A0\n<br />\n<br />This mod does NOT replicate any of DeLiXxN's work—it relies entirely on QuickSave's thorough approach to capturing game state during the game day. QuickSave Automated simply triggers saves on a schedule and writes to a separate \"Autosave\" slot, preserving your manual quicksaves.\n<br />There is a brief screen freeze during autosave (typically about 1 second), just as with manual quicksaves, while the game state is captured. Make sure that your \"Load\" hotkey for QuickSave Automated is different from the \"Load\" hotkey for QuickSave, or you'll pull the wrong save.\n<br />\n<br />[b]Requires QuickSave version 1.4.0 or later[/b], which added the API methods that make this mod possible. Many thanks to DeLiXxN for their excellent work on QuickSave and for exposing the TrySave method in the API to enable this companion mod.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42798",
+	"Version": "1.0.0",
+	"Updated": "2026-02-24T13:09:18+00:00",
+	"Downloads": [
+		{
+			"Id": 158009,
+			"Type": "Main",
+			"DisplayName": "QuickSave Automated",
+			"FileName": "QuickSave Automated-42798-1-0-0-1771938558.zip",
+			"Description": "Allows autosaving game state using DeLiXxN's QuickSave API, schedule saves at game-time or real-time intervals, load autosave with configurable hotkey.",
+			"Version": "1.0.0",
+			"SizeInBytes": 18525,
+			"Uploaded": "2026-02-24T13:09:18+00:00",
+			"Mods": [
+				{
+					"Id": "tbonehunter.QuickSaveAutomated",
+					"DisplayName": "QuickSave Automated",
+					"Type": "Smapi",
+					"RelativePath": "QuickSaveAutomated",
+					"Manifest": {
+						"Name": "QuickSave Automated",
+						"Description": "Automatically triggers QuickSave at configurable intervals based on game time or real time. Supports auto-detection of time-stop mods.",
+						"Author": "tbonehunter",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "QuickSaveAutomated.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DLX.QuickSave",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:42798"
+						],
+						"UniqueId": "tbonehunter.QuickSaveAutomated"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544697,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429486,
+		"UploaderId": 244014770,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

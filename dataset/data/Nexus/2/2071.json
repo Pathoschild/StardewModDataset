@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 2071,
+	"Name": "PlanImporter",
+	"Author": "Platonymous",
+	"Description": "In Co-Op, only use if you are the host, and you have no extra cabins on your map (because they will be removed).\n<br />After the import is done, you can build your cabins and go on as normal.\n<br />\n<br />Allows the import of plans that you or others build using the planner on [url=https://stardew.info]stardew.info[/url]\uFEFF.\n<br />\n<br />You can now import farms without exporting them first by using the id set on stardew.info.\n<br />For exp. this plan:\u00A0[url=https://stardew.info/planner/wicked-bulldog-76/]https://stardew.info/planner/wicked-bulldog-76/[/url]\u00A0would be imported by typing:\n<br />[code]plan wicked-bulldog-76\u00A0\n<br />[/code]in the console.\n<br />\n<br />this will also create an import file in your folder, so it doesn't have to download the content again\n<br />if you however want to perform a new download and not use the cached file type:\n<br />[code]planweb wicked-bulldog-76[/code]\n<br />\n<br />Currently there is no button for the export so I made a simple Chrome Extension that will create one for you:\n<br />[url=https://chrome.google.com/webstore/detail/stardew-planner-export/jgbhnhgpphpdajoononghfbeenmiiako]Stardew Planner Export\n<br />[/url](Note: You need to save your plan in the planner before exporting.)\n<br />\n<br />After installing simply click the export icon in the upper right corner of the page while you are viewing a plan and it will automaticly download a .json file.\n<br />Rename the file however you like and place it into the imports folder of this mod.\n<br />\n<br />After you opened a game or started a new one, go into the smapi console and type:\n<br />[code]plan myfarmexport[/code]\n<br />with myfarmexport beiing your filename (without .json).\n<br />\n<br />[b]The mod will clear your whole farm and rebuild it based on the imported plan.\n<br />[u](Important: this will remove EVERYTHING on your farm, so it's best used for new games)[/u][/b]\n<br />\n<br />[b][i]There's currently no check wether or not your farmtype is suitable to the plan, so make sure you only use plans that were made for your farmtype.\n<br />[/i][/b]\n<br />\n<br />Includes 2 plans for testing. one called farm.json which is for the [url=https://stardew.info/planner/wicked-bulldog-76]standart farm[/url] and one called hill.json for the [url=https://stardew.info/planner/friendly-cat-12/]hilltop farm[/url].\n<br />\n<br />\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2071",
+	"Version": "0.8.11",
+	"Updated": "2019-11-26T19:30:45+00:00",
+	"Downloads": [
+		{
+			"Id": 20157,
+			"Type": "Main",
+			"DisplayName": "Plan Importer",
+			"FileName": "Plan Importer-2071-0-8-11-1574796645.zip",
+			"Description": "Requires SMAPI",
+			"Version": "0.8.11",
+			"SizeInBytes": 33695,
+			"Uploaded": "2019-11-26T19:30:45+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.PlanImporter",
+					"DisplayName": "PlanImporter",
+					"Type": "Smapi",
+					"RelativePath": "PlanImporter",
+					"Manifest": {
+						"Name": "PlanImporter",
+						"Description": "Import plans from stardew.info.",
+						"Author": "Platonymous",
+						"Version": "0.8.11",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "PlanImporter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2071"
+						],
+						"UniqueId": "Platonymous.PlanImporter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342406845,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388759,
+		"UploaderId": 42440425,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

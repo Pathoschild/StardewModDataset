@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 6488,
+	"Name": "Energy Time",
+	"Author": "ThatOneCow",
+	"AuthorLabel": "nikperic",
+	"Description": "[size=4]Overview and Goal[/size]\n<br />\n<br />This mod lets time pass proportionally to your energy usage. You can also fast forward by [default] pressing and holding the 'U' key.\n<br />\n<br />With the default configuration, using all of your stamina will cause your day to reach roughly 6:30pm / 18:30.\n<br />\n<br />The inspiration for this mod comes from the relaxed feeling when there is no time constraint in games like Littlewood. I always found myself modifying the default time passage, often freezing it as a result. In the end, I prefer the approach in games like Littlewood and wanted something similar for Stardew hence this mod.\n<br />\n<br />[size=4]In-Game Controls[/size]\n<br />\n<br />Default controls below:\n<br />\n<br />[code]U[/code]: hold key down fast forward time\n<br />[code]N[/code]: freeze or unfreeze time\n<br />[code]B[/code]: reload the config settings from file\n<br />[code].[/code]: increase the energy requirement multiplier by 0.1. Combine with Shift to increase by 1.0, or Alt to increase by 0.01\n<br />[code],[/code]: decrease the energy requirement multiplier by 0.1. Combine with Shift to decrease by 1.0, or Alt to decrease by 0.01\n<br />[code];[/code]: toggle between Vanilla Time and Energy Time\n<br />\n<br />While in Vanilla Time, time will pass by normally, unless you are holding U to fast forward, or have paused time with N (default keybindings, may differ given your configuration).\n<br />\n<br />Shortcuts will only work when there are no active menus.\n<br />[size=4]Multiplayer[/size]\n<br />\n<br />In multiplayer, all connected players stamina is pooled together for calculations. Whenever a player joins or leaves the game, the base factor for time passing is calculated and reset.\n<br />\n<br />In theory, this could allow for an infinite day exploit if a player keeps leaving and rejoining since it also resets the stamina used value, but this seems like a lot of effort for an exploit.\n<br />\n<br />Only the host can pass time via the pass time shortcut during a multiplayer game.\n<br />\n<br />[size=4]Configuration Options[/size]\n<br />\n<br />Configuration options are listed below, with their default values.\n<br />\n<br />[code]\u00A0 \"EnergyRequirementMultiplier\": 2.0,\n<br />\u00A0 \"PassTimeKey\": \"U\",\n<br />\u00A0 \"PauseTimeKey\": \"N\",\n<br />\u00A0 \"ReloadConfigKey\": \"B\",\n<br />\u00A0 \"IncreaseMultiplierKey\": \".\",\n<br />\u00A0 \"DecreaseMultiplierKey\": \",\",\n<br />\u00A0 \"TimeModeToggleKey\": \";\"\n<br />[/code]\n<br />\n<br />To modify how quickly your energy depletion makes time pass, tweak the [code]EnergyRequirementMultiplier[/code] configuration value. The higher the value, the more energy must be expended for a 10 minute tick to pass.\n<br />\n<br />The mod expects that at 1.0, there will be 150 ticks that you want passed.\n<br />\n<br />With the default configuration, using all of your stamina will cause your day to reach roughly 6:30pm / 18:30.\n<br />\n<br />Presently, the exceptions include using stamina above the amount required for a tick (e.g. typically happens with charged tool usage, fishing rod usage at low max stamina). I'm not yet sure if this will be tweaked as the goal is to create a relaxed environment but I'm also not 100% satisfied with the balance there.\n<br />[size=4]\n<br />Compatibility[/size]\n<br />\n<br />This mod should not impact most other mods, however there is a high likelihood of conflicts with other mods that manipulate time mechanics in the game.\n<br />\n<br />[size=4]Feedback[/size]\n<br />\n<br />I'm open to suggestions for improvements and tweaks, but have a full time job and other responsibilities. This is very much just something I did for fun for myself that I wanted to share so please bear with me if I take some time to respond to improvement suggestions.\n<br />\n<br />That said, I shall do my best to address any critical bugs in a timely fashion.\n<br />\n<br />[size=4]Open Source[/size]\n<br />\n<br />[url=https://gitlab.com/nikperic/energytime]Open source under MIT License on Gitlab[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6488",
+	"Version": "1.4.1",
+	"Updated": "2020-09-04T14:38:58+00:00",
+	"Downloads": [
+		{
+			"Id": 30892,
+			"Type": "Main",
+			"DisplayName": "Energy Time",
+			"FileName": "Energy Time-6488-1-4-1-1599230338.zip",
+			"Description": "",
+			"Version": "1.4.1",
+			"SizeInBytes": 10576,
+			"Uploaded": "2020-09-04T14:38:58+00:00",
+			"Mods": [
+				{
+					"Id": "nikperic.EnergyTime",
+					"DisplayName": "EnergyTime",
+					"Type": "Smapi",
+					"RelativePath": "EnergyTime",
+					"Manifest": {
+						"Name": "EnergyTime",
+						"Description": "Makes time pass with energy usage.",
+						"Author": "nikperic",
+						"Version": "1.4.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "EnergyTime.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6488"
+						],
+						"UniqueId": "nikperic.EnergyTime"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342417580,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393176,
+		"UploaderId": 94564898,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

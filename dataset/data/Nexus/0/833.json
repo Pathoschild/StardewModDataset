@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 833,
+	"Name": "Basic Sprinkler Improved",
+	"Author": "LittleRaskols",
+	"Description": "[b][u]INTRODUCTION[/u]\n<br />[/b]\n<br />Basic Sprinkler Improved changes the way the basic sprinkler works without making it cover any more area than it does in the base game. I always found the most annoying thing about it to be the shape, which was just useless. But while there are a number of fine mods out there that change the way the sprinkler works, they all make it cover more total area, which seemed a bit overpowered to me. So I made this for my personal use.\n<br />\n<br />It's hoped that in addition to making the basic sprinkler more useful, the different patterns one can make with them will give them a niche so they can still be useful even when you get improved sprinklers. However, if I'm being honest, I'm kinda updating this for posterity. Because of the need to reconfigure the watering area rather than just adding to it, there's an \"unwatering\" step that seems daunting to do in a way that does not interfere with other watering devices. On the other hand there's a mod called \"Line Sprinklers\" that does more or less what I would want to do with this mod, and more. So give this a try, but know that there are other options out there.\n<br />\n<br />Using it you can create irrigation rows like this:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/833-1-1484840317.png[/img]\n<br />\n<br />It's also good for those annoying beanpoles and similar planters:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/833-0-1484840318.png[/img]\n<br />\n<br />[b][u]CONFIGURATION[/u]\n<br />[/b]\n<br />Note that while this section refers to the config file, you can change settings in game using the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface.\n<br />\n<br />The config.json file by default makes the mod use the \"horizontal\" configuration. To change that, change the \"patternType\" item. \u00A0The mod works by watering tiles according to one of the following configurations:\u00A0\"[url=https://staticdelivery.nexusmods.com/mods/1303/images/833-6-1484763613.png]horizontal[/url]\", \"[url=https://staticdelivery.nexusmods.com/mods/1303/images/833-5-1484763614.png]vertical[/url]\", \"[url=https://staticdelivery.nexusmods.com/mods/1303/images/833-4-1484763614.png]north[/url]\", \"[url=https://staticdelivery.nexusmods.com/mods/1303/images/833-3-1484763614.png]south[/url]\", \"[url=https://staticdelivery.nexusmods.com/mods/1303/images/833-2-1484763614.png]east[/url]\", \"[url=https://staticdelivery.nexusmods.com/mods/1303/images/833-1-1484763614.png]west[/url]\", and \"custom\", which deserves more explanation.\n<br />\n<br />The four items in the config.json called \"northArea\", \"southArea\", \"eastArea\", and \"westArea\" define possible alternative configurations. You need to set the \"patternType\" to \"custom\" for this to work. Then you need to provide values. Whatever value you put in the appropriate direction is how many tiles it will water in that direction. However, it won't let you water more than 4 tiles total.\n<br />\n<br />For example, with this configuration:\n<br />\n<br />[font=Courier New]\"patternType\": \"custom\",[/font]\n<br />[font=Courier New]\"northArea\": 1,[/font]\n<br />[font=Courier New]\"southArea\": 1,[/font]\n<br />[font=Courier New]\"eastArea\": 2,[/font]\n<br />[font=Courier New]\"westArea\": 0[/font]\n<br />\n<br />The sprinkler will produce [url=https://staticdelivery.nexusmods.com/mods/1303/images/833-0-1484763614.png]this pattern[/url].\n<br />\n<br />If you don't set the \"patternType\" to \"custom\" then the numbers will be ignored entirely.\n<br />[b]\n<br />[u]KNOWN ISSUES[/u][/b]\n<br />\n<br />[list]\n<br />[*]Can't do anything with the sprinkler's animation to make it match how it actually works, I'm afraid.\n<br />[*]There is a possibility that a basic sprinkler may \"unwater\" parts of the pattern of another kind of sprinkler. Don't put basic sprinklers within or adjacent to the watering area of another sprinkler.\n<br />[/list][b]\n<br />[u]FUTURE PLANS[/u][/b]\n<br />\n<br />None, it just needs to be maintained.\n<br />\n<br />[b][u]CREDITS[/u][/b]\n<br />\n<br />I'll admit that I studied closely the work of OrSpeeder (maker of Configurable Improved Sprinklers) and ADoby (maker of Simple Sprinkler). The method overall is my own but without their pioneering work, I probably wouldn't have been able to make heads or tails of anything. If you want a different take on changing up how sprinklers work, definitely check them out.\n<br />\n<br />[url=http://community.playstarbound.com/threads/configurable-improved-sprinklers-scarecrow-and-sprinklers-area-highlights.112443/]Configurable Improved Sprinklers[/url]\n<br />[url=http://community.playstarbound.com/threads/smapi-simple-sprinkler.110326/]Simple Sprinkler[/url]\n<br />[b]\n<br />[u]LICENSE[/u]\n<br />[/b]\n<br />Basic Sprinkler Improved is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n<br />\n<br />For information on this license, see: [url=http://www.gnu.org/licenses/]http://www.gnu.org/licenses/[/url]\n<br />\n<br />Basic Sprinkler Improved mod is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. \u00A0See the GNU General Public License for more details.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/833",
+	"Version": "2.1.0",
+	"Updated": "2020-09-17T23:53:43+00:00",
+	"Downloads": [
+		{
+			"Id": 31272,
+			"Type": "Main",
+			"DisplayName": "Basic Sprinkler Improved - v2.1.0",
+			"FileName": "Basic Sprinkler Improved - v2.1.0-833-2-1-0-1600386823.7z",
+			"Description": "Improves functionality of basic sprinkler. Now with Generic Mod Config Menu support.",
+			"Version": "2.1.0",
+			"SizeInBytes": 22416,
+			"Uploaded": "2020-09-17T23:53:43+00:00",
+			"Mods": [
+				{
+					"Id": "lrsk_sdvm_bsi.0117171308",
+					"DisplayName": "Basic Sprinkler Improved",
+					"Type": "Smapi",
+					"RelativePath": "BasicSprinklerImproved",
+					"Manifest": {
+						"Name": "Basic Sprinkler Improved",
+						"Description": "Make the basic Sprinkler more useful by changing its spray shape but not area.",
+						"Author": "littleraskol",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BasicSprinklerImproved.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Chucklefish:4455",
+							"Nexus:833"
+						],
+						"UniqueId": "lrsk_sdvm_bsi.0117171308"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342417960,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387521,
+		"UploaderId": 2514862,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

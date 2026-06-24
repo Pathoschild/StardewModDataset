@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 38587,
+	"Name": "PerFarmhandWoods",
+	"Author": "DerexSV",
+	"Description": "Per Farmhand Woods 0.1.1\n<br />========================\n<br />\n<br />[b]Per Farmhand Woods[/b] gives every multiplayer guest their own Secret Woods. The host keeps the vanilla Woods. When a guest steps on the Forest entrance tiles, they’re smoothly routed to a personal Woods instance; exiting returns them to the Forest a couple tiles inward to avoid re-triggering. No commands or setup.\n<br />\n<br />[b]New in 0.1.1[/b]\n<br />[list]\n<br />[*] Added a console command, [code]pfw_purge[/code], that deletes every [i]Woods_*[/i] instance, disables custom warps, and halts the mod’s save logic for the remainder of the session.\n<br />[*] Introduced runtime flags so all event handlers respect purge mode before attempting warps or persisting save data.\n<br />[*] Documented the purge workflow and uninstall steps in both English and Brazilian Portuguese READMEs.\n<br />[*] Translated remaining diagnostics and inline comments to English for consistent logging.\n<br />[/list]\n<br />\n<br />[b]Features[/b]\n<br />[list]\n<br />[*] [b]Per-player Secret Woods:[/b] each farmhand gets [i]Woods_&lt;theirUID&gt;[/i], created on demand and reused across sessions.\n<br />[*] [b]Host stays vanilla:[/b] the host always enters the original Woods via the normal border warp.\n<br />[*] [b]Seamless entry/exit:[/b] guests go straight to their own instance; exits land slightly inward in the Forest to prevent re-trigger loops.\n<br />[*] [b]Save-safe &amp; zero config:[/b] the host creates instances; nothing in the base save is overwritten; drop in and play.\n<br />[/list]\n<br />\n<br />[b]How it works[/b]\n<br />[list]\n<br />[*] On host load / farmhand connect, the mod ensures a location named [i]Woods_&lt;UID&gt;[/i] exists (cloned from the vanilla Woods via the game’s location data).\n<br />[*] The Forest entrance tiles are given a custom [i]TouchAction[/i] ([code]DerexSV.PerFarmhandWoods.EnterWoods x y[/code]). For guests, it warps to [i]Woods_&lt;UID&gt;[/i]; for the host, it does nothing so the vanilla border warp handles entry.\n<br />[*] Personal Woods adjust their built-in exit warps to return to the Forest a couple tiles inward, avoiding immediate re-trigger.\n<br />[/list]\n<br />\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*] Stardew Valley 1.6+\n<br />[*] SMAPI 4.3.2+ (matches the mod’s manifest)\n<br />[/list]\n<br />\n<br />[b]Installation[/b]\n<br />[list]\n<br />[*] Extract the mod folder into your [i]Mods[/i] directory.\n<br />[*] [b]Multiplayer:[/b] install on [u]host and all farmhands[/u] so the custom TouchAction is recognized client-side.\n<br />[/list]\n<br />\n<br />[b]Compatibility[/b]\n<br />[list]\n<br />[*] Compatible with most content packs and map reskins.\n<br />[*] Mods that heavily edit [i]Maps/Forest*[/i] entrance tiles or replace the vanilla Woods warps may require load-order/patch priority tweaks.\n<br />[*] Festival versions of the Forest may disable the Woods entrance (vanilla behavior).\n<br />[/list]\n<br />\n<br />[b]Known limitations[/b]\n<br />[list]\n<br />[*] If a guest reaches the entrance before the host’s instance is fully created, entry may fail once. Re-entering after a moment (or after the host finishes loading) resolves it.\n<br />[*] Uninstalling leaves any [i]Woods_&lt;UID&gt;[/i] locations in the save as unused areas. This is harmless, but back up your save if you plan to remove the mod.\n<br />[/list]\n<br />\n<br />[b]Disabling / uninstalling[/b]\n<br />[list]\n<br />[*] Run [code]pfw_purge[/code] in the SMAPI console to remove all personal Woods, stop the mod’s saving, and disable the custom warps.\n<br />[*] Sleep to save the in-game day.\n<br />[*] Close the game and delete the mod folder before launching Stardew Valley again.\n<br />[/list]\n<br />\n<br />[b]Troubleshooting[/b]\n<br />[list]\n<br />[*] [b]Guest enters vanilla Woods:[/b] ensure the guest also has the mod installed and the host loaded the save first.\n<br />[*] [b]“Required location not found” on entry:[/b] the host didn’t finish creating the instance yet. Try again shortly and verify both sides are up-to-date with SMAPI and this mod.\n<br />[/list]\n<br />\n<br />[b]Source &amp; issues[/b]\n<br />[list]\n<br />[*] GitHub repository: [url=https://github.com/Jadiael1/PerFarmhandWoods]github.com/Jadiael1/PerFarmhandWoods[/url]\n<br />[/list]\n<br />\n<br />[b]Credits[/b]\n<br />[list]\n<br />[*] DerexSV — concept and implementation.\n<br />[*] Thanks to ConcernedApe, the SMAPI community, and Pathoschild for the tooling.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38587",
+	"Version": "0.1.1",
+	"Updated": "2025-10-15T20:07:43+00:00",
+	"Downloads": [
+		{
+			"Id": 145601,
+			"Type": "Main",
+			"DisplayName": "PerFarmhandWoods",
+			"FileName": "PerFarmhandWoods-38587-0-1-1-1760558863.zip",
+			"Description": "Adds purge console command to remove Woods instances mid-save, introduces runtime flags to disable saving/warps, updates docs with bilingual uninstall guidance, and translates diagnostics/comments to English for clarity.",
+			"Version": "0.1.1",
+			"SizeInBytes": 28325,
+			"Uploaded": "2025-10-15T20:07:43+00:00",
+			"Mods": [
+				{
+					"Id": "DerexSV.PerFarmhandWoods",
+					"DisplayName": "Per Farmhand Woods",
+					"Type": "Smapi",
+					"RelativePath": "PerFarmhandWoods",
+					"Manifest": {
+						"Name": "Per Farmhand Woods",
+						"Description": "Each multiplayer guest has their own Secret Woods; the host keeps the vanilla Woods.n.",
+						"Author": "DerexSV",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "PerFarmhandWoods.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:38587"
+						],
+						"UniqueId": "DerexSV.PerFarmhandWoods"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532289,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425275,
+		"UploaderId": 115641573,
+		"CategoryId": 16,
+		"Adult": false
+	}
+}

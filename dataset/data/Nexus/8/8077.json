@@ -1,0 +1,151 @@
+{
+	"Site": "Nexus",
+	"Id": 8077,
+	"Name": "Multiple Floor Farmhouse",
+	"Author": "aedenthorn",
+	"Description": "[size=4][b]TL;DR:[/b][/size]\n<br />\n<br />Install this mod and its content pack and you will get two new floors for your farmhouse. You can choose which floors to use and their order in the mod's config.json file.\n<br />\n<br />[youtube]sx1jfUxoU2A[/youtube]\n<br />\n<br />[size=4][b]Details:[/b][/size]\n<br />\n<br />This mod is a framework that allows you to create and install content packs that define farmhouse floor types, to then add as extra floors to your farmhouse using this mod's config file.\n<br />\n<br /> There is an example content pack that contains two ready-made floor types, one that has many rooms and is based on the fully upgraded farmhouse main floor, and another that is just one big room about the size of the entire farmhouse main floor.\n<br />\n<br />\n<br />[size=4][b]Content Packs:[/b][/size]\n<br />\n<br />Content packs include a content.json with a list of at least one farmhouse floor type. For an idea of what the content.json file should look like, start with the one in the example content pack.\n<br />\n<br />Each farmhouse floor type does the following:\n<br />[list]\n<br />[*]provides a unique name for the floor type\n<br />[*]points to a map file that must be included in the content pack\n<br />[*]indicates the tile position to draw the staircases\n<br />[*]defines wall and floor rectangles for decorating\n<br />[/list]\n<br />Once you've installed a content pack, you can setup your farmhouse floors in this mod's config.json file (created once you load the game with this mod):\n<br />\n<br />[code]{\n<br />\u00A0 \"EnableMod\": true,\n<br />\u00A0 \"FloorNames\": [\n<br />\u00A0\u00A0\u00A0 \"ManyRooms\",\n<br />\u00A0\u00A0\u00A0 \"EmptyHall\"\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />This tells the mod that your first extra floor will be of the \"ManyRooms\" type, and your second extra floor will be of the \"EmptyHall\" type. These are the two types I've created as an example in the example content pack. You can add as many entries to the \"FloorNames\" key as you like, and they will be added to the farmhouse in the order they appear there.\n<br />\n<br />If you're happy with my two floor types, you can just install this mod and its example content pack, and you will immediately have two extra floors in your farmhouse, one of each type, and you can edit the order and floor types in the config file as you like.\n<br />\n<br />\n<br />[size=4][b]Notes:[/b][/size]\n<br />[list]\n<br />[*]If you install only the main mod without the example content pack, the mod will throw an error because by default it expects to load both floor types in the example content pack. You can edit the config to switch to your own floor types, and the error will go away.\n<br />[*]Floor maps must have the [b]indoors[/b] and [b]untitled tile sheet[/b][i] [/i]tile sheets from the farm house, in order to properly show the stairs. I recommend starting off with one of the example floors as a base and editing it using Tiled as you like (provided you know what your doing).\n<br />[*]This mod hasn't been tested rigorously. It may be that placing certain things on the new floors causes problems I haven't thought of. I can confirm that it saves wallpaper, flooring, and objects that you place on the floors, so all seems well! Still, this is a mod, so as always backup your save if you're afraid of the unexpected.\n<br />[*]Changing your floor layout does not move things you place on that floor. I'd recommend removing everything from a floor before you change the floor type for a floor.\n<br />[/list]\n<br />\n<br />[size=4][b]Technical:[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8077",
+	"Version": "0.2.5",
+	"Updated": "2021-03-19T23:34:17+00:00",
+	"Downloads": [
+		{
+			"Id": 38017,
+			"Type": "Optional",
+			"DisplayName": "Multiple Floor Farmhouse Content Pack",
+			"FileName": "Multiple Floor Farmhouse Content Pack-8077-0-1-0-1613334500.zip",
+			"Description": "Install this along with the main archive to activate the extra floors",
+			"Version": "0.1.0",
+			"SizeInBytes": 3976,
+			"Uploaded": "2021-02-14T20:28:20+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MSFFloorPack",
+					"DisplayName": "Multi-Story Farmhouse Floor Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "[MSF] Floor Pack",
+					"Manifest": {
+						"Name": "Multi-Story Farmhouse Floor Content Pack",
+						"Description": "",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.MultiStoryFarmhouse",
+							"MinimumVersion": "0.1.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.MultiStoryFarmhouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.MSFFloorPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342424705,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 39561,
+			"Type": "Optional",
+			"DisplayName": "MSF Redrus Floor Pack",
+			"FileName": "MSF Redrus Floor Pack-8077-0-1-0-1616195530.zip",
+			"Description": "Two floor types made by Redrus. To use, add the names to the list of floors in the config.json file.\n<br /><br />Floor names: \n<br /><br />ManyAlternateRooms\n<br />ManyMoreRooms",
+			"Version": "0.1.0",
+			"SizeInBytes": 4993,
+			"Uploaded": "2021-03-19T23:12:10+00:00",
+			"Mods": [
+				{
+					"Id": "Redrus.MSFFloorPack",
+					"DisplayName": "Floor Content Pack for MSF",
+					"Type": "ContentPack",
+					"RelativePath": "[MSF] Redrus Floor Pack",
+					"Manifest": {
+						"Name": "Floor Content Pack for MSF",
+						"Description": "",
+						"Author": "RedrusFijorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.MultiStoryFarmhouse",
+							"MinimumVersion": "0.1.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.MultiStoryFarmhouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Redrus.MSFFloorPack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342426249,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 39562,
+			"Type": "Main",
+			"DisplayName": "Multiple Floor Farmhouse",
+			"FileName": "Multiple Floor Farmhouse-8077-0-2-5-1616196857.zip",
+			"Description": "Changes:\n<br /><br />Compatibility with Ace's Expanded Houses",
+			"Version": "0.2.5",
+			"SizeInBytes": 17744,
+			"Uploaded": "2021-03-19T23:34:17+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.MultiStoryFarmhouse",
+					"DisplayName": "Multiple Floor Farmhouse",
+					"Type": "Smapi",
+					"RelativePath": "MultiStoryFarmhouse",
+					"Manifest": {
+						"Name": "Multiple Floor Farmhouse",
+						"Description": "MultiStoryFarmhouse.",
+						"Author": "aedenthorn",
+						"Version": "0.2.5",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "MultiStoryFarmhouse.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8077"
+						],
+						"UniqueId": "aedenthorn.MultiStoryFarmhouse",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "MultiStoryFarmhouse"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342426250,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394765,
+		"UploaderId": 18901754,
+		"CategoryId": 19,
+		"Adult": false
+	}
+}

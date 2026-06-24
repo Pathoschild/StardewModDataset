@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 8524,
+	"Name": "Choose Random Farm Event",
+	"Author": "RunoV",
+	"Description": "This is intended as a debugging tool for modders, but it can also be used a cheat tool. This should theoretically be safe for use in actual gameplay (as long as you keep [font=Courier New]EnforceEventConditions[/font] set to [font=Courier New]true[/font]; see below), but it hasn't been tested extensively.\n<br />\n<br />[b][size=5]Usage\n<br />[/size]\n<br />[/b]Adds the following SMAPI console commands:\n<br />\n<br />[b][font=Courier New]set_farmevent &lt;event_type&gt;[/font][/b]\n<br />\n<br />If you use this command any time before going to bed, an event of the type you specified will occur that night. Only one event can occur each night, so if you use this command twice, the second event will override the first.\n<br />\n<br />Accepted event types:\n<br />\n<br />[list]\n<br />[*][b][font=Courier New]capsule[/font][/b] - a strange capsule will spawn on your farm\n<br />[*][b][font=Courier New]meteorite[/font][/b] - a meteorite will spawn on your farm\n<br />[*][b][font=Courier New]wild_animal_attack[/font][/b] - wild animals will kill one of your livestock trapped outside at night (this does nothing if you have no livestock trapped outside)\n<br />[*][b][font=Courier New]owl_statue[/font][/b] - a stone owl statue will spawn on your farm\n<br />[*][b][font=Courier New]fairy[/font][/b] - a fairy will grow some of your crops to maturity\n<br />[*][b][font=Courier New]witch[/font][/b] - a witch will curse one of your coops or slime hutches\n<br />[*][b][font=Courier New]NPC_child_request[/font][/b] - your NPC spouse will ask you if you want to have a child\n<br />[*][b][font=Courier New]PC_child_request[/font][/b] - your PC spouse in a multiplayer game will ask you if you want to have a child\n<br />[*][b][font=Courier New]animal_birth[/font][/b] - one of your livestock will give birth\n<br />[/list]\n<br />[b][font=Courier New]spawn_giantcrop &lt;x&gt; &lt;y&gt; [&lt;crop_ID&gt;] [now][/font][/b]\n<br />\n<br />Spawn a giant crop at a specified tile overnight, or immediately if you add [font=Courier New]now[/font] to the end of the command. You can use this command multiple times throughout the day, and all the giant crops will attempt to spawn overnight.\n<br />\n<br />[list]\n<br />[*][b][font=Courier New]x[/font][/b] and [b][font=Courier New]y[/font][/b] are the tile coordinates that the giant crop will spawn at. (Giant crops take up 3x3 tiles; these are the coordinates of the center tile.) To find the coordinates of a tile, you can use the mod [url=https://www.nexusmods.com/stardewvalley/mods/679]Debug Mode[/url]\uFEFF. Unless you add a [font=Courier New]crop_ID[/font] (see below), only a tile that contains a crop will be accepted, and the giant crop will be the same type as that preexisting crop.\n<br />[*][b][font=Courier New]crop_ID[/font][/b] (optional) - The item ID of the base crop. You can find item IDs on the [url=https://stardewvalleywiki.com/Modding:Object_data]Modding:Object Data[/url]\uFEFF page of the wiki under \"Raw Data\" (it's the first number in quotation marks for each entry). For example, the item ID for pumpkin is [font=Courier New]276[/font]. If you specify an item ID, you can spawn a giant crop anywhere, even where there isn't any normal crop growing. \n<br />\n<br />Note that CRFE does not check whether the item has a valid giant crop version; you can actually create a giant crop from most of the vanilla items (it will look like a cauliflower but produce the item you specified when destroyed). You can also create giant crops from crops added with [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url]\uFEFF (use the command [font=Courier New]ja_summary[/font] to find the item ID (NOT the crop ID; the ID of the item the crop produces)), but if the crop does not have a giant version added by JA, you will get errors.\n<br />\n<br />[b][font=Courier New]crop_ID[/font][/b] is only accepted if [font=Courier New]EnforceEventConditions[/font] is set to [font=Courier New]false[/font], and the mod will not check for any existing objects or characters in the place the giant crop will spawn; it will simply spawn on top of any if they exist.[*]Add [b][font=Courier New]now[/font][/b] to the end of the command to spawn the giant crop immediately instead setting it up to spawn overnight.\n<br />[/list]\n<br />[b][font=Courier New]clear_giantcrops &lt;from_when&gt;[/font][/b]\n<br />\n<br />Clears all giant crops added by this mod within a certain time frame. Giant crops spawned naturally by the game are left alone.\n<br />\n<br />Accepted values for [b][font=Courier New]from_when[/font][/b]:\n<br />[list]\n<br />[*][b][font=Courier New]all[/font][/b] - clears all giant crops ever added by this mod\n<br />[*][b][font=Courier New]yesterday [/font][/b]- clears all giant crops spawned yesterday (including overnight)\n<br />[*][b][font=Courier New]today[/font][/b] - clears all giant crops already spawned today\n<br />[*][b][font=Courier New]tonight[/font][/b] - clears the list of giant crops set to spawn overnight\n<br />[/list]\n<br />[b][size=5]Config[/size]\n<br />\n<br />[font=Courier New]EnforceEventConditions[/font][/b]: allowed values [b][font=Courier New]true[/font][/b], [b][font=Courier New]false[/font][/b]; default [b][font=Courier New]true[/font][/b]\n<br />\n<br />If [font=Courier New]true[/font], you are only allowed to set events that could naturally occur under the current game conditions (e.g. you can only use [font=Courier New]NPC_child_request[/font] if you are actually married to an NPC, you can only use [font=Courier New]capsule[/font] if you haven't gotten the strange capsule event before, you can only spawn giant crops in the middle of a 3x3 square of crops where the middle one is fully grown), and any game progression events (such as weddings and community center bundle completion) will override whatever custom event you set for the day. If the event you specify cannot occur, you will get a message explaining why in the SMAPI console.\u00A0 See the [url=https://stardewvalleywiki.com/Random_Events]random events[/url] page of the Stardew Valley wiki for info about the conditions under which each event can occur.\n<br />\n<br />If [font=Courier New]false[/font], this mod will try to execute the event you specify without checking any of the normal game conditions for the event, and override any other event that would have happened that night. [b]If you set this to [font=Courier New]false[/font], you may run into errors or miss important game progression events.[/b]\n<br />\n<br />[b][size=5]Notes[/size]\n<br />\n<br />[/b][list]\n<br />[*]Works in multiplayer, but only [font=Courier New]set_farmevent[/font] commands from the host will actually do anything.\n<br />[*]The event you choose for the day is guaranteed to occur that night (unless overriden by a game progression event), but some events may still fail to actually do anything when they occur. For example, the meteorite event randomly chooses a square of tiles and only actually spawns a meteorite there if that square is free of water, buildings, etc.; if the square it randomly chooses doesn't fulfill those requirements, nothing will happen. See the [url=https://stardewvalleywiki.com/Random_Events]random events[/url]\uFEFF wiki page for more information.\n<br />[*]This mod can spawn giant crops added by [url=https://www.nexusmods.com/stardewvalley/mods/5263]More Giant Crops[/url]\uFEFF and [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url]\uFEFF, [i]but it cannot check which crops have non-vanilla giant versions[/i]. Even if you have EnforceEventConditions set to true, if you have More Giant Crops or Json Assets installed, CFRE can't stop you from trying to spawn a crop that has no giant version, and if you do so, you may run into errors. You can use the [font=Courier New]clear_giantcrops[/font] command to clear any giant crops added by this mod that are giving you problems. (If you're getting a constant stream of errors to the SMAPI console, you may have to move to a different area in the game before you can use the command.)\n<br />[*]This mod uses Harmony, so you will see a \"These mods directly change the game code\" warning when you start up SMAPI.\n<br />[/list]\n<br />\n<br />[size=5][b]Source[/b][/size]\n<br />\n<br />[url=https://github.com/valruno/ChooseRandomFarmEvent]Github[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8524",
+	"Version": "1.0.0",
+	"Updated": "2021-05-01T17:53:59+00:00",
+	"Downloads": [
+		{
+			"Id": 40848,
+			"Type": "Main",
+			"DisplayName": "Choose Random Farm Event",
+			"FileName": "Choose Random Farm Event-8524-1-1-0-1619891639.zip",
+			"Description": "Adds giant crop spawning.",
+			"Version": "1.1.0",
+			"SizeInBytes": 21544,
+			"Uploaded": "2021-05-01T17:53:59+00:00",
+			"Mods": [
+				{
+					"Id": "RunoV.ChooseRandomFarmEvent",
+					"DisplayName": "Choose Random Farm Event",
+					"Type": "Smapi",
+					"RelativePath": "ChooseRandomFarmEvent",
+					"Manifest": {
+						"Name": "Choose Random Farm Event",
+						"Description": "Sets the farm nighttime random event via console command.",
+						"Author": "RunoV",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.9.5",
+						"EntryDll": "ChooseRandomFarmEvent.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus : 8524"
+						],
+						"UniqueId": "RunoV.ChooseRandomFarmEvent"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342427536,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395212,
+		"UploaderId": 35681580,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

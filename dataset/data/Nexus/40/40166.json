@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 40166,
+	"Name": "Category Ingredient Display Fix",
+	"Author": "Nereithr",
+	"Description": "[center][size=6]Category Ingredient Display Fix\n<br />\n<br />[/size][/center][size=5]What is this (and mod compat)?[/size]\n<br />\n<br />A simple SMAPI Harmony mod for Stardew Valley 1.6 that fixes the way unused (in vanilla) category ingredients are displayed where applicable (recipe tooltip, collections tab). A category ingredient is an ingredient that is defined with a category such as Fish (Any) instead of one specific item and matches any item included in that category. Added category ingredients now display a proper name (standardized as \"&lt;Category&gt;(Any)\") instead of ???, and an icon representing the category. [url=https://www.nexusmods.com/stardewvalley/mods/11400]This is an updated fork of Traktori7's Categories in Recipes[/url] with the following key differences:\n<br />\n<br />[list]\n<br />[*]Updated to 1.6, duh.\n<br />[*]Now uses postfix over prefix patches. The main difference is that it allows all vanilla logic for grabbing item names and sprites to run first before overriding specific icons and names, instead of doing its own logic first and potentially not allowing the vanilla method to run. In practice this shouldn't really matter for a simple mod like this, including for mod compatibility.\n<br />[*]Supports more categories. The original mod supports Vegetable, Fruit and Greens (edible forage). This additionally supports Cooking, Mineral, Meat, Fertilizer, Junk, Bait, Syrup, Seeds, Flower.\n<br />[*]The icon for each category is now customizable by specifying the source item in the config.json directly or through the Generic Mod Config Menu.\n<br />[*]Optionally customize icons for categories that already display properly, which are Gem (fully functional but unused), Fish, Egg and Milk, for the simple reason that I wanted BIG EGGS as an icon.\n<br />[*]Yoinked ko and pt translations from KhloeLeclair's BetterCrafting for (nearly) all of the above categories, added ru translation, removed other translations from the base mod as they only had one machine-translated category.\n<br />[/list]\n<br />Note that this only modifies vanilla methods for displaying icons and names in recipes. Mods such as Love of Cooking and BetterCrafting entirely replace Cooking (and/or Crafting) menus. They include similar (but not identical) changes, but only [i]for their own crafting menus.[/i] Looking at the source BetterCrafting is also supposed to fix some of the vanilla categories, but that code doesn't seem to get called. This means that the fixes from this mod will only apply in the collections tab and the vanilla crafting menus (which you can still call in BetterCrafting using the shift modifier or config file). For the sake of consistency, this mod uses the same default icons as BetterCrafting, barring Cooking and Meat icons, for which BetterCrafting uses non-item icons, and this mod uses Tom Kha Soup and Bug Steak (which isn't actual meat), which are the closest vanilla matches. Note that this mod also adds support for Bait and Syrup categories, which BetterCrafting does not support and will display with an invalid name/icon. Some of the translated names are different because I think they sound more natural (e.g. Dish (Any) vs Cooking (Any)), edit the lang files if it annoys you :^).\n<br />\n<br />[size=5]How to install/use[/size]\n<br />\n<br />Requires SMAPI\n<br />\n<br />[list=1]\n<br />[*]Unzip the folder containing the .dll and manifest.json into your [font=Courier New]Stardew Valley&#92;Mods[/font] folder.\n<br />[*]Optionally change icons in the GMCM.\n<br />[*]Hover over crafting/cooking recipes that had previously unsupported category ingredients.\n<br />[*]Rejoice.\n<br />[/list]\n<br />[size=5]Some info on categories and why not everything is included[/size]\n<br />\n<br />The original reason I even wanted a mod that fixed item category displays was to add some Content Patcher recipes that use category ingredients. While this is still useful for cooking, most of the other categories include way too many different items for them to be useful within the context of recipes without recategorizing half the items. Below is a quick summary of the included/affected categories:\n<br />\n<br />[list]\n<br />[*]Gem (Any) | category_gem: All Minerals listed as \"Gems\" (e.g. Jade) and \"Foraged Minerals\" (e.g. Quartz) on the wiki. Excludes everything listed as \"Geode Minerals\" (e.g. Jasper).\n<br />[*]Fish (Any) | category_fish: All Fish (including crabpot).\n<br />[*]Egg (Any) | category_egg: All Animal Products considered Eggs.\n<br />[*]Milk (Any) | category_milk: All Animal Products considered Milk.\n<br />[*]Dish (Any) | category_cooking: All [i]cooked[/i] dishes. This excludes food items like Bug Steak or Joja Cola.\n<br />[*]Mineral (Any) | category_minerals: All Minerals listed as \"Geode Minerals\" on the wiki.\n<br />[*]Meat (Any) | category_meat: Quite literally nothing in vanilla.\n<br />[*]Fertilizer (Any) | category_fertilizer: All Fertilizers.\n<br />[*]Junk (Any) | category_junk: All Trash.\n<br />[*]Bait (Any) | category_bait: All Bait.\n<br />[*]Syrup (Any) | category_syrup: Maple Syrup, Oak Resin, Pine Tar and Magic Syrup. Recategorize Oak Resin and Pine Tar Objects in your content patch/mod OR use Ingredient Yeeter to ban them from matching category ingredients.\n<br />[*]Seeds (Any) | category_seeds: All Seeds.\n<br />[*]Vegetable (Any) | category_vegetable: All Vegetable items, including Fiddlehead Ferns, which are foraged.\n<br />[*]Fruit (Any) | category_fruits: All Fruit items, including farmed, foraged and fruit tree fruits.\n<br />[*]Flower (Any) | category_flowers: All Flower items, including farmed and foraged flowers.\n<br />[*]Greens (Any) | category_greens: All Forage items, which includes various greens, mushrooms and, notably, [i]Sap[/i]. Recategorize the Sap Object in your content patch/mod OR use Ingredient Yeeter to ban it from matching category ingredients.\n<br />[/list]\n<br />Some other categories that could feasibly and easily be included, such as Tackle, were omitted because I'm not really sure how you would use them in a recipe. If you need them for a mod, open an issue on GitHub/write a comment/do a PR and I will add them. However, do note that certain other categories such as Crafting, Equipment, Weapons, Hats or BigCraftables were deliberately excluded due to either being too all-encompassing (Crafting, includes very diverse craftables and even some foods such as Bug Steak and Field Snack) or causing unintuitive behaviour when crafting (Equipment, which includes permanent and non-permanent tools).\n<br />\n<br />If you plan on using non-standard categories in crafting/cooking recipes, you might be interested in [url=https://www.nexusmods.com/stardewvalley/mods/40174]Ingredient Yeeter, a mod that allows you to ban certain items[/url] from matching category ingredients without altering anything about the base item.\n<br />\n<br />[size=5]Translation status for the one and a half people who care[/size]\n<br />\n<br />If the language isn't listed, there are no translations at all. Contribute if needed, you can either do a PR or simply list proper translations for the supported categories in a comment/issue. Note that the the newly enabled Vegetable (Any) and Greens (Any) categories already have translated base game strings and so do Gems/Fish/Eggs/Milk, this is for every other category. GMCM strings are not translated.\n<br />\n<br />[list]\n<br />[*]default | English - Yeah :^)\n<br />[*]ru | Russian - Yeah :^)\n<br />[*]pt | Portugese - Missing Bait and Syrup\n<br />[*]ko | Korean - Missing Bait and Syrup\n<br />[/list]\n<br />[size=5]Credits:[/size]\n<br />\n<br />[list]\n<br />[*][url=https://github.com/Traktori7/StardewValleyMods/tree/master/CategoriesInRecipes]Traktori7's Fix Categories in Recipes[/url] - original author, used their code under the MIT License\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/BetterCrafting]KhloeLeclair's BetterCrafting[/url] - ko and pt translations\n<br />[*][url=https://github.com/ceejbot/md2nexus]md2nexus because I hate bbcode[/url]\uFEFF\n<br />[/list]\n<br />[size=5]Source[/size]\n<br />\n<br />[url=https://github.com/Nereithr/CategoryIngredientDisplayFix]GitHub repository[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40166",
+	"Version": "1.0.0",
+	"Updated": "2025-12-12T00:35:24+00:00",
+	"Downloads": [
+		{
+			"Id": 150399,
+			"Type": "Main",
+			"DisplayName": "Category Ingredient Display Fix",
+			"FileName": "Category Ingredient Display Fix-40166-1-0-0-1765499724.zip",
+			"Description": "Install like any other mod.",
+			"Version": "1.0.0",
+			"SizeInBytes": 19340,
+			"Uploaded": "2025-12-12T00:35:24+00:00",
+			"Mods": [
+				{
+					"Id": "Nereithr.CategoryIngredientDisplayFix",
+					"DisplayName": "Category Ingredient Display Fix",
+					"Type": "Smapi",
+					"RelativePath": "CategoryIngredientDisplayFix",
+					"Manifest": {
+						"Name": "Category Ingredient Display Fix",
+						"Description": "Fixes the way previously unused category ingredients are displayed in recipes and collections. Lets you to customize icons for all category ingredients.",
+						"Author": "Nereithr",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CategoryIngredientDisplayFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40166"
+						],
+						"UniqueId": "Nereithr.CategoryIngredientDisplayFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537087,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342426854,
+		"UploaderId": 132366928,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

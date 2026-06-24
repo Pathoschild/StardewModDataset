@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 47508,
+	"Name": "AC Style Balloon Drops",
+	"Author": "YourSlave",
+	"Description": "[b]AC Style Balloon Drops[/b]\n<br />Inspired by the balloon presents from Animal Crossing, this mod adds present-carrying balloons that drift across the screen while you're outdoors. Spot one floating by, hit it with your slingshot, and the present tumbles to the ground for you to collect. Pick it up, then right-click the Mystery Present in your inventory to unwrap it and reveal what's inside.\n<br />\n<br />[b]Features[/b]\n<br />[list]\n<br />[*]Balloons drift across outdoor areas at random — sometimes none, sometimes a few. Keep your slingshot handy.[/*]\n<br />[*]Pop them by shooting them. Only a slingshot projectile counts.[/*]\n<br />[*]Presents drop as a collectable Mystery Present item you open whenever you like — no instant rewards, you unwrap it yourself.[/*]\n<br />[*]Rewards are cosmetics and recipes: furniture, hats, shirts, pants, wallpaper, flooring, and cooking/crafting recipes.[/*]\n<br />[*]Seven balloon colours that spawn at random for a bit of variety.[/*]\n<br />[/list][b]Works with other mods automatically[/b]\n<br />The reward pool is built from every item installed in your game, not a fixed list. Any mod that adds furniture, hats, clothing, wallpaper, or flooring will have its items show up in presents automatically — no patches or add-ons needed. Junk and unobtainable entries are filtered out so drops stay worthwhile. Recipes you already know are skipped, so you won't get a dud.\n<br />\n<br />[b]Configuration (Generic Mod Config Menu)[/b]\n<br />With GMCM installed you can tune everything in-game:\n<br />[list]\n<br />[*]Turn balloons on or off entirely[/*]\n<br />[*]Adjust spawn chance, how often the game checks, and how many can appear at once[/*]\n<br />[*]Lock balloons to a single colour, or leave them random[/*]\n<br />[*]Toggle which reward types can drop — want furniture only? Turn the rest off.[/*]\n<br />[/list][b]Requirements[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu (GMCM)[/url]\u00A0(optional — only needed for the in-game settings menu)[/*]\n<br />[/list][b]Compatibility[/b]\n<br />Safe to add to an existing save, and safe to remove.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47508",
+	"Version": "1",
+	"Updated": "2026-06-12T07:57:15+00:00",
+	"Downloads": [
+		{
+			"Id": 170930,
+			"Type": "Main",
+			"DisplayName": "AC Style Balloon Drops",
+			"FileName": "41/e7/20/41e72035-d8de-42f2-b6c7-672e36d6e8c4",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 33256,
+			"Uploaded": "2026-06-12T07:57:15+00:00",
+			"Mods": [
+				{
+					"Id": "sunder.BalloonDrops",
+					"DisplayName": "Balloon Drops",
+					"Type": "Smapi",
+					"RelativePath": "AC Style Balloon Drops\\Balloon Drops Code",
+					"Manifest": {
+						"Name": "Balloon Drops",
+						"Description": "Present-carrying balloons drift across the screen outdoors. Shoot one with your slingshot to pop it and drop a random recipe or cosmetic item.",
+						"Author": "sunder",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BalloonDrops.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "sunder.BalloonDrops"
+					}
+				},
+				{
+					"Id": "sunder.BalloonDrops.CP",
+					"DisplayName": "Balloon Drops (Content)",
+					"Type": "ContentPack",
+					"RelativePath": "AC Style Balloon Drops\\[CP] Balloon Drops",
+					"Manifest": {
+						"Name": "Balloon Drops (Content)",
+						"Description": "Defines the Mystery Present item for the Balloon Drops mod.",
+						"Author": "sunder",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.8.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sunder.BalloonDrops",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "sunder.BalloonDrops.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557618,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434196,
+		"UploaderId": 126172698,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

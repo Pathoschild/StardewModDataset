@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 41475,
+	"Name": "NPCs Don't Sleep",
+	"Author": "MiluaSolena",
+	"Description": "Tired of villagers going to sleep before you can talk to or gift them? This mod makes it so that NPCs never sleep by replacing their schedules to remove the sleep animation. There's definitely a better way to do this, but this is my quick and dirty solution. Recommended to be used in tandem with [url=https://www.nexusmods.com/stardewvalley/mods/41105]Bypass All Doors or Unlock All Doors[/url]\uFEFF so you can barge into their houses past midnight.\n<br />\n<br />Should be compatible with practically any mod that doesn't try to load schedules for the vanilla NPCs (editing is fine though, it's specifically loading since Content Patcher only allows one mod to load each file). You can check this by opening any mod's `content.json`\u00A0and looking for `\"Action\": \"Load\"`.\n<br />\n<br />[b]Process for any mods that add or modify schedules\n<br />[/b]This mod only covers the vanilla schedules. If you install other mods that load new schedules (like SVE) or edit schedules (like Wandering Spouses), here's how to quickly edit the JSONs to get rid of sleep.\n<br />\n<br />[list=1]\n<br />[*]In your IDE/editor of choice — VS Code and Notepad++ are what I use since these allow you to replace text in multiple files at once — open the folder (VS Code) or a file \uFEFF(Notepad++)\u00A0for the mod you're installing.\n<br />[*]Hit Ctrl+Shift+F.\n<br />[*](VS Code) Open up the dropdown next to the search bar to reveal the replacement box. (Notepad++) Set the Directory to the mod's folder.\u00A0\n<br />[*]In the search box type ` &#92;w+_sleep` (including the space) and hit the checkbox or button that turns on Regex. Don't type anything in the replacement box.\n<br />[*](Optional) Look over the search results to make sure you're only hitting schedule data. I don't believe this search key is used for anything else besides schedules, so this is mainly for paranoia.\n<br />[*]Hit the Replace All or Replace in Files button. Save the file(s) if it doesn't automatically.\n<br />[*]Let them suffer.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41475",
+	"Version": "1.0.0",
+	"Updated": "2026-01-20T10:07:19+00:00",
+	"Downloads": [
+		{
+			"Id": 154223,
+			"Type": "Main",
+			"DisplayName": "NPCs Don't Sleep",
+			"FileName": "NPCs Don't Sleep-41475-1-0-0-1768903639.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 19514,
+			"Uploaded": "2026-01-20T10:07:19+00:00",
+			"Mods": [
+				{
+					"Id": "0.MiluaSolena.NPCsDontSleep",
+					"DisplayName": "(CP) (0) NPCs Don't Sleep",
+					"Type": "ContentPack",
+					"Manifest": {
+						"Name": "(CP) (0) NPCs Don't Sleep",
+						"Description": "Edits NPC schedules so they never sleep.",
+						"Author": "MiluaSolena",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:41475"
+						],
+						"UniqueId": "0.MiluaSolena.NPCsDontSleep"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342540911,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428163,
+		"UploaderId": 160182753,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

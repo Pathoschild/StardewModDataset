@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 29714,
+	"Name": "Night Owl Plus",
+	"Author": "MaximillianRW",
+	"Description": "[color=#980000][size=3][b]Attention: This mod requires Game Version 1.6.10+ and SMAPI 4.1.0+[/b][/size][/color]\n<br />\n<br />Night Owl Plus combines and extends the functionalities of [url=https://www.nexusmods.com/stardewvalley/mods/433]Omegasis' Night Owl[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/7592]su226's StayUp[/url] in an updated version. Thanks to both authors for the open source code and inspiration to make it possible.\u00A0\n<br />\n<br />\n<br />[b][u][size=3]Main Feature:[/size][/u][/b]\n<br />[list]\n<br />[*]No more forced passing out at 2AM. Stay awake for an entire 24h cycle.\n<br />[/list]\n<br />\n<br />[b][u][size=3]Optional Features:[/size][/u][/b]\n<br />[list]\n<br />[*]Internal Fish Data Editor, which makes fish appear past 2AM. Compatible with mods that add new fish to the game [b]AND[/b] CP compatibility to modders make their own late night fish times with version 1.1.0+ (with an example CP in the mod folder)! You can read more about it [url=https://www.nexusmods.com/stardewvalley/articles/2770]here[/url]\uFEFF.\n<br />[*]Farmer and Horse position restored after saving at 6AM.\n<br />[*]Custom Stamina and Health restoration for sleeping late (with adjustable sleep hours needed to full rest).\n<br />[*]Exhaustion at turning to a new day awaken.\n<br />[*]Night-to-Day Light transition and Night Time Music for late night time.\n<br />[*]No clock shaking from 12AM to 2AM.\n<br />[/list]\n<br />All Optional Features are [b]enabled by default[/b] and configurable through [b]config.json[/b] or in-game with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url]\uFEFF. You can read more about them [url=https://www.nexusmods.com/stardewvalley/articles/2687]here[/url].\n<br />\n<br />\n<br />[b][u][size=3]Update Instructions:[/size][/u][/b]\n<br />[u][i]From 1.0.x to 1.1.x[/i][/u] -&gt; Delete the old Night Owl Plus folder from your Mods folder before extracting and moving the new one. To keep your configurations just save a backup of your [b]config.json[/b] and paste it back on [u]\"Mods/Night Owl Plus/Night Owl Plus\"[/u] folder (Not the \"Night Owl Plus [CP]\" one, and on the same level where is the [b]\"NightOwlPlus.dll\"[/b])\n<br />\n<br />\n<br />[b][u][size=3]Known Issues:[/size][/u][/b]\n<br />[list]\n<br />[*]Night-to-Day Light transition is not as smooth as intended.\n<br />[*]Inside buildings and windows lights show day-light past 1:50AM.\n<br />[/list]\n<br />\n<br />[b][u][size=3]Multiplayer Compatibility:[/size][/u][/b]\n<br />It was tested between two Windows Steam Players and it seems to work perfectly now (v. 1.1.0+)\n<br />Let me know if you find any issues.\n<br />\n<br />\n<br />[b][u]Currently Supported Languages:[/u][/b]\n<br />[list]\n<br />[*]English (as default)\n<br />[*]Portuguese\n<br />[/list]\n<br />[u]To Translators:[/u]\n<br />This mod uses the i18n system. You have pre-given permission to release your own translations that adds the necessary files through Nexus.\n<br />To more info, refer to the [url=https://stardewvalleywiki.com/Modding:Translations]wiki[/url].\n<br />\n<br />My heartly thanks in advance to all authors that releases translations to this mod.\n<br />\n<br />\n<br />[b][u][size=3]Special Thanks:[/size][/u][/b]\n<br />[list]\n<br />[*][b]Omegasis[/b] and [b]su226[/b] for the original mods and source.\n<br />[*][url=https://discord.gg/stardewvalley]Stardew Valley Discord[/url]\uFEFF community for all the help.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29714",
+	"Version": "1.1.1",
+	"Updated": "2025-01-12T21:32:36+00:00",
+	"Downloads": [
+		{
+			"Id": 122120,
+			"Type": "Main",
+			"DisplayName": "Night Owl Plus",
+			"FileName": "Night Owl Plus-29714-1-1-1-1736717556.zip",
+			"Description": "- Possibly fix for modded buildings acting as night at all times.",
+			"Version": "1.1.1",
+			"SizeInBytes": 26487,
+			"Uploaded": "2025-01-12T21:32:36+00:00",
+			"Mods": [
+				{
+					"Id": "MaximillianRW.NightOwlPlus",
+					"DisplayName": "Night Owl Plus",
+					"Type": "Smapi",
+					"RelativePath": "NightOwlPlus\\NightOwlPlus",
+					"Manifest": {
+						"Name": "Night Owl Plus",
+						"Description": "Stay Up All Night",
+						"Author": "MaximillianRW",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "NightOwlPlus.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:29714"
+						],
+						"UniqueId": "MaximillianRW.NightOwlPlus"
+					}
+				},
+				{
+					"Id": "MaximillianRW.NightOwlPlus.CP",
+					"DisplayName": "Night Owl Plus (CP)",
+					"Type": "ContentPack",
+					"RelativePath": "NightOwlPlus\\NightOwlPlus [CP]",
+					"Manifest": {
+						"Name": "Night Owl Plus (CP)",
+						"Description": "Functional example for adding custom fish times",
+						"Author": "MaximillianRW",
+						"Version": "1.1.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MaximillianRW.NightOwlPlus",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:29714"
+						],
+						"UniqueId": "MaximillianRW.NightOwlPlus.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342508808,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416402,
+		"UploaderId": 22409349,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

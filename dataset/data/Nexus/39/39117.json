@@ -1,0 +1,115 @@
+{
+	"Site": "Nexus",
+	"Id": 39117,
+	"Name": "Generic Mana Bar API",
+	"Author": "MoonSlime",
+	"AuthorLabel": "moonSlime for port and spacechase0 for original",
+	"Description": "[size=3]\uFEFF\uFEFF[img]https://i.imgur.com/3qxSqCb.png[/img][/size]\n<br />\n<br />This is an improved port of the original mana bar api mod to modern Stardew Valley. I originally had this mod included in the Wizardry folder, but a few people suggest I try to make it into it's own mod for others to use. To maybe cut down on all the mana bars going around.\u00A0\n<br />\n<br />With this mod you have a fully functioning Mana bar system. Mana can decrease, increase, stats added, or even have food to recover it. All art assets are open to modders to change with content patcher. Nothing changed with existing IDs or paths so existing packs should already function. I do suggest modders who use this keep track of the mana they are adding or removing from players in some way, as to not mess with other mods that are using this (like using mod data). Or not, I'm not your boss xD\n<br />\n<br />[b][i][u][size=4]Below are the following details of the API and how to use them\n<br />[/size][/u][/i][/b]\n<br />If you need to adjust your max mana or add mana as a player in game for some reason, there are two console commands for you to use. Make sure you are typing these in the console.[list]\n<br />[*]manaapi_Mana\u00A0add &lt;value&gt;\n<br />[*]manaapi_MaxMana\u00A0set &lt;value&gt;\n<br />[/list]\n<br />The first two items are context tags. You do not need to install this mod to add them to your mod. However if some one has this mod and finds items with these context tags, it will work. These are displayed on tooltips![list]\n<br />[*][i]\"moonslime.ManaBarApi.ManaFill/#\"[/i]: This is a context tag you can add to any object that is edible. Negative values work. This will return the amount of mana to the player that is equal to the #. Affected by item quality. A gold quality item will restore 80% more. Similar to regular health and energy.\n<br />[*][i]\"moonslime.ManaBarApi.ManaRestore/#\"[/i]: This context a context tag you can add to any object that is edible. Negative values work. This will return the % of mana to the player equal to the #. This is not affected by item quality.\u00A0\n<br />[/list]\n<br />Trigger Actions for content patcher\n<br />[list]\n<br />[*]\"moonslime.ManaBarAPI.AddMana #\" which adds(or subtracts if negative) # of mana to the player who triggered this\n<br />[*]\"moonslime.ManaBarAPI.SetMaxMana #\" which sets the player who triggered this mana to #\n<br />[*]\"moonslime.ManaBarAPI.AddToMaxMana #\" which adds(or subtracts if negative) # of max mana to the player who triggered this\n<br />[*]\"moonslime.ManaBarAPI.SetManaToMax\" which sets the player who triggered this mana to max\n<br />[/list]\n<br />New Game State Queries\n<br />[list]\n<br />[*]Checks if the player's current mana is equal to or greater than value\n<br />[code]PLAYER_CURRENT_MANA_GREATER_THAN_VALUE &lt;Player&gt;\u00A0 &lt;#Value&gt;\u00A0\n<br />[/code][*]Checks if the player's current mana is less than or equal to value\n<br />[code]PLAYER_CURRENT_MANA_LESS_THAN_VALUE &lt;Player&gt;\u00A0&lt;#Value&gt;[/code][*]Whether or not the current mana of the player\u00A0is between the #Min and #Max (default unlimited)\n<br />[code]PLAYER_MANA &lt;Player&gt;\u00A0&lt;#Min&gt;\u00A0[#Max]\n<br />[/code][*]Whether or not the current mana of the player\u00A0is between the #Min and #Max (default unlimited)\n<br />[code]PLAYER_MAX_MANA &lt;Player&gt;\u00A0&lt;#Min&gt;\u00A0[#Max][/code][/list]\n<br />[url=https://stardewvalleywiki.com/Modding:Game_state_queries#Target_player]See here on what to stick for &lt;Player&gt;[/url]\u00A0\n<br />\n<br />The next few items are specifically tied to mana control for mod authors, and requires some C# knowledge to use.\u00A0[u][i]IManaBarApi[/i][/u]\u00A0is the interface for it.[list]\n<br />[*][i]GetMana(Farmer farmer);[/i] This will return the current amount of mana the player has.\n<br />[*][i]AddMana(Farmer farmer, int amt); [/i]This will add mana up to their max. Negative Values accepted to remove mana from the player. Values clamp can not go below 0 or above their current max\n<br />[*][i]GetMaxMana(Farmer farmer); [/i]This will return the current max mana the player has.\n<br />[*][i]SetMaxMana(Farmer farmer, int newMaxMana);[/i] This will set the player's mana to the value. BE CAREFUL WHEN USING THIS, AS OTHER MODS MIGHT BE ADJUSTING THE PLAYER MAX MANA!\n<br />[*][i]AddToMaxMana(Farmer farmer, int maxManaToAdd);[/i] This Value is the value one should be using if you are adjusting or lowering the player's max mana. As this will add or lower to their current max.\u00A0\n<br />[*][i]SetManaToMax(Farmer farmer);[/i]\u00A0 This will set the current player's mana to their max mana value.\n<br />[*][i]IsCurrentManaGreaterThanValue(Farmer farmer, int valueToCheckAgainst);[/i]\u00A0 Check's player mana &gt;= value\n<br />[*][i]IsCurrentManaLessThanValue(Farmer farmer, int valueToCheckAgainst);[/i]\u00A0 Check's player mana &lt;= value\n<br />[/list]\n<br />I am open to suggestions of what people want from this mod. Github can be found [url=https://github.com/Pet-Slime/StardewValley/tree/master/WizardryManaBar]Here[/url]. Unique ID of the mod has stayed the same, even if the Folders containing the mod has changed. Content patcher paths for the assets are 100% the same and should work with any UI replacement that already exists.\n<br />\n<br />\n<br />[b][i][u][size=4]AN EXAMPLE OF CONTENT PATCHER USING THIS MOD![/size][/u][/i][/b]\n<br />\n<br />using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/27100]Button's Extra Trigger Action Stuff[/url]\u00A0\n<br />\n<br />[list]\n<br />[*]Tigger of\u00A0[url=https://stardew.button.gay/docs/betas/triggers#MonsterKilled]MonsterKilled\u00A0[/url]\uFEFF\n<br />[*]GSQ of\u00A0[url=https://stardew.button.gay/docs/betas/queries#PLAYER_HELD_ITEM]Player holding an Item[/url]\n<br />[*]Trigger action from this mod of &lt;moonslime.ManaBarAPI.AddMana #&gt;\n<br />[/list]\n<br />You can now make a sword and have it restore 5 mana every time you kill a monster with it. Below is the code example of this.\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0 \u00A0\"Target\": \"Data/TriggerActions\",\n<br />\u00A0 \u00A0\"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \"ExampleTriggerAction\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Id\": \"ExampleTriggerAction\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Trigger\": \"Spiderbuttons.BETAS_MonsterKilled\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Condition\": \"PLAYER_HELD_ITEM Current (W)57\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Action\": \"moonslime.ManaBarAPI.AddMana 5\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0}\n<br />}\n<br />[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/39117",
+	"Version": "1.8.0",
+	"Updated": "2026-06-13T00:18:28+00:00",
+	"Downloads": [
+		{
+			"Id": 170999,
+			"Type": "Main",
+			"DisplayName": "ManaBarAPI 1.6 V1.8.0",
+			"FileName": "bf/0a/34/bf0a343d-6fe1-4219-b993-5f54559b55cd",
+			"Description": "",
+			"Version": "1.8.0",
+			"SizeInBytes": 88206,
+			"Uploaded": "2026-06-13T00:18:28+00:00",
+			"Mods": [
+				{
+					"Id": "moonslime.ManaBarAPI",
+					"DisplayName": "Mana bar API",
+					"Type": "Smapi",
+					"RelativePath": "ManaBarAPI\\ManaBarAPI",
+					"Manifest": {
+						"Name": "Mana bar API",
+						"Description": "A port of spacechase0's API to 1.6.",
+						"Author": "moonslime",
+						"Version": "1.8.0",
+						"MinimumApiVersion": "4.5.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "ManaBarAPI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "HeyImAmethyst.ArsVenefici",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "moonslime.ManaBarApi.CP",
+								"MinimumVersion": "1.4.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"MinimumVersion": "1.28.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Zexu2K.MagicStardew.C",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:39117"
+						],
+						"UniqueId": "moonslime.ManaBarAPI",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "moonslime.ManaBarApi.CP",
+					"DisplayName": "(CP) Wizardry Mana bar",
+					"Type": "ContentPack",
+					"RelativePath": "ManaBarAPI\\[CP] ManaBarAPI",
+					"Manifest": {
+						"Name": "(CP) Wizardry Mana bar",
+						"Description": "Wizardry Mana bar Content Patcher",
+						"Author": "moonslime",
+						"Version": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Aimon111.HPE_Icons",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"-1"
+						],
+						"UniqueId": "moonslime.ManaBarApi.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557687,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425805,
+		"UploaderId": 84486208,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

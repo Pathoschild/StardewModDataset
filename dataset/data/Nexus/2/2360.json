@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 2360,
+	"Name": "Everlasting Baits And Unbreakable Tackles Mod",
+	"Author": "Digus",
+	"Description": "[size=3][b]Current version: [/b]1.4.1[/size][list]\n<br />[*]Fix error were recipes would not load sometimes.\n<br />[*]Fix error where language might not applied to letter if the game was not reloaded.\n<br />[/list]\n<br />[size=3][b]Objective: [/b][/size]\n<br />Adds a no-cheat way of getting baits and tackles that will last forever. It's integrated into the game lore and you will have to work for them.\n<br />Also adds iridium quality fish when using wild baits. Wild bait in the game is really underwhelming for how much it costs, so this tries to balance it.\n<br />\n<br />[size=3][b]Installation:[/b][/size][list]\n<br />[*][size=2][url=https://github.com/Pathoschild/SMAPI/releases]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/2360/]Unzip the Everlasting Baits And Unbreakable Tackles Mod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/1536/]Unzip the MailFrameworkMod[/url] into /Stardew Valley/Mods.[/size]\n<br />[*][size=2]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />[size=3][b]How does it work:[/b][/size]\n<br />[list]\n<br />[*][size=2]The recipes will show in the end of the crafting recipe list. They have different names from the regular baits and tackles, but have the same image.[/size]\n<br />[*][size=2]Once crafted, the items will have the regular name, but they can be identified by the iridium quality star.[/size]\n<br />[*][size=2]If you use another mod to spawn iridium quality baits and tackles, they will also be everlasting and unbreakable.[/size]\n<br />[*][size=2][b]Baits[/b][/size]\n<br />[list]\n<br />[*][size=2]You will need fishing level 10 and 10 heats with certain people. It should be pretty obvious who will teach you the bait and wild bait version. If you want to know the who gives the magnet just check the mod images.[/size]\n<br />[*][size=2]With the mod installed, if the bait is iridium quality, it will never consume from the stack while fishing.[/size]\n<br />[*][size=2]If you put the bait in a crab pot it will vanish like usual.[/size]\n<br />[/list][*][b][size=2]Tackles[/size][/b][list]\n<br />[*][size=2]You will need fishing level 8, 6 heats with Willy and Clint, and have the artisan achievement. After that you will receive an mail explaining the quest chain, and another mail with the first recipe.[/size]\n<br />[*][size=2]As you follow the quest, you will receive all the unbreakable tackle recipes, and you can get a nice reward at the end.[/size]\n<br />[*][size=2]With the mod installed, if the tackle is iridium quality, it will never were its durability while fishing.[/size]\n<br />[/list]\n<br />[*][size=2][b]Iridium Quality Fish[/b][/size][list]\n<br />[*][size=2]After you know the wild bait recipe and are fishing level 4, Linus will sent you a letter saying he was able to catch the best quality fish he has ever seen using wild baits. This is just for flavor, quality fish can be catch even before level 4 fish, it will just be very difficult.[/size]\n<br />[*][size=2]The game has a formula to decide the size of the fish, going from 0.00 to 1.00, this was not changed. But if the fish size is bigger than 0.95, the mod will roll for a chance of it being an iridium quality fish.[/size]\n<br />[*][size=2]The chance is equal to half the fish size. So if the fish size is 0.95, it has a 47.5% of being iridium quality.[/size]\n<br />[*][size=2]This is the same rule used for iridium quality from animal products.[/size]\n<br />[*][size=2]You can change this settings on the config file.[/size]\n<br />[/list]\n<br />[*][b][size=2]Console Commands[/size][/b][list]\n<br />[*][size=2]player_addallbaitstacklesrecipes - Adds all everlasting baits and unbreakable tackles the player does not have already.[/size]\n<br />[*][size=2]player_getallbaitstackles - Opens a menu with all everlasting baits and unbreakable tackles, the player can than move them to his/her inventory. All menus have to be closed before using the command.[/size]\n<br />[*][size=2]player_addquestfortackle &lt;tackle name&gt; - Adds the quest to deliver the respective tackle to willy. The tackle name should follow this exemple: \"Unbreakable Lead Bobber\". Respect spaces and case, without quotes.[/size]\n<br />[*][size=2]player_removeblankquests - Removes any blank quests from the player log. This is to fix possible broken quest from previous versions.[/size]\n<br />[/list]\n<br />[/list][size=3][b]Config options:[/b][/size]\n<br />[size=2]Run the game at least one with the mod installed to create the config.json file. You can edit this file to change the configuration.[/size][list]\n<br />[*][size=2]\"\uFEFF[b]DisableBaits[/b]\": ([b]false[/b]|true) Enable or disable everlasting baits. When disable you won't receive letters about baits, the crafting recipes won't show, and existing everlasting baits will be consumed as normal.[/size]\n<br />[*][size=2][size=2]\"\uFEFF[b]DisableTackles[/b]\": ([b]false[/b]|true) Enable or disable unbreakable tackles. When disable you won't receive letters starting quests, the crafting recipes won't show, and existing unbreakable tackles will wear out. Active quests will still show and be able to be ended if existing tackles.[/size][/size]\n<br />[*][size=2][size=2][size=2]\"\uFEFF[b]DisableIridiumQualityFish[/b]\": ([b]false[/b]|true) Enable or disable the iridium quality fish. When disable you will not catch iridium quality fish, nor receive Linus letter.[/size][/size][/size]\n<br />[*][size=2]\"[b]IridiumQualityFishOnlyWithWildBait[/b]\": (false|[b]true[/b]) If true, you will only get iridium quality fish using wild bait.[/size]\n<br />[*][size=2]\"[b]IridiumQualityFishOnlyWithIridiumQualityBait[/b]\": ([b]false[/b]|true) If true, you will only get iridium quality fish if using iridium quality baits.[/size]\n<br />[*][size=2]\"[b]IridiumQualityFishMinimumSize[/b]\": ([b]0.95[/b]|anyNumber) Set a minimum size for the fish to be iridium quality. It does not change the chance for it to be iridium quality(fishSize/2), it just enable the fish to be iridium quality after its bigger than the size chosen.[/size]\n<br />[/list]\n<br />[size=3][b]Data files:[/b][/size]\n<br />[size=2]You can change the mod data. To do so, lunch the game at least once and edit the files in the 'EverlastingBaitsAndUnbreakableTacklesMod&#92;data' folder.[/size][list]\n<br />[*][size=2][b]CraftingRecipes.json[/b] - You can configure the materials need in the recipes. The format is \"item_id1 amount1 item_id2 amount2...\". You can add as many items as the game will support.[/size]\n<br />[/list][size=3][b]\n<br />Internationalization:[/b][/size]\n<br />[size=2]This mod is compatible with SMAPI support to i18n files. As of now, there is no official translation for this mod, but you can translate it yourself following this instructions: [url=https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation]https://stardewvalleywiki.com/Modding:SMAPI_APIs#Translation[/url]\n<br />\n<br />[/size][size=3][b]Uninstall:[/b][/size][list]\n<br />[*][size=2]Delete the mod from the installation folder.[/size]\n<br />[*][size=2]No other steps are needed, the baits and tackles will still be iridium quality, but they will work as normal.[/size]\n<br />[*][size=2]If you had not finished an quest, it will stay their, but no other side effects.[/size]\n<br />[/list]\n<br />[size=3][b]Special Thanks:[/b][/size]\n<br />[list]\n<br />[*][url=https://community.playstarbound.com/members/nate-mccloud.16799/]Nate McCloud[/url] - Who requested for an infinite version of lures on the official forums. \n<br />[*][url=https://community.playstarbound.com/members/genman.848160/]genman[/url]- Who requested the iridium quality fish.\n<br />[*] Everyone on the modding discord channel that are always super helpful.\n<br />[/list]\n<br />[size=3][b]For more info:[/b][/size][b]\n<br />[/b]https://community.playstarbound.com/threads/everlasting-baits-and-unbreakable-tackles-mod.146025/[b]\n<br />\n<br />[size=3]My Other Mods:[/size][/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1538]Animal Husbandry Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2374]Water Retaining Field Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2516]Custom Crystalarium Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2594]Crop Transplant Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2642]Custom Cask Mod[/url]\uFEFF\n<br />[/list][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4664/]Custom Kissing Mod[/url]\n<br />[/list][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4711]Borderless Wood Floor Mod[/url]\n<br />[/list][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4992]Custom Producer Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7842/]Mail Services Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8178/]Arcane Table Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8292/]Gem Lamp Posts Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8413]Advanced Casks Mod[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2360",
+	"Version": "1.4.1",
+	"Updated": "2025-03-01T21:08:15+00:00",
+	"Downloads": [
+		{
+			"Id": 126405,
+			"Type": "Main",
+			"DisplayName": "EverlastingBaitsAndUnbreakableTacklesMod-v1.4.1",
+			"FileName": "EverlastingBaitsAndUnbreakableTacklesMod-v1.4.1-2360-1-4-1-1740863295.zip",
+			"Description": "Some error fixes",
+			"Version": "1.4.1",
+			"SizeInBytes": 29817,
+			"Uploaded": "2025-03-01T21:08:15+00:00",
+			"Mods": [
+				{
+					"Id": "DIGUS.EverlastingBaitsAndUnbreakableTacklesMod",
+					"DisplayName": "Everlasting Baits And Unbreakable Tackles Mod",
+					"Type": "Smapi",
+					"RelativePath": "EverlastingBaitsAndUnbreakableTacklesMod",
+					"Manifest": {
+						"Name": "Everlasting Baits And Unbreakable Tackles Mod",
+						"Description": "Adds Everlasting Baits and Unbreakable Tackles to the game.",
+						"Author": "Digus",
+						"Version": "1.4.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EverlastingBaitsAndUnbreakableTacklesMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.MailFrameworkMod",
+								"MinimumVersion": "1.16.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:2360"
+						],
+						"UniqueId": "DIGUS.EverlastingBaitsAndUnbreakableTacklesMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513093,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389048,
+		"UploaderId": 2186381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

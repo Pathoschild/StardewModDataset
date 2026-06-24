@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 38824,
+	"Name": "Asset Bridge",
+	"Author": "Nikanor24",
+	"AuthorLabel": "Nikanor",
+	"Description": "[b]AssetBridge[/b] lets mods [b]load textures directly from another mod’s folder[/b].\n<br />It’s a lightweight framework designed to reduce sprite conflicts and avoid redundant copies of the same files.\n<br />\n<br />With AssetBridge, you can create [b]logical assets[/b] (like Characters/NpcName_anything) that are automatically linked to sprites in another mod.\n<br />\n<br />This is ideal for animation frameworks, conditional texture swaps, or simply sharing art assets between packs.\n<br />\n<br />How It Works\n<br />\n<br />[list=1]\n<br />[*][b]AssetBridge[/b] creates a virtual data asset called AssetBridges. Content Patcher can patch it with EditData\u00A0to define links between logical assets and the actual PNG files in other mods.\n<br />\n<br />[*]When the game or another mod requests an asset, AssetBridge intercepts the request, locates the linked file in the target mod, and serves it automatically.\n<br />[/list]\n<br />\n<br />In you manifest.json add a new dependency:\n<br />[code]\uFEFF\"Dependencies\": [\n<br />   \uFEFF{ \"UniqueID\": \"Nikanor.AssetBridge\", \"IsRequired\": true }\n<br />],\n<br />[/code]\n<br />In you content.json:\u00A0\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"AssetBridges\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Characters/NpcName\": \"TargetUniqueID/path inside their mod/file name.png\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />}\n<br />[/code]\n<br />Let’s say you want to use Alex’s sprites from the mod\u00A0[b]Seasonal Cute Characters[/b] (Poltergeister.SeasonalCuteCharacters) and load them into new logical assets for use in another pack or animation.\n<br />\n<br />Here’s what your Content Patcher configuration would look like:\n<br />\n<br />[code]\uFEFF\uFEFF{\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"AssetBridges\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0\"Characters/Alex_Example\": \"Poltergeister.SeasonalCuteCharacters/assets/Characters/Alex/Alex_Summer.png\",\n<br />   \uFEFF   \uFEFF\"Portraits/Alex_Example\":\u00A0\"Poltergeister.SeasonalCuteCharacters/assets/Portraits/Alex/Alex_Summer.png\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />}\n<br />[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38824",
+	"Version": "1.1.1",
+	"Updated": "2025-10-25T18:08:14+00:00",
+	"Downloads": [
+		{
+			"Id": 146478,
+			"Type": "Main",
+			"DisplayName": "AssetBridge",
+			"FileName": "AssetBridge-38824-1-1-1-1761415694.zip",
+			"Description": "Fixed an issue where mods with JSON manifests containing trailing commas couldn’t be detected by AssetBridge.",
+			"Version": "1.1.1",
+			"SizeInBytes": 16443,
+			"Uploaded": "2025-10-25T18:08:14+00:00",
+			"Mods": [
+				{
+					"Id": "Nikanor.AssetBridge",
+					"DisplayName": "Asset Bridge",
+					"Type": "Smapi",
+					"RelativePath": "Nikanor.AssetBridge",
+					"Manifest": {
+						"Name": "Asset Bridge",
+						"Description": "Bridge to load PNGs from another mods folders.",
+						"Author": "Nikanor",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Nikanor.AssetBridge.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:38824"
+						],
+						"UniqueId": "Nikanor.AssetBridge"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533166,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425512,
+		"UploaderId": 262325170,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 10861,
+	"Name": "Custom Emotes",
+	"Author": "purrplingcat",
+	"Description": "This mod doesn't add any content to game, it provides an interface to add custom above head bubble emotes via JSON content packs.\n<br />\n<br />[size=4][b]Install[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Download and install SMAPI\n<br />[*]Download this mod\n<br />[*]Unpack mod's ZIP file into Mods folder in the game directory\n<br />[*]Find or create content pack(s) with custom emotes\n<br />[/list]\n<br />[size=4][b]How to create custom emotes[/b][/size]\n<br />\n<br />Create file [i]manifest.json\n<br />[/i][code]{\n<br />\u00A0 \"Name\": \"&lt;Your pack name&gt;\",\n<br />\u00A0 \"Author\": \"&lt;You&gt;\",\n<br />\u00A0 \"Version\": \"1.0.0\",\n<br />\u00A0 \"Description\": \"&lt;description&gt;\",\n<br />\u00A0 \"UniqueID\": \"&lt;your mod unique id&gt;\",\n<br />\u00A0 \"MinimumApiVersion\": \"3.13.0\",\n<br />\u00A0 \"UpdateKeys\": [ \"\" ],\n<br />\u00A0 \"ContentPackFor\": {\n<br />    \"UniqueID\": \"PurrplingCat.CustomEmotes\"\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />Create file [i]emotes.json[/i]\n<br />[code][\n<br />\u00A0 {\n<br />    \"Image\": \"test_emotes.png\",\n<br />    // Map which row in your image refers which named emote.\u00A0\n<br />    // Emote name is used to show the emote instead their sprite index.\n<br />    // Row is every 16 pixels of height like in TileSheets&#92;emotes\n<br />    \"Map\": {\n<br />      \"0\": \"confused\", // The string is the emote name you can refer in dialogues or events\n<br />      \"1\": \"check_ok\" // Emote names can't contain space characters and other non-alphanumeric characters except underscore\n<br />    }\n<br />\u00A0 }\n<br />]\n<br />[/code]\n<br />Then add your image with your custom emotions. The filename of image must be tha same as is defined in the [b]Image[/b] field in [i]emotes.json[/i] definition file.\n<br />\n<br />[size=3][b]Image format\n<br />[/b][/size]\n<br />Emote texture image is a PNG file, which contains emotes and their animation frames. Every frame has 16x16 pixels and the horizontal frames are animation frames of an emote in row. Rows are every single emote. For better imagination [url=https://docs.google.com/spreadsheets/d/1CpDrw23peQiq-C7F2FjYOMePaYe0Rc9BwQsj3h6sjyo/edit#gid=693962458]see this cheat sheet[/url]. Your image file must contain ONLY YOUR CUSTOM EMOTES. Custom Emotes mod appends then into game's emote texture file in runtime.\n<br />\n<br />[size=4][b]Where to use custom emotes[/b]\n<br />\n<br />[/size][size=3][b]Dialogues[/b][/size]\n<br />\n<br />You can use custom emote by refer their name in standard NPC dialogues. Just add [i]%emote_&lt;emoteName&gt; [/i]into your dialogue line.\n<br />\n<br />[code]Okay, let's go find some trouble!$1%emote_check_ok\n<br />[/code]\n<br />Also you can use custom emote for farmer during NPC Dialogue with [i]%emote_farmer_&lt;emoteName&gt;[/i]. Add both (NPC emote and farmer emote on one line) is supported too.\n<br />\n<br />[code]\uFEFFOkay, let's go find some trouble!$1%emote_check_ok%emote_farmer_happy\n<br />[/code]\n<br />[size=3][b]Events[/b][/size]\n<br />\n<br />You can use custom emotes in event scripts. Just use standard event command emote, but instead of a emote number you place your desired custom emote name.\n<br />\n<br />[code]emote farmer confused/pause 1000/emote Abigail confused/pause 2000/emote Pierre check_ok/pause 5000\n<br />[/code]\n<br />[b][size=4]Vanilla emote names[/size][/b]\n<br />\n<br />[size=2]You can use vanilla emotes via their names (as custom emotes). This allows use vanilla emotes in standard NPC dialogues or use vanilla emotes as named in events. There are list of SDV vanilla emotes which can be reffered via their name:\n<br />\n<br />[code]happy, sad, heart, exclamation, note, sleep, game, question, x, pause, blush, angry[/code][/size]\n<br />[b]\n<br />[size=4]Future plans[/size][/b]\n<br />\n<br />[list]\n<br />[*]Upload better images here\n<br />[*]Write better docs\n<br />[*][s]Expose source code[/s]\n<br />[*]Add content patcher support\n<br />[*]Add other features desired by community\n<br />[/list]\n<br />[size=4][b]Links\n<br />[/b][/size]\n<br />[list]\n<br />[*][url=https://discord.gg/HWqXSXjcmb]Join our Discord community[/url]\uFEFF\n<br />[*][url=https://www.patreon.com/purrplingcat]Subscribe me on Patreon[/url]\n<br />[*][url=https://ko-fi.com/purrplingcat]Buy me a Ko-fi\uFEFF[/url]\uFEFF\uFEFF\n<br />[*][url=https://github.com/purrplingcat/CustomEmotes]Source code[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10861",
+	"Version": "1.1.0",
+	"Updated": "2022-03-02T06:32:04+00:00",
+	"Downloads": [
+		{
+			"Id": 51450,
+			"Type": "Main",
+			"DisplayName": "Custom Emotes 1.1.0",
+			"FileName": "Custom Emotes 1.1.0-10861-1-1-0-1646202724.zip",
+			"Description": "Added support for farmer emotes during standard NPC dialogue",
+			"Version": "1.1.0",
+			"SizeInBytes": 13943,
+			"Uploaded": "2022-03-02T06:32:04+00:00",
+			"Mods": [
+				{
+					"Id": "PurrplingCat.CustomEmotes",
+					"DisplayName": "Custom Emotes",
+					"Type": "Smapi",
+					"RelativePath": "CustomEmotes",
+					"Manifest": {
+						"Name": "Custom Emotes",
+						"Description": "Add custom emotes reflectable above head as bubble",
+						"Author": "PurrplingCat",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "CustomEmotes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10861"
+						],
+						"UniqueId": "PurrplingCat.CustomEmotes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342438138,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397549,
+		"UploaderId": 68185132,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

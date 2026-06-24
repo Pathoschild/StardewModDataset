@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 24977,
+	"Name": "Hue-Nifier",
+	"Author": "WoosterUK",
+	"Description": "[quote][b][size=4]You can have your Poppy in any colour, so long as it's orange[/size][/b]\n<br />Do you hate the natural colour diversity that flowers exhibit? Do you long for a world where flowers no longer clutter up your inventories with several different shades? Do you think the Valley is sorely lacking machines with punning names?\n<br />\n<br />Then install the Hue-Nifier today! This somewhat expensive and not-entirely reliable machine will wash all the superfluous colour from your flowers, leaving you with flowers unified under some default shade. In just two hours, your beautiful red Poppy can become some weird, bland orange, and similar effects will apply to all flowers that naturally grow in different hues.\n<br />\n<br />[size=1]Warning: Extracted hues are destroyed not retained. There is a 10% chance that any flower's quality could be completely erased. Manufacturer is not to be held liable for any loss arising from the use of the Hue-Nifier. All disputes to be adjudicated under the laws of the Gotoro Empire.[/size][/quote][line][size=5][b]Detailed description[/b][/size]\n<br />The machine returns flowers in a unified colour. I haven't done detailed figuring out of where the colour comes from, apart from that it's plainly some kind of default for each flower type, possibly related to the colour context tag. It will take anything tagged as category_flowers, but excludes Crocus, Sunflower and Sweet Pea which all come in one hue already. If I've missed any other vanilla flowers that already have one hue, please let me know on the [url=https://gitlab.com/stardew_valley/hue-nifier/-/issues]issue tracker[/url].\n<br />\n<br />By design, there is a 10% chance that the Hue-Nifier will scrub any quality indicator from your flower, as a bit of a penalty for using it on higher-quality flowers. (You should be giving these away or using my [url=https://www.nexusmods.com/stardewvalley/mods/20624]Quality Conversion Engine[/url] to down-convert them!)\n<br />[line][size=5][b]Development priorities[/b][/size]\n<br />[list=1]\n<br />[*]Publication of source on git service, including use of issues tracker for bugs and feature requests.\n<br />[*]Make a story mode to allow upgrading the Hue-Nifier, to reduce the quality loss effect or speed up processing.\n<br />[/list][line][size=5][b]Known issues and incompatibilities[/b][/size]\n<br />[b]Sprite.[/b] Artwork is not my forte, as you will be able to see from the sprite. I welcome offers to produce a sprite that is more in keeping with Stardew Valley's general style, as well as just plain nicer.\n<br />[b]\n<br />Compatibility with non-vanilla flowers.[/b] This mod relies on categories. So long as flowers from other mods are appropriately categorised, they should be processed by this machine. It does not know whether a flower comes in a single hue naturally, apart from for Crocus, Sunflower and Sweet Pea, which (iirc) are the only vanilla flowers to do this. I don't intend to exclude specific flowers arising from mods, because of the lengthy list of additional support this could create; but if there is a programmatic way to do this within Content Patcher (e.g. some way to know when a flower has only one hue possibility), I'll take suggestions.\n<br />[line][url=https://gitlab.com/stardew_valley/quality_conversion_engine]Source code[/url]. Please preferentially use the bug tracker at Gitlab, rather than the comments section here.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24977",
+	"Version": "1.0.0",
+	"Updated": "2024-06-08T13:11:48+00:00",
+	"Downloads": [
+		{
+			"Id": 103058,
+			"Type": "Main",
+			"DisplayName": "Hue-Nifier",
+			"FileName": "Hue-Nifier-24977-1-0-0-1717852308.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 18612,
+			"Uploaded": "2024-06-08T13:11:48+00:00",
+			"Mods": [
+				{
+					"Id": "Wooster.CP.Huenifier",
+					"DisplayName": "Hue-Nifier",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Hue-Nifier",
+					"Manifest": {
+						"Name": "Hue-Nifier",
+						"Description": "Provides a machine to unify flower colours",
+						"Author": "WoosterUK",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:24977"
+						],
+						"UniqueId": "Wooster.CP.Huenifier"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342489746,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411665,
+		"UploaderId": 45628237,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

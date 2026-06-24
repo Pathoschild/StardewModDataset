@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 41918,
+	"Name": "Stardew Messages - Phone SMS and MMS (Core)",
+	"Author": "Jybee",
+	"Description": "[center][size=6][b]Stardew Messages - SMS/MMS Framework (Core)[/b][/size]\n<br />[i]v1.0.1 - Phone UI + engine. Stories come from JSON Content Packs.[/i][/center]\n<br />[quote]\n<br />[b]In short:[/b] An in-game phone with a real SMS/MMS app (threads, contacts, MMS, gallery).\n<br />Plus a lightweight conversation framework (scene intros, choices, triggers &amp; natural pacing),\n<br />and a practical quick action to find NPCs in seconds.[/quote]\n<br />\n<br />[size=5][b]What this mod is (and is not)[/b][/size]\n<br />[b]This file is the CORE.[/b] It provides the phone UI + the engine.\u00A0\u00A0\n<br />It does [b]not[/b] include story content by itself.\u00A0\u00A0\n<br />To receive NPC conversations, install at least one [b]JSON Content Pack[/b].\n<br />\n<br />[b]Recommended starter pack:[/b]\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/41917][b]Vanilla FirstContact (Content Pack)[/b][/url]\n<br />\n<br />[size=5][b]The main pillars[/b][/size]\n<br />\n<br />[b]1) The Phone (SMS/MMS)[/b]\n<br />[list]\n<br />[*]Inbox with conversation threads (unread markers, recent sorting)[/*]\n<br />[*]Clean in-thread reading (scroll, message bubbles)[/*]\n<br />[*]Phone-like navigation (messages / contacts / gallery)[/*]\n<br />[/list]\n<br />[b]2) MMS Gallery[/b]\n<br />[list]\n<br />[*]MMS images inside threads (image + caption)[/*]\n<br />[*]Gallery app: thumbnails → full view → next/previous[/*]\n<br />[*]Optional filters (depending on pack metadata)[/*]\n<br />[/list]\n<br />[b]3) Story Scenes Engine[/b] (this is where it becomes more than “just texting”)\n<br />[list]\n<br />[*][b]Mystery Contact[/b]: start anonymous, reveal the contact at the right moment[/*]\n<br />[*][b]Multi-choice replies[/b]: 1/2/3 options for RP &amp; variations[/*]\n<br />[*][b]Triggers + Delivery Queue[/b]: messages arrive with natural pacing (no flood)[/*]\n<br />[/list]\n<br />[b]4) JSON-only Content Packs[/b]\n<br />[list]\n<br />[*]No C# required for story content: conversations, triggers, choices, i18n… in JSON[/*]\n<br />[*]Community-friendly: creators can publish their own packs[/*]\n<br />[*]Translation-ready via i18n tokens[/*]\n<br />[/list]\n<br />[size=5][b]Quick install[/b][/size]\n<br />[list]\n<br />[*]Install SMAPI[/*]\n<br />[*]Drop this mod into: Stardew Valley/Mods/[/*]\n<br />[*]Install at least one Content Pack (recommended above)[/*]\n<br />[*]Launch the game - messages will arrive naturally during gameplay[/*]\n<br />[/list]\n<br />[size=5][b]Feature demos (GIFs)[/b][/size]\n<br />(Coming soon - placeholders.)\n<br />[list]\n<br />[*]Phone navigation (Inbox → Thread)[/*]\n<br />[/list][img]https://staticdelivery.nexusmods.com/mods/1303/images/41918/41918-1770592557-715493004.gif[/img]\uFEFF\n<br />[list]\n<br />[*]QuickWhere (Where are you?)[/*]\n<br />[/list][img]https://staticdelivery.nexusmods.com/mods/1303/images/41918/41918-1770592823-951568176.gif[/img]\uFEFF\n<br />[list]\n<br />[*][b]GIF 3:[/b] Natural arrival example (e.g. after sleeping)[/*]\n<br />[/list][list]\n<br />[*]MMS inside a thread[/*]\n<br />[/list]\n<br />[list]\n<br />[*][b]GIF 5:[/b] Gallery navigation (thumbs → full view → next/prev)[/*]\n<br />[*][b]GIF 6:[/b] Multi-choice replies[/*]\n<br />[*][b]GIF 7:[/b] Mystery Contact (anonymous intro → reveal)[/*]\n<br />[/list]\n<br />[size=5][b]Requirements / compatibility[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[*]SMAPI 4.0+[/*]\n<br />[*]Multiplayer: everyone should have the Core installed. Content packs should match for consistent content.[/*]\n<br />[/list][size=5][b]For content creators[/b][/size]\n<br />Want to create your own pack?\n<br />[list]\n<br />[*]JSON-only workflow (no C# required)[/*]\n<br />[*]i18n tokens for easy translations[/*]\n<br />[*]See the [b]Docs[/b] tab for schemas, examples, and best practices[/*]\n<br />[/list]\n<br />[size=5][b]Changelog[/b][/size]\n<br />[b]1.0.0[/b]\u00A0- Initial public release:\n<br />[list]\n<br />[*]Messages UI (threads + unread)[/*]\n<br />[*]MMS + Gallery[/*]\n<br />[*]Delivery Queue (anti-flood)[/*]\n<br />[*]Triggers[/*]\n<br />[*]Mystery Contact intros (anonymous → reveal)[/*]\n<br />[*]QuickWhere[/*]\n<br />[*]Deterministic content pack priority[/*]\n<br />[/list]\n<br />[b]1.0.1[/b]\u00A0- Multiplayer improvements:\n<br />[list]\n<br />[*]Moved state to per-player local JSON storage (no more overwriting host data)[/*]\n<br />[*]QuickWhere: fixed multiplayer reliabilit[/*]\n<br />[/list]\n<br />[b]1.0.2[/b]\u00A0- Save &amp; UI\u00A0improvements:\n<br />[list]\n<br />[*]UI[b]:[/b] added F9 (default) to cycle the HUD button position (prevents overlap with other UI mods) + optional chat notification when new messages arrive.[/*]\n<br />[*]Persistence[b]:[/b] upgraded JSON save system with a snapshot + WAL (write-ahead log) for safer, more reliable data storage.[/*]\n<br />[/list]\n<br />[b]1.0.3[/b]\u00A0- New &amp; improvements:\n<br />[list]\n<br />[*]Conversation chaining system between contacts (same pack)[/*]\n<br />[*]Inbox sorting is now deterministic:[/*]\n<br />[*]\u00A0 \uFEFFunread first[/*]\n<br />[*]\u00A0 \uFEFFthen read[/*]\n<br />[*]\u00A0 \uFEFFnewest first within each group[/*]\n<br />[/list]\n<br />1.0.4 - New &amp; improvements:\n<br />[list]\n<br />[*]Custom contact names can now be translated through i18n with `DisplayNameKey`.[/*]\n<br />[*]Added `DailyLuck` / `MinDailyLuck` trigger condition based on Stardew Valley’s real daily luck.[/*]\n<br />[*]Added visual highlighting for unread incoming messages inside conversations.[/*]\n<br />[*]Conversations are now marked as read when leaving the thread, not immediately when opening it.[/*]\n<br />[*]Opening one conversation no longer marks unread messages from other conversations as read.[/*]\n<br />[/list]\n<br />[size=5][b]Credits[/b][/size]\n<br />[list]\n<br />[*][b]Author:[/b] Jybee[/*]\n<br />[/list]\n<br />[i]Note:[/i] I designed the feature set and overall direction; AI assisted with drafting, formatting, and iteration during development.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41918",
+	"Version": "1.0.4",
+	"Updated": "2026-06-02T07:28:29+00:00",
+	"Downloads": [
+		{
+			"Id": 169811,
+			"Type": "Main",
+			"DisplayName": "Stardew Messages - Core Framework",
+			"FileName": "Stardew Messages - Core Framework-41918-1-0-4-1780385309.zip",
+			"Description": "In-game SMS/MMS UI, delivery queue (anti-flood), triggers, Unknown Sender intros, MMS gallery, quick replies, debug tools, deterministic pack priority. EN default; Requires SMAPI 4.0+ (SV 1.6+).",
+			"Version": "1.0.4",
+			"SizeInBytes": 275533,
+			"Uploaded": "2026-06-02T07:28:29+00:00",
+			"Mods": [
+				{
+					"Id": "Stardew.Messages",
+					"DisplayName": "Stardew Messages",
+					"Type": "Smapi",
+					"RelativePath": "Stardew.Messages",
+					"Manifest": {
+						"Name": "Stardew Messages",
+						"Description": "Framework SMS/MMS & conversations pour Stardew Valley : queue anti-flood, triggers, intros UnknownSender et galerie MMS.",
+						"Author": "Jybee",
+						"Version": "1.0.4",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "Stardew.Messages.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:41918"
+						],
+						"UniqueId": "Stardew.Messages",
+						"OtherFields": {
+							"Tags": [
+								"Conversations",
+								"Framework",
+								"UI",
+								"Phone"
+							]
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556499,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428606,
+		"UploaderId": 34649135,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

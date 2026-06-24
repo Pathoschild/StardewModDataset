@@ -1,0 +1,75 @@
+{
+	"Site": "Nexus",
+	"Id": 35071,
+	"Name": "Fishing Minigame Music",
+	"Author": "Mindstormman",
+	"Description": "[heading][b]Add custom music to the fishing minigame![/b][/heading]\n<br />By default, the mod will play unused music tracks from the base game. These do not fit very well and it is highly recommended you change them following the instructions below.\n<br />\n<br />Default Tracks:\n<br />[url=https://drive.google.com/file/d/1ycVTGbuK3IfR-Zeu4Xh02QCIIhhCGB1I/view?usp=sharing]Archaeo[/url] (Main Track)\n<br />[url=https://drive.google.com/file/d/1LFTXU-H4AEQH-5-kQ5BuCF97i5nDjzZK/view?usp=sharing]Sappy Piano[/url] (Alt Track)\n<br />\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF (Optional)\n<br />[/list]\n<br />[heading][b]How to use[/b][/heading][list]\n<br />[*]Extract the .zip to your mods folder\n<br />[*]Find a music track to add to the minigame\n<br />[*]Convert it to .wav and name it 'archaeo.wav'\n<br />[*]Move it to 'Mods/[CP] Fishing Music/assets'\n<br />[*]If you want to add an alt track (enable in config), name a track 'sappypiano.wav' and add it to the same location\n<br />[*]You're all good to go!\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35071",
+	"Version": "1.1",
+	"Updated": "2025-09-14T03:29:29+00:00",
+	"Downloads": [
+		{
+			"Id": 142971,
+			"Type": "Main",
+			"DisplayName": "Fishing Minigame Music",
+			"FileName": "Fishing Minigame Music-35071-1-2-1757820569.zip",
+			"Description": "Made custom music actually work by fixing the manifest.",
+			"Version": "1.2",
+			"SizeInBytes": 13100,
+			"Uploaded": "2025-09-14T03:29:29+00:00",
+			"Mods": [
+				{
+					"Id": "Mindstormman.FishingMusicPlayer",
+					"DisplayName": "Fishing Minigame Music",
+					"Type": "Smapi",
+					"RelativePath": "FishingMusic",
+					"Manifest": {
+						"Name": "Fishing Minigame Music",
+						"Description": "Plays music during the fishing minigame.",
+						"Author": "Aiden",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "FishingMusic1.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Mindstormman.FishingMusicPlayer"
+					}
+				},
+				{
+					"Id": "Mindstormman.FishingMusicPlayer.replacer",
+					"DisplayName": "Fishing Music Replacer",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Fishing Music",
+					"Manifest": {
+						"Name": "Fishing Music Replacer",
+						"Description": "Replaces an unused song for use during fishing",
+						"Author": "Mindstormman",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Mindstormman.FishingMusicPlayer",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Mindstormman.FishingMusicPlayer.replacer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342529659,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421759,
+		"UploaderId": 84774373,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

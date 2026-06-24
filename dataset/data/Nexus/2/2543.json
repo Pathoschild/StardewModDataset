@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 2543,
+	"Name": "Multiplayer Time",
+	"Author": "lolmaj",
+	"Description": "[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url]\u00A0and\u00A0[color=#ff7700][size=2][url=https://www.nexusmods.com/stardewvalley/mods/5098][/url][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF[/size][/color]\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]How it works[/size]\n<br />Host collects info from players wheter they normally should have their time stopped or no (in menu, in cutsccene, in minigame, ect.). When those conditions are met for every player in game the time stops. If any player is free to act, the game goes back to normal. Most of the features I had to hardcode instead of using build in pause, because it's unaviable for modders\u00A0(time, NPCs, monsters, animals, health, buff timers, regeneration, bombs). Aditionally players can see clock in cutscenes, minigames and while buying new buildings or animals.\n<br />\n<br />This mod also fixes time flow in Skull Cavern proportionally to the % player inside it and also fixes health loss from entering shafts.\n<br />\n<br />There is new visual feature: a bar that indicates how many players met the condition of pause. Blue color shows the number of players that are free to act, and green for those who don't. Red color (only host can see it) shows that some players don't have mod installed or are not loaded yet. Player can also click on this bar to get message with list of blue/red players. This mouse click will be ignored by non modded part of game, so you don't need to worry that it will close dialogbox or cutscene.\n<br />\n<br />U can turn on/off mod by pressing F3 button.\u00A0You can change this button in config.\u00A0If you are using UI Info Suite mod then check config. You can also disable UI bar.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6.15 on Linux/Mac/Windows.\n<br />[*]Works with Generic Mod Info Menu 1.12.0\n<br />[*]Works with Smapi 4.1.10\n<br />[*]Works in multiplayer but every player have to have this mod. Otherwise it doesn't work. You don't need this mod when playing split screen.\n<br />[/list]\n<br />[size=5]My thoughts\n<br />[/size]It is my first mod so be forgiving. I want this mod to be balanced and fair with game rules. Time should work like in single player. All frauds, that you can do in single player to manipulate time, should also exist in multiplayer, but this mod shouldn't add any more ways to do this.\n<br />\n<br />[url=https://github.com/MaciejMarkuszewski/StardewValleyMultiplayerTime][size=5]Source Code\n<br />[/size][/url][size=5][url=https://www.nexusmods.com/stardewvalley/users/56620357?tab=user+files]My other mods\n<br />[/url]Bar was created by my Friend Zedarrrr. Check out his\u00A0[url=https://twitter.com/Zedarrrr]Twitter[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2543",
+	"Version": "5.3",
+	"Updated": "2025-03-22T18:46:07+00:00",
+	"Downloads": [
+		{
+			"Id": 128047,
+			"Type": "Main",
+			"DisplayName": "Multiplayer Time",
+			"FileName": "Multiplayer Time-2543-5-3-1742669167.zip",
+			"Description": "Time slows in skull cavern proportionally to the number of players in there. Fix to time slow in prehistoric floors - wiki mislead me",
+			"Version": "5.3",
+			"SizeInBytes": 36225,
+			"Uploaded": "2025-03-22T18:46:07+00:00",
+			"Mods": [
+				{
+					"Id": "lolmaj.MultiplayerTime",
+					"DisplayName": "MultiplayerTime",
+					"Type": "Smapi",
+					"RelativePath": "MultiplayerTime",
+					"Manifest": {
+						"Name": "MultiplayerTime",
+						"Description": "Stop time if each player on server should have time stopped.",
+						"Author": "lolmaj",
+						"Version": "5.3.0",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "MultiplayerTime.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:2543"
+						],
+						"UniqueId": "lolmaj.MultiplayerTime"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342514735,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389231,
+		"UploaderId": 56620357,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

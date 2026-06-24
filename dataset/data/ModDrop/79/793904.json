@@ -1,0 +1,143 @@
+{
+	"Site": "ModDrop",
+	"Id": 793904,
+	"Name": "Custom Music",
+	"Author": "Platonymous",
+	"TagLine": "Changing the games music via content pack",
+	"Description": "_Changes in 1.1:_\n- Supports .wav files\n- if you change \"convert:\" in the config file to true (by default it is false) CM will convert all .ogg files to .wav. This will take up additional diskspace and make the first loading slightly longer, but after the conversion, the loading times will be drasticly reduced.\n(the config.json files gets created on first launch)\n\nTo create a ContentPack for CM, write a standard manifest.json and add a content.json file.\nYou can download a simple template under Optional Files.\n\nmanifest.json example:\n``\n\ncontent.json example:\n``\n``Id: The Id the games uses for the Song this is going to replace\n(List of Ids by Cane: [Google Doc](https://docs.google.com/spreadsheets/d/1CpDrw23peQiq-C7F2FjYOMePaYe0Rc9BwQsj3h6sjyo/edit#gid=1007418291))\n\nFile: Your music file (currently supports .ogg &amp; .wav)\n\nLoop: If it should loop\n\nAmbient: Whether or not this is an ambient sound\n\nRequires SMAPI.\n\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/793904",
+	"Version": null,
+	"Updated": "2022-02-07T01:30:12.204+00:00",
+	"Downloads": [
+		{
+			"Id": 802017,
+			"Type": "Optional",
+			"DisplayName": "CM Content Pack Template",
+			"FileName": "CM Content Pack Template.zip",
+			"Description": "Goes right into the Mod folder",
+			"Version": "1.0.3",
+			"SizeInBytes": 11397033,
+			"Uploaded": "2020-06-02T07:56:23.393+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomMusic.Template",
+					"DisplayName": "Custom Music Template",
+					"Type": "ContentPack",
+					"RelativePath": "[CM]Template",
+					"Manifest": {
+						"Name": "Custom Music Template",
+						"Description": "Template for Custom Music",
+						"Author": "Platonymous",
+						"Version": "1.0.3",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.CustomMusic",
+							"MinimumVersion": "1.0.3"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Platonymous.CustomMusic.Template"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "64a10ae8f132dc650eb33524ddd175e6",
+				"md5In": "46774ab42bffa4293167d7d52bf31353",
+				"scriptType": 0,
+				"sha256Ex": "4860141fbf13145dd439a82a54b6d1e8d77d9b0c0a389ffcf9220ea15a9ec82d",
+				"sha256In": "291b7b4c919918c1ba6428cfbc41038c1e14acb55058e60381b20db7a8edb989"
+			}
+		},
+		{
+			"Id": 1119850,
+			"Type": "Main",
+			"DisplayName": "Custom Music",
+			"FileName": "Custom Music.zip",
+			"Version": "1.9.0",
+			"SizeInBytes": 172286,
+			"Uploaded": "2022-02-07T01:30:12.204+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomMusic",
+					"DisplayName": "CustomMusic",
+					"Type": "Smapi",
+					"RelativePath": "CustomMusic",
+					"Manifest": {
+						"Name": "CustomMusic",
+						"Description": "Changes the games music",
+						"Author": "Platonymous",
+						"Version": "1.9.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CustomMusic.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3043"
+						],
+						"UniqueId": "Platonymous.CustomMusic",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "Stardew-Valley-Mods",
+								"User": "Platonymous",
+								"Directory": "_releases",
+								"ModFolder": "CustomMusic"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "80f2ed720076e52a16cbb0a9df5e6f24",
+				"md5In": "c2ac154f233de64b929d24d760bd6f5e",
+				"scriptType": 0,
+				"sha256Ex": "d908f795df659739d75d3e111eb34b24e537e4462882e736f6f308cd3ff2ff78",
+				"sha256In": "b2b55ba140f1310bd672a7b5f3d82fbe5e943571df586d7bb98f247625cf5985"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1591084602580,
+		"DateUpdated": 1644197412203,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1591084581517,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/793904/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/793904/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/793904/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/793904/icon_original"
+		},
+		"nexusModID": 3043,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

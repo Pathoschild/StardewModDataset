@@ -1,0 +1,118 @@
+{
+	"Site": "Nexus",
+	"Id": 40885,
+	"Name": "Teh's Fishing Overhaul Revived",
+	"Author": "Hiztaar",
+	"Description": "For [b]SDV[/b] 1.6.15 and [b]SMAPI[/b]\u00A04.3.2\n<br />\n<br />Completely reworks fishing:\n<br />\n<br />[list]\n<br />[*] Control every aspect of fishing! Configure the chances of hitting fish\n<br />instead of trash, the difficulty of catching fish, the chances of finding treasure, what fish/treasure/trash you'll find, where you'll find it all, and how the fish behave.[list]\n<br />[*] Add new fish, adjust fish behaviors, and control where they can be caught. If\n<br />you want to be able to catch diamonds, wearable boots, or even fishing rods while fishing, go ahead![/list][*] Perfect catches are more rewarding. As you get more perfect catches in a row, your streak\n<br />increases, and fish become more valuable.[*] Optional built-in fishing HUD. See what fish you can catch while you're fishing!\n<br />[*] Support for [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF, including in-game config editing.\n<br />[list]\n<br />[*] Some complex settings may not be modifiable through GMCM though\n<br />[/list][/list]\n<br />[list]\n<br />[*]Built-in automatic compatibility with all mods adding locations and fishes (no content pack required anymore!)   \uFEFF\n<br />[list]\n<br />[*] Optional content pack included for making legendary fish recatchable.\n<br />[/list][/list]Most config settings can be modified in-game with [url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url]. For more fine-tuned control over the settings, the configs can also be\n<br />modified through their respective `.json` files in the mod's `config`\n<br />folder.\n<br />\n<br />\n<br />[b]Recatchable Legendaries:[/b]\n<br />\n<br />Allows legendary fish to be caught more than once. Option is in the GMCM menu. If option is active, after catching a normal legendary fish, you can catch it again after a period of time that you can define.\n<br />\n<br />[size=5]API[/size]\n<br />\n<br />To use the API, check out the [url=https://github.com/Hiztaar/TehsStardewValleyMods_1.6Revived/blob/main/docs/TehPers.FishingOverhaul/API.md]api docs[/url].\n<br />\n<br />[size=5]Source code &amp; License[/size]\n<br />\n<br />This mod is licensed under MIT License. The source code and full license text can be found on the [url=https://github.com/Hiztaar/TehsStardewValleyMods_1.6Revived]github repo[/url].\n<br />\n<br />\n<br />[size=5]Special Thanks\n<br />[/size]\n<br />Special thanks to Teh for its mods and the incredible work. I simply updated and improved on its original mod.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40885",
+	"Version": "3.4.2",
+	"Updated": "2026-06-21T16:20:28+00:00",
+	"Downloads": [
+		{
+			"Id": 172069,
+			"Type": "Main",
+			"DisplayName": "TehPersCore",
+			"FileName": "87/5e/3b/875e3b0f-1e45-4798-9e82-e01fc947d8d5",
+			"Description": "Mandatory Core Mod. Required to get Teh's Fishing Overhaul to work",
+			"Version": "1.1.4",
+			"SizeInBytes": 370071,
+			"Uploaded": "2026-06-21T16:19:40+00:00",
+			"Mods": [
+				{
+					"Id": "TehPers.Core",
+					"DisplayName": "TehCore",
+					"Type": "Smapi",
+					"RelativePath": "TehPers.Core",
+					"Manifest": {
+						"Name": "TehCore",
+						"Description": "Utility mod for creating highly compatible mods",
+						"Author": "TehPers",
+						"Version": "1.1.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TehPers.Core.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "TehPers.Core",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558757,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 172070,
+			"Type": "Main",
+			"DisplayName": "Teh's Fishing Overhaul Revived",
+			"FileName": "87/b3/f4/87b3f475-61d2-4187-afc2-75215e1f51de",
+			"Description": "Main Teh's Fishing Overhaul Revived File",
+			"Version": "3.4.2",
+			"SizeInBytes": 419685,
+			"Uploaded": "2026-06-21T16:20:28+00:00",
+			"Mods": [
+				{
+					"Id": "Hiztaar.FishingOverhaulRevived",
+					"DisplayName": "Teh's Fishing Overhaul Revived",
+					"Type": "Smapi",
+					"RelativePath": "TehPers.FishingOverhaul",
+					"Manifest": {
+						"Name": "Teh's Fishing Overhaul Revived",
+						"Description": "Highly customizable overhaul for fishing",
+						"Author": "Hiztaar",
+						"Version": "3.4.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TehPers.FishingOverhaul.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "TehPers.Core",
+								"MinimumVersion": "1.1.4",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.24.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.6.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Esca.EMP",
+								"MinimumVersion": "1.1.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hiztaar.FishingOverhaulRevived",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558758,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427573,
+		"UploaderId": 1122507,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}

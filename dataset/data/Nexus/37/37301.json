@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 37301,
+	"Name": "SinZational Speedy Solutions",
+	"Author": "SinZ163",
+	"AuthorLabel": "SinZ",
+	"Description": "[size=5]Current Features[/size]\n<br />\n<br />\n<br />[size=4]Audio Optimizations[/size]\n<br />Without this mod, every time mods add/change audio, all custom audio has to be re-processed individually which with mods like SVE and RSV loaded can be 30+ seconds, With this mod, only new/different audio will be reprocessed each time.\n<br />Due to how Content Patcher forces a full invalidation during its startup cycle, this is guarenteed to half the audio loading time during startup, and massively improve performacne for any runtime audio changes that occur.\n<br />\n<br />Also loads the audio in the background in parallel which fully removes the load time from audio for startup, as it all runs in the background now.\n<br />\n<br />\u00A0\n<br />[size=4]Map Optimizations[/size]\n<br />\n<br />In Modded Stardew Valley, there are two map formats available for mod authors to use, TBin and TMX.\n<br />TMX is a much more mod author friendly map format, and is the native format for the main map editor of choice Tiled, but it isn't the native map format for Stardew Valley and so it is more computationally expensive to load tmx maps, as a TMX file has to first deserialize to a TMX Map format, and then go through a translation process to convert it into the xTile/Tides format that the game will understand.\n<br />\n<br />Rather than convince every mod author to have a worse developer experience and use tbins, This mod does it for them, by intercepting tmx map loads, and saving them as a tbin file, if the map is loaded again, rather than loading the tmx file, it will load the tbin version instead which is smaller on disk (being a binary format as opposed to XML) and is much more computationally easier to deserialize due to being the native format to Stardew it gets to skip a translation step entirely.\n<br />\n<br />In addition, there is a configurable In-Memory cache, so tbin maps under a certain size will be kept in memory so when the map is requested again, it can skip reading the filesystem at all for further performance.\n<br />\n<br />\n<br />[size=4]Image Optimizations[/size]\n<br />\n<br />This keeps all modded images kept in a In Memory cache to minimize repeated filesystem reads, improving performance\n<br />\n<br />[size=4]Misc[/size]\n<br />\n<br />In stardew, for legacy reasons the Town will always unload itself whenever you leave the location, and reload when you enter it again, but for heavily modded saves or simply lightly modded but playing split screen co-op, this can be a source of lag whenever someone enters Town. So this mod fixes it so Town no longer unloads itself and will work like every other location in stardew.\n<br />\n<br />[size=4]Note:[/size]\n<br />This mod is for End users only and is not intended to be used for mod authors, as this mod assumes the filesystem is immutable and is why everything can be safely cached (outside of the tmx-&gt;tbin logic which due to persisting between instances, does extra checks). If you use this mod while developing mods, the image cache will mean you cant change images on disk or audio tracks and have anything happen with or without patch reload.\n<br />\n<br />\n<br />Source:\u00A0[url=https://github.com/SinZ163/StardewMods/tree/main/SinZational%20Speedy%20Solutions]StardewMods/SinZational Speedy Solutions at main · SinZ163/StardewMods[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37301",
+	"Version": "1.1.0",
+	"Updated": "2025-10-20T13:33:59+00:00",
+	"Downloads": [
+		{
+			"Id": 146062,
+			"Type": "Main",
+			"DisplayName": "SinZational Speedy Solutions",
+			"FileName": "SinZational Speedy Solutions-37301-1-1-0-1760967239.zip",
+			"Description": "Adds the Audio Change parallelization to speed up audio loading by loading them all in parallel in the background\n<br />\n<br />Fixes default config not being correctly set.\n<br />Removes FarmHouse from being part of the slow mapLoader optimization\n<br />",
+			"Version": "1.1.0",
+			"SizeInBytes": 23877,
+			"Uploaded": "2025-10-20T13:33:59+00:00",
+			"Mods": [
+				{
+					"Id": "SinZ.SpeedySolutions",
+					"DisplayName": "SinZational Speedy Solutions",
+					"Type": "Smapi",
+					"RelativePath": "SinZational Speedy Solutions",
+					"Manifest": {
+						"Name": "SinZational Speedy Solutions",
+						"Description": "A mod that implements performance optimizations",
+						"Author": "SinZ",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.1.3",
+						"EntryDll": "SinZational Speedy Solutions.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:37301"
+						],
+						"UniqueId": "SinZ.SpeedySolutions",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342532750,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423989,
+		"UploaderId": 8420039,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

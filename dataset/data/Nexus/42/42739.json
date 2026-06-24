@@ -1,0 +1,129 @@
+{
+	"Site": "Nexus",
+	"Id": 42739,
+	"Name": "(CP) Penguins",
+	"Author": "macro191",
+	"Description": "[size=5][b][CP] Penguins[/b][/size]\n<br />A Content Patcher pack that adds late-game penguins with a discovery event, branching outcomes, and a full GMCM-ready config system.\n<br />\n<br />[center][b]Final Update Note\n<br />[/b]Hey everyone,\n<br />This will be my final update for this mod. I want to thank everyone who has used it—it was truly created as a fun side project, and I'm glad it resonated with some of you.\n<br />Unfortunately, I've found that some in the modding community can be a little unwelcoming to newcomers, which has diminished my enthusiasm for continuing development\n<br />That said, the mod will remain available as-is. If anyone wants to take it over or continue development, feel free to reach out.\n<br />Thanks for everything![/center]\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*]Adds [b]Black Penguin[/b] and [b]Blue Penguin[/b] farm animals.\n<br />[*]Blue encounter outcomes:\n<br />[list]\n<br />[*][b]Adopt[/b]: receive a Blue Penguin Egg.\n<br />[*][b]Send to Marnie[/b]: unlock blue shop purchase.\n<br />[*][b]Leave Wild[/b]: enables year-limited seasonal wild bonus events.\n<br />[/list][*]Blue unlock mode options: [code]StoryEvent[/code], [code]ShopOnly[/code], [code]Both[/code].\n<br />[*]Seasonal byproduct economy with multiplier tiers.\n<br />[*]Balance presets: [code]Custom[/code], [code]VanillaLike[/code], [code]Balanced[/code], [code]Hardcore[/code], [code]ProfitHeavy[/code].\n<br />[*]Debug levels: [code]Off[/code], [code]Errors[/code], [code]Verbose[/code].\n<br />[*]English and Spanish localization.\n<br />[/list]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]SMAPI\n<br />[*]Content Patcher\n<br />[*](Optional) Generic Mod Config Menu\n<br />[/list]\n<br />\n<br />[size=4][b]Config Overview[/b][/size]\n<br />[list]\n<br />[*][b]General[/b]: ConfigMode, BalancePreset\n<br />[*][b]Unlock[/b]: BlueUnlockMode, BlueEncounterSeason, BlueEncounterChance\n<br />[*][b]Economy[/b]: UseSeasonalPricing, AnimalPriceMultiplier, ItemPriceMultiplier, SummerPriceMultiplier, WinterPriceMultiplier\n<br />[*][b]Direct Values[/b]: animal prices, maturity, produce cadence, friendship gates, item prices\n<br />[*][b]Debug[/b]: DebugLevel\n<br />[/list]\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Event IDs use high range [code]971xx[/code] to reduce conflict risk.\n<br />[*]If other mods edit the same event IDs or farm animal entries, load order can affect behavior.\n<br />[*]Do not keep duplicate copies with the same [code]UniqueId[/code].\n<br />[/list]\n<br />\n<br />[size=4][b]Support[/b][/size]\n<br />If reporting issues, include:\n<br />[list]\n<br />[*]SMAPI log\n<br />[*]Mod list\n<br />[*]Your [code]config.json[/code]\n<br />[*]Encounter branch chosen (Adopt / Marnie / Wild)\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42739",
+	"Version": "v1.0.0",
+	"Updated": "2026-02-23T03:17:58+00:00",
+	"Downloads": [
+		{
+			"Id": 157878,
+			"Type": "Main",
+			"DisplayName": "CP Penguins",
+			"FileName": "CP Penguins-42739-v1-0-0-1771816678.zip",
+			"Description": "",
+			"Version": "v1.0.0",
+			"SizeInBytes": 24652,
+			"Uploaded": "2026-02-23T03:17:58+00:00",
+			"Mods": [
+				{
+					"Id": "Macro191.PenguinsCP",
+					"DisplayName": "(CP) Penguins",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Penguins",
+					"Manifest": {
+						"Name": "(CP) Penguins",
+						"Description": "A Content Patcher Mod Adding Cute Penguins",
+						"Author": "Macro191",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:42739"
+						],
+						"UniqueId": "Macro191.PenguinsCP",
+						"OtherFields": {
+							"ConfigSchema": {
+								"BaseValueTier": {
+									"Default": "Medium",
+									"AllowValues": "Low, Medium, High"
+								},
+								"BlueUnlockMode": {
+									"Default": "StoryEvent",
+									"AllowValues": "StoryEvent, ShopOnly, Both"
+								},
+								"EncounterCooldown": {
+									"Default": "Yearly",
+									"AllowValues": "Yearly, Seasonal"
+								},
+								"BlueEncounterSeason": {
+									"Default": "winter",
+									"AllowValues": "spring, summer, fall, winter"
+								},
+								"BlueEncounterChance": {
+									"Default": "0.25",
+									"AllowValues": "0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1.00"
+								},
+								"DebugLevel": {
+									"Default": "Off",
+									"AllowValues": "Off, Errors, Verbose"
+								},
+								"UseSeasonalPricing": {
+									"Default": "true",
+									"AllowValues": "true, false"
+								},
+								"DaysToMature": {
+									"Default": "10"
+								},
+								"BlueDaysToMature": {
+									"Default": "14"
+								},
+								"DaysToProduce": {
+									"Default": "1"
+								},
+								"BlueDaysToProduce": {
+									"Default": "1"
+								},
+								"FriendshipForFasterProduce": {
+									"Default": "1000"
+								},
+								"BlueFriendshipForFasterProduce": {
+									"Default": "1000"
+								},
+								"HappinessDrain": {
+									"Default": "8"
+								},
+								"BlueHappinessDrain": {
+									"Default": "9"
+								},
+								"FeatherUnlock1": {
+									"Default": "200"
+								},
+								"FeatherUnlock2": {
+									"Default": "350"
+								},
+								"BlueFeatherUnlock1": {
+									"Default": "600"
+								},
+								"BlueFeatherUnlock2": {
+									"Default": "800"
+								},
+								"PebbleUnlock": {
+									"Default": "900"
+								},
+								"BluePebbleUnlock": {
+									"Default": "1000"
+								}
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544566,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429427,
+		"UploaderId": 4092810,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

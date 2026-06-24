@@ -1,0 +1,145 @@
+{
+	"Site": "ModDrop",
+	"Id": 1012482,
+	"Name": "Item Research 'n' Spawn",
+	"Author": "TSlex",
+	"TagLine": "This is a small mod that allows you to give out any item you want if you've researched it.",
+	"Description": "![](https://raw.githubusercontent.com/TSlex/StardewValley/v2.0.1/ItemResearchSpawnerV2/title.png)\n\nSDV 1.6 Status: Version 2.0 is finally completed, thank you for waiting <3\n\nSecret Note #1: some items (especially new) might be imbalanced by price or have the wrong category, and it needs a lot more time to figure it all out (and I don't want to delay release anymore). If you want to help, please submit your suggestions in the forum :)\n\nSecret Note #2: due to new ID and naming mechanics introduced by SDV 1.6 already researched items in SDV 1.5 might get lost. I added an option to see those items (will appear as \"Missing Item\" in the menu with the original \"unique key\"), so you can find and research them again.\n\n## Description\n\nThis mod introduces mechanics similar to Terraria's Journey Mode and Minecraft's ProjectE mod, where you can \"research\" an item and create much more of it (for free or by spending some currency). There are different modes and settings available, allowing you to play the mod the way you like, more game-progression friendly or straight-up cheaty.\n\n## How to use\n\n1. Press `R` (or your configured key) to open the menu.\n2. Place items into the research area (a small animated book).\n3. Press the research button (under research area) until the item disappears from the research area.\n4. Check the menu, if the amount of item was sufficient, the researched item will appear in the menu and leftovers will be returned to your inventory.\n\nPress `left alt` to mark/unmark the item as a favorite.\nPress `left ctrl` to quickly move items to the research area and back. If the item is researched, it will be sold or removed (bypassing the move to the research area).\nPress `left ctrl` on a trash can to remove all researched items from inventory (only for Research and Mr. Qi modes)\n\n## Install\n\n1. [Install the latest version of SMAPI](https://smapi.io/).\n2. Download the mod and unzip it into Stardew Valley/Mods/ directory.\n3. Start the game using [SMAPI](https://stardewvalleywiki.com/Modding:Installing_SMAPI_on_Windows#Configure_your_game_client).\n\n## Сompatibility\n- **Stardew Valley 1.6** (*for SDV 1.5 use version 1.0.1*).\n- **SMAPI 4.0.8** or later.\n- **Windows**, *Linux*, *MacOS* (Linux and MacOS not tested, but should work ok)\n- **Singleplayer** or **Multiplayer** (not split screen). For multiplayer, the mod must be installed by the host and optionally installed for other players (if they want to use the menu themselves).\n- **Keyboard+Mouse only** (gamepad support will be added later, maybe...)\n- Items added by other mods should work, but are not guaranteed. Besides that, there is no known mod conflict.\n\n## Features\n\n- 5 different modes to choose from:\n\t- Research mode - each item has own required amount for research, after research completion you can generate as much item you want for free.\n\t- Buy/Sell mode - you need only 1 of each item for research, giving items will cont in-game money and you can sell items as well. Also shows the money bar and tooltip for item price.\n\t- Combined mode - researching like in Research mode, after research completion like in Buy/Sell mode.\n\t- Mr. Qi mode - Research mode but all items already researched/unlocked. Basically **CJB Item Spawner** functionality.\n\t- JojaMart mode - Buy/Sell mode but all items already researched/unlocked. Items costs a lot, and sell price is 1. For true JojaMart fans. :)\n- Filtering:\n    - Research progression tracking.\n    - Favorite item filtering.\n- Higly customizable:\n    - Customizable buy and sell prices (using corresponding modifier).\n    - Customizable research amount (using corresponding modifier).\n    - Customizable categories, pricelist and item blacklist (using corresponding .json file in assets/config/ folder).\n\n## Configuration\n\nFirst of all, installing [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) is mandatory, as this is the only way to change settings for the started save file. A config.json file is only for the default setting for new farms, if you want to change them after you start the save, you have to use Config Menu mod. Anyway, you already using it, aren't you? ;)\n\nBelow are listed possible configurations. Note: some of them can be changed by the host player only (does not matter in singleplayer):\n- `ShowMenuButton` - a key to open the menu. [Default is R]\n- `DefaultMode` - actually the active menu mode for active saves. [Default is \"Research\"] [Host only]\n- `ShowMissingItems` - to show each \"Missing Item\" in the menu if there are any. [Default is false]\n- `EnableSounds` - determines if the mod menu is muted or not. [Default is true]\n- `ResearchAmountMultiplier` - multiplies the base research amount. [Default is 1.5] [Host only]\n- `SellPriceMultiplier` - multiplies the item selling price in the menu, if applicable. [Default is 0.8] [Host only]\n- `BuyPriceMultiplier` - multiplies the item buying price in the menu, if applicable. [Default is 1.2] [Host only]\n- `ResearchTimeSeconds` - determines how long you need to press the research button (in seconds). [Default is 1.0] [Host only]\n- `UseCustomUIColor` - determines if a custom color should be used instead of the mode's default one. [Default is false]\n- `CustomUIColor` - RGB value for custom color.\n\n## Commands\n\nThere are special commands available. Since Chat Commands is outdated and Default On Cheats is not a replacement for it!; I made my own little system of chat commands. Works in both singleplayer and multiplayer. Each command must start with `!rns_`:\n- `!rns_help` - prints all commands and their description.\n- `!rns_get_key` - prints active hotbar item \"unique key\". Can be used to tune price list and categories.\n- `!rns_unlock_active` - completes the research of active hotbar item.\n- `!rns_unlock_all` - completed the research of all items.\n- `!rns_dump_progression` - saves progression of all players in .json format. [Host only]\n- `!rns_load_progression` - loads progressions back from .json files and replaces whatever is in the mod now. [Host only]\n",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1012482",
+	"Version": null,
+	"Updated": "2025-01-12T18:07:57.92+00:00",
+	"Downloads": [
+		{
+			"Id": 1515716,
+			"Type": "Main",
+			"DisplayName": "Item Research 'n' Spawn v1.0.1 [SDV 1.5]",
+			"FileName": "Item Research 'n' Spawn v1.0.1 [SDV 1.5].zip",
+			"Description": "Combined mode + global price and research amount modifiers",
+			"Version": "1.0.1",
+			"SizeInBytes": 88993,
+			"Uploaded": "2024-01-06T14:07:17.895+00:00",
+			"Mods": [
+				{
+					"Id": "TSlex.ItemResearchSpawner",
+					"DisplayName": "Item Research 'n' Spawn",
+					"Type": "Smapi",
+					"RelativePath": "ItemResearchSpawner",
+					"Manifest": {
+						"Name": "Item Research 'n' Spawn",
+						"Description": "Give any item you want if you've researched it!",
+						"Author": "TSlex, CJBok and Pathoschild",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.9.5",
+						"EntryDll": "ItemResearchSpawner.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "cat.chatcommands",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8933"
+						],
+						"UniqueId": "TSlex.ItemResearchSpawner"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "0f69b1bf7ad1b7583110a187b5dad72f",
+				"md5In": "b0347e8a01509fa7dff662aaa04d092e",
+				"patchNotes": "https://github.com/TSlex/StardewValley/blob/v1.0.1/ItemResearchSpawner/release-notes.md",
+				"scriptType": 0,
+				"sha256Ex": "cab1279d21cc8a6ca12352c45dc02d6f50a37d35863bd574cd4fb9d14ceccdfb",
+				"sha256In": "9a2d93d51557979e741bd709eacb04d0b80123491dd53707eb228f7d48b6854b"
+			}
+		},
+		{
+			"Id": 1631588,
+			"Type": "Main",
+			"DisplayName": "Item Research 'n' Spawn v2.0.1 [SDV 1.6+]",
+			"FileName": "Item Research 'n' Spawn v2.0.1 [SDV 1.6+].zip",
+			"Description": "Bugfixes\n\n- For Stardew Valley 1.6\n- Requires SMAPI 4.0.8 or later",
+			"Version": "2.0.1",
+			"SizeInBytes": 169621,
+			"Uploaded": "2024-08-04T11:05:55.698+00:00",
+			"Mods": [
+				{
+					"Id": "TSlex.ItemResearchSpawner",
+					"DisplayName": "Item Research 'n' Spawn",
+					"Type": "Smapi",
+					"RelativePath": "ItemResearchSpawnerV2",
+					"Manifest": {
+						"Name": "Item Research 'n' Spawn",
+						"Description": "Give any item you want as long as you've researched it!",
+						"Author": "TSlex, Pathoschild and CJBok",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ItemResearchSpawnerV2.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "cat.chatcommands",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8933"
+						],
+						"UniqueId": "TSlex.ItemResearchSpawner"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "5e536de35c51cdb93f95e10bda590f95",
+				"md5In": "e42b1d2233b51207c1e07e6b3593044b",
+				"scriptType": 0,
+				"sha256Ex": "6b9147d0ee590182e199c0c8fed9c2068211c1b2507eedc25cf753ca59e13a29",
+				"sha256In": "a034a60b91d5e673f5f8af4d034224aa03565900d088aae2493ca01c86c1e3eb"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1630405490303,
+		"DateUpdated": 1736705277920,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1630404782070,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1012482/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1012482/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1012482/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1012482/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 264272
+	}
+}

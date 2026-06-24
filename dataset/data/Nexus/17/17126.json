@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 17126,
+	"Name": "Food Cravings",
+	"Author": "Hexenentendrache",
+	"Description": "This mod adds daily cravings for cooked food for the player, the craving will be pulled from the list of recipes known to the player. The craving will be displayed at the start of the day and it will also be put into the quest log. If this craving is fulfilled, the player will receive these buffs by default (additionally to the buffs the food gives by default):\n<br />[list]\n<br />[*]+2 Attack\n<br />[*]+2 Defense\n<br />[*]+1 Speed\n<br />[/list]\n<br />[color=#ff0000][size=4]Note: Since the quest framework is broken, it is no longer used in the newest version, meaning we are back to only posting the daily craved food at the beginning of the day, it will no longer be displayed in quests. I will go back to quests once possible.[/size][/color]\n<br />\n<br />[size=5]Configuration\n<br />[/size]Because\u00A0[s]I suck at balancing[/s]\u00A0I'm not telling you how you are supposed to feel when you finally eat that food you were craving ;) you can also change the values for the buffs using the config file included in the mod.\u00A0\n<br />\n<br />The config file also includes the opion to enable \"hangry mode\", which gives you debuffs until you fulfill your craving. To enable it, simply set\u00A0[font=Courier New]\"useHangryMode\": true[/font]. Similarly to the buff values, you can also edit the debuff values in the config.\n<br />\n<br />Because some food mods may add foods that aren't really meant for consumption, but only as an ingredient for other food, the config also contains a list that you can use to blacklist certain foods. As an example of usage:\n<br />[font=Courier New]\"recipeBlacklist\": [\n<br />   \"Fried Egg\",\n<br />   \"Omelet\"\n<br />][/font]\n<br />\n<br />Also, you can choose between using the default randomization and a seeded version. Default will give you a random food every time to start the day, meaning if you quit to main menu and restart the day you will probably get something different. Seeded means the random food is fixed to each day, so resetting until you get what you want is not an option anymore. You can activate seeded randomness by setting:\n<br />[font=Courier New]\"seededRandom\": true[/font]\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]Compatibility\n<br />[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, I couldn't test multiplayer yet (any reports on that welcome).\n<br />[*]Works together with mods adding recipes into the game (so yes, recipes from mods can be the daily craving)\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/Enteligenz/StardewMods]Source Code[/url]\n<br />[*]Reading the source code of [url=https://www.nexusmods.com/stardewvalley/mods/9050]this nice mod[/url] helped me figure out how to apply buffs, so shoutout to them :)\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17126",
+	"Version": "2.0.0",
+	"Updated": "2024-06-02T16:51:40+00:00",
+	"Downloads": [
+		{
+			"Id": 102202,
+			"Type": "Main",
+			"DisplayName": "Food Cravings 2.0.0",
+			"FileName": "Food Cravings 2.0.0-17126-2-0-0-1717347100.zip",
+			"Description": "Updated mod to SV1.6, added translation options and added buff icons. Had to remove quests since quest framework is broken.",
+			"Version": "2.0.0",
+			"SizeInBytes": 17656,
+			"Uploaded": "2024-06-02T16:51:40+00:00",
+			"Mods": [
+				{
+					"Id": "Hexenentendrache.FoodCravings",
+					"DisplayName": "Food Cravings",
+					"Type": "Smapi",
+					"RelativePath": "FoodCravings",
+					"Manifest": {
+						"Name": "Food Cravings",
+						"Description": "Adds daily cravings for random cooked foods for the player.",
+						"Author": "Hexenentendrache",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "FoodCravings.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17126"
+						],
+						"UniqueId": "Hexenentendrache.FoodCravings"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488890,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342403814,
+		"UploaderId": 59183916,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

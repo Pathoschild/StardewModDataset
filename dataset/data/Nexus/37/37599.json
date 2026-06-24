@@ -1,0 +1,42 @@
+{
+	"Site": "Nexus",
+	"Id": 37599,
+	"Name": "ai auto translator",
+	"Author": "XDynis",
+	"Description": "[center][size=6][color=#ff6b35]Stardew Valley MOD Auto Translation Tool[/color][/size]\n<br />[size=4]星露谷物语MOD全自动翻译工具[/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][color=#4a90e2]Description / 工具介绍[/color][/size]\n<br />\n<br />This tool automatically translates Stardew Valley MOD i18n files using AI technology, making it easy to localize mods into different languages. Supports all 12 official Stardew Valley languages with just 5 clicks to complete the entire translation process!\n<br />\n<br />本工具使用AI技术自动翻译星露谷物语MOD的i18n文件，让MOD本地化变得简单快捷。全自动翻译工具，支持星露谷物语全12个国家语言，只需点击5次即可完成翻译！\n<br />\n<br />[size=5][color=#4a90e2]Features / 主要功能[/color][/size]\n<br />\n<br />[list]\n<br />[*]  Supports all 12 official Stardew Valley languages / 支持星露谷物语全部12种官方语言\n<br />[*]  Ultra-fast workflow - complete translation in just 5 clicks / 超快工作流程 - 仅需5次点击完成翻译\n<br />[*]  Local AI translation with Ollama + Qwen2.5 model - No API limits or restrictions / 基于本地部署模型Ollama + Qwen2.5模型的AI翻译，无需担心API限制和风控\n<br />[*]  Automatic MOD package extraction and compression / 自动MOD包解压和打包\n<br />[*]  Smart i18n file detection and extraction / 智能i18n文件检测和提取\n<br />[*]  Batch translation with progress tracking / 批量翻译并显示进度\n<br />[*]  Customizable translation speed settings / 可自定义翻译速度设置\n<br />[*]  Modern GUI with multi-language support / 现代化界面，支持多语言\n<br />[*]  Auto-save translation progress / 自动保存翻译进度\n<br />[/list]\n<br />\n<br />[size=5][color=#4a90e2]Requirements / 系统要求[/color][/size]\n<br />\n<br />[list]\n<br />[*] Windows 10/11 (64-bit)\n<br />[*] 4GB+ RAM (8GB+ recommended for better performance)\n<br />[*] Ollama service installed\n<br />[*] Qwen2.5 model downloaded\n<br />[/list]\n<br />\n<br />[size=5][color=#4a90e2]Installation / 安装说明[/color][/size]\n<br />\n<br />[size=4][color=#e74c3c]Step 1: Install Ollama / 安装Ollama[/color][/size]\n<br />\n<br />1. Visit [url=https://ollama.ai/]Ollama Official Website[/url] / 访问Ollama官网\n<br />2. Download and install Ollama for Windows / 下载并安装Windows版本\n<br />3. Ollama will start automatically after installation / 安装后Ollama会自动启动\n<br />\n<br />[size=4][color=#e74c3c]Step 2: Download Qwen2.5 Model / 下载Qwen2.5模型[/color][/size]\n<br />\n<br />Open command prompt and run / 打开命令提示符并运行：\n<br />\n<br />[code]\n<br /># Recommended model / 推荐模型\n<br />ollama pull qwen2.5:7b\n<br />\n<br /># For lower-end PCs / 低配置电脑\n<br />ollama pull qwen2.5:3b\n<br />\n<br /># For high-end PCs / 高配置电脑\n<br />ollama pull qwen2.5:14b\n<br />[/code]\n<br />\n<br />[size=4][color=#e74c3c]Step 3: Verify Installation / 验证安装[/color][/size]\n<br />\n<br />[code]\n<br /># Check Ollama status / 检查Ollama状态\n<br />ollama list\n<br />\n<br /># Test model / 测试模型\n<br />ollama run qwen2.5:7b \"Hello\"\n<br />[/code]\n<br />\n<br />[size=5][color=#4a90e2]How to Use / 使用方法[/color][/size]\n<br />\n<br />[size=4][color=#27ae60]Simple 6-Step Process / 简单6步流程[/color][/size]\n<br />\n<br />[list=1]\n<br />[*] Launch the tool / 启动工具\n<br />[*] Import MOD package / 导入MOD压缩包\n<br />[*] Extract MOD files / 解压MOD文件\n<br />[*] Extract i18n files / 提取i18n文件\n<br />[*] Start auto translation / 开始自动翻译\n<br />[*] Package completed MOD / 打包完成的MOD\n<br />[/list]\n<br />\n<br />[size=5][color=#4a90e2]Important Notes / 重要说明[/color][/size]\n<br />\n<br />[list]\n<br />[*] Translation speed depends on your PC performance / 翻译速度取决于电脑性能\n<br />[*] You can adjust translation speed in settings / 可在设置中调整翻译速度\n<br />[*] Some texts might not be translated if not extracted to i18n / 某些文本可能因未提取到i18n而未翻译\n<br />[*] Make sure Ollama service is running on port 11434 / 确保Ollama服务在11434端口运行\n<br />[/list]\n<br />\n<br />[size=5][color=#4a90e2]Troubleshooting / 故障排除[/color][/size]\n<br />\n<br />[b]Translation stops halfway / 翻译中途停止：[/b]\n<br />Some texts weren't extracted to i18n files by the mod author / 作者某些文本没有提取到i18n文件\n<br />\n<br />[b]Cannot connect to Ollama / 无法连接Ollama：[/b]\n<br />Check if Ollama service is running, usually requires port 11434 / 检查Ollama服务是否启动，通常需要端口11434\n<br />\n<br />[b]Translation failed / 翻译失败：[/b]\n<br />File format might be corrupted / 可能文件格式有问题\n<br />\n<br />[b]Slow translation / 翻译速度慢：[/b]\n<br />Try using a smaller model like qwen2.5:3b / 尝试使用更小的模型如qwen2.5:3b\n<br />\n<br />[size=5][color=#4a90e2]Support / 技术支持[/color][/size]\n<br />\n<br />If you encounter any issues or have suggestions, please leave a comment or contact the author.\n<br />如果遇到任何问题或有建议，请在评论留言或联系作者。\n<br />\n<br />[line]\n<br />\n<br />[size=5][color=#4a90e2]Source Code / 源代码[/color][/size]\n<br />\n<br />This project is open source! Check out the code on GitHub:\n<br />本项目开源！在GitHub上查看源代码：\n<br />\n<br />[url=https://github.com/Fox-Noah/stardew-ai-auto-translator]\uD83D\uDD17 GitHub Repository[/url]\n<br />\n<br />[size=5][color=#4a90e2]Support the Author / 支持作者[/color][/size]\n<br />\n<br />If you find this tool helpful, consider supporting the development!\n<br />如果您觉得这个工具有用，请考虑支持开发工作！\n<br />\n<br />[url=https://ko-fi.com/X8X11KF0YO][img]https://cdn.ko-fi.com/cdn/kofi2.png?v=3[/img][/url]\n<br />\n<br />[url=https://ko-fi.com/X8X11KF0YO]☕ Support me on Ko-fi[/url]\n<br />\n<br />[line]\n<br />\n<br />[center][size=4][color=#666666]Thank you for using this tool! / 感谢使用本工具！[/color][/size]\n<br />[size=3][color=#999999]Made with ❤️ for the Stardew Valley modding community[/color][/size][/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37599",
+	"Version": "1.0",
+	"Updated": "2025-09-19T16:41:48+00:00",
+	"Downloads": [
+		{
+			"Id": 143362,
+			"Type": "Main",
+			"DisplayName": "stardew auto translator1.2",
+			"FileName": "stardew auto translator1.2-37599-1-2-1758300108.zip",
+			"Description": "-Auto translation tool, supporting all 12 languages of Stardew Valley. Translation complete in just 5 clicks.\n<br />-Fixed the Portuguese (BR) error translation issue\n<br />-Fixed the issue where some JSON files ended with a comma, causing parsing failures",
+			"Version": "1.2",
+			"SizeInBytes": 14723590,
+			"Uploaded": "2025-09-19T16:41:48+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "143362",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530050,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342424287,
+		"UploaderId": 127269138,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

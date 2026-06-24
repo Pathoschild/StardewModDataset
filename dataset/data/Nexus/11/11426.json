@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 11426,
+	"Name": "Trash Does Not Consume Bait",
+	"Author": "atravita",
+	"Description": "This mod prevents trash from consuming bait. Additionally, it adds automatic replacement of tackles/bait when they run out. When replacing, the code will try to use the same bait/tackle you were using, but if you don't have that particular tackle/bait remaining in your inventory, it can optionally use whatever you have on hand. It will only use bait/tackle in your inventory.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url].\n<br />[*]Download and install [url=https://www.nexusmods.com/stardewvalley/mods/12932]AtraCore[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Configuration[/size]\n<br />Run SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to configure.\n<br />\n<br />[list=1]\n<br />[*][font=Courier New]AutomaticRefill[/font]: Toggles the automatic refill feature.\n<br />[*][font=Courier New]SameTackleOnly[/font]: Replacement tackles have to be the same type as the one used up.\n<br />[*][font=Courier New]SameBaitOnly[/font]: Replacement bait have to be the same type as the one used up.\n<br />[*][font=Courier New]ConsumeChanceNormal[/font]: The probability that a fishing rod without the Preserving enchantment consumes bait/tackle. (Default: 1 = 100%)\n<br />[*][font=Courier New]ConsumeChancePreserving[/font]: The probability that a fishing rod with the Preserving enchantment consumes bait/tackle. (Default: 0.5 = 50%)\n<br />[*][font=Courier New]CrabPotTrashDoesNotEatBait[/font]: Whether crab pot trash should eat bait.\n<br />[/list]\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, multiplayer, and split-screen mode. Should be fine if installed for one player only.\n<br />[*]Should be compatible with most other mods. (If you use [url=https://www.nexusmods.com/stardewvalley/mods/2360]Everlasting Bait and Unbreakable Tackles[/url], you may see the stack size of your bait increase or your tackle repair though. [url=https://www.nexusmods.com/stardewvalley/mods/7719]Unbreakable Tackles[/url] is closed source - or at least I couldn't find the source - so I don't know how this mod interacts with that one. You could alternately just set the consume chance to be zero though.)\n<br />[/list]\n<br />Technical note: this mod transpiles [font=Courier New]FishingRod.doDoneFishing[/font], so it's not likely to be compatiable with any mod that also transpiles that function.\n<br />\n<br />[size=5]See also[/size]\n<br />\n<br />[list]\n<br />[*][url=https://github.com/atravita-mods/StardewMods/blob/main/TrashDoesNotConsumeBait/TrashDoesNotConsumeBait/docs/Changelog.md]changelog[/url]\n<br />[*][url=https://github.com/atravita-mods/StardewMods/blob/main/TrashDoesNotConsumeBait/TrashDoesNotConsumeBait]source code[/url].\n<br />[/list]All donation points for this mod go to [url=https://www.againstmalaria.com/]Against Malaria[/url]. Please consider supporting them if you like this mod!\n<br />Looking for something else? Please consider [url=https://www.nexusmods.com/users/116553368?tab=user+files]my other mods[/url]!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11426",
+	"Version": "0.2.1",
+	"Updated": "2023-01-09T23:23:19+00:00",
+	"Downloads": [
+		{
+			"Id": 64930,
+			"Type": "Main",
+			"DisplayName": "TrashDoesNotConsumeBait",
+			"FileName": "TrashDoesNotConsumeBait-11426-0-2-1-1673306599.zip",
+			"Description": "For Stardew 1.5.6+/SMAPI 3.18.1+/AtraCore 0.1.2",
+			"Version": "0.2.1",
+			"SizeInBytes": 25043,
+			"Uploaded": "2023-01-09T23:23:19+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.TrashDoesNotConsumeBait",
+					"DisplayName": "Trash Does Not Consume Bait",
+					"Type": "Smapi",
+					"RelativePath": "TrashDoesNotConsumeBait",
+					"Manifest": {
+						"Name": "Trash Does Not Consume Bait",
+						"Description": "Prevents trash from consuming bait.",
+						"Author": "atravita",
+						"Version": "0.2.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "TrashDoesNotConsumeBait.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.1.2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11426"
+						],
+						"UniqueId": "atravita.TrashDoesNotConsumeBait"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342451618,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398114,
+		"UploaderId": 116553368,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

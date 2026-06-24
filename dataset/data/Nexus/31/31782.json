@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 31782,
+	"Name": "Monster Hutch Framework",
+	"Author": "juminos",
+	"Description": "This mod adds a new building, Monster Hutch, and a new machine, Monster Incubator, as well as providing a framework to add monsters that can be raised and produce items overnight and define rings to act as charmer rings for those monsters. \n<br />\n<br />[b][size=4]Monster Hutch[/size]\n<br />[/b][list]\n<br />[*]The Monster Hutch is a new building\u00A0that can be found in Robin's menu and uses the pre-1.6 Slime Hutch building exterior (basically just a bigger version of the current slime hutch)\n<br />[*]The interior is considered a slime hutch, so slime breeding will still function there (default 20 slime capacity limit), and it can accommodate up to 40 total monsters\n<br />[*]8 water troughs are provided to keep the monsters watered so they can produce\n<br />[*]Monsters added by this mod do not multiply on their own in the hutch like slimes do and must be incubated in the new 'Monster Incubator' machine\n<br />[*]An optional basement expansion can be turned on in the configuration options which adds a slightly smaller 'basement' area that monsters cannot visit, but casks will work.\n<br />[/list]\n<br />[b][size=4]Monster Incubator[/size]\n<br />[/b][list]\n<br />[*]The Monster Incubator has a similar appearance to the Slime Incubator and is used to incubate monsters added by content packs for this framework\n<br />[*]The recipe is acquired upon receiving a letter from the wizard upon reaching 6 hearts\n<br />[*]Crafting it requires 2 Iridium Bars and 50 Void Essence\n<br />[*]Valid input items are defined by content packs, and 10 Void Essence is also consumed as 'fuel' to start incubation\n<br />[/list]\n<br />[b][size=4]Monsters[/size]\n<br />[/b][list]\n<br />[*]The monsters created by this mod are based on a subset of the vanilla game monsters, so their behavior will replicate the base type used\n<br />[*]These monsters will target and inflict damage to the player like their wild counterparts (unless the right monster charmer ring is worn)\n<br />[*]The water troughs are used by both slimes and this mod's monsters with the same 'watered' ratio (1 trough 'waters' up to 5 monsters)\n<br />[*]If a monster has been 'watered', it can produce items overnight similar to coop animals (Auto-Grabber works here)\n<br />[/list]\n<br />[b][size=4]Charmer Rings[/size]\n<br />[/b][list]\n<br />[*]Vanilla or mod-added rings can be defined as 'charmer' rings for these new monsters, similar to the Slime Charmer Ring\n<br />[*]In addition to preventing damage to the player, these charmer rings (as well as the Slime Charmer Ring) will also prevent the player from dealing damage to the relevant monster (bombs and trinkets excepted).\n<br />[*]If wearing the relevant ring, the player can 'pet' their monsters (no effect on the monster, just a sound and speech bubble)\n<br />[/list]\n<br />[b][size=4]Configuration Options[/size][/b]\n<br />[list]\n<br />[*][b]HutchExpansion[/b]: Whether to add a basement expansion upgrade for the Monster Hutch to Robin's build menu (the basement cannot be used by monsters, but casks will work there). Default: false\n<br />[*]\u00A0[b]RandomizeMonsterPositions[/b]: Whether to randomize monster positions in the hutch every day (to prevent them from clumping up on one tile). Default: false\n<br />[*][b][/b][b]SkipRandomizeSlimePositions[/b]: Whether the above setting should leave slime positions alone. Default: false\n<br />[*][b][/b][b]HutchSlimeCapacity[/b]: The maximum slime capacity for the Monster Hutch. Default: 20\n<br />[*][b][/b][b]HutchMonsterCapacity[/b]: The total monster capacity (including slimes) for the Monster Hutch. Default: 40\n<br />[*][b][/b][b]DoubleNodeDrops[/b]: Whether breaking nodes (ores, gems, geodes, etc) yields double in the Monster Hutch. Default: true\n<br />[*][b]NoFlooringSpawn[/b]: Whether monster produce should never spawn on flooring. Default: true\n<br />[*][b][/b][b]IncubatorIsAffectedByCoopmaster[/b]: Whether incubation time is affected by coopmaster profession. Default: true\n<br />[*][b][/b][b]IncubatorWobblesWhileIncubating[/b]: Whether monster incubator should wobble while it's working. Default: true\n<br />[*][b][/b][b]DefaultIncubatorAdditionalRequiredItemID[/b]: The item ID for the additional required item to start incubation in the monster incubator. Default: \"(O)769\"\n<br />[*][b][/b][b]IncubatorAdditionalRequiredItemCount[/b]: The amount of the above required to start incubation. Default: 10\n<br />[*][b][/b][b]DefaultIncubatorRecipe[/b]: The crafting recipe for the monster incubator. Default: \"337 2 769 50\"\n<br />[*][b][/b][b]DefaultIncubatorRecipeUnlock[/b]: The condition for unlocking the monster incubator recipe. Default: \"f Wizard 6\"\n<br />[*][b][/b][b]LethalRings[/b]: Whether the rings defined in CharmerRingData allow the player to deal damage to the associated monster(s). Default: false\n<br />[*][b][/b][b]VanillaSlimeRing[/b]: Whether the Slime Charmer Ring retains its vanilla properties allowing the player to damage slimes while worn. Default: false\n<br />[/list]\n<br />[b][size=4]Compatibility\n<br />[/size][/b][list]\n<br />[*]works with [url=https://www.nexusmods.com/stardewvalley/mods/10669]Ring Overhaul[/url]\uFEFF and probably other mods that allow combining more rings (I think [url=https://www.nexusmods.com/stardewvalley/mods/3214]Wear More Rings[/url]\uFEFF stores the worn rings as combined rings so it might work with this mod)\n<br />[*]any Slime Hutch mods should work since the Monster Hutch is a separate building, not a replacement\n<br />[/list]\n<br />[size=4][b]Modders[/b][/size]\n<br />[list]\n<br />[*]If you wish to make a content pack for this framework refer to the [url=https://github.com/juminos/StardewValleyMods/tree/develop/MonsterHutchFramework#modder-guide]Modder Guide[/url]\uFEFF and see the [url=https://www.nexusmods.com/stardewvalley/mods/31903]Monster Hutch Starter Pack[/url]\uFEFF for examples[url=https://github.com/juminos/StardewValleyMods/tree/develop/MonsterHutchFramework#readme][/url]\n<br />[*]If you mod the Monster Hutch interior map and change the number/position of the water troughs, any Monster Hutch buildings that have been built before the change will need to be demolished or the game will crash the next time you save. But any number and positioning of water troughs should work for Monster Hutches constructed after making changes to the interior map.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31782",
+	"Version": "1.1.3",
+	"Updated": "2025-03-14T15:32:46+00:00",
+	"Downloads": [
+		{
+			"Id": 127427,
+			"Type": "Main",
+			"DisplayName": "MonsterHutchFramework",
+			"FileName": "MonsterHutchFramework-31782-1-1-3-1741966366.zip",
+			"Description": "fixed slime capacity overriding monster capacity in some cases",
+			"Version": "1.1.3",
+			"SizeInBytes": 768049,
+			"Uploaded": "2025-03-14T15:32:46+00:00",
+			"Mods": [
+				{
+					"Id": "juminos.MonsterHutchFramework",
+					"DisplayName": "Monster Hutch Framework",
+					"Type": "Smapi",
+					"RelativePath": "MonsterHutchFramework",
+					"Manifest": {
+						"Name": "Monster Hutch Framework",
+						"Description": "A framework for adding more types of monsters to raise in the slime hutch and custom charmer rings",
+						"Author": "juminos",
+						"Version": "1.1.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MonsterHutchFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:31782"
+						],
+						"UniqueId": "juminos.MonsterHutchFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342514115,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418470,
+		"UploaderId": 199353398,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

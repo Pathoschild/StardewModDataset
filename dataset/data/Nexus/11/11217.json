@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 11217,
+	"Name": "Please Gift Me In Person",
+	"Author": "Shockah",
+	"Description": "[size=6]TL;DR:[/size]\n<br />[size=4]Adds some more realism and life to the Gift Delivery Service. An extension to the [url=https://www.nexusmods.com/stardewvalley/mods/7842]Mail Services Mod[/url].[/size]\n<br />\n<br />Makes it so NPCs will start disliking or even hating being gifted via mail, if done so repeatedly.\n<br />This means the gifted item will be treated as if it was one tier (if disliked) or two tiers (if hated) lower. For example, if an NPC hates the fact it was sent a gift via mail, and the item was one it likes, it will go down to being a disliked item (only for this particular mail, the item itself will still be liked).\n<br />\n<br />The mod has TONS of options - you can make an NPC love receiving mails, but hate receiving them in-person, etc.\n<br />Modded NPCs are supported and can be configured straight from the [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />By default, all NPCs dislike frequent gifts via mail, while being neutral in terms of in-person gifts.\n<br />Additionally, the mod comes with some overrides for vanilla NPCs:\n<br />[list]\n<br />[*]Dwarf: hates by mail\n<br />[*]Elliott: neutral\n<br />[*]Krobus: hates by mail\n<br />[*]Leo: loves infrequent by mail\n<br />[*]Linus: dislikes, hates frequent by mail\n<br />[*]Penny: neutral\n<br />[*]Sandy: likes infrequent in-person, likes infrequent but dislikes frequent by mail\n<br />[*]Sebastian: dislikes in-person, neutral by mail\n<br />[*]Wizard: dislikes frequent in-person, neutral by mail\n<br />[/list]\n<br />\n<br />[size=6]Configuration[/size]\n<br />The mod has [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] support. You can also edit the [font=Courier New]config.json[/font] file manually, but there are SOOOOOOOOO many options, that it's even hard to list them, so using GMCM is VERY recommended.\n<br />\n<br />[size=6]Instructions for modders[/size]\n<br />You can add an override for an NPC by editing the [font=Courier New]Data/PleaseGiftMeInPerson[/font] asset. The key is the NPC's name (not display name!). The value has the following format:\n<br />[code]InPersonPreference/ByMailPreference/InfrequentGiftPercent/FrequentGiftPercent[/code]\n<br />You can omit any of those fields to not override them (just leave them empty). You can also omit trailing slashes.\n<br />\n<br />Allowed values for [font=Courier New]InPersonPreference[/font]/[font=Courier New]ByMailPreference[/font] are:\n<br />[list]\n<br />[*][font=Courier New]Hates[/font]: -2 tiers\n<br />[*][font=Courier New]DislikesAndHatesFrequent[/font]: -1 tier, -2 tiers past the frequent %\n<br />[*][font=Courier New]HatesFrequent[/font]: -1 tier past the infrequent %, -2 tiers past the frequent %\n<br />[*][font=Courier New]Dislikes[/font]: -1 tier\n<br />[*][font=Courier New]DislikesFrequent[/font]: no change, -1 tier past the frequent %\n<br />[*][font=Courier New]Neutral[/font]: no change\n<br />[*][font=Courier New]LikesInfrequentButDislikesFrequent[/font]: +1 tier, no change past the infrequent %, -1 tier past the frequent %\n<br />[*][font=Courier New]LikesInfrequent[/font]: no change, +1 tier below the infrequent %\n<br />[*][font=Courier New]Likes[/font]: +1 tier\n<br />[*][font=Courier New]LovesInfrequent[/font]: +2 tiers below the infrequent %, +1 tier below the frequent %\n<br />[*][font=Courier New]LikesAndLovesInfrequent[/font]: +1 tier, +2 tiers below the infrequent %\n<br />[*][font=Courier New]Loves[/font]: +2 tiers\n<br />[/list]\n<br />[font=Courier New]InfrequentGiftPercent[/font]/[font=Courier New]FrequentGiftPercent[/font] are floats (decimal numbers).\n<br />\n<br />Keep in mind a user's customized per-NPC configuration will take priority over those overrides.\n<br />\n<br />[size=6]Other info[/size]\n<br />You can find the source code [url=https://github.com/Shockah/Stardew-Valley-Mods/tree/master/PleaseGiftMeInPerson]here[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11217",
+	"Version": "1.0.3",
+	"Updated": "2022-09-20T21:17:44+00:00",
+	"Downloads": [
+		{
+			"Id": 60583,
+			"Type": "Main",
+			"DisplayName": "PleaseGiftMeInPerson",
+			"FileName": "PleaseGiftMeInPerson-11217-1-0-3-1663708664.zip",
+			"Description": "",
+			"Version": "1.0.3",
+			"SizeInBytes": 117478,
+			"Uploaded": "2022-09-20T21:17:44+00:00",
+			"Mods": [
+				{
+					"Id": "Shockah.PleaseGiftMeInPerson",
+					"DisplayName": "Please Gift Me In Person",
+					"Type": "Smapi",
+					"RelativePath": "PleaseGiftMeInPerson",
+					"Manifest": {
+						"Name": "Please Gift Me In Person",
+						"Description": "Adds some more realism and life to the Gift Delivery Service. An extension to the Mail Services Mod.",
+						"Author": "Shockah",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "PleaseGiftMeInPerson.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Digus.MailServicesMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11217"
+						],
+						"UniqueId": "Shockah.PleaseGiftMeInPerson"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342447271,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397905,
+		"UploaderId": 133612513,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

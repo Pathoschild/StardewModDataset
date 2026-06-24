@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 3990,
+	"Name": "Snow-Covered Craftables",
+	"Author": "LadyEleven",
+	"Description": "This mod has its roots a long time ago, back when there was no Content Patcher and Seasonal Immersion was the best way to modify buildings and stuff. A small part of Seasonal Immersion's functionality allowed for two sets of \"Craftables.xnb\" sprites per season: one that displayed indoors, and one outdoors. I never actually saw a published mod that utilized this feature, at least not for what I wanted: snow-coated objects. Seasonal Immersion allowed me to enjoy my lovely custom buildings looking all cozy and snow-covered, but there sat my Bee Houses looking like it might as well be high summer. So though I am not at ALL, like REALLY REALLY NOT a sprite artist, I tried to fill that gap and create a version of Craftables that actually looked like they'd been sitting outdoors in the snow. Then sadly, Seasonal Immersion stopped working after an update to the game, and Content Patcher was unable to replicate this feature properly, with the only option being to coat all Craftables in snow whether they were inside or outside. I gave up on the project for a while until Pathoschild hinted he might try to add Indoor/Outdoor recognition to Content Patcher, and then my interest was piqued again.\n<br />\n<br />And now here you have it, my clumsy attempt at snowy sprite art (except for the snowmen - those are lifted from the vanilla assets for the most part)! It is very far from perfect, and I would welcome anyone who thinks they can do it better to do so and you're welcome to take whatever you want from this and use it without needing permission or anything. I only made this because I wanted it so bad and it was too much work to ask someone else to do on my behalf.\n<br />\n<br />Anyway, it uses Content Patcher's \"Overlay\" feature, and the included PNG file is ONLY the snow, which means it *can* work with recolors of the craftables, as long as my mod is loaded *after* the recolor mod. In the most recent version, I have changed how this works. Instead of putting a \"Z\" in the mod title to trick SMAPI into loading it last (which I learned is not recommended by Pathoschild), I have added a list of common recolors as optional dependencies to the manifest. This should mean that SMAPI will check for these recolors and load them first in a way that is intended and hopefully more reliable. Unfortunately, there's no way to create a \"blanket\" set of optional dependencies that would cover any and all recolors, and there are almost certainly some I missed. So you can make a post and let me know, and/or just add any specific recolor mods as optional dependencies to the manifest yourself.\n<br />\n<br />Oh! On what I did not do: this mod only recolors items that are actually legitimately used by the game - So none of the unused potted plants or items that exist for cutscenes and stuff. I also did not add snow to: the \"on\" furnace, the Crystalarium, the top part of light-providing objects, etc - because I assume those things all run pretty hot, so it makes sense to me that the snow would melt off of them. I also did not add snow to any item that is a non-Winter version, like the non-Winter seasonal plants. I also didn't add snow to the Candy Canes - couldn't think of where it would look right, and besides, Candy Canes are already kinda Wintery. I also did not add snow to the easter egg statues, but I don't have a good reason for that - just couldn't get it to look right.\n<br />\n<br />Additional Version 3.0/Game Version 1.5 Changes:\n<br />- Updated the patching behavior for the newest versions of Content Patcher and the game, so the snow overlay does not appear in the new 1.5 area (being vague to avoid spoilers).\n<br />- Added snow to some new items.\n<br />- As stated earlier, overhauled the mod to change the way it attempts to account for recolors.\n<br />\n<br />06/30/2024: Added snow for some of the new craftables as of 1.6 and slightly reworked the content file to reflect recent changes to SMAPI/Content Patcher.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3990",
+	"Version": "4.0.0",
+	"Updated": "2024-07-01T00:09:07+00:00",
+	"Downloads": [
+		{
+			"Id": 105440,
+			"Type": "Main",
+			"DisplayName": "Snow-Covered Craftables",
+			"FileName": "Snow-Covered Craftables-3990-4-0-0-1719792547.zip",
+			"Description": "SMAPI 4.0 and Stardew version 1.6 compatible now; snow added to some new items.",
+			"Version": "4.0.0",
+			"SizeInBytes": 19035,
+			"Uploaded": "2024-07-01T00:09:07+00:00",
+			"Mods": [
+				{
+					"Id": "LadyEleven.SnowCoveredCraftables",
+					"DisplayName": "Snow-Covered Craftables",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Snow-Covered Craftables",
+					"Manifest": {
+						"Name": "Snow-Covered Craftables",
+						"Description": "Adds snow to crafted and decor items when placed outside in winter.",
+						"Author": "LadyEleven",
+						"Version": "4.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "SchrodingersKit.BSWG.CMBSBM",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Leonary.PC",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Rose.craftables",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Grifx.LighterCraftables",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Sithurism.CP.NewScarecrows",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "fwippy.darkwoodslimecraftables",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "LadyEleven.PurpleRewards",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3990"
+						],
+						"UniqueId": "LadyEleven.SnowCoveredCraftables"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342492128,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390678,
+		"UploaderId": 10678595,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

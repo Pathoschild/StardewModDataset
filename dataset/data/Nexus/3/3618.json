@@ -1,0 +1,81 @@
+{
+	"Site": "Nexus",
+	"Id": 3618,
+	"Name": "Seeds are rare",
+	"Author": "jahangmar",
+	"Description": "[size=4][b]What it does:[/b]\n<br />[/size][list]\n<br />[*]Removes seeds (except tree saplings) from all stores.\n<br />[*]Seed Makers are moved to the farming 1 tier and are less expensive to build.\n<br />[*]Only way to get seeds is by finding mixed seeds and processing crops in a Seed Maker.\n<br />[/list]The mod requires [url=https://www.nexusmods.com/stardewvalley/mods/3012]Better Mixed Seeds[/url] which allows every seed to be found in mixed seeds.\n<br />\n<br />[size=4][b]Installation:[/b][/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF and \uFEFF unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Download\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/3012]Better Mixed Seeds[/url]  and \uFEFF unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font]. You should have a [font=Courier New]Mods/SeedsAreRare[/font] and a [font=Courier New]Mods/CP-SeedsAreRare[/font] folder afterwards.\n<br />[*]Optional: Download [url=https://www.nexusmods.com/stardewvalley/mods/935]Better Quality More Seeds[/url]\uFEFF ([url=https://smapi.io/mods/#Better_Quality_More_Seeds]unofficial update[/url]\uFEFF) and unzip it into [font=Courier New]Stardew Valley/Mods[/font]. Seed Makers will give more seeds for better quality crops.\n<br />\n<br />[*]Run the game using SMAPI.\n<br />[/list][size=4][b]\n<br />Uninstall[/b][/size][size=4][b]:[/b][/size]\n<br />[list]\n<br />[*]Remove the folders [font=Courier New]SeedsAreRare[/font] and [font=Courier New]CP-SeedsAreRare[/font] in your [font=Courier New]Stardew Valley/Mods[/font] folder.\n<br />[/list]You will still be able to make Seed Makers (with the vanilla recipe) if you already learned it but everything else will work as in vanilla.\n<br />\n<br />\n<br />[size=4][b]Configuration:\n<br />[/b][/size]Start the game with this mod at least once to generate the config.json in the\u00A0[font=Courier New]SeedsAreRare[/font] folder.\n<br />[list]\n<br />[*] exclude_rare_seed: The \"Rare Seed\" will still be sold.\n<br />[*]exclude_&lt;shopname&gt;: &lt;shopname&gt; will still sell seeds if this is set to true.\n<br />[*]\uFEFFexclude_night_market: same as above but affects all shops at the night market. exlude_traveling_merchant does not affect the night market traveling merchant.\n<br />[/list]\n<br />[size=4][b]Compatibility:[/b][/size]\n<br />[list]\n<br />[*]Tested with Stardew Valley 1.4 on Linux\n<br />[*]Tested in Multiplayer\n<br />[*]Seems to be compatible with mods using the json assets mod to add new crops to the game. Tested with Bonster's Crops.\n<br />[/list]\n<br />[url=https://github.com/jahangmar/StardewValleyMods/tree/master/SeedsAreRare_Project]source code\n<br />[/url]\n<br />If you like this mod you might also like my mod [url=https://www.nexusmods.com/stardewvalley/mods/3654]Working Fireplace[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3618",
+	"Version": "1.4.0",
+	"Updated": "2019-12-29T00:03:32+00:00",
+	"Downloads": [
+		{
+			"Id": 22204,
+			"Type": "Main",
+			"DisplayName": "SeedsAreRare",
+			"FileName": "SeedsAreRare-3618-1-4-0-1577577812.zip",
+			"Description": "",
+			"Version": "1.4.0",
+			"SizeInBytes": 6823,
+			"Uploaded": "2019-12-29T00:03:32+00:00",
+			"Mods": [
+				{
+					"Id": "jahangmar.CP-SeedsAreRare",
+					"DisplayName": "SeedsAreRare (CP)",
+					"Type": "ContentPack",
+					"RelativePath": "CP-SeedsAreRare",
+					"Manifest": {
+						"Name": "SeedsAreRare (CP)",
+						"Description": "Content pack belonging to the SeedsAreRare mod.",
+						"Author": "jahangmar",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3618"
+						],
+						"UniqueId": "jahangmar.CP-SeedsAreRare"
+					}
+				},
+				{
+					"Id": "jahangmar.SeedsAreRare",
+					"DisplayName": "SeedsAreRare",
+					"Type": "Smapi",
+					"RelativePath": "SeedsAreRare",
+					"Manifest": {
+						"Name": "SeedsAreRare",
+						"Description": "Removes seeds from all stores and encourages the use of seed makers",
+						"Author": "jahangmar",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SeedsAreRare.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "jahangmar.CP-SeedsAreRare",
+								"MinimumVersion": "1.4.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3618"
+						],
+						"UniqueId": "jahangmar.SeedsAreRare"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342408892,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390306,
+		"UploaderId": 51240921,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

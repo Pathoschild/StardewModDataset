@@ -1,0 +1,72 @@
+{
+	"Site": "Nexus",
+	"Id": 13807,
+	"Name": "Creaturebook - Bestiary Framework",
+	"Author": "KeDili",
+	"AuthorLabel": "KediDili",
+	"Description": "Creaturebook is a framework that allows content packs to add their creatures to the mod's 'bestiary', and allows the farmer to discover these creatures via clicking to NPCs with the mod's custom notebook item in hand.\n<br />\n<br />For all content pack documentation, source code, credits, permissions and translations, see the mod's GitHub repository.\n<br />Which is\u00A0[url=https://github.com/KediDili/Creaturebook#readme]linked[/url]\uFEFF here.\n<br />To find the content pack that added these moths in preview images, check Requirements section. You will find other content packs (if any are made :sweat_smile:)\n<br />\n<br />[b][color=#00ffff][size=6]= Config options explanation here[/size][/color][/b]\n<br />[b]\n<br />[/b][color=#f1c232][size=4][b]- 'OpenMenuKeybind'[/b]\n<br />[/size][/color][size=3][color=#f4f4f4]   \uFEFFDetermines via which keybind will you open the mod's bestiary menu. Default value is [b]'LeftShift + LeftControl + B'[/b][/color][/size][color=#f1c232][size=4]\n<br />[b]\n<br />- 'WayToGetNotebook'[/b]\n<br />[/size][/color][size=3][color=#f4f4f4]   \uFEFFDetermines how you want your Creaturebook item to be given. Valid values are '[b]Letter[/b]', '[b]Inventory[/b]' and '[b]Events[/b]'.\n<br />   \uFEFF- [b]Events[/b]: Gets you to obtain it via events.[/color]\n<br />[/size]\uFEFF   \uFEFF[size=3]- [b]Letter[/b]: Gets you to obtain it via mail.[/size][size=3]\n<br />   \uFEFF\uFEFF- [b]Inventory[/b]: Directly spawns it into your inventory\n<br />\n<br />[color=#f1c232][size=4][b]- 'ShowScientificNames'[/b]\n<br />[/size][/color][size=3][color=#f4f4f4]   \uFEFFDetermines if you want the menu to display creatures' scientific names when they're discovered. \n<br />   \uFEFFValid values are '[b]true[/b]' and '[b]false[/b]'.   \uFEFF\n<br />   \uFEFF\uFEFF- [b]true[/b]: Enables scientific names[/color]\n<br />[/size]\uFEFF   \uFEFF[size=3]- [b]false[/b]: Disables scientific names[/size][/size]\n<br />\n<br />[color=#f1c232][size=4][b]- 'ShowDiscoveryDates'[/b]\n<br />[/size][/color][size=3][color=#f4f4f4]   \uFEFFDetermines\u00A0if you want the menu to display dates when creatures are discovered, once they're discovered.\n<br />   [/color][/size][size=3][color=#f4f4f4]Valid values are '[b]true[/b]' and '[b]false[/b]'.   \uFEFF\n<br />   \uFEFF\uFEFF- [b]true[/b]: Enables displaying dates[/color]\n<br />[/size]\uFEFF   \uFEFF[size=3]- [b]false[/b]: Disables displaying dates[/size]\n<br />\n<br />[color=#00ffff][size=6][b]= Possible f-a-q for mod users here[/b][/size][/color]\n<br />\n<br />[color=#f1c232][b][size=4]-[/size]\u00A0[size=4]Information &amp;\u00A0[/size][size=4]Mod Usage [/size][/b][/color]\n<br />   [color=#f4f4f4][size=3][b]What even is this... 'Creaturebook'?[/b]\n<br />   \uFEFF\uFEFFCreaturebook is a framework mod that allows content packs to add their creatures' pages for information, and allows said    \uFEFF   \uFEFFcreatures to be \uFEFF\uFEFFdiscovered by the player. So yeah, it's sort of a bestiary mod. Since the mod is a framework, don't expect it to do    \uFEFF\uFEFFso much without content packs. \uFEFFView mod images to see how does a player discover a creature and see info about it.\n<br />\n<br />   \uFEFF[b]How do I obtain Creaturebook item?\n<br />[/b]   \uFEFFThat depends on what your `WayToGetNotebookItem` config is set to. It's valid values are `Letter`, `Inventory` and `Events`. \n<br />   \uFEFFSee config \uFEFFvalues section above.\n<br />\n<br />   \uFEFF[b]How do I discover a creature?[/b]\n<br />[b]   \uFEFF\uFEFF[/b]There are three ways:\n<br />   \uFEFF1) One is via clicking a tile (with the Creaturebook item in hand) that's set to get you to discover a creature \uFEFFinstantly (Note that \uFEFF   \uFEFFthis feature is completely untested). \n<br />   \uFEFF2) The primary way is clicking to anything that has got a page \uFEFFin Creaturebook and that's coded \uFEFFinto the game as an NPC    \uFEFF(So yes, using Custom Companions will work, fellow authors.) with \uFEFF\uFEFFCreaturebook item in hand. \n<br />   \uFEFF3)\u00A0The third is attaching an item\n<br />\n<br />   \uFEFF[b]How do I see information about creatures?[/b]\n<br />   \uFEFFFirst, you need to have discovered what creature you want to see. If you already have, use the mod's menu opening keybind    \uFEFF   \uFEFFwhile no other menu \uFEFFis open. You can find it in your config.json, or install Generic Mod Config Menu to easily change it.\n<br />   \uFEFFThe default keybind is [b]`LeftControl + LeftShift + B`[/b].\n<br />   \uFEFF\n<br />   \uFEFF[b]There's this button on the mod's menu at the right side of this right arrow button, what is it?[/b][/size][/color][b]\n<br />[/b]   \uFEFF\uFEFF[size=3]It's a button to open the menu's search box. Type one of a creature's ID, translated name or scientific name, press enter and the    \uFEFF\uFEFFcorrect page \uFEFF\uFEFF\uFEFFshall show up. View mod images to visually see how is it used.[/size]\n<br />\n<br />[b][color=#f1c232][size=4]-[/size][size=4] Installation\u00A0[/size][/color][/b]\n<br />   [color=#f4f4f4][size=3][b]How to install?[/b]\n<br />[/size]   [size=3]Just like any other mod. Drop into anywhere in Mods folder.[/size]\n<br />\n<br />   [size=3][b]Dependencies\n<br />   \uFEFF[/b]\uFEFFThe only necessary requirements are SMAPI and SpaceCore. Content Patcher and Generic Mod Config Menu are optional    \uFEFFdependencies.\uFEFF[/size][/color]\n<br />\n<br />[color=#f1c232][size=4][b]- Compatibility\u00A0[/b][/size][/color]\n<br />   \uFEFF\uFEFF[size=3][b]SVE/RSV/Any other known mod[/b]\n<br />   \uFEFFDon't you dare not using your logic for such an annoying question. But yes.\n<br />[/size]   [size=3]\n<br />   \uFEFF\uFEFF[b]Any known conflicting mods?\n<br />   \uFEFF[/b]None. Hooray!~\n<br />\uFEFF\n<br />[/size]   [size=3][b]\uFEFFMultiplayer\n<br />[/b]   \uFEFFIt should be compatible, but it is untested\n<br />\n<br />[/size]   [size=3]\uFEFF[b]Split-screen\n<br />   \uFEFF[/b]I don't know, but I don't think so.\n<br />\n<br />   [b]Gamepad/Controller[/b]\uFEFF\n<br />   \uFEFFIt does have compatibility code! (When I feel like it, I will make a scheme for what button does what in mod menu.)\n<br />\n<br />[/size]   [size=3][b]\uFEFFLinux/Mac/Android\n<br />   \uFEFF[/b]I believe it is compatible with Linux and Mac, but this is untested. As for Android, unfortunately no, and won't be unless \n<br />   \uFEFFsomeone else volunteers \uFEFF\uFEFFto port it.\n<br />\n<br />[/size]   [size=3]\uFEFF[b]Harmony (In other words 'does this mod change the game code?')\n<br />   (\uFEFFThis matters because if done wrongly, could break the game or other mods)\n<br />   \uFEFF[/b]No. And it never will unless needed.[/size]\n<br />\n<br />[color=#f1c232][size=4][b]- Issues, Suggestions &amp; Reaching Out[/b][/size][/color]\n<br />   [size=3][b]Any known bugs?\n<br />   \uFEFF[/b]There might be visual glitches with sets-only paging, and there are issues with obtaining-via-Events and obtaining-via-Mail for\n<br />   \uFEFFthe notebook tool. For a temporary solution, see right below of this message.\n<br />[b]   \uFEFF[/b]\n<br />   \uFEFF[b]Hey! I can't make the notebook work on creatures since the last update, and I can't get a new one either :([/b]\n<br />   Enter ``cb_instantTool`` to the SMAPI console and press enter. You'll get a new one instantly and it should be categorized as a    \uFEFFTool. From now on, use that instead and put the old one to trash if you can.\n<br />\n<br />[b]   \uFEFFIs reporting bugs okay?[/b]\n<br />   \uFEFFYes. Absolutely, author would love to have her first true bug report ever, and she is bored from finding her bugs on her own.    \uFEFF   \uFEFFThough make sure \uFEFFyou upload your log to\u00A0[url=https://smapi.io/log]https://smapi.io/log[/url]\uFEFF\u00A0before reporting, and include the log with your report.\n<br />\n<br />[/size]   [size=3][b]\uFEFFIs giving suggestions okay?[/b]\n<br />[/size]   [size=3]\uFEFF\uFEFFYes! The author would love to hear what people want to see in the mod. Though keep in mind that not every single suggestion    \uFEFF\uFEFF\uFEFFwould be implemented. \uFEFFThat will depend on if she agrees with it, if it is doable, and if her coding skill is sufficient for it.\n<br />\n<br />   \uFEFF[b]How can I contact the author?\n<br />[/b][/size]   \uFEFF[size=3]Your fastest bet is by Discord. You can find me in most modding servers or main SDV server. (As an unrelated note )[/size]\n<br />\n<br />[color=#f1c232][size=4][b]- Content packs &amp; Translations\n<br />[/b][/size][/color]   \uFEFF[size=3]To find content packs, check this mod's Requirements section.\n<br />\n<br />   \uFEFF\uFEFFIf you want to [i][b]make [/b][/i]content packs, see this GitHub page for\u00A0[url=https://github.com/KediDili/Creaturebook/blob/main/documentation.md]content pack documentation[/url]\n<br />   \uFEFF\n<br />[/size]   [size=3]\uFEFFIf you want to do translations for this mod or for content packs, see this GitHub page for\u00A0[url=https://github.com/KediDili/Creaturebook/blob/main/translation.md]translation documentation[/url]\n<br />   \uFEFFThe mod already has Turkish translation made by myself, I know I wrote there'd be Portuguese before but I have lost the file and    \uFEFFthe translator as well has deleted it.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13807",
+	"Version": "1.1.0",
+	"Updated": "2022-10-30T07:49:37+00:00",
+	"Downloads": [
+		{
+			"Id": 62132,
+			"Type": "Main",
+			"DisplayName": "Creaturebook",
+			"FileName": "Creaturebook-13807-1-1-0-1667116177.zip",
+			"Description": "All content packs will need to update for this version, changes will be documented.",
+			"Version": "1.1.0",
+			"SizeInBytes": 52030,
+			"Uploaded": "2022-10-30T07:49:37+00:00",
+			"Mods": [
+				{
+					"Id": "KediDili.Creaturebook",
+					"DisplayName": "Creaturebook",
+					"Type": "Smapi",
+					"RelativePath": "Creaturebook",
+					"Manifest": {
+						"Name": "Creaturebook",
+						"Description": "A framework that allows the player to have a notebook that includes info on various creatures.",
+						"Author": "KediDili",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "Creaturebook.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"ModDrop:???"
+						],
+						"UniqueId": "KediDili.Creaturebook"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448820,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400495,
+		"UploaderId": 108727003,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

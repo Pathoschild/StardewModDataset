@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 28750,
+	"Name": "Restauranteer - Continued",
+	"Author": "CyanFire",
+	"AuthorLabel": "aedenthorn",
+	"Description": "This is a continuation of [url=https://www.nexusmods.com/stardewvalley/mods/14519]Restauranteer[/url] by aedenthorn\n<br />\n<br />\n<br />This mod implements simple restaurant gameplay in Stardew Valley, once you become friends with Gus, the bartender at the Stardrop Saloon.\n<br />\n<br />At the end of Gus' five heart event, he will mention that they could use \n<br />another chef. From then on, you can go to the saloon any time and access\n<br /> the new stove.\u00A0\n<br />\n<br />When patrons enter the saloon, they will randomly express their meal requests in speech bubbles over their heads.\n<br /> The bubble contains an image of the dish they want.\u00A0By default there is\n<br /> a 70% chance they will request something they love, and a 15% chance \n<br />they will request something they like or a 15% of something neutral. \n<br />\n<br />If you hold down the mod key (default [b]Left Alt[/b]), it will show a speech bubble with the name of the dish instead of the image.\n<br />\n<br />By default, the cooking menu automagically contains all the ingredients \n<br />needed to make whatever orders are currently being requested.\n<br />\n<br />When you deliver a dish to a patron, you will by default receive 40 \n<br />friendship points for loved dishes and 20 friendship points for liked \n<br />dishes, the price of the dish in coins, and knowledge that the patron \n<br />likes or loves that dish. They will also say one of three random \n<br />reactions to the dish.\n<br />\n<br />By default, patrons will request a maximum of two dishes per day.\n<br />\n<br />This mod does not change NPC schedules; you can only serve people who come to the saloon of their own free will.\n<br />\n<br />Lots of things are customizable in the mod via GMCM or the config.json file.\n<br />\n<br />\n<br />[b][size=5]Custom Reaction Strings[/size][/b]\n<br />\n<br />You can add custom reaction strings to NPC dialogue dictionaries using Content Patcher. Keys are:\n<br />\n<br />[b]RestauranteerMod-Loved-1[/b]\n<br />[b]RestauranteerMod-Liked-1\n<br />[/b][b]RestauranteerMod-Neutral-1[/b]\n<br />\n<br />You can add multiple strings to be chosen at random by adding [b]-2[/b], [b]-3[/b], etc. keys.\n<br />\n<br />\n<br />[b][size=5]Custom Saloon Maps[/size][/b]\n<br />\n<br />You can prevent the mod from automatically patching the saloon map in the config. \n<br />\n<br />To set a buildings tile as a stove, add a tile location to KitchenTiles in the config, e.g.:\n<br />\n<br />[b]\"KitchenTiles\": [{\"X\":5, \"Y\":5}],[/b][b]\n<br />\n<br />[/b]You can also create a custom map patch and add the tile property \"[b]aedenthorn.Restauranteer_kitchen[/b]\" to the tile on the Buildings layer.\n<br />\n<br />\n<br />[b][size=5]Custom Restaurant Locations[/size][/b]\n<br />\n<br />You can also designate another location to be a restaurant, giving access \n<br />to cooking and causing NPCs to express desired dishes, by adding the \n<br />location name to the config list\u00A0[b]RestaurantLocations[/b]. You will have to modify the map properties yourself if you want to add kitchen tiles.\n<br />\n<br />\n<br />[b][size=5]Translations[/size][/b]\n<br />\n<br />Thank you to everyone for your translations! You can send me translations in a private message or on Discord.\n<br />\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can customize this mod by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[code]\"\uFEFFRequire Event for Saloon\": If enabled, requires the player to have seen Gus' 5 Hearts event before being able to use the Saloon kitchen.\n<br />\n<br />\"Auto Fill Fridge\": If enabled, auto fills Saloon/custom restaurant locations fridge/mini-fridge with ingredients from requested dishes.\n<br />\n<br />\"Add Fridge Objects\": If enabled, adds fridge to Saloon/custom restaurant locations to specified tile in map file.\n<br />\n<br />\"Sell Current Recipes\": If enabled, adds unowned recipes for requested dishes to Gus' shop to purchase.\n<br />\n<br />\"Patch Saloon Map\": If enabled, patches the Saloon map to add the kitchen.\n<br />\n<br />\"Show Dish Name Key\": Sets the key to display the dish name instead of the image when held down.\n<br />\n<br />\"Reset Ingredients Keybind\": Sets the keybind to refresh ingredients in the fridge/mini-fridge for active orders. Useful if a recipe consumes an ingredient which then blocks the player from cooking another dish which uses the same ingredient, due to the order of the ingredients in the fridge/mini-fridge.\n<br />\n<br />\"Order Chance\": Sets the global chance percentage for an NPC to request a dish.\n<br />\n<br />\"Loved Dish Order Chance\": Sets the global chance percentage for an NPC to request a loved dish over a liked/netural one.\n<br />\n<br />\"Price Multiplier\": Sets the value which each dish price is multiplied by to create the amount the player is paid for each fulfilled order.\n<br />\n<br />\"Max NPC Orders Per Night\": Sets the maximum number of orders an NPC can request in one night.\n<br />\n<br />\"Loved Friendship Change\": Sets the amount of friendship points given for a fulfilled loved order.\n<br />\n<br />\"Liked Friendship Change\": Sets the amount of friendship points given for a fulfilled liked order.\n<br />[/code]\n<br />\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/CyanFireUK/StardewValleyMods]https://github.com/CyanFireUK/StardewValleyMods[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28750",
+	"Version": "1.0.18",
+	"Updated": "2025-01-11T01:24:16+00:00",
+	"Downloads": [
+		{
+			"Id": 121869,
+			"Type": "Main",
+			"DisplayName": "Restauranteer - Continued",
+			"FileName": "Restauranteer - Continued-28750-1-0-19-1736558656.zip",
+			"Description": "Tried to delay patching of saloon map to hopefully fix issues with fridge not appearing for some players",
+			"Version": "1.0.19",
+			"SizeInBytes": 41696,
+			"Uploaded": "2025-01-11T01:24:16+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.Restauranteer",
+					"DisplayName": "Restauranteer",
+					"Type": "Smapi",
+					"RelativePath": "Restauranteer",
+					"Manifest": {
+						"Name": "Restauranteer",
+						"Description": "Restauranteer.",
+						"Author": "aedenthorn & CyanFire",
+						"Version": "1.0.19",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Restauranteer.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28750"
+						],
+						"UniqueId": "aedenthorn.Restauranteer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342508557,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342415438,
+		"UploaderId": 3490737,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,137 @@
+{
+	"Site": "ModDrop",
+	"Id": 1521423,
+	"Name": "Normalize AI for Inworld AI Mod",
+	"Author": "Platonymous",
+	"TagLine": "Better integrates Inworld's AI Mod and adds content pack support.\nImportant: Made for the Stardew Valley 1.6 alpha, experimental version for 1.5.6 available. (0.9.0)!",
+	"Description": "# Normalize AI\n\nby Platonymous\n\n\n---\nAI DIalogues are shown with a Dialoguebox.\nGenerates Random Dialogue so you can talk to an NPC forever without using chat.\nAdds contentpack support for adding or altering Brains.\n**Important: Made for the Stardew Valley 1.6 alpha, experimental version for 1.5.6 available in optional files. (0.9.0)!**\n![](https://imgur.com/T5Eybda.png)\nThe mod on it's own does nothing.\nWith [Inworld's AI Villagers](https://www.nexusmods.com/stardewvalley/mods/16816?tab=description)  installed, it alters the mod in the following ways:\n\nAI Dialogue is shown in a Dialoguebox not a speech-bubble or in chat.\nYou can continueously talk to an NPC and a new random dialouge will be created,\nthis way you can have the AI powered dialogues without having to use the chat.\n(chat prompts still work if you want specific dialogue)\n\n_1.1.0-alpha fixes some bugs and adds a way to initiate Dialogue from a specific prompt:_\nIn Events you can use the command **NAI_Prompt** followed by the name of the npc, followed by your prompt to initiate an AI dialogue.\n(which could be a question you want the NPC to answer or a statement you want them to make)\nExample: ``\nFor Dialogues from the dictionary you can write **NAI_Prompt:** followed by your prompt instead of specific dialogue, when injecting dialogue to an NPC.\nExample:\n``\n\n__Inworld is buid on OpenAI's GPT-3, so you can engeneer your prompt beyond just initiating a normal chat.__\n\n(1.2.0-alpha/1.3.0-alpha)\nAdded auto translation for different languages\n<s>not for chat prompted dialogue(</s>1.3.0-aplha), does not work in all languages\nprompts for NAI_Prompt dialogue still need to be written in english.\n1.3.0-alpha also gives the ai more context for their responses\n\nAdditionally the mod can be targeted by contentpacks to add or alter brains without manual edits required by the player.\nThe contentpacks need to include a manifest.json and a config.json\n\nExample: [/center]manifest.json\n``\nconfig.json\n``![](https://imgur.com/b8d5H2A.png)\nIf you have any questions or feature requests you can usually find me on the [Stardew Valley Discord](https://stardewvalleywiki.com/Modding:Community#Discord)  under the username **Routine**#8715\n![](https://imgur.com/u7Unylz.png)\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1521423",
+	"Version": null,
+	"Updated": "2024-03-04T18:54:19.227+00:00",
+	"Downloads": [
+		{
+			"Id": 1541545,
+			"Type": "Optional",
+			"DisplayName": "Normalize AI",
+			"FileName": "Normalize AI.zip",
+			"Description": "For Stardew Valley 1.6 only.",
+			"Version": "1.3.2-alpha",
+			"SizeInBytes": 20535,
+			"Uploaded": "2024-03-04T18:54:16.212+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.NormalizeAI",
+					"DisplayName": "NormalizeAI",
+					"Type": "Smapi",
+					"RelativePath": "NormalizeAI",
+					"Manifest": {
+						"Name": "NormalizeAI",
+						"Description": "Make AI Villages more vanilla friendly",
+						"Author": "Platonymous",
+						"Version": "1.3.2-alpha.20240219",
+						"MinimumApiVersion": "4.0.0-alpha",
+						"EntryDll": "NormalizeAI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PogDerson.Inworld",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19334"
+						],
+						"UniqueId": "Platonymous.NormalizeAI"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "06d1083ee6250ed266c3e084e95e9aae",
+				"md5In": "7732d749dbca4432e103e9c15c25ef75",
+				"scriptType": 0,
+				"sha256Ex": "629ed4d5f1a9b16f7db6bd134378d5ac4a1a6a4d920bf3b63c188e9b4e957f40",
+				"sha256In": "d4b2aab5e435f38517b0e7a8370659093ea5b71a7b5d6cb4cd4167fb522abd8a"
+			}
+		},
+		{
+			"Id": 1541546,
+			"Type": "Optional",
+			"DisplayName": "Normalize AI",
+			"FileName": "Normalize AI.zip",
+			"Description": "Experimental version for 1.5.6.\nNo Event support.",
+			"Version": "0.9.0",
+			"SizeInBytes": 19862,
+			"Uploaded": "2024-03-04T18:54:16.274+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.NormalizeAI",
+					"DisplayName": "NormalizeAI",
+					"Type": "Smapi",
+					"RelativePath": "NormalizeAI",
+					"Manifest": {
+						"Name": "NormalizeAI",
+						"Description": "Make AI Villages more vanilla friendly",
+						"Author": "Platonymous",
+						"Version": "0.9.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "NormalizeAI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PogDerson.Inworld",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19334"
+						],
+						"UniqueId": "Platonymous.NormalizeAI"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "53fd95159b98da0482cb8dd2382d7bbc",
+				"md5In": "23a36c6dac51eb6e82d85f5ab17b7e83",
+				"scriptType": 0,
+				"sha256Ex": "aaf008912528f610bcf3d1c9efd06d27cf9506e9a00626af1b90a1b7f749b610",
+				"sha256In": "0bd969b97b87d69ac10eedf14721795df002a773303949679943c3cce0a34600"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1709578459227,
+		"DateUpdated": 1709578456027,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1709578456027,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1521423/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1521423/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1521423/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1521423/icon_original"
+		},
+		"nexusModID": 19334,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

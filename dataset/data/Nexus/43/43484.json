@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 43484,
+	"Name": "Befriend the Crows",
+	"Author": "Huskyn1nja",
+	"Description": "Science has compared crows to be of equal intelligence as a 5 to 7 year old child. So instead of fighting them and having an antagonistic relationship with them, why not put in the work to befriend them and see what happens?!\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/13610770-1759332435.png[/img]\n<br />\n<br />• A new buildable structure from Robin. The Crow Feeder. Use this to leave offerings to the crows.\n<br />   \uFEFF- There is no in game indicator for befriending the crows, but you'll know. Crow rewards start small, like less likely to eat your crops. But eventually, they may start bringing you presents back in return!\n<br />\n<br />• Ignore the crows too long, and they may forget how much they like you....\n<br />\n<br />• Easy setup for modders to add / change compatibilty with other mods' crops or add new skins / themes (see notes below)\n<br />\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/13610770-1759332579.png[/img]\n<br />\n<br />There are no known conflicts, currently only Vanilla crops and seeds are accepted by the crows.\n<br />\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/13610770-1759332629.png[/img]\n<br />\n<br />[list]\n<br />[*]Install the latest version of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url].\n<br />[*]Unzip this mod's folder into your\u00A0Stardew Valley/Mods\u00A0folder.\n<br />[*]Run the game using SMAPI\n<br />[/list][img]https://staticdelivery.nexusmods.com/images/1303/13610770-1759332703.png[/img]\n<br />\n<br />[list]\n<br />[*]There are too many different themes and crops for me to account for all of them at release, so I have made it easy for modders to customize or add-in what they want.\n<br />[/list]To add food / seeds for the crows:\n<br />\n<br />Example\n<br />[Spoiler]\n<br />{\n<br />\u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Huskyn1nja.KindredCrows/Diet\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Loved\": [ \"CustomItem_ShinyPebble\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Liked\": [ \"CustomItem_SlightlyLessShinyPebble\" ]\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}\n<br />[/Spoiler]\n<br />\n<br />To add items that the crows can leave as rewards (note that \"MinPoints\" is the minimum number of friendship points needed for that item to be in the loot pool:\n<br />\n<br />[Spoiler]\n<br />{\n<br />\u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Huskyn1nja.KindredCrows/Loot\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"MyDrop1\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemId\": \"MyCoolThing\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MinPoints\": 2000\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"MyDrop2\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemId\": \"MyCoolThing2\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MinPoints\": 1500\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}\n<br />[/Spoiler]\n<br />Lastly, to add custom themes / skins to Kindred Crows (since people love themselves an aesthetic)\n<br />\n<br />[Spoiler]\n<br />{\n<br />\u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Huskyn1nja.KindredCrows/Themes\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Gothic\": \"Mods/&lt;mod id&gt;/SpookyFeeder\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}\n<br />[/Spoiler]\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/images/1303/13610770-1759332750.png[/img][list]\n<br />[*]Description separators made via\u00A0https://www.kdau.com/scrollish/\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43484",
+	"Version": "1.0",
+	"Updated": "2026-03-10T21:34:57+00:00",
+	"Downloads": [
+		{
+			"Id": 159900,
+			"Type": "Main",
+			"DisplayName": "Kindred Crows",
+			"FileName": "Kindred Crows-43484-1-0-1773178497.zip",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 24096,
+			"Uploaded": "2026-03-10T21:34:57+00:00",
+			"Mods": [
+				{
+					"Id": "Huskyn1nja.KindredCrows",
+					"DisplayName": "Kindred Crows",
+					"Type": "Smapi",
+					"RelativePath": "Kindred Crows",
+					"Manifest": {
+						"Name": "Kindred Crows",
+						"Description": "Don't fight the crows. Make them your friends. They give you shiny things.",
+						"Author": "Huskyn1nja",
+						"Version": "1.0.0",
+						"EntryDll": "KindredCrows.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:43484"
+						],
+						"UniqueId": "Huskyn1nja.KindredCrows"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342546588,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430172,
+		"UploaderId": 13610770,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

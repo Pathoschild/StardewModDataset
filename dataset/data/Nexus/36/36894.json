@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 36894,
+	"Name": "Streamlined Item Quality",
+	"Author": "drgeppo",
+	"Description": "This mod aims to streamline the amount of quality items you collect in the game, while trying to not completely change or overhaul the game balance.\n<br />The prime motivation is that I was very annoyed at picking up forageables or shells and very quickly running out of the inventory space because of all the\u00A0different qualities ANY item can have.\n<br />\n<br />[b]What does it do?[/b][list]\n<br />[*][b]Artisan goods[/b]\u00A0and [b]Cooked Dishes [/b]are not impacted by this mod and [b]always retain their quality[/b]\n<br />[*][b]Silver quality[/b] items are [b]always downgraded[/b] to Regular quality\n<br />[*][b]Gold quality [/b]items are [b]retained by default[/b], but you can set what item categories should or should not be downgraded via the Mod Config Menu, with the possibility to set a minimum price threshold (it's annoying when a \"gold quality\" item occupies a precious new inventory slot but sells for very little and could just as well stack with its lower quality counterpart!)\n<br />[*][b]Iridium quality[/b] items [b]are downgraded [/b]to Regular quality, [b]but are doubled in quantity[/b].\u00A0\uFEFFThis will ease inventory management while letting you keep the same profit when selling the items outright. It also gives you the chance to process double the artisan goods\n<br />[/list]\n<br />To make it short: by default you will now only deal with regular and gold quality items, while not losing on the profit gained from iridium quality items.\n<br />\n<br />Anyway, Iridium quality reduction to double items can be disabled via the Mod Config Menu. When the option is [b]unchecked [/b]the category and price filters will still determine whether the item will maintain its Iridium quality or be downgraded to a [b]single[/b] regular item (just like downgraded Gold quality items).\n<br />\n<br />[b]Installation[/b]\n<br />[list]\n<br />[*]Download and install [url=https://smapi.io/]SMAPI[/url]\uFEFF\n<br />[*]Download the mod zip\n<br />[*]Drop this mod into the Mods folder\n<br />[/list][b]\n<br />Existing saves[/b]\n<br />All items are impacted by this mod only AFTER being moved to the player inventory, so you can try this mod or the various settings without the worry to downgrade anything valuable stored in your chests.\n<br />\n<br />Also, because of this you should always keep an inventory slot open to be able to pick up items, before they are downgraded and added to an existing stack.\n<br />\n<br />[b]Inspiration\n<br />[/b]This mod is inspired and forked from [url=https://www.nexusmods.com/stardewvalley/mods/5090?tab=description]Regular Quality[/url]\uFEFF, but contrary to the original mod this version DOES NOT change any of the required items in the bundles when starting a new save file.\n<br />\n<br />I do not think it is necessary since you can fine tune what Gold or Iridium quality items you are able to get, but I am not an expert player so feedback is appreciated.\n<br />\n<br />This is my first time modding the game and I am quite satisfied with the result, please be kind if you have any complaints :)\n<br />\n<br />Source code available on [url=https://github.com/mttdr/sdv-streamlined-quality]Github[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36894",
+	"Version": "1.1.0",
+	"Updated": "2026-03-08T15:59:18+00:00",
+	"Downloads": [
+		{
+			"Id": 159565,
+			"Type": "Main",
+			"DisplayName": "Streamlined Item Quality",
+			"FileName": "Streamlined Item Quality-36894-1-1-0-1772985558.zip",
+			"Description": "BUGFIX:\n<br />\n<br />I found out the logic I was using to duplicate iridium quality into regular objects caused some serious slow downs in multiplayer.\n<br />This new implementation should work flawlessly now!",
+			"Version": "1.1.0",
+			"SizeInBytes": 18732,
+			"Uploaded": "2026-03-08T15:59:18+00:00",
+			"Mods": [
+				{
+					"Id": "drgeppo.StreamlinedQuality",
+					"DisplayName": "Streamlined Item Quality",
+					"Type": "Smapi",
+					"RelativePath": "StreamlinedQuality",
+					"Manifest": {
+						"Name": "Streamlined Item Quality",
+						"Description": "Drop the quality of most items to ease inventory management.",
+						"Author": "drgeppo",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StreamlinedQuality.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:36894"
+						],
+						"UniqueId": "drgeppo.StreamlinedQuality"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342546253,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423582,
+		"UploaderId": 242699267,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

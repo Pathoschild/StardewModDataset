@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 2163,
+	"Name": "Scroll To Zoom",
+	"Author": "Tomwa",
+	"Description": "Scrolling in using the in-game UI buttons can be incredibly tedious, why shouldn't the scrolling work just like in your browser?\n<br />\n<br />Well, now it does!\n<br />\n<br />1. Extract to your[b] Stardew Valley&#92;Mods [/b]folder.\n<br />2. Change the provided [b]config.json[/b] file with your desired options.\n<br />\n<br />Sample Config:\n<br />[code]{\n<br />\u00A0 \"ModifierKey\": \"LeftControl\",\n<br />\u00A0 \"MinZoom\": 0.85,\n<br />\u00A0 \"MaxZoom\": 2.25,\n<br />\u00A0 \"ZoomIncrement\": 0.05,\n<br />\u00A0 \"SuppressModifierButton\": true\n<br />}\n<br />[/code]\n<br />[b]Note: [/b]Due to the fact that the game doesn't handle menu resizing well zoom is disabled when menus such as Chests, Bundles, etc. are open. This fix is necessary to prevent odd behavior such as duplicating UI elements. The game resizes the option menu (when changing zoom using the buttons) by spawning a new instance of the menu after zooming however\u00A0 this is untenable for the sheer number of other menus with the APIs limited access to the game.\n<br />\n<br />[b]Additional Note: [/b]Stardew Valley 1.3+ (Multiplayer Beta) is required for this mod to function.\n<br />\n<br />[size=4][b]Options:[/b]\n<br />[/size]\n<br />[b]Modifier Key:[/b] The key which must be held in order for scroll to adjust the zoom. All available Key Names can be found[b] [url=http://https://stardewvalleywiki.com/Modding:Key_bindings]Here[/url][/b].\n<br />[b]MinZoom: [/b]The minimum zoom as a percentage, 1.0 represents normal zoom (100%), note that very small values don't behave well and values below zero will cause the game to crash. \n<br />[b]MaxZoom:\u00A0[/b]The maximum zoom as a percentage, 1.25 represents normal zoom (100%), note that very large values don't behave well as they will cause elements to overlap.\n<br />[b]ZoomIncrement: [/b]The amount to increment&#92;decrement the zoom with each scroll will tick. I.E. Scrolling up with ZoomIncrement of 0.05 will increase zoom by 5%.\n<br />[b]SupressModifierButton: [/b]When using a button that is bound to some other action (ideally something you don't want it to do) it is ideal to prevent that action from happening. This essentially says \"I don't want the button I chose as the modifier key to do anything other than act as a modifier key\".\n<br />[b]FunctionalityLevel: [/b]Many UIs in the game do not respond well to scaling while they're open (I'm fairly certain this is why there's no Zoom key bind in game and why the buttons are disabled with such UIs open), many of these I have made more functional but if jumping cursors and such don't bother you then you can enable some or all UIs. \n<br />\n<br />[b]There are three levels of functionality:[/b]\n<br />\n<br />[b]Level 3 Fully Functional -[/b] UI Should work almost perfectly\n<br />ShopMenu\n<br />Billboard\n<br />GameMenu\n<br />CarpenterMenu\n<br />LetterViewMenu\n<br />LevelUpMenu\n<br />\n<br />[b]Level 2 Mostly Functional - [/b]UI may jump around or cursor may get moved, minor to moderate annoyances\n<br />TitleMenu\n<br />- Mouse jumps on zoom.\n<br />DialogBox\n<br />- Mouse jumps on zoom.\n<br />MineElevatorMenu\n<br />LoadGameMenu\n<br />- Zooming causes cursor to jump off screen.\n<br />CoopMenu \n<br />- Zooming causes cursor to jump off screen\n<br />GeodeMenu \n<br />- Mouse jumps on zoom.\n<br />MuseumMenu \n<br />- Window flicks back from the corner on zoom.\n<br />PurchaseAnimalsMenu \n<br />- Mouse jumps on zoom.\n<br />QuestLog \n<br />- Mouse jumps on zoom.\n<br />\n<br />[b]Level 1 Not Functional - [/b]UI is utterly broken.\n<br />ItemGrabMenu (Chests, Shipping Box, etc.) \n<br />- Elements shift around on zoom.\n<br />AboutMenu\n<br />- Elements shift on zoom.\n<br />JunimoNoteMenu (Bundles)\n<br />- X button doesn't adjust position on zoom. \n<br />- Secondary screens after selecting Bundles have horrible duplication issues.\n<br />- Secondary screens don't fire MenuChanged events and therefore cannot be handled at all.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2163",
+	"Version": "1.6",
+	"Updated": "2021-01-17T01:22:52+00:00",
+	"Downloads": [
+		{
+			"Id": 35827,
+			"Type": "Main",
+			"DisplayName": "Scroll To Zoom",
+			"FileName": "Scroll To Zoom-2163-2-1-1610846572.zip",
+			"Description": "",
+			"Version": "2.1",
+			"SizeInBytes": 7493,
+			"Uploaded": "2021-01-17T01:22:52+00:00",
+			"Mods": [
+				{
+					"Id": "Tomwa.ScrollToZoom",
+					"DisplayName": "ScrollToZoom",
+					"Type": "Smapi",
+					"RelativePath": "ScrollToZoom",
+					"Manifest": {
+						"Name": "ScrollToZoom",
+						"Description": "Allows you to scroll in and out using your mouse wheel and a modifier key",
+						"Author": "Tomwa",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ScrollToZoom.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2163"
+						],
+						"UniqueId": "Tomwa.ScrollToZoom"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342422515,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388851,
+		"UploaderId": 2594523,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

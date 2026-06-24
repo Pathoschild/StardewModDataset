@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 7920,
+	"Name": "Deluxe Grabber Redux",
+	"Author": "igrek312",
+	"AuthorLabel": "ferdaber",
+	"Description": "A Stardew Valley mod - spiritual successor of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2462]Deluxe Grabber[/url].\n<br />\n<br />This mod beefs up your Auto Grabber so it can do more things than just collect animal produce:\n<br />[list]\n<br />[*]Harvest slime balls from the slime hutch.\n<br />[*]Harvest mushrooms from your farm cave.\n<br />[*]Harvest crops in your farm (as well as from indoor pots), with a configurable range for game balance.\n<br />[*]Forage items throughout town.\n<br />[*]Dig up artifact spots throughout town.\n<br />[*]Collect ores from ore pan sites through town.\n<br />[*]Search through garbage cans in town.\n<br />[*]Chop down hardwood stumps in the Secret Woods.\n<br />[*]Harvest berries from bushes.\n<br />[*]Harvest fruits from fruit trees.\n<br />[*]Shake down seeds from seed trees.\n<br />[/list]\n<br />All of these options are configurable. To use this mod, just place an Auto-Grabber on a specific map, and the Auto-Grabber will do all of the above applicable things in that map. If you place one in the Secret Woods, it will forage all items that spawn at the beginning of the day, and chop down the stumps for you. If you place one outdoors in your farm, it will harvest your crops, harvest fruits from fruit trees, etc.\n<br />\n<br />Currently unsupported features:\n<br />[list]\n<br />[*]Global harvesting (beta support). The previous mod allowed a single auto grabber to perform harvesting for every map in the game. In my version, an auto grabber only covers the map that it was placed in (not including building interiors) for game balance purposes. If there is enough demand I can work on adding this in a future update.\n<br />[*]Harvesting Golden Walnuts in Ginger Island. These add very specific collection stats to the game that has more complex logic. Will add in a future update.\n<br />[*]Harvesting artifact spots in Ginger Island. There are additional items that you can get from digging up artifact spots in Ginger Island. Currently this will not work as intended (it will still dig up artifact spots, but will not roll for those additional items).\n<br />[*]Harvesting giant crops. This can be added in a future update if there is enough demand.\n<br />[*]Adding to game stats. Some manual actions that your player does (like chopping wood or digging up artifact spots) adds to a specific hidden counter in the game for achievement tracking purposes. Using this mod to have the auto grabbers perform those actions for you will currently not update the game stats.\n<br />[/list]\n<br />This mod is compatible with the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0to customize settings. Otherwise you can change your config.json on your own.\n<br />\n<br />Available settings (edit inside config.json):\n<br />[list]\n<br />[*][b]slimeHutch:\u00A0[/b]boolean (default: [i]true[/i])\u00A0- Enable/disable harvesting slime balls from slime hutches.\n<br />[*][b]farmCaveMushrooms[/b]: boolean (default: [i]true[/i]) - Enable/disable harvesting from mushroom boxes inside the farm cave.\n<br />[*][b]harvestCrops[/b]: boolean (default: [i]false[/i]) - Enable/disable harvesting crops. Note that disabling this will automatically cause the mod to also disable the following: [b]flowers[/b], [b]harvestCropsIndoorPots[/b], [b]harvestCropsRange[/b].\n<br />[*][b]flowers[/b]: boolean (default: [i]false[/i])\u00A0- Enable/disable harvesting flowers. Useful if you want to manually harvest flowers for Bee House purposes.\n<br />[*][b]harvestCropsIndoorPots[/b]: boolean (default: [i]true[/i]) - Enable/disable harvesting crops from pots.\n<br />[*][b]harvestCropsRange[/b]: integer (default: [i]-1[/i])\u00A0- Customize the crop-harvesting range of an Auto-Grabber. If set, the Auto-Grabber will only harvest crops within that number of tiles from it. Does not affect other harvesting mechanisms.\n<br />[*][b]harvestCropsRangeMode[/b]: \"walk\" | \"square\" (default: [i]walk[/i]) - Customize the range formation for an Auto-Grabber, see below for an example.\n<br />[*][b]artifactSpots[/b]: boolean (default: [i]false[/i])\u00A0- Enable/disable digging up artifact spots on the ground.\n<br />[*][b]orePan[/b]: boolean (default: [i]false[/i]) - Enable/disable collecting ores from ore pan sites in the water.\n<br />[*][b]garbageCans[/b]: boolean (default: [i]false[/i]) - Enable/disable searching through and collecting trash from garbage cans in town.\n<br />[*][b]bushes[/b]: boolean (default: [i]true[/i]) - Enable/disable foraging berries from bushes.\n<br />[*][b]fruitTrees[/b]: boolean (default: [i]false[/i]) - Enable/disable harvesting fruits from fruit trees.\n<br />[*][b]seedTrees[/b]: boolean (default: [i]false[/i]) - Enable/disable shaking every tree for seed drops.\n<br />[*][b]fellSecretWoodsStumps[/b]: boolean (default: [i]false[/i]) - Enable/disable the chopping down of stumps inside the Secret Woods.\n<br />[*][b]reportYield[/b]: boolean (default: [i]true[/i]) - Enable/disable reporting of the yield of each auto-grabber inside the SMAPI console.\n<br />[*][b]gainExperience[/b]: boolean (default: [i]true[/i]) - Enable/disable skill EXP gain from auto grabbers as if you did the forage/harvest yourself.\n<br />[/list]\n<br />Autograbber range modes (NOTE that this only applies to harvesting crops, all other modes of harvesting are map-wide always):\n<br />\n<br />[i][u]\"Walk\" with range 4\n<br />[/u][/i][img]https://raw.githubusercontent.com/ferdaber/sdv-mods/master/DeluxeGrabberRedux/publish-assets/walk4.png[/img]\uFEFF\n<br />[i][u]\n<br />\"Square\" with range 4\n<br />[img]https://raw.githubusercontent.com/ferdaber/sdv-mods/master/DeluxeGrabberRedux/publish-assets/square4.png[/img]\uFEFF\n<br />[/u][/i]\n<br />[b]Global Grabber (EXPERIMENTAL)\n<br />[/b]You can choose to download the \"DeluxeGrabberRedux_GlobalGrabber_EXPERIMENTAL\" optional file instead of the main mod build, which contains a mostly-experimental feature to set a global auto grabber. Usage instructions:\n<br />[list]\n<br />[*]Place an auto grabber anywhere on the ground in any map.\n<br />[*]Hover your mouse cursor over the auto grabber, and press the \"G\" key.\n<br />[*]If successful, you should receive an HUD message that says that the global grabber has been set. It will immediately attempt to grab every item from every location in the game.\n<br />[*]If you want to set another auto grabber as the global grabber, repeat the above steps on another grabber.\n<br />[*]If you press \"G\" on a grabber that is already a global grabber, the mod will \"unset\" it and it will no longer act as the global grabber. The \"G\" key acts as a toggle.\n<br />[*]Global grabber details: harvest crop range settings will be completely ignored, so everything in every location will be harvested (though settings to ignore certain types of forage will still be respected). EVERY location will be grabbed, including the ones you do not have access to currently (Ginger Island, mod-specific new locations, Secret Woods, etc).\n<br />[*]This setting is part of your save file, so you will need to set a global grabber (if you wish) on any save game you have (and go to sleep so that the settings are actually saved along with your game data).\n<br />[*]Note that the global grabber setting is all-or-nothing. If you set a global grabber, every other grabber that you have placed will no longer function (excluding the ones in the Barn and Coop as the base game takes care of those). Unsetting the global grabber will restore functionality to other grabbers.\n<br />[/list]\n<br />The code is mostly derived from the original Deluxe Grabber source. I rewrote it from scratch in my own style to make it easier for me to maintain, but all of the credits should go to the original author.\n<br />\n<br />[url=https://github.com/ferdaber/sdv-mods/tree/master/DeluxeGrabberRedux]Source (GitHub)[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7920",
+	"Version": "1.3.0",
+	"Updated": "2021-02-06T20:44:43+00:00",
+	"Downloads": [
+		{
+			"Id": 37553,
+			"Type": "Main",
+			"DisplayName": "DeluxeGrabberRedux",
+			"FileName": "DeluxeGrabberRedux-7920-1-3-0-1612638394.zip",
+			"Description": "",
+			"Version": "1.3.0",
+			"SizeInBytes": 56859,
+			"Uploaded": "2021-02-06T19:06:34+00:00",
+			"Mods": [
+				{
+					"Id": "ferdaber.DeluxeGrabberRedux",
+					"DisplayName": "Deluxe Grabber Redux",
+					"Type": "Smapi",
+					"RelativePath": "DeluxeGrabberRedux",
+					"Manifest": {
+						"Name": "Deluxe Grabber Redux",
+						"Description": "Allows use of autograbber for harvesting crops, slime balls, fruit trees, bushes, forageable items, and artifact spots.",
+						"Author": "ferdaber",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "DeluxeGrabberRedux.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7920"
+						],
+						"UniqueId": "ferdaber.DeluxeGrabberRedux"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342424241,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 37556,
+			"Type": "Optional",
+			"DisplayName": "DeluxeGrabberRedux_GlobalGrabber_EXPERIMENTAL",
+			"FileName": "DeluxeGrabberRedux_GlobalGrabber_EXPERIMENTAL-7920-1-3-0-1612644283.zip",
+			"Description": "This is an EXPERIMENTAL/BETA build that implements global grabber functionality. See mod details for usage instructions.",
+			"Version": "1.3.0",
+			"SizeInBytes": 60671,
+			"Uploaded": "2021-02-06T20:44:43+00:00",
+			"Mods": [
+				{
+					"Id": "ferdaber.DeluxeGrabberRedux",
+					"DisplayName": "Deluxe Grabber Redux",
+					"Type": "Smapi",
+					"RelativePath": "DeluxeGrabberRedux",
+					"Manifest": {
+						"Name": "Deluxe Grabber Redux",
+						"Description": "Allows use of autograbber for harvesting crops, slime balls, fruit trees, bushes, forageable items, and artifact spots.",
+						"Author": "ferdaber",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "DeluxeGrabberRedux.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7920"
+						],
+						"UniqueId": "ferdaber.DeluxeGrabberRedux"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342424244,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394608,
+		"UploaderId": 2033148,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

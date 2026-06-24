@@ -1,0 +1,104 @@
+{
+	"Site": "Nexus",
+	"Id": 6669,
+	"Name": "Custom Resource Clumps",
+	"Author": "aedenthorn",
+	"Description": "This mod allows you to create custom resource clumps (the game's name for 2x2 farmable stumps and boulders) that have a chance to spawn instead of ordinary boulders. [b]By default it does nothing[/b], you are expected to either install a content pack for it or create your own. Alternatively, it includes a sample file you can rename and use that adds five custom clumps: copper, iron, gold, diamond, and iridium (see below).\n<br />\n<br />\n<br />[b][size=5]Usage[/size][/b]\n<br />\n<br />To use this mod with the example clumps, you can simply rename the [b]EXAMPLEcustom_resource_clumps.json[/b] file included with this mod to [b][b]custom_resource_clumps[/b].json[/b] (and optionally edit it with a text editor). The [b]clumps[/b] key has a list of JSON objects that provide one custom clump each, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"clumps\": [\n<br />\uFEFF\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"clumpDesc\": \"An extremely dense piece of stone with diamonds in it.\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"debrisType\": 14,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"failSounds\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"clubhit\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"clank\"\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"hitSounds\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"hammer\"\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"breakSounds\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"boulderBreak\"\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"shake\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"toolType\": \"pick\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"toolMinLevel\": 3,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"tileWidth\": 2,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"tileHeight\": 2,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spritePath\": \"assets&#92;&#92;diamond.png\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spriteType\": \"mod\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spriteX\": 0,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spriteY\": 0,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minLevel\": -1,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"maxLevel\": -1,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"baseSpawnChance\": 0.01,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"additionalChancePerLevel\": 0.01,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"durability\": 20,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"expType\": \"mining\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"exp\": 25,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropItems\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"itemIdOrName\": \"Diamond\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropChance\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minAmount\": 3,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"MaxAmount\": 6\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"itemIdOrName\": \"390\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropChance\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minAmount\": 5,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"MaxAmount\": 10\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ]\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"clumpDesc\": \"An extremely dense piece of stone with iridium in it.\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"debrisType\": 14,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"failSounds\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"clubhit\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"clank\"\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"hitSounds\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"hammer\"\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"breakSounds\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"boulderBreak\"\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ],\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"shake\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"toolType\": \"pick\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"toolMinLevel\": 3,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"tileWidth\": 2,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"tileHeight\": 2,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spritePath\": \"Maps&#92;&#92;springobjects\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spriteType\": \"game\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spriteX\": 352,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"spriteY\": 400,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minLevel\": -1,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"maxLevel\": -1,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"baseSpawnChance\": 0.001,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"additionalChancePerLevel\": 0.001,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"durability\": 20,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"expType\": \"mining\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"exp\": 25,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropItems\": [\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"itemIdOrName\": \"386\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropChance\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minAmount\": 5,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"MaxAmount\": 10\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"itemIdOrName\": \"390\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropChance\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minAmount\": 5,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"MaxAmount\": 10\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"itemIdOrName\": \"535\",\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"dropChance\": 100,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"minAmount\": 2,\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \"MaxAmount\": 2\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 ]\n<br />\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />Alternatively, you can create your own Content Pack for this mod (see Files section for an example content pack)\u00A0 with its own [b][b]custom_resource_clumps[/b][/b][b].json[/b] file.\n<br />\n<br />\n<br />[size=5][b]JSON Explanation[/b][/size]\n<br />\n<br />Each JSON object can have the following keys:\n<br />\n<br />[list]\n<br />[*]string [b]id[/b]: a text id to identify the clump by (for console spawning, e.g.)\n<br />\n<br />[*]string [b]clumpDesc[/b]: A description of the clump (doesn't do much afaics).\n<br />[*]int [b]debrisType[/b]: what sort of crap flies up when it breaks (14 is stone, 12 is wood, I think)\n<br />[*]string[] [b]failSounds[/b]: \uFEFF a list of sound names to play on a hit with the wrong tool\n<br />[*]string[] [b]hitSounds[/b]: a list of sound names to play on a hit with the right tool\n<br />[*]string[] [b]breakSounds[/b]: \uFEFF a list of sound names to play when the clump is destroyed\n<br />[*]int [b]shake[/b]: the rate of time it takes for the clump to vibrate when hit (lower is quicker, 0 turns off shake)\n<br />[*]string [b]toolType[/b]: the right tool, one of \"[b]axe[/b]\", \"[b]pick[/b]\", \"[b]hoe[/b]\", \"[b]weapon[/b]\", \"[b]wateringcan[/b]\", \"[b]wand[/b]\". I don't know if they all will work.\n<br />[*]int [b]toolMinLevel[/b]: minimum upgrade required to hurt the clump (for weapons, set to 0)\n<br />[*]int [b]tileWidth[/b]: how many tiles wide the clump is ([b]must be 2 for now[/b])\n<br />[*]int [b]tileHeight[/b]: \uFEFFhow many tiles tall the clump is ([b]must be 2 for now[/b])\n<br />[*]string [b]spritePath[/b]: the relative path either to the game or mod sheet containing the sprite\n<br />[*]string [b]spriteType[/b]: where to look for the sprite sheet; one of \"[b]mod[/b]\" or \"[b]game[/b]\"\n<br />[*]int [b]spriteX[/b]: the X-coord of the pixel where the sprite begins on the sheet\n<br />[*]int [b]spriteY[/b]: the Y-coord of the pixel where the sprite begins on the sheet\n<br />[*]int [b]minLevel[/b]: minimum mine level for the clump to spawn (optional)\n<br />[*]int [b]maxLevel[/b]: maximum mine level for the clump to spawn (optional)\n<br />[*]float [b]baseSpawnChance[/b]: 0-100\n<br />[*]float [b]\uFEFFadditionalChancePerLevel[/b]: 0-100 additional chance per mine level (Skull Cave level 1 is level 121)\n<br />[*]int [b]durability[/b]: how many hit points it has.\n<br />[*]string [b]expType[/b]: which skill to benefit from breaking this clump; one of \"farming\", \"foraging\" \"mining\", \"combat\".\n<br />[*]int [b]exp[/b]: how much experience to gain from destroying this node\n<br />[*]List&lt;DropItem&gt; [b]\uFEFFdropItems[/b]: a list of items to drop (see below).\n<br />[/list]\n<br />The drop item list contains JSON objects with one item each that this node should drop, as follows:\n<br />\n<br />[list]\n<br />[*]\uFEFF\"[b]itemIdOrName[/b]\": The name or parent sheet index of the item to drop.\n<br />[*]\"[b]dropChance[/b]\": 0-100\n<br />[*]\"[b]minAmount[/b]\": minimum to drop.\n<br />[*]\"[b]MaxAmount[/b]\": maximum to drop.\n<br />[/list]\n<br />\n<br />[size=5][b]Console Commands[/b][/size]\n<br />\n<br />You can list id and index for all loaded clumps using:\n<br />\n<br />[b]crc list[/b]\n<br />\n<br />You can spawn a clump using\n<br />\n<br />[b]crc spawn &lt;id or index&gt; &lt;x&gt; &lt;y&gt;[/b]\n<br />\n<br />\n<br />[size=5][b]Other Underground Mods[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6597]Underground Secrets[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5894]Custom Dungeon Floors[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5966]Custom Ore Nodes[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5864]Boss Creatures[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7685]Treasure Chests Expanded[/url]\uFEFF\n<br />[/list]\n<br />\n<br />[size=5][b]Technical Notes[/b][/size]\n<br />\n<br />Skull Cave seems to have boulders appear only very rarely. If you want to spawn these clumps more often, you can use [url=https://www.nexusmods.com/stardewvalley/mods/5894]Custom Dungeon Floors[/url] which allows for spawning more clumps, among other things.\n<br />\n<br />This mod no longer extends the sprite sheet [b]Maps&#92;springobjects[/b], so it should no longer be in danger of conflict there.\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Source code is available at [url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6669",
+	"Version": "0.7.0",
+	"Updated": "2022-09-20T21:38:07+00:00",
+	"Downloads": [
+		{
+			"Id": 30333,
+			"Type": "Optional",
+			"DisplayName": "Custom Resource Clumps Example Mod",
+			"FileName": "Custom Resource Clumps Example Mod-6669-0-1-0-1597839712.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 21554,
+			"Uploaded": "2020-08-19T12:21:52+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomResourceClumpsExample",
+					"DisplayName": "(CRC) Custom Resource Clumps Example",
+					"Type": "ContentPack",
+					"RelativePath": "[CRC] Custom Resource Clumps Example Mod",
+					"Manifest": {
+						"Name": "(CRC) Custom Resource Clumps Example",
+						"Description": "Custom Resource Clumps Example Mod",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.4.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.CustomResourceClumps",
+							"MinimumVersion": "0.1.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "aedenthorn.CustomResourceClumpsExample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342417021,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 60586,
+			"Type": "Main",
+			"DisplayName": "Custom Resource Clumps",
+			"FileName": "Custom Resource Clumps-6669-0-7-0-1663709887.zip",
+			"Description": "Changes:\n<br /><br />Added mod API",
+			"Version": "0.7.0",
+			"SizeInBytes": 38516,
+			"Uploaded": "2022-09-20T21:38:07+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomResourceClumps",
+					"DisplayName": "Custom Resource Clumps",
+					"Type": "Smapi",
+					"RelativePath": "CustomResourceClumps",
+					"Manifest": {
+						"Name": "Custom Resource Clumps",
+						"Description": "Spawns custom resource clumps in mines.",
+						"Author": "aedenthorn",
+						"Version": "0.7.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "CustomResourceClumps.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6669"
+						],
+						"UniqueId": "aedenthorn.CustomResourceClumps",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "CustomResourceClumps"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342447274,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393357,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

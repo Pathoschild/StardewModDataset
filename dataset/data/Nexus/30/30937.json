@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 30937,
+	"Name": "Advanced Weather Forecast Mod",
+	"Author": "Digus",
+	"Description": "[b]Current Version: 1.2.1[/b]\n<br />[list]\n<br />[*]Fix error when calendar would not show all forecast is an custom weather didn't have a icon texture.\n<br />[*]Added the forecast to the hover text of the calendar.\n<br />[*]Fix to error in when interacting with the quest of the day menu.\n<br />\n<br />[/list]\n<br />[b]Objective:[/b]\n<br />Improve the weather forecast.\n<br />If this mod gather some interest, I might add some sort of quest-line to improve the weather forecast per save, instead of just a flat-out configuration.\n<br />\n<br />[b]Disclaimer:[/b]\n<br />This mod might have some conflicts with mods that change the weather behavior.\n<br />It should be compatible with weathers managed by the Cloudy Skies Framework.\n<br />It should work with other mods that adds new type of weather. But they will show as sunny days in the calendar.\n<br />It should be compatible with mods that change the rules and percentage weather chance using content patcher.\n<br /> It also should be compatible with added festivals, but if the forecast was calculated for the day of the festival in your game, it might only correct itself on the the day before the festival or if you clear and calculate the weather again using the console commands.\n<br />\n<br />[b]Installation:[/b][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]Install the latest version of SMAPI[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/30937/]Unzip the Advanced Weather Forecast Mod[/url] into /Stardew Valley/Mods.\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1536/]Unzip the MailFrameworkMod[/url] into /Stardew Valley/Mods. [Optional]\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[b]How does it work:[/b]\n<br />[list]\n<br />[*][b]Forecast Calculation:[/b]\n<br />[list]\n<br />[*]At the load of the farm, the mod checks all context locations and update their weather data according to the current amount of day configured to forecast.\n<br />[*]The weather is calculated as if the game were in that day. While this is happening, the mod changes the current date briefly.\n<br />[*]Most weather random is fixed per save, so days that rain and green happen do not change if you reset the weather. But some randoms are not fixed, so a wind day might become a sunny way if you clear and calculate the weather again. Also if it will be rain or storm.\n<br />[*]At the end of the day, the mod calculate the weather for the next day without forecast, based on the current config.\n<br />[*]A wedding will override the forecast for that day, as expected.\n<br />[*]A new festival added after the forecast is made might not show right in the calendar, but will correct itself the day before the festival.\n<br />[/list][*][b]Calendar:[/b]\n<br />[list]\n<br />[*]The calendar menu will now show the weather forecast in the top right corner, where the wedding indication appears.\n<br />[*]For the forecast of the next month, it will appear in the day of the current month that is already grayed out.\n<br />[*]Past weather data is not kept and it is cleared from the save in the day it happens.\n<br />[*]You can technically set the DaysInAdvanceForecast property to more than 27 days, but you won't be able to see that forecast in game.\n<br />[*]Set the DaysInAdvanceForecast to 1 or less will disable any forecast calculation, but you might still see the tomorrow weather forecast in the calendar.\n<br />[/list][*][b]Console Comands:[/b][list]\n<br />[*][b]world_clear_weatherforecastdata[/b] - Clear weather forecast for all locations.\n<br />[*][b]world_calculate_weatherforecast[/b] - Calculate weather forecast for all locations. Won't override data, needs to clear first.\n<br />[/list]\n<br />[/list][b]\n<br />Config options:[/b]\n<br />Run the game at least once with the mod instaled to create the config.json file. You can edit this file to change the configuration.\n<br />[list]\n<br />[*]\"[b]DaysInAdvanceForecast[/b]\":(7) How many days in advance you can know the weather forecast. You can set a number from 1 to 27. A number greater than 27 will calculate the weather further, but you won't be able to see it.\n<br />[*]\"[b]DisableForecastLetter[/b]\":(true|[b]false[/b]) Enable or disable the letter Demetrius send you explaining about the advanced weather forecast, in case you have MFM but don't want to receive the letter.\n<br />[/list]\n<br />[b]Internationalization:[/b]\n<br />This mod is compatible with SMAPI support to i18n files. It has an official translation for pt-BR, but you can translating for your language following this instructions: [url=https://stardewcommunitywiki.com/Modding:Modder_Guide/APIs/Translation]https://stardewcommunitywiki.com/Modding:Modder_Guide/APIs/Translation[/url]\n<br />Feel free to send me a translation to your language and I might add it on future versions.\n<br />\n<br />[b]Uninstall:[/b]\n<br />Delete the mod from the installation folder.\n<br />\n<br />[b]My Other Mods:[/b][list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1538]Animal Husbandry Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2360]Everlasting Baits And Unbreakable Tackles Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2374]Water Retaining Field Mod[/url]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/2516]Custom Crystalarium Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2642]Custom Cask Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4664/]Custom Kissing Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4711]Borderless Wood Floor Mod[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/4992]Custom Producer Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8178/]Arcane Table Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8292/]Gem Lamp Posts Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8413]Advanced Casks Mod[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7842/]Mail Services Mod[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30937",
+	"Version": "1.2.1",
+	"Updated": "2025-01-22T20:16:39+00:00",
+	"Downloads": [
+		{
+			"Id": 123163,
+			"Type": "Main",
+			"DisplayName": "AdvancedWeatherForecastMod-v1.2.1",
+			"FileName": "AdvancedWeatherForecastMod-v1.2.1-30937-1-2-1-1737576999.zip",
+			"Description": "Fix to billboard error.",
+			"Version": "1.2.1",
+			"SizeInBytes": 29646,
+			"Uploaded": "2025-01-22T20:16:39+00:00",
+			"Mods": [
+				{
+					"Id": "Digus.AdvancedWeatherForecastMod",
+					"DisplayName": "Advanced Weather Forecast Mod",
+					"Type": "Smapi",
+					"RelativePath": "AdvancedWeatherForecastMod",
+					"Manifest": {
+						"Name": "Advanced Weather Forecast Mod",
+						"Description": "Adds weather forecast beyond tomorrow.",
+						"Author": "Digus",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AdvancedWeatherForecastMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DIGUS.MailFrameworkMod",
+								"MinimumVersion": "1.16.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.12.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "Digus.AdvancedWeatherForecastMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509851,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342417625,
+		"UploaderId": 2186381,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

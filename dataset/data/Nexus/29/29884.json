@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 29884,
+	"Name": "VirtualKeyboard",
+	"Author": "zszs1452",
+	"AuthorLabel": "DoubleZ",
+	"Description": "Stardew Valley mod that add simple virtual keyboard\n<br />\n<br />[size=5]Install\n<br />[/size]\n<br />[size=4]PC User[/size]\n<br />[list=1]\n<br />[*]Install the latest version of\u00A0[url=https://smapi.io/]SMAPI[/url]\uFEFF.\n<br />[*]Download this mod and unzip it into\u00A0Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=4]Android User[/size]\n<br />[list=1]\n<br />[*]Install the latest version of\u00A0[url=https://github.com/NRTnarathip/SMAPILoader]SMAPILoader[/url].\n<br />[*]Download this mod.\n<br />[*]Unzip it into Android&#92;data&#92;abc.smapi.gameloader&#92;files&#92;Mods or Use SMAPILauncher -&gt; Mod Manager -&gt; install Mod and select mod zip\n<br />[*]SMAPILauncher -&gt; Start Game\n<br />[/list]\n<br />[size=5]How to use[/size]\n<br />\n<br />[b][b][warn] If you're upgrading from an older version, please delete the old config.json file first.[/b][/b]\n<br />\n<br />A simple virtual keyboard that supports multiple keys and shows on screen.\n<br />\n<br />Press the toggle button on screen to show the keyboard; press it again to hide it.\n<br />\n<br />The config.json file is automatically generated after the first run with the mod.\n<br />\n<br />[size=4][b]Add Button(Android Only)[/b][/size]\n<br />\n<br />To add a new button:\n<br />\n<br />[list=1]\n<br />[*]Click the [b]Add[/b] button.\n<br />[*]Enter the new button's [b]Enum Key[/b] and [b]description[/b]. (All valid Enum Keys can be found in the [url=https://docs.monogame.net/api/Microsoft.Xna.Framework.Input.Keys.html]official MonoGame documentation[/url]\uFEFF.)\n<br />[*]The new custom button will then appear next to the [b]Add[/b] button.\n<br />[/list]\uFEFF\uFEFF\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918369-338321867.jpg[/img]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766919105-2027747705.jpg[/img]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766919105-1031773619.jpg[/img]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918631-2119971728.jpg[/img]\n<br />\n<br />[size=4][b]Move Button[/b][/size]\n<br />\n<br />\uFEFFTo move a button:\n<br />\uFEFF\n<br />[list=1]\n<br />[*]Click the [b]Edit[/b] button to enter edit mode. A small [b]×[/b](cross) icon will appear in the top-right corner of each button.\n<br />[*]Click and hold the button you wish to move, then [b]drag[/b] it to the desired position.\n<br />[/list]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918631-2119971728.jpg[/img]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918632-996628501.jpg[/img]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918633-1063636614.jpg[/img]\n<br />\n<br />[b][size=4]\uFEFFDelete Button[/size][/b]\n<br />\uFEFF\n<br />To delete a button:\n<br />\n<br />[list=1]\n<br />[*]Click the\u00A0[b]Edit[/b]\u00A0button to enter edit mode. A small\u00A0[b]×[/b](cross) icon will appear in the top-right corner of each button.\n<br />[*]Simply click the [b]×[/b] icon on the button you wish to remove.\n<br />[/list]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918633-1063636614.jpg[/img]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/29884/29884-1766918632-1139041943.jpg[/img]\n<br />\n<br />[size=4][b]Resize Button[/b][/size]\n<br />\n<br />To resize buttons:\n<br />\n<br />[list=1]\n<br />[*]Open the [i]config.json[/i] file.\n<br />[*]Locate and modify the value of the [i]ButtonScale[/i] setting. The default value is 1.0.\n<br />[/list][code]\u00A0 \"ButtonScale\": 1.0\n<br />[/code]\n<br />[b][size=4]Set Display Layer[/size][/b]\n<br />\n<br />To set button display layer (above or below game UI):\n<br />\n<br />[list=1]\n<br />[*]Open the [i]config.json[/i] file.\n<br />[*]Locate and modify the value of the [i]AboveMenu[/i] setting:\n<br />[list]\n<br />[*][b]0:[/b] Game UI will cover the buttons. (Default)\n<br />[*][b]1:[/b] Buttons will be displayed on top of the game UI.\n<br />[/list]\n<br />[/list][code]\uFEFF\uFEFF\u00A0 \"AboveMenu\": 0\n<br />[/code]\n<br />[b][size=4]Change Toggle Image[/size][/b]\n<br />\n<br />To change the toggle button image:\n<br />\n<br />[list=1]\n<br />[*]Add your own image file to the [i]assets [/i]directory.\n<br />[*]Open the [i]config.json[/i] file.\u00A0\n<br />[*]Locate and modify the value of the [i]TogglePath [/i]setting. Set it to the path of your new image file (e.g., [i]\"assets/your_image.png\"[/i]). The default value is [i]\"assets/togglebutton.png\"[/i].\n<br />[/list][code]\u00A0 \uFEFF\uFEFF\"TriggerPath\": \"assets/togglebutton.png\"\n<br />[/code]\n<br />[b][size=4]Default Config[/size][/b]\n<br />\n<br />Default config.json may like this:\n<br />[code]\uFEFF{\n<br />\u00A0 \"AboveMenu\": 0,\n<br />\u00A0 \"ButtonScale\": 1.0,\n<br />\u00A0 \"TriggerPath\": \"assets/togglebutton.png\",\n<br />\u00A0 \"vToggle\": {\n<br />\u00A0 \u00A0 \"key\": \"None\",\n<br />\u00A0 \u00A0 \"rectangle\": {\n<br />\u00A0 \u00A0 \u00A0 \"X\": 36,\n<br />\u00A0 \u00A0 \u00A0 \"Y\": 12,\n<br />\u00A0 \u00A0 \u00A0 \"Width\": 64,\n<br />\u00A0 \u00A0 \u00A0 \"Height\": 64\n<br />\u00A0 \u00A0 }\n<br />\u00A0 },\n<br />\u00A0 \"Buttons\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"key\": \"P\",\n<br />\u00A0 \u00A0 \u00A0 \"alias\": \"\",\n<br />\u00A0 \u00A0 \u00A0 \"pos\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"X\": 48,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 92\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"key\": \"I\",\n<br />\u00A0 \u00A0 \u00A0 \"alias\": \"\",\n<br />\u00A0 \u00A0 \u00A0 \"pos\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"X\": 96,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 92\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"key\": \"O\",\n<br />\u00A0 \u00A0 \u00A0 \"alias\": \"\",\n<br />\u00A0 \u00A0 \u00A0 \"pos\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"X\": 143,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 92\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"key\": \"Q\",\n<br />\u00A0 \u00A0 \u00A0 \"alias\": \"\",\n<br />\u00A0 \u00A0 \u00A0 \"pos\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"X\": 193,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 92\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ],\n<br />\u00A0 \"Init\": true\n<br />}\n<br />[/code]\n<br />[list=1]\n<br />[list=1]\n<br />[list]\n<br />[/list][/list][/list][size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Work with\u00A0[url=https://smapi.io/]SMAPI[/url] 4.1.10 with Stardew Valley 1.6.15 on Windows, other version not test.\n<br />[*]Work with [url=https://github.com/NRTnarathip/SMAPILoader]SMAPILoader\u00A0[/url]\uFEFF1.1.4\u00A0with Stardew Valley 1.6.15 on Android\n<br />[/list]\n<br />[size=5]See also\n<br />[/size][list]\n<br />[*][url=https://github.com/SourceZh/VirtualKeyboard]Source code[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29884",
+	"Version": "1.1.0",
+	"Updated": "2025-12-28T10:08:15+00:00",
+	"Downloads": [
+		{
+			"Id": 151646,
+			"Type": "Main",
+			"DisplayName": "VirtualKeyboard 1.1.0",
+			"FileName": "VirtualKeyboard 1.1.0-29884-1-1-0-1766916495.zip",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 21711,
+			"Uploaded": "2025-12-28T10:08:15+00:00",
+			"Mods": [
+				{
+					"Id": "DoubleZ.VirtualKeyboard",
+					"DisplayName": "VirtualKeyboard",
+					"Type": "Smapi",
+					"RelativePath": "VirtualKeyboard",
+					"Manifest": {
+						"Name": "VirtualKeyboard",
+						"Description": "simple virtual keyboard",
+						"Author": "DoubleZ",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "VirtualKeyboard.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:29884"
+						],
+						"UniqueId": "DoubleZ.VirtualKeyboard"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342538334,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416572,
+		"UploaderId": 29907245,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"Site": "Nexus",
+	"Id": 29569,
+	"Name": "Better Events Core",
+	"Author": "darthalex2014",
+	"AuthorLabel": "AlexGoD",
+	"Description": "[b][size=4]Also:\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/29557]Events Editor[/url]\n<br />Here are some of the commands you can use (For Events):[/size][/b]\n<br />[b]removeClothes\u00A0[/b][all/bottom/top]: Undresses the farmer.\n<br />[b]saveClothes\u00A0[/b]&lt;slotName&gt;: Saves the farmer's current outfit to a slot with the specified name. Useful for restoring specific outfits later.\n<br />[b]restoreClothes\u00A0[/b]&lt;slotName&gt;: Restores the farmer's outfit from the specified slot.\n<br />[b]loopSound[/b]\u00A0&lt;soundName&gt; &lt;delay&gt; [repeatCount]: Plays a sound repeatedly with a specified delay between repetitions. The optional repeatCount determines how many times the sound is played.\n<br />[b]loopSoundStop[/b]\u00A0&lt;soundName&gt;: Stops a repeating sound.\n<br />[b]advShake[/b]\u00A0&lt;targetName&gt; &lt;amplitudeX&gt; &lt;delayX&gt; &lt;amplitudeY&gt; &lt;delayY&gt;: Animates a character by shaking them horizontally and vertically. Replace targetName with either \"farmer\" or the name of an NPC in the event.\n<br />[b]advShakeStop[/b]\u00A0&lt;targetName&gt;: Stops the shaking animation for the specified target.\n<br />[b]timeSkip[/b]\u00A0&lt;timeToAdd&gt;: Adds a specified number of time to the current in-game time. (This can be used to simulate time passing during an event or to trigger time-dependent actions.)\n<br />\n<br />[b][size=4]OMG:[/size][/b]\n<br />[b]loopSound[/b]\u00A0This command can be used to play sounds during [b][u][size=4]speak or message commands[/size][/u][/b] for layered sound effects.\n<br />\n<br />[b][u][size=4]Example:[/size][/u][/b]\n<br />[u][b]For sound in speak:[/b][/u]\n<br />/[b]loopSound[/b]\u00A0gulp 35\u00A0\n<br />/[b]loopSound[/b]\u00A0slimeHit 80\n<br />/pause 2000\n<br />/speak Penny &#92;\"Gulp... M-m-ph... Gulp...&#92;\"\n<br />/[b]loopSoundStop\u00A0[/b]gulp\n<br />/[b]loopSoundStop\u00A0[/b]slimeHit\n<br />\n<br />[b][u]Example Usage dress/undress:[/u][/b]\n<br />message &#92;\"The farmer is taking off his shirt...&#92;\"\n<br />[b]/saveClothes[/b] standart\u00A0\n<br />[b]/removeClothes[/b] top\n<br />[b]/saveClothes[/b] withpants\n<br />/message &#92;\"The farmer is taking off his pants...&#92;\"\n<br />[b]/removeClothes[/b] bottom\n<br />/message &#92;\"The farmer is putting on his pants...&#92;\"\n<br />[b]/restoreClothes[/b] withpants\n<br />/message &#92;\"The farmer is putting on his shirt...&#92;\"\n<br />[b]/restoreClothes[/b] standart\u00A0\n<br />\n<br />[b][u]OR:[/u][/b]\n<br />message \"The farmer is undressing...\"\n<br />[b]/removeClothes[/b] all",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29569",
+	"Version": "1.0.0",
+	"Updated": "2024-11-20T09:20:43+00:00",
+	"Downloads": [
+		{
+			"Id": 117092,
+			"Type": "Main",
+			"DisplayName": "BetterEventsCore 1.0.0",
+			"FileName": "BetterEventsCore 1.0.0-29569-1-0-0-1732094443.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 10763,
+			"Uploaded": "2024-11-20T09:20:43+00:00",
+			"Mods": [
+				{
+					"Id": "AlexGoD.BetterEventsCore",
+					"DisplayName": "Better Events Core",
+					"Type": "Smapi",
+					"RelativePath": "BetterEvents\\BetterEventsCore",
+					"Manifest": {
+						"Name": "Better Events Core",
+						"Description": "Add extra command for events.",
+						"Author": "AlexGoD",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BetterEventsCore.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "AlexGoD.BetterEventsCore"
+					}
+				},
+				{
+					"Id": "AlexGoD.NoDress",
+					"DisplayName": "NoDress",
+					"Type": "ContentPack",
+					"RelativePath": "BetterEvents\\[CP] NoDress",
+					"Manifest": {
+						"Name": "NoDress",
+						"Description": "NoDress",
+						"Author": "AlexGoD",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "AlexGoD.NoDress"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342503780,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416257,
+		"UploaderId": 122957028,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

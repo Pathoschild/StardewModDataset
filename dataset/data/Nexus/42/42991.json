@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 42991,
+	"Name": "One Season At A Time",
+	"Author": "Larvuk",
+	"Description": "[size=4][b]Farming in the greenhouse is too easy for your skills?[/b][/size]\n<br />\n<br />This mod adds a device inside your greenhouse, handling heat and humidity.\n<br />So you will have to choose only one season at a time to grow crops in your greenhouse.\n<br />[b][size=4]\n<br />\n<br />Greenhouse Controller Machine[/size][/b]\n<br />\n<br />The device simulating seasons in your greenhouse needs energy cells to work (deactivable and configurable with 3 difficulty levels). Craft them and load them inside it.\n<br />Move it around with your axe or pickaxe just like a chest, so your visual harmony is preserved.\n<br />Multiple greenhouses (like with SVE) means multiple Greenhouse Controllers you can use with different settings.\n<br />\n<br />\n<br />[b][size=4]Only spring crops in your non-greenhouse buildings[/size][/b]\n<br />\n<br />Not to let you replace your greenhouse with dozen of garden pots in your children's bedroom, the mod limits non-greenhouse buildings to spring crops (deactivable)\n<br />\n<br />\n<br />[size=4][b]Low quality crops[/b][/size]\n<br />\n<br />If you're still too good at the game, you can lower the quality of crops that grow in greenhouses and in other buildings.\n<br />\n<br />\n<br />Have fun!\n<br />\n<br />\n<br />[b][size=4]Compatibility[/size][/b]\n<br />\n<br />Made with SDV 1.6.\n<br />Supposed to be compatible with most mods adding greenhouses, and with most custom greenhouse interiors, but I can't check everything and it might not work with some of them - just tell me in the comments then.\n<br />\n<br />Uses Harmony, and impacts the following methods (there might be conflicts with mods impacting the same methods):\n<br />[font=Courier New]Crop.newDay()\n<br />Crop.Harvest()[/font][font=Courier New]\n<br />HoeDirt.DrawOptimized()\n<br />HoeDirt.canPlantThisSeedHere()\n<br />GameLocation.SeedsIgnoreSeasonsHere()\n<br />GameLocation.GetSeason()\n<br />Chest.isEmpty()\n<br />Chest.updateWhenCurrentLocation()\n<br />Chest.checkForAction()\n<br />Chest.ShowMenu()[/font]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42991",
+	"Version": "1.0.1",
+	"Updated": "2026-04-28T11:26:21+00:00",
+	"Downloads": [
+		{
+			"Id": 165859,
+			"Type": "Main",
+			"DisplayName": "One Season At A Time",
+			"FileName": "One Season At A Time-42991-1-0-2-1777375579.zip",
+			"Description": "",
+			"Version": "1.0.2",
+			"SizeInBytes": 34018,
+			"Uploaded": "2026-04-28T11:26:21+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.OneSeasonAtATimeCP",
+					"DisplayName": "One Season At A Time",
+					"Type": "ContentPack",
+					"RelativePath": "OneSeasonAtATime\\[CP] OneSeasonAtATime",
+					"Manifest": {
+						"Name": "One Season At A Time",
+						"Description": "Your greenhouse won't allow multiple seasons' crops. You'll have to choose a season.",
+						"Author": "larvuk",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.3.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "larvuk.OneSeasonAtATimeSMAPI",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:42991"
+						],
+						"UniqueId": "larvuk.OneSeasonAtATimeCP"
+					}
+				},
+				{
+					"Id": "larvuk.OneSeasonAtATimeSMAPI",
+					"DisplayName": "One Season At A Time",
+					"Type": "Smapi",
+					"RelativePath": "OneSeasonAtATime\\[SMAPI] OneSeasonAtATime",
+					"Manifest": {
+						"Name": "One Season At A Time",
+						"Description": "Your greenhouse won't allow multiple seasons' crops. You'll have to choose a season.",
+						"Author": "larvuk",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "OneSeasonAtATime.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:42991"
+						],
+						"UniqueId": "larvuk.OneSeasonAtATimeSMAPI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342552547,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429679,
+		"UploaderId": 200664389,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

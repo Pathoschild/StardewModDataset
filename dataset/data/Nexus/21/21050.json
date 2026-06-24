@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 21050,
+	"Name": "Automate Tool Swap I Switch I Select",
+	"Author": "Trapyy",
+	"Description": "[size=5][b][url=https://next.nexusmods.com/profile/Trapyy/mods]My Other Mods[/url][/b][/size]\n<br />If you like the mod and want to help me, you can do so in my [color=#ff7700][url=http://ko-fi.com/trapyy]Ko-Fi[/url][/color]\n<br />\n<br />PLEASE READ THE DETECTION METHODS\n<br />[size=6][b]Overview[/b][/size]\n<br />\n<br />AutomateToolSwap is a Stardew Valley mod designed to streamline your gameplay by intelligently selecting the appropriate tool or item from your inventory when you interact with objects in the world. Spend less time scrolling through your hotbar and more time farming, mining, and exploring!\n<br />\n<br />For example, clicking on a tree will automatically select your [font=Courier New]Axe[/font], clicking on a [font=Courier New]Furnace[/font] will select the best available ore, and clicking on tilled soil might select seeds or fertilizer. This mod is highly customizable, allowing you to enable or disable automatic switching for [i]each[/i] specific type of interaction.\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*] [b]Automatic Tool/Item Selection:[/b] Detects your interaction target and selects the best tool/item ([font=Courier New]Axe[/font] for trees, [font=Courier New]Pickaxe[/font] for rocks, Ore for [font=Courier New]Furnace[/font], Seeds for soil, etc.). Covers a wide range of common interactions.\n<br />[*] [b]Fully Configurable Interactions:[/b] Individually enable or disable automatic switching for [i]each[/i] supported interaction type via the config menu.\n<br />[*] [b]Return to Previous Item:[/b]\n<br />[list]\n<br />[*] Instantly switch back to your previously held item using a configurable hotkey.\n<br />[*] Optionally enable automatic return to the previous item after an action is completed.\n<br />[/list][*] [b]Configurable Item Detection:[/b] Choose [i]how[/i] the mod determines your target ([font=Courier New]Cursor-based[/font], [font=Courier New]Cursor-Only[/font], or [font=Courier New]Player-Facing[/font]).\n<br />[/list]\n<br />\n<br />[size=5][b]How to Use[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] [b]Install SMAPI:[/b] Ensure you have the latest version of SMAPI installed.\n<br />[*] [b]Install Generic Mod Config Menu (Recommended)[/b]\n<br />[*] [b]Download AutomateToolSwap[/b]\n<br />[*] [b]Install AutomateToolSwap:[/b] Unzip the download and place the [font=Courier New]AutomateToolSwap[/font] folder into your [font=Courier New]Stardew Valley/Mods[/font] directory.\n<br />[*] [b]Launch the Game:[/b] Run Stardew Valley via SMAPI.\n<br />[/list]\n<br />\n<br />[list]\n<br />[*] [b]Accessing Configuration:[/b]\n<br />[list]\n<br />[*] [b]With GMCM:[/b] Click the gear icon on the title screen or find the settings button in the in-game options menu.\n<br />[*] [b]Without GMCM:[/b] Edit the [font=Courier New]config.json[/font] file located in [font=Courier New]Stardew Valley/Mods/AutomateToolSwap[/font] (not recommended).\n<br />[/list][/list]\n<br />\n<br />[size=5][b]Configuration Settings[/b][/size]\n<br />\n<br />The following settings are available in the config menu ([font=Courier New]GMCM[/font]) or [font=Courier New]config.json[/font]:\n<br />\n<br />[list]\n<br />[*] [b]Interaction Toggles:[/b]\n<br />[list]\n<br />[*] A series of checkboxes (e.g., [font=Courier New]AutoSelectAxeForTree[/font], [font=Courier New]AutoSelectPickaxeForRock[/font], [font=Courier New]AutoSelectOreForFurnace[/font], etc.).\n<br />[*] Check to enable auto-selection for that specific interaction; uncheck to disable.\n<br />[/list][*] [b]Return Behavior:[/b]\n<br />[list]\n<br />[*] [font=Courier New]ReturnToPreviousItemMode[/font]: Controls how switching back works.\n<br />[list]\n<br />[*] [font=Courier New]Manual[/font]: Requires pressing the hotkey.\n<br />[*] [font=Courier New]Automatic[/font]: Automatically switches back after the action completes.\n<br />[/list][*] [font=Courier New]ReturnToPreviousItemKey[/font]: Defines the hotkey for the [i]manual[/i] return function.\n<br />[/list][*] [b]Item Detection Method:[/b]\n<br />[list]\n<br />[*] [font=Courier New]DetectionMethod[/font]: Choose how the interaction target is determined.\n<br />[list]\n<br />[*] [font=Courier New]Cursor[/font]: Prioritizes the mouse cursor tile, falls back to player direction if cursor is out of range. (Recommended Default)\n<br />[*] [font=Courier New]CursorOnly[/font]: Exclusively uses the mouse cursor tile.\n<br />[*] [font=Courier New]Player[/font]: Exclusively uses the tile the player is facing.\n<br />[/list][*] ([i]See the 'Item Detection Methods' section below for a detailed explanation of each option[/i]).\n<br />[/list][/list]\n<br />\n<br />[size=5][b]Item Detection Methods[/b][/size]\n<br />\n<br />Understanding how the mod detects your target can help you choose the best setting ([font=Courier New]DetectionMethod[/font]) for your playstyle:\n<br />\n<br />[list]\n<br />[*] [b][font=Courier New]Cursor[/font] Method:[/b]\n<br />[list]\n<br />[*] [b]How it works:[/b] Looks at the game tile directly under your mouse cursor. If that tile is within interaction range, it's used as the target. If the cursor is too far away (outside interaction range), the mod checks the tile directly in front of the player instead.\n<br />[*] [b]Best for:[/b] Most keyboard and mouse users. Offers flexibility between precise cursor targeting and quick directional interaction.\n<br />[/list][*] [b][font=Courier New]CursorOnly[/font] Method:[/b]\n<br />[list]\n<br />[*] [b]How it works:[/b] [i]Always[/i] uses the game tile directly under your mouse cursor as the target, no matter how far away it is or where the player is facing.\n<br />[*] [b]Best for:[/b] Players who want absolute precision based on cursor position, even when targeting things outside the normal interaction range (though the interaction itself will still be limited by game mechanics).\n<br />[/list][*] [b][font=Courier New]Player[/font] Method:[/b]\n<br />[list]\n<br />[*] [b]How it works:[/b] [i]Always[/i] uses the game tile directly in front of the player (based on their facing direction) as the target. The mouse cursor position is ignored for determining the target.\n<br />[*] [b]Best for:[/b] Controller users, otherwise, the interactions may not function properly.\n<br />[/list][/list]\n<br />\n<br />[size=5][b]Mod Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*] [b]Generic Mod Config Menu (GMCM):[/b] Fully supported for easy in-game configuration.\n<br />[*] [b]Tractor Mod:[/b] The mod will behave exactly the same way as it already does, and that means that any interactions the Tractor Mod has with tools that are not in the vanilla game will do nothing. The only difference being that when you are in a Tractor, the tools will insta-swap whenever it detects something, so there's no need to click. Also, it won't swap to the Hoe because otherwise you would be tilling all the soil whenever you move, so you have to switch manually if you want to do it.\n<br />[*] [b]Item Extension Mods:[/b] The mod recognizes the new nodes ores and clumps and swaps tools accordingly.\n<br />[*] [b]Ranged Tools:[/b] The mod will check only your axe range and use it as a default for the interaction range of anything.\n<br />[/list]\n<br />\n<br />[size=5][b]Support[/b][/size]\n<br />\n<br />[list]\n<br />[*] [b]Bug Reports[/b] Please report any issues and bugs on my [url=https://www.nexusmods.com/stardewvalley/mods/21050?tab=bugs]Nexus Mods Bugs Tab[/url].\n<br />[*] [b]Questions &amp; Suggestions:[/b] You can ask questions or feature requests on the [url=https://www.nexusmods.com/stardewvalley/mods/21050?tab=posts]Nexus Mods Posts Tab[/url].\n<br />[/list]\n<br />\n<br />When reporting bugs, please include:\n<br />[list=1]\n<br />[*] A clear description of the problem.\n<br />[*] Steps to reproduce the issue.\n<br />[*] Your SMAPI log ([url=https://smapi.io/log]How to find your SMAPI log[/url]).\n<br />[/list]\n<br />\n<br />[url=https://github.com/Caua-Oliveira/StardewMods/tree/main]Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21050",
+	"Version": "1.6.0",
+	"Updated": "2026-02-06T18:16:51+00:00",
+	"Downloads": [
+		{
+			"Id": 156059,
+			"Type": "Main",
+			"DisplayName": "AutomateToolSwap_1.6.0",
+			"FileName": "AutomateToolSwap_1.6.0-21050-1-6-0-1770401811.zip",
+			"Description": "Fixed the setting \"Scythe for Moss on Trees\" not working.",
+			"Version": "1.6.0",
+			"SizeInBytes": 72638,
+			"Uploaded": "2026-02-06T18:16:51+00:00",
+			"Mods": [
+				{
+					"Id": "Trapyy.AutomatetoolSwap",
+					"DisplayName": "AutomateToolSwap",
+					"Type": "Smapi",
+					"RelativePath": "AutomateToolSwap",
+					"Manifest": {
+						"Name": "AutomateToolSwap",
+						"Description": "Selects the correct tool or item for you whenever you click something that requires it",
+						"Author": "Trapyy",
+						"Version": "1.6.0",
+						"MinimumApiVersion": "4.1.9",
+						"EntryDll": "AutomateToolSwap.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "mistyspring.ItemExtensions",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "vgperson.RangedTools",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21050"
+						],
+						"UniqueId": "Trapyy.AutomatetoolSwap"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342542747,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407738,
+		"UploaderId": 82698833,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

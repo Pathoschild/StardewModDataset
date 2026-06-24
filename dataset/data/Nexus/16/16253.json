@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 16253,
+	"Name": "Instant Load",
+	"Author": "Platonymous",
+	"Description": "[center][heading]Instant Load[/heading] by Platonymous\n<br />[line]\n<br />Simple mod to load directly into your last saved game and for debug purposes. \n<br />Not unique but the one I use.[size=2]\uFEFF[/size]\n<br />[img]https://imgur.com/T5Eybda.png[/img]\n<br />Automaticly loads your last saved game or last hosted farm.\n<br />\n<br />[b]Config:[/b]\n<br />[i][b]EnableInstantLoad[/b][/i]:\u00A0Enables or disables the instant loading\n<br />[i][b]LoadHost[/b][/i]: if true, host your last hosted Farm instead of starting in singleplayer (false by default)\n<br />[i][/i][i][b]EnableDebugCommands[/b][/i]:\u00A0Enables or disables the added commands\n<br />\n<br />[i][b]DebugCommands[/b][/i]: \n<br />A list of commands that are autoexecuted on Startup (\"Event\":\"Start\"), on Load of the Save (\"Event\":\"Load\") or Daily (\"Event\":\"Day\").\n<br />Commands can be console commands (\"Target\":\"Console\") or call a method from a specified mod (from the entry class) by setting \"Target\": \"Id.Of.The.Mod\".\n<br />\"Command\" is either the main console command like \"world_settime\" or the name of the method from the mod you want to call.\n<br />\"Args\" provides a list of parameters that are passed to the command or method (all strings)\n<br />\u00A0\n<br />[b]Example[/b]:[/center]config.json\n<br />[code]{\n<br />\u00A0 \"EnableInstantLoad\": true,\n<br />\u00A0 \"LoadHost\": false,\n<br />\u00A0 \"EnableDebugCommands\": true,\n<br />\u00A0 \"DebugCommands\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Platonymous.InstantLoad\",\n<br />\u00A0 \u00A0 \u00A0 \"Event\": \"Start\",\n<br />\u00A0 \u00A0 \u00A0 \"Command\": \"RunDebugStart\",\n<br />\u00A0 \u00A0 \u00A0 \"Args\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Test\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Success\"\n<br />\u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Console\",\n<br />\u00A0 \u00A0 \u00A0 \"Event\": \"Load\",\n<br />\u00A0 \u00A0 \u00A0 \"Command\": \"world_settime\",\n<br />\u00A0 \u00A0 \u00A0 \"Args\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"1000\"\n<br />\u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}\n<br />\n<br />[/code][center]\n<br />[img]https://imgur.com/b8d5H2A.png[/img]\uFEFF\n<br />If you have any questions or feature requests you can usually find me on the\u00A0[url=https://stardewvalleywiki.com/Modding:Community#Discord]Stardew Valley Discord[/url]\uFEFF under the username\u00A0[b]Routine[/b]#8715\n<br />[img]https://imgur.com/u7Unylz.png[/img]\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.[/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/16253",
+	"Version": "1.1.2",
+	"Updated": "2023-11-04T20:42:52+00:00",
+	"Downloads": [
+		{
+			"Id": 78016,
+			"Type": "Main",
+			"DisplayName": "InstantLoad Prerelease",
+			"FileName": "InstantLoad Prerelease-16253-1-1-3-alpha-20231104-1699130572.zip",
+			"Description": "For Stardew Valley 1.6 only.",
+			"Version": "1.1.3-alpha.20231104",
+			"SizeInBytes": 15496,
+			"Uploaded": "2023-11-04T20:42:52+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.InstantLoad",
+					"DisplayName": "InstantLoad",
+					"Type": "Smapi",
+					"RelativePath": "InstantLoad",
+					"Manifest": {
+						"Name": "InstantLoad",
+						"Description": "Instantly load into your last save and added debug features",
+						"Author": "Platonymous",
+						"Version": "1.1.3-alpha.20231104",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "InstantLoad.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:16253"
+						],
+						"UniqueId": "Platonymous.InstantLoad"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342464704,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342402941,
+		"UploaderId": 42440425,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

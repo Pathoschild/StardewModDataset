@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 2527,
+	"Name": "Fishing Automaton",
+	"Author": "thepaladinknight",
+	"AuthorLabel": "Drynwynn",
+	"Description": "There are a couple mods that already automate the fishing mini-game for Stardew Valley, but I couldn't find one that specifically had what I wanted:\n<br />[list]\n<br />[*]Not unrealistically catch fish you shouldn't be able to at a particular stage in the game. E.g. no catching Ice Pips and Lava Eels with the starter pole at Lvl 1 fishing unless extremely lucky with fish movement\n<br />[*]Wanted the reel sounds (weird I know!)\n<br />[*]If RNG makes the fish particularly difficult (darting around), mod should have the chance to fail just as a human would\n<br />[*]Automatically deal with treasure and the caught fish popup\n<br />[/list]\n<br />\n<br />Basically I wanted a mod to perform like I would on the fishing game, without actually having to play it.  On subsequent playthroughs I found I just didn't really want to do fishing anymore, but I didn't want a completely unfair advantage so early in the game (it's still pretty unfair to fish automatically but I've made peace with that.\u00A0 Hopefully you can too!\u00A0 =) ).\u00A0 I created this mod to meet the rather eclectic requirements.\n<br />\n<br />[size=5]Install[/size][list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />Most of the mod's internals are available through the configuration file.  See below for a full description of options.  The key config is 'autoCast' and 'autoCastButton' (defaults to 'N' key).\n<br />\n<br />Equip a fishing rod, stand in front of a fishing hole (note that the mod does not actually check this, it will happily cast into a tree if you tell it to), and press the &lt;autoCastButton&gt; key to activate the mod.  By default the mod will continually fish for you until you press the &lt;autoCastButton&gt; key again, stopping only if there is an error (such as trying to acquire treasure but your inventory is full).\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.3 beta on Windows\n<br />[*]Works in single player\n<br />[*] Full disclosure: I have not tested this on Mac/Linux.  I have not tested this in multiplayer.  I may do that going forward, but know that these things are not tested and not guaranteed to work.  However, I don't do anything special with other people's inventories or net fields, so I would *expect* it to work.\n<br />[/list]\n<br />[size=5]Harmony\n<br />[/size]Harmony is required for sections of the code that do not call a separate function or use a variable that we can manipulate.\u00A0 For example, the bobber bar code specifically checks if a button is pushed down; there is no 'useButtonPushedDown' variable we could set to 'true'.\u00A0 Harmony is used for the following:\n<br />[list]\n<br />[*]Manipulating the bobber bar like a human (also for the reel sounds)\n<br />[*]Closing the caught fish pop-up\n<br />[/list]\n<br />If you decide to configure the mod to not load Harmony, these functions will not operate even if their options are set to true.\n<br />\n<br />[size=5]NOTES[/size]\n<br />\n<br />It was mentioned above, but a reminder that this mod WILL fail to catch fish sometimes, especially if you are undergeared or underleveled for the fish you are trying to catch.\u00A0 This is intentional to mimic a human player.\u00A0 If this is not what you are looking for or don't find that novelty particularly exciting, there are other great quality mods for your play style!\u00A0 =)\n<br />\n<br />[size=5]See also[/size]\n<br />\n<br />[list]\n<br />[*][url=https://github.com/Drynwynn/StardewValleyMods]Source on Github[/url]\n<br />[/list]\n<br />\n<br />[size=5]Configuration Options\n<br />[/size]I like to expose a lot of configuration options so you can use the mod as you wish.\u00A0 There is a lot of philosophy about providing 'too much' options to the user that make such configurations intimidating.\u00A0 The defaults should be sane, so if it's intimidating just ignore the majority of it.\n<br />[size=4]\n<br />[/size]All configuration options are described below.\u00A0 If a 'Button' option follows, you can set this to a keyboard key and toggle the respective value with the hotkey.\u00A0 The default value is listed in brackets after the option (e.g. configOption [default] - description).\n<br />\n<br />[size=3][u]Important Options[/u][/size]\n<br />\n<br />[list]\n<br />[*]autoCast [false] - Turn the mod on or off.\u00A0 It is recommended to have 'autoCastButton' set to a hotkey, then use that key to turn the mod on or off.\u00A0 If you set this to true in the configuration file with no button, the only way to stop it is to change the selected tool/item away from the fishing rod before the mod casts again.\n<br />[*]autoCastButton [N]\n<br />[/list]\n<br />\n<br />[size=3][u]Generic Options[/u][/size]\n<br />\n<br />[list]\n<br />[*]alwaysPerfect [false] - Even if the fish leaves the green bobber bar, register it as a perfect catch\n<br />[*]alwaysPerfectButton [None]\n<br />[*]alwaysTreasure [false] - Always spawn a treasure chest\n<br />[*]alwaysTreasureButton [None]\n<br />[*]autoFinish [true] - Will close the caught fish pop up and acquire any treasure that was caught\n<br />[*]autoFinishButton [None]\n<br />[*]autoHook [true] - When the \"HIT\" marker is displayed, automatically hook the fish\n<br />[*]autoHookButton [None]\n<br />[*]boringFishing [false] - As soon as the fishing minigame starts, immediately catch the fish (no treasure will be caught)\n<br />[*]boringFishingButton [None]\n<br />[*]catchFish [true] - Play the actual minigame by moving the bobber bar and keeping the fish inside of it\n<br />[*]catchFishButton [None]\n<br />[*]catchTreasure [true] - If a treasure chest spawns, attempt to catch it.\u00A0 There is an inherent risk of losing the fish if this is true\n<br />[*]catchTreasureButton [None]\n<br />[*]maxCastPower [true] - Always set the casting power bar to 'max'\n<br />[*]maxCastPowerButton [None]\n<br />[*]noSeaweed [true] - Seaweed and algae are not a possible catch during fishing.\u00A0 You may want to turn this off to acquire seaweed/algae as it's difficult to get it otherwise.\n<br />[*]noTrash [true] - Trash is not a possible catch during fishing.\n<br />[*]pauseTreasureOnError [true] - The primary source of an error is a full inventory.\u00A0 If set to false, the game will discard any treasure acquired.\u00A0 If true, the mod will stop and allow you to determine what to throw away.\n<br />[*]quickHook [true] - Once the bobber hits the water after casting, if set to true it will immediately generate a \"HIT\" prompt\n<br />[*]quickHookButton [None]\n<br />[/list]\n<br />\n<br />[size=3][u]Uncommon Options (probably don't touch these)[/u][/size]\n<br />The following options are used as part of the algorithm to mimic human reaction and also to prevent over correction if the fish darts far away from the bobber.\u00A0 The algorithm will ramp up the max allowed speed between withFish and WithoutFish as the fish approaches the outside of the bar.\n<br />[list]\n<br />[*]fishingBarMaxVelWithFish [1.5] - This is the maximum velocity of the bobber bar when the fish is near the middle.\n<br />[*]fishingBarMaxVelWithoutFish [7.0] - This is the maximum velocity of the bobber bar when the fish is outside the bobber.\n<br />[*]fishingBarMaxVelAtBottom [4.0] - This overrides the above speeds as the bobber approaches the bottom of the window.\u00A0 This prevents the bar from 'bouncing' from hitting the bottom of the window at high speed.\n<br />[*]HarmonyDebug [false] - Tell Harmony to generate verbose logging of its own\n<br />[*]HarmonyLoad [true] - Turn off Harmony loading completely.\u00A0 Note that this will force \"catchFish' and 'autoFinish' to 'false'.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2527",
+	"Version": "1.1.0",
+	"Updated": "2018-08-02T07:23:28+00:00",
+	"Downloads": [
+		{
+			"Id": 10490,
+			"Type": "Main",
+			"DisplayName": "Fishing Automaton 1.1.0",
+			"FileName": "Fishing Automaton 1.1.0-2527-1-1-0.zip",
+			"Description": "For Stardew Valley 1.3 beta only. Requires SMAPI 2.6 or later.",
+			"Version": "1.1.0",
+			"SizeInBytes": 71568,
+			"Uploaded": "2018-08-02T07:23:28+00:00",
+			"Mods": [
+				{
+					"Id": "Drynwynn.FishingAutomaton",
+					"DisplayName": "FishingAutomaton",
+					"Type": "Smapi",
+					"RelativePath": "FishingAutomaton",
+					"Manifest": {
+						"Name": "FishingAutomaton",
+						"Description": "Provides a automaton to automate the fishing game in Stardew Valley",
+						"Author": "Drynwynn",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "2.6.0",
+						"EntryDll": "FishingAutomaton.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2527"
+						],
+						"UniqueId": "Drynwynn.FishingAutomaton",
+						"OtherFields": {
+							"DsUnifiedVersion": "1.1.0"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342397178,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389215,
+		"UploaderId": 1003213,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

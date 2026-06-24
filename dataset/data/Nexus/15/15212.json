@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 15212,
+	"Name": "Garden Pot - Automate",
+	"Author": "ncarigon",
+	"Description": "The existing garden pot support within Automate is limited to harvesting bushes. This mod adds the following options:\n<br />\n<br />[list]\n<br />[*]Harvest crops\n<br />[*]Harvest flowers (new in v1.0.4)\n<br />[*]Plant seeds\n<br />[*]Apply fertilizer\n<br />[*]Use watering can\n<br />[*]Apply profession bonuses\n<br />[*]Gain experience\n<br />[/list]\n<br />Planting and fertilizing utilizes the base game's planting logic and harvesting logic, and should generally be compatible with other mods. I tested\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/21608]Garden Pot Options[/url]\u00A0option to allow Ancient Seeds and it worked correctly.\n<br />\n<br />Additional harvesting logic was added to correctly handle automatically harvesting wild seed crops, since those work differently than normal crops and bushes.\n<br />\n<br />This mod does not handled harvesting any bushes in garden pots since\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate\u00A0[/url]already does that.\n<br />\n<br />[s]This mod does not handle watering garden pots so[/s]\u00A0Changed in version 1.0.3!\n<br />\n<br />Normal watering requirements for garden pots still exist, but a watering can in the chest can be used to water garden pots. It still uses water and will need to be refilled occasionally (unless it's enchanted). However, I also tested\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/21608]Garden Pot Options[/url]\u00A0sprinkler option and it worked well too.\n<br />\n<br />[s]One minor issue is that fertilizer will not be applied after a seed has already been planted. This means you should put any fertilizer you want to be applied into the chest before any seeds so it will be applied first.[/s] Fixed in version 1.0.2!\n<br />\n<br />[b][u]Known Issues:[/u][/b]\n<br />[list]\n<br />[*]Since the Owner property of Garden Pots are not correctly tracked within the base game, Experience and Professions only reference the host player and not farmhands.\n<br />[*]A bug in the base game prevents farmhands from correctly seeing newly-planted garden pot crops that another player or automation just planted in the same location. Having the farmhand move to another location and back again will refresh the garden pot and it will look correct for them.\n<br />[/list]\n<br />Source:\u00A0[url=https://github.com/ncarigon/StardewValleyMods]ncarigon/StardewValleyMods (github.com)[/url]\n<br />\n<br />My mods:\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/15333]Copper Still[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/15212]Garden Pot - Automate[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/15223]Passable Crops\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/15792/]Bush Bloom Mod\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/15805]Ore Berries\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/21608]Garden Pot Options[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/15212",
+	"Version": "1.1.1",
+	"Updated": "2024-04-01T12:33:53+00:00",
+	"Downloads": [
+		{
+			"Id": 87895,
+			"Type": "Main",
+			"DisplayName": "GardenPotAutomate",
+			"FileName": "GardenPotAutomate-15212-1-1-1-1711974833.zip",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 21401,
+			"Uploaded": "2024-04-01T12:33:53+00:00",
+			"Mods": [
+				{
+					"Id": "NCarigon.GardenPotAutomate",
+					"DisplayName": "Garden Pot - Automate",
+					"Type": "Smapi",
+					"RelativePath": "GardenPotAutomate",
+					"Manifest": {
+						"Name": "Garden Pot - Automate",
+						"Description": "Adds additional support for garden pots within Automate.",
+						"Author": "NCarigon",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GardenPotAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"MinimumVersion": "2.0.3",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:15212"
+						],
+						"UniqueId": "NCarigon.GardenPotAutomate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342474583,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401900,
+		"UploaderId": 173700366,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

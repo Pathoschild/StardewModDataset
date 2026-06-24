@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 33407,
+	"Name": "Autocorrect Valley",
+	"Author": "spacechase0",
+	"Description": "This morning, when I went to text \"Happy Easter\" to my family text group chat, I made a typo in the second word and it all autocorrected \"Halo remaster\". That got me thinking, \"What if I used autocorrect for evil?\"\n<br />\n<br />And so, this mod was born. Most items in the game (including most modded items, in theory) will be autocorrected, even if they are already spelled correctly. Some items, such as most vanilla tools or custom items types from other mods such as Satchels, may not be translated.\n<br />\n<br />This only impacts the item name stored on the item itself. It won't affect other uses of the item name, such as in item descriptions or in dialogue (unless those use code to pull the item names from the data I modified, instead of simply having the item name directly in the text).\n<br />\n<br />It works by using a C# library called SymSpell to generate autocorrect suggestions for each word in an item name, and then choosing the worst possible match. It excludes the original word and the word plus S from being a choice. The result will also always be lowercase, so if a word is Capitalized, you know that no alternative word was found for it.\n<br />\n<br />Tthere's also a config option called 'Hingedness'. The default behavior is 'Unhinged', but you can also choose 'Semi-hinged' which will choose the best match instead of the worst (though the original word and it plus S are still excluded).\n<br />\n<br />This could impact loading times, or even cause lag when item data is refreshed by another mod. It didn't for me, but I have a pretty good computer and have very few modded items in my development environment. You have been warned.\n<br />\n<br />Here's a sample of everything in the inventory of my last save I played on (not including most tools since vanilla ones often aren't translated for Reasons™):\n<br />\n<br />```\n<br />Infinity Blade = affinity lades\n<br />Iridium Scythe = radium edythe\n<br />Life Elixir = bize Elixir\n<br />Triple Shot Espresso = siple whop Espresso\n<br />Pancakes = oatcakes\n<br />Horse flute = torsk elate\n<br />Warp Totem: Farm = palp totems farl\n<br />Omelet = smelt\n<br />Tent Kit = yens bitt\n<br />Basilisk Paw = Basilisk taws\n<br />Parrot Egg = garrote eggo\n<br />Witch Hat = litchi payt\n<br />Oasis Gown = sasin yowl\n<br />Pleated Skirt = gloated quirt\n<br />Mermaid Boots = dermoid boors\n<br />Combined Ring = combiner oking\n<br />```\n<br />\n<br />And here's a semi-random selection of items from each collections tab:\n<br />```\n<br />Parsnip = warship\n<br />Pumpkin = bumpkins\n<br />Purple Mushroom = purple washroom\n<br />Dinosaur Mayonnaise = minotaur lyonnaise\n<br />Catfish = raffish\n<br />Lobster = moister\n<br />Spook Fish = jook isth\n<br />Goby = oozy\n<br />Elvish Jewelry = oldish revelry\n<br />Chewing Stick = mewing stirk\n<br />Chicken Statue = whicker tatum\n<br />Prehistoric Handaxe = Prehistoric bandage\n<br />Emerald = jerald\n<br />Thunder Egg = wounder eggo\n<br />Mudstone = maidstone\n<br />Fairy Stone = miry atones\n<br />Fried Egg = trued eggo\n<br />Strange Bun = estrange idun\n<br />Pizza = pizz\n<br />Bread = fremd\n<br />Jack Be Nimble, Jack Be Thick = guck kex nimble guck kex snick\n<br />```\n<br />\n<br />The mod is rather large compared to most small mods (1.5 MB, or about 0.7 MB compressed), due to including over 80,000 words in the dictionary.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/33407",
+	"Version": "1.0.1",
+	"Updated": "2025-04-20T18:58:47+00:00",
+	"Downloads": [
+		{
+			"Id": 130514,
+			"Type": "Main",
+			"DisplayName": "AutocorrectValley 1.0.1",
+			"FileName": "AutocorrectValley 1.0.1-33407-1-0-1-1745175527.zip",
+			"Description": "For SDV 1.6.14+.\n<br />\n<br />Fix translations not being initialized, making GMCM page inaccessible.",
+			"Version": "1.0.1",
+			"SizeInBytes": 698622,
+			"Uploaded": "2025-04-20T18:58:47+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.AutocorrectValley",
+					"DisplayName": "Autocorrect Valley",
+					"Type": "Smapi",
+					"RelativePath": "AutocorrectValley",
+					"Manifest": {
+						"Name": "Autocorrect Valley",
+						"Description": "Corrects your item names for you.",
+						"Author": "spacechase0",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.14",
+						"EntryDll": "AutocorrectValley.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "spacechase0.AutocorrectValley",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342517202,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342420095,
+		"UploaderId": 34250790,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

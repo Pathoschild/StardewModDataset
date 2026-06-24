@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 45329,
+	"Name": "Mod Reporter",
+	"Author": "tbonehunter",
+	"Description": "\uFEFF\n<br /># Mod Reporter\n<br />\n<br />A SMAPI mod that tracks the mods used in each game save and warns you when the mod set changes between sessions.\n<br />\n<br />Mod Reporter writes a per-save mod index when a new game is created (or when starting an existing game if no mod index file has yet been written), then checks that index each time you load the save. If the currently loaded mods differ from the recorded list, it warns you and gives you the choice to update the list or keep it as-is.\n<br />\n<br />## What it does\n<br />\n<br />When you start a new game:\n<br />\n<br />1. Writes `ModsIndex/&lt;SaveName&gt;.mods.json` inside the save folder.\n<br />2. Optionally writes `ModsIndex/&lt;SaveName&gt;_summary.txt`.\n<br />\n<br />When you load an existing save:\n<br />\n<br />1. Reads `ModsIndex/&lt;SaveName&gt;.mods.json`.\n<br />2. Optionally warns if previously-used mods are missing.\n<br />3. Optionally warns if newly-added mods are loaded that were not in the index.\n<br />\n<br />If both warning conditions are true, warnings are shown sequentially — missing mods first, new mods second. If currently running mods match the list in the mods index file, no warning is shown.\n<br />\n<br />If no index exists for that save, the mods index file is written silently, and no warning is shown.\n<br />\n<br />## Configuration (GMCM + i18n)\n<br />\n<br />If Generic Mod Config Menu is installed, Mod Reporter exposes these toggles:\n<br />\n<br />1. Enable in-game missing mods warning.\n<br />2. Enable in-game new mods warning.\n<br />3. Write summary file. (NOTE: the summary file is an easy-to-read simple list of mods used. If toggled off, the mods index will be the only file written, and is not as easy to read.)\n<br />\n<br />Without GMCM, these settings still work through `config.json`.\n<br />\n<br />## Warning menus\n<br />\n<br />Both the Missing Mods and New Mods warning menus share the same two buttons:\n<br />\n<br />### Update List\n<br />\n<br />Immediately backs up the current index to a timestamped file and overwrites it with the currently loaded mods.\n<br />\n<br />Backup location: `ModsIndex/&lt;SaveName&gt;.mods.YYYY-MM-DDTHHMMSSZ.json`\n<br />\n<br />### Keep List\n<br />\n<br />Leaves the existing mod index unchanged. The next time this save is loaded, the same comparison will run again against the original list.\n<br />\n<br />## Missing Mods Warning\n<br />\n<br />Shown when mods from the previous index are not currently loaded.\n<br />\n<br />A missing-mods report is written automatically when this warning triggers:\n<br />\n<br />`ModsIndex/MissingModsReports/&lt;SaveName&gt;.missing.YYYY-MM-DDTHHMMSSZ.txt`\n<br />\n<br />## New Mods Warning\n<br />\n<br />Shown when currently loaded mods include entries that were not in the previous index.\n<br />\n<br />## Notes on index updates\n<br />\n<br />The mod index is only updated in two situations:\n<br />\n<br />1. A new game is created (automatic, silent).\n<br />2. The player clicks **Update List** in a warning menu.\n<br />\n<br />The index is never overwritten silently by a normal game save.\n<br />\n<br />## Installation\n<br />\n<br />1. Install SMAPI 4.1.0 or later.\n<br />2. Unzip Mod Reporter into your `Stardew Valley/Mods/` folder.\n<br />3. Optional: install Generic Mod Config Menu for in-game settings UI.\n<br />\n<br />## Requirements\n<br />\n<br />1. SMAPI 4.1.0+\n<br />2. Stardew Valley 1.6.15+\n<br />\n<br />## Troubleshooting\n<br />\n<br />**The menu never appears:**\n<br />\n<br />1. Open SMAPI console and check Mod Reporter logs.\n<br />2. Confirm the save has `ModsIndex/&lt;SaveName&gt;.mods.json`.\n<br />3. Confirm relevant warning toggles are enabled.\n<br />\n<br />**Update List button seems to do nothing:**\n<br />\n<br />1. Check `ModsIndex` for `&lt;SaveName&gt;.mods.YYYY-MM-DDTHHMMSSZ.json` (the backup).\n<br />2. Check SMAPI log output for the exact paths written.\n<br />\n<br />## License\n<br />\n<br />MIT\n<br />\n<br />## Author\n<br />\n<br />tbonehunter",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45329",
+	"Version": "1.0.0",
+	"Updated": "2026-06-01T15:54:57+00:00",
+	"Downloads": [
+		{
+			"Id": 169745,
+			"Type": "Main",
+			"DisplayName": "Mod Reporter 1.0.0",
+			"FileName": "Mod Reporter 1.0.0-45329-1-0-0-1780329297.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 32831,
+			"Uploaded": "2026-06-01T15:54:57+00:00",
+			"Mods": [
+				{
+					"Id": "tbonehunter.ModReporter",
+					"DisplayName": "Mod Reporter",
+					"Type": "Smapi",
+					"RelativePath": "Mod Reporter",
+					"Manifest": {
+						"Name": "Mod Reporter",
+						"Description": "Tracks mods used in games, writes per-game-save list, warns when loading with different mods.",
+						"Author": "tbonehunter",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "ModReporter.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:45329"
+						],
+						"UniqueId": "tbonehunter.ModReporter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556433,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432017,
+		"UploaderId": 244014770,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

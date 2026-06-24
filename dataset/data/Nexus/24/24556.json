@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 24556,
+	"Name": "EscargoWinBugfix",
+	"Author": "BlackJack69666",
+	"AuthorLabel": "BlackJack",
+	"Description": "This mod patches OnRaceWon using a harmony prefix to ensure all winner keys exist in the dictionary, which is skipped the first time you win with escargo. This prevents the bug occuring when you collect your prize.\n<br />\n<br />[size=3]Full details:[/size]\n<br />\n<br />In the function OnRaceWon it iterates through the guesses and checks in order:\n<br />[list]\n<br />[*]Was the guess correct\n<br />[*]Is this the first winning bet on Escargo of the day for that player\n<br />[*]Does the entry in the collection rewardsToCollect exist for this player (and if not creates it set to 0)\n<br />[/list]And then increments the rewards to collect and adds to the winning farmersImportantly, if the check for the first winning bet for Escargo succeeds, it will move onto the next guess skipping the creation of the entry in the rewardsToCollect collection.\n<br />\n<br />Then, when you go to collect your race prize in the function CollectRacePrizes, it tries to get the value of the non-existent entry in the collection rewardsToCollect, which causes a crash without mods, or an error message to appear in the console on SMAPI and no rewards to be given.\n<br />\n<br />In order for this bug to occur, the win with Escargo must be the first win of the day, otherwise the entry will already exist due to a prior win.\n<br />This mod fixes this by patching the OnRaceWon method to ensure the entry in rewardsToCollect exists for all winners.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24556",
+	"Version": "1.0.0",
+	"Updated": "2024-05-27T22:12:49+00:00",
+	"Downloads": [
+		{
+			"Id": 101315,
+			"Type": "Main",
+			"DisplayName": "EscargoWinBugfix",
+			"FileName": "EscargoWinBugfix-24556-1-0-0-1716847969.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 9349,
+			"Uploaded": "2024-05-27T22:12:49+00:00",
+			"Mods": [
+				{
+					"Id": "BlackJack.EscargoWinBugfix",
+					"DisplayName": "EscargoWinBugfix",
+					"Type": "Smapi",
+					"RelativePath": "EscargoWinBugfix",
+					"Manifest": {
+						"Name": "EscargoWinBugfix",
+						"Description": "Modifies mine population algorithm to check stone types.",
+						"Author": "BlackJack",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EscargoWinBugfix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "BlackJack.EscargoWinBugfix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488003,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411244,
+		"UploaderId": 88846633,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,191 @@
+{
+	"Site": "Nexus",
+	"Id": 9572,
+	"Name": "Furniture Example Pack for Alternative Textures (Pink-Blue)",
+	"Author": "lnss94",
+	"Description": "[b]Requires [url=https://www.nexusmods.com/stardewvalley/mods/9246?tab=description]Alternative Textures[/url] by PeacefulEnd, SMAPI 13+, Stardew Valley 1.5.\u00A0[/b]\n<br />\n<br />Have you been sitting there, going back and forth between the raw file and image editor, trying to figuring out just how big this Oak Chair or Small Fish Tank or that-rug-I-don't-know-the-name-of is, just to have it colored pink? No need to worry anymore!\n<br />\n<br />Alternative Textures is a framework that lets users add content packs to re-texture individual objects in game and has a support for furniture. The framework author provides an example content pack for various objects it supports along with the mod. \n<br />\n<br />This mod specifically expands on furniture objects of the example content pack, adding:\n<br />\n<br />[list]\n<br />[*][b]For modders[/b], an example AT content pack with template texture files, guideline images for editing, and documented list of furniture names/texture size (+ more) for every furniture in vanilla game.\n<br />[/list]\n<br />[list]\n<br />[*][b]For mod users,[/b]\u00A0Pink/Blue recolored re-texture for every furniture in vanilla game. You can choose to only add the ones you want!\n<br />[/list]\n<br />All provided textures are recolored versions of vanilla furniture.\n<br />\n<br />\n<br />[line]\n<br />\n<br />[b][size=4]FOR MODDERS\n<br />[/size][/b]\n<br />[list=1]\n<br />[*][size=2]Download file under\u00A0For Modders - AT FurnitureExamplePack[/size]\n<br />[*][size=2]Unzip the contents to anywhere you want.[/size]\n<br />[*][size=2]Use and edit the template folders/files as needed.[/size]\n<br />[/list]\n<br />\n<br />[b][size=3]FILE CONTENTS[/size][/b]\n<br />\n<br />For detailed description, see Articles or attached\u00A0[i]readme.txt[/i].\n<br />\n<br />\n<br />[size=3][b]USAGE GUIDE[/b][/size]\n<br />\n<br />For overall content pack creation, see [url=https://github.com/Floogen/AlternativeTextures/wiki/Creating-a-Content-Pack]Alternative Textures wiki[/url].\n<br />\n<br />[b]Choose which of 4 template folders you want.[/b]\n<br />\n<br />[list]\n<br />[*][AT] FurnitureExamplePack-var1/2-long/split\n<br />[/list]\n<br />[list]\n<br />[*]By non-manual (uniform probabilities per texture) variations, [u]var1 vs var2[/u]. If you need only one type of retexture, choose var1. If you want to add 2+ texture types in a single pack, choose var2. \n<br />[/list]\n<br />[list]\n<br />[*]By texture.[i]png[/i]\u00A0format style, [u]long\u00A0vs split[/u]. Choose long (one long texture containing all variations, [i]texture.png[/i]) if you want the textures maintained in a single file.\u00A0Choose split (split texture per variation,\u00A0[i]texture_n.png[/i]) if you prefer controlling each texture type or easily add more later on.\n<br />[/list]\n<br />[list]\n<br />[*]Each folder has a template [i]manifest.json[/i] and\u00A0[i]Textures[/i] folder set up (with template textures for each furniture).\n<br />[/list]\n<br />[b]Edit/Create texture files.\n<br />[/b]\n<br />[list]\n<br />[*][i]Guide[/i] folder provides base guideline patterns/images per size and type of furniture you need; you can load them into image editor you use (e.g. Adobe Photoshop, Gimp) as a helper.\n<br />[/list]\n<br />[list]\n<br />[*]To look for name/size of a furniture by what it looks like, look up the number ID under attached\u00A0[i]furniture-ID.png[/i]\u00A0and find furniture name by ID under\u00A0[i]Furniture.xlsx [/i]file\n<br />[/list]\n<br />[list]\n<br />[*]To look for folder names/size of a furniture by furniture name, look under the\u00A0[i]Furniture.xlsx[/i]\n<br />[/list]\n<br />[b]Add texture files to the template folder of your choice.\n<br />[/b]\n<br />[list]\n<br />[*]Make sure to edit [i]manifest.json[/i] with your own project name and ID\n<br />[/list]\n<br />[list]\n<br />[*]Edit [i]texture.json[/i] accordingly if number of variations has changed. See [url=https://github.com/Floogen/AlternativeTextures/wiki/Creating-a-Content-Pack#adding-texture-variation]wiki[/url]\uFEFF.\n<br />[/list]\n<br />[list]\n<br />[*]Replace any existing textures with your own. Remove any folders you do not need.\n<br />[/list]\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]FOR MOD USERS[/b][/size]\n<br />\n<br />To use this mod, make sure you have the latest version of SMAPI and Alternative Textures installed.\n<br />\n<br />[list=1]\n<br />[*]Download file under [b]For Mod Users - AT lnss94FurniturePack-Blue[/b]\u00A0and/or\u00A0[b]AT lnss94FurniturePack-Pink[/b]\n<br />[*]Unzip the downloaded file(s) into the game's mods folder: Stardew Valley/Mods/\n<br />[*]To remove any unwanted retexture, remove the specific furniture folder in [i]Textures[/i] folder inside the unzipped folder. (e.g. Mods/[AT] lnss94FurniturePack-Blue/Textures/PlasmaTV)\n<br />[/list]\n<br />For looking up which retextures are added and their furniture names, see Media or\u00A0[i]preview[/i] folder. Left is Blue, Right is Pink version of the mod.\n<br />\n<br />For looking up folder names to remove by furniture name, see attached files\u00A0[i]Furniture.xlsx [/i]or[i] Furniture-ItemName.txt[/i].\n<br />\n<br />\n<br />[line]\n<br />\n<br />[size=4]THINGS TO NOTE[/size]\n<br />\n<br />   [size=2]\uFEFF* (10/07/2021) \"Gourmand Statue\" has a wrong dimension in the .json file. Planning to post an updated version within this week. For anyone who wants to fix it, open the texture.json file inside Textures/GourmandStatue folder with any notepad program, edit\u00A0\"TextureWidth\" to 32.[/size]\n<br />\n<br />   \uFEFF1. [b]Recommended to use the latest version of Alternative Textures (v4.3.6 as of Oct 7, 2021)![/b]\u00A0Minimum version is set to be the current latest version when released (v3.3.2). The mod should work for AT v2.1.0+ for long/v3.3.0+ for split textures since the version adds furniture/split texture support but various problems can occur with lower versions. Check AT's change log. Following changes affected per version:[list=1]\n<br />[list]\n<br />[*][u] 2.1.0[/u]: Added furniture retexture support. Bare minimum version required for this mod to work.\n<br />[*][u] 2.2.1[/u]: Fixed Fish Tanks not being drawn properly (looking overlapped with vanilla skin).\n<br />[*][u] 2.2.2[/u]: Fixed furniture with lights (Window/Lamp) not updating properly (day-night/on-off).\n<br />[*][u] 3.0.0[/u]: Optimized lagging in the farm even without placing any furniture items.\n<br />[*][u] 3.1.0[/u]: Fixed Paint Bucket preview UI not showing previews properly (would look like colored shapes/dots/lines or have no preview but still clickable on UI).\n<br />[*][u] 3.2.0[/u]: Fixed furniture placed on top of other furniture (tables) not drawing properly (only vanilla texture appears and cannot be accessed with paint bucket).\n<br />[*][u] 3.3.0[/u]: Added split texture support. Changed object's Paint Bucket preview name to appear on the bottom of the UI instead hovering over the mouse.\n<br />[*][u] 3.3.1/3.3.2[/u]: Fixed split texture not sorting properly on UI preview (mainly affected numerical sorting).\n<br />[*][u]3.4.0[/u]: Fixed furniture placed on top of rugs not drawing properly (would not be given AT texture and cannot be accessed with paint bucket)\n<br />[*][u]3.6.0[/u]: Added support for furniture animations\n<br />[/list][/list]\n<br />   \uFEFF2. Some items share same in-game Item Name, thus sharing same texture files. (e.g. There are five different Ceiling Leaves in game so I put in five different textures per recolor, making it 10 variations.) The\u00A0[i]texture.png[/i] and [i]texture.json[/i]\u00A0files are modified accordingly. List of those furniture items (var1/var2) are:\n<br />[list=1]\n<br />\n<br />[list]\n<br />[*] Ceiling Leaves (5/10)\n<br />[*] Cloud Decal (2/4)\n<br />[*] Dining Chair (2/4)\n<br />[*] Floor Divider (8/16)\n<br />[*] House Plant (15/30)\n<br />[*] Jungle Decal (4/8)\n<br />[*] Log Panel (2/4)\n<br />[*] Small Junimo Plush (4/8)\n<br />[*] Wall Sconce (7/14)\n<br />[/list][/list]\n<br />   \uFEFF3. Singing Stone is under Deco-Interactable on preview image/screenshots but is not interactable in-game. The furniture version of the item does not have any effect when interacted. (Type: Craftables does.)\u00A0\n<br />\n<br />   \uFEFF4. Furniture ID on [i]Furniture.xlsx[/i], [i]furniture-ID.png[/i], [i]overlay-ID.png[/i] is a little messed up; there are two 70's and no 55/56/57/272/273.\n<br />\n<br />   \uFEFF5. Recolored texture quality can be inconsistent. They were meant as example textures, so there could be a pixel or two uncolored/missing (or more!). Please report or request change if something bothers you.\n<br />\n<br />   \uFEFF6. For split texture, renumbering is not required when consecutive\u00A0[i]texture_n.png[/i] is removed, EXCEPT FOR when you delete [i]texture_1.png[/i]. [b]Each furniture folder must contain either [i]texture.png[/i] or [i]texture_1.png[/i][/b]\u00A0[b]at least[/b] ([url=https://github.com/Floogen/AlternativeTextures/wiki/Creating-a-Content-Pack#split-texture-example]first split texture variation of an object should be named texture_1.png[/url]\uFEFF). If you have both in the same folder, AT will use\u00A0[i]texture.png[/i]\u00A0and anything following is ignored.\n<br />\n<br />   \uFEFF7. Alternative Textures v3.6.0 adds a support for furniture animations. This mod does not include any examples but PeacefulEnd added some on [url=https://www.nexusmods.com/stardewvalley/mods/9246?tab=description]his example pack[/url]\u00A0or you can check [url=https://github.com/Floogen/AlternativeTextures/wiki/Creating-a-Content-Pack#using-animations]wiki[/url] for details. I can look into adding them if anyone requests.\n<br />\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]QUESTIONS[/b][/size]\n<br />\n<br />[b]\n<br />Q. How do I uninstall the mod? Can I uninstall the mod mid-game?[/b]\n<br />[list][*] Simply remove the mod folder. It should not affect any save files. The game will go back to vanilla textures + textures from other AT content packs you have added.\n<br />[/list]\n<br />\n<br />[b]Q. Can I use the mod with other Alternative Textures content packs modifying same furniture?[/b]\n<br />[list][*] Yes, Alternative Textures will randomly choose textures from different content packs when placing.\n<br />[/list]\n<br />\n<br />[b]Q. How do I change a texture of a placed furniture?\n<br />[/b][list][*] See [url=https://github.com/Floogen/AlternativeTextures/wiki/Paint-Bucket-Tool]Paint Bucket on wiki[/url]\uFEFF.\n<br />[/list]\n<br />\n<br />[b]Q. Can I change category/base file/texture/folder name of a furniture?[/b]\n<br />[list][*] Feel free to edit any file content of the mod to your needs EXCEPT for Item Name and Size (unless it is wrong) as they are what AT/game uses to apply the textures.\n<br />[/list]\n<br />\n<br />[b]Q. Texture is not showing up/Sprites do not get updated at day-night/Lamps do not turn on at night/Paint Bucket preview is messed up/Cannot use Paint Bucket/Furniture placed on tables or rugs has vanilla skin/Cannot access items placed on tables or rugs with Paint Bucket/There is a massive lag in the farm (but not inside buildings)![/b]\n<br />[list][*] Likely an Alternative Textures version issue. See THINGS TO NOTE #1 for further details. Otherwise, it could be a mistake I made or a mod compatibility issue. Please contact and report.\n<br />[/list]\n<br />\n<br />[b]Q. Is it compatible with xyz mod?[/b]\n<br />[list][*] Currently no known incompatibilities.\n<br />[/list]\n<br />\n<br />[line]\n<br />\n<br />[size=4][b][b]CONTACT[/b][/b][/size]\n<br />\n<br />Found bugs/missing items/wrong info or have requests/questions/comments? Leave a comment/message on Nexus OR find @Lensus at the official [url=https://stardewvalleywiki.com/Modding:Community#Discord]Stardew Valley discord channel[/url].\n<br />\n<br />[line]\n<br />[size=4][b]\n<br />\n<br />[/b][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9572",
+	"Version": "1.0.0",
+	"Updated": "2021-09-08T12:05:55+00:00",
+	"Downloads": [
+		{
+			"Id": 45007,
+			"Type": "Main",
+			"DisplayName": "For Modders - AT FurnitureExamplePack",
+			"FileName": "For Modders - AT Furniture Example Pack-9572-1-0-0-1631102591.zip",
+			"Description": "For Modders. Initial Release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 12410517,
+			"Uploaded": "2021-09-08T12:03:11+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "[AT] FurnitureExamplePack\\Guide",
+					"Type": "Invalid",
+					"RelativePath": "[AT] FurnitureExamplePack\\Guide",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "YourID.ProjectName",
+					"DisplayName": "(AT) Project Name",
+					"Type": "ContentPack",
+					"RelativePath": "[AT] FurnitureExamplePack\\[AT] FurnitureExamplePack-var1-long",
+					"Manifest": {
+						"Name": "(AT) Project Name",
+						"Description": "Project Description.",
+						"Author": "YourID",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YourID.ProjectName"
+					}
+				},
+				{
+					"Id": "YourID.ProjectName",
+					"DisplayName": "(AT) Project Name",
+					"Type": "ContentPack",
+					"RelativePath": "[AT] FurnitureExamplePack\\[AT] FurnitureExamplePack-var1-split",
+					"Manifest": {
+						"Name": "(AT) Project Name",
+						"Description": "Project Description.",
+						"Author": "YourID",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YourID.ProjectName"
+					}
+				},
+				{
+					"Id": "YourID.ProjectName",
+					"DisplayName": "(AT) Project Name",
+					"Type": "ContentPack",
+					"RelativePath": "[AT] FurnitureExamplePack\\[AT] FurnitureExamplePack-var2-long",
+					"Manifest": {
+						"Name": "(AT) Project Name",
+						"Description": "Project Description.",
+						"Author": "YourID",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YourID.ProjectName"
+					}
+				},
+				{
+					"Id": "YourID.ProjectName",
+					"DisplayName": "(AT) Project Name",
+					"Type": "ContentPack",
+					"RelativePath": "[AT] FurnitureExamplePack\\[AT] FurnitureExamplePack-var2-split",
+					"Manifest": {
+						"Name": "(AT) Project Name",
+						"Description": "Project Description.",
+						"Author": "YourID",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YourID.ProjectName"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342431695,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 45008,
+			"Type": "Main",
+			"DisplayName": "For Mod Users - AT lnss94FurniturePack-Pink",
+			"FileName": "For Mod Users - AT lnss94 Furniture Pack - Pink-9572-1-0-0-1631102682.zip",
+			"Description": "For Mod Users. Pink version of furniture retexture. Initial release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 3645119,
+			"Uploaded": "2021-09-08T12:04:42+00:00",
+			"Mods": [
+				{
+					"Id": "lnss94.ATFurniturePackPink",
+					"DisplayName": "(AT) Furniture Pack - Pink",
+					"Type": "ContentPack",
+					"RelativePath": "[AT] lnss94FurniturePack-Pink",
+					"Manifest": {
+						"Name": "(AT) Furniture Pack - Pink",
+						"Description": "Add Alternative Textures content pack for furniture, recolored in pink.",
+						"Author": "lnss94",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "lnss94.ATFurniturePackPink"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342431696,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 45009,
+			"Type": "Main",
+			"DisplayName": "For Mod Users - AT lnss94FurniturePack-Blue",
+			"FileName": "For Mod Users - AT lnss94 Furniture Pack - Blue-9572-1-0-0-1631102755.zip",
+			"Description": "For Mod Users. Blue version of furniture retexture. Initial release.",
+			"Version": "1.0.0",
+			"SizeInBytes": 3655323,
+			"Uploaded": "2021-09-08T12:05:55+00:00",
+			"Mods": [
+				{
+					"Id": "lnss94.ATFurniturePackBlue",
+					"DisplayName": "(AT) Furniture Pack - Blue",
+					"Type": "ContentPack",
+					"RelativePath": "[AT] lnss94FurniturePack-Blue",
+					"Manifest": {
+						"Name": "(AT) Furniture Pack - Blue",
+						"Description": "Add Alternative Textures content pack for furniture, recolored in blue.",
+						"Author": "lnss94",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "lnss94.ATFurniturePackBlue"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342431697,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396260,
+		"UploaderId": 62411371,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

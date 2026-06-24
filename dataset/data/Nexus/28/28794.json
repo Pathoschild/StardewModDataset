@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 28794,
+	"Name": "SV i18n Comment Namer",
+	"Author": "darthalex2014",
+	"AuthorLabel": "AlexGoD",
+	"Description": "[size=4][b]Also check\u00A0[/b][url=https://www.nexusmods.com/stardewvalley/mods/28796]SV i18n Translation Merger[/url]\n<br />[b]Also check [/b][url=https://www.nexusmods.com/stardewvalley/mods/21858]SV i18n Converter Tools[/url]\n<br />[b]Also check [/b][url=https://www.nexusmods.com/stardewvalley/mods/29116]XNB to CP Converter (For Dialogs mods)[/url][b]\n<br />\n<br />[center]\u00A0SV i18n Comment Namer[/center][/b][/size][b][size=3][center]Make your mod translation-friendly! This mod automatically adds NPC names to dialogue lines in your i18n files, making it easier for translators to work with.[/center][/size][/b][center][b][size=3]This tool helps Stardew Valley modders create translation-friendly i18n files by automatically adding comments that identify which character or game element is associated with each text entry.[/size][/b][/center][size=3][b]Features:[/b]\n<br />[list]\n<br />[*][b][u]Customizable Commenting:[/u][/b]\u00A0Choose which types of i18n entries to comment using the checkboxes below:[list]\n<br />[*][b]Include Events:[/b]\u00A0Adds comments to lines using common event commands like [b][u]speak[/u][/b], [b][u]dialogue[/u][/b], [b][u]textAboveHead[/u][/b], and [b][u]dialogueWarpOut[/u][/b].\n<br />[*][b][u]Include message:[/u][/b]\u00A0Adds \"[b][u]//message[/u][/b]\" comments to lines using the message\n<br />\u00A0command.[*][b][u]Include Characters/Dialogue/:[/u][/b]\u00A0Automatically detects and comments dialogue lines within [b][u]Characters/Dialogue/[/u][/b]\n<br />\u00A0blocks, even if those blocks are formatted across multiple lines.[*][b][u]Include Strings/schedules/:[/u][/b]\u00A0Automatically detects and comments text entries within [b][u]Strings/schedules/[/u][/b]\n<br />\u00A0blocks, useful for schedule-related text.[/list]\n<br />[/list][list][*][b][u]Prevent Duplicate Comments:[/u][/b]\u00A0The \"[b][u]Don't add comments to lines with existing comments[/u][/b]\" option ensures the tool won't add redundant comments to lines that already have them (starting with \"//\").\n<br />[/list][/size][b][size=3]This makes your i18n files easier to understand and translate, leading to a better experience for international players!\n<br />[/size][/b]\n<br />[size=3][b]How to Use:[/b]\n<br />[/size][list=1]\n<br />[*][size=3]Click \"[b][u]Select Folder[/u][/b]\" and choose the folder that contains your mod's [b][u]content.json[/u][/b]\u00A0file. Make sure this folder also [b][u]contains the i18n[/u][/b]\u00A0folder with your [b][u]default.json[/u][/b]\u00A0file.[/size]\n<br />[*][size=3]Select the types of i18n entries you want to comment using the checkboxes.[/size]\n<br />[*][size=3]The program will automatically process your files and create a new file named [b][u]default_with_comments.json[/u][/b]\u00A0in the i18n\u00A0folder.[/size]\n<br />[/list][size=3]That's it! Your new\u00A0[b][u]default_with_comments.json[/u][/b]\u00A0file will have helpful comments that make translation and organization easier.[/size]\n<br />\n<br />[b][size=3]Planned Features:[/size][/b]\n<br />[list]\n<br />[*][s]&#92;\"{{i18n:key | text}}&#92;\" (lines where the | separator is used[/s]) Done\n<br />[*][s]&#92;\"{{i18n:key{{Random: ...}}}}&#92;\"[/s]\u00A0\u00A0Done\n<br />[*][s]&#92;\"{{i18n:key}}!&#92;\" (the ! sign after {{i18n:key}})[/s] Done\n<br />[*][s]&#92;\"{{i18n:key}}.&#92;\" (the . sign after {{i18n:key}})[/s] Done\n<br />[/list]\n<br />[size=3][b]Known cases that are not commented:[/b][/size][list]\n<br />[*]question fork1 and quickQuestion and question null (It's better to comment these lines manually, as different mod authors use them differently)\n<br />[*]&#92;\"$q number null #{{i18n:key}}#$r\n<br />[*]&#92;\"{{i18n:key}}#$b# (when #$b# is after {{i18n:key}})\n<br />[*]\"i18n_name\": \"{{i18n:key}}&#92;\" (when {{i18n:key}} is at the beginning of the event)\n<br />[*]&#92;\"/{{i18n:key}}&#92;\" (extra /, most likely an error in the mods)\n<br />[*][u][b]\"key\" :[/b][/u]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28794",
+	"Version": "1.1.1",
+	"Updated": "2024-11-02T14:10:28+00:00",
+	"Downloads": [
+		{
+			"Id": 114800,
+			"Type": "Main",
+			"DisplayName": "SV i18n Comment Namer",
+			"FileName": "SV i18n Comment Namer-28794-1-1-2alpha-1730556628.exe",
+			"Description": "+ Fixed: The script now correctly ignores blocks that have a \"FromFile\": key, preventing incorrect NPC name assignments to subsequent i18n keys.\n<br />- If the formatting after Entries is not standard, the script will not comment on those lines.",
+			"Version": "1.1.2alpha",
+			"SizeInBytes": 37181584,
+			"Uploaded": "2024-11-02T14:10:28+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "114800",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342501488,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342415482,
+		"UploaderId": 122957028,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

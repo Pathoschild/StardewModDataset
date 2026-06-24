@@ -1,0 +1,104 @@
+{
+	"Site": "Nexus",
+	"Id": 23135,
+	"Name": "Cloudy Skies",
+	"Author": "KhloeLeclair",
+	"AuthorLabel": "Khloe Leclair",
+	"Description": "[img]https://staticdelivery.nexusmods.com/mods/1303/images/23135/23135-1713977599-1579814326.png[/img]\n<br />\n<br />[size=5]Are you a player?[/size]\n<br />\n<br />There's not much here for you, unless one of the mods you're using needs this, in which case: download it and forget it.\n<br />\n<br />[size=5]Are you a modder?[/size]\n<br />\n<br />This mod provides a framework for adding custom weather types to the game using content packs. But what does that mean?\n<br />\n<br />In Stardew Valley 1.6, the current weather was changed so that mods can add custom weather Ids. However, just having a custom weather Id doesn't do much. This mod is here to fix that, making it easy to add custom rendering effects and the like when there's weather afoot.\n<br />\n<br />Want to get started? We have an [url=https://github.com/KhloeLeclair/StardewMods/blob/main/CloudySkies/author-guide.md]authoring guide[/url], as well as a [url=https://github.com/KhloeLeclair/StardewMods/blob/main/CloudySkies/Sample%20Content/content.json]sample content pack[/url] with a commented content file showing off a few things.\n<br />\n<br />Make sure to note that your weather won't magically show up. You need to add it to [font=Courier New]Data/LocationContexts[/font] like you would any other weather. You can create custom weather totems though, as documented in the author guide, or you [b]can[/b] force tomorrow's weather though, using the [font=Courier New]cs_tomorrow[/font] command. Also check the [font=Courier New]cs_list[/font] command to see all the available weather types by Id.\n<br />\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6 on Linux/Mac/Windows.\n<br />[*]Works with [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF.\n<br />[*]Works in single player and multiplayer.\n<br />[/list]\n<br />[size=5]Known Issues[/size]\n<br />[list]\n<br />[*]None yet. Toss em here if you find one!\n<br />[/list]\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/CloudySkies]Source code[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/CloudySkies/CHANGELOG.md]Changelog[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/CloudySkies/Sample%20Content/content.json]For Devs: Sample Content Pack[/url]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/CloudySkies/author-guide.md]For Devs: Content Authoring Guide[/url]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/CloudySkies/ICloudySkiesApi.cs]For Devs: C# API[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23135",
+	"Version": "1.9.1",
+	"Updated": "2025-05-01T18:46:12+00:00",
+	"Downloads": [
+		{
+			"Id": 95167,
+			"Type": "Optional",
+			"DisplayName": "Sample Weather",
+			"FileName": "Sample Weather-23135-1-0-0-1714016239.zip",
+			"Description": "This is a sample pack showing you how to write and include weather.",
+			"Version": "1.0.0",
+			"SizeInBytes": 297255,
+			"Uploaded": "2024-04-25T03:37:19+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.cs.test",
+					"DisplayName": "(CS) Test Weather",
+					"Type": "ContentPack",
+					"RelativePath": "[CS] Test Weather",
+					"Manifest": {
+						"Name": "(CS) Test Weather",
+						"Description": "Test weather types for the Cloudy Skies mod.",
+						"Author": "Khloe Leclair",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.cloudyskies",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "leclair.cs.test"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481855,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 131458,
+			"Type": "Main",
+			"DisplayName": "Cloudy Skies",
+			"FileName": "Cloudy Skies-23135-1-9-1-1746125172.zip",
+			"Description": "This is the @main release. Supports 1.6.15+ only. Users on 1.6.14 or below should use an older release.",
+			"Version": "1.9.1",
+			"SizeInBytes": 630018,
+			"Uploaded": "2025-05-01T18:46:12+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.cloudyskies",
+					"DisplayName": "Cloudy Skies",
+					"Type": "Smapi",
+					"RelativePath": "CloudySkies",
+					"Manifest": {
+						"Name": "Cloudy Skies",
+						"Description": "A framework mod for adding custom weather types to the game via content packs!",
+						"Author": "Khloe Leclair",
+						"Version": "1.9.1",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "CloudySkies.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:23135@main"
+						],
+						"UniqueId": "leclair.cloudyskies",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342518146,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342409823,
+		"UploaderId": 138772588,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

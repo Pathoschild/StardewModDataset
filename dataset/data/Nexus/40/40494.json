@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 40494,
+	"Name": "Luau Soup Customizer",
+	"Author": "aedenthorn",
+	"Description": "This mod adds several modifications to the Luau soup pot mechanics:\n<br />\n<br />It adds info to the description of items during the Luau festival, letting you know the item's category and how much friendship will be added or subtracted from everyone in town if you put it into the pot.\n<br />\n<br />It lets you change how much friendship is gained or lost for each type of response (loved, liked, disliked, and hated) in the config.\n<br />\n<br />It adds some dialogue to Lewis's reminder when you talk to him, letting you know that quality, cost, and edibility will affect the taste of the soup.\n<br />\n<br />It lets you change the logic for an item to be considered each category\u00A0(loved, liked, neutral, disliked, and hated).\n<br />\n<br />It lets you create new event results for putting specific items into the pot.\n<br />\n<br />\n<br />[b][size=5]Category Logic\n<br />[/size][/b]\n<br />In the config file, each category has a list of requirements, any one of which can cause an item to be recognized for that category. E.g.:\n<br />\n<br />[code]\"ReqsLoved\": [\n<br />    {\n<br />      \"minQuality\": 2,\n<br />      \"maxQuality\": null,\n<br />      \"minPrice\": 160,\n<br />      \"maxPrice\": null,\n<br />      \"minEdibility\": null,\n<br />      \"maxEdibility\": null\n<br />    },\n<br />    {\n<br />      \"minQuality\": 1,\n<br />      \"maxQuality\": 1,\n<br />      \"minPrice\": 300,\n<br />      \"maxPrice\": null,\n<br />      \"minEdibility\": 11,\n<br />      \"maxEdibility\": null\n<br />    }\n<br />\u00A0 ][/code]\n<br />\n<br />This says that for an item to be loved, it must either a) have a min quality of 2 and a min price of 160, or b) have a quality of 1 and a min price of 300.\n<br />\n<br />Quality refers to the star level an item: 0 = no star, 1 = silver, 2 = gold, 4 = iridium.\n<br />\n<br />[b]null[/b] values are ignored, and requirements go in order from best to worst\u00A0(loved &gt; liked &gt; neutral &gt; disliked &gt; hated).\n<br />\n<br />\n<br />[b][size=5]Custom Results\n<br />[/size][/b]\n<br />You can use Content Patcher to create custom results for specific items, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />    \"Changes\": [\n<br />      \u00A0 {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"aedenthorn.LuauSoup/dict\",\n<br />            \"Entries\":\u00A0\n<br />            {\n<br />                \"876\":\u00A0\n<br />                {\n<br />                  \u00A0 \"friendship\": 200,\n<br />                  \u00A0 \"itemLevel\": 42,\n<br />                  \u00A0 \"forceResult\": true,\n<br />                  \u00A0 \"isLoved\": true\n<br />                }\n<br />            }\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Action\": \"EditData\",\n<br />            \"Target\": \"Data/Festivals/summer11\",\n<br />            \"Entries\":\u00A0\n<br />            {\n<br />                \"governorReaction42\": \"emote Governor 16/pause 600/shake Governor 1000/jump Governor/playMusic EmilyDream/emote Governor 20/pause 800/speak Governor &#92;\"Oh my... this soup tastes like the rainbow!$h&#92;\"/shake Governor 5000/animate Governor false true 100 9 10 11 11 10/pause 800/move Lewis 2 0 2/move Lewis 0 2 3/pause 500/animate Lewis false false 200 19 19 22 23 23 22 23 23 22 19 19/pause 800/playSound gulp/pause 600/playSound gulp/pause 1000/speak Lewis &#92;\"You're right... It's prismatic!$h&#92;\"/pause 500/faceDirection Lewis 2/speak Lewis &#92;\"Wonderful job, everyone! Now... who else wants to taste the rainbow?$h&#92;\"/faceDirection Marnie 0 true/moveToSoup/pause 1000/globalFade/viewport -1000 -1000/pause 300/message &#92;\"The Governor wasn't kidding... the soup tastes like a chromatic symphony!&#92;\"/pause 500/message &#92;\"Time to head home.&#92;\"/waitForOtherPlayers festivalEnd/end\",\n<br />            }\n<br />      \u00A0 }\n<br />    ]\n<br />}\n<br />[/code]\n<br />\n<br />876 is the ItemId for Prismatic Jelly, and [b]itemLevel[/b]\u00A0is a custom number chosen by you for this result so this [b]content.json[/b] file will change what happens if you put Prismatic Jelly into the pot, namely running the custom event branch\u00A0[b]governorReaction42[/b].\n<br />\n<br />If [b]forceResult[/b]\u00A0is set to true, the item will override any other item put in the pot by other players. Otherwise the item with the lowest itemLevel determines the result, as usual.\n<br />\n<br />If you use an [b]itemLevel[/b] of 0-6, it will be interpreted according to the vanilla results, as follows:\n<br />\n<br />[list]\n<br />[*]6 - lucky purple shorts\n<br />[*]5 - missing an item\n<br />[*]4 - loved\n<br />[*]3 - liked\n<br />[*]2 - neutral\n<br />[*]1 - disliked\n<br />[*]0 - hated\n<br />[/list]\n<br />If you set\u00A0[b]isLoved[/b]\u00A0to true, this makes the response count for the hidden achievement #38 of putting a loved item into the pot, regardless of the [b]itemLevel[/b].\n<br />\n<br />[b][size=5]Notes[/size][/b]\n<br />\n<br />You can change various things by editing the config file, or some of them using GMCM.\n<br />\n<br />Source code is here:\u00A0[url=https://github.com/aedenthorn/StardewValleyMods/]https://github.com/aedenthorn/StardewValleyMods/[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40494",
+	"Version": "0.1.1",
+	"Updated": "2025-12-23T08:08:36+00:00",
+	"Downloads": [
+		{
+			"Id": 151255,
+			"Type": "Main",
+			"DisplayName": "Luau Soup Customizer",
+			"FileName": "Luau Soup Customizer-40494-0-1-1-1766477316.zip",
+			"Description": "Changes:\n<br />\n<br />Added Nexus ID\n<br />Fixed loved if unloved item added as well",
+			"Version": "0.1.1",
+			"SizeInBytes": 20751,
+			"Uploaded": "2025-12-23T08:08:36+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.LuauSoup",
+					"DisplayName": "Customizable Luau Soup",
+					"Type": "Smapi",
+					"RelativePath": "LuauSoup",
+					"Manifest": {
+						"Name": "Customizable Luau Soup",
+						"Description": "Customizable Luau Soup.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LuauSoup.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40494"
+						],
+						"UniqueId": "aedenthorn.LuauSoup"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537943,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427182,
+		"UploaderId": 18901754,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

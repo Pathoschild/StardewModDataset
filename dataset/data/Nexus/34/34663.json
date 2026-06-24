@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 34663,
+	"Name": "wsf's_mod",
+	"Author": "leejohnkt11",
+	"AuthorLabel": "leejohn",
+	"Description": "Stardew-mod\n<br />写在前面\n<br />这是由 Leejohn 开发的一个星露谷游戏模组,突发奇想开发了这样一个带有礼物性质的mod❤️\n<br />[b]⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[/b]\n<br />使用方法\n<br />[list][*]从[url=https://www.nexusmods.com/]N网官网[/url]搜索 wsf's_mod 或者 id：34663;\n<br />[*]常规 Manual 下载,配置 Mods 文件夹;\n<br />[*]正常加载存档之后，会自动给予戒指\uD83D\uDC8D：’\n<br />[/list][img]https://img.picui.cn/free/2025/06/17/685185e22876f.png[/img]\n<br />[list][*]带上戒指（魔改的辉石戒指）以后会有自动换装和亮表情特效 (不在此展示了)；\n<br />[*]在游戏中的任何位置按\"U\"键，可以调用和谢恩的远程交流(使用Deepseek)；\n<br />[/list]\n<br />[img]https://img.picui.cn/free/2025/06/17/685185e21fb06.png[/img]\n<br />开发记录\n<br />环境选择\n<br />[list][*]本来对于 .NET 项目想基于 VS 开发但是最后还是选择本地配置 .NET SDK 结合 vscode 来开发（调试，该参数更方便）\n<br />[*]需要 vscode .NET Install Tool 扩展。\n<br />[*]核心是 Modentry.cs 文件继承 Mod 类：\n<br />[/list]\n<br />[code]\u00A0 \u00A0 \u00A0 using StardewModdingAPI;\n<br />\u00A0 \u00A0 \u00A0 using StardewModdingAPI.Events;\n<br />\u00A0 \u00A0 \u00A0 using StardewValley;\n<br />\u00A0 \u00A0 \u00A0 using StardewValley.Objects;\n<br />\u00A0 \u00A0 \u00A0 namespace wsf;\n<br />\u00A0 \u00A0 \u00A0 public class Modentry : Mod\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 public override void Entry(IModHelper helper)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Monitor.Log(\"Initializing Custom Ring Mod\", LogLevel.Debug);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 CustomRing.Register(helper, this.Monitor);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 bool hasRing = false;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 foreach (var item in Game1.player.Items)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 if (item is Ring ring &amp;&amp; ring.GetType() == typeof(CustomRing))\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 hasRing = true;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 break;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 if (!hasRing)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Game1.player.addItemToInventory(new CustomRing());\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Monitor.Log(\"Auto-given custom ring to player\", LogLevel.Info);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />[/code]\n<br />[list][*]在 CustomRing.cs 中可以个性化修改戒指事件，在注册戒指分配及穿戴事件之后可以自定义修改消息文本和动作以及表情内容\n<br />[/list]\n<br />[code]public override void onEquip(Farmer who)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 base.onEquip(who);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Game1.addHUDMessage(new HUDMessage(\"text\", 1));\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 _monitor?.Log($\"{who.Name} text!\", LogLevel.Info);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 who.animateOnce(id);\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 originalHat = who.hat.Value;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 originalShirt = who.shirtItem.Value?.ItemId;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 originalPants = who.pantsItem.Value?.ItemId;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 originalHairColor = who.hairstyleColor.Value;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 who.hat.Value = new Hat(\"69\");\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 who.changeShirt(\"1265\");\u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 who.pantsItem.Value = new Clothing(\"2\");\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 who.changeGender(who.IsMale);\u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 // who.doEmote(20);\u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }[/code]\n<br />[b]⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[/b]\n<br />结语\n<br />作者和女朋友在星露谷度过了一段极其难忘的时光，齐先生也许见证了我的喜欢和内心的悸动\uD83D\uDC40，这是她和作者在一起的第一个生日，某天晚上突然有了这样一个想法，遂放手去做，既是对过去自己的喜欢的奖励也是对未来恋爱的激励，正所谓继往开来嘛\uD83E\uDD29。 现在功能很单一，后续可能会慢慢更新，可能到最后会变成一个真正有用的 mod ，而不仅限于一个 gift~。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34663",
+	"Version": "1.0.1",
+	"Updated": "2025-06-17T15:04:13+00:00",
+	"Downloads": [
+		{
+			"Id": 134886,
+			"Type": "Main",
+			"DisplayName": "wsf's_mod",
+			"FileName": "wsf's_mod-34663-1-0-1-1750172653.zip",
+			"Description": "新增和谢恩的远程交流，随时随地，不限内容",
+			"Version": "1.0.1",
+			"SizeInBytes": 124790,
+			"Uploaded": "2025-06-17T15:04:13+00:00",
+			"Mods": [
+				{
+					"Id": "leejohnkt11.WSF",
+					"DisplayName": "WSF",
+					"Type": "Smapi",
+					"RelativePath": "wsf",
+					"Manifest": {
+						"Name": "WSF",
+						"Description": "ljy给wsf的生日礼物",
+						"Author": "leejohnkt11",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WSF.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:leejohnkt11/WSF"
+						],
+						"UniqueId": "leejohnkt11.WSF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342521574,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421351,
+		"UploaderId": 253754209,
+		"CategoryId": 13,
+		"Adult": false
+	}
+}

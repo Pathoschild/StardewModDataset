@@ -1,0 +1,95 @@
+{
+	"Site": "ModDrop",
+	"Id": 1753229,
+	"Name": "Star Control - CustomisationPlus",
+	"Author": "nnnextra",
+	"TagLine": "Radial menus for controller play. Replaces toolbar for quicker tool and item access. Also provides radial menus for other mods.",
+	"Description": "Star Control – CustomisationPlus is a controller-focused Stardew Valley mod that adds customisable radial menus, quick actions, and a small-screen-friendly config UI. This is a quality‑of‑life fork of the original Star Control mod, built for players who want finer control over how radial menus look and behave. CustomisationPlus allows for better Star Control usability on smaller screens like the Steam Deck, but also adds many customisation features suitable for any screen size.  \n\nKey features of Star Control - CustomisationPlus\n\nRadial menu layout controls: size, position (vertical & horizontal), and a preview layout that can be seen on smaller screens.\nItem label and description options: toggle visibility and scale text size.\nQuick action menus: toggle visibility and adjust size independently.\nConfig menu improvements: fits comfortably on smaller resolutions with scrollable pages.\nHUD behavior: only the vanilla toolbar hides while health, stamina, time, and money remain visible.\nFixes the slingshot quick action assignment (including Swords & Sorcery bows).  \nController QoL: improved right‑stick scrolling across all config tabs; cursor no longer pops in/out on wheel open/close.\nInstant actions: holding the button now repeats tool use.  \n\uFEFFGives the player separate radial wheels for other mods such as Sword & Sorcery, to enable easy access to modded controls with a controller (i.e. S&S Adventure Bar).\n\nDocumentation\n\nDocumentation for the original mod is available at the original Star Control Docs.\nDocumentation for the CustomisationPlus version of Star Control coming soon.\nRequirements\n\nSMAPI (required)\nStardewUI (required)\nGeneric Mod Config Menu (optional but recommended)  \n\nNote: You must uninstall previous installations of Star Control or Radial Menu before installing Star Control - CustomisationPlus.  \n\n---\n\nInstallation\nPasted from original mod page\n\nStar Control - CustomisationPlus works out of the box, though many of its more powerful features require additional setup. These steps will get you up and running; afterward, head on over to the configuration pages to learn how to customize.\n\nInstallation steps:\n\nInstall SMAPI and set up your game for mods, per the Modding: Player's Guide instructions.\nDownload and install Stardew UI.\nDownload the main file from the Files tab.\nOpen the .zip file and extract the StarControl folder into your Stardew Valley\\Mods folder. You can also use a mod manager such as Stardrop.\nLaunch the game and load a save.\n\nBasic controls once the mod is installed (all can be customized):\nHold  to open the Inventory Pie Menu,\nHold  to open the Mod Actions menu, which initially will only have one item, the Star Control Settings.\nWith either menu open, use  to focus an item. The game is paused during selection (except in co-op/multiplayer).\nWhen an item is focused (highlighted), press  to use it or  to select (hold) it.\nIf a menu has multiple pages, use  and  to navigate while the menu is open.\nPress  during gameplay to open the Instant Actions menu and set single-button actions.\n\n\nCredits\n\nOriginal mod by focustense. This fork maintained by nnnextra.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1753229",
+	"Version": null,
+	"Updated": "2025-12-24T19:22:41.52+00:00",
+	"Downloads": [
+		{
+			"Id": 1776256,
+			"Type": "Main",
+			"DisplayName": "Star Control - CustomisationPlus 1.1.8",
+			"FileName": "Star Control - CustomisationPlus 1.1.8.zip",
+			"Description": "Star Control – CustomisationPlus is a controller-focused Stardew Valley mod that adds customisable radial menus, quick actions, and a small-screen-friendly config UI. This is a quality‑of‑life fork of the original Star Control mod.",
+			"Version": "1.1.8",
+			"SizeInBytes": 290361,
+			"Uploaded": "2025-12-24T19:15:33.384+00:00",
+			"Mods": [
+				{
+					"Id": "focustense.StarControl",
+					"DisplayName": "Star Control - CustomisationPlus",
+					"Type": "Smapi",
+					"RelativePath": "Star Control - CustomisationPlus",
+					"Manifest": {
+						"Name": "Star Control - CustomisationPlus",
+						"Description": "Radial menus for toolbar, designed to be used with controllers",
+						"Author": "nnnextra (forked from focustense)",
+						"Version": "1.1.8",
+						"MinimumApiVersion": "4.1.10",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "StarControl.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "focustense.StardewUI",
+								"MinimumVersion": "0.6.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:nnnextra/StardewControllers-CustomisationPlus",
+							"NexusMods:40470"
+						],
+						"UniqueId": "focustense.StarControl",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "08ebb49d4472d61d92d1801cf9844957",
+				"md5In": "6ba190bc76452061c7df5ca615503691",
+				"patchNotes": "1.1.0-1.1.8 Changelog:\n\nRemoved legacy Harmony patches for cursor methods not present in current game versions to reduce log noise.\nPlayStation controller button prompt icon set and selector (Controls tab).\nInstant Actions menu item in the mod wheel with visibility toggle.\nPlayStation controller prompt spritemap and sprite sheet variants.\nInstant Actions (remapping) menu layout adjusted to better fit smaller screens; middle list now scrolls with a visible scrollbar.\nSwitching controller prompt sets now reloads UI sprites in-game (close and reopen the menu if needed).\nControl prompts and the mod-menu keybind editor now follow the selected controller prompt set.\nQuick action menu slot content scaled up while keeping the menu size the same.\nMouse/trackpad now reveals the cursor correctly after closing a wheel.\nDefaults/Cancel/Save tooltips removed to avoid overlap on smaller screens.\nSeparate thumbstick navigation options for the item wheel and mod wheel.\nAdded a \"Both\" thumbstick option for wheel navigation.\nBackward-compatible binding so older config layouts still show a navigation selector.\nCustomization controls for item name/description size and visibility.\nSliders for vertical and horizontal radial menu position.\nToggle and size slider for quick action menus.\nScrollable config menu pages with visible scrollbars.\nReduced default radial menu size and lowered on-screen position for a less intrusive UI.\nReduced quick action menu sizes to match main radial menus.\nRemoved full-screen background fade when radial menus are opened.\nImproved radial menu preview layout and centering.\nSharper item name rendering at small scales.\nUpdated default configuration values to match the new UI tuning.\nConfig menu now centers on most tabs and slides left on the Style tab to make room for the preview.\nConfig menu slide animation smoothed for better readability.\nPreserves vanilla health/stamina/time HUD while hiding only the toolbar.\nInstant actions now support held tool use for continuous action.\nImproved controller cursor behavior after closing a wheel (suppresses flicker and unwanted movement).\nReset mouse position to the player when opening/closing the wheel.\nRefined config menu layout to fit better on smaller screens.\nIn-game config menu scaling on smaller screens (incl. 1280x800).\nFixed preview rendering at sub-1.0 text scale.\nFixed truncated item names in the radial menu center label.\nFixed slingshot (and modded bows) assignment to quick actions.\nRight-stick scrolling now works across all config tabs without cursor snapping.\nCursor stays hidden when opening/closing radial menus to prevent pop-in.\nHot reload source sync no longer crashes when source paths are unavailable.\nGMCM keybinding sync now skips cleanly when the extension DLL is missing.\nFixed radial menu preview not showing properly in the Style tab of in-game config menu.",
+				"scriptType": 0,
+				"sha256Ex": "dde12241982aa731d4e95f5695d9bb4a39dfb8586d80d10a78a6efc23ed70d8a",
+				"sha256In": "f8cdf17fe7a747f3e75095589e8697ff3a4433abc4023e19717613c3f0346da2"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1766604161520,
+		"DateUpdated": 1766604158967,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1766603531427,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1753229/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1753229/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1753229/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1753229/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 487086
+	}
+}

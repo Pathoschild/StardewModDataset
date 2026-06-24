@@ -1,0 +1,292 @@
+{
+	"Site": "Nexus",
+	"Id": 19513,
+	"Name": "Changing Skies -- Weather- and Time-Dependent UI",
+	"Author": "Doragoun",
+	"Description": "[img]https://i.imgur.com/K5Df5sk.png[/img]\n<br />\n<br />As the name and the short blurb imply, this mod aims to take a new approach to customizing the dialogue box by reflecting the current weather and time of day.\n<br />At the moment, there's a grand total of eight different portrait backgrounds: Sunny, rainy and snowy days have their own unique day and night portrait backgrounds. The mod switches between the day and night versions once the in-game clock reaches 5 PM and you change the map you're on (so when you leave the bus stop and enter the town, for example).\n<br />\n<br />Additionally, there are background for the sewers as well as caves such as the mines or the Skull Cavern. Because that isn't enough, though, there's also a special overlay when you're indoors: a comically big window that shows the current weather. If you reach a certain blue gentleman on Ginger Island, you might even be treated to another special background...\n<br />\n<br />[center]\n<br />[img]https://i.imgur.com/ybov3XZ.gif[/img]\uFEFF[/center]\n<br />There are also day and night versions of a new special event in 1.6 that you can find under the following spoiler. Click at your own risk!\n<br />[SPOILER]\n<br />[img]https://i.imgur.com/9gdUgSx.png[/img]\uFEFF[/SPOILER]\n<br />If you've got feedback, comments and things you'd like to see in the future, please leave a comment or ping me (Doragoun) in the SDV Discord server's modded farmers channel and I'll get back to you as soon as possible. Additionally, if you like the mod, please consider endorsing it – it's easy to do and gets more people to see it. Thanks for reading this far!\n<br />\n<br />[img]https://i.imgur.com/L5bBY65.png[/img]\uFEFF\n<br />\n<br />The gap between the portrait and the box containing their name has always annoyed me just as much as some of the commenters. Thankfully, there's an update for [url=https://www.nexusmods.com/stardewvalley/mods/22678]Dialogue Display Framework[/url] and I finally figured out how to make a content pack for it thanks to its author MangusuPixel!\n<br />\n<br />[center]\n<br />[img]https://i.imgur.com/Qz1O2GA.png[/img]\uFEFF\n<br />Portrait from [url=https://www.nexusmods.com/stardewvalley/mods/16649]Mono's Portraits[/url]\uFEFF[/center]\n<br />The pack itself is pretty simple – all it does is move the name upwards so there's no more awkward gap. To use it, simply make sure you've got the updated [url=https://www.nexusmods.com/stardewvalley/mods/22678]Dialogue Display Framework[/url] installed. That's it! I'd heavily recommend using it, but it's obviously up to you. If you notice something looking off, please don't hesitate to let me know!\n<br />\n<br />[img]https://i.imgur.com/8BxUdEv.png[/img]\uFEFF\n<br />\n<br />In addition to the portrait backgrounds, there's also a new style for the borders of the dialogue box with rounded corners that also change their color to fit the current weather. If you don't like this change, though, you can use [url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url] to edit the config.json file that'll be created once you've run the game with this mod once. Seriously, please get GMCM. It makes things much easier.\n<br />\n<br />The config that's responsible for the borders is called \"Border Style\" and can be set to three different values. It defaults to \"Dynamic\" that changes the borders to a new design with rounded corners and dynamically  changes their color to fit the current weather/time varuation. If you'd rather have a constantly brown border with the new rounded corners, you can set it to \"Brown\". If you'd rather see the base game wooden frame or want to use another UI mod's edits, \"Vanilla\" is the config you want. Additionally, if you dislike the indoors overlay, simply untick the check box (or manually change \"true\" to \"false\" in the JSON file using a text editor) for \"Indoors Overlay\".\n<br />\n<br />For the new CC part of the mod in version 1.3, there are two new configs. \"Dynamic CC Background\" is another true/false option that's set to true by default. If you dislike it for whatever reason, you can turn it off. Additionally, each CC interface comes in two different versions that you can choose from. The default version (\"Background\") is based ony Changing Skies' portrait backgrounds and prominently features the sky (or a cave or the sewers) along with appropriate decoration (clouds, rain drops, you name it). If you prefer the old ornate leaves, you can set this config to \"Border\" and you'll get a sky-inspired background with a colored leaf border instead of these decorations. For a preview, check the last screenshot!\n<br />\n<br />One last config is for (makeshift) compat between my DDF patch and Farmer Portraits. If you check the post by Magoozor in the posts section, you'll see the problem and see my short explanation. Short version: If you can live with the gap and not having the indoors overlay, set \"Farmer Portraits BG Fix\" to true and make sure you've got custom backgrounds enabled in Farmer Portraits' own config. This way, you'll at least be able to read your farmer's name. We can only wait for the frameworks' authors to fix this little problem, but please don't harass them.\n<br />\n<br />[img]https://i.imgur.com/e1dXF3S.png[/img]\uFEFF\n<br />\n<br />The mod should be compatible with hopefully all other big UI mods – it'll replace other portrait backgrounds and optionally their dialogue box frame. If you find one that's not supported, you can make a so-called [url=https://stardewmodding.wiki.gg/wiki/Tutorial:_How_to_Add_a_False_Dependency_for_Load_Orders]false dependency[/url] yourself. Open this mod's manifest, find the \"template\" I prepared, remove the slashes and insert the other UI mod's unique ID. It's easier than it sounds, so no worries.\n<br />Additionally, I tried to work some behind-the-scenes 1.6 magic that should make Changing Skies load very late which means its changes should overwrite most if not all UI mods. That in turn means you hopefully won't have to resort to setting false dependencies yourself too often.\n<br />\n<br />If you want to see some really cool cross-mod compat, I'd also recommend checking out ItsBenter's [url=https://www.nexusmods.com/stardewvalley/mods/6899]Portrait Frame Variations[/url]. Not only does it add incredibly neat map-dependent decoration, it's even got custom compat assets for Changing Skies! Use both at the same time for some incredibly immersive portraits. If you also have Dialogue Display Framework installed, make sure to also grab these [url=https://www.nexusmods.com/stardewvalley/mods/24130]temporary fix compat assets[/url] – otherwise, some of Benter's decoration might awkwardly float around.\n<br />\n<br />You want cool dynamic backgrounds but don't want the portrait to be quite so out in the open? Check out Kanadeyoru's [url=https://www.nexusmods.com/stardewvalley/mods/23337]Portraited Changing Skies[/url] featuring exactly that.\n<br />\n<br />If you want to use both the Gap-B-Gone patch for DDF and Hearts and Gifts, a pretty nifty DDF content pack that displays excatly what it says on the tin, make sure to download the optional compat patch made by MangusuPixel in the [url=https://www.nexusmods.com/stardewvalley/mods/22678?tab=files]DDF update's optional files section[/url].\n<br />\n<br />[img]https://i.imgur.com/N3yemR7.png[/img]\uFEFF\n<br />\n<br />[list=1]\n<br />[*]Make sure you've installed [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF.\n<br />[*]Download the main zip file.\n<br />[*]Extract it into your mods folder.\n<br />[/list]Done!\n<br />\n<br />Optionally, if you want to use the additional [url=https://www.nexusmods.com/stardewvalley/mods/22678]Dialogue Display Framework[/url] patch (which I heavily recommend!), make sure you've got it installed, too.\n<br />\n<br />If you want to uninstall it, simply delete this mod's folder.\n<br />\n<br />[img]https://i.imgur.com/Pwr9vmc.png[/img]\uFEFF\n<br />\n<br />A lot of stuff. Please just ask if there's something you're interested in! \n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/17059]DSV[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/18223]Yri's Retro Recolor[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/17912]VPR-Inspired UI[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14524]Elle's Town Buildings[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8164]Simple Foliage[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/12831]Dynamic Reflections[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8897]Visible Fish[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/9063]SH's Wild Animals[/url]\uFEFF\n<br />[*][url=https://github.com/Annosz/UIInfoSuite2/releases]UI Info Suite 2[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/12442]Less Ugly Town Interiors[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/12557]Altar of Yoba Replacement[/url]\uFEFF\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/16649]Mono's Portraits[/url]\uFEFF\n<br />[/list]\n<br />I strongly recommend using a mod that gives the villagers seasonal outfits – otherwise, you'll end up looking at things like [url=https://cdn.discordapp.com/attachments/1109597027588919389/1184838454182420480/image.png?ex=658d6dcc&amp;is=657af8cc&amp;hm=45bb2c52493cd97b34483a3da7f9533e40fd492f8417dffc331ab3c7fe27a8d4&amp;]this[/url]. [url=https://www.nexusmods.com/stardewvalley/mods/17059]DSV[/url] in particular has tons of different outfits, including ones for rainy days, and can be configured to use both diverse and vanilla designs.\n<br />\n<br />[img]https://i.imgur.com/JbSa5Vf.png[/img]\uFEFF\n<br />\n<br />My friends on the SDV discord that listened to me ramble, gave me incredibly valuable feedback and (digitally) had my back at all times. Thank you so much!\n<br />Extra special thanks to Airyn, Vin, Max, Quill, Logo, Nonu, Soup and Choop! This wouldn't look nearly as good without all of your input.\n<br />A special shoutout to the man, the myth, the legend himself – Pathoschild who showed me a way to set up the mines background without going insane.\n<br />For the 1.3 release, thanks for Benter and 6480 for advice on behind-the-scenes compat improvements.\n<br />Additionally, thanks to MangusuPixel for helping me wrap my head around DFF and making a specific compat patch for Changing Skies and Hearts and Gifts.\n<br />For the French and Spanish translations, another special thank you to Caranud and Luryxy, respectively!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19513",
+	"Version": "1.5.0",
+	"Updated": "2024-07-14T17:26:55+00:00",
+	"Downloads": [
+		{
+			"Id": 99103,
+			"Type": "Main",
+			"DisplayName": "Changing Skies",
+			"FileName": "Changing Skies-19513-1-5-0-1715708147.zip",
+			"Description": "Main and only file. DDF add-on has been integrated into this one.",
+			"Version": "1.5.0",
+			"SizeInBytes": 574809,
+			"Uploaded": "2024-05-14T17:35:47+00:00",
+			"Mods": [
+				{
+					"Id": "Dora.ChangingSkies",
+					"DisplayName": "Changing Skies",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Changing Skies",
+					"Manifest": {
+						"Name": "Changing Skies",
+						"Description": "A mod that changes the portrait backgrounds, dialogue box borders and Community Center interface according to the current weather and time.",
+						"Author": "Doragoun",
+						"Version": "1.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MineralTownArchitects.MineralTown",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Amaryn.OvergrownFloweryInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ManaKirel.VintageInterface2",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ManaKirel.VMI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "grapeponta.VibrantPastoralRecolor",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "MaybeItsMitts.MittsMintyMenus",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DaisyNiko.EarthyInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Sqbr.StarryBlueUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "thefrenchdodo.sakurainterfaceredux",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DaisyNiko.EarthyRecolour",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Leodolon.LeosInterfaceRecolours",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Sqbr.BlueUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Narianka.YetAnotherRecolour",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KittenTyme.GloomyRecolour",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "SabiMiyato.JollyRainbowInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "SabiMiyato.UImodTH",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ninthalley.CitrusInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "GZhynko.DialogueBoxRedesign",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "iHaku.MagicalInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Eyeyumi.SakuraInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Phiido.LessSaturatedVisuals",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "IYAHO.PinkBlueInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "IYAHO.PinkDustInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ninthalley.TransparentBlueInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KAYA.YellogFlowerUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Luffian735.WoodenInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "vamoosi.RosierColoredGlasses",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Acerbicon.Recolor",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "lwinnn.CleanUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Lita.StarblueValley",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Acerbicon.ADarkInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "LPMG.SVNightmode",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hazel.Pathologic",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "zazizu.darkUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "zazizu.darkUICP",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "minervamaga.CP.ATDSV",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "minervamaga.CP.GardenVarietyUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Taskmaster.FantasticFrames",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ChaseXavier.transparentinterface-black",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ChaseXavier.TDialogueBox",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Voltronvalley",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "yeoneeeee.flowerUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Shrimpxwarrior.FUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "norisu.PastelInterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "UI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "hopewashere.transparentinterface-darkbrown",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "coldazrael.TDialogueBox",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "megmom84.darkwoodinterface",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "BeneathThePlass.StarrySkyInterfaceCP",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Dora.VPRUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Dora.SpookyScaryUI",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "coldazrael.NexusTDialogueBox",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "aedenthorn.CPDDFHeartsandGifts",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19513"
+						],
+						"UniqueId": "Dora.ChangingSkies"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342485791,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 106792,
+			"Type": "Optional",
+			"DisplayName": "Spanish translation",
+			"FileName": "Spanish translation-19513-1-0-0-1720978015.zip",
+			"Description": "A Spanish translation for the config descriptions made by Luryxy. To use, download and unzip the file, then paste it into Changing Skies' i18n folder so it's next to the already existing default.json and fr.json.",
+			"Version": "1.0.0",
+			"SizeInBytes": 801,
+			"Uploaded": "2024-07-14T17:26:55+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "106792",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342493480,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406201,
+		"UploaderId": 79665293,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

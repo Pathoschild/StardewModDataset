@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 11252,
+	"Name": "Log Spam Filter",
+	"Author": "aedenthorn",
+	"Description": "The SMAPI log is great, but if you don't pay attention it can spam the same error or log messages each frame, needlessly filling up space, writing to disk, and even slowing down your game.\n<br />\n<br />This mod tries to fix that a bit, by catching messages that fit custom parameters and throttling them for a specific period of time.\n<br />\n<br />It has the following configurable options:\n<br />\n<br />[list]\n<br />[*]EnableMod - enable the mod\n<br />[*]IsDebug - post SMAPI log messages every time throttling occurs (default: [b]false[/b])\n<br />[*]AllowList - always allow from specific sources (usually the name of a mod, the last part of a SMAPI log line before the ]), comma-separated\n<br />[*]MSSpawnThrottle - time in milliseconds to throttle a source after catching spam (default: [b]1000[/b])\n<br />[*]MSBetweenMessages - throttle a source if it posts messages more frequently than this many milliseconds (default: [b]0[/b])\n<br />[*]MSBetweenIdenticalMessages - throttle a source if it posts identical messages more frequently than this many milliseconds (default: [b]0[/b])\n<br />[*]MSBetweenSimilarMessages - throttle a source if it posts similar messages more frequently than this many milliseconds (default: [b]0[/b])\n<br />[*]PercentSimilarity - percent similarity two consecutive messages must be to consider them similar  (default: [b]0[/b])\n<br />[/list]\n<br />A value of 0 or less means don't throttle.\n<br />\n<br />Similarity is pretty rudimentary, don't expect deep checking. I don't recommend turning on similar or all message throttling unless you are a mod dev and/or don't really care about providing complete SMAPI logs.\n<br />\n<br />All of the config variables except for AllowList can be configured using GMCM. You can edit the mod's config.json file to modify AllowList.\n<br />\n<br />There is a tally of how many messages have been throttled in the GMCM interface.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11252",
+	"Version": "0.1.1",
+	"Updated": "2022-03-10T15:58:11+00:00",
+	"Downloads": [
+		{
+			"Id": 51723,
+			"Type": "Main",
+			"DisplayName": "Log Spam Filter",
+			"FileName": "Log Spam Filter-11252-0-1-1-1646927891.zip",
+			"Description": "Changes:\n<br /><br />Fixed spelling",
+			"Version": "0.1.1",
+			"SizeInBytes": 12436,
+			"Uploaded": "2022-03-10T15:58:11+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.LogSpamFilter",
+					"DisplayName": "Log Spam Filter",
+					"Type": "Smapi",
+					"RelativePath": "LogSpamFilter",
+					"Manifest": {
+						"Name": "Log Spam Filter",
+						"Description": "A simple mod that throttles identical messages from spamming in the SMAPI log. Can be configured to throttle similar messages, or just messages from the same mod.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "LogSpamFilter.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "aedenthorn.LogSpamFilter",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "LogSpamFilter"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342438411,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397940,
+		"UploaderId": 18901754,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

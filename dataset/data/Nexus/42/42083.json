@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 42083,
+	"Name": "Idle Plus Walk",
+	"Author": "ViolentFran",
+	"Description": "This mod modifies the game's NPC animation logic, allowing for the creation of [b]Character Mods [/b]with[b]\u00A0Unique Idle Poses[/b].\n<br />It works by reserving frame 1 of the walk animation rows as a unique idle pose while using only frames 2-3-4 for the walk animation in a ping-pong playback style.\n<br />\n<br />[size=4][b]Used in These Fine Character Mods:[/b][/size]\n<br />[list]\n<br />[*]My very own Tall Wives Mods:\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/42110]Long Leah[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/43238]Huge Haley[/url]\uFEFF.\n<br />[*]Ash1307's\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/42811]Full Height Abigail - SCA - Nyapu style[/url]\n<br />[/list]If you are using IdlePlusWalk on your character mod and want to be featured here, send me a message.\n<br />\n<br />[size=4][b]How to Use:[/b][/size]\n<br />Download both Idle Plus Walk and a character mod that uses it.\n<br />\n<br />[b][size=4]How to make your own Character Mods with Idle Poses?[/size][/b]\n<br />[list=1]\n<br />[*]Use the first frame of the walk animation rows as the idle pose.\n<br />[*]In your content patch mod add this CustomField to the modded character data:\u00A0\"violentfran.IdlePlusWalk/Use\": \"true\"\n<br />[*]Here on Nexus, add Idle Plus Walk as a requirement to your character mod.\n<br />[/list]You can confirm your character mod is working with Idle Plus Walk through the SMAPI console. After loading for the first time into a save, a message like this will be printed:[i] \"[Idle Plus Walk] Leah is using IdlePlusWalk.\"\n<br />\n<br /> Feel free to contact me if you need help implementing this framework into your character mod![/i]\n<br />\n<br />[size=4][b]Known Issues:[/b][/size]\n<br />[list=1]\n<br />[*]It does not work for the preview in the character's profile.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42083",
+	"Version": "1.1",
+	"Updated": "2026-02-22T20:34:38+00:00",
+	"Downloads": [
+		{
+			"Id": 157847,
+			"Type": "Main",
+			"DisplayName": "IdlePlusWalk",
+			"FileName": "IdlePlusWalk-42083-1-1-1771792478.zip",
+			"Description": "Removed the whitelist. Mod activation is now done through the CustomField \"violentfran.IdlePlusWalk/Use\": \"true\". Also, should work on Vortex now(untested).",
+			"Version": "1.1",
+			"SizeInBytes": 5049,
+			"Uploaded": "2026-02-22T20:34:38+00:00",
+			"Mods": [
+				{
+					"Id": "ViolentFran.IdlePlusWalk",
+					"DisplayName": "Idle Plus Walk",
+					"Type": "Smapi",
+					"RelativePath": "IdlePlusWalk",
+					"Manifest": {
+						"Name": "Idle Plus Walk",
+						"Description": "Allows for NPC unique idle poses without compromising the walk animations",
+						"Author": "ViolentFran",
+						"Version": "1.1.0",
+						"EntryDll": "IdlePlusWalk.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:42083"
+						],
+						"UniqueId": "ViolentFran.IdlePlusWalk"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544535,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428771,
+		"UploaderId": 178873845,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 45910,
+	"Name": "Spouses In Ginger Island Fix",
+	"Author": "AlanBF",
+	"Description": "Every 10 in-game minutes this error pops up?\n<br />\n<br />[code][12:37:48 ERROR Spouses' Island] This mod failed in the GameLoop.TimeChanged event. Technical details: \n<br />NullReferenceException: Object reference not set to an instance of an object.\n<br />\u00A0\u00A0 at SpousesIsland.Events.Time.OnChange(Object sender, TimeChangedEventArgs e)\n<br />\u00A0\u00A0 at StardewModdingAPI.Framework.Events.ManagedEvent`1.Raise(TEventArgs args)[/code]\n<br />It's because the mod looks for a list of valid spouses, but it only create that list if you already unlocked the Island House Upgrade.\n<br />\n<br />I just added\n<br />\n<br />[code]if(Upgrade not unlocked):\n<br />    Do nothing.[/code]\n<br />That's all.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45910",
+	"Version": "1",
+	"Updated": "2026-05-06T16:49:53+00:00",
+	"Downloads": [
+		{
+			"Id": 166635,
+			"Type": "Main",
+			"DisplayName": "SpousesInGingerIslandFix",
+			"FileName": "SpousesInGingerIslandFix-45910-1-1778086193.zip",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 12781,
+			"Uploaded": "2026-05-06T16:49:53+00:00",
+			"Mods": [
+				{
+					"Id": "AlanBF.SpousesInGingerIslandFix",
+					"DisplayName": "Spouses In Ginger Island Fix",
+					"Type": "Smapi",
+					"RelativePath": "SpousesInGingerIslandFix",
+					"Manifest": {
+						"Name": "Spouses In Ginger Island Fix",
+						"Description": "Fix Spouses In Ginger Island GameLoop error",
+						"Author": "AlanBF",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "SpousesInGingerIslandFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "mistyspring.spousesisland",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:45910"
+						],
+						"UniqueId": "AlanBF.SpousesInGingerIslandFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553323,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432598,
+		"UploaderId": 29404525,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

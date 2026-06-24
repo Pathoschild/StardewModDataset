@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 24225,
+	"Name": "Museum Donation Checker",
+	"Author": "HitaxasTV",
+	"Description": "[code]\uFEFF[/code]Adds a game state query for use with trigger actions.\n<br />\n<br />A use example is my\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/24071]Bugs in the valley[/url]\u00A0mod, where turning in specific bugs to the museum allows the player to receive special letters in the mail.\u00A0\n<br />\n<br />If anyone would like to use this in their own mod all they need to do is add\n<br />[code]\u00A0\"Condition\": \"MuseumDonationChecker.DonationStatus &lt;item ID&gt;\"\n<br />[/code]\u00A0to their trigger action. Then replace &lt;item ID&gt; with the desired artifact or mineral ID.\n<br />\n<br />Another functionality of this mod is to output donation statuses to the log\n<br />\n<br />[code]\uFEFFdebug_donation_status\n<br />[/code]\u00A0- can be used in SMAPI to check for the donation status of all artifacts and minerals\n<br />\n<br />[code]\uFEFFcheck_donation_status &lt;itemID&gt;\n<br />[/code]\u00A0- can be used in SMAPI to check a specific artifact/mineral",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24225",
+	"Version": "1.1",
+	"Updated": "2024-05-20T03:49:06+00:00",
+	"Downloads": [
+		{
+			"Id": 100132,
+			"Type": "Main",
+			"DisplayName": "Museum Donation Checker",
+			"FileName": "Museum Donation Checker-24225-1-2-1716176946.zip",
+			"Description": "Added some extra logic for Bugs in the valley",
+			"Version": "1.2",
+			"SizeInBytes": 14261,
+			"Uploaded": "2024-05-20T03:49:06+00:00",
+			"Mods": [
+				{
+					"Id": "Hitaxas.Dono.DLL",
+					"DisplayName": "MuseumDonationChecker",
+					"Type": "Smapi",
+					"RelativePath": "MuseumDonationChecker",
+					"Manifest": {
+						"Name": "MuseumDonationChecker",
+						"Description": "Detects if an item has been donated to Gunther's museum.",
+						"Author": "Hitaxas",
+						"Version": "1.2.0",
+						"EntryDll": "MuseumDonationChecker.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 24225"
+						],
+						"UniqueId": "Hitaxas.Dono.DLL"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342486820,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342410913,
+		"UploaderId": 3646000,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

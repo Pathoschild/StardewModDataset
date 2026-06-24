@@ -1,0 +1,151 @@
+{
+	"Site": "Nexus",
+	"Id": 9365,
+	"Name": "Dynamic Game Assets",
+	"Author": "spacechase0",
+	"Description": "[b]Dynamic Game Assets[/b] lets content packs add custom content to the game. It currently supports objects (including bigcraftables), crops (including giant  crops), equipment (boots + clothing + hats + weapons), fences, furniture, fruit trees, and recipes (crafting + forge + machine + tailoring). This is meant to eventually replace [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url].\n<br />\n<br />[b][size=5]Install[/size][/b]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url], [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url]\uFEFF, and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF.\n<br />[*]Unzip the mod folder into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[b][size=5]Use[/size][/b]\n<br />[b][size=3]For players[/size][/b]\n<br />This mod does nothing on its own; you need to install content packs by unzipping them into your [font=Courier New]Mods[/font] folder. See [i]Requirements[/i] &gt; [i]Mods requiring this file[/i] above to find content packs. Before uninstalling Dynamic Game Assets, make sure you remove any custom content you added in-game.\n<br />\n<br />[b][size=3]For mod authors[/size][/b]\n<br />See the [url=https://github.com/spacechase0/StardewValleyMods/tree/develop/DynamicGameAssets#readme]README[/url] for more info.\n<br />\n<br />\n<br />[b][size=5]Compatibility[/size][/b]\n<br />Compatible with Stardew Valley 1.5.5+ on Linux/macOS/Windows, both single-player and multiplayer.\n<br />\n<br />\n<br />[b][size=5]Common questions[/size][/b]\n<br />[b][size=3]What's the benefit compared to Json Assets?[/size][/b]\n<br />Well, no ID shuffles from installing a new DGA pack, for one.\n<br />\n<br />Besides that, a lot. It supports everything JA does (minus rings that do absolutely nothing) and a little more. It has built-in animation support (for everything), in a way that is more optimized than using Content Patcher Animations. You can change how an object works day-to-day using Content Patcher conditions. Overwriting a content pack won't result in lingering items from old folders. Probably more, I don't have a list.\n<br />\n<br />[b][size=3]Can I use this alongside Json Assets?[/size][/b]\n<br />Yes, Dynamic Game Assets was designed in a way that allows it to co-exist with JA, since the transition period to getting everything using this might be a while.\n<br />\n<br />(*) Shirts may act up with Json Assets installed. They might render funny, they might crash you from running out of GPU memory. I have no idea why. Try not to use DGA shirts if you have JA installed.\n<br />\n<br />[b][size=3]Will this work in multiplayer and split-screen?[/size][/b]\n<br />It should definitely work for multiplayer. Unsure about split-screen; I might have missed something. Either way, let me know if you encounter any problems.\n<br />\n<br />[b][size=3]Will this work on Android?[/size][/b]\n<br />No, this is for Stardew Valley 1.5.4 or later, and Android doesn't have that update yet.\n<br />\n<br />[b][size=3]Will you add ___?[/size][/b]\n<br />Probably not, although there are a few things still to do (listed in the top of [font=Courier New]Mod.cs[/font]).\n<br />\n<br />[b][size=3]Is there a converter? Can we migrate existing saves from JA to DGA?[/size][/b]\n<br />Coming soon! Probably. If you haven't gotten it in a couple of weeks after this initial release, then perhaps not.\n<br />\n<br />[b][size=3]What about your other mods that use JA?[/size][/b]\n<br />Those will be updated within a few weeks from now. Probably.\n<br />\n<br />[b][size=3]What are the known issues?[/size][/b]\n<br />[list]\n<br />[*]Shirts may act up with Json Assets installed. They might render funny, they might crash you from running out of GPU memory. I have no idea why. Try not to use DGA shirts if you have JA installed.\n<br />[*]Cooking recipes show up in the menu, but not in the collection.\n<br />[*]Recipe items (ie. in stores) don't show the correct ingredients. They show fine in the crafting menu.\n<br />[*]Big craftables recipes don't take 2 tiles on the crafting page, so they can overlap with other items. (Same with other larger items you craft, like furniture.)\n<br />[/list]\n<br />\n<br />[b][size=5]See also[/size][/b]\n<br />[list]\n<br />[*][url=https://github.com/spacechase0/StardewValleyMods/blob/develop/DynamicGameAssets/docs/release-notes.md#release-notes]Release notes[/url]\n<br />[*][url=https://github.com/spacechase0/StardewValleyMods]Source code[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9365",
+	"Version": "1.4.4",
+	"Updated": "2022-10-29T22:59:02+00:00",
+	"Downloads": [
+		{
+			"Id": 44943,
+			"Type": "Optional",
+			"DisplayName": "DynamicGameAssets Example Pack 1.0.0",
+			"FileName": "DynamicGameAssets Example Pack 1.0.0-9365-1-0-0-1630950720.zip",
+			"Description": "Initial release. This is just an @example content pack.",
+			"Version": "1.0.0",
+			"SizeInBytes": 96801,
+			"Uploaded": "2021-09-06T17:52:00+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.DynamicGameAssets.Example",
+					"DisplayName": "Dynamic Game Assets Example Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "DynamicGameAssets.Example",
+					"Manifest": {
+						"Name": "Dynamic Game Assets Example Content Pack",
+						"Description": "Example pack for DGA",
+						"Author": "spacechase0",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.DynamicGameAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "spacechase0.DynamicGameAssets.Example",
+						"OtherFields": {
+							"DGA.FormatVersion": 2,
+							"DGA.ConditionsFormatVersion": "1.23.0"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342431631,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 49227,
+			"Type": "Optional",
+			"DisplayName": "DGA Automate addon 1.0.4",
+			"FileName": "DGA Automate addon 1.0.4-9365-1-0-4-1641877028.zip",
+			"Description": "This adds @Automate compatibility. Requires the main mod, and SMAPI 3.13.0 or later. See [URL=https://github.com/spacechase0/StardewValleyMods/blob/develop/DGAAutomate/docs/release-notes.md#104]release notes[/URL]. Updated by Pathoschild.",
+			"Version": "1.0.4",
+			"SizeInBytes": 75991,
+			"Uploaded": "2022-01-11T04:57:08+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.DGAAutomate",
+					"DisplayName": "DGA Automate",
+					"Type": "Smapi",
+					"RelativePath": "DGAAutomate",
+					"Manifest": {
+						"Name": "DGA Automate",
+						"Description": "Enables automation of Dynamic Game Assets machines using Automate.",
+						"Author": "spacechase0",
+						"Version": "1.0.4",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "DGAAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.DynamicGameAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9365@Automate"
+						],
+						"UniqueId": "spacechase0.DGAAutomate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342435915,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62098,
+			"Type": "Main",
+			"DisplayName": "Dynamic Game Assets 1.4.4",
+			"FileName": "Dynamic Game Assets 1.4.4-9365-1-4-4-1667084342.zip",
+			"Description": "Bug fixes and SMAPI deprecation fixes.",
+			"Version": "1.4.4",
+			"SizeInBytes": 335564,
+			"Uploaded": "2022-10-29T22:59:02+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.DynamicGameAssets",
+					"DisplayName": "Dynamic Game Assets",
+					"Type": "Smapi",
+					"RelativePath": "DynamicGameAssets",
+					"Manifest": {
+						"Name": "Dynamic Game Assets",
+						"Description": "Lets content packs add custom content to the game.",
+						"Author": "spacechase0",
+						"Version": "1.4.4",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "DynamicGameAssets.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.22.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:9365"
+						],
+						"UniqueId": "spacechase0.DynamicGameAssets",
+						"OtherFields": {
+							"RequiredForEveryone": true
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448786,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396053,
+		"UploaderId": 34250790,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

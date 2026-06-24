@@ -1,0 +1,130 @@
+{
+	"Site": "Nexus",
+	"Id": 6752,
+	"Name": "Range Highlight",
+	"Author": "jltaylor1",
+	"AuthorLabel": "Jamie Taylor",
+	"Description": "This mod adds highlighting for the range of scarecrows, sprinklers, bombs, bee houses, mushroom logs,, and Junimo huts.  Highlights are visible when the corresponding item is equipped or when a hotkey is held down.  Each item uses a different highlight color.\n<br />\n<br />Supports Prismatic Sprinklers (from the Prismatic Tools mod) and Deluxe Scarecrows.\n<br />\n<br />[size=5][b]Install[/b]\n<br />[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5][b]How to use\n<br />[/b][/size]\n<br />Ranges are shown automatically when the corresponding item is equipped or when the cursor is over a Junimo hut.  Hold down one of the following hotkeys to show ranges without needing to have an item equipped:\n<br />\n<br />[code]LeftShift   \uFEFF[/code]\uFEFFAll Range Highlights\n<br />[code]J   \uFEFF[/code]\uFEFF[b]J[/b]unimo huts\n<br />[code]H   \uFEFF[/code]\uFEFFBee [b]H[/b]ouses\n<br />[code]R[/code]   \uFEFFSp[b]r[/b]inklers\n<br />[code]O[/code]   \uFEFFScarecr[b]o[/b]ws\n<br />\n<br />\n<br />The hotkeys and highlight colors are configurable. \u00A0If [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/10505]GMCM Options[/url] are installed then these settings can be configured on the title screen. \u00A0Otherwise you'll have to edit the [font=Courier New]config.json[/font] file:\n<br />\n<br />When SMAPI runs the mod for the first time, it will create a [font=Courier New]config.json[/font] file in the mod directory. \u00A0Edit the file to change hotkeys or highlight colors. \u00A0You can also configure whether to show the inner and outer ranges of bombs,\u00A0and whether to show the ranges of \"ticking\" bombs placed on the ground.\n<br />\n<br />Starting in version 1.3, you can configure the hotkeys to act like toggle switches rather than having to be held down.\n<br />\n<br />\uFEFFStarting in version 1.4, the Show[i]THING[/i]Range options allow you to turn off highlighting of [i]thing\u00A0[/i]completely. \u00A0(Maybe you don't want to see it. \u00A0Maybe some other mod is already\u00A0provides highlighting. \u00A0In any case, it's not going to hurt my feelings if you\u00A0want to disable some features.)\n<br />\n<br />Version 1.5 added configuration options\u00A0that control whether other (already placed) sprinklers,\u00A0scarecrows, and beehouses have their ranges highlighted if the currently held\u00A0item is a sprinkler, scarecrow, or beehouse. \u00A0By default, this is on for\u00A0sprinklers and scarecrows, and off for beehouses. \u00A0Version 2.1 added support for mushroom logs, which have default configuration like beehouses.\n<br />\n<br />[size=3][b]A note on bombs:\n<br />[/b][/size]\n<br />\uFEFFBombs are weird. \u00A0They don't have a single range of effect, they have\u00A0three different ranges.[list]\n<br />[*]\u00A0 The innermost area is where the bomb can cause dirt to turn\u00A0into hoed ground. \u00A0The default configuration is to not show\u00A0this area, but it can be enabled.\n<br />[*]\u00A0 The \"normal\" range is the area where rocks and many items are\u00A0destroyed. \u00A0This is was the only range shown version 1.1.\n<br />[*]\u00A0 The outermost area is where crops are destroyed, flooring is\u00A0disrupted, and the player takes damage. \u00A0(Note that prior to Stardew Valley 1.5.5 this area was not centered on the bomb.) \u00A0The default configuration does\u00A0show this range, but it can be disabled.\n<br />[/list]Version 1.1 shows only the \"normal\" range, and only around the cursor\u00A0location when a bomb is equipped. \u00A0Starting in version 1.2, multiple\u00A0ranges are shown (if configured), and each bomb placed on the ground\u00A0and not yet exploded shows its ranges (unless disabled in configuration).\n<br />\n<br />\n<br />[size=5][b]Compatibility[/b]\n<br />[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6 on Linux/Mac/Windows. \u00A0Might work on Android in the release corresponding to the Stardew Valley version on Android.\n<br />[*]Works in single player and multiplayer.\n<br />[*]No known incompatibilities, but if you have another mod that also shows ranges (such as UI Info Suite) then each mod will apply its own highlighting. The result is not horrible, but you probably want to disable the range highlighting in the other mod if possible. \u00A0(You can do this from the in-game menu in UI Info Suite.)\n<br />[*]If Prismatic Tools is installed then the range of the prismatic sprinkler will be the value read from its config.\n<br />[*]If Better Junimos is installed then the range of Junimo Huts will be its configured value.\n<br />[*]If Better Sprinklers is installed then the range of Sprinklers will use its configured ranges. \u00A0(Note that Better Sprinklers will still draw its own highlights in addition to the Range Highlight highlights.)\n<br />[*]\uFEFFIf Simple Sprinklers is installed then the range of Sprinklers will use its configured ranges. \u00A0(Range shown may be incorrect if\u00A0\uFEFFthe Simple Sprinkler configuration is [i]smaller[/i] than the base sprinkler range.)\n<br />[*]\uFEFFIf Line Sprinklers is installed then the ranges of the line sprinklers will be shown. \u00A0(Correctly, as of 2.4.0, rather than as if they were the non-line versions.)\n<br />[*]\uFEFFIf Radioactive Tools is installed then the range of the radioactive sprinkler will be highlighted.\n<br />[*]\uFEFFIf Better Beehouses is installed then the range of beehouses will use the value it has configured for Flower Search radius.\n<br />[*]May have issues in split-screen. \u00A0(I think it's working as of v2.2.1, but this is not regularly tested, so problems may creep back into later versions even if everything is working in v2.2.1.)\n<br />[/list]\n<br />[b][size=5]For mod developers[/size][/b]\n<br />\n<br />This mod provides an API that other mods can use. \u00A0See the [url=https://github.com/jltaylor-us/StardewRangeHighlight]GitHub repo[/url] for more information.\n<br />[size=5][b]\n<br />See also\n<br />[/b][/size]\n<br />[list]\n<br />[*][url=https://github.com/jltaylor-us/StardewRangeHighlight/blob/default/ReleaseNotes.md]Release notes[/url]\n<br />[*][url=https://github.com/jltaylor-us/StardewRangeHighlight]Source code[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6752",
+	"Version": "4.2.1",
+	"Updated": "2024-06-08T16:58:49+00:00",
+	"Downloads": [
+		{
+			"Id": 63561,
+			"Type": "Optional",
+			"DisplayName": "RangeHighlight 3.6.0",
+			"FileName": "RangeHighlight 3.6.0-6752-3-6-0-1670092620.zip",
+			"Description": "Last version to work with SDV 1.5.6",
+			"Version": "3.6.0",
+			"SizeInBytes": 42662,
+			"Uploaded": "2022-12-03T18:37:00+00:00",
+			"Mods": [
+				{
+					"Id": "jltaylor-us.RangeHighlight",
+					"DisplayName": "Range Highlight",
+					"Type": "Smapi",
+					"RelativePath": "RangeHighlight",
+					"Manifest": {
+						"Name": "Range Highlight",
+						"Description": "Highlights ranges for scarecrows, sprinklers, etc.",
+						"Author": "Jamie Taylor",
+						"Version": "3.6.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "RangeHighlight.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6752",
+							"GitHub:jltaylor-us/StardewRangeHighlight"
+						],
+						"UniqueId": "jltaylor-us.RangeHighlight"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342450249,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 78327,
+			"Type": "Optional",
+			"DisplayName": "RangeHighlight 4.0.0-alpha20231112",
+			"FileName": "RangeHighlight 4.0.0-alpha20231112-6752-4-0-0-alpha20231112-1699840493.zip",
+			"Description": "For the upcoming Stardew Valley 1.6 only. Don't use this version unless you're testing the game's alpha version.",
+			"Version": "4.0.0-alpha20231112",
+			"SizeInBytes": 42879,
+			"Uploaded": "2023-11-13T01:54:53+00:00",
+			"Mods": [
+				{
+					"Id": "jltaylor-us.RangeHighlight",
+					"DisplayName": "Range Highlight",
+					"Type": "Smapi",
+					"RelativePath": "RangeHighlight",
+					"Manifest": {
+						"Name": "Range Highlight",
+						"Description": "Highlights ranges for scarecrows, sprinklers, etc.",
+						"Author": "Jamie Taylor",
+						"Version": "4.0.0-alpha20231112",
+						"MinimumApiVersion": "4.0.0-alpha",
+						"EntryDll": "RangeHighlight.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6752",
+							"GitHub:jltaylor-us/StardewRangeHighlight"
+						],
+						"UniqueId": "jltaylor-us.RangeHighlight"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342465015,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 103097,
+			"Type": "Main",
+			"DisplayName": "RangeHighlight 4.2.1",
+			"FileName": "RangeHighlight 4.2.1-6752-4-2-1-1717865929.zip",
+			"Description": "",
+			"Version": "4.2.1",
+			"SizeInBytes": 50167,
+			"Uploaded": "2024-06-08T16:58:49+00:00",
+			"Mods": [
+				{
+					"Id": "jltaylor-us.RangeHighlight",
+					"DisplayName": "Range Highlight",
+					"Type": "Smapi",
+					"RelativePath": "RangeHighlight",
+					"Manifest": {
+						"Name": "Range Highlight",
+						"Description": "Highlights ranges for scarecrows, sprinklers, etc.",
+						"Author": "Jamie Taylor",
+						"Version": "4.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "RangeHighlight.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6752",
+							"GitHub:jltaylor-us/StardewRangeHighlight"
+						],
+						"UniqueId": "jltaylor-us.RangeHighlight"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342489785,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393440,
+		"UploaderId": 90845068,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

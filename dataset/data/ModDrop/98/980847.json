@@ -1,0 +1,80 @@
+{
+	"Site": "ModDrop",
+	"Id": 980847,
+	"Name": "Non-Replacing Hair Resource",
+	"Author": "malic",
+	"TagLine": "This modders resource adds one non-replacing demo hairstyle through Content Patcher.",
+	"Description": "This modders resource adds one non-replacing demo hairstyle through Content Patcher.\n\nI felt too many mods replace hairstyles or append new hairstyles to the end of the hairstyles image, in a way that having multiple hair packs would conflict.\nThis mod uses a SDV 1.5 feature that allows writing into the Data/HairData asset to define custom hairstyles.\n**With this method, modders can add as many hairstyles as they want and their mods will not conflict with each other.**\nNo hairstyles.png overwriting necessary. No Get Glam necessary.\n\nThis mod is intended to be used as a modders resource for other mod-makers.\n\n**_How it works_**\nWe insert a hairstyle spritesheet into the Characters/Farmer/ asset folder with CP.\nIt can be named anything as long as its consistent within our content.json.\n\nThen we insert lines of data into the Data/HairData asset. Each line defines a new hairstyle.\n\nData/HairData uses the following format:\n`\"100\": \"hairstyles2/0/0/true/-1/false\",`\nThe table name (100) is a unique ID. We need ours to be unique.\nThis ID cannot be larger than 2,147,483,647 (the maximum value of Int32)\nA common trend with NPC events is to start with the last 4 digits of your NexusMods profile ID, so that is what I've done in this demo.\n\nThen we have the following entries, separated by slashes:\n0 - The filename for the file we added to Characters/Farmer/, without filetype.\n1 - The tile position for our hairstyle sprite, x coordinate.\n2 - The tile position for our hairstyle sprite, y coordinate.\n3 - If we have a unique left sprite or not. If false, it uses the right hair flipped. If false, we need a fourth sprite.\n4 - Either a unique ID of a separate hairstyle for when player is wearing a hat, or -1 to hide hair.\n5 - \"is bald style\". Currently, just set false.\n6 - unused\n7 - unused\n8 - unused\n\n**_Notes_**\n<s>We're likely still limited to ~336 hairstyles with this method, but this is untested. Spacecore may solve this if it occurs.\n</s>Users have shown this mod supports more than 700+ hairstyles, so we are not limited to 336.\n\n**_Credits_**\nArt by Charles Gabriel. Slightly modified. Under CC-BY 3.0 - https://opengameart.org/content/16x18-rpg-characters-hair-clothing-pack\n\n**_Changelog_**\nv1.0.0 - Initial release",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/980847",
+	"Version": null,
+	"Updated": "2021-07-11T09:11:46.387+00:00",
+	"Downloads": [
+		{
+			"Id": 1000319,
+			"Type": "Main",
+			"DisplayName": "Non-Replacing Hair Resource",
+			"FileName": "Non-Replacing Hair Resource.zip",
+			"Version": "1.0.0",
+			"SizeInBytes": 7182,
+			"Uploaded": "2021-07-11T09:11:29.68+00:00",
+			"Mods": [
+				{
+					"Id": "malic.cp.nonreplacinghairresource",
+					"DisplayName": "Non-Replacing Hair Resource",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Non-Replacing Hair Resource",
+					"Manifest": {
+						"Name": "Non-Replacing Hair Resource",
+						"Description": "A modders resource to add hair without replacing",
+						"Author": "Malic",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8821"
+						],
+						"UniqueId": "malic.cp.nonreplacinghairresource"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "a25ffbb6ac570d45f0dba96bb4231f3a",
+				"md5In": "b5302321a4757c1b9b5449b731936962",
+				"scriptType": 0,
+				"sha256Ex": "f0db70acbbf12d46f99c4b8947303fb2bff7ab84ce589c4de0f913b83ea4c9c7",
+				"sha256In": "5b6aab2159dbe5560fdfedd2448cc1dc31c82de509ba5a59bc1bc80508d21e2b"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1625994706387,
+		"DateUpdated": 1625994689680,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 8,
+		"dateCreated": 1625254828327,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/980847/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/980847/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/980847/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/980847/icon_original"
+		},
+		"nexusModID": 8821,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": false,
+		"userID": 173012
+	}
+}

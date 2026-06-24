@@ -1,0 +1,91 @@
+{
+	"Site": "ModDrop",
+	"Id": 1164062,
+	"Name": "(CP) No Built In Kitchen",
+	"Author": "Asterisk555",
+	"TagLine": "Removes the built in kitchen from the farmhouse",
+	"Description": "Removes the built in kitchen from the farmhouse\nOriginally made to be used with my [Buildable Kitchen Mod](https://www.nexusmods.com/stardewvalley/mods/11950) , and I'm making other mods that might need it so I'm uploading it separately so it can be used as a dependency\n_Quick start_\n\n1.  If you are not using a modded farmhouse you can just download and extract this mod and it's requirements into your mods folder (if you are confused check out [this guide](https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started#Getting_started) ).\n\n2.  If you __are__ using a modded farmhouse check the compatibility section below\n\n3.  It's ready to play\nNote: If installing on an existing game, move everything out of the built in vanilla fridge first before you install the mod, or you'll lose everything in the fridge.\n\n_Compatibility_\n\n*   Patches the square where the original kitchen is, so as long as you are not using any mods that move the kitchen this mod will work with it.\n\n*   As such it works with [Bigger Farmhouse](https://www.nexusmods.com/stardewvalley/mods/11762)  and [Seasonal Farmhouse](https://www.nexusmods.com/stardewvalley/mods/6005)  (note: bigger farmhouse got changed and is now updated to include it's own config for not having a kitchen instead)\n\n*   Mods with custom kitchens I've built in compatibility for include [Another Smaller Farmhouse](https://www.nexusmods.com/stardewvalley/mods/11772)\n\n*   It also removes the tile property that stops you placing furniture in from of the cooker in the original farmhouse, but your spouse will still try and stand there in the morning. So I recommend you can put rugs/flooring there but don't put chests or other unpassable furniture.\n\nPicture showing what I mean by 'where your spouse normally stands in the morning'\n![](https://staticdelivery.nexusmods.com/mods/1303/images/11772/11772-1650654706-208077173.png)\n\nThis should be compatible with modded farmhouses as long as those farmhouses leave the kitchen in the default vanilla spot. If it doesn't work straight away you might need to add your modded farmhouse mod as a false dependency using the template below. Go to the manifest.json located in this mod and copy the template. Replace \"NAME OF FARMHOUSE MOD\" with the \"UniqueID\" of the farmhouse mod you're using, which can be found in the manifest.json which can be found in the farmhouse mod's folder. If I get a request then I will also add it as a false dependency to this mod myself.\n\n``\n\n_Other mods I've made that work well with this one_\n\n*   https://www.nexusmods.com/stardewvalley/mods/11772\n*   https://www.nexusmods.com/stardewvalley/mods/11772[Customisable Empty Spouse Rooms with NPC furniture](https://www.nexusmods.com/stardewvalley/mods/11641)\n\n*   [Beam recolor mod](https://www.nexusmods.com/stardewvalley/mods/11597)\n\n*   [Big Furniture Pack](https://www.nexusmods.com/stardewvalley/mods/12240)\n\n*   [Walls and Floors Megapack](https://www.nexusmods.com/stardewvalley/mods/12002)\n\n*   [Crib flooring fix](https://www.nexusmods.com/stardewvalley/mods/12602)\n\n_On why the kitchen can be placed outdoors, but not used to cook outdoors:_Action kitchen checks for if currentLocation is FarmHouse house and then tries to access (Chest)house._fridge, so it's not usable outdoors\nCookout Kit directly instantiates a new CraftingPage with no IList&lt;Item&gt; material_containers param used, so no references\nIf you want a tile property, try a dependency on Esca's Modding Utilities (?) which includes a custom kitchen tile property that works in any location\nThanks to blueberry (author of [Love Of Cooking](https://www.nexusmods.com/stardewvalley/mods/6830)) on the SDV discord for explaining this to me.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1164062",
+	"Version": null,
+	"Updated": "2022-10-28T16:34:02.3+00:00",
+	"Downloads": [
+		{
+			"Id": 1273627,
+			"Type": "Main",
+			"DisplayName": "(CP) No Built In Kitchen",
+			"FileName": "(CP) No Built In Kitchen.zip",
+			"Description": "Replaces kitchen with an empty space, so you can put in your own kitchen. Or just because you hate cooking.",
+			"Version": "1.2",
+			"SizeInBytes": 9988,
+			"Uploaded": "2022-10-28T16:34:02.299+00:00",
+			"Mods": [
+				{
+					"Id": "Asterisk555.CP.NoBuiltInKitchen",
+					"DisplayName": "(CP) No Built In Kitchen",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] No Built In Kitchen",
+					"Manifest": {
+						"Name": "(CP) No Built In Kitchen",
+						"Description": "Farmhouse map",
+						"Author": "Asterisk555",
+						"Version": "1.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.19.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Asterisk555.CP.BiggerFarmhouse",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DustBeauty.SeasonalGardernFarmhouse.v2",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11950@Farmhouse"
+						],
+						"UniqueId": "Asterisk555.CP.NoBuiltInKitchen"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "c27b763b8e46b51f3c1300220cafb29f",
+				"md5In": "9429d3f4ee0b4a91b28e8d2529a0fa31",
+				"scriptType": 0,
+				"sha256Ex": "f0293315cbc47369d7817555d64bcb42e3eaecdf956884be694cd537b9a1897e",
+				"sha256In": "8241a2bb56265d21134c98ef117de2cb88ce43dc8066cbc245706dc7f7f42abe"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1653865898633,
+		"DateUpdated": 1666974842300,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1653865859753,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1164062/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1164062/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1164062/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1164062/icon_original"
+		},
+		"nexusModID": 12120,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 190934
+	}
+}

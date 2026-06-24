@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 11790,
+	"Name": "Water Flow",
+	"Author": "bblueberry",
+	"AuthorLabel": "blueberry",
+	"Description": "[img]https://i.imgur.com/aUx51yL.png[/img]\n<br />[size=3]\n<br />This little mod is made on a simple premise: gravity. Ever notice how water flows [i]upwards[/i] wherever you are in the world?\n<br />We here at Making Mods, Inc. have decided enough is enough, Stardew Valley needs to finally obey the laws of physics.\n<br />\n<br />With Water Flow loaded, water will flow down the mountains, along the rivers, and towards the glittering Emerald Sea.\n<br />Lakes and ponds will be perfectly still, moving only with the breeze. Sea water will lap at the beaches as usual.\n<br />[/size]\n<br />\n<br />[img]https://i.imgur.com/mrAZqfS.png[/img]\n<br />[size=4]\n<br />    \uFEFF[b][color=#6fa8dc]1.[/color][/b] Download [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url],\n<br />    \uFEFF[b][color=#6fa8dc]2.[/color][/b] Extract the Water Flow folder into your Mods folder,\n<br />    \uFEFF[b][color=#6fa8dc]3.[/color][/b] Done![/size]\n<br />[size=3]\n<br />    \uFEFF[img]https://i.imgur.com/mYDts2I.png[/img]\u00A0\u00A0 Yep, that's it! No extra setup required.\n<br />    \uFEFF[img]https://i.imgur.com/iaEO805.png[/img]\u00A0\u00A0 All vanilla locations are updated to use the new water flow.\n<br />    \uFEFF[img]https://i.imgur.com/xrOOtWC.png[/img] \u00A0 Each location uses its own unique water table for lakes, rivers, and seas.\n<br />[/size]\n<br />\n<br />\n<br />[img]https://i.imgur.com/2giDckM.png[/img]\n<br />\n<br />\n<br />Example content pack:\n<br /> [url=https://github.com/b-b-blueberry/WaterFlow/blob/master/%5BCP%5DWaterFlow/content.json]https://github.com/b-b-blueberry/WaterFlow/blob/master/[CP]WaterFlow/content.json[/url][url=https://github.com/b-b-blueberry/WaterFlow/blob/master/%5BCP%5DWaterFlow/content.json]\n<br />[/url]\n<br />Custom content creators making new maps can set the water flow for their new locations.\n<br />\n<br />Add a local map property to a game location to affect its WaterFlow in any number of non-overlapping areas, as well as a global map property affecting the default WaterFlow.\n<br />\n<br />If you've created a custom map, feel free to add the map properties to your map, and WaterFlow will read them if it's loaded.\n<br />If this mod isn't loaded, no changes will be made, and no errors will be raised: the map properties will quietly be ignored by the game.\n<br />You can add a map property with Content Patcher using EditMap+MapProperties, or with SMAPI+C# using Map.Properties.\n<br />Be sure to use the map asset name as the Target for your patch: using the location name may cause mismatches in some cases.\n<br />\n<br />The global property takes a single parameter to define the global WaterFlow.\n<br />The local property takes any number of chained parameters in groups of 5 values each, allowing you to define multiple local areas at once.\n<br />Property value parameter groups are parsed in this order, with different groups separated by spaces:\n<br />[code]WaterFlow X Y W H WaterFlow X Y W H . . .\n<br />[/code]\n<br />\n<br />Enable VerboseLogging in the config file for feedback when testing, printed to DEBUG.\n<br />With Console Code installed, set the WaterFlow with:\n<br />[code] cs WaterFlow.ModEntry.State.Value.WaterFlow = WaterFlow.WaterFlow.Up;[/code]\n<br />\n<br />You can use names or numbers as your WaterFlow values. A complete list of values can be found here:\n<br />[url=https://github.com/b-b-blueberry/WaterFlow/blob/master/WaterFlow/ModEntry.cs#L21-L29]https://github.com/b-b-blueberry/WaterFlow/blob/master/WaterFlow/ModEntry.cs[/url]\n<br />\n<br />\n<br />      \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFF   [size=3]\uFEFF[url=https://github.com/b-b-blueberry/WaterFlow]&gt;&gt; github[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11790",
+	"Version": "1.0.0",
+	"Updated": "2022-05-24T00:48:00+00:00",
+	"Downloads": [
+		{
+			"Id": 54819,
+			"Type": "Main",
+			"DisplayName": "Water Flow",
+			"FileName": "Water Flow-11790-1-0-0-1653353280.zip",
+			"Description": "1.0.0: Initial release\n<br /><br />Enjoy!",
+			"Version": "1.0.0",
+			"SizeInBytes": 13405,
+			"Uploaded": "2022-05-24T00:48:00+00:00",
+			"Mods": [
+				{
+					"Id": "blueberry.WaterFlow",
+					"DisplayName": "Water Flow",
+					"Type": "Smapi",
+					"RelativePath": "Water Flow\\WaterFlow",
+					"Manifest": {
+						"Name": "Water Flow",
+						"Description": "Change the water flow of game locations.",
+						"Author": "blueberry",
+						"Version": "1.0.0",
+						"EntryDll": "WaterFlow.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11790"
+						],
+						"UniqueId": "blueberry.WaterFlow"
+					}
+				},
+				{
+					"Id": "blueberry.WaterFlow.CP",
+					"DisplayName": "(CP) Water Flow",
+					"Type": "ContentPack",
+					"RelativePath": "Water Flow\\[CP]WaterFlow",
+					"Manifest": {
+						"Name": "(CP) Water Flow",
+						"Description": "Changes the water flow of non-custom game locations.",
+						"Author": "blueberry",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "blueberry.WaterFlow",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:????"
+						],
+						"UniqueId": "blueberry.WaterFlow.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342441507,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398478,
+		"UploaderId": 71169863,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

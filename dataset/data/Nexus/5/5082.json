@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 5082,
+	"Name": "Speed Mod",
+	"Author": "beornblackclaw",
+	"AuthorLabel": "Blackclaw",
+	"Description": "[size=5][center]\uFEFFOverview[/center][/size]This mod adds a speed boost and the ability to teleport home at the cost of stamina. This could be considered cheating but I consider it more of QoL mod because of the built-in limitations.\n<br />\n<br />[center][youtube]PtgfM0SvUS8[/youtube]\n<br />[youtube]d1NO8vTFT5s[/youtube][/center]\n<br />[center][size=5]Changelog[/size][/center][size=4][b][u]Version 1.2[/u]   [/b][/size]\n<br />[list]\n<br />[*] \uFEFFAdded an alternative method to detect configuration modifications if the ModTabSettings integration fails\n<br />[*] Added support for interrupting the teleportation process (manually or through damage)\n<br />[*] The energy used by the teleportation is drained over time during the casting period\n<br />[*] The speed boost is disabled if the player is under the tipsy or slimed debuffs (both impact movement speed)\n<br />[*] Added a teleport effect matching the one from the totems\n<br />[/list]\n<br />[u][size=4]Version 1.01-beta[/size][/u]\n<br />[list]\n<br />[*]ModTabSettings integration\n<br />[/list]\n<br />[u][size=4]Version 1.0[/size][/u]\n<br />[list]\n<br />[*]Initial release\n<br />[/list][center][size=5]Configuration\n<br />[/size][/center]Most aspects of the mod are configurable through the [code]config.json[/code] file.\n<br />\n<br />[size=4][code]SpeedModifier:[/code][/size]\n<br />Value of the speed boost.\n<br />[i]integer[/i] [0-25] (default: [b]2[/b])\n<br />\n<br />[code][size=4]TeleportHomeKey[/size][size=4][code]:[/code][/size][/code]\n<br />The key used to trigger the teleportation (displays a confirmation dialog).\n<br />[i]keybind[/i] [url=https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings]wiki reference[/url] (default: [b]H[/b])\n<br />\n<br />\n<br />[code][size=4][code]CanPlayerInterrupt: [/code][/size][/code]?NEW 1.2\n<br />Allows the player to cancel the teleportation if the activation key is pressed again.\n<br />⚠ Any spent energy is not recovered.\n<br />[i]boolean[/i] [b]true [/b]/ [b]false [/b](default: [b]true[/b])\n<br />\n<br />\n<br />[code][size=4]CanDamageInterrupt[/size][/code][size=4][code]:[/code][/size] ?NEW 1.2\n<br />Allows damage to interrupt the teleportation if the threshold is reached (See [DamageThreshold]([project]damagethreshold-new-12[/project])).\n<br />⚠ Any spent energy is not recovered.\n<br />[i]boolean[/i] [b]true [/b]/ [b]false [/b](default: [b]true[/b])\n<br />\n<br />\n<br />[code][size=4][code]DamageThresholdBasedOnTotalHealth: [/code][/size][/code]?NEW 1.2\n<br />Controls how the damage threshold is evaluated (See [DamageThreshold]([project]damagethreshold-new-12[/project])):\n<br />[list]\n<br />[*]if [b]true[/b], based on the [cur]total health[/cur] (chance of interruption is linear: easier)\n<br />[*]if [b]false[/b], based on the [cur]remaining health[/cur] (chance of interruption increases as health declines: harder).\n<br />[/list][i]boolean[/i] [b]true [/b]/ [b]false [/b](default: [b]true[/b])\n<br />\n<br />\n<br />[size=4][code]DamageThreshold: [/code][/size]?NEW 1.2\n<br />The amount of damage in % of the player's health that would interrupt the teleportation.\n<br />[i]integer[/i] [0-90] (default: [b]10[/b])\n<br />\n<br />\n<br />[code][size=4][code]StaminaCost: [/code][/size][/code]\n<br />The amount of stamina depleted when teleporting home.\n<br />[i]integer[/i] (default: [b]50[/b])\n<br />\n<br />\n<br />[code][size=4][code]RecastCooldown: [/code][/size][/code]\n<br />The time period for which the teleportation is on cooldown (also resets at the end of the day).\n<br />[i]timespan[/i] [b]HH:MM:SS[/b] (default: [b]00:07:00[/b])\n<br />\n<br />\n<br />[code][size=4]CastCooldown[/size][/code][size=4][code]: [/code][/size]⚠ Modified 1.2\n<br />The time in seconds it takes to perform the teleportation.\n<br />‼ You need to edit your config.json manually or delete it or the new version won't be able to load the configuration.\n<br />[i]integer [/i](default: [b]5[/b]) ⚠ The type of the value was changed from [i]timespan[/i] to [i]integer[/i].\n<br />\n<br />\n<br />[size=4][code]TeleportToBed: [/code][/size]?NEW 1.2\n<br />Controls whether the player is teleported to their bed or outside the farm (same as the Return Scepter).\n<br />[i]boolean[/i] [b]true[/b] / [b]false[/b] (default: [b]true[/b])\n<br />\n<br />\n<br />[code][size=4][code]EnableTeleportationEffects: [/code][/size][/code]?NEW 1.2\n<br />Enables or disables the visual effects.\n<br />[i]boolean[/i] [b]true[/b] / [b]false[/b] (default: [b]true[/b])\n<br />\n<br />\n<br />[code][/code][size=4][code]EnableTeleportationSounds: [/code][/size]?NEW 1.2\n<br />Enables or disables the sound effects.\n<br />[i]boolean[/i] [b]true[/b] / [b]false[/b] (default: [b]true[/b])\n<br />\n<br />\n<br />[code][size=4][code]EnableInMultiplayer:\n<br />[/code][/size][/code]Flag specifying if the teleportation feature is enabled in multiplayer.\n<br />[i]boolean[/i] [b]true[/b] / [b]false[/b] (default: [b]false[/b])\n<br />\n<br />[size=5][center]Example file:[/center][/size][code]{\n<br />\u00A0 \"SpeedModifier\": 2,\n<br />\u00A0 \"TeleportHomeKey\": \"H\",\n<br />\u00A0 \"CanPlayerInterrupt\": true,\n<br />\u00A0 \"CanDamageInterrupt\": true,\n<br />\u00A0 \"DamageThreshold\": 15,\n<br />\u00A0 \"DamageThresholdBasedOnTotalHealth\": true,\n<br />\u00A0 \"StaminaCost\": 50,\n<br />\u00A0 \"RecastCooldown\": \"00:07:00\",\n<br />\u00A0 \"CastCooldown\": 3,\n<br />\u00A0 \"TeleportToBed\": false,\n<br />\u00A0 \"EnableTeleportationEffects\": true,\n<br />\u00A0 \"EnableTeleportationSounds\": true,\n<br />\u00A0 \"EnabledInMultiplayer\": true\n<br />}\n<br />[/code]\n<br />[url=https://github.com/Xebeth/StardewValley-SpeedMod]Source code[/url] available on [url=https://github.com]Github[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5082",
+	"Version": "1.0",
+	"Updated": "2020-01-11T03:22:23+00:00",
+	"Downloads": [
+		{
+			"Id": 22741,
+			"Type": "Main",
+			"DisplayName": "Speed Mod",
+			"FileName": "Speed Mod-5082-1-2-1578712943.zip",
+			"Description": "Requires [url=https://www.nexusmods.com/stardewvalley/mods/4579]ModTabSettings 0.2.1+[/url] to have a localized configuration in-game.",
+			"Version": "1.2",
+			"SizeInBytes": 30869,
+			"Uploaded": "2020-01-11T03:22:23+00:00",
+			"Mods": [
+				{
+					"Id": "Blackclaw.SpeedMod",
+					"DisplayName": "Speed Mod",
+					"Type": "Smapi",
+					"RelativePath": "SpeedMod",
+					"Manifest": {
+						"Name": "Speed Mod",
+						"Description": "Adds a permanent (configurable) speed boost and the ability to teleport home at the cost of energy",
+						"Author": "Blackclaw",
+						"Version": "1.2.0",
+						"EntryDll": "SpeedMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5082"
+						],
+						"UniqueId": "Blackclaw.SpeedMod",
+						"OtherFields": {
+							"MinimumApiLevel": "3.0.0",
+							"PerSaveConfigs": false
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342409429,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391770,
+		"UploaderId": 7887724,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

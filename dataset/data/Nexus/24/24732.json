@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 24732,
+	"Name": "Iridium Cooking Dishes",
+	"Author": "XiaobaiTian",
+	"AuthorLabel": "TianXiaobai",
+	"Description": "修改了烹饪机制，使用不同等级的齐先生的调味料可以产生对应等级的菜品，最高可以到铱星品质\n<br />原料的品质在使用齐先生的调味料的时候可以影响产出菜品的品质了，使用对应等级的调味料可以保证做出的菜品等级不低于调味料等级\n<br />Change the principle for cooking, you canget the same quality of dishes by using the corresponding quality of Qi\n<br />Seasoning\n<br />While using the Qi Seasoning, the qualityof ingredients will influence the quality of dishes, and the quality of Qi\n<br />Seasoning is the lowest quality the dishes will be\n<br />\n<br />增加了木桶的配方，现在可以将齐先生的调味料放入木桶提升品质（1天银星，2天金星，4天铱星）\n<br />Add a recipe for Cask, now you can upgradethe quality of Qi Seasoning by put it into cask which will take 1 day to silver\n<br />quality, 2 days to gold quality, 4 days to iridium quality\n<br />\u00A0\u00A0\n<br />针对不同品质的菜品，修改了对应的buff等级增益和持续时间增益：\n<br />银星品质：buff等级+1，持续时间增加50%（相当于之前金星品质的效果）\n<br />金星品质：buff等级+2，持续时间增加100%\n<br />铱星品质：buff等级+3，持续时间增加150%\n<br />\u00A0\n<br />High quality dishes have more powerfulbuffs:\n<br />Silver Quality: buff level +1, durationtime +50%\n<br />Gold Quality: buff level +2, duration time+100%\n<br />Iridium Quality: buff level +3, durationtime +150%\n<br />\u00A0\n<br />基于当前游戏版本进行了测试，不确定是否支持1.6之前的版本（如果老版本这部分的代码和当前一致，可能也兼容老版本，但我没有测试过）\n<br />I test this mod by current game version, soit may not be compatible with old version (if this part of game origin codes hasn't\n<br />change, it might work correctly)\n<br />\u00A0\n<br />使用这个模组可以获取铱星品质的菜品了，玩的开心~\n<br />Now you can get Iridium Quality Dishes withthis mod, enjoy it~\n<br />\u00A0\n<br />\u00A0\n<br />后续计划：\n<br />1、基于烹饪原料品质提升烹饪产物品质（已完成）\n<br />2、增加配置文件（已完成）\n<br />3、其他想法~\n<br />\u00A0\n<br />配置文件说明：\n<br />\u00A0\"CalculateIngredientQuality\": true,//是否使能原料品质计算功能，默认打开\n<br />\u00A0\"CalculateIngredientQualityWithQiSeasoning\": true,//必须在有齐先生调味料的情况下才计算原料品质，默认打开\n<br />\u00A0\"EnableSpeedBuffLevelBonus\": false,//是否使能品质对速度buff的影响，默认关闭\n<br />\u00A0\n<br />\u00A0\"AgeMulti\": 14,//设置木桶升级齐先生调味料需要的时间，越大越快，默认14，对应4天（56/14），最少3天（设置大于20无意义）\n<br />\u00A0\n<br />\u00A0\"DurationMultiSilver\": 1.5,//银星品质的时间加成，默认1.5\n<br />\u00A0\"DurationMultiGold\": 2.0,//金星品质的时间加成，默认2.0\n<br />\u00A0\"DurationMultiIridium\": 2.5,//铱星品质的时间加成，默认2.5\n<br />\u00A0\n<br />\u00A0\"LevelBonusSilver\": 1,//银星品质的buff等级加成，默认+1\n<br />\u00A0\"LevelBonusGold\": 2,//金星品质的buff等级加成，默认+2\n<br />\u00A0\"LevelBonusIridium\": 3//铱星品质的buff等级加成，默认+3\n<br />\u00A0\n<br />\u00A0\n<br />原料品质与菜品品质计算方式：\n<br />普通：0\n<br />银星：1\n<br />金星：2\n<br />铱星：4\n<br />\u00A0\n<br />计算的菜品品质值决定了烹饪产物\n<br />菜品品质值 = 原料的品质平均值 + 齐先生调味料的品质值\n<br />\u00A0\n<br />如果菜品品质值在0-1之间（不含1），则有对应的几率获得银星品质\n<br />如果菜品品质值在1-2之间（不含2），则至少获得银星品质，有该值减1对应的几率获得金星品质\n<br />如果菜品品质值在2-4之间（不含4），则至少获得金星品质，有该值减1后除以2对应的几率获得铱星品质\n<br />如果菜品品质值大于等于4，则至少获得1份铱星品质的菜品，有该值减4后除以4对应的几率额外双份铱星品质的菜品\n<br />\u00A0\n<br />例如：\n<br />菜品品质值为0.4，有0.4概率获得银星品质，0.6概率获得普通品质\n<br />菜品品质值为1.8，有0.8概率获得金星品质，0.2概率获得铱星品质\n<br />菜品品质值为3，有0.5概率获得铱星品质，0.5概率获得金星品质\n<br />菜品品质值3.4，有（3.4-2）/2=0.7概率获得铱星品质，0.3概率获得金星品质\n<br />菜品品质值7，有（7-4）/4=0.75概率获得2份铱星品质菜品，0.25概率获得1份铱星品质菜品\n<br />\u00A0\n<br />原料品质平均值的计算方法：\n<br />对于任意一个菜谱：\n<br />原料A，需求数量a\n<br />原料B，需求数量b\n<br />...\n<br />原料N，需求数量n\n<br />\u00A0\n<br />平均值=\n<br />（a个原料A中的第1个的品质+a个原料A中的第2个的品质+... +a个原料A中的第a个的品质\n<br />+b个原料B中的第1个的品质+b个原料B中的第2个的品质+... +b个原料B中的第b个的品质\n<br />+...\n<br />+n个原料N中的第1个的品质+n个原料N中的第2个的品质+... +n个原料N中的第b个的品质）\n<br />/（a+ b+... +n)\n<br />\u00A0\n<br />每个原料的品质都影响结果，而不是仅仅受到每种原料的品质的影响\n<br />\u00A0\n<br />例如：\n<br />黑莓脆皮饼（2个黑莓+1个糖+1个大麦粉）\n<br />如果使用（1个银星品质黑莓，1个铱星品质黑莓；1个普通品质糖；1个普通品质大麦粉；1个银星品质齐先生的调味料）\n<br />计算原料的品质均值为（1+4+0+0）/(2+1+1)=1.25\n<br />菜品的品质值为1.25+1=2.25\n<br />因此至少获得1个金星品质，有0.125的概率获得1个铱星品质\n<br />\u00A0\n<br />\u00A0\n<br />the Dish Quality Value calculated fromingredient average quality and the Consumed Qi Seasoning Quality determine the\n<br />quality of dishes\n<br />Dish Quality Value = the average Quality ofingredients + Qi Seasoning Quality\n<br />\u00A0\n<br />Normal Quality Value ：0\n<br />Silver Quality Value：1\n<br />Gold Quality Value：2\n<br />Iridium Quality Value：4\n<br />\u00A0\n<br />Here showing how the Dish Quality Valueinfluence the dish quality\n<br />Dish Quality Value between 0 to 1(don'tinclude 1), has (Dish) chance to get a silver quality Dish, or a normal quality\n<br />dish\n<br />Dish Quality Value between 1 to 2(don'tinclude 2), has (Dish Quality - 1) chance to get a gold quality Dish, or a\n<br />silver quality dish\n<br />Dish Quality Value between 2 to 4(don'tinclude 4), has (Dish Quality - 1)/2 chance to get a iridium quality Dish, or a\n<br />gold quality dish\n<br />Dish Quality Value lager than 4(include 4),has (Dish Quality - 4)/4 chance to get TWO iridium quality Dishes, or an\n<br />iridium quality dish\n<br />\u00A0\n<br />for example:\n<br />Dish quality Value 0.4 means you have 0.4chance to get a silver quality dish and 0.6 chance to get a normal quality dish\n<br />Dish quality Value 1.8 means you have 0.8chance to get a gold quality dish and 0.2 chance to get a silver quality dish\n<br />Dish quality Value 3 means (3-2)/2=0.5chance for a iridium quality and 0.5 chance for a gold quality;\n<br />Dish quality Value 3.4 means (3.4-2)/2=0.7chance for a iridium quality dish and 0.3 chance for a gold quality dish\n<br />Dish quality Value 7 means (7-4)/4=0.75chance for TWO iridium quality dishes and 0.25 chance for a iridium quality\n<br />dish\n<br />\u00A0\n<br />below show the calculation rules of theaverage quality of ingredients:\n<br />For a Cooking Recipe:\n<br />Ingredient A, count a\n<br />Ingredient B, count b\n<br />...\n<br />Ingredient N, count n\n<br />\u00A0\n<br />average Quality=\n<br />(A1.Quality + A2.Quality+ ...+ Aa.Quality+\n<br />B1.Quality + B2.Quality+ ...+ Bb.Quality+\n<br />....+\n<br />N1.Quality + N2.Quality+...+ Nn.Quality)\n<br />/ (a+ b+ ...+ n)\n<br />\u00A0\n<br />every count instead every type ofingredient quality will influence the average\n<br />\u00A0\n<br />For Example：\n<br />Blackberry Cobbler（2Blackberry + 1 Sugar + 1 Wheat Flour）\n<br />if You use (1 silver quality Blackberry，1 iridium quality Blackberry，1 normalquality Sugar ，1 normal quality Wheat Flour，1\u00A0 silver quality Qi Seasoning）to cook\n<br />the average quality of ingredients is(1+4+0+0) / (2+1+1) = 1.25\n<br />the dish quality is 1.25+1=2.25\n<br />so, you have (2.25-2)/2 =0.125 chance toget a iridium quality Blackberry Cobbler and 0.875 chance to get a gold quality\n<br />Blackberry Cobbler",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24732",
+	"Version": "1.0.7",
+	"Updated": "2025-11-23T12:33:04+00:00",
+	"Downloads": [
+		{
+			"Id": 115986,
+			"Type": "Optional",
+			"DisplayName": "combine many rings unofficial fixed",
+			"FileName": "combine many rings unofficial fixed-24732-1-1-1-1731239618.zip",
+			"Description": "for those crashed in new game version, I upload a version (nothing changed, just fix some errors while implent the source code, and it works), if you need this , you can download here~",
+			"Version": "1.1.1",
+			"SizeInBytes": 18362,
+			"Uploaded": "2024-11-10T11:53:38+00:00",
+			"Mods": [
+				{
+					"Id": "Stari.CombineManyRings",
+					"DisplayName": "CombineManyRings",
+					"Type": "Smapi",
+					"RelativePath": "CombineManyRings",
+					"Manifest": {
+						"Name": "CombineManyRings",
+						"Description": "Allows you to combine already combined rings.",
+						"Author": "Stari",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "CombineManyRings.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8801"
+						],
+						"UniqueId": "Stari.CombineManyRings"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342502674,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 148810,
+			"Type": "Main",
+			"DisplayName": "IridiumCookingDishes",
+			"FileName": "IridiumCookingDishes-24732-1-0-7-1763901184.zip",
+			"Description": "bugs fix",
+			"Version": "1.0.7",
+			"SizeInBytes": 18077,
+			"Uploaded": "2025-11-23T12:33:04+00:00",
+			"Mods": [
+				{
+					"Id": "TianXiaobai.IridiumCookingDishes",
+					"DisplayName": "IridiumCookingDishes",
+					"Type": "Smapi",
+					"RelativePath": "IridiumCookingDishes",
+					"Manifest": {
+						"Name": "IridiumCookingDishes",
+						"Description": "Now you can get Qi Seasoning with different quality, thus get different quality of cooking dishes",
+						"Author": "TianXiaobai",
+						"Version": "1.0.7",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "IridiumCookingDishes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:24732"
+						],
+						"UniqueId": "TianXiaobai.IridiumCookingDishes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342535498,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411420,
+		"UploaderId": 115395638,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}

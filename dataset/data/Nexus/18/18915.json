@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 18915,
+	"Name": "Realtime Framework",
+	"Author": "drbirbdev",
+	"Description": "This mod is a framework which doesn't do anything on its own.\u00A0 Additional mods need to add actual holiday changes.\n<br />\n<br />To find mods using this framework, check the requirements drop-down above.\n<br />\n<br />[b]Using Realtime Framework (as a Modder)\n<br />\n<br />[/b]The simplest way to use the framework is with Content Patcher.\u00A0 Realtime Framework provides several tokens which can be used to get current holidays.\n<br />\n<br />For example:\n<br />\n<br />[code]{\n<br />   \uFEFF\"Foramt\": \"1.29.0\",\n<br />   \uFEFF\"Changes\": {\n<br />\uFEFF   \uFEFF   \uFEFF{\n<br />   \uFEFF   \uFEFF   \uFEFF\"Action\": \"EditImage\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"Target\": \"Portraits/Abigail\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"FromFile\": \"assets/pumpkin_hair_ornament.png\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"PatchMode\": \"Overlay\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"When\": {\n<br />      \uFEFF   \uFEFF\uFEFF   \uFEFF\"drbirbdev.RealtimeFramework/CurrentHolidays\": \"halloween\"\n<br />   \uFEFF   \uFEFF   \uFEFF}\n<br />   \uFEFF   \uFEFF}\n<br />   \uFEFF]\n<br />}\n<br />[/code]\n<br />could add a pumpkin hair ornament to Abigail's portrait on Halloween.\n<br />\n<br />Available tokens all start with \"drbirbdev.RealtimeFramework/\" and include\n<br />\n<br />[list]\n<br />[*]ComingHolidays - get a list of upcoming holidays\n<br />[*]CurrentHolidays - get a list of current holidays (happening today)\n<br />[*]PassingHolidays - get a list of holidays which have just passed\n<br />[*]ComingHolidaysLocal - get a list of upcoming holidays using localized names\n<br />[*]CurrentHolidaysLocal - get a list of current holidays using localized names\n<br />[*]PassingHolidaysLocal - get a list of passing holidays using localized names\n<br />[*]Hour - get the current hour\n<br />[*]DayOfMonth - get the day of the month (eg 31)\n<br />[*]DayOfWeek -get the day of the week (eg 6)\n<br />[*]DayOfYear - get the day of the year (eg 278)\n<br />[*]Month - get the month (eg 10)\n<br />[*]Year - get the year (eg 2023)\n<br />[*]WeekdayLocal - get the day of the week localized (eg Monday)\n<br />[*]MonthLocal - get the month localized (eg October)\n<br />[/list]\n<br />There's also an API.\u00A0 Check github for the interface and code.\u00A0 It include methods for Coming, Current, and Passing holidays, as well as getting a localized name of a holiday.\u00A0 It does not include anything for current Hour, Day, Year, etc. since modders should just use time libraries.\u00A0 It would be advisable to check for holidays at (in-game) day start, and cache the value, since that is how Content Patcher mods would likely work, but this is up to the modder.\n<br />\n<br />[b]Adding Holidays with Content Patcher\n<br />\n<br />The prefered way to add a holiday is directly.\u00A0 Please submit a pull request on github, or just write a message.\u00A0 Note that people will still have to make content for that holiday, just adding it here won't do anything by itself.\n<br />\n<br />[/b]This is because of the Content Patcher lifecycle, patches to this mod will take the first frame, and therefore patches using your added holiday will not be able to happen on frame one.\u00A0 This means the title screen might not be patch-able for the holiday you are adding, unless it's added via a pull request.\u00A0 I have only included a few holidays to start with, and they are all USA-centric.\u00A0 If there is demand, I can add more holidays myself, or create alternate json files for prioritizing other nationalities holidays.\u00A0 Please let me know.\n<br />\n<br />[b]If you'd still like to patch in holidays yourself, then see below.[/b]\n<br />\n<br />If you would like to add a new holiday, see holidays.json for the format.\u00A0 Holidays can be added with Content Patcher.\n<br />\n<br />[code]\uFEFF{\n<br />   \uFEFF\"Action\": \"EditData\",\n<br />   \uFEFF\"Target\": \"Mods/drbirbdev.RealtimeFramework/Holidays\",\n<br />   \uFEFF\"Entries\": {\n<br />   \uFEFF   \uFEFF\"&lt;holiday&gt;\": {\n<br />   \uFEFF   \uFEFF   \uFEFF\"Date\": [ &lt;month&gt;, &lt;day&gt; ],\n<br />   \uFEFF   \uFEFF   \uFEFF\"ComingDays\": &lt;days&gt;,\n<br />   \uFEFF   \uFEFF   \uFEFF\"PassingDays\": &lt;days&gt;,\n<br />   \uFEFF   \uFEFF   \uFEFF\"StartDelayHours\": &lt;hours&gt;,\n<br />   \uFEFF   \uFEFF   \uFEFF\"EndDelayHours\": &lt;hours&gt;,\n<br />   \uFEFF   \uFEFF   \uFEFF\"VaryingDates\": {\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"&lt;year&gt;\": [ &lt;month&gt;, &lt;day&gt; ],\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"&lt;year&gt;\": [ &lt;month&gt;, &lt;day&gt; ],\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"&lt;year&gt;\": [ &lt;month&gt;, &lt;day&gt; ]\n<br />   \uFEFF   \uFEFF   \uFEFF}\n<br />   \uFEFF   \uFEFF}\n<br />   \uFEFF}\n<br />}\n<br />[/code]\n<br />all values between &lt;&gt; should be replaced as appropriate.\u00A0 &lt;holiday&gt; is the unique key for a holiday. &lt;month&gt;, &lt;day&gt;, &lt;days&gt;, &lt;hours&gt; are all integers.\u00A0 \"&lt;year&gt;\" is an integer, but must be between quotes, eg \"2023\".\n<br />[b]\n<br />Date and VaryingDates[/b]\n<br />\n<br />Date OR VaryingDates must be provided.\u00A0 Date can be used if the holiday happens on the same day every year, like Valentines day or Halloween.\u00A0 VaryingDates can be used if the holiday changes date, like Easter, or Thanksgiving.\u00A0 VaryingDates must specify the date of the holiday for every year, so try to provide 10 or so years of dates ahead of the current year.\n<br />\n<br />[b]\n<br />ComingDays and PassingDays\n<br />\n<br />[/b]These can help with holiday events, allowing buildup to a coming holiday, or post-holiday events. For instance, consider Easter in Animal Crossing, which has a week or two of egg collecting, with an additional couple of items unlocked the day of.\u00A0 By specifying these in the Realtime Framework, all mods adding holiday event changes can be roughly coordinated, and not start at random different times leading up to the holiday.\n<br />\n<br />\n<br />[b]StartDelayHours and EndDelayHours\n<br />\n<br />[/b]These settings can adjust the exact start and end times of holidays.\u00A0 This can be useful if a holiday is usually celebrated at night, and therefore might overlap with the following day, such as Halloween or New Years Eve.\u00A0 This can also help support holidays which don't start at midnight, like Hanukkah, by pushing the start time.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18915",
+	"Version": "1.0.0",
+	"Updated": "2023-10-29T00:58:17+00:00",
+	"Downloads": [
+		{
+			"Id": 77747,
+			"Type": "Main",
+			"DisplayName": "Realtime Framework",
+			"FileName": "Realtime Framework-18915-1-0-0-1698541097.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 44579,
+			"Uploaded": "2023-10-29T00:58:17+00:00",
+			"Mods": [
+				{
+					"Id": "drbirbdev.RealtimeFramework",
+					"DisplayName": "Realtime Framework",
+					"Type": "Smapi",
+					"RelativePath": "RealtimeFramework",
+					"Manifest": {
+						"Name": "Realtime Framework",
+						"Description": "Add Content Patcher tokens and SMAPI API for real-time events.",
+						"Author": "drbirbdev",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "RealtimeFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:18915"
+						],
+						"UniqueId": "drbirbdev.RealtimeFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342464435,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342405603,
+		"UploaderId": 142616753,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

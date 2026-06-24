@@ -1,0 +1,138 @@
+{
+	"Site": "Nexus",
+	"Id": 4702,
+	"Name": "Anything Ponds",
+	"Author": "MouseyPounds",
+	"Description": "[b]Description:\n<br />\n<br />[color=#ffff00]Anything Ponds[/color][/b] is a SMAPI mod which removes game restrictions on fish ponds so that you can put in clams, legendary fish, algae, and just about anything else. It includes pond definitions for algae &amp; seaweed and a minimal generic definition. In general, this mod should be used in conjunction with [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] content packs that add new definitions. See the optional files for some example packs.\n<br />\n<br />\n<br />[b]Installation:[/b]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url].\n<br />[*]Unzip the download and place the included [color=#b6d7a8][code]AnythingPonds[/code][/color] folder into your [color=#b6d7a8][code]Mods[/code][/color] folder.\n<br />[/list]\n<br />\n<br />[b]Configuration:\n<br />[/b]\n<br />[list]\n<br />[*][color=#6d9eeb][b]Enable_Algae_and_Seaweed_Pond_Definitions[/b][/color]\u00A0-- [color=#b4a7d6][i]true[/i]\u00A0[/color](default) or [i][color=#b4a7d6]false[/color][/i]. Only set this to false if you have a content pack for those ponds you want to use instead. \n<br />[*][color=#6d9eeb][b]Allow_Empty_Ponds_to_Become_Algae_or_Seaweed[/b][/color]\u00A0-- [color=#b4a7d6][i]true[/i]\u00A0[/color](default) or [i][color=#b4a7d6]false[/color][/i]. This will cause ponds which sit empty to spontaneously become Green Algae, White Algae, or Seaweed ponds (randomly chosen) after a set amount of time (see next option.) Make sure the previous option is enabled (or an alternative definition is active from a content pack) when using this. \n<br />[*][color=#6d9eeb][b]Number_of_Days_for_Empty_Pond_to_become_Algae_or_Seaweed[/b][/color]\u00A0-- integer value which defaults to [color=#b4a7d6][i]7[/i]\u00A0[/color]. \n<br />[/list]\n<br />\n<br />[b]Built-in Pond Definitions:\n<br />[/b]\n<br />[list]\n<br />[*]The definitions for algae and seaweed ponds are in the [i]pond_algae.json[/i] file in the mod folder; this file will be created the first time the game is run with the mod installed and can be edited to preference. If enabled by the config, these definitions will be added just before the [i]category_fish[/i] definition from the base game.\n<br />[*]The definition for the generic pond is in the [i]pond_generic.json[/i] file in the mod folder; this file will be created the first time the game is run with the mod installed and can be edited to preference. This will always be added as the last pond data definition although other mods could change this order.\n<br />[/list]\n<br />\n<br />[b]Compatibility:\n<br />[/b]\n<br />[list]\n<br />[*][b][color=#ffff00]Anything Ponds[/color][/b] requires [url=https://smapi.io]SMAPI[/url] version 3.0.0 or higher and should work with Stardew Valley 1.4 or higher.\n<br />[*]If you choose to uninstall this mod, you should empty or remove any ponds which have items the game doesn't normally support before you do so.\n<br />[/list]\n<br />\n<br />[b]Source Code Repository:\n<br />[/b]\n<br />[url=https://github.com/MouseyPounds/stardew-mods/tree/master/Anything%20Ponds]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4702",
+	"Version": "1.0.1",
+	"Updated": "2020-12-24T23:57:40+00:00",
+	"Downloads": [
+		{
+			"Id": 20632,
+			"Type": "Optional",
+			"DisplayName": "(CP) Legendary Fish Ponds",
+			"FileName": "(CP) Legendary Fish Ponds-4702-1-0-0-1575108392.zip",
+			"Description": "Content Patcher content pack example for legendary fish ponds. Similar to Tiger Trout, they will not reproduce, but the pond starts with a capacity of 10 to support mods &amp; multiplayer. Will produce roe.",
+			"Version": "1.0.0",
+			"SizeInBytes": 1060,
+			"Uploaded": "2019-11-30T10:06:32+00:00",
+			"Mods": [
+				{
+					"Id": "MouseyPounds.LegendaryFishPonds",
+					"DisplayName": "Legendary Fish Ponds",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]LegendaryFishPonds",
+					"Manifest": {
+						"Name": "Legendary Fish Ponds",
+						"Description": "Adds fishing pond support for legendary fish.",
+						"Author": "MouseyPounds",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.10.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MouseyPounds.AnythingPonds",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MouseyPounds.LegendaryFishPonds"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407320,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 20634,
+			"Type": "Optional",
+			"DisplayName": "(CP) Doll Ponds",
+			"FileName": "Doll Ponds-4702-1-0-0-1575111060.zip",
+			"Description": "Content Patcher content pack example for doll ponds. Ancient dolls reproduce every 3 days and create hay &amp; rarely roe. The two strange dolls reproduce every 6 days and produce pizza &amp; occasional movie tickets.",
+			"Version": "1.0.0",
+			"SizeInBytes": 1147,
+			"Uploaded": "2019-11-30T10:51:00+00:00",
+			"Mods": [
+				{
+					"Id": "MouseyPounds.DollPonds",
+					"DisplayName": "Doll Ponds",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]DollPonds",
+					"Manifest": {
+						"Name": "Doll Ponds",
+						"Description": "Adds fishing pond support for doll items.",
+						"Author": "MouseyPounds",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.10.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MouseyPounds.AnythingPonds",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MouseyPounds.DollPonds"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342407322,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 33638,
+			"Type": "Main",
+			"DisplayName": "Anything Ponds",
+			"FileName": "Anything Ponds-4702-1-0-1-1608854260.zip",
+			"Description": "Compatibility with Stardew 1.5",
+			"Version": "1.0.1",
+			"SizeInBytes": 18751,
+			"Uploaded": "2020-12-24T23:57:40+00:00",
+			"Mods": [
+				{
+					"Id": "MouseyPounds.AnythingPonds",
+					"DisplayName": "Anything Ponds",
+					"Type": "Smapi",
+					"RelativePath": "AnythingPonds",
+					"Manifest": {
+						"Name": "Anything Ponds",
+						"Description": "A way to add ponds for legendary fish, algae, seaweed, and even stranger things.",
+						"Author": "MouseyPounds",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AnythingPonds.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:4702"
+						],
+						"UniqueId": "MouseyPounds.AnythingPonds"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342420326,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391390,
+		"UploaderId": 3604264,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 3519,
+	"Name": "Configure Machine Speed",
+	"Author": "BayesianBandit",
+	"Description": "[size=4]Installation:[/size]\n<br />[list=1]\n<br />[*] [url=https://www.smapi.io/] Install the latest version of SMAPI[/url]\n<br />[*] Unzip [code]ConfigureMachineSpeed.zip[/code] into [code]../Stardew Valley/Mods[/code].\n<br />[*] Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=4]Compatibility:[/size]\n<br />[list]\n<br />[*] Works with Stardew Valley 1.3 on Linux/Mac/Windows.\n<br />[*] Compatible with SMAPI 2.11.2+ (untested on earlier versions, but it might still work).\n<br />[*] This mod does NOT work for Farmhands in multiplayer (though it should work for hosts).\n<br />[*] Untested on custom machines (let me know what happens if you try it).\n<br />[*] No known mod conflicts (let me know if you find one).\n<br />[*] Should be compatible with SMAPI 3.0.0 once it is released.\n<br />[/list]\n<br />\n<br />[size=4]How To Use:[/size]\n<br />[list=1]\n<br />[*] Run the game using SMAPI at least once to generate a [code]config.json[/code] file inside [code]../Stardew Valley/Mods/ConfigureMachineSpeed[/code].\n<br />[*]Modify\u00A0[code]config.json\u00A0[/code]with whatever settings you choose and save the file.\n<br />[*]Press the\u00A0[code]ReloadConfigKey[/code]\u00A0key (by default this is\u00A0[code]L[/code]) while playing the game to reload your modified config file.\n<br />[*]Enjoy!\n<br />[/list]\n<br />\n<br />[size=4]The Config File:[/size]\n<br />[list=1]\n<br />[*]In the\u00A0[code]config.json[/code]\u00A0file you will see two keys:\u00A0[code]UpdateInterval[/code],\u00A0[code]Machines[/code]\u00A0and\u00A0[code]ReloadConfigKey[/code].\n<br />[*][code]ReloadConfigKey[/code]\u00A0specifies which key you can press to re-load the settings found in\u00A0[code]config.json[/code]\u00A0while playing the game (useful if you want to change the speed of machines without exiting to desktop).\n<br />[*][code]UpdateInterval[/code]\u00A0sets how often the mod will check the machine's remaining time and alter it if necessary. It's probably fine as is, but feel free to change it.\n<br />[*]Each machine in\u00A0[code]Machines[/code]\u00A0has three keys:\u00A0[code]Name[/code],\u00A0[code]Time[/code], and\u00A0[code]UsePercent[/code].\n<br />[list]\n<br />[*]If\u00A0[code]UsePercent[/code]\u00A0is\u00A0[code]true[/code], then\u00A0[code]Time[/code]\u00A0specifies how much time each machine will take as a\u00A0percentage\u00A0(e.g., setting this to\u00A0[code]100[/code]\u00A0will change nothing, setting it to\u00A0[code]50[/code]\u00A0will make the machines run 2x as fast).\n<br />[*]If\u00A0[code]UsePercent[/code]\u00A0is\u00A0[code]false[/code], then\u00A0[code]Time[/code]\u00A0specifies how much time each machine will take in\u00A0minutes\u00A0(e.g., setting this to\u00A0[code]100[/code]\u00A0will make the machine take 100 in-game minutes to finish processing).\n<br />[/list]\n<br />[/list]\n<br />\n<br />[size=4]Supported Machines:[/size]\n<br />[list]\n<br />[*] Bee House\n<br />[*] Casks (note: you still need to sleep to make the product age up)\n<br />[*] Charcoal Kiln\n<br />[*] Cheese Press\n<br />[*] Crystalarium\n<br />[*] Furnace\n<br />[*] Incubator (note: you still need to sleep to make the egg hatch after the timer runs out)\n<br />[*] Keg\n<br />[*] Lightning Rod\n<br />[*] Loom\n<br />[*] Mayonnaise Machine\n<br />[*] Oil Maker\n<br />[*] Preserves Jar\n<br />[*] Recycling Machine\n<br />[*] Seed Maker\n<br />[*] Slime Egg-Press\n<br />[*] Slime Incubator (note: you still need to sleep to make the egg hatch after the timer runs out)\n<br />[*] Tapper\n<br />[*] Worm Bin\n<br />[/list]\n<br />\n<br />[size=4]Known Bugs/Unsupported Machines:[/size][list]\n<br />[*] No immediate plans to support Crab Pots/Mushroom Bins/Statue of Perfection/etc. this mod, since Stardew handles those outputs too differently (they don't count down a timer, they just generate new items each morning). Let me know if this is something you guys really want, otherwise I probably won't look into adding it.\n<br />[*]  If you use a mod like UI Info Suite to see how much longer the machines have left to process, it will look like the machines are one minute too fast. This is just cosmetic and has to do with how the speed change is done. The game only measures increments of 10 minutes anyways so it should not affect your gameplay. (The mod is implemented this way on purpose, since the alternative would be less efficient.)\n<br />[/list]\n<br />\n<br />[size=4]Source Code:[/size]\n<br />This mod is open source under an MIT License. Feel free to check out it's [url=https://github.com/BayesianBandit/ConfigureMachineSpeed]GitHub repository[/url]. I use the issue tracker there if you would prefer to open an issue there (leaving a post here is fine too though).",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3519",
+	"Version": "2.0.0-beta.2",
+	"Updated": "2019-08-31T18:09:03+00:00",
+	"Downloads": [
+		{
+			"Id": 18893,
+			"Type": "Main",
+			"DisplayName": "Configure Machine Speed",
+			"FileName": "Configure Machine Speed-3519-2-0-0-beta-2-1567274943.zip",
+			"Description": "Fixes casks.",
+			"Version": "2.0.0-beta.2",
+			"SizeInBytes": 11576,
+			"Uploaded": "2019-08-31T18:09:03+00:00",
+			"Mods": [
+				{
+					"Id": "BayesianBandit.ConfigureMachineSpeed",
+					"DisplayName": "Configure Machine Speed",
+					"Type": "Smapi",
+					"RelativePath": "ConfigureMachineSpeed",
+					"Manifest": {
+						"Name": "Configure Machine Speed",
+						"Description": "Configure the speed of your machines.",
+						"Author": "BayesianBandit",
+						"Version": "2.0.0-beta.2",
+						"MinimumApiVersion": "2.10.2",
+						"EntryDll": "ConfigureMachineSpeed.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3519"
+						],
+						"UniqueId": "BayesianBandit.ConfigureMachineSpeed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342405581,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390207,
+		"UploaderId": 65621396,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

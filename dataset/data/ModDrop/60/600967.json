@@ -1,0 +1,139 @@
+{
+	"Site": "ModDrop",
+	"Id": 600967,
+	"Name": "Adopt 'n' Skin   (Animal Skinner)",
+	"Author": "Gathouria",
+	"TagLine": "Adopt new pets, find wild horses, and randomize and select custom skins for everyone!",
+	"Description": "**_Mod Updates Are on HIATUS\n_(06/17/2023)**\n**Due to life currently being very hectic, I have not been keeping up with mod maintenance.**\n\n**If you're a SMAPI modder and you'd like to help push updates through to get the mod working with SDV 4.0, I'd love to help you out! While working on the mod personally has been touch-and-go, I would love to see other players get to continue using this mod.__While I'd ask that Harmony not be added to the mod, as it can introduce a lot of bugs, I am not familiar with it should I return more actively, and the mod's functions do not require it to work properly, I have various private beta, cleaner versions of the code mid-refactor that I can share to help out anyone trying to port A&amp;S into 4.0**\n\n**I can be contacted most reliably through Discord (username gathouria). Send me a private message, no friend request required.**\n **_______________________________________________________________\n\nAdopt new pets, find wild horses, and randomize and\nselect custom skins for everyone!_**\nInspired by and based on Entoarox's [More Animals](https://www.nexusmods.com/stardewvalley/mods/2274) mod\n\n**** The current versions are BETA. Please use caution ****\n\nThe newest files (3.2.0-beta.1.8  &amp;  4.0.0-beta.1.6.7) are the same files that I have been \"unofficially\" circulating with Corrin, as they have not been as thoroughly tested by my beta testers as the typical releases due to real life health issues. If you've already downloaded the \"unofficial\" copy, check out the multiplayer-compitable beta file!\n\n**Information shown below and in the FAQ may be outdated, as the multiplayer-compatiable update has changed much of the back-end coding.**\nIt will be updated at a later date.\n\n![](https://i.imgur.com/wajLawd.png)\n\n*   Allows loading custom farm animal, pet, and horse sprite sheets for use in game, with the same naming convention as [More Animals](https://www.nexusmods.com/stardewvalley/mods/2274)\n\n*   Randomizes each animal's skin when created or born\n\n*   Lets you select a specific skin for each farm animal, pet, or horse whenever you like\n\n*   [BFAV](https://www.nexusmods.com/stardewvalley/mods/3296) compatible\n\n*   Run across wild horses that you can adopt\n\n*   Marnie finds stray pets that you can adopt\nIf you would like to use the default skin for an animal, you don't need to do anything! A&amp;S will only load additional skins for the animals you place in the `AdoptSkin/assets/skins` folder.\n\n![](https://i.imgur.com/2z2RXFz.png)\n**1.** Place the skins you want anywhere in the `AdoptSkin/assets/skins` folder. Any folder placed inside is purely for aesthetic organization.\n**2.** Remove any other reskin mods from the `Mods` folder itself. If you previously had another reskin mod on your save file:\n\n*   Make sure that any skins that you'd like to use are placed in `AdoptSkin/assets/skins`\n\n*   Remove the reskin mods themselves from the `Mods` folder\n\n*   Call the `randomize_skin` console command on the existing creatures that were affected by the reskin mod(s)\n**3.** A few default skins are in there to give you an example, but follow the naming conventions listed further down for the skin files.\n**4.** Your animals are all ready to have randomized skins now! The console commands below can be used for changing skins.\n\n☆ **_Recommended sprite set_:** Elle's replacement sprites ([Coop](https://www.nexusmods.com/stardewvalley/mods/3168), [Barn](https://www.nexusmods.com/stardewvalley/mods/3167), [Dog](https://www.nexusmods.com/stardewvalley/mods/3871), [Cat](https://www.nexusmods.com/stardewvalley/mods/3872), and [Horse](https://www.nexusmods.com/stardewvalley/mods/3169)). These are most of the sprites shown in the picture examples. And I personally love them! Hollowstyx also has made [adorable quails and tiny chicken skins](https://www.nexusmods.com/stardewvalley/mods/7046) to work specifically with A&amp;S.\n**☆ _Recommended paired mod_:** [Chat Commands](https://www.nexusmods.com/stardewvalley/mods/2092). This makes it easier to change the sprites within the game!\n(Note: Chat Commands has a bug where if a SMAPI error occurs, the game will crash. Be careful with new versions of A&amp;S and typing commands)\n**☆ _Incompatible mods_:**\n\n*   **More Animals -**  MA competes with A&amp;S when trying to reskin and move animals around the map, and A&amp;S covers the functionality of MA\n\n*   **Reskin mods -** These mods compete with A&amp;S when trying to reskin or adjust animals, and cause weird issues. A&amp;S covers their functionality once the skins from these mods have been moved into the `AdoptSkin/assets/skins` folder. Call `randomize_skin` on existing animals that used the reskin mod's assets.\n\n*   **Pet Interaction (Somewhat) -** There is a bug where an extra cat added by PI will be on your farm. Until the author works this out, this cat will warp to wherever your pets are being placed. If this doesn't bother you, go ahead and use the two together!\n\n![](https://i.imgur.com/itkGU6J.png)\n**`list_creatures [creature category]`**\nGives the Name, ID, and skin ID of every creature in the given category\n__Accepted categories: all, animal, pet, horse, coop, barn, chicken, cow, or any specific type (i.e. whitechicken)__\n\n**`randomize_skin [creature category or creature ID]`**\n Randomizes the skin of the creatures with the given category or the creature with the given ID\n__Accepted categories: all, animal, pet, horse, coop, barn, chicken, cow, or any specific type (i.e. whitechicken)__\n\n**`set_skin [skin ID] [creature ID]`**\nSelect a specific skin for the given creature\n\n**`sell [creature ID]`**\nGives away the specific pet or horse with the given creature ID\n\n**`horse_whistle [optional: horse ID]`**\nCalls a horse to your location. When used with a horse's ID, that specific horse is called. This also has a configurable hotkey, which is \"R\" by default.\n\n**`corral_horses`**\nSends all the horses you own to your stable, giving you the honor of being a professional clown car chauffeur. This also has a configurable hotkey, which is \"Y\" by default.\n\n_Command Example_:\nLet's set our chicken, who we'll call Chirpchirp, to have the skin `whitechicken_4`, which we've placed in the `/assets/skins` folder of A&amp;S.\n\nFirst, we'll need to figure out Chirpchirp's ID, which the the short number A&amp;S uses to reference individual farm animals, pets, and horses.\nTo do that, we'll call `list_creatures chicken`. The output in the console should show all the chickens you own. Chirpchirp's information should look something like this:\n`# Chirpchirp:    Type - whitechicken`\n`Short ID:        3`\n`Skin ID:        9`\n\nFrom this we can tell that Chirpchirp's farm animal ID is 3, and its currently set to have the `whitechicken` type skin 9, which would be the skin named `whitechicken_9` in the `/assets/skins` folder.\n\nTo set Chirpchirp's skin to `whitechicken_4`, we then need to call ```set_skin 4 3`, which calls the `set_skin` function on the creature with the ID of 3, which happens to be Chirpchirp, and gives it the fourth skin of that creature's type (Chirpchirp is a whitechicken, so that's the skin named `whitechicken_4`).\n\nChirpchirp will now appear with the skin `whitechicken_4`!\n\n_![](https://i.imgur.com/INoNYYN.png)_\n**Does the horse whistle work with the tractor mod?**\nYep.\n\n**Can I use A&amp;S in multiplayer?**\nConditionally. Multipet/multihorse isn't yet tested in multiplayer, but the farm animal skins work. Other things are a little unpredictable, as they are not\nyet supported. Multiplayer multipet/multihorse is currently being worked on.\n\n**Can I turn off/change X feature?**\nCheck the `Config` file. There's a ton of things you can turn on and off or set to a different value. Explanations of the options in the `Config` are described below.**Can I change/rename/delete/add to folders inside of `/assets/skins`?**\nYep! Any subfolder of the `/skins` folder is purely serving as a visual means to organize! You can do whatever you like to them, and nest folders to your heart's content; A&amp;S will grab any skin inside. Just make sure you're still naming everything the same- A&amp;S doesn't care __what__ folder you put them in.\n**Where's the `Config` file?**\nThe `Config` file will generate after you've run Stardew Valley at least once after installing A&amp;S.**The SMAPI commands aren't working!**\nThe commands went through an overhaul with the release of 2.4.0, and again with 2.6.0. If you're used to the old commands, or are confused on how to use them in general, refer to the explanations and example of the commands above.\n\n**Why aren't the skins showing up? / I'm getting an error and skins aren't showing up**\n&gt; **First**, make sure that you've placed skins in `AdoptSkin/assets/skins`, as A&amp;S does not come with many skins of its own- only a few example skins.\n&gt; **Second**, check the file naming guide below.\n&gt; **Third**, Make sure you don't have any other skin replacers for animals, pets, or horses. If you do:\n1. Since reskinners can cause conflict, you'll have to make sure you've moved any skins that you want from those mods into `/assets/skins`\n2. Remove the reskin mods from the `Mods` folder\n 3. When you load older saves that used these replacers, call `randomize_skin` on the creatures or creature category that was using those skins\nThose creatures, and new ones of its kind, should be good to go after that!\n&gt; **Fourth**, if you're still having problems or are confused, feel free to post a comment or ask on the SDV discord's #modding channel!\n\n**Why aren't my BFAV animal skins working?**\nMake sure the skins are named **exactly** as they appear in the BFAV Config file. Some BFAV animals have \"color variants\", that work just like how brown chickens and white chickens do, in that they're each treated as a completely different animal. You'll have to name skins for each variant.\n\n**Can I reskin the petbed at Marnie's?**\nSure can. Just make sure your image is named `petbed.png` and is the same size as the one in `AdoptSkin/assets/`. Then just replace that image with yours!\n\n**The game crashes when I enter Marnie's**\nIf you removed `petbed.png`, this is the culprit. You can replace the image with something else, but it has to be there!\n\n**My pet/horse turns invisible when I reskin it**\nThis can happen for some users when in Fullscreen mode and pulling SMAPI over the top of the game. To fix this either install the [Chat Commands](https://www.nexusmods.com/stardewvalley/mods/2092) mod for A&amp;S commands or use a different window setting.\n\nIf this does not correct the issue, this also can be from a corrupted game problem, due to mods other than A&amp;S. Try these steps to fix the issue, and feel free to ping me (@gathouria#9832) on the SDV #modding server if the issue continues.\n\n1.  Make a copy of your `Mods` folder somewhere else on your computer (i.e. your Desktop)\n\n2.  Delete your Stardew Valley folder. Yes, the entire folder. No saved data will be lost, as not only does Steam back your save files up, but they're located in a different location on your computer.\n\n3.  Open up Steam. In your library, right click on Stardew Valley, and select `Properties`. Select the `Local Files` tab, and click `Verify Integrity of Game Files`. Steam will then alert you that your files are missing, and then redownload Stardew Valley for you. The reason for deleting the entire folder instead of just validating files is due to the fact that Steam cannot detect many corruptions of files, and reacquiring ensures that your files are Stardew-original.\n\n4.  Run Stardew Valley. You can close this as soon as it opens.\n\n5.  Reinstall SMAPI.\n\n6.  Create a new `Mods` folder within your Stardew Valley folder, and **ONLY** move Adopt &amp; Skin into it.\n\n7.  Check that the issue still occurs on a new save file. You can use [CJB Cheats Menu](https://www.nexusmods.com/stardewvalley/mods/4)  and [CJB Item Spawner](https://www.nexusmods.com/stardewvalley/mods/93)  to quickly get to owning a pet or having a stable, as they have always worked fine for my personal testing. The save that you encountered the issue on may or may not continue to have the issue, as Stardew made the file while it was corrupted.\n\n8.  If the issue is fixed, move your `Mods` folder back into the Stardew Valley folder, and check that the issue doesn't reoccur by again making a new save file. If it does, then the issue is coming from a conflict with another mod. Make sure that none of the known incompatible mods, listed near the beginning of this page, are also installed.\n**My horse isn't showing up when I call `list_creatures horse`**\nThis seems to be an issue in some multiplayer games. Reminder that **multiplayer is not yet tested for A&amp;S, and there are likely many bugs.**\n\n****I can't reskin my horse!****\nIf you're currently riding your horse, dismount it first! Stardew Valley's code treats horses being ridden as non-existent.**I don't see any stray pets at Marnie's!**\nStrays only start appearing the day after you've received your first pet from Marnie in-game, and don't appear every day. The chance of them appearing can be altered in the `Config` file.\n\nThere is also a known bug that happens when you return to the title screen and load a save file again, without exiting to desktop, that causes Strays to not appear in Marnie's, or to be invisible at Marnie's, even if a notification is given that one should be there. This is fixed by just exiting Stardew and reloading the game.\n\n**I can't find any wild horses!**\nWild horses will only appear after you've built a stable, and are somewhat uncommon, having about a 25% chance to appear somewhere on the map each day, give or take some luck. This choice was made in order for wild horses to be an exciting find, rather than something you get bored of running across. That said, you can increase the chance of one appearing or set the chat and console to notify you when and where a wild horse appears via the `Config` file.\n\n**I see a wild horse but can't reach it??**\nTricky little devils, aren't they\n\n**☆ If you have a question not answered here, feel free to comment or pop over to the SDV discord #modding channel! (@ me at gathouria#9832) ☆**\n\n![](https://i.imgur.com/vIbkPsl.png)\n**_Naming your skin files:_**\n\nSprite sheets should be named in the manner listed below and placed in the `/asses/skins` folder. If you're familiar with the way More Animals names these files, it is exactly the same.\n\n*   The file must be named in the format of `[Baby/Sheared][Type]_[Skin ID]`\n**EX: Cat_1, BabyVoidChicken_7, Dinosaur_3, Horse _27, etc.**\n*   The [`Type]`needs to be exactly as shown in the above type chart (BFAV note below). Spaces and capitalization optional.\n\n*   All animals with a baby or sheared sprite _MUST_ have these sprites in the folder, alongside the normal adult sprite.\n\n*   Each baby or sheared skin is matched to the normal adult version of the skin with that ID (i.e. `babysheep_1` will be the baby sprite of a sheep with the skin `sheep_1`)\n\n*   Skin IDs can be any number greater than 1, but must be unique from others of that type (i.e. you can have `dog_1` and `whitechicken_1`, but not two `whitechicken_1`s)\n\n*   _**BFAV animal skins**_ are to be named in the same way, with their name looking the same as it appears in the BFAV `Config` file. _Double check the `Config`, as animals may have a variety of \"color variants\" (like whitechicken and brownchicken have), which all need their own skin sets_.\n\n*   All sprite files must be of type `.PNG` or `.XNB`\n\n*   All sprite files must be placed somewhere in `AdoptSkin/assets/skins`\n\n_Default animal types:_\n``\n\n_Default pet types:_\n``\n\n_Default horse types:_\n\n`Horse`\n\n![](https://i.imgur.com/ENu9wlE.png)\n\n*   **`OneTileHorse`** : Squishes the horse you're riding to fit anywhere your can normally walk\n\n*   **`PetAndHorseNameTags`** : Whether or not to display the name of the pet or horse that your cursor is hovering over\n\n*   **`HorseWhistleKey`** : The hotkey for calling one of your horses to you. By default, this is set to R\n\n*   **`CorralKey`** : The hotkey for calling all horses back to the stable. By default, this is set to Y\n\n*   **`StrayAdoptionPrice`** : The price for adopting a stray pet at Marnie's, once the player receives their first pet\n\n*   **`WalkThroughPets`** : Whether or not pets can be walked through by the player. Useful for when you own a lot of pets\n\n*   **`DisperseCuddlePuddle`** : Whether or not to spread pets out from the water dish, rather than have them all spawn in a single tile\n\n*   **`CuddleExplosionRadius`** : How far out, in all directions from the water dish, pets can be spread when `DisperseCuddlePuddle = true`\n\n*   **`WildHorseSpawn`** : Whether or not wild horses can be found after the player obtains a stable\n\n*   **`StraySpawn`** : Whether or not stray pets can show up at Marnie's after the player receives their first pet\n\n*   **`WildHorseChancePercentage`** : The chance of a wild horse spawning each day after the player obtains a stable. By default, this is set to 25%\n\n*   **`StrayChancePercentage`** : The chance of a stray pet appearing each day at Marnie's, after the player obtains their first pet. By default, this is set to 60%\n\n*   **`ChanceAffectedByLuck`** : Whether or not the chance for a wild horse or stray pet to spawn each day is affected by daily luck (up to 10%)\n\n*   **`NotifyHorseSpawn`** : Whether the player will be alerted, via SMAPI console and chat notification, if a wild horse spawns that day, and where it is located. By default, this is set to false.\n\n*   **`NotifyStraySpawn`** : Whether the player will be alerted, via SMAPI console and chat notification, if a stray spawns that day at Marnie's. By default, this is set to false.\n\n*   **`DebuggingMode`** : A mode for debugging. This adds a suite of debugging commands to the SMAPI console for your use, including commands to spawn in a wild horse or stray.\n\n![](https://i.imgur.com/95GGaG4.png)\nI have a few ideas for additional features for A&amp;S, so let me know if you'd be interested in seeing them, and feel free to suggest your own for the list!\n~ Multiplayer support for multipet and multihorse\n~ Baby stage of pets and horses\n~ <s>Toggle name tags on/off</s> **DONE!**<s></s>\n~ <s>Allow hotkeys to be set to null </s> **DONE!**\n~ <s>Allow organization of skins into subfolders</s> **DONE!**\n~ <s>Allow support for multi-pet farms, as More Animals itself added</s>**DONE!**\n~ <s>Add support for horse skin randomization/selection</s> **DONE!**\n~ <s>Create a command allowing the player to view the info for only a certain animal type, which would reduce the size of the animal list to look at</s> **DONE!**\n~ <s>Compatibility with BFAV</s> **DONE!**\n\nReporting bugs makes A&amp;S stronger. Help conquer the enemy (•̀ᴗ•́)و ̑̑\n\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __  _ _  _  _ _  _  _  _   _   _   _      _      _       _        _          _          _            _              _                  _                      _\n\n[Source Code](https://github.com/Gathouria/Adopt-Skin)\n\nhttps://ko-fi.com/D1D74F09D",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/600967",
+	"Version": null,
+	"Updated": "2022-05-21T20:36:29.758+00:00",
+	"Downloads": [
+		{
+			"Id": 1034090,
+			"Type": "Optional",
+			"DisplayName": "Adopt 'n' Skin 4.0.0-beta.2.0.0",
+			"FileName": "Adopt 'n' Skin 4.0.0-beta.2.0.0.zip",
+			"Description": "**Currently not functioning. Use single-player and turn off wild horses\n\nDoes not yet include multi-horse. See changelog.\n\n\n- Adds debug commands to integrate old save files\n- Fixes A&amp;S-included duck skins for swimming\n- Adds strays (CAUTION: Less ...",
+			"Version": "4.0.0-beta",
+			"SizeInBytes": 169855,
+			"Uploaded": "2021-09-13T04:47:59.416+00:00",
+			"Mods": [
+				{
+					"Id": "Gathouria.AdoptSkin",
+					"DisplayName": "Adopt & Skin",
+					"Type": "Smapi",
+					"RelativePath": "AdoptSkin",
+					"Manifest": {
+						"Name": "Adopt & Skin",
+						"Description": "Adopt new pets, find wild horses, and randomize and select custom skins for everyone!",
+						"Author": "Gathouria",
+						"Version": "4.0.0-beta.2.0.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "AdoptSkin.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Paritee.BetterFarmAnimalVariety",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4011",
+							"ModDrop:600967"
+						],
+						"UniqueId": "Gathouria.AdoptSkin"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "93f6e8afe27d25886cefcf052c656bcb",
+				"md5In": "b25eaf8e49db72f1a6bc5e9bd7529328",
+				"scriptType": 0,
+				"sha256Ex": "3de5ddf749119f0fcf0e0dc3aed3a3c0fe925fa0c73baf235e81985ce186f8dd",
+				"sha256In": "00ca5cb790f1e630f1ea54bdedd1164a201d6df5093e447c8eef2524b845cd3b"
+			}
+		},
+		{
+			"Id": 1175484,
+			"Type": "Main",
+			"DisplayName": "Adopt 'n' Skin",
+			"FileName": "Adopt 'n' Skin.zip",
+			"Description": "Updated for SDV 1.6. This is the file you want to download.\n\nNot yet ready for SMAPI 4.0",
+			"Version": "3.2.1",
+			"SizeInBytes": 190932,
+			"Uploaded": "2022-05-21T20:36:29.758+00:00",
+			"Mods": [
+				{
+					"Id": "Gathouria.AdoptSkin",
+					"DisplayName": "Adopt & Skin",
+					"Type": "Smapi",
+					"RelativePath": "AdoptSkin",
+					"Manifest": {
+						"Name": "Adopt & Skin",
+						"Description": "Adopt new pets, find wild horses, and randomize and select custom skins for everyone!",
+						"Author": "Gathouria",
+						"Version": "3.2.1",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "AdoptSkin.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Paritee.BetterFarmAnimalVariety",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:4011",
+							"ModDrop:600967"
+						],
+						"UniqueId": "Gathouria.AdoptSkin"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "5c8f5aed3d9a1f3588e9092dad13f78b",
+				"md5In": "bb8c2ce6b5c748512327cc5193320eeb",
+				"scriptType": 0,
+				"sha256Ex": "9a0ff52f1e4e1ec05ce59c91b540e0e62357c45da0e308679cc4b02f436e14c7",
+				"sha256In": "866abab70414aeca8886af1321d2e7b0b939862f9149ce951400d0d13d721957"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1563390328293,
+		"DateUpdated": 1653165389757,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1563390321793,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/600967/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/600967/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/600967/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/600967/icon_original"
+		},
+		"nexusModID": 4011,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 120561
+	}
+}

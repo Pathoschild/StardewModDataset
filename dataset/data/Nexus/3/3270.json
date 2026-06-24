@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 3270,
+	"Name": "Simple Hunger System",
+	"Author": "SknTheLisper",
+	"AuthorLabel": "skn",
+	"Description": "[size=3]This is a recreation of my previous hunger mod(Suggestions are highly welcomed):[/size]\n<br />[b]NB:\u00A0[/b][size=3][b]Does not work in multiplayer.[/b][/size]\n<br />\n<br />\n<br />It is just as configurable as it was previously, but some changes have been made(especially to default values). Your energy is reduced based upon your maximum energy, and your current hunger level(as it was when you went to bed, not when you wake up). Energy level you wake up is determined by this simple formula:\u00A0[size=1]MaxStamina * (HungerValue / HungerValueMax)\n<br />[/size]\n<br />GoodFood is multiplied with foodmultiplier,\u00A0 and all other food is divided with foodDivident, using the games edability stat as a default(No I don't have any real idea what it is, but it seems to be what the game use to determine energy&#92;health gain on consumables).\n<br />\n<br />Choosing to not eat&#92;ignore food isn't going to kill you, you simply wake up with no energy until you eat something.   \uFEFF\n<br />\n<br />\n<br />Full disclosure: I have barely played the game(even with my own mod), so balance, pacing etc can be a bit wonky. I did play one full year of the game where I rushed for a kitchen.\n<br />\n<br />[b]NB: [/b][size=3][b]Does not work in multiplayer.[/b][/size]\n<br />\n<br />[b][size=4]Working On&#92;Planned Features:[/size][/b]\n<br />\u00A0 \u00A0Check out the Article\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/117]here[/url]\n<br />\n<br />[b][size=4]Installation instructions:[/size][/b][i]\n<br />Download then install\u00A0[url=https://github.com/Pathoschild/SMAPI/releases]SMAPI[/url]\u00A0\n<br />Unzip&#92;Create folder named HungerMod in Stadrew Vallley&#92;Mods&#92;\n<br />Should look like this:\n<br />\u00A0 \u00A0 Stardew Valley&#92;Mods&#92;HungerMod&#92; \u00A0containing these files:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0config.json\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[/i]\u00A0Hungermod.dll\n<br />[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[/i]Hungermod.pdb\n<br />[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0[/i]manifest.json\n<br />\n<br />[b][size=4]Update instructions:[/size][/b][i]\n<br />Same as installation, if new features are added that can be configured it will be automatically generated to your config file(No need to manually add it)\u00A0[/i][/i]\n<br />\n<br />\n<br />[b][size=5]Compatibility:\n<br />[/size][/b]Compatible with all mods adding new food&#92;consumables as long as they are associated with an object category(Fruit, Vegetable, Cooked, etc), individual consumables can be made an exception using the\u00A0[i]\u00A0 \"add_item_to_VeryGoodList\": \"O\", \"add_item_to_AlcoholList\": \"L\", \"add_item_to_NotList\": \"N\",\u00A0 and \"[/i][i]add_item_to_RawList\": \"P\",[/i][i]\u00A0 [/i]keys. AlcoholList is used for the hangover system and will need individual items added to it(by default wine, mead, beer and pale-ale is on this list through the old ID list) through the use of the add_item_to_alcoholList\u00A0 key(default L).\n<br />\n<br />[size=5]\uFEFF[b]Configuration:[/b][/size]\n<br />[i][b]\u00A0[/b] \"randomHungerReduction\": true,[/i] [b]- Randomly reduce hunger between hungerValueReduction and MaxRand[/b]\n<br />[i][b]\u00A0 [/b]\"turn_off_listadding_after_consume\": true,[/i][b]\u00A0- Turns off the add-to-comp-list after you consume an item(so you won't have to manually keep track)[/b]\n<br />[i]\u00A0 \"maxRand\": 80,[/i][b] - Maximum amount the hunger will be reduced by[/b]\n<br />[i]\u00A0 \"alcohol_not_food_msg\": false,[/i][b] - when true shows not-filling message when drinking alcohol(for bevereges not considered food).[/b]\n<br />[i]\u00A0 \"hangover_system\": true,[/i][b] - Whether to use the hangover system or not[/b]\n<br />[i]\u00A0 \"minimum_alcohol\": 3,[/i][b] - How much alcohol you need to drink before you can have a chance of getting hungover[/b]\n<br />[i]\u00A0 \"hangover_chance\": 33,[/i][b]- The % chance(so 1 - 100) you'll get hungover[/b]\n<br />[i]\u00A0 \"hangover_stamina\": 25,[/i] [b]- How much stamina you'll have left after getting hungover[/b]\n<br />[i]\u00A0\"rawFoodCompList\": [],[/i][b] - Food considered to be raw(not good, and not \"not food\"), a.k.a the catch-all food type[/b][b]\n<br />[/b]\n<br />[b]Consumable categories that are not considered food, or is considered high quality food respectuflly, replace old system of IDs. Note that the blank item(\"\") in notFoodCategory is a catch-all for items without a category(like seaweed, coffee).[/b]\n<br />[i]\u00A0 \"notFoodCategory\": [\n<br />\u00A0 \u00A0 \"flower\",\n<br />\u00A0 \u00A0 \"forage\",\n<br />\u00A0 \u00A0 \"artisan goods\"\n<br />\u00A0 \u00A0 \"\"\n<br />\u00A0 ],\n<br />\u00A0 \"goodFoodCategory\": [\n<br />\u00A0 \u00A0 \"cooking\"\n<br />\u00A0 ],\n<br />[/i]\n<br />\n<br />[i]\u00A0 \"event_filling\": true,[/i][b]- Whether events will fill you or not, if not the event days will be ignored.[/b]\n<br />\n<br />\n<br />[b]Compatibility for other mods, added dynamically while playing using the add_item keys.[/b]\n<br />[i]\u00A0 \"NotFoodCompItems\": [],\n<br />\u00A0 \"alcoholCompDrinks\": [],\n<br />\u00A0 \"veryGoodCompList\": [],[/i]\n<br />\n<br />[i]\u00A0 \"Show_Hunger_Button\": \"H\",[/i][b]\u00A0- Previously button, shows your hunger value[/b]\n<br />\n<br />[b]Buttons to add items into the compatibility lists[/b]\n<br />[i]\u00A0 \"add_item_to_VeryGoodList\": \"O\",\n<br />\u00A0 \"add_item_to_AlcoholList\": \"L\",\n<br />\u00A0 \"add_item_to_NotList\": \"N\",\n<br />[i]\u00A0 \"add_item_to_RawList\": \"P\",[/i][b]\u00A0- Adds to the new rawFoodCompList, mutually exclusive to good&#92;not list.[/b][/i]\n<br />\n<br />\u00A0 \"food_type_message\": true, - [b]Shows what type of food you just consumed, such as good food, not food, etc.[/b]\n<br />[i]\u00A0 \"ConstantStuffedMessage\": false,[/i][b] - Show stuffed message everytime you eat after being full, when false only shows it once a day.[/b]\n<br />\u00A0 [i]\"ShowNotFillingMessage\": true,[/i] [b]- Shows if an item you ate is not considered food.[/b]\n<br />\u00A0[i] \"FoodMultiplier\": 2.5,[/i][b]- The multiplier for good&#92;cooked food.[/b]\n<br />\u00A0[i] \"FoodDivident\": 1.8,[/i] [b]- The divident of raw&#92;not good food.[/b]\n<br />[i]\u00A0 \"HungerValueMax\": 300.0, [/i][b]- Maximum filled value.[/b]\n<br />[i]\u00A0 \"HungerValueReduction\": 42.0,[/i][b] - How much the filled variable is reduced pr day(a.k.a, how hungry you get every night).[/b]\n<br />[i]\u00A0 \"StartHunger\": 279,[/i] [b]- when you will start to feel hungry[/b]\n<br />\n<br />[b]What festivals are considered free-food festivals. Requires the player to actually attend the festival(by meeting up).[/b]\n<br />[i]\u00A0 \"festival_days\": [\n<br />\u00A0 \u00A0 \"egg festival\",\n<br />\u00A0 \u00A0 \"flower dance\",\n<br />\u00A0 \u00A0 \"luau\",\n<br />\u00A0 \u00A0 \"spirit's eve\",\n<br />\u00A0 \u00A0 \"feast of the winter star\"\n<br />\u00A0 ],\n<br />[/i]\n<br />[b]Food item list(vanilla game) of what is considered what type of consumable(not food, alcohol, or cooked&#92;good food, any consumable not mentioned is considered raw food, including mods).[/b]\n<br />[i]\u00A0 \"NotFoodItems\": [\u00A0[i]\u00A0-snip-[/i]\n<br />\u00A0 ],\n<br />\u00A0 \"alcoholDrinks\": [\u00A0[i]\u00A0-snip-[/i]\n<br />\u00A0 ],\n<br />\u00A0 \"VeryGoodFoodItems\": [ -snip-\n<br />\u00A0 ],[/i]\n<br />\n<br />[b]Messages to be displayed(FoodMessage text is only displayed if \"[/b]food_type_message[b]\" is true)[/b]\u00A0\n<br />\u00A0 \"NotFoodMessage\": \"That was not filling at all.\", - [b]Message dispalyed when you eat something that's not food.[/b]\n<br />\u00A0 \"RawFoodMessage\": \"That was barely a meal\", -\u00A0 [b]Message displayed when you eat food that's neither \"not food\", and \"good food\".[/b]\n<br />\u00A0 \"GoodFoodMessage\": \"A feast for the mouth!\", - [b]Message displayed when you eat good food[/b]\n<br />\u00A0 \"FullMessage\": \"You are satisfied.\", - [b]Message when your hunger value is maxed as you eat.[/b]\n<br />\u00A0 \"CurrentHungerValueMessage\": \"Current hunger Value: \", - [b]Message when you press show hunger button[/b]\n<br />\u00A0 \"festival_eat_message\": \"You've gorgued yourself on the free-food availible!\" - [b]Message displayed when you attend a food Festival[/b]\n<br />--\n<br />\n<br />With default values you'll start seeing hunger immediatly after going a day of no eating, and it'll slowly chip down how much energy you have each-day, so you can choose to go a while without eating, without it feeling like you are being too punished(but clearly encouraged to eat), also don't need the most expensive or best food to maintain your hunger values. After about 7 days of no eating you won't have any energy when you wake up.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3270",
+	"Version": "1.1.2",
+	"Updated": "2019-02-04T21:23:54+00:00",
+	"Downloads": [
+		{
+			"Id": 14390,
+			"Type": "Main",
+			"DisplayName": "Simple hunger System",
+			"FileName": "Simple hunger System-3270-1-1-2-1549315434.rar",
+			"Description": "Main File",
+			"Version": "1.1.2",
+			"SizeInBytes": 16504,
+			"Uploaded": "2019-02-04T21:23:54+00:00",
+			"Mods": [
+				{
+					"Id": "skn.HungerMod",
+					"DisplayName": "Simple Hunger System",
+					"Type": "Smapi",
+					"RelativePath": "HungerMod",
+					"Manifest": {
+						"Name": "Simple Hunger System",
+						"Description": "A simple hunger system",
+						"Author": "SKN",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "2.9.0",
+						"EntryDll": "HungerMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3270"
+						],
+						"UniqueId": "skn.HungerMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342401078,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389958,
+		"UploaderId": 51711,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

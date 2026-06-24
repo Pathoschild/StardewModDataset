@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 43517,
+	"Name": "Miihau Event Helper",
+	"Author": "Miihau",
+	"Description": "I needed a firefly effect for an event and decided to make a helper mod because I couldn't find a good way to do it otherwise.\n<br />I will expand this helper mod if I need other effects.\n<br />\n<br />currently there are only [b][u]3[/u][/b] actions.\n<br />\n<br />[size=4][b]action 1 and 2:\n<br />[/b][/size][u]Fireflies\n<br />[/u]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0Usage:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0action MiihauEventHelper_SpawnFirefly &lt;tileX&gt; &lt;tileY&gt; [durationMs] [baseRadius] [pulseAmplitude] [pulseSpeed] [color] [movementSpeed] [fadeInDurationMs] [fireflyId]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0Example:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0action MiihauEventHelper_SpawnFirefly 6 7 5000 0.9 0.1 0.3 #FF4938 15 3000 introGlow\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0Then later:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0Usage:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0action MiihauEventHelper_RemoveFireFly &lt;id&gt; [fadeOutDurationMs]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0Example:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ///\u00A0 \u00A0 \u00A0action MiihauEventHelper_RemoveFireFly introGlow\n<br />\n<br />\n<br />\n<br />Example Event:\n<br />[code]{\n<br />\"Action\": \"EditData\",\n<br />\"Target\": \"Data/Events/Forest\",\n<br />\"Entries\":\n<br />{\n<br />\"{{ModId}}_fireFliesTest/F\":\"\n<br />\u00A0 \u00A0 none/76 76/farmer 76 76 2/skippable/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 action MiihauEventHelper_SpawnFirefly 76 76 0 0.5 0.2 0.2 #863DFF 20 3000 firefly1/\n<br />\u00A0 \u00A0 message &#92;\"after firefly 1&#92;\"/\n<br />\u00A0 \u00A0 action MiihauEventHelper_SpawnFirefly 84 72 0 0.5 0.1 0.25 #863DFF 25 3500 firefly2/\n<br />\u00A0 \u00A0 pause 300/\n<br />\u00A0 \u00A0 action MiihauEventHelper_SpawnFirefly 83 76 0 0.55 0.13 0.15 #863DFF 25 2000 firefly3/\n<br />\u00A0 \u00A0 pause 100/\n<br />\u00A0 \u00A0 action MiihauEventHelper_SpawnFirefly 78 72 0 0.55 0.13 0.15 #863DFF 30 2000 firefly4/\n<br />\u00A0 \u00A0 message &#92;\"after adding more firefly&#92;\"/\n<br />\u00A0 \u00A0 action MiihauEventHelper_RemoveFirefly firefly1 3000/\n<br />\u00A0 \u00A0 message &#92;\"after removing firefly 1&#92;\"/\n<br />\u00A0 \u00A0 pause 2000/\n<br />\u00A0 \u00A0 message &#92;\"now spawning firefly with 3 second timer&#92;\"/\n<br />\u00A0 \u00A0 action MiihauEventHelper_SpawnFirefly 34 12 3000/\n<br />\u00A0 \u00A0 pause 3000/\n<br />\u00A0 \u00A0 message &#92;\"timed firefly removed&#92;\"/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 end/\n<br />\u00A0 \u00A0 \",\n<br />}\n<br />},\n<br />[/code]\n<br />\n<br />[size=4][b]action 3:[/b][/size]\n<br />[u]CustomEmote\n<br />[/u]\n<br />///\u00A0 \u00A0 \u00A0Usage:\n<br />///\u00A0 \u00A0 \u00A0action MiihauEventHelper_CustomEmote &lt;actor&gt; &lt;PathToSpriteFile&gt; &lt;XposInSprite&gt; &lt;YposInSprite&gt; &lt;width&gt; &lt;height&gt; [YOffset = 0]\n<br />///\n<br />///\u00A0 \u00A0 \u00A0Example:\n<br />///\u00A0 \u00A0 \u00A0action MiihauEventHelper_CustomEmote Abigail Characters&#92;&#92;Emily 1 4 15 13 12\n<br />\n<br />Example Event:\n<br />[code]\uFEFF{\n<br />\"Action\": \"EditData\",\n<br />\"Target\": \"Data/Events/Forest\",\n<br />\"Entries\":\n<br />{\n<br />\"{{ModId}}_CustomEmoteTest/F\":\"\n<br />\u00A0 \u00A0 none/36 12/farmer 35 15 2 Abigail 36 15 2 Penny 37 15 2 Vincent 38 15 2/skippable/\n<br />\u00A0 \u00A0 pause 2000/\n<br />\u00A0 \u00A0 pause 200/\n<br />\u00A0 \u00A0 emote Abigail 32 true/\n<br />\u00A0 \u00A0 emote farmer 32 true/\n<br />\u00A0 \u00A0 emote Penny 32 true/\n<br />\u00A0 \u00A0 emote Vincent 32/\n<br />\u00A0 \u00A0 pause 200/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Abigail Characters&#92;&#92;Emily 1 4 15 13 12/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote farmer Characters&#92;&#92;Emily 1 4 15 28/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Penny Characters&#92;&#92;Emily 1 4 15 13 12/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Vincent Characters&#92;&#92;Emily 1 4 15 13 22/\n<br />\u00A0 \u00A0 pause 5000/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Penny Characters&#92;&#92;Emily 1 4 15 13 12/\n<br />\u00A0 \u00A0 emote Abigail 32/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote farmer Characters&#92;&#92;Emily 1 4 15 28/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Abigail Characters&#92;&#92;Emily 1 4 15 13 12/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Penny Characters&#92;&#92;Emily 1 4 15 13 12/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Vincent Characters&#92;&#92;Emily 1 4 15 13 33/\n<br />\u00A0 \u00A0 pause 3000/\n<br />\u00A0 \u00A0 emote farmer 32/\n<br />\u00A0 \u00A0 pause 200/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote farmer Characters&#92;&#92;Emily 1 4 15 28/\n<br />\u00A0 \u00A0 pause 2000/\n<br />\u00A0 \u00A0 emote Abigail 32/\n<br />\u00A0 \u00A0 pause 200/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Abigail Characters&#92;&#92;Emily 1 4 15 13 23/\n<br />\u00A0 \u00A0 pause 1000/\n<br />\u00A0 \u00A0 emote Vincent 32/\n<br />\u00A0 \u00A0 pause 200/\n<br />\u00A0 \u00A0 action MiihauEventHelper_CustomEmote Vincent Characters&#92;&#92;Emily 1 4 15 13 22/\n<br />\u00A0 \u00A0 pause 2000/\n<br />\u00A0 \u00A0 end/\n<br />\u00A0 \u00A0 \",\n<br />}\n<br />},\n<br />[/code]\n<br />\n<br />\n<br />[url=https://github.com/MiihauLOL/MiihauEventHelper]Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43517",
+	"Version": "0.0.5",
+	"Updated": "2026-03-19T18:42:13+00:00",
+	"Downloads": [
+		{
+			"Id": 161211,
+			"Type": "Main",
+			"DisplayName": "Miihau Event Helper",
+			"FileName": "Miihau Event Helper-43517-0-0-5-1773945733.zip",
+			"Description": "just a helper for Event mods",
+			"Version": "0.0.5",
+			"SizeInBytes": 22410,
+			"Uploaded": "2026-03-19T18:42:13+00:00",
+			"Mods": [
+				{
+					"Id": "MiihauEventHelper",
+					"DisplayName": "Miihau Event Helper",
+					"Type": "Smapi",
+					"RelativePath": "MiihauEventHelper",
+					"Manifest": {
+						"Name": "Miihau Event Helper",
+						"Description": "Adds custom event commands for firefly effects.",
+						"Author": "Miihau",
+						"Version": "0.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MiihauEventHelper.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:43517"
+						],
+						"UniqueId": "MiihauEventHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547899,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430205,
+		"UploaderId": 151409123,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

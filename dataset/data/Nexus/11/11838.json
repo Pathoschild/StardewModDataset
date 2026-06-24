@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 11838,
+	"Name": "JhinFour",
+	"Author": "sadoskik",
+	"AuthorLabel": "Keaton Sadoski",
+	"Description": "[size=5]Summary[/size]\n<br />This is a mod for Stardew Valley which plays the Jhin counting voiceline each time the sling shot is used. It keeps track of \n<br />the last voiceline and uses the appropriate next one (ie. \"One\" then \"Two\").\n<br />[size=5]Install[/size][list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Motivation[/size]\n<br />I really enjoy the game and thought it would be a fun intersection of my two favorite things. It was a good introduction to \n<br />modding in Stardew and will be a good stepping stone to a larger mod project I have in mind.\n<br />[size=5]Technical Details[/size]\n<br />The selection of events raised by SMAPI left a lot to be desired. I wanted an event at least for when the player uses a tool, but I did not find that. Instead, I wrote a handler for the GameTick event and checked if the player was \"Using Slingshot\" and keeps track of that value. The current value is compared against the previous one to detect a falling edge (Using -&gt; not using). That triggers the playSound method which checks what the correct sound to play is.\n<br />[size=5]Challenges[/size]\n<br />[list]\n<br />[*]As mentioned before, the SMAPI does not offer a lot of events to bind handlers to. Whether that is a shortcoming of the extension or the \n<br />base game, I cannot say.[*]The soundbytes for Jhin were obtained from the League of Legends fan wiki. There is no easy way to download the sound files, but inspecting \n<br />the html source reveals the URL for each sound byte. These came in .ogg format.[*]Through some error of the System.IO.FileStream() constructor, it was having issues opening the .ogg files. Luckily SV accepts .wav sound \n<br />format as well. That worked fine.[/list][size=5]Future Applications[/size]\n<br />[list]\n<br />[*]Addition of a configuration file that allows sounds to be disabled, sound activation frequency (not every use of slingshot, etc), skin sounds to use (Dark Cosmic, Vanilla, High Noon, etc).\n<br />\n<br />[*]Custom weapon with similar mechanics to LoL's in-game.\n<br />[*]Visual effect change for fourth shot.\n<br />\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11838",
+	"Version": "1.0.0",
+	"Updated": "2022-04-28T00:30:44+00:00",
+	"Downloads": [
+		{
+			"Id": 53748,
+			"Type": "Main",
+			"DisplayName": "JhinFour",
+			"FileName": "JhinFour-11838-1-0-0-1651105844.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 962487,
+			"Uploaded": "2022-04-28T00:30:44+00:00",
+			"Mods": [
+				{
+					"Id": "Sadoski.JhinFour",
+					"DisplayName": "JhinFour",
+					"Type": "Smapi",
+					"RelativePath": "JhinFour",
+					"Manifest": {
+						"Name": "JhinFour",
+						"Description": "Plays voice lines from League of Legend's Jhin to slingshot attacks in Stardew Valley. Specifically the numbered count as you attack similar to LoL in-game voice lines.",
+						"Author": "Keaton Sadoski",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "JhinFour.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Sadoski.JhinFour"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342440436,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398526,
+		"UploaderId": 52906856,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

@@ -1,0 +1,94 @@
+{
+	"Site": "Nexus",
+	"Id": 46936,
+	"Name": "Map Aquarium Fish - Framework",
+	"Author": "NassiLove",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />\n<br />Ever wanted your custom map to have a fish tank? What about adding fish to a fish pond in your map? How about adding fish in random places? Carpet eels? Hand animating them is an option, and this mod is another!\n<br />It does not have (known) limitations on placement. They can overlap, be put in walls, be put in the sky, etc.\n<br />\n<br />It isn't limited to fish either. As with the optional example mod, as long as it has aquarium data, it will work. I added aquarium data to the duck sprite, with minor edits to make it look more like it's in water, I didn't even add them as items! So no need to deal with object data, all you need is the aquarium data.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />\n<br />- Works with custom maps\n<br />- Works with custom fish\n<br />- Can be event-only\n<br />- Custom width and height\n<br />- Can be placed anywhere on the map\n<br />- Collision can be turned off\n<br />- The tank is default invisible, so the fish can be added anywhere\n<br />- It can also use the sprite of an existing fish tank furniture in Data/Furniture\n<br />- Specific front and back sprites can be chosen as well\n<br />- The textures can be tinted, including for existing fish tank furniture, opacity can be changed\n<br />- The fish field uses item queries, making it more customizable\n<br />- The fish can be tinted, opacity can also be changed (tank-specific)\n<br />- Shadows and Bubbles can be hidden (tank-specific)\n<br />- Players cannot remove the fish, so don't worry\n<br />- Many fields are optional, how long and complex it is depends on your needs\n<br />\n<br />[b]To add fish tanks you need Content Patcher to edit the mod file.[/b] Instructions and examples are inside the mod folder.\n<br />They're called [b]example.json[/b] and [b]blank_example.json[/b].\n<br />[b]The former is VERY wordy[/b], as it explains what every field is for and if it's required or optional. [b]The latter has minimal comments[/b], if the former is overwhelming or you just want something to easily copy-paste.\n<br />\n<br />[size=4][b]Weird interactions[/b][/size]\n<br />\n<br />Dynamic reflections seem to reflect the contents weirdly, will look into that next update.\n<br />\n<br />Grabbing custom tanks as furniture objects using cheats makes it act like a janky fish tank, as it's meant as decoration for maps, not something the player is meant to have. (players can't naturally pick up those spawned by the framework, so the only way is through cheats or mods like CJB Item Spawner)\n<br />It will have weird offsets and bounds, and fish can only be added by holding them and clicking on the tank, not through the menu. Otherwise it's a regular fish tank. Think of it like a debug item, players can spawn it with cheats, but it's pretty jank.\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />The scope creep... and the people who encouraged it \uD83D\uDE14",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46936",
+	"Version": "1.0.0",
+	"Updated": "2026-05-30T16:08:49+00:00",
+	"Downloads": [
+		{
+			"Id": 169426,
+			"Type": "Main",
+			"DisplayName": "Map Aquarium Fish Framework",
+			"FileName": "Map Aquarium Fish Framework-46936-1-0-0-1780099917.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 38237,
+			"Uploaded": "2026-05-30T00:11:57+00:00",
+			"Mods": [
+				{
+					"Id": "NassiLove.MapAquariumFish",
+					"DisplayName": "Map Aquarium Fish",
+					"Type": "Smapi",
+					"RelativePath": "MapAquariumFish",
+					"Manifest": {
+						"Name": "Map Aquarium Fish",
+						"Description": "This mod is a framework and does nothing on it's own. Other mods can use this one to add swimming fish to existing maps!",
+						"Author": "NassiLove",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MapAquariumFish.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46936"
+						],
+						"UniqueId": "NassiLove.MapAquariumFish"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556114,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 169498,
+			"Type": "Optional",
+			"DisplayName": "Swimming Ducks - Mod Example",
+			"FileName": "Swimming Ducks - Mod Example-46936-1-0-1-1780157329.zip",
+			"Description": "Added SVE compatibility and made fish only appear if the weather is correct (it doesn't take into account time tho)",
+			"Version": "1.0.1",
+			"SizeInBytes": 5210,
+			"Uploaded": "2026-05-30T16:08:49+00:00",
+			"Mods": [
+				{
+					"Id": "NassiLove.SwimmingDucksMAF",
+					"DisplayName": "Swimming Ducks",
+					"Type": "ContentPack",
+					"RelativePath": "[ContentPatcher] SwimmingDucks",
+					"Manifest": {
+						"Name": "Swimming Ducks",
+						"Description": "Adds ducks in aquarium data, and uses Map Aquarium Fish to add them by the waterfall in town.",
+						"Author": "NassiLove",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "NassiLove.MapAquariumFish",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "NassiLove.SwimmingDucksMAF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342556186,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433624,
+		"UploaderId": 84995438,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

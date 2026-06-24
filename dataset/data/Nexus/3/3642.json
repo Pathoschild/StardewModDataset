@@ -1,0 +1,96 @@
+{
+	"Site": "Nexus",
+	"Id": 3642,
+	"Name": "Event Repeater - A useful tool for Content Patcher Modding",
+	"Author": "MissCoriel",
+	"Description": "To Install Event Repeater:\n<br />[list=1]\n<br />[*][b]Install [url=https://smapi.io/]SMAPI[/url]\uFEFF[/b]\n<br />[*][b]Install [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF (The Mod itself doesn't need it.. but Event Repeater Mods will)[/b]\n<br />[*][b]Download and Unzip this Mod into the Mods Folder[/b]\n<br />[/list]\n<br />[b]6.6 Quest Functions Acquired!\n<br />[/b]I added in the searchquest command!\u00A0 This feature allows you to search for quests with simple keywords.\u00A0 It will even look for modded quests! The results of your search will give you the Quest ID, Quest Name, and the Description!\u00A0 Using inject quest &lt;id&gt; will add that quest to your questlog even if you've already completed it!\u00A0 On top of that, using endquest &lt;id&gt; will complete the quest you specified as if you did it in game.\u00A0 This will add a lot of applications to your debugging!!\n<br />[b]6.5.8 Updated to 1.6\n<br />[/b]To be honest, I thought I future proofed this on my last update.. I was not prepared.\u00A0 There is only one change that I had to account for and that all numericals are considered strings.\u00A0 If you use the RepeatEvents or RepeatResponse blocks, please convert them to strings (ex. \"1999999999\").\n<br />\n<br />[b]6.5.5 Mail and Response Monitoring and Mailbox Monitor\n<br />[/b]This version adds a console alert when a MailID is added to your seen list as well as ResponseIDs.. there is a caveat for the latter: If the question's ResponseID is -1 or you've already seen the response without removing it or the question doesn't use the $q format. This feature will also inform you if a MailID or ResponseID was removed.\u00A0\u00A0\n<br />Also, you will have Active Mailbox monitoring.\u00A0 This will send a console message of MailIDs contained in your mailbox.\u00A0 This is useful for debugging purposes.\u00A0 As such a new console command was added: [b]fastmail &lt;mailID&gt;[/b]\u00A0will immediately send mail to your mailbox, no waiting for tomorrow.\n<br />\n<br />[b]6.5.1 Temporarily disabling the need for dependency:\n<br />[/b]It has occured to me that a lot of modders haven't had time to add the dependency to their mods.\u00A0 For the current update, I'm removing the need and urge all Modders who use Event Repeater to add the dependency.\u00A0 Please view the Modder's Documentation if you wish to read on it.\u00A0 I will probably add it back in after I am sure a good measure of mods are ready.\n<br />[b]6.5.0 Adds GMCM support along with some efficiency improvements![/b]\n<br />[list]\n<br />[*][b]New ways to use Event Repeater:[/b]\u00A0Working on the documentation right now, but it should still work in the classic way as well.\n<br />[*][b]GMCM: [/b]you can now configure the hotkeys made in 6.4.7 to suit your needs\n<br />[/list][b]6.4.8 Oops, I messed up!!\n<br />[/b]In my haste to make a new function, I messed up the commands.\u00A0 But I fixed it!\u00A0 Here's what this fast fix changes:\n<br />[list]\n<br />[*][b]Emergency Skip uses the proper command: [/b]The command [b]stopevent[/b]\u00A0was what is used for modders. [b]emergencyskip\u00A0[/b]\u00A0is just an default skip.\n<br />[*][b]Normal Skip has a hotkey: [/b]Press [b]ALT + S[/b]\u00A0to skip an event normally.\n<br />[*][b]Emergency Skip has it's features expanded: [/b]Now the event log will place a label on the event command you engaged the skip.\u00A0 It will also have a SMAPI error stating the command you had to interrupt.\u00A0 Emergency Skip will also remove the event from your seen list a few seconds after the event stops.\u00A0 You can reenter the map to execute the event again.\n<br />[/list][b]6.4.7 adds two hotkeys: CTRL + S and CTRL + I!!\n<br />[/b]These are shortcuts to emergencyskip and showinfo.\u00A0\u00A0\n<br />[b]EmergencySkip Update!\n<br />[/b]Making an event that broke in testing?\u00A0 Press [b]CTRL + S [/b]or use the [b]console command[/b]\u00A0to interrupt the event and a dump of the event command list will be placed in the [b]Stardew Valley Folder[/b].\u00A0 Use this to find the culprit, or send it to experts for evaluation!\n<br />[b]6.4.3 adds new commands and convenience to event editing and more\n<br />[/b]New Console were created to further help you:\n<br />[list]\n<br />[*][b]stopevent[/b]\u00A0will interrupt an event.. it doesn't work like skip.. you need to use [b]eventforget[/b]\u00A0to reset the event\n<br />[*][b]emergencyskip[/b]\u00A0this will interrupt the event, but also set the required flags for game progression\n<br />[*][b]showinfo[/b]\u00A0toggles in game information.\n<br />[/list]Added ingame/console information: When an event is started, the console and, if enabled (enabled by default), the game as a hud message will tell you the event ID some alerts will show in game as well.[b]6.4 adds a new command for events; timeAdvance\n<br />[/b]Give your events more weight by making time pass.. see Modder's Manual for more information.\n<br />\n<br />[b]Event Repeater v6 now adds 3 new event commands for finer repeating!\n<br />[/b]see the modder's manual for more information.\n<br />\n<br />[b]New commands added make it possible to make events repeatable as if they were modded to do so![/b]\n<br />The new install requirements are both\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF and\u00A0[url=https://smapi.io]SMAPI[/url]\uFEFF\n<br />\n<br />For detailed information on how to create mods with Event Repeater, see the [url=https://github.com/MissCoriel/Event-Repeater/wiki/Modder's-Readme]Modder's Manual[/url].\n<br />\n<br />[size=4][b]You can also find me in my [url=https://discord.gg/uSGNKNf]Cozy Apartment[/url] for more active support!\n<br />\n<br />[/b][/size]Have the desire to support me and my endeavors?\n<br />[url=https://www.patreon.com/MissCoriel]Support me through Patreon[/url]\n<br />My promise to you:\u00A0 My mods will always be free and open.\u00A0 Patreon will give you special Discord roles on my server and Exclusive access to my original music.\u00A0\u00A0\n<br />You do not need to ever pay money to access my mods/content or beta releases!\n<br />Special thanks to Atravita for improving the base code &lt;3",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3642",
+	"Version": "6.6.0",
+	"Updated": "2025-10-04T17:20:47+00:00",
+	"Downloads": [
+		{
+			"Id": 27178,
+			"Type": "Optional",
+			"DisplayName": "Event Repeater Test Mod",
+			"FileName": "Event Repeater Test Mod-3642-5-3-0-1589604288.zip",
+			"Description": "Fixes a typo in RepeatResponse",
+			"Version": "5.3.0",
+			"SizeInBytes": 1571,
+			"Uploaded": "2020-05-16T04:44:48+00:00",
+			"Mods": [
+				{
+					"Id": "misscoriel.testmod",
+					"DisplayName": "Event Repeater Test Event",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Event Repeater Test",
+					"Manifest": {
+						"Name": "Event Repeater Test Event",
+						"Description": "Short Demonstration of Event Repeater",
+						"Author": "MissCoriel",
+						"Version": "5.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "misscoriel.eventrepeater",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "misscoriel.testmod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342413866,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 144633,
+			"Type": "Main",
+			"DisplayName": "Event Repeater",
+			"FileName": "Event Repeater-3642-6-6-0-1759598447.zip",
+			"Description": "Added the searchquest, inject quest, and endquest commands.  Please read the wiki for more information.",
+			"Version": "6.6.0",
+			"SizeInBytes": 30154,
+			"Uploaded": "2025-10-04T17:20:47+00:00",
+			"Mods": [
+				{
+					"Id": "misscoriel.eventrepeater",
+					"DisplayName": "Event Repeater",
+					"Type": "Smapi",
+					"RelativePath": "EventRepeater",
+					"Manifest": {
+						"Name": "Event Repeater",
+						"Description": "Adds Repeating capability to Content Patcher.",
+						"Author": "MissCoriel",
+						"Version": "6.6.0",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "EventRepeater.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 3642"
+						],
+						"UniqueId": "misscoriel.eventrepeater"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342531321,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390330,
+		"UploaderId": 3946892,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

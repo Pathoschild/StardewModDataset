@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 18776,
+	"Name": "Mines Tokens",
+	"Author": "sophiesalacia",
+	"AuthorLabel": "sophie",
+	"Description": "[center][size=5][b]Mines Tokens\n<br />[/b][/size][i]by sophie[/i][/center]\n<br />[b]This mod has no effect on gameplay by itself.[/b] It provides more options to people using Content Patcher to create patches, and as such may be a required dependency of any such content packs. \n<br />\n<br />This mod exposes several internal game values related to the Mines as Content Patcher tokens, for use in your patches. This means you can easily determine what floor of the mines a player is on, whether they're in the Mines/Skull Cavern/Quarry, and whether or not Hard Mode is enabled. More tokens may be added in the future on request.\n<br />\n<br />[size=5]Installation (for Mod Users)\n<br />[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[/list]\n<br />[size=5]Usage (for Mod Authors)[/size][list=1]\n<br />[*]Add this mod as a dependency to your [font=Courier New]manifest.json[/font].\n<br />[*]Reference the custom tokens as shown below.\n<br />[/list]\n<br />\n<br />[size=5]Documentation[/size]\n<br />\n<br />This mod adds the following tokens:\n<br />[list]\n<br />[*][b]IsMines[/b], [b]IsQuarry [/b]and [b]IsSkullCavern[/b]: these tokens will return \"true\" if you are in the specified area and \"false\" otherwise.\n<br />[*]If these aren't granular enough for you, consider using [b]MineLevel [/b]which will return the numeric value of the level of the mines you are on. 1-120 indicates you are in the regular mines, 121+ indicates you're in the skull caverns, and 77377 is reserved for the quarry.\n<br />[*]Finally, [b]IsHardMode [/b]will return \"true\" if the mines are set to Hard Mode and \"false\" otherwise.\n<br />\n<br />[/list]\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5 on Windows. Linux/Mac have not been tested but should work. Earlier versions have not been tested but should work. Please report any issues you encounter.\n<br />[*]Works in single player and multiplayer.\n<br />\n<br />[/list]\n<br />[size=5]Source code:\n<br />[/size] Available [url=https://github.com/sophiesalacia/StardewMods]here[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18776",
+	"Version": "0.3.0",
+	"Updated": "2023-10-18T02:34:36+00:00",
+	"Downloads": [
+		{
+			"Id": 77357,
+			"Type": "Main",
+			"DisplayName": "Mines Tokens 0.3.0",
+			"FileName": "Mines Tokens 0.3.0-18776-0-3-0-1697596476.zip",
+			"Description": "Initial release. Contains: IsMines, IsQuarry, IsSkullCavern, MineLevel, IsHardMode tokens.",
+			"Version": "0.3.0",
+			"SizeInBytes": 7072,
+			"Uploaded": "2023-10-18T02:34:36+00:00",
+			"Mods": [
+				{
+					"Id": "sophie.MinesTokens",
+					"DisplayName": "MinesTokens",
+					"Type": "Smapi",
+					"RelativePath": "MinesTokens",
+					"Manifest": {
+						"Name": "MinesTokens",
+						"Description": "Custom CP tokens related to the quarry tilesheet and hard mode.",
+						"Author": "sophie",
+						"Version": "0.3.0",
+						"EntryDll": "MinesTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:18776"
+						],
+						"UniqueId": "sophie.MinesTokens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342464045,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342405464,
+		"UploaderId": 6976914,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

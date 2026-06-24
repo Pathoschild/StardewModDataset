@@ -1,0 +1,229 @@
+{
+	"Site": "Nexus",
+	"Id": 9786,
+	"Name": "Stardew Progress",
+	"Author": "seeinggreen",
+	"Description": "[size=6]New Version Out Now!\n<br />[/size]\n<br />[size=3]As you may be aware - a new version of Stardew Valley (1.6) was released on March 19th 2024 bringing major changes to the way mods work with the game. In order to support the new version of the game a brand new version of Stardew Progress is in the works. As well as all the changes needed to get the mod working with 1.6, I'm also taking the opportunity\u00A0to give the whole mod a refresh and bring in some features that have been asked for for a while![/size]\n<br />\n<br />[size=5]New Features[/size]\n<br />[list]\n<br />[*][size=3][b]Redone navigation[/b]\u00A0(done!) - Support for jumping to specific sections of the data and the ability to redisplay the same section when reopening the menu[/size]\n<br />[*][size=3][b]Community centre support[/b]\u00A0(done!)\u00A0- Details on the items needed to complete the CC for those starting new playthroughs[/size]\n<br />[*][size=3][b]Customisation[/b]\u00A0(coming soon) - The ability to change the way the mod behaves and displays your data[/size]\n<br />[*][size=3][b]Togglable sections[/b]\u00A0(to come) - Support for hiding sections of the data to just focus on the bits you want to. Great for multiplayer farms where farmhands aren't always present and complex mod setups that load very slowly when loading all info.[/size]\n<br />[/list]\n<br />[size=5]Version 2.0 FAQs[/size]\n<br />[list]\n<br />[*][size=3][b]Will the new version be compatible with older versions of the game?[/b]\u00A0Unfortunately not. The changes in the new version are really closely tied to version 1.6 of the game and it would be too hard to try and separate out the bits that would work in 1.5 and below. The current version of the mod will stay available for anyone not wanting to upgrade their game version.[/size]\n<br />[*][size=3][b]Will all my mods work with SDV 1.6?[/b]\u00A0It depends - a lot of work has been put in to make old mods work with the new version but there will be some mods that need to be manually changed to work (such as this one!). You may find that some of your mods don't work but hopefully the update will be worth it![/size]\n<br />[*][size=3][b]Will my game break if I remove broken mods?[/b]\u00A0A big problem with this mod was issues caused by mods being removed and causing crashes. The new game version makes this much less of an issue and removing mods should no longer cause big issues (there may be a few initial teething issues though!).[/size]\n<br />[*][size=3][b]Will there be translation support?[/b]\u00A0The mod should automatically use localised versions of in-game text in much more cases than before, making things much easier for anyone not playing in English. If you are interested in helping to translate the other bits of text in this mod do get in touch.[/size]\n<br />[*][size=3][b]Will you add feature X?[/b]\u00A0Version 1.6 has been a great excuse to spruce up the mod and I'm hoping to include a lot of features that have been requested over the years. Do keep suggesting anything you would like to see and I will try and include good suggestions![/size]\n<br />[*][size=3][b]What should I do if there's a bug/issue with the mod?[/b]\u00A0Please do report anything that goes wrong, even if it feels minor - it will really help me out. Please send me your SMAPI log ([url=https://smapi.io/log]see the instructions here[/url]\uFEFF) either as a Bug Report or a Post here on Nexus.[/size]\n<br />[/list]\n<br />[size=6]Overview\n<br />[/size][b]Note - this section is somewhat outdated and needs to be updated. However, you should still be able to get a good sense of how the mod works. A complete overhaul of the mod guide will follow the completion of the major updates to the mod.[/b]\n<br />\n<br />\uFEFF\uFEFFThis mod helps players keep track of everything they have left to do in Stardew Valley to achieve perfection:\n<br />[list]\n<br />[*]Max all skills - the mod shows the current level for each skill and the amount of XP needed to max the skill\n<br />[*]Kill all monsters - the mod shows how many of each monster you have left to kill\n<br />[*]Collect all stardrops - the mod shows which stardrops are yet to be found\n<br />[*]Max all friendships - the mod shows the number of loved gifts left to give each NPC and those which have a birthday today/in the current season\n<br />[*]Cook all recipes - the mod shows which recipes the player needs to cook and the ingredients needed to cook them (unless they're already in your fridge!)\n<br />[*]Craft all recipes - as above but for crafting!\n<br />[*]Catch all fish - the mod shows all the fish you have left to catch and highlights which ones are currently in season\n<br />[*]Ship all basic items - the mod shows all the basic items left to ship and supports multiplayer farms where farmhands may have shipped less than the main farmer\n<br />[*]Donate all items to the museum - shows all the items left to donate\n<br />[*]Collect all golden walnuts - the mod shows how many are left to collect\n<br />[*]Build all obelisks/gold clock - the mod shows the buildings left to build\n<br />[/list][list]\n<br />[*]Multiplayer - the mod supports farmhands and shows data for all players including the total number of ingredients needed for everyone to achieve perfection\n<br />[*]SDV Expanded/Other mods - all data is taken from the game at the point your save game is loaded so any modifications/additions from mods will be taken into account\n<br />[/list]\n<br />SPOILER ALERT - at the moment the mod tracks everything right from the moment you first use it which obviously shows spoilers for the game. Future versions will include spoiler control but - for now - you have been warned!\n<br />\n<br />[size=6]Mod Guide[/size]\n<br />\n<br />[size=5]Basic Usage\n<br />[/size]\n<br />In order to see your progress so far in Stardew Valley simply press F3 at any time (once you have a save loaded!). The menu behaviour will match the normal game menu so the game will be paused (in single player) if you have that setting checked. For now, just use the forward and backward buttons to look through what's left to complete (better navigation coming soon!) and hit Esc or the red X to close the menu.\n<br />\n<br />Each of the screenshots below are from a farm where the farmer is called... Farmer. The mod would normally show the name of the farmer or, in the case of multiplayer games, the name of each farmer!\n<br />\n<br />[size=5]Key Remapping[/size]\n<br />\n<br />The default key to show the progress menu is F3. To change this keymapping (after you have run the mod at least once), just edit the config.json file (found in the mod folder) to the key of your choice by opening the file in a text editor when the game isn't running. Be sure not to delete the config file when you update the mod otherwise you will need to do this step again. Do make sure to use a valid key code otherwise the mod will crash (and you'll see a red error message on the SMAPI console). For a full list of valid codes see this [url=https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings]link[/url].\n<br />\n<br />[size=5]Perfection Summary[/size]\n<br />\n<br />The first page of the progress tracker is the perfection summary:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1635087470-1056152083.jpeg[/img]\n<br />\n<br />Each element that contributes towards perfection is listed for each player as well as for the farm as a whole. The farm value in multiplayer games (as with the in-game perfection tracker) takes the best score for each value. Where this occurs the relevant player scores will be highlighted in green.\n<br />\n<br />The percentages on the right are the perfection values with each element contributing a certain amount towards perfection (e.g. cooking contributes 10%). Some elements require completion before they contribute any perfection (e.g. killing all monsters) whereas others (e.g. shipping) increase for every bit of the goal you complete. The overall perfection value (which matches the in-game value) is shown in the bottom right.\n<br />\n<br />The percentage values along the bottom under each player are a true measure of the progress each player has made. For example, if the player is 1 friendship point off maximum for each NPC they will earn 10.99% even though they would still show as 0/29 friendships maxed. This is also true for skills (where every XP point counts) and monsters (where every kill counts). [b]This will generally mean this value will end up being higher than the 'true' perfection score in the bottom right.\n<br />\n<br />[/b]The game will award perfection to a farm when at least one player on the farm (in multiplayer games) has completed each goal. This mod also allows you to track the progress of individual players so that everyone can truly claim perfection!\n<br />\n<br />[size=5]Skills[/size]\n<br />\n<br />The mod shows the current level (in brackets) of each skill and the XP required to max the skill:\n<br />[size=2]\n<br />[/size][img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226419-939227842.jpeg[/img]\n<br />\n<br />[size=5]Monster Goals[/size]\n<br />\n<br />[size=2]Each player's progress towards the monster goals is shown in terms of the number of monsters they have left to kill for each goal:[/size]\n<br />\n<br />[size=2][img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226380-1139011519.jpeg[/img][/size]\n<br />\n<br />[size=2]If a mod has been used to change \uFEFFwhich monsters count towards the goals or changing the goals in other ways this won't be reflected here.[/size]\n<br />\n<br />[size=5]Stardrops\n<br />[/size]\n<br />The mod shows the stardrops the farmer(s) have left to find:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226419-945210919.jpeg[/img]\n<br />\n<br />[size=5]Friendships\n<br />[/size]\n<br />In order to keep track of progress towards maximising all friendships, the number of loved gifts needed for each villager is shown:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226673-1878582772.jpeg[/img]\n<br />\n<br />The number shown is the number of loved gifts it will take to go above the maximum number of hearts for the villager (8 hearts for dateable villagers and 10 for the others). You will be able to give fewer gifts than this if you give high quality gifts, complete quests, give birthday gifts etc. It is also possible to give liked or neutral gifts and make slower progress towards maximising the points. Villagers highlighted in green have a birthday in the current season (if the birthday has already passed it won't be highlighted). The villager highlighted in red has their birthday today.\n<br />\n<br />Where NPCs have been modified by other mods (e.g. changing who is datable, adding/removing NPCs) this will be reflected.\n<br />\n<br />[size=5]Cooking\n<br />[/size]\n<br />The cooking section will show you all the recipes you have left to cook (with unknown recipes shown in red):\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1633448021-866859275.jpeg[/img]\n<br />\n<br />[size=2]If there is more than one player on the farm then a list will be displayed for each farmer/farmhand. The ingredients for each dish left to cook (for every farmer) will calculated and displayed at the bottom of the output:\n<br />\n<br />[/size][img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1633448010-1918051889.jpeg[/img]\n<br />\n<br />Any ingredients stored in a fridge (or minifridge) within the main farmhouse (i.e. not the cabins) will be subtracted from the list allowing you to collect ingredients and store them for recipes you haven't made yet.\n<br />\n<br />Where recipes have been modified/added by other mods this will be reflected.\n<br />\n<br />[size=5]Crafting\n<br />[/size]\n<br />Crafting works in the same way to cooking. A list of items left to craft is shown for each player (with unknown recipes shown in red):\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1633447988-1622682090.jpeg[/img]\n<br />\n<br />A list is shown for each farmer/farmhand and a total of the ingredients needed is shown \uFEFFat the bottom of the output:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1633448015-241309032.jpeg[/img]\n<br />\n<br />Items that are stored in chests on the farm (outside), in the farmhouse or in a cabin are counted as collected and are subtracted from the list. Items stored in fridges (or minifridges) or stored in chests outside the farm or in other farm buildings are not counted and will still show as needed. Items that are needed for both cooking and crafting are shown separately\u00A0in the two lists.\uFEFF\n<br />\n<br />Where stacks are larger than 1000 (likely for multiplayer farms) this will be shortened to save space (e.g. Stone/Wood above).\n<br />\n<br />Where recipes have been modified/added by other mods this will be reflected.\n<br />\n<br />[size=5]Fishing\n<br />[/size]\n<br />A list of fish that the player needs to catch will be shown:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226673-1362862749.jpeg[/img]\n<br />\n<br />Fish\u00A0which are currently in season will be highlighted in green and this list will include any modifications/additions made by other mods.\n<br />\n<br />[size=5]Shipping[/size]\n<br />\n<br />The mod will show a list of all basic items that still need to be shipped:\n<br />[size=2]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634493862-2002344495.jpeg[/img]\n<br />\n<br />On multiplayer farms it is possible for farmhands to have not shipped items that the main farmer has if the farmhand wasn't playing when the item was shipped. Where this is the case a little portrait of the farmhand(s) will be shown next to the item. Where no face is shown then no player has shipped the item and where faces are shown the main farmer has shipped the item but the displayed farmhand(s) hasn't. On single player farms no faces will appear.\n<br />\n<br />If mods add basic items to the game then these will be included.\n<br />[/size]\n<br />[size=5]Museum Collection\n<br />\n<br />[/size]The mod shows which items are still left to be donated to the museum:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1635087470-225766260.jpeg[/img]\n<br />\n<br />[size=5]Golden Walnuts\n<br />[/size]\n<br />The mod shows the number of walnuts left to collect:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226978-450074633.jpeg[/img]\n<br />\n<br />[size=5]Buildings\n<br />[/size]\n<br />The mod lists the buildings (the 4 obelisks and the gold clock) which haven't yet been built:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/9786/9786-1634226973-382981469.jpeg[/img]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9786",
+	"Version": "2.2.2",
+	"Updated": "2024-12-23T14:32:29+00:00",
+	"Downloads": [
+		{
+			"Id": 84571,
+			"Type": "Optional",
+			"DisplayName": "Portuguese Translation",
+			"FileName": "Portuguese Translation-9786-2-1-0-1711229579.zip",
+			"Description": "This is a translation in Portuguese - kindly contributed by Fumadobolado. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br /><br /><br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.1.0",
+			"SizeInBytes": 2355,
+			"Uploaded": "2024-03-23T21:32:59+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342471259,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 85234,
+			"Type": "Optional",
+			"DisplayName": "Chinese Translation",
+			"FileName": "Chinese Translation-9786-2-1-0-1711368776.zip",
+			"Description": "This is a translation in Chinese - kindly contributed by xiaosanjun. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br /><br /><br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.1.0",
+			"SizeInBytes": 2619,
+			"Uploaded": "2024-03-25T12:12:56+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342471922,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 86540,
+			"Type": "Optional",
+			"DisplayName": "German Translation",
+			"FileName": "German Translation-9786-2-1-0-1711652848.zip",
+			"Description": "This is a translation in German - kindly contributed by Th3Tob1. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br /><br /><br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.1.0",
+			"SizeInBytes": 2570,
+			"Uploaded": "2024-03-28T19:07:28+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "de\\StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "de\\StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342473228,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 90487,
+			"Type": "Optional",
+			"DisplayName": "Turkish Translation",
+			"FileName": "Turkish Translation-9786-2-2-0-1712611086.zip",
+			"Description": "This is a translation in Turkish- kindly contributed by Lexith98. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br /><br /><br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.2.0",
+			"SizeInBytes": 3708,
+			"Uploaded": "2024-04-08T21:18:06+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "tr\\StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "tr\\StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342477175,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 90739,
+			"Type": "Optional",
+			"DisplayName": "Korean Translation",
+			"FileName": "Korean Translation-9786-2-2-0-1712680767.zip",
+			"Description": "This is a translation in Korean - kindly contributed by cheesecats. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br /><br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.2.0",
+			"SizeInBytes": 4043,
+			"Uploaded": "2024-04-09T16:39:27+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342477427,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 94034,
+			"Type": "Optional",
+			"DisplayName": "Spanish Translation",
+			"FileName": "Spanish Translation-9786-2-2-0-1713653418.zip",
+			"Description": "This is a translation in Spanish - kindly contributed by Gonzy42. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br /><br /><br /><br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.2.0",
+			"SizeInBytes": 3512,
+			"Uploaded": "2024-04-20T22:50:18+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342480722,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 119966,
+			"Type": "Main",
+			"DisplayName": "Stardew Progress (for 1.6)",
+			"FileName": "Stardew Progress (for 1.6)-9786-2-2-2-1734963950.zip",
+			"Description": "This version is compatible with all game versions 1.6+ (for older versions, see below). If you get a compatibility warning from SMAPI when playing game version 1.6.15, please make sure your SMAPI version is up to date.",
+			"Version": "2.2.2",
+			"SizeInBytes": 91646,
+			"Uploaded": "2024-12-23T14:25:50+00:00",
+			"Mods": [
+				{
+					"Id": "seeinggreen.StardewProgress",
+					"DisplayName": "Stardew Progress",
+					"Type": "Smapi",
+					"RelativePath": "StardewProgress",
+					"Manifest": {
+						"Name": "Stardew Progress",
+						"Description": "Shows progress of the player(s) towards perfection",
+						"Author": "seeinggreen",
+						"Version": "2.2.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewProgress.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:9786"
+						],
+						"UniqueId": "seeinggreen.StardewProgress"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506654,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 119967,
+			"Type": "Optional",
+			"DisplayName": "French Translation",
+			"FileName": "French Translation-9786-2-2-2-1734964349.zip",
+			"Description": "This is a translation in French - kindly contributed by Caranud. It is currently unverified and may contain errors - if you see any errors or if you can confirm it is correct, please get in touch.\n<br />\n<br />Place the file in Mods/StardewProgress/i18n/.",
+			"Version": "2.2.2",
+			"SizeInBytes": 4066,
+			"Uploaded": "2024-12-23T14:32:29+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewProgress\\i18n",
+					"Type": "Invalid",
+					"RelativePath": "StardewProgress\\i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342506655,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396474,
+		"UploaderId": 112311508,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

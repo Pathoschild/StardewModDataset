@@ -1,0 +1,190 @@
+{
+	"Site": "ModDrop",
+	"Id": 1521399,
+	"Name": "Ink Stories - Advanced Dialogue and Event Scripting",
+	"Author": "Platonymous",
+	"TagLine": "Allows adding dialogues and events via the ink Scripting Language",
+	"Description": "# Ink Stories\n\nby Platonymous\n\n\n---\nAllows adding dialogues and events via the **ink** Scripting Language..\n\n> ink is a scripting language built around the idea of marking up pure-text with flow in order to produce interactive scripts.\n> At its most basic, it can be used to write a Choose Your Own-style story, or a branching dialogue tree. But its real strength is in writing dialogues with lots of options and lots of recombination of the flow.\n> ink offers several features to enable non-technical writers to branch often, and play out the consequences of those branches, in both minor and major ways, without fuss.\n> The script aims to be clean and logically ordered, so branching dialogue can be tested \"by eye\". The flow is described in a declarative fashion where possible.\n> It's also designed with redrafting in mind; so editing a flow should be fast.\n\nDocumentatation for ink: https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.mdInky - A Tool for writing ink: https://www.inklestudios.com/ink/\n![](https://imgur.com/T5Eybda.png)\n**For players:** Just add this mod and any contentpack that requires it to the Mods folder.\nInk Stories does nothing on it's own, it just enables other mods to use ink.\n\n**Example:**\nUnder Optionale Files you can download an example that adds dialogue to Emily on the 13th and 14th of spring.\nAfter the dialogue with Emily it also adds new dialogue to Alex.\nThe latest example also changes the flowerfestival event, it requires the latest version of InkStories.\n\n**For Modders:**[/center]\nFirst, write your ink script (and test it in Inky). Save normaly as .ink or export to json, both work.\n\n**Important: This section changed with 1.2.0, the old way still works but now only one contentpack is required.**\n\nCreate a content pack for [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915):\n\nmanifest.json\n``\ncontent.json\n``(You can add as many stories as you want and use it in as many Dialogues as you want)\n\n**INK** Your.Story.Id used as dialogue will start the Inkstory dialogue.\n**INKCALL** Your.Story.Id calls the \"EventSetup\" function in your ink-code (if defined) and provides everything that follows as parameters.\n(if you use INKCALL for the setup phase in your event (third entry) the function needs to return a string of the actual setup)\n\n**-- Tags:**\n\nIn Addition to the functionality of ink as described in the documentation, the Ink Stories Mod handles specific tags as commands you can use:\n\n**# BREAK**\nEnds the dialogue after this line\n\n**# READD**\nRe-adds the story to the same NPC so the player can continue the story\n\n**# BR**\nShortform of \"# BREAK  # READD\"\n\n**# ADD [NPCNAME] [STORY ID]**\nAdds the specified story to the current dialogues of the npc (instead of the Story ID you can also put THIS, which will use the current story)\n\n**# ADDNEXT [NPCNAME] [ STORY ID]**\nSame as # ADD, but the story is added the next day\n\n**# RESET**\nResets the current story\n\n**# LOG [TYPE] [TEXT]**\nLogs the text to the console with the specified type (INFO,DEBUG,WARN,ERROR,ALERT,TRACE)\n\n**-- External functions:**\n\nInk Stories also provides you with optional external functions that you can implement if you need them:\n\n``\n(the lower \"=== function ... ===\" declarations are fallbacks so the external functions don't throw erros in Inky, they aren't requiered ingame,\nand in general you only need to include externals that you actually use in your script)\n\n**ADD, ADDNEXT, RESET, LOG**\nDo the same as their Tag-Counterparts\n\n**SDVCHARS**\nParses the special dialouge characters in a text. Those are getting parsed by the game anyway, but with this you can get the results early and perform checks on them if you need to.\n\n**HASMOD**\nTrue if the player has the specified mod installed\n\n**SPEAKER**\nReturns the name of the current speaker\n\n**FRIENDSHIP**\nChanges the friendshippoints by the set amount and returns the total\n\n**CHECK**\nChecks eventconditions and returns true or false\n\n**COMMAND**\nExecutes an event command\n\n**ADDCOMMAND**\nAdds an event command to the current event\n\n**SIN, COS, TAN**\nMath functions\n\n**STEXT, SETSTEXT, SNUM, SETSNUM**\nGets or sets text or int values that can be accessed from other stories, setting isFixed to true will mean it's value doesn't get reset even if the story does.\nYou can only set values from the same story, but you can get values from any story by id (if it has set a value yet, otherwise returns \"\" or 0);\nYou can use \"THIS\" instead of the id if you want to access values from the same story.\n\n**SCOUNT**\nAccesses a SNUM value and adds the change value to it (use negative number for substraction), returns its new value.\n\n**CONTINUE**\nSteps to the next command in the ongoing event. Only needed from an INKCALL.\n\n**CPTEXT, CPNUM, CPBOOL**\nLet's you access data stored under your story Id throgh CP.\ne.g.:\n\n``\nThen you can access that data for example with: {CPTEXT(\"your.key.1\")}\n\nThe text stored will be auto parsed if using CPNUM (to float) or CPBOOL.\n\n**-- Internal functions:**\n\nInk Stories calls internal functions at certain times if they are implemented in your ink story:\n\n``\n**ShouldShow(npcname,path,day,season,year) &amp; Fallback()**\nIs checked before a story is displayed, if false the story will instead show the text returned in the Fallback function\n\n**DayEnding(day,season,year)**\nIs called on stories that have been loaded (shown at least once and not reset). The returnvalue (true of false) determines wether or not the story should be reset. The default is true, so any story not implementing the function will be reset at the end of the day.\n\n**EventSetup**\nIs called when using \"INKCALL Your.Event.Id parameter 1 parameter2 parameter3 ...\" as an event command.\nYou can have as many or as few parameters as you need, as long as you provide them when calling it.\nThe return value is only used if the call is made from the setup entry (3rd) in an event description.\n\n![](https://imgur.com/b8d5H2A.png)\nIf you have any questions or feature requests you can usually find me on the [Stardew Valley Discord](https://stardewvalleywiki.com/Modding:Community#Discord)  under the username **Routine**#8715\n![](https://imgur.com/u7Unylz.png)\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1521399",
+	"Version": null,
+	"Updated": "2024-03-04T18:43:08.603+00:00",
+	"Downloads": [
+		{
+			"Id": 1541482,
+			"Type": "Main",
+			"DisplayName": "InkStories",
+			"FileName": "InkStories.zip",
+			"Version": "1.4.0",
+			"SizeInBytes": 251412,
+			"Uploaded": "2024-03-04T18:42:59.644+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.InkStories",
+					"DisplayName": "Ink Stories",
+					"Type": "Smapi",
+					"RelativePath": "InkStories",
+					"Manifest": {
+						"Name": "Ink Stories",
+						"Description": "Ink Story Mod.",
+						"Author": "Platonymous",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "InkStories.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:15987"
+						],
+						"UniqueId": "Platonymous.InkStories"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "17c67deaa710b53932680f78851e441d",
+				"md5In": "14984ad57262f9688f8d034ccf971b3e",
+				"scriptType": 0,
+				"sha256Ex": "6a26bc115d993b761952c6cc9ecc7d44b91ab983a06b54bc7b8538539256a936",
+				"sha256In": "0b182cd1cc53dcf3f2e08dcb87d9df9d9a5bbf3d77963b28214cb0d6378e3d89"
+			}
+		},
+		{
+			"Id": 1541484,
+			"Type": "Optional",
+			"DisplayName": "Ink Stories Example",
+			"FileName": "Ink Stories Example.zip",
+			"Description": "Adds Ink Stories Dialogue to Emily on the 13th and 14th of spring and alters the flowerfestival (spring 24). Requires ContentPatcher and InkStories 1.4.0 or later.\n\n\n\n",
+			"Version": "1.4.1-alpha",
+			"SizeInBytes": 5607,
+			"Uploaded": "2024-03-04T18:42:59.755+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.InkStoriesExample.ContentPatcher",
+					"DisplayName": "InkStories Example CP",
+					"Type": "ContentPack",
+					"RelativePath": "[INK] InkStoriesExample",
+					"Manifest": {
+						"Name": "InkStories Example CP",
+						"Description": "InkStories Example",
+						"Author": "Platonymous",
+						"Version": "1.4.1-alpha.20231122",
+						"MinimumApiVersion": "3.18.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.InkStories",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:15987"
+						],
+						"UniqueId": "Platonymous.InkStoriesExample.ContentPatcher"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "0518df7cf4a2ceb8ce56ff09435f4edb",
+				"md5In": "caba04f72cf2006c316076e993ed63bb",
+				"scriptType": 0,
+				"sha256Ex": "7d6862977c5bebf543fd54129e98800e9da278d76b3b757ddc76cabc47967df7",
+				"sha256In": "9edf6340101f4687a1a392d9df9115c3393126edfb8d96dba030ef519d8c3c16"
+			}
+		},
+		{
+			"Id": 1541487,
+			"Type": "Optional",
+			"DisplayName": "InkStories",
+			"FileName": "InkStories.zip",
+			"Description": "For the upcoming Stardew Valley 1.6 only. Don't use this version unless you're testing the game's alpha version.",
+			"Version": "1.4.3-alpha",
+			"SizeInBytes": 214767,
+			"Uploaded": "2024-03-04T18:42:59.896+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.InkStories",
+					"DisplayName": "Ink Stories",
+					"Type": "Smapi",
+					"RelativePath": "InkStories",
+					"Manifest": {
+						"Name": "Ink Stories",
+						"Description": "Ink Story Mod.",
+						"Author": "Platonymous",
+						"Version": "1.4.3-alpha.20240226",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "InkStories.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:15987"
+						],
+						"UniqueId": "Platonymous.InkStories"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "0d12a7d3f1f1346fc71811c2d60102a2",
+				"md5In": "c606e943a52c8ec9e6dc2a4b2163c062",
+				"scriptType": 0,
+				"sha256Ex": "b401c64993cfc4ca509ea66aabd094e982a12bd7f77de96b78a22a75f3e601f1",
+				"sha256In": "116619aa4332be91eac4722eaa66f69b1003e83a275884cee6b44e5abe1df78f"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1709577788603,
+		"DateUpdated": 1709577779130,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1709577779130,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1521399/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1521399/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1521399/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1521399/icon_original"
+		},
+		"nexusModID": 15987,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

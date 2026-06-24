@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 26845,
+	"Name": "SWAPI - Stardew Valley Web API - let your game send events to a custom web server",
+	"Author": "Tomokisan1",
+	"AuthorLabel": "Tomokisan",
+	"Description": "Stardew Valley Web API, let your game send events to a custom web server, useful for making discord bots, interactive web maps and so on !\n<br />\n<br />You can use the in game configuration menu (via [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]) to configure the url of your server and the list of events you want the game to send to the server.\n<br />\n<br />The list of events are all the events listed here :\u00A0[url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Events]https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Events[/url]\u00A0except the ones listed as \"Specialised\", the\u00A0UpdateTicking,\u00A0UpdateTicked and\u00A0the drawing ones to not spam your server and/or lag the game.\n<br />\n<br />The requests to the server are POST type and the event data are given as form parameters, data listed in the above link are sent to the server as string format with same name + an \"eventName\" key that let you identify the event :\u00A0\n<br />\n<br />[img]https://i.ibb.co/PDvhyWZ/Capture-d-e-cran-2024-08-09-a-14-50-43.png[/img]\uFEFF\n<br />\n<br />You can also as a developer call the api given to you to send custom requests with custom datas, here is the API interface :\u00A0\n<br />\n<br />[img]https://i.ibb.co/f0Q8sSw/Capture-d-e-cran-2024-08-09-a-15-04-24.png[/img]\n<br />\n<br />You can call it like this :\n<br />\n<br />[code]\uFEFFISWAPIModApi\u00A0api = ModEntry.Instance.Helper.ModRegistry.GetApi&lt;ISWAPIModApi&gt;(\"tomokisan.SWAPI\");\n<br />var data = new Dictionary&lt;string, string&gt;\n<br />{\n<br />   \uFEFF{ \"eventName\", \"testEvent\" },\n<br />   \uFEFF{ \"customData\", \"customValue\" }\n<br />};\n<br />\n<br />Task&lt;string&gt; response = api.sendRequestAsync(\"POST\", data);\n<br />[/code]\uFEFF\n<br />\n<br />My mods :\u00A0\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26845]SWAPI - Stardew Valley Web API[/url] : Let your game send events to a custom web server.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24765]highRollerSlots[/url]\u00A0:\u00A0Add possibility to bet more in slots machines.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24254]geodeCrusherPlus[/url]\u00A0:\u00A0Add ability to geode crusher to crush any geode, including mysteryboxes, Artifact Trove and golden coconuts.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24885]\uFEFFTV Shopping channel[/url]\u00A0:\u00A0\uFEFFAdd a TV shopping channel.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24982]Prize Machine Custom Prizes[/url]\u00A0:\u00A0Let you easily fully customize the prize list of Prize Machine.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\uFEFF\u00A0\uFEFF:\u00A0Allow you to get one blessing by statue per day instead of only one blessing per day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25267]Custom Blessings Framework[/url]\uFEFF :\u00A0\uFEFFAllow mod developers to easily add blessings from statues of blessings.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26260]Custom Wake Up Time[/url]\u00A0:\u00A0Let you configure the wake up time for each day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26371]Anti Tool Exhaustion[/url]\u00A0:\u00A0Prevent you to become exhausted from an accidental tool use.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/26845",
+	"Version": "1.0.0",
+	"Updated": "2024-08-09T13:19:53+00:00",
+	"Downloads": [
+		{
+			"Id": 108880,
+			"Type": "Main",
+			"DisplayName": "SWAPI - Stardew Valley Web API",
+			"FileName": "SWAPI - Stardew Valley Web API-26845-1-0-0-1723209593.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 30018,
+			"Uploaded": "2024-08-09T13:19:53+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.SWAPI",
+					"DisplayName": "SWAPI",
+					"Type": "Smapi",
+					"RelativePath": "SWAPI",
+					"Manifest": {
+						"Name": "SWAPI",
+						"Description": "Stardew Valley Web API, let your game send events to a custom web server.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SWAPI.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:26845"
+						],
+						"UniqueId": "tomokisan.SWAPI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342495568,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342413533,
+		"UploaderId": 205391183,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

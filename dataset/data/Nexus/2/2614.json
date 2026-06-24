@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 2614,
+	"Name": "Mouse Move Mode",
+	"Author": "ylongkaka",
+	"AuthorLabel": "ylsama",
+	"Description": "[size=3][quote][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3][size=3]Version 1.4.4:\n<br />- Fix following NPC bug when they goes out of current Game Location bug\n<br />[/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size]\n<br />Version 1.4.3:[/size][/size][/size][/size]\n<br />- \uFEFFFix sometime stuck in Menu window when interact with some furniture object (eg: Junimo Catalogue[/size][/size])\n<br />\n<br />Version 1.4.2:[/size][/size][/size][/size]\n<br />- \uFEFFFix sometime right-click action at the end of movement isn't working\n<br />- Fix stuck when interacting with Joja membership and \"lost and found box[size=3][size=3]\" in Lewis's house\n<br />\n<br />\uFEFF\uFEFFVersion 1.4.1:\n<br />- \uFEFFFix sometime player can't right click when using chest/inventory\uFEFF\n<br />\n<br />\n<br />Version 1.4.0:\n<br />- \uFEFFFix how the mod handle action at the end of movement (which cause a lot of soft lock bug report), it should be more intelligent now\n<br />- Add config menu support through Generic Mod Config Menu \uFEFF\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/5098]https://www.nexusmods.com/stardewvalley/mods/5098[/url]\uFEFF\n<br />[/size][/size][/size]- Add config to enable and disable Path finding[size=3][code]\"EnablePathFinding\": true[/code][/size]\n<br />\n<br />Remember to delete the old config file if thing didn't work[/quote][b][size=6]\n<br />[/size][/b][/size][size=5][b]Mod feature[/b][/size][size=3][b][size=3]\n<br />\n<br />[/size][/b][list]\n<br />[*]Right-click or Holding right mouse will make the player move,\u00A0holding move stop the player after release\n<br />[*]Holding shift when riding will make right-click to be only move\u00A0\n<br />[*]Right-click too far from the player will perform an action\u00A0on the pointed\u00A0object when you\u00A0come close\n<br />[/list][list]\n<br />[*]Press\u00A0[b]F6[/b]\u00A0for On/Off the Right mouse move mode in-game (auto [b]On\u00A0[/b]at start, can change in config)\n<br />[*][i]Alt + Enter to change between fullscreen and window mode[/i]\n<br />[*][i]Crtl + Wheeling will zoom in and out[/i]\n<br />[size=3]\n<br />[/size][/list][size=3][img]https://i.imgur.com/DHUyCMT.gif[/img]\n<br />\n<br />[/size][/size][size=5][b]Config file option[/b][/size][size=3][size=3][size=3][b]\n<br />\n<br />[/b][/size][/size][code]\uFEFF{\n<br />\u00A0 \"MouseWhellingZoomStep\": 0.25,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (Increase it make wheel scroll quicker)\n<br />\u00A0 \"MouseWhellingMaxZoom\": 2.0,\n<br />\u00A0 \"MouseWhellingMinZoom\": 0.75,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (Extended Mode mouse wheel zooming cap)\n<br />\u00A0 \"FullScreenKeybindShortcut\": \"RightAlt + Enter\"\u00A0\u00A0 (Some may want to use \"F11\")\n<br />\u00A0 \"ExtendedModeDefault\": true,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (set it to false will disable Ctrl+Wheel and RightAlt+Enter)\n<br />\u00A0 \"RightClickMoveModeDefault\": true,\u00A0\u00A0\u00A0\u00A0 (change it to 'false' will make the mod disable at startup)\n<br />\u00A0 \"RightClickMoveModeToggleButton\": \"G\", (hotkey to enable/disable the mod\u00A0in-game)\n<br />\u00A0 \"HoldingMoveOnly\": true,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (only move player when holding right-mouse)\n<br />\u00A0 \"HoldTickCount\": 15,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (time of pressing mouse needed\u00A0to be consider as holding)\n<br />\u00A0 \"WeaponsSpecticalInteraction\": true,\u00A0\u00A0 (set it to 'false' disable the special handle for weapon)\n<br />\u00A0 \"WeaponsSpecticalInteractionType\": 0,\u00A0 (1 as default, value can be change to 0 1 2 3)\n<br />\uFEFF\u00A0 \"EnablePathFinding\": true,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (Enable path finding)\n<br />\u00A0 \"PathFindLimit\": 500,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (\uFEFFLimit the total game tile will be search through)\n<br />\u00A0 \"ShowMousePositionHint\": true\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 (Showing mouse indicator to control destination better)\n<br />}\n<br />[/code][size=3]\n<br />\n<br />[u]WeaponsSpecticalInteraction:[/u]\u00A0There is 3 mode to handle Special using right-click:\u00A0\n<br />[/size][/size][list]\n<br />[*][size=3][size=3]0:\u00A0[/size]No special handle for weapons[/size]\n<br />[/list][size=3][size=3]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Right-click Special move only in a small radius (2 tiles) around the player\u00A0\n<br />[/size][/size][list]\n<br />[*][size=3][size=3]1: Normal[/size][/size]\n<br />[/list][size=3][size=3]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0Replicate the normal game, but the special move\u00A0will interrupt the moving\n<br />[/size][/size][list]\n<br />[*][size=3][size=3]2: Disable Right-click Special move[size=3][size=3]\u00A0 (default)[/size][/size][/size][/size]\n<br />[/list][size=3][size=3]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0instead, press middle/X1 mouse [b]or left-click on the farmer[/b] to perform weapons special move[/size][/size][size=3][size=3]\n<br />[/size][/size][list]\n<br />[*][size=3][size=3]3: Disable Right-click Special move (new)[/size][/size]\n<br />[/list][size=3][size=3]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0instead, press middle/X1 mouse to perform weapons special move[/size][/size]\n<br />[size=3]\n<br />[/size][size=5][b]Motivation[/b][/size][size=3]\n<br />\n<br />[size=3]Are you bored with the mouse being quite useless and always have to stay close to your character? So do I, and because of that, I make a little mod to enhance mouse function.\n<br />\n<br />Is this complete\u00A0yet? Well, [s]No for me[/s] It is almost\u00A0stable as it is now you.\n<br />[/size]\n<br />[/size][size=5][b]How to install[/b][/size][size=3][size=4]\n<br />\n<br />[/size][list]\n<br />[*][size=3]Step 1: Install SMAPI 4.1.1 or above[/size]\n<br />[*][size=3]Step 2:\u00A0Download the zip file, and\u00A0Extract\u00A0[/size]\n<br />[*][size=3]Step 3:\u00A0Place the folder that you get from step 2 to Stardew Valley/Mods[/size]\n<br />[*][size=3]Step 4: Start complaining in the Post tab[/size]\n<br />[/list]\n<br />[/size][size=5][b]You want to help me?[/b][/size][size=4][b]\n<br />[/b][/size]\n<br />[size=3][b]As a coder:[/b] This is the GitHub page of the mod project:\u00A0[url=https://github.com/ylsama/RightClickMoveMode]https://github.com/nghiango1/RightClickMoveMode[/url]\n<br />[b]As a user: [/b]You can freely tell me your ideas\u00A0about how/where this mod can improve :D\n<br />\n<br />It my first time received a coffee cup from the mod, special thank for your donation, eh... Mr. Tandy, Mr. Sheradin[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2614",
+	"Version": "1.4.4",
+	"Updated": "2025-01-29T13:12:30+00:00",
+	"Downloads": [
+		{
+			"Id": 123776,
+			"Type": "Main",
+			"DisplayName": "MouseMoveMode",
+			"FileName": "MouseMoveMode-2614-1-4-4-1738156350.zip",
+			"Description": "- Fix NPC following bug when NPC goes out of current Game Location\n<br />- Bump up some dependency (dev things)",
+			"Version": "1.4.4",
+			"SizeInBytes": 49775,
+			"Uploaded": "2025-01-29T13:12:30+00:00",
+			"Mods": [
+				{
+					"Id": "nghiango1.MouseMoveMode",
+					"DisplayName": "MouseMoveMode",
+					"Type": "Smapi",
+					"RelativePath": "MouseMoveMode",
+					"Manifest": {
+						"Name": "MouseMoveMode",
+						"Description": "A simple enchancement for game controls that allow player move your Farmmer by Mouse",
+						"Author": "nghiango1",
+						"Version": "1.4.4",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "MouseMoveMode.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2614",
+							"Github:nghiango1/RightClickMoveMode"
+						],
+						"UniqueId": "nghiango1.MouseMoveMode"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342510464,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389302,
+		"UploaderId": 57115937,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

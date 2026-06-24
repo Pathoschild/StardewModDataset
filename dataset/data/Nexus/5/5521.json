@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 5521,
+	"Name": "Entoarox Modding Utilities",
+	"Author": "Entoarox",
+	"Description": "[color=#980000][size=4][b]EMU is still new and in development, bugs *will* appear, and can take time to fix, use at your own risk![/b][/size][/color]\n<br />\n<br />Entoarox Framework is by this point a old mod, and is starting to show that age badly.\n<br />Rather then continue monkey-patching it to keep old functionality alive while trying to add new features, I have decided to start over.\n<br />Entoarox Modding Utilities (EMU) is the result of this.\n<br />\n<br />A much more lightweight, easier, and generally more capable replacement.\n<br />Right now EMU is still in Alpha, as there are still EF features that are being kept but which I have not yet been able to finish rewriting.\n<br />\n<br />I am releasing EMU at this point in time though, because any future release of [url=https://www.nexusmods.com/stardewvalley/mods/4014]Sundrop City[/url]\uFEFF will depend on the functionality in this mod.\n<br />\n<br />\n<br />[size=4][b][u]Current Features[/u][/b][/size]\n<br />[list]\n<br />[*][size=2]The \"TypeId\" registry, which acts as a central system for referencing both vanilla and modded items reliably.[/size]\n<br />[*][size=2]The \"Extended Layers\" functionality, which enables maps to use a bunch of extra layers.[/size]\n<br />[/list]\n<br />[size=3][b][u]TypeId\n<br />[/u][/b][/size]TypeId enables users to input simple names (Such as [font=Courier New]sdv.object:stone[/font][font=Arial]) and reliably have the matching item show up, no matter where they use it.\n<br />[/font]Extensions can be created by mods to hook their items into the TypeId system, but support for [url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url] comes build-it.\n<br />(To reference a JA object, use [font=Courier New]ja.object:&lt;id&gt;[/font] or [font=Courier New]ja.craftable:&lt;id&gt;[/font] to identify the item)\n<br />Modders wishing to support TypeId should [url=https://github.com/Entoarox/StardewMods/blob/master/EntoaroxUtilities/IEntoUtilsApi.cs]look at the EMU's public API[/url], as it provides all the functionality to interact with TypeId.\n<br />\n<br />[size=3][b][u]Extended Layers\n<br />[/u][/b][/size]SDV vanilla is awesome, but it only has so many layers for modders to play with, well, no more!\n<br />Simply having EMU installed enables 5 extra layers to play with, increasing the total amount of layers available to 9!\n<br />\n<br />The full layer list available is as such:\n<br />[list]\n<br />[*][b]FarBack[/b]\n<br />[*][b]MidBack[/b]\n<br />[*]Back\n<br />[*]Buildings\n<br />[*][b]Shadows[/b]\n<br />[*][b]LowFront [/b](For when you need 2 \"Front\" tiles in the same space only!)\n<br />[*]Front\n<br />[*]AlwaysFront\n<br />[*][b]AlwaysFront2[/b]\n<br />[/list]\n<br />* A big note for LowFront is that it should not be used separate from the Front layer, as you will experience the farmer being able to phase through things should you do so.\n<br />\u00A0 It exists as a means of having 2 overlapping tiles which exhibit the behaviour the Front layer has.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5521",
+	"Version": "0.4.2",
+	"Updated": "2021-06-13T12:17:32+00:00",
+	"Downloads": [
+		{
+			"Id": 42118,
+			"Type": "Main",
+			"DisplayName": "Entoarox Modding Utilities 0.4.2",
+			"FileName": "Entoarox Modding Utilities 0.4.2-5521-0-4-2-1623586652.zip",
+			"Description": "Fixes an issue with LowFront &amp; HighFront z-indexing.",
+			"Version": "0.4.2",
+			"SizeInBytes": 89268,
+			"Uploaded": "2021-06-13T12:17:32+00:00",
+			"Mods": [
+				{
+					"Id": "Entoarox.Utilities",
+					"DisplayName": "Entoarox Modding Utilities",
+					"Type": "Smapi",
+					"RelativePath": "EntoaroxUtilities",
+					"Manifest": {
+						"Name": "Entoarox Modding Utilities",
+						"Description": "Contains utilities to help make modding easier and provide cross-mod support for common things.",
+						"Author": "Entoarox",
+						"Version": "0.4.2",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "EntoaroxUtilities.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"nexus:5521"
+						],
+						"UniqueId": "Entoarox.Utilities"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428806,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392209,
+		"UploaderId": 38902465,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

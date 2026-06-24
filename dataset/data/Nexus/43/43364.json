@@ -1,0 +1,86 @@
+{
+	"Site": "Nexus",
+	"Id": 43364,
+	"Name": "APF - Animated Portrait Framework",
+	"Author": "Tyr4nTX",
+	"Description": "[b][size=4][u]Animated Portrait Framework[/u][/size][/b]\n<br />\n<br />[size=4]\n<br />SMAPI mod that brings NPC portraits to life with frame-based sprite animations. Supports unlimited expressions, multiple animation modes (loop, pingpong, once), automatic DDF integration, and per-expression spritesheets. Modders create simple JSON content packs — no coding required.\n<br />\n<br />[color=#ff0000][u]Requires Dialogue Display Framework Continued.[/u][/color][/size]\n<br />\n<br />\n<br />[size=4][u]APF Portrait Studio\n<br />\n<br />[/u][/size]Browser-based tool for creating APF content packs. Cut video clips into sprite frames, remove backgrounds with AI (rembg), clean up artifacts, fill holes, preview animations in real-time, and export ready-to-use content packs with one click. Runs locally via Flask — no uploads, no cloud.\n<br />\n<br />1. It seems complicated BUT there is a TOUR guide!\u00A0\n<br />2. If you want to create a NORMAL Replacer and not animated [b][color=#00ff00]YOU can......!\u00A0 \u00A0 Just Put your Expression.png in the Video Cutter and make the Video on 1 Frames and 1 FPS and will create a normal Replacer[/color]\n<br />[/b]3. [b]BUT this Tool is basicly for animations!\u00A0\n<br />\n<br />[color=#ff0000][u]IMPORTANT/Requirements:[/u]\n<br />\n<br />1. FFMPEG FULL BUILD:\u00A0\n<br />https://github.com/FFmpeg/FFmpeg\n<br />\n<br />2. RemBG:\n<br />https://github.com/danielgatis/rembg\n<br />\n<br />3. DDFC (Dialogue Display Framework Continued)[/color]\n<br />\n<br />\n<br />\n<br />My Workflow:\n<br />\n<br />1. Create a Character ( AI because i can t draw) or Draw something [color=#ff0000][size=4](IMPORTANT: Make the Background ALWAYS black)[/size][/color]\n<br />\n<br />2. Use grok imagine and drop your Character make a 6 seconds video! (Its free)\u00A0\n<br />\n<br />3. Drop this 6 sec Video in the DEV cutter and cut your animation as your desire (I always use 1024x1024, BUT in Export i resized to 512x512 so its smaller and you don t see a diffrent in SDV trust me i testet it.\n<br />\n<br />4. run the Background Remover remove the background to get a transparent Sheet\n<br />\n<br />5. Export: Make a zip to drop it in Vortex, or just deploy the mod in your Mod Folder directly!\u00A0\n<br />\n<br />\n<br />IMPORTANT: Its an ALPHA Version !\u00A0\n<br />\n<br />NEXT STEP: I Want to create a easy CP within this tool so you can create a CUSTOM Expression and make a content pack, when and how this Expression is triggered... !\u00A0\n<br />\n<br />\n<br />Have fun creating! and Please tell me everything thats not working!\u00A0\n<br />\n<br />English is not my native language so sorry for bad spelling!\u00A0[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43364",
+	"Version": "1.0.3",
+	"Updated": "2026-04-19T19:25:44+00:00",
+	"Downloads": [
+		{
+			"Id": 161063,
+			"Type": "Optional",
+			"DisplayName": "APF Portrait Studio",
+			"FileName": "APF Portrait Studio-43364-1-0-1-1773859349.zip",
+			"Description": "fixxes now it can handle BOM!",
+			"Version": "1.0.1",
+			"SizeInBytes": 90644,
+			"Uploaded": "2026-03-18T18:42:29+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "APF_PortraitStudio",
+					"Type": "Invalid",
+					"RelativePath": "APF_PortraitStudio",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342547751,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 164918,
+			"Type": "Main",
+			"DisplayName": "APF - Animated Portrait Framework",
+			"FileName": "APF - Animated Portrait Framework-43364-1-0-4-1776626744.zip",
+			"Description": "its working better now with content patcher!",
+			"Version": "1.0.4",
+			"SizeInBytes": 41479,
+			"Uploaded": "2026-04-19T19:25:44+00:00",
+			"Mods": [
+				{
+					"Id": "tyr4ntx.AnimatedPortraitFramework",
+					"DisplayName": "Animated Portrait Framework",
+					"Type": "Smapi",
+					"RelativePath": "AnimatedPortraitFramework",
+					"Manifest": {
+						"Name": "Animated Portrait Framework",
+						"Description": "Framework for animated NPC portraits in Stardew Valley. Supports unlimited expressions, multiple animation modes, and automatic DDF integration. Modders create simple Content Packs — no coding required.",
+						"Author": "tyr4ntx",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AnimatedPortraitFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Mangupix.DialogueDisplayFrameworkContinued",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "tyr4ntx.AnimatedPortraitFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342551606,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430052,
+		"UploaderId": 4930779,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

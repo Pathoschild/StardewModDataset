@@ -1,0 +1,188 @@
+{
+	"Site": "ModDrop",
+	"Id": 664041,
+	"Name": "Dynamic Night Time",
+	"Author": "Koihime Nakamura",
+	"TagLine": "This mod gives Stardew Valley a more dynamic daylight cycle, changing when it gets dark and adding a dawn period at the start of the day. It also adds a full light cycle, adding sunrise and sunset effects. These times will vary depending on the ti...",
+	"Description": "**Dynamic Night Time**\n\n_**Requirements**_\n- SMAPI 3.0+\n- Stardew Valley 1.4+\n\n**_This Mod Does:_**\nThis mod gives Stardew Valley a more dynamic daylight cycle, changing when it gets dark and adding a dawn period at the start of the day. It also adds a full light cycle, adding sunrise and sunset effects. These times will vary depending on the time of year. Can be configured to match your latitude. Does not alter start time.\n\n_**IMPORTANT NOTE**_\nMake sure that if you have problems with other mods that you are running their latest version.  Also, this mod does not alter wake up time.\nNOTE: DNT does some assumption work lighting after sunset is consistent. This also may not match your tick timing if you use time speed mods.\nNOTE2: This mod is incompatible with Deep Woods prior to 1.2-beta.18 / 1.3-beta.15\n\n_**INCOMPATIBILITIES:**_\nDo not install this mod with Ambient Light.\n\n_**Multiplayer Compatibility**_\nThis mod is MP compatible, and all clients will need it for it to work.\n\n**Light Level Notes**\nThe higher the number, the darker the night. See comparison image in images. Defaults to 1.\n\n**Installation Instructions**\nUnzip the folder into your Mods/ folder after making sure SMAPI is installed\n\nFor changelog and patch notes, see [Here](https://github.com/Sakorona/SDVMods/blob/main/DynamicNightTime/CHANGELOG.md)\n\n_**Troubleshooting Notes**_\n* This mod dynamically generates your cycle based on latitude, and then clamps it to the nearest 10  hours. This does means that changes that are less than 3 minutes will not be visible. This is largely due to the nature of the 10 minute clock in Stardew Valley.\n*This mod uses Harmony, a tool that allows for rewriting of game functions during runtime.\nThis mod alters three functions in Game1 - isNightOut, GameClock, getStartingToGetDarkTime, getTrulyDarkTime. They will still return the same variables and generally the same intended use.\n\n_**Options Config**_\nTo configure, open up `config.json` in your mod folder. (Or use GMCM, if you have it installed)\n\n-`SunsetTimesAreMinusThirty` - Valid is true or false. This applies a half hour corrective to the generated sunset.\n\n- `latitude` - Valid is anything from -64 to 64. (- for lats S, + for lats N.). Sets the latitude that will determine sunrise and sunset times. Out of range latitudes will be reset. To find the latitude for your city, please consult google. Note that if you are in south latitude, you will get your sunrise/sunset times but not your climate.\n\n- `NightDarknessLevel` - Set values from 1-4, as you go higher, it gets darker.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/664041",
+	"Version": null,
+	"Updated": "2024-05-13T20:34:39.867+00:00",
+	"Downloads": [
+		{
+			"Id": 882910,
+			"Type": "Main",
+			"DisplayName": "Dynamic Night Time",
+			"FileName": "Dynamic Night Time.zip",
+			"Description": "Updated for SDV 1.5",
+			"Version": "1.3.7",
+			"SizeInBytes": 79573,
+			"Uploaded": "2020-12-26T17:06:42.03+00:00",
+			"Mods": [
+				{
+					"Id": "knakamura.dynamicnighttime",
+					"DisplayName": "Dynamic Night Time",
+					"Type": "Smapi",
+					"RelativePath": "DynamicNightTime",
+					"Manifest": {
+						"Name": "Dynamic Night Time",
+						"Description": "Dynamic Night Time",
+						"Author": "Sakorona",
+						"Version": "1.3.7",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "DynamicNightTime.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2072"
+						],
+						"UniqueId": "knakamura.dynamicnighttime",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "SDVMods",
+								"User": "Sakorona",
+								"Directory": "_releases",
+								"ModFolder": "DynamicNightTime"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "f819e50cc44d1a9c46d55c2b98fbd7ec",
+				"md5In": "6c7affbba2d5a156a192c18033021eab",
+				"scriptType": 0,
+				"sha256Ex": "5951c898c84222229c968516283a1bd06444a98b675b115a3ba4a72935e226ea",
+				"sha256In": "a08154de84a6938d5f2f64065500004c96b7964b49497e4af88bf12a6cacba8b"
+			}
+		},
+		{
+			"Id": 1096562,
+			"Type": "Main",
+			"DisplayName": "DynamicNightTime 1.3.8",
+			"FileName": "DynamicNightTime 1.3.8.zip",
+			"Description": "See patch notes.",
+			"Version": "1.3.8",
+			"SizeInBytes": 70959,
+			"Uploaded": "2022-01-05T05:28:30.85+00:00",
+			"Mods": [
+				{
+					"Id": "knakamura.dynamicnighttime",
+					"DisplayName": "Dynamic Night Time",
+					"Type": "Smapi",
+					"RelativePath": "DynamicNightTime",
+					"Manifest": {
+						"Name": "Dynamic Night Time",
+						"Description": "Dynamic Night Time",
+						"Author": "Sakorona",
+						"Version": "1.3.8",
+						"MinimumApiVersion": "3.9.0",
+						"EntryDll": "DynamicNightTime.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2072",
+							"ModDrop:664041"
+						],
+						"UniqueId": "knakamura.dynamicnighttime"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "4ba68f430f6393d5fde7ba43211bef46",
+				"md5In": "cd15a3587777757072b9cfeb3e5230f5",
+				"patchNotes": " - Island set to 30 degrees south (or north) of the valley. This difference is customizable\n - Fixes 1.5 issue introduced by parallax calculations assuming only sunset changes on the hour\n - CoF integration temporarily disabled",
+				"scriptType": 0,
+				"sha256Ex": "459d4d9222a5d9cd73cec3245df30e2c80044f5656147a3a2d2312a424d08ff8",
+				"sha256In": "6764d731752a85e193be82caeadcbac3e971912cc561aec745eeb1c1a074ee0c"
+			}
+		},
+		{
+			"Id": 1599379,
+			"Type": "Optional",
+			"DisplayName": "Dynamic Night Time",
+			"FileName": "Dynamic Night Time.zip",
+			"Description": "Bug fixes.",
+			"Version": "1.3.16-beta",
+			"SizeInBytes": 35783,
+			"Uploaded": "2024-05-13T20:34:39.867+00:00",
+			"Mods": [
+				{
+					"Id": "knakamura.dynamicnighttime",
+					"DisplayName": "DynamicNightTime",
+					"Type": "Smapi",
+					"RelativePath": "DynamicNightTime",
+					"Manifest": {
+						"Name": "DynamicNightTime",
+						"Description": "Sets the night time dynamically.",
+						"Author": "Sakorona",
+						"Version": "1.3.16-beta",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DynamicNightTime.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2072"
+						],
+						"UniqueId": "knakamura.dynamicnighttime",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "35d6ba0f397a0469035fb23fbde0bd24",
+				"md5In": "b465ce129d878ef65d5bd68a1de042cb",
+				"scriptType": 0,
+				"sha256Ex": "117b6f15df001ef0aa57f973c6c3b9bb9715e855a213c08c82437305cd56a4e3",
+				"sha256In": "d0648232d636b182c95b4ae513754951b92e8aa9a8ffe6fea8c4736dfa9f2033"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1574813176180,
+		"DateUpdated": 1715632479867,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateApproved": 1575069171779,
+		"dateCreated": 1574813168003,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/664041/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/664041/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/664041/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/664041/icon_original"
+		},
+		"nexusModID": 2072,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66259
+	}
+}

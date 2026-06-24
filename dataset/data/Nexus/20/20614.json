@@ -1,0 +1,101 @@
+{
+	"Site": "Nexus",
+	"Id": 20614,
+	"Name": "Forage For Tinies",
+	"Author": "svalawoo",
+	"Description": "Tiny People have come out to visit Cindersnap forest. They can be foraged, so you can pick them up and carry them around!\n<br />\n<br />This mod adds (fourteen, currently) tiny people to stardew valley. Every day, 6-12 of them should appear in Cindersnap Forest, with different individuals spawning in different seasons.\u00A0\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\u00A0is required to add the new content.\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/3231]Farm Type Manager[/url] is needed for the tinies to spawn. I haven't tested it without FTM, but I conjecture that the mod will still work, the tinies will just never appear in game.\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/14487]Sprites in Detail [/url]is used to make the Tinies more tiny, and more detailed. I would like to make the tinies prettier and more visible in a future update. The mod can probably function without SiD, but it will show different (less detailed, weirder) sprites.\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />(Dark Humour Warning: [s]You can eat the tinies if you would like to. I'm sure they won't complain.[/s])",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/20614",
+	"Version": "1.0.0",
+	"Updated": "2024-03-19T05:04:39+00:00",
+	"Downloads": [
+		{
+			"Id": 82559,
+			"Type": "Main",
+			"DisplayName": "ForageForTinies",
+			"FileName": "ForageForTinies-20614-1-0-0-1710824679.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 46045,
+			"Uploaded": "2024-03-19T05:04:39+00:00",
+			"Mods": [
+				{
+					"Id": "svalawoo.ForageForTiniesContent",
+					"DisplayName": "Forage for Tinies - populate",
+					"Type": "ContentPack",
+					"RelativePath": "ForageForTinies\\[CP] ForageForTiniesPopulate",
+					"Manifest": {
+						"Name": "Forage for Tinies - populate",
+						"Description": "Part of a mod that adds tinies that can be foraged. This defines and adds fourteen tiny people into the game.",
+						"Author": "svalawoo",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "svalawoo.ForageForTiniesContent"
+					}
+				},
+				{
+					"Id": "svalawoo.ForageForTiniesForaging",
+					"DisplayName": "Forage for Tinies - FTM addon",
+					"Type": "ContentPack",
+					"RelativePath": "ForageForTinies\\[FTM] ForageForTiniesForaging",
+					"Manifest": {
+						"Name": "Forage for Tinies - FTM addon",
+						"Description": "Part of a mod that adds tinies that can be foraged. This uses Farm Type Manager to spawn the tinies in Cindersnap Forest.",
+						"Author": "svalawoo",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.10.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "svalawoo.ForageForTiniesContent",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "svalawoo.ForageForTiniesForaging"
+					}
+				},
+				{
+					"Id": "svalawoo.ForageForTiniesHDSprite",
+					"DisplayName": "Forage for Tinies - resize",
+					"Type": "ContentPack",
+					"RelativePath": "ForageForTinies\\[SiD] ForageForTiniesHDSprites",
+					"Manifest": {
+						"Name": "Forage for Tinies - resize",
+						"Description": "Part of a mod that adds tinies that can be foraged. This makes the sprites more tiny, while also making them more HD.",
+						"Author": "svalawoo",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "BleakCodex.SpritesInDetail"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "svalawoo.ForageForTiniesContent",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "svalawoo.ForageForTiniesHDSprite"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469247,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342407302,
+		"UploaderId": 204614882,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

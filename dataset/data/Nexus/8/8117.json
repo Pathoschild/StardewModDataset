@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 8117,
+	"Name": "More Grass on the Beach",
+	"Author": "ArchAngelKiragis",
+	"AuthorLabel": "Angela Ranna",
+	"Description": "My partner tried out the new beach farm and wasn't super impressed...the catch rates seem low, the boxes are rare, and they don't contain a whole lot worth giving up so much space and the ability to use sprinklers for. This seems to be a common problem with all the farm types other than the standard and forest farms - standard has space, forest has hardwood, but the others just don't give enough back for the lack of farming space.\n<br />\n<br />We got to talking, and something that hasn't been really done is a ranching focused farm. I did a little code digging and lo' and behold, the code that spawns grass is packed up nice and tidy in its own method. Turns out rock geode spawns are too, so why not tweak that while we're at it. Adjusting the fish table on the farm is not nearly so easy, unfortunately, so I just extended the grass virulence to the river farm as well. The forest doesn't need any help but...eh, already this deep so let's give the player the ability to tweak the forage spawn rate too, though we'll disable it by default.\n<br />\n<br />[size=5]Change List\n<br />[/size][list]\n<br />[*][size=2]The beach and river farms call the spawn grass method twice, so it should be more virulent and support animals easier than other layouts.[/size]\n<br />[*][size=2]The quarry and 4-corners farms call the spawn rocks/geodes method twice, giving it a small buff.[/size]\n<br />[*][size=2]A config option is included (but turned off by default) to also have the grass go nuts on other farms.[/size]\n<br />[*][size=2]A config option is included (but turned off by default) to have the forest farm try to spawn forage twice.[/size]\n<br />[*][size=2]A config option is included (turned on by default) to let you turn off the rock/geode double dipping in case you have a different mod to improve the farm quarry installed, like\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5170?tab=description]Better Quarry Redux[/url]\uFEFF.[/size]\n<br />[*][size=2]A config option is included (set to 1 by default) that lets you control how many additional times the spawn methods get called each day, just in case you want to go really nuts.[/size]\n<br />[/list][size=2]\n<br />[/size][size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io/]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into\u00A0[font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list][size=5]How to use[/size]\n<br />Run the game once to generate the config file then check it if you want to change any settings, but other than that this should work on any existing or new game out of the box.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Tested on the beach farm with Stardew Valley 1.5 on Windows.\n<br />[*]Tested in single player.\n<br />[/list]\n<br />[size=5]TODO[/size]\n<br />[list]\n<br />[*][size=2]Test other farms.[/size]\n<br />[*][size=2]Test in multiplayer/split screen (probably just the host needs to have this installed, and guests having it won't affect anything).[/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8117",
+	"Version": "2.0.0",
+	"Updated": "2021-12-01T16:36:53+00:00",
+	"Downloads": [
+		{
+			"Id": 47655,
+			"Type": "Main",
+			"DisplayName": "More Grass on the Beach",
+			"FileName": "More Grass on the Beach-8117-2-0-0-1638376613.zip",
+			"Description": "The main file - download this.",
+			"Version": "2.0.0",
+			"SizeInBytes": 7843,
+			"Uploaded": "2021-12-01T16:36:53+00:00",
+			"Mods": [
+				{
+					"Id": "AngelaRanna.MoreGrassOnTheBeach",
+					"DisplayName": "More Grass on the Beach",
+					"Type": "Smapi",
+					"RelativePath": "MoreGrassOnTheBeach",
+					"Manifest": {
+						"Name": "More Grass on the Beach",
+						"Description": "Spawns more grass each day start on the beach to help it support animal heavy games.",
+						"Author": "AngelaRanna",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.13.1",
+						"EntryDll": "MoreGrassOnTheBeach.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8117"
+						],
+						"UniqueId": "AngelaRanna.MoreGrassOnTheBeach"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342434343,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394805,
+		"UploaderId": 1334065,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

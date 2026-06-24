@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 14391,
+	"Name": "Slingshot Rebalance",
+	"Author": "ToweringRedwood",
+	"AuthorLabel": "Towering Redwood",
+	"Description": "Slingshot Rebalance aims to fix many of the aspects of slingshot weapons that make them nigh-unusable in comparison to melee weapons. To this end, I've found these buffs make the Master slingshot a useful ranged weapon in the lower levels of the mines, and the Galaxy slingshot more balanced for Skull Cavern.\n<br />\n<br />1. First off, this mod buffs the damage of various ammos. In particular, Stone's damage has been doubled so that the player always has a cheap, but effective source of ammo. Buffs are [b]bolded[/b]:\n<br />[list]\n<br />[*]Default\u00A0 \u00A0 \u00A0 \u00A01\u00A0 \u00A0 \u00A0--\u00A0 \u00A0 \u00A01\n<br />[*][b]Wood\u00A0 \u00A0 \u00A0 \u00A0 \u00A02\u00A0 \u00A0 \u00A0-&gt;\u00A0 \u00A0 \u00A05[/b]\n<br />[*][b]Stone\u00A0 \u00A0 \u00A0 \u00A0 \u00A05\u00A0 \u00A0 \u00A0-&gt;\u00A0 \u00A0 \u00A010[/b]\n<br />[*]Coal\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A015\u00A0 \u00A0 --\u00A0 \u00A0 \u00A015\n<br />[*][b]Copper\u00A0 \u00A0 \u00A0 10\u00A0 \u00A0 -&gt;\u00A0 \u00A0 \u00A020[/b]\n<br />[*][b]Iron\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 20\u00A0 \u00A0 -&gt;\u00A0 \u00A0 25[/b]\n<br />[*][b]Explosive\u00A0 \u00A020\u00A0 \u00A0-&gt;\u00A0 \u00A0 \u00A030[/b]\n<br />[*]Gold\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A030\u00A0 \u00A0 --\u00A0 \u00A0 \u00A030\n<br />[*]Iridium\u00A0 \u00A0 \u00A0 \u00A050\u00A0 \u00A0 --\u00A0 \u00A0 \u00A050\n<br />[/list]\n<br />--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n<br />2. Secondly, I tightened up the old damage formula to greatly reduce the randomness of slingshot damage.\n<br />[i]Old Formula[/i]:[i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 [/i]AmmoDamage + RandomBetween(-0.5*AmmoDamage, AmmoDamage)\n<br />[i]Nu Formula:[/i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0AmmoDamage + RandomBetween(0.35*AmmoDamage, 0.65*AmmoDamage)\n<br />\n<br />So while the Max damage has been slightly nerfed, the Min damage has been significantly buffed. For example, here are the damage ranges for a piece of Iridium from a regular slingshot:\n<br />[i]Old[/i]:\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 50 + RandomBetween(-25, 50)\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0--&gt;\u00A0 \u00A0 \u00A0[25, 100]\n<br />[i]Nu:[/i]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A050 + RandomBetween(18, 33)\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 --&gt;\u00A0 \u00A0 \u00A0[68, 88]\n<br />\n<br />---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n<br />\n<br />3. I made the Galaxy Slingshot purchasable alongside the other Galaxy Weapons from the Adventurer's Guild. It does 4x damage (the Master Slingshot only does 2x damage). I also made the higher level slingshots charge a little faster, so that they can be more effective against ambush enemies like the Dragons in Skull Cavern.\n<br />[list]\n<br />[*]Regular\u00A0 \u00A0 \u00A0 \u00A0 \u00A00.3s\u00A0 \u00A0 \u00A0 --\u00A0 \u00A0 \u00A0 0.3s\n<br />[*]Master\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 0.3s\u00A0 \u00A0 \u00A0 -&gt;\u00A0 \u00A0 \u00A00.2s\n<br />[*]Galaxy\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A00.3s\u00A0 \u00A0 \u00A0 -&gt;\u00A0 \u00A0 \u00A00.1s\n<br />[/list]\n<br />---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n<br />\n<br />Slingshot Rebalance is\u00A0[b]Multiplayer Friendly\u00A0[/b]too!\u00A0I would highly recommned pairing this mod with [url=https://www.nexusmods.com/stardewvalley/mods/2067]Better Slingshots[/url] for the Utlimate Stardew Slingshot Experience™.\n<br />\n<br />[size=4]Installing &amp; Usage:[/size]\n<br />[list]\n<br />[*][size=2]Make sure [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\uFEFF is installed[/size]\n<br />[*][size=2]Download this mod from the files tab and unzip it into your\u00A0[i]Stardew Valley/Mods[/i]\u00A0folder[/size]\n<br />[*][size=2]Run the game using SMAPI[/size]\n<br />[*][size=2]If you feel like tweaking some damage values, you can do so in the config.json file[/size]\n<br />[/list]\n<br />[size=4]Compatability:[/size]\n<br />[list]\n<br />[*]Works on Windows 10. Untested on Mac, Linux, or Ubuntu.\n<br />[*]Compatible with [i][url=https://www.nexusmods.com/stardewvalley/mods/2067]Better Slingshots[/url]\uFEFF[/i], and [i][url=https://www.nexusmods.com/stardewvalley/mods/14115]Galaxy Slingshot Obtainable[/url]\uFEFF [/i](though, the Galaxy Slingshot will be in the shop menu twice with the latter installed).\n<br />[*]Untested alongside [i][url=https://www.nexusmods.com/stardewvalley/mods/12763]Enhanced Slingshots[/url]\uFEFF[/i], and [i][url=https://www.nexusmods.com/stardewvalley/mods/3320]Free Slingshot[/url]\uFEFF[/i].\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14391",
+	"Version": "1.0.0",
+	"Updated": "2022-11-08T02:39:43+00:00",
+	"Downloads": [
+		{
+			"Id": 62479,
+			"Type": "Main",
+			"DisplayName": "SlingshotRebalance",
+			"FileName": "SlingshotRebalance-14391-1-0-0-1667875183.zip",
+			"Description": "This here be the mod. Download it. Unzip it. Place it in ya Mods folder.",
+			"Version": "1.0.0",
+			"SizeInBytes": 13316,
+			"Uploaded": "2022-11-08T02:39:43+00:00",
+			"Mods": [
+				{
+					"Id": "Redwood.SlingshotRebalance",
+					"DisplayName": "Slingshot Rebalance",
+					"Type": "Smapi",
+					"RelativePath": "Slingshot Rebalance",
+					"Manifest": {
+						"Name": "Slingshot Rebalance",
+						"Description": "Reduces range of slingshot damage, buffs certain ammo, reduces charge times, and makes Galaxy Slingshot available.",
+						"Author": "Redwood",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "Slingshot Rebalance.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14391"
+						],
+						"UniqueId": "Redwood.SlingshotRebalance"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449167,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401079,
+		"UploaderId": 48248538,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

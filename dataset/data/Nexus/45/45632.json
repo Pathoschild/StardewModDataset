@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 45632,
+	"Name": "TractorStaminaPatch",
+	"Author": "huweigoodboy",
+	"Description": "[size=5][b]Tractor Stamina Patch[/b][/size]\n<br />\n<br />[b]Overview[/b]\n<br />Pathoschild's [b]Tractor Mod[/b] normally saves your stamina at the start of each tractor \"pulse\" and [b]fully restores it afterward[/b], so riding the tractor feels free. This add-on removes that restore and reapplies stamina using the same rules the game already ran during the pulse—so using tools from the tractor actually costs energy, closer to using them by hand.\n<br />\n<br />[b]Features[/b]\n<br />[list]\n<br />[*][b]No more free refill:[/b] Harmony transpiler strips the stamina-restore sequence in the tractor fake-interaction method (compatible with current game / Farmer stamina API).[/*]\n<br />[*][b]Fair tool drain:[/b] Tractor called [font=Courier New]Tool.DoFunction[/font] with [font=Courier New]power = 0[/font]; several tools (e.g. axe) scale cost with power, so they barely drained. This mod patches the tractor helper to use a minimum power so those tools lose stamina correctly.[/*]\n<br />[*][b]Tuning:[/b] Global on/off, stamina multiplier, optional maximum stamina lost per pulse.[/*]\n<br />[*][b]Per-action toggles:[/b] When the main switch is on, you can disable stamina cost separately for seeds, fertilizer, grass starter, hoe, axe, pickaxe, watering can, scythe, sword/dagger/club, slingshot, milk pail, shears, and a catch-all \"other tools\" category.[/*]\n<br />[*][b]GMCM + i18n:[/b] Optional [b]Generic Mod Config Menu[/b] UI; English ([font=Courier New]default.json[/font]) and Chinese ([font=Courier New]zh.json[/font]) strings.[/*]\n<br />[/list]\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.1.0 or later[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1401]Tractor Mod[/url] by Pathoschild (required)[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional, for in-game settings)[/*]\n<br />[/list]\n<br />[b]Install[/b]\n<br />[list]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip this mod into [font=Courier New]Stardew Valley/Mods[/font] (one folder containing [font=Courier New]manifest.json[/font] and the DLL).[/*]\n<br />[*]Launch the game once to generate [font=Courier New]config.json[/font]; edit in-game via GMCM if installed.[/*]\n<br />[/list]\n<br />[b]Compatibility[/b]\n<br />Built for [b]Stardew Valley 1.6[/b] and recent Tractor Mod releases. If Tractor Mod updates its IL heavily, the transpiler may need an update—check the SMAPI log for warnings on load.\n<br />\n<br />[b]Permissions &amp; credits[/b]\n<br />[list]\n<br />[*]Tractor Mod is by [b]Pathoschild[/b]; this is a separate compatibility / gameplay patch, not affiliated.[/*]\n<br />[*]Do not upload this mod elsewhere under your name without permission; linking back to the Nexus page is appreciated.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45632",
+	"Version": "1.2.1",
+	"Updated": "2026-05-17T08:19:08+00:00",
+	"Downloads": [
+		{
+			"Id": 167827,
+			"Type": "Main",
+			"DisplayName": "TractorStaminaPatch",
+			"FileName": "TractorStaminaPatch-45632-1-2-1-1779005948.zip",
+			"Description": "",
+			"Version": "1.2.1",
+			"SizeInBytes": 25319,
+			"Uploaded": "2026-05-17T08:19:08+00:00",
+			"Mods": [
+				{
+					"Id": "verehu.TractorStaminaPatch",
+					"DisplayName": "Tractor Stamina Patch",
+					"Type": "Smapi",
+					"RelativePath": "TractorStaminaPatch",
+					"Manifest": {
+						"Name": "Tractor Stamina Patch",
+						"Description": "Stamina for Pathoschild's Tractor Mod: removes the post-pulse stamina restore, adds multiplier and optional cap, fixes tool power so axes and other tools drain correctly, and offers GMCM options with per-action toggles (English / Chinese).",
+						"Author": "verehu",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "TractorStaminaPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.TractorMod",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "verehu.TractorStaminaPatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342554515,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432320,
+		"UploaderId": 94034763,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

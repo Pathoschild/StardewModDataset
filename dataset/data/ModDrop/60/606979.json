@@ -1,0 +1,133 @@
+{
+	"Site": "ModDrop",
+	"Id": 606979,
+	"Name": "Event Repeater - A useful tool for Content Patcher Modding",
+	"Author": "MissCoriel",
+	"TagLine": "Add depth to  your stories with the option to Repeat events over and over as you need them! Now integrates with Content Patcher!!",
+	"Description": "To Install Event Repeater:\n\n1.  **Install [SMAPI](https://smapi.io/)**\n\n2.  **Install [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915)  (The Mod itself doesn't need it.. but Event Repeater Mods will)**\n\n3.  **Download and Unzip this Mod into the Mods Folder**\n**6.6 Quest Functions Acquired!**\nI added in the searchquest command!  This feature allows you to search for quests with simple keywords.  It will even look for modded quests! The results of your search will give you the Quest ID, Quest Name, and the Description!  Using inject quest &lt;id&gt; will add that quest to your questlog even if you've already completed it!  On top of that, using endquest &lt;id&gt; will complete the quest you specified as if you did it in game.  This will add a lot of applications to your debugging!!\n**6.5.8 Updated to 1.6**\nTo be honest, I thought I future proofed this on my last update.. I was not prepared.  There is only one change that I had to account for and that all numericals are considered strings.  If you use the RepeatEvents or RepeatResponse blocks, please convert them to strings (ex. \"1999999999\").\n\n**6.5.5 Mail and Response Monitoring and Mailbox Monitor**\nThis version adds a console alert when a MailID is added to your seen list as well as ResponseIDs.. there is a caveat for the latter: If the question's ResponseID is -1 or you've already seen the response without removing it or the question doesn't use the $q format. This feature will also inform you if a MailID or ResponseID was removed.\nAlso, you will have Active Mailbox monitoring.  This will send a console message of MailIDs contained in your mailbox.  This is useful for debugging purposes.  As such a new console command was added: **fastmail &lt;mailID&gt;** will immediately send mail to your mailbox, no waiting for tomorrow.\n\n**6.5.1 Temporarily disabling the need for dependency:**\nIt has occured to me that a lot of modders haven't had time to add the dependency to their mods.  For the current update, I'm removing the need and urge all Modders who use Event Repeater to add the dependency.  Please view the Modder's Documentation if you wish to read on it.  I will probably add it back in after I am sure a good measure of mods are ready.\n**6.5.0 Adds GMCM support along with some efficiency improvements!**\n\n*   **New ways to use Event Repeater:** Working on the documentation right now, but it should still work in the classic way as well.\n\n*   **GMCM:** you can now configure the hotkeys made in 6.4.7 to suit your needs\n**6.4.8 Oops, I messed up!!**\nIn my haste to make a new function, I messed up the commands.  But I fixed it!  Here's what this fast fix changes:\n\n*   **Emergency Skip uses the proper command:** The command **stopevent** was what is used for modders. **emergencyskip**  is just an default skip.\n\n*   **Normal Skip has a hotkey:** Press **ALT + S** to skip an event normally.\n\n*   **Emergency Skip has it's features expanded:** Now the event log will place a label on the event command you engaged the skip.  It will also have a SMAPI error stating the command you had to interrupt.  Emergency Skip will also remove the event from your seen list a few seconds after the event stops.  You can reenter the map to execute the event again.\n**6.4.7 adds two hotkeys: CTRL + S and CTRL + I!!**\nThese are shortcuts to emergencyskip and showinfo.\n**EmergencySkip Update!**\nMaking an event that broke in testing?  Press **CTRL + S** or use the **console command** to interrupt the event and a dump of the event command list will be placed in the **Stardew Valley Folder**.  Use this to find the culprit, or send it to experts for evaluation!\n**6.4.3 adds new commands and convenience to event editing and more**\nNew Console were created to further help you:\n\n*   **stopevent** will interrupt an event.. it doesn't work like skip.. you need to use **eventforget** to reset the event\n\n*   **emergencyskip** this will interrupt the event, but also set the required flags for game progression\n\n*   **showinfo** toggles in game information.\nAdded ingame/console information: When an event is started, the console and, if enabled (enabled by default), the game as a hud message will tell you the event ID some alerts will show in game as well.**6.4 adds a new command for events; timeAdvance**\nGive your events more weight by making time pass.. see Modder's Manual for more information.\n\n**Event Repeater v6 now adds 3 new event commands for finer repeating!**\nsee the modder's manual for more information.\n\n**New commands added make it possible to make events repeatable as if they were modded to do so!**\nThe new install requirements are both [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915)  and [SMAPI](https://smapi.io)\n\nFor detailed information on how to create mods with Event Repeater, see the [Modder's Manual](https://github.com/MissCoriel/Event-Repeater/wiki/Modder's-Readme).\n\n**You can also find me in my [Cozy Apartment](https://discord.gg/uSGNKNf) for more active support!**\n\nHave the desire to support me and my endeavors?\n[Support me through Patreon](https://www.patreon.com/MissCoriel)\nMy promise to you:  My mods will always be free and open.  Patreon will give you special Discord roles on my server and Exclusive access to my original music.\nYou do not need to ever pay money to access my mods/content or beta releases!\nSpecial thanks to Atravita for improving the base code &lt;3",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/606979",
+	"Version": null,
+	"Updated": "2025-10-04T22:34:17.13+00:00",
+	"Downloads": [
+		{
+			"Id": 794658,
+			"Type": "Optional",
+			"DisplayName": "Event Repeater Test Mod",
+			"FileName": "Event Repeater Test Mod.zip",
+			"Description": "Fixes a typo in RepeatResponse",
+			"Version": "5.3.0",
+			"SizeInBytes": 1571,
+			"Uploaded": "2020-05-16T05:11:30.312+00:00",
+			"Mods": [
+				{
+					"Id": "misscoriel.testmod",
+					"DisplayName": "Event Repeater Test Event",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Event Repeater Test",
+					"Manifest": {
+						"Name": "Event Repeater Test Event",
+						"Description": "Short Demonstration of Event Repeater",
+						"Author": "MissCoriel",
+						"Version": "5.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "misscoriel.eventrepeater",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "misscoriel.testmod"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "672a39affdf928736efa8ba224f29456",
+				"md5In": "a22d4381a3ebda795a80e6c41900558e",
+				"scriptType": 0,
+				"sha256Ex": "f7e4f21129d9e29e78d4d5536e70f2656670bd4ad3e52f20063f9d6c9c01879f",
+				"sha256In": "e1afe8742452a1aecce48d86f637b4080540744589a461db425a209e62426b4f"
+			}
+		},
+		{
+			"Id": 1754956,
+			"Type": "Main",
+			"DisplayName": "Event Repeater",
+			"FileName": "Event Repeater.zip",
+			"Description": "Added the searchquest, inject quest, and endquest commands.  Please read the wiki for more information.",
+			"Version": "6.6.0",
+			"SizeInBytes": 29821,
+			"Uploaded": "2025-10-04T22:34:17.129+00:00",
+			"Mods": [
+				{
+					"Id": "misscoriel.eventrepeater",
+					"DisplayName": "Event Repeater",
+					"Type": "Smapi",
+					"RelativePath": "EventRepeater",
+					"Manifest": {
+						"Name": "Event Repeater",
+						"Description": "Adds Repeating capability to Content Patcher.",
+						"Author": "MissCoriel",
+						"Version": "6.6.0",
+						"MinimumApiVersion": "2.10.0",
+						"EntryDll": "EventRepeater.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 3642"
+						],
+						"UniqueId": "misscoriel.eventrepeater"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "1a45aac92ada7a64e51fbd34d0335a82",
+				"md5In": "9ea0f4b5fc3772625e4acf4cdc19637b",
+				"scriptType": 0,
+				"sha256Ex": "f49d8337d8a2763145e8d892d0b233896da0cf7ba209d613ff8f1750d53d8e82",
+				"sha256In": "b90454d230f57ac23c10b03c59591940b70c285c1f46126c3f319241841deeae"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1564351301513,
+		"DateUpdated": 1759617257130,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1564351296637,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/606979/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/606979/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/606979/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/606979/icon_original"
+		},
+		"nexusModID": 3642,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 125332
+	}
+}

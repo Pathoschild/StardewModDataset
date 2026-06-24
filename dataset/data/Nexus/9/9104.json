@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 9104,
+	"Name": "Boarding House for Mobile Phone",
+	"Author": "ShatteredEffect",
+	"Description": "And we're back again, with another mobile phone patch.\u00A0\n<br />\n<br />There are technically two mods in here, as with the other patches I've made. One that adds the events to the phone, and another that makes the NPC's dialogue from the Boarding House mod when answering and saying goodbye on the phone more unique (this does not change his in game dialogue). I haven't quite figured out how to combine them in an effective way yet, but I am hoping to combine them in the future.\u00A0\n<br />\n<br />Note: Currently only Gregory is done, I am planning on adding the rest as I have time.\u00A0\n<br />\n<br />I would like to thank\u00A0[url=https://www.nexusmods.com/stardewvalley/users/60742951]TrentXV[/url]\u00A0for the creation and building Boarding House and it's NPCs, and\u00A0[url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn[/url]\u00A0for making this all possible through their Mobile phone mod. (Special\u00A0thanks to\u00A0[url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn[/url]\u00A0for helping me figure out some kinks that I was having in the code!)\n<br />\n<br />You can find both of their mods here (note, they are required for this mod!)\n<br />\n<br />Boarding House and Bus Stop Extension by TrentXV:\u00A0https://www.nexusmods.com/stardewvalley/mods/4120\n<br />Mobile Phone by aedenthorn:\u00A0https://www.nexusmods.com/stardewvalley/mods/6523\n<br />\n<br />Installation:\u00A0\n<br />1: This mod requires SMAPI and content patcher, so make sure you have both installed to the specifications listed on their pages.\u00A0\n<br />2: Make sure that both Boarding House and Mobile phone are installed to the standards listed on their individual pages (including all required mods for them)\n<br />3: Either download Boardning House for Mobile Phone via your mod manager, or manually\n<br />   \uFEFFa: If you do it via manager that should be it, please enjoy the mod and let me know if you run into any issues! I will do my best to sort them out.\u00A0\n<br />   \uFEFFb: If you do it manually, then manually extract the file into your mod folder, then you should be ready to go!\n<br />\n<br />There is a config file in [CP] Boarding House - Mobile phone greetings, the only thing it does is turns the adjusted greetings and goodbyes on or off. I'm hoping to expand upon it more as I have more time.\u00A0\n<br />\n<br />Thanks again, and please enjoy the mod. :)\n<br />\n<br />Things planned for the future:\u00A0\n<br />\n<br />Adding more greetings based on relationship to the NPCs in Boarding House and other villagers.\u00A0\n<br />Possibly adding Mobile Phone support for more followers, based on if I get permission from the authors.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9104",
+	"Version": "1.0.0",
+	"Updated": "2021-07-12T23:46:05+00:00",
+	"Downloads": [
+		{
+			"Id": 43032,
+			"Type": "Main",
+			"DisplayName": "Boarding House for Mobile Phone",
+			"FileName": "Boarding House for Mobile Phone-9104-1-0-0-1626133565.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 2555,
+			"Uploaded": "2021-07-12T23:46:05+00:00",
+			"Mods": [
+				{
+					"Id": "ShatteredEffect.BHMobilePhoneGreetings",
+					"DisplayName": "Boarding House Mobile Phone Greetings",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Boarding House - Mobile Phone Greetings",
+					"Manifest": {
+						"Name": "Boarding House Mobile Phone Greetings",
+						"Description": "A Content Pack add-on for aedenthorn’s Mobile Phone. Replaces greetings and goodbyes for Boarding House NPCs (mod by TrentXV).",
+						"Author": "ShatteredEffect",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.20.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.MobilePhone",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "CPBoardingHouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ShatteredEffect.BHMobilePhoneGreetings"
+					}
+				},
+				{
+					"Id": "ShatteredEffect.BHMobilePhone",
+					"DisplayName": "Boarding House Mobile Phone Events",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Boarding House - Replay Events Though Mobile Phone",
+					"Manifest": {
+						"Name": "Boarding House Mobile Phone Events",
+						"Description": "Adds the Boarding House NPCs (mod by TrentXV) events to the Mobile Phone (mod by aedenthorn).",
+						"Author": "ShatteredEffect",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.MobilePhone",
+							"MinimumVersion": "1.23.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.MobilePhone",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "CPBoardingHouse",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ShatteredEffect.BHMobilePhone"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429720,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395792,
+		"UploaderId": 6880523,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

@@ -1,0 +1,131 @@
+{
+	"Site": "Nexus",
+	"Id": 18177,
+	"Name": "Hat Mouse Lacey - NPC",
+	"Author": "ichortower",
+	"Description": "[size=3][size=6][b][u]Hat Mouse Lacey[/u][/b][/size]\n<br />\n<br />Introducing Lacey, a new take on the hat mouse in Cindersap Forest. She's a newcomer to the valley, just like you, and recently bought and renovated the abandoned cabin. She's eager to open her new business making and selling hats!\n<br />\n<br />She's cheerful and polite, but somewhat introverted, so she often keeps to herself. She is passionate about hats, and full of opinions about them. She loves good food and therefore admires Gus. Autumn is her favorite time of year, and she likes to spend time outside. But, sometimes it's hard being the only four-foot talking mouse.\n<br />\n<br />Unlike the vanilla hat mouse (a map sprite), Lacey is a full-fledged friendable NPC with plenty of dialogue — including unique commentary on every vanilla hat and some modded ones — and a full set of heart events. She is also eligible for marriage; almost no one will comment on that, because it's not weird unless you make it weird.\n<br />\n<br />If this is your first time playing with Lacey, I recommend a new save for the best experience, since she has some Year 1 dialogue.\n<br />\n<br />I also recommend not snooping around in the mod files, since you may find spoilers in there, and I think it's fun to discover things and be surprised. Of course, if you like spoilers, be my guest; I can't stop you.\n<br />\n<br />Also available on GitHub:\u00A0[url=https://github.com/ichortower/HatMouseLacey/releases]releases[/url],\u00A0[url=https://github.com/ichortower/HatMouseLacey]source code[/url], and a (spoiler-filled!)\u00A0[url=https://github.com/ichortower/HatMouseLacey/blob/main/docs/help-spoilers.md]help file[/url].\n<br />\n<br />\n<br />[size=5][b][u]Special Thanks and Acknowledgements[/u][/b][/size]\n<br />\n<br />[list]\n<br />[*]u/Aglet_Green, who\u00A0made\u00A0[url=https://old.reddit.com/r/StardewValley/comments/12crela/thought_i_knew_stardew_well_but_evidently_not_who/jf2sjk0/]this Reddit post[/url]\u00A0which directly inspired this mod.\n<br />[*]elizaphantomhive (Discord) and\u00A0[url=https://www.nexusmods.com/stardewvalley/users/133194498]MriaMoonrose[/url]\u00A0(Nexus) for bugfinding.\n<br />[*]All the other weirdos (affectionate) in the Stardew Valley Discord server.\n<br />[/list]\n<br />Thanks to the following contributors for providing translations:\n<br />\n<br />[list]\n<br />[*]Turkish:\u00A0[url=https://github.com/Rupurudu]Rupurudu[/url]\n<br />[/list]\n<br />My thanks as well to the following mod authors:\n<br />\n<br />[list]\n<br />[*]Gweniaczek\u00A0of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/7332]Way Back Pelican Town[/url]\n<br />[*]Elle\u00A0of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14524]Elle's Town Buildings[/url]\n<br />[*]YriKururu\u00A0of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14765]Project Yellog[/url]\n<br />[*]Dolphin Is Not a Fish of\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/29509]Mouse Friends in the Forest[/url]\uFEFF\n<br />[/list]\n<br />... who have given me their gracious permission to, where necessary, include derived versions of some of their mod assets in this mod. These files are\u00A0NOT\u00A0covered by this mod's MIT license, since they are derivative works used by permission.\n<br />\n<br />For a full list of files which this mod's permissive license\u00A0DOES NOT\u00A0cover, see the file\u00A0[url=https://github.com/ichortower/HatMouseLacey/blob/1.1.1/docs/nonlicensed.txt]nonlicensed.txt[/url].\n<br />\n<br />\n<br />[size=5][b][u]Requirements[/u][/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Stardew Valley 1.6.9+\n<br />[*]SMAPI 4.1.0+\n<br />[*]Content Patcher 2.4.0+\n<br />[*](optional, since 1.3.0)\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/25055]Secret Note Framework[/url]\uFEFF, for some extra bits of lore\n<br />[/list]\n<br />\n<br />[size=5][b][u]Installation[/u][/b][/size]\n<br />\n<br />Download the release and unzip it into your Mods folder. It contains two mod folders:\n<br />\n<br />[list=1]\n<br />[*]HatMouseLacey\n<br />[*]HatMouseLacey_Core\n<br />[/list]\n<br />HatMouseLacey\u00A0is a Content Patcher content pack, which handles all of the content: images, maps, text, music, event scripts, etc.\n<br />HatMouseLacey_Core is the C# mod which makes all the code changes necessary for Lacey's special features.\n<br />\n<br />\n<br />[size=5][b][u]Configuration[/u][/b][/size]\n<br />\n<br />Hat Mouse Lacey supports the following config settings.\n<br />[b]Note that the former AlwaysAdopt setting has changed to ChildPolicy.[/b]\n<br />\n<br />[list]\n<br />[*][b]DTF[/b]: true/false (default true). If true, enables some suggestive (but not explicit) dialogue. Set to false to keep it G-rated.\n<br />[*][b]ChildPolicy[/b] (formerly [b]AlwaysAdopt[/b]): one of ByGender, AlwaysAdopt, or AlwaysPregnant (default ByGender). This controls how Lacey will approach having children with the farmer: the default is to check the farmer's gender just like vanilla spouses (so, with a male farmer, she will become pregnant). AlwaysAdopt will cause her to adopt children, and AlwaysPregnant will cause her to get pregnant, in both cases ignoring the player's gender entirely. [i]If Lacey gets pregnant and gives birth to children, they will be mice,[/i] but due to how the game works, you can change this setting at any time before the child arrives without issue (and if you make a mistake, you can fix your children with a console command).\n<br />[*][b]RecolorPalette[/b]: one of Auto, Vanilla, Earthy, VPR, Starblue, or Wittily (default Auto). If set to Auto, this mod will attempt to detect which recolor mod you are using and match it. If you get the wrong result, you can manually set it to the desired value.\n<br />[*][b]InteriorPalette[/b]: one of Auto, Vanilla, Earthy, VPR, or Starblue (default Auto). This is just like RecolorPalette, but attempts to detect and match enabled interior recolors. (Wittily does not recolor interiors, so it is not listed as an option)\n<br />[*][b]MatchRetexture[/b]: one of Auto, Vanilla, WaybackPT, ElleTown, YriYellog, or FlowerValley (default Auto). This is like RecolorPalette, but it matches active building retextures that apply to the mouse house. As with the others, set manually if Auto does not detect your situation.\n<br />NOTE: Elle's Town Buildings and Yri's Project Yellog will only be detected by Auto if you have set their respective config settings to retexture the mouse house (for Yellog, you will need HatMouseHouseRestored). Otherwise, you'll get the vanilla appearance.[*][b]PortraitStyle[/b]:\u00A0one of Auto, Nouveau, Nyapu, or Classic (default Auto). Controls which set of portraits to use. Auto will choose between Nouveau and Nyapu depending on whether [url=https://www.nexusmods.com/stardewvalley/mods/11491]Nyapu's Portraits[/url]\uFEFF are installed.\n<br />[*][b]SeasonalOutfits[/b]: true/false (default false). Enables Lacey's optional alternate outfits for summer and fall. The winter outfit is automatically enabled, since those are vanilla.\n<br />[*][b]WeddingAttire[/b]: one of Dress or Tuxedo (default Dress). Choose which outfit Lacey will wear to her wedding.\n<br />[*][b]MarkUnseenHats[/b]: true/false (default true). If true, hats in your inventory will be drawn with little icons of Lacey's face if you have not yet shown them to Lacey to get her reaction. Does not work with Fashion Sense hats, since they live in hammerspace (mirrorspace?).\n<br />[*][b]CollapseHatRegistry[/b]: true/false (default true). If true, the hat registry menu will avoid showing you duplicate modded hats (that is, hats which Lacey considers the same, or trivial variants).\n<br />[/list]\n<br />[b]These config settings will be read from the HatMouseLacey_Core mod's config.json[/b]. The Core mod will appear in the Generic Mod Config Menu, if you have that installed. The settings will apply to both mods.\n<br />\n<br />Using Generic Mod Config Menu is highly recommended! It's much easier than editing your config.json by hand, and starting in 1.5, Lacey features live previews in GMCM of which sprites and portraits you have enabled.\n<br />\n<br />\n<br />[size=5][b][u]Compatibility[/u][/b][/size]\n<br />\n<br />✓ Fully supported\n<br />→ Partial or in-progress\n<br />✗ Expect conflicts or major issues\n<br />\n<br />EWONTFIX means I am not currently planning to address the issue.\n<br />\n<br />[b]Up-to-date Compatibility Patches[/b]\n<br />\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url]\n<br />\u00A0 \u00A0 \u00A0Added fixes for things that broke in 1.6. Should still be fully compatible.\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5787]East Scarp[/url]\n<br />\u00A0 \u00A0 \u00A0Fixed a few festival collisions, and repaired one that broke since 1.5.6.\n<br />✓ [b]Mods which add other mouse characters![/b] Some of Lacey's lines change to acknowledge the existence of other mice if they are installed. Featuring:\n<br />[list][*] [url=https://www.nexusmods.com/stardewvalley/mods/29509]Mouse Friends in the Forest[/url]\n<br />Also adds a small crossover event.[*][url=https://www.nexusmods.com/stardewvalley/mods/17315]Fievel Goes East Scarp[/url]\n<br />Also adds a few lines and a small crossover event.[*][url=https://www.nexusmods.com/stardewvalley/mods/17364]Hat Mouse and Friends[/url]\n<br />No special content other than the dialogue edits, but it makes more sense now.[*] [url=https://www.nexusmods.com/stardewvalley/mods/32385]Rose and the Alchemist[/url]\uFEFF\n<br />No special content (yet!).[*] [url=https://www.nexusmods.com/stardewvalley/mods/17348]Cap Mouse[/url]\n<br />No special content.[/list]✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/20414]They Deserve It Too[/url]\uFEFF\n<br />\u00A0 \u00A0 \u00A0Works alongside Hat Mouse and Friends.\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6367]Vibrant Pastoral Redrawn[/url]\n<br />\u00A0 \u00A0 \u00A0Updated to correctly detect VPR's new config setup.\n<br />→ Mods altering the terrain around the mouse house (including\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14635]Cape Stardew[/url]\u00A0and maybe others)\n<br />\u00A0 \u00A0 \u00A0Lacey's map edits are now set to late priority, so they will apply after normal-priority terrain edits.\n<br />\n<br />[b]Compatibility as of 1.1.3/SDV 1.5.6[/b]\n<br />\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/7286]Ridgeside Village[/url]\n<br />\u00A0 \u00A0 \u00A0Lacey attends the RSV festivals.\n<br />✓ Multiple popular map recolors:\n<br />\u00A0 \u00A0 \u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5255]DaisyNiko's Earthy Recolour[/url]\n<br />\u00A0 \u00A0 \u00A0\uFEFF[s]Vibrant Pastoral Recolor[/s] see Redrawn, above\n<br />\u00A0 \u00A0 \u00A0\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/1869]Starblue Valley[/url]\n<br />\u00A0 \u00A0 \u00A0\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/2995]A Wittily Named Recolor[/url]\n<br />\u00A0 \u00A0 \u00A0\uFEFFAdditional recolors may be supported in the future.\n<br />✓\u00A0Multiple popular building retextures:\n<br />\u00A0 \u00A0\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/7332]Way Back Pelican Town[/url]\n<br />\u00A0 \u00A0\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14524]Elle's Town Buildings[/url]\n<br />\u00A0 \u00A0\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/14765]Yri's Project Yellog[/url]\n<br />\u00A0 \u00A0\u00A0[url=https://kayainsdv.postype.com/post/10220280]Flower Valley[/url]\n<br />\u00A0 \u00A0 Additional retextures may be supported in the future.\n<br />\u00A0 \u00A0 [b]NOTE[/b]: for Elle's Town Buildings and Project Yellog, you will need to set their config values for the mouse house. See\u00A0Configuration, above.\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/url]\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/13497]Stardew Valley Reimagined 3[/url]\n<br />✓\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6966]Community Center Reimagined[/url]\n<br />✗ Mods which replace or redesign the vanilla hats (Lacey's comments are written for the unmodified versions)\n<br />✗ Mods which add an interior map to the shack\n<br />\u00A0 \u00A0 \u00A0(incompatible vision; EWONTFIX)\n<br />✗\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/17291]Hat Shop Restoration[/url]\n<br />\u00A0 \u00A0 \u00A0(incompatible vision; EWONTFIX)\n<br />✗\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/17502]Fashion Mouse[/url]\n<br />\u00A0 \u00A0 \u00A0(incompatible vision; EWONTFIX)\n<br />✗\u00A0[url=https://nexusmods.com/stardewvalley/mods/6278]Unique Children[/url]\n<br />\u00A0 \u00A0 \u00A0This mod reimplements child sprites entirely, overriding my patch to provide custom sprites. EWONTFIX, manual compatibility only; see that mod's instructions.\n<br />\n<br />\n<br />[size=5][b][u]Other Questions You May Have[/u][/b][/size]\n<br />\n<br />[quote]What modded hats does Lacey have commentary for?[/quote]\n<br />The list of supported hat mods is [url=https://github.com/ichortower/HatMouseLacey/blob/main/docs/supported-hat-list.md]here[/url].\n<br />\n<br />[quote]I need help with &lt;problem&gt;. What should I do/Can you help?[/quote]\n<br />There is a\u00A0[url=https://github.com/ichortower/HatMouseLacey/blob/main/docs/help-spoilers.md]spoiler-filled help file[/url]. ([b]WARNING[/b]: spoilers!) It has some tips and information in it.\n<br />I also frequent\u00A0[url=https://discord.gg/stardewvalley]the Stardew Valley Discord server[/url].\n<br />\n<br />[quote]Is this compatible with &lt;mod name here&gt;?[/quote]\n<br />If it's not listed above, under\u00A0[b]Compatibility[/b], the default answer is \"probably, technically\". What that means is that I don't expect this mod to crash your game or break much of it, but there may be asset conflicts, weird behavior, or lore clashes.\n<br />\n<br />This even applies to mods above which I have listed as incompatible and/or EWONTFIX. Your game should still run and most things should still work. But it may be jarring, especially if those kinds of errors greatly bother you.\n<br />\n<br />If you find any compatibility problems with mods not listed above, I would be much obliged to you if you let me know.\n<br />\n<br />[quote]What about multiplayer?[/quote]\n<br />Everything works correctly, as far as I know. Special thanks to MriaMoonrose for helping out.\n<br />\n<br />[quote]kind of a weird decision to make the mouse datable[/quote]\n<br />That's not a question.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/18177",
+	"Version": "1.6.2",
+	"Updated": "2025-12-18T14:44:43+00:00",
+	"Downloads": [
+		{
+			"Id": 150886,
+			"Type": "Main",
+			"DisplayName": "HatMouseLacey-1.6.2",
+			"FileName": "HatMouseLacey-1.6.2-18177-1-6-2-1766069083.zip",
+			"Description": "Fixed a few bugs. See changelog for details.",
+			"Version": "1.6.2",
+			"SizeInBytes": 3126106,
+			"Uploaded": "2025-12-18T14:44:43+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.HatMouseLacey",
+					"DisplayName": "Hat Mouse Lacey",
+					"Type": "ContentPack",
+					"RelativePath": "HatMouseLacey",
+					"Manifest": {
+						"Name": "Hat Mouse Lacey",
+						"Description": "Makes the hat mouse a real NPC named Lacey.",
+						"Author": "ichortower",
+						"Version": "1.6.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ichortower.HatMouseLacey.Core",
+								"MinimumVersion": "1.6.2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "CopperSun.TruffulaTreesCP",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "DaisyNiko.EarthyRecolour",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "grapeponta.VibrantPastoralRecolor",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Lita.StarblueValley",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Acerbicon.Recolor",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Gweniaczek.WayBackPT",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Elle.TownBuildings",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "yri.ProjectYellogTownOverhaul",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "yri.ProjectYellogTownOverhaulPerformance",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "kaya.floralvalley",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:18177",
+							"GitHub:ichortower/HatMouseLacey"
+						],
+						"UniqueId": "ichortower.HatMouseLacey"
+					}
+				},
+				{
+					"Id": "ichortower.HatMouseLacey.Core",
+					"DisplayName": "Hat Mouse Lacey - Core",
+					"Type": "Smapi",
+					"RelativePath": "HatMouseLacey_Core",
+					"Manifest": {
+						"Name": "Hat Mouse Lacey - Core",
+						"Description": "Hat Mouse Lacey's C# component.",
+						"Author": "ichortower",
+						"Version": "1.6.2",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "HatMouseLacey.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:18177",
+							"GitHub:ichortower/HatMouseLacey"
+						],
+						"UniqueId": "ichortower.HatMouseLacey.Core"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537574,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342404865,
+		"UploaderId": 188952864,
+		"CategoryId": 24,
+		"Adult": false
+	}
+}

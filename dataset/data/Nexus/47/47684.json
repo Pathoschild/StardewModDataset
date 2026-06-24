@@ -1,0 +1,96 @@
+{
+	"Site": "Nexus",
+	"Id": 47684,
+	"Name": "Better Minecart Menu",
+	"Author": "sagittaerisage",
+	"Description": "[b]Stardew Valley Better Minecart Menu[/b]\n<br />\n<br />Have so many mods in your Stardew Valley that your minecart warp menu is unmanageable, with too many pages of destinations to navigate? Better Minecart Menu is a Stardew Valley SMAPI mod that aims to solve that exact issue to save you previous seconds each time you use the minecart.\n<br />\n<br />Things this mod provides:\n<br />[list]\n<br />[*]A tabbed interface for minecart warps, with each tab assigned to each network (e.g. Pelican Town, Outskirts, Ridgeside Valley, East Scarp, etc)[/*]\n<br />[*]A choice between tabs on the left side (more readable network names), and tabs on the top (better fit for smaller resolutions)[/*]\n<br />[*]Show unavailable destinations as disabled buttons so you know what you're working towards in the future (can disable in config)[/*]\n<br />[*](NEW in 1.0.0) Automatically finds the \"You are here\" destination since they are not always provided[/*]\n<br />[*]Ability to order your network tabs (have to edit config.json)[/*]\n<br />[*]Working integrations with major expansion and minecart mods[/*]\n<br />[*]Easy way to add more cross-mod integrations in the future[/*]\n<br />[/list]\n<br />Features more for mod developers (and cheaters... no judgement) - these are disabled by default:\n<br />[list]\n<br />[*]Can show \"unknown\" networks i.e. networks registered by other mods but not yet integrated into this mod. Generally unknown networks work fine, though they won't have a \"network name\" on their tab. This would include bus and train networks.[/*]\n<br />[*]Can show known but \"hidden\" networks, which are usually trains and busses networks from other mods e.g. you can take the train to Mount Vapius from any minecart etc.[/*]\n<br />[*]Force-allow disabled destination buttons to be clicked on, so players can warp regardless of whether or not they meet the condition to travel there via the minecart. Buttons will still *look* disabled, but they are in fact clickable. Use with caution as it might mess up the game state.[/*]\n<br />[/list][url=https://github.com/sagittaeri/StardewValleyMods/tree/main/BetterMinecartMenu/BetterMinecartMenu]Source code on Github[/url]\n<br />\n<br />\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/43861]StardewUI Continued[/url][/*]\n<br />[*](Optional)\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url][/*]\n<br />[/list]\n<br />\n<br />[b]Device Compatibility[/b]\n<br />[list]\n<br />[*]Tested with Stardew Valley 1.6 and SMAPI 4.5.2 on Linux/Mac/Windows/Cinderbox Android with Windows build[/*]\n<br />[*]Untested on native Android app (testers welcome)[/*]\n<br />[*]Works with keyboard, mouse, and most gamepads[/*]\n<br />[*]Untested on touchscreen inputs (testers welcome)[/*]\n<br />[/list]\n<br />[b]Cross-Mod Compatibility[/b]\n<br />[list]\n<br />[*](NEW in 1.0.0) Deep integration with [url=https://www.nexusmods.com/stardewvalley/mods/47476]Minecart Travel Menu[/url]\u00A0(thanks [url=https://www.nexusmods.com/stardewvalley/users/1757906]ringlord174[/url]\u00A0for providing the API)[/*]\n<br />[*]Works with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/3753]SVE[/url],\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/7286]Ridgeside[/url],\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5787]East Scarp[/url],\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/11111]Sunberry[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/9600]Visit Mount Vapius[/url]\u00A0(note on Mount Vapius - this mod modifies the minecart conditions slightly with permission from the author - please report to me if there are any issues because of it)[/*]\n<br />[*]Works with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/11881]Integrated Minecarts[/url],\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/23311]PolyCarts[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/24397]Better Things[/url]\u00A0(it's best to have only one of these at a time, but if you know what you're doing feel free to add all three)[/*]\n<br />[*]Works with my\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/47032]Smart Horses[/url]\u00A0mod (able to use the Better Minecart Menu while mounted with Smart Horses)[/*]\n<br />[*]Please report any cross-mod issues you find - I will try to fix them as soon as possible.[/*]\n<br />[/list]\n<br />[b]How to Add Cross Mod Support[/b]\n<br />There are three options to cross-mod support with your mod:\n<br />[list=1]\n<br />[*]Do it yourself in your own mod, using Content Patcher to perform EditData on the target:\u00A0[b]Sagittaeri.BetterMinecartMenu/MinecartNetworkEdits[/b]\n<br />For example:\n<br />[code]{\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"Sagittaeri.BetterMinecartMenu/MinecartNetworkEdits\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"CustomNetworkID\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"Custom Network Name\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"TabName\": \"CNN\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"RemoveNetwork\": false,\n<br />            \"RedirectNetwork\": \"\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"RemoveDestinations\": [],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"AppendDestinations\": [],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"OrderFromTop\": [\"CustomDestinationID.3\", \"CustomDestinationID.2\", \"CustomDestinationID.1\"],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"OrderFromBottom\": []\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />}[/code]This will add new metadata on a custom minecart network called \"CustomNetworkID\", with the following fields:\n<br />\n<br />[b]DisplayName[/b]\u00A0= Text that you see on the tab in side tab mode, and in the tab popup of the top tab mode[b]\n<br />TabName[/b]\u00A0= Text that you see on the tab in the top tab mode - recommend at most 3 letters[b]\n<br />RemoveNetwork[/b]\u00A0= Remove this network from the minecart UI (network still exists, it's just hidden, and can still be seen if users choose to \"show hidden networks\" in their config)\n<br />[b]RedirectNetwork[/b]\u00A0= When opening a minecart menu, redirect the input network ID to another\n<br />[b]RemoveDestinations[/b]\u00A0= List of destination IDs to remove from this network\u00A0[b]\n<br />AppendDestinations[/b]\u00A0= List of destination IDs to add to this network - note that this removes these destinations from all other networks[b]\n<br />OrderFromTop[/b]\u00A0= List of destination IDs to order from the top, if they exist[b]\n<br />OrderFromBottom[/b]\u00A0= List of destination IDs to order from the bottom, if they exist\n<br />\n<br />If all you want to do is to add a localisable name to your network, do this:\n<br />[code]{\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"Sagittaeri.BetterMinecartMenu/MinecartNetworkEdits\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"CustomNetworkID\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"{{i18n: Network.CustomNetworkID}}\"\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"TabName\": \"{{i18n: Network.CustomNetworkID.Tab}}\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />}[/code]This will register the display name and tab name from \"Network.CustomNetworkID\" and \"Network.CustomNetworkID.Tab\" localisation keys respectively. Feel free to browse some examples in my\u00A0[url=https://github.com/sagittaeri/StardewValleyMods/tree/main/BetterMinecartMenu/BetterMinecartMenu/BetterMinecartMenu_CP]source code on Github[/url].\n<br />[/*]\n<br />[*]Create the CP as above but instead of running it in your own mod, have it run on mine for whatever reason. If that's the route you want to take, fork my\u00A0[url=https://github.com/sagittaeri/StardewValleyMods/tree/main/BetterMinecartMenu/BetterMinecartMenu/BetterMinecartMenu_CP]source code on Github[/url]\u00A0and then submit a PR when you're done, and I'll merge it in as soon as I've tested them.\n<br />[/*]\n<br />[*]Ask me to integrate it for your mod. If you do so, contact me in this forum on in Discord.[/*]\n<br />[/list]\n<br />\n<br />[b]Installation[/b]\n<br />\n<br />Follow the usual installation procedure for SMAPI mods:\n<br />\n<br />[list=1]\n<br />[*]Install\u00A0[url=https://smapi.io/]SMAPI[/url][/*]\n<br />[*]Download the latest release of this mod and unzip it into the `Mods` directory[/*]\n<br />[*]Run the game using SMAPI[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47684",
+	"Version": "1.0.0",
+	"Updated": "2026-06-20T18:13:22+00:00",
+	"Downloads": [
+		{
+			"Id": 171935,
+			"Type": "Main",
+			"DisplayName": "BetterMinecartMenu 1.0.0",
+			"FileName": "f7/27/fd/f727fdf8-971e-4498-a8c7-f5f3b97b8ac9",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 50097,
+			"Uploaded": "2026-06-20T18:13:22+00:00",
+			"Mods": [
+				{
+					"Id": "Sagittaeri.BetterMinecartMenu",
+					"DisplayName": "Better Minecart Menu",
+					"Type": "Smapi",
+					"RelativePath": "BetterMinecartMenu\\BetterMinecartMenu",
+					"Manifest": {
+						"Name": "Better Minecart Menu",
+						"Description": "Replaces the Minecart warp menu with a tabbed interface to switch between networks. Works well on gamepad.",
+						"Author": "Sagittaeri",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "BetterMinecartMenu.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ringlord174.MinecartTravelMenu",
+								"MinimumVersion": "1.1.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:47684"
+						],
+						"UniqueId": "Sagittaeri.BetterMinecartMenu"
+					}
+				},
+				{
+					"Id": "Sagittaeri.BetterMinecartMenu.CP",
+					"DisplayName": "Better Minecart Menu (CP)",
+					"Type": "ContentPack",
+					"RelativePath": "BetterMinecartMenu\\BetterMinecartMenu_CP",
+					"Manifest": {
+						"Name": "Better Minecart Menu (CP)",
+						"Description": "Replaces the Minecart warp menu with a tabbed interface to switch between networks. Works well on gamepad.",
+						"Author": "Sagittaeri",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Lumisteria.MtVapius",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:47684"
+						],
+						"UniqueId": "Sagittaeri.BetterMinecartMenu.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558623,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434372,
+		"UploaderId": 162989888,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

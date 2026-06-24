@@ -1,0 +1,163 @@
+{
+	"Site": "Nexus",
+	"Id": 14428,
+	"Name": "Colored Crystalariums",
+	"Author": "sophiesalacia",
+	"AuthorLabel": "sophie",
+	"Description": "[center]\uFEFF[img]https://imgur.com/80EBfdr.png[/img][/center]\n<br />[i][center]by sophie[/center]\n<br />\n<br />\n<br />\n<br />[/i][img]https://imgur.com/txXAhJ4.png[/img]\n<br />\n<br />[list=1]\n<br />[*][size=3][url=https://smapi.io]Install the latest version of SMAPI[/url].[/size]\n<br />[*][size=3]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].[/size]\n<br />[*][size=3]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />[img]https://imgur.com/sDABBoV.png[/img]\n<br />\n<br />[list]\n<br />[*][size=3]Works with Stardew Valley 1.5 on Windows. Linux/Mac have not been tested, but[/size]\n<br />[size=3] should work.Please report any issues you encounter.[/size][*][size=3]Works in single player and multiplayer. Multiplayer has not been extensively [/size]\n<br />[size=3]tested, so please report any issues you encounter.\n<br />[/size][/list][list]\n<br />[*][size=3]Not compatible with AT yet - only use one crystalarium texture at a time if you don't want there to be issues.[/size]\n<br />[*][size=3]There is an optional file included for compatibility if you use [url=https://www.nexusmods.com/stardewvalley/mods/5513]Gwen's Medieval Craftables[/url]\uFEFF.[/size]\n<br />[/list]\n<br />[img]https://imgur.com/gehBk46.png[/img]\n<br />\n<br />[list]\n<br />[*]There is one config option. \"Draw Simplified Gem Bubbles\" removes the speech-bubble-like underlay that hovers over the crystalarium when it is finished, leaving just the gem floating above. This defaults to False, drawing the bubbles in the vanilla fashion.\n<br />[/list][list]\n<br />[*]See the optional file for an example of how to modify the overlay to work with any crystalarium retexture. Basically you just need to point [font=Courier New]sophie.ColoredCrystalariums/Overlay [font=Arial]to the overlay file you wish to use. The overlay works as follows: transparent pixels are ignored, any other pixels are colored according to the gem color.[/font][/font]\n<br />[*][font=Arial]Gem colors can be customized as well - to do so, add an entry to [font=Courier New]sophie.ColoredCrystalariums/ColorOverrides[font=Arial] where the key is the object ID [/font][/font][/font]\uFEFF\uFEFFand the value is a string of RGB values in hex format - i.e. FFFFFF for white, FF0000 for Red, and so on. Here is an example patch which colors Diamond-filled crystalariums yellow:\n<br />[code]   \uFEFF{\n<br />   \uFEFF   \uFEFF\uFEFF\"Action\": \"EditData\",\n<br />   \uFEFF   \uFEFF\"Target\": \"sophie.ColoredCrystalariums/ColorOverrides\",\n<br />   \uFEFF   \uFEFF\"Entries\": {\n<br />   \uFEFF   \uFEFF   \uFEFF\"72\": \"FFFF00\"   \uFEFF// sets Diamond (id 72) to hex color #FFFF00\n<br />   \uFEFF   \uFEFF}\n<br />   \uFEFF}\n<br />[/code][/list][list]\n<br />[*]If this value is not provided, the mod will calculate the average color of the sprite, meaning it should work fine with gem retextures.\n<br />[/list]\n<br />[img]https://imgur.com/YimGDMd.png[/img]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14416]Splash Text[/url]\uFEFF - adds a little splash of fun to the title menu\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14377]Lasting Conversation Topics[/url]\uFEFF -\u00A0 NPCs don't immediately forget what you've done\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/9659]Stats As Tokens[/url]\uFEFF - adds additional tokens for use with Content Patcher mods\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/9444]Configurable Bundle Costs[/url]\uFEFF - makes the Vault/Joja bundle costs configurable\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8690]Configurable Special Orders Unlock[/url]\uFEFF - allows you to choose when the special orders board unlocks\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/8450]Early Community Upgrades[/url]\uFEFF - allows you to unlock the community upgrades earlier\n<br />[/list]\n<br />   \uFEFFSource code available [url=https://github.com/sophiesalacia/StardewMods]here[/url]\uFEFF.\n<br />\n<br />[img]https://imgur.com/5o4ZcBi.png[/img]\uFEFF\n<br />\n<br />[list]\n<br />[*]yo[b]u[/b] k[b]n[/b]ow who you [b]a[/b]re ;)\n<br />[*][url=https://www.nexusmods.com/users/95265773]skellady[/url]\uFEFF ([url=https://ko-fi.com/skellady]Ko-fi[/url]\uFEFF) for helping me put together this beautiful page\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14428",
+	"Version": "0.1.0",
+	"Updated": "2022-11-12T16:33:48+00:00",
+	"Downloads": [
+		{
+			"Id": 62608,
+			"Type": "Main",
+			"DisplayName": "Gwen's Medieval Craftables Compat",
+			"FileName": "Gwen's Medieval Craftables Compat-14428-0-1-0-1668116201.zip",
+			"Description": "Adds compatibility for Gwen's Medieval Craftables: https://www.nexusmods.com/stardewvalley/mods/5513",
+			"Version": "0.1.0",
+			"SizeInBytes": 1737,
+			"Uploaded": "2022-11-10T21:36:41+00:00",
+			"Mods": [
+				{
+					"Id": "sophie.ColoredCrystalariumsMedievalCompat",
+					"DisplayName": "Colored Crystalariums Medieval Compat",
+					"Type": "ContentPack",
+					"RelativePath": "ColoredCrystalariums - Gwens Compat",
+					"Manifest": {
+						"Name": "Colored Crystalariums Medieval Compat",
+						"Description": "Compatibility patch for Colored Crystalariums + Gwen's Medieval Craftables",
+						"Author": "sophie",
+						"Version": "0.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.24.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sophie.ColoredCrystalariumsMedievalCompat"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449296,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62609,
+			"Type": "Main",
+			"DisplayName": "Colored Crystalariums",
+			"FileName": "Colored Crystalariums-14428-0-1-0-1668116385.zip",
+			"Description": "Sets the crystalarium color depending on the gem inside.",
+			"Version": "0.1.0",
+			"SizeInBytes": 34133,
+			"Uploaded": "2022-11-10T21:39:45+00:00",
+			"Mods": [
+				{
+					"Id": "sophie.ColoredCrystalariums",
+					"DisplayName": "Colored Crystalariums",
+					"Type": "Smapi",
+					"RelativePath": "ColoredCrystalariums",
+					"Manifest": {
+						"Name": "Colored Crystalariums",
+						"Description": "Crystalariums change color depending on what gem is inside.",
+						"Author": "sophie",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "ColoredCrystalariums.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14428"
+						],
+						"UniqueId": "sophie.ColoredCrystalariums"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449297,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62620,
+			"Type": "Main",
+			"DisplayName": "Primitive Artisan Equipment Compat",
+			"FileName": "Primitive Artisan Equipment Compat-14428-0-1-0-1668131029.zip",
+			"Description": "Adds compatibility for Primitive Artisan Equipment: https://www.nexusmods.com/stardewvalley/mods/4090",
+			"Version": "0.1.0",
+			"SizeInBytes": 1716,
+			"Uploaded": "2022-11-11T01:43:49+00:00",
+			"Mods": [
+				{
+					"Id": "sophie.ColoredCrystalariumsPrimitiveCompat",
+					"DisplayName": "Colored Crystalariums Primitive Compat",
+					"Type": "ContentPack",
+					"RelativePath": "ColoredCrystalariums - Primitive Compat",
+					"Manifest": {
+						"Name": "Colored Crystalariums Primitive Compat",
+						"Description": "Compatibility patch for Colored Crystalariums + Primitive Artisan Equipment",
+						"Author": "sophie",
+						"Version": "0.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.24.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sophie.ColoredCrystalariumsPrimitiveCompat"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449308,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62684,
+			"Type": "Main",
+			"DisplayName": "Eden's Cottagecore Crystalarium Compat",
+			"FileName": "Eden's Cottagecore Crystalarium Compat-14428-0-1-0-1668270828.zip",
+			"Description": "Adds compatibility for Eden's Cottagecore Crystalarium: https://www.nexusmods.com/stardewvalley/mods/7885",
+			"Version": "0.1.0",
+			"SizeInBytes": 2251,
+			"Uploaded": "2022-11-12T16:33:48+00:00",
+			"Mods": [
+				{
+					"Id": "sophie.ColoredCrystalariumsEdensCompat",
+					"DisplayName": "Colored Crystalariums Eden's Compat",
+					"Type": "ContentPack",
+					"RelativePath": "ColoredCrystalariums - Edens Compat",
+					"Manifest": {
+						"Name": "Colored Crystalariums Eden's Compat",
+						"Description": "Compatibility patch for Colored Crystalariums + Eden's Crystalarium",
+						"Author": "sophie",
+						"Version": "0.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.24.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sophie.ColoredCrystalariumsEdensCompat"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449372,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401116,
+		"UploaderId": 6976914,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 14712,
+	"Name": "Spoilage",
+	"Author": "aedenthorn",
+	"Description": "[b][size=5]Description[/size][/b]\n<br />\n<br />This mod implements a simple spoilage system in Stardew Valley, making preserved items and fridges more meaningful, and curbing some of the more extreme hording tendencies. Also, it just makes sense not to be able to keep raw fish in your backpack for months.\n<br />\n<br />Items that have spoiled are by default converted into trash with tags to make it look green and indicate what it used to be.\n<br />\n<br />\n<br />[b][size=5]Deterioration[/size][/b]\n<br />\n<br />Each perishable category has separate \"days to spoil\" settings. The default values are:\n<br />\n<br />[list]\n<br />[*]Fruits: 5\n<br />[*]Vegetables: 5\n<br />[*]Greens: 4\n<br />[*]Flowers: 3\n<br />[*]Egg: 3\n<br />[*]Milk: 2\n<br />[*]Cooked: 2\n<br />[*]Meat: 1\n<br />[*]Fish: 1\n<br />[/list]\n<br />Greens is used for forage items.\n<br />\n<br />Items in fridges will deteriorate at a separate rate (default\u00A0[b]0.1x[/b]).\n<br />\n<br />Items in stone chests will deteriorate at a separate rate (default\u00A0[b]0.5x[/b]).\n<br />\n<br />Items in the player's inventory will deteriorate at a separate rate (default [b]1.5x[/b]).\n<br />\n<br />Deterioration is calculated in the morning [i][b]after[/b] [/i]saving, so if you make a mistake and something spoils unexpectedly, you can just change the settings and reload the save.\n<br />\n<br />\n<br />[b][size=5]Quality[/size][/b]\n<br />\n<br />By default, items that have \"quality\" stars will lose one quality point each time they would otherwise spoil, resetting their \"age\" back to 0. Iridium products have 4 quality points, so it will take two spoil cycles for them to reach gold star quality (2).\n<br />\n<br />You can turn off quality reduction and / or spoilage in the config.\n<br />\n<br />\n<br />[b][size=5]Exceptions[/size][/b]\n<br />\n<br />Some items may not neatly fall into their spoilage category, so you can set exceptions in the config. E.g.:\n<br />\n<br />[code]\uFEFF   \uFEFF\"CustomSpoilage\": {\n<br />      \"Sap\": {\n<br />         \"age\": 0,\n<br />         \"category\": 9999,\n<br />         \"spoiled\": null\n<br />      }\n<br />   }\n<br />[/code][b]\n<br />[/b]means Sap will never spoil even though it is in the Greens category for some reason. Setting the age higher than 0 gives any item a custom number of days to spoil of course. You can also use the ParentSheetIndex value instead of the name.\n<br />\n<br />If you change \"category\" to something other than 9999 that item will follow the setting for that category instead of the number at \"age\".\n<br />\n<br />Category numbers are:\n<br />\n<br />GreensCategory = -81\n<br />VegetableCategory = -75\n<br />FishCategory = -4\n<br />EggCategory = -5\n<br />MilkCategory = -6\n<br />CookingCategory = -7\n<br />FruitsCategory = -79\n<br />flowersCategory = -80\n<br />meatCategory = -14\n<br />\n<br />If you change \"spoiled\" to either the name or index of a valid object, this item will turn into that sort of item when it spoils instead of trash. (Omit the \"age\" field if you just want to change \"spoiled\").\n<br />\n<br />There is also a dictionary at\u00A0[b]aedenthorn.Spoilage/dictionary[/b] available for mods to add their own exceptions using Content Patcher. E.g.:\n<br />\n<br />[code]{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.Spoilage/dictionary\",\n<br />         \"Entries\": {\n<br />            \"Sap\": {\n<br />      \uFEFF   \uFEFF   \uFEFF   \uFEFF\"age\": 0,\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"category\": 9999,\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"spoiled\": null      \n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF}\n<br />         }\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />\n<br />[size=5][b]Display\n<br />[/b][/size]\n<br />By default, the age and days left are shown in item descriptions, and spoiled items will be marked as such. Spoiled items also have their ParentSheetIndex changed to\u00A0168 (the index for Trash) and their quality set to -4, so the game and other mods don't mistake them for unspoiled goods. Spoiled items' trash sprite will be colored green in menus.\n<br />\n<br />\n<br />[b][size=5]API[/size][/b]\n<br />\n<br />This mod only finds items in placed chests and directly in the player inventory. Items in modded non-chest-type containers will probably not be found. Mods can trigger aging and get info about items using the following SMAPI mod API interface:\n<br />\n<br />[code]\uFEFF\u00A0 \u00A0 public interface ISpoilageAPI\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public void SpoilItems(IList&lt;Item&gt; items, float mult = 1);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public void SpoilFridgeItems(IList&lt;Item&gt; items);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public void SpoilPlayerItems(IList&lt;Item&gt; items);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public string SpoiledItem(Item item);\n<br />\u00A0 \u00A0 \u00A0 \u00A0 public float ItemAge(Item item);\n<br />\u00A0 \u00A0 }\n<br />[/code]\n<br />[b]SpoiledItem[/b]\u00A0returns the original name of the spoiled item if it is indeed spoiled, otherwise returns null.\n<br />ItemAge returns the item age in days if it has aged as a spoilable item, otherwise returns -1.\n<br />\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can customize this mod by editing the config file or using\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14712",
+	"Version": "0.4.1",
+	"Updated": "2025-09-27T08:45:23+00:00",
+	"Downloads": [
+		{
+			"Id": 143907,
+			"Type": "Main",
+			"DisplayName": "Spoilage",
+			"FileName": "Spoilage-14712-0-4-1-1758962723.zip",
+			"Description": "Changes:\n<br />\n<br />Update for 1.6\n<br />Added reduced spoilage for stone chests",
+			"Version": "0.4.1",
+			"SizeInBytes": 22854,
+			"Uploaded": "2025-09-27T08:45:23+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.Spoilage",
+					"DisplayName": "Spoilage",
+					"Type": "Smapi",
+					"RelativePath": "Spoilage",
+					"Manifest": {
+						"Name": "Spoilage",
+						"Description": "Spoilage.",
+						"Author": "aedenthorn",
+						"Version": "0.4.1",
+						"EntryDll": "Spoilage.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14712"
+						],
+						"UniqueId": "aedenthorn.Spoilage"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530595,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401400,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

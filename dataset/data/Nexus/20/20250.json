@@ -1,0 +1,95 @@
+{
+	"Site": "Nexus",
+	"Id": 20250,
+	"Name": "SAML",
+	"Author": "MindMeltMax",
+	"Description": "[size=2]SAML is a UI Framework built on top of the game's menu system using its own easily extensible elements.[/size]\n<br />[size=2][b](Please keep in mind this is an alpha version of the mod, things are subject to change)\n<br />[/b][/size][b](Also keep in mind, that this mod requires at least the 1.6 alpha version to run, any version after September 2023 should work)[/b]\n<br />\n<br />[size=2]For a full list of current elements with a short description, please view\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/1843]this article[/url][/size]\n<br />\n<br />[size=5][b]How to install :\u00A0[/b][/size]\n<br />1. Install\u00A0[url=http://stardewvalleywiki.com/Modding:Installing_SMAPI]Smapi[/url]\uFEFF\n<br />2. Unzip the file and place it in the mod folder\n<br />\n<br />[size=5][b]How to start :\u00A0\n<br />[/b][/size](for a full example, see the optional example mod code)\n<br />1. Install the mod\n<br />2. [url=https://stardewvalleywiki.com/Modding:Modder_Guide/Get_Started#Create_the_project]Create a new project[/url]\u00A0(just make sure to target .NET 6 instead of .NET 5)[url=https://stardewvalleywiki.com/Modding:Modder_Guide/Get_Started#Create_the_project]\n<br />[/url]3. Open the .csproj file\n<br />4. \uFEFFAdd the following code block inside the &lt;Project&gt; tag\n<br />[code]&lt;PropertyGroup&gt;\n<br />   \uFEFF&lt;GamePath&gt;(Place the path to your game folder here)&lt;/GamePath&gt;\n<br />&lt;/PropertyGroup&gt;\n<br />\n<br />&lt;ItemGroup&gt;\n<br />   \uFEFF&lt;Reference Include=\"SAML\"&gt;\n<br />       \uFEFF&lt;HintPath&gt;$(GamePath)&#92;Mods&#92;SAML&#92;SAML.dll&lt;/HintPath&gt;\n<br />       \uFEFF&lt;Private&gt;false&lt;/Private&gt;\n<br />   \uFEFF&lt;/Reference&gt;\n<br />&lt;/ItemGroup&gt;\n<br />[/code]5. Create a new class file called MyNewMenu.cs\n<br />6. Add \" : Menu\"\uFEFF after \"class MyNewMenu\"\n<br />7. Add a few elements, make sure to add them all to the Elements list of the menu\n<br />8. In the ModEntry.cs file, create a ButtonPressed event like so :\n<br />[code]public override void Entry(IModHelper helper)\n<br />{\n<br />   \uFEFFHelper.Events.Input.ButtonPressed += onButtonDown;\n<br />}\n<br />\n<br />private void onButtonDown(object? sender, ButtonPressedEventArgs e)\n<br />{\n<br />   \uFEFFif (!Context.CanPlayerMove) //Make sure the save has been loaded and no events / other menus are active\n<br />       \uFEFFreturn;\n<br />   \uFEFFif (e.Button == SButton.OemQuotes) //The \" key\n<br />       \uFEFFGame1.activeClickableMenu = new MyNewMenu();\n<br />}\n<br />[/code]9. Run the project\n<br />\n<br />Official documentation is in the works\n<br />\n<br />[url=https://github.com/MindMeltMax/SAML/][Source][/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/20250",
+	"Version": "1.0.0-alpha.1",
+	"Updated": "2024-02-20T13:22:21+00:00",
+	"Downloads": [
+		{
+			"Id": 81607,
+			"Type": "Main",
+			"DisplayName": "SAML",
+			"FileName": "SAML-20250-1-0-0-alpha-1-1708435190.zip",
+			"Description": "(Please keep in mind this is an alpha version of the mod, things are subject to change)\n<br />(Also keep in mind, that this mod requires at least the 1.6 alpha version to run, any version after September 2023 should work)",
+			"Version": "1.0.0-alpha.1",
+			"SizeInBytes": 52525,
+			"Uploaded": "2024-02-20T13:19:50+00:00",
+			"Mods": [
+				{
+					"Id": "MindMeltMax.SAML",
+					"DisplayName": "SAML",
+					"Type": "Smapi",
+					"RelativePath": "SAML",
+					"Manifest": {
+						"Name": "SAML",
+						"Description": "A simple, extensible UI Framework",
+						"Author": "MindMeltMax",
+						"Version": "1.0.0-alpha.1",
+						"MinimumApiVersion": "4.0.0-alpha.20230925",
+						"EntryDll": "SAML.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"nexus:20250"
+						],
+						"UniqueId": "MindMeltMax.SAML"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468295,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 81608,
+			"Type": "Optional",
+			"DisplayName": "SAML Test",
+			"FileName": "SAML Test-20250-1-0-0-alpha-1-1708435341.zip",
+			"Description": "A display of the included elements used for testing and demonstration as seen in the promo image\n<br /><br />@Test",
+			"Version": "1.0.0-alpha.1",
+			"SizeInBytes": 11263,
+			"Uploaded": "2024-02-20T13:22:21+00:00",
+			"Mods": [
+				{
+					"Id": "MindMeltMax.SAMLTest",
+					"DisplayName": "SAMLTest",
+					"Type": "Smapi",
+					"RelativePath": "SAMLTest",
+					"Manifest": {
+						"Name": "SAMLTest",
+						"Description": "A simple, extensible UI Framework test",
+						"Author": "MindMeltMax",
+						"Version": "1.0.0-alpha.1",
+						"MinimumApiVersion": "4.0.0-alpha.20230925",
+						"EntryDll": "SAMLTest.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "MindMeltMax.SAML",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:20250@Test"
+						],
+						"UniqueId": "MindMeltMax.SAMLTest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468296,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342406938,
+		"UploaderId": 62752131,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

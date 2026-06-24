@@ -1,0 +1,62 @@
+{
+	"Site": "Nexus",
+	"Id": 27472,
+	"Name": "YAML Adapter for Content Patcher",
+	"Author": "linkoidDev",
+	"AuthorLabel": "linkoid",
+	"Description": "[size=6]YAML Adapter for Content Patcher[/size]\n<br />\n<br />YAML Adapter for Content Patcher is a framework that allows creating [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] content packs using human-friendly [url=https://yaml.org/]YAML[/url] instead of JSON.\n<br />\n<br />\n<br />[size=4]Installation\n<br />[/size]\n<br />[list=1][*]Install the [url=https://smapi.io/]latest version of SMAPI[/url].\n<br />[*]Install the [url=https://www.nexusmods.com/stardewvalley/mods/1915]latest version of Content Patcher[/url].\n<br />[*]Install this mod from [url=https://www.nexusmods.com/stardewvalley/mods/0]Nexus Mods[/url].\n<br />[*]Unzip any YACP content packs into Mods to install them.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]For Mod Authors[/size][size=4]\n<br />[/size]\n<br />YACP works exactly the same as Content Patcher. The only things that change are the use of [b][u]content.yaml[/u][/b] files instead of [b]content.json[/b], and the YAML syntax.\n<br />\n<br />For details on using Content Patcher, refer to the [url=https://github.com/Pathoschild/StardewMods/blob/stable/ContentPatcher/docs/author-guide.md]Content Patcher Author Guide[/url].\n<br />For details on using YAML with Content Patcher, refer to the example [url=https://github.dev/linkoid/Stardew.YetAnother.ContentPatcher/blob/main/YetAnother.ContentPatcher.Tests.Content/content.yaml]content.yaml[/url] file.\n<br />\n<br />\n<br />[size=4]Migrating from JSON[/size]\n<br />\n<br />An existing [u]content.json[/u] file can quickly be converted to a [u]content.yaml[/u] file\n<br />using [url=https://linkoid.github.io/Stardew.YetAnother.ContentPatcher/converter]YACP's online JSON converter[/url]\uFEFF.\n<br />\n<br />\n<br />[size=4]Examples[/size]\n<br />\n<br />Example mod file structure:\n<br />[quote]\uD83D\uDCC1 Mods/\n<br />   \uFEFF\uD83D\uDCC1 [YACP] YourModName/\n<br />   \uFEFF   \uFEFF\uD83D\uDDCE content.yaml\n<br />   \uFEFF   \uFEFF\uD83D\uDDCE manifest.json\n<br />   \uFEFF   \uFEFF\uD83D\uDCC1 assets/\n<br />   \uFEFF   \uFEFF   \uFEFF\uD83D\uDDCE example.png[/quote]\n<br />Example content.yaml file:\n<br />[quote][font=Courier New][color=#9fc5e8]Format[/color]: [color=#b6d7a8]2.3.0[/color]\n<br />[color=#9fc5e8]Changes[/color]:\n<br />- [color=#9fc5e8]Action[/color]: [color=#f9cb9c]Load[/color]\n<br />\u00A0 [color=#9fc5e8]Target[/color]: [color=#f9cb9c]Portraits/Abigail[/color]\n<br />\u00A0 [color=#9fc5e8]FromFile[/color]: [color=#f9cb9c]\"assets/example.png\"[/color][/font][/quote]\n<br />\n<br />[size=4]Links[/size]\n<br />[list]\n<br />[*][url=https://github.com/linkoid/Stardew.YetAnother.ContentPatcher]GitHub[/url]\n<br />[*][url=https://linkoid.github.io/Stardew.YetAnother.ContentPatcher/converter]JSON to YAML Converter[/url]\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/27472",
+	"Version": "0.2.0",
+	"Updated": "2024-09-02T21:33:06+00:00",
+	"Downloads": [
+		{
+			"Id": 110537,
+			"Type": "Main",
+			"DisplayName": "YetAnother.ContentPatcher.zip",
+			"FileName": "YetAnother.ContentPatcher.zip-27472-0-2-0-1725312786.zip",
+			"Description": "",
+			"Version": "0.2.0",
+			"SizeInBytes": 159278,
+			"Uploaded": "2024-09-02T21:33:06+00:00",
+			"Mods": [
+				{
+					"Id": "Linkoid.YetAnother.ContentPatcher",
+					"DisplayName": "Linkoid.Stardew.YetAnotherContentPatcher",
+					"Type": "Smapi",
+					"RelativePath": "YetAnother.ContentPatcher",
+					"Manifest": {
+						"Name": "Linkoid.Stardew.YetAnotherContentPatcher",
+						"Description": null,
+						"Author": null,
+						"Version": "0.2.0",
+						"EntryDll": "Linkoid.Stardew.YetAnother.ContentPatcher.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:27472"
+						],
+						"UniqueId": "Linkoid.YetAnother.ContentPatcher",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342497225,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414160,
+		"UploaderId": 221329755,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

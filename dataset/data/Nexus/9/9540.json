@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 9540,
+	"Name": "Unique Children Talk",
+	"Author": "Shaklin",
+	"Description": "[size=5][center]Unique Children Talk[/center][/size]\n<br />\n<br />Dialogues for Children.\n<br />Works in Singleplayer and Multiplayer.\n<br />You [u]don't[/u] need my other mod 'Unique Children', it also works with vanilla children!\n<br />(or any other children mods (as long as they don't turn children into npcs))\n<br />\n<br />Start the Game and a new file 'Config.json' will be create.\n<br />Open it and edit it like you want:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"language\": \"en\",\n<br />\u00A0 \"relationname_Mother\": \"Mum\",\n<br />\u00A0 \"relationname_Father\": \"Dad\",\n<br />\u00A0 \"relationname_Aunt\": \"Aunt\",\n<br />\u00A0 \"relationname_Uncle\": \"Uncle\",\n<br />\u00A0 \"relationname_Spouse_Mother\": \"Mum\",\n<br />\u00A0 \"relationname_Spouse_Father\": \"Dad\"\n<br />}\n<br />[/code]\n<br />You can edit how the children should call you.\n<br />\n<br />\"relationname_Mother\" = you as female\n<br />\"relationname_Father\" = you as male\n<br />\"relationname_Aunt\" = other players as female\n<br />\"relationname_Uncle\" = other players as male\n<br />\"relationname_Spouse_Mother\" = your female spouse\n<br />\"relationname_Spouse_Father\" = your male spouse\n<br />\n<br />You also can change the language.\n<br />This mod already contains english (en) and german (de).\n<br />\n<br />For more language please look under 'Description/Translations\uFEFF'\uFEFF.\n<br />\n<br />The childs have 2 dialogues each day (before 12:00, after 12:00) &amp; extra dialogues (when they are in bed, when they sit).\n<br />They also have their own dialogues for every festival.\n<br />\n<br />\n<br />[size=4][u]Portraits[/u]:[/size]\n<br />You don't need to do anything else. The mod use automatically the children sprites for the portraits.\n<br />But if you want your own portraits images, then just place your png file(s) to the assets/Portrait folder and rename it like your child.\n<br />\n<br />For example:\n<br />assets/Portraits/Childname.png\n<br />\n<br />Or for different clothes (optional):\n<br />Childname.png (for day 1,5,9,13,17,21,24)\n<br />Childname2.png (for day 2,6,10,14,18,22,26)\n<br />Childname3.png (for day 3,7,11,15,19,23,27)\n<br />Childname4.png (for day\u00A04,8,12,16,20,24,28) \n<br />\n<br />Optional for specific season:\n<br />(for example winter)\n<br />Childname_Winter.png\n<br />Childname_Winter2.png\n<br />Childname_Winter3.png\n<br />Childname_Winter4.png\n<br />\n<br />Optional for a specific day for all seasons:\n<br />(for example 25. day of the month)\n<br />Childname25.png\n<br />\n<br />Optional for a specific day for a specific season:\n<br />(for example 25. day of winter)\n<br />Childname_Winter25.png\n<br />\n<br />(if you have pngs for all seasons and for a specific season, the mod will prefer the season png)\n<br />\n<br />Or you can use any other Portrait Mods.\n<br />For HD Portraits use 'Portraiture':\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/999]https://www.nexusmods.com/stardewvalley/mods/999[/url]\n<br />(Just create a new folder in Mods&#92;Portraiture&#92;Portraits&#92; (for example\u00A0Mods&#92;Portraiture&#92;Portraits&#92;NameOftheChild&#92;) and put the Portrait\n<br /> png in it.\n<br />Ingame you can switch between vanilla and HD with the key \"p\")\n<br />\n<br />\n<br />[u][size=4]Dialogues Modders:[/size]\n<br />[/u]\n<br />2 options:\n<br />Either create a new language folder in assets/Dialogues with the translated dialogs.\n<br />Or with Content Patcher. To do this, download the example file under FILES/OPTIONAL FILES and change the files.[u]\n<br />[/u]\n<br />more information:\n<br />You can use this Keywords in the dialog text files:\n<br />\n<br />§RelationName (it will use automatically the right relationname, depends on who talk with the child)\n<br />§RelationSpouse (it uses relationname_Spouse_Mother / relationname_Spouse_Father)\n<br />§RelationMother (it uses relationname_Mother)\n<br />§RelationFather (it usse relationname_Father)\n<br />§RelationAunt (it uses relationname_Aunt)\n<br />§RelationUncle (it uses relationname_Uncle)\n<br />\n<br />And if you put names in brackets (e.g. [Penny] it will automatically detect if the children are related to that person or not.\n<br />If the children is not related, the game will show \"Penny\" in the dialog.\n<br />If related or Penny is your spouse, \"Penny\" will be replaced with the appropriate form of address (your children will call Penny as Mum).\n<br />\n<br />You can even write:\n<br />[Ms. Penny]\n<br />Important is a space between the words and the name must be in the last position.\n<br />\n<br />\n<br />Dialogs can now be written explicitly for specific mods. Just write a # and the UniqueID of the required mod.\n<br />Example:\n<br />Vanilla:\n<br />\"spring_Mon_morning_1\": \"Good morning §RelationName!\",\n<br />\n<br />Only if SVE installed:\n<br />\"spring_Mon_morning_1#FlashShifter.SVECode\": \"Good morning SVE!\",\n<br />---------------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=2]Recommended dialogue mod for more variety ([b]Immersive Unique Children[/b] Talk by [url=https://www.nexusmods.com/stardewvalley/users/59699651][b]xiaoleiwen[/b][/url]):\n<br />[/size][size=2](new dialog files only) [url=https://www.nexusmods.com/stardewvalley/mods/17054]https://www.nexusmods.com/stardewvalley/mods/17054[/url][/size]\n<br />\n<br />[size=2]If you want the same children sprites as in the pictures, then look at my other mod:\n<br />[/size][size=2](new sprites only) [url=https://www.nexusmods.com/stardewvalley/mods/6278]https://www.nexusmods.com/stardewvalley/mods/6278[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9540",
+	"Version": "2.9",
+	"Updated": "2025-07-23T22:49:27+00:00",
+	"Downloads": [
+		{
+			"Id": 138023,
+			"Type": "Main",
+			"DisplayName": "Unique Children Talk 2.9",
+			"FileName": "Unique Children Talk 2.9-9540-2-9-1753310967.zip",
+			"Description": "-Fixed dialogue issue with LittleNPCs at Festivals",
+			"Version": "2.9",
+			"SizeInBytes": 179756,
+			"Uploaded": "2025-07-23T22:49:27+00:00",
+			"Mods": [
+				{
+					"Id": "shaklin.uniquechildrentalk",
+					"DisplayName": "Unique Children Talk",
+					"Type": "Smapi",
+					"RelativePath": "UniqueChildren Talk",
+					"Manifest": {
+						"Name": "Unique Children Talk",
+						"Description": "Talk to your Children",
+						"Author": "Shaklin",
+						"Version": "2.9.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "UniqueChildren Talk.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 9540"
+						],
+						"UniqueId": "shaklin.uniquechildrentalk"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342524711,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342396228,
+		"UploaderId": 693835,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

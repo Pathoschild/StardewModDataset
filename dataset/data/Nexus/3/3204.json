@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 3204,
+	"Name": "Refugee NPCs",
+	"Author": "delfargo",
+	"AuthorLabel": "DelFargo aka Acidia",
+	"Description": "The overall goal is to add an expansion to the east of town that will hold a Refugee Center that will always need more help from the player.\u00A0 The population of the center will be drawn from many sources but one goal is to capture some of the unique NPCs that have been created over the years that have not been updated to work with the most recent versions.\u00A0 Now that I know how to do so, it's quite easy.\u00A0 From there I'll be looking at how to make them more interactive.\n<br />\n<br />Looking for abandoned NPCs!\u00A0 If there are some well developed NPCs that have been abandoned, let me know so I can try and track down the author.\u00A0 Looking for mostly mundane people with nice backstories.\u00A0 Ideas:\n<br />A bookish daughter for gunther or maybe an Indian Jones type son?\n<br />The miner who clears away the boulder blocking access to the mines\n<br />A police officer?\n<br />The red haired lady who works at Joja mart might need a family?\n<br />\n<br />Currently awaiting responses from\n<br />AceAthena for Eliza\n<br />https://community.playstarbound.com/threads/oc-fake-mod-pixel-art.131384/\n<br />\n<br />Version 0.4\n<br />!!!Requires a simple save edit for backwards compatability!!!\n<br />The easy solution for this is:\n<br />1) Going to your save folder around \"C:&#92;Users&#92; [NAME] &#92;AppData&#92;Roaming&#92;StardewValley&#92;Saves\" \n<br />2) Making a backup of the file named after your character\n<br />3) Opening the two files inside the folder that are named [name]_######### and [name]_#########_old\n<br />4) Ctrl+F and search for \"Antoine\"\n<br />5) Delete everything from \"&lt;characters&gt;&lt;NPC&gt;&lt;name&gt;Antoine&lt;/name&gt;...\" to \"...&lt;/IsWalkingTowardPlayer&gt;&lt;/NPC&gt;&lt;/characters&gt;\" make sure there is only one NPC listed in there, if someone else is listed just delete from \"&lt;NPC&gt;&lt;name&gt;Antoine&lt;/name&gt;....&lt;/IsWalkingTowardPlayer&gt;&lt;/NPC&gt;\"\n<br />6) You may get an error message in SMAPI when you load the game but everything seems to function correctly after that.\n<br />\n<br />This version implements the Monk, Kevin, and the interior of the refugee center..\n<br />-Added RefugeeCenter_Entry map, the final home of Antoine, Kevin, and sorta Rose/Henry even though they aren't seen inside it\n<br />-Added Galebourn's Kevin, a nerdy kid working for the wizard, looking for a way home.\u00A0 https://community.playstarbound.com/threads/kevin-v0-1-new-npc.112067/\n<br />-Added Monk, an old friend of your grandfather's he mostly wanders about the woods reminiscing about better times\n<br />-When loading a save, the first day you load it there won't be any NPCs starting on original maps, they appear the second day.\u00A0 An engine problem, no clear solution so we'll have to deal with it for now.\n<br />\n<br />Version 0.3\n<br />!!!Now Requires Advanced Location Loader!!!\n<br />This version is mostly to test the new locations east of the Railroad map.\n<br />-Added NorthWoods map, home of the monk's shrine (who is awaiting a portrait).\u00A0 There are forage-ables and a bit of wood that you can collect at the moment \n<br />-Added SmokeyFallsJunction map, dominated by an abandoned grain mill this map is a cross roads for heading north into the mountains where Smokey Falls is located or south to the refugee center and whatever we implement further east\n<br />-Added TownEast map, the final home for the refugee center when that transition can be made.\u00A0 This map will have a bridge to the west opening around the entrance of Joja Mart and the street to the east will lead to future beach front buildings\n<br />\n<br />Version 0.2\n<br />-Adds the shelter, temporarily bound to the Spa... possibly a mistake since it appears NPCs have serious issues pathing in and out of the room.\n<br />-Adds Rose, a character created by Sheetcakeghost.\u00A0 Rose is a young woman displaced by the war, currently residing in the shelter.\u00A0 She is looking for work and has aspirations of becoming a baker.\n<br />-Adds Antoine, another character created by Sheetcakeghost.\u00A0 A strange young man that works in the shelter.\u00A0 He's lived in the valley for a long time but most people don't seem to know him???\n<br />\n<br />Version 0.1\n<br />-Adds Sister Henry, a nun who is a long term resident of the Valley and a proof of ability to add NPCs.\u00A0 Her main function is to tie the original cast to the newcomers.\n<br />\n<br />Known Bugs\n<br />-NPC movement script may not kick off until the second day that she is loaded, haven't determined why yet\n<br />-Season variants of the tile-sets aren't loading, I'll have to look into it\n<br />-When loading a save, the first day you load it there won't be any NPCs starting on original maps, they appear the second day.\u00A0 An engine \n<br />problem, no clear solution so we'll have to deal with it for now.\n<br />\n<br />Not Bugs\n<br />-I suck at drawing pixel art \n<br />-Everyone currently only has a single schedule each so when you finish the community center they'll still visit people like Clint even when he isn't in his shop.\n<br />-NPC schedules, position, and dialogue don't seem to update every time you load the game.\u00A0 It may take a few days for NPCs to become fully active.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3204",
+	"Version": "0.4",
+	"Updated": "2019-01-27T22:41:30+00:00",
+	"Downloads": [
+		{
+			"Id": 14177,
+			"Type": "Main",
+			"DisplayName": "RefugeeNPCs",
+			"FileName": "RefugeeNPCs-3204-0-4-1548628890.zip",
+			"Description": "Please do the simple save edit for backwards compatibility with older saves, listed on the details page of nexus.",
+			"Version": "0.4",
+			"SizeInBytes": 481001,
+			"Uploaded": "2019-01-27T22:41:30+00:00",
+			"Mods": [
+				{
+					"Id": "Acidia.RefugeeNPCsExtras",
+					"DisplayName": "Refugee NPCs Extras",
+					"Type": "ContentPack",
+					"RelativePath": "[ALL] Refugee NPCs",
+					"Manifest": {
+						"Name": "Refugee NPCs Extras",
+						"Description": "Adds new maps for the Refugee NPCs",
+						"Author": "Acidia",
+						"Version": "0.0.4",
+						"MinimumApiVersion": "2.9.0",
+						"ContentPackFor": {
+							"UniqueId": "Entoarox.AdvancedLocationLoader"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Acidia.RefugeeNPCs",
+								"MinimumVersion": "0.0.4",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3204"
+						],
+						"UniqueId": "Acidia.RefugeeNPCsExtras"
+					}
+				},
+				{
+					"Id": "Acidia.RefugeeNPCs",
+					"DisplayName": "Refugee NPCs",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Refugee NPCs",
+					"Manifest": {
+						"Name": "Refugee NPCs",
+						"Description": "Assist refugees and newcomers to the Valley.",
+						"Author": "Acidia",
+						"Version": "0.0.4",
+						"MinimumApiVersion": "2.9.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.6.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3204"
+						],
+						"UniqueId": "Acidia.RefugeeNPCs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342400865,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389892,
+		"UploaderId": 9691915,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

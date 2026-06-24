@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 9295,
+	"Name": "Key Suppressor",
+	"Author": "Deflaktor",
+	"Description": "[size=5]Key Suppressor[/size]\n<br />\n<br />Suppresses a configurable list of keys to prevent the base game from handling that key event whilst enabling other mods to still handle that event.\n<br />\n<br />[size=4]Motivation[/size]\n<br />\n<br />The [url=https://stardewcommunitywiki.com/Controls]Controller mapping[/url] in Stardew Valley often has multiple keys for the same action defined. For example the XBox Controller has three buttons for opening the menu (Start, Y and B). This mod aims to free up some of the duplicate keys to be used by other mods.\n<br />\n<br />Some example mods which can be used with this mod:\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/492]Billboard Anywhere[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/1691]Data Layers[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/7500]Horse Flute Anywhere[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/7971]Drop It - Drop Item Hotkey[/url]\n<br />\n<br />It does not always work though with mods which require a button to be held. These mods need to adapt their code to ensure compatibility with this mod.\n<br />\n<br />[size=4]Configuration[/size]\n<br />\n<br />Start the game and let the 'config.json' be generated. By default it creates a list you may want to modify:\n<br />\n<br />[code]{\n<br />\u00A0 \"SuppressedKeys\": {\n<br />\u00A0\u00A0\u00A0 \"DPadDown\": \"Suppress\",\n<br />\u00A0\u00A0\u00A0 \"DPadLeft\": \"Suppress\",\n<br />\u00A0\u00A0\u00A0 \"DPadRight\": \"Suppress\",\n<br />\u00A0\u00A0\u00A0 \"DPadUp\": \"Suppress\",\n<br />\u00A0\u00A0\u00A0 \"RightStick\": \"Suppress\", // Suppressing this button removes the chat functionality. Useful for splitscreen.\n<br />\u00A0\u00A0\u00A0 \"ControllerB\": \"SuppressOnlyWhenPlayerFree\", // Retains the functionality to cancel within menus, but frees it up for when the player is free to act.\n<br />\u00A0\u00A0\u00A0 [...]\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />You can freely extend this list by other keys. See a list of possible keys in the Stardew Wiki page [url=https://stardewcommunitywiki.com/Modding:Player_Guide/Key_Bindings]Key Bindings[/url]\n<br />\n<br />The following suppression modes exist:\n<br />\n<br />- [b]Suppress[/b]: The key is suppressed in all circumstances of the game (even in the main menu, loading screen, etc.)\n<br />- [b]SuppressOnlyWhenPlayerFree[/b]: The key is suppressed only ingame when the player is free to act on the world (no menu is displayed, no cutscene is in progress, etc).\n<br />- [b]SuppressOnlyInMenu[/b]: The key is suppressed only ingame when the player is currently in some menu (inventory, chests, etc.)\n<br />- [b]SuppressOnlyWhenPlayerCanMove[/b]: Same as [i]SuppressOnlyWhenPlayerFree[/i] but the player is also free to move (e.g. not using a tool)\n<br />\n<br />[size=4]Source\n<br />[/size]You can find the source on [url=https://github.com/Deflaktor/KeySuppressor]Github[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9295",
+	"Version": "1.0.1",
+	"Updated": "2021-08-16T16:10:05+00:00",
+	"Downloads": [
+		{
+			"Id": 43964,
+			"Type": "Main",
+			"DisplayName": "KeySuppressor",
+			"FileName": "KeySuppressor-9295-1-0-1-1629130205.zip",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 5954,
+			"Uploaded": "2021-08-16T16:10:05+00:00",
+			"Mods": [
+				{
+					"Id": "Deflaktor.KeySuppressor",
+					"DisplayName": "KeySuppressor",
+					"Type": "Smapi",
+					"RelativePath": "KeySuppressor",
+					"Manifest": {
+						"Name": "KeySuppressor",
+						"Description": "You can configure which keys the base game shall ignore (mods are unaffected)",
+						"Author": "Deflaktor",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "KeySuppressor.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:9295"
+						],
+						"UniqueId": "Deflaktor.KeySuppressor"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342430652,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395983,
+		"UploaderId": 123576898,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

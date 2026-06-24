@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 16192,
+	"Name": "Time Master (Slow Time and Pause in Multiplayer)",
+	"Author": "trashcan9",
+	"Description": "This mod adds features to control the speed of time, including how fast time flows and whether time should stop in specified locations. It also works in multiplayer, and provides different methods of how pausing should function in multiplayer.\n<br />\n<br />[size=5]Features[/size]\n<br />[list]\n<br />[*]Machines can optionally continue processing while paused.\n<br />[*]Pause during multiplayer based on configurable conditions.\n<br />[list]\n<br />[*][b]Any[/b]: Time will pause for all players when time should pause for [i]any[/i] one player e.g. when any player is in a menu, talking to NPCs, or in an event.\n<br />[*][b]All[/b]: Time will pause for all players when time should pause for all players.\n<br />[*][b]Host[/b]: Time will pause for all players when time should pause for the host player.\n<br />[*][b]Half[/b]: Time will pause for all players when time should pause for at least half of all players.\n<br />[*][b]Majority[/b]: Time will pause for all players when time should pause for more than half of all players.\n<br />[*][b]Fair[/b]: (default) Time will pause for all players when the time should pause for the player who has requested the least amount of pause time so far during the current day. (similar to 'auto' mode from the [url=https://community.playstarbound.com/threads/multipause-balanced-time-pausing-mechanics-for-multiplayer.157657/]MultiPause [/url]mod)\n<br />[/list][*]Pause when any player is in a cutscene.\n<br />[*]Slow time based on the number of players that should have time paused e.g. slow to half speed in a 2 player game when one player has a chest open.\n<br />[*]Allow players to vote on when to pause.\n<br />[*]Maintains buffs, player HPs, monster HPs, freezes monsters while game is paused.\n<br />[*]Slow time based on location e.g. if you want to slow time while inside your Farm House.\n<br />[*]Freeze time in specified locations e.g. if you want to freeze time at the Night Market.\n<br />[*]Freeze time at a specified time e.g. if you want to freeze time before passing out.\n<br />[*]Optional 24 hour time format.\n<br />[*]Configuration option to update clock display every minute (instead of every 10 minutes).\n<br />[/list]\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />[list]\n<br />[*]The default settings will slow time while indoors to 50%, while outdoors to 80%, and leave time speed in mines/dungeons unmodified. These can all be changed via configuration. See section below for Configuration.\n<br />[*]In multiplayer, the host controls the time dynamics, including time speed.\n<br />[*]If you'd like hotkeys to manually stop time or slow/speed time, those hotkeys can be enabled in the mod's configuration under the Controls section. See below for setting up Configuration.\n<br />[/list]\n<br />\n<br />[size=5]Configuration[/size]\n<br />[list]\n<br />[*]Configuration options are available via the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url]\u00A0mod in game (click the gear icon in the bottom left corner on the title screen, or at the bottom of the options tab in the Escape button menu while a game is loaded) or via editing config.json directly.\n<br />[/list]\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, multiplayer, splitscreen.\n<br />[/list]\n<br />\n<br />[size=5]Known Issues[/size]\n<br />[list]\n<br />[*]When configuring Additional Locations in the [url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url] in-game configuration menu, after clicking\u00A0\"Click to Configure Additional Locations\" and removing a location you previously added, if you click \"Click to Configure Additional Locations\" again, the removed location will still appear. This is a visual bug due to limitations in GMCM, which provides no way to remove options from the menu. The location will be removed from the configuration as expected, and the visual bug will be resolved after restarting.\n<br />[*]Several translations are missing for non-English languages. Feel free to send translation updates so they can be added to the mod!\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/16192",
+	"Version": "1.2.1",
+	"Updated": "2023-05-16T18:04:09+00:00",
+	"Downloads": [
+		{
+			"Id": 71135,
+			"Type": "Main",
+			"DisplayName": "TimeMaster-1.2.1",
+			"FileName": "TimeMaster-1.2.1-16192-1-2-1-1684260249.zip",
+			"Description": "* Removed 'TimeSpeed' and 'Pause Time In Multiplayer' as requirements. Both can be safely uninstalled now.",
+			"Version": "1.2.1",
+			"SizeInBytes": 90861,
+			"Uploaded": "2023-05-16T18:04:09+00:00",
+			"Mods": [
+				{
+					"Id": "trashcan9.TimeMaster",
+					"DisplayName": "Time Master",
+					"Type": "Smapi",
+					"RelativePath": "TimeMaster\\TimeMaster",
+					"Manifest": {
+						"Name": "Time Master",
+						"Description": "Control time in stardew!",
+						"Author": "trashcan9",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "TimeMaster.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "cantorsdust.TimeSpeed",
+								"MinimumVersion": "2.7.5",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "jorgamun.PauseInMultiplayer",
+								"MinimumVersion": "1.7.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:16192"
+						],
+						"UniqueId": "trashcan9.TimeMaster"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342457823,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342402880,
+		"UploaderId": 176695995,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

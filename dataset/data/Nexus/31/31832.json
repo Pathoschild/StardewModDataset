@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 31832,
+	"Name": "PeliQ",
+	"Author": "mushymato",
+	"Description": "[size=5][url=https://github.com/Mushymato/PeliQ]Source Code[/url][/size]\n<br />\n<br />[size=6][b]PeliQ[/b][/size]\n<br />Modder framework, adds some item query related utilities.\n<br />\n<br />See [font=Courier New][CP] PeliQ Examples[/font] for samples.\n<br />\n<br />[size=4][b]Nested Item Queries[/b][/size]\n<br />Run 1 item query, then pass it's results to another item query for further processing.\n<br />The inner item query goes in [font=Courier New]ModData[/font].\n<br />\n<br />For example, this item query, if placed under a shop Items field, makes that shop sell every kind of fish bait including any modded fish.\n<br />\n<br />[font=Courier New]json\n<br />{\n<br />  \"Id\": \"{{ModId}}_AllBait_Outer\",\n<br />  \"ItemId\": \"ALL_ITEMS (O)\",\n<br />  \"PerItemCondition\": \"ITEM_CONTEXT_TAG Target category_fish\",\n<br />  \"ModData\": {\n<br />    \"Id\": \"{{ModId}}_AllBait_Inner\",\n<br />    \"ItemId\": \"FLAVORED_ITEM Bait mushymato.PeliQ_NestedId\",\n<br />  }\n<br />}[/font]\n<br />\n<br />The inner item query:\n<br />\n<br />[list]\n<br />[*]It is required to have [font=Courier New]mushymato.PeliQ_NestedId[/font] as part of [font=Courier New]ItemId[/font], i.e. cannot use non-ItemId queries here\n<br />[*]Alteratively, you can put [font=Courier New]mushymato.PeliQ_NestedId[/font] with [font=Courier New]InputId[/font].\n<br />[*]can only nest once\n<br />[*]At the moment, this inner query cannot accept certain types, namely lists.\n<br />[/list]\n<br />The specific flavor of item spawn data used is [font=Courier New]PeliQSpawnItemData[/font] which extends [url=https://stardewvalleywiki.com/Modding:Machines]MachineItemOutput[/url] with 1 more field [font=Courier New]InputId[/font] that acts as the machine input.\n<br />You can spawn custom flavored items like so:\n<br />\n<br />[font=Courier New]json\n<br />\"ModData\": [\n<br />  {\n<br />    \"Id\": \"{{ModId}}_CustomPreserve\",\n<br />    \"ItemId\": \"(O)107\", // dino egg\n<br />    \"ObjectDisplayName\": \"[LocalizedText Strings&#92;&#92;Objects:SmokedFish_Description %PRESERVED_DISPLAY_NAME]\",\n<br />    \"ObjectInternalName\": \"DINO EGG TEST\",\n<br />    \"PreserveId\": \"DROP_IN\",\n<br />    \"CopyColor\": true,\n<br />    \"InputId\": \"(O)Moss\"\n<br />  }\n<br />][/font]\n<br />\n<br />The outer query's results are passed into the inner as [font=Courier New]InputId[/font] if [font=Courier New]InputId=mushymato.PeliQ_NestedId[/font].\n<br />\n<br />[size=4][b]Stored Item Queries [font=Courier New]mushymato.PeliQ/ItemQueries[/font][/b][/size]\n<br />Add a new asset for item queries that can be used by key in various places.\n<br />The custom asset is a list of item queries with condition.\n<br />This also uses the mentioned [font=Courier New]PeliQSpawnItemData[/font] type.\n<br />\n<br />[font=Courier New]json\n<br />{\n<br />  \"Action\": \"EditData\",\n<br />  \"Target\": \"mushymato.PeliQ/ItemQueries\",\n<br />  \"Entries\": {\n<br />    \"{{ModId}}_Jelly\": [\n<br />      {\n<br />        \"Id\": \"{{ModId}}_Jelly1\",\n<br />        \"ItemId\": \"(O)CaveJelly\",\n<br />      },\n<br />      {\n<br />        \"Id\": \"{{ModId}}_Jelly2\",\n<br />        \"ItemId\": \"(O)RiverJelly\",\n<br />      },\n<br />      {\n<br />        \"Id\": \"{{ModId}}_Jelly3\",\n<br />        \"ItemId\": \"(O)SeaJelly\",\n<br />      }\n<br />    ],\n<br />    \"{{ModId}}_Fish\": [\n<br />      {\n<br />        \"Id\": \"{{ModId}}_Fish\",\n<br />        \"ItemId\": \"ALL_ITEMS (O)\",\n<br />        \"PerItemCondition\": \"ITEM_CONTEXT_TAG Target category_fish\",\n<br />      }\n<br />    ]\n<br />  }\n<br />},[/font]\n<br />\n<br />These can be used in:\n<br />\n<br />[list]\n<br />[*]Item queries: [font=Courier New]mushymato.PeliQ_STORED_QUERY &lt;queryId&gt;[/font] in the ItemId of another ItemQuery\n<br />[*]Trigger action: [font=Courier New]mushymato.PeliQ_AddItemByQuery &lt;queryId&gt; [ItemQuerySearchMode][/font]\n<br />[*]Tile Action and TouchAction: [font=Courier New]mushymato.PeliQ_AddItemByQuery &lt;queryId&gt; [ItemQuerySearchMode] [isDebris][/font]\n<br />[*]Mail: [font=Courier New]%peliQ &lt;queryId&gt; [ItemQuerySearchMode] %%[/font] in mail, the items will appear on mail and need to be removed one by one.\n<br />[/list]\n<br />[size=2][b]ItemQuerySearchMode[/b][/size]\n<br />One of:\n<br />\n<br />[list]\n<br />[*][font=Courier New]All[/font]\n<br />[*][font=Courier New]AllOfTypeItem[/font]\n<br />[*][font=Courier New]FirstOfTypeItem[/font]\n<br />[*][font=Courier New]RandomOfTypeItem[/font]\n<br />[/list]\n<br />The default is [font=Courier New]AllOfTypeItem[/font], note that these are applied to every query in the list, so if you have 3 queries that each give 1 specific item (like the [font=Courier New]{{ModId}}_Jelly[/font] example) and use [font=Courier New]RandomOfTypeItem[/font], you will get 3 jellies because 3 item queries have ran. Use fields like [font=Courier New]RandomItemId[/font] to randomize one item query.\n<br />\n<br />[size=2][b]isDebris[/b][/size]\n<br />The trigger action always add item directly to player inventory, while the 2 map actions will spawn debris unless isDebris is [font=Courier New]false[/font].\n<br />\n<br />[size=4][b]New Item Queries[/b][/size]\n<br />[size=3][b]mushymato.PeliQ_ACTION_SALABLE &lt;itemId&gt;[/b][/size]\n<br />[list]\n<br />[*]Adds a bogus item entry in the shop that doesn't actually buy items.\n<br />[*]This is intended to be used for the purpose of creating a shop entry that activates [font=Courier New]ActionsOnPurchase[/font] without giving you an actual item.\n<br />[*][font=Courier New]itemId[/font] is not qualified and must be an [font=Courier New]Data/Objects[/font] entry.\n<br />[/list]\n<br />There are 2 custom fields that can be set on the [font=Courier New]Data/Objects[/font] entry of your placeholder object.\n<br />\n<br />[list]\n<br />[*][font=Courier New]mushymato.PeliQ/ExitOnPurchase[/font]: Exit the menu immediately on purchase\n<br />[*][font=Courier New]mushymato.PeliQ/PurchaseSound[/font]: Sound to play on purchase\n<br />[/list]\n<br />[size=4][b]New Game State Queries[/b][/size]\n<br />[size=3][b]mushymato.PeliQ_ITEM_ID_REGEX Target|Input &lt;regex&gt;+[/b][/size]\n<br />[list]\n<br />[*]Matches item id or qualified item id against a [url=https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference]regular expression (case insensitive)[/url].\n<br />[*]First argument is usually Target, but Input if dealing with machine trigger rules.\n<br />[/list]\n<br />[size=4][b]mushymato.PeliQ_ANY_N \"first GSQ\" &lt;count&gt; &lt;\"GSQ\"&gt;+[/b][/size]\n<br />[list]\n<br />[*]Evaluate first GSQ, then check that at least [font=Courier New]count[/font] number of the following [font=Courier New]GSQ[/font]'s results equals the first GSQ's result.\n<br />[*]For basic usage you can use [font=Courier New]TRUE[/font] or [font=Courier New]FALSE[/font] as the first GSQ.\n<br />[*]If the GSQ has spaces, it must be quote escaped.\n<br />[/list]\n<br />[size=4][b]mushymato.PeliQ_AND \"first GSQ\" \"second GSQ\"[/b][/size]\n<br />[list]\n<br />[*]Evaluate 2 GSQ, and check for AND.\n<br />[*]Added just for fun, you can already use [font=Courier New]GSQ,GSQ[/font] for AND, and [font=Courier New]ANY \"!GSQ\" \"!GSQ\"[/font] for !AND.\n<br />[/list]\n<br />[size=4][b]mushymato.PeliQ_OR \"first GSQ\" \"second GSQ\"[/b][/size]\n<br />[list]\n<br />[*]Evaluate 2 GSQ, and check for AND.\n<br />[*]Added just for fun, you can already use [font=Courier New]ANY GSQ GSQ[/font] for OR.\n<br />[/list]\n<br />[size=4][b]mushymato.PeliQ_XOR \"first GSQ\" \"second GSQ\"[/b][/size]\n<br />[list]\n<br />[*]Evaluate 2 GSQ, and check for XOR (aka first does not equal second).\n<br />[*]Added just for fun, you can already use [font=Courier New]ANY \"GSQ,!GSQ\" \"!GSQ,GSQ\"[/font] for XOR.\n<br />[/list]\n<br />\n<br />[url=https://maverick-ornithography.tumblr.com/post/160072696605/pelcan-mouth-perfec-t-size-for-put-baby-in-to]Pelican[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31832",
+	"Version": "1.2.0",
+	"Updated": "2026-05-08T23:13:07+00:00",
+	"Downloads": [
+		{
+			"Id": 166868,
+			"Type": "Main",
+			"DisplayName": "PeliQ",
+			"FileName": "PeliQ-31832-1-2-0-1778281987.zip",
+			"Description": "For SDV 1.6.15, see changelogs",
+			"Version": "1.2.0",
+			"SizeInBytes": 26998,
+			"Uploaded": "2026-05-08T23:13:07+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.PeliQ",
+					"DisplayName": "PeliQ",
+					"Type": "Smapi",
+					"RelativePath": "PeliQ",
+					"Manifest": {
+						"Name": "PeliQ",
+						"Description": "Query related utilities",
+						"Author": "mushymato",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.4.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "PeliQ.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:31832",
+							"GitHub:Mushymato/PeliQ"
+						],
+						"UniqueId": "mushymato.PeliQ",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553556,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418520,
+		"UploaderId": 18790269,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

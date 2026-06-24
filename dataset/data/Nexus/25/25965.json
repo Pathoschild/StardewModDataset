@@ -1,0 +1,390 @@
+{
+	"Site": "Nexus",
+	"Id": 25965,
+	"Name": "Predictor (ALL) -CN",
+	"Author": "TIANWANGDUNMOGU",
+	"Description": "[size=6][url=https://www.nexusmods.com/stardewvalley/users/25104754]JoXW[/url]的[url=https://www.nexusmods.com/stardewvalley/mods/21332]Predictor （ALL）[/url]中文翻译，必须安装[url=https://www.nexusmods.com/stardewvalley/mods/21332]Predictor （ALL）[/url]，翻译才能生效。[/size]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/21332]Predictor （ALL）【预测器（全部）】[/url]的中文翻译，再也不用使用英文UI界面了。\n<br />\n<br />[size=6]我的其他翻译：\n<br />[/size][list]\n<br />[*][size=4][url=https://www.nexusmods.com/stardewvalley/mods/25959]AdvancedFishingTreasure 简体中文翻译【高级钓鱼宝箱】[/url][/size]\n<br />[*][size=4][url=https://www.nexusmods.com/stardewvalley/mods/25953]XP Display Chinese translation【经验显示】[/url][/size]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25952][size=4]EXP Control 中文翻译【经验控制】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25922][size=4]Si's Extra Crafting Materials 中文翻译【Si的额外制作材料】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25919][size=4]Write A Book Chinese translation【书写一本书】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25675][size=4]Yandere Maru Mod 中文翻译【病娇玛鲁】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25520][size=4]集镇 - 食品店 _ 花店 _ 渔业等 中文翻译【集镇】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25124][size=4]JP's Dreaming of Strawberries - The Strawberry Way 中文翻译【草莓之路】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25008][size=4]Better Things Chinese translation【更好的事物】[/size][/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/24301][size=4]Lemon Universe （FIX）简体中文翻译【柠檬宇宙（FIX）】[/size][/url]\n<br />[/list][list]\n<br />[*][size=5]更多我的翻译，请点击[url=https://next.nexusmods.com/profile/TIANWANGDUNMOGU/mods]天王炖蘑菇[/url]\u00A0，进主页查看！[/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/25965",
+	"Version": "1.0.3",
+	"Updated": "2024-07-20T02:28:58+00:00",
+	"Downloads": [
+		{
+			"Id": 107251,
+			"Type": "Main",
+			"DisplayName": "Predictor (ALL) CN",
+			"FileName": "Predictor (ALL) CN-25965-1-0-3-1721442538.zip",
+			"Description": "包括主 mod 文件和所有可选补丁的中文翻译。\n<br />更新Predictor (ALL)1.0.3时，建议先将MODS文件里的Predictor (ALL)1.0.2文件删除，再安装Predictor (ALL)1.0.3，最后安装Predictor (ALL) CN。",
+			"Version": "1.0.3",
+			"SizeInBytes": 19956,
+			"Uploaded": "2024-07-20T02:28:58+00:00",
+			"Mods": [
+				{
+					"Id": "JoXW.Predictor",
+					"DisplayName": "预测器",
+					"Type": "Smapi",
+					"RelativePath": "Predictor",
+					"Manifest": {
+						"Name": "预测器",
+						"Description": "预测各种随机事件的结果。",
+						"Author": "JoXW",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Predictor.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21332"
+						],
+						"UniqueId": "JoXW.Predictor"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorBreakableContainerPatch",
+					"DisplayName": "可破坏容器内物品预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorBreakableContainerPatch",
+					"Manifest": {
+						"Name": "可破坏容器内物品预测补丁",
+						"Description": "预测可破坏容器内的物品。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorBreakableContainerPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@BreakableContainerPatch"
+						],
+						"UniqueId": "JoXW.PredictorBreakableContainerPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorBushPatch",
+					"DisplayName": "灌木丛掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorBushPatch",
+					"Manifest": {
+						"Name": "灌木丛掉落预测补丁",
+						"Description": "预测灌木丛的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorBushPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@BushPatch"
+						],
+						"UniqueId": "JoXW.PredictorBushPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorCropPatch",
+					"DisplayName": "作物预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorCropPatch",
+					"Manifest": {
+						"Name": "作物预测补丁",
+						"Description": "预测作物质量。",
+						"Author": "JoXW",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorCropPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@CropPatch"
+						],
+						"UniqueId": "JoXW.PredictorCropPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorDigSpotPatch",
+					"DisplayName": "挖掘点掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorDigSpotPatch",
+					"Manifest": {
+						"Name": "挖掘点掉落预测补丁",
+						"Description": "预测挖掘点的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorDigSpotPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@DigSpotPatch"
+						],
+						"UniqueId": "JoXW.PredictorDigSpotPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorFishingPatch",
+					"DisplayName": "钓鱼预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorFishingPatch",
+					"Manifest": {
+						"Name": "钓鱼预测补丁",
+						"Description": "预测钓鱼成功几率及其他相关信息。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorFishingPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@FishingPatch"
+						],
+						"UniqueId": "JoXW.PredictorFishingPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorGarbageCanPatch",
+					"DisplayName": "垃圾桶掉落及NPC反应预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorGarbageCanPatch",
+					"Manifest": {
+						"Name": "垃圾桶掉落及NPC反应预测补丁",
+						"Description": "预测垃圾桶的物品掉落及NPC的反应。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorGarbageCanPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@GarbageCanPatch"
+						],
+						"UniqueId": "JoXW.PredictorGarbageCanPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorGeodePatch",
+					"DisplayName": "晶球破碎掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorGeodePatch",
+					"Manifest": {
+						"Name": "晶球破碎掉落预测补丁",
+						"Description": "预测晶球破碎后的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorGeodePatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@GeodePatch"
+						],
+						"UniqueId": "JoXW.PredictorGeodePatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorMineablePatch",
+					"DisplayName": "可挖掘物掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorMineablePatch",
+					"Manifest": {
+						"Name": "可挖掘物掉落预测补丁",
+						"Description": "预测可挖掘物体的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorMineablePatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@MineablePatch"
+						],
+						"UniqueId": "JoXW.PredictorMineablePatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorMinigamesPatch",
+					"DisplayName": "小游戏预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorMinigamesPatch",
+					"Manifest": {
+						"Name": "小游戏预测补丁",
+						"Description": "预测小游戏的结果。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorMinigamesPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@MinigamesPatch"
+						],
+						"UniqueId": "JoXW.PredictorMinigamesPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorPanningPatch",
+					"DisplayName": "淘金掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorPanningPatch",
+					"Manifest": {
+						"Name": "淘金掉落预测补丁",
+						"Description": "预测淘金点的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorPanningPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@PanningPatch"
+						],
+						"UniqueId": "JoXW.PredictorPanningPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorSeedMakerPatch",
+					"DisplayName": "种子机掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorSeedMakerPatch",
+					"Manifest": {
+						"Name": "种子机掉落预测补丁",
+						"Description": "预测种子机的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorSeedMakerPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@SeedMakerPatch"
+						],
+						"UniqueId": "JoXW.PredictorSeedMakerPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorSpawnedPatch",
+					"DisplayName": "生成物追踪补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorSpawnedPatch",
+					"Manifest": {
+						"Name": "生成物追踪补丁",
+						"Description": "追踪生成的物品。",
+						"Author": "JoXW",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorSpawnedPatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@SpawnedPatch"
+						],
+						"UniqueId": "JoXW.PredictorSpawnedPatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorTillablePatch",
+					"DisplayName": "可耕作地块掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorTillablePatch",
+					"Manifest": {
+						"Name": "可耕作地块掉落预测补丁",
+						"Description": "预测可耕作地块的物品掉落。",
+						"Author": "JoXW",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorTillablePatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@TillablePatch"
+						],
+						"UniqueId": "JoXW.PredictorTillablePatch"
+					}
+				},
+				{
+					"Id": "JoXW.PredictorTreePatch",
+					"DisplayName": "树木掉落预测补丁",
+					"Type": "Smapi",
+					"RelativePath": "PredictorTreePatch",
+					"Manifest": {
+						"Name": "树木掉落预测补丁",
+						"Description": "预测树木的掉落物。",
+						"Author": "JoXW",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PredictorTreePatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JoXW.Predictor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21332@TreePatch"
+						],
+						"UniqueId": "JoXW.PredictorTreePatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342493939,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342412653,
+		"UploaderId": 204413537,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

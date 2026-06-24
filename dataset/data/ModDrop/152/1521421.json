@@ -1,0 +1,80 @@
+{
+	"Site": "ModDrop",
+	"Id": 1521421,
+	"Name": "VisualizeTK",
+	"Author": "Platonymous",
+	"TagLine": "Allows adding Color-Presets to maps",
+	"Description": "# VisualizeTK\n\nby Platonymous\n\n\n---\nAdd color Presets to maps\n\n![](https://imgur.com/T5Eybda.png)\nThe mod on it's own does nothing.\nAdd a Property to your map called \"**VTK_Preset**\" with the name of one of the currently available color Presets:\n\n**Grey** or **Gray**\n**Sepia**\n**Underwater**\n**Garden**\n**Desaturated**\n**Danger**\n**Heat**\n**Midnight**\n**Sunset**\n**Custom**\n\n**\"Custom\" Preset (1.1.0+)**\nWhen the Preset is set to \"Custom\", the colors only change if one or more of these additional Properties are set on the map:\n\n\"**VTK_Sat**\"\nstring of a floating point number (exp. 0.5), that sets the saturation.\nAlternatively you can use \"VTK_SatR\", \"VTK_SatG\" and or \"VTK_SatB\" to set the colorsaturations by channel.\n\n\"**VTK_Tint**\"\nstring setting the colortint of the map in the format \"R-G-B\" (exp. 255-0-0 for red)\nYou can add multiple comma-seperated colors (exp. 255-0-0,0-255-0,0-0-255) to have the map gradually circle through them.\n Set a floating point number to \"VTK_TintSpeed\" to increrase (&gt; 1.0) or decrease (&lt; 1.0) the speed of those transitions.\n\nThe extra parameters can also be added when using other Presets to override selected parameters.\n\n**Event Commands (1.2.0+)**\nTo activate the presets in events use the event commant \"vtk_preset\" followed by the preset name.\nIf you choose Custom, you can set the parameters with the additional commands:\n\"vtk_sat\" (followed by either one or three numbers),\n\"vtk_tint\" (followed by one or more colors)\n\"vtk_tspeed\" (followed by a number)\nbefore the end of the event call \"vtk_clear\" to make sure the preset is no longer active after the event.\n\nExamples:\n`.../farmer 64 16 2 Demetrius 64 18 0/vtk_preset Custom/vtk_sat 0.2 0.1 0.8/vtk_tint 255-0-0 0-255-0/vtk_tspeed 2.0/.../vtk_clear/end`\n\n`.../farmer 64 16 2 Demetrius 64 18 0/vtk_preset Sepia/.../vtk_clear/end`\n[/center]![](https://imgur.com/b8d5H2A.png)\nIf you have any questions or feature requests you can usually find me on the [Stardew Valley Discord](https://stardewvalleywiki.com/Modding:Community#Discord)  under the username **Routine**#8715\n![](https://imgur.com/u7Unylz.png)\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1521421",
+	"Version": null,
+	"Updated": "2024-03-04T18:51:51.473+00:00",
+	"Downloads": [
+		{
+			"Id": 1541537,
+			"Type": "Optional",
+			"DisplayName": "VisualizeTK",
+			"FileName": "VisualizeTK.zip",
+			"Description": "For Stardew Valley 1.6 only.",
+			"Version": "1.2.2-alpha",
+			"SizeInBytes": 20836,
+			"Uploaded": "2024-03-04T18:51:41.404+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.VisualizeTK",
+					"DisplayName": "VisualizeTK",
+					"Type": "Smapi",
+					"RelativePath": "VisualizeTK",
+					"Manifest": {
+						"Name": "VisualizeTK",
+						"Description": "Visual Toolkit",
+						"Author": "Platonymous",
+						"Version": "1.2.2-alpha.20240226",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "VisualizeTK.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:19009"
+						],
+						"UniqueId": "Platonymous.VisualizeTK"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "9c8b63a0535bc22f11c270264b8c232f",
+				"md5In": "4518f5fdaf623292206bab8205773f36",
+				"scriptType": 0,
+				"sha256Ex": "e03ca91797d5f92e552daeb8865cb97f9e37ee17fec11aa101206d6e530c21c3",
+				"sha256In": "457f7a3991b46bf1ffb9c0fbdef552b6600995e5b74919fbe1209e16062e6c79"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1709578311473,
+		"DateUpdated": 1709578301060,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1709578301060,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1521421/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1521421/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1521421/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1521421/icon_original"
+		},
+		"nexusModID": 19009,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 47582,
+	"Name": "Godly Hand - Debug Commands - Custom NPC Tool",
+	"Author": "Aerishiph",
+	"Description": "GODLY HAND\n<br />Debug Commands — Sneak Peek Release\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />\uD83D\uDCCC Main Purpose\n<br />\n<br />This is a sneak peek at one component of Godly Hand — a full all-in-one NPC creator coming to Nexus. The Debug Commands tool solves a specific problem every NPC modder hits during testing: remembering console commands, looking up event IDs, and typing the same things into SMAPI over and over.\n<br />\n<br />If you have ever tested a custom NPC, you know the loop. You edit a schedule or an event, reload the game, open the SMAPI console, try to remember your manifest UniqueID for patch reload, type it wrong, fix it, then try to remember which event ID you need to trigger, look it up in your JSON, type debug ebi and the ID, get it wrong by one digit, and do it all again. Every single test cycle.\n<br />\n<br />Import your manifest → import your events file → click to copy. That's it.\n<br />\n<br />Interested in other modding tools?\n<br />→ Godly Hand — Coordinate Picker: https://www.nexusmods.com/stardewvalley/mods/47493\n<br />→ Godly Hand — Animation Builder: https://www.nexusmods.com/stardewvalley/mods/47496\n<br />\n<br />\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />⚙️ Features\n<br />\n<br />\uD83D\uDCC2 Manifest import with auto-fill\n<br />Click Locate manifest.json and select it from your mod folder. The tool reads your UniqueID and generates your patch reload command automatically. Handles manifests with trailing commas, // line comments, and /* block comments */ — the kind of formatting you find in real mods like Ridgeside Village and Amon.\n<br />\n<br />\uD83D\uDD0D Event file import with search\n<br />Import your Regular_Events.json or Marriage_Events.json. The tool parses every event entry, extracts the event ID, map name, heart requirements, day-of-week conditions, and dating or marriage preconditions. Browse the full list or search by any of those fields. Click an event to add it to your scene list.\n<br />\n<br />\uD83C\uDFAC Scene registry with one-click copy\n<br />Build a list of every event you want to test. Each scene gets a label you choose — something like \"6-heart rainy town\" or \"marriage kitchen\" — and the debug ebi command generates automatically. Click Copy and paste it straight into the SMAPI console.\n<br />\n<br />\uD83D\uDCCB Patch reload and patch summary\n<br />Your patch reload command is always visible at the top, ready to copy. Patch summary is there too — one click when you need to check what loaded and what didn't.\n<br />\n<br />\uD83D\uDCC4 Export to .txt\n<br />Download a plain text file with your patch reload, patch summary, and every scene trigger laid out cleanly. Keep it open in Notepad while testing so you never have to switch windows to look up an ID.\n<br />\n<br />⚠ Mod structure warning\n<br />Not all mods put their events in the same place. If you import a file and the tool finds zero events, a popup explains what happened and why — some authors put events inside content.json, split them across include files, or use non-standard target paths. You can always add event IDs manually.\n<br />\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />\uD83D\uDCE5 Installation\n<br />\n<br />This tool runs entirely in your browser. There is nothing to install.\n<br />\n<br />HTML version — recommended for most users\n<br />Download GodlyHand_DebugCommands.html\n<br />Open it in Chrome, Firefox, or Edge\n<br />Done — no setup required\n<br />\n<br />JSX version — for Claude / React environments\n<br />Download GodlyHand_DebugCommands.jsx\n<br />Drop it into Claude.ai or any React sandbox and run it\n<br />\n<br />Both versions are identical in functionality. No internet connection required after downloading.\n<br />\n<br />\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />⭐ How to Use\n<br />\n<br />Opening the Tool\n<br />Take the GodlyHand_DebugCommands.html file and either:\n<br />Drag and drop it into your browser\n<br />Right-click → Open with → Choose your browser\n<br />\n<br />Loading Your Manifest\n<br />Click Locate manifest.json and select the file from your mod folder. Your UniqueID fills in automatically and the patch reload command appears. You can also type the UniqueID manually if you know it — format is AuthorName.ModName.\n<br />\n<br />Importing Events\n<br />Click Import Events JSON and select your events file — typically Regular_Events.json or Marriage_Events.json from your mod's Assets/Date folder. The tool reads every event and shows them in a searchable dropdown. Click any event to add it to your scene list.\n<br />\n<br />If the tool can't find events in the file, it will tell you. Some mods structure their data differently — check how the author laid out their files. You can always type event IDs in manually.\n<br />\n<br />Building Your Scene List\n<br />Label each scene with something you'll recognise fast. The debug ebi command generates from the event ID. Click Copy and paste it into the SMAPI console. Stand near the relevant map before triggering — events silently fail if you're in the wrong location.\n<br />\n<br />Exporting\n<br />Click Export Debug Text File and you get a .txt with everything — patch reload, patch summary, and all your scene triggers with labels. Keep it open next to SMAPI while you test.\n<br />\n<br />\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />\uD83D\uDCCB Requirements\n<br />\n<br />SMAPI\n<br />The Stardew Valley modding API. Required to run any console command. Get it at smapi.io.\n<br />\n<br />Content Patcher\n<br />Required for patch reload and patch summary to work. Most custom NPC mods already depend on it.\n<br />\n<br />A modern browser\n<br />Chrome, Firefox, or Edge. No internet connection required after downloading the file.\n<br />\n<br />\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />\uD83D\uDC99 Shout Outs\n<br />\n<br />Rafseazz and mamaesh — Ridgeside Village\n<br />Manifest used for compatibility testing. Block comments across 21 dependencies — the kind of real-world formatting that breaks naive JSON parsers. Confirmed the cleaner handles it.\n<br />→ Ridgeside Village: https://www.nexusmods.com/stardewvalley/mods/7286\n<br />\n<br />Endwyr — Therapist NPC\n<br />Event file and manifest used for parsing and import testing. A custom NPC mod that adds a therapist named Grey to the valley with therapy schedules for vanilla NPCs.\n<br />→ Therapist NPC: https://www.nexusmods.com/stardewvalley/mods/20597\n<br />\n<br />Foxtail — Custom NPC Amon (English translation by Solariaze)\n<br />Manifest structure used as a reference for how a well-organized custom NPC mod lays out its files. Also used to test manifest parsing with trailing commas and optional dependencies.\n<br />→ Custom NPC Amon: https://www.nexusmods.com/stardewvalley/mods/19746\n<br />\n<br />Claude — Anthropic\n<br />Development assistant throughout. Built the scene registry, event import and search picker, JSON cleaner, and export logic.\n<br />\n<br />━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n<br />\n<br />\n<br />This tool exists because testing a custom NPC meant typing the same console commands fifty times a day. Hopefully it saves you the same headache.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47582",
+	"Version": "1",
+	"Updated": "2026-06-13T02:02:44+00:00",
+	"Downloads": [
+		{
+			"Id": 171017,
+			"Type": "Main",
+			"DisplayName": "Godly Hand   Debug Tool",
+			"FileName": "d6/2b/df/d62bdf18-dbed-41bb-ad04-1987128ec866",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 18762,
+			"Uploaded": "2026-06-13T02:02:44+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Godly Hand - Debug Command",
+					"Type": "Invalid",
+					"RelativePath": "Godly Hand - Debug Command",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557705,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434270,
+		"UploaderId": 50948201,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

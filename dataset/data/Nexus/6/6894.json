@@ -1,0 +1,126 @@
+{
+	"Site": "Nexus",
+	"Id": 6894,
+	"Name": "Angel's Weapon Rebalance",
+	"Author": "ArchAngelKiragis",
+	"AuthorLabel": "Angela Ranna",
+	"Description": "[size=4]****UPDATED FOR STARDEW 1.5.5****\n<br />[/size]Make sure to remove the old mod when installing the new version - I changed the folder names to remove some redundancy.\n<br />\n<br />[size=5]*****NEW IN STARDEW 1.5*****[/size]\n<br />-Lead rod drops were fixed in the base game, so remove the Lead Rod Drop Fixer if you have it installed!\n<br />-Updated knockback randomizer to look for the new code.\n<br />-First pass at balancing the new weapons.\n<br />-First pass at rebalancing daggers since they got a teensy (1% with two crit rings X| ) special case crit rate boost while Desperado was nerfed from 3x to 2x.\n<br />-Defense has been restored to weapons that had it.\n<br />-Hammers switched from punt sticks to scaling defense as you get stronger hammers - this is what I wanted to do in the first place with them, to work with the Defender profession.\n<br />-Weapon levels rebalanced with precision.\n<br />\n<br />[size=4]TODO In Stardew 1.5:[/size]\n<br />-Check dagger balance with new special attack root and reduced cooldown.\n<br />[spoiler]\n<br />-Give Dragontooth weapons a clear identity? Maybe speed or AOE?\n<br />-Give Dwarven weapons a clear identity? Maybe defense?\n<br />[/spoiler]\n<br />\n<br />\n<br />This mod is my attempt at molding the weapons to make them all feel appropriate for their level and give each profession a place in the game. In the base game swords are universally more powerful than both hammers and daggers (outside of abusing the hammer bug), and everybody I've ever heard of uses the same Fighter/Brute combat tree.\n<br />\n<br />No more! This mod aims to give each weapon type its niche and desirable play pattern, and increase the variety of weapons you get to play with in the game overall.\n<br />\n<br />[size=5]Change List[/size]\n<br />[list]\n<br />[*]Swords remain the \"deal consistent damage safely\" option, but are slightly nerfed by reducing their base crit multiplier from 3x to 1.5x.\n<br />[*]Hammers have become the \"lots of tank\" option, good for pairing with the Defender profession. They have scaling defense, +20 AoE, and 2x crit multiplier, but a *very* large damage range.\n<br />[*]Hammer levels now scale smoothly from 1-20 instead of 1-5 with the Galaxy Hammer jumping to the astronomical level 9.\n<br />[/list][list]\n<br />[*]The base crit chance for both swords and hammers are increased to 5% from 2%, so you'll see crits more often though they're not such guaranteed one-shots.\n<br />[*]The base crit chance for daggers has been buffed to 56%! This should give you an 84% crit rate with the Scout profession, and 100% if you're willing to use both ring slots for Aquamarine rings. BUT their base crit multiplier has been reduced to 3x, to hopefully avoid their damage going completely nuts.\n<br />[*]Dagger damage now should scale smoothly. In the base game they incremented by ones and twos until the Broken Trident, then each upgrade was a huge spike.\n<br />[*]The \"endgame\" weapons each have their own, even more special identities.\n<br />[/list][spoiler]\n<br />[list]\n<br />[*]Galaxy/Infinity Sword: narrowed damage range drastically towards its top end damage. Removed crit chance. Retained +4 speed.\n<br />[*]Galaxy/Infinity Hammer: *huge* damage range. +20 knockback, +25 AoE. Removed crit chance. Punt flying enemies to the moooooooooon!\n<br />[*]Galaxy/Infinity Dagger: +100 AoE. Removed crit chance. The only dagger with significant cleave!\n<br />[*]Wicked Kris/Iridium Needle: 67% base crit chance, which means 100% with just the Scout profession. Retained high multipliers. Nerfed damage considerably on the Wicked Kris; Iridium Needle already had this.\n<br />[/list][/spoiler]\n<br />[list]\n<br />[*]All non-NPC weapons that aren't bought from the shop or obtained otherwise (e.g. neptune's sword and broken trident from fishing) are enabled to drop from crates/barrels and have been given appropriate drop ranges. Hopefully you'll see a lot more weapon choice before you get to the endgame items.\n<br />[*]Rebalanced some weapons vs their level drop range and ease of access.[spoiler]e.g. Why was the most powerful dagger before the GDagger/Kris a common-ish fishing reward? Why did a sword that dropped around floor 20 of the skull cavern have less damage than the one you got in a chest on floor 100 of the mine? These changes shuffled stats between weapons.[/spoiler]\n<br />[*][s]Removed all instances of +Defense on weapons, since they didn't do anything and thus were misleading.[/s]\u00A0Restored in Stardew 1.5.\n<br />[*]Tweaked a few personal nuisances like having +5 knockback on the crystal and galaxy daggers - why would you ever want to punt enemies away with a weapon that works best when you're juggling the enemy right in front of you?\n<br />[*]A new event plays once you've gone into the mines to give you a beginner dagger and a beginner hammer so you can play around with them and find what you like.\n<br />[*]Knockback is no longer random! As of Stardew 1.5 it no longer gets weaker as the enemy gets closer either.\n<br />[/list]\n<br />[size=5]Weapon Precision[/size]\n<br />[size=2]Please note that I used a hidden, unused stat called Precision to fix weapon levels after all these changes. However weapon precision is a very small factor in the weapon level calculation, so it required crazy values.[/size]\n<br />\n<br />[size=3]IF YOU HAVE A MOD THAT CHANGES MONSTERS TO USE THEIR \"miss chance\" OR ADDS \"evasion\" YOU'LL NEED TO TURN THE PRECISION CHANGES OFF.\n<br />[/size]\n<br />Otherwise some weapons will never miss and others will never hit because of this change. To turn it off, simply run the game once to generate \"AngelsWeaponRebalance&#92;[CP] Angels Weapon Rebalance - Data&#92;config.json\", open that up, and change EnablePrecisionChanges from \"true\" to \"false\".\n<br />\n<br />Just be aware that by doing this, weapon levels will be crazy high, which can be exploited for silly amounts of money. As of Stardew 1.5, there shouldn't be any negative weapon levels if you turn this off.\n<br />\n<br />[size=5]Optional Files\n<br />[/size][size=4]Angel's existing weapon updater\n<br />[/size]This optional addon replaces existing weapons in your inventory on save load and weapons that get moved from a chest to your inventory. Each update type is configurable in config.json so you can turn it off when everything's done, and changes to it are picked up at the start of each day.\n<br />\n<br />NOTE: As of 1.5 the weapon updater *will* nuke any enchantments on a weapon in order to update it to the new stats, so if you're not actively using it to update something to new stats I recommend uninstalling it or turning it off.\n<br />\n<br />I made this an optional, extra file because it can be used to keep your weapons up to date with any other mod out there. If I get enough requests for it, I can move this to its own mod instead of being an optional here.\n<br />\n<br />[size=4][s]Lead Rod fixer[/s]\n<br />[/size][s]This optional file fixes a typo in the code that causes lead rods to drop from floor 60 of the mines to floor 40 of the skull caverns and adds Holy Sword to the drop table for floors 60-79 (where lead rod is supposed to drop). This is set up as a separate file from the main mod because it's a type of mod that will be very prone to breaking with updated game versions (transpiler harmony patch), and since a bug report has been submitted and seen hopefully this will be fixed in core game in the 1.5 time frame.[/s]\n<br />The bug that caused lead rods to drop erroneously has been fixed in 1.5! Please remove this optional file if you had it installed.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Install Content Patcher[/url]\uFEFF\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]How to use[/size]\n<br />Nothing to it, just go out and adventure! Recommended to try it on a new playthrough.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Tested with Stardew Valley 1.5.5 on Windows.\n<br />[*]Tested in single player.\n<br />[*]Did quite a bit of work under the guidance of the good people at the #making-mods channel to narrow this down to just the damage/crit/etc fields on the weapons, so anything that changes things like descriptions, names, or images should be fully compatible.\n<br />[*]Now compatible with updated SVE that makes Gil an actual NPC.\n<br />[*]Includes the 3 SVE weapons as of v1.1.0.\n<br />[*]Users have reported that using this mod in combination with others (probably Deluxe Hats, but maybe SVE) will sometimes overwrite your save file's attack multiplier. If you're suddenly doing crazy damage after installing this mod, open your save file and set \"attackIncreaseModifier\" back to 0.\n<br />[/list]\n<br />[size=5]TODO[/size]\n<br />[list]\n<br />[*][size=2]Add something to the Galaxy Dagger's description to indicate it has a significant +AoE buff.[/size]\n<br />[*][size=2]Test mod in multiplayer/splitscreen.[/size]\n<br />[*][size=2]Cross-platform testing.[/size]\n<br />[*][size=2]Playtest! Need some users to try out these weapons and let me know if anything stands out as super weird or against the spirit of the mod. In particular keep an eye on daggers - I tried to make their damage roughly consistent with same-level swords when you go down the crit path, but this may be too much with their attack speed. Then again, they are very short range, have zero cleave, and are very carpal-tunnel inducing without a macro, so making them the highest dps weapons may not be a bad balance point.[/size]\n<br />[*][size=2][s]Figure out why so many lead rods still drop[/s]. - Fixed in 1.5![/size]\n<br />[*][size=2][s]Figure out why enemies sometimes walk through your weapon. It's like they sometimes ignore knockback, and it seems to affect daggers a lot more than the other weapons.[/s] - Bug report filed and seen by a dev, but I'm less hopeful about seeing this one changed. Crossing my fingers anyways. Also knockback is now no longer random! Feels 1000% better.[/size]\n<br />[/list]\n<br />[size=5]Catch me in the #making-mods channel of the SDV discord or post here to drop me feedback!\n<br />[/size][size=4]Many kudos to the kind modders on the SDV discord. Special thanks to users Jonqora, Arknir, Purrplingcat, and Pathoschild for helping me debug all the things.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6894",
+	"Version": "3.0.1",
+	"Updated": "2021-12-12T00:13:40+00:00",
+	"Downloads": [
+		{
+			"Id": 47641,
+			"Type": "Optional",
+			"DisplayName": "Angel's existing weapon updater",
+			"FileName": "Angel's existing weapon updater-6894-0-6-0-1638339638.zip",
+			"Description": "This updates weapons in your inventory on game load and when they enter your inventory, like from a box.\n<br /><br /><br />Disable this mod using the config or uninstall once your weapons are done or you'll lose enchantments!\n<br /><br /><br />@AngelsExistingWeaponUpdater",
+			"Version": "0.6.0",
+			"SizeInBytes": 6270,
+			"Uploaded": "2021-12-01T06:20:38+00:00",
+			"Mods": [
+				{
+					"Id": "AngelaRanna.ExistingWeaponsUpdater",
+					"DisplayName": "Angel's existing weapon updater",
+					"Type": "Smapi",
+					"RelativePath": "AngelsExistingWeaponUpdater",
+					"Manifest": {
+						"Name": "Angel's existing weapon updater",
+						"Description": "Updates all weapons on game load and inventory add to keep them in line with installed mods.",
+						"Author": "AngelaRanna",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "3.13.1",
+						"EntryDll": "ExistingWeaponUpdater.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6894@AngelsExistingWeaponUpdater"
+						],
+						"UniqueId": "AngelaRanna.ExistingWeaponsUpdater"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342434329,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 48013,
+			"Type": "Main",
+			"DisplayName": "Angel's Weapon Rebalance",
+			"FileName": "Angel's Weapon Rebalance-6894-3-0-1-1639268020.zip",
+			"Description": "The main file - download this.",
+			"Version": "3.0.1",
+			"SizeInBytes": 14904,
+			"Uploaded": "2021-12-12T00:13:40+00:00",
+			"Mods": [
+				{
+					"Id": "AngelaRanna.WeaponBalanceCode",
+					"DisplayName": "Angel's weapon rebalance - Code",
+					"Type": "Smapi",
+					"RelativePath": "AngelsWeaponRebalance\\Code",
+					"Manifest": {
+						"Name": "Angel's weapon rebalance - Code",
+						"Description": "Rebalances weapons to make all of them desirable - Code",
+						"Author": "AngelaRanna",
+						"Version": "3.0.1",
+						"MinimumApiVersion": "3.13.1",
+						"EntryDll": "AngelsWeaponRebalance.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6894"
+						],
+						"UniqueId": "AngelaRanna.WeaponBalanceCode"
+					}
+				},
+				{
+					"Id": "AngelaRanna.WeaponBalanceData",
+					"DisplayName": "Angel's weapon rebalance - Data",
+					"Type": "ContentPack",
+					"RelativePath": "AngelsWeaponRebalance\\Data",
+					"Manifest": {
+						"Name": "Angel's weapon rebalance - Data",
+						"Description": "Rebalances weapons to make all of them desirable - Data",
+						"Author": "AngelaRanna",
+						"Version": "3.0.1",
+						"MinimumApiVersion": "2.8.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.5.3"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.JA.SVE",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6894"
+						],
+						"UniqueId": "AngelaRanna.WeaponBalanceData"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342434701,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393582,
+		"UploaderId": 1334065,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 40847,
+	"Name": "Fairy Rings and Other Trickery",
+	"Author": "Poplinp",
+	"Description": "[size=3]Craft a [b][color=#f4cccc]Fairy ring[/color][/b]: a small mushroom circle that gives you certain rare items from The Fae when placed.\n<br />[/size]Be careful: The Fae may be kind to gift you some rare items, but once you collect said rare items, you may be subject to some trickery... They say to be wary of fairies for a reason, after all.\n<br />\n<br />This mod gives a fun, additional use for red mushrooms (there aren't many to begin with).\n<br />\n<br />The Fairy rings are based on [url=https://en.wikipedia.org/wiki/Fairy_ring]a real occurrence in nature[/url], and are associated with Fae and the supernatural in different folklore.\u00A0[b]\n<br />[/b]\n<br />[b]\n<br />[color=#f4cccc][size=4][img]https://i.ibb.co/gMC7cDKL/tiny-mush.png[/img]\u00A0Crafting\n<br />[/size][/color][/b][list]\n<br />[*]Recipe: 20 Red Mushrooms and 1 Solar Essence.\n<br />[/list]Obtain the recipe from foraging level 9[b].\n<br />[/b]Fairy Rings are set to produce every day.[b]\n<br />\n<br />\n<br />\n<br />[color=#f4cccc][size=3]Possible output items by chance[/size][/color][/b]\n<br />[spoiler][list]\n<br />[*]Fairy Dust - 37.75%\n<br />[*]Moss -\u00A037.75%\n<br />[*]Mossy Seed - 8%\n<br />[*]Mushroom Tree Seed - 8%\n<br />[*]Rotten Plant - 4%\n<br />[*]Rare fairy-esque (vanilla) furniture* - 4%\n<br />[*]Mushroom Cap (hat) - 0.5%\n<br />[/list]Chances are approximate due to the nature of the randomization (rounded to the thousandth percent).\n<br />\n<br />* \"Rare fairy-esque furniture\" items cannot be obtained via the regular furniture catalogue.\n<br />[/spoiler]\n<br />\n<br />[b][color=#f4cccc][size=3]Curses and tricks on collection by chance[/size][/color][/b]\n<br />[spoiler][list]\n<br />[*]None - 75%\n<br />[*]\"Frozen\" debuff (vanilla) - 6%\n<br />[*]\"Darkness\" debuff (vanilla) - 6%\n<br />[*]\"Dizzy\" debuff (new, -0.5 speed for 1 min) - 6%\n<br />[*]\"Sleepy\" debuff (new, -250 max energy* for 30 secs) - 6%\n<br />[*]spontaneously combusts and disappears - 0.5%\n<br />[*]instant death - 0.5%\n<br />[/list]\n<br />You can disable both the chances for debuffs and death in the config ([url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM [/url]makes this easy).\n<br />\n<br />* FYI, The starting max energy value is 270 before increases. This debuff shouldn't be able to over-exert you instantly.\n<br />[/spoiler]\n<br />\n<br />[b][color=#f4cccc][size=3]More secrets[/size][/color][/b]\n<br />[spoiler][list]\n<br />[*]Using Fairy dust on a Fairy Ring [Spoiler] How dare you! Ring combusts and you die instantly :)[/Spoiler]\n<br />[/list][/spoiler]\n<br />[b][color=#f4cccc][size=4]\n<br />[b][color=#f4cccc][size=4][img]https://i.ibb.co/gMC7cDKL/tiny-mush.png[/img][/size][/color][/b]\u00A0Notes[/size][/color][/b][list]\n<br />[*]The main mod folder consists of two separate folders: FairyRing and [CP] Fairy Ring (appear as 2 mods in the SMAPI console). They are both necessary, leave them as is in the main folder.\n<br />[*]This mod patches the game code (aka harmony patching) and would appear in the list of mods that do so in the\u00A0SMAPI console. No need to be afraid, it doesn't change your save file or anything :)\n<br />[*]Source code is [url=https://github.com/shirimishor/PoplinpStardewMods/tree/main/FairyRing]here[/url]\uFEFF.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40847",
+	"Version": "1.0.0",
+	"Updated": "2026-01-04T16:30:20+00:00",
+	"Downloads": [
+		{
+			"Id": 152407,
+			"Type": "Main",
+			"DisplayName": "FairyRing",
+			"FileName": "FairyRing-40847-1-0-0-1767544220.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 20877,
+			"Uploaded": "2026-01-04T16:30:20+00:00",
+			"Mods": [
+				{
+					"Id": "Poplinp.FairyRingHelper",
+					"DisplayName": "Fairy Ring",
+					"Type": "Smapi",
+					"RelativePath": "FairyRing\\FairyRing",
+					"Manifest": {
+						"Name": "Fairy Ring",
+						"Description": "Fairy Rings to receive rare items and some tricks",
+						"Author": "Poplinp",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FairyRing.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:40847"
+						],
+						"UniqueId": "Poplinp.FairyRingHelper"
+					}
+				},
+				{
+					"Id": "Poplinp.CP_FairyRing",
+					"DisplayName": "(CP) Fairy Ring",
+					"Type": "ContentPack",
+					"RelativePath": "FairyRing\\[CP] Fairy Ring",
+					"Manifest": {
+						"Name": "(CP) Fairy Ring",
+						"Description": "Fairy Rings to receive rare items and some tricks",
+						"Author": "Poplinp",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Selph.ExtraMachineConfig",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:40847"
+						],
+						"UniqueId": "Poplinp.CP_FairyRing"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342539095,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427535,
+		"UploaderId": 134543158,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}

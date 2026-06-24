@@ -1,0 +1,86 @@
+{
+	"Site": "Nexus",
+	"Id": 38352,
+	"Name": "AutoHideHost - Instant Sleep for Multiplayer",
+	"Author": "LeeKit9989",
+	"AuthorLabel": "puppy-stardew-server",
+	"Description": "[b]AutoHideHost - The Ultimate Dedicated Server Mod[/b]\n<br />\n<br />A reliable companion for running 24/7 Stardew Valley multiplayer servers.\n<br />AutoHideHost solves three major issues in multiplayer: waiting for sleeping players, host player interference, and wasted server resources when nobody is online.\n<br />\n<br />[b]What's New in v1.2.2[/b]\n<br />[b]FIXED: Disabled Automatic LevelUpMenu Handling[/b]\n<br />In previous versions, the mod automatically closed LevelUpMenu, which prevented players from choosing skill professions. This has now been corrected.\n<br />\n<br />Changes in this version:\n<br />[list]\n<br />[*] Players can manually choose skill professions\n<br />[*] ShippingMenu and DialogueBox auto-handling remains active\n<br />[*] Instant day transition once all players confirm choices\n<br />[*] No unintended automatic selections\n<br />[/list]\n<br />\n<br />Technical notes:\n<br />[list]\n<br />[*] Removed LevelUpMenu from auto-dismiss logic\n<br />[*] Instant sleep trigger preserved after manual menu closure\n<br />[*] Full compatibility with Always On Server maintained\n<br />[/list]\n<br />\n<br />[b]Core Features[/b]\n<br />\n<br />[b]1) Instant Sleep (No Waiting)[/b]\n<br />Vanilla multiplayer requires all players to sleep before ending the day. AutoHideHost removes this limitation.\n<br />\n<br />Features:\n<br />[list]\n<br />[*] Any player can sleep at any time\n<br />[*] Day ends immediately when all online players are in bed\n<br />[*] Transition time under 0.5 seconds\n<br />[*] Single-player-like experience\n<br />[*] Full profession selection support (v1.2.2+)\n<br />[/list]\n<br />\n<br />Technical details:\n<br />[list]\n<br />[*] Sleep status monitored every 0.25 seconds\n<br />[*] Uses Team Ready API for sync\n<br />[*] Auto-handles ShippingMenu and DialogueBox\n<br />[*] LevelUpMenu requires manual confirmation\n<br />[/list]\n<br />\n<br />[b]2) Invisible Host Player[/b]\n<br />Designed for dedicated servers where the host player is a technical necessity.\n<br />\n<br />Functionality:\n<br />[list]\n<br />[*] Host warped to Desert (0,0) by default\n<br />[*] Invisible and non-interactive to other players\n<br />[*] Auto-hide on save load and on each new day\n<br />[*] Protection from forced teleports\n<br />[/list]\n<br />\n<br />Guard Window:\n<br />[list]\n<br />[*] Engine may teleport host to Farm on player connect\n<br />[*] Mod detects this and re-hides host instantly\n<br />[*] Active for 60 seconds after connection; refreshes daily\n<br />[/list]\n<br />\n<br />Hide methods:\n<br />[list]\n<br />[*] warp — send host to a defined map location (default: Desert)\n<br />[*] offmap — send host to extreme coordinates\n<br />[/list]\n<br />\n<br />[b]3) Smart Auto-Pause[/b]\n<br />Works with Always On Server to conserve resources.\n<br />[list]\n<br />[*] Auto-pauses when no players are online\n<br />[*] Resumes instantly when someone joins\n<br />[*] Reduces CPU/RAM usage and bandwidth\n<br />[*] Prevents unwanted time progression\n<br />[/list]\n<br />\n<br />[b]Perfect For[/b]\n<br />[list]\n<br />[*] 24/7 servers (VPS/Cloud/Home)\n<br />[*] Docker deployments\n<br />[*] Cross-platform multiplayer\n<br />[*] Groups in different time zones\n<br />[*] Avoiding AFK delays\n<br />[/list]\n<br />\n<br />[b]Installation[/b]\n<br />\n<br />Requirements:\n<br />[list]\n<br />[*] SMAPI 4.0.0+\n<br />[*] Stardew Valley 1.6.0+\n<br />[*] Server/Host only (clients do not need it)\n<br />[/list]\n<br />\n<br />Steps:\n<br />[list]\n<br />[*] Install SMAPI\n<br />[*] Download AutoHideHost v1.2.2\n<br />[*] Extract to Stardew Valley/Mods/\n<br />[*] Launch via SMAPI\n<br />[/list]\n<br />\n<br />[b]Configuration[/b]\n<br />\n<br />Edit: Mods/AutoHideHost/config.json\n<br />\n<br />[code]\n<br />{\n<br />  \"Enabled\": true,\n<br />  \"AutoHideOnLoad\": true,\n<br />  \"AutoHideDaily\": true,\n<br />  \"PauseWhenEmpty\": false,\n<br />  \"InstantSleepWhenReady\": true,\n<br />  \"HideMethod\": \"warp\",\n<br />  \"WarpLocation\": \"Desert\",\n<br />  \"WarpX\": 0,\n<br />  \"WarpY\": 0,\n<br />  \"PreventHostFarmWarp\": true,\n<br />  \"PeerConnectGuardSeconds\": 60,\n<br />  \"RehideDelayTicks\": 1,\n<br />  \"DebugMode\": false,\n<br />  \"DebugTraceMenus\": false\n<br />}\n<br />[/code]\n<br />\n<br />Options:\n<br />[list]\n<br />[*] Enabled — master switch\n<br />[*] AutoHideOnLoad — hide host on save load\n<br />[*] AutoHideDaily — re-hide each new day\n<br />[*] InstantSleepWhenReady — instant sleep when all ready\n<br />[*] HideMethod — warp/offmap\n<br />[*] WarpLocation — target location name\n<br />[*] WarpX/WarpY — coordinates\n<br />[*] PreventHostFarmWarp — guard window protection\n<br />[*] PeerConnectGuardSeconds — guard duration (default 60)\n<br />[*] DebugMode — extended logging\n<br />[/list]\n<br />\n<br />[b]Recommended Companion Mods[/b]\n<br />[list]\n<br />[*] Always On Server — automates host actions, enables 24/7 uptime (full integration)\n<br />[*] ServerAutoLoad — auto-loads save on restart (works together)\n<br />[*] Skill Level Guard — prevents forced Level 10 skills (recommended)\n<br />[/list]\n<br />\n<br />[b]Docker Server Integration[/b]\n<br />AutoHideHost is included in the Puppy Stardew Server setup.\n<br />\n<br />One-command deployment:\n<br />[code]\n<br />curl -sSL https://raw.githubusercontent.com/truman-world/puppy-stardew-server/main/quick-start.sh | bash\n<br />[/code]\n<br />\n<br />Features:\n<br />[list]\n<br />[*] Cross-platform\n<br />[*] One-command deploy\n<br />[*] Auto-save load\n<br />[*] VNC configuration\n<br />[*] 2GB RAM minimum\n<br />[*] Pre-configured mods (v1.2.2)\n<br />[/list]\n<br />\n<br />[b]Changelog[/b]\n<br />\n<br />[b]v1.2.2 (November 2025)[/b]\n<br />[list]\n<br />[*] LevelUpMenu auto-handling disabled\n<br />[*] Manual selection restored\n<br />[*] ShippingMenu/DialogueBox instant processing preserved\n<br />[*] Instant sleep maintained\n<br />[/list]\n<br />\n<br />[b]v1.2.1 (November 2025)[/b]\n<br />[list]\n<br />[*] Stability improvements\n<br />[*] Minor guard window fixes\n<br />[/list]\n<br />\n<br />[b]v1.2.0 (November 2025)[/b]\n<br />[list]\n<br />[*] Configurable hide location (Desert by default)\n<br />[*] Warp method added\n<br />[*] Guard window increased to 60s\n<br />[*] Better compatibility with Always On Server\n<br />[/list]\n<br />\n<br />[b]v1.1.9 (November 2025)[/b]\n<br />[list]\n<br />[*] Host no longer appears at Farm entrance\n<br />[*] Guard window activates on day start\n<br />[*] Multi-day persistence\n<br />[*] Diagnostic logging improvements\n<br />[/list]\n<br />\n<br />[b]v1.1.8 (November 2025)[/b]\n<br />[list]\n<br />[*] Guard window mechanism\n<br />[*] PeerConnected event monitoring\n<br />[*] Warped detection and re-hide logic\n<br />[*] Save flow bug fixed\n<br />[/list]\n<br />\n<br />[b]v1.1.2 (October 2025)[/b]\n<br />[list]\n<br />[*] Auto-enables Always On Server\n<br />[*] Improved instant sleep API\n<br />[*] Fixed ShippingMenu blocking sleep\n<br />[/list]\n<br />\n<br />[b]v1.0.x[/b]\n<br />[list]\n<br />[*] Core instant sleep\n<br />[*] Hidden host\n<br />[*] Basic config system\n<br />[/list]\n<br />\n<br />[b]FAQ[/b]\n<br />\n<br />[b]Q: Works with existing saves?[/b]\n<br />A: Yes.\n<br />\n<br />[b]Q: Do clients need this mod?[/b]\n<br />A: No, server/host only.\n<br />\n<br />[b]Q: Can players choose skill professions?[/b]\n<br />A: Yes, starting from v1.2.2.\n<br />\n<br />[b]Q: Compatible with other mods?[/b]\n<br />A: Works with major mods including Always On Server, ServerAutoLoad, Content Patcher, SVE.\n<br />\n<br />[b]Q: How to confirm it works?[/b]\n<br />A: SMAPI console will show:\n<br />[code]\n<br />[AutoHideHost] AutoHideHost v1.2.2 loaded\n<br />[AutoHideHost] Host auto-hidden\n<br />[AutoHideHost] Guard window active\n<br />[/code]\n<br />\n<br />[b]Q: Can I re-enable automatic LevelUpMenu dismissal?[/b]\n<br />A: Possible via source modifications, but not recommended.\n<br />\n<br />[b]License[/b]\n<br />MIT License\n<br />\n<br />[b]Credits &amp; Support[/b]\n<br />Author: truman-world  \n<br />Version: 1.2.2  \n<br />Release Date: November 2025  \n<br />\n<br />Links:\n<br />[list]\n<br />[*] GitHub: [url=https://github.com/truman-world/puppy-stardew-server]https://github.com/truman-world/puppy-stardew-server[/url]\n<br />[*] Docker Hub: [url=https://hub.docker.com/r/truemanlive/puppy-stardew-server]https://hub.docker.com/r/truemanlive/puppy-stardew-server[/url]\n<br />[*] Issue Tracker: [url=https://github.com/truman-world/puppy-stardew-server/issues]https://github.com/truman-world/puppy-stardew-server/issues[/url]\n<br />[*] Nexus Mods: [url=https://www.nexusmods.com/stardewvalley/mods/38352]https://www.nexusmods.com/stardewvalley/mods/38352[/url]\n<br />[/list]\n<br />\n<br />Support the project:\n<br />[list]\n<br />[*] Star on GitHub\n<br />[*] Endorse on Nexus Mods\n<br />[*] Share feedback\n<br />[/list]\n<br />\n<br />Enjoy smooth multiplayer gameplay with full control and no waiting.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38352",
+	"Version": "1.0.0",
+	"Updated": "2025-11-09T17:20:48+00:00",
+	"Downloads": [
+		{
+			"Id": 146530,
+			"Type": "Optional",
+			"DisplayName": "AutoHideHost_v1.0.1",
+			"FileName": "AutoHideHost_v1.0.1-38352-1-0-1-1761482444.zip",
+			"Description": "AutoHideHost v1.0.1: Multiplayer Host Mgmt &amp; Sleep Fix for Stardew Valley 1.6+ (SMAPI 4.0+). Size: 6.9KB. Auto-hides host, instant sleep, auto-pause. Fixes black screen bug. Install: Extract to Mods/AutoHideHost. Config: JSON toggle features.",
+			"Version": "1.0.1",
+			"SizeInBytes": 7040,
+			"Uploaded": "2025-10-26T12:40:44+00:00",
+			"Mods": [
+				{
+					"Id": "AIdev.AutoHideHost",
+					"DisplayName": "AutoHideHost",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "AutoHideHost",
+						"Description": "Automatically hides the host player in multiplayer servers and provides seamless day-night transitions without waiting prompts.",
+						"Author": "AI Developer",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AutoHideHost.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "AIdev.AutoHideHost"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533218,
+				"CategoryId": 2,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 147625,
+			"Type": "Optional",
+			"DisplayName": "AutoHideHost-v1.2.2",
+			"FileName": "AutoHideHost-v1.2.2-38352-v1-2-2-1762708848.zip",
+			"Description": "AutoHideHost-v1.2.2",
+			"Version": "v1.2.2",
+			"SizeInBytes": 14204,
+			"Uploaded": "2025-11-09T17:20:48+00:00",
+			"Mods": [
+				{
+					"Id": "AIdev.AutoHideHost",
+					"DisplayName": "AutoHideHost",
+					"Type": "Smapi",
+					"RelativePath": "AutoHideHost",
+					"Manifest": {
+						"Name": "AutoHideHost",
+						"Description": "Automatically hides the host player in multiplayer servers and provides seamless day-night transitions without waiting prompts. v1.2.2: Disabled LevelUpMenu auto-handling to prevent unintended skill upgrades.",
+						"Author": "AI Developer",
+						"Version": "1.2.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AutoHideHost.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "AIdev.AutoHideHost"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342534313,
+				"CategoryId": 2,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425040,
+		"UploaderId": 264860698,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

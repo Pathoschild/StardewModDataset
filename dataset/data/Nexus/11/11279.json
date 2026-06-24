@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 11279,
+	"Name": "Anki Study Break",
+	"Author": "nymvaline",
+	"Description": "Each morning, and at certain intervals throughout the day, forces you to stop to do some Anki cards.\n<br />\n<br />This mod is intended to interface with Anki via the add-on AnkiConnect. If you don't use Anki, this mod is probably completely irrelevant for you. (And if you want to learn more about Anki, Nicky Case wrote a good introduction to spaced repetition flashcard systems here: https://ncase.me/remember/\n<br />\n<br />[b]Prerequisites\n<br />[/b]SMAPI https://smapi.io/\n<br />Anki (which I'm assuming you already have) https://apps.ankiweb.net/\n<br />AnkiConnect, which is an add-on for Anki written by someone else. Installation notes here: https://foosoft.net/projects/anki-connect/\n<br />\n<br />[b]How to use:[/b]\n<br />[list]\n<br />[*]Open up Anki, with AnkiConnect installed and running.\n<br />[*]Open up Stardew Valley, with this mod installed.\n<br />[*]Play as normal.\n<br />[*]At the beginning of each day (after saving), a dialogue box will pop up telling you how many cards you have to study before the mod will allow you to continue playing. Alt tab into Anki and do some reviews.\n<br />[*]When you've done enough, alt tab back into Stardew Valley and select the \"Card Check\" option.\n<br />[/list][list=1]\n<br />[*]   \uFEFFIf you have studied enough Anki cards since the dialogue box first popped up (default 10), the box will go away and you can play as normal.\n<br />[*]   \uFEFFOtherwise, the box will pop up again with an updated count. Reach the number of reviews.\n<br />[/list][list]\n<br />[*]If you'd rather not do the reviews, the \"Exit to main menu\" option will allow you to end the game. There will be an additional confirmation dialogue box before actually exiting to main menu, because I kept misclicking.\n<br />[*]If you're out of reviews, but want to finish the day in order to save, close Anki - the game [i]should[/i] send a request, never get any info back, and allow you to keep playing.\n<br />[/list]\n<br />[b]Config options:[/b]\n<br />Launch the game once with the mod in order to populate the config.json in this mod's folder. \n<br />Once populated, you can edit the following fields\n<br />\u00A0 \"AnkiBreakOnDayStart\": boolean, whether or not to pause when the day starts. Default: true\n<br />\u00A0 \"NumAnkiCardsForDayStart\": integer, how many cards to require when the day starts. Default: 15\n<br />\u00A0 \"AnkiBreakAtIntervals\": boolean, whether or not to pause at regular intervals throughout the day. Default: true\n<br />\u00A0 \"NumAnkiCardsForIntervals\": integer, how many cards to require at regular intervals throughout the day. Default: 10\n<br />\u00A0 \"NumHoursForIntervals\": integer, how many hours between the regular intervals throughout the day. For example, on a normal day with the default settings, interval reviews will happen at 9 AM, 12 AM, 3 PM, 6 PM, 9 PM, and 12 PM. Default: 3\n<br />\u00A0 \"AnkiConnectURL\": Advanced option. If you've changed the URL for AnkiConnect, update it here. Default: \"http://127.0.0.1:8765\"\n<br />\n<br />[b]Known Limitations:[/b]\n<br />I believe this only counts reviews that have a due date - if it's in a filtered deck that doesn't say \"reschedule based on my responses\", then AnkiConnect doesn't count it in the number of reviews that it will tell this mod, and will not make the counter go down.\n<br />Also, this has only been tested in singleplayer - I believe using this mod in multiplayer will run into issues since dialogue does not automatically pause the clock.\n<br />\n<br />[b]Other Issues and compatibility with other mods:[/b]\n<br />I don't know of any issues, but I don't really use other mods. If you run into an issue, leave a bug report and I'll try to fix it.\n<br />\n<br />[b]Source Code:[/b]\n<br />https://github.com/nymvaline/StardewValley-AnkiStudyBreak",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11279",
+	"Version": "1.0.1",
+	"Updated": "2022-03-14T01:09:07+00:00",
+	"Downloads": [
+		{
+			"Id": 51908,
+			"Type": "Main",
+			"DisplayName": "AnkiStudyBreak.zip",
+			"FileName": "AnkiStudyBreak.zip-11279-1-0-1-1647220147.zip",
+			"Description": "1.0.1 Added update key",
+			"Version": "1.0.1",
+			"SizeInBytes": 11176,
+			"Uploaded": "2022-03-14T01:09:07+00:00",
+			"Mods": [
+				{
+					"Id": "nymvaline.AnkiStudyBreak",
+					"DisplayName": "AnkiStudyBreak",
+					"Type": "Smapi",
+					"RelativePath": "AnkiStudyBreak",
+					"Manifest": {
+						"Name": "AnkiStudyBreak",
+						"Description": "Forces you to pause occasionally to do some Anki cards.",
+						"Author": "nymvaline",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AnkiStudyBreak.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11279"
+						],
+						"UniqueId": "nymvaline.AnkiStudyBreak"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342438596,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397967,
+		"UploaderId": 137679948,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

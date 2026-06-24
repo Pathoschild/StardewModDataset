@@ -1,0 +1,249 @@
+{
+	"Site": "Nexus",
+	"Id": 17257,
+	"Name": "Permanent Cellar",
+	"Author": "CyanFire",
+	"Description": "This mod is heavily based on [url=https://www.nexusmods.com/stardewvalley/mods/5104]Cellar Available[/url] but i realised that mod has it's limitations such as it doesn't work for Cabins and it's not compatible with custom maps. In multiplayer only the host player can see the entrance also, so i thought i would take a stab at making my own that is more modder &amp; multiplayer friendly.\n<br />\n<br />\n<br />This mod uses the vanilla game's way of applying the cellar entrance so each house size has it's own patch map which i have made targetable with Content Patcher so modders can alter them for custom maps. The mod already comes pre-configured for vanilla though.\n<br />\n<br />\"Maps/FarmHouse_Cellar0\" is for the smallest size.\n<br />\n<br />\"Maps/FarmHouse_Cellar1\" is for the medium size\n<br />\n<br />and then just like vanilla the default \"Maps/FarmHouse_Cellar\" is used for the largest size\n<br />\n<br />\n<br />Then came the issue of how to handle return warps as using Content Patcher to set them up would be way to confusing for most, especially for Cabins. So i have made it super simple, I have created a new Map Property called \"CellarExit\" which can be added to the entrance patch map via Tiled or CP. This is the point that the player will be warped to when leaving the Cellar, you can provide a maximum of 2 exit points. This of course is entirely optional. Format is below:\n<br />\n<br />\n<br />For 1 exit point:\n<br />\n<br />\"CellarExit\":\u00A0 \"7 10\"\n<br />\n<br />for 2 exit points:\n<br />\n<br />\"CellarExit\": \"4 10 5 10\"\n<br />\n<br />\n<br />Feel free to take a look at the .tmx files for reference\n<br />\n<br />\n<br />The Map Property only works for \"Maps/FarmHouse_Cellar0\" &amp; \"Maps/FarmHouse_Cellar1\" as the vanilla game handles everything after the first upgrade. I will be adding that functionality to the vanilla \"Maps/FarmHouse_Cellar\" via my Farmhouse Fixes mod as i thought it would be better to split it as some users may find it useful but may not want a permanent Cellar.\n<br />\n<br />\n<br />The config file should look VERY familiar!:\n<br />\n<br />ShowCommunityUpgrade - Show community upgrade in the carpenter's menu. This disables the upgrade option of your farmhouse so don't set it \n<br />before you're satisfied with your house size. This setting is only available for the host player.\n<br />RemoveCellarCasks - Removes all casks from your own cellar. Note that this option resets itself, otherwise casks would be removed every time the save is loaded. I recommend only using this option initially to remove the Casks that are automatically added by the game as this option will also remove any crafted Casks that are placed in the cellar.\n<br />AddCellarCasks - Reverse of the above option, adds the default casks to your own cellar if they've been removed. Note that this option resets itself, otherwise casks would be added every time the save is loaded and you would end up with an infinite amount.\n<br />\n<br />\n<br />Show Community Upgrade, Remove Cask &amp; some warp code is used from [url=https://www.nexusmods.com/stardewvalley/users/75865403]candidus42[/url]'s [url=https://www.nexusmods.com/stardewvalley/mods/5104]Cellar Available[/url] mod. Huge thanks to them!\n<br />\n<br />\n<br />[url=https://github.com/CyanFireUK/StardewValleyMods]Source Code[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17257",
+	"Version": "1.2.4",
+	"Updated": "2026-03-06T19:56:37+00:00",
+	"Downloads": [
+		{
+			"Id": 120681,
+			"Type": "Optional",
+			"DisplayName": "(CP) PC Vanilla Compat for Aimon's Cellar Mods",
+			"FileName": "(CP) PC Vanilla Compat for Aimon's Cellar Mods-17257-1-0-0-1735585220.zip",
+			"Description": "Compatibility CP patch for Aimon's Tidy Cozy Cellar &amp; Fancy Cellar mods, for the vanilla farmhouse\n<br />\n<br />\n<br />Recommended to use with my Farmhouse Fixes mod\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />@VanillaAimonCellarCompat",
+			"Version": "1.0.0",
+			"SizeInBytes": 5908,
+			"Uploaded": "2024-12-30T19:00:20+00:00",
+			"Mods": [
+				{
+					"Id": "CF.PermanentCellarCP.VanillaAimonCellarCompat",
+					"DisplayName": "(CP) Permanent Cellar Vanilla Compat for Aimon's Tidy Cozy Cellar & Fancy Cellar",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Permanent Cellar Vanilla Compat for Aimon's Tidy Cozy Cellar & Fancy Cellar",
+					"Manifest": {
+						"Name": "(CP) Permanent Cellar Vanilla Compat for Aimon's Tidy Cozy Cellar & Fancy Cellar",
+						"Description": "Permanent Cellar vanilla compatibility for Aimon's Tidy Cozy Cellar & Fancy Cellar",
+						"Author": "CyanFire",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17257@VanillaAimonCellarCompat"
+						],
+						"UniqueId": "CF.PermanentCellarCP.VanillaAimonCellarCompat"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342507369,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 120753,
+			"Type": "Optional",
+			"DisplayName": "(CP) Permanent Cellar for DL FarmHouse",
+			"FileName": "(CP) Permanent Cellar for DL FarmHouse-17257-1-1-1-1735663938.zip",
+			"Description": "Compatibility CP patch for delloti's DL FarmHouse (https://blog.naver.com/delloti/222828804686), includes compatibility for Aimon's Tidy Cozy Cellar &amp; Aimon's Fancy Cellar\n<br />\n<br />\n<br />Recommended to use with my Farmhouse Fixes mod\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />@DLFarmhouse",
+			"Version": "1.1.1",
+			"SizeInBytes": 9685,
+			"Uploaded": "2024-12-31T16:52:18+00:00",
+			"Mods": [
+				{
+					"Id": "CF.PermanentCellarCP.DLFarmHouse",
+					"DisplayName": "(CP) Permanent Cellar for DL FarmHouse",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Permanent Cellar for DL FarmHouse",
+					"Manifest": {
+						"Name": "(CP) Permanent Cellar for DL FarmHouse",
+						"Description": "Permanent Cellar compatibility for delloti's DL FarmHouse",
+						"Author": "CyanFire",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17257@DLFarmhouse"
+						],
+						"UniqueId": "CF.PermanentCellarCP.DLFarmHouse"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342507441,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 120754,
+			"Type": "Optional",
+			"DisplayName": "(CP) Permanent Cellar for Sea Breeze Farmhouse",
+			"FileName": "(CP) Permanent Cellar for Sea Breeze Farmhouse-17257-1-0-2-1735663967.zip",
+			"Description": "Compatibility CP patch for collingbe's Sea Breeze Farmhouse, includes compatibility for Aimon's Tidy Cozy Cellar &amp; Aimon's Fancy Cellar\n<br />\n<br />\n<br />Recommended to use with my Farmhouse Fixes mod\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />@SeaBreezeFarmhouse",
+			"Version": "1.0.2",
+			"SizeInBytes": 14505,
+			"Uploaded": "2024-12-31T16:52:47+00:00",
+			"Mods": [
+				{
+					"Id": "CF.PermanentCellarCP.SeaBreezeFarmhouse",
+					"DisplayName": "(CP) Permanent Cellar for Sea Breeze Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Permanent Cellar for Sea Breeze Farmhouse",
+					"Manifest": {
+						"Name": "(CP) Permanent Cellar for Sea Breeze Farmhouse",
+						"Description": "Permanent Cellar compatibility for Collingbe's Sea Breeze Farmhouse",
+						"Author": "CyanFire",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17257@SeaBreezeFarmhouse"
+						],
+						"UniqueId": "CF.PermanentCellarCP.SeaBreezeFarmhouse"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342507442,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 121784,
+			"Type": "Optional",
+			"DisplayName": "(CP) Permanent Cellar for Kisaa's Cozy Farmhouse",
+			"FileName": "(CP) Permanent Cellar for Kisaa's Cozy Farmhouse-17257-1-0-1-1736465345.zip",
+			"Description": "Compatibility CP patch for crystalinerose' Kisaa's Cozy Rustic Farmhouse, includes compatibility for Aimon's Tidy Cozy Cellar &amp; Aimon's Fancy Cellar\n<br />\n<br />\n<br />\n<br />Recommended to use with my Farmhouse Fixes mod\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />@CozyRusticFarmhouse",
+			"Version": "1.0.1",
+			"SizeInBytes": 403264,
+			"Uploaded": "2025-01-09T23:29:05+00:00",
+			"Mods": [
+				{
+					"Id": "CF.PermanentCellarCP.CozyRusticFarmhouse",
+					"DisplayName": "(CP) Permanent Cellar for Kisaa's Cozy Rustic Farmhouse",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Permanent Cellar for Kisaa's Cozy Rustic Farmhouse",
+					"Manifest": {
+						"Name": "(CP) Permanent Cellar for Kisaa's Cozy Rustic Farmhouse",
+						"Description": "Permanent Cellar compatibility for Kisaa's Cozy Rustic Farmhouse",
+						"Author": "CyanFire",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17257@CozyRusticFarmhouse"
+						],
+						"UniqueId": "CF.PermanentCellarCP.CozyRusticFarmhouse"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342508472,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 122314,
+			"Type": "Optional",
+			"DisplayName": "(CP) Permanent Cellar for Tiny Farmhouse 1.6",
+			"FileName": "(CP) Permanent Cellar for Tiny Farmhouse 1.6-17257-1-0-0-1736879950.zip",
+			"Description": "Compatibility CP patch for clownedcat's Tiny Farmhouse 1.6, includes compatibility for Aimon's Tidy Cozy Cellar &amp; Aimon's Fancy Cellar\n<br />\n<br />\n<br />Recommended to use with my Farmhouse Fixes mod\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />@TinyFarmhouse",
+			"Version": "1.0.0",
+			"SizeInBytes": 10148,
+			"Uploaded": "2025-01-14T18:39:10+00:00",
+			"Mods": [
+				{
+					"Id": "CF.PermanentCellarCP.TinyFarmhouse",
+					"DisplayName": "(CP) Permanent Cellar for Tiny Farmhouse 1.6",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Permanent Cellar for Tiny Farmhouse 1.6",
+					"Manifest": {
+						"Name": "(CP) Permanent Cellar for Tiny Farmhouse 1.6",
+						"Description": "Permanent Cellar compatibility for clownedcat's Tiny Farmhouse 1.6",
+						"Author": "CyanFire",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:17257@TinyFarmhouse"
+						],
+						"UniqueId": "CF.PermanentCellarCP.TinyFarmhouse"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509002,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 159295,
+			"Type": "Main",
+			"DisplayName": "Permanent Cellar",
+			"FileName": "Permanent Cellar-17257-1-2-4-1772826997.zip",
+			"Description": "Fix for Cabin cellars not being created in multiplayer on new game, kindly provided by tbonehunter",
+			"Version": "1.2.4",
+			"SizeInBytes": 23495,
+			"Uploaded": "2026-03-06T19:56:37+00:00",
+			"Mods": [
+				{
+					"Id": "CF.PermanentCellar",
+					"DisplayName": "Permanent Cellar",
+					"Type": "Smapi",
+					"RelativePath": "PermanentCellar",
+					"Manifest": {
+						"Name": "Permanent Cellar",
+						"Description": "Makes the cellar accessable for all farmhouse/cabin sizes, custom maps & multiplayer compatible",
+						"Author": "CyanFire",
+						"Version": "1.2.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PermanentCellar.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:17257"
+						],
+						"UniqueId": "CF.PermanentCellar"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342545983,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342403945,
+		"UploaderId": 3490737,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

@@ -1,0 +1,68 @@
+{
+	"Site": "Nexus",
+	"Id": 24410,
+	"Name": "Garbage Can Tweaks",
+	"Author": "chiccenSDV",
+	"AuthorLabel": "chiccen",
+	"Description": "Garbage Can Tweaks is an original mod inspired by [url=https://www.nexusmods.com/stardewvalley/mods/4171]Better Garbage Cans[/url] by AAir. Although that mod inspired this one, this mod was built from the ground up as a completely original work and was never intended to be a replacement. Thus, some features you may have liked from that mod will not be present in this one. If you encounter issues, disable the mod and please post a bug report. If you'd like to contribute, the source code is available on\u00A0[url=https://github.com/chiccendev/StardewValleyMods/tree/main]my Github.[/url]\n<br />\n<br />DESCRIPTION\n<br />===========\n<br />\n<br />Garbage Can Tweaks lets you tweak Garbage Cans in Pelican Town to drop loved gifts for NPCs at the respective houses' garbage cans on their birthday. NPCs without garbage cans will have their items spawned at the Mayor's. It also allows players to upload custom loot drop tables for custom loot at each trash can.\n<br />\n<br />Important Configuration notes:\n<br />LootChance is a multiplier, not a base chance (hence it isn't on a 0 to 1 scale like most chance config options). When tested at 3x with the default loot table, the output was pretty incredible. So honestly, I wouldn't go much higher than that unless you really wanna get a lot of use out of garbage cans.\n<br />\n<br />Loot Tables are read from the \"assets\" folder at [font=Courier New][color=#c9daf8]Stardew Valley/Mods/GarbageCanTweaks/assets/[/color][/font]. I am working on support to scan the mod folder, to allow a sort of \"content patcher\" style of custom garbage can data. However, that isn't slotted yet and I will be sure to put out some notice if that capability does come out. To create your own garbage data pack, refer to the the \"default.json\" file within that folder. Default is all the original base values and conditions from the base vanilla game. [color=#ea9999]Be extremely attentive if modifying these data sets, as you can very very very easily break your game by mistake[/color]. I am working on a guide to safely modify/create custom garbage data files, but in the meantime I would recommend just sticking with Default. A couple more packs do come included, but these are mostly for demonstration, or for bug testing. So use those at your own risk.\n<br />\n<br />tweaked.json -- adds a secret birthday gift for me at my favorite NPC's house, and a chance to get bombs from Kent's trash can when you've reached floor 100 in the mines. This pack is for demonstration.\n<br />debug.json -- i honestly can't even remember, but I think the blacksmith trash data was swapped for prismatic shard, iridium bar, and something else. This pack was just used to debug.\n<br />\n<br />The default configuration is:\n<br />[code]EnableMod = true\n<br />numChecks = 1\n<br />LootTable = \"default\"\n<br />EnableBirthday = true\n<br />BirthdayChance = 0.75 //(75%)\n<br />LootChance = 1f //(1.0x)\n<br />Debug = false\n<br />[/code]\n<br />You can edit the config in\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0or by editing the mod's config.json file after starting the game once.\n<br />\n<br />[size=5]Technical[/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at\u00A0[url=https://github.com/chiccendev/StardewValleyMods/tree/main/GarbageCanTweaks]https://github.com/chiccenFL/StardewValleyMods/tree/main/GarbageCanTweaks[/url]\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, message me on[url=https://discordapp.com/users/147114387096731649/]\u00A0Discord[/url]\u00A0(@chiccen). I am also reachable on the\u00A0[url=https://discord.gg/stardewvalley]Official Stardew Valley Discord[/url]\u00A0with the same username.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24410",
+	"Version": "1.0.1",
+	"Updated": "2024-11-18T06:41:08+00:00",
+	"Downloads": [
+		{
+			"Id": 116870,
+			"Type": "Main",
+			"DisplayName": "Garbage Can Tweaks",
+			"FileName": "Garbage Can Tweaks-24410-1-0-1-1731912068.zip",
+			"Description": "Added option to increase number of times you can check a garbage can per day. This feature is untested, so please do report any bugs with this as soon as possible so I can address them quickly!",
+			"Version": "1.0.1",
+			"SizeInBytes": 29886,
+			"Uploaded": "2024-11-18T06:41:08+00:00",
+			"Mods": [
+				{
+					"Id": "chiccen.GarbageCanTweaks",
+					"DisplayName": "Garbage Can Tweaks",
+					"Type": "Smapi",
+					"RelativePath": "GarbageCanTweaks",
+					"Manifest": {
+						"Name": "Garbage Can Tweaks",
+						"Description": "Changes some behavior to make garbage cans a little more useful!",
+						"Author": "chiccen",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "GarbageCanTweaks.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:24410"
+						],
+						"UniqueId": "chiccen.GarbageCanTweaks",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "chiccen",
+								"Directory": "_releases",
+								"ModFolder": "GarbageCanTweaks"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342503558,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411098,
+		"UploaderId": 21205234,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

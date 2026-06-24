@@ -1,0 +1,68 @@
+{
+	"Site": "Nexus",
+	"Id": 47677,
+	"Name": "Fashion Sense Buffs",
+	"Author": "hierocles",
+	"Description": "[b]Fashion Sense Buffs[/b] automatically applies (and removes) buffs based on whichever [url=https://www.nexusmods.com/stardewvalley/mods/18384]Fashion Sense Outfits[/url] outfit you're wearing. Map any outfit ID to one or more buffs from [i]Data/Buffs[/i] — including buffs added by other mods — so your wardrobe can actually do something in-game. Stack with [url=https://www.nexusmods.com/stardewvalley/mods/21226]Farmer 2.0 ESWF[/url] and you can automate the whole process!\n<br />\n<br />A common use case is pairing weather-themed outfits with protection buffs from [url=https://www.nexusmods.com/stardewvalley/mods/23734]Project Danger Weather[/url], but the system works with [b]any[/b] buff from [b]any[/b] mod that registers entries in [i]Data/Buffs[/i]. You can see an example of PDW-based outfit setup\u00A0[url=https://github.com/hierocles/FashionSenseBuffs/blob/main/examples/%5BCP%5D%20PDW%20Outfit%20Buffs/content.json]here[/url]. (This is technically cheating and removes the point of the item-based gameplay aspects of PDW, but who is anybody to yuck your yum?)\n<br />\n<br />Outfit-to-buff mappings are fully configurable in [i]assets/outfits.json[/i], and other mods can add or override mappings through [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] without touching this mod's files. A default set of outfits for Project Danger Weather is already mapped, but you would need to create outfits with identical names from within Fashion Sense Outfits.\n<br />\n<br />If you want to use the built-in [font=Courier New]outfits.json[/font] with PDW, create outfits with these names in Fashion Sense Outfits: WinterCoat (for winter weather), RainyDayGear (for rain/monsoon/hurricane/etc), DesertExplorer (for hot weathers), BugProof (for insect swarms like the locusts).\n<br />\n<br />[line]\n<br />\n<br />[size=5]Installation instructions[/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] (4.0 or newer) and [url=https://www.nexusmods.com/stardewvalley/mods/9969]Fashion Sense[/url]\u00A0&amp;\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/18384]Fashion Sense Outfits[/url].[/*]\n<br />[*]Download [b]Fashion Sense Buffs[/b] and unzip the folder into your Stardew Valley [i]Mods[/i] directory.[/*]\n<br />[*]Launch the game once with SMAPI. The mod creates a config file at [i]Mods/FashionSenseBuffs/config.json[/i].[/*]\n<br />[/list]\n<br />[b]Custom mappings:[/b]\n<br />Edit [i]Mods/FashionSenseBuffs/assets/outfits.json[/i] to map your own outfits, or ship a Content Patcher pack that targets [i]hierocles.FashionSenseBuffs/Outfits[/i]. See the GitHub\u00A0[i][url=https://github.com/hierocles/FashionSenseBuffs/blob/main/docs/content-patcher-guide.md]docs/content-patcher-guide.md[/url][/i] for the full format.\n<br />\n<br />[line]\n<br />\n<br />[size=5]Main features[/size]\n<br />\n<br />[list]\n<br />[*][b]Automatic buff application[/b] — When your active Fashion Sense outfit changes, the mod looks up that outfit's ID and applies the configured buffs. Switching to an unmapped outfit (or clearing your outfit) removes any buffs this mod applied.[/*]\n<br />[*][b]Apply and remove buffs[/b] — Each mapping supports [i]BuffIds[/i] (buffs to apply) and optional [i]RemoveBuffIds[/i] (debuffs or lingering buffs to strip while the outfit is worn). Useful when weather mods apply debuffs before protection kicks in.[/*]\n<br />[*][b]Content Patcher support[/b] — Other mods can patch [i]hierocles.FashionSenseBuffs/Outfits[/i] with [i]EditData[/i] to register outfit mappings. Built-in data loads at low priority, so CP packs always override the defaults.[/*]\n<br />[*][b]Smart outfit matching[/b] — Outfit IDs are matched case-insensitively. Seasonal and indoor variants (e.g. [i]Acid Rain Spring[/i], [i]Heatwaves Summer[/i]) can share a single base mapping like [i]Acid Rain[/i] or [i]Heat Wave[/i] without duplicating every variant.[/*]\n<br />[*][b]Stays in sync with conditions[/b] — Mappings reload when a save is loaded and each morning, so Content Patcher conditions (season, weather, event flags, etc.) stay current.[/*]\n<br />[*][b]In-game settings (optional)[/b] — With [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] installed, open [b]Mod Options → Fashion Sense Buffs[/b] to toggle the feature on/off and view all loaded outfit → buff mappings.[/*]\n<br />[/list]\n<br />[b]Finding outfit IDs:[/b]\n<br />The outfit ID is Fashion Sense's internal name, not the label shown in the outfit picker. Enable SMAPI debug logging and switch outfits — when a mapped buff is applied, the log shows the ID (e.g. [i]Applied buff 'PDWKittyMuffs' for outfit 'WinterCoat'[/i]). You can also check keys in a Fashion Sense content pack's config files.\n<br />\n<br />[size=4][b]Friendly Note! ~ [/b]I still consider this to be in the beta stage. I've played a few weathers from Project Danger Weather, but haven't tested any other outfit-based buffs. If you notice that a buff or debuff isn't applying, please submit a bug report with your [url=https://smapi.io/log]SMAPI log[/url]\u00A0and Fashion Sense Outfits JSON! [/size]\n<br />\n<br />[line]\n<br />[size=5]Requirements[/size]\n<br />\n<br />[b]Core mod[/b]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.0+ — [b]Required[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/9969]Fashion Sense[/url] — [b]Required[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/18384]Fashion Sense Outfits[/url] — [b]Required[/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] — [b]Required\u00A0[/b](by Fashion Sense Outfits)[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — Optional (in-game settings UI, used to enable/disable mod and list loaded outfit-buff mappings)[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21226]Farmer 2.0 ESWF[/url] — Optional, or some other season/weather outfit switching mod that works with Fashion Sense Outfits. Without a mod to automatically switch your outfits, you'll need to manually apply the appropriate outfit to get the buffs.[/*]\n<br />[/list]\n<br />[center][url=https://github.com/hierocles/FashionSenseBuffs]Open Source on GitHub[/url][/center]\n<br />[center][/center]\n<br />[center]Note: I use a mix of Cursor and Claude Code, which is why I've tagged the mod AI-generated. There are no assets shipped with this mod, so there's no creative AI generated here. (Support your artists &lt;3) Code is reviewed, tested, debugged, and iterated, not just 1-shotted onto GitHub. I've been coding for over 2 decades as a hobby, long before ChatGPT was an invented phrase. I see AI as a useful tool for coding, but I do understand anybody's hesitance with AI in general given how it's used in creative/artistic spaces. All that being said, please follow any Discord/community rules and don't ask for support anywhere except this mod page and the GitHub repo. :)[/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47677",
+	"Version": "v0.2.0",
+	"Updated": "2026-06-17T01:35:37+00:00",
+	"Downloads": [
+		{
+			"Id": 171546,
+			"Type": "Main",
+			"DisplayName": "FashionSenseBuffs v0.2.0",
+			"FileName": "1a/f9/84/1af98476-4fd3-4ff0-b4f3-c449324c74ac",
+			"Description": "",
+			"Version": "v0.2.0",
+			"SizeInBytes": 29328,
+			"Uploaded": "2026-06-17T01:35:37+00:00",
+			"Mods": [
+				{
+					"Id": "hierocles.FashionSenseBuffs",
+					"DisplayName": "Fashion Sense Buffs",
+					"Type": "Smapi",
+					"RelativePath": "FashionSenseBuffs",
+					"Manifest": {
+						"Name": "Fashion Sense Buffs",
+						"Description": "Automatically applies buffs based on the active Fashion Sense outfit. Outfit-to-buff mappings are fully configurable and patchable by other mods via Content Patcher.",
+						"Author": "hierocles",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FashionSenseBuffs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.FashionSense",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:hierocles/FashionSenseBuffs",
+							"Nexus:47677"
+						],
+						"UniqueId": "hierocles.FashionSenseBuffs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558234,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434365,
+		"UploaderId": 161512533,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

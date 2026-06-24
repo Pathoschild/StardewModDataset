@@ -1,0 +1,140 @@
+{
+	"Site": "Nexus",
+	"Id": 11363,
+	"Name": "Missing Gifts",
+	"Author": "ChiroxT",
+	"Description": "[u][size=5][b][u][color=#f4f4f4][size=5][b]What does this mod do?\n<br />\n<br />[/b][/size][/color][/u][/b][/size][/u]This Mod adds a Bar of Portraits to the bottom left corner.\n<br />Those are the villagers with the least friendship, which not have received 2 gifts this week and no gift today.\n<br />\n<br />\n<br />[b][u][size=5]Gift indicator[/size][/u][/b]\n<br />\n<br />When holding an Item in the Hand or hovering over them in chests or the inventory, the villagers start to glow to indicate, how they like it:\n<br />\n<br />\uFEFF[img]https://treichel.ddns.net/mods/images/example.png[/img]\n<br />\n<br />[color=#ff00ff]Purple[/color]: loves\n<br />[color=#00ff00]Green[/color]: beloved\n<br />[color=#ff7700]Orange[/color]:\u00A0 dislike\n<br />[color=#ff0000]Red[/color]: hates\n<br />\n<br />Also you can see little speech-bubbles above the head of the villagers, which indicates, how much the like them.\n<br />\n<br />Both features can be disabled in the config by setting their values to false or\u00A0turn them off in\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />[b][u][size=5]Daily quest indicator[/size][/u][/b]\n<br />\n<br />The Mod also shows, if you can turn in a daily quest. If you need an item for that quest, it shows, while holding it or hovering over it.\n<br />\n<br />This feature is turned on by default, but can be turned off in the config by setting\u00A0show_finished_quests to false of via\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />[b][u][size=5]\n<br />SVE? RSV?\n<br />[/size][/u][/b]\n<br />Yes, this also works for\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/7286]Ridgeside Village[/url].\n<br />In Fact, it even works for [b]ANY[/b] Custom NCP, as long as he/she is giftable.\n<br />Just add\u00A0\uFEFFan asset File with his/her name.\n<br />\n<br />I will also provide Assets for some Mods :)\n<br />you can Download them and place the extracted folder in the folder assets (like the folder Stardew Valley already is).\n<br />Also, i created an extra \"Mod\" for NSFW assets, since i cant publish them here :D\n<br />\n<br />Currently, the dwarf and some RSV villagers are missing, since i dont found them yet ... will come in following updates\n<br />\n<br />\n<br />[b][u][size=5]Know everything or Learn it by yourself\n<br />[/size][/u][/b]\n<br />Due to a suggestion, i added the learn-mode :D\n<br />Instead of Knowing, what everyone like, you need to find it out by yourself.\n<br />\n<br />To Turn it on, set the config value for know_all_tastes to false or turn it off in\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\n<br />\n<br />\n<br />[b][u][size=5]Only wanna use Loving items?\n<br />\n<br />[/size][/u][/b]In the config, you can set only_loves to true\u00A0or turn it on in\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />If you do that, you will be only indicated for items, the villagers do love or you dont know how they like it.\n<br />\n<br />\n<br />[b][u][size=5]Creating own Assets\u00A0[/size][/u][/b]\n<br />\n<br />The Assets must have the dimensions 80x600.\n<br />Each 100pixel vertical are used for the 5 likestates and the unknown state.\n<br />The ? for the\u00A0know_all_tastes-Config is in the base asset folder and can be used for your custom Villagers.\n<br />\n<br />GIMP Drop Shadow Setting:\n<br />   \uFEFFX = 1,115\n<br />   \uFEFFY = -8,041\n<br />   \uFEFFRadius = 13,83\n<br />   \uFEFFOpacity = 2,0\n<br />   \uFEFFColors: \n<br />   \uFEFF   \uFEFFloves = ff00f9\n<br />   \uFEFF   \uFEFFlikes = 3be91c\n<br />   \uFEFF   \uFEFFdislikes = ffa600\n<br />   \uFEFF   \uFEFFhates = ff0000\n<br />\n<br />\n<br />[b][u][size=5]Configurations\n<br />[/size][/u][/b]In the config.json you can set, how many villagers shall be seen, up to how many hearts they shall appear and the direction of points.\n<br />You can change those values in the file and update the settings by pressing F6 (no restart required) or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />Default:\n<br />[code]{\n<br />\u00A0 \"ModEnabled\": true,\n<br />\u00A0 \"max_persons\": 15,\n<br />\u00A0 \"show_maxhearts\": 10,\n<br />\u00A0 \"low_to_high\": true,\n<br />\u00A0 \"only_loves\": false,\n<br />\u00A0 \"switch_key\": \"RightControl\",\n<br />\u00A0 \"know_all_tastes\": true,\n<br />\u00A0 \"show_finished_quests\": true\n<br />}\n<br />[/code]\n<br />\n<br />[b][u][size=5]Custom Item List\n<br />[/size][/u][/b]If the Items are added to the Giftinglist, it should show the indicators.\n<br />Still, it could show wrong ... e.g. Alex dislikes Wood, but shows neutral.\n<br />the file\u00A0specials.txt is for overwriting these data ...\n<br />\n<br />Just add a Line with those data:\n<br />[code]Villager;ItemID;likestate(;Optional infos like itemname)[/code]\n<br />likestate:\n<br />   \uFEFF0 loves\n<br />   \uFEFF1 likes\n<br />   \uFEFF2 neutral\n<br />   \uFEFF3 dislikes\n<br />   \uFEFF4 hates\n<br />\n<br />you can get the ItemID from the SMAPI Console with the command [i]list_items &lt;Itemname&gt;[/i]\n<br />\n<br />example:\n<br />Alex;388;3;Wood\n<br />\n<br />I will update this list as soon as i test new items for villagers.\n<br />\n<br />\n<br />[b][u][size=5]To-Do's[/size][/u][/b]\n<br />[list]\n<br />[*][size=2][s]Indicate, while holding cursor over an Item[/s] done[/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url][s]\u00A0integration[/s]\u00A0done[/size]\n<br />[*][size=2]Adding all missing SDV, SDE and RSV assets[/size]\n<br />[*][size=2]Adding assets for some NSFW Mods\u00A0[/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11363",
+	"Version": "1.8",
+	"Updated": "2024-07-11T03:04:27+00:00",
+	"Downloads": [
+		{
+			"Id": 56848,
+			"Type": "Optional",
+			"DisplayName": "Rigdeside Village Assets 1.7",
+			"FileName": "Rigdeside Village Assets 1.7-11363-1-7-1656869958.rar",
+			"Description": "The assets for Ridgeside Village",
+			"Version": "1.7",
+			"SizeInBytes": 311372,
+			"Uploaded": "2022-07-03T17:39:18+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "MissingGifts\\assets\\Ridgeside Village",
+					"Type": "Invalid",
+					"RelativePath": "MissingGifts\\assets\\Ridgeside Village",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342443536,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 56849,
+			"Type": "Optional",
+			"DisplayName": "Stardew Valley Expanded Assets 1.7",
+			"FileName": "Stardew Valley Expanded Assets 1.7-11363-1-7-1656870014.rar",
+			"Description": "the assets for Stardew Valley Expanded",
+			"Version": "1.7",
+			"SizeInBytes": 69524,
+			"Uploaded": "2022-07-03T17:40:14+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "MissingGifts\\assets\\Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "MissingGifts\\assets\\Stardew Valley Expanded",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342443537,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 56850,
+			"Type": "Main",
+			"DisplayName": "Missing Gifts ... SDV 1.5",
+			"FileName": "Missing Gifts 1.7-11363-1-7-1656870884.rar",
+			"Description": "The Mod itself ... for SDV 1.5",
+			"Version": "1.7",
+			"SizeInBytes": 432460,
+			"Uploaded": "2022-07-03T17:54:44+00:00",
+			"Mods": [
+				{
+					"Id": "treinke.missinggifts",
+					"DisplayName": "Missing Gifts",
+					"Type": "Smapi",
+					"RelativePath": "MissingGifts",
+					"Manifest": {
+						"Name": "Missing Gifts",
+						"Description": "Shows, who still needs to be given gifts this week and how he likes, what is in your hand.",
+						"Author": "ChiroxT",
+						"Version": "1.7.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "MissingGifts.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11363"
+						],
+						"UniqueId": "treinke.missinggifts"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342443538,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 106417,
+			"Type": "Main",
+			"DisplayName": "Missing Gifts ... SDV 1.6",
+			"FileName": "Missing Gifts-11363-1-8-1720667067.zip",
+			"Description": "This is the Mod Itself ... for SDV 1.6",
+			"Version": "1.8",
+			"SizeInBytes": 445618,
+			"Uploaded": "2024-07-11T03:04:27+00:00",
+			"Mods": [
+				{
+					"Id": "treinke.missinggifts",
+					"DisplayName": "Missing Gifts",
+					"Type": "Smapi",
+					"RelativePath": "MissingGifts",
+					"Manifest": {
+						"Name": "Missing Gifts",
+						"Description": "Shows, who still needs to be given gifts this week and how he likes, what is in your hand.",
+						"Author": "ChiroxT",
+						"Version": "1.8.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "MissingGifts.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:11363"
+						],
+						"UniqueId": "treinke.missinggifts"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342493105,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342398051,
+		"UploaderId": 118831923,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

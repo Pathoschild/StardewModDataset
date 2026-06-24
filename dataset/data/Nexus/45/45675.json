@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 45675,
+	"Name": "StardewCropProfit",
+	"Author": "darkness1335ds",
+	"Description": "# Stardew Crop Profit 1.4.0 Release Post\n<br />\n<br />## English\n<br />\n<br />### Overview\n<br />\n<br />**Stardew Crop Profit** is a real-time crop profit and farm planning assistant for Stardew Valley.\n<br />It runs as a SMAPI mod with a bundled local web UI, then syncs your current save data into the browser so you can make better planting and processing decisions without manual data entry.\n<br />\n<br />This tool is built for players who want more than a static crop spreadsheet.\n<br />Instead of only comparing base profits, it uses your live farm state, current season, current day, professions, planted crops, machine availability, bundle progress, active quests, and key unlock conditions to provide recommendations that are much closer to actual gameplay.\n<br />\n<br />It supports desktop and mobile access on the same local network, and includes a bilingual Chinese / English interface.\n<br />\n<br />### Core Features\n<br />\n<br />- Real-time sync for season, day, year, professions, planted crops, and available planting plots.\n<br />- Profit calculation for 40 vanilla crops, including Stardew Valley 1.6 additions.\n<br />- Machine scanning for Kegs and Preserves Jars, including working batches and remaining processing time.\n<br />- Community Center bundle tracking with room progress and missing item visibility.\n<br />- Active quest integration so crop-related quests can influence planting plans.\n<br />- Planting recommendations with both Profit First and Task First modes.\n<br />- Seed accessibility checks so special crops are only recommended when they are realistically obtainable.\n<br />- Multi-source crop info with clearer purchase source text, including Pierre's, Joja, Oasis, Traveling Cart, Ginger Island, and Prize Machine related logic where applicable.\n<br />- Local web access from phone, tablet, or another PC on the same LAN.\n<br />\n<br />### What's New in 1.4.0\n<br />\n<br />Version 1.4.0 is a feature update centered on Robin's carpenter projects.\n<br />This release adds a new Robin shop panel to the local web UI so you can browse farm buildings and upgrades directly from synced save data, check whether your current backpack materials and money are enough, and quickly compare what you can build next.\n<br />\n<br />It also improves presentation by adding local building images sourced from the Chinese Wiki for vanilla carpenter projects, while still degrading safely for unsupported or incomplete blueprint data.\n<br />\n<br />### 1.4.0 Highlights\n<br />\n<br />- Added a new Robin shop panel to the sync view with left and right building switching.\n<br />- Added full vanilla carpenter project coverage based on wiki data, including farm buildings, farmhouse upgrades, and community upgrades.\n<br />- Added build readiness checks using current backpack materials and current money.\n<br />- Added local vanilla building images sourced from Chinese Wiki data, with placeholder fallback when an image is unavailable.\n<br />- Added runtime blueprint sync so standard blueprint-style mod buildings can be appended when detected.\n<br />- Moved the Robin shop section below greenhouse planting recommendations for a more natural planning flow.\n<br />\n<br />### Robin Shop Features\n<br />\n<br />- Browse Robin projects one by one without leaving the sync page.\n<br />- See the building name, description, source, price, and requirement list in one card.\n<br />- Material requirements use a bundle-style presentation and only show whether each requirement is satisfied.\n<br />- Build status now clearly distinguishes:\n<br />\u00A0 - `Ready to Build`\n<br />\u00A0 - `Missing Materials`\n<br />\u00A0 - `Missing Money`\n<br />\u00A0 - `Missing Both`\n<br />\u00A0 - `Owned`\n<br />\u00A0 - `Maxed`\n<br />\u00A0 - `Incomplete`\n<br />\n<br />### Sync &amp; Compatibility\n<br />\n<br />- Extended sync payloads with:\n<br />\u00A0 - `backpackInventory`\n<br />\u00A0 - `currentMoney`\n<br />\u00A0 - `robinState`\n<br />\u00A0 - `robinBlueprints`\n<br />- Added backward-compatible payload normalization so older sync responses still degrade safely.\n<br />- Vanilla buildings are driven by stable static definitions.\n<br />- Mod buildings are appended from runtime blueprint data when they expose enough information.\n<br />- If a mod blueprint is incomplete, the UI still shows it safely as `Incomplete` instead of breaking the page.\n<br />\n<br />### Notes\n<br />\n<br />- Vanilla building images are stored locally in the packaged web assets instead of hotlinking the wiki at runtime.\n<br />- Some vanilla edge cases without a stable source image still fall back to a placeholder image.\n<br />- Mod buildings currently use a placeholder image by design unless explicit image support is added later.\n<br />\n<br />### Compatibility\n<br />\n<br />- Requires SMAPI 4.0.0 or newer.\n<br />- Designed for Stardew Valley 1.6 content support.\n<br />\n<br />### Update Notes\n<br />\n<br />- The packaged mod folder and release zip continue to use **StardewCropProfit**.\n<br />- If you used an older version, manually delete `Mods/StardewToolsSync` before installing 1.4.0 to avoid keeping the old folder alongside the renamed release.\n<br />- When updating from an older version, replacing the entire mod folder is recommended.\n<br />- If the page still shows old frontend behavior after updating, do a hard refresh in your browser with `Ctrl+F5`.\n<br />- For the best results, keep the bundled web assets and DLL from the same release package.\n<br />\n<br />---\n<br />\n<br />## 中文\n<br />\n<br />### 模组介绍\n<br />\n<br />**Stardew Crop Profit** 是一个面向《星露谷物语》的实时作物收益与农场规划助手。\n<br />它以 SMAPI 模组形式运行，并内置本地网页界面，把当前存档中的游戏数据同步到浏览器里，帮助你在不手动录入数据的情况下，更高效地做出种植和加工决策。\n<br />\n<br />这个工具并不只是一个静态收益表。\n<br />它不会只对比作物基础利润，而是会结合你当前存档中的季节、日期、职业、已种植作物、加工设备、收集包进度、活跃任务和关键解锁状态，给出更贴近真实游玩过程的建议。\n<br />\n<br />同时，它支持同一局域网下的电脑、手机和平板访问，并提供中文 / English 双语界面。\n<br />\n<br />### 核心功能\n<br />\n<br />- 实时同步季节、日期、年份、职业、已种植作物和可种植地块数量。\n<br />- 支持 40 种原版作物收益计算，包含 Stardew Valley 1.6 新增内容。\n<br />- 扫描酒桶与果酱腌菜罐，显示工作中的批次和剩余加工时间。\n<br />- 跟踪社区中心收集包进度，展示房间完成度和缺失物品。\n<br />- 读取当前活跃任务，让与作物相关的任务直接影响种植规划。\n<br />- 提供“收益优先”和“任务优先”两种种植推荐模式。\n<br />- 增加种子可得性判断，避免推荐今天实际上拿不到的特殊作物。\n<br />- 更准确展示作物来源说明，并结合皮埃尔、Joja、绿洲、旅行货车、姜岛、兑奖机等渠道做推荐判断。\n<br />- 支持局域网访问，可在手机、平板或其他电脑上直接打开使用。\n<br />\n<br />### 1.4.0 更新概述\n<br />\n<br />`1.4.0` 是一次围绕“罗宾商店 / 木匠铺项目”展开的功能更新。\n<br />这次版本在本地网页里新增了罗宾商店区域，你可以直接基于当前同步到的存档数据浏览建筑与升级项目，判断背包材料和金币是否足够，并更快决定下一步该建什么。\n<br />\n<br />同时，这个版本也加入了来自中文 Wiki 整理后的原版建筑本地图片资源，并为标准蓝图类 mod 建筑提供了尽量兼容的运行时追加显示。\n<br />\n<br />### 1.4.0 更新亮点\n<br />\n<br />- 在同步视图中新增罗宾商店区域，支持左右切换当前建筑项目。\n<br />- 新增完整的原版木匠铺项目数据，覆盖农场建筑、农舍升级和社区升级。\n<br />- 新增基于“当前背包材料 + 当前金币”的建造可达性判断。\n<br />- 新增原版建筑本地图片资源，来源于中文 Wiki 整理结果；无图时自动回退占位图。\n<br />- 新增标准蓝图类 mod 建筑的运行时同步，检测到时会自动追加到罗宾列表中。\n<br />- 将罗宾商店移动到温室未种植推荐下方，更贴合实际规划流程。\n<br />\n<br />### 罗宾商店功能\n<br />\n<br />- 无需离开同步页，就能逐个查看罗宾当前可展示的建筑与升级项目。\n<br />- 单张卡片中直接展示建筑名称、描述、来源、价格和材料需求。\n<br />- 材料列表延续收集包式展示，只显示“已满足 / 不足”，不展示具体背包数量。\n<br />- 建造状态现在会明确区分：\n<br />\u00A0 - `可建造`\n<br />\u00A0 - `材料不足`\n<br />\u00A0 - `金币不足`\n<br />\u00A0 - `材料和金币不足`\n<br />\u00A0 - `已拥有`\n<br />\u00A0 - `已满级`\n<br />\u00A0 - `信息不完整`\n<br />\n<br />### 同步与兼容\n<br />\n<br />- 同步负载新增字段：\n<br />\u00A0 - `backpackInventory`\n<br />\u00A0 - `currentMoney`\n<br />\u00A0 - `robinState`\n<br />\u00A0 - `robinBlueprints`\n<br />- 增加向后兼容的 payload 归一化处理，旧版本同步数据也会安全降级。\n<br />- 原版建筑由稳定的静态配置驱动。\n<br />- mod 建筑在运行时通过蓝图数据追加，只要字段足够完整就会展示。\n<br />- 如果某个 mod 蓝图信息不完整，前端会安全显示为 `信息不完整`，不会破坏整个页面。\n<br />\n<br />### 说明\n<br />\n<br />- 原版建筑图片已经打包进本地网页资源，不依赖运行时热链 Wiki。\n<br />- 少数没有稳定图源的原版项目仍会回退为占位图。\n<br />- mod 建筑当前默认使用占位图，这是当前版本的预期行为。\n<br />\n<br />### 兼容性\n<br />\n<br />- 需要 SMAPI 4.0.0 或更高版本。\n<br />- 面向 Stardew Valley 1.6 内容支持。\n<br />\n<br />### 更新建议\n<br />\n<br />- 打包后的模组目录名和发布 ZIP 名继续使用 **StardewCropProfit**。\n<br />- 如果你之前使用的是旧版本，请先手动删除 `Mods/StardewToolsSync`，再安装 `1.4.0`，避免旧目录残留。\n<br />- 如果你是从旧版本升级，建议直接替换整个模组文件夹。\n<br />- 如果更新后网页仍显示旧版前端行为，请在浏览器中执行一次硬刷新：`Ctrl+F5`。\n<br />- 为避免资源不一致，建议始终使用同一发布包中的 DLL 和 `web` 文件一起更新。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45675",
+	"Version": "1",
+	"Updated": "2026-05-23T06:58:06+00:00",
+	"Downloads": [
+		{
+			"Id": 168572,
+			"Type": "Main",
+			"DisplayName": "StardewCropProfit 1.4.0",
+			"FileName": "StardewCropProfit 1.4.0-45675-1-4-0-1779519486.zip",
+			"Description": "### Features<br /><br />- Added a new Robin shop panel to the sync view with left/right building switching.<br />- Added vanilla carpenter projects from wiki data, including buildings, house upgrades, and community upgrades.<br />- Added build readiness checks for Robin proj",
+			"Version": "1.4.0",
+			"SizeInBytes": 459840,
+			"Uploaded": "2026-05-23T06:58:06+00:00",
+			"Mods": [
+				{
+					"Id": "fuchangling.StardewCropProfit",
+					"DisplayName": "Stardew Crop Profit",
+					"Type": "Smapi",
+					"RelativePath": "StardewCropProfit",
+					"Manifest": {
+						"Name": "Stardew Crop Profit",
+						"Description": "Host a local crop profit web UI and expose current game state through SMAPI.",
+						"Author": "fuchangling",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewToolsSync.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:45675"
+						],
+						"UniqueId": "fuchangling.StardewCropProfit"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555260,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432363,
+		"UploaderId": 284122643,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

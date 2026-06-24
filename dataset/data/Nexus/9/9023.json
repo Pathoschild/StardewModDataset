@@ -1,0 +1,69 @@
+{
+	"Site": "Nexus",
+	"Id": 9023,
+	"Name": "Artifact System Drop Framework and Geodes Handler",
+	"Author": "pepoluan",
+	"Description": "[color=#00ffff][font=Comic Sans MS]This mod's original name was [font=Lucida Sans Unicode][color=#ffff00][b]\"Artifact System Fixed - Redux\"[/b][/color][/font], and now since I've cleaned up all ASF code, I decide to rename it \"Artifact System Drop Framework &amp; Geodes Handler\" (ASDFGH for short) because since v0.6.0 it has features to allow other modders to 'patch in' into the Artifact System / Geodes System; please read this doc in its entirety, especially the \"FRAMEWORK\" section.[/font][/color]\n<br />\n<br />[color=#00ffff]---[/color]\n<br />\n<br />The original [url=https://www.nexusmods.com/stardewvalley/mods/2761]Artifact System Fixed[/url] mod (ASF) aimed to do three things:\n<br />[list=1]\n<br />[*]Fix the bugged \"Primary Table\" for artifact spot digging,\n<br />\n<br />[*]Give fairness to odds of items given from artifact spot, and\n<br />\n<br />[*]Reduce the odds of getting same item from \"Primary Table\" or \"Geode drops\"\n<br />[/list]\n<br />Since it was last officially updated, two things happened:\n<br />[list=1]\n<br />[*]SDV 1.4 came out -- this fixes the \"Primary Table\" so #1 above is no longer needed, and\n<br />[*]SDV 1.5 came out\n<br />[/list]\n<br />SDV 1.5 introduced A LOT of new things ... that ASF did not take into consideration, such as:\n<br />[list]\n<br />[*]Qi Beans special order -- totally suppressed by ASF\n<br />[*]Bone fragments special order / mail quest -- not suppressed, but made harder\n<br />[*]Enchantments are totally ignored\n<br />[*]Artifact Troves treated as 'normal' geodes\n<br />[*]Golden Coconuts treated as 'normal' geodes\n<br />[*]... and many others.\n<br />[/list]\n<br />Unfortunately, the maker of the original ASF mod seems to have abandoned the mod ([url=https://github.com/Ilyaki/ArtifactSystemFixed/pull/1]PR since last year[/url]\uFEFF have been ignored)\n<br />\n<br />So I took it upon myself to \"[url=https://www.merriam-webster.com/dictionary/redux]Redux[/url]\uFEFF\" this mod.\n<br />\n<br />\n<br />[font=Trebuchet MS][color=#00ffff][size=5][b]Changes [/b](compared to ASF)[/size][/color][/font]\n<br />[list]\n<br />[*][color=#ff0000][size=4][b]Modding Framework[/b][/size][/color] to patch into Artifact System &amp; Geodes System\n<br />[*]Fully compatible with SDV 1.5 quests &amp; items\n<br />[*]Custom weighting has been taken out, because it's potentially game-breaking due to the much more complex logic of SDV 1.5\n<br />[b]Note:[/b] Automatic \"de-emphasizing\" (i.e., making odds of already-found artifacts to be lower) [i]is kept[/i].[*]\"Secondary Table\" now also have \"fair odds\"\n<br />[*]If [url=https://www.nexusmods.com/stardewvalley/mods/8680]Even Better RNG (EBRNG)[/url]\uFEFF version 1.10.0 or newer is used, then it will use EBRNG's much-improved random number generator\n<br />[*](since v0.2.0) config.json syntax changes. Older config.json sadly will be overwritten, but in its place\n<br />[*](since v0.2.0) MORE configurable knobs in config.json!! Yay!!!\n<br />[*](since v0.2.0) Default value for \"already found item\" is changed to 0.6 to make the mod less 'cheaty' (you can change it back to 0.3 if you want, of course)\n<br />[*](since v0.2.0) Default value for \"Lost Book found\" odds is changed to 0.15 (originally hard-coded to 0.2)\n<br />[/list]\n<br />\n<br />[b][font=Trebuchet MS][color=#00ffff][size=5]Installation[/size][/color][/font][/b]\n<br />[list=1]\n<br />[*]Make sure SMAPI is installed and running\n<br />[*]Download &amp; extract to the Mods directory\n<br />[*]DELETE the old \"Artifact System Fixed\" directory (if any)\n<br />[*]DELETE the older \"Artifact System Fixed - Redux\" directory (if any -- since v0.6.0 the directory is called \"ASDFGH\" &lt;== do NOT delete this one!)\n<br />\n<br />[*]Enjoy\n<br />[/list]\n<br />\n<br />[b][i]Remember, delete the old \"ASF\" and \"ASFR\" directories![/i][/b]\n<br />\n<br />\n<br />[b][font=Trebuchet MS][color=#00ffff][size=5]For Mod Makers: [color=#ff00ff]F R A M E W O R K[/color][/size][/color][/font][/b]\n<br />The framework is designed to [b]augment[/b] content packs created for [url=https://www.nexusmods.com/stardewvalley/mods/1720]JSON Assets[/url] (JA) : If your mod is a valid, working content pack for JA, all you need is to [b]add ONE file[/b] and your mod will now be patched into the Artifact System / Geodes System.\n<br />\n<br />[url=https://sourceforge.net/p/sdvmod-asdfgh/code/ci/default/tree/ASDFGH/docs/mod-authors.md]Please click here to see the documentation for this feature[/url].\n<br />\n<br />\n<br />[b][font=Trebuchet MS][color=#00ffff][size=5]Source Code[/size][/color][/font][/b]\n<br />[url=https://sourceforge.net/p/sdvmods-artifact-fix-redux/code/ci/default/tree/]Available on SourceForge[/url]\uFEFF, released under [url=https://www.mozilla.org/en-US/MPL/2.0/FAQ/]MPL-2.0 license[/url].\n<br />\n<br />.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9023",
+	"Version": "0.6.1",
+	"Updated": "2021-07-04T15:01:25+00:00",
+	"Downloads": [
+		{
+			"Id": 42788,
+			"Type": "Main",
+			"DisplayName": "ASDFGH 0.7.0",
+			"FileName": "ASDFGH 0.7.0-9023-0-7-0-1625410885.zip",
+			"Description": "Please see \"Changelog\" in the \"Description\" tab for a summary of changes between versions.",
+			"Version": "0.7.0",
+			"SizeInBytes": 108730,
+			"Uploaded": "2021-07-04T15:01:25+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.ASDFGH",
+					"DisplayName": "Artifact System Drop Framework & Geodes Handler",
+					"Type": "Smapi",
+					"RelativePath": "ASDFGH",
+					"Manifest": {
+						"Name": "Artifact System Drop Framework & Geodes Handler",
+						"Description": "Overhauls Artifact System & Geodes drops, and allow content modders to patch into the system",
+						"Author": "pepoluan",
+						"Version": "0.7.0",
+						"EntryDll": "ASDFGH.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:9023"
+						],
+						"UniqueId": "pepoluan.ASDFGH",
+						"OtherFields": {
+							"MinimumApiLevel": "3.7.0",
+							"PerSaveConfigs": false,
+							"Meta:License": "GPLv3",
+							"Meta:Repository": "https://sourceforge.net/projects/sdvmods-artifact-fix-redux/",
+							"Meta:Changelog": {
+								"0.1.0": "Initial Release",
+								"0.1.1": "Fix Primary Table weighting",
+								"0.2.0": "Add more tunable knobs",
+								"0.3.0": "Complete rewrite to remove all traces of GPLv3-taint",
+								"0.4.0": "Rename to Artifact System Drop Framework & Geodes Handler (ASDFGH)",
+								"0.6.0": "Total rewrite! Now this is a framework!",
+								"0.6.1": "Bugfix: don't crash if location not in primary table",
+								"0.7.0": "There's a bugfix but I don't remember what..."
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429476,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395711,
+		"UploaderId": 27024274,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

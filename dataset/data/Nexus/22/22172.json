@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 22172,
+	"Name": "Reptile Hut as Farm Building",
+	"Author": "Paperkoopa",
+	"Description": "[size=4][u]Overview:[/u][/size]\n<br />The Reptile Hut houses 8 animals and can be built by Robin for 14000 Gold, 700 Wood, 250 Stone and 1 Metal Bar. It comes with an Incubator by default. This might seem expensive, but it acts similarily to a Big Coop, so it's a building plus an upgrade in one.\n<br />There is also a Deluxe Repitle Hut  for 20000 Gold, 500 Wood, 150 Stone and 2 Metal Bars. The Deluxe variant does not increase in size, but I think the auto-feeder makes the prices justified.\n<br />A level 1 version of the building wouldn't make a lot of sense I think, the incubator is too important for reptile breeding.\n<br />\n<br />All coop and barn animals can now live in the Reptile Hut. This fixes previous issues of being unable to re-house already existing animals.\n<br />\n<br />If that doesn't seem like enough animals to warrant an expensive new building, give my other mod\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/21790]Tortoises as Farm Animals[/url] a look!\n<br />\n<br />[size=4][u]Installation:[/u][/size]\n<br />[list]\n<br />[*]Extract archive to Stardew Valley&#92;Mods&#92;\n<br />[/list]\n<br />[size=4][u]Dependencies:[/u][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\n<br />[/list]\n<br />[size=4][u]Info for Mod Authors:\n<br />[/u][/size][i](By default, you can house any Coop or Barn animals in the Reptile Hut, but you can also the method below, if your animal is already living in a custom building)[/i]\n<br />\n<br />For Content Patcher mods you can assign different buildings to your custom animals, depending on whether this mod is installed or not.\n<br />[i]\n<br />Example using my [url=https://www.nexusmods.com/stardewvalley/mods/21790]Tortoise mod[/url]:[/i]\n<br />First, assign dynamic tokens like this:\n<br />[code]\"DynamicTokens\": [\n<br />   \uFEFF{\n<br />   \uFEFF   \uFEFF\"Name\": \"TortoiseHouse\",\n<br />   \uFEFF   \uFEFF\"Value\": \"Barn\"\n<br />   \uFEFF},\n<br />   \uFEFF{\n<br />   \uFEFF   \uFEFF\"Name\": \"TortoiseHouse\",\n<br />   \uFEFF   \uFEFF\"Value\": \"Paperkoopa.ReptileHut_ReptileHut\",\n<br />   \uFEFF   \uFEFF\"When\": {\n<br />   \uFEFF   \uFEFF   \uFEFF\"HasMod\": \"Paperkoopa.ReptileHut\"\n<br />   \uFEFF   \uFEFF}\n<br />},\n<br />[/code]\n<br />And in your entry you can reference these tokens like this:\n<br />[code]\uFEFF\"Entries\": {\n<br />   \uFEFF\"Tortoise\": {\n<br />   \uFEFF   \uFEFF\"RequiredBuilding\": \"{{TortoiseHouse}}\"\n<br />   \uFEFF}\n<br />}\n<br />[/code]\n<br />You can even get dynamic translations like this:\n<br />[code]\"ShopDescription\": \"{{i18n: shop-description-{{lowercase: {{TortoiseHouse}}}}}}\",\n<br />\"ShopMissingBuildingDescription\": \"{{i18n: shop-missing-building-description-{{lowercase: {{TortoiseHouse}}}}}}\",\n<br />[/code]\n<br />With translation files like this:\n<br />[code]\"shop-description-paperkoopa.reptilehut_reptilehut\": \"[...] Lives in the Reptile Hut.\",\n<br />\"shop-description-barn\": \"[...] Lives in the Barn.\",\n<br />[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/22172",
+	"Version": "1.0.7",
+	"Updated": "2024-04-12T15:37:08+00:00",
+	"Downloads": [
+		{
+			"Id": 91569,
+			"Type": "Main",
+			"DisplayName": "Reptile Hut as Farm Building",
+			"FileName": "Reptile Hut as Farm Building-22172-1-0-7-1712936228.7z",
+			"Description": "",
+			"Version": "1.0.7",
+			"SizeInBytes": 49523,
+			"Uploaded": "2024-04-12T15:37:08+00:00",
+			"Mods": [
+				{
+					"Id": "Paperkoopa.ReptileHut",
+					"DisplayName": "Reptile Hut as Farm Building",
+					"Type": "ContentPack",
+					"RelativePath": "ReptileHutAsFarmBuilding\\[CP] Reptile Hut",
+					"Manifest": {
+						"Name": "Reptile Hut as Farm Building",
+						"Description": "This mod creates the Reptile Hut as living space for Dinosaurs and custom animals",
+						"Author": "Paperkoopa",
+						"Version": "1.0.7",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:22172"
+						],
+						"UniqueId": "Paperkoopa.ReptileHut"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342478257,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408860,
+		"UploaderId": 4619020,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 14292,
+	"Name": "All The Trees",
+	"Author": "DemonBigj781",
+	"Description": "This mod adds a tree to\u00A0all the games items from index 0 to 65535. so if its out there there is a tree of it. The texture are testing textures so a true texture submission\u00A0is\u00A0appreciated. i only need a universal sapling and a tree texture due to me using automated software to update all the files.\u00A0\n<br />\n<br />use debug getindex \"item name\" to find the Item ID of the tree so...\n<br />\n<br />Wheat is \"262\" so the tree name is \"Item Id Number 262 Sapling\"\n<br />\n<br />Json Assets is required and you need more than 65535 items in the game to make this work.\n<br />\n<br />it is Not a Virus because I used\u00A0https://json-generator.com/ with this code.\n<br />\n<br />[code]\uFEFF['{{repeat(65535)}}',\n<br />\u00A0 {\n<br />\u00A0 \u00A0 Name: function (tags ,x) {\n<br />\u00A0 \u00A0 \u00A0 if (this.Name === null) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 x = 0 ;}\n<br />\u00A0 \u00A0 \u00A0 else if ( x !==0) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0x += 1;\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 else if ( x === 0) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 x = 1;\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 x = x- 1;\n<br />\u00A0 \u00A0 return x.toString();\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 Product: '{{index()}}',\n<br />\u00A0 \u00A0 SaplingName: function(tags, y){\n<br />\u00A0 \u00A0 \u00A0 if (this.Name === null) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0y\u00A0 = 0 ;}\n<br />\u00A0 \u00A0 \u00A0 else if ( y !==0) {\n<br />\u00A0 \u00A0 \u00A0 y+= 1;\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 else if ( y === 0) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 y = 1;\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0y = y- 1;\n<br />\u00A0 \u00A0 \u00A0 return \"Item Id Number \" + y.toString() + \" Tree Sappling\";\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 SaplingDescription:\n<br />\u00A0 \u00A0 function(tags, z){\n<br />\u00A0 \u00A0 \u00A0 if (this.Name === null) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0z\u00A0 = 0 ;}\n<br />\u00A0 \u00A0 \u00A0 else if (z !==0) {\n<br />\u00A0 \u00A0 \u00A0 z+= 1;\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 else if ( z === 0) {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 z = 1;\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0z = z- 1;\n<br />\u00A0 \u00A0 \u00A0 return \"Takes 28 days to produce a mature Item Id Number \" + z.toString() + \" Tree Sappling. Ready to harvest in the fall. Only grows if the 8 surrounding tiles are empty.\";\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 Season: \"fall\",\n<br />\u00A0 \u00A0 saplingPurchasePrice: 3750\u00A0 \u00A0\u00A0\n<br />}]\uFEFF\uFEFF\n<br />[/code]and used this python code to split the result.\n<br />\n<br />[code]\uFEFFimport json\n<br />import os\n<br />import shutil\n<br />docs = json.load(open('in.json'))\n<br />mode = 0o666\n<br />for ii, doc in enumerate(docs):\n<br />\u00A0 \u00A0 path= 'C:&#92;&#92;Users&#92;&#92;Owner&#92;&#92;Desktop&#92;&#92;py&#92;&#92;FruitTrees&#92;&#92;Item ID Number '+ str(ii)\n<br />\u00A0 \u00A0 os.mkdir(path, mode)\n<br />\u00A0 \u00A0 os.chdir(path)\n<br />\u00A0 \u00A0 shutil.copy(r'C:&#92;Users&#92;Owner&#92;Desktop&#92;py&#92;img&#92;sapling.png', path)\n<br />\u00A0 \u00A0 shutil.copy(r'C:&#92;Users&#92;Owner&#92;Desktop&#92;py&#92;img&#92;tree.png', path)\n<br />\u00A0 \u00A0 with open('tree.json', 'w') as out:\n<br />\u00A0 \u00A0 \u00A0 \u00A0 json.dump(doc, out, indent=2)\n<br />\n<br />[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14292",
+	"Version": "0.0.1",
+	"Updated": "2022-10-30T03:37:04+00:00",
+	"Downloads": [
+		{
+			"Id": 62128,
+			"Type": "Main",
+			"DisplayName": "All The Trees",
+			"FileName": "All The Trees-14292-0-0-1-1667101024.zip",
+			"Description": "This is a massive file. Download with caution.",
+			"Version": "0.0.1",
+			"SizeInBytes": 462034816,
+			"Uploaded": "2022-10-30T03:37:04+00:00",
+			"Mods": [
+				{
+					"Id": "DemonBigj781.AllTheTrees",
+					"DisplayName": "All The Trees JsonAssets",
+					"Type": "ContentPack",
+					"RelativePath": "all the trees",
+					"Manifest": {
+						"Name": "All The Trees JsonAssets",
+						"Description": "A collection All of new trees for JsonAssets",
+						"Author": "DemonBigj781",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:????"
+						],
+						"UniqueId": "DemonBigj781.AllTheTrees"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448816,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400980,
+		"UploaderId": 29432655,
+		"CategoryId": 14,
+		"Adult": false
+	}
+}

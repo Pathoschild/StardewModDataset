@@ -1,0 +1,104 @@
+{
+	"Site": "Nexus",
+	"Id": 34328,
+	"Name": "Mushroom Log Framework",
+	"Author": "BarleyZP",
+	"Description": "[size=4]Mushroom Log Framework[/size]\n<br />\n<br />[size=3]Mushroom Log Framework allows content pack authors to edit the hardcoded outputs for the Mushroom Log to include modded mushrooms or other items. It is a framework mod that does nothing on its own and is safe to add and remove from your save at any time.\n<br />\n<br />Please see the source code on [url=https://github.com/lisyce/StardewValleyMods/tree/main/MushroomLogFramework]GitHub[/url] for complete documentation and the \"Optional Files\" tab on this mod's page for an example content pack that adds the mushrooms from [url=https://www.nexusmods.com/stardewvalley/mods/19508]Cornucopia[/url] to the Mushroom Log.\n<br />\n<br />Available Features:\n<br />\n<br />[list]\n<br />[*] Change the hardcoded mushroom log outputs and their probabilities.\n<br />[*] Any machine that has their \"OutputMethod\" set to \"StardewValley.Object, Stardew Valley: OutputMushroomLog\" (the same value as the Vanilla mushroom log) can have their own distinct set of outputs based on nearby trees.\n<br />[/list]\n<br />\n<br />Mushroom Log Framework leaves the Vanilla mushroom log output algorithm as untouched as possible. It simply changes the list of potential output items that the game randomly chooses from. See the [url=https://stardewvalleywiki.com/Mushroom_Log]mushroom log wiki page[/url] for more information.[/size]\n<br />\n<br />Note that this mod may potentially be incompatible with the [url=https://www.nexusmods.com/stardewvalley/mods/22926]Cauldron mod[/url] due to conflicting Harmony code patches.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34328",
+	"Version": "2.0.0",
+	"Updated": "2025-10-28T19:58:24+00:00",
+	"Downloads": [
+		{
+			"Id": 146735,
+			"Type": "Optional",
+			"DisplayName": "Cornucopia Mushroom Logs 2.0.0",
+			"FileName": "Cornucopia Mushroom Logs 2.0.0-34328-2-0-0-1761681323.zip",
+			"Description": "Example content pack that adds the Cornucopia Shiitake and Chicken of the Woods to the mushroom log. Requires the base mod and Cornucopia: More Crops. Also requires that the Extended Crops option is enabled in Cornucopia (for the new mushrooms).",
+			"Version": "2.0.0",
+			"SizeInBytes": 1222,
+			"Uploaded": "2025-10-28T19:55:23+00:00",
+			"Mods": [
+				{
+					"Id": "BarleyZP.CornucopiaMushroomLogs",
+					"DisplayName": "(CP) Cornucopia Mushroom Logs",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] CornucopiaMushroomLogs",
+					"Manifest": {
+						"Name": "(CP) Cornucopia Mushroom Logs",
+						"Description": "Adds Cornucopia mushrooms to the vanilla mushroom logs.",
+						"Author": "BarleyZP",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.2.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "BarleyZP.MushroomLogFramework",
+								"MinimumVersion": "2.0.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "BarleyZP.CornucopiaMushroomLogs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533423,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 146737,
+			"Type": "Main",
+			"DisplayName": "Mushroom Log Framework 2.0.0",
+			"FileName": "Mushroom Log Framework 2.0.0-34328-2-0-0-1761681504.zip",
+			"Description": "Totally revamped the framework for more control and options for mushroom log outputs! Previous versions are now deprecated.\n<br />\n<br />See the [url=https://github.com/lisyce/StardewValleyMods/blob/main/MushroomLogFramework/docs/release-notes.md]release notes[/url].",
+			"Version": "2.0.0",
+			"SizeInBytes": 18645,
+			"Uploaded": "2025-10-28T19:58:24+00:00",
+			"Mods": [
+				{
+					"Id": "BarleyZP.MushroomLogFramework",
+					"DisplayName": "Mushroom Log Framework",
+					"Type": "Smapi",
+					"RelativePath": "MushroomLogFramework",
+					"Manifest": {
+						"Name": "Mushroom Log Framework",
+						"Description": "Dehardcodes the vanilla mushroom logs to allow other mods to add outputs",
+						"Author": "BarleyZP",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.3.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "MushroomLogFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:34328"
+						],
+						"UniqueId": "BarleyZP.MushroomLogFramework",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342533425,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421016,
+		"UploaderId": 109869138,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

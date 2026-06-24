@@ -1,0 +1,242 @@
+{
+	"Site": "Nexus",
+	"Id": 7225,
+	"Name": "Shane Dinner Date for Mobile Phone Mod Invite Menu",
+	"Author": "MissMarlot",
+	"Description": "Do you think Stardew Valley is missing a feature to take your boo on a date?\n<br />\n<br />Well, if you are Shane trash like me and you use aedenthorn's Mobile Phone mod, then you are in luck!\n<br />\n<br />Download this mod and call Shane up with the mobile phone between 5pm and 8pm to ask him out to dinner.\n<br />\n<br />The event should hopefully be pretty replayable! I added some randomized dialogue and some dialogue which is dependent on the season, and even specific days. It will also take into account whether or not Shane is working at Joja.\n<br />\n<br />The mod consists of three folders, all three need to be present in your mod folder.\n<br />\n<br />Because I wanted you to be able to choose your meal, I worked with mail IDs, which is why you will need EventRepeater to make this mod work long-term.\n<br />\n<br />It also comes with a modified saloon map (Vanilla and SVE, place choose ONE), because Shane can't SIT DOWN.\n<br />\n<br />By default, the date [i]doesn't [/i]cost money. This can be changed in the [b]config file[/b] in the \"[CP] Shane Dinner Date\" folder. Also works with[url=https://www.nexusmods.com/stardewvalley/mods/5098] the Generic Mod Config Menu[/url].\u00A0\n<br />\n<br />[b]HOW TO USE THE CONFIG FILE:[/b]\n<br />[b]\"CostsMoney\"[/b] determines whether the mod will charge you for dates or not. The values are \"true\" or \"false\".\n<br />[b]\"AmountDateCosts\"[/b] determines how much it will charge you. Put in any number. The default is 1000. (If \"CostsMoney\" is set to \"false\", you can ignore this, it will not affect the event.)\n<br />[b]\"DateMayPay\"[/b] determines if there is a chance Shane will offer to pay. If \"true\" there is a one in four chance he will offer to pay, if \"false\" the player will pay every time.\u00A0\u00A0The default is true. (If \"CostsMoney\" is set to \"false\", you can ignore this, it will not affect the event.)\n<br />\n<br />Required mods:\n<br />[list]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/6523]Mobile Phone[/url]\uFEFF by\u00A0\uFEFFaedenthorn (obviously)\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3642]Event Repeater[/url]\uFEFF by\u00A0\uFEFFMissCoriel (so you can choose your meal anew each time)\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/1726]Platonymous Toolkit[/url]\uFEFF by Platonymous (for the date saloon map)\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/1820]TMXL Map Toolkit[/url]\uFEFF by\u00A0\uFEFFPlatonymous\u00A0(for the \u00A0date saloon map)\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF by\u00A0\uFEFFPathoschild\u00A0\uFEFF(for the \u00A0dialogue and map)\n<br />[/list]\n<br />This mod works with SMAPI.\n<br />\n<br />(I have laid the groundwork to add some of the other bachelors/bachelorettes in the future. I will almost certainly do one for Emily, because I have some ideas for her. If you want to give suggestions or give me dialogue for the other bachelors, that would be highly appreciated!)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7225",
+	"Version": "1.0.2",
+	"Updated": "2020-12-06T15:11:02+00:00",
+	"Downloads": [
+		{
+			"Id": 32977,
+			"Type": "Optional",
+			"DisplayName": "Shane Dinner Date Invite for SVE",
+			"FileName": "Shane Dinner Date Invite for SVE-7225-1-0-2-1607267409.zip",
+			"Description": "Download this version if you have SVE installed.",
+			"Version": "1.0.2",
+			"SizeInBytes": 486160,
+			"Uploaded": "2020-12-06T15:10:09+00:00",
+			"Mods": [
+				{
+					"Id": "missmarlot.dinnerdateCP",
+					"DisplayName": "Shane Dinner Date CP",
+					"Type": "ContentPack",
+					"RelativePath": "Shane Dinner Date for Mobile Phone (SVE)\\[CP] Shane Dinner Date",
+					"Manifest": {
+						"Name": "Shane Dinner Date CP",
+						"Description": "adds the correct files for the event",
+						"Author": "MissMarlot",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "missmarlot.dinnerdatemap",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "misscoriel.eventrepeater",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "tenthousandcats.ImmersiveCShane",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7225"
+						],
+						"UniqueId": "missmarlot.dinnerdateCP"
+					}
+				},
+				{
+					"Id": "missmarlot.dinnerdateInvite",
+					"DisplayName": "Invite Shane Dinner Date",
+					"Type": "ContentPack",
+					"RelativePath": "Shane Dinner Date for Mobile Phone (SVE)\\[MPI] Shane Dinner Date",
+					"Manifest": {
+						"Name": "Invite Shane Dinner Date",
+						"Description": "Adds an event invite to the mobile phone to go on a dinner date",
+						"Author": "MissMarlot",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.MobilePhone",
+							"MinimumVersion": "0.1.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.MobilePhone",
+								"MinimumVersion": "1.4.2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "missmarlot.dinnerdatemap",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "missmarlot.dinnerdateCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedALL",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7225"
+						],
+						"UniqueId": "missmarlot.dinnerdateInvite"
+					}
+				},
+				{
+					"Id": "missmarlot.dinnerdatemap",
+					"DisplayName": "(TMX) ShaneDinnerDateMap",
+					"Type": "ContentPack",
+					"RelativePath": "Shane Dinner Date for Mobile Phone (SVE)\\[TMX] Shane Dinner Date",
+					"Manifest": {
+						"Name": "(TMX) ShaneDinnerDateMap",
+						"Description": "adds the saloon for dinner date invite",
+						"Author": "MissMarlot",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.TMXLoader",
+							"MinimumVersion": "1.3.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.Toolkit",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "missmarlot.dinnerdatemap"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342419665,
+				"CategoryId": 2,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 32978,
+			"Type": "Optional",
+			"DisplayName": "Shane Dinner Date Invite Vanilla",
+			"FileName": "Shane Dinner Date Invite Vanilla-7225-1-0-2-1607267462.zip",
+			"Description": "Please download this version if you are not playing using Stardew Valley Expanded. (Untested - please let me know if you get error messages!)",
+			"Version": "1.0.2",
+			"SizeInBytes": 36867,
+			"Uploaded": "2020-12-06T15:11:02+00:00",
+			"Mods": [
+				{
+					"Id": "missmarlot.dinnerdateCP",
+					"DisplayName": "ShaneDinnerDateCP",
+					"Type": "ContentPack",
+					"RelativePath": "Shane Dinner Date for Mobile Phone (Vanilla)\\[CP] Shane Dinner Date",
+					"Manifest": {
+						"Name": "ShaneDinnerDateCP",
+						"Description": "adds the correct files for the event",
+						"Author": "MissMarlot",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "missmarlot.dinnerdatemap",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "misscoriel.eventrepeater",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "tenthousandcats.ImmersiveCShane",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7225"
+						],
+						"UniqueId": "missmarlot.dinnerdateCP"
+					}
+				},
+				{
+					"Id": "missmarlot.dinnerdateInvite",
+					"DisplayName": "Invite Shane Dinner Date",
+					"Type": "ContentPack",
+					"RelativePath": "Shane Dinner Date for Mobile Phone (Vanilla)\\[MPI] Shane Dinner Date",
+					"Manifest": {
+						"Name": "Invite Shane Dinner Date",
+						"Description": "Adds an event invite to the mobile phone to go on a dinner date",
+						"Author": "MissMarlot",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.5.0",
+						"ContentPackFor": {
+							"UniqueId": "aedenthorn.MobilePhone",
+							"MinimumVersion": "0.1.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.MobilePhone",
+								"MinimumVersion": "1.4.2",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "missmarlot.dinnerdatemap",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "missmarlot.dinnerdateCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7225"
+						],
+						"UniqueId": "missmarlot.dinnerdateInvite"
+					}
+				},
+				{
+					"Id": "missmarlot.dinnerdatemap",
+					"DisplayName": "(TMX) ShaneDinnerDateMap",
+					"Type": "ContentPack",
+					"RelativePath": "Shane Dinner Date for Mobile Phone (Vanilla)\\[TMX] Shane Dinner Date",
+					"Manifest": {
+						"Name": "(TMX) ShaneDinnerDateMap",
+						"Description": "adds the saloon for dinner date invite",
+						"Author": "MissMarlot",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Platonymous.TMXLoader",
+							"MinimumVersion": "1.3.4"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.Toolkit",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "missmarlot.dinnerdatemap"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342419666,
+				"CategoryId": 2,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393913,
+		"UploaderId": 61626681,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

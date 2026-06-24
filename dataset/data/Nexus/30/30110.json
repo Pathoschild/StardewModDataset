@@ -1,0 +1,111 @@
+{
+	"Site": "Nexus",
+	"Id": 30110,
+	"Name": "Collector",
+	"Author": "rokugin",
+	"Description": "[size=3]The Collector is a new big craftable that collects various configurable items from the map it's placed on. All Collectors store in one shared inventory that can be accessed from any Collector.\n<br />\n<br />Visually, the storage space of the Collector is the same size as a Big Chest, however the actual capacity is unlimited. Items collected beyond \n<br />the visual limit are still stored, you just have to pull items out in \n<br />order to access the excess.\n<br />\n<br />[/size][size=4]Currently supports collecting:[/size][size=3]\n<br />[spoiler]Animal produce\n<br />Crops\n<br />Flowers\n<br />Forage\n<br />Spawned objects (gems, minerals, etc)\n<br />Spring Onions\n<br />Ginger\n<br />Tree forage\n<br />Moss\n<br />Fruit trees\n<br />Artifact spots\n<br />Seed spots\n<br />Mushroom boxes\n<br />Garbage cans\n<br />Berry bushes\n<br />Tea bushes\n<br />Panning spots\n<br />Secret Woods stumps\n<br />Slime Balls\n<br />Garden pots\n<br />Crab pots[/spoiler]\n<br />If there's anything that's not covered, feel free to leave a suggestion in the comments and I'll consider it for a future update.\n<br />[/size][size=4]\n<br />Unlocking the recipe:[/size][size=3]\n<br />This mod currently adds a special order and two events revolving around the recipe.\n<br />In order to start the quest to get the recipe you need at least 2 hearts with Maru and Farming level 10.\n<br />If you're married to Maru you'll get an event on the Farm after reaching Farming 10, otherwise you'll receive a letter a day or so after reaching Farming 10 and 2 hearts with Maru.\n<br />The events and special order can be disabled in the settings in order to unlock access to the recipe immediately.\n<br />\n<br />[img]https://i.ibb.co/TMNC1K7/install.png[/img]\n<br />1. Install the latest version of [url=https://smapi.io/]SMAPI[/url].\n<br />2. Install the latest version of [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].\n<br />3. Unzip the mod folder into [font=Courier New]Stardew Valley/Mods[/font].\n<br />4. Run the game using SMAPI.\n<br />[i](Optionally) [/i]Install [url=https://www.nexusmods.com/stardewvalley/mods/31247]Perfection Exclusions[/url] to keep the Grabber-Collector swap recipes from counting towards perfection.\n<br />\n<br />[img]https://i.ibb.co/kMncK1j/compatibility.png[/img]\n<br />[/size][list]\n<br />[*][size=3]Should work with any expansions and most* other mods, depending on what kind of items they're spawning.[/size]\n<br />[*][size=3]Multiplayer should work[/size]\n<br />[/list][size=3]Let me know if there's any issues and I'll try to address them.\n<br />\n<br />* Automate does not pull items from the Collector's because they're not chests or machines. I will look at what it takes to add support for Automate but it most likely will be a while.\n<br />\n<br />[img]https://i.ibb.co/vws1mpD/see-also.png[/img]\n<br />[url=https://github.com/rokugin/Collector]Source[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/30110",
+	"Version": "1.1.0",
+	"Updated": "2025-01-28T11:13:47+00:00",
+	"Downloads": [
+		{
+			"Id": 123681,
+			"Type": "Main",
+			"DisplayName": "Collector - 1.1.0",
+			"FileName": "Collector - 1.1.0-30110-1-1-0-1738062827.zip",
+			"Description": "Add WoL compat for berry bushes.\n<br />Add daily global collection config.\n<br />Make sure drone doesn't count towards perfection.\n<br />Add optional Perfection Exclusions for Grabber-Collector swap recipes.",
+			"Version": "1.1.0",
+			"SizeInBytes": 73309,
+			"Uploaded": "2025-01-28T11:13:47+00:00",
+			"Mods": [
+				{
+					"Id": "rokugin.collector",
+					"DisplayName": "Collector",
+					"Type": "Smapi",
+					"RelativePath": "Collector\\Collector",
+					"Manifest": {
+						"Name": "Collector",
+						"Description": "Adds Collector big craftable that collects various items from the map.",
+						"Author": "rokugin",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "Collector.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DaLion.Professions",
+								"MinimumVersion": "1.2.3",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "furyx639.CustomBush",
+								"MinimumVersion": "1.5.2",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "NCarigon.BushBloomMod",
+								"MinimumVersion": "1.2.4",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.4.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:30110"
+						],
+						"UniqueId": "rokugin.collector",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				},
+				{
+					"Id": "rokugin.collectorcp",
+					"DisplayName": "Collector CP Component",
+					"Type": "ContentPack",
+					"RelativePath": "Collector\\[CP] Collector",
+					"Manifest": {
+						"Name": "Collector CP Component",
+						"Description": "CP component for Collector mod.",
+						"Author": "rokugin",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "rokugin.collector",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "rokugin.perfectionexclusions",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:30110"
+						],
+						"UniqueId": "rokugin.collectorcp",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342510369,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416798,
+		"UploaderId": 2781857,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

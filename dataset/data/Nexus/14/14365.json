@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 14365,
+	"Name": "Stardew Impact - Play as NPCs",
+	"Author": "aedenthorn",
+	"Description": "[size=5][b]Description[/b][/size]\n<br />\n<br />This mod provides an entirely new combat framework to Stardew Valley, centered around character-based magic skills like Genshin Impact (minus the gacha).\n<br />\n<br />The framework can be thought of as having two parts:\n<br />\n<br />[list]\n<br />[*]Letting you assemble a team of up to four villagers with whom you have enough friendship points, and switching between those characters using hotkeys.\n<br />[*]Letting you cast a character's special \"skill\" on cooldown and accumulate energy to eventually cast the character's more powerful \"burst\".\n<br />[/list]\n<br />It is possible to simply add a character as playable using Content Patcher, but to create skills and bursts requires creation of a SMAPI C# mod, accessing this mod's API.\n<br />\n<br />\n<br />[b][size=5]Basic Usage[/size][/b]\n<br />\n<br />Once you have installed mods that make characters playable, you can enable the party UI by equipping any weapon. \n<br />\n<br />When you are not holding a weapon, the party UI will disappear. \n<br />\n<br />The party UI consists of up to four circles on the right side of the screen. \n<br />\n<br />Left clicking on a circle will cycle through available characters, adding the next one in the list to the party slot. \n<br />\n<br />Right clicking on a circle will remove the current character from that slot.\n<br />\n<br />To switch between characters, use the 1-4 keys on the keyboard. To switch back to the farmer, use the 5 key.\n<br />\n<br />For characters that have custom skill mods installed, you can cast their skill by pressing the E key, and their burst by pressing the Q key.\n<br />\n<br />Here is a list of mods that implement this framework (please message me if you make a new mod to add to this list):\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14366/]Emily for Stardew Impact[/url]\uFEFF - fully implements Emily as a playable character with custom skill and burst\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14367/]Playable Villagers[/url]\uFEFF - adds all vanilla villagers as playable using Content Patcher, no skills or bursts.\n<br />[/list]\n<br />\n<br />[size=5][b]Content Patcher\n<br />[/b][/size]\n<br />Making a character playable without special skills is as simple as creating a Content Patcher mod with the following content.json file:\n<br />\n<br />[code]\uFEFF{\n<br />   \"Format\": \"1.23.0\",\n<br />   \"Changes\": [\n<br />      {\n<br />         \"Action\": \"EditData\",\n<br />         \"Target\": \"aedenthorn.StardewImpact/characters\",\n<br />         \"Entries\": {\n<br />            \"Abigail\": {\n<br />               \"name\": \"Abigail\",\n<br />               \"characterColor\": { \"R\": 0, \"G\": 0, \"B\":255, \"A\":255},\n<br />            }\n<br />         }\n<br />      }\n<br />   ]\n<br />}\n<br />[/code]\n<br />\n<br />This tells the framework to add Abigail as a playable character without any special skills. [b]characterColor [/b]will be used for the frame around the portrait circle.\n<br />\n<br />\n<br />[b][size=5]SMAPI C#\n<br />[/size][/b]\n<br />If you don't know what this part means already, it's probably not for you. You can access the framework's API using the interface at:\n<br />\n<br />[url=https://github.com/aedenthorn/StardewValleyMods/blob/master/StardewImpact/StardewImpactApi.cs]https://github.com/aedenthorn/StardewValleyMods/blob/master/StardewImpact/StardewImpactApi.cs\n<br />\n<br />[/url]\uFEFFYou can manipulate the stored values for a character using the interface at:\n<br />\n<br />[url=https://github.com/aedenthorn/StardewValleyMods/blob/master/StardewImpact/ICharacterData.cs]https://github.com/aedenthorn/StardewValleyMods/blob/master/StardewImpact/ICharacterData.cs\n<br />\n<br />[/url]I have created a mod implementing these that you can use as an example at:\n<br />\n<br />[url=https://github.com/aedenthorn/StardewValleyMods/tree/master/SDIEmily]\uFEFFhttps://github.com/aedenthorn/StardewValleyMods/tree/master/SDIEmily\n<br />\n<br />\n<br />[/url]\uFEFF[size=5][b]Config[/b]\n<br />[/size]\n<br />You can edit the\u00A0config.json\u00A0file that is created when first running the game or use GMCM.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14365",
+	"Version": "0.1.1",
+	"Updated": "2022-11-05T15:59:19+00:00",
+	"Downloads": [
+		{
+			"Id": 62396,
+			"Type": "Main",
+			"DisplayName": "Stardew Impact",
+			"FileName": "Stardew Impact-14365-0-1-1-1667663959.zip",
+			"Description": "",
+			"Version": "0.1.1",
+			"SizeInBytes": 44624,
+			"Uploaded": "2022-11-05T15:59:19+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.StardewImpact",
+					"DisplayName": "Stardew Impact",
+					"Type": "Smapi",
+					"RelativePath": "StardewImpact",
+					"Manifest": {
+						"Name": "Stardew Impact",
+						"Description": "Stardew Impact.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "3.15.0",
+						"EntryDll": "StardewImpact.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14365"
+						],
+						"UniqueId": "aedenthorn.StardewImpact",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "StardewImpact"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342449084,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401053,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

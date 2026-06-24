@@ -1,0 +1,66 @@
+{
+	"Site": "Nexus",
+	"Id": 40483,
+	"Name": "Global God Rays",
+	"Author": "Spiderbuttons",
+	"Description": "This mod adds gorgeous sun beams (or god rays, light beams, or whatever else you want to call them) to the outdoor locations of Stardew Valley. These rays will move throughout the day according to the angle of the sun, change colour as it approaches sunset, and fade away when it gets dark out. They'll move and fade in and out over time so they aren't just staying completely and statically still the whole time.\n<br />\n<br />[url=https://github.com/Spiderbuttons/GlobalGodRays/]PREVIEW VIDEO AVAILABLE HERE.[/url]\n<br />\n<br />[b][size=5]Installation[/size][/b]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Extract the mod into Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list][size=5][b]Performance[/b][/size][b][size=5]\n<br />[/size][/b]This mod is\u00A0[i]not[/i]\u00A0a demanding mod to run. Seriously! It's just drawing a PNG on top of your screen. In all likelihood, you won't notice any performance decrease in your gameplay at all as a result of this mod. You don't need a fancy graphics card, you don't need a powerful computer, you don't need to worry about performance. Just try it.\n<br />\n<br />[b][size=5]Configuration\n<br />[/size][/b]Note: Configuration is only supported via Generic Mod Config Menu (GMCM).\n<br />\n<br />This mod comes with two customizable hotkeys:\n<br />[list]\n<br />[*]Toggle Location God Rays: Press this hotkey to quickly enable or disable god rays in the location you are currently standing in. Works in indoor locations as well. No default hotkey.\n<br />[*]Toggle Current Weather: Press this hotkey to quickly enable or disable god rays for the current weather you are standing in. No default hotkey.\n<br />[/list]\n<br />The god rays are also customizable to an extent in this mod. You won't be able to change the texture, but you'll be able to change some factors about how the rays appear and where/when they appear. The available settings are:\n<br />\n<br />[list]\n<br />[*]Enable God Rays: Whether or not god rays should be drawn on the screen. Default true.\n<br />[*]Ray Scale: How small or large the god rays appear on the screen. You'll want to adjust this depending on your screen size. Larger rays are more transparent than smaller rays to avoid blinding white lights at high scales. Default 65%.\n<br />[*]Ray Intensity: How many god rays there are and how densely they appear. Default 4.\n<br />[*]Ray Animation Speed: The speed at which the rays move around in the sky. Default 20.\n<br />[*]Ray Opacity Modifier: How much the opacity is multiplied by before final render. Change this if you want them more or less transparent without changing any other settings. Default 1.2x.\n<br />[*]Fade Under Clouds: If enabled, the rays will fade out when you stand beneath a cloud. Default true.\n<br />[/list]\n<br />In v1.1.0 and above, you are also able to configure the god rays individually per-weather! This includes the vanilla weathers as well as any modded weathers added via Cloudy Skies (notably, this includes Weather Wonders). When you launch the game and open the GMCM screen for this mod, you will be presented with multiple pages: Generic Weather Settings, Vanilla Weather Settings, and if you have Cloudy Skies installed, Modded Weather Settings.\n<br />\n<br />The Generic Weather Settings will be used for\u00A0[i]all[/i]\u00A0weathers that you have not specifically changed. These are the settings you want to alter if you want a set of default values that will work in any weather without you needing to do anything else for individual weathers. The Generic Weather Settings also include an additional configuration option:\n<br />\n<br />[list]\n<br />[*]Disable in Bad Weather: Whether or not rays should automatically be disabled if the current weather is determined to be bad (i.e. raining, snowing, etc.) Default true.\n<br />[/list]\n<br />The other pages, Vanilla Weather Settings and Modded Weather settings, will show you a list of weather types that you can click on to configure individually. Each individual weather configuration comes with an additional configuration option:\n<br />\n<br />[list]\n<br />[*]Use Generic Settings: If enabled, every other setting in this specific weather configuration will be ignored and the mod will use your Generic Weather Settings for this weather type. Default true.\n<br />[/list]\n<br />If you want to configure individual weathers, remember to disable the \"Use Generic Settings\" option! With that disabled, your custom weather configurations will be used for the god rays whenever you are currently experiencing that weather type in game.\n<br />\n<br />For Modded Weather Settings, the name of the weather displayed is taken from the other mod. So if it doesn't look right, please let the other mod author know that they did not set the DisplayName of their weather correctly, don't tell me! But just in case there are any such issues, the internal weather ID is also displayed when you go to configure that specific weather, so you can still figure out what it is from the internal name (hopefully).\n<br />\n<br />[b][size=5][url=https://github.com/Spiderbuttons/GlobalGodRays]Source Code[/url][/size][/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40483",
+	"Version": "1.1.1",
+	"Updated": "2026-01-13T02:12:14+00:00",
+	"Downloads": [
+		{
+			"Id": 153333,
+			"Type": "Main",
+			"DisplayName": "Global God Rays",
+			"FileName": "Global God Rays-40483-1-1-1-1768270334.zip",
+			"Description": "New: Experimental support for split screen. If you play with split screen, you will likely need to adjust your opacity multiplier. If you encounter issues (split screen or otherwise) in this update specifically, feel free to go back to v1.1.0",
+			"Version": "1.1.1",
+			"SizeInBytes": 406362,
+			"Uploaded": "2026-01-13T02:12:14+00:00",
+			"Mods": [
+				{
+					"Id": "Spiderbuttons.GlobalGodRays",
+					"DisplayName": "Global God Rays",
+					"Type": "Smapi",
+					"RelativePath": "GlobalGodRays",
+					"Manifest": {
+						"Name": "Global God Rays",
+						"Description": "Render gorgeous sun beams in outdoor locations during the day.",
+						"Author": "Spiderbuttons",
+						"Version": "1.1.1",
+						"EntryDll": "GlobalGodRays.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Kana.WeatherWonders",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "leclair.cloudyskies",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:40483"
+						],
+						"UniqueId": "Spiderbuttons.GlobalGodRays"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342540021,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427171,
+		"UploaderId": 177615852,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

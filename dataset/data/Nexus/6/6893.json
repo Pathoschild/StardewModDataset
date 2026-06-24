@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 6893,
+	"Name": "Community Center Helper",
+	"Author": "vgperson",
+	"Description": "Need help finding items for the Community Center bundles, but don't want to look it up online every time? This mod adds suggestions of where to find items when you hover over/highlight them in the bundle menu!\n<br />\n<br />Suggestions are generally tailored to your progress in the game. For example, if an item requires an unlearned cooking recipe, it will tell you how to get the recipe; otherwise, it will tell you the ingredients. It tries to make it clear when there are requirements (such as skill levels) that must be met before the item can be obtained.\n<br />\n<br />Most item sources are included, but not every possible one - I prioritized the easiest and most reliable ways to get each item. This notably excludes things like the Traveling Cart, which can randomly provide many of the items required for bundles, but cannot be relied upon. I also don't account for bundle rewards, since they're one-time and are often changed by mods.\n<br />\n<br />Additionally, as of version 1.6.0, you can choose to show hints for items in the Collections tab as well, which can help with filling in your Collection or finding more of a particular item. Note that only items from the base game Collections tab are guaranteed to be supported, as supporting every mod item that could be there is infeasible.\n<br />\n<br />\n<br />[size=4][b]Supports English, [size=4][b]Chinese (Simplified &amp; Traditional), [size=4][b][size=4][b]French, [/b][/size]German, [size=4][b]Italian[/b][/size], [size=4][b]Japanese, [/b][/size][size=4][b]Portuguese, [size=4][b]Russian, [/b][/size][/b][/size][/b][/size][/b][/size]Spanish, Thai, Ukrainian[/b][/size]\n<br />(Even in unsupported languages, item and character names refer directly to the data, so those will use the proper names for that language.)\n<br />\n<br />Japanese translation done by vgperson.\n<br />Simplified Chinese translation provided by sansenenlemon.\n<br />Traditional Chinese translation (to use, delete zh-CN.json in l18n folder and rename zh-TW.json to zh.json) provided by Yilite.\n<br />French translation provided by Azurys &amp; Caranud.\n<br />German translation provided by NotErikWasTaken &amp; randomC0der.\n<br />Italian translation provided by AliAgo08 &amp;\u00A0flowerssummerr.\n<br />Portuguese translation provided by Cosmiky.\n<br />Russian translation provided by angel4killer &amp; AppleNorris.\n<br />Spanish translation provided by vlcoo.\n<br />Thai translation (usable with Thai mod and SMAPI 3.13.0 or newer) provided by ellipszist.\n<br />Turkish translation provided by sevilayerkan.\n<br />Ukrainian translation (usable with Ukrainian mod and SMAPI 3.13.0 or newer) provided by ChulkyBow.\n<br />\n<br />\n<br />[size=4][size=5][b]Installation[/b][/size]\n<br />[/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url]\uFEFF.\n<br />[*]Unzip the [b]CommunityCenterHelper[/b] folder into [b]Stardew Valley/Mods[/b].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5][b]User Configuration[/b][/size]\n<br />\n<br />[b]NOTE:[/b] The Collections tab setting is disabled by default, so be sure to enable it if you want it! Either edit the config.json file directly, or if you have [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] installed, open Mod Config from the title screen or options menu.\n<br />\n<br />\n<br />[b]ShowSpoilers (true or false)[/b]\n<br />By its nature, this mod spoils certain things about the game. However, by default (\"ShowSpoilers\": false), it tries to conceal things that could be seen as \"surprises\" for new players, like areas and characters you haven't yet encountered. If you want all the information regardless of your progress in the game, you can set this to true.\n<br />\n<br />[b]Things that are still spoiled with ShowSpoilers disabled:[/b] Names of items and machines, requirements for getting recipes, the existence of some constructions.\n<br />[b]\n<br />Things that ShowSpoilers will hide as appropriate:[/b] Names of areas you haven't yet reached, unknown shops, unencountered monsters.\n<br />\n<br />\n<br />[b]ShowCollectionsTabHints (0, 1, or 2)[/b]\n<br />You can enable this to show the same style of hint tooltips in the Collections tab as well.\n<br />\n<br />[b]0 (off, default):[/b] Never show location hints in the Collections tab.\n<br />[b]1 (for unknowns):[/b] Shows hints for where to get items not yet obtained in Collections.\n<br />[b]2 (all items):[/b] Not only shows hints for unobtained items, but allows you to review location hints on obtained items as well - just click or press the Action or Tool button to toggle what's displayed.\n<br />\n<br />\n<br />[size=5][b]Bundle Mod Support[/b][/size]\n<br />\n<br />In addition to the bundles (both normal and remixed) in the base game, the following bundle-altering mods are supported.\n<br />\n<br />[list]\n<br />[*]Custom Community Center Bundles (by Alja)\n<br />[*]Challenging Community Center Bundles (by Alja)\n<br />[*]Minerva's Harder Community Center Bundles\n<br />[*]Legacy Community Center Bundles (by Lunatyx)\n<br />[*]Alchemistry Bundles (Easy and Harder) (by Morghoula)\n<br />[*]Community Center Bundle Overhaul (by 7Yrs, SMAPI version by Chaos234)\n<br />[*]EasierBundles (by Quirinea)\n<br />[*]Alternative Bundles (by Quirinea)\n<br />[*]Vegan Community Center Bundles (by Yuki Del Valle)\n<br />[*]difficulty option for bundles (by Axisdubois)\n<br />[*]Very Hard version of Community Center Bundles for 1 year challenge (by kners)\n<br />[*]Adventurer's Bundle to Gemologist's Bundle (by LenneDalben)\n<br />[*]The Impossible Bundle (by Mossy)\n<br />[/list]\n<br />Note that even if a bundle mod is not listed here, it's still likely to have partial, or possibly even full support for non-modded items - suggestions are defined on a per-item basis, and many base-game items are covered. Any items not covered will just not show any suggestions.\n<br />\n<br />\n<br />[size=5][b]Possible Mod Conflicts[/b][/size]\n<br />\n<br />I tried to have this mod directly reference the data when possible, so some things changed by mods (like recipe unlock requirements that aren't mail-based) may be automatically supported. But for the most part, suggestions are hardcoded according to the base game, and could be inaccurate or incomplete when using mods that make major changes. (In just a few cases, there are suggestions that are only listed when specific mods are installed, but I'm absolutely not committing to covering everything like that.)\n<br />\n<br />Besides that, however, the mod does very little to the code and is unlikely to break the game in combination with anything.\n<br />\n<br />\n<br />[b][size=5]See also[/size][/b][size=3]\n<br />\n<br />[url=https://github.com/vgperson/CommunityCenterHelper]Source code[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6893",
+	"Version": "1.6.10",
+	"Updated": "2026-01-23T22:54:34+00:00",
+	"Downloads": [
+		{
+			"Id": 59003,
+			"Type": "Main",
+			"DisplayName": "CommunityCenterHelper (for 1.4 Compatibility)",
+			"FileName": "CommunityCenterHelper (for 1.4 Compatibility)-6893-1-1-1-1660763736.zip",
+			"Description": "The latest mod version prior to Stardew Valley 1.5 (but including current translations). Use this for compatibility with Stardew 1.4 (i.e. on mobile).",
+			"Version": "1.1.1",
+			"SizeInBytes": 131508,
+			"Uploaded": "2022-08-17T19:15:36+00:00",
+			"Mods": [
+				{
+					"Id": "vgperson.CommunityCenterHelper",
+					"DisplayName": "Community Center Helper",
+					"Type": "Smapi",
+					"RelativePath": "CommunityCenterHelper",
+					"Manifest": {
+						"Name": "Community Center Helper",
+						"Description": "Adds tips for where to find things when hovering over required items for bundles.",
+						"Author": "vgperson",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CommunityCenterHelper.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6893"
+						],
+						"UniqueId": "vgperson.CommunityCenterHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342445691,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 154634,
+			"Type": "Main",
+			"DisplayName": "CommunityCenterHelper",
+			"FileName": "CommunityCenterHelper-6893-1-6-10-1769208874.zip",
+			"Description": "",
+			"Version": "1.6.10",
+			"SizeInBytes": 206151,
+			"Uploaded": "2026-01-23T22:54:34+00:00",
+			"Mods": [
+				{
+					"Id": "vgperson.CommunityCenterHelper",
+					"DisplayName": "Community Center Helper",
+					"Type": "Smapi",
+					"RelativePath": "CommunityCenterHelper",
+					"Manifest": {
+						"Name": "Community Center Helper",
+						"Description": "Adds tips for where to find things when hovering over required items for bundles.",
+						"Author": "vgperson",
+						"Version": "1.6.10",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CommunityCenterHelper.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6893"
+						],
+						"UniqueId": "vgperson.CommunityCenterHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342541322,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393581,
+		"UploaderId": 95309763,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

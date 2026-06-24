@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 35032,
+	"Name": "Crop Encyclopedia",
+	"Author": "advanlsdnfa",
+	"AuthorLabel": "gellingly",
+	"Description": "[size=6][b]Crop Encyclopedia[/b][/size]\n<br />\n<br />Press a configurable keybinding to open a UI that provides crop information like sell price, gold per day, and what seasons it can be grown in.\u00A0 This will show crops from other mods, but may not have complete information if there is custom logic.\n<br />\n<br />The columns, in order, are:\n<br />[list]\n<br />[*]Name\n<br />[*]Sprite\n<br />[*]D - How many days it takes to grow to first harvest\n<br />[*]R - How many days it takes to regrow, if applicable\n<br />[*]# - Number of harvests you'd be able to make from one seed if planted today. \u00A0This does the calculation for a maximum of one year if greenhouse logic is being used, or the crop regrows and can last through all seasons.\n<br />[*]G - Sell price\n<br />[*]G/d - Gold per day. \u00A0If the crop does not regrow, this is `sell price / days for growth`. \u00A0If the crop regrows, it is `sell price * number of harvests / days until last harvest`. \u00A0This does not take into account crops that might have extra yield, such as blueberries. \u00A0Similar to the number of harvests, this does the calculation for a maximum of one year if greenhouse logic is being used, or the crop regrows and can last through all seasons.\n<br />[*]Date - Date of first harvest if planted today\n<br />[*]Seasons - What seasons this crop is in season for\n<br />[/list]\n<br />All column headers can be clicked to sort the information by that column, except for Seasons.\n<br />\n<br />The options on the left, in order, \u00A0are:\n<br />[list]\n<br />[*]Textbox - Filter by name\n<br />[*]Greenhouse Logic - Changes values such as the filter for if the crop will die before being harvestable, how many days until harvest, first harvest date, and gold per day to be calculated assuming the crop is always in season\n<br />[*]Won't die - Only show crops that will be harvestable if planted today\n<br />[*]Giant crop - Only show crops that can form a giant crop\n<br />[*]Seasons - Filter by season\n<br />[*]Regrowth - Filter by if the crop can regrow\n<br />[*]Type - Filter by type like vegetable, fruit, or flower\n<br />[*]Fertilizer - Changes values such as days until harvest, first harvest date, and gold per day to reflect the chosen fertilizer\n<br />[/list]\n<br />If the farmer has the Agriculturalist profession, calculations will take this into account.\n<br />\n<br />[size=3][b]Config Options[/b][/size]\n<br />KeyBinding - keybinding to open the UI. \u00A0Default is F8.\n<br />\n<br />Source code:\u00A0[url=https://github.com/gellingly/stardewmods]https://github.com/gellingly/stardewmods[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/35032",
+	"Version": "1.0.0",
+	"Updated": "2025-07-05T20:48:54+00:00",
+	"Downloads": [
+		{
+			"Id": 136340,
+			"Type": "Main",
+			"DisplayName": "Crop Encyclopedia v1.1.0",
+			"FileName": "Crop Encyclopedia v1.1.0-35032-v1-1-0-1751748534.zip",
+			"Description": "Built from https://github.com/gellingly/stardewmods/commit/c186d4d3de770e4406168e9537bcd561852a76cc",
+			"Version": "v1.1.0",
+			"SizeInBytes": 32981,
+			"Uploaded": "2025-07-05T20:48:54+00:00",
+			"Mods": [
+				{
+					"Id": "gellingly.CropEncyclopedia",
+					"DisplayName": "Crop Encyclopedia",
+					"Type": "Smapi",
+					"RelativePath": "CropEncyclopedia",
+					"Manifest": {
+						"Name": "Crop Encyclopedia",
+						"Description": "Provides information about crops",
+						"Author": "gellingly",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CropEncyclopedia.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"MinimumVersion": "0.6.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:35032"
+						],
+						"UniqueId": "gellingly.CropEncyclopedia"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342523028,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342421720,
+		"UploaderId": 158787108,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

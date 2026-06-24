@@ -1,0 +1,127 @@
+{
+	"Site": "Nexus",
+	"Id": 9049,
+	"Name": "Barn Incubator Support",
+	"Author": "elbebeta",
+	"AuthorLabel": "elbe",
+	"Description": "After updating the BFAV unofficial patch so [url=https://github.com/lshtech/StardewValleyMods/releases/tag/BFAV-3.2.4]Ostriches can hatch again[/url] (fixed bug with golden chickens too) started to wonder if the Ostrich Incubator could be modded to support modded animals.\n<br />Thus, my first [i]official[/i] release: Barn Incubator Support.\n<br />\n<br />While I don't provide any animals that make use of it, this is basically a framework, more creative modders can create larger, barn sized animals that incubate and hatch.\n<br />\n<br />It's pretty easy to set up. Using [url=https://www.nexusmods.com/stardewvalley/mods/4847]BFAV Quails[/url] as an example you create or edit an animal's data to show them as being in a Barn (case insensitive):\n<br />1/5/Quail Egg/Large Quail Egg/cluck/36/64/64/64/36/64/64/64/0/false/[b]Barn[/b]/16/16/16/16/15/5/null/639/1000/Japanese Quail/[b]Barn[/b]\"\n<br />\n<br />The spot in the middle, index 15, is the one it checks by but the one at the end is the one displayed to the user. So, with some animal adding mod like BFAV, you can put in any item in the egg category that the animal produces and you'll get a brand new oviparous animal to name, pet, and exploit for your personal gain.\n<br />\n<br />While the only dependency this has directly is SMAPI it doesn't add extra animals or modify the hatching logic, just the insert into incubator logic.\n<br />\n<br />Extra details:\n<br />In the code the time it takes to incubate is 150 hours for all the coop birds, 250 hours for the ostrich, and twice the time for the dinosaur (300, in this case). I left it as coop animals are 150, any barn animals are 250, and anything with \"Dinosaur\" in it's name gets double that - in case someone wants to make a Large Dinosaur or something.\n<br />\n<br />When you put any egg into the ostrich incubator the sprite turns into the ostrich one. I don't currently have any good ideas on how to dynamically change that so it's just a little visual oddity.\n<br />\n<br />An optional Content Patcher mod has been uploaded that will rename the incubator from \"Ostrich\" to \"Large\"; I felt like it seemed appropriate.\n<br />\n<br />Source can be found on [url=https://github.com/lshtech/StardewValleyMods/tree/develop/BarnIncubatorSupport]GitHub[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9049",
+	"Version": "1.01.1",
+	"Updated": "2021-07-06T20:58:59+00:00",
+	"Downloads": [
+		{
+			"Id": 42750,
+			"Type": "Optional",
+			"DisplayName": "Rename Incubater from Ostrich to Large",
+			"FileName": "Rename Incubater from Ostrich to Large-9049-1-0-1-1625279296.zip",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 955,
+			"Uploaded": "2021-07-03T02:28:16+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.BarnIncubatorSupportCP",
+					"DisplayName": "Content Patcher for Barn Incubator Support",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] BarnIncubatorSupport",
+					"Manifest": {
+						"Name": "Content Patcher for Barn Incubator Support",
+						"Description": "Renames \"Ostrich Incubator\" to \"Large Incubator\"",
+						"Author": "elbe",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2596"
+						],
+						"UniqueId": "elbe.BarnIncubatorSupportCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429438,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42843,
+			"Type": "Main",
+			"DisplayName": "Barn Incubator Support",
+			"FileName": "Barn Incubator Support-9049-1-01-1-1625605081.zip",
+			"Description": "I've removed Barnosaurus Rex from the main package, fixed it's manifest, and uploaded it as an optional example file.",
+			"Version": "1.0.1",
+			"SizeInBytes": 7444,
+			"Uploaded": "2021-07-06T20:58:01+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.BarnIncubatorSupport",
+					"DisplayName": "Barn Incubator Support",
+					"Type": "Smapi",
+					"RelativePath": "BarnIncubatorSupport",
+					"Manifest": {
+						"Name": "Barn Incubator Support",
+						"Description": "Allows the ostrich incubator in the barn to hatch mod added animals",
+						"Author": "elbe",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "BarnIncubatorSupport.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:9049"
+						],
+						"UniqueId": "elbe.BarnIncubatorSupport"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429531,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42844,
+			"Type": "Optional",
+			"DisplayName": "Barnosaurus Rex",
+			"FileName": "Barnosaurus Rex-9049-1-0-1-1625605139.zip",
+			"Description": "Example file. Changes the dinosaur to use the barn incubator.",
+			"Version": "1.0.1",
+			"SizeInBytes": 825,
+			"Uploaded": "2021-07-06T20:58:59+00:00",
+			"Mods": [
+				{
+					"Id": "elbe.BarnosaurusRex",
+					"DisplayName": "Puts the dinosar in the barn",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Barnosaurus Rex",
+					"Manifest": {
+						"Name": "Puts the dinosar in the barn",
+						"Description": "Barnosaurus Rex",
+						"Author": "elbe",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "elbe.BarnosaurusRex"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429532,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395737,
+		"UploaderId": 559339,
+		"CategoryId": 7,
+		"Adult": false
+	}
+}

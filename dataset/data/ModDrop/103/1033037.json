@@ -1,0 +1,107 @@
+{
+	"Site": "ModDrop",
+	"Id": 1033037,
+	"Name": "Alternative Textures example packs and conversion tools",
+	"Author": "Asterisk555",
+	"TagLine": "Modding tools for quickly converting (or creating) lots of spritesheets to Alternative Textures packs",
+	"Description": "If you're only just starting with making Alternative Textures content packs makes sure you've [read everything available on the mod pages](https://www.nexusmods.com/stardewvalley/mods/9246) first, especially since there is an in-depth wiki linked in the description, and an example pack  in the files tab which is actually quite easy to read.\n\nThese are mostly just extra example packs, though the \"all furniture tools\" is something I made when I was mass converting furniture mods to AT for personal use, and it has ReadMe instructions inside it.\n\nI moved a lot of the example packs to [Vanilla for Alternative Textures](https://www.nexusmods.com/stardewvalley/mods/12028)  because I thought that would be less confusing for people who want to convert just a few items, and not huge megapacks. But if you __are__ doing a megapack the old mod description and python tutorial in the optional files might be useful to you.\n\nold mod description: I did my best to make the instructions easy to understand, and everything should be very quick to use, but if you are only converting a small number of files or aren't comfortable with using scripts to automate things this may not be for you cause some of the things here have a bit of a learning curve. They were really handy for me though because I've had to process over 6,764 images so far.\n\nEach file has a \"read me\" with instructions, sources, and links. I've also created a [wiki](https://stardewmodding.wiki/wiki/Converting_CP_or_CF_mods_to_AT_packs) page for common bugs, which is a wiki that is open to all modders to edit so if you learn anything or think the instructions could be clearer you can add it to the page too.\n\nThe CP mod I used as my banner Yellog's and is no longer available on nexus but you can get an unofficial version [here\n](https://stardewvalleywiki.com/Modding:Using_XNB_mods#Alternatives_using_Content_Patcher)\nFrom the Read me:\n\nFOR CONVERTING FURNITURE MODS TO Alternative Textures PACKS\nThis pack includes a few tools, and links to tool, to help make converting spritesheets to AT packs easier.\nI primarily use these to mass convert old CP mods.\n--------------------------\nThe tools I use include:\n1. Pathos' split stardew valley spritesheet, which can be manually edited to generate filenames \"texture_0,1,2,3\" etc if you change the name section to:\neditor.Image.Save(Path.Combine(exportPath, \"texture_\" + name + \".png\"));\nlink: https://gist.github.com/Pathoschild/f53fe224f87bf349ad85726dc05c477b\n2. For image pricessing: Furniture grids that make it easier to crop spritesheets manually if I have to. [BIMP plugin](https://github.com/alessandrofrancesconi/gimp-plugin-bimp) for GIMP to format multiple images quickly. [Image Magick](https://imagemagick.org/) for when the number of images gets really obscene, but you have to be ready to learn a few basic things about command prompts to use it.\n3. Windows Powershell to automatically name files in all folders quickly. A text file with the commands is included in this folder\nIf you're comfortable downloading programs then try [Bulk Rename](https://www.bulkrenameutility.co.uk/) or [Advanced Renamer](https://www.advancedrenamer.com/), or you can look for something else. But I will not guarantee the digital hygiene of any downloads.\n4. My sorted \"AT template\" pack, also included, which organises furniture items by function and dimensions.\nI have a separate one which separates items which aren't available in the furniture catalogue and are therefore difficult for players to have multiple of.\n5. This example pack with previews of how each furniture .png should look\nlink: https://www.nexusmods.com/stardewvalley/mods/9572/\n--------------------------\n\nNote: These tools are due for an update, what I need to add in the future:\n1. Always start split textures as texture_0 unless you have a good reason not to\n2. Image examples for everything\n3. I have more powershell commands (specifically for sorting and image dump into sorted folders)\n4. Image Magick commands (for resizing images and adding masks and seasonal overlays)\n\n5. A disclaimer saying that even though a lot of my mods have the items individually tagged you don't have to do that! Doing a quick variation number is extrememly fast and easy. I just like to do manual variations for that extra level of user friendliness. And I automate it too! If all your images are named before you start you can use this command to get a list of file names, and then use a macro, find-replace, or excel to add in this missing parts:\n\ntype CMD in the windows explorer navigation bar\n`dir /b &gt; List.txt`\nGives you a list of all files in a folder\n\n6. If you want to retexture something there's no example for you can find the name of it in your game files. If you're gonna be doing a lot of modding anyway it's worth unpacking all your files using [Stardew XNB Hack](https://stardewvalleywiki.com/Modding:Editing_XNB_files#Unpack_game_files) , and then from there if you search those files for, say, \"craftables\" you'll get a document that lists all the different craftables. There'll be a lot of extra game info in those documents but you only really need the name.\n7. To work with Linux operating systems the capital letters are important. \"Texture\" folder and \"texture.json\" and \"texture_0.png\"\n8. If you're dealing with multiple layers in GIMP the  [export as layers plugin](https://github.com/khalim19/gimp-plugin-export-layers) can be pretty handy.\n9. I should probably have more folder templates with images in them?\n10. There's more than just furniture packs on this page now and I should maybe cover the other categories.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1033037",
+	"Version": null,
+	"Updated": "2022-05-16T00:56:46.03+00:00",
+	"Downloads": [
+		{
+			"Id": 1164217,
+			"Type": "Main",
+			"DisplayName": "All furniture tools",
+			"FileName": "All furniture tools.zip",
+			"Description": "All modding tools for converting furniture with Read me instructions inside the folders. Now updated with items not in the furniture catalogue separated! And fixed a few files that were in the wrong place in the old version.",
+			"Version": "3.2",
+			"SizeInBytes": 598817,
+			"Uploaded": "2022-04-30T22:29:34.236+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "AT Furniture tools 3.2\\Colour co-ordinated Furniture grid",
+					"Type": "Invalid",
+					"RelativePath": "AT Furniture tools 3.2\\Colour co-ordinated Furniture grid",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				},
+				{
+					"Id": "YOURNAME.ATFurniturePackSAMPLE",
+					"DisplayName": "(AT) SAMPLE Furniture Pack",
+					"Type": "ContentPack",
+					"RelativePath": "AT Furniture tools 3.2\\Folder Templates\\[AT] all in one template",
+					"Manifest": {
+						"Name": "(AT) SAMPLE Furniture Pack",
+						"Description": "Alternative Textures content pack for furniture: SAMPLE.",
+						"Author": "YOURNAME",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YOURNAME.ATFurniturePackSAMPLE"
+					}
+				},
+				{
+					"Id": "YOURNAME.ATFurniturePackSAMPLE",
+					"DisplayName": "(AT) SAMPLE Furniture Pack",
+					"Type": "ContentPack",
+					"RelativePath": "AT Furniture tools 3.2\\Folder Templates\\[AT] sorted template",
+					"Manifest": {
+						"Name": "(AT) SAMPLE Furniture Pack",
+						"Description": "Alternative Textures content pack for furniture: SAMPLE.",
+						"Author": "YOURNAME",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "3.3.2"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YOURNAME.ATFurniturePackSAMPLE"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "76c62c8bf7234a4007a825ec71ca1d7b",
+				"md5In": "bf75a5e2e76e35bc7e8e601a5798cb74",
+				"scriptType": 0,
+				"sha256Ex": "eda327ed8076a02e422357ac23e92185ec4ae1e02f93c8453c009891efaa18bc",
+				"sha256In": "69e26d1e5fc42bac8afde970e8a30949f281f988c0ec03790de7f9b5c02f770d"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1633907315197,
+		"DateUpdated": 1652662606030,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1633907300620,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1033037/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1033037/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1033037/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1033037/icon_original"
+		},
+		"nexusModID": 9834,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 190934
+	}
+}

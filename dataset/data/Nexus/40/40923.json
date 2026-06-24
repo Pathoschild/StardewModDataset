@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 40923,
+	"Name": "Emet-Selch - Custom NPC (Ko.json)",
+	"Author": "OnyxChalcedony",
+	"AuthorLabel": "Onyx",
+	"Description": "&lt;주의사항&gt;\n<br />원문을 최대한 해치지 않는 선에서 진행하였으나 취향에 맞춰 번역하다보니 원작 기반 의역, 각색이 많을 수 있습니다.\n<br />첫 번역입니다\n<br />버그픽스도 진행했는데 코딩은 까막눈이라 오류가 발생할 수도 있습니다.\n<br />\n<br />토큰(명령어) 추가나 순서 변경(한/영 어순 문제) 등 원문에는 없는 문장구성을 간혹 사용한 경우가 있기 때문에 오류, 오역 발생시 알려주시면 감사하겠습니다.\n<br />\n<br />\n<br />원본 모드 폴더 내에 압축을 해제하여 덮어쓰기 해주세요\n<br />\n<br />\n<br />\n<br />[code]\uFEFF옮긴이: Onyx\n<br />X(Twitter): @Onyx_Ore\n<br />1.0\u00A0\n<br />1.1 %year 토큰 누락 수정\n<br />1.2 대사 출력 오류 수정\n<br />1.3 감정 표현 토큰누락 수정, 대사 출력 오류 수정, 초안번역 교정누락 수정\n<br />1.4 Positive Negative 키 누락 버그픽스\n<br />===\n<br />Bug fix\n<br />&lt;default.json&gt;\n<br />EmetSelch.Spouse.fall_27\n<br />$h#$e$ ▶ $h#$e#\n<br />//토큰 오타 수정\n<br />EmetSelch.unhappyMarried.8\n<br />#$e$ ▶ #$e#\n<br />//토큰 오타 수정\n<br />EmetSelch.Platonic.winter_Wed8\n<br />[668] ▶ [688]\n<br />//지급 아이템 오브젝트 바위파일 코드를 농장 귀환 토템으로 수정\n<br />EmetSelch.Movies.art.2\n<br />$#b# ▶ #$b#\n<br />//토큰 오타 수정\n<br />EmetSelch.AcceptBirthdayGift_Positive, EmetSelch.AcceptBirthdayGift_Negative\n<br />//키 누락 수정 및 추가\n<br />---\n<br />&lt;Emet-Selch_data.json&gt;\n<br />RejectItem_(O)460\": \"{{i18n:EmetSelch.RejectMermaidPendant.1.{{Random: 1, 2, 3, 4, 5, 6}}}} ▶ RejectItem_(O)460\": \"{{i18n:EmetSelch.RejectMermaidPendant.{{Random: 1, 2, 3, 4, 5, 6}}}}\n<br />//랜덤 토큰 호출 수정\n<br />---\n<br />&lt;Emet-Selch_CustomFixedDialogue_Patch.json&gt;\n<br />NPC.cs.3958\": \"{{i18n:EmetSelch.RejectMermaidPendant.alt1}} ▶ NPC.cs.3958\": \"{{i18n:EmetSelch.RejectMermaidPendant.1}}\n<br />//alt1 키는 존재하지 않음. 1로 교체 수정\n<br />NPC.cs.3985\": \"{{i18n:EmetSelch.giftQuesiton}} ▶ NPC.cs.3985\": \"{{i18n:EmetSelch.giftQuestion}}\n<br />//오타 수정\n<br />---\n<br />&lt;Emet-Selch_platonic_edits.json&gt;\n<br />{{i18n:Emet10hearts-2.Hythlodaeus.Platonic.7}} ▶ {{i18n:Emet10hearts-2.Platonic.Hythlodaeus.7}}\n<br />//토큰 호출 오타 수정\n<br />\n<br />\n<br />[/code]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/13436]원본 모드[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/40923",
+	"Version": "1.6",
+	"Updated": "2026-01-12T14:48:29+00:00",
+	"Downloads": [
+		{
+			"Id": 153280,
+			"Type": "Main",
+			"DisplayName": "Emet-Selch(Main)",
+			"FileName": "Emet-Selch(Main)-40923-1-4-1768229282.zip",
+			"Description": "1.3 감정 표현 토큰누락 수정, 대사 출력 오류 수정, 초안번역 교정누락 수정\n<br />1.4 Positive Negative 키 누락 버그픽스",
+			"Version": "1.4",
+			"SizeInBytes": 153902,
+			"Uploaded": "2026-01-12T14:48:02+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "153280",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342539968,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 153281,
+			"Type": "Optional",
+			"DisplayName": "Bugfix Patch(not translation)",
+			"FileName": "Bugfix Patch(not translation)-40923-1-4-1768229309.zip",
+			"Description": "버그픽스 패치전용(번역x)",
+			"Version": "1.4",
+			"SizeInBytes": 45304,
+			"Uploaded": "2026-01-12T14:48:29+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "assets\\Characters",
+					"Type": "Invalid",
+					"RelativePath": "assets\\Characters",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "assets\\Dialogue",
+					"Type": "Invalid",
+					"RelativePath": "assets\\Dialogue",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "assets\\Events",
+					"Type": "Invalid",
+					"RelativePath": "assets\\Events",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "i18n",
+					"Type": "Invalid",
+					"RelativePath": "i18n",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342539969,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342427611,
+		"UploaderId": 44397202,
+		"CategoryId": 24,
+		"Adult": false
+	}
+}

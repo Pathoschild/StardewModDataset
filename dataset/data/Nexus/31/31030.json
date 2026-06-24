@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 31030,
+	"Name": "CopyQuality",
+	"Author": "stylemate",
+	"Description": "I'm new to modding and while I was learning to make my own mod, I thought some people can benefit from this simple change.\n<br />\n<br />This mod may counteract against some game design, but I thought [b]fine ingredients should produce fine goods.\u00A0[/b]\n<br />\n<br />[b]It basically overwrites all machines loaded at certain point in content pipeline[/b], so I assume this mod has some extreme compatiblity with other mods.\n<br />\n<br />[b]Side effects:[/b]\n<br />1. Casks are practically obsolete.\n<br />2. Large Milk potential value = Regular Milk potential value (Large Milk produces gold quality cheese by default)\n<br />3. Items that cannot normally have quality (ex. Pickles and Jellies) get a quality.\n<br />\n<br />I may provide an update with configurable patch to address 2&amp;3.\n<br />\n<br />\n<br />\n<br />This mod does not use Content Patcher and edits all machine data from \"Data/Machines\" with the priority of:\u00A0\n<br />AssetEditPriority.Late + 2\n<br />\n<br />Simple source code:\n<br />[spoiler]\n<br />[code]\uFEFFprivate void OnAssetRequested(object? sender, AssetRequestedEventArgs e)\n<br />{\n<br />\u00A0 \u00A0 if (e.NameWithoutLocale.IsEquivalentTo(\"Data/Machines\"))\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 e.Edit(asset =&gt;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 var data = asset.AsDictionary&lt;string, MachineData&gt;().Data;\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 foreach ((string machineId, MachineData machineData) in data)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 if (machineData.OutputRules != null)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 foreach (var outputRules in machineData.OutputRules)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 foreach (var outputItem in outputRules.OutputItem)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 outputItem.CopyQuality = true;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }, AssetEditPriority.Late + 2);\n<br />\u00A0 \u00A0 }\n<br />}[/code][/spoiler]\n<br />\n<br />That's it. Unless other mods are loaded/patched very late (priority 1003 and above), this will overwrite all machines if they have OutputRules.\n<br />I've checked with Butter Churn from [url=https://www.nexusmods.com/stardewvalley/mods/24842]Cornucopia - Artisan Machines[/url]\uFEFF, and Chest/Hoppers with [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url].\n<br />They are compatible.\n<br />\n<br />Thank you.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31030",
+	"Version": "1.0.0",
+	"Updated": "2025-01-21T08:06:50+00:00",
+	"Downloads": [
+		{
+			"Id": 122966,
+			"Type": "Main",
+			"DisplayName": "CopyQuality",
+			"FileName": "CopyQuality-31030-1-0-0-1737446810.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 10667,
+			"Uploaded": "2025-01-21T08:06:50+00:00",
+			"Mods": [
+				{
+					"Id": "stylemate.CopyQuality",
+					"DisplayName": "CopyQuality",
+					"Type": "Smapi",
+					"RelativePath": "CopyQuality",
+					"Manifest": {
+						"Name": "CopyQuality",
+						"Description": "All machines (Vanilla and possibly modded) will now copy over input item's quality to output item's quality if possible.",
+						"Author": "stylemate",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CopyQuality.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:31030"
+						],
+						"UniqueId": "stylemate.CopyQuality"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509654,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342417718,
+		"UploaderId": 4119251,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

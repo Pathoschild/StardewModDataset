@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 37380,
+	"Name": "Button's Extra Books (RU) (3.2.1)",
+	"Author": "YouPik",
+	"Description": "Делал для себя просто делюсь. (автор вкладывал шутки в названия и описание книг я попытался переделать на русский лад но как получалось)\n<br />Оригинал -\u00A0https://www.nexusmods.com/stardewvalley/mods/21526",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/37380",
+	"Version": "3.2.1",
+	"Updated": "2025-09-06T22:49:03+00:00",
+	"Downloads": [
+		{
+			"Id": 142274,
+			"Type": "Main",
+			"DisplayName": "Button's Extra Books (RU) (3.2.1)",
+			"FileName": "Button's Extra Books (RU) (3.2.1)-37380-3-2-1-1757198943.zip",
+			"Description": "Просто скопируй с заменой в папку mods",
+			"Version": "3.2.1",
+			"SizeInBytes": 10115,
+			"Uploaded": "2025-09-06T22:49:03+00:00",
+			"Mods": [
+				{
+					"Id": "Spiderbuttons.ButtonsExtraBooksCore",
+					"DisplayName": "Дополнительные книги",
+					"Type": "Smapi",
+					"RelativePath": "ButtonsExtraBooks\\Button's Extra Books",
+					"Manifest": {
+						"Name": "Дополнительные книги",
+						"Description": "Добавляет больше книг и сил, которые можно приобрести у продавца книг и в других местах.",
+						"Author": "Spiderbuttons",
+						"Version": "3.2.1",
+						"MinimumApiVersion": "4.1.7",
+						"EntryDll": "ButtonsExtraBooks.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21526"
+						],
+						"UniqueId": "Spiderbuttons.ButtonsExtraBooksCore"
+					}
+				},
+				{
+					"Id": "Spiderbuttons.ButtonsExtraBooks",
+					"DisplayName": "Дополнительные книги Баттона",
+					"Type": "ContentPack",
+					"RelativePath": "ButtonsExtraBooks\\[CP] Button's Extra Books",
+					"Manifest": {
+						"Name": "Дополнительные книги Баттона",
+						"Description": "Добавляет больше книг и сил, которые можно приобрести у продавца книг и в других местах.",
+						"Author": "Spiderbuttons",
+						"Version": "3.2.1",
+						"MinimumApiVersion": "4.1.7",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Spiderbuttons.ButtonsExtraBooksCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:21526"
+						],
+						"UniqueId": "Spiderbuttons.ButtonsExtraBooks"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528962,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342424068,
+		"UploaderId": 193452923,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

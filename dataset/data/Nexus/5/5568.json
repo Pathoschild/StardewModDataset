@@ -1,0 +1,142 @@
+{
+	"Site": "Nexus",
+	"Id": 5568,
+	"Name": "Industrial Furnace",
+	"Author": "Traktori",
+	"Description": "Adds a new building that can smelt massive amounts of ores over night. It functions pretty much like the Mill and is meant to help process large bulks of ore in the late game. As a bonus the furnace is more efficient at smelting. For example it uses only 4 ores per bar instead of the normal 5. You can change that in the SmeltingRules.json if you wish.\n<br />\n<br />The texture is made of bits and pieces of basic Stardew Valley textures by me.\n<br />\n<br />\n<br />[size=5]New in version 1.8.0[/size]\n<br />Changes:\n<br />[list]\n<br />[*][size=2]Updated to SMAPI 3.14[/size]\n<br />[*][size=2]Changed the smelting rules to a dictionary to allow editing it with Content Patcher[/size]\n<br />[/list]\n<br />\n<br />[size=5]Install[/size][list=1]\n<br />[*][size=3]Install the latest versions of\u00A0[url=https://smapi.io]SMAPI[/url]\uFEFF\uFEFF.[/size]\n<br />[*][size=3]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].[/size]\n<br />[*][size=3]Run the game using SMAPI.[/size]\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />The building can be bought from Robin for 10000g, 10 Iron Bars and 1 Iridium Bar and it takes one day to build. To use the furnace you first place the ores inside and then start the furnace by placing 5 pieces of coal. The furnace cannot be interacted with after it starts and it finishes smelting during the night. The furnace has an internal capacity of a chest so you shouldn't run out of space anytime soon. Although, if you smelt thousands and thousands of Quartz, the output might overflow and void some of them, but in my opinion that is not a realistic problem that needs addressing. Be warned though if you do try crazy things with it....\n<br />\n<br />\n<br />[size=5]Config[/size]\n<br />[spoiler][list]\n<br />[*]CoalAmount: (default 5) How much coal is needed to start the furnace.\n<br />[*]InstantSmelting: (default false) If set to true, furnace finishes the smelting process instantly.\n<br />[/list][/spoiler]\n<br />\n<br />[size=5]Smelting Rules\n<br />[/size][size=2][spoiler]The file SmeltingRules.json is a dictionary that defines the input and output items for a smelting recipe. The entries look like this:\n<br />[code]\"378\": \"4/334/1/\"\n<br />[/code]where each key is the input item's id. The entries consist of\n<br />[code]\"input item's ID\": \"input amount/output item's ID/output amount/required mod's ID if applicable\".[/code]\n<br />NOTE: The required mod ID field doesn't work properly if the items are added by Json Assets. You should use Content Patcher's own check\n<br />[code]\"When\": {\n<br />\u00A0 \u00A0 \"HasMod\": \"UniqueModID\"\n<br />}[/code]\n<br />in those cases and divide the edit to multiple parts.\n<br />\n<br />The default rules are:\n<br />[list]\n<br />[*][size=2]4 Copper Ore -&gt; 1 Copper Bar[/size]\n<br />[*][size=2]4 Iron Ore -&gt; 1 Iron Bar[/size]\n<br />[*][size=2]4 Gold Ore -&gt; 1 Gold Bar[/size]\n<br />[*][size=2]4 Iridium Ore -&gt; 1 Iridium Bar[/size]\n<br />[*][size=2]2 Quartz -&gt; 3 Refined Quartz[/size]\n<br />[*][size=2]1 Fire Quartz -&gt; 4 Refined Quartz[/size]\n<br />[*][size=2]1 Prismatic Shard -&gt; 5 Prismatic Bar (if you have Prismatic Tools installed)[/size]\n<br />[/list][/spoiler][/size]\n<br />\n<br />[size=5]Content Patcher\n<br />[/size]Version 1.7.2 adds support for content patcher. The optional files include an example how to patch the textures. The asset names to target are [spoiler]\n<br />[list]\n<br />[*]\"Buildings/Industrial Furnace\" - The off texture\n<br />[*]\"Traktori.IndustrialFurnace/FurnaceOn\" - The on texture\n<br />[*]\"Traktori.IndustrialFurnace/SmokeSprite\" - The smoke sprite\n<br />[*]\"Traktori.IndustrialFurnace/FireSprite\" - The fire sprite\n<br />[*]\"Traktori.IndustrialFurnace/SmeltingRules\" - The smelting rules\n<br />[*]\"Traktori.IndustrialFurnace/SmokeAnimationData\" - The smoke animation data\n<br />[*]\"Traktori.IndustrialFurnace/FireAnimationData\" - The fire animation data[/spoiler]\n<br />[/list]\n<br />\n<br />[size=5]Compatibility[/size][list]\n<br />[*]Works with Stardew Valley 1.5.6 on Windows. Use older versions of the mod if you want to use the mod on older versions of Stardew Valley.\n<br />[*]Version 1.4.3 seems to work on android with\u00A0ZaneYork Android smapi 1.4.1 in some cases but I won't be actively supporting the mod on android.\n<br />[*]No known issues with other platforms.\n<br />[*]No known issues with multiplayer.\n<br />[*]Works with Prismatic Tools. Drop your mod integration ideas in the comments.\n<br />[*]The optional file adds\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url]\uFEFF support.\n<br />[*]Version 1.7.3 adds support for the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2070]Instant Buildings[/url]\u00A0mod.\uFEFF\n<br />[/list]\n<br />\n<br />[size=5]Known issues[/size]\n<br />[list]\n<br />[*]No known issues.\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*]Release notes\n<br />[*][url=https://github.com/Traktori7/StardewValleyMods/tree/master/IndustrialFurnace]Source code[/url]\uFEFF\uFEFF\n<br />[/list]\n<br />\n<br />[size=5]Credits\n<br />[/size][list]\n<br />[*]havenfour for the Chinese translation.\n<br />[*]Alcalina for the Spanish translation.\n<br />[*]tikamin557 for the Japanese translation.\n<br />[*]nik2038 for the German translation.\n<br />[*]martin66789 for the Hungarian translation.\n<br />[*]Pathoschild for his Tractor mod that helped me learn how to add new buildings to the game.\n<br />[*]Huge thanks to kdau for figuring out some of the secrets how the android version works and helping with the testing.\n<br />[*]And the patient helpers at the Stardew Valley discord who answered my questions.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5568",
+	"Version": "1.8.0",
+	"Updated": "2022-05-10T16:17:46+00:00",
+	"Downloads": [
+		{
+			"Id": 54220,
+			"Type": "Main",
+			"DisplayName": "Industrial Furnace 1.8.0",
+			"FileName": "Industrial Furnace 1.8.0-5568-1-8-0-1652191199.zip",
+			"Description": "Changes from 1.7.4:\n<br />-Updated to SMAPI 3.14\n<br />-Changed the smelting rules data to be loaded as a dictionary for CP",
+			"Version": "1.8.0",
+			"SizeInBytes": 76387,
+			"Uploaded": "2022-05-10T13:59:59+00:00",
+			"Mods": [
+				{
+					"Id": "Traktori.IndustrialFurnace",
+					"DisplayName": "Industrial Furnace",
+					"Type": "Smapi",
+					"RelativePath": "IndustrialFurnace",
+					"Manifest": {
+						"Name": "Industrial Furnace",
+						"Description": "A giant furnace capable of smelting multiple ores at once.",
+						"Author": "Traktori",
+						"Version": "1.8.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "IndustrialFurnace.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5568"
+						],
+						"UniqueId": "Traktori.IndustrialFurnace"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342440908,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 54221,
+			"Type": "Optional",
+			"DisplayName": "Industrial Furnace Automate integration",
+			"FileName": "Industrial Furnace Automate integration-5568-1-7-0-1652191383.zip",
+			"Description": "REQUIRES THE MAIN FILE. Adds support for Automate. Install like any other mod. Requires Automate.\n<br /><br />@Automate",
+			"Version": "1.7.0",
+			"SizeInBytes": 8504,
+			"Uploaded": "2022-05-10T14:03:03+00:00",
+			"Mods": [
+				{
+					"Id": "Traktori.AM.IndustrialFurnace",
+					"DisplayName": "Industrial Furnace for Automate",
+					"Type": "Smapi",
+					"RelativePath": "IndustrialFurnaceAutomate",
+					"Manifest": {
+						"Name": "Industrial Furnace for Automate",
+						"Description": "Integrates the Industrial Furnace with Automate.",
+						"Author": "Traktori",
+						"Version": "1.7.0",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "IndustrialFurnaceAutomate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Traktori.IndustrialFurnace",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5568@Automate"
+						],
+						"UniqueId": "Traktori.AM.IndustrialFurnace"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342440909,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 54224,
+			"Type": "Optional",
+			"DisplayName": "Seasonal texture",
+			"FileName": "Seasonal texture-5568-1-0-1-1652199466.zip",
+			"Description": "REQUIRES THE MAIN FILE v. 1.8.0 or higher and CONTENT PATCHER. Adds a seasonal texture for the furnace for fall and winter as an example.\n<br /><br />@seasonal",
+			"Version": "1.0.1",
+			"SizeInBytes": 49135,
+			"Uploaded": "2022-05-10T16:17:46+00:00",
+			"Mods": [
+				{
+					"Id": "Traktori.SeasonalIndustrialFurnace",
+					"DisplayName": "Seasonal texture for Industrial Furnace",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] SeasonalIndustrialFurnace",
+					"Manifest": {
+						"Name": "Seasonal texture for Industrial Furnace",
+						"Description": "An example on how to patch the texture for Industrial Furnace",
+						"Author": "Traktori",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Traktori.IndustrialFurnace",
+								"MinimumVersion": "1.8.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5568@Seasonal"
+						],
+						"UniqueId": "Traktori.SeasonalIndustrialFurnace"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342440912,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392256,
+		"UploaderId": 14099340,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

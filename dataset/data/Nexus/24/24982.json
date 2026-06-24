@@ -1,0 +1,91 @@
+{
+	"Site": "Nexus",
+	"Id": 24982,
+	"Name": "Prize Machine Custom Prizes (Framework)",
+	"Author": "Tomokisan1",
+	"AuthorLabel": "Tomokisan",
+	"Description": "Let you easily fully customize the prize list of Prize Machine.\n<br />\n<br />You just need to create a content pack (see : [url=https://stardewvalleywiki.com/Modding:Content_packs]https://stardewvalleywiki.com/Modding:Content_packs[/url]) for this mod containing an assets/prizeList.json file, here is a sample :\n<br />\n<br />[code]\uFEFF{\n<br />     \uFEFF\"1\": {\n<br />       \uFEFF\"prizeType\": \"simple\",\n<br />       \uFEFF\"itemRequest\": \"(O)GoldenMysteryBox\",\n<br />       \uFEFF\"quantity\": 1,\n<br />       \uFEFF\"perItemCondition\": \"\"\n<br />     \uFEFF},\n<br />     \uFEFF\"infinite\": {\n<br />       \uFEFF\"prizeType\": \"query\",\n<br />       \uFEFF\"itemRequest\": \"RANDOM_ITEMS (O)\",\n<br />       \uFEFF\"quantity\": \"2-7\",\n<br />       \uFEFF\"perItemCondition\": \"\"\n<br />     \uFEFF}\n<br />}\n<br />[/code]\n<br />\n<br />And here is the documentation :\u00A0\n<br />\n<br />[size=6]Configuration documentation[/size]\n<br />\n<br />The configuration consist of an associative array of key -&gt; subarray in the JSON format.\n<br />\n<br />\n<br />[b][size=4]rule key[/size][/b][list]\n<br />[*]A number : The nth of the prize in the list, is 0 based so the first prize is the key \"0\".\n<br />[*]\"infinite\" : The rule that will be applied for each prize if there is no key found for the current prize number, for example if my JSON contain 5 prizes + an \"infinite\" rule, when i pull the 6th, 7th, etc... prize, the rule applied will be the \"infinite\" one each time.\n<br />[/list]If there is no \"infinite\" rule and if there is no key in the array corresponding to the current prize we try to get, the native rule will be used, so you can patch only one prize if you want.\n<br />\n<br />\n<br />[b][size=4]prizeType[/size][/b][list]\n<br />[*]simple : A simple unique item identifier\n<br />[*]list : A list of unique items identifiers, comma separated\n<br />[*]query : An item query, please see the documentation at :\u00A0[url=https://stardewvalleywiki.com/Modding:Item_queries]https://stardewvalleywiki.com/Modding:Item_queries[/url]\n<br />[*]vanilla : Simply the vanilla prize for this prize number, if you set type to vanilla you can omit itemRequest, quantity and perItemCondition for a more simple json file.\n<br />[/list][b][size=4]itemRequest[/size][/b][list]\n<br />[*]The current item request, depending of the prizeType value it must be an unique item identifier, a comma separated list of uniques items identifier or an item query\n<br />[/list][b][size=4]quantity[/size][/b][list]\n<br />[*]The quantity of item to be given as prize, if integer it give the quantity as is, if string you can define a range which the mod pick randomly between like : \"1-5\"\n<br />[/list]\n<br />[b][size=4]perItemCondition[/size][/b][list]\n<br />[*]The per item condition to apply to filter items returned by the item query when using it, else leave it empty\n<br />[/list]\n<br />\n<br />[b]Note : Each content pack is taken into account and all json are \"merged\", but if a key is in common, the one used is the key from the content pack loaded the most lately.\n<br />\n<br />[/b][size=6]Advanced usage : adding in game configuration[/size]\n<br />\n<br />[size=2]You can offer to players to configure which object/list of object/item query to use with given rule(s).\n<br />\n<br />[/size]You need to create an assets/config.json file in your contentPack like this :\u00A0\n<br />\n<br />[img]https://i.ibb.co/MVx4f7q/Capture-d-e-cran-2024-07-29-a-18-32-25.png[/img]\n<br />\n<br />The configuration consist of an associative array of key -&gt; subarray in the JSON format.\n<br />\n<br />\n<br />[b][size=4]rule key[/size][/b][list]\n<br />[*]The rule number of the rule you want to configure (same as in the prizeList.json)\n<br />[/list]\n<br />\uFEFF[size=4][b]itemList[/b][/size]\n<br />[list]\n<br />[*]The list of object identifier, comma separated list of object identifiers or item queries depending of\u00A0\uFEFF\u00A0prizeType of the rule, separated by \"|\". The choice of user will replace\u00A0itemRequest of the rule.\n<br />[/list]\n<br />\uFEFF[size=4][b]itemListDisplay[/b][/size]\n<br />[list]\n<br />[*][size=2]The list of texts to display in the selector,\u00A0\uFEFF[/size]separated by \"|\", must match the order of\u00A0\uFEFF\u00A0itemList value to correctly match.\n<br />[/list]\n<br />For translation, you can add one or multiple\u00A0itemListDisplay_langCode (for example :\u00A0\uFEFF\uFEFF\u00A0itemListDisplay_fr-FR), the mod will use correct line accordingly and default to the normal\u00A0\uFEFF\u00A0itemListDisplay if the one corresponding to the player language doesn't exist.\n<br />\n<br />It will display something like :\u00A0\n<br />\n<br />[img]https://i.ibb.co/z4FXcQC/Capture-d-e-cran-2024-07-29-a-18-47-15.png[/img]\n<br />\n<br />If user didn't choose an option it default to the prizeList.json settings (as if the entry wasn't in config.json)\n<br />\uFEFF\n<br />My mods :\u00A0\n<br />\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/26845]SWAPI - Stardew Valley Web API[/url]\uFEFF\u00A0: Let your game send events to a custom web server.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24765]highRollerSlots[/url]\u00A0:\u00A0Add possibility to bet more in slots machines.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24254]geodeCrusherPlus[/url]\u00A0:\u00A0Add ability to geode crusher to crush any geode, including mysteryboxes, Artifact Trove and golden coconuts.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24885]\uFEFFTV Shopping channel[/url]\u00A0:\u00A0\uFEFFAdd a TV shopping channel.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24982]Prize Machine Custom Prizes[/url] :\u00A0Let you easily fully customize the prize list of Prize Machine.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\uFEFF\u00A0\uFEFF:\u00A0Allow you to get one blessing by statue per day instead of only one blessing per day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25267]Custom Blessings Framework[/url]\uFEFF :\u00A0\uFEFFAllow mod developers to easily add blessings from statues of blessings.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26260]Custom Wake Up Time[/url]\uFEFF\u00A0:\u00A0Let you configure the wake up time for each day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26371]Anti Tool Exhaustion[/url]\uFEFF\u00A0:\u00A0Prevent you to become exhausted from an accidental tool use.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/24982",
+	"Version": "1.2.3",
+	"Updated": "2024-07-31T12:24:08+00:00",
+	"Downloads": [
+		{
+			"Id": 108067,
+			"Type": "Optional",
+			"DisplayName": "prizeMachineCustomPrizesSample",
+			"FileName": "prizeMachineCustomPrizesSample-24982-1-2-0-1722271823.zip",
+			"Description": "",
+			"Version": "1.2.0",
+			"SizeInBytes": 3026,
+			"Uploaded": "2024-07-29T16:50:23+00:00",
+			"Mods": [
+				{
+					"Id": "author.yourModName",
+					"DisplayName": "yourModName",
+					"Type": "ContentPack",
+					"RelativePath": "prizeMachineCustomPrizesCPSample",
+					"Manifest": {
+						"Name": "yourModName",
+						"Description": "Your description here",
+						"Author": "Author",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "tomokisan.prizeMachineCustomPrizes"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "author.yourModName"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342494755,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 108171,
+			"Type": "Main",
+			"DisplayName": "prizeMachineCustomPrizes",
+			"FileName": "prizeMachineCustomPrizes-24982-1-2-3-1722428648.zip",
+			"Description": "",
+			"Version": "1.2.3",
+			"SizeInBytes": 19443,
+			"Uploaded": "2024-07-31T12:24:08+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.prizeMachineCustomPrizes",
+					"DisplayName": "prizeMachineCustomPrizes",
+					"Type": "Smapi",
+					"RelativePath": "prizeMachineCustomPrizes",
+					"Manifest": {
+						"Name": "prizeMachineCustomPrizes",
+						"Description": "Let you easily fully customize the prize list of Prize Machine.",
+						"Author": "Tomokisan",
+						"Version": "1.2.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "prizeMachineCustomPrizes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:24982"
+						],
+						"UniqueId": "tomokisan.prizeMachineCustomPrizes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342494859,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342411670,
+		"UploaderId": 205391183,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

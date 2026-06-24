@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 41503,
+	"Name": "Chests Anywhere Expansion",
+	"Author": "mackhx",
+	"Description": "## 功能概述\n<br />本模组为星露谷的箱子菜单添加了两个实用功能：\n<br />1. **防止拿走每叠最后一件物品** - 开启此功能后，Automate的出货箱无法从箱子中取走物品堆的最后一件物品\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 *此功能是Chests Anywhere（尾号518）的早期版本的功能，在最新版本删除了此功能所以我写了这个mod以实现全球化自动工厂\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 *此功能如果要单独在箱子中开启，需要配合Chests Anywhere，并在其设置界面中找到并开启\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 *或者可以配合我写的Super Hopper Filtered（41505）使用，上方箱子开启后超级加料器不会把每叠最后一件物品移动到下方箱子\n<br />2. **物品拆分功能** - 按住Ctrl键并点击物品，可以将物品堆拆分\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 *可以把物品铺满这个箱子，配合放置拿走每叠最后一件物品，这个箱子就可以做到只自动收取箱子中有的物品\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 *和安卓端长按拆分物品类似\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 *助力全球化自动工厂\n<br />\n<br />## 安装方法\n<br />1. 将模组文件夹放入星露谷的Mods目录中\n<br />2. 启动游戏（通过SMAPI加载）\n<br />\n<br />## 配置选项\n<br />配置文件位于`config.json`，包含以下设置：\n<br />- `Enabled`: 是否启用整个模组（true/false）\n<br />- `EnableItemSplitting`: 是否启用Ctrl+点击拆分物品功能（true/false）\n<br />\n<br />## 使用说明\n<br />- **防止拿走最后物品**：默认关闭，需要Chests Anywhere中的设置界面中打开防止拿走每叠最后一件物品选项\n<br />- **物品拆分**：此功能默认开启，\n<br />按住Ctrl键并右键点击箱子中的物品，该物品堆的一半会被移到箱子中的空余格子中，左键点击物品，该物品堆的一个会被移到箱子中的空余格子中\n<br />\n<br />## 兼容性\n<br />本模组与以下模组兼容：\n<br />- Pathoschild的ChestsAnywhere\n<br />- Pathoschild的Automate\n<br />\n<br />## 反馈与支持\n<br />如有任何问题或建议，请访问模组发布页面留言。\n<br />源代码：\n<br />[url=https://github.com/sivarconf/SDV-Mod/tree/main/vscode]SDV-Mod/vscode at main · sivarconf/SDV-Mod[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41503",
+	"Version": "1.0.1",
+	"Updated": "2026-03-23T14:29:15+00:00",
+	"Downloads": [
+		{
+			"Id": 161679,
+			"Type": "Main",
+			"DisplayName": "Edit Chests Anywhere Expansion",
+			"FileName": "Edit Chests Anywhere Expansion-41503-1-0-2-1774276155.zip",
+			"Description": "修复与改动\n<br />✅ 兼容 Chests Anywhere 1.30+\n<br />修复了编辑界面中“保留每叠最后一项”选项不显示的问题。\n<br />✅ 新增配置项：仅漏斗和出货箱生效\n<br />开启后，仅对以下机器应用“保留最后一项”：\n<br />漏斗（Feed Hopper）\n<br />大出货箱（Shipping Bin）\n<br />迷你出货箱（Mini Shipping Bin）\n<br />✅ Automate 稳定性优化\n<br />调整保留逻辑触发阶段，降低“已判定可消耗但实际未扣减”带来的异常行为。",
+			"Version": "1.0.2",
+			"SizeInBytes": 22617,
+			"Uploaded": "2026-03-23T14:29:15+00:00",
+			"Mods": [
+				{
+					"Id": "mack.ChestHelper",
+					"DisplayName": "宝箱随处可得拓展",
+					"Type": "Smapi",
+					"RelativePath": "宝箱随处可得拓展",
+					"Manifest": {
+						"Name": "宝箱随处可得拓展",
+						"Description": "为箱子添加保留最后一项选项（兼容 Chests Anywhere 1.30+）；新增仅对漏斗/出货箱生效选项；支持 Ctrl+点击拆分物品",
+						"Author": "mack",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChestHelper.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ChestsAnywhere",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:41503"
+						],
+						"UniqueId": "mack.ChestHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342548367,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428191,
+		"UploaderId": 258990439,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 42577,
+	"Name": "No Tool Requirements - breakable logs and boulders",
+	"Author": "semper1dem",
+	"Description": "[size=5][b]No Tool Requirements[/b][/size]\n<br />\n<br />Stardew Valley locks certain large resource clumps behind tool upgrade levels. This mod removes those hard locks, letting you attempt any node with whatever tool you currently have.\n<br />\n<br />By default the mod is not a free pass - it replaces the hard lock with configurable penalties: extra stamina drain and more swings required the further your tool is below the requirement. Both systems can be tuned down to nothing if you prefer pure convenience, or cranked up if you want meaningful friction without outright blocking progression.\n<br />\n<br />[size=4][b]Affected nodes[/b][/size]\n<br />[list]\n<br />[*][b]Large Stump[/b] - vanilla requirement: Copper Axe (level 1)\n<br />[*][b]Large Log[/b] - vanilla requirement: Steel Axe (level 2)\n<br />[*][b]Farm Boulder[/b] - vanilla requirement: Steel Pickaxe (level 2)\n<br />[*][b]Quarry Boulder[/b] - vanilla requirement: Gold Pickaxe (level 3)\n<br />[*][b]Meteorite[/b] - vanilla requirement: Gold Pickaxe (level 3)\n<br />[/list]\n<br />Each node can be individually toggled. Mod-added nodes are also supported via a custom node field.\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />Settings can be changed in-game with [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional), or by editing [font=Courier New]config.json[/font] directly.\n<br />\n<br />[b]Stamina Penalty[/b]\n<br />Extra stamina cost per missing upgrade level, expressed as a percentage of the base swing cost. Scales automatically with your skill level, professions, and enchantments.\n<br />[list]\n<br />[*][b]Stamina Penalty[/b] - extra stamina per swing = baseCost x gap x (StaminaPenalty / 100). Default: 100%. Range: 0–1000%.\n<br />[/list]\n<br />Examples at 100%: gap 1 doubles the base cost, gap 2 triples it, gap 3 quadruples it.\n<br />Set to 0 to disable stamina penalties entirely.\n<br />\n<br />[b]Extra Hits Required[/b]\n<br />Each swing restores a portion of the damage dealt, so the node takes more total hits to break.\n<br />[list]\n<br />[*][b]Extra Hits[/b] - percentage of additional swings required. Default: 50%. Range: 0–400%.\n<br />[*][b]Per Gap[/b] - when OFF (default), the percentage is a flat multiplier regardless of gap size. When ON, it compounds per missing upgrade level.\n<br />[/list]\n<br />Examples at 50% with Per Gap off: a node that normally takes 5 hits will take 7–8.\n<br />Examples at 50% with Per Gap on: gap 1 = 1.5x hits, gap 2 = 2.25x hits, gap 3 = 3.4x hits.\n<br />Set Extra Hits to 0 to disable and use vanilla damage rates.\n<br />\n<br />[b]Allowed Nodes[/b]\n<br />Individual checkboxes for each of the five vanilla node types. Unchecking a node fully restores its vanilla tool requirement - the penalty systems will not apply to it either.\n<br />\n<br />[b]Custom Nodes[/b]\n<br />Additional nodes can be specified using the format [font=Courier New]nodeId=requiredLevel[/font] separated by semicolons.\n<br />[list]\n<br />[*][font=Courier New]nodeId[/font] - the parentSheetIndex of the ResourceClump\n<br />[*][font=Courier New]requiredLevel[/font] - the upgrade level the vanilla check uses (0 = Basic, 1 = Copper, 2 = Steel, 3 = Gold, 4 = Iridium)\n<br />[/list]\n<br />Example: [font=Courier New]123=2;456=3[/font]\n<br />All stamina and extra-hit penalties apply to custom nodes. Invalid entries are silently ignored.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.0.0+\n<br />[*]Stardew Valley 1.6.14+\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] - optional, for in-game configuration UI\n<br />[/list]\n<br />\n<br />[size=4][b]Multiplayer[/b][/size]\n<br />All players must have the mod installed. The mod patches game logic directly, so a player without it will still be blocked by vanilla tool requirements.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />Compatible with mods that add new resource clumps - use the Custom Nodes field to unlock them. May conflict with other mods that also patch [font=Courier New]ResourceClump.performToolAction[/font].\n<br />\n<br />[size=4][b]Changelog[/b][/size]\n<br />[spoiler]\n<br />[b]0.3.2[/b]\n<br />[list]\n<br />[*][b]Fixed[/b] - Stamina pentalty not being applied\n<br />[/list]\n<br />[b]0.3.1[/b]\n<br />[list]\n<br />[*][b]Changed[/b] - stamina setting renamed from Stamina Multiplier to Stamina Penalty and expressed as a percentage for consistency with the Extra Hits setting\n<br />[/list]\n<br />\n<br />[b]0.3.0[/b]\n<br />[list]\n<br />[*][b]Changed[/b] - stamina penalty now multiplies the base swing cost instead of adding a flat amount, so it correctly scales with skill level, professions, and enchantments\n<br />[*][b]Changed[/b] - stamina setting renamed from Stamina Multiplier to Stamina Penalty and expressed as a percentage for consistency with the Extra Hits setting\n<br />[*][b]Removed[/b] - Exponent setting removed; Stamina Penalty alone is sufficient\n<br />[/list]\n<br />\n<br />[b]0.2.0[/b]\n<br />[list]\n<br />[*][b]Fixed[/b] - rocks (Farm Boulder, Quarry Boulder, Meteorite) were not affected in 0.1.0 due to a bug; all five node types now work correctly\n<br />[*][b]Added[/b] - stamina penalty system: extra stamina is charged as a multiplier on the base swing cost, scaling automatically with skill level, professions, and enchantments\n<br />[*][b]Added[/b] - extra hits system: nodes require more swings when your tool is below the requirement, configurable as a flat percentage or compounding per gap level\n<br />[*][b]Added[/b] - node whitelist: each of the five vanilla node types can be individually enabled or disabled\n<br />[*][b]Added[/b] - custom nodes: mod-added or missing nodes can be unlocked via a text field using nodeId=requiredLevel syntax\n<br />[*][b]Added[/b] - Generic Mod Config Menu support for all settings\n<br />[*][b]Changed[/b] - damage per swing now uses the player's actual tool level instead of the minimum required level, so swings no longer deal more damage than they should\n<br />[/list]\n<br />\n<br />[b]0.1.0[/b]\n<br />[list]\n<br />[*]Initial release\n<br />[*]Allowed breaking all axe-type nodes (Large Stump, Large Log) with any axe\n<br />[/list]\n<br />[/spoiler]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42577",
+	"Version": "0.3.2",
+	"Updated": "2026-02-21T12:51:09+00:00",
+	"Downloads": [
+		{
+			"Id": 157645,
+			"Type": "Main",
+			"DisplayName": "No Tool Requirements",
+			"FileName": "No Tool Requirements-42577-0-3-2-1771678269.zip",
+			"Description": "",
+			"Version": "0.3.2",
+			"SizeInBytes": 9037,
+			"Uploaded": "2026-02-21T12:51:09+00:00",
+			"Mods": [
+				{
+					"Id": "semper1dem.NoToolRequirements",
+					"DisplayName": "No Tool Requirements",
+					"Type": "Smapi",
+					"RelativePath": "NoToolRequirements",
+					"Manifest": {
+						"Name": "No Tool Requirements",
+						"Description": "Allows breaking large stumps, large logs, and large boulders with any axe/pickaxe, regardless of upgrade level.",
+						"Author": "semper1edm",
+						"Version": "0.3.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NoToolRequirements.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:42577"
+						],
+						"UniqueId": "semper1dem.NoToolRequirements"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342544333,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342429265,
+		"UploaderId": 25888550,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

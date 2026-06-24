@@ -1,0 +1,89 @@
+{
+	"Site": "Nexus",
+	"Id": 7515,
+	"Name": "Skill Rings",
+	"Author": "AlphaMeece",
+	"Description": "[left][b]\uFEFF[/b][color=#00ff00][size=6][b]Now Compatible with Stardew 1.6[/b][/size][/color]\n<br />\n<br />[size=3][color=#ffff00][b]Note for authors of Skill Mods utilizing SpaceCore:[/b][/color]\n<br />[spoiler]\n<br />All of the following should be done in your own mod's files.\n<br />\n<br />All of the rings are added right before a save is created or a save begins to load, meaning with the proper setup you can edit the rings using Content Patcher. Anything about them can be changed other than their effect and price, though just to be safe I would stick to changing the:\n<br />[list]\n<br />[*]DisplayName\n<br />[*]Description\n<br />[*]Texture\u00A0\n<br />[*]CustomFields\n<br />[/list]Example:\n<br />[code]\uFEFF{\n<br />   \uFEFF\"Action\": \"EditData\",\n<br />   \uFEFF\"Target\": \"Data/Objects\",\n<br />   \uFEFF\"When\": {\n<br />   \uFEFF   \uFEFF\"Time\": \"{{Range: 0600, 2600}}\"\n<br />   \uFEFF},\n<br />   \uFEFF\"Fields\": {\n<br />   \uFEFF   \uFEFF\"RingID\": {\n<br />   \uFEFF   \uFEFF   \uFEFF\"DisplayName\": \"Something Else\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"CustomFields\": {\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"AlphaMeece.SkillRings_Shop\": \"SeedShop\"\n<br />   \uFEFF   \uFEFF   \uFEFF}\n<br />   \uFEFF   \uFEFF}\n<br />   \uFEFF}\n<br />}\n<br />[/code]\n<br />Some notes:\n<br />[list]\n<br />[*]The \"When Time\" isn't [i]required[/i]\u00A0per se, but it removes a warning content patcher gives on startup since the rings don't actually exist until the player starts a game\n<br />[*]\"RingID\" will be: AlphaMeece.SkillRings_[Your Skill ID]Ring[1|2|3]\n<br />   \uFEFF- For example if JohnDoe made a horsemanship mod and the skill's ID was JohnDoe.Horsemanship, the rings would have the IDs:   \uFEFF   \uFEFF-\u00A0\uFEFFAlphaMeece.SkillRings_JohnDoe.HorsemanshipRing1   \uFEFF   \uFEFF-\u00A0AlphaMeece.SkillRings_JohnDoe.HorsemanshipRing2   \uFEFF   \uFEFF-\u00A0AlphaMeece.SkillRings_JohnDoe.HorsemanshipRing3[*]The only customfield used by the mod will be \"AlphaMeece.SkillRings_Shop\" and the value associated with it should be the name of the shop in the game, I don't see why this wouldn't work with modded shops, but I have not tested it as of yet. If this custom field is excluded it will default to the traveling merchant. If the value is a shop that does not exist then it will default to traveling merchant and display a message in the console.\n<br />[/list][/spoiler]\n<br />[/size]\n<br />[b]SpaceCore Based Skill Mods\n<br />[/b]All custom skill mods made with space core are automatically compatible with this mod, the rings will be automatically generated and sold by the travelling merchant. You can disable this functionality in the mod's configuration file.\n<br />[code]\uFEFF\"moddedSkillrings\": true/false\n<br />[/code]\n<br />[b]Notes for Generic Mod Config Menu users:\n<br />[/b][spoiler]\n<br />Any updates to skill buffs will not occur to a worn ring until it is re-equipped.\n<br />Any updates to a ring's price will not occur until a new day has passed.\n<br />[/spoiler]\n<br />\n<br />[b]Translations:[/b]\n<br />Mandarin(中文): Included in Base Mod(包括)\n<br />   \uFEFFCourtesy of [url=https://www.nexusmods.com/stardewvalley/users/108748513]sakuraandfish[/url], and Ethan\n<br />Korean(한국어): Included in Base Mod(포함)\n<br />   \uFEFFCourtesy of\u00A0[url=https://forums.nexusmods.com/index.php?/user/80214773-4kmong/]4KMong\n<br />[/url]German(Deutsch): Included in Base Mod(Inklusive)\n<br />   \uFEFFCourtesy of\u00A0[url=https://www.nexusmods.com/stardewvalley/users/58067946]Th3Tob1[/url]\uFEFF\n<br />Portuguese(Português)):\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/9516?tab=description]https://www.nexusmods.com/stardewvalley/mods/9516?tab=description[/url]\uFEFF\uFEFF\n<br />   \uFEFFCourtesy of [url=http://www.nexusmods.com/stardewvalley/users/125248693]NecromanteOfficial\n<br />[/url]Spanish(Español):\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/15847?tab=description]https://www.nexusmods.com/stardewvalley/mods/15847?tab=description[/url]\u00A0\n<br />   \uFEFFCourtesy of [url=https://www.nexusmods.com/stardewvalley/users/28509740]wilsarave\n<br />[/url]Thai(ภาษาไทย): [url=https://www.nexusmods.com/stardewvalley/mods/26876?tab=images][/url][url=https://www.nexusmods.com/stardewvalley/mods/26876?tab=description][/url][url=https://www.nexusmods.com/stardewvalley/mods/26876?tab=description]https://www.nexusmods.com/stardewvalley/mods/26876?tab=description\n<br />   \uFEFF[/url]Courtesy of [url=https://next.nexusmods.com/profile/Freyrlamour/about-me?gameId=1303]Freyrlamour\n<br />[/url]Japanese(日本語)\uFEFF:\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/22160]https://www.nexusmods.com/stardewvalley/mods/22160\n<br />[/url]\u00A0 \u00A0 \u00A0 \u00A0 Courtesy of [url=https://www.nexusmods.com/stardewvalley/users/40748555]kabocchi[/url]\uFEFF\n<br />   \uFEFF\n<br />[b][size=4]Note[/size]: [/b]This mod is not compatible with split screen co-op.\n<br />\n<br />[b][size=4]Source Code GitHub Link:[/size][/b]\n<br />[url=https://github.com/AlphaMeece/StardewSkillRings]https://github.com/AlphaMeece/StardewSkillRings[/url]\uFEFF\uFEFF\n<br />\n<br />[b][size=4]Retextures:\u00A0\n<br />[/size][size=3]Note:\u00A0[b]I\u00A0[i]Highly[/i]\u00A0Recommend these, they're better than anything I could make[/b][/size]\n<br />[/b]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/12771?tab=description]Skill Rings REMIX Feat. Paint.net (Radio ver.)\n<br />   \uFEFF[/url][color=#f4f4f4]Courtesy of[/color]\uFEFF\u00A0[url=https://www.nexusmods.com/stardewvalley/users/11613013?tab=about+me]AtomicBunnytron\n<br />[/url][spoiler][img]https://staticdelivery.nexusmods.com/mods/1303/images/12771/12771-1667357228-777432728.png[/img]\uFEFF\uFEFF[/spoiler]\uFEFF\n<br />\n<br />[b][size=4]What is it?[/size][/b]\n<br />This mod adds a collection of 18 rings to the game, with 3 rings for each skill and 3 rings for bonus experience gain.\n<br />Tier 1 rings give a +1(or x1.1)\n<br />Tier 2 rings give a +2(or x1.2)\n<br />Tier 3 rings give a +5(or x1.5)\n<br />\n<br />Each set of rings has its own source while the tier 3 rings all require 4 hearts with someone that has to do with that skill, the person will send you a broken version of the ring that you must do something with to fix, which is unique to each ring.\n<br />\n<br />These rings do stack with food buffs as well.\n<br />These rings may also be used to make a combined ring.\n<br />\n<br />[b][size=3]Important note:[/size]\n<br />[/b]These rings do not stack with themselves, or prior tiers, so wearing 2 +5 fishing rings results in only +5, and wearing a +5 fishing ring with a +2 fishing ring still results in +5.\n<br />\n<br />[size=4][b]The Rings[/b][/size]\n<br />[spoiler]\n<br />[size=3][b]Category\n<br />[/b][/size]Tier 1\n<br />Tier 2\n<br />Tier 3\n<br />\n<br />[b][size=3]Farming[/size]\n<br />[/b]Ring of Decent Soil\n<br />Ring of the Green Thumb\n<br />Ring of Nature's Oracle\n<br />\n<br />[size=3][b]Foraging\n<br />[/b][/size]Ring of Deep Roots\n<br />Ring of the Gatherer\n<br />Ring of Natural Bounty\n<br />\n<br />[b][size=3]Fishing[/size][/b]\n<br />Ring of the Apprentice Fisher\n<br />Ring of the Mad Mariner\n<br />Ring of the Legendary Angler\n<br />\n<br />[b][size=3]Combat[/size][/b]\n<br />Ring of Sharper Blades\n<br />Ring of Pure Strength\n<br />Ring of the War God\n<br />\n<br />[b][size=3]Mining[/size]\n<br />[/b]Ring of the Wieldy Pick\n<br />Ring of the Caves\n<br />Ring of Dwarven Luck\n<br />\n<br />[b][size=3]Experience\n<br />[/size][/b]Ring of Insight\n<br />Ring of Knowledge\n<br />Ring of Ineffable Knowledge[/spoiler]\n<br />\n<br />[b][size=4]Where to Obtain[/size][/b][/left]\n<br />[b][size=3]Farming[/size]\n<br />[/b]Tiers 1 and 2 can be purchased from Marnie\n<br />Tier 3: 4 Hearts with Marnie\n<br />\n<br />[b][size=3]Foraging[/size]\n<br />[/b]The recipes for tiers 1 and 2 are gotten from Linus at 1 and 2 hearts respectively\n<br />Tier 3: 4 Hearts with Linus\n<br />\n<br />[b][size=3]Fishing[/size]\n<br />[/b]Tiers 1 and 2 can be purchased from Willy\n<br />Tier 3: 4 Hearts with Willy\n<br />\n<br />[b][size=3]Combat[/size][/b]\n<br />Tiers 1 and 2 can be purchased from Marlon(Adventurer's Guild)\n<br />Tier 3: 4 Hearts with Abigail\n<br />\n<br />[b][size=3]Mining[/size][/b]\n<br />Tiers 1 and 2 can be purchased from the Dwarf\n<br />Tier 3: 4 Hearts with the Dwarf\n<br />\n<br />[b][size=3]Experience Gain[/size][/b]\n<br />All tiers purchased from Sandy in the Desert\n<br />\n<br />[b][size=3]Luck[/size][/b]\n<br />All purchased from Krobus\n<br />\n<br />[b][size=3]Note: This mod needs Content Patcher[/size][/b]\n<br />\n<br />[b][size=4]Directly Supported Mods:[/size][/b]\n<br />[list]\n<br />[*]Stardew Valley Expanded\n<br />[*]Wear More Rings\n<br />[*]Luck Skill(SpaceChase0's)\n<br />[/list]   \uFEFF   \uFEFF- 3 new rings sold by Krobus\n<br />[list]\n<br />[*][i]ANY[/i]\u00A0SpaceCore based Custom Skill mod\n<br />[/list]   \uFEFF   \uFEFF- 3 Rings sold by Travelling Merchant\n<br />   \uFEFF   \uFEFF- Rings are only generated for installed skill mods, no mod = no ring\n<br />   \uFEFF   \uFEFF- Skill Mod authors have the option to change the: name, description, texture, and shop their ring appears in\n<br />   \uFEFF   \uFEFF- If the skill mod doesn't edit the rings at all the rings will show up in the traveling merchant and be as follows:\n<br />   \uFEFF   \uFEFF   \uFEFFName: SkillName 1|2|3\n<br />   \uFEFF   \uFEFF   \uFEFFDescription: +1|2|5 SkillName\n<br />   \uFEFF   \uFEFFE.x. Luck Skill ring 1\n<br />   \uFEFF   \uFEFF   \uFEFFName: Luck 1\n<br />   \uFEFF   \uFEFF   \uFEFFDescription: +1 Luck\n<br />   \uFEFF   \uFEFF- The name of the rings will only translate if the skill mod author had overridden the GetName function of their skill to return the proper language [b]and[/b]\u00A0that mod has a translation in that language. For example if you're playing in Mandarin, Binning rings will be \"Binning 1\", but Luck rings(MoonSlime's) will be \"幸运 1\"\n<br />\n<br />[b][size=4]Note:[/size][/b]\n<br />If the mod does not change the map in any way, Skill Rings will work. If the mod [i]does[/i]\u00A0change the map, so long as the Secret Woods, Clint's House, Wizard's Basement, and the Quarry Cave are unchanged, Skill Rings will work.\n<br />\n<br />[b][size=4]Commands:[/size][/b][list]\n<br />[*]fixhealth: resets the player's max health to what it should be. This command accounts for combat levels(+5 per level other than 5 and 10), the fighter(+15) and defender(+25) professions, and the Iridium milk(+25) from Mr.Qi\n<br />[*]fixring: Changes the currently held broken ring into its tier 3 equivalent\n<br />[*]sendmail: sends mail to the player immediately, mainly to be used if your game bugs and you cannot receive the letter. usage:\n<br />[/list]   \uFEFF- sendmail [skill]\n<br />   \uFEFF   \uFEFF- where [skill] is one of: foraging, farming, fishing, mining, combat, foragingr1, foragingr2\n<br />   \uFEFF   \uFEFF- foragingr1 and r2 are the recipes for the 1st and 2nd foraging rings\n<br />   \uFEFF   \uFEFF- E.x: \"sendmail farming\"\n<br />[b][size=4]Tier 3 Ring Spoilers[/size][/b]\n<br />\n<br />[b][size=3]Grassy Ring(Farming)[/size][/b]\n<br />[spoiler]Right click on a farm animal with it[/spoiler]\n<br />\n<br />[b][size=3]Sticky Ring(Foraging)[/size]\n<br />[/b][spoiler]Bring it to the statue in the secret woods[/spoiler]\n<br />\n<br />[b][size=3]Dusty Ring(Fishing)[/size][/b]\n<br />[spoiler]Right click on a fish pond with it[/spoiler]\n<br />\n<br />[b][size=3]Cursed Ring(Combat)[/size][/b]\n<br />[spoiler]Bring it to the Reaper statue that held the golden scythe[/spoiler]\n<br />\n<br />[b][size=3]Stone Ring(Mining)[/size]\n<br />[/b][spoiler]Bring it to Clint's anvil[/spoiler]\n<br />\n<br />[b][size=3]Elusive Ring(Experience Gain)[/size]\n<br />[/b][spoiler]Bring it to the Shrine of Illusions in the Wizard's Basement[/spoiler]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7515",
+	"Version": "2.2.12",
+	"Updated": "2025-12-21T14:58:08+00:00",
+	"Downloads": [
+		{
+			"Id": 151121,
+			"Type": "Main",
+			"DisplayName": "Skill Rings",
+			"FileName": "Skill Rings-7515-2-2-12-1766329088.zip",
+			"Description": "Added support for Generic Mod Config Menu for in-game changes. Updates to ring skill buffs will not occur until the ring is re-equipped. Updates to ring prices will not occur until a new day.",
+			"Version": "2.2.12",
+			"SizeInBytes": 44202,
+			"Uploaded": "2025-12-21T14:58:08+00:00",
+			"Mods": [
+				{
+					"Id": "AlphaMeece.SkillRings",
+					"DisplayName": "Skill Rings",
+					"Type": "Smapi",
+					"RelativePath": "SkillRings\\SkillRings",
+					"Manifest": {
+						"Name": "Skill Rings",
+						"Description": "Adds rings that boost a skill or experience gain",
+						"Author": "AlphaMeece",
+						"Version": "2.2.12",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SkillRings.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7515"
+						],
+						"UniqueId": "AlphaMeece.SkillRings"
+					}
+				},
+				{
+					"Id": "AlphaMeece.CP.SkillRings",
+					"DisplayName": "New Items for Skill Rings",
+					"Type": "ContentPack",
+					"RelativePath": "SkillRings\\[CP] SkillRings",
+					"Manifest": {
+						"Name": "New Items for Skill Rings",
+						"Description": "Adds items for Skill Rings.",
+						"Author": "AlphaMeece",
+						"Version": "2.2.12",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "AlphaMeece.SkillRings",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7515"
+						],
+						"UniqueId": "AlphaMeece.CP.SkillRings"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342537809,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394203,
+		"UploaderId": 36106525,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

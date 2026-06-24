@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 45858,
+	"Name": "Post Wedding Dates Fix",
+	"Author": "AlanBF",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Every night when going to sleep this error appears if you are not married:\n<br />\n<br />[code][Post Wedding Dates] This mod failed in the GameLoop.DayEnding event. Technical details:\n<br />NullReferenceException: Object reference not set to an instance of an object.\n<br />\u00A0 \u00A0at PostWeddingDates.ModEntry.OnDayEnded(Object sender, EventArgs e) in C:UsersBlamssourcereposPostWeddingDatesPostWeddingDatesModEntry.cs:line 77\n<br />\u00A0 \u00A0at StardewModdingAPI.Framework.Events.ManagedEvent`1.Raise(TEventArgs args) in SMAPIFrameworkEventsManagedEvent.cs:line 101[/code]\n<br />This fix injects a:\n<br />\n<br />[code]if (not married):\n<br />    do nothing[/code]\n<br />before the things the mod tries to do.\n<br />\n<br />Originally wanted to send a PR to the github of the mod, but is extremely outdated.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45858",
+	"Version": "1",
+	"Updated": "2026-05-05T06:33:40+00:00",
+	"Downloads": [
+		{
+			"Id": 166506,
+			"Type": "Main",
+			"DisplayName": "PostWeddingDatesFix",
+			"FileName": "PostWeddingDatesFix-45858-1-1777962820.zip",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 14237,
+			"Uploaded": "2026-05-05T06:33:40+00:00",
+			"Mods": [
+				{
+					"Id": "AlanBF.PostWeddingDatesFix",
+					"DisplayName": "Post Wedding Dates Fix",
+					"Type": "Smapi",
+					"RelativePath": "PostWeddingDatesFix",
+					"Manifest": {
+						"Name": "Post Wedding Dates Fix",
+						"Description": "Fix Post Wedding Dates",
+						"Author": "AlanBF",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "PostWeddingDatesFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "blams.PostWeddingDates",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:45858"
+						],
+						"UniqueId": "AlanBF.PostWeddingDatesFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342553194,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432546,
+		"UploaderId": 29404525,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

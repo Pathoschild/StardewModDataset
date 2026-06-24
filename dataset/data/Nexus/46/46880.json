@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 46880,
+	"Name": "Door Knock",
+	"Author": "aedenthorn",
+	"Description": "[youtube]PYrZSzXxUVI[/youtube]\n<br />\n<br />[b][size=5][u]Overview[/u][/size][/b]\n<br />\n<br />This mod\u00A0lets players knock on the door to an NPC's room or locked door to an NPC's house, playing a knock sound (default \"axchop\") a set number of times (default 3).\u00A0\n<br />\n<br />If the NPC is at home, they will walk to the door, open it, wait for a specified time (default 200 game ticks), then return to their starting point and continue any animated activity they were performing.\n<br />\n<br />By default, trying to open a compatible locked door will knock instead. This override can be disabled in the config, and knocking can be instead performed by pressing a hotkey (default [b]Enter[/b]) when facing a door.\n<br />\n<br />NPCs will not answer the door if they are already moving somewhere.\n<br />\n<br />For exterior doors, the farmer will automatically move one tile away from the door to make room for the NPC.\n<br />\n<br />If a room is owned by more than one NPC, the mod will check for all owners and choose randomly from those in the room.\n<br />\n<br />If you have the [url=https://www.nexusmods.com/stardewvalley/mods/46676]Close Doors[/url] mod installed, NPCs will close interior doors before returning to their starting point.\n<br />\n<br />\n<br />[b][size=5][u]Config[/u][/size][/b]\n<br />\n<br />\n<br />You can change the following in the config:\n<br />\n<br />[list]\n<br />[*]Knock button[/*]\n<br />[*]Knock sound[/*]\n<br />[*]Knock sound times[/*]\n<br />[*]Knock sound interval[/*]\n<br />[*]Answer delay in game ticks[/*]\n<br />[*]Wait time in game ticks[/*]\n<br />[*]Whether to wake sleeping NPCs[/*]\n<br />[/list]\n<br />\n<br />[b][size=5][u]Notes[/u][/size][/b]\n<br />\n<br />The mod determines interior door owners from the tile action, so for Robin and Demetrius, the action is \"Door Robin Demetrius\" and it selects an owner from one of those two names.\n<br />\n<br />The mod uses a simple tile-checking algorithm starting with the tile behind the door to determine who is in the room.\n<br />\n<br />Exterior doors only work if the owner's name is mentioned in the door action code, as that determines which NPC will answer the door. So, for example \"LockedDoorWarp 7 9 LeahHouse 1000 1800 Leah 500\" will find Leah and check for her inside.\n<br />\n<br />This mod will let you knock on\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/46789]Door Furniture[/url]\u00A0but won't trigger NPCs to open them.\n<br />\n<br />\n<br />[u][size=5][b]Technical[/b][/size][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46880",
+	"Version": "0.4.2",
+	"Updated": "2026-06-07T22:51:04+00:00",
+	"Downloads": [
+		{
+			"Id": 170417,
+			"Type": "Main",
+			"DisplayName": "DoorKnock",
+			"FileName": "DoorKnock-46880-0-4-2-1780872664.zip",
+			"Description": "Changes:<br /><br />Added support for animations<br />",
+			"Version": "0.4.2",
+			"SizeInBytes": 27504,
+			"Uploaded": "2026-06-07T22:51:04+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.DoorKnock",
+					"DisplayName": "Door Knock",
+					"Type": "Smapi",
+					"RelativePath": "DoorKnock",
+					"Manifest": {
+						"Name": "Door Knock",
+						"Description": "Door Knock.",
+						"Author": "aedenthorn",
+						"Version": "0.4.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DoorKnock.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46880"
+						],
+						"UniqueId": "aedenthorn.DoorKnock"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557105,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433568,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

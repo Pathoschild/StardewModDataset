@@ -1,0 +1,106 @@
+{
+	"Site": "Nexus",
+	"Id": 13911,
+	"Name": "Seacliff Farm for Android - Obsolete",
+	"Author": "FreeTheJunimos",
+	"Description": "[size=6][b]THIS MOD IS OBSOLETE AND SHOULD BE REPLACED WITH THE VERSION AT [url=https://www.nexusmods.com/stardewvalley/mods/14296]SEACLIFF FARM[/url].[/b][/size][size=4][b]\n<br />\n<br />DESCRIPTION[/b][/size]\n<br />Seacliff Farm is especially designed as a Four Corners replacement for Android, with attractive terrain and diverse resources. It features a small lake fed by a mountain stream via a waterfall, with a substantial above-ground mining area located next to it. An extended waterfall plummets spectacularly from the lake down to the sandy and pristine ocean cove at the bottom of a cliff. Extra foraging is largely focused in a heavily forested region located at the far end of an expansive and grassy valley. A break in the edge of the forest canopy offers access to the ocean cove and the modest bounty which washes to shore there.\n<br />\n<br />[b][size=4]REQUIRED ADDITIONAL MODS FOR ANDROID\n<br />[/size][/b][list]\n<br />[*]Farm Type Manager 1.11.0 by Esca (do not use later versions)\n<br />[*]Content Patcher 1.19.0 by Pathoschild (do not use later versions)\n<br />[/list]\n<br />[size=4][b]FEATURES[/b][/size][size=4][b]\n<br />[/b][/size]Same size as Four Corners, with preserved exits from the farmland to matching terrain and the greenhouse\n<br />Moderate surface mining\n<br />[list]\n<br />[*]Lowered mining level requirements for spawning of ores\n<br />[*]No gem spawning\n<br />[/list]Zone 5 fishing castable from east and south to avoid negative impact of Android/iOS bug\n<br />[list]\n<br />[*]Small fresh water lake with ecologically responsible fish and seasonal visitors from the Mines\n<br />[*]Salt water cove with the usual ocean fish\n<br />[*]No ocean crab pots in mobile version due to hardcoded limitations in Stardew 1.4\n<br />[/list]Full seasonal foraging spawns\n<br />[list]\n<br />[*]5 Regenerating hardwood stumps\n<br />[*]Substantial seasonal berry foraging\n<br />[*]Special forest farm weeds which always spawn mixed seeds\n<br />[*]Extra seasonal foraging spawns (mushrooms, fiddlehead fern, holly)\n<br />[*]Normal beach foraging (no quality) and some Island Farm crate items, plus ocean crab pot fish foragable in the Fall\n<br />[/list]Expansive grassy valley for farming\n<br />[list]\n<br />[*]Some tiered terrain interruptions\n<br />[*]Fully tillable grass, dirt, and sand\n<br />[*]No hard-coded paving in spouse area or in front of greenhouse\n<br />[/list]Compatability\n<br />[list]\n<br />[*]Seacliff Farm for Android should be replaced with the [url=https://www.nexusmods.com/stardewvalley/mods/14296]PC version[/url]\uFEFF when SMAPI for Android has been updated to support Stardew Valley version 1.5\n<br />[*]Seacliff has not been tested with other (visual/textural/recoloring) mods - Let us know what works or doesn't!\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14296]PC version[/url]\uFEFF has been simultaneously developed\n<br />[/list]Credits\n<br />[list]\n<br />[*]Map designed using Tiled from mapeditor.org\n<br />[*]Waterfall Reversion For SVE from Niteslash\n<br />[*]Waterfall edge image from SVE\n<br />[*]And of course the massive amount of artwork from ConcernedApe\n<br />[*]Massive thanks to the designers of Farm Type Manager, Content Patcher, and everyone who has provided supportive documentation\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13911",
+	"Version": "1.0.2",
+	"Updated": "2023-01-14T17:26:26+00:00",
+	"Downloads": [
+		{
+			"Id": 65125,
+			"Type": "Main",
+			"DisplayName": "Seacliff Farm",
+			"FileName": "Seacliff Farm-13911-1-0-2-1673717186.zip",
+			"Description": "Seacliff Farm is especially designed as a Four Corners replacement for Android, with attractive terrain and diverse resources.",
+			"Version": "1.0.2",
+			"SizeInBytes": 3053636,
+			"Uploaded": "2023-01-14T17:26:26+00:00",
+			"Mods": [
+				{
+					"Id": "freethejunimos.seaclifffarm",
+					"DisplayName": "SeaCliff Farm Code",
+					"Type": "Smapi",
+					"RelativePath": "SeaCliffFarm\\SeaCliffFarm",
+					"Manifest": {
+						"Name": "SeaCliff Farm Code",
+						"Description": "Code for separate freshwater and ocean zones",
+						"Author": "FreeTheJunimos",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SeaCliffFarm.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:13911"
+						],
+						"UniqueId": "freethejunimos.seaclifffarm"
+					}
+				},
+				{
+					"Id": "freethejunimos.cp.seaclifffarm",
+					"DisplayName": "SeaCliff Farm Content",
+					"Type": "ContentPack",
+					"RelativePath": "SeaCliffFarm\\[CP] SeaCliffFarm",
+					"Manifest": {
+						"Name": "SeaCliff Farm Content",
+						"Description": "Replacement farm content for the Four Corners farm",
+						"Author": "FreeTheJunimos",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"MinimumVersion": "1.11.6",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Nite.EarthyRecolourFix",
+								"MinimumVersion": "1.1.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13911"
+						],
+						"UniqueId": "freethejunimos.cp.seaclifffarm"
+					}
+				},
+				{
+					"Id": "freethejunimos.ftm.seaclifffarm",
+					"DisplayName": "SeaCliff Farm Forage Locations",
+					"Type": "ContentPack",
+					"RelativePath": "SeaCliffFarm\\[FTM] SeaCliffFarm",
+					"Manifest": {
+						"Name": "SeaCliff Farm Forage Locations",
+						"Description": "Foraging, mining and stump regeneration for SeaCliff Farm",
+						"Author": "FreeTheJunimos",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.11.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:13911"
+						],
+						"UniqueId": "freethejunimos.ftm.seaclifffarm"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342451813,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400599,
+		"UploaderId": 161083548,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

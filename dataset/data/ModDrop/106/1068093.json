@@ -1,0 +1,79 @@
+{
+	"Site": "ModDrop",
+	"Id": 1068093,
+	"Name": "Pause Time in Multiplayer",
+	"Author": "jorgamun",
+	"TagLine": "Pauses time in multiplayer games when appropriate.",
+	"Description": "This is a non-intrusive mod that pauses time in multiplayer games when all players meet the conditions that would pause time if they were in a single-player game. A few other mods exist on here with this functionality, but they had some bugs and lack of implementation that I wasn't happy with so I made this one.\n\n## Additional Features\n*    Stops food and drink buffs from ticking down while the game is paused.\n*    Locks monster positions and player health while paused.\n*    Slows down clock time if all players are in the Skull Cavern as it does in single-player.\n*    Displays a subtle X graphic over the game clock to better indicate when time is paused.\n\n**Each player must have this mod installed for it to function properly.**\nIf each player meets any of the following conditions then time is paused:\n*    has a menu open\n*    is engaged in dialogue\n*    is shopping\n*    is processing geodes\n*    is in the animation of pulling crops\n*    is using a tool\n*    is in an event\n*    is reeling in fish\n*    is playing an arcade game\n*    is playing darts\n*    is playing the crane game\n*    is watching a movie\n*    is gambling\n*    is being asked to use an item (such as eating food)\n\nThe game clock will stop advancing when time is paused. NPCs, farm animals, and monsters will lock positions.\n\n**Monsters and player hitpoints lock as of 1.4.0.**\nThis feature is new and while I've tested it, if you have any bugs please let me know!\n\n## Installation Instructions\n1.    Install the latest version of [SMAPI\uFEFF](https://smapi.io/)\n2.    Extract the contents of PauseInMultiplayer.zip to your StardewValley/Mods folder for every player (take care to use the same version for every player also)\n\n## Optional Configuration\nIncluded with the mod is config.json, which allows you to set two different values to true or false depending on your preference.\n```\n{\n  \"ShowPauseX\": true, //change to false if you don't want to display the X graphic when paused\n  \"FixSkullTime\": true, //change to false to disable the Skull Cavern time fix (host only)\n  \"LockMonsters\": true //change to false to disable monster and hp locking (host only)\n}\n```",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1068093",
+	"Version": null,
+	"Updated": "2021-12-30T08:48:56.64+00:00",
+	"Downloads": [
+		{
+			"Id": 1091364,
+			"Type": "Main",
+			"DisplayName": "PauseInMultiplayer_1_4_3",
+			"FileName": "PauseInMultiplayer_1_4_3.zip",
+			"Description": "Place the PauseInMultiplayer folder from the .zip into your StardewValley/Mods folder.",
+			"Version": "1.4.3",
+			"SizeInBytes": 12541,
+			"Uploaded": "2021-12-28T23:49:12.749+00:00",
+			"Mods": [
+				{
+					"Id": "jorgamun.PauseInMultiplayer",
+					"DisplayName": "Pause in Multiplayer",
+					"Type": "Smapi",
+					"RelativePath": "PauseInMultiplayer",
+					"Manifest": {
+						"Name": "Pause in Multiplayer",
+						"Description": "Pauses time in multiplayer when all connected players should have their time paused.",
+						"Author": "jorgamun",
+						"Version": "1.4.3",
+						"EntryDll": "PauseInMultiplayer.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:10328"
+						],
+						"UniqueId": "jorgamun.PauseInMultiplayer"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "a5a2d5d28c66d908e406f44efb66a651",
+				"md5In": "2faf0284626114822ac0c9c13cdd2888",
+				"patchNotes": "Fixed a bug causing health to not increase in certain conditions (thanks zedqt!)",
+				"scriptType": 0,
+				"sha256Ex": "3ddc43df95f928b3eee928729a195da8320f9c79de8012241e45c1df468cbddc",
+				"sha256In": "2915f0ecbd14e124d7efb60ed7f3762c69d3f2203238674d6df93a0ea128b042"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1639596493443,
+		"DateUpdated": 1640854136640,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1639595811497,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1068093/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1068093/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1068093/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1068093/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 281761
+	}
+}

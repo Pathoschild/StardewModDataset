@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 29215,
+	"Name": "Custom Emotes Menu",
+	"Author": "Zexu2K",
+	"Description": "[size=4]This mod introduces a brand-new custom emote menu that can be accessed at any time during gameplay. When activated, the menu displays a variety of custom emojis that players can use to express themselves![/size]\n<br />\n<br />[center][img]https://i.postimg.cc/pV0Tk99L/for-user-s-1.png[/img][/center]\n<br />\n<br />[b][size=4][center]Accessing the Emote Menu[/center][/size][/b]\n<br />[size=4]\n<br />To [b][color=#00ff00]open[/color][/b] the [b][color=#00ff00]emoji menu[/color][/b], use the key or controller button set in the mod’s config.  \n<br />Default: [b][color=#00ff00]Q[/color][/b] for keyboard, [b][color=#00ff00]DPadDown[/color][/b] for controller.\n<br />[/size]\n<br />\n<br />[b][size=4][center]Using Emotes[/center][/size][/b]\n<br />[size=5]Browse through [b]available emoji[/b] and [b]select one[/b] to express how you're feeling!  \n<br />The selected emoji will appear above your character’s head to show your [color=#9900ff][b]mood[/b][/color] or [color=#ff7700][b]reaction[/b][/color] to [color=#00ff00][b]friends[/b][/color] and [color=#00ff00][b]NPCs[/b][/color].[/size]\n<br />\n<br />[center][img]https://i.postimg.cc/VsBKr8Vw/Muliplayer-showcase-ezgif-com-video-to-gif-converter.gif[/img][/center]\n<br />\n<br />[b][size=5]⭐ Setting Favorite Emojis[/size][/b]\n<br />\n<br />[b][size=4]On Keyboard:[/size][/b]  \n<br />[size=4]Hold [b][color=#00ff00]Ctrl[/color][/b] + [b][color=#00ff00]1[/color][/b], [b][color=#00ff00]2[/color][/b], [b][color=#00ff00]3[/color][/b], or [b][color=#00ff00]4[/color][/b] while clicking an emoji with the [b][color=#00ff00]left mouse button[/color][/b] to assign it as a favorite.  \n<br />To use a favorite, just open the emoji menu and press the corresponding key ([color=#00ff00]1–4[/color]).[/size]\n<br />\n<br />[b][size=4]On Controller:[/size][/b]  \n<br />[size=4]Hold [b][color=#00ff00]Left Shoulder (LB)[/color][/b] + [b][color=#00ff00]LT[/color][/b], [b][color=#00ff00]RT[/color][/b], [b][color=#00ff00]DPadUp[/color][/b], [b][color=#00ff00]DPadRight[/color][/b], or [b][color=#00ff00]DPadLeft[/color][/b] to assign a favorite emoji.  \n<br />To use it, just open the emoji menu and press the assigned button again.[/size]\n<br />\n<br />[center][img]https://i.postimg.cc/Vs0v0Ldw/emote-s-list.png[/img][/center]\n<br />[center][img]https://i.postimg.cc/d3CVbnz3/list.png[/img]\n<br />[img]https://i.postimg.cc/SsHfM5XX/additional-emotes-packs.png[/img]\n<br />\n<br />[size=6][b]-[url=https://www.nexusmods.com/stardewvalley/mods/33051]Terraria Emoji Pack\n<br />[/url]\uFEFF[/b][/size]\uFEFF[/center]\n<br />[center][img]https://i.postimg.cc/FRrrVmNS/for-modder-s.png[/img][/center]\n<br />\n<br />[size=4][b]\uD83E\uDDE9 Creating Your Own Custom Emoji: A Guide for Modders[/b][/size]\n<br />\n<br />\uD83D\uDCC1 [b]Step 1: Folder Structure[/b]  \n<br />Your content pack should follow this layout:\n<br />[code]\n<br />YourEmojiPack/\n<br />├── assets/\n<br />│   ├── YourEmoji.png\n<br />│   ├── AnotherEmoji.png\n<br />├── cfg.json\n<br />└── manifest.json\n<br />[/code]\n<br />\n<br />\uD83D\uDCDD [b]Step 2: manifest.json Example[/b]\n<br />[code]\n<br />{\n<br />  \"Name\": \"NameForPack\",\n<br />  \"Author\": \"YourName\",\n<br />  \"Version\": \"1.0\",\n<br />  \"Description\": \"Terraria Emoji Pack\",\n<br />  \"UniqueID\": \"YourName.NameForPack\",\n<br />  \"ContentPackFor\": {\n<br />    \"UniqueID\": \"Zexu2K.NewEmotes\",\n<br />    \"MinimumVersion\": \"2.2\"\n<br />  }\n<br />}\n<br />[/code]\n<br />\n<br />\uD83C\uDFA8 [b]Step 3: Create Emoji Graphics[/b]  \n<br />Use the included [b][color=#00ff00]template.png[/color][/b] (found in the [b]main mod folder[/b]) to align your artwork.  \n<br />[b]Green lines are helper guides[/b] showing the [b]center of the emoji bubble[/b], making positioning easier.  \n<br />Each emoji must be exactly [b]64×64 pixels[/b] and use a transparent background.\n<br />\n<br />\uD83D\uDCDD [b]Step 4: cfg.json Format[/b]  \n<br />Your [color=#00ff00][b]cfg.json[/b][/color] file should look like this:\n<br />[code]\n<br />{\n<br />  \"Tongue\": \"Tongue.png\",\n<br />  \"Happy\": \"HappyEmoji.png\",\n<br />  \"Wave\": \"wave.png\"\n<br />}\n<br />[/code]\n<br />\n<br />By following this guide, you can create custom emojis that integrate seamlessly into the in-game emote system!\n<br />\n<br />[size=3][b]Note:[/b] For custom emoji to work in multiplayer, [b]all players must have the same emoji files installed.[/b][/size]\n<br />\n<br />[center][img]https://i.postimg.cc/FsHVYJSb/credits.png[/img][/center]\n<br />\n<br />[size=3]Special thanks to [url=https://next.nexusmods.com/profile/Treeways?gameId=1303]Treeways[/url] for the OwO emoji assets used in this mod.  \n<br />Original mod: [url=https://www.nexusmods.com/stardewvalley/mods/9848][color=#ff7700]OwO Emote[/color][/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29215",
+	"Version": "2.3",
+	"Updated": "2025-07-25T13:41:11+00:00",
+	"Downloads": [
+		{
+			"Id": 138213,
+			"Type": "Main",
+			"DisplayName": "Emote's",
+			"FileName": "Emote's-29215-2-3-1753450871.zip",
+			"Description": "The update adds:\n<br />A more pleasant list of favorite emojis and increases the number of slots for favorite emojis (see photos), and it fixes the bugs with my other mod fast eat",
+			"Version": "2.3",
+			"SizeInBytes": 126520,
+			"Uploaded": "2025-07-25T13:41:11+00:00",
+			"Mods": [
+				{
+					"Id": "Zexu2K.NewEmotes",
+					"DisplayName": "Emote's",
+					"Type": "Smapi",
+					"RelativePath": "Emote's",
+					"Manifest": {
+						"Name": "Emote's",
+						"Description": "Adds new emote's to Stv",
+						"Author": "Zexu2K",
+						"Version": "2.3.0",
+						"MinimumApiVersion": "4.0.8",
+						"EntryDll": "DanceMenuMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:29215"
+						],
+						"UniqueId": "Zexu2K.NewEmotes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342524901,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342415903,
+		"UploaderId": 55430287,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

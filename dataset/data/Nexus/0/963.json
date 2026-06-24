@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 963,
+	"Name": "Skull Cavern Elevator",
+	"Author": "Bifibi",
+	"AuthorLabel": "Lestoph",
+	"Description": "[color=#6aa84f]This Mod is based on SMAPI 3.0+, for installing SMAPI refer to https://smapi.io/.\n<br />For installation unpack the zip-File in the Mods Folder, just like any other SMAPI Mod.[/color]\n<br />\n<br />An elevator like in the normal mine is added to the Skull Cavern, like in the normal mine the elevator is updated every 5th Floor by default.\n<br />Note: The elevator is always placed to the right of the ladder. \n<br />\n<br />If you want to support us, feel free to leave us a tip at: [url=https://www.buymeacoffee.com/Bifibi]Buy me a Coffee\n<br />[/url]Thanks\n<br />\n<br />[size=4]Update 1.1.2[/size]\n<br />\n<br />In the folder SkullCavernElevator there will be a file called config.json after starting the game with the mod, in this file you can change how frequent the elevators appear. You just need to change the value behind the\u00A0\"elevatorStep\" : (the 5).\u00A0\n<br />\n<br />[size=4]Update 1.2.1\n<br />[/size]\n<br />A new setting called \"difficulty\" has been added to the config.json file. It changes the number of elevator levels appearing in the menu. The value is calculated as follows: deepestMineLevel/elevatorSteps/difficulty.\n<br />\n<br />[size=4]Update 1.3.0[/size]\n<br />A new setting called \"FirstLevelElevatorActive\": has been added to the config.json file. It is used as a workaround if the elevator is not shown in the entrance area, but if set to \"true\" the elevator will appear in the first floor.\n<br />[size=4]\n<br />Update 1.4.0[/size]\n<br />The settings in the config.json were renamed to start with a Capital letter, difficulty -&gt; Difficulty, elevatorStep -&gt; ElevatorStep, firstLevelElevatorActive -&gt; FirstLevelElevatorActive.\n<br />\n<br />A new setting called \"ElevatorCostPerStep\": with default value 0 has been added to the config.json file. If this value is set to &gt; 0, a cost will be calculated and displayed in the elevator menu. The formula is (Position of Elevator displayed) * ElevatorCostPerStep. This cost will be subtracted from your current available money. If you do not have enough, the elevator will not be used.\n<br />\n<br />[size=4]Difficulty and elevator setting\n<br />\n<br />[/size]A few examples to illustrate how difficulty and elevatorStep work. In all examples it is assumed that the lowest mine level reached is 40.\n<br />First elevatorStep, this changes step width between elevators appearing.\n<br />elevatorStep 5 (and default difficulty 1) means when you reach level 40 of the SkullCavern, you will see the elevators: 5, 10, 15, 20, 25, 30, 35 and 40\n<br />elevatorStep 10 (and default difficulty 1) means when you reach level 40 of the SkullCavern, you will see the elevators: 10, 20, 30 and 40\n<br />\n<br />Difficulty setting changes how difficult it is to travel further down with the elevator.\n<br />Difficulty 2 (and default elevatorStep 5) means when you reach level 40 of the SkullCavern, you will only see elevators up to level 20 (My Lowest Level[40]/Difficulty[2]). Means elevators: 5, 10, 15 and 20\n<br />Difficulty 4 (and default elevatorStep 5) means when you reach level 40 of the SkullCavern, you will only see elevators up to level 10 (My Lowest Level[40]/Difficulty[4]). Means elevators: 5 and 10\n<br />As you can see, a higher value in Difficulty means that less elevators appear and you need to get further down to unlock new elevators.\n<br />\n<br />A combination of elevatorStep and Difficulty can look like this:\n<br />Difficulty 1.5 and elevatorStep 10 means when you reach level 40 of the SkullCavern, you will only see elevators up to level (Lowest Level[40]/Difficulty[1.5]) 26. Means elevators: 10 and 20. (due to the elevatorStep of 10).\n<br />\n<br />\n<br />[url=http://community.playstarbound.com/threads/smapi-skull-cavern-elevator.130637/]Official Discussion Thread[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/963",
+	"Version": "1.6.2",
+	"Updated": "2024-11-06T19:30:54+00:00",
+	"Downloads": [
+		{
+			"Id": 115452,
+			"Type": "Main",
+			"DisplayName": "SkullCavernElevator",
+			"FileName": "SkullCavernElevator-963-1-6-2-1730921454.zip",
+			"Description": "This version (1.6.2) works with SDV &gt; 1.6.9 and SMAPI 4.1.4 release.\n<br />",
+			"Version": "1.6.2",
+			"SizeInBytes": 177512,
+			"Uploaded": "2024-11-06T19:30:54+00:00",
+			"Mods": [
+				{
+					"Id": "SkullCavernElevator",
+					"DisplayName": "SkullCavernElevator",
+					"Type": "Smapi",
+					"RelativePath": "SkullCavernElevator",
+					"Manifest": {
+						"Name": "SkullCavernElevator",
+						"Description": "Elevator for the Skull Cavern",
+						"Author": "lestoph",
+						"Version": "1.6.2",
+						"EntryDll": "SkullCavernElevator.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:963"
+						],
+						"UniqueId": "SkullCavernElevator"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342502140,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342387651,
+		"UploaderId": 20120134,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,131 @@
+{
+	"Site": "Nexus",
+	"Id": 47704,
+	"Name": "LivingNPCs",
+	"Author": "3111471949",
+	"AuthorLabel": "yuki",
+	"Description": "[i]Your villagers remember, feel, and quietly act on what happens between you.[/i]\n<br />[i]让村民记住、在意，并悄悄回应你们之间发生的一切。[/i]\n<br />\n<br />[size=5][b][u]English[/u][/b][/size]\n<br />\n<br />LivingNPCs adds a lightweight memory, emotion, help request, and safe action layer for Stardew Valley NPCs. It is designed to work with [url=https://github.com/dandm1/ValleyTalk]ValleyTalk[/url]: ValleyTalk generates the AI dialogue, while LivingNPCs gives those conversations continuity and a small set of carefully validated in-game effects.\n<br />\n<br />[b]This download includes both mods[/b] — LivingNPCs and the modified ValleyTalk it runs on (two folders, one install). Keep both folders for the intended AI dialogue, memory, help request, and action experience. The package also bundles an optional [b]ValleyTalk for SVE[/b] content pack for Stardew Valley Expanded users.\n<br />\n<br />[list]\n<br />[*][b]Mod ID:[/b] Yuki.LivingNPCs[/*]\n<br />[*][b]Nexus author:[/b] 3111471949[/*]\n<br />[*][b]Version:[/b] 0.1.5[/*]\n<br />[/list]\n<br />[size=4][b]What it adds[/b][/size]\n<br />[list]\n<br />[*][b]Long-term conversation memory.[/b] NPCs can remember useful facts, your likes and dislikes, promises, boundaries, and shared moments, then naturally recall the relevant parts later.[/*]\n<br />[*][b]Emotions and relationship pacing.[/b] Villagers can carry longer emotional states such as happy, worried, grateful, jealous, upset, or calm. Relationship depth uses both vanilla hearts and conversation history, so newly-met NPCs should not instantly act like lifelong friends.[/*]\n<br />[*][b]Help requests.[/b] NPCs may occasionally ask for a small item-based favor. Accepted requests use the vanilla quest log, and completion can grant extra friendship or a small reward.[/*]\n<br />[*][b]Small, safe AI-driven actions.[/b] When visible dialogue supports it, an NPC may offer a small gift, money, a meaningful gift, a companion outing, a festival moment, or light quest assistance. Actions are validated locally before anything happens.[/*]\n<br />[*][b]Companion outings.[/b] NPCs can join short outings to supported destinations when the conversation clearly accepts the invitation. Destination anchors have been tuned for vanilla maps and supported SVE outdoor locations.[/*]\n<br />[*][b]Personalized mail and thanks.[/b] Birthday gifts, reciprocal gifts, and help-request rewards use NPC-specific templates where available, with stable fallback text for everyone else.[/*]\n<br />[*][b]Prompt and context improvements.[/b] ValleyTalk integration includes LivingNPCs context, semantic context routing, compact prompt options, action decision validation, transcript export, and diagnostic logs.[/*]\n<br />[*][b]Compatibility controls.[/b] SVE compatibility can be enabled or disabled. Content from mods whose authors do not permit AI use is not used as AI prompt context.[/*]\n<br />[*][b]Localized UI[/b] in English and Simplified Chinese.[/*]\n<br />[/list]\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6.x[/*]\n<br />[*]SMAPI 4.1.0 or later[/*]\n<br />[*]ValleyTalk — included in this download (modified build)[/*]\n<br />[*]Content Patcher — required by ValleyTalk[/*]\n<br />[*]Generic Mod Config Menu — optional, recommended for in-game settings[/*]\n<br />[*]An LLM provider — required for ValleyTalk AI dialogue[/*]\n<br />[/list]\n<br />[size=4][b]Recommended setup[/b][/size]\n<br />[list=1]\n<br />[*]Download and unzip this file.[/*]\n<br />[*]Put the extracted LivingNPCs and ValleyTalk folders into your Stardew Valley Mods folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[*]Open Generic Mod Config Menu in-game, then open ValleyTalk settings.[/*]\n<br />[*]Choose your model provider, enter your API key, and enter the model name.[/*]\n<br />[*]If you choose OpenAI-compatible API, click Save once after selecting that provider. Reopen ValleyTalk settings; a Base URL / server address field should appear. Fill in your Base URL, then save again.[/*]\n<br />[*]Watch the SMAPI console for ValleyTalk's connection check. If it reports a successful connection, you are ready to talk to NPCs. If it reports an error, check your API key, model name, provider, and Base URL.[/*]\n<br />[/list]\n<br />The SMAPI console should also log \"LivingNPCs loaded.\" during startup.\n<br />\n<br />LivingNPCs leans on the model harder than plain chat: every turn may include structured hidden metadata for memory, emotions, help requests, and safe actions. Stronger models usually produce more stable results. Smaller or cheaper models can still work, but may give weaker memory, behavior, or roleplay.\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />Most commonly used options are available through Generic Mod Config Menu. Advanced tuning can be edited in config.json after the first launch.\n<br />\n<br />[list]\n<br />[*]Configure [b]ValleyTalk[/b] first. It controls the AI provider, model, API key, Base URL/server address, request timeout, typed replies, translation, semantic context routing, and optimized prompt toggle.[/*]\n<br />[*]Configure [b]LivingNPCs[/b] after ValleyTalk works. It controls NPC memory, proactive help requests, small gifts, AI world actions, companion outings, SVE compatibility, HUD messages, and debug tools.[/*]\n<br />[*]Leave semantic context routing enabled for normal play.[/*]\n<br />[*]Leave optimized prompts disabled unless you want shorter prompts and accept a higher chance of model hallucinations.[/*]\n<br />[*]If NPCs ask for help too often or too rarely, adjust LivingNPCs' daily help-request chance.[/*]\n<br />[*]If you want AI dialogue without real in-game effects, disable LivingNPCs' AI world actions.[/*]\n<br />[*]Updating from an older version keeps your existing config.json files. New defaults only apply automatically on a fresh install or after deleting/resetting the old config.[/*]\n<br />[/list]\n<br />[size=4][b]Console commands[/b][/size]\n<br />For debugging or bug reports, type these in the SMAPI console:\n<br />[list]\n<br />[*]livingnpcs_debug [near|&lt;NPC&gt;] — current state, recent behavior reasons, help-request fit, and memory recall.[/*]\n<br />[*]livingnpcs_prompt [near|&lt;NPC&gt;] — the hidden context about to be sent to ValleyTalk.[/*]\n<br />[*]livingnpcs_export [near|all|&lt;NPC&gt;] — a Markdown debug report under Mods/LivingNPCs/debug_reports/&lt;save&gt;/.[/*]\n<br />[*]livingnpcs_eval — a quick in-game sanity check of key behavior rules.[/*]\n<br />[/list]\n<br />Hotkey: LeftShift + J prints a nearby NPC's state and memory to the console by default.\n<br />\n<br />[size=4][b]Heads-up about AI[/b][/size]\n<br />Conversations are sent to whatever LLM provider you configure in ValleyTalk. LivingNPCs only adds the memory/behavior layer on top of ValleyTalk responses. Running costs, privacy considerations, speed, and output quality depend on your chosen provider and model.\n<br />\n<br />LivingNPCs tries to keep AI-driven behavior limited and safe. Hidden metadata is parsed defensively, visible dialogue must support gifts/money/outings, and actions are checked before execution.\n<br />\n<br />[size=4][b]Feedback[/b][/size]\n<br />This mod is still evolving. If you find a bug, strange NPC behavior, awkward outing destination, bad translation, missing compatibility case, or anything that feels inconsistent, please feel free to leave a comment or bug report on Nexus.\n<br />\n<br />Clear examples help a lot: screenshots, the NPC name, date/time/weather, location, your prompt, the NPC reply, and any conversation log or SMAPI log will make the issue much easier to reproduce.\n<br />\n<br />[size=4][b]License and credits[/b][/size]\n<br />[list]\n<br />[*]LivingNPCs is new code in this project.[/*]\n<br />[*]The bundled modified ValleyTalk was created by [url=https://github.com/dandm1/ValleyTalk]dandm1[/url] and is redistributed under its original [b]LGPL v2.1[/b] license. LivingNPCs integrates with ValleyTalk but does not claim ownership of ValleyTalk.[/*]\n<br />[/list]\n<br />\n<br />————————————————————————————————\n<br />\n<br />\n<br />[size=5][b][u]中文说明[/u][/b][/size]\n<br />\n<br />LivingNPCs 为《星露谷物语》的 NPC 增加一层轻量的记忆、情绪、主动求助和安全动作系统。它主要配合 [url=https://github.com/dandm1/ValleyTalk]ValleyTalk[/url] 使用：ValleyTalk 负责生成 AI 对话，LivingNPCs 则让这些对话拥有连续性，并在安全限制内触发少量实际效果。\n<br />\n<br />[b]本下载同时包含两个 mod[/b]——LivingNPCs 和它依赖的修改版 ValleyTalk（两个文件夹，一次安装）。请保留两个文件夹，才能获得完整的 AI 对话、记忆、求助和动作体验。本包还一并附带可选的 [b]ValleyTalk for SVE[/b] 内容包，供 Stardew Valley Expanded 玩家使用。\n<br />\n<br />[list]\n<br />[*][b]模组 ID：[/b]Yuki.LivingNPCs[/*]\n<br />[*][b]Nexus 作者：[/b]3111471949[/*]\n<br />[*][b]版本：[/b]0.1.5[/*]\n<br />[/list]\n<br />[size=4][b]它带来什么[/b][/size]\n<br />[list]\n<br />[*][b]长期对话记忆。[/b]NPC 可以记住有用的事实、你的好恶、约定、边界和共同经历，并在之后自然提起相关内容。[/*]\n<br />[*][b]情绪与关系节奏。[/b]村民可以保留更长期的情绪，例如开心、担心、感激、吃醋、不悦或平静。关系深度会同时考虑原版心数和对话历史，所以刚认识的 NPC 不会立刻像多年好友一样亲密。[/*]\n<br />[*][b]主动求助。[/b]NPC 有时会请求一件小物品。接受后会进入原版任务日志，完成后可获得额外好感或小奖励。[/*]\n<br />[*][b]少量安全的 AI 行为。[/b]如果可见对白支持，NPC 可以给小礼物、给钱、给有意义的礼物、一起短途出游、进行节日互动或轻量任务协助。所有动作执行前都会经过本地校验。[/*]\n<br />[*][b]陪伴出游。[/b]当对话中明确接受邀请时，NPC 可以和玩家去支持的地点短暂停留。原版地图和受支持的 SVE 户外地图都调整过终点锚点。[/*]\n<br />[*][b]个性化信件和谢礼。[/b]生日礼物、回礼和求助谢礼会优先使用 NPC 专属模板；没有专属模板时会使用稳定的通用文本。[/*]\n<br />[*][b]提示词和上下文优化。[/b]ValleyTalk 集成包括 LivingNPCs 上下文、语义上下文路由、优化提示词开关、动作二次判定、对话导出和诊断日志。[/*]\n<br />[*][b]兼容控制。[/b]可以启用或关闭 SVE 兼容。对于不允许 AI 使用内容的模组，LivingNPCs/ValleyTalk 不会把相关内容用于 AI 提示词上下文。[/*]\n<br />[*][b]界面本地化[/b]：英文与简体中文。[/*]\n<br />[/list]\n<br />[size=4][b]运行需求[/b][/size]\n<br />[list]\n<br />[*]星露谷物语 1.6.x[/*]\n<br />[*]SMAPI 4.1.0 或更高[/*]\n<br />[*]ValleyTalk — 已包含在本下载中（修改版）[/*]\n<br />[*]Content Patcher — ValleyTalk 需要[/*]\n<br />[*]Generic Mod Config Menu — 可选，推荐用于游戏内配置[/*]\n<br />[*]大模型服务 — ValleyTalk 的 AI 对话需要[/*]\n<br />[/list]\n<br />[size=4][b]推荐设置[/b][/size]\n<br />[list=1]\n<br />[*]下载并解压本文件。[/*]\n<br />[*]把解压出来的 LivingNPCs 和 ValleyTalk 两个文件夹放进星露谷的 Mods 文件夹。[/*]\n<br />[*]通过 SMAPI 启动游戏。[/*]\n<br />[*]在游戏里打开 Generic Mod Config Menu，然后进入 ValleyTalk 设置。[/*]\n<br />[*]选择你的模型提供商，填写 API Key 和模型名。[/*]\n<br />[*]如果你选择的是 OpenAI 兼容接口，选择该提供商后需要先点一次保存。然后重新打开 ValleyTalk 设置，这时会刷新出 Base URL / 服务器地址输入框。填好 Base URL 后，再保存一次。[/*]\n<br />[*]观察 SMAPI 控制台里的 ValleyTalk 连接检查提示。如果显示连接成功，就可以开始和 NPC 对话；如果报错，请检查 API Key、模型名、服务商和 Base URL。[/*]\n<br />[/list]\n<br />启动时 SMAPI 控制台也应该出现 \"LivingNPCs loaded.\"\n<br />\n<br />LivingNPCs 比普通聊天更依赖模型能力：每轮对话可能需要模型额外输出记忆、情绪、求助和安全动作所用的隐藏结构化数据。强模型通常更稳定；较小或较便宜的模型也能运行，但记忆、行为和角色扮演效果可能更弱。\n<br />\n<br />[size=4][b]配置[/b][/size]\n<br />常用设置可以通过 Generic Mod Config Menu 调整。首次启动后，也可以手动编辑生成出来的 config.json。\n<br />\n<br />[list]\n<br />[*]请先配置 [b]ValleyTalk[/b]。它负责 AI 服务商、模型、API Key、Base URL/服务器地址、请求超时、自由输入、翻译、语义上下文路由，以及优化提示词开关。[/*]\n<br />[*]ValleyTalk 能正常连接后，再配置 [b]LivingNPCs[/b]。它负责 NPC 记忆、主动求助、小礼物、AI 世界动作、陪伴出游、SVE 兼容、HUD 提示和调试工具。[/*]\n<br />[*]正常游玩建议保持语义上下文路由开启。[/*]\n<br />[*]“启用优化后的提示词”默认关闭；它可能减少提示词长度，但也可能提高模型幻觉概率。[/*]\n<br />[*]如果 NPC 主动求助太频繁或太少，可以调整 LivingNPCs 的每日主动求助概率。[/*]\n<br />[*]如果你只想要 AI 对话，不想让 AI 触发实际游戏效果，可以关闭 LivingNPCs 的 AI 世界动作。[/*]\n<br />[*]从旧版本更新会保留已有的 config.json。新默认值只会在全新安装，或删除/重置旧配置后自动生效。[/*]\n<br />[/list]\n<br />[size=4][b]控制台命令[/b][/size]\n<br />用于调试或反馈问题，可在 SMAPI 控制台输入：\n<br />[list]\n<br />[*]livingnpcs_debug [near|&lt;NPC名&gt;] —— 当前状态、最近行为原因、求助适配和记忆召回。[/*]\n<br />[*]livingnpcs_prompt [near|&lt;NPC名&gt;] —— 即将发送给 ValleyTalk 的隐藏上下文。[/*]\n<br />[*]livingnpcs_export [near|all|&lt;NPC名&gt;] —— 导出 Markdown 调试报告到 Mods/LivingNPCs/debug_reports/&lt;存档名&gt;/。[/*]\n<br />[*]livingnpcs_eval —— 在游戏内快速检查关键行为规则。[/*]\n<br />[/list]\n<br />默认快捷键：LeftShift + J 会把附近 NPC 的状态和记忆打印到控制台。\n<br />\n<br />[size=4][b]关于 AI 的提示[/b][/size]\n<br />对话会发送给你在 ValleyTalk 中配置的大模型服务。LivingNPCs 只是在 ValleyTalk 回复之上增加记忆和行为层。运行费用、隐私、速度和输出质量取决于你选择的服务商和模型。\n<br />\n<br />LivingNPCs 会尽量限制并校验 AI 行为。隐藏元数据会被防御式解析；礼物、金钱和出游必须由可见对白支持；动作执行前会再次检查。\n<br />\n<br />[size=4][b]反馈[/b][/size]\n<br />这个 mod 还在持续调整。如果你发现 bug、奇怪的 NPC 行为、尴尬的出游终点、翻译问题、兼容问题，或者任何感觉不一致的地方，欢迎在 Nexus 留言或提交 bug report。\n<br />\n<br />清晰的例子会非常有帮助：截图、NPC 名字、日期/时间/天气、地点、你的输入、NPC 的回复，以及可用的聊天记录或 SMAPI 日志，都能让我更容易复现和修复问题。\n<br />\n<br />[size=4][b]许可证与鸣谢[/b][/size]\n<br />[list]\n<br />[*]LivingNPCs 是本项目的新增代码。[/*]\n<br />[*]捆绑的修改版 ValleyTalk 由 [url=https://github.com/dandm1/ValleyTalk]dandm1[/url] 创作，并按其原始 [b]LGPL v2.1[/b] 许可证再发布。LivingNPCs 与 ValleyTalk 集成，但不声称拥有 ValleyTalk。[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47704",
+	"Version": "0.1.4",
+	"Updated": "2026-06-23T18:55:16+00:00",
+	"Downloads": [
+		{
+			"Id": 172309,
+			"Type": "Main",
+			"DisplayName": "LivingNPCs 0.1.5",
+			"FileName": "03/81/a8/0381a8c2-cf6b-4c93-bdfc-97cf7ce6c348",
+			"Description": "",
+			"Version": "0.1.5",
+			"SizeInBytes": 900564,
+			"Uploaded": "2026-06-23T18:55:16+00:00",
+			"Mods": [
+				{
+					"Id": "Yuki.LivingNPCs",
+					"DisplayName": "LivingNPCs",
+					"Type": "Smapi",
+					"RelativePath": "LivingNPCs",
+					"Manifest": {
+						"Name": "LivingNPCs",
+						"Description": "Adds safe NPC behavior hooks and optional ValleyTalk prompt integration.",
+						"Author": "Yuki",
+						"Version": "0.1.5",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "LivingNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "dandm1.ValleyTalk",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:47704"
+						],
+						"UniqueId": "Yuki.LivingNPCs"
+					}
+				},
+				{
+					"Id": "dandm1.ValleyTalk",
+					"DisplayName": "ValleyTalk",
+					"Type": "Smapi",
+					"RelativePath": "ValleyTalk\\ValleyTalk",
+					"Manifest": {
+						"Name": "ValleyTalk",
+						"Description": "Infinite dialogue for Stardew Valley",
+						"Author": "dandm1, modified by Yuki",
+						"Version": "0.1.5",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "ValleyTalk.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47704"
+						],
+						"UniqueId": "dandm1.ValleyTalk"
+					}
+				},
+				{
+					"Id": "dandm1.ValleyTalkSVE",
+					"DisplayName": "ValleyTalk for SVE",
+					"Type": "ContentPack",
+					"RelativePath": "ValleyTalk\\ValleyTalk for SVE",
+					"Manifest": {
+						"Name": "ValleyTalk for SVE",
+						"Description": "SVE content pack for ValleyTalk - Infinite dialogue",
+						"Author": "dandm1, modified by Yuki",
+						"Version": "0.1.5",
+						"MinimumApiVersion": "4.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47704"
+						],
+						"UniqueId": "dandm1.ValleyTalkSVE",
+						"OtherFields": {
+							"PermitAiUse": true
+						}
+					}
+				},
+				{
+					"Id": "dandm1.CPValleyTalk",
+					"DisplayName": "ValleyTalk Content Pack",
+					"Type": "ContentPack",
+					"RelativePath": "ValleyTalk\\[CP] ValleyTalk Base",
+					"Manifest": {
+						"Name": "ValleyTalk Content Pack",
+						"Description": "CP Infinite dialogue for Stardew Valley",
+						"Author": "dandm1, modified by Yuki",
+						"Version": "0.1.5",
+						"MinimumApiVersion": "4.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:47704"
+						],
+						"UniqueId": "dandm1.CPValleyTalk",
+						"OtherFields": {
+							"PermitAiUse": true
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558997,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434392,
+		"UploaderId": 146063278,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

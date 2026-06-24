@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 28078,
+	"Name": "Change Sewer Color (setting your sewer color with RGB)",
+	"Author": "Bamma77",
+	"Description": "I made this mod for Underdark Sewer Overhaul that isn't compatible with 1.6.\n<br />I want to update the Underdark mod, but author didn't allow any permission, I made and upload .dll file that only changes the steam and water color.\u00A0\u00A0\n<br />\n<br />It's also compatible with other Sewer Overhaul, which doesn't change steam and water colors. I played with [url=http://https://www.nexusmods.com/stardewvalley/mods/19405]Aimon's More Lively Sewer Overhau[/url]l as well. They didn't crash. (But aimon's sewer has its own tile sheet (e.g., waterfalls), so my mod doesn't apply with additional tilesheet.)\n<br />\n<br />I found out the ambientlight color doesn't work well... If your Sewer map file (tbin, tmx) has its own ambientlight color in map properties, my ambientlight color doesn't appear. (And that's the reason that it seems somewhat differnt) So you must modify the map file directly... Sorry, I'll find the other way. You can still change water and steam color with config file\n<br />\n<br />\n<br />***If you want to use with Underdark Sewer Mod, you must follow the instructions.\n<br />\n<br />1. Copy this mode to the Mods folder. \n<br />2. Download [url=http://Underdark Sewer at Stardew Valley Nexus - Mods and community]Underdark Sewer Overhaul[/url] and look for the \"[CP] Underdark Sewer\" folder. \n<br />3. Copy only the \"[CP] Underdark Sewer\" folder to Mods. (So you need to copy each folder to Mods. Don't combine it.)\n<br />\n<br />[size=3]4. From here, It is optional. This mod has problem that appears ambientLight color of map properites, not my mod config Value. So You can modify the map properties of this tbin file. ambientlight 150,150,150 -&gt; 250, 140, 160\u00A0\n<br />[/size]5. modify the default Steamcolor Value to (255, 200, 255).\u00A0\n<br />\n<br />\n<br />I don't recommend using this mod with vanilla Sewer (it shows green tile sheets and pink steam and water...)\n<br />\n<br />***1.1.0 Updated version\n<br />You can change directly with config.json\n<br />When you install and run the mod, a new config.json file is created in the folder. The content.json is the default value, so you don't need to modify it.\u00A0\n<br />You can change the color of the sewer by setting the RGBA value in the config.json file as you wish. (A Value manages the opacity of the color.)\n<br />\n<br />The default Value is here.\u00A0 water color (255, 150, 255) / steam color (0, 150, 210) / ambientlight color (250, 140, 160)\n<br />\n<br />Underdark Sewer's default Value was here.\u00A0\n<br />-water color (255, 150, 255) / steam color (255, 200, 255)\u00A0\u00A0/ ambientlight color (250, 140, 160)\n<br />[s]\n<br />I apply that Value for my mod in old version, but the result screenshot wasn't same as the orginal Underdark version. Because of the ambientlight color in my mod doesn't appear but the its own(Sewer.tbin) map properites appear.\u00A0 So I just changed the default value of mine to looks similar.[/s]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28078",
+	"Version": "1.1.0",
+	"Updated": "2024-09-23T03:34:43+00:00",
+	"Downloads": [
+		{
+			"Id": 111844,
+			"Type": "Main",
+			"DisplayName": "Change Sewer Color",
+			"FileName": "Change Sewer Color-28078-1-1-0-1727062483.zip",
+			"Description": "Remove the previous version and download updated version and copy to Mods. You can config the RGBA directly in config.json./ add updatekeys.",
+			"Version": "1.1.0",
+			"SizeInBytes": 89948,
+			"Uploaded": "2024-09-23T03:34:43+00:00",
+			"Mods": [
+				{
+					"Id": "Bamma.changesewersteam",
+					"DisplayName": "Change Sewer Color",
+					"Type": "Smapi",
+					"RelativePath": "Change Sewer Color",
+					"Manifest": {
+						"Name": "Change Sewer Color",
+						"Description": "Change the steam, water, ambientlight color of Sewer, also this is unofficial update of UnderdarkSewer by MelNoelle for 1.6.",
+						"Author": "Bamma",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "ChangeSewerColor.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.12.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"28078"
+						],
+						"UniqueId": "Bamma.changesewersteam"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342498532,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414766,
+		"UploaderId": 159507858,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

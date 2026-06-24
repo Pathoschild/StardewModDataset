@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 42199,
+	"Name": "NPC Map Locations - No More Lag - Performance Patch",
+	"Author": "ZeroXPatch",
+	"Description": "[center][size=6][b]Performance Patch - NPC Map Locations\n<br />[/b][/size][/center][quote]NPC Map Locations itself is fine but when install with large expansions adding 100+ NPC, the constant background tracking is eating up a lot of CPU --&gt; Lag, Jitter. [color=#ffff00]this mod is intended for player who needs extra CPU power or simply wants the removal of lag caused by that mod, and who doesn't care about real time Mini map tracking.[/color][/quote]\n<br />\n<br />Safe to Install/uninstall anytime. Removing it just disables the features.\n<br />\n<br />[url=https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=endorsements][size=3]https://www.nexusmods.com/profile/ZeroXPatch/mods?gameId=1303&amp;sortBy=endorsements\n<br />[/size][/url]\n<br />\n<br />[size=5][b]What This Mod Does[/b][/size]\n<br />\n<br />This performance patch prevents [b]NPC Map Locations[/b] from constantly updating NPC positions when the map isn't open, dramatically reducing CPU usage.\n<br />\n<br />In vanilla NPC Map Locations, NPC positions update [b]60 times per second[/b] continuously, even when you're not looking at the map. With expansion mods like [b]Stardew Valley Expanded[/b], [b]Ridgeside Village[/b], or [b]East Scarp[/b] adding 50-100+ NPCs, this constant background tracking causes significant performance overhead for a feature you only use occasionally.\n<br />\n<br />[b]This patch changes that:[/b] NPC positions [b]only update when the map tab is actually open[/b]. When you're playing normally without the map open, NPC Map Locations is completely disabled, saving 90-95% of its CPU usage.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]How It Works[/b][/size]\n<br />\n<br />The mod uses [b]Harmony[/b] to intercept NPC Map Locations' update methods:\n<br />\n<br />[list]\n<br />[*][b]Map Tab Closed:[/b] All NPC position tracking is disabled - zero CPU overhead\n<br />[*][b]Map Tab Open:[/b] NPC tracking resumes immediately, showing current positions\n<br />[*][b]Tab Switching:[/b] Automatically detects when you switch to/from the map tab in GameMenu (Tab/E key)\n<br />[/list]\n<br />\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Performance Impact[/b][/size]\n<br />\n<br />\n<br />The more NPCs you have from expansion mods, the more dramatic the performance improvement.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI 3.0.0[/url] or later\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/url] by Bouhm - [b]REQUIRED[/b]\n<br />[/list]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/url]\n<br />[*]Download this mod\n<br />[*]Extract the zip file into your [font=Courier New]Stardew Valley/Mods[/font] folder\n<br />[*]Launch the game through SMAPI\n<br />[/list]\n<br />\n<br />You should see:\n<br />[code][Performance Patch - NPC Map Locations] Performance Patch for NPC Map Locations loaded successfully!\n<br />[Performance Patch - NPC Map Locations] Successfully patched X update method(s).[/code]\n<br />\n<br />[line]\n<br />\n<br />[color=#ffff00][size=5][b]Known Limitations[/b][/size]\n<br />[/color]\n<br />[color=#ff0000][size=4][b]⚠️ Mini-Map Incompatibility[/b][/size]\n<br />\n<br />[b]Real-time mini-maps will NOT work with this mod.[/b][/color]\n<br />\n<br />If you use mini-map feature that displays NPC locations in real-time, those NPCs will show [b]outdated positions[/b] when the main map is closed.\n<br />\n<br />[b]Workaround:[/b] Open the full map (Tab/E key, then click Map tab) to refresh NPC positions, then close it.\n<br />\n<br />[b]Recommendation:[/b] If real-time mini-map tracking is important to you, [b]don't use this mod[/b]. This is a deliberate trade-off: you choose between performance OR constant real-time NPC tracking.\n<br />[size=4][b]\n<br />[/b][/size]\n<br />[b]Compatible With:[/b]\n<br />[list]\n<br />[*]All map texture replacement mods\n<br />[*]All NPC expansion mods (SVE, Ridgeside Village, East Scarp, etc.)\n<br />[*]UI mods that don't display real-time NPC positions\n<br />[*]Multiplayer (each player needs the mod installed)\n<br />[/list]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]FAQ[/b][/size]\n<br />\n<br />[b]Q: Will this break NPC Map Locations?[/b]\n<br />A: No! When the map tab is open, everything works exactly as normal. You just won't waste CPU tracking NPCs when you're not looking at them.\n<br />\n<br />[b]Q: Can I use this with 100+ NPCs from expansion mods?[/b]\n<br />A: Yes! That's exactly when this patch is most beneficial. The more NPCs you have, the more CPU you save.\n<br />\n<br />[b]Q: What about the mini-map in UI Info Suite 2?[/b]\n<br />A: It will show outdated NPC positions. You can refresh by opening the full map. If you need real-time mini-map tracking, this mod isn't for you.\n<br />\n<br />[b]Q: Does this work in multiplayer?[/b]\n<br />A: Yes, but each player needs it installed. It only affects local CPU usage, not game sync.\n<br />\n<br />[b]Q: Why do NPCs disappear when I open the map?[/b]\n<br />A: This shouldn't happen with the current version. If it does, please report it with your SMAPI log.\n<br />\n<br />[b]Q: Can I configure update frequency instead of on/off?[/b]\n<br />A: Not in this version. This is a simple map-only patch by design. For throttling options, you'd need a different mod.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Troubleshooting[/b][/size]\n<br />\n<br />[b]\"NPC Map Locations mod not found\" error:[/b]\n<br />Make sure NPC Map Locations is installed and enabled before this patch.\n<br />\n<br />[b]Mod doesn't seem to reduce CPU usage:[/b]\n<br />[list]\n<br />[*]Check SMAPI console - it should say \"Successfully patched X update method(s)\"\n<br />[*]If it says \"0 methods patched\", NPC Map Locations may have updated - report this\n<br />[*]Try disabling other mods to isolate the performance issue\n<br />[/list]\n<br />\n<br />[b]NPCs show wrong positions on map:[/b]\n<br />This is normal after the map has been closed for a while. Positions update within 1 second of opening the map.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/42199",
+	"Version": "1.1",
+	"Updated": "2026-02-16T02:44:38+00:00",
+	"Downloads": [
+		{
+			"Id": 157054,
+			"Type": "Main",
+			"DisplayName": "NPCMapLocationsPerformancePatch",
+			"FileName": "NPCMapLocationsPerformancePatch-42199-1-2-1771209878.zip",
+			"Description": "Fixed manifest version number, thx PurrpleHaze420 lol",
+			"Version": "1.1",
+			"SizeInBytes": 12788,
+			"Uploaded": "2026-02-16T02:44:38+00:00",
+			"Mods": [
+				{
+					"Id": "ZeroXPatch.NPCMapLocationsPerformancePatch",
+					"DisplayName": "Performance Patch - NPC Map Locations",
+					"Type": "Smapi",
+					"RelativePath": "NPCMapLocationsPerformancePatch",
+					"Manifest": {
+						"Name": "Performance Patch - NPC Map Locations",
+						"Description": "Forces NPC Map Locations to only update when the map is open, dramatically reducing CPU usage. NPC positions will not update while the map is closed.",
+						"Author": "ZeroXPatch",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "NPCMapLocationsPerformancePatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Bouhm.NPCMapLocations",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:42199"
+						],
+						"UniqueId": "ZeroXPatch.NPCMapLocationsPerformancePatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342543742,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342428887,
+		"UploaderId": 141646868,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

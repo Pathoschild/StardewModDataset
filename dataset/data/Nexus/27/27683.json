@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 27683,
+	"Name": "This Round's On Me",
+	"Author": "AlphaMeece",
+	"Description": "[b]What is it?[/b]\n<br />This mod changes Gus's dialogue in the Saloon to allow you to buy a round of drinks for everyone present. This can only be done once per day and only affects the people in the Saloon when you purchased it.\n<br />\n<br />To buy a round of drinks you must talk to Gus directly(not the counter). The dialogue option will tell you how much money is required to buy the round, by default the cost is equivalent to one beer(400) per person and everyone's friendship increases by 20, the amount of a neutral gift.\n<br />\n<br />Both the price and friendship gain can be changed in the mod's config.\n<br />\n<br />[size=3][b]Important notes:[/b][/size]\n<br />[list=1]\n<br />[*]There is currently a bug with Stardew Valley and how the $action tag works causing a blank dialogue box to appear after running a command, there is nothing I can do to fix this, this was not solved by Stardew Valley 1.6.9\n<br />[*]Due to limitations of Content Patcher(I assume intentional so as to not lag the game) the price tag only updates every 10 seconds(10 in-game minutes), but the price will still be charged appropriately.\n<br />[*]Attempting to buy it while not having enough money will result in a warning in the console but Gus's dialogue will continue as if you had paid, in this case NPC friendship will not rise and you will not be charged. I don't know if this is possible to fix, I'm very clueless when it comes to dialogue modding.\n<br />[*]If you have not \"met\" an NPC before buying them a drink you will get an error in the console about adding friendship to a friend that does not exist. So be sure you've met everyone, it doesn't break anything, it's just wasted friendship.\n<br />[/list][size=3][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/14120]Immersive Saloon[/url][b]: [/b]Kind of, un-randomizes Gus's dialogue from the mod(all other npcs are unchanged) in order to make both work together.\uFEFF[/size]\n<br />[/list][b]Translations[/b]\n<br />[list]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/27736]Spanish[/url]\uFEFF(Español) by [url=https://next.nexusmods.com/profile/SoraGodFallen/about-me?gameId=1303]SoraGodFallen[/url][/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/27817?tab=description]Turkish[/url]\uFEFF(Turkce) by\u00A0[url=https://www.nexusmods.com/stardewvalley/users/186153489]mustafasaidsulak[/url][/size]\n<br />[*][size=2][url=https://www.nexusmods.com/stardewvalley/mods/27838]Mandarin[/url]\uFEFF(中文) by [url=https://www.nexusmods.com/stardewvalley/users/158984893]huangmiu[/url][/size]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28437]Thai[/url]\uFEFF(ภาษาไทย) by [url=https://next.nexusmods.com/profile/mistermozart?gameId=1303]mistermozart[/url]\uFEFF\n<br />[*]French(Français) by\u00A0[url=https://next.nexusmods.com/profile/FabLeKebab]FabLeKebab[/url]\u00A0-\u00A0Inclus\uFEFF\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/27683",
+	"Version": "1.1.1",
+	"Updated": "2025-03-03T21:15:34+00:00",
+	"Downloads": [
+		{
+			"Id": 126587,
+			"Type": "Main",
+			"DisplayName": "This Round's on Me",
+			"FileName": "This Round's on Me-27683-1-1-1-1741036534.zip",
+			"Description": "Added French translation courtesy of FabLeKebab",
+			"Version": "1.1.1",
+			"SizeInBytes": 17333,
+			"Uploaded": "2025-03-03T21:15:34+00:00",
+			"Mods": [
+				{
+					"Id": "AlphaMeece.ThisRoundsOnMe",
+					"DisplayName": "ThisRoundsOnMe",
+					"Type": "Smapi",
+					"RelativePath": "ThisRoundsOnMe\\ThisRoundsOnMe",
+					"Manifest": {
+						"Name": "ThisRoundsOnMe",
+						"Description": "Allows the player to buy a round of drinks for everyone in the saloon",
+						"Author": "AlphaMeece",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ThisRoundsOnMe.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:27683"
+						],
+						"UniqueId": "AlphaMeece.ThisRoundsOnMe"
+					}
+				},
+				{
+					"Id": "AlphaMeece.CP.ThisRoundsOnMe",
+					"DisplayName": "Dialogue Changes for This Round's on Me",
+					"Type": "ContentPack",
+					"RelativePath": "ThisRoundsOnMe\\[CP] ThisRoundsOnMe",
+					"Manifest": {
+						"Name": "Dialogue Changes for This Round's on Me",
+						"Description": "Modifies Dialoge for This Round's on Me'.",
+						"Author": "AlphaMeece",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "AlphaMeece.ThisRoundsOnMe",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:27683"
+						],
+						"UniqueId": "AlphaMeece.CP.ThisRoundsOnMe"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513275,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414371,
+		"UploaderId": 36106525,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"Site": "ModDrop",
+	"Id": 1654718,
+	"Name": "Umbrellas",
+	"Author": "Monsoon Sheep",
+	"TagLine": " NPCs can carry umbrellas! You can make unique umbrellas for characters. ",
+	"Description": "This mod allows for adding custom umbrellas for NPCs to carry.\nIt doesn't do anything on its own. Here's some of the umbrellas that I made!\uFEFF\n\nRequirements\n- Content Patcher\n\n\n## For Mod Authors\nThis mod does 2 things\n- Overlay the umbrella texture on the NPC's sprite (it handles the bobbing up and down when walking)\n- Edits the NPC's sprite, based on the content pack.\n\nWith the umbrella model (added via CP), you can add edits to the NPC's sprite to move their hand to make it look like they're holding the umbrella.\nThese edits are in the form of Deletes and Copies. Each Delete is a rectangle to erase, and each Copy is a rectangle and a list of points to paste that rectangle onto.\n\nTypically you'd want to erase the parts where the umbrella-holding hand is not in the right place, and copy over the part of the sprite where that hand is in a position that it looks like it may be holding an umbrella and paste it to the other sprites.\n\nIf you're making an umbrella for your NPC and you need help with this, message me on Discord at monsoonsheep and I can help you out! (Sorry I'm not good at explaining the process here)\n\n### Creating an Umbrella Model\nIf you want to make an umbrella model for an NPC, look at the models in the starter pack mod.\nI recommend taking one of the models from my starter pack and going from there.\n\n[ModDrop - Monsoon's Umbrellas Starter Pack](https://www.moddrop.com/stardew-valley/mods/1654721-monsoons-umbrellas-starter-pack-for-umbrellas)\n\nThe umbrella texture is a 56 x 128 image.\nThere are 8 cells, 4 on the left and 4 on the right. Each cell is 28 wide and 32 high.\nThe left column is the sprites that will be drawn on top of the NPC and the right column are drawn behind.\nThe first row is for the character facing down, the second row for right, third for up, and fourth for left.\n\nHere's a guide image for it:\n![Guide](https://raw.githubusercontent.com/monsoonsheep/StardewMods/e93fd034df7c3abe43cd1b2e45840701c7819bfc/Umbrellas/guide.png)\n\nAdding a model is done through Content Patcher (CP) by targeting fields in the asset \uFEFF`Mods/MonsoonSheep.Umbrellas/Umbrellas`\nThe key in each entry is the NPC's name (internal name), and the value is an object with the following properties:\n\n* \"Texture\": Asset name of the texture to be used (You can use the InternalAssetName token to point to your file)\n* \"Offset\": a vector2 indicating an offset for drawing the umbrella\n* \"Deletes\": For editing the NPC's sprite, a list of rectangles that specify areas of the NPC's sprite to be replaced with transparent\n* \"Copies\": For editing the NPC's sprite, a list of \"Copy\" objects specifying areas to be copy-pasted\n\n#### JSON Examples:\n[spoiler]\nA copy is defined with a \"Source\" (Rectangle) and Targets (Array of Vector2's). For example:\n{\n  \"Source\": {\n\"X\": 58,\n\"Y\": 25,\n\"Width\": 4,\n\"Height\": 3\n  },\n  \"Targets\": [\n{\n\"X\": 57,\n\"Y\": 24\n},\n\uFEFF\uFEFF\uFEFF    \uFEFF{\n\"X\": 41,\n\"Y\": 23\n}\n}\n\nSo a full content patcher pack would look like this\n\n{\n  \"Format\": \"2.4.0\",\n  \"Changes\":\n  [\n{\n\"Action\": \"EditData\",\n\"Target\": \"Mods/MonsoonSheep.Umbrellas/Umbrellas\",\n\"Entries\":\n{\n  \"Abigail\": {\n\"Texture\": \"{{InternalAssetKey: abigail.png}}\",\n\n\"Deletes\": [\n{\n  \"X\": 12,\n  \"Y\": 21,\n  \"Width\": 3,\n  \"Height\": 5\n},\n{\n  \"X\": 34,\n  \"Y\": 86,\n  \"Width\": 2,\n  \"Height\": 4\n}\n],\n\n\"Copies\": [\n{\n  \"Source\": {\n\"X\": 58,\n\"Y\": 21,\n\"Width\": 4,\n\"Height\": 6\n  },\n  \"Targets\": [\n{\n\"X\": 10,\n\"Y\": 21\n},\n{\n\"X\": 26,\n\"Y\": 22\n}\n  ]\n},\n{\n  \"Source\": {\n\"X\": 27,\n\"Y\": 54,\n\"Width\": 3,\n\"Height\": 4\n  },\n  \"Targets\": [\n{\n\"X\": 11,\n\"Y\": 53,\n}\n  ]\n\uFEFF\uFEFF\uFEFF   }\n]\n  }\n}\n}\n  ]\n}\n[/spoiler]",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1654718",
+	"Version": null,
+	"Updated": "2025-01-11T19:04:11.167+00:00",
+	"Downloads": [
+		{
+			"Id": 1676749,
+			"Type": "Main",
+			"DisplayName": "Umbrellas 1.0.0",
+			"FileName": "Umbrellas 1.0.0.zip",
+			"Description": " NPCs can carry umbrellas! You can make unique umbrellas for characters. ",
+			"Version": "1.0.0",
+			"SizeInBytes": 16392,
+			"Uploaded": "2025-01-11T18:48:36.557+00:00",
+			"Mods": [
+				{
+					"Id": "MonsoonSheep.Umbrellas",
+					"DisplayName": "Umbrellas",
+					"Type": "Smapi",
+					"RelativePath": "Umbrellas",
+					"Manifest": {
+						"Name": "Umbrellas",
+						"Description": "NPCs can carry umbrellas! You can make unique umbrellas for characters.",
+						"Author": "MonsoonSheep",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.7",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "Umbrellas.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.12.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:30741"
+						],
+						"UniqueId": "MonsoonSheep.Umbrellas",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "8fed0c8f2827f3999c21c33ffb67db93",
+				"md5In": "60ff939c1f41c0fd11011ba760789f43",
+				"scriptType": 0,
+				"sha256Ex": "86f8ddee919d48240a953b55667cc037e9ed1b60644dbc911278f98bc39b9e14",
+				"sha256In": "7199619f65cc22f7e99c884d7d2f87688effd0e49a113ceb66fa7b57abdaddaf"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1736621990697,
+		"DateUpdated": 1736622251167,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1736621221107,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1654718/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1654718/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1654718/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1654718/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 460601
+	}
+}

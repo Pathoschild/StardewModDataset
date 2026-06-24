@@ -1,0 +1,358 @@
+{
+	"Site": "ModDrop",
+	"Id": 790268,
+	"Name": "Pollen Sprites",
+	"Author": "EscaMMC",
+	"TagLine": "Pollen Sprites adds a new type of non-hostile monster. They appear on windy days in spring, float around players harmlessly, and sometimes drop random seeds when defeated.",
+	"Description": "**Pollen Sprites** adds a new type of non-hostile monster. They appear on windy days, float around players harmlessly, and sometimes drop random seeds when defeated. You'll find them around the farm and various parts of the wilderness. You can also enable options to give yourself \"allergy\" effects or change which seeds they drop.\n\nCreated for the Spring 2020 event on the [Stardew Valley Discord server](https://discord.gg/stardewvalley).\n\n- - - - -\n### Installation\n- - - - -\n1. Install the latest version of [SMAPI](https://smapi.io/).\n2. Install the latest version of [Content Patcher](https://www.moddrop.com/stardew-valley/mods/470174-content-patcher).\n3. Install the latest version of [Farm Type Manager](https://www.moddrop.com/stardew-valley/mods/598755-farm-type-manager-ftm).\n4. Download Pollen Sprites from the Download tab above, the [GitHub Releases page](https://github.com/Esca-MMC/PollenSprites/releases), or [Nexus Mods](https://www.nexusmods.com/stardewvalley/mods/6149).\n5. Unzip Pollen Sprites into your __Stardew Valley\\Mods__ folder.\n\n- - - - -\n### Options\n- - - - -\nPollen Sprites have some optional \"allergy\" effects and customizable seed drop chances. To edit these options:\n\n1. **Run the game** using SMAPI. This will generate the mod's config.json file in the __Stardew Valley\\Mods\\PollenSprites\\PollenSprites__ folder.\n2. **Exit the game** and open the config.json file with any text editing program.\n\n\nThis mod also supports [Generic Mod Config Menu](https://www.moddrop.com/stardew-valley/mods/771692-generic-mod-config-menu) (GMCM). Users with that mod will be able to change config.json settings from Stardew's main menu.\n\nFor specific information about each option, highlight them in GMCM or refer to the [GitHub readme](https://github.com/Esca-MMC/PollenSprites#options).\n\n- - - - -\n### Customization\n- - - - -\nThe number of pollen sprites spawned, their locations, and other settings can be changed by editing the __Stardew Valley\\Mods\\PollenSprites\\[FTM] PollenSprites\\content.json__ file.\n\nFarm Type Manager also includes a visual editor for this file. To use it:\n\n1. Download Farm Type Manager's Config Editor from [GitHub](https://github.com/Esca-MMC/FarmTypeManager/blob/master/FarmTypeManager/ConfigEditor.html) or [Nexus Mods](https://www.nexusmods.com/stardewvalley/mods/3231?tab=files).\n2. Open it with any web browser.\n3. Click the \"Load\" button and select the __Stardew Valley\\Mods\\PollenSprites\\[FTM] PollenSprites\\content.json__ file.\n4. Click the \"Monsters\" tab.\n5. Edit any of the available settings.\n6. Click the \"Save\" button and overwrite the __Stardew Valley\\Mods\\PollenSprites\\[FTM] PollenSprites\\content.json__ file.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/790268",
+	"Version": null,
+	"Updated": "2024-04-12T15:29:46.957+00:00",
+	"Downloads": [
+		{
+			"Id": 797861,
+			"Type": "Main",
+			"DisplayName": "Pollen Sprites v1.0.0",
+			"FileName": "Pollen Sprites v1.0.0.zip",
+			"Description": "Adds harmless pollen sprites to various outdoor areas on windy spring days.",
+			"Version": "1.0.0",
+			"SizeInBytes": 13944,
+			"Uploaded": "2020-05-23T13:15:26.819+00:00",
+			"Mods": [
+				{
+					"Id": "Esca.PollenSprites",
+					"DisplayName": "Pollen Sprites",
+					"Type": "Smapi",
+					"RelativePath": "PollenSprites",
+					"Manifest": {
+						"Name": "Pollen Sprites",
+						"Description": "Adds a new type of monster called a Pollen Sprite.",
+						"Author": "Esca",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "PollenSprites.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.PollenSpritesCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6419",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSprites"
+					}
+				},
+				{
+					"Id": "Esca.PollenSpritesCP",
+					"DisplayName": "(CP) Pollen Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] PollenSprites",
+					"Manifest": {
+						"Name": "(CP) Pollen Sprites",
+						"Description": "Loads the custom spritesheet used by the Pollen Sprite monster type.",
+						"Author": "Esca",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.3.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6419",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSpritesCP"
+					}
+				},
+				{
+					"Id": "Esca.PollenSpritesFTM",
+					"DisplayName": "(FTM) Pollen Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "[FTM] PollenSprites",
+					"Manifest": {
+						"Name": "(FTM) Pollen Sprites",
+						"Description": "Spawns Pollen Sprites in various locations on windy days in spring.",
+						"Author": "Esca",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.10.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.PollenSprites",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6419",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSpritesFTM"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "21531a5807472ca08310ce1e4faa7345",
+				"md5In": "9aa4b3fe24cd2aaee4441538e8d3bd60",
+				"patchNotes": "Initial release version. Designed for Stardew Valley v1.4.5.",
+				"scriptType": 0,
+				"sha256Ex": "b5533bc53277826a6cf63fe8230381ac1bedf828aeca6de38edf97254a412361",
+				"sha256In": "eb78eb95a953f95b8f53dc2a3403b988ae99d51c1e3be8341018fa87cd367c20"
+			}
+		},
+		{
+			"Id": 798886,
+			"Type": "Main",
+			"DisplayName": "Pollen Sprites v1.1.0",
+			"FileName": "Pollen Sprites v1.1.0.zip",
+			"Description": "Adds harmless pollen sprites to various outdoor areas on windy spring days.",
+			"Version": "1.1.0",
+			"SizeInBytes": 22892,
+			"Uploaded": "2020-05-25T17:13:57.981+00:00",
+			"Mods": [
+				{
+					"Id": "Esca.PollenSprites",
+					"DisplayName": "Pollen Sprites",
+					"Type": "Smapi",
+					"RelativePath": "PollenSprites",
+					"Manifest": {
+						"Name": "Pollen Sprites",
+						"Description": "Adds a new type of monster called a Pollen Sprite.",
+						"Author": "Esca",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "PollenSprites.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.PollenSpritesCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6149",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSprites"
+					}
+				},
+				{
+					"Id": "Esca.PollenSpritesCP",
+					"DisplayName": "(CP) Pollen Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] PollenSprites",
+					"Manifest": {
+						"Name": "(CP) Pollen Sprites",
+						"Description": "Loads the custom spritesheet used by the Pollen Sprite monster type.",
+						"Author": "Esca",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.3.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6149",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSpritesCP"
+					}
+				},
+				{
+					"Id": "Esca.PollenSpritesFTM",
+					"DisplayName": "(FTM) Pollen Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "[FTM] PollenSprites",
+					"Manifest": {
+						"Name": "(FTM) Pollen Sprites",
+						"Description": "Spawns Pollen Sprites in various locations on windy days in spring.",
+						"Author": "Esca",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.10.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.PollenSprites",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6149",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSpritesFTM"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "70a4a2d1346bb04c1696f79530c9418a",
+				"md5In": "0990b78afb1003a19b5116ce78d47ad3",
+				"patchNotes": "* Adds a config.json file with new optional features:\n  ** Slow debuff and/or energy loss when touching pollen sprites\n  ** Customizable drop rates for seed types\n* Adds support for GMCM\n* Fixes Nexus update key typo\n\nDesigned for Stardew Valley v1.4.5.",
+				"scriptType": 0,
+				"sha256Ex": "53f41c19a43e05de840aa2da2e13c86818005f0fb8d7b5d00dd76c23bd81cc34",
+				"sha256In": "1af300846a712a9dc2616e1fe5515c80f4b51b4c0dd1c9e33dd461074c62c055"
+			}
+		},
+		{
+			"Id": 1574746,
+			"Type": "Main",
+			"DisplayName": "Pollen Sprites v2.0.0",
+			"FileName": "Pollen Sprites v2.0.0.zip",
+			"Description": "Main file. Designed for Stardew Valley v1.6.3.",
+			"Version": "2.0.0",
+			"SizeInBytes": 27287,
+			"Uploaded": "2024-04-12T15:27:14.908+00:00",
+			"Mods": [
+				{
+					"Id": "Esca.PollenSprites",
+					"DisplayName": "Pollen Sprites",
+					"Type": "Smapi",
+					"RelativePath": "PollenSprites\\PollenSprites",
+					"Manifest": {
+						"Name": "Pollen Sprites",
+						"Description": "Adds a new type of monster called a Pollen Sprite.",
+						"Author": "Esca",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PollenSprites.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.PollenSpritesCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6149",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSprites"
+					}
+				},
+				{
+					"Id": "Esca.PollenSpritesCP",
+					"DisplayName": "(CP) Pollen Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "PollenSprites\\[CP] PollenSprites",
+					"Manifest": {
+						"Name": "(CP) Pollen Sprites",
+						"Description": "Loads the custom spritesheet used by the Pollen Sprite monster type.",
+						"Author": "Esca",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:6149",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSpritesCP"
+					}
+				},
+				{
+					"Id": "Esca.PollenSpritesFTM",
+					"DisplayName": "(FTM) Pollen Sprites",
+					"Type": "ContentPack",
+					"RelativePath": "PollenSprites\\[FTM] PollenSprites",
+					"Manifest": {
+						"Name": "(FTM) Pollen Sprites",
+						"Description": "Spawns Pollen Sprites in various locations on windy days.",
+						"Author": "Esca",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.10.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Esca.PollenSprites",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6149",
+							"GitHub:Esca-MMC/PollenSprites",
+							"ModDrop:790268"
+						],
+						"UniqueId": "Esca.PollenSpritesFTM"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "625e78a6c72a7d2e090d5ef68dec4c57",
+				"md5In": "fba557c8b26effcb33eeeccbeb52f065",
+				"patchNotes": "**Changes:**\n* Updates everything for Stardew v1.6\n* Spawns pollen sprites in fall with different colors\n* Replaces random flower seed drops with the new \"Mixed Flower Seeds\" item\n* Improves default seed drop rates\n  * Mixed seeds chance increased from 45% to 50%.\n  * Mixed flower seeds chance increased from 10% to 20%.\n\nDesigned for Stardew Valley v1.6.3.",
+				"scriptType": 0,
+				"sha256Ex": "39180bbeca92c7b1fdfc3d11be58c858fbd5cf8530523989014a44e57e51fcf1",
+				"sha256In": "aebbecce06f11399089203794d8998f955f1525f402e2c1637252f5a0c745eee"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1590237215873,
+		"DateUpdated": 1712935786957,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1590236237360,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/790268/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/790268/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/790268/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/790268/icon_original"
+		},
+		"notice": "This mod requires Content Patcher and Farm Type Manager. When used in multiplayer, all players need to install this mod and the requirements.",
+		"dateNoticeUpdated": "2020-05-23T08:32:12.1522595-04:00",
+		"isNoticeEnabled": true,
+		"isUploadedByAuthor": true,
+		"userID": 124419
+	}
+}

@@ -1,0 +1,99 @@
+{
+	"Site": "Nexus",
+	"Id": 13819,
+	"Name": "Fishing Nets",
+	"Author": "MindMeltMax",
+	"Description": "[size=4][b]About :[/b][/size]\n<br />Adds a fishing net object which can be used just like a crab pot to catch fish overnight when provided with bait.\n<br />Just like with crab pots, the need for bait is removed when the player has the \"Luremaster\" profession. Additionally, if the Quality Bait mod is installed, a random quality will be selected when not provided with bait.\n<br />\n<br />The nets come with multiple texture variants: 2 new animated ones, and the original pre-2.0 texture for nostalgia.\n<br />These can be switched out in the config or through GMCM.\n<br />\n<br />[size=4][b]How to obtain :[/b][/size]\n<br />Recipe unlocks at level 6 Fishing. By default, the recipe requires 3 iron bars and 30 fiber.\n<br />\n<br />[size=4][b]Compatible With :\u00A0\n<br />[/b][/size][b]Automate [/b]- requires optional file\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/13819?tab=files#file-container-optional-files]Fish Nets - Automate\n<br />[/url][b]Better Crafting [/b]- [s]requires optional file\u00A0Fish Nets - Better Crafting[/s]\u00A0Integrated into main mod as of 2.0.0\n<br />[b]More New Fish[/b] - Adds more catchable fish\n<br />[b]Ridgeside Village, Stardew Valley Expanded, East Scarp [/b]- Tested with these major extensions, keep in mind, not all areas provide anything catchable\n<br />[b]Quality Bait[/b] - Adds quality options to catches\n<br />[b]Json Assets[/b] - Any mod that adds fish / bait through JA should work\n<br />[b]Dynamic Game Assets[/b] - [s]Any mod that adds fish / bait through DGA should work[/s]\u00A0As of 2.0.0, DGA is considered deprecated and will no longer be supported\n<br />[b]Alternative Textures[/b] - Change the net's texture through AT (for 2.0.0+, animations do not need to be added through AT, this is handled internally, just providing the texture will do)\n<br />[b]Save Anywhere Redux[/b] - [s]Net's are saved before SAR saves and load back in after save (No catches for mid-day saves)[/s]\u00A0No additional support needed as of 2.0.0, works out of the box\n<br />\n<br />[size=4][b](Partially) Incompatible With :\u00A0\n<br />[/b][/size][b]The Daily Newspaper [/b]- [s]Mod uses item id 931, change the id of fishnets for compatibility[/s]\u00A0No longer an issue since 1.1.5\n<br />[b]MARGO [/b]- Won't break, but won't interact with each other (MARGO skills don't work for fishnets)\n<br />\n<br />[size=5][b]How to install :\u00A0[/b][/size]\n<br />1. Install\u00A0[url=http://stardewvalleywiki.com/Modding:Installing_SMAPI]Smapi[/url]\uFEFF\n<br />2. Unzip the file and place it in the mod folder\n<br />\n<br />[url=https://github.com/MindMeltMax/Stardew-Valley-Mods/tree/main/Fishnets][Source Code][/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13819",
+	"Version": "2.1.0",
+	"Updated": "2024-05-29T13:13:02+00:00",
+	"Downloads": [
+		{
+			"Id": 101618,
+			"Type": "Main",
+			"DisplayName": "Fish Nets",
+			"FileName": "Fish Nets-13819-2-1-0-1716988352.zip",
+			"Description": "",
+			"Version": "2.1.0",
+			"SizeInBytes": 36930,
+			"Uploaded": "2024-05-29T13:12:32+00:00",
+			"Mods": [
+				{
+					"Id": "MindMeltMax.Fishnets",
+					"DisplayName": "Fishnets",
+					"Type": "Smapi",
+					"RelativePath": "Fishnets",
+					"Manifest": {
+						"Name": "Fishnets",
+						"Description": "Place in water to catch fish over night",
+						"Author": "MindMeltMax",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Fishnets.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"nexus:13819"
+						],
+						"UniqueId": "MindMeltMax.Fishnets"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488306,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 101619,
+			"Type": "Optional",
+			"DisplayName": "Fish Nets - Automate",
+			"FileName": "Fish Nets - Automate-13819-1-1-1-1716988382.zip",
+			"Description": "An integration for Automate.\n<br /><br />Requires both Automate and Fish Nets to be installed to run\n<br /><br />Requires at least version 2.1.0 of Fish Nets\n<br /><br />@Automate",
+			"Version": "1.1.1",
+			"SizeInBytes": 12076,
+			"Uploaded": "2024-05-29T13:13:02+00:00",
+			"Mods": [
+				{
+					"Id": "MindMeltMax.Fishnets.Automate",
+					"DisplayName": "Fishnets - Automate",
+					"Type": "Smapi",
+					"RelativePath": "Fishnets - Automate",
+					"Manifest": {
+						"Name": "Fishnets - Automate",
+						"Description": "An Automate integration for fishnets",
+						"Author": "MindMeltMax",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Fishnets - Automate.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "MindMeltMax.Fishnets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"nexus:13819@Automate"
+						],
+						"UniqueId": "MindMeltMax.Fishnets.Automate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488307,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400507,
+		"UploaderId": 62752131,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}

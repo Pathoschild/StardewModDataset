@@ -1,0 +1,134 @@
+{
+	"Site": "ModDrop",
+	"Id": 1771839,
+	"Name": "The Living Valley",
+	"Author": "mariachaan",
+	"TagLine": "What if Pelican Town felt a little more alive every day?",
+	"Description": "The Living Valley keeps the cozy vanilla feeling but adds a living world layer. Villagers react more naturally, requests change over time, market prices move with town activity, and the newspaper reflects what is happening around you.\n\nRequirements:\n\nStardew Valley 1.6+\nSMAPI 4.0+\nPlayer2 connection (FREE using the gpt-oss-120b AI model)\n\nInstallation:\n\nOption 1: Easy Setup (Recommended) – Player2 App\n\n1. Install SMAPI.\n2. Download this mod.\n3. Extract StardewLivingRPG into your Stardew Valley/Mods folder.\n4. Download and install the Player2 app.\n5. Open the Player2 app and make sure it’s running and you are logged in.\n6. Select gpt-oss-120b in the AI model selection if you want to play for free, which is good enough for the newspaper and market trends. But for better narrative and context flow, I recommend Gemini 3 Flash or DeepSeek V3.2\n7. Launch the game through SMAPI.\n8. Load your save and play.\n\nOption 2: Manual Connection – Browser Website\n\n1. Install SMAPI.\n2. Download this mod.\n3. Extract StardewLivingRPG into your Stardew Valley/Mods folder.\n4. Launch the game through SMAPI.\n5. Load your save and play.\n6. If prompted, connect Player2 in-game (open browser and enter code).\n7. Once the code is approved, go back in-game and wait for authorization.\n\n\nFirst-Time Quick Start:\n\nPress K to open the Market Board.\nPress J to read today's newspaper.\nPress L to check town requests.\nTalk to villagers and choose the follow-up chat option after vanilla dialogue.",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1771839",
+	"Version": null,
+	"Updated": "2026-03-30T12:50:58.821+00:00",
+	"Downloads": [
+		{
+			"Id": 1797343,
+			"Type": "Main",
+			"DisplayName": "StardewLivingRPG",
+			"FileName": "StardewLivingRPG.zip",
+			"Description": "Make Pelican Town feel alive! The Living Valley adds dynamic daily market prices, a readable Pelican Times newspaper, a unified town request board, and context-aware NPC chats. Watch the local economy and relationships grow alongside your farm in a truly ",
+			"Version": "1.0.5",
+			"SizeInBytes": 920341,
+			"Uploaded": "2026-03-30T12:50:58.821+00:00",
+			"Mods": [
+				{
+					"Id": "mx146323.StardewLivingRPG",
+					"DisplayName": "The Living Valley",
+					"Type": "Smapi",
+					"RelativePath": "StardewLivingRPG\\[0] Living Valley Main",
+					"Manifest": {
+						"Name": "The Living Valley",
+						"Description": "A cozy living-world layer for Stardew Valley with dynamic NPCs, requests, and town news.",
+						"Author": "mariachaaan",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewLivingRPG.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:42597"
+						],
+						"UniqueId": "mx146323.StardewLivingRPG"
+					}
+				},
+				{
+					"Id": "LivingValley.Characters.CP",
+					"DisplayName": "Living Valley Characters - CP",
+					"Type": "ContentPack",
+					"RelativePath": "StardewLivingRPG\\[NPC] Living Valley Characters\\[CP] Content Pack",
+					"Manifest": {
+						"Name": "Living Valley Characters - CP",
+						"Description": "Content Patcher implementation for Morrow, the town-square magician.",
+						"Author": "mariachaaan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.5.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mx146323.StardewLivingRPG",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LivingValley.Characters.CP"
+					}
+				},
+				{
+					"Id": "LivingValley.Characters",
+					"DisplayName": "Living Valley Characters (TLV Content Pack)",
+					"Type": "ContentPack",
+					"RelativePath": "StardewLivingRPG\\[NPC] Living Valley Characters\\[TLV] Content Pack",
+					"Manifest": {
+						"Name": "Living Valley Characters (TLV Content Pack)",
+						"Description": "TLV identity, lore, activity context, and portrait profiles for Morrow.",
+						"Author": "mariachaaan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "mx146323.StardewLivingRPG",
+							"MinimumVersion": "0.4.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "LivingValley.Characters",
+						"OtherFields": {
+							"TLVPackVersion": "1.0.0",
+							"TLVFrameworkMinVersion": "0.4.0"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "157c22e495e9b49f1327c079fd4d27d0",
+				"md5In": "76af0f6bde76112b10183695aba45233",
+				"patchNotes": "Version 1.0.5\nFixed - NPC memory, transcript recall, and town-memory lookups now survive a full game restart again. Existing saves with mixed-case duplicate NPC keys such as `Caroline` and `caroline` are merged back together on load\nVersion 1.0.4\nFixed NPC Movement - NPCs will no longer walk through walls or out-of-bounds areas on modded maps like Stardew Valley Expanded (SVE).\nFixed Lag - The mod’s \"brain\" is now more efficient. You should notice less stuttering and lower CPU usage while playing.\nSmarter Background Chat - NPCs still gossip and remember things behind your back, but the game no longer \"films\" these invisible scenes. This keeps the game running smoothly.\nLivelier Towns - Socializing is now focused on places you can actually see. The Saloon will feel busier, and you’ll notice more chats happening in small shops.\nVersion 1.0.3\nChanged - Custom NPC schedule routing no longer depends on Player2 for spatial planning.\nFixed - players should see much less Living Valley console spam during play.\nFixed - NPC Face-to-face chats are less likely to start in messy crowding situations.\nVersion 1.0.2\nChanged - Face-to-face encounter pacing has been tightened so villagers are less likely to keep trying the same chat again and again when they are just standing around in the same place.\nVersion 1.0.1\nFixed - NPCs are less likely to freeze, drift, disappear, or snap to strange locations after face-to-face encounters end.\nChanged - Background warning spam during busy NPC simulation has been reduced, which should help cut down the hitching some players noticed when lots of autonomy logs were firing in the background.\nChanged - The regular player-to-NPC chat menu has been rolled back to the earlier version some players preferred, with the older instant send and close behavior restored.\nVersion 1.0.0\nAdded: Villagers can now fall into more natural social encounters around town, with short face-to-face chats that feel more like Pelican Town life unfolding on its own.\nChanged: NPC memory and town memory have been strengthened so conversations can better reflect things people actually saw, heard, promised, or talked about before.\nChanged: Follow-up dialogue now does a better job carrying forward recent moments instead of feeling like every conversation starts from scratch.\nFixed: Japanese, Chinese, Korean, and other IME text input now works more reliably in the player chat input and in Morrow's guessing game.\nVersion 0.9.6\nLong text in the Newspaper’s Market Outlook will now wrap correctly and won’t overflow or get cut off, even in languages like Japanese.\nNewspaper market-outlook lines now use localization keys for the remaining market phrasing, including Market, Opportunity, softened, rose, and the press-time variants.\nShort date formatting used by the newspaper and market board now resolves localized season names and the Yr abbreviation through i18n.\nMagician clues now correctly match the translated answers in supported languages instead of using the English letters.\nVersion 0.9.5\nFixed - Market Board prices now affect actual sell payouts for tracked goods across normal selling paths instead of only updating the board and newspaper displays.\nVersion 0.9.4\nAdded a new magician minigame in the Town Square. You can talk to the magician to play daily riddles, continue with extra rounds the same day, and earn items as rewards when you win.\nRumor Board quests now use the correct localized NPC and item names, instead of always appearing in English.\nMarket Board and newspaper market listings now show item names based on your game’s language, matching the official in-game names.\nVersion 0.9.3\nThe Town Request Board now has a cleaner layout showing Client, Reward, and Deadline more clearly, with better spacing and easier-to-read details.\nRequest details now include a larger progress bar so you can easily see how close you are to completing a request. It only shows as complete when it’s actually ready to turn in.\nRequest descriptions now sound more natural and NPC-driven, and the request board now correctly shows which NPC actually made the request.\nWhen NPCs ask for items in chat, the game now correctly keeps the amount they requested, instead of changing it unexpectedly.\nVersion 0.9.2\nAfter finishing the NPC’s normal (vanilla) dialogue, the game now shows a 3-option menu: “Talk / Quest / Bye.” This menu appears instead of opening the AI chat automatically, so players can choose what they want to do next.\nSocial visit quests can now progress through normal NPC interactions and menu options, instead of requiring the player to enter the AI chat to continue the quest.\nNPC responses have been improved to feel more natural and relevant.\nVersion 0.9.1\nFixed: Town Request Board progress now correctly counts carried items when target names differ between display/internal forms (for example, Coconut), and uses the same matching rules for completion item consumption.",
+				"scriptType": 0,
+				"sha256Ex": "b9cc1803ee850800fc7bbb1bb63c9422296c6b85cf82916f530f39974a6ebb24",
+				"sha256In": "9e37d7b3eb7b75c0dd3fadcac73a341821f8c5d0c13b336f416c166978ace06a"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1773584041947,
+		"DateUpdated": 1774875058820,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1773583244623,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1771839/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1771839/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1771839/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1771839/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 492310
+	}
+}

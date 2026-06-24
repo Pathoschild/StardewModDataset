@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 14525,
+	"Name": "Theme Manager",
+	"Author": "KhloeLeclair",
+	"AuthorLabel": "Khloe Leclair",
+	"Description": "Hello, players!\n<br />\n<br />If you're here, it's probably because you've got another mod or a content pack that depends on Theme Manager. By itself, it doesn't do much.\n<br />\n<br />Theme Manager has two main jobs:\n<br />\n<br />[list=1]\n<br />[*]Theme Manager makes it possible for content packs to modify hard-coded colors used in in-game UIs. Take the calendar, for example. It has a blue border that flashes around the current in-game day. It also draws gray squares over previous days to dim them. Theme Manager lets you change those colors. Check out this example: [img]https://staticdelivery.nexusmods.com/mods/1303/images/14525/14525-1668812879-1295128899.png[/img]\n<br />[*]Theme Manager makes it easy for other C# modders to allow content packs to modify their in-game UIs. This is the same technology used by my other mods, [url=https://www.nexusmods.com/stardewvalley/mods/11115]Better Crafting[/url]\uFEFF and [url=https://www.nexusmods.com/stardewvalley/mods/11022/]Almanac[/url]\uFEFF, that let content packs modify their looks.\n<br />[/list]\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]How to use[/size]\n<br />Theme Manager adds a section to the Generic Mod Config Menu that lets you select a theme, configure the font changes, and enable some (excessive) debug logging if you wish. You probably won't even need to use this, but it's there.\n<br />\n<br />If you don't have Generic Mod Config Menu, you can use the [font=Courier New]theme[/font], [font=Courier New]retheme[/font], and [font=Courier New]tm_repatch[/font] commands to control Theme Manager.\n<br />\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6.3 on Linux/Mac/Windows.\n<br />[*]Does not work on Android\n<br />[*]Works in single player and multiplayer.\n<br />[*]Works with [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFF.\n<br />[*]Works with [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF\n<br />[/list]\n<br />\n<br />[size=5]Known Issues[/size]\n<br />[list]\n<br />[*]Using the C# API is currently impossible due to issues with Pintail. I'm trying to work with the devs to get it fixed.\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/ThemeManager]Source code[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/ThemeManager/CHANGELOG.md]Changelog[/url]\uFEFF\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/blob/main/ThemeManager/IThemeManagerApi.cs]For Devs: C# API[/url]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/ThemeManagerExample]For Devs: C# Example Mod[/url]\n<br />[*][url=https://github.com/KhloeLeclair/StardewMods/tree/main/ThemeManager/author-guide.md]For Mod Authors: Author Guide[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14525",
+	"Version": "0.7.0",
+	"Updated": "2024-04-15T00:30:55+00:00",
+	"Downloads": [
+		{
+			"Id": 92341,
+			"Type": "Main",
+			"DisplayName": "Theme Manager",
+			"FileName": "Theme Manager-14525-0-7-0-1713141055.zip",
+			"Description": "Supports Stardew Valley 1.6.\n<br /><br />This is the @main release.",
+			"Version": "0.7.0",
+			"SizeInBytes": 319119,
+			"Uploaded": "2024-04-15T00:30:55+00:00",
+			"Mods": [
+				{
+					"Id": "leclair.thememanager",
+					"DisplayName": "Theme Manager",
+					"Type": "Smapi",
+					"RelativePath": "ThemeManager",
+					"Manifest": {
+						"Name": "Theme Manager",
+						"Description": "Provides a framework for UI theme support in mods, as well as enhanced UI theme support for the base game.",
+						"Author": "Khloe Leclair",
+						"Version": "0.7.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "ThemeManager.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:14525"
+						],
+						"UniqueId": "leclair.thememanager",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342479029,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342401213,
+		"UploaderId": 138772588,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

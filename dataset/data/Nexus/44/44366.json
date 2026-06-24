@@ -1,0 +1,80 @@
+{
+	"Site": "Nexus",
+	"Id": 44366,
+	"Name": "Stardew Valley Fair and Balanced",
+	"Author": "emurphy42",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />\n<br />[size=3]This mod changes up grange scoring a bit:[/size]\n<br />[list]\n<br />[*]NPCs receive scores for their displays, and the game displays a full leaderboard after Lewis judges them.[/*]\n<br />[*]Your score may be bumped up or down from the usual value. If this happens, the leaderboard will explain why.[/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Math details (because you care)[/b][/size]\n<br />\n<br />[size=3]The base game code basically implies that Pierre gets 90, Marnie gets 75, and Willy gets 60. The mod adds some weighted random changes (roughly a normal distribution with standard deviation of 10: so usually within +/-10, rarely as much as +/-30).[/size]\n<br />[list]\n<br />[*][size=3]A farmer display that would normally score 90+ is no longer 100% guaranteed to win (but it's still likely to, and 121+ is still guaranteed).[/size][/*]\n<br />[*][size=3]It's possible for a different NPC to win.[/size][/*]\n<br />[/list]\n<br />[size=3]Because the 90 / 75 / 60 cutoffs are baked pretty deeply into the base code, the mod may bump your score up or down some to match both those ranges and the randomized scores, or if needed it will leave your score alone and instead re-roll the randomized scores using a simpler/flatter method.[/size]\n<br />\n<br />\n<br />[size=4][b]Customization[/b][/size]\n<br />\n<br />[size=3]You can edit \"NPCAverageScores\" in the config.json file. By default, it should look like:[/size]\n<br />\n<br />[font=Courier New]{\n<br />\u00A0 \"NPCAverageScores\": {\n<br />\u00A0 \u00A0 \"Clint\": 60\n<br />\u00A0 }\n<br />}[/font]\n<br />\n<br />[size=3]Pierre, Marnie, and Willy are always included even if they're not listed here, but you can add them here to change their average scores (default 90 / 75 / 60).[/size]\n<br />\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />[size=3]Nothing built-in, but you can add modded NPCs with displays to config.json as noted above, with whatever average scores you think they should have.[/size]\n<br />\n<br />\n<br />[size=4][b]Credits[/b][/size]\n<br />\n<br />[size=3]u/Imaginary-Scene8990 for [url=https://www.reddit.com/r/StardewValleyMods/comments/1s3m4hm/theres_mods_to_randomize_the_egg_hunt_winner_and/]suggesting the idea[/url].[/size]\n<br />\n<br />\n<br />[size=4][b]Source code[/b][/size]\n<br />\n<br />[size=3]On [url=https://github.com/emurphy42/StardewValleyFairAndBalanced]GitHub[/url][/size]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44366",
+	"Version": "1.2.0",
+	"Updated": "2026-04-20T04:20:14+00:00",
+	"Downloads": [
+		{
+			"Id": 164969,
+			"Type": "Main",
+			"DisplayName": "StardewValleyFairAndBalanced 1.2.0.zip",
+			"FileName": "StardewValleyFairAndBalanced 1.2.0.zip-44366-1-2-0-1776658814.zip",
+			"Description": "",
+			"Version": "1.2.0",
+			"SizeInBytes": 19900,
+			"Uploaded": "2026-04-20T04:20:14+00:00",
+			"Mods": [
+				{
+					"Id": "JohnPeters.StardewValleyFairAndBalancedCP",
+					"DisplayName": "(CP) Stardew Valley Fair and Balanced",
+					"Type": "ContentPack",
+					"RelativePath": "StardewValleyFairAndBalanced 1.2.0\\(CP) Stardew Valley Fair and Balanced",
+					"Manifest": {
+						"Name": "(CP) Stardew Valley Fair and Balanced",
+						"Description": "Calculate and show semi-random grange scores for NPCs at the Stardew Valley Fair.",
+						"Author": "John Peters (you know, the farmer?)",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44366"
+						],
+						"UniqueId": "JohnPeters.StardewValleyFairAndBalancedCP"
+					}
+				},
+				{
+					"Id": "JohnPeters.StardewValleyFairAndBalanced",
+					"DisplayName": "Stardew Valley Fair and Balanced",
+					"Type": "Smapi",
+					"RelativePath": "StardewValleyFairAndBalanced 1.2.0\\StardewValleyFairAndBalanced",
+					"Manifest": {
+						"Name": "Stardew Valley Fair and Balanced",
+						"Description": "Calculate and show semi-random grange scores for NPCs at the Stardew Valley Fair.",
+						"Author": "John Peters (you know, the farmer?)",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "StardewValleyFairAndBalanced.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44366"
+						],
+						"UniqueId": "JohnPeters.StardewValleyFairAndBalanced"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342551657,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431054,
+		"UploaderId": 120865633,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

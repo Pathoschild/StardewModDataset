@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 19105,
+	"Name": "Event Portrait and Dialogue for Player",
+	"Author": "ennRiccia",
+	"Description": "Hi! Since I am giving some\u00A0narratives to my player character as an OC,\n<br />I wanted to add some player's own portraits &amp; dialogue into the in-game events.\n<br />I figured it out by adding player's dummy as a\u00A0custom NPC. Quite old trick lol\n<br />\n<br />\n<br />\n<br />[b]&lt; installation &gt;[/b]\n<br />1. Download the main file.\n<br />2. Make sure you have installed\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\u00A0and [url=https://www.nexusmods.com/stardewvalley/mods/5371]Anti-Social NPCs[/url].\n<br />3. Unzip the file then put it into Stardew Valley&#92;Mods\n<br />\n<br />4. Edit\u00A0yourCharacterName from content.json\n<br />5-1. Replace\u00A0PlayerDummy.png to your own portrait png file then rename it\u00A0PlayerDummy.png\n<br />5-2. Or if you want to use [url=https://www.nexusmods.com/stardewvalley/mods/999]Portraiture[/url], put\u00A0your own portrait png file into\n<br />Portraiture&#92;Portraits&#92;(your folder name) folder then rename it\u00A0PlayerDummy.png\n<br />\uFEFF\n<br />6. Edit events as you normally did.\n<br />for example:\n<br />Data&#92;Events&#92;Farm.json line 37\n<br />\"65/m 25000/t 600 1200/H\": \"continue/64 15/farmer 64 16 2 Demetrius 64 18 0 [b]PlayerDummy 0 0 0[/b]/pause 1500/[b]speak PlayerDummy &#92;\"Hi, Demetrius.&#92;\"/pause 1500[/b]/speak Demetrius &#92;\"Hi @! I have some good news for you. (...)\n<br />* this event is\u00A0Demetrius's door-to-door saling for\u00A0mushroom-fruit cave.\n<br />\n<br />Done!\n<br />\n<br />\n<br />[b]&lt; Questions someone might ask\u00A0&gt;[/b]\n<br />1. If you\u00A0edited events 'propperly' but it doesn't works, check that some other mods are overwriting events you edited.\n<br />2. If you are editing events from mod and that mod uses i18n, you may use\u00A0i18n too.\n<br />i18n key to content.json, your dialogue lines to i18n&#92;default.json.\n<br />(second one wasted 2 hours... hope you don't need to do so like me)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19105",
+	"Version": "1.0.1",
+	"Updated": "2024-01-02T03:18:31+00:00",
+	"Downloads": [
+		{
+			"Id": 80032,
+			"Type": "Main",
+			"DisplayName": "Event Portrait n Dialogue for Player",
+			"FileName": "Event Portrait n Dialogue for Player-19105-1-0-1-1704165511.zip",
+			"Description": "renamed character name placeholder as 'yourCharacterName'",
+			"Version": "1.0.1",
+			"SizeInBytes": 8278,
+			"Uploaded": "2024-01-02T03:18:31+00:00",
+			"Mods": [
+				{
+					"Id": "EnnRiccia.eventPnDForPlayer",
+					"DisplayName": "Event Portraits & Dialogue for Player",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Event Portrait n Dialogue for Player",
+					"Manifest": {
+						"Name": "Event Portraits & Dialogue for Player",
+						"Description": "Adds player's dummy as a custom NPC so that player can use their own Portraits & Dialogue in events.",
+						"Author": "EnnRiccia",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "SuperAardvark.AntiSocial",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:19105"
+						],
+						"UniqueId": "EnnRiccia.eventPnDForPlayer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342466720,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342405793,
+		"UploaderId": 53270001,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 36431,
+	"Name": "ExtendedLootTables",
+	"Author": "EchoHarbor",
+	"Description": "[b]ExtendedLootTables[/b] is a [b]content framework mod[/b] for Stardew Valley designed for mod authors who want to add [b]custom monster drops[/b] to the game without writing their own SMAPI code.\n<br />Instead of replacing the game’s existing loot logic, ExtendedLootTables uses [b]Harmony patching[/b] to inject new drop rules directly into the monster loot system. This ensures that:\n<br />[list]\n<br />[*][b]Vanilla drops remain intact[/b] — your changes simply add to them.\n<br />[*]Custom items through Json Assets SHOULD integrate naturally for drops.\n<br />[*]Drop logic runs automatically whenever a monster dies, using your configured drop chances.\n<br />[/list]As a content creator, all you need to do is:\n<br />[list=1]\n<br />[*]Create or reference a custom item (usually via [b]Json Assets[/b]).\n<br />\n<br />[*]Define which monster(s) can drop it and the probability of the drop in a simple JSON file.\n<br />\n<br />[*]Place that [code]lootdrops.json[/code] alongside your mod’s [code]manifest.json[/code] — ExtendedLootTables will automatically detect and load it. (I hope)\n<br />\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36431",
+	"Version": "1.0.0",
+	"Updated": "2025-08-08T08:49:21+00:00",
+	"Downloads": [
+		{
+			"Id": 139493,
+			"Type": "Main",
+			"DisplayName": "ExtendedLootTables",
+			"FileName": "ExtendedLootTables-36431-1-0-0-1754642961.zip",
+			"Description": "ExtendedLootTables is a lightweight framework for Stardew Valley that lets mod authors easily add custom monster loot without replacing vanilla drops.",
+			"Version": "1.0.0",
+			"SizeInBytes": 13814,
+			"Uploaded": "2025-08-08T08:49:21+00:00",
+			"Mods": [
+				{
+					"Id": "EchoHarbor.ExtendedLootTables",
+					"DisplayName": "ExtendedLootTables",
+					"Type": "Smapi",
+					"RelativePath": "1.0 Working",
+					"Manifest": {
+						"Name": "ExtendedLootTables",
+						"Description": "Framework for adding item drops to monster loot tables.",
+						"Author": "EchoHarbor",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "ExtendedLootTables.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:36431"
+						],
+						"UniqueId": "EchoHarbor.ExtendedLootTables"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342526181,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423119,
+		"UploaderId": 96981033,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

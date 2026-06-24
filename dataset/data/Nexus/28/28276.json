@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 28276,
+	"Name": "The J Club",
+	"Author": "ichortower",
+	"AuthorLabel": "jichortower ichoncher and ichortilla",
+	"Description": "[size=5][b][u]The J Club[/u][/b][/size]\n<br />\n<br />[size=3]Have you ever lamented the absolutely criminal lack of custom NPCs whose names start with J?[/size]\n<br />\n<br />[size=3]I have too. There are just so few of them! That is what this mod is meant to address. When you install it, every NPC's display name will be modified to start with the letter J. This applies to each word in the name (so, for example, Jister Ji and Jrofessor Jnail), which seems only fair and correct, as it increases the number of Js.[/size]\n<br />\n<br />[size=3]This mod should automatically work with custom NPCs, but see below for details.[/size]\n<br />\n<br />[size=5][b][u]And, Introducing... Alt Modes![/u][/b][/size]\n<br />[size=3]\n<br />This mod now features the ability to switch between different mutators, or \"modes\". At this time, there are three modes:\n<br />\n<br />[list=1]\n<br />[*][size=3]\"Default\", the OG mode. Makes every NPC's name start with J.[/size]\n<br />[*][size=3]\"Boncher\", which inserts \"onch\" into character names.[/size]\n<br />[*][size=3]\"Tortilla\", which makes names end with \"illa\".[/size]\n<br />[/list][/size]\n<br />[size=3]To switch modes, use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] and choose the mode you want, or edit your config.json by hand like an animal. The option is called \"Mode\" and the allowed values are as above.\n<br />[/size]\n<br />[size=3]You should not need to reload your game. All affected assets should be invalidated and reloaded automatically.[/size]\n<br />\n<br />[size=5][b][u]Caveats (Technical)[/u][/b][/size]\n<br />\n<br />[size=3]This mod accounts for any custom NPC that either:\n<br />\n<br />[/size][list=1]\n<br />[*][size=3]puts its display name into Strings/NPCNames (the standard location) and references it with [LocalizedText], or[/size]\n<br />[*][size=3]puts its display name directly into the DisplayName field in its Data/Characters entry.[/size]\n<br />[/list]\n<br />[size=3]If an NPC puts its name somewhere else, this mod won't find it, and you will have one fewer J-named person, which is of course a tragedy.[/size]\n<br />\n<br />[size=3]This mod also attempts to find and replace NPC names in other assets whose text is displayed to the player. It is possible, or maybe even likely, that I did not find all of the assets that contain NPC names: please let me know if you see a non-J name. In addition, to do many of these edits, it is necessary to invalidate the assets involved after the NPCs load in, so some assets must be reloaded. If you have a lot of mods requesting edits on those assets, this may slightly increase your load times.[/size]\n<br />\n<br />[size=3]Some strings are written to your save data (for example, active quests), and those are not edited, so if you add this mod to a file with active quests, you may see non-J names in the quest text. The author regrets this infelicity.[/size]\n<br />\n<br />[size=3]You may experience strange results in non-English languages. I do not mean to exclude those languages, so please let me know if something bad or offensive appears so I can try to address it.[/size]\n<br />\n<br />[size=3]This mod attempts to avoid generating unfortunate names. It probably isn't perfect! Please report icky results if you find any.[/size]\n<br />\n<br />[size=5][b][u]Other[/u][/b][/size]\n<br />[size=3]\n<br />You can update the list of nicknames in the mod folder (assets/OtherNames.json) and reload your game in order to add names I may have missed. If you do so, kindly let me know what I omitted so I can add it to future releases.\n<br />\n<br />Source code is available\u00A0[url=https://github.com/ichortower/TheJClub]on GitHub[/url].[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28276",
+	"Version": "1.2.0",
+	"Updated": "2025-09-04T15:06:07+00:00",
+	"Downloads": [
+		{
+			"Id": 142022,
+			"Type": "Main",
+			"DisplayName": "TheJClub-1.2.0",
+			"FileName": "TheJClub-1.2.0-28276-1-2-0-1756998367.zip",
+			"Description": "Adds another highly-anticipated alt mode: Tortilla.",
+			"Version": "1.2.0",
+			"SizeInBytes": 21427,
+			"Uploaded": "2025-09-04T15:06:07+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.TheJClub",
+					"DisplayName": "The J Club",
+					"Type": "Smapi",
+					"RelativePath": "TheJClub",
+					"Manifest": {
+						"Name": "The J Club",
+						"Description": "Automatically changes every NPC's name to match a theme.",
+						"Author": "ichortower",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TheJClub.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28276",
+							"GitHub:ichortower/TheJClub"
+						],
+						"UniqueId": "ichortower.TheJClub"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528710,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414964,
+		"UploaderId": 188952864,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

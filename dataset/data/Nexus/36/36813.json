@@ -1,0 +1,136 @@
+{
+	"Site": "Nexus",
+	"Id": 36813,
+	"Name": "Scale Up Unofficial",
+	"Author": "Arborsm",
+	"Description": "[b][center][size=5]Usage Examples[/size]\n<br />[size=4]（btw you could continue using format from [/size][url=https://www.nexusmods.com/stardewvalley/mods/3130?tab=description]Scale Up 2[/url]\uFEFF[size=4]、[/size][url=https://www.nexusmods.com/stardewvalley/mods/14487?tab=description]Sprites in Detail[/url]\uFEFF[size=4], [/size][i][size=5]it just works.[/size][size=4])[/size]\n<br />[size=2](Notice：if you use those format then you must depends on those mod's uniqueID not ScaleUpUnofficial[/size][/i][size=2]）[/size][/center][/b][left][size=2]Adding High-Resolution Crop Textures /\u00A0Portraits\u00A0[/size][/left][left][code]{\n<br />   \uFEFF\"Format\": \"2.0.0\",\n<br />   \uFEFF\"Changes\": [\n<br />   \uFEFF   \uFEFF{\n<br />   \uFEFF   \uFEFF   \uFEFF\"Action\": \"EditData\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"Target\": \"{{Arborsm.ScaleUpUnofficial/Assets}}\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"Entries\": {\n<br />\uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"WHATEVERUWANT.ButUnique\": [\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF{   \n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF      \uFEFF\"Asset\": \"Mods/YourMod/Crops/AncientFruit\",\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFF\"Scale\": 4,   \n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF//\"PaddingWidth\": 32,   \n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\uFEFF//\"PaddingHeight\": 16\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF},\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Target\": \"Portraits\", // like Portraits/Crops/Characters, it would add before the Assets with /, eg. Portraits + Haley_Spring_Indoor =&gt; Portraits/Haley_Spring_Indoor\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Assets\": \"Haley_Spring_Indoor, Haley_Spring_Outdoor, Haley_Fall_Indoor, Haley_Fall_Outdoor, Haley_Summer_Indoor, Haley_Summer_Outdoor, Haley_Winter, Haley_IslandSouth\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Scale\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 /// OR (Same effect as above)\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Asset\": \"Portraits/Haley_FarmHouse\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Scale\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Asset\": \"Portraits/Haley_FlowerDance\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0    \uFEFF\"Scale\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF]\n<br />   \uFEFF   \uFEFF   \uFEFF}\n<br />   \uFEFF   \uFEFF}\n<br />   \uFEFF]\n<br />}\n<br />[/code][/left][left]Adding Detailed Character Sprites\n<br />[code]OTHER SAME WITH ABOVE, just add it in\u00A0` Entries =&gt; \"WHATEVERUWANT\" `, if you don't understand, just look at the picture.\n<br />Now, you could use the app `StardewSpriteTokens App` in Optional files to get tokens\n<br />\n<br />\uFEFF{\n<br />   \uFEFF\uFEFF\"Asset\": \"Characters/Lewis\",\n<br />   \uFEFF\"Sprite\": {\n<br />   \uFEFF   \uFEFF\"BreathType\": \"Female\",\n<br />\u00A0 \u00A0 \u00A0 \"ChestSourceX\": 24,\n<br />\u00A0 \u00A0 \u00A0 \"ChestSourceY\": 100,\n<br />\u00A0 \u00A0 \u00A0 \"ChestSourceWidth\": 16,\n<br />\u00A0 \u00A0 \u00A0 \"ChestSourceHeight\": 8,\n<br />\u00A0 \u00A0 \u00A0 \"HeadShotX\": 12,\n<br />\u00A0 \u00A0 \u00A0 \"HeadShotY\": 53,\n<br />\u00A0 \u00A0 \u00A0 \"HeadShotXRenderOffset\": 0,\n<br />\u00A0 \u00A0 \u00A0 \"HeadShotYRenderOffset\": 0,\n<br />\u00A0 \u00A0 \u00A0 \"MiniMapXOffset\": 0,\n<br />\u00A0 \u00A0 \u00A0 \"MiniMapYOffset\": 0,\n<br />   \uFEFF   \uFEFF \"IsSmallSprite\": false // true = 24px sprite, false = 32px sprite (default)\n<br />   \uFEFF}\n<br />}\n<br />[/code][/left]\n<br />* Source Code:\u00A0[url=https://github.com/Arborsm/ScaleUpUnofficial]https://github.com/Arborsm/ScaleUpUnofficial[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36813",
+	"Version": "2.6.0",
+	"Updated": "2025-12-29T16:41:42+00:00",
+	"Downloads": [
+		{
+			"Id": 140922,
+			"Type": "Optional",
+			"DisplayName": "StardewSpriteTokens App",
+			"FileName": "StardewSpriteTokens App-36813-1-0-0-1756013927.zip",
+			"Description": "an easy python app to get sprite mode tokens",
+			"Version": "1.0.0",
+			"SizeInBytes": 15094438,
+			"Uploaded": "2025-08-24T05:38:47+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewSpriteTokens",
+					"Type": "Invalid",
+					"RelativePath": "StardewSpriteTokens",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342527610,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 151771,
+			"Type": "Main",
+			"DisplayName": "Scale Up Unofficial",
+			"FileName": "Scale Up Unofficial-36813-2-6-0-1767026502.zip",
+			"Description": "Bug Fixes\n<br />  - Fixed small sprite rendering issues\n<br />  - Fixed division by zero crash in certain cases\n<br />\n<br />  Improvements\n<br />  - Added IsSmallSprite configuration option\n<br />  - Build zip now should extracts correctly on Linux/macOS",
+			"Version": "2.6.0",
+			"SizeInBytes": 57918,
+			"Uploaded": "2025-12-29T16:41:42+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.ScaleUp",
+					"DisplayName": "ScaleUpUnofficial - Platonymous Scale Up Compatibility Layer",
+					"Type": "Smapi",
+					"RelativePath": "Scale Up Unofficial\\PlatonymousScaleUpCompatibilityLayer",
+					"Manifest": {
+						"Name": "ScaleUpUnofficial - Platonymous Scale Up Compatibility Layer",
+						"Description": "Allows Platonymous's Scale Up mods works.",
+						"Author": "Arborsm",
+						"Version": "9.9.9",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PlatonymousScaleUpCompatibilityLayer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Arborsm.ScaleUpUnofficial",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Platonymous.ScaleUp"
+					}
+				},
+				{
+					"Id": "Arborsm.ScaleUpUnofficial",
+					"DisplayName": "ScaleUpUnofficial",
+					"Type": "Smapi",
+					"RelativePath": "Scale Up Unofficial\\ScaleUpUnofficial",
+					"Manifest": {
+						"Name": "ScaleUpUnofficial",
+						"Description": "Allows adding higher resolution textures via ContentPatcher",
+						"Author": "Arborsm, Platonymous",
+						"Version": "2.6.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ScaleUpUnofficial.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:36813"
+						],
+						"UniqueId": "Arborsm.ScaleUpUnofficial"
+					}
+				},
+				{
+					"Id": "BleakCodex.SpritesInDetail",
+					"DisplayName": "ScaleUpUnofficial - Sprites in Detail Compatibility Layer",
+					"Type": "Smapi",
+					"RelativePath": "Scale Up Unofficial\\SpritesInDetailCompatibilityLayer",
+					"Manifest": {
+						"Name": "ScaleUpUnofficial - Sprites in Detail Compatibility Layer",
+						"Description": "Allows use Sprites in Detail's mods works.",
+						"Author": "Arborsm",
+						"Version": "9.9.9",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpritesInDetailCompatibilityLayer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Arborsm.ScaleUpUnofficial",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "BleakCodex.SpritesInDetail"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342538459,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342423501,
+		"UploaderId": 65169671,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

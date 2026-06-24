@@ -1,0 +1,145 @@
+{
+	"Site": "Nexus",
+	"Id": 13694,
+	"Name": "Starry Blue UI (Content Patcher)",
+	"Author": "sqbr",
+	"Description": "This is compatible with all the translations, as far as I can tell, but let me know if you hit any issues. \n<br />\n<br />It shouldn't interfere with any mods that aren't also modifying the UI. [url=https://www.nexusmods.com/stardewvalley/users/67730946]cookietehcat[/url] has created [url=https://www.nexusmods.com/stardewvalley/mods/21682]Compatibility Patches for Starry Blue UI[/url]\uFEFF for a few mods that do affect the UI such as GMCM. \n<br />\n<br />[b]Known Bugs:\n<br />[/b]There seems to sometimes be an issue with the Trinket slot. [b]\n<br />[/b]This mod often causes errors when combined with other mods which affect the cursor. [b]\n<br />[/b]\u00A0Older versions: The EditCursor option is broken, which is why I removed it from later versions. [b]\n<br />[/b]\n<br />[b]Installation Guide:[/b]\n<br />Install SMAPI, Content Patcher, and [url=https://www.nexusmods.com/stardewvalley/mods/14525?tab=files]Theme Manager[/url].\n<br />Download the file and unzip.\n<br />Put it in the Mods folder.\n<br />\n<br />Edit the config.json of Theme Manager to have the line \n<br />[code]\"StardewTheme\": \"Sqbr.StarryBlueUI\",[/code]\n<br />or set the Theme Manager theme to Sqbr.StarryBlueUI with [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />\n<br />[b]For Stardew Valley Version 1.5/ Version 1.0 of this mod only:\n<br />\n<br />[/b]\n<br />\n<br />Download Spirit's\u00A0[url=https://m.blog.naver.com/khs3400/222049471897] [Stardew Valley] Font property mode[/url]\u00A0 and copy and paste this over the contents of the config file for that mod:\n<br />\n<br />[code]{\n<br />\u00A0 \"Debug\": false,\n<br />\u00A0 \"HideShadow\": true,\n<br />\u00A0 \"EnableFixSmallFontLineSpace\": false,\n<br />\u00A0 \"SmallFontLineSpace\": 30,\n<br />\u00A0 \"EnableFixFontPixelZoom\": false,\n<br />\u00A0 \"FontPixelZoom\": 1.0,\n<br />\u00A0 \"EnableFixFontColor\": false,\n<br />\u00A0 \"FontColor\": [],\n<br />\u00A0 \"EnableFixImgColor\": true,\n<br />\u00A0 \"ImgColor\": [\n<br />    {\n<br />      \"Name\": \"Money\",\n<br />      \"Target\": [128,0,0,255],\n<br />      \"Change\": [24,10,69,255]\n<br />    }\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />Mods shown in screenshots:\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/12442]Less Ugly Town Interiors[/url]\uFEFF\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/10852]Vanilla Tweaks\n<br />\n<br />[/url]Versions:\n<br />1.0.2: Added EditCursors\n<br />1.0.3: Removed EditCursors code because it started breaking everything for some reason. I am sure it didn't use to!\n<br />1.1: Version 1.6 compatibility\n<br />1.11: Base Trinket slot colour fixed\n<br />1.12: Now uses Theme Manager\n<br />1.13: Fixed some minor visual bugs.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13694",
+	"Version": "1.141",
+	"Updated": "2024-11-20T11:21:48+00:00",
+	"Downloads": [
+		{
+			"Id": 61621,
+			"Type": "Main",
+			"DisplayName": "Starry Blue UI",
+			"FileName": "Starry Blue UI-13694-1-0-3-1665997101.zip",
+			"Description": "Removed EditCursors option because it was breaking the mod for me all of a sudden for some reason.",
+			"Version": "1.0.3",
+			"SizeInBytes": 3495222,
+			"Uploaded": "2022-10-17T08:58:21+00:00",
+			"Mods": [
+				{
+					"Id": "Sqbr.StarryBlueUI",
+					"DisplayName": "Starry Blue UI",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Starry Blue UI",
+					"Manifest": {
+						"Name": "Starry Blue UI",
+						"Description": "Makes the colours of the user interface blue and purple.",
+						"Author": "sqbr",
+						"Version": "1.0.3",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 13694"
+						],
+						"UniqueId": "Sqbr.StarryBlueUI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448309,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 101701,
+			"Type": "Main",
+			"DisplayName": "Starry Blue UI",
+			"FileName": "Starry Blue UI-13694-1-13-1717036048.zip",
+			"Description": "Fixed some minor visual bugs.",
+			"Version": "1.13",
+			"SizeInBytes": 3979127,
+			"Uploaded": "2024-05-30T02:27:28+00:00",
+			"Mods": [
+				{
+					"Id": "Sqbr.StarryBlueUI",
+					"DisplayName": "Starry Blue UI",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Starry Blue UI",
+					"Manifest": {
+						"Name": "Starry Blue UI",
+						"Description": "Makes the colours of the user interface blue and purple.",
+						"Author": "sqbr",
+						"Version": "1.13.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.thememanager",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 13694"
+						],
+						"UniqueId": "Sqbr.StarryBlueUI",
+						"OtherFields": {
+							"stardew:theme": "theme.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342488389,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 117098,
+			"Type": "Main",
+			"DisplayName": "Starry Blue UI",
+			"FileName": "Starry Blue UI-13694-1-141-1732101708.zip",
+			"Description": "Fixed a major issue with languages other than Spanish/Italian/Portuguese. Sorry about that, I was fixing and testing something for the Spanish etc version and so didn't even notice I'd totally broken all the other languages!",
+			"Version": "1.141",
+			"SizeInBytes": 4038850,
+			"Uploaded": "2024-11-20T11:21:48+00:00",
+			"Mods": [
+				{
+					"Id": "Sqbr.StarryBlueUI",
+					"DisplayName": "Starry Blue UI",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Starry Blue UI",
+					"Manifest": {
+						"Name": "Starry Blue UI",
+						"Description": "Makes the colours of the user interface blue and purple.",
+						"Author": "sqbr",
+						"Version": "1.141.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.thememanager",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 13694"
+						],
+						"UniqueId": "Sqbr.StarryBlueUI",
+						"OtherFields": {
+							"stardew:theme": "theme.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342503786,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400382,
+		"UploaderId": 43761177,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

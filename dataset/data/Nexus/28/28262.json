@@ -1,0 +1,343 @@
+{
+	"Site": "Nexus",
+	"Id": 28262,
+	"Name": "Mine Treasure Framework",
+	"Author": "Larvuk",
+	"Description": "[size=5][b]What is MineTreasureFramework[/b][/size]\n<br />\n<br />MTF is a SMAPI framework used to change [b]rewards in the local mines[/b] (items in chest on floors 10, 20, 40 etc). Mine floor 120, Skull Cavern chest floors and Volcano treasure chests cannot be edited with this framework. \n<br />\n<br />Only one reward will be chosen randomly from the lists you create, just as vanilla rewards work.\n<br />\n<br />[b]This mod does nothing by itself and needs a content pack mod.[/b] You can try my content pack [url=https://www.nexusmods.com/stardewvalley/mods/28282]here[/url].\n<br />As a mod user, you don't need to read more on this page. It's designed for mod authors.\n<br />\n<br />/!&#92; Be careful when changing some rewards as stardrop or slingshots. Players should still be able to achieve perfection.\n<br />\n<br />\n<br />\n<br />[size=5][b]Different types of content packs[/b][/size]\n<br />\n<br />MTF can handle 3 types of content packs:\n<br />\n<br />1/ [b][font=Courier New]\"alter_vanilla_treasures\"[/font] packs[/b] that will create subtle changes to the original version of the Mines' treasures. For exemple you created a mod adding several boot models to the game, and you want them to be able to appear in the mines' treasure chests if the player activated the \"remixed mine rewards\" new-game option.\n<br />\n<br />2/ [b][font=Courier New]\"full_replacement_set\"[/font] packs[/b] that will replace every chest items in the mines' treasure floors. For example you want to create a mod that replace all mine rewards with random seeds. Such content pack would have higher priority than alter_vanilla_treasures packs. Only one can be added on the same game.\n<br />\n<br />3/ [b][font=Courier New]\"alter_replacement_set\"[/font] packs[/b] that will have the same effect as \"alter_vanilla_treasures\" packs but on a \"full_replacement_set\" pack. For example you liked the mod that gives random seeds in mine chests and you want to create a patch to add Cornucopia seeds and some balance.\n<br />\n<br />\n<br />So content packs can be [b]full-sets[/b] (2/) or [b]alterations[/b] (1/ and 3/).\n<br />\n<br />\n<br />[size=5][b]\n<br />Full-set packs[/b][/size]\n<br />\n<br />Full-set packs need to specify at least all Vanilla chest floors (10, 20, 30 ... 110). Floor 30 needs to be specified even if it's an empty chest room.\n<br />To specify more chest floors (for example creating a chest floor on floor 5) please check section [b]EnableFloorTypeChange[/b] below.\n<br />\n<br />A full-set pack will start from zero: [b]all vanilla stuff is removed[/b]. If you want to keep a chest as its vanilla version you can use [font=Courier New]\"KeepVanillaVersion\": \"yes\"[/font] (see floor 100 in the following example)\n<br />\n<br />A full-set pack could look like this:\n<br />\n<br />[code]{\n<br />    \"PackType\": \"full_replacement_set\",\n<br />    \"Floors\": [\n<br />      \u00A0 {\n<br />            \"Floor\": 10,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(W)11\"},\n<br />                {\"QualifiedItemId\": \"(W)20\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(W)24\", \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 20,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(BC)24\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"770\", \"Amount\": 20},\n<br />                {\"QualifiedItemId\": \"689\", \"Amount\": 6, \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 30,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(T)MilkPail\"},\n<br />                {\"QualifiedItemId\": \"(BC)9\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"466\", \"Amount\": 8, \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 40,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(W)33\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 50,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(BC)MushroomLog\"},\n<br />                {\"QualifiedItemId\": \"(BC)71\", \"Amount\": 5, \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(BC)214\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(BC)BigChest\", \"Amount\": 2, \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 60,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(W)46\"},\n<br />                {\"QualifiedItemId\": \"(W)19\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(W)48\", \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 70,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(BC)208\"},\n<br />                {\"QualifiedItemId\": \"(BC)231\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(BC)12\", \"Amount\": 2, \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 80,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(BC)216\", \"Amount\": 2},\n<br />                {\"QualifiedItemId\": \"(BC)MushroomLog\", \"Amount\": 3, \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(BC)FishSmoker\", \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 90,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(BC)62\"},\n<br />                {\"QualifiedItemId\": \"(BC)265\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(BC)Dehydrator\", \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 100,\n<br />            \"KeepVanillaVersion\": \"yes\"\n<br />      \u00A0 },\n<br />      \u00A0 {\n<br />            \"Floor\": 110,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"(BC)231\", \"Amount\": 2},\n<br />                {\"QualifiedItemId\": \"(BC)239\", \"Condition\": \"remixed\"},\n<br />                {\"QualifiedItemId\": \"(BC)DeluxeWormBin\", \"Condition\": \"remixed\"}\n<br />            ]\n<br />      \u00A0 }\n<br />    ]\n<br />}\n<br />[/code]\n<br />\n<br />\n<br />[size=5][b]Alteration packs[/b][/size]\n<br />\n<br />Alteration packs just need to specify altered floors. All the rest will not be changed.\n<br />The items you're listing are [b]added to the existing pool[/b]. If you need to remove preexisting items you can use [font=Courier New]\"ClearAllTreasures\": \"yes\"[/font] (on the floor) or [font=Courier New]\"Remove\": \"yes\"[/font] (on an item)\n<br />\n<br />Here's an example:\n<br />\n<br />[code]{\n<br />   \uFEFF\"PackType\": \"alter_vanilla_treasures\",\n<br />   \uFEFF\"Floors\": [\n<br />\u00A0    \uFEFF{\n<br />   \uFEFF   \uFEFF   \uFEFF\"Floor\": 10,\n<br />   \uFEFF   \uFEFF   \uFEFF\"TreasureList\":[\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"(B)506\", \"Remove\": \"yes\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"(B)507\", \"Remove\": \"yes\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"SkillBook_0\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"SkillBook_1\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"SkillBook_2\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"SkillBook_3\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"SkillBook_4\"}\n<br />   \uFEFF   \uFEFF   \uFEFF]\n<br />\u00A0    \uFEFF},\n<br />\n<br />\u00A0    \uFEFF{\n<br />   \uFEFF   \uFEFF   \uFEFF\"Floor\": 30,\n<br />   \uFEFF   \uFEFF   \uFEFF\"ClearAllTreasures\": \"yes\",\n<br />   \uFEFF   \uFEFF   \uFEFF\"TreasureList\":[\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"(BC)24\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"839\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"599\", \"Amount\": 2, \"Condition\": \"remixed\"},\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF{\"QualifiedItemId\": \"689\", \"Amount\": 6, \"Condition\": \"remixed\"}\n<br />   \uFEFF   \uFEFF   \uFEFF]\n<br />\u00A0    \uFEFF},\n<br />   \uFEFF\uFEFF]\n<br />}\n<br />[/code]\n<br />This example pack will remove boots from floor 10 chest (both regular and remixed) and add skillbooks. Weapons from vanilla remixed mine rewards could still appear.\n<br />\n<br />All vanilla rewards will be removed from floor 30 chest and different rewards replace them.\n<br />\n<br />\n<br />\n<br />[size=5][b]EnableFloorTypeChange[/b][/size]\n<br />\n<br />If [font=Courier New]Config.EnableFloorTypeChange[/font] is set to [font=Courier New]true[/font], MTF will allow content packs to alter floor types, so that regular mining floors can become chest rooms and chest rooms can become regular mining floors.\n<br />\n<br />Here is another example content pack:\n<br />\n<br />[code]{\n<br />   \uFEFF\"PackType\": \"alter_vanilla_treasures\",\n<br />   \uFEFF\"Floors\": [\n<br />\uFEFF\n<br />      \u00A0 {\n<br />            \"Floor\": 8,\n<br />            \"TreasureList\":[\n<br />                {\"QualifiedItemId\": \"SkillBook_0\"},\n<br />                {\"QualifiedItemId\": \"SkillBook_1\"},\n<br />                {\"QualifiedItemId\": \"SkillBook_2\"},\n<br />                {\"QualifiedItemId\": \"SkillBook_3\"},\n<br />                {\"QualifiedItemId\": \"SkillBook_4\"}\n<br />            ]\n<br />      \u00A0 },\n<br />\n<br />      \u00A0 {\n<br />            \"Floor\": 10,\n<br />            \"ClearAllTreasures\": \"yes\",\n<br />            \"OnNoTreasureFound\": \"mining_floor\",\n<br />            \"MapId\": \"25\"\n<br />      \u00A0 }\n<br />\uFEFF   \uFEFF]\n<br />}\n<br />[/code]\n<br />This example pack will change floor 8 into a treasure room with a skillbook reward.\n<br />Floor 10 will be changed into a regular mining floor using map 25.\n<br />\n<br />[b]/!&#92; Using this kind of content pack with Config.EnableFloorTypeChange set to false will throw an Exception and MTF will not run. This security parameter prevents the use of unnecessary Harmony methods that could cause lower stability and compatibility.[/b]\n<br />\n<br />\n<br />\n<br />[size=5][b]Description of the different fields[/b][/size]\n<br />\n<br />\n<br />[size=4][b]Pack fields[/b][/size]\n<br />\n<br />[u][b][font=Courier New]PackType[/font]\n<br />   \uFEFF[/b][/u]see section \"Different types of content packs\".\n<br />[b][i]   \uFEFFDefault value:[/i][/b] [font=Courier New]\"alter_vanilla_treasures\"[/font]\n<br />[b][i]   \uFEFFPossible values:[/i][/b] [font=Courier New]\"alter_vanilla_treasures\", \"full_replacement_set\", \"alter_replacement_set\"[/font]\n<br />\n<br />[b][u][font=Courier New]Floors\n<br />[/font][/u][/b]   \uFEFFlist of floors.\n<br />\n<br />\n<br />\n<br />[size=4][b]Floor fields[/b][/size]\n<br />\n<br />[b][u][font=Courier New]ClearAllTreasures[/font][/u][/b]\n<br />   \uFEFFOnly used in Alteration packs. Used to remove preexisting treasures from Vanilla (in alter_vanilla_treasures packs) or from a replacement set (in alter_replacement_set packs)\n<br />[b][i]   \uFEFFDefault value:[/i][/b] [font=Courier New]\"no\"[/font]\n<br />   \uFEFF[b][i]Possible values:[/i][/b] [font=Courier New]\"yes\", \"no\"[/font]\n<br />\n<br />[b][u][font=Courier New]KeepVanillaVersion[/font][/u][/b]\n<br />   \uFEFFOnly used in Full-set packs. Used to keep preexisting treasures from Vanilla.\n<br />   \uFEFF[b][i]Default value:[/i][/b] [font=Courier New]\"no\"[/font]\n<br />   \uFEFF[b][i]Possible values:[/i][/b] [font=Courier New]\"yes\", \"no\"[/font]\n<br />\n<br />[b][u][font=Courier New]OnNoTreasureFound[/font][/u][/b]\n<br />   \uFEFFOnly used if EnableFloorTypeChange has been set to true int the config file. Used to replace empty chest rooms with normal mining levels.\n<br />[b][i]   \uFEFFDefault value:[/i][/b] [font=Courier New]\"vanilla\"[/font]\n<br />   \uFEFF[b][i]Possible values:[/i][/b] [font=Courier New]\"mining_floor\"[/font] (always replace empty chest rooms with a mining floor), [font=Courier New]\"empty_room\" [/font](never do it), [font=Courier New]\"vanilla\"[/font] (do it but not for floors 10 ,20, 30 etc)\n<br />\n<br />[b][u][font=Courier New]MapId[/font][/u][/b]\n<br />   \uFEFFOnly used if [font=Courier New]EnableFloorTypeChange[/font] has been set to true int the config file. When an empty chest room is replaced with a normal mining level, specifies the ID of the map to use.\n<br />   \uFEFF[b][i]Default value:[/i][/b] [font=Courier New]\"15\"[/font]\n<br />   \uFEFF[b][i]Possible value:[/i][/b] any path to a map starting in the Maps/Mines/ directory without the extension. Be careful when changing vanilla treasure floors into mining floors as this framework WILL NOT add elevators to maps that don't have one already. Consider using maps 5, 15, 25, 35 or custom maps with elevators.\n<br />\n<br />[font=Courier New][b][u]TreasureList:[/u][/b][/font]\n<br />   \uFEFFlist of possible treasures.\n<br />\n<br />\n<br />\n<br />[size=4][b]Treasure fields[/b][/size]\n<br />\n<br />[b][u][font=Courier New]QualifiedItemId\n<br />[/font][/u][/b]   \uFEFFmandatory field representing the qualified ID of the item you want to add. You can find vanilla IDs on several places like [url=https://mateusaquino.github.io/stardewids/]this one[/url].\n<br />\n<br />[b][u][font=Courier New]Amount[/font][/u][/b]\n<br />   \uFEFFthe number of items in the stack.\n<br />[b][i]   \uFEFFDefault:[/i][/b] 1\n<br />   \uFEFF[b][i]Possible values:[/i][/b] 1 - 999\n<br />\n<br />[b][u]Condition[/u][/b]\n<br />   \uFEFF wether the item will appear when the \"remixed mine rewards\" new-game option is off or on.\n<br />[b][i]   \uFEFFDefault:[/i][/b] [font=Courier New]\"both\"[/font]\n<br />   \uFEFF[b][i]Possible values:[/i][/b] [font=Courier New]\"non-remixed\"[/font], [font=Courier New]\"remixed\"[/font] or [font=Courier New]\"both\"[/font]\n<br />\n<br />[b][u]Remove[/u][/b]\n<br />   \uFEFFOnly used in Alteration packs. Used to remove a preexisting treasure from Vanilla (in alter_vanilla_treasures packs) or from a replacement set (in alter_replacement_set packs) based on its ID.\n<br />[b][i]   \uFEFFDefault value:[/i][/b] [font=Courier New]\"no\"[/font]\n<br />   \uFEFF[b][i]Possible values:[/i][/b] [font=Courier New]\"yes\", \"no\"[/font]\n<br />\n<br />\n<br />[size=5][b]Compatibility[/b][/size]\n<br />\n<br />Created with SV 1.6.8 vanilla.\n<br />I'm still using it with SV 1.6.13 and everything seems OK.\n<br />\n<br />Compatibility with most other mods [b]not checked yet[/b]. Tell me if you need any compatibility check.\n<br />I'd appreciate user feedback especially when using any of the following mods:\n<br />\uFEFF- VMV (not checked)\n<br />\uFEFF- Underground Secrets (not checked)\n<br />\uFEFF- Custom Dungeon Floors (not checked)\n<br />\uFEFF- Pacifist Valley (not checked)\n<br />\uFEFF- Additional Mine Maps (not checked)\n<br />\uFEFF- Ladder Locator (not checked)\n<br />\n<br />\n<br />[b]Uses Harmony.[/b]\n<br />\n<br />Harmony alters following methods:\n<br />\uFEFF- MineShaft.GetReplacementChestItem()\n<br />\uFEFF- MineShaft.addLevelChests()\n<br />\n<br />If EnableFloorTypeChange is set to true, Harmony alters these methods too:\n<br />\uFEFF- MineShaft.loadLevel()\n<br />\uFEFF- MineShaft.adjustLevelChances()\n<br />\uFEFF- MineShaft.populateLevel()",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/28262",
+	"Version": "1.1.2",
+	"Updated": "2025-09-23T17:20:20+00:00",
+	"Downloads": [
+		{
+			"Id": 139576,
+			"Type": "Main",
+			"DisplayName": "MineTreasureFramework",
+			"FileName": "MineTreasureFramework-28262-1-1-2-1754738668.zip",
+			"Description": "Standard version. Check the optional files if you have issues with Android.",
+			"Version": "1.1.2",
+			"SizeInBytes": 25223,
+			"Uploaded": "2025-08-09T11:24:28+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.MineTreasureFrameworkCP",
+					"DisplayName": "MineTreasureFrameworkCP",
+					"Type": "ContentPack",
+					"RelativePath": "MineTreasureFramework\\[CP] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFrameworkCP",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "larvuk.MineTreasureFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFrameworkCP",
+						"OtherFields": {
+							"ModUpdater": {}
+						}
+					}
+				},
+				{
+					"Id": "larvuk.MineTreasureFramework",
+					"DisplayName": "MineTreasureFramework",
+					"Type": "Smapi",
+					"RelativePath": "MineTreasureFramework\\[SMAPI] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFramework",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MineTreasureFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342526264,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 139628,
+			"Type": "Optional",
+			"DisplayName": "MTF - Android version",
+			"FileName": "MTF - Android version-28262-1-1-2-android-1754764740.zip",
+			"Description": "If you're an Android user and are having trouble with this mod, try this version.",
+			"Version": "1.1.2-android",
+			"SizeInBytes": 24827,
+			"Uploaded": "2025-08-09T18:39:00+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.MineTreasureFrameworkCP",
+					"DisplayName": "MineTreasureFrameworkCP",
+					"Type": "ContentPack",
+					"RelativePath": "MineTreasureFramework\\[CP] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFrameworkCP",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2-android",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "larvuk.MineTreasureFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFrameworkCP",
+						"OtherFields": {
+							"ModUpdater": {}
+						}
+					}
+				},
+				{
+					"Id": "larvuk.MineTreasureFramework",
+					"DisplayName": "MineTreasureFramework",
+					"Type": "Smapi",
+					"RelativePath": "MineTreasureFramework\\[SMAPI] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFramework",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2-android",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MineTreasureFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342526316,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 139629,
+			"Type": "Optional",
+			"DisplayName": "MTF - Android version - Floor type change enabled",
+			"FileName": "MTF - Android version - Floor type change enabled-28262-1-1-2-android-1754764824.zip",
+			"Description": "This is the best version for Android users installing Combat Overhaul.",
+			"Version": "1.1.2-android",
+			"SizeInBytes": 24827,
+			"Uploaded": "2025-08-09T18:40:24+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.MineTreasureFrameworkCP",
+					"DisplayName": "MineTreasureFrameworkCP",
+					"Type": "ContentPack",
+					"RelativePath": "MineTreasureFramework\\[CP] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFrameworkCP",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2-android",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "larvuk.MineTreasureFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFrameworkCP",
+						"OtherFields": {
+							"ModUpdater": {}
+						}
+					}
+				},
+				{
+					"Id": "larvuk.MineTreasureFramework",
+					"DisplayName": "MineTreasureFramework",
+					"Type": "Smapi",
+					"RelativePath": "MineTreasureFramework\\[SMAPI] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFramework",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2-android",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MineTreasureFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342526317,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 141343,
+			"Type": "Optional",
+			"DisplayName": "MTF - 1.2.0 beta",
+			"FileName": "MTF - 1.2.0 beta-28262-1-2-0-1756390929.zip",
+			"Description": "This is a major update which may contain many bugs. It's being tested. Packs made for previous versions of MTF won't be compatible with this version. Just be patient.",
+			"Version": "1",
+			"SizeInBytes": 30275,
+			"Uploaded": "2025-08-28T14:22:09+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.MineTreasureFrameworkCP",
+					"DisplayName": "MineTreasureFrameworkCP",
+					"Type": "ContentPack",
+					"RelativePath": "MineTreasureFramework\\[CP] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFrameworkCP",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "larvuk.MineTreasureFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFrameworkCP",
+						"OtherFields": {
+							"ModUpdater": {}
+						}
+					}
+				},
+				{
+					"Id": "larvuk.MineTreasureFramework",
+					"DisplayName": "Mine Treasure Framework",
+					"Type": "Smapi",
+					"RelativePath": "MineTreasureFramework\\[SMAPI] MineTreasureFramework",
+					"Manifest": {
+						"Name": "Mine Treasure Framework",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MineTreasureFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342528031,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 143633,
+			"Type": "Main",
+			"DisplayName": "MineTreasureFramework - Floor type Change enabled",
+			"FileName": "MineTreasureFramework - Floor type Change enabled-28262-1-1-2-1758648020.zip",
+			"Description": "Please use this version if you're using Combat Overhaul.\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />\n<br />This is the exact same mod as the main file. The only difference is the EnableFloorTypeChange config field set to TRUE.",
+			"Version": "1.1.2",
+			"SizeInBytes": 22311,
+			"Uploaded": "2025-09-23T17:20:20+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.MineTreasureFrameworkCP",
+					"DisplayName": "MineTreasureFrameworkCP",
+					"Type": "ContentPack",
+					"RelativePath": "MineTreasureFramework\\[CP] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFrameworkCP",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "larvuk.MineTreasureFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFrameworkCP",
+						"OtherFields": {
+							"ModUpdater": {}
+						}
+					}
+				},
+				{
+					"Id": "larvuk.MineTreasureFramework",
+					"DisplayName": "MineTreasureFramework",
+					"Type": "Smapi",
+					"RelativePath": "MineTreasureFramework\\[SMAPI] MineTreasureFramework",
+					"Manifest": {
+						"Name": "MineTreasureFramework",
+						"Description": "Edit treasures from treasure chest floors in the mine.",
+						"Author": "larvuk",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MineTreasureFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28262"
+						],
+						"UniqueId": "larvuk.MineTreasureFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342530321,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342414950,
+		"UploaderId": 200664389,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

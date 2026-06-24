@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 44407,
+	"Name": "Negative Hearts",
+	"Author": "Asakohee",
+	"Description": "[center][img]https://i.postimg.cc/8c72nsf2/1.png[/img][/center]\n<br />[center][/center]\n<br />[center][/center]\n<br />Negative Hearts is a\u00A0 mod that extends Stardew Valley's relationship system down to −10 hearts.\n<br />\n<br />In vanilla, friendship points cannot drop below 0. With this mod installed, relationships can deteriorate into negative territory — and content packs can add unique dialogue and events for each stage of that decline.\n<br />\n<br />[b]What this mod does:[/b]\n<br />[list]\n<br />[*]Extends the friendship floor from 0 to [b]−2500 points (−10 hearts)[/b][/*]\n<br />[*]Displays broken heart icons in the social menu for negative relationships[/*]\n<br />[*]Shows a [b]10-tier relationship label[/b] on the dialogue jewel during conversations[/*]\n<br />[*]Supports negative heart [b]dialogue keys[/b] for Content Patcher packs (e.g. Tue-2, Fri-4)[/*]\n<br />[*]Allows fine-tuned control over [b]decay, talk gain, and gift values[/b] per heart range via config[/*]\n<br />[/list]\n<br />[b]What this mod does NOT do:[/b]\n<br />[list]\n<br />[*]Does not include dialogue or event content — that comes from separate content packs[/*]\n<br />[*]Does not change vanilla romance progression (dating, marriage, etc.)[/*]\n<br />[*]Does not alter any vanilla behavior above 0 hearts[/*]\n<br />[/list]\n<br />[center][img]https://i.postimg.cc/6p6pYf5g/2.png[/img][/center]\n<br />\n<br />[size=4][b]▌ Negative Friendship System[/b][/size]\n<br />\n<br />1 heart = 250 points. The floor is −2500 points (−10 hearts). The ceiling is unchanged from vanilla.\n<br />\n<br />[list]\n<br />[*][b]−1 heart and above[/b]: Neutral zone — vanilla behavior, config rules not applied[/*]\n<br />[*][b]−2 hearts and below[/b]: Negative zone — config rules apply[/*]\n<br />[/list]\n<br />[size=4][b]▌ Relationship Tiers[/b][/size]\n<br />\n<br />A relationship label is shown on the dialogue jewel (bottom-right of the dialogue box).\n<br />\n<br />[list]\n<br />[*][b]Broken[/b] — −10 hearts[/*]\n<br />[*][b]Hostile[/b] — −8 to −9 hearts[/*]\n<br />[*][b]Resentful[/b] — −6 to −7 hearts[/*]\n<br />[*][b]Cold[/b] — −4 to −5 hearts[/*]\n<br />[*][b]Awkward[/b] — −2 to −3 hearts[/*]\n<br />[*][b]Neutral[/b] — −1 to +1 hearts[/*]\n<br />[*][b]Warm[/b] — +2 to +3 hearts[/*]\n<br />[*][b]Close[/b] — +4 to +5 hearts[/*]\n<br />[*][b]Trusted[/b] — +6 to +7 hearts[/*]\n<br />[*][b]Cherished[/b] — +8 hearts and above[/*]\n<br />[/list]\n<br />[size=4][b]▌ Dialogue Keys for Content Packs[/b][/size]\n<br />\n<br />Content Patcher packs can use the following key format for negative heart dialogue:\n<br />[code]Mon-2\u00A0 Tue-4\u00A0 Wed-6\u00A0 Thu-8\u00A0 Fri-10[/code]\n<br />Lookup priority (example: current −4 hearts on Tuesday):\n<br />[list=1]\n<br />[*]Tue-4_[year] (year variant, year 2+)[/*]\n<br />[*]Tue-4[/*]\n<br />[*]Tue-2_[year][/*]\n<br />[*]Tue-2[/*]\n<br />[*]Vanilla fallback (Tue, spring_Tue, etc.)[/*]\n<br />[/list]\n<br />[b]Note:[/b] Only even numbers are supported (−2, −4, −6, −8, −10). Odd keys like Mon-3 will not be read.\n<br />\n<br />[size=4][b]▌ config.json[/b][/size]\n<br />\n<br />Three rule sets can be configured per heart range:\n<br />[list]\n<br />[*][b]Decay[/b] — Friendship lost per day[/*]\n<br />[*][b]Talk[/b] — Friendship gained from talking[/*]\n<br />[*][b]Gift[/b] — Friendship change per gift type[/*]\n<br />[/list]\n<br />[spoiler]\n<br />[code]{\n<br />\u00A0 \"Decay\": [\n<br />\u00A0 \u00A0 { \"From\": -4, \"To\": 0, \"PerDay\": -2 },\n<br />\u00A0 \u00A0 { \"From\": -8, \"To\": -4, \"PerDay\": -4 },\n<br />\u00A0 \u00A0 { \"From\": -10, \"To\": -8, \"PerDay\": -6 }\n<br />\u00A0 ],\n<br />\u00A0 \"Talk\": [\n<br />\u00A0 \u00A0 { \"From\": -4, \"To\": 0, \"Gain\": 20 },\n<br />\u00A0 \u00A0 { \"From\": -8, \"To\": -4, \"Gain\": 10 },\n<br />\u00A0 \u00A0 { \"From\": -10, \"To\": -8, \"Gain\": 5 }\n<br />\u00A0 ],\n<br />\u00A0 \"Gift\": [\n<br />\u00A0 \u00A0 { \"From\": -4, \"To\": 0, \"Loved\": 250, \"Liked\": 45, \"NeutralTaste\": 20, \"Disliked\": -20, \"Hated\": -40 },\n<br />\u00A0 \u00A0 { \"From\": -10, \"To\": -4, \"Loved\": 250, \"Liked\": 45, \"NeutralTaste\": 20, \"Disliked\": -20, \"Hated\": -40 }\n<br />\u00A0 ]\n<br />}[/code]Any range not defined in config will use vanilla behavior.[/spoiler]\n<br />\n<br />[size=4][b]▌ Console Commands[/b][/size]\n<br />[list]\n<br />[*][b]relationship_status [NPC|all][/b] — Check current points and heart count[/*]\n<br />[*][b]relationship_set [NPC] [points][/b] — Set points directly (debug)[/*]\n<br />[/list]\n<br />[size=4][b]▌ GMCM Support[/b][/size]\n<br />\n<br />If Generic Mod Config Menu is installed, all config values can be adjusted in-game via slider. The mod works fine without it.\n<br />\n<br />[center][/center]\n<br />[center][img]https://i.postimg.cc/2jw6vtCh/3.png[/img][/center]\n<br />\n<br />[b]Required:[/b]\n<br />[list=1]\n<br />[*][b]SMAPI[/b] 4.0.0 or later — [url=https://smapi.io]smapi.io[/url] / [url=https://www.nexusmods.com/stardewvalley/mods/2400]Nexus[/url][/*]\n<br />[*][b]Content Patcher[/b] — Required to use content packs — [url=https://www.nexusmods.com/stardewvalley/mods/1915]Nexus[/url][/*]\n<br />[/list]\n<br />[b]Optional:[/b]\n<br />[list]\n<br />[*][b]Generic Mod Config Menu (GMCM)[/b] — For in-game config UI — [url=https://www.nexusmods.com/stardewvalley/mods/5098]Nexus[/url][/*]\n<br />[/list]\n<br />[b]Steps:[/b]\n<br />[list=1]\n<br />[*]Install the required mods above.[/*]\n<br />[*]Download [b]NegativeHearts[/b] from the Files tab and extract it into your [b]Stardew Valley/Mods/[/b] folder.[/*]\n<br />[*](Optional) Download [b]NegativeHearts ExamplePack[/b] from the Files tab and install it the same way.[/*]\n<br />[*]Launch the game via SMAPI.[/*]\n<br />[/list]\n<br />[code]Stardew Valley/\n<br />└── Mods/\n<br />\u00A0 \u00A0 ├── NegativeHearts/\n<br />\u00A0 \u00A0 │\u00A0 ├── manifest.json\n<br />\u00A0 \u00A0 │\u00A0 ├── NegativeHearts.dll\n<br />\u00A0 \u00A0 │\u00A0 ├── assets/\n<br />\u00A0 \u00A0 │\u00A0 └── i18n/\n<br />\u00A0 \u00A0 └── NegativeHearts.ExamplePack/\u00A0 ← optional\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ├── manifest.json\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ├── content.json\n<br />\u00A0 \u00A0 \u00A0 \u00A0 └── i18n/[/code]\n<br />[center][/center]\n<br />[center][img]https://i.postimg.cc/TY1RbY7v/4.png[/img][/center]\n<br />\n<br />[list]\n<br />[*][b]Example Pack languages:[/b] English and Korean only. The main mod supports multiple languages via i18n, but translations may be inaccurate as they were machine-translated. Corrections are welcome.[/*]\n<br />[*][b]Neutral zone protection:[/b] Config rules do not apply above −1 heart (−499 points). Vanilla behavior is preserved in this range.[/*]\n<br />[*][b]Uninstalling:[/b] Negative friendship values remain in the save file. Vanilla will clamp them back to 0 on load. Your save will not be corrupted.[/*]\n<br />[/list]\n<br />[center][img]https://i.postimg.cc/pTswVKth/5.png[/img][/center]\n<br />\n<br />[b]Q: Does this mod add dialogue or events by itself?[/b]\n<br />A: No. The mod only provides the system. Dialogue and events must come from a separate Content Patcher pack. The Example Pack included on this page is a reference implementation for all 37 vanilla NPCs.\n<br />\n<br />[b]Q: Can I make my own content pack?[/b]\n<br />A: Yes! Download the Example Pack, use it as a reference, and create your own CP pack with custom dialogue and events. See the Example Pack's content.json and i18n files for the structure.\n<br />\n<br />[b]Q: Is this compatible with NPC mods?[/b]\n<br />A: The Harmony patches apply to all NPCs. Custom NPCs should work as long as they follow standard SMAPI conventions.\n<br />\n<br />[b]Q: Can I install or remove this mid-playthrough?[/b]\n<br />A: Yes. Existing saves are fully compatible. Removing the mod clamps all negative values back to 0 — your save will not be damaged.\n<br />\n<br />[b]Q: Where can I report bugs or give feedback?[/b]\n<br />A: Please use the bug report tab on this page. For general questions, feel free to message Asakohee on [url=https://cafe.naver.com/starvall]the Stardew Valley Korean community.[/url]\n<br />\n<br />[line]\n<br />\n<br />[b]Credits[/b]\n<br />[list]\n<br />[*][b]Author:[/b] Asakohee[/*]\n<br />[*][b]SMAPI[/b] by Pathoschild[/*]\n<br />[*][b]Content Patcher[/b] by Pathoschild[/*]\n<br />[*][b]Generic Mod Config Menu[/b] by spacechase0[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44407",
+	"Version": "1",
+	"Updated": "2026-03-29T23:09:06+00:00",
+	"Downloads": [
+		{
+			"Id": 162718,
+			"Type": "Main",
+			"DisplayName": "NegativeHearts V1.0.0",
+			"FileName": "NegativeHearts V1.0.0-44407-1-1774825694.zip",
+			"Description": "Core mod. Extends the friendship system to negative hearts (−10). Required for all content packs.",
+			"Version": "1",
+			"SizeInBytes": 43179,
+			"Uploaded": "2026-03-29T23:08:14+00:00",
+			"Mods": [
+				{
+					"Id": "Asakohee.NegativeHearts",
+					"DisplayName": "Negative Hearts",
+					"Type": "Smapi",
+					"RelativePath": "NegativeHearts_v1.0.0\\NegativeHearts",
+					"Manifest": {
+						"Name": "Negative Hearts",
+						"Description": "Extends relationships with negative heart levels and supports negative dialogue keys.",
+						"Author": "Asakohee",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NegativeHearts.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Asakohee.NegativeHearts"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549406,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 162719,
+			"Type": "Main",
+			"DisplayName": "NegativeHearts ExamplePack V1.0.0",
+			"FileName": "NegativeHearts ExamplePack V1.0.0-44407-1-1774825746.zip",
+			"Description": "Optional content pack. Includes negative heart dialogue (12 lines) and one event per NPC for all 37 vanilla NPCs. English and Korean supported. Use as a reference for creating your own pack.",
+			"Version": "1",
+			"SizeInBytes": 67987,
+			"Uploaded": "2026-03-29T23:09:06+00:00",
+			"Mods": [
+				{
+					"Id": "Asakohee.NegativeHearts.ExamplePack",
+					"DisplayName": "Negative Hearts - Example Pack",
+					"Type": "ContentPack",
+					"RelativePath": "NegativeHearts_ExamplePack_v1.0.0\\NegativeHearts.ExamplePack",
+					"Manifest": {
+						"Name": "Negative Hearts - Example Pack",
+						"Description": "Example Content Patcher pack for Negative Hearts.",
+						"Author": "Asakohee",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Asakohee.NegativeHearts",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Asakohee.NegativeHearts.ExamplePack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342549407,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431095,
+		"UploaderId": 116047128,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

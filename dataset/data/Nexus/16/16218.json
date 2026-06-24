@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 16218,
+	"Name": "Camera Pan",
+	"Author": "atravita",
+	"Description": "Allows you to freely pan the camera. Pan with the mouse by moving it to the edges of the screen, or pan with the arrow keys.\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url].\n<br />[*]Download and install [url=https://www.nexusmods.com/stardewvalley/mods/12932]AtraCore[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[size=5]Uninstall[/size]\n<br />Simply delete from your Mods directory.\n<br />\n<br />[size=5]Configuration.[/size]\n<br />Run SMAPI at least once with this mod installed to generate the [font=Courier New]config.json[/font], or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to configure.\n<br />\n<br />[size=4]General Options[/size]\n<br />[list]\n<br />[*][font=Courier New]ToggleBehavior[/font]: Sets how the camera should be toggled on and off. Available options: [font=Courier New]Always[/font] (panning always enabled), [font=Courier New]Never[/font] (panning never enabled), [font=Courier New]Toggle[/font] (a toggle key enables or disables the panning), or [font=Courier New]Camera[/font] (holding the camera object enables the camera. Check Robin for it!).\n<br />[*][font=Courier New]UseMouseToPan[/font]: If enabled, moving the mouse to the edges of the screen will cause the camera to pan, &lt;em&gt;if camera panning is enabled&lt;/em&gt;.\n<br />[*][font=Courier New]ClickAndDragBehavior[/font]: Defines the behavior for clicking-and-dragging. Options are: [font=Courier New]None[/font] (do nothing), [font=Courier New]DragMap[/font] (will move the map under the mouse), and [font=Courier New]AutoScroll[/font] (which is Mozilla-style scrolling). The default button for this is the middle mouse button, but can be set with the [font=Courier New]ClickToScroll[/font] keybind.\n<br />[*][font=Courier New]ClickAndDragColor[/font]: As AutoScroll mode draws four tiny arrows on the screen, this lets you set their color.\n<br />[*][font=Courier New]ResetWhenDamageTaken[/font]: If enabled, the camera will pan back towards the player if the player takes damage.\n<br />[*][font=Courier New]Speed[/font]: Controls how fast the camera pans.\n<br />[/list]\n<br />[size=4]Panning boundaries[/size]\n<br />[list]\n<br />[*][font=Courier New]XRange[/font]: Controls how far the camera can get away from the player (in the x-direction).\n<br />[*][font=Courier New]YRange[/font]: Controls how far the camera can get away from the player (in the y-direction).\n<br />[*][font=Courier New]KeepPlayerOnScreen[/font]: If enabled, the camera will not pan sufficiently far to move the player off-screen.\n<br />[*][font=Courier New]ShowArrowsToOtherPlayer[/font]: If enabled, other players on the same map will be pointed out by a small arrow.\n<br />[*][font=Courier New]SelfColor[/font]: The color of the arrow pointing to the current player.\n<br />[*][font=Courier New]FriendColor[/font]: The color of the arrow pointing to any other player on the map.\n<br />[/list]\n<br />[size=4]Keybinds[/size]\n<br />Set any of the keybinds to null to disable.\n<br />\n<br />[list]\n<br />[*][font=Courier New]ToggleButton[/font]: The button used to toggle the camera, if [font=Courier New]ToggleBehavior[/font] is set to [font=Courier New]Toggle[/font].\n<br />[*][font=Courier New]ResetButton[/font]: The button that resets the camera over the player.\n<br />[*][font=Courier New]ClickToScroll[/font]: The button used for the click-and-drag behavior. Defaults to middle-click.\n<br />[*][font=Courier New]UpButton[/font], [font=Courier New]DownButton[/font], [font=Courier New]LeftButton[/font], [font=Courier New]RightButton[/font] pan the camera.\n<br />[/list]\n<br />[size=4]Map-specific camera behavior.[/size]\n<br />These control the default map behavior. The four options are:\n<br />\n<br />[list]\n<br />[*][font=Courier New]Vanilla[/font]: Completely vanilla camera. No panning, no locking. The camera will in general stay in-bounds.\n<br />[*][font=Courier New]Offset[/font]: Panning is enabled, but the camera is not locked.\n<br />[*][font=Courier New]Locked[/font]: The default vanilla camera will try to stay in-bounds on the map. This locks the camera to the player's feet, including allowing it to leave the map boundaries.\n<br />[*][font=Courier New]Both[/font]: This combines [font=Courier New]Offset[/font] and [font=Courier New]Locked[/font]. The camera will lock to the panned position.\n<br />[/list]\n<br />Maps are generally categorized as indoor and outdoors and you can set those separately, or you can set a per-map override.\n<br />\n<br />Special notes: the vanilla map property [font=Courier New]ViewportFollowPlayer[/font] automatically engages [font=Courier New]Vanilla[/font] -&gt; [font=Courier New]Locked[/font] and [font=Courier New]Offset[/font] -&gt; [font=Courier New]Both[/font], and this is enabled normally in the mines. Additionally, the map property [font=Courier New]atravita.PanningForbidden[/font] allows map modders to disable panning on their map.\n<br />\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, multiplayer, and split-screen mode. Should be fine if installed for only one player in multiplayer.\n<br />[*]Should be compatible with most other mods. A note on Critter Rings: [font=Courier New]Locked[/font] and [font=Courier New]Both[/font] will effectively disable the Frog Ring's panning.\n<br />[/list]\n<br />[size=5]See also[/size]\n<br />[url=https://github.com/atravita-mods/StardewMods/blob/main/CameraPan]Source[/url]\n<br />[url=https://github.com/atravita-mods/StardewMods/blob/main/CameraPan/docs/changelog.md]Changelog[/url]\n<br />\n<br />All donation points for this mod go to [url=https://www.againstmalaria.com/]Against Malaria[/url]. Please consider supporting them if you like this mod!\n<br />Looking for something else? Please consider [url=https://www.nexusmods.com/users/116553368?tab=user+files]my other mods[/url]!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/16218",
+	"Version": "0.1.2",
+	"Updated": "2023-04-17T01:42:34+00:00",
+	"Downloads": [
+		{
+			"Id": 69730,
+			"Type": "Main",
+			"DisplayName": "Camera Pan",
+			"FileName": "Camera Pan-16218-0-1-3-1681695754.zip",
+			"Description": "Built for SMAPI 3.18.2+/Stardew 1.5.6+/AtraCore 0.2.3+\n<br /><br />The screen will now better keep up with the farmer when the speed set is slow but the farmer has a lot of speed buffs.",
+			"Version": "0.1.3",
+			"SizeInBytes": 47706,
+			"Uploaded": "2023-04-17T01:42:34+00:00",
+			"Mods": [
+				{
+					"Id": "atravita.CameraPan",
+					"DisplayName": "Camera Pan",
+					"Type": "Smapi",
+					"RelativePath": "CameraPan",
+					"Manifest": {
+						"Name": "Camera Pan",
+						"Description": "Lets you pan the camera around.",
+						"Author": "atravita",
+						"Version": "0.1.3",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "CameraPan.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "atravita.AtraCore",
+								"MinimumVersion": "0.2.3",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 16218"
+						],
+						"UniqueId": "atravita.CameraPan",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342456418,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342402906,
+		"UploaderId": 116553368,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

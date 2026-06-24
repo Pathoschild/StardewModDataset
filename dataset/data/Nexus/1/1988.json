@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 1988,
+	"Name": "Artifact Drop Rates",
+	"Author": "antifringe",
+	"AuthorLabel": "Suntide",
+	"Description": "[b]Installation[/b]\n<br />This is a Content Patcher mod. You must have Content Patcher installed to use this mod. Content Patcher in turn requires SMAPI.\u00A0 If you do have Content Patcher installed, all you need to do is unzip the ArtifactDropRate folder into your Mods folder.\u00A0 This mod intercepts (but does not overwrite) the contents of ObjectInformation.yaml.\u00A0 Because it is a Content Patcher mod, it does not conflict with other mods that happen to alter this file, unless they also specifically alter the drop rates of the artifacts.\u00A0 This mod should not break if Stardew Valley gets updated, although if new artifacts get added, they will have to be added to the content.json file.\n<br />\n<br />[b]What this mod does[/b]\n<br />This mod allows you to alter the odds of artifacts dropping from dig sites on an artifact-by-artifact basis.\u00A0 You can also add, remove, or change which regions the artifacts can spawn in.\u00A0 This mod ONLY affects drops from artifact dig sites.\u00A0 Fishing chests, monster drops, and digging up sand in the mines are NOT affected.\n<br />\n<br />It helps to understand how artifact drops are processed by the game.\u00A0 Each artifact has an ID number.\u00A0 When you dig up a site, the game checks the list for artifacts that are eligible for that region (e.g. town, forest, farm, etc.) and rolls against the drop rate of each qualifying artifact.\u00A0 If an artifact passes its roll, that artifact is spawned and the game stops rolling.\u00A0 This is done in order of ID number.\u00A0 This means that artifacts with higher ID numbers are rarer than their printed odds would make it seem, because not only do they have to pass their check, but every artifact above them on the list also has to fail.\u00A0 This is also why there are no simple \"better drop rate\" mods out there. \u00A0\n<br />\n<br />For example, the Chipped Amphora has the lowest ID of all of the artifacts. If you were to alter the Chipped Amphora to have \"Town 1.0\" (i.e. a 100% drop rate in in the town map), then the Chipped Amphora is the ONLY artifact that you will EVER find in town.\u00A0 The other town artifacts on the list\u00A0 will never get a chance to roll on their charts, because the Chipped Amphora will always win first. \n<br />\n<br />[b]Usage[/b]\n<br />Open content.json (included in this package) and alter the entries as you see fit.\u00A0 The starting numbers are copied directly from the game files, so by default, this mod changes nothing.\u00A0 It just gives you the ability to make changes yourself.\u00A0 Here's an example line:\n<br />\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"101\": { 0: \"Arrowhead\", 6: \"Mountain .02 Forest .02 BusStop 0.02\" },\n<br />\n<br />This means that the Arrowhead artifact has a 2% drop rate from artifact dig sites found in the Mountain, Forest, and Bus Stop maps.\u00A0 Changing the line to read\n<br />\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"101\": { 0: \"Arrowhead\", 6: \"Mountain 0.5 Town .02 BusStop 0.02\" },\n<br />\n<br />would mean that the Arrowhead now has a 50% rate in Mountain sites, 2% in Town sites, and 2% in Bus Stop sites.\u00A0 The original 2% Forest rate is now gone (i.e. set to 0%).\n<br />\n<br />Some artifacts have an UndergroundMine entry.\u00A0 There are no artifact dig sites in the mines, and these entries do nothing.\u00A0 They specifically do NOT affect drop rates from digging up sand in the caves.\n<br />\n<br />\n<br />Alter the numbers as you see fit, remembering that giving high numbers to the lower ordinal artifacts can possibly choke out artifacts that are lower on the list.\u00A0 You can also use this mod to remove artifacts that you already have from the pool.\u00A0 Just remember that these changes will be present in all of your savegames. \n<br />\n<br />If you screw up badly, I included a file called \"content - backup.json\" It contains the original, unmodded data, so you can easily revert to the default numbers.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/1988",
+	"Version": "1.0.1",
+	"Updated": "2018-03-26T23:51:50+00:00",
+	"Downloads": [
+		{
+			"Id": 7542,
+			"Type": "Main",
+			"DisplayName": "Artifact Drop Rate",
+			"FileName": "Artifact Drop Rate-1988-1-0-1.zip",
+			"Description": "Alter artifact drop rates from dig sites.",
+			"Version": "1.0.1",
+			"SizeInBytes": 6252,
+			"Uploaded": "2018-03-26T23:51:50+00:00",
+			"Mods": [
+				{
+					"Id": "Suntide.ArtifactDropRate",
+					"DisplayName": "ArtifactDropRate",
+					"Type": "ContentPack",
+					"RelativePath": "ArtifactDropRate",
+					"Manifest": {
+						"Name": "ArtifactDropRate",
+						"Description": "Alter artifact drop rates from dig spots",
+						"Author": "Suntide",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.1.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Suntide.ArtifactDropRate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342394230,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388676,
+		"UploaderId": 1072561,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

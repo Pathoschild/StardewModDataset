@@ -1,0 +1,116 @@
+{
+	"Site": "Nexus",
+	"Id": 11102,
+	"Name": "Car Warp (Previously Decorative Cars)",
+	"Author": "skellady",
+	"AuthorLabel": "skellady and sophie",
+	"Description": "[size=5]Information:[/size]\n<br />[size=3]\n<br />This mod adds a car in 19 colors that allows for teleportation.\n<br />\n<br />You can go to Robin's to build the car.\u00A0\n<br />\n<br />The locations you can teleport to are editable via the CP portion of the mod. However, adding your own locations and editing the file to add more locations could cause issues, so it's best to avoid doing so.\u00A0[/size]\n<br />\n<br />[size=5]Installation:\u00A0[/size]\n<br />\n<br />[size=3]1. Install the latest version of\u00A0[url=https://smapi.io/]SMAPI\n<br />[/url]2. Install the latest version of [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\n<br />3. Install the mod (manual download is recommended over vortex/mod managers)\n<br />4. Unzip the file, place the folder in your Mods folder\n<br />5. Launch your game and enjoy!\u00A0\u00A0[/size]\n<br />\n<br />[size=5]Configuration:\n<br />\n<br />[/size][size=3]Using [url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM[/url] (Generic Mod Config Menu), you can configure the placement of the steering wheel.\n<br />\n<br />[b]Right:[/b] The steering wheel is on the right side of the vehicle.\n<br />[b]Left:[/b] The steering wheel is on the left side of the vehicle.\n<br />[b]None:[/b] The steering wheel is not present. The player will sit in whichever seat is closest to them.\n<br />[b]Empty: [/b]The steering wheel and dashboard are not present. The player will sit in whichever seat is closest to them.\n<br />[/size]\n<br />[size=3]You can also enable or disable the [b]seasonal overlay[/b], which adds a light dusting of fallen leaves in autumn, or snow in winter.\u00A0\n<br />[b]Seasonal Overlay:[/b] True by default. Change to False to disable it.\n<br />[/size]\n<br />\n<br />\n<br />[size=5]Credits:[/size]\n<br />\n<br />[size=3]-Thanks to the amazing [url=https://www.moddrop.com/stardew-valley/profile/182160/mods]Airyn[/url] for the flame job skins!\n<br />-Thanks to the wonderful [url=https://www.nexusmods.com/stardewvalley/users/6976914]sophie[/url] for the C# portion of this mod, which adds teleportation!\n<br />\n<br />[/size][size=5]Source Code:[/size]\n<br />[size=3]Available [url=https://github.com/sophiesalacia/StardewMods/tree/main/CarWarp]here[/url].[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/11102",
+	"Version": "2.0.0",
+	"Updated": "2024-03-19T19:22:26+00:00",
+	"Downloads": [
+		{
+			"Id": 82727,
+			"Type": "Main",
+			"DisplayName": "Car Warp 1.6",
+			"FileName": "Car Warp 1.6-11102-2-0-0-1710876146.zip",
+			"Description": "Updated for Stardew Valley 1.6. Unzip into your Mods folder. DELETE the previous version.",
+			"Version": "2.0.0",
+			"SizeInBytes": 86983,
+			"Uploaded": "2024-03-19T19:22:26+00:00",
+			"Mods": [
+				{
+					"Id": "sophie.CarWarp",
+					"DisplayName": "Car Warp",
+					"Type": "Smapi",
+					"RelativePath": "Car Warp\\[C#] Car Warp",
+					"Manifest": {
+						"Name": "Car Warp",
+						"Description": "Extends skellady's decorative Car mod with warp functionality.",
+						"Author": "sophie",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0-alpha",
+						"EntryDll": "CarWarp.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "sophie.CarWarp"
+					}
+				},
+				{
+					"Id": "skellady.CW",
+					"DisplayName": "Car Warp",
+					"Type": "ContentPack",
+					"RelativePath": "Car Warp\\[CP] Car Warp",
+					"Manifest": {
+						"Name": "Car Warp",
+						"Description": "Adds cars for transportation.",
+						"Author": "skellady",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "3.12.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.23.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sophie.CarWarp",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11102"
+						],
+						"UniqueId": "skellady.CW"
+					}
+				},
+				{
+					"Id": "sophie.CarWarpLocations",
+					"DisplayName": "Car Warp Locations",
+					"Type": "ContentPack",
+					"RelativePath": "Car Warp\\[CP] Car Warp Locations",
+					"Manifest": {
+						"Name": "Car Warp Locations",
+						"Description": "Adds warp locations to sophie's CarWarp mod.",
+						"Author": "sophie and skellady",
+						"Version": "2.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sophie.CarWarp",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:11102"
+						],
+						"UniqueId": "sophie.CarWarpLocations"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469415,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342397790,
+		"UploaderId": 95265773,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

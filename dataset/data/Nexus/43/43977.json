@@ -1,0 +1,62 @@
+{
+	"Site": "Nexus",
+	"Id": 43977,
+	"Name": "Sewer Lewis",
+	"Author": "himanbam",
+	"AuthorLabel": "starkettle",
+	"Description": "Lewis lives in the sewer now.\n<br />\n<br />Basically a reskin of Krobus to make him look like Lewis.\n<br />\n<br />Can be used with my other mod [url=https://www.nexusmods.com/stardewvalley/mods/11374]Mayor Krobus[/url].\n<br />\n<br />\n<br />*Note this does not change his name,\u00A0 birthday, or any dialogue. \n<br />However if you want those changes, you can use the [url=https://www.nexusmods.com/stardewvalley/mods/9271]Ultimate Villager Manager[/url] mod by ApollyonSV. Then, change the config as described below.\n<br />\n<br />\n<br />[line][b]\n<br />[size=4]Ultimate Villager Manager Config Instructions:\n<br />[/size][/b]\n<br />Go to the Krobus section.\n<br />Change Krobus' name to Lewis.\n<br />You can also change his birthday to Lewis' birthday (Spring 7).\n<br />That mod will update dialogue and events to use the new name.\n<br />\n<br />[size=4][b]\n<br />My Config Instructions:[/b][/size]\n<br />\n<br />If using Ultimate Villager Manager to change names:\n<br />Set the config for Ultimate Villager Manager as described above.\n<br />Then just leave my mod's config as the defaults. The defaults are:\n<br />[list]\n<br />[*]DoChangeNames = false (because it is handled by UVM)\n<br />[*]DoChangeExtraNames = true (handles a few extra things that UVM currently doesn't).\n<br />[*]KrobusNewName = Lewis\n<br />[/list]\n<br />\n<br />If [b]not[/b] using Ultimate Villager Manager, but want to change the name in some places.\n<br />[list]\n<br />[*]DoChangeNames = true\n<br />[*]DoChangeExtraNames = true\n<br />[*]KrobusNewName = Lewis\n<br />[/list]\n<br />Note that it won't change any dialogue, just his name in the menu/portrait.\n<br />\n<br />If you don't want any name changes, set my config to:\n<br />[list]\n<br />[*]DoChangeNames = false\n<br />[*]DoChangeExtraNames = false\n<br />[*]KrobusNewName doesn't matter.\n<br />[/list]\n<br />\n<br />[line]\n<br />\n<br />Known Issues:\n<br />Due to the fact that Krobus is typically smaller than Lewis (16x24 pixels instead of 16x32), there are a few issues that aren't solvable with just Content Patcher. Some places in the C# code hard code the size so you can't fix it without a C# mod / Harmony. This includes:\n<br />[list]\n<br />[*]The mysterious thief shadow person uses the same sprites as Krobus but hardcoded size so he looks like a legless lewis.\n<br />[*]The event when the dwarf goes to the sewer. The first frame of Krobus is messed up.\n<br />[/list]Maybe I'll fix it at some later point, not sure if it's worth the effort though.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/43977",
+	"Version": "1.0.0",
+	"Updated": "2026-03-22T02:05:53+00:00",
+	"Downloads": [
+		{
+			"Id": 161507,
+			"Type": "Main",
+			"DisplayName": "Sewer Lewis",
+			"FileName": "Sewer Lewis-43977-1-0-0-1774145153.zip",
+			"Description": "Replaces all Krobus textures with Mayor Lewis.",
+			"Version": "1.0.0",
+			"SizeInBytes": 42341,
+			"Uploaded": "2026-03-22T02:05:53+00:00",
+			"Mods": [
+				{
+					"Id": "starkettle.SewerLewis",
+					"DisplayName": "SewerLewis",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] SewerLewis",
+					"Manifest": {
+						"Name": "SewerLewis",
+						"Description": "Lewis lives in the sewer now.",
+						"Author": "starkettle",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Apollyon.UltimateVillagerManagerSV",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:43977"
+						],
+						"UniqueId": "starkettle.SewerLewis"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342548195,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342430665,
+		"UploaderId": 116393258,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

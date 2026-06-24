@@ -1,0 +1,90 @@
+{
+	"Site": "Nexus",
+	"Id": 2229,
+	"Name": "Disable Gamepad",
+	"Author": "lperkins2",
+	"Description": "Ever wanted to change the keybindings in SDV?\u00A0 Ever wanted to run a dualseat game with one player using a gamepad and the second player using the keyboard?\u00A0 \n<br />\n<br />This mod asks MonoGame.Framework to disable gamepads added via SDL2 (linux), and tries to trick XInput (windows) into thinking the gamepade has disconnected and won't be back before\u00A0 [code]17-Aug-292278994[/code].\u00A0 Note that I don't have a windows machine to actually try it on, so YMMV.\u00A0 \n<br />\n<br />There is no configuration for this mod, since the request to disable the gamepad is a one-way operation in MonoGame.Framework.\u00A0 Just install it like any other SMAPI mod and launch the game, the controller shouldn't respond.\n<br />\n<br />I've included the source in the download, if someone wants to add support for disabling gamepads on other platforms, or disabling mouse/keyboard, whatever, drop me a line with a patch and I'll add it.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/2229",
+	"Version": "0.0.3",
+	"Updated": "2018-07-03T18:37:44+00:00",
+	"Downloads": [
+		{
+			"Id": 8775,
+			"Type": "Main",
+			"DisplayName": "DisableGamepad",
+			"FileName": "DisableGamepad-2229-0-0-2.zip",
+			"Description": "For SMAPI &lt; 2.6 beta 15, stardewvalley &lt; 1.3.18",
+			"Version": "0.0.2",
+			"SizeInBytes": 5042,
+			"Uploaded": "2018-05-23T20:03:05+00:00",
+			"Mods": [
+				{
+					"Id": "lperkins2.DisableController",
+					"DisplayName": "DisableController",
+					"Type": "Smapi",
+					"RelativePath": "DisableController",
+					"Manifest": {
+						"Name": "DisableController",
+						"Description": "This disables gamepads so you can remap them using programs like joy2key.",
+						"Author": "Logan Perkins",
+						"Version": "0.0.2",
+						"MinimumApiVersion": "2.6.0-beta",
+						"EntryDll": "DisableController.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2229"
+						],
+						"UniqueId": "lperkins2.DisableController"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342395463,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 9965,
+			"Type": "Main",
+			"DisplayName": "DisableGamepad",
+			"FileName": "DisableGamepad-2229-0-0-3.zip",
+			"Description": "For SMAPI 2.6 beta 17, stardewvalley 1.3.22, including reflection fix suggested by vaindil.",
+			"Version": "0.0.3",
+			"SizeInBytes": 5605,
+			"Uploaded": "2018-07-03T18:37:44+00:00",
+			"Mods": [
+				{
+					"Id": "lperkins2.DisableController",
+					"DisplayName": "DisableController",
+					"Type": "Smapi",
+					"RelativePath": "DisableController",
+					"Manifest": {
+						"Name": "DisableController",
+						"Description": "This disables gamepads so you can remap them using programs like joy2key.",
+						"Author": "Logan Perkins",
+						"Version": "0.0.3",
+						"MinimumApiVersion": "2.6.0-beta.17",
+						"EntryDll": "DisableController.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:2229"
+						],
+						"UniqueId": "lperkins2.DisableController"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342396653,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388917,
+		"UploaderId": 3199067,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

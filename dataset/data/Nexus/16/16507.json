@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 16507,
+	"Name": "Farmhouse Fixes",
+	"Author": "CyanFire",
+	"Description": "[b][size=4]Features of the mod:[/size][/b]\n<br />\n<br />\n<br />[b]Non-Hardcoded Warps\n<br />\n<br />[/b]Warping to any tile in the farmhouse/cabins is now possible which is great for custom locations which branch off from them as they can now warp back without being forced to the EntryLocation point. Works for any location, not just custom ones. Cabin warps have also been altered so it's now possible to warp from one area of the cabin to another. If a mod tries to alter just the Farmhouse/Cabins map and not both by using \"LocationName\" conditions the game has trouble grabbing the entry point for the them if it's using a custom EntryLocation and the warp is broken, this is now handled by my mod automatically and is fixed.\n<br />[b]\n<br />\n<br />Spouse Rooms/Cellar Stairs Fixes\n<br />[/b]\n<br />Under certain conditions including but not limited to using Content Patcher to patch tiles in the farmhouse or cabins can cause spouse rooms and the cellar entrance stairs to disappear. This also used to be an issue when using aedenthorn’s Dynamic Flooring mod, when removing flooring placed with that mod. Since i have taken over updating that particular mod I have included the fix so Farmhouse Fixes isn’t neccessary anymore. \u00A0Another issue is when patching Maps/spouseRooms using conditions such as but not limited to OnTimeChanged or OnLocationChange, spouse rooms don't get updated to reflect these changes. The last issue is nitpicky but on the first day after loading a save if it's sunny, the sunrays from spouse room windows are missing. All of these issues are fixed with this mod.\n<br />Warps &amp; Action Warps to the Cellar are now handled correctly for Cabins as the vanilla game only automatically updates TouchAction Warps destinations to the correct Cellar. So now any type of warp to the Cellar can be used. TouchAction &amp; Action warps OUT of the cellar now update to the correct farmhouse/cabin just like the \"Warp\" map property does. Cabin warps now also update automatically instead of warping you to the farmhouse.\n<br />Adds the ability to use my CellarExit map property on the cellar stairs map \"Maps/FarmHouse_Cellar\", refer to my Permanent Cellar mod page for info &amp; usage instructions.\n<br />Config option to remove the random tile that appears in certain situations at 34, 9 after the second house upgrade &amp; when you are married. Most noticeable when using custom Farmhouse/Cabin maps that remove the walls there.\n<br />\n<br />\n<br />\n<br />[b]Fixed Day/Night Tiles\n<br />\n<br />[/b]After marriage in game when spouse rooms are loaded, custom Day/Night tiles in the farmhouse/cabins get removed by game code so they don't work. This is no longer the case and custom day/night tiles now work all the time. Spouse Room Day/Night tiles when loading a map with Content Patcher using Action: Load are now fixed also.\n<br />\n<br />Spouse Rooms patched in with TMXL Map Toolkit still disappear when Content Patcher is used to patch tiles in the farmhouse and Day/Night tiles do not work in these spouse rooms either. It doesn't look like i am able to fix these issues, and since TMXL Map Toolkit is outdated i feel the work would be futile.\n<br />\n<br />\n<br />\n<br />[b]Extra Tokens\n<br />[/b]\n<br />[b][i]\"CF.FarmhouseFixes/PreviousLocation\" :[/i][/b]\n<br /> I have created a token for CP users which can be used on Action/TouchAction warps which will warp you back to the last farmhouse/cabin/building location.\u00A0Your patch will require an update on location change if using this token.\n<br />As of version 1.8.0, this token now works for AddWarps/altering the Warp map property with CP in multiplayer for all players.\n<br />\n<br />[b][i]\"CF.FarmhouseFixes/IsDarkOut\" :[/i][/b]\n<br />I have also added a token which can be used for patches that apply only when it's Daylight or NightTime outside. This adheres to the games day/night cycle even if using mods that alter this. I have personally used it to create custom light beams for custom windows.\n<br />\n<br />[b][i]\"CF.FarmhouseFixes/CabinUpgrade\" :[/i][/b]\n<br />The third token i have added returns the upgrade level of the Cabin the user is/was currently in. The FarmHouseUpgrade token provided by Content Patcher isn't able to track each individual upgrade level for each Cabin so i've created a way to be able to do this. So creating patches based on Cabin levels can be done properly. Your patch will require an update on location change if using this token.\n<br />\n<br />\n<br />\n<br />[b]Installation:\n<br />\n<br />\n<br />[/b]No special setup required, just unzip to your mods folder. Unhardcoded warps can be enabled/disabled via config.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/16507",
+	"Version": "1.8.2",
+	"Updated": "2025-01-02T22:15:59+00:00",
+	"Downloads": [
+		{
+			"Id": 121031,
+			"Type": "Main",
+			"DisplayName": "Farmhouse Fixes",
+			"FileName": "Farmhouse Fixes-16507-1-8-3-1735856159.zip",
+			"Description": "Fixes for better compatibility with PolyamorySweet",
+			"Version": "1.8.3",
+			"SizeInBytes": 28741,
+			"Uploaded": "2025-01-02T22:15:59+00:00",
+			"Mods": [
+				{
+					"Id": "CF.FarmhouseFixes",
+					"DisplayName": "Farmhouse Fixes",
+					"Type": "Smapi",
+					"RelativePath": "FarmhouseFixes",
+					"Manifest": {
+						"Name": "Farmhouse Fixes",
+						"Description": "Various fixes/QOL improvements for farmhouse/cabins",
+						"Author": "CyanFire",
+						"Version": "1.8.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmhouseFixes.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "CF.PermanentCellar",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:16507"
+						],
+						"UniqueId": "CF.FarmhouseFixes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342507719,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342403195,
+		"UploaderId": 3490737,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

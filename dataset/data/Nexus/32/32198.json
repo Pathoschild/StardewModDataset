@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 32198,
+	"Name": "Ytloe's Mini Tree Mod",
+	"Author": "Ytloe",
+	"Description": "[size=4][b]【Introduction / 模组介绍】[/b][/size]\n<br />该模组会自动调用每一种树/果树的小树贴图（兼容树木美化模组），可于通用模组配置菜单（GMCM）中单独设置每一种小树贴图的开关。\n<br />This mod automatically applies sapling textures to every tree and fruit tree (compatible with tree retexture/aesthetic mods). You can toggle the texture for each individual tree separately via the Generic Mod Config Menu (GMCM).\n<br />\n<br />[b]果树/树 (Fruit Trees / Trees):[/b]\n<br />*\u00A0 \u00A0没有星星 (No Star): 未成年的小树 (Immature sapling)\n<br />*\u00A0 \u00A0金星 (Gold Star): 成年大树（不代表果树的果实品质） (Mature tree - Note: This does not represent the quality of the fruit produced)\n<br />*\u00A0 \u00A0银星 (Silver Star): 仅用于区分两种绿雨树（与小橡树、小枫树相同，已略微染色处理） (Used only to distinguish between the two types of Green Rain trees - same sprites as Oak/Maple saplings, but slightly tinted)\n<br />*\u00A0 \u00A0铱星 (Iridium Star): 摇树可掉落树种/椰子 (Shaking the tree may drop seeds/coconuts)\n<br />*\u00A0 \u00A0星星偏绿 (Greenish Star): 树上长了苔藓 (The tree is covered in moss)\n<br />\n<br />[b]本地化 (Localization):[/b]\n<br />模组自带了 SVE 添加的 6 种树的翻译键，当其他模组添加了树木/果树，smapi会提示添加了其他翻译键，可打开i18n文件夹中的json文件自行替换null值。\n<br />The mod includes translation keys for the 6 trees added by Stardew Valley Expanded (SVE). If other mods add new trees or fruit trees, SMAPI will notify you of the missing translation keys. You can open the .json file in the i18n folder and replace the null values manually.\n<br />\n<br />[b]例如 (Example):[/b]\n<br />i18n中出现以下null值 (If the following null value appears in the i18n file):\n<br />\"TreeID.FlashShifter.StardewValleyExpandedCP_Fir_Tree\": null,\n<br />可自行替换为 (You can replace it with):\n<br />\"TreeID.FlashShifter.StardewValleyExpandedCP_Fir_Tree\": \"(SVE) Fir Tree\",\n<br />[i]千万注意\"(SVE)冷杉树\"用的是英文符号\"\"而非中文符号“”（最后面的英文逗号同理）\n<br />[/i]\n<br />--------------------------------------------------------------------------------\n<br />[size=4][b]【Changelog / 更新日志】[/b][/size]\n<br />[b]v2.0.0 Update:[/b]\n<br />不再依赖CP前置，并且全自动兼容所有非高清的树木美化模组，兼容所有额外添加树木的扩展模组，更加智能的配置菜单，更加方便的i18n翻译键。\n<br />*\u00A0 \u00A0Removed Content Patcher (CP) dependency.\n<br />*\u00A0 \u00A0Features fully automatic compatibility with all non-HD tree aesthetic/retexture mods and all expansion mods that add extra trees.\n<br />*\u00A0 \u00A0Includes a smarter configuration menu and more convenient i18n translation keys.\n<br />\n<br />正式支持缩小任意果树，调整了果实的位置和大小使其不再悬空。\n<br />*\u00A0 \u00A0Added official support for shrinking any fruit tree.\n<br />*\u00A0 \u00A0Adjusted the position and size of fruits so they no longer appear to be floating in mid-air.\n<br />\n<br />修复了树上长苔藓后无法分辨绿雨树还是小橡树的视觉漏洞，绿星改为半透明覆盖而非直接替换原星星。\n<br />*\u00A0 \u00A0Fixed a visual issue where it was impossible to distinguish between Green Rain trees and small Oak trees when they were covered in moss.\n<br />*\u00A0 \u00A0The \"Green Star\" is now a semi-transparent overlay rather than directly replacing the original star.\n<br />\n<br />调整了CP版本反人类的菜单选项，现在每一种树都有一一对应的美化开关。\n<br />*\u00A0 \u00A0Overhauled the unintuitive menu options from the CP version. Now, there is a specific toggle switch corresponding to every single tree type.\n<br />\n<br />未测试该模组与高清美化的兼容性，若使用了高清的树木美化模组出现贴图错乱问题，请自行在配置菜单中关闭被美化的树木选项。\n<br />*\u00A0 \u00A0Compatibility with HD aesthetic mods has not been tested. If you use an HD tree retexture mod and experience texture glitches, please manually disable the options for the affected trees in the configuration menu.\n<br />\n<br />--------------------------------------------------------------------------------\n<br />[b]Note:[/b]\n<br />该版本后不再维护CP前置的版本，但仍保留下载渠道直至彻底不支持最新游戏版本。2.0版本更新进度依旧随缘。\n<br />The Content Patcher (CP) version will no longer be maintained after this release, but it will remain available for download until it becomes completely incompatible with the latest game version. Future updates for version 2.0 will continue to be released at my own pace.\n<br />\n<br />\n<br />Compatible with\u00A0[b]version 1.6+[/b]; replaces textures of mature trees to prevent them from blocking the view.\n<br />Supports\u00A0[b]Chinese and English settings interface[/b], allowing users to freely adjust the types of trees to be replaced.\n<br />Requires the\u00A0[b]CP (Content Patcher) prerequisite mod ID 1915[/b], eliminating the need to replace the original game's XNB files during installation.\n<br />支持1.6+的版本，替换了成熟树木的贴图使其变得不再遮挡视线。\n<br />支持中英文的设置界面，可以自由调整需要替换的树木类型。\n<br />需要尾号1915的CP前置，这使安装mod不再需要替换原游戏的xnb文件。\n<br />\n<br />1.3.0更新：\n<br />Added a Priority property to the textures, which should fix the issue of this mod's textures failing to load when multiple tree beautification mods are loaded simultaneously.\n<br />为贴图增加了优先级（Priority）属性，应该可以修复多树木美化同时加载时不加载该mod贴图的问题\n<br />\n<br />1.4.0更新：\n<br />Updated small fruit trees that still have floating fruit (but fixing the floating-fruit bug is unlikely).\n<br />更新了会浮空水果的缩小果树（但是大概率不会修浮空水果的bug）。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/32198",
+	"Version": "2.0.0",
+	"Updated": "2026-02-27T15:29:13+00:00",
+	"Downloads": [
+		{
+			"Id": 158376,
+			"Type": "Main",
+			"DisplayName": "Ytloe's Mini Tree Mod",
+			"FileName": "Ytloe's Mini Tree Mod-32198-2-0-1-1772206153.zip",
+			"Description": "添加了默认关闭的小树桩选项，使树木倒塌后显示原版的树桩外观。",
+			"Version": "2.0.1",
+			"SizeInBytes": 26920,
+			"Uploaded": "2026-02-27T15:29:13+00:00",
+			"Mods": [
+				{
+					"Id": "Ytloe.MiniTreeMod",
+					"DisplayName": "Mini Tree Mod",
+					"Type": "Smapi",
+					"RelativePath": "MiniTreeMod",
+					"Manifest": {
+						"Name": "Mini Tree Mod",
+						"Description": "兼容了所有模组添加树和果树的小树美化mod，不再依赖于CP前置",
+						"Author": "Ytloe",
+						"Version": "2.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MiniTreeMod.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:32198"
+						],
+						"UniqueId": "Ytloe.MiniTreeMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342545064,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342418886,
+		"UploaderId": 181993071,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

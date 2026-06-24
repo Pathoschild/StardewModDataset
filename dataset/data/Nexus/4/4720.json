@@ -1,0 +1,974 @@
+{
+	"Site": "Nexus",
+	"Id": 4720,
+	"Name": "Cinderella Girls Valley",
+	"Author": "8bitcanvas",
+	"Description": "[img]https://lh3.googleusercontent.com/pw/AM-JKLXAnnobndYaoQssGoAtqoeKdxc53XsovBYlCW8MzZ_tnCHeqnQcNrk65yroAtFWaca5AIkkT0SO6RECtSUvI57Xher62-s1c6ZMcPkflazOhH2CMA3VO68Vsdy1oWIbe-mKqb_w2FFkS7RDnbAVLnxV=w32-h64-no?authuser=0[/img][size=6][b]Cinderella Girls Valley (シンデレラガールズバレー)[/b]\uFEFF[/size]\n<br />\n<br />The contents and explanation of this Mod are all in Japanese only. The English I use is made up of Google Translate.\n<br />\n<br />[size=3][b]このModは何？[/b][/size]\n<br />スマートフォン向けアプリ「アイドルマスターシンデレラガールズ」のキャラクターなどを追加するMod（日本語）です。\n<br />常に製作中のため、キャラクターやコンテンツは随時追加されます。\n<br />対応バージョンはStardew Valley 1.6までを確認しています。\n<br />依存するModに影響されますが、現時点ではマルチプレイヤーでも遊べると思います。\n<br />\n<br />[size=3][b]常連さん向けの話[/b][/size]\n<br />今までのアップデートで何が変わったか知りたい方はChangelogを見ることをおすすめします。\n<br />\n<br />[size=4][b]!お知らせ![/b][/size]\n<br />ひっそり再公開。最近はほぼ自分用に作っており、バグや作りかけが多いので\n<br />本当に遊びたい人向けに公開しています。バグもすぐには直せないし、マイペースで制作しているので\n<br />「バグが多くて耐えられない」という人はプレイをお控えください。\n<br />1.6アップデートにあたって動作を確認しましたが、一応動作するようです。\n<br />必要なModにまだ未対応のModも多いため、一部機能が動作しませんが、いずれ動作するようになる…と思います。\n<br />すべてのコンテンツが楽しめなくても良いという方のみ遊んでください。\n<br />\n<br />[b]↓アップデート前の注意・JsonAssets産のアイテムがおかしくなった場合の対処[/b]\n<br />アップデート後にオリジナルアイテムが変なアイテムに変化する可能性があります。\n<br />セーブデータのロードができなくならないようにModのアップデート前にModフォルダとセーブデータのバックアップを取り、\n<br />テストして必要なら当Modのオリジナルアイテムを全部ゴミ箱に捨ててからアップデートしてください。\n<br />もしおかしくなったアイテムがあればゴミ箱に捨ててください。\n<br />\n<br />\n<br />[size=3][b]注意すること[/b][/size]\n<br />更新履歴に更新内容は書きますが、結構細かい修正などあるのでできれば総入れ替えが好ましい。\n<br />歩行グラフィックは公式の改造なので別の用途に使わないこと。\n<br />[s]ゲーム配信は双方の公式に迷惑がかからないようにしてもらえればOK。[/s]\n<br />[color=#ff0000][b]公式に迷惑がかかるといけないので配信もお控えください。[/b][/color]\n<br />スクショをひっそり載せるだけで我慢してもらえると助かります。\n<br />[b]\n<br />!ロード後初日のNPCが動かないバグについて[/b]\n<br />[s]※1.4実装頃発症バグ\u3000Modを入れてから途中までプレイしたゲームを再開するとその日一日はNPCが動かないバグが有るようです。\n<br />日付を進めると動くようになるみたいですが、Modを更新するたびになる模様…\n<br />原因がわからなくて直せていません。解消方法がわかる方が居たら教えてくださると助かります。[/s]\n<br />頂いたコメントで該当のバグを修正した前提Modを教えて頂きました。\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/3849]Custom NPC Fixes[/url]が必須になりました。\n<br />こちらを入れないままゲームを遊んだ場合、ロード直後の日付ではカスタムNPCが正常に動きません。\n<br />上のModを入れた状態でお楽しみください。\n<br />※上記については1.6未確認\n<br />\n<br />\n<br />[size=3][b]Modの構成について[/b][/size]\n<br />このModの目的はデレマスのアイドルといちゃいちゃすることなので、カスタムNPCを主要として作られています。\n<br />アイドルを追加するためのカスタムNPCにオリジナルMapやオリジナルアイテム、オリジナルシステムなどが付属しています。\n<br />当Modを楽しむために必要な前提Modは必須Mod欄に書いてありますので、そちらを参照。\n<br />\n<br />[size=3][b]導入方法[/b][/size]\n<br />必要なオプションModを選び要らないものは消した上で、\n<br />フォルダ構造を変えないまま一番上の「Cinderella Girls Valley」をModフォルダに入れてください。\n<br />アップデートの際は総入れ替え推奨。\n<br />optionalsフォルダの中身は好みによって入れるかどうか判断してください。使わないModはフォルダごと消してください。\n<br />[b]\n<br />[size=3]必須Modについて[/size][/b]\n<br />Dataフォルダ、Npcフォルダ、Mapフォルダが必須Modになります。\n<br />この中はいじらないようにしてください。\n<br />\n<br />[size=3][b]オプションModについて[/b][/size]\n<br />フォルダ先頭についている略称が前提Modの略称です。以下内容について。必要なものだけ入れてください。\n<br />\n<br />\n<br />[s]・[AHM] Sokkuri Mushi, Ueki-chan\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1538]Animal Husbandry Mod[/url]が必要。家畜に関しての追加要素を大きくするMod。オリジナル家畜の要素を追加します。BFAV入れる場合だけどうぞ。[/s]\n<br />※バグが多いため、現在は同梱しておりません。\n<br />\n<br />・[AT] Deremas\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/9246]\uFEFFAlternative Textrures[/url]\uFEFFが必要。デフォルトのかかしの画像をアイドルに変えられるようになります。\n<br />[s]\n<br />・[BFAV] Sokkuri Mushi, Ueki-chan\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/3296]Better Farm Animal Variety[/url]が必要。家畜を追加する。これが無いとアイドルかかしなどのオリジナルアイテムが実質作れなくなります。[/s]\n<br />※バグが多いため、現在は同梱しておりません。\n<br />\n<br />[s]・[CF] Deremas Furniture\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1254]Custom Furniture[/url]が必要。家具を追加するMod。[/s]\n<br />※バグが多いため、現在は同梱しておりません。\n<br />\n<br />・[CP] CS Files Changes\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFFのMod。\uFEFF\uFEFFペンダントを渡したときの対応を変えます。他Modと競合しやすい。\n<br />\n<br />・[CP] DeremasGift Tastes\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1915]\uFEFFContent Patcher[/url]\uFEFFのMod。PPJA導入時に入れると好物を増やします。\n<br />\n<br />・[FS] Deremas\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/9969]Fashion Sense[/url]\uFEFFが必要。主人公用の髪型やアクセサリを追加できる。\n<br />\n<br />・[JA] 8bit's Foods\n<br />\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/1720]Json Assets[/url]\uFEFFが必要。アイドル用の好物を増やす8bitcanvas製のMod。\n<br />\n<br />[s]・[NA] Cinderella Girls Valley\n<br />\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/4582]NPC Adventures[/url]\uFEFF用のMod。何人かのアイドルを仲間に誘えるようになる。[/s]\n<br />※現在は同梱しておりません。\n<br />\n<br />[s]・[NML] Deremas Locations\n<br />\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/url]\uFEFFが必要。マップ上に表示されるキャラアイコンを正しくトリミングする。[/s]\n<br />[s][/s]※現在は同梱しておりません。\n<br />\n<br />[size=3][b]PPJAアイテムの好物対応について[/b][/size]\n<br />2.3.0からparadigmnomad氏のPPJAシリーズの好物設定に対応しました。PPJAの各Modが導入されていると好物に追加されるようになっています。\n<br />PPJAシリーズを全部使っているわけではないので個別に導入しても良いのですが、初めて導入する場合は[url=https://www.nexusmods.com/stardewvalley/mods/1935]PPJA\u3000Content Pack Collection[/url]をオススメします。\n<br />PPJA Content Pack Collectionの導入は前提Modがまた別にあるので、該当Modのページをよく読んで（エラーが出たらエラーメッセージを読んで）導入して頂けたらと思います。\n<br />\n<br />[u]余談\u3000PPJAシリーズとは[/u]\n<br />paradigmnomadさんと有志の方たち作成のオリジナルアイテムをたくさん追加する巨大Modです。\n<br />作物やレシピなどたくさんのアイテムが追加されるModで、「バニラだと作物が少なすぎる！」とか、「料理レシピが少なすぎる！」みたいな方におすすめ。\n<br />※CGVに関してはPPJAシリーズのアイテムをアイドルたちが好物に持つようになります。\n<br />（かなり楽しくなると思うのでぜひ入れてほしい）\n<br />\n<br />[b]Vyranity's Pizza'sアイテムの好物対応について[/b]\n<br />Vyranityさんのオリジナルのピザ追加Modの好物設定に対応しました。\n<br />こちらのModを入れていると該当Modのピザアイテムを好物として追加します。\n<br />当Modの構造上、PPJAが導入されていないと上手く動作しないかもしれません。（今度直すかも）\n<br />\n<br />\n<br />\n<br />[size=3][b]現在実装されているNPCについて[/b][/size]\n<br />現在は以下のアイドルが実装されています（実装順）。\n<br />簡潔にするため好物情報は外しました。[url=https://www.nexusmods.com/stardewvalley/mods/541]Lookup Anything[/url]とかで確認してください。\n<br />[spoiler]\n<br />\n<br />[size=3][b]NPCの衣装について[/b][/size]\n<br />2.5.0の更新から、着替えをするアイドルの衣装変更ルールを指定できるようになりました。\n<br />season、random、selectの3つから選ぶことが出来ます。\n<br />\n<br />・season\n<br />\uFEFF季節と天候によって勝手に変更されます。\n<br />・random\n<br />\uFEFF全ての衣装から毎日ランダムに変更されます。\n<br />・select\n<br />一つの衣装を指定してずっとその衣装で固定します。\n<br />\n<br />設定は\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\uFEFFで好きなときに変更できます。\n<br />\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLU05qxv2-iHjIaMZBOeFw33TfoyZjt1jIRXaxqtozon5GyEvth-PUkOhatqI4ehTSP198y_nX0GiBeE_hiac0RO824sIfzCnF0gkXuRaIo76Fcoym3p_EzgYaOOoex9suhr45T28aKRtKzuqvh-Dnjg=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLXr3XhxUyNOfbSuCKe1J30Yu3DQszNo9d1e16l_8S1DQsVEf5_OLMigofLWr-ieYuLRjARKpSzBDDSYyB_zmKiqVjiDr_nTEOmCt97ep8GNBwLPIzANMNShm8RkPoHo871R18AFofZvEav6n6PWHpuL=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLXfMM4YDJX1RjKkxnMTLKrG4EBcEe_x1QeiaDYV4YDF_b_aBjFzjk13eLHBN6nRDqvW_CyEvcFO98PngSHIGldvOKzztgrtbUTafhD73-uSAX8Ocy5sRug4BIG_TKDMPU7LDqWonq-eTHbLDvcEiP9g=s128-no?authuser=0/img]&lt;img src=[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLUgIqR-mmATh3-ctp6VQ4-9tSMwK6pug4dz_33JN4PQrsGs86hv4LQbp363kwHO_kt-oL_RIj6-16K4nG6xsF9gu8CfLL6DrhV8VTZMxb4dvsef-JSZSRvZM97SE7wzkgYCUVpPgP2UiZbU-sQMDpXs=w32-h64-no?authuser=0[/img][b]一ノ瀬志希[/b](結婚可能)\n<br />・誕生日\n<br />\uFEFF春の28日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />\uFEFF春、秋：初期N\n<br />夏：パフュームトリッパー\uFEFF\n<br />冬：夜の匂い\n<br />結婚後、牧場自宅内：ガンスリンガー\n<br />・家の場所\n<br />牧場側からペリカンタウンに入ったすぐ上。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />\uFEFFなし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLWQrucNMBnD061vvQRqXgEelzrwAaW4NZ-YiMoGESclzd7HfXTN0ulQ-auhn2F5wlwAu4ubKnaH_00ZDVwNJ9VDqOzoveH_-vCOUTzXdw3mWPdUPueYWDR5PYVwWDhWX0F7-JVjQrqFOHOgMtURMClS=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLX8uBuyA0TbxVdT43ibEWa7k7Y47_tPj3_EVv8cRM6DTfZBh3rq1TbmD2YIf5L4vOCVk0GjIQgF3tFk5yFF0crQpzoIaRlg2XMPQwx6_WDmpIfZI0CSAoJCctqA-TuAqbtbAH10c2QKabc8N39dOhUA=w32-h64-no?authuser=0[/img][b]宮本フレデリカ[/b](結婚可能)\n<br />・誕生日\n<br />\uFEFF冬の14日\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\uFEFF\n<br />なし。\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />\uFEFFフレデリカのお気に入りレシピ フランスパン編\n<br />・クエスト\n<br />\uFEFFなし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLUydO7KY-EyPDH_6ygGvcZ9I0PCjqV-xpkw9P5Ac5SsenzyyJsAEQf_i_Xyq4fqfgXZMuLTR7v7_yEumCF5raCIBIHoj4_YHHb1iAU6pV85Bw0Anjk60QCgybXbaf1FxoZs_XHvO8EVgiP-MWV9lj_Y=s128-no?authuser=0/img]&lt;img src=[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLUz9QJsZDjxuLaakrS9axrTsPREnRU_cz628fIArD_q94Vrz9lY4JRvxwd7Xj33Jut7M5SphReobclcsaTorepjptYO0RVNEMHkjBCLlIc42-TKS12RBaBrYAYi0AiFGQFrHZwNch5nZ3Sn-70AZOQ9=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLXzRkb0XDSbZ_4dkJgy7horujicwITaPAD_lmhbPdZ1xiHNgj1HBq63LyCFj4KqXo1G2U4XoX_PE7F7_WnUUInx78VulSrakYQ__1D3ygop4eShGfOdzA6Cp6uNezNWoFamaB0qJ56cbZfdYpsB-WBy=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLUnBI74aRvKoQfHvibsFlaai8OuErPgWiEmZA8Fw4ufyZlZ1oCF9xtkn3PTKCYLPg2-fNZR9erFB27yhzUw8zb0b7ytOgTQbWa85Djel6tOjwJsto545glA_ddy7VsdyJJOwTrzDnHD8jL9qOUI2XQ_=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLX9IbXhOZ0RHCHRqFmBFVgr_Ux5LbjeMqBP9EdaSj8ukSyi8Y2h-KyjBjXCGdgyPbot611HC9vYa4AUEoCAwPkkyA5sBLesqDGMiijFJ7IBfAo2RmI69a0iXl9BRbGgeNkVFuijOschx8pZhBe7lTU6=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLVNYad1Yg2lHm0qohXsqJ78oImt6z3MIgeOICYvRXvgkgvDlU4k_uvqwR0rpo6T-efZgWpAC77wmhdZsMUmfCWB30Vthbr13mJehBhmoq5mU8rUIMEPLxdu6sZOdw7rEkgCCHtockM3-NiTcj6-Bdfx=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLX_GlWWLxBN-_uI8zj6tediN4DHbp3oamLOdVsYyQbc4VOTeKKRus2pp7rUgu127-zVLFk_q0zQD_qy1FBR9KotJ7CElOpXcdOR86nmSFCLslBxklc3B1jtrfXS6XRTulIWU2VwJ-72fo3uXyePAf4Y=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLXAnnobndYaoQssGoAtqoeKdxc53XsovBYlCW8MzZ_tnCHeqnQcNrk65yroAtFWaca5AIkkT0SO6RECtSUvI57Xher62-s1c6ZMcPkflazOhH2CMA3VO68Vsdy1oWIbe-mKqb_w2FFkS7RDnbAVLnxV=w32-h64-no?authuser=0[/img][b]二宮飛鳥[/b](結婚可能)\n<br />・誕生日\n<br />冬の3日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />春：グリッターステージ\n<br />夏：バベル\n<br />秋：ミッシング・ピース\uFEFF\n<br />冬：初期R\uFEFF\n<br />雨：エクステンドワールド\n<br />ランダム・指定時：パレスオブファンタジア+、灼熱のリベリオン+\n<br />・家の場所\n<br />森に牧場側から入ってすぐ左。\n<br />・メール\n<br />飛鳥からのお願い1\n<br />飛鳥のお気に入りレシピ\u3000チョコクッキー編\n<br />\uFEFF飛鳥からのプレゼント\n<br />・クエスト\n<br />なし。。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLXDXbkHBoedWGZfYvcMXnLHvHuEvxMY_j_DtIPDnaoSfV2hsL2aXb_x66_Htbc8BTBf6UbAXDAWHUhfXUj6t2EHxixN8V9fQziuyKCo_NqEbSBz8fPGYqeiy0LLqea5DFpFKaVi30Nou8f4Ys7Zud0U=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLUJ2x2yPjaowDx-D6UTVJ2gzeqRm7Zl83LJXuf6ATwRyXw9jSddnQGHhmdCGwiJr_sSI9b8GHJPK4VIoAJ6CYRtkEytNbXPJ6VIhr94pSoVVKMOFA9F6TwIw11fScANm144zhOr3eNpqRnoOmxKYhSn=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLXxaBU5vBxbrKmecPIEfHo2217VEatfaHAKQvlFZjUcBv5zGqDpS0A968WdeD5DVFSfw2TddomFOXkgGOQbTgcXIFmc2WrZTjFiVgzvkn8ZHbMC_H5ck9AyDht58s1Atw88F-BYYsQijeclSGA70b26=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLWPjhT8K21aaAnrbVAVjbchOk4HwoxNzN--eYpQrgpyvIiacbeVRdrZCzWt1JbNs7etOpOhMapLw5z-H-bQ4SJdHF3N9_LK5hS3PtSa8Xwn3z0qiFJTmvj5SqXWyAXE9GrVZeovdZcaSUDVXEYqVqlK=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVu-2y2uZZV-PXU-ibOD04iYMtrrk1ipWvMkgvGqg331jivkrDTisix8pFg4LqIJAgheGWP4dFXCBPagA7GH8feT1e6Z7-U9QTgftaxM6-8zUkiuMFKtgjgW8C9UsLMMQQ7IZUzJuY3duFRL8hYfHN9=w32-h64-no?authuser=0[/img][b]輿水幸子[/b](結婚可能)\n<br />・誕生日\n<br />\uFEFF秋の25日\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />\uFEFF春：街の人気者\n<br />夏：自称・カワイイ\n<br />秋：自称・カンペキ\n<br />冬：初期R\n<br />・家の場所\n<br />\uFEFFバスでやってくる。\n<br />・メール\n<br />\uFEFF幸子のお気に入りレシピ チョコドーナツ編\n<br />・クエスト\n<br />\uFEFFなし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLUxg-3p4766YfLYrQ18xC6p8JibQ3WdQ47JPoXKxohmB2ineRUqjJJ_-yJyhjjHRK5oA8QEXMzEHxcvK1SKTGPRVEf5Qer7WSTMN1KEajR8Shoo9A7Ga7NPCrbzko2U2hbeiisMf5NL9Yk_8eZWpxso=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVVjd6W6rQFRZ-lbQWen0rirCFwUk75ja7JCgC3SuYudguMQDkN6UaHpOHmd7vJXekslrhrmivSuOqLyuFGSXNdGH3g3SUZ_NV5sMorxEpw8UCb62DXP0-O81S6fqtBT-mf5RW0hJr0eeS9jId9dxGC=w32-h64-no?authuser=0[/img][b]安斎都[/b](結婚可能)\n<br />・誕生日\n<br />冬の6日\n<br />\uFEFF・ハートイベント\n<br />なし。\n<br />\uFEFF・着替え\n<br />なし。\n<br />\uFEFF・家の場所\n<br />バスでやってくる。\n<br />\uFEFF・メール\n<br />なし。\n<br />\uFEFF・クエスト\n<br />なし。\n<br />\uFEFF・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLW1y0mm_hBRDiiSITW2HfXJB9vHrsMGDI1_AE2DnTsUPbQqZuGRBm2lxtfr0fYN1dRVPlJnJ7wLhCzkJQ_S15QTxqC3i9JVOjVwkERxY_RPPoSgPNNJUsgkq7uf4mJQ0WhAphbVmmVUcdErr8WHWecK=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLV3Zl0RgIOz43C_gRlTzqA3X3PwhdC4VO8iDjmImfQEaidCHcT3Z2hRvgYdAGD9-pQD36WL_8JxQLtT37BOQLIzmW7paPB_K0lEfLXtB3O-JG6B2PTRtdFWOk_L_fuvkU7y6DY6KPt0EKFaJPtbOdW_=w32-h64-no?authuser=0[/img][b]城ヶ崎莉嘉[/b](結婚不可)\n<br />・誕生日\n<br />\uFEFF夏の28日\n<br />・ハートイベント   \n<br />\uFEFF\uFEFFなし。\n<br />・着替え   \n<br />なし。\n<br />・家の場所   \n<br />バスでやってくる。\n<br />・メール   \n<br />なし。\n<br />・クエスト   \n<br />なし。\n<br />・特別注文   \n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVdcd9N2xJAsZTAaENn1UrKCAuVaieunxTfQLo6CoYYvoQ-KKikWbcx8x4qbtQNLqptRRHYqjHGhLhiL2rWJZPoOc7M3Z3NhA48UHsKJcm073IF433IsDc9oMmggmqNtrc0gBZhTtsR95bvNYyTKYmL=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLWz9luivmgMyIoxvD4yvryXRE5cC3Cbawdb_R0lIPPlr0beui1wN0u-RjtvXLBAVz0H7cp_jN2iMovAYqzTr_OOKxmLlsEbdIU9exyp6oykPEi6mo2ibwTodcYIaJrIrlPrCW7NGvG6Q-iPD84acWS1=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLXmJCK-qO0Hj_moEvwzSqYs8KJw-xi9Jzsxpxddg07rkdqWuIeIYpi6ADEmsCF4SZGcJ1UPz2TZqbZn3DhXfUyb0wYJOhCMWsircmX8fGXE2QHygWrP4Rn3Hapa-A29lKO6Rckyrv1YLlapaTI0Ip1k=w32-h64-no?authuser=0[/img][b]南条光[/b](結婚不可)\n<br />・誕生日   \uFEFF\n<br />秋の13日\n<br />・ハートイベント   \n<br />なし。\n<br />・着替え\n<br />春、冬：初期SR\n<br />夏、秋：等身大の素顔\n<br />・家の場所\n<br />\uFEFFバスでやってくる。\n<br />・メール\n<br />\uFEFF光からのお願い1\n<br />光からのお願い2\n<br />光のお気に入りレシピ おにぎり編\n<br />・クエスト\n<br />2種類。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLU44NbKf8jKm8pfKYUObM1A9vWDlJtJ1XevRaN-IfM-0ZhTC3AkxJ59DMFebKrcHUubYIiG-Aoen20inZx14pe-fNNR5Ezsz6eT_EsLAsTV4uIfyaHhBp8Kk7IcY4NtcKPyXdhYawoNRAtiMFTMDcw4=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVqQA4PMe9PogtXhFn7fudPmyeLGIVhz8CaUwfKouq0wWrop4Ce2IGl-aiRDXyh6q_9FNcYd65Mik2X3dhg1HC3oQaE1XGMJDUVGotQYtG28wl3cFhVnZRP3Rlp0ZS3duLVWE-pgeHCHvLBjqdcHoSP=w32-h64-no?authuser=0[/img][b]早坂美玲[/b](結婚不可)\n<br />・誕生日\n<br />\uFEFF春の9日\n<br />・ハートイベント\n<br />\uFEFFサルーンで発生。\n<br />・着替え\n<br />\uFEFFなし。\n<br />・家の場所\n<br />\uFEFFバスでやってくる。\n<br />・メール\n<br />\uFEFFミレイのお気に入りレシピ\u3000ハンバーグ編\n<br />・クエスト\n<br />\uFEFFなし。\n<br />・特別注文\n<br />\uFEFFなし。\n<br />\n<br />[img]https://i.gyazo.com/1247f25c4ef07d214d5aef21c435d311.png[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLWafES1OTQCFwLn6beZy5iJW1Tq_BBFOhmw6LkUXV0yGTIQ46ev92I2uM82Gow09XZb510U3IjOmKZAE-iyjMON53FFkW_Z2ysSJG6DCBZ8Kl-QgAtJdKB7zTncNYaLHFDWmuFewObEljEfdIL4YjHK=w32-h64-no?authuser=0[/img][b]結城晴[/b](結婚不可)\n<br />・誕生日\n<br />\uFEFF夏の17日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />\uFEFFなし。\n<br />・家の場所\n<br />\uFEFFバスでやってくる。\n<br />・メール\n<br />\uFEFFなし。\n<br />・クエスト\n<br />\uFEFFなし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLW-6YCBUpqUpPWDC0-4Sw3BCRPYYFaM-INkAfE3IkFfmy5SD0Bbp9Qwz65VVe-KNmvfODQYh6BtebdpLEStT64lfkC8Q52jggdqtDqzCdr2xcLadyEGiE1P1V4DvuhOdJUctA5HoeoeWMrtXiseux5n=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVs74gwRqAH02SijdqJRV_cf1J6vmOWs598pTHL9T3-f9FvnOro-4BTJAGXJjfMZFORWI97nLNda6LZdYgU3WpNN-4ykI7oUZJouFW3nt6E6GblVszDlX1vAIBlUuUWw6aYum26iY0NnWp6cYfcqjWx=w32-h64-no?authuser=0[/img][b]星輝子[/b](結婚不可)\n<br />・誕生日\n<br />夏の6日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />\uFEFF町外れの中央上の洞窟。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVDK7V9B9MvvKSwDayoXuNjtMmpBtSqIHh-zCKuW-lcrLlDzyhxMt8YsILzBgl2qbUy9y6Ix38JxINF6sigNtcq1OUkEP24_i0Nh2QODIuCgFBpuve3u_cIckp7BJcyLz03eWkRuhnt1Sk5PMERgW9m=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVzsJH8teXjpE_fIsaW55cD24-PxlFpdck4xRMDscWBi2sFBsBInpoTnImQ1Y6UI7lw1LRYgor2X8ZrsOqzJoFubc3-2-NB8aS1wi-9lZkyUiAiVNNl3lgA7MFiqk2i1OVeqWIU6GXojhtlNGniH1U-=w32-h64-no?authuser=0[/img][b]神崎蘭子[/b](結婚不可)\n<br />・誕生日\n<br />春の8日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />\uFEFFなし。\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />\uFEFFなし。\n<br />・クエスト\n<br />\uFEFFなし。\n<br />・特別注文\n<br />\uFEFFなし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVZdHI1KYrH73A0hBp8_514FaKFItS7Q_vU0jA1pd_QkyjqNDSlqUrVzPT3enkxMSyvEqBXXgdm0YwvrAB2xm0PFhX30Vg-HppnIpwIz_yk9ZesUVfSDCGZLcXH3pY-UUG5G43Os-9_DhWeaNBIrmch=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLXsWvoHjJEEaqhd4tuL9yKY-9lSi7Eh9uA4RRMcGiZquxAsaLjDSeOPF0jc-8PyMCoEdPng0HZ1p-mC7Ppn4-Jo9e7wIvq1bw5v95TpM4KW-wdvrAxwB1tUbA8IgGDk9Jmbvg-BJnDuNN9_ypEYDQZD=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLV0QyH8vYn9x5zfWWeXRnqdvBV8nhTusPpCUv1diUk9vJv35a686zToznmBf6DVsE5zyYkf-mXDcsGarR5uji-oM0Qv39EOw5BA7fRzEa72JzOq01fMlzgD7vKvABG5DhOh2EPGyvbKalQeQJO3-IBE=w32-h64-no?authuser=0[/img][b]森久保乃々[/b](結婚可能)\n<br />・誕生日\n<br />\uFEFF夏の27日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />\uFEFF春、冬：デレステ立ち絵\n<br />\uFEFF夏、秋：ギフト・フォー・アンサー+\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />\uFEFFなし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLV73YMu6OI97_euR16Rb5PfJyqO7y_M7Sx9_tSzCXxlPgtEMM8PzlIpw20_MW_IkpPmEehWDdPoMZIgYGRfXFv4iHYSX5vd6PLMPMmAXIDQ6Wbh1Qg81InOeRaO70LKG7tWvVBpd8xoh4T_lssGHh_6=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLWAebqdJ5_GmR7zFUje4RSZiqv-BfrM1WR2SXn2qHvgGOdlPaA3OSNDtogzXGmcJwlVsdKtXEJGYZMg1JmjCDE0eVck5VpaCvGLd3HoZ6gJhQ-UK1XenUGraRr8ym1ofRvaMzrdODtgRhwrOc5Ab6Kb=s128-no?authuser=0[/img][img]https://lh3.googleusercontent.com/pw/AM-JKLV8UO5-ma6O2uWmx11gKYFnzGWUdVM5X6mpUmnmK8CEOV_l0o9qsElfmN0DVJd-sFzXjnN6WBuYyqTcKnqZ7Bas9jK7KHxD-gUCqauqDnKouo4qBw280-fbol1oOlpUqzDg2nV27y_Z1lGNHdr3dvie=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLVAaoMcwkJImF6f1ymFVDbY2WycYYfLSJK9_s0NLCf39I49xl2Yk-FhBhbySD3Qr5gSqApQdS4clxODHNDaBzrxDOBd65-qmXzQmT77tq8dlPhXxjMJSiyC5sIfd19U1a5sL_teks--Cbc9vOw_c2U3=w32-h64-no?authuser=0[/img][b]佐久間まゆ[/b](結婚可能)\n<br />・誕生日\n<br />\uFEFF夏の27日\n<br />・ハートイベント\n<br />\uFEFFなし。\n<br />・着替え\n<br />春、夏：永遠の結び愛\n<br />秋：5thアニバーサリー\n<br />冬：魅惑のショウタイム\n<br />・家の場所\n<br />\uFEFFバスでやってくる。\n<br />・メール\n<br />\uFEFFなし。\n<br />・クエスト\n<br />\uFEFFなし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://i.gyazo.com/46e57b5748df80dd27b66a434db18ce0.png[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLW_UUlYycNySswk6NkdyQZXOrNF2u4wMlFpOv9EvrD_Iz_ffS3AwOmUfEoAwPnIG5jWQoBSe14egznve58BUk6cQxuJd7F2LU2MrsPXIaLOr7l276rnXrECBK_o5VhAmdUcvivdkQfwwIZkAh7NdFM9=w32-h64-no?authuser=0[/img][b]喜多日菜子[/b]（結婚可能）\n<br />・誕生日\n<br />春の6日\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLX96uhWz2BIb1zfbOMqwyKtX0tkNdzDblyw6BmieXZMMhn7YGQ1YaNcN45ZVdzL4Bs_-tGo1u5feicmVIZVhkYCSUz0mqSJW8_Cw-jyDCzFGbegpqvFJk0N1WiKH63oX6KMtsdIgG6uX93gKMs7rGOj=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLWC36bHXmPwh97S387-mvSi7yL_pFZvqHKmXjLezKPnQ91AYxjf0PziAzkZLJV371Hys_qvLglk0yAk1HIbQFy8-LRLbgOznHncuh6u-OPufND0c-aq3Z7y8SVoQhXIjHg9UWyw_OIf2QbiHjlVNJek=w32-h64-no?authuser=0[/img][b]辻野あかり[/b]（結婚不可）\n<br />・誕生日\n<br />秋の5日\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />シンダーサップの森の桜の木の下にずっと居る\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLUHNnAIZEMp2EBTXLdgtsNsq9sfUEe9yFyLvecN-5kydWQuRPUmifqdtWnTuHKaC8yoIVarDMZP9ppc3xFHIada9kQaJT5yY-pfOJZk-aXo4FjGmy9dHgOpNK7G1x_DVzb_Sgc1sOL65ZntuWHchluR=s128-no?authuser=0[/img]\n<br />[img]https://lh3.googleusercontent.com/pw/AM-JKLU-5AoJxXBV-kWXYXarnBqr1lORGOoYuOqMKX3qDBjyqEBecHxaQKruKruLoYL1Nt_VEorwP6OX2gu464xCKeAJKZX3i3Y3t-mDHEeikqxnP1ztgOzjyPCQm2L6NsT9XvCg6BZPe_zeG1xYJNV41pVB=w32-h64-no?authuser=0[/img][b]今井加奈[/b]（結婚不可）\n<br />・誕生日\n<br />春の3日\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />[img]https://i.gyazo.com/a7c70e77333ec0712fc123ba901ff5c1.png[/img]\n<br />[img]https://i.gyazo.com/4233b307b957cb54f5c315a5055055c4.gif[/img][b]久川颯[/b]（結婚可）\n<br />・誕生日\n<br />夏の16日\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />なし。\n<br />\n<br />\n<br />[img]https://i.gyazo.com/bd5a22e3668600c1b643a58034d9247a.png[/img]\n<br />[img]https://i.gyazo.com/b157b247dc97a4789d28bd2d1ccc0cc8.gif[/img][b]久川凪[/b]（好感度無し）\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />バスでやってくる。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />\n<br />\n<br />[img]https://i.gyazo.com/b4e8d3b8bfcd5d36a092e1bc42a199c0.png[/img]\n<br />[img]https://i.gyazo.com/d2b9a8e71c09201b1f60582b4c660280.gif[/img][b]乙倉悠貴[/b]（好感度無し）\n<br />・ハートイベント\n<br />なし。\n<br />・着替え\n<br />なし。\n<br />・家の場所\n<br />バス停前にずっといる。\n<br />・メール\n<br />なし。\n<br />・クエスト\n<br />なし。\n<br />・特別注文\n<br />なし。\n<br />[/spoiler]\n<br />\n<br />[size=3][b]カスタムアイテムについて[/b][/size]\n<br />現在以下のアイテムが実装されています。\n<br />[spoiler]\n<br />あんぱん\n<br />チョコクッキー\n<br />チョコドーナツ\n<br />コーンフレーク\n<br />カレー粉\n<br />カレーライス\n<br />デスソース\n<br />エナジードリンク\n<br />フランスパン\n<br />フライドポテト\n<br />ハンバーガー\n<br />メロンソーダ\n<br />おにぎり\n<br />牛乳\n<br />食パン\n<br />プリン\n<br />食塩\n<br />食用ソース\n<br />いちごのショートケーキ\n<br />バナナ\n<br />青いバラ\n<br />高級チーズ\n<br />そっくり虫の魔法玉\n<br />赤いバラ\n<br />スタミナドリンク\n<br />いちごのチョコ\n<br />半熟目玉焼き\n<br />まぐろ寿司\n<br />えび寿司\n<br />オムライス\n<br />特製ハンバーグ\n<br />マンガ肉\n<br />オレンジジュース\n<br />肉まん\n<br />うえきちゃんロッド\n<br />コキュートス\n<br />ガチャガチャマシーン\n<br />スタージュエル\n<br />りんごろうさん\n<br />サバオリくん\n<br />ガシャチケット\n<br />スカウトチケット各種\n<br />[/spoiler]\n<br />レシピはガスで買ったり、アイドルたちにメールでもらったりします。\n<br />\n<br />[size=3][b]その他アイテム[/b][/size]\n<br />[spoiler]\n<br />Pヘッド（帽子）\n<br />アイドルの姿をしたカカシ\n<br />[/spoiler]\n<br />\n<br />[size=3]\n<br />[b]オリジナルシステム[/b][/size]\n<br />[spoiler]\n<br />[s][b]ガシャシステム[/b]\n<br />色んな場所で手に入るスタージュエルを集めることで、志希の店でガシャチケットと交換することが出来ます。\n<br />ガシャチケットをガシャガシャマシーンを入れると各種スカウトチケットが排出されます。\n<br />確率は以下の通り。\n<br />\n<br />Rスカウトチケット 40%\n<br />SRスカウトチケット 20%\n<br />SSRスカウトチケット 0.5%\n<br />りんごろうさん5個～10個 35%\n<br />\n<br />スカウトチケットは志希の店でアイドルの姿をしたかかしのレシピを手に入れるのに使えます。（レア度はモバマス・デレステ準拠）\n<br />スタージュエルはガシャガシャマシーンで使う他に、貯めて直接スカウトチケットと交換することも出来ます。\n<br />\n<br />Rスカウトチケット50枚\n<br />SRスカウトチケット200枚\n<br />SSRスカウトチケット500個\n<br />\n<br />スタージュエルは家畜「そっくり虫」が生み出す赤いバラか青いバラをガシャガシャマシーンに入れることで赤1個、青3個入手できる他、\n<br />シンダーサップの森の木箱から手に入ることがあります。\n<br />かかしを実際に作る際は家畜「うえきちゃん」が生み出すチューリップシンボルを使う必要があります。\n<br />レア度Rのかかしはチューリップシンボルが1個、SRのかかしはチューリップシンボルが2個、\n<br />SSRのかかしは黄金のチューリップシンボルが1個必要になります。\n<br />\n<br />ガシャガシャマシーンのレシピは志希の店で5000Gで売っています。[/s]\n<br />[b]以上は現在調整中のため、内容通りではない可能性があります。[/b]\n<br />\n<br />[b]あかりのりんごろう交換屋[/b]\n<br />シンダーサップの森の桜の木の横にあかりがおり、りんごろうさんを探しています。\n<br />シンダーサップの森の至る所に毎日りんごろうさんが発生します。\n<br />また、それ以上欲しい場合は釣りで釣ることもできます。\n<br />あかりの横のりんごろうさんを調べるとショップが開き、りんごろうさんとレアアイテムを交換してもらえます。\n<br />あかりはハートが10になると差し入れをしてくれるようになります。\n<br />\n<br />[/spoiler]\n<br />\n<br />[size=3][b]アイドルの家について[/b][/size]\n<br />以前は谷の至る所に家を設置していましたが、\n<br />一部を除いてバスからやってくるように改修しました。\n<br />砂漠行きのバスの右にもう一台バスがあり、そこからやってきます。\n<br />プレイヤーが家に行くことは今のところできません。\n<br />砂漠から帰ってきたときにすり抜けますが大目に見てください。設置する場所がなかったんや…\n<br />※バスのマップが1.6から新しくなっているので、バスの位置がおかしくなっております。そのうち直します。\n<br />\n<br />互換性の話\n<br />2.5.0の大改修の時点で[url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url]への互換性対応を行っております。\n<br />現在のところ、互換性を確認できているのはSVEだけになりますが、\n<br />私もまだ全てを遊んだわけではないので、競合がある可能性があります。\n<br />一応、家の場所をバスに変えたので、前ほど競合は起きないかと思います。\n<br />ゆっくり遊びながら確認しようと思っておりますが、私が今あまりMod更新を行っておりませんので、\n<br />期待しないで待っていただけると幸いです。どうしても遊びたい方は単体で導入してください。\n<br />\n<br />\n<br />[size=3][b]現在出来ること[/b][/size]\n<br />ハートイベント：美玲ちゃんのみ。飛鳥と志希のハートイベントは一旦消去しました。[size=1][s]恥ずかしかったので…[/s][/size]\n<br />結婚：アイドルによって違います。現在不可能なキャラもそのうち実装するかも。\n<br />イベントの参加：あかり・悠貴以外のアイドルがほとんどのイベントに参加します。\n<br />\n<br />\n<br />[size=3][b]やりたいこと[/b][/size]\n<br />・小型NPCでいいので、キャラをどんどん増やしたい\n<br />・気が向いたらセリフとかイベント追加\n<br />・気に入らないグラフィックの作り直し\n<br />・ポートレートや歩行グラフィックなどの見た目を拡張していきたい\n<br />・その気になったときに既存キャラの結婚実装もやりたい（気まぐれ）\n<br />・今は適当だけどマップもそのうちオリジナルの画像使ってがっつりやりたい\n<br />・基本的に公式に迷惑がかからないようにひっそりやっていきます\n<br />\n<br />[b]小話[/b]\n<br />[list=1]\n<br />[*]TMXLoarderが必要なパッケージをContentPatcherに移行したので、当Modに関してはTMXLoaderは必要なくなりました。\n<br />[*]アイドルの結婚後の部屋は何も置いてない状態となっております。好きなように家具を並べてあげたらいいと思います。\n<br />[/list]\n<br />\n<br />[size=3][b]翻訳について[/b][/size]\n<br />2021/04/29 更新\n<br />翻訳していただくのは構いませんが[color=#ff0000][b]アイドルマスターシンデレラガールズを十分に理解した上で行ってください。[/b][/color]\n<br />このModは二次創作のため、このModが原因で公式に迷惑がかかることはあってはならいことですし、\n<br />万が一そうなった場合場合公開を停止せざるを得なくなる可能性があります。\n<br />絶対に公式に迷惑のかかる行為はおやめください。\n<br />また、翻訳ファイルを公開するときは一度ご連絡ください。\n<br />\n<br />[size=3][b]About Translation[/b][/size] \n<br />[color=#ff0000]It's okay to translate it, but please do so after understanding the IDOL M@STER Cinderella Girls.\n<br />[/color]This mod is a fan fiction, so in the unlikely event that this mod causes official inconvenience, you may have to stop publishing.Please do not officially cause any inconvenience.Also, please contact us once when you publish the translation file.Please allow the terms to be different from before.It is a change after thinking that it was inappropriate as it was before to cherish the work called The iDOLM@STER Cinderella Girls. \n<br />\n<br />[size=3][b]最後に[/b][/size]\n<br />何かあればPOST欄にどうぞ。外国語はわからないので、Google翻訳で返信させていただきます。（全てに対応は出来ません）",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/4720",
+	"Version": "2.6.0b",
+	"Updated": "2024-03-20T00:49:19+00:00",
+	"Downloads": [
+		{
+			"Id": 82961,
+			"Type": "Main",
+			"DisplayName": "Cinderella Girls Valley",
+			"FileName": "Cinderella Girls Valley-4720-2-6-0b-1710895759.zip",
+			"Description": "1.6.0でも(一応)遊べます",
+			"Version": "2.6.0b",
+			"SizeInBytes": 2255100,
+			"Uploaded": "2024-03-20T00:49:19+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Cinderella Girls Valley\\Data\\[CP] Cinderella Girls Valley",
+					"Type": "Invalid",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[CP] Cinderella Girls Valley",
+					"ManifestParseError": "ManifestInvalid",
+					"ManifestParseErrorText": "parsing its manifest failed:\nNewtonsoft.Json.JsonReaderException: Can't parse JSON file at E:\\source\\_Stardew\\_ModData\\mod-dump\\Nexus\\4\\4720\\82961\\Cinderella Girls Valley\\Data\\[CP] Cinderella Girls Valley\\manifest.json.\nTechnical details: Can't parse semantic version from invalid value '2.6.0b', should be formatted like 1.2, 1.2.30, or 1.2.30-beta (path: Version).\r\n   at StardewModdingAPI.Toolkit.Serialization.JsonHelper.ReadJsonFileIfExists[TModel](String fullPath, TModel& result) in E:\\source\\_Stardew\\SMAPI\\src\\SMAPI.Toolkit\\Serialization\\JsonHelper.cs:line 126\r\n   at StardewModdingAPI.Toolkit.Framework.ModScanning.ModScanner.ReadFolder(DirectoryInfo root, DirectoryInfo searchFolder, Boolean useCaseInsensitiveFilePaths) in E:\\source\\_Stardew\\SMAPI\\src\\SMAPI.Toolkit\\Framework\\ModScanning\\ModScanner.cs:line 163"
+				},
+				{
+					"Id": "8bitcanvas.CPDeremasFish",
+					"DisplayName": "(CP) Deremas Fish",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[CP] Deremas Fishs",
+					"Manifest": {
+						"Name": "(CP) Deremas Fish",
+						"Description": "CP Deremas Fish",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "8bitcanvas.CPDeremasFish"
+					}
+				},
+				{
+					"Id": "8bitcanvas.FTM.Deremas.Forest",
+					"DisplayName": "(FTM) CGV Forest Forage",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[FTM] Cinderella Girls Valley",
+					"Manifest": {
+						"Name": "(FTM) CGV Forest Forage",
+						"Description": "8bit's Deremas Forest Forage",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.15.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "8bitcanvas.FTM.Deremas.Forest"
+					}
+				},
+				{
+					"Id": "8bitcanvas.FTM.Deremas.Starjewel",
+					"DisplayName": "(FTM) CGV Starjewel",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[FTM] Starjewel",
+					"Manifest": {
+						"Name": "(FTM) CGV Starjewel",
+						"Description": "8bit's Deremas Starjewel",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.15.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "8bitcanvas.FTM.Deremas.Starjewel"
+					}
+				},
+				{
+					"Id": "8bitcanvas.DeremasItem",
+					"DisplayName": "(JA) Deremas Items",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[JA] Deremas Items",
+					"Manifest": {
+						"Name": "(JA) Deremas Items",
+						"Description": "Deremas Items",
+						"Author": "8bitcanvas",
+						"Version": "1.4.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.DeremasItem"
+					}
+				},
+				{
+					"Id": "8bitcanvas.DSVMail",
+					"DisplayName": "(MFM) Deremas SV Mail",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[MFM] Deremas Mail",
+					"Manifest": {
+						"Name": "(MFM) Deremas SV Mail",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.5.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.DSVMail"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Deremas.PFM",
+					"DisplayName": "8bit Deremas PFM",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[PFM] Deremas PFM",
+					"Manifest": {
+						"Name": "8bit Deremas PFM",
+						"Description": "8bit Deremas PFM",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.7.0",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.ProducerFrameworkMod"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.DeremasItem",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Deremas.PFM"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Deremas.Shop",
+					"DisplayName": "(STF) Deremas Shop",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Data\\[STF] Deremas Shop",
+					"Manifest": {
+						"Name": "(STF) Deremas Shop",
+						"Description": "For ContentPatcher",
+						"Author": "8bit",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.ShopTileFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Deremas.Shop"
+					}
+				},
+				{
+					"Id": "8bitcanvas.CGVMaps",
+					"DisplayName": "(CP) CGV Maps",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Map\\[CP] Cinderella Girls Valley Maps",
+					"Manifest": {
+						"Name": "(CP) CGV Maps",
+						"Description": "For Content Patcher.",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.CGVMaps"
+					}
+				},
+				{
+					"Id": "8bitcanvas.DeremasSpouseRooms",
+					"DisplayName": "(CP) Deremas Spouse Rooms",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Map\\[CP] Deremas Spouse Rooms",
+					"Manifest": {
+						"Name": "(CP) Deremas Spouse Rooms",
+						"Description": "For ContentPatcher.",
+						"Author": "8bitcanvas",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.19.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.DeremasSpouseRooms"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Akari",
+					"DisplayName": "(CP) Akari Tsujino",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Akari Tsujino",
+					"Manifest": {
+						"Name": "(CP) Akari Tsujino",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Akari"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Asuka",
+					"DisplayName": "(CP) Asuka Ninomiya",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Asuka Ninomiya",
+					"Manifest": {
+						"Name": "(CP) Asuka Ninomiya",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "2.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Asuka"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Frederica",
+					"DisplayName": "(CP) Frederica Miyamoto",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Frederica Miyamoto",
+					"Manifest": {
+						"Name": "(CP) Frederica Miyamoto",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Frederica"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Haru",
+					"DisplayName": "(CP) Haru Yuuki",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Haru Yuuki",
+					"Manifest": {
+						"Name": "(CP) Haru Yuuki",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Haru"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Hayate",
+					"DisplayName": "(CP) Hayate Hisakawa",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Hayate Hisakawa",
+					"Manifest": {
+						"Name": "(CP) Hayate Hisakawa",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Hayate"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Hikaru",
+					"DisplayName": "(CP) Hikaru Nanjo",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Hikaru Nanjyo",
+					"Manifest": {
+						"Name": "(CP) Hikaru Nanjo",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Hikaru"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Hinako",
+					"DisplayName": "(CP) Hinako Kita",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Hinako Kita",
+					"Manifest": {
+						"Name": "(CP) Hinako Kita",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Hinako"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Kana",
+					"DisplayName": "(CP) Kana Imai",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Kana Imai",
+					"Manifest": {
+						"Name": "(CP) Kana Imai",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Kana"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Mayu",
+					"DisplayName": "(CP) Mayu Sakuma",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Mayu Sakuma",
+					"Manifest": {
+						"Name": "(CP) Mayu Sakuma",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Mayu"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Mirei",
+					"DisplayName": "(CP) Mirei Hayasaka",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Mirei Hayasaka",
+					"Manifest": {
+						"Name": "(CP) Mirei Hayasaka",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Mirei"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Miyako",
+					"DisplayName": "(CP) Miyako Anzai",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Miyako Anza",
+					"Manifest": {
+						"Name": "(CP) Miyako Anzai",
+						"Description": "For ContentPatcher",
+						"Author": "8bit",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Miyako"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Nagi",
+					"DisplayName": "(CP) Nagi Hisakawa",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Nagi Hisakawa",
+					"Manifest": {
+						"Name": "(CP) Nagi Hisakawa",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "SuperAardvark.AntiSocial",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Nagi"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Nono",
+					"DisplayName": "(CP) Nono Morikubo",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Nono Morikubo",
+					"Manifest": {
+						"Name": "(CP) Nono Morikubo",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Nono"
+					}
+				},
+				{
+					"Id": "8bitcanvas.NPCSettings",
+					"DisplayName": "(CP) CGV NPC Settings",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] NPC Settings",
+					"Manifest": {
+						"Name": "(CP) CGV NPC Settings",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "8bitcanvas.Akari",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Asuka",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Frederica",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Haru",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Hikaru",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Hinako",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Kana",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Mayu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Mirei",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Miyako",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Nono",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Ranko",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Rika",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Sachiko",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Shiki",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "8bitcanvas.Syoko",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.NPCSettings"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Ranko",
+					"DisplayName": "(CP) Ranko Kanzaki",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Ranko Kanzaki",
+					"Manifest": {
+						"Name": "(CP) Ranko Kanzaki",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Ranko"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Rika",
+					"DisplayName": "(CP) Rika Jyogasaki",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Rika Jyogasaki",
+					"Manifest": {
+						"Name": "(CP) Rika Jyogasaki",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Rika"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Sachiko",
+					"DisplayName": "(CP) Sachiko Koshimizu",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Sachiko Koshimizu",
+					"Manifest": {
+						"Name": "(CP) Sachiko Koshimizu",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Sachiko"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Shiki",
+					"DisplayName": "(CP) Shiki Ichinose",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Shiki Ichinose",
+					"Manifest": {
+						"Name": "(CP) Shiki Ichinose",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Shiki"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Syoko",
+					"DisplayName": "(CP) Syoko Hoshi",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Syoko Hoshi",
+					"Manifest": {
+						"Name": "(CP) Syoko Hoshi",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Syoko"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Yuuki",
+					"DisplayName": "(CP) Yuuki Otokura",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\Npc\\[CP] Yuuki Otokura",
+					"Manifest": {
+						"Name": "(CP) Yuuki Otokura",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "SuperAardvark.AntiSocial",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Yuuki"
+					}
+				},
+				{
+					"Id": "8bitcanvas.DeremasAlternativeTexturesPack",
+					"DisplayName": "(AT) Deremas Alternative Textures Pack",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\optionals\\[AT] Deremas",
+					"Manifest": {
+						"Name": "(AT) Deremas Alternative Textures Pack",
+						"Description": "Deremas For AlternativeTextures",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.AlternativeTextures",
+							"MinimumVersion": "6.1.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "8bitcanvas.DeremasAlternativeTexturesPack"
+					}
+				},
+				{
+					"Id": "8bitcanvas.CSFChanges",
+					"DisplayName": "8bit's CS Files Changes",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\optionals\\[CP] CS Files Changes",
+					"Manifest": {
+						"Name": "8bit's CS Files Changes",
+						"Description": "For ContentPatcher",
+						"Author": "8bit",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.CSFChanges"
+					}
+				},
+				{
+					"Id": "8bitcanvas.DSV.JAGiftTastes",
+					"DisplayName": "(CP) Deremas JA Gift Tastes",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\optionals\\[CP] Deremas GiftTastes",
+					"Manifest": {
+						"Name": "(CP) Deremas JA Gift Tastes",
+						"Description": "For ContentPatcher",
+						"Author": "8bitcanvas",
+						"Version": "2.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.JsonAssets",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Asuka",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Shiki",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Frederica",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Miyako",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Sachiko",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Rika",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Hikaru",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Mirei",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Haru",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Ranko",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Nono",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Syoko",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Mayu",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Hinako",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Akari",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "8bitcanvas.Kana",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.DSV.JAGiftTastes"
+					}
+				},
+				{
+					"Id": "8bitcanvas.FS",
+					"DisplayName": "(FS) Deremas Fashion",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\optionals\\[FS] Deremas",
+					"Manifest": {
+						"Name": "(FS) Deremas Fashion",
+						"Description": "Deremas Fashion.",
+						"Author": "8bitcanvas",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.FashionSense",
+							"MinimumVersion": "4.3.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "8bitcanvas.FS"
+					}
+				},
+				{
+					"Id": "8bitcanvas.Foods",
+					"DisplayName": "8bit's Foods",
+					"Type": "ContentPack",
+					"RelativePath": "Cinderella Girls Valley\\optionals\\[JA] 8bit's Foods",
+					"Manifest": {
+						"Name": "8bit's Foods",
+						"Description": "8bit's Foods",
+						"Author": "8bitcanvas",
+						"Version": "1.3.0",
+						"ContentPackFor": {
+							"UniqueId": "spacechase0.JsonAssets"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							""
+						],
+						"UniqueId": "8bitcanvas.Foods"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469649,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342391408,
+		"UploaderId": 44994902,
+		"CategoryId": 24,
+		"Adult": false
+	}
+}

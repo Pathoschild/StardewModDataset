@@ -1,0 +1,178 @@
+{
+	"Site": "ModDrop",
+	"Id": 793920,
+	"Name": "Plato Warp Menu",
+	"Author": "Platonymous",
+	"TagLine": "Visual Warp Menu that allows you to pick a location and warp to any spot by clicking on it.",
+	"Description": "# Plato Warp Menu\n\nby Platonymous\n\n---\n**Visual Warp Menu** that allows you to pick a location and warp to any spot by clicking on it.![](https://imgur.com/T5Eybda.png)\n\nOpen the Warp Menu with **J** key (key can be changed in the config.json file after the first run).\nPick a location directly or have it show the location of a character or artifact spot.\nClick on the map-image to pick a spot<s>and warp there.</s>\n\nAfter picking a sport, click on the \"Warp To ...\" text to perform the warp.\n\nThe locations in the menu are populated from all available locations during a game,\neven modded and/or otherwiese unreachable locations are accessible.\n\nIf the images of the locations don't show up for you change \"UseTempFolder\" in the config.json file (or the GMCM menu) to true.\nIf you are having issues you can also set \"CompatibilityMode\" to true\n\n![](https://imgur.com/b8d5H2A.png)\nIf you have any questions you can usually find me on the [Stardew Valley Discord](https://stardewvalleywiki.com/Modding:Community#Discord)  under the username **Routine**#8715\n![](https://imgur.com/u7Unylz.png)\nIf you like my mods and want to support me, you can do so via [Paypal](https://www.paypal.me/platonymousgames)   or on [Patreon](https://www.patreon.com/bePatron?u=406905) .",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/793920",
+	"Version": null,
+	"Updated": "2023-11-06T18:34:30.327+00:00",
+	"Downloads": [
+		{
+			"Id": 1359513,
+			"Type": "Main",
+			"DisplayName": "Plato Warp Menu",
+			"FileName": "Plato Warp Menu.zip",
+			"Version": "1.11.0",
+			"SizeInBytes": 267476,
+			"Uploaded": "2023-03-04T10:44:48.294+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.PlatoUI",
+					"DisplayName": "PlatoUI",
+					"Type": "Smapi",
+					"RelativePath": "PlatoUI",
+					"Manifest": {
+						"Name": "PlatoUI",
+						"Description": "UI Toolkit",
+						"Author": "Platonymous",
+						"Version": "1.10.2",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "PlatoUI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6589"
+						],
+						"UniqueId": "Platonymous.PlatoUI",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "PlatoTK",
+								"User": "Platonymous",
+								"Directory": "_releases",
+								"ModFolder": "PlatoUI"
+							}
+						}
+					}
+				},
+				{
+					"Id": "Platonymous.PlatoWarpMenu",
+					"DisplayName": "Plato Warp Menu",
+					"Type": "Smapi",
+					"RelativePath": "PlatoWarpMenu",
+					"Manifest": {
+						"Name": "Plato Warp Menu",
+						"Description": "Platonymous Warp Menu",
+						"Author": "Platonymous",
+						"Version": "1.11.0",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "PlatoWarpMenu.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.PlatoUI",
+								"MinimumVersion": "1.8.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Platonymous.Toolkit",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5384"
+						],
+						"UniqueId": "Platonymous.PlatoWarpMenu"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "0b2102f969e993b9f43625cacbf224ca",
+				"md5In": "bcadfecf0f24d7f039cf4ab67567a4f7",
+				"scriptType": 0,
+				"sha256Ex": "624cb63ec7f7d3a996c41bcfe72c5fbe3fc42bddd067ab860d552b73ed1c7606",
+				"sha256In": "1cd489ead529a260091b8a00ae65d86357237c3254d9c102669d364f38227c70"
+			}
+		},
+		{
+			"Id": 1492971,
+			"Type": "Optional",
+			"DisplayName": "Plato Warp Menu Prerelease",
+			"FileName": "Plato Warp Menu Prerelease.zip",
+			"Description": "For the upcoming Stardew Valley 1.6 only. Don't use this version unless you're testing the game's alpha version.",
+			"Version": "1.11.1-alpha",
+			"SizeInBytes": 161538,
+			"Uploaded": "2023-11-06T18:34:30.325+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.PlatoWarpMenu",
+					"DisplayName": "Plato Warp Menu",
+					"Type": "Smapi",
+					"RelativePath": "PlatoWarpMenu",
+					"Manifest": {
+						"Name": "Plato Warp Menu",
+						"Description": "Platonymous Warp Menu",
+						"Author": "Platonymous",
+						"Version": "1.11.1-alpha.20231105",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "PlatoWarpMenu.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.PlatoUI",
+								"MinimumVersion": "1.8.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Platonymous.Toolkit",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:5384"
+						],
+						"UniqueId": "Platonymous.PlatoWarpMenu"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": false,
+				"IsOld": false,
+				"IsPreRelease": true,
+				"IsAlternative": true,
+				"ext": ".zip",
+				"group": 1,
+				"icons": {},
+				"md5Ex": "4bd497d25d277945f8707b274442cdb8",
+				"md5In": "c179b196062c0ca65461a1d620fdfba1",
+				"scriptType": 0,
+				"sha256Ex": "cea29fde860513d007ad1983321aca497923b29f0cf8ef82c7cf0eb825030e81",
+				"sha256In": "6756fe4cfff37a8170cd5dfa609d34e3b6dd75a7f4163d19d668cee6d006bda6"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1591087203677,
+		"DateUpdated": 1699295670327,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1591086954270,
+		"flags": 0,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/793920/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/793920/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/793920/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/793920/icon_original"
+		},
+		"nexusModID": 5384,
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 66873
+	}
+}

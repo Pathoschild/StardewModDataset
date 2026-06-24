@@ -1,0 +1,114 @@
+{
+	"Site": "Nexus",
+	"Id": 8787,
+	"Name": "PatcherHelper",
+	"Author": "pepoluan",
+	"Description": "[color=#ff0000][i][font=Trebuchet MS][size=5]This is not a \"mod\" per se; rather, this is a resource for modders.[/size][/font][/i][/color]\n<br />\n<br />First things first: [b]This is a \"Helper Bundle\", not a \"Framework[/b]\".\n<br />\n<br />What's the difference?\n<br />\n<br />A \"framework\" provides a complete, often opinionated, full-blown system to hide the underlying mechanism. It is almost invariably complex, and you need to follow its own well-defined procedure to perfrom things. If a feature/facility does not exist, you usually have to either extend the framework using the framework's development guidelines, or submit an Issue report to the maker so they can implement the facility in a way that meshes with the overall concept/design of the \"framework\".\n<br />\n<br />A clear -- and relevant -- example is the Harmony framework itself. You [i]can[/i] actually perform your own patching, but that's a very complex process that will require you to interact with .Net Framework's \"IL Interpreter\". Harmony hides all that behind its framework, so you don't have to go to the nitty-gritty low level of CIL manipulation.\n<br />\n<br />A \"helper bundle\" is, on the other hand, just a collection of [i]optional[/i] tools to help you use the underlying mechanism. A little veneer might exist to provide some 'convenience methods' in using the underlying mechanism, but overall you're still nearly directly using the underlying mechanism. You still have access to the low(er) level mechanisms themselves.\n<br />\n<br />For example, the [font=Courier New]InstructionsWalker[/font] class provided in this helper bundle. It does not hide how Harmony works; rather, it just provides a convenient way to search an array of instructions, providing convenience methods to (1) search for a pattern of CIL ops, (2) perform replacement of ops with assertations, and many others.\n<br />\n<br />Even the [font=Courier New]HarmonyPatcherHelper[/font] class does not hide the mechanism of Harmony; rather, it simplifies all the boilerplate code such as the [font=Courier New]try..catch[/font] protection, instantiation of [font=Courier New]MethodInfo[/font] and [font=Courier New]HarmonyMethod[/font] objects required by [font=Courier New]HarmonyInstance.Patch()[/font], and so on.\n<br />\n<br />A benefit of making this a \"helper bundle\" instead of a \"framework\", is that this strategy allows simple inclusion in your project(s):\n<br />[list=1]\n<br />[*]Copy the single file [font=Courier New]PatcherHelper.cs[/font] to your project's directory\n<br />[*]Add that file to the Project you're working on\n<br />[*]Add the statement [color=#6aa84f][b][font=Courier New]using PatcherHelper;[/font][/b][/color] to the top of your patcher code\n<br />[*]Done.\n<br />[/list]\n<br />\n<br />No need to download binaries or install exotic NuGet packages. Just a simple source-code inclusion. And since the source code is [b]MPL-2.0 licensed[/b], you're free to license the rest of your source code the way you want. (MPL-2.0 license applies to just that file only, and it does not preclude any kind of licenses -- including proprietary license -- to be applied to the whole project.)\n<br />\n<br />Most importantly, since this is a [b]source-code bundle[/b], it will NOT cause DLL hell due to different mods requiring different versions of PatcherHelper.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Installation[/size][/font][/b]\n<br />\n<br />As aforementioned, the process is simple:\n<br />[list=1]\n<br />[*]Download &amp; extract the .7z file provided\n<br />[i]or alternatively\n<br />[/i]Clone the repository to your hard disk\n<br />[*]Copy the [b][font=Courier New]PatcherHelper.cs[/font][/b] file to your project, into the directory where your [b][font=Courier New]ModEntry.cs[/font][/b] resides\n<br />[*]Add the statement  [color=#6aa84f][b][font=Courier New]using PatcherHelper;[/font][/b][/color] to the top of the .cs file where you want to use the PatcherHelper bundle\n<br />[*]Done.\n<br />[/list]\n<br />[color=#00ffff]Please note that the one uploaded here on Nexus [i][b]might not be the newest version[/b][/i]. The newest version always appear in the repository below first.[/color]\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Source Code\n<br />[/size][/font][/b][url=https://sourceforge.net/p/sdvmod-patcherhelper/code/ci/default/tree/]\n<br />Is available on SourceForge[/url], released under the [b]MPL-2.0 license[/b].\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Examples[/size][/font][/b]\n<br />\n<br />For the latest and greatest examples, please check [url=https://sourceforge.net/p/sdvmod-even-better-rng/code/ci/v2/tree/EvenBetterRNG/]this source code[/url], especially the following files in there:\n<br />[list]\n<br />[*][color=#ff7700][b][font=Courier New]EBRNG_Patcher.cs[/font][/b][/color] -- shows how to use the HarmonyPatcherQueue class\n<br />[*][b][font=Courier New][color=#ff7700]EBRNG_Patches.cs[/color][/font][/b] and files within [color=#ff7700][b][font=Courier New]Patches/[/font][/b][/color] -- shows how to use (1) the WantOpCache class, and (2) the WantOp factory methods\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8787",
+	"Version": "R74",
+	"Updated": "2021-07-06T14:54:16+00:00",
+	"Downloads": [
+		{
+			"Id": 41922,
+			"Type": "Main",
+			"DisplayName": "PatcherHelper R58",
+			"FileName": "PatcherHelper R58-8787-R58-1622997957.7z",
+			"Description": "Revision R58. [b]There are BREAKING changes compared to R39![/b] Please check the ChangeLog!\n<br /><br />In addition, there's a bug since R44 that has been fixed in R58.",
+			"Version": "R58",
+			"SizeInBytes": 11703,
+			"Uploaded": "2021-06-06T16:45:57+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "41922",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428610,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42029,
+			"Type": "Main",
+			"DisplayName": "PatcherHelper R65",
+			"FileName": "PatcherHelper R65-8787-R65-1623323335.7z",
+			"Description": "URGENT BUGFIX for R64",
+			"Version": "R65",
+			"SizeInBytes": 12247,
+			"Uploaded": "2021-06-10T11:08:55+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "42029",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428717,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42262,
+			"Type": "Main",
+			"DisplayName": "PatcherHelper R72",
+			"FileName": "PatcherHelper R72-8787-R72-1624042140.7z",
+			"Description": "WARNING: [b]POSSIBLE BREAKING CHANGE[/b]. See Changelog in the Description tab for major new things",
+			"Version": "R72",
+			"SizeInBytes": 13621,
+			"Uploaded": "2021-06-18T18:49:00+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "42262",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428950,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 42834,
+			"Type": "Main",
+			"DisplayName": "PatcherHelper R74",
+			"FileName": "PatcherHelper R74-8787-R74-1625583256.zip",
+			"Description": "Please see [b]Changelog[/b] in the Descriptions tab for changes since R74",
+			"Version": "R74",
+			"SizeInBytes": 15409,
+			"Uploaded": "2021-07-06T14:54:16+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "42834",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429522,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395475,
+		"UploaderId": 27024274,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

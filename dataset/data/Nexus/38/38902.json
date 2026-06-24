@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 38902,
+	"Name": "Cobalt Sans (Font Replacement)",
+	"Author": "ichortower",
+	"Description": "[size=3][b]Cobalt Sans[/b] is a font family designed to replace both the vanilla bold font (dialogue boxes, mail, some UI titles, etc.) and the two \"sprite fonts\" (inventory, tooltips, shop dialogue, etc.) which together provide the majority of user-facing text in Stardew Valley. The goal is to make the game fonts more palatable to me, personally. It's also intended to showcase what Font Smasher, the framework it uses, is capable of.\n<br />\n<br />The name isn't especially meaningful; I just like the word \"cobalt\".\n<br />\n<br />Also available [url=https://github.com/ichortower/CobaltSans]from GitHub[/url].\n<br />\n<br />\n<br />[size=5][b][u]Support[/u][/b][/size]\n<br />\n<br />Cobalt Sans includes full coverage for the characters supported by the bold (dialogue) font: the latin and cyrillic alphabets, the assorted symbols, and the suite of vanilla diacritics. This should cover everything *in use* in the sprite fonts, but it isn't everything that's actually in those fonts themselves.\n<br />\n<br />Put another way, these fonts should fully support English, French, Spanish, German, Italian, Portuguese, Russian, Turkish, and Hungarian. Please let me know if you find something I missed (or make a content pack to extend it: that's what Font Smasher is for!).\n<br />\n<br />In addition, Cobalt Sans adds glyphs for Ā, ā, Ē, ē, Ī, ī, Ō, ō, Ū, ū, Ŷ, and ŷ, which are the same glyphs added by Font Smasher's sample pack. These are only added if the fonts are enabled, though.\n<br />\n<br />\n<br />[size=5][b][u]Configuration[/u][/b][/size]\n<br />\n<br />Cobalt Sans includes config settings for each of its two font types (bold and sprite), and they can be tweaked independently.\n<br />\n<br />[list]\n<br />[*][b]Enable[/b]: Use this font.\n<br />[*][b]Numeral style[/b]: Choose between Text numerals (sometimes called \"old style\"), which vary in height and position, and Lining numerals, which are a consistent (tall) height.\n<br />[*][b]Letter style (a, g)[/b]: Use the default 'a' and 'g', or plainer, handwriting-style versions.\n<br />[/list]\n<br />I recommend configuring Cobalt Sans via [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url], since that uses the nicer names for the config options, gives you helpful hover text, and features a small specimen at the bottom so you can easily compare the settings.\n<br />\n<br />\n<br />[size=5][b][u]Compatibility[/u][/b][/size]\n<br />\n<br />This mod is compatible with the following interface recolor mods, and should automatically match whichever one you are using (at your convenience, please request or implement support for your favorite unlisted mod):\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/23987]Bog's Forest UI Interface[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/39379]Cat Valley (Interface)[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/13658]DaisyNiko's Earthy Interface[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/17323]Lavender Dreams UI Recolor[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25349]Lowkey Spring Interface Recolor[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/26211]Magical Valley (Interface)[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6166]Overgrown Flowery Interface[/url]\n<br />[/list]\n<br />If the colors look wrong, or if you have a different interface recolor installed, you can choose whichever recolor option in the config menu looks the best to you (click \"Save\" after choosing to apply the new color!).\n<br />\n<br />These fonts have slightly different metrics than the vanilla fonts: in particular, the bold font is significantly narrower (mostly by removing excess whitespace), so more text will fit in the same horizontal space than in the base game. This mostly shouldn't matter, since the game code typically measures strings before rendering them, but anything aligned using spaces is likely to look off if it is expecting the vanilla fonts.\n<br />\n<br />This mod both Loads and Edits (with Late priority, when matching a UI recolor mod) the [font=Courier New]LooseSprites/font_bold[/font] and [font=Courier New]LooseSprites/font_colored[/font] assets, on the assumption that if you have this mod installed, you want to see it.\n<br />\n<br />[size=5][b][u]Other Notes[/u][/b][/size]\n<br />\n<br />These fonts were designed by me using only the vanilla Stardew Valley fonts as a base and were made for this game specifically. Resemblance to any other fonts is a coincidence.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/38902",
+	"Version": "1.1.0",
+	"Updated": "2025-12-03T04:30:03+00:00",
+	"Downloads": [
+		{
+			"Id": 149724,
+			"Type": "Main",
+			"DisplayName": "CobaltSans-1.1.0",
+			"FileName": "CobaltSans-1.1.0-38902-1-1-0-1764736203.zip",
+			"Description": "Added support for seven popular interface recolors, for both bold and sprite fonts. Don't forget to update Font Smasher!\n<br />Also tweaked a few characters.",
+			"Version": "1.1.0",
+			"SizeInBytes": 286852,
+			"Uploaded": "2025-12-03T04:30:03+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.CobaltSans",
+					"DisplayName": "Cobalt Sans (font family)",
+					"Type": "ContentPack",
+					"RelativePath": "CobaltSans",
+					"Manifest": {
+						"Name": "Cobalt Sans (font family)",
+						"Description": "Replaces the default Latin fonts using Font Smasher.",
+						"Author": "ichortower",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "ichortower.FontSmasher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "ichortower.FontSmasherSamplePack",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:38902",
+							"GitHub:ichortower/CobaltSans"
+						],
+						"UniqueId": "ichortower.CobaltSans"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342536412,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342425590,
+		"UploaderId": 188952864,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

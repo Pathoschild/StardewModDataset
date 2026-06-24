@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 46564,
+	"Name": "Pockets",
+	"Author": "aedenthorn",
+	"Description": "[youtube]fa2pKOpTXA4[/youtube]\n<br />\n<br />\n<br />[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />This mod offers multiple types of pockets for shirts and pants that can be customized in size and placement:\n<br />\n<br />[list]\n<br />[*]Pocket types tied to specific clothing items[/*]\n<br />[*]Global pocket types for each individual clothing item[/*]\n<br />[*]Global pockets irrespective of which clothing item the player is wearing[/*]\n<br />[/list]\n<br />[b][size=5][u]Gameplay[/u][/size][/b]\n<br />\n<br />[size=4][b]Opening Pockets[/b][/size]\n<br />\n<br />There are three ways to open a pocket:\n<br />\n<br />[list]\n<br />[*]From the game menu's inventory page, if you hover over the player portrait in the right location, you will see a highlighted square indicating the existence of a pocket. Left clicking opens the pocket in place of the main player inventory.[/*]\n<br />[*]From the game menu's inventory page, pressing a pocket's designated hotkey (see below) will open or close that pocket.[/*]\n<br />[*]Hovering over the player when there is no open menu and pressing a pocket's hotkey will open the inventory page with the hotkey's pocket open.[/*]\n<br />[/list]\n<br />[b][size=4]Closing Pockets[/size][/b]\n<br />\n<br />To close a pocket, returning to the main inventory, either click on the player portrait's face or press the menu open key (E or Esc on keyboard).\n<br />\n<br />\n<br />[b][size=4]Transfering Items[/size][/b]\n<br />\n<br />You can transfer items from pocket to pocket, inventory to pocket, or pocket to inventory in two ways:\n<br />\n<br />[list]\n<br />[*]Pick up an item with the cursor, switch to the target pocket or main inventory, drop the item in a slot.[/*]\n<br />[*]Pick up an item with the cursor, hover over the target pocket indicator (or players face for main inventory) and press the right mouse button.[/*]\n<br />[/list]\n<br />[b][size=5][u]Defaults[/u][/size][/b]\n<br />\n<br />[b][size=4]Inventory[/size][/b]\n<br />\n<br />By default, each shirt has a single 3x3 pocket that covers the entire shirt, and each pants has two 2x2 pockets, one on the left and one on the right.\n<br />\n<br />Pocket inventory is by default tied to specific clothing, so if you switch pants, your pocket inventory changes.\n<br />\n<br />\n<br />[b][size=4]Hotkeys[/size][/b]\n<br />\n<br />Default hotkeys are:\n<br />\n<br />[list]\n<br />[*]LeftControl + L for the right pants pocket (because it's on the left side from your perspective)[/*]\n<br />[*]LeftControl + R for the left pants pocket (because it's on the right side from your perspective)[/*]\n<br />[*]LeftControl + S for the shirt pocket[/*]\n<br />[/list]\n<br />[b][size=5][u]Config[/u][/size][/b]\n<br />\n<br />[b][size=4]Basic Config[/size][/b]\n<br />\n<br />Basic configuration can be done using GMCM:\n<br />\n<br />[list]\n<br />[*]You can disable the need to hover over the player for hotkeys to work.[/*]\n<br />[*]You can turn on global default pockets so that, regardless of what the player is wearing, the same set of pockets is used.[/*]\n<br />[*]You can change the pocket indicator opacity and color.[/*]\n<br />[/list]\n<br />\n<br />[b][size=4]Advanced Config[/size][/b]\n<br />\n<br />The settings for the default pockets is in the config as well, but must be changed manually by editing the mod's config.json file (created after starting the game).\n<br />\n<br />Here's the default pocket settings in the config file:\n<br />\n<br />[code]\u00A0 \"DefaultPockets\": {\n<br />\u00A0 \u00A0 \"DefaultShirt\": {\n<br />\u00A0 \u00A0 \u00A0 \"ClothesType\": \"SHIRT\",\n<br />\u00A0 \u00A0 \u00A0 \"HotKey\": \"LeftControl + S\",\n<br />\u00A0 \u00A0 \u00A0 \"StartX\": 16,\n<br />\u00A0 \u00A0 \u00A0 \"StartY\": 36,\n<br />\u00A0 \u00A0 \u00A0 \"Width\": 32,\n<br />\u00A0 \u00A0 \u00A0 \"Height\": 24,\n<br />\u00A0 \u00A0 \u00A0 \"PocketSlots\": 9,\n<br />\u00A0 \u00A0 \u00A0 \"PocketRows\": 3\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \"DefaultRightPants\": {\n<br />\u00A0 \u00A0 \u00A0 \"ClothesType\": \"PANTS\",\n<br />\u00A0 \u00A0 \u00A0 \"HotKey\": \"LeftControl + L\",\n<br />\u00A0 \u00A0 \u00A0 \"StartX\": 16,\n<br />\u00A0 \u00A0 \u00A0 \"StartY\": 60,\n<br />\u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \"Height\": 20,\n<br />\u00A0 \u00A0 \u00A0 \"PocketSlots\": 4,\n<br />\u00A0 \u00A0 \u00A0 \"PocketRows\": 2\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \"DefaultLeftPants\": {\n<br />\u00A0 \u00A0 \u00A0 \"ClothesType\": \"PANTS\",\n<br />\u00A0 \u00A0 \u00A0 \"HotKey\": \"LeftControl + R\",\n<br />\u00A0 \u00A0 \u00A0 \"StartX\": 32,\n<br />\u00A0 \u00A0 \u00A0 \"StartY\": 60,\n<br />\u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \"Height\": 20,\n<br />\u00A0 \u00A0 \u00A0 \"PocketSlots\": 4,\n<br />\u00A0 \u00A0 \u00A0 \"PocketRows\": 2\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }[/code]\n<br />\n<br />[b]StartX[/b], [b]StartY[/b], [b]Width[/b] and [b]Height[/b] are relative to the portrait location on the inventory page and denote the highlight area for that pocket.\n<br />\n<br />[b]PocketSlots[/b] is the total number of item slots the pocket has, and [b]PocketRows[/b] determines how they will be laid out. Max should be 36 and 3 respectively.\n<br />\n<br />You will have to restart the game after changing the config.json file.\n<br />\n<br />\n<br />[u][b][size=5]Custom Pockets[/size][/b][/u]\n<br />\n<br />You can use Content Patcher to set custom pocket types for specific clothing items. Pockets set in this way will always be individual to each instance of that clothing item.\n<br />\n<br />Here is an example content.json file:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.Pockets/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"1007\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"RightPocket\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ClothesType\": 0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HotKey\": \"RightControl + L\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"StartX\": 16,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"StartY\": 36,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 24,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PocketSlots\": 12,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PocketRows\": 3\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"LeftPocket\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ClothesType\": 0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HotKey\": \"RightControl + R\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"StartX\": 32,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"StartY\": 36,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 24,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PocketSlots\": 12,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"PocketRows\": 3\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />This gives two pockets to the \"Green Overalls\" shirt item, one on the left and one on the right, each with 12 slots in a 4x3 grid.\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game. If you have [url=https://www.nexusmods.com/stardewvalley/mods/10505]GMCM Options[/url], you can also change the colors in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46564",
+	"Version": "0.1.0",
+	"Updated": "2026-05-22T23:43:00+00:00",
+	"Downloads": [
+		{
+			"Id": 168530,
+			"Type": "Main",
+			"DisplayName": "Pockets",
+			"FileName": "Pockets-46564-0-1-0-1779493380.zip",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 27223,
+			"Uploaded": "2026-05-22T23:43:00+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.Pockets",
+					"DisplayName": "Pockets",
+					"Type": "Smapi",
+					"RelativePath": "Pockets",
+					"Manifest": {
+						"Name": "Pockets",
+						"Description": "Pockets.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Pockets.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:46564"
+						],
+						"UniqueId": "aedenthorn.Pockets"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555218,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342433252,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

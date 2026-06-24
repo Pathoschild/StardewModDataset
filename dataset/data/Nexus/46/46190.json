@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 46190,
+	"Name": "All of Buffs",
+	"Author": "slpOff",
+	"Description": "[size=6]# All of Buffs[/size]\n<br />\n<br />`All of Buffs` changes how consumable buffs behave in Stardew Valley and adds an in-game editor for food and drink buff overrides.\n<br />\n<br />[size=5]## Features[/size]\n<br />\n<br />- Food buff stacking support.\n<br />- Per-item food and drink buff override editing in a custom in-game menu.\n<br />- Search and filter support in the custom menu.\n<br />- Optional fixed top-left buff grid.\n<br />- Optional minimized buff icons.\n<br />- Optional clockwise filled timer overlay.\n<br />\n<br />[size=5]## Requirements[/size]\n<br />\n<br />- SMAPI `4.0.0` or newer.\n<br />- Generic Mod Config Menu is optional, but recommended.\n<br />\n<br />[left][size=5]## GMCM Options[/size][/left]\n<br />[left][/left]\n<br />[size=4]### Food Buffs[/size]\n<br />\n<br />`Enable food buff stacking`\n<br />\n<br />- Lets food buffs stack with other food buffs instead of replacing the previous one.\n<br />- This affects food-style consumable buffs. It is the main gameplay behavior toggle for the mod.\n<br />\n<br />`Auto-remove missing item overrides`\n<br />\n<br />- Automatically deletes override entries for foods or drinks that no longer exist.\n<br />- This is useful when a content mod adds custom consumables and is later removed.\n<br />- When enabled, invalid entries are removed from `consumable-buff-overrides.json` during sync.\n<br />- When disabled, invalid entries are kept in the JSON file, but they are not shown or used in-game.\n<br />\n<br />`Open buff menu key`\n<br />\n<br />- Opens the in-game custom menu for food and drink override editing.\n<br />- Default key: `X`.\n<br />\n<br />[size=4]### Buff Display[/size]\n<br />\n<br />`Use fixed top-left display`\n<br />\n<br />- Draws stacked food buffs in a custom grid near the top-left of the screen.\n<br />- Disable this if you want to rely on Stardew Valley's default buff UI only.\n<br />\n<br />`Minimize fixed icons`\n<br />\n<br />- Shrinks the icons used in the custom fixed grid.\n<br />- This only affects the custom top-left display.\n<br />\n<br />`Minimized icon scale`\n<br />\n<br />- Controls how much minimized icons are reduced.\n<br />- Available values:\n<br />- `1/2`\n<br />- `1/3`\n<br />- `1/4`\n<br />\n<br />`Show clockwise timer overlay`\n<br />\n<br />- Draws a filled countdown overlay on buff icons.\n<br />- The overlay shrinks clockwise like a clock face.\n<br />\n<br />`Timer overlay opacity`\n<br />\n<br />- Controls overlay transparency from `0%` to `100%`.\n<br />- Lower values make the icon easier to see underneath.\n<br />\n<br />[size=5]## Custom Menu[/size]\n<br />\n<br />Press the configured hotkey, default `X`, while in-game to open the custom food/drink override menu.\n<br />\n<br />[size=4]### Main Screen[/size]\n<br />\n<br />- Items are shown as paged cards in a `4 x 3` grid.\n<br />- Each card shows:\n<br />- item sprite\n<br />- item name\n<br />- Food and drink tabs are separated.\n<br />\n<br />[size=4]### Search[/size]\n<br />\n<br />- Use the search box at the top-right.\n<br />- Search accepts:\n<br />- localized item name\n<br />- item ID / qualified item ID\n<br />- Example matches:\n<br />- `Coffee`\n<br />- `커피`\n<br />- `(O)395`\n<br />\n<br />[size=4]### Buff Filter[/size]\n<br />\n<br />- Filter buttons use buff icons.\n<br />- Multiple filters can be selected at the same time.\n<br />- Filter behavior is additive: an item is shown if it has any matching buff among the selected filters.\n<br />- The `All` checkbox clears every active filter.\n<br />\n<br />[size=4]### Item Editor Popup[/size]\n<br />\n<br />Click any item card to open its override editor popup.\n<br />\n<br />Each buff row is:\n<br />\n<br />- `Enabled`\n<br />- `Buff name`\n<br />- `Value`\n<br />- `Duration`\n<br />\n<br />Meaning:\n<br />\n<br />- `Enabled`: whether that buff is applied for the selected item.\n<br />- `Buff name`: the buff category, such as Speed, Luck, Mining, Attack, etc.\n<br />- `Value`: numeric buff strength.\n<br />- `Duration`: duration in real-time seconds.\n<br />\n<br />Duration notes:\n<br />\n<br />- You can enter a number of seconds.\n<br />- You can enter `allday` for all-day duration.\n<br />\n<br />[size=4]### Supported Buff Types[/size]\n<br />\n<br />- Farming\n<br />- Fishing\n<br />- Mining\n<br />- Luck\n<br />- Foraging\n<br />- Max Stamina\n<br />- Magnetic Radius\n<br />- Speed\n<br />- Defense\n<br />- Attack\n<br />- Buff Duration Added\n<br />\n<br />`Buff Duration Added` increases remaining finite buff time instead of creating a new normal buff icon.\n<br />\n<br />[size=5]## Files[/size]\n<br />\n<br />`config.json`\n<br />\n<br />- Stores global mod settings and hotkeys.\n<br />\n<br />`consumable-buff-overrides.json`\n<br />\n<br />- Stores per-item food and drink override values.\n<br />\n<br />[size=5]## Notes[/size]\n<br />\n<br />- The custom menu only appears in-game.\n<br />- GMCM is used for global settings and the hotkey only.\n<br />- If code changes are rebuilt while the game is already running, restart the game to fully reload the mod assembly.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46190",
+	"Version": "1.1.2",
+	"Updated": "2026-06-18T02:44:19+00:00",
+	"Downloads": [
+		{
+			"Id": 171657,
+			"Type": "Main",
+			"DisplayName": "AllofBuffs",
+			"FileName": "45/24/c0/4524c023-06bd-456b-8b90-d5c27794f8a2",
+			"Description": "please let me know your bugs:)",
+			"Version": "1.1.2",
+			"SizeInBytes": 256840,
+			"Uploaded": "2026-06-18T02:44:19+00:00",
+			"Mods": [
+				{
+					"Id": "slO.AllofBuffs",
+					"DisplayName": "All of Buffs",
+					"Type": "Smapi",
+					"RelativePath": "AllofBuffs",
+					"Manifest": {
+						"Name": "All of Buffs",
+						"Description": "Adds configurable buff behavior changes, starting with stacked food buffs.",
+						"Author": "slO",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AllofBuffs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:46190"
+						],
+						"UniqueId": "slO.AllofBuffs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342558345,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432878,
+		"UploaderId": 231048348,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

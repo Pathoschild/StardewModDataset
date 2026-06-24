@@ -1,0 +1,62 @@
+{
+	"Site": "Nexus",
+	"Id": 1402,
+	"Name": "Customizable Cart Redux",
+	"Author": "Sakorona",
+	"Description": "[size=5][b]Customizable Cart Redux[/b]\n<br />[/size]\n<br />This mod is inspired by yyeahdude. It allows you to set the chances of the traveling cart appearing per day (by setting it from 0 to 1, for example, a 25% chance is .25), the items it contains, and how much it is. \n<br />\n<br />[b][size=3][u]Requires:[/u][/size][/b]\n<br />SMAPI 3.8+\n<br />SDV 1.5+\n<br />\n<br />[i][u][b]WARNING UPDATING TO 1.4[/b][/u][/i]\n<br />[i][b]The API has changed. Any mods using this should use the newer API[/b][/i]\n<br />\n<br />[b][u]Install Instructions[/u][/b]\n<br />Unzip the archive into the Mods folder\n<br />\n<br />[u][b]Changelog[/b][/u]\n<br />[url=https://github.com/Sakorona/SDVMods/blob/master/CustomizableCartRedux/CHANGELOG.md]Changelog[/url]\n<br />\n<br />[b][u]Multiplayer Behavior[/u][/b]\n<br />This mod will only work for the main player (i.e the host) in an MP game. \n<br />\n<br />[b][u]Current Config Options[/u][/b]\n<br />To configure, open up `config.json` in your mod folder.\n<br />\n<br />- Monday through SundayChance: sets the odds it appears that day of the week\n<br />- AppearOnlyAtStartOfSeason: Will appear only on day 1, regardless of any other settings.\n<br />- AppearOnlyatEndOfSeason: Will appear only on day 28, regardless of any other settings\n<br />- AppearOnlyatStartAndEndOfSeason: Will appear only day 1 and 28, regardless of any other settings\n<br />- AppearOnlyEveryOtherWeek: Will only appear on days 8-14 and 22-28 of the season\n<br />- Use Vanilla Max: The vanilla game stops looking for items at 790. Setting this to false allows PPJA assets\n<br />- Opening Time: The time the cart opens in the morning\n<br />- Closing Time: The time the cart closes in the evening. Use 2400 notation.\n<br />- AmountOfItems: default 12, but can be altered down or up to control how many items appear. Note: The mod will by default set any numbers less than 3 to 3.\n<br />- BlacklistedItems - These items will not appear in the cart. Note: This applies over any items added to AllowedItems.\n<br />- AllowedItems - These items will be permitted to appear in the cart. (This is primarily used to override the prohibited categories.)\n<br />- UseCheaperPricing: Uses a less expensive method of determining the value.\n<br />\n<br />\n<br />[u][b]API documentation[/b][/u]\n<br />\n<br />This mod provides an API if people want to add items to the cart. \n<br />\n<br />The interface looks like:\n<br />\n<br />\u00A0\u00A0\u00A0 public interface ICustomizableCart\n<br />\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 event EventHandler CartProcessingComplete;\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 void AddItem(Item item, int price, int quality);\n<br />\u00A0\u00A0\u00A0 }\n<br />\n<br />\n<br />[u][i][b]Important Note[/b][/i][/u]: `AddItem` is meant for more advanced uses outside of the handler, but we strongly recommend you call it only with the handler.\n<br />The API defaults the last to 1, but it can be passed in if you want a different number. This interface is from 1.2.2+\n<br />\n<br />In order to add items, subscribe to the CartProcessingComplete event, and put your logic for adding items there.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/1402",
+	"Version": "1.4.2",
+	"Updated": "2020-12-26T15:32:49+00:00",
+	"Downloads": [
+		{
+			"Id": 33760,
+			"Type": "Main",
+			"DisplayName": "Customizable Cart Redux",
+			"FileName": "Customizable Cart Redux-1402-1-4-2-1608996769.zip",
+			"Description": "Update for SDV 1.5 features.",
+			"Version": "1.4.2",
+			"SizeInBytes": 75097,
+			"Uploaded": "2020-12-26T15:32:49+00:00",
+			"Mods": [
+				{
+					"Id": "KoihimeNakamura.CCR",
+					"DisplayName": "Customizable Cart Redux",
+					"Type": "Smapi",
+					"RelativePath": "CustomizableCartRedux",
+					"Manifest": {
+						"Name": "Customizable Cart Redux",
+						"Description": "Allows you to alter the chances of the traveling cart appearing. Credit to Yyeahdude for the original idea.",
+						"Author": "Sakorona",
+						"Version": "1.4.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "CustomizableCartRedux.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1402"
+						],
+						"UniqueId": "KoihimeNakamura.CCR",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "SDVMods",
+								"User": "Sakorona",
+								"Directory": "_releases",
+								"ModFolder": "CustomizableCartRedux"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342420448,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342388090,
+		"UploaderId": 2920064,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 3214,
+	"Name": "Wear More Rings",
+	"Author": "bcmpinc",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Configure the amount of ring slots in your inventory. By default adds 4 additional ring slots.\n<br />\n<br />[size=4][b]Config[/b][/size]\n<br />[i]Note: run Stardew Valley once with this mod enabled to generate the [code]config.json[/code] file.[/i][list]\n<br />[*] [code]Rings[/code]: Number of ring slots available. Normally this is 2, this mod increases it to 6. Max = 20.\n<br />[*] [code]BonusTrinket[/code]: Whether unlocking trinkets gives you two trinket slots instead of one.\n<br />[/list][size=4][b]Console Commands[/b][/size][list]\n<br />[*] [code]player_openforge[/code]: Opens the forge menu.\n<br />[*] [code]world_destroyringchests[/code]: Removes the chests used for storing player's rings. Any items contained therein will be dropped at your feet.\n<br />[/list][size=4][b]Dependencies[/b][/size]\n<br />This mod requires the following mods to be installed:[list]\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\n<br />[*] [url=https://www.nexusmods.com/stardewvalley/mods/3213]StardewHack[/url]\n<br />[/list][size=4][b]Known bugs[/b][/size]\n<br />Please report bugs on [url=https://github.com/bcmpinc/StardewHack/issues]GitHub[/url].[list]\n<br />[*] The forge menu does not show your ring slots.\n<br />[*] This mod does not support android / mobile.\n<br />[*] This mod might be incompatible with [url=https://www.nexusmods.com/stardewvalley/mods/2543]Multiplayer Time[/url]. Using both will cause save game corruption. This can (hopefully) be fixed by uninstalling either of these mods. If you keep Multiplayer Time, the mod should resolve the issue automatically. If you use Wear More Rings you need to execute the [code]player_resetmodifiers[/code] console command manually.\n<br />[*] This mod is incompatible with [url=https://www.nexusmods.com/stardewvalley/mods/8981]BalancedCombineManyRings[/url] mod.\n<br />[*] Ring Slots in the Inventory screen can overlap with other text in the UI, especially with a high [code]Rings[/code] setting. This won't be fixed.\n<br />[/list][size=4][b]API[/b][/size]\n<br />Mods adding additional rings most should work out of the box. For backwards compatibility this mod provides an API to access the equipped rings: [url=https://github.com/bcmpinc/StardewHack/blob/master/WearMoreRings/IWearMoreRingsAPI.cs]IWearMoreRingsAPI[/url].\n<br />\n<br />[size=4][b]Changes[/b][/size]\n<br />[i]7.9[/i][list]\n<br />[*] Added German translation.\n<br />[/list][i]7.8[/i][list]\n<br />[*] Fixed issue where loading an existing save that did not use WMR yet, would cause equipped rings to be duplicated.\n<br />[/list][i]7.7[/i][list]\n<br />[*] Reduce default number of rings to 6.\n<br />[*] Trinkets now show below rings if ting count is &lt;= 6.\n<br />[/list][i]7.6:[/i][list]\n<br />[*] Compatibility with SDV 1.6.11.\n<br />[/list][i]7.5:[/i][list]\n<br />[*] French, Turkish &amp; Chinese translations.\n<br />[/list][i]7.4:[/i][list]\n<br />[*] Fix issue with equipping rings removing the effects and unequipping adding them.\n<br />[/list][i]7.3:[/i][list]\n<br />[*] Fix issue with ring effects (e.g. magnetism) not being applied.\n<br />[/list][i]7.2:[/i][list]\n<br />[*] Fixed compatibility issue with SpaceCore mod.\n<br />[/list][i]7.1:[/i][list]\n<br />[*] Updated for Stardew Valley 1.6\n<br />[*] Added config option for bonus trinket (untested).\n<br />[*] Localization support.\n<br />[*] Russian &amp; Ukrainian translation\n<br />[/list][i]6.4:[/i][list]\n<br />[*] Fixed null pointer error when saving in generic mod config menu.\n<br />[/list][i]6.3:[/i][list]\n<br />[*] Name the combined ring used for ring storage to clearly communicate its purpose.\u00A0\n<br />[*] Prevent crash caused by equipping the combined ring inside of itself.\n<br />[*] Add support for local co-op (aka split-screen).\n<br />[*] Removed ring slots from the forge menu so the player cannot accidentally unequip the container ring there.\n<br />[/list][i]6.2:[/i][list]\n<br />[*] Added [code]player_dismantle_nested[/code] command to get rid of nested combined rings, prior to accessing the forge.\n<br />[*] Fixed issue with re-joining in multiplayer creating nested combined rings.\n<br />[/list][i]6.1:[/i][list]\n<br />[*] Re-added the [url=https://github.com/bcmpinc/StardewHack/blob/master/WearMoreRings/IWearMoreRingsAPI.cs]IWearMoreRingsAPI[/url].\n<br />[*] Rings no longer drop during migration.\n<br />[*] If the player has rings in slots that are not accessible due to a lower ring capacity, these rings are dropped.\n<br />[/list][i]6.0:[/i][list]\n<br />[*] Rewrite most of the mod for better multiplayer support. It now uses Combined Rings rather than a hidden chest for ring storage. Note that after the update you have to manually re-equip your rings.\n<br />[*] Update [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] bindings.\n<br />[*] Added [code]world_destroyringchests[/code] command to destroy any remaining old rings chests.\n<br />[*] Removed the API as it's no longer needed.\n<br />[/list][i]4.0:[/i][list]\n<br />[*] Added integration for [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />[*] Add 64-bit support\n<br />[/list][i]3.4:[/i][list]\n<br />[*] Rearranged ring slots. The right ring is now positioned in the first column, second from the top.\n<br />[*] Added config parameter [code]Rings[/code] for the amount of ring slots. Anything above 8 will result in text overlaying the ring slots.\n<br />[/list][i]3.3:[/i][list]\n<br />[*] Hide the chest in the [url=https://www.nexusmods.com/stardewvalley/mods/518]Chests Anywhere[/url] mod.\n<br />[*] Added the [code]player_resetmodifiers[/code] command for people who added/removed rings from the hidden chest using Chests Anywhere to fix any issues this might have caused.\n<br />[/list][i]3.2:[/i][list]\n<br />[*] Fixed issue with some effects of combined rings not being applied.\n<br />[/list][i]3.1:[/i][list]\n<br />[*] Updated for Stardew Valley 1.5.\n<br />[*] Added two extra ring slots.\n<br />[*] Mod no longer modifies the network protocol.\n<br />[*] Rings are now stored in a way that works for combined and modded rings.\n<br />[/list][i]3.0:[/i][list]\n<br />[*] Updated for Stardew Valley 1.4.4.\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3214",
+	"Version": "7.9",
+	"Updated": "2025-05-28T19:27:28+00:00",
+	"Downloads": [
+		{
+			"Id": 133326,
+			"Type": "Main",
+			"DisplayName": "Wear More Rings",
+			"FileName": "Wear More Rings-3214-7-9-1748460448.zip",
+			"Description": "SMAPI 4.1.10 with Stardew Valley 1.6.15 build 24356",
+			"Version": "7.9",
+			"SizeInBytes": 30973,
+			"Uploaded": "2025-05-28T19:27:28+00:00",
+			"Mods": [
+				{
+					"Id": "bcmpinc.WearMoreRings",
+					"DisplayName": "Wear More Rings",
+					"Type": "Smapi",
+					"RelativePath": "WearMoreRings",
+					"Manifest": {
+						"Name": "Wear More Rings",
+						"Description": "Adds additional ring slots to your inventory.",
+						"Author": "bcmpinc",
+						"Version": "7.9.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WearMoreRings.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "bcmpinc.StardewHack",
+								"MinimumVersion": "7.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3214"
+						],
+						"UniqueId": "bcmpinc.WearMoreRings"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342520014,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389902,
+		"UploaderId": 58117611,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

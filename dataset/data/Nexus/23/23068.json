@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 23068,
+	"Name": "Cellar Hatch",
+	"Author": "ferngull",
+	"Description": "I liked the idea of the [url=https://www.nexusmods.com/stardewvalley/mods/14055]Cellar Door[/url] mod by [url=https://www.nexusmods.com/stardewvalley/users/3452690?tab=user+files]NotOnLand[/url] but unfortunately that mod no longer works as DGA is not supported by 1.6, so I made this mod. It functions in game basically the same as NotOnLand's mod, but uses Content Patcher and SpaceCore instead of DGA. \n<br />\n<br />[size=4][b]Instructions:[/b][/size]\n<br />\n<br />1. Download Cellar Hatch, unzip it and put the unzipped file in your mods folder.\n<br />\n<br />[u][b][size=4]Review config options in Generic Mod Config Menu [/size][/b][size=4](or edit the values in config.json) [b]before using:[/b][/size][/u]\n<br />\n<br />2. When you want the items to be available for purchase in Robin's shop, check the box next to \"Stock items\" in GMCM (or set \"Stock items\" to \"true\" in config.json). \n<br />Note: You do not need to have the cellar farmhouse upgrade to purchase and use the hatch and ladder. However, if you do not have the cellar upgrade, you must use the ladder to exit the cellar. If you try using the stairs before you have the cellar upgrade you will get stuck and will have to use a debug warp command in SMAPI to get unstuck.\n<br />\u00A0\u00A0 \u00A0*After purchasing the hatch and ladder, I recommend that you uncheck the box next to \"Stock items\" (or set \"Stock items\" to \"false\" in config.json) so that the items wont spawn daily in Robin's shop inventory and take up space there.\n<br />\n<br />3. The hatch and ladder sprites are available in a vanilla color and a VPR recolor (credit to [url=https://www.nexusmods.com/stardewvalley/users/91802318?tab=user+files]grapeponta[/url]'s amazing [url=https://www.nexusmods.com/stardewvalley/mods/6367]Vibrant Pastoral Recolor[/url] mod for the assets!). Choose either \"vanilla\" or \"VPR\" in GMCM (or set \"Color\" to \"vanilla\" or \"VPR\" in config.json).\n<br />\n<br />4. You can choose the orientation of the hatch: if you want the hatch to face to the left or down, choose \"left &amp; down\" in GMCM (or set \"Orientation\" to \"left &amp; down\" in config.json). If you want the hatch to face to the right or up, choose \"right &amp; up\" in GMCM (or set \"Orientation\" to \"right &amp; up\" in config.json)\n<br />\n<br />5. You can choose to have the [b]hatch[/b] [b]warp you to the left or to the right of the cellar stairs in GMCM[/b] (or set \"Warp to cellar\" to \"left of cellar stairs\" or \"right of cellar stairs\" in config.json). \n<br />\u00A0\u00A0 \u00A0*I recommended that you place the ladder in the corresponding spot in the cellar for immersion. So if you choose to have the hatch warp you to the left of the cellar stairs, place the ladder to the left of the cellar stairs.\n<br />\n<br />6. You can choose to have the [b]ladder warp you next to the upper left or upper right corner outside the farmhouse (for the Standard, Riverland, Forest, Hill-top, Wilderness, Four-Corners and Beach farms) in GMCM[/b] (or set \"Warp to farm\" to \"upper left farmhouse exterior\" or \"upper right farmhouse exterior\" in config.json). \n<br />\u00A0\u00A0 \u00A0*I recommend that you place the hatch near the corresponding spot outside the farmhouse for immersion. So if you choose to have the ladder warp you next to the upper left corner outside the farmhouse, place the hatch near the upper left corner of the farmhouse.\n<br />\u00A0\u00A0 \u00A0*If you're playing on the [b]Meadowlands farm[/b] and want to warp next to the upper left or upper right corner outside the farmhouse, make sure to [b]use the \"Warp to farm\": \"upper left Meadowlands farmhouse\" or \"upper right Meadowlands farmhouse\"[/b] options.\n<br />\n<br />[b][size=4]Compatibility:[/size][/b]\n<br />\n<br />This mod should be compatible with any mod that alters the farm and/or cellar maps, but you may want to alter the coordinates for the warp locations, especially if the farmhouse on your map is in another location compared to the vanilla farms and/or you're using a mod that changes the layout of the cellar.\n<br />\n<br />Setting custom warp coordinates:\n<br />[spoiler] [code]Hatch:\n<br />\n<br />\u00A0\u00A0 \u00A0If you want the hatch to warp you to a location of your choosing, go to the Cellar Hatch mod folder and open the content.json file with a text editor like Notepad++ or Sublime (you can download either for free). Scroll down to where you find this string and follow the instructions:\n<br />\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Warp to cellar\": \"custom\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"{{ModId}}_CellarHatch\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"TileProperties\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"0, 0\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Buildings\": {\n<br />//You can change where the hatch warps you\n<br />//In game, stand where you want to warp to in the cellar and type \" debug \n<br />ppp \" (dont' include the quotations) into SMAPI and hit enter to get \n<br />your desired coordinates\n<br />//Make note of the coordinates and close the game \n<br />//Replace the numbers below in \"Warp 7 7 Cellar\" with the numbers from your desired coordinates\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"Warp 7 7 Cellar\",\n<br />\n<br />Dont change anything else! Save your changes and close the text editor. Now when you select \"custom\" for \"Warp to cellar\" in GMCM (or set \"Warp to cellar\" to \"custom\" in config.json) the hatch will warp you to your chosen location in the cellar.\n<br />\n<br />Ladder:\n<br />\n<br />\u00A0\u00A0 \u00A0If you want the ladder to warp you to a location of your choosing, go to the Cellar Hatch mod folder and open the content.json file with a text editor like Notepad++ or Sublime (you can download either for free). Scroll down to where you find this string and follow the instructions:\n<br />\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Warp to farm\": \"custom\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Entries\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"{{ModId}}_CellarLadder\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"TileProperties\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"0, 0\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Buildings\": {\n<br />//You can change where the ladder warps you\n<br />//In game, stand where you want to warp to on the farm and type \" debug ppp \"\n<br /> into SMAPI (dont' include the quotations) and hit enter to get your \n<br />desired coordinates\n<br />//Make note of the coordinates and close the game \n<br />//Replace the numbers in \"Warp 70 12 Farm\" below with the numbers from your desired coordinates\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"Warp 70 12 Farm\"\n<br />\n<br />Dont change anything else! Save your changes and close the text editor. Now when you select \"custom\" for \"Warp to farm\" in GMCM (or set \"Warp to farm\" to \"custom\" in config.json) the ladder will warp you to your chosen location on the farm.\n<br />[/code][/spoiler]\n<br />This is my first mod and while I've tested it pretty thoroughly, it's very possible I missed something. I tried many different configurations of the hatch and ladder and this seems to be the most optimal in terms of configuration and offering compatibility with other mods that alter the farm and/or cellar maps. However, if you have any questions, comments, suggestions, or notice any bugs, please don't hesitate to let me know!\n<br />\n<br />Note: *I haven't tested the items outside the farm map*",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/23068",
+	"Version": "0.0.3",
+	"Updated": "2024-04-23T07:59:02+00:00",
+	"Downloads": [
+		{
+			"Id": 94735,
+			"Type": "Main",
+			"DisplayName": "Cellar Hatch",
+			"FileName": "Cellar Hatch-23068-0-0-3-1713859142.zip",
+			"Description": "fixed a typo",
+			"Version": "0.0.3",
+			"SizeInBytes": 8246,
+			"Uploaded": "2024-04-23T07:59:02+00:00",
+			"Mods": [
+				{
+					"Id": "ferngull.CellarHatch",
+					"DisplayName": "Cellar Hatch",
+					"Type": "ContentPack",
+					"RelativePath": "CellarHatch.0-0-3",
+					"Manifest": {
+						"Name": "Cellar Hatch",
+						"Description": "Adds items you can purchase and use to access the cellar directly from the farm.",
+						"Author": "ferngull",
+						"Version": "0.0.3",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "ferngull.CellarHatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342481423,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342409756,
+		"UploaderId": 141119963,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

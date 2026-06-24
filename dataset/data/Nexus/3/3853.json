@@ -1,0 +1,101 @@
+{
+	"Site": "Nexus",
+	"Id": 3853,
+	"Name": "Content Patcher Animations",
+	"Author": "spacechase0",
+	"Description": "[b]Content Patcher Animations[/b] lets you animate textures in Content Patcher with its [font=Courier New]EditImage[/font] action.\n<br />\n<br />[b][size=5]Install[/size][/b]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].\n<br />[*]Unzip the mod folder into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[b][size=5]Use[/size][/b]\n<br />[b][size=3]For players[/size][/b]\n<br />Just install the mod and it'll work automatically for content packs that use it.\n<br />\n<br />[b][size=3]For mod authors[/size][/b]\n<br />[list=1]\n<br />[*]Create a content pack for [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].\n<br />[*]Add an [font=Courier New]EditImage[/font] patch for the image you want to animate.\n<br />[*]Give the patch a unique [font=Courier New]LogName[/font] value.\n<br />[*]Add these two fields to your patch:[list]\n<br />[*][font=Courier New]AnimationFrameTime[/font] is the number of ticks between each frame (in game ticks, which is 1/60thof a second);\n<br />[*][font=Courier New]AnimationFrameCount[/font] is the number of frames.\n<br />[/list]\n<br />[/list]All frames must be next to each other horizontally in the same [font=Courier New]FromFile[/font] image.\n<br />\n<br />See the optional files for an example content pack.\n<br />\n<br />[b][size=5]Compatibility[/size][/b]\n<br />Compatible with Stardew Valley 1.5.5+ on Linux/macOS/Windows, both single-player and multiplayer.\n<br />\n<br />[b][size=5]See also[/size][/b]\n<br />[list]\n<br />[*][url=https://github.com/spacechase0/StardewValleyMods/blob/develop/ContentPatcherAnimations/docs/release-notes.md#release-notes]Release notes[/url]\n<br />[*][url=https://github.com/spacechase0/StardewValleyMods]Source code[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3853",
+	"Version": "1.2.4",
+	"Updated": "2022-10-29T23:03:41+00:00",
+	"Downloads": [
+		{
+			"Id": 16226,
+			"Type": "Optional",
+			"DisplayName": "ContentPatcherAnimationTest.zip",
+			"FileName": "ContentPatcherAnimationTest.zip-3853-1-0-0-1556651668.zip",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 3576,
+			"Uploaded": "2019-04-30T19:14:28+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.AnimationTest",
+					"DisplayName": "Animation Test",
+					"Type": "ContentPack",
+					"RelativePath": "[CP-A] Animation Test",
+					"Manifest": {
+						"Name": "Animation Test",
+						"Description": "test",
+						"Author": "spacechase0",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.10.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.6.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "spacechase0.AnimationTest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342402914,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 62104,
+			"Type": "Main",
+			"DisplayName": "Content Patcher Animations 1.2.4",
+			"FileName": "Content Patcher Animations 1.2.4-3853-1-2-4-1667084621.zip",
+			"Description": "SMAPI deprecation fixes.",
+			"Version": "1.2.4",
+			"SizeInBytes": 114307,
+			"Uploaded": "2022-10-29T23:03:41+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.ContentPatcherAnimations",
+					"DisplayName": "Content Patcher Animations",
+					"Type": "Smapi",
+					"RelativePath": "ContentPatcherAnimations",
+					"Manifest": {
+						"Name": "Content Patcher Animations",
+						"Description": "Lets Content Patcher packs animate textures.",
+						"Author": "spacechase0",
+						"Version": "1.2.4",
+						"MinimumApiVersion": "3.13.0",
+						"EntryDll": "ContentPatcherAnimations.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.24.6",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Platonymous.ScaleUp",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3853"
+						],
+						"UniqueId": "spacechase0.ContentPatcherAnimations"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448792,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390541,
+		"UploaderId": 34250790,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

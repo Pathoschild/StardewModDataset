@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 21466,
+	"Name": "ZelWorld - custom world music",
+	"Author": "zelinknilez",
+	"AuthorLabel": "zelink",
+	"Description": "[center][font=Trebuchet MS][size=5][b]You can customize the music that plays anywhere you want!\n<br />[/b][/size][/font]with simple JSON[/center]\n<br />[center][size=4]\uFEFFIf you have any questions, feel free to ask.[/size][/center]\n<br />\n<br />1. Go to ZelWorld&#92;assets(there will be sample files will be applied to FarmHouse(F for day, F2 for night) and Backwoods(same as FarmHouse but G and G2)).\n<br />[url=https://imgbb.com/][img]https://i.ibb.co/sH3GRCg/asdfasdf.png[/img]\n<br />\n<br />[/url]2. Add the wav files you want to hear:\n<br />[url=https://imgbb.com/][img]https://i.ibb.co/YWHNBgd/Kakao-Talk-20240331-211255384.png[/img]\n<br />\n<br />[/url]3. Open the content.json file.\n<br />\n<br />4. Modify the content.json file in the following format.\n<br />[code]{\n<br />   \uFEFF\"Name\": \"Woods\",\n<br />   \uFEFF\"Day\": [ \"Woods\", \"Woods2\" ],\n<br />   \uFEFF\"Night\": [ \"Woods2\" ],\n<br />   \uFEFF\"IgnoredByRain\": true\n<br />}\n<br />[/code]Copy &amp; paste this code right after\u00A0\"IgnoredByRain\": true[b]\u00A0}, (you must add a comma after a pair of brackets)[/b]\u00A0and edit:\n<br />\n<br />[list]\n<br />[*][size=3]\"Name\":[b] \"Woods\"[/b]\u00A0[/size]\n<br />[/list]-&gt; your location name (you can find the name of the location [url=http://stardewvalleywiki.com/Modding:Location_data#Location_names]here[/url])\n<br />[list]\n<br />[*][size=3]\"Day\": [ [b]\uFEFF\"Woods\"[/b], [b]\"Woods2\"[/b] ][/size]\n<br />[/list]-&gt;\u00A0your wav file name(without .wav)\u00A0[b]There can be one or multiple items.[/b]\u00A0If there are multiple items, random music will be selected every day.\n<br />[list]\n<br />[*][size=3]\"Night\": [ [b]\"Woods2\"[/b] ]\u00A0[/size]\n<br />[/list]-&gt; your wav file name(without .wav)\u00A0[b]There can be one or multiple items.[/b]\u00A0If there are multiple items, random music will be selected every day.\n<br />[list]\n<br />[*][size=3]\"IgnoredByRain\": [/size][b][size=3]true[/size][/b]\n<br />[/list]-&gt; [Optional, default false] whether the sound of rain will play instead of music when it rains. (true/false, doesn't need\u00A0quotations)\n<br />\n<br />As a result, you'll get the JSON file like this:\n<br />[code]\uFEFF{\n<br />\u00A0 \u00A0 \"Places\": [\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Name\": \"FarmHouse\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Day\": [ \"F\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Night\": [ \"F2\" ]\n<br />\u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Name\": \"Backwoods\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Day\": [ \"G\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Night\": [ \"G2\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"IgnoredByRain\": true\n<br />\u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Name\": \"Woods\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Day\": [ \"Woods\", \"Woods2\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Night\": [ \"Woods2\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"IgnoredByRain\": true\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}\n<br />[/code][u][center][size=4]\n<br />That's all!\n<br />You can add as many locations as you want.[/size][/center][/u]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21466",
+	"Version": "1.0.0",
+	"Updated": "2024-04-01T08:18:17+00:00",
+	"Downloads": [
+		{
+			"Id": 87849,
+			"Type": "Main",
+			"DisplayName": "ZelWorld",
+			"FileName": "ZelWorld-21466-1-0-0-1711959497.zip",
+			"Description": "main",
+			"Version": "1.0.0",
+			"SizeInBytes": 92431097,
+			"Uploaded": "2024-04-01T08:18:17+00:00",
+			"Mods": [
+				{
+					"Id": "zelink.ZelWorld",
+					"DisplayName": "ZelWorld",
+					"Type": "Smapi",
+					"RelativePath": "ZelWorld",
+					"Manifest": {
+						"Name": "ZelWorld",
+						"Description": "Adds custom music",
+						"Author": "zelink",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "ZelWorld.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21466"
+						],
+						"UniqueId": "zelink.ZelWorld"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342474537,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408154,
+		"UploaderId": 78002518,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

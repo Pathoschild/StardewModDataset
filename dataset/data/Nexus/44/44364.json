@@ -1,0 +1,114 @@
+{
+	"Site": "Nexus",
+	"Id": 44364,
+	"Name": "Building Footprint Swapper",
+	"Author": "bobkalonger",
+	"Description": "[center][b][color=#ff7700][size=6][u]\uFEFF\uFEFFBuilding Footprint Swapper[/u][/size][/color][/b][/center]\n<br />A SMAPI utility mod for Stardew Valley modders. When a building upgrade results in a larger footprint, this mod intercepts the upgrade and immediately enters move mode so the player can reposition the building themselves. This mod will block off the new footprint on the map, so no objects can be placed on the tile that the new building will occupy. Additionally, current game behavior when setting values for UpgradeSignTile and UpgradeSignHeight in a Content Pack does not actually change the position of the sign, and it just plain ol' won't show up for a modded building getting an upgrade. This mod reads UpgradeSignHeight and UpgradeSignTile directly from the Content Pack, allowing modders to set the position of the upgrade sign per existing documentation on the Stardew Modding Wiki. [b]The upgrade sign functionality [i]will[/i]\u00A0work even if the footprints are the same size. The mod will recognize the footprint is unchanged and skip the move action, but the modder can still control the upgrade sign position with their Content Pack as long as the CustomFields is set properly.[/b]\n<br />\n<br />[center]\uFEFF[img]https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExam11OWR3bWQ5cWtkeDk5azNpYWs4YXJ1amtsdnRtMzNpOXVoMzA2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/T7ILt6uf38bTFLTh58/giphy.gif[/img]\u00A0 \uFEFF\uFEFF[img]https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGF4NXpscmxrNWowMjZibWd6anJ3anY4bHNtcGlydjh4em0yZ2J4YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ldqNg3qHnWUuGxRc2p/giphy.gif[/img]\uFEFF\uFEFF\uFEFF[/center]\n<br />\n<br />[color=#ff0000][size=4][b]For Players[/b][/size][/color]\n<br />\n<br />Install like any other SMAPI mod. This mod does nothing on its own, it only activates for buildings whose mod authors set up the Content Pack to trigger it.\n<br />\n<br />Use the content pack in the optional files to change the SVE Premium Coop and Barn from standalone buildings to being upgrades for the Deluxe Coop and Barn!\n<br />\n<br />\n<br />[b][color=#ff0000][size=4]For Modders[/size][/color][/b]\n<br />\n<br />Add the following `CustomFields` entry to your upgraded building's data in `Data/Buildings`:\n<br />[code]{\n<br />\uFEFF\"Action\": \"EditData\",\n<br />\uFEFF\"Target\": \"Data/Buildings\",\n<br />\uFEFF\"Entries\": {\n<br />\uFEFF\u00A0  \uFEFF\"YourName.YourMod_YourBuilding\": {\n<br />\uFEFF\u00A0  \uFEFF\u00A0  \uFEFF\"CustomFields\": {\n<br />\uFEFF\u00A0  \uFEFF\u00A0  \uFEFF\u00A0  \uFEFF\"bobkalonger.BFS_util/ForceMove\": \"true\"\n<br />\uFEFF\u00A0  \uFEFF\u00A0  \uFEFF}\n<br />\uFEFF\u00A0  \uFEFF}\n<br />\uFEFF}\n<br />}[/code]\n<br />For the upgrade sign position, follow the Stardew Modding Wiki documentation:\n<br />[code]\u00A0  \uFEFF\u00A0  \uFEFF\"UpgradeSignTile\": {\n<br />\uFEFF\u00A0  \uFEFF\u00A0  \uFEFF\"X\": 0,\n<br />\uFEFF\u00A0  \uFEFF\u00A0  \uFEFF\"Y\": 4\n<br />\uFEFF\u00A0  \uFEFF},\n<br />\uFEFF\u00A0  \uFEFF\"UpgradeSignHeight\": \"48\",[/code]\n<br />\n<br />To further clarify, the X value will center the sign on that tile. If you want the sign centered on two tiles, you can use 0.5 values. The Y value needs to be pretty big to actually draw on TOP of the building texture, and 4 is usually good enough (though this places it way at the bottom or off the building). Use UpgradeSignHeight to move it back up, and remember that 16px is one tile, so in the example above it would move back up 3 tiles. You are able to shift the sign by 1 pixel, allowing for some fine positioning. If you set the Y value for UpgradeSignTile too small, the sign will draw behind the building, and you can only see it when the player triggers FadeWhenBehind and the building goes see-through. Regardless, now you can play around with the values in your Content Pack and just test out what happens. [b]Have fun![/b]\n<br />\n<br />You can reference the content pack in the optional files for a more detailed reference of how to use this mod.\n<br />\n<br />[b][color=#ff0000][size=4]How It Works[/size][/color][/b]\n<br />\n<br />When a player clicks an upgradeable building in Robin's build menu:\n<br />1. The mod checks whether the target blueprint has `bobkalonger.BFS_util/ForceMove` set to `\"true\"` in its `CustomFields`.\n<br />2. If yes, checks the new footprint against the existing footprint. [b][i]If the footprints match, the move action is skipped and the upgrade proceeds normally.[/i][/b]\n<br />If the new footprint is larger, the mod reads the values for BuildCost and BuildMaterials, stores those values and defers charging the player until the move is complete.\n<br />3. The carpenter menu then immediately triggers move mode, allowing the player to reposition the building before the upgrade starts. The new, larger footprint is shown during the move.\n<br />4. When the player places the building (second click) they pay the gold and materials stored, and the old building will shift (temporarily during the upgrade) to the upper left corner of the NEW footprint. The rest of the upgrade sequence continues as in the base game.\n<br />5. During the upgrade, the player is locked out from placing objects within the new footprint to protect the future building. NPCs will also path around the new footprint.\n<br />5. When the upgrade completes, the player will see the new building fully occupying the new footprint.\n<br />\n<br />[b]If the player cancels out of move mode, the building remains at its original position in its original state. Since the build cost and materials are deferred until the second click, they aren't charged anything.[/b]\n<br />\n<br />\n<br />[color=#ff0000][size=4][b]Notes\n<br />[/b][/size][/color]\n<br />- If live data is unavailable at click time (e.g. a config change occurred while the carpenter menu was already open), the mod falls back to the blueprint's cached data and logs a warning. The player will get the behavior that was correct when they opened the menu, not a hard failure.\n<br />- This mod does not require a soft dependency (though it is recommended). If it isn't installed, the `CustomFields` key is simply ignored by the game.\n<br />- Multiplayer behavior has not been tested. Use with caution in multiplayer environments and PLEASE REPORT BUGS and I will do my best to work them out. Thank you!!\n<br />[center]\n<br />\uFEFF------------------------------------------------\uFEFF[/center]\n<br />[center][size=4]Source code on [url=https://github.com/BobKaLonger/BuildingFootprintSwapper]GitHub[/url][/size][/center]\n<br />[center]------------------------------------------------\uFEFF[/center]\n<br />[center][/center]\n<br />[center][color=#ff7700]If you like my mods, you can show your support by endorsing them! This helps other players find my mods.\n<br />All of my mods are FREE to use, and if you'd like to show extra love for my work, you can send me a tip on [url=https://ko-fi.com/bobkalonger]Ko-fi[/url]\uFEFF.[/color]\n<br />[/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44364",
+	"Version": "1.0.1",
+	"Updated": "2026-04-05T03:11:47+00:00",
+	"Downloads": [
+		{
+			"Id": 163401,
+			"Type": "Optional",
+			"DisplayName": "SVE Premium Upgrade",
+			"FileName": "SVE Premium Upgrade-44364-1-0-1-1775309082.zip",
+			"Description": "Use this small content pack together with the main mod to change the SVE Premium Coop and Barn from new buildings to being upgrades for the Deluxe Coop and Barn!\n<br />Added fields for IndoorItems and IndoorItemMoves for cleaner execution player-side.",
+			"Version": "1.0.1",
+			"SizeInBytes": 1444,
+			"Uploaded": "2026-04-04T13:24:42+00:00",
+			"Mods": [
+				{
+					"Id": "bobkalonger.SVE_PremiumUpgrade",
+					"DisplayName": "SVE Premium Upgrade",
+					"Type": "ContentPack",
+					"RelativePath": "[BFS] SVE Premium Upgrade",
+					"Manifest": {
+						"Name": "SVE Premium Upgrade",
+						"Description": "This mod will shift the SVE Premium Coop and Barn to upgrade the Deluxe Coop and Barn, rather than require new buildings.",
+						"Author": "bobkalonger",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.4.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "bobkalonger.BFS_util",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"MinimumVersion": "1.15.11",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:-1"
+						],
+						"UniqueId": "bobkalonger.SVE_PremiumUpgrade"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550089,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 163469,
+			"Type": "Main",
+			"DisplayName": "Building Footprint Swapper",
+			"FileName": "Building Footprint Swapper-44364-1-0-1-1775358707.zip",
+			"Description": "Added compatibility with Instant Building Completion by aedenthorn by request.",
+			"Version": "1.0.1",
+			"SizeInBytes": 17484,
+			"Uploaded": "2026-04-05T03:11:47+00:00",
+			"Mods": [
+				{
+					"Id": "bobkalonger.BFS_util",
+					"DisplayName": "Building Footprint Swapper",
+					"Type": "Smapi",
+					"RelativePath": "BuildingFootprintSwapper",
+					"Manifest": {
+						"Name": "Building Footprint Swapper",
+						"Description": "Utility for modders to allow for a change to the building footprint during an upgrade, automatically triggering the move menu before the upgrade proceeds.",
+						"Author": "bobkalonger",
+						"Version": "1.0.1",
+						"EntryDll": "BuildingFootprintSwapper.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.InstantBuildingConstruction",
+								"MinimumVersion": "0.3.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:44364"
+						],
+						"UniqueId": "bobkalonger.BFS_util"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550157,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431052,
+		"UploaderId": 71312693,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

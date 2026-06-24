@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 26306,
+	"Name": "Mal's Sebastian Expansion in Chinese",
+	"Author": "erinyang",
+	"AuthorLabel": "Mal",
+	"Description": "此 mod 最初由 Mal 制作完成 ，初版中文是由我汉化的。\n<br />目前只包含中文翻译内容，一切文本皆基于 Mal 的原版内容翻译。\n<br />由于 Mal 自 2018 年以来已停止更新，这个 mod 是我个人进行修订的 1.6 适配非官方更新版本。\n<br />如果你想根据我的修改内容制作其他语言的翻译 mod，只需要在介绍页面中说明 Mal 原创以及我的修改即可 :)\n<br />\n<br />The original mod is created by Mal: [url=https://www.nexusmods.com/stardewvalley/mods/2060]Mal's Sebastian Expansion with Post Marriage Events[/url]. \n<br />And I made the Chinese translation for it. Here is a Chinese version with some of my fixation.\n<br />Since Mal haven't update this mod since 2018, I personally made an unofficial 1.6 update for it (but only in Chinese).\u00A0\n<br />If you would like to update this mod with other language translation base on my files, feel free to do it. \n<br />Just mention Mal's work and my job under your description :)\n<br />\n<br />\n<br />目前经过测试，与SVE可以兼容。\n<br />Capable with SVE through my test.\u00A0\n<br />\n<br />更多此 mod 相关的内容，包括剧情触发等，请查看[url=https://www.nexusmods.com/stardewvalley/mods/2060]原 Mod 介绍页面[/url]\n<br />More about this mod include events trigger conditions, please check out the description of [url=https://www.nexusmods.com/stardewvalley/mods/2060]original mod[/url].\u00A0\u00A0\n<br />[center]\n<br />[color=#ff7700][size=4][b]安装 Installation[/b][/size][/color][/center]\n<br />   \uFEFF1. 下载安装 [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI [/url]和 [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF1. Download [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\n<br />   \uFEFF2. 下载此 mod，解压到游戏目录的 Mods 文件夹里   \uFEFF   \uFEFF   \uFEFF   \uFEFF\u00A0 \u00A0 \u00A02. Download this mod, unzip it and put it in your Mods.\u00A0\n<br />   \uFEFF3. 用 Generic Config Menu 或编辑 config.json 进行设置：\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 3. Use Generic Config Menu or use any notepad edit config.json:\u00A0\n<br />   \uFEFF[code]{\n<br />\u00A0 \"Character Options\": \"None\", //\"None\"= no edit to character 不修改人物形象。\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"non-smoking\"= remove Seb's sprite and dialogue about smoking.修改384的形象，去掉抽烟相关的对话和动作\n<br />\u00A0 \"Dialogue Edit\": \"true\"\u00A0   \uFEFF//\"true\"= Edit original dialogue from game 修改游戏中的对话。\n<br />   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\u00A0 //\"false\" = Add dialogue changes from this mod to your game 修改游戏中的对话。\n<br />}\n<br />[/code]\n<br />\n<br />[size=4][center][b][color=#ff7700]修改内容 Changes[/color][/b][/center][/size]\n<br />1. 将旧版格式合并为一个文件夹，可以根据自己需求进行修改。\n<br />   \uFEFF注意：考虑到很多人都有美化，角色形象默认为不修改。如果你想使用这个mod的行走图覆盖你的其他美化，可以设置 config 中的 Character Options 改为non-smoking，并对 content.json 进行如下修改：\n<br />   \uFEFFI combined the older version into one whole folder, you can choose what you like by edit config.json. This is for the convinient of player who don't use other sprite mod. If you want the non-smoking sprite to cover your other mods, you can set \"Character Options\" to \"non-smoking\", then edit your content.json like this:\u00A0\n<br />   \uFEFF[code]\uFEFF{\n<br />      \"Action\": \"EditImage\",\n<br />      \"Target\": \"Characters/Sebastian\",\n<br />      \"FromFile\": \"assets/Sebastia.png\",\n<br />   \uFEFF   \uFEFF\"Priority\": \"Late\",\n<br />      \"When\": {\n<br />         \"Character Options\": \"non-smoking\",\n<br />         },\n<br />   },\n<br />[/code]\n<br />2.\u00A0 \u00A0 \u00A0将 CP 格式修改为最新版的。如果你的游戏版本较老，可以在 Manifest.json 中将 Format 的版本修改为更早的版本。\n<br />   \uFEFFChanges the Format into the newest version of Content Patcher. If you have old version of game, you can change it to earlier version in Manifest.json.\n<br />\n<br />3.\u00A0 \u00A0 \u00A0更正润色了部分中文翻译。\n<br />   \uFEFFRepolished some Chinese Translation.\n<br />\n<br />4.\u00A0 \u00A0 \u00A0修复了部分 1.6 剧情中角色和视角定位错误的问题。\n<br />   \uFEFFFixed characters and camera were set in wrong positions in some events.\u00A0\n<br />\n<br />\n<br />\n<br />\n<br />图片中使用的mod (Mods shown in pictures)：\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/21452]FishKing's Walkable character Portraits\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/5450]Seasonal Outfits[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/26306",
+	"Version": "1.1.0",
+	"Updated": "2024-07-23T14:42:09+00:00",
+	"Downloads": [
+		{
+			"Id": 107581,
+			"Type": "Main",
+			"DisplayName": "Sebastian Expansion in Chinese",
+			"FileName": "Sebastian Expansion in Chinese-26306-1-1-0-1721745729.zip",
+			"Description": "1.6 适配/Capable with 1.6",
+			"Version": "1.1.0",
+			"SizeInBytes": 36112,
+			"Uploaded": "2024-07-23T14:42:09+00:00",
+			"Mods": [
+				{
+					"Id": "mal.Erin.SebastionExpansion",
+					"DisplayName": "Sebastian Expansion Mod in Chinese",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Mal's Seb Expansion Chinese",
+					"Manifest": {
+						"Name": "Sebastian Expansion Mod in Chinese",
+						"Description": "Removes references to Sebastian smoking; adds marriage events;adds dialogue; etc",
+						"Author": "Mal",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:26306"
+						],
+						"UniqueId": "mal.Erin.SebastionExpansion"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342494269,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342412994,
+		"UploaderId": 55781247,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

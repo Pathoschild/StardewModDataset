@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 6983,
+	"Name": "Map Binder",
+	"Author": "Ambedrake",
+	"AuthorLabel": "SnowFire kVala",
+	"Description": "Map Binder allows a user to register new Game Locations using either internal game assets or their own TMX files. With the ability to strip warps embedded into maps, create multiple unique instances from the same maps, and even creating maps that can be shared between save files, Map Binder allows for some off the wall game play.\n<br />\n<br />[b][size=4]Defining a Map[/size][/b]\n<br />\n<br />Maps are defined by using one of two file types, a BMAP file is a json file denoting that the asset is from the base game where as a CMAP file denotes that the asset to be used is a custom TMX file. The name needs to be unique.\u00A0\n<br />\n<br />[i]Note: If you set the CrossSaveMap to true it will allow the map to be accessed by all save files, however this can cause some strange effects as the maps day/season is controlled by the loaded save and not the map itself. I do plan on looking into custom time tracking for shared maps but it will take some time to implement, and as I am in the middle of implementing content packs first it is on the back burner.[/i]\n<br />\n<br />[b]Example[/b]: This example adds in another farm of the Fishing type, with a warp file available (requires [url=https://www.nexusmods.com/stardewvalley/mods/6892]Warp Binder[/url]) in the Maps folder relative to the mod. It will also disable the warps built into the map, however due to having the \"Farm\" override certain farm buildings will appear on the map. If you enter them and exit them you will be back on the main farm.\n<br />[b]Example File[/b]: \"Demo.bmap\"\n<br />[b]Example Contents[/b]:\n<br />[code]\uFEFF{\n<br />   \"Asset\": \"Maps/Farm_Fishing\",\n<br />   \"MapUniqueName\": \"kVala\",\n<br />   \"Outdoors\":true,\n<br />   \"Farm\":true,\n<br />   \"Greenhouse\":false,\n<br />   \"CrossSaveMap\": false,\n<br />   \"PurgeMapWarps\": true,\n<br />   \"MapTypeOverride\": \"Farm\",\n<br />   \"WarpFiles\": [\"Maps/DemoWarpSVE.warp\"]\n<br />}\n<br />[/code]\n<br />\n<br />[b]Example[/b]: This loads up the kVala map as a farmable map, but as a standard location type so the farm buildings will not show up. Again with a warp file denoted (requires [url=https://www.nexusmods.com/stardewvalley/mods/6892]Warp Binder[/url]).\n<br />[b]Example File[/b]: \"Demo.cmap\"\n<br />[b]Example Contents[/b]:\n<br />[code]\uFEFF{\n<br />   \"Asset\": \"Maps/kVala.tmx\",\n<br />   \"MapUniqueName\": \"kVala\",\n<br />   \"Outdoors\":true,\n<br />   \"Farm\":true,\n<br />   \"Greenhouse\":false,\n<br />   \"CrossSaveMap\": false,\n<br />   \"PurgeMapWarps\": true,\n<br />   \"WarpFiles\": [\"Maps/DemoWarpSVE.warp\"]\n<br />}\n<br />[/code]\n<br />\n<br />[b][size=4]Content Packs[/size][/b]\n<br />\n<br />As of (v.1.1.0) content packs are supported, to create a content pack target your manifest to \"SnowFire.Map_Binder\" and list each desired map file in a file called content.json as shown below. All folders are relative to your content packs folder and can not go higher than your content packs folder root. Once you have these basics in, just ensure that your map files and any additional files they point to are in the correct locations in your packs folders and Map Binder will take care of the rest.\n<br />[code]\uFEFF{\n<br />   \"MapList\":[\n<br />      \"Internal/Maps/ExtraFarm_Cave.bmap\",\n<br />      \"Custom/Maps/Vales/kVala.cmap\",\n<br />      \"Custom/Maps/Vales/kTreva.cmap\",\n<br />      \"Custom/Maps/Vales/kValdemar.cmap\",\n<br />      \"Custom/Maps/Other/Hardorn.cmap\"\n<br />      ]\n<br />}\n<br />[/code]\n<br />[b]Bug Catchers[/b]\n<br />\n<br />Because they are the unsung heroes of the software development world.\n<br />\n<br />- ty2manie\n<br />\n<br />[b]Discord / Comms[/b]\n<br />\n<br />I can be found lurking in these Discord servers, though in the Stardew Valley server I tend to keep to the Making and Using mods sections for obvious reasons. While I may not be in voice chat during the day (I work 0800-1700 Pacific Time) I do check in via my phone.\n<br />\n<br />[url=https://discord.gg/stardewvalley]Stardew Valley Discord[/url]\uFEFF\n<br />\n<br />[url=https://discord.gg/JbP4Tg]NightSong Discord[/url]\uFEFF\n<br />\n<br />[url=https://discord.gg/Cm4cE6]The Vales[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/6983",
+	"Version": "1.3.1",
+	"Updated": "2020-10-13T01:27:59+00:00",
+	"Downloads": [
+		{
+			"Id": 31817,
+			"Type": "Main",
+			"DisplayName": "Map Binder",
+			"FileName": "Map Binder-6983-1-3-1-1602552479.zip",
+			"Description": "HotFix - Forgot to bundle interface assembly with mod. \n<br /><br /><br />[b]Note:[/b] Optional Requirement of Warp Binder increased to 1.5.1 due to shared code refactor\n<br /><br /><br />[b]Note:[/b] Due to refactor please delete old files when upgrading, custom maps can remain",
+			"Version": "1.3.1",
+			"SizeInBytes": 382203,
+			"Uploaded": "2020-10-13T01:27:59+00:00",
+			"Mods": [
+				{
+					"Id": "SnowFire.Map_Binder",
+					"DisplayName": "Map Binder",
+					"Type": "Smapi",
+					"RelativePath": "Map Binder",
+					"Manifest": {
+						"Name": "Map Binder",
+						"Description": "A mod that allows creation of instances of custom or built in maps as new game locations.",
+						"Author": "SnowFire k'Vala",
+						"Version": "1.3.1",
+						"MinimumApiVersion": "2.11.0",
+						"EntryDll": "Map_Binder.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "SnowFire.Warp_Binder",
+								"MinimumVersion": "1.5.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:6983"
+						],
+						"UniqueId": "SnowFire.Map_Binder"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342418505,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342393671,
+		"UploaderId": 97844303,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

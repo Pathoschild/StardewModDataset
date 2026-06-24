@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 22300,
+	"Name": "Special Power Utilities (SPU)",
+	"Author": "Spiderbuttons",
+	"Description": "Special Power Utilities provides a way for modded players and mod authors to separate their Special Items &amp; Powers tab into different mod categories so that you can see which mod adds what powers and view them separately from the powers present in the base game. As well, for mod authors, Special Power Utilities provides some new GameStateQueries, Tokens, and/or TriggerActions that may prove useful to you if you'd like to do more with powers than you otherwise could.\n<br />\n<br />It is very important to note that [b]Special Power Utilities is not intended to be a framework for adding more complex and advanced powers[/b]. While I would love this to be the case, due to the nature of how powers work and how they must be integrated into the game's code, you will still likely need to delve into C# yourself in order to create more advanced powers. If in the future I can figure out a way to make this easier to achieve for mod authors who only use Content Patcher, I will work to include it, but this is not guaranteed. The aim of this mod is to provide a (hopefully) nicer Special Items &amp; Powers tab for modded players and make working with simpler powers a little bit easier for mod authors.\n<br />\n<br />[b][size=5]Installation[/size][/b]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Extract the mod into Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[b][size=5]Usage For Players[/size][/b]\n<br />Installing this mod will replace your current Special Items &amp; Powers tab with one that supports categories. If you have another mod installed that adds a new special item or power, it will be placed in a new category on the left side, separate from the base game powers. Each mod that adds a special item or power will get its own category[size=2]*[/size] on the side, with no limit to the number of categories. If a mod does not provide support specifically for Special Power Utilities, it will be assigned an icon to use. Nothing about how you unlock your powers will change, regardless of whether or not your other mods support Special Power Utilities; the only thing that will change is how you view them.\n<br />\n<br />[size=2]*Potentially. See the configuration section below.[/size]\n<br />\n<br />\n<br />[b][size=5]Usage For Content Patcher Mod Authors[/size][/b]\n<br />[url=https://github.com/Spiderbuttons/SpecialPowerUtilities/blob/main/SpecialPowerUtilities/Docs/DOCS.md]Please click here for the documentation.[/url]\n<br />\n<br />[size=5][b]Usage for C# Mod Authors\n<br />[/b][/size][url=https://github.com/Spiderbuttons/SpecialPowerUtilities/blob/main/SpecialPowerUtilities/Docs/API.md]Please click here for the API documentation.[/url]\n<br />\n<br />[size=5][b]Configuration\n<br />[/b][/size]SpecialPowerUtilities comes with four config options and each of them are explained below. It is recommended to use Generic Mod Config Menu for adjusting these values in game.\n<br />\n<br />[list]\n<br />[*][b]EnableCategories:[/b] Rather self explanatory. If this is disabled, you will not see any mod categories on the left side of your Special Items &amp; Powers tab, nor will your modded special items and powers be moved anywhere. All special items and powers, modded or otherwise, will be placed into the usual looking Special Items &amp; Powers tab. It will appear almost no different than if the mod was not installed at all. The behind-the-scenes features available to mod authors will still function as normal.\n<br />[/list]\n<br />[list]\n<br />[*][b]ParseModNames:[/b] If a mod follows the standard naming convention for their special items and powers (i.e. their special item and power IDs are prefixed with their mod ID, such as \"Example.PowerMod_Power_One\"), but does not otherwise support Special Power Utilities and the mod author has not designated a mod category, then Special Power Utilities will attempt to parse the mod name from those IDs in order to automatically assign modded special items and powers into their correct categories. Following the given example, if this option was enabled, you would see a category on the left side of your Special Items &amp; Powers tab with the name \"Example.PowerMod,\" a randomly assigned icon, and the \"Power_One\" power displayed within it. If this option is disabled, Special Power Utilities will not parse the mod name as described, and will instead add any uncategorized modded special item or power into a single \"Miscellaneous\" category.\n<br />[/list]\n<br />[list]\n<br />[*][b][/b][b]EnableMiscCategory: [/b]If disabled, Special Power Utilities will not add any uncategorized, modded special items or powers into a \n<br />\"Miscellaneous\" category. Instead, those special items and powers will be placed into the default \"Stardew Valley\" category that holds the powers from the base game, which is where they would be if you did not have Special Power Utilities installed. It will still place modded special items and powers into categories if those categories are specified by the mods themselves and \"[b]EnableCategories[/b]\" is enabled.[/list]\n<br />[list]\n<br />[*][b]UseVanillaMenu: [/b]If enabled, the Special Items &amp; Powers tab provided this mod will not be loaded at all. Unavailable powers will not be able to be differentiated from available powers, but the mod will otherwise function as intended. Turn this on if you are having issues with another mod that needs to edit the Special Items &amp; Powers tab.\n<br />[/list]\n<br />[list]\n<br />[*][b]StripelessBooks: [/b]Whether or not to remove the two lighter stripes that are on the front and back covers of books in the \"reading a book\" animation. If enabled, the book in the animation will use solid colours with no stripes.\n<br />[/list]\n<br />[size=5][b]Mod Compatibility\n<br />[/b][/size]Special Power Utilities should be compatible with any mod that adds a custom special item or power already, however it does completely replace the Special Items &amp; Powers tab in your menu (even with EnableCategories disabled), so if another mod replaces the same menu, it will not be compatible. If you need to, you CAN toggle \"UseVanillaMenu\" on and go back to using the normal menu. Some features may not be visible, but they will still be functional.\n<br />\n<br />[size=5][b]Translations[/b][/size]\n<br />If you would like to help translate this mod, please know that translation files within this mod (and [i]only[/i] the translation files, not the whole mod itself) are licensed under the terms of the [url=https://choosealicense.com/licenses/mit/]MIT License[/url]\uFEFF. By submitting your translations to me for inclusion in the mod, you understand that your translations will then also be licensed under the terms of the aforementioned license. Please click the link to learn about what rights and permissions the license grants others. If you are not okay with your translations being licensed under those terms, you are more than welcome to upload a translation mod to Nexus separately so that you may reserve all rights to your translations.\n<br />\n<br />[b]HOW TO CONTRIBUTE A TRANSLATION: [/b]Ideally, you would submit a pull request on my Github found in the source code link below, but if you do not know how to use Github for that purpose or just don't want to deal with it like that, please make a thread on the Forums section of this mod page with your translation. If a language .json file exists in the mod for your language already, any text in need of translation will be marked with \"/* TODO */\" in front of it. Otherwise, you will need to create the file yourself.\n<br />\n<br />[size=5][b][url=https://github.com/Spiderbuttons/SpecialPowerUtilities]Source Code[/url][/b][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/22300",
+	"Version": "2.3.3",
+	"Updated": "2025-03-12T06:32:08+00:00",
+	"Downloads": [
+		{
+			"Id": 127245,
+			"Type": "Main",
+			"DisplayName": "Special Power Utilities",
+			"FileName": "Special Power Utilities-22300-2-3-3-1741761128.zip",
+			"Description": "Fixed: Huge menu performance improvement thanks to KhloeLeclair. Everyone say thank you KhloeLeclair.",
+			"Version": "2.3.3",
+			"SizeInBytes": 61232,
+			"Uploaded": "2025-03-12T06:32:08+00:00",
+			"Mods": [
+				{
+					"Id": "Spiderbuttons.SpecialPowerUtilities",
+					"DisplayName": "Special Power Utilities",
+					"Type": "Smapi",
+					"RelativePath": "SpecialPowerUtilities",
+					"Manifest": {
+						"Name": "Special Power Utilities",
+						"Description": "An organized Special Items & Powers list along with a few small, helpful utility features for mod authors working with custom powers and books.",
+						"Author": "Spiderbuttons",
+						"Version": "2.3.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpecialPowerUtilities.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:22300"
+						],
+						"UniqueId": "Spiderbuttons.SpecialPowerUtilities"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342513933,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342408988,
+		"UploaderId": 177615852,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

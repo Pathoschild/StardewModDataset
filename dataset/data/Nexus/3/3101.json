@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 3101,
+	"Name": "Console Code",
+	"Author": "spacechase0",
+	"Description": "[b]Console Code[/b] lets you write and execute C# code from the SMAPI console.\n<br />\n<br />[b][size=5]Install[/size][/b]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io]SMAPI[/url].\n<br />[*]Unzip the mod folder into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />[b][size=5]Use[/size][/b]\n<br />[b][size=3]Short snippets[/size][/b]\n<br />You can run code directly in the SMAPI console using the [font=Courier New]cs[/font] command. You can separate multiple expressions with [font=Courier New];[/font]. If the last expression returns a value, it'll be shown in the SMAPI console.\n<br />\n<br />For example:\n<br />[code]cs Game1.player.Money = 5000; Game1.player.currentLocation.Name\n<br />&gt; Output: \"FarmHouse\"[/code]\n<br />\n<br />You can't use double quotes ([font=Courier New]\"[/font]) directly in the console (due to the SMAPI command parser), but you can replace them with backticks ([font=Courier New]`[/font]).\n<br />\n<br />[b][size=3]Script files[/size][/b]\n<br />You can load a block from a file in Console Code's folder. The script must not include [font=Courier New]using[/font] statements, class declarations, etc.\n<br />\n<br />For example, let's say you have this [font=Courier New]sell-items.cs[/font] file in the mod folder:\n<br />[code]foreach (var item in Game1.player.items)\n<br />{\n<br />    if (item == null)\n<br />        continue;\n<br />    Game1.player.money += item.salePrice();\n<br />    Game1.player.removeItemFromInventory(item);\n<br />}[/code]\n<br />\n<br />You can execute it like this:\n<br />[code]cs --script sell-items.cs[/code]\n<br />\n<br />[b][size=5]Compatibility[/size][/b]\n<br />Compatible with Stardew Valley 1.5+ on Linux/macOS/Windows, both single-player and multiplayer.\n<br />\n<br />[b][size=5]See also[/size][/b]\n<br />[list]\n<br />[*][url=https://github.com/spacechase0/StardewValleyMods/blob/develop/ConsoleCode/docs/release-notes.md#release-notes]Release notes[/url]\n<br />[*][url=https://github.com/spacechase0/StardewValleyMods]Source code[/url]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3101",
+	"Version": "1.1.0",
+	"Updated": "2024-03-19T15:57:03+00:00",
+	"Downloads": [
+		{
+			"Id": 82650,
+			"Type": "Main",
+			"DisplayName": "Console Code 1.1.0",
+			"FileName": "Console Code 1.1.0-3101-1-1-0-1710863823.zip",
+			"Description": "Update for 1.6. Allows directly accessing private variables in console code snippets (both console and file scripts).",
+			"Version": "1.1.0",
+			"SizeInBytes": 3049060,
+			"Uploaded": "2024-03-19T15:57:03+00:00",
+			"Mods": [
+				{
+					"Id": "spacechase0.ConsoleCode",
+					"DisplayName": "Console Code",
+					"Type": "Smapi",
+					"RelativePath": "ConsoleCode",
+					"Manifest": {
+						"Name": "Console Code",
+						"Description": "Run C# code in the SMAPI console.",
+						"Author": "spacechase0",
+						"Version": "1.1.0",
+						"EntryDll": "ConsoleCode.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:3101"
+						],
+						"UniqueId": "spacechase0.ConsoleCode",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342469338,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342389789,
+		"UploaderId": 34250790,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

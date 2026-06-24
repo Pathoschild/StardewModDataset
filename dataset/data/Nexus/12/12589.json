@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 12589,
+	"Name": "Prismatic Furniture",
+	"Author": "aedenthorn",
+	"Description": "With this mod, you can create a Content Patcher pack that points to a png file with a partial or full furniture texture and that texture will be drawn as prismatic when drawing the associated furniture.\n<br />\n<br />An example content.json file:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.25.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"Load\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.PrismaticBed\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"FromFile\": \"assets/bed.png\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.PrismaticFurniture/dictionary\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Bed\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"id\": \"Bed\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"texturePath\": \"aedenthorn.PrismaticBed\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 \"speed\":2\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />[b]\"speed\"[/b] refers to how fast color shifting occurs. The entry keys should be the name of the furniture (not the display name).\n<br />\n<br />You can also set a decimal [b]\"offset\"[/b], to start the shifting on a different color, though I haven't tested to see how that works.\n<br />\n<br />The png file should be the same size as the furniture source rectangle on the spritesheet, including variations (rotation, on/off, etc.).\n<br />\n<br />An example pack is [url=https://www.nexusmods.com/stardewvalley/mods/12590/]here[/url].\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12589",
+	"Version": "0.1.1",
+	"Updated": "2022-06-20T15:44:52+00:00",
+	"Downloads": [
+		{
+			"Id": 56344,
+			"Type": "Main",
+			"DisplayName": "Prismatic Furniture",
+			"FileName": "Prismatic Furniture-12589-0-1-1-1655739892.zip",
+			"Description": "",
+			"Version": "0.1.1",
+			"SizeInBytes": 10177,
+			"Uploaded": "2022-06-20T15:44:52+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.PrismaticFurniture",
+					"DisplayName": "Prismatic Furniture",
+					"Type": "Smapi",
+					"RelativePath": "PrismaticFurniture",
+					"Manifest": {
+						"Name": "Prismatic Furniture",
+						"Description": "Prismatic Furniture.",
+						"Author": "aedenthorn",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "PrismaticFurniture.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:12589"
+						],
+						"UniqueId": "aedenthorn.PrismaticFurniture",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "PrismaticFurniture"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342443032,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399277,
+		"UploaderId": 18901754,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

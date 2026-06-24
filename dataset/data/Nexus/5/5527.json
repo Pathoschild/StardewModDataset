@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 5527,
+	"Name": "Running Key - Sprint key",
+	"Author": "strato35",
+	"Description": "[size=5]Running key for Stardew Valley[/size]\n<br />\n<br />\n<br />This mod add a configurable key enable running (or sprint, technically the base game is running but it still a bit slow...)\n<br />[b]The default key is left shift, but the game use it to walk. You can change it in config.json, or like I do change the walk key in game option (walk key is called \"Run\" because of base running option)\n<br />\n<br />Now compatible with mod config menu.\n<br />\n<br />[/b]Gamepad support : Press left joystick to run (tested on xbox controller).\n<br />Multiplayer : Every players who want to run have to install the mod.\n<br />\n<br />Running consume stamina over time, but you can configure the amount of stamina loses while running.\n<br />\n<br />Configuration options :\n<br />[code]\uFEFF[/code][code]\n<br />{\n<br />  \"RunningSpeedGain\": 50,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 &lt;- Base percent of speed added while running\n<br />  \"Key\": \"LeftShift\",\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 &lt;- Key used for run\n<br />  \"StaminaLose\": 1,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 &lt;- How many stamina did you lose while running\n<br />  \"StaminaTick\": 30,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 &lt;- Update stamina per tiks (it's like a frame rate), you will lose StaminaLose amount every StaminaTick of running\n<br />  \"StaminaLimit\": 20,\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 &lt;- Minimum percent of stamina you need to run, if current stamina is under this amount, you can't run.\n<br />\"EnableGamePad\": true\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 &lt;- Enable left stick running with controller\n<br />}\n<br />[/code]\n<br />New 2026:\n<br />version 2.0.1 : Fix issue with splitscreen sharing buttons between controller and keyboard + fix overspeed in splitscreen context + fix draining stamina without moving.\n<br />\n<br />New 2025 : \n<br />version 2.0.0 : Maybe fix staminaLose less than 0 + I hope fixed the override of food effect speed\n<br />\n<br />Code on github : [url=https://github.com/Strrato/StardewValleyRunningKey]https://github.com/Strrato/StardewValleyRunningKey[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/5527",
+	"Version": "2.0.0",
+	"Updated": "2026-01-02T14:37:59+00:00",
+	"Downloads": [
+		{
+			"Id": 152158,
+			"Type": "Main",
+			"DisplayName": "RunningKey V2",
+			"FileName": "RunningKey V2-5527-2-0-3-1767364679.zip",
+			"Description": "Hopefully fix splitscreen with multiple controllers (but without building the wrong branch...)",
+			"Version": "2.0.3",
+			"SizeInBytes": 16130,
+			"Uploaded": "2026-01-02T14:37:59+00:00",
+			"Mods": [
+				{
+					"Id": "Strato35.RunningKey",
+					"DisplayName": "RunningKey",
+					"Type": "Smapi",
+					"RelativePath": "RunningKeyV2",
+					"Manifest": {
+						"Name": "RunningKey",
+						"Description": "Running by pressing a key",
+						"Author": "Strato35",
+						"Version": "2.0.3",
+						"MinimumApiVersion": "3.9.1",
+						"EntryDll": "RunningKeyV2.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:5527"
+						],
+						"UniqueId": "Strato35.RunningKey"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342538846,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342392215,
+		"UploaderId": 4240487,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

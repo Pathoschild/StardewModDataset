@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 14152,
+	"Name": "Custom Starter Package",
+	"Author": "aedenthorn",
+	"Description": "This mod lets you replace the starter package contents in the farmhouse with a list you create using Content Patcher.\n<br />\n<br />I have include an example pack in the Files tab. A basic content.json file looks like this:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.CustomStarterPackage/dictionary\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"aedenthorn.CSPTestCP/ParsnipSeeds\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"NameOrIndex\": \"Parsnip Seeds\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Type\": \"Object\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"MinAmount\": 15,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"MaxAmount\": 20,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"ChancePercent\": 100,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"MinQuality\": 0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"MaxQuality\": 0\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />Entry keys must be unique; you can install multiple content packs and each will add its own items to the package.\n<br />\n<br />[list]\n<br />[*][b]NameOrIndex[/b] can be either the key (index) or the first field (name) in the item's data file (e.g. [b]Data/ObjectInformation[/b])\n<br />[*][b]Type[/b] can be one of the following:\n<br />[b]Object [/b]- uses Data/ObjectInformation[b]\n<br />Chest [/b]- uses Data/ObjectInformation[b]\n<br />BigCraftable [/b]- uses Data/BigCraftablesInformation[b]Hat [/b]- uses Data/hats[b]\n<br />Boots [/b]- uses Data/Boots[b]Clothing [/b]- uses Data/ClothingInformation[b]Ring [/b]- uses Data/ObjectInformation[b]Furniture [/b]- uses Data/Furniture[b]Pickaxe [/b]- put the upgrade level in NameOrIndex (e.g. 3 for Gold)[b]Axe [/b]- put the upgrade level in NameOrIndex (e.g. 3 for Gold)[b]FishingRod [/b]- put the upgrade level in NameOrIndex[b]\n<br />Hoe [/b]- put the upgrade level in NameOrIndex (e.g. 3 for Gold)[b]WateringCan [/b]- put the upgrade level in NameOrIndex (e.g. 3 for Gold)[b]MeleeWeapon [/b]- uses Data/weapons[b]\n<br />Pan\n<br />[/b][b]Shears\n<br />[/b][*]use [b]MinAmount [/b]and [b]MaxAmount[/b] for items that can stack\n<br />[*][b]ChancePercent[/b] means the chance that the item gets included\n<br />[*]use [b]MinQuality[/b] and [b]MaxQuality[/b] for items that have quality (e.g. crop harvest)\n<br />[/list]\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14152",
+	"Version": "0.2.1",
+	"Updated": "2025-04-16T01:25:11+00:00",
+	"Downloads": [
+		{
+			"Id": 61643,
+			"Type": "Optional",
+			"DisplayName": "CSP Test Pack",
+			"FileName": "CSP Test Pack-14152-0-1-0-1666032432.zip",
+			"Description": "This is just a template, you can edit it as you like and publish yours if you want to share it.",
+			"Version": "0.1.0",
+			"SizeInBytes": 998,
+			"Uploaded": "2022-10-17T18:47:12+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CSPTestCP",
+					"DisplayName": "(CP) CSP Test",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] CSP Test",
+					"Manifest": {
+						"Name": "(CP) CSP Test",
+						"Description": "[CP] CSP Test",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.13.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "aedenthorn.CSPTestCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448331,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 130067,
+			"Type": "Main",
+			"DisplayName": "Custom Starter Package",
+			"FileName": "Custom Starter Package-14152-0-2-1-1744766711.zip",
+			"Description": "Changes:\n<br />\n<br />Updated to 1.6 thanks to mouahrara",
+			"Version": "0.2.1",
+			"SizeInBytes": 21792,
+			"Uploaded": "2025-04-16T01:25:11+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomStarterPackage",
+					"DisplayName": "Custom Starter Package",
+					"Type": "Smapi",
+					"RelativePath": "CustomStarterPackage",
+					"Manifest": {
+						"Name": "Custom Starter Package",
+						"Description": "Replace the 15 parsnip seeds you get at the beginning of the game with whatever seeds, items, weapons, tools, clothing, etc.",
+						"Author": "aedenthorn",
+						"Version": "0.2.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "CustomStarterPackage.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:14152"
+						],
+						"UniqueId": "aedenthorn.CustomStarterPackage"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342516755,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400840,
+		"UploaderId": 18901754,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

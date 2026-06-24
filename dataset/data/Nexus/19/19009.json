@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 19009,
+	"Name": "VisualizeTK",
+	"Author": "Platonymous",
+	"Description": "[center][heading]VisualizeTK[/heading] by Platonymous\n<br />[line]Add color Presets to maps\n<br />[size=2]\uFEFF[/size]\n<br />[img]https://imgur.com/T5Eybda.png[/img]\n<br />The mod on it's own does nothing.\n<br />Add a Property to your map called \"[b]VTK_Preset[/b]\" with the name of one of the currently available color Presets:\n<br />\u00A0\n<br />[b]Grey [/b]or [b]Gray\n<br />Sepia\n<br />Underwater\n<br />Garden\n<br />Desaturated\n<br />Danger\n<br />Heat\n<br />Midnight\n<br />Sunset\n<br />Custom\n<br />\n<br />\"Custom\" Preset (1.1.0+)\n<br />[/b]When the Preset is set to \"Custom\", the colors only change if one or more of these additional Properties are set on the map:\n<br />\n<br />\"[b]VTK_Sat[/b]\"\n<br />string of a floating point number (exp. 0.5), that sets the saturation.\n<br />Alternatively you can use \"VTK_SatR\",\u00A0\"VTK_SatG\" and or\u00A0\"VTK_SatB\" to set the colorsaturations by channel.\n<br />\n<br />\"[b]VTK_Tint[/b]\"\n<br />string setting the colortint of the map in the format \"R-G-B\" (exp. 255-0-0 for red)\n<br />You can add multiple comma-seperated colors (exp. 255-0-0,0-255-0,0-0-255) to have the map gradually circle through them.\n<br />\u00A0Set a floating point number to \"VTK_TintSpeed\" to increrase (&gt; 1.0) or decrease (&lt; 1.0) the speed of those transitions.\n<br />\n<br />The extra parameters can also be added when using other Presets to override selected parameters.\n<br />\n<br />\n<br />[b]Event Commands (1.2.0+)\n<br />[/b]To activate the presets in events use the event commant \"vtk_preset\" followed by the preset name.\n<br />If you choose Custom, you can set the parameters with the additional commands:\n<br />\"vtk_sat\" (followed by either one or three numbers), \n<br />\"vtk_tint\" (followed by one or more colors)\n<br />\"vtk_tspeed\" (followed by a number)\n<br />before the end of the event call \"vtk_clear\" to make sure the preset is no longer active after the event.\n<br />\n<br />Examples:\n<br />[code].../farmer 64 16 2 Demetrius 64 18 0/vtk_preset Custom/vtk_sat 0.2 0.1 0.8/vtk_tint 255-0-0 0-255-0/vtk_tspeed 2.0/.../vtk_clear/end[/code]\n<br />\n<br />[code].../farmer 64 16 2 Demetrius 64 18 0/vtk_preset Sepia/.../vtk_clear/end[/code]\n<br />[/center][center][img]https://imgur.com/b8d5H2A.png[/img]\uFEFF\n<br />If you have any questions or feature requests you can usually find me on the [url=https://stardewvalleywiki.com/Modding:Community#Discord]Stardew Valley Discord[/url]\uFEFF under the username [b]Routine[/b]#8715\n<br />[img]https://imgur.com/u7Unylz.png[/img]\n<br />If you like my mods and want to support me, you can do so via [url=https://www.paypal.me/platonymousgames]Paypal[/url]\uFEFF \uFEFFor on [url=https://www.patreon.com/bePatron?u=406905]Patreon[/url]\uFEFF.[/center]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/19009",
+	"Version": "1.2.2-alpha.20240226",
+	"Updated": "2024-02-26T12:29:01+00:00",
+	"Downloads": [
+		{
+			"Id": 81851,
+			"Type": "Main",
+			"DisplayName": "VisualizeTK",
+			"FileName": "VisualizeTK Prerelease-19009-1-2-2-alpha-20240226-1708950541.zip",
+			"Description": "For Stardew Valley 1.6 only.",
+			"Version": "1.2.2-alpha.20240226",
+			"SizeInBytes": 21164,
+			"Uploaded": "2024-02-26T12:29:01+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.VisualizeTK",
+					"DisplayName": "VisualizeTK",
+					"Type": "Smapi",
+					"RelativePath": "VisualizeTK",
+					"Manifest": {
+						"Name": "VisualizeTK",
+						"Description": "Visual Toolkit",
+						"Author": "Platonymous",
+						"Version": "1.2.2-alpha.20240226",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "VisualizeTK.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:19009"
+						],
+						"UniqueId": "Platonymous.VisualizeTK"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342468539,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342405697,
+		"UploaderId": 42440425,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

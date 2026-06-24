@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 7907,
+	"Name": "Quality Smash",
+	"Author": "barfytheclown",
+	"AuthorLabel": "barfytheclown and NormanPCN",
+	"Description": "[size=4]Since Artisan goods from Kegs and Preserves jars do not care about input quality, why not reduce crop quality to base and save space in your backpack and chests, and make it faster to load those machines when the time comes. Run those machine fast with only one stack.\n<br />\n<br />Tired of having 42 minifridges just to be able to craft a large quantity of any cooking recipe at will? Running out of storage space for crops waiting to be processed in Kegs and Preserves jars? Annoyed by needing to switch among multiple quality level crops while loading all those Kegs/Jars? This mod can help.\n<br />\n<br />Why shouldn't you be able to smash (or gently tap) a fruit with a hammer to reduce its quality? Why should you need two dozen slots to hold Blue Jazz for your Lucky Lunches? With this mod, two dozen inventory slots can become one.\n<br />\n<br />Change flowers to a single color or reduce the quality of items in order to save chest and fridge space at the click of a button.\n<br />\n<br />Configure whether to exclude or include specific items, item qualities, and item categories--protecting yourself from accidentally messing up your stash of Iridium quality Ancient Fruit Wine. [/size]\n<br />[size=4]\n<br />[/size][size=4][u]\n<br />Color Smash:\n<br />[/u]Affects only Stardew Colored Objects (e.g. flowers). Brown/White eggs are a special case.\n<br />Changes all flowers in a container, except those excluded in the config, to one color so that they will stack.\n<br />Brown eggs are changed to white so that they will stack.\n<br />\n<br />This Mod extends color smash to fruits and vegetables crop categories, if they are Stardew colored objects. Only Modded crops might do this.\n<br />\n<br />The Cornucopia Mod does not create Stardew colored objects for crops that result in multiple colors. e.g. Bell Pepper. It creates a unique object type for each separate \"color\" of the crop result.\n<br />[/size]\n<br />[size=4][u]Quality Smash:\n<br />[/u]Reduces all items in a container, except those excluded in the config, to lowest quality so that they will stack.[/size]\n<br />\n<br />[b][size=5]\n<br />Installation:[/size]\n<br />[/b][size=4]Install via Vortex or Drop the QualitySmash folder contained in the zip file in your SMAPI Mods folder.[b]\n<br />\n<br />[/b]This mod is built against Stardew Valley 1.6+ and SMAPI 4+.[/size]\n<br />\n<br />\n<br />[b][size=5]Usage Instructions:\n<br />[/size][/b][u][size=4][size=5]Original smash method using UI buttons:[/size]\n<br />[/size][/u][size=4]If enabled in the config, two buttons will appear to the right of the sort/quickstack buttons when interacting with a chest or fridge. \n<br />Smash Colors button:\u00A0 Will change all flowers in the currently open chest/fridge to one color, then combine the stacks. Flower types can be excluded via the config.\n<br />Smash Quality button: Will r[size=4]educe all items in the active chest/fridge, except those excluded in the config, to lowest quality and then combine the stacks.\n<br />\n<br />[u][size=5]New additional smash method using keyboard shortcuts (1.1.0):[/size]\u00A0\n<br />[/u][b][size=4]Smashing using this method does NOT adhere to the filters defined in the config. Any and all items will be smashed[/size][/b][u]\n<br />[/u]If enabled in the config, holding either 'C' (color) or 'Q' (quality) then clicking on an item in any inventory will smash that item. This includes any containers or the player inventory\n<br />[/size][/size][size=4]Quality smashing using this method will only reduce the quality of the stack by one step[/size][b]: [/b][size=4]Iridium -&gt; Gold, Gold -&gt; Silver, etc.\n<br />There is a config option to single smash directly to base quality.\n<br />[/size]\n<br />[size=5][u]Version 1.5 adds a new Auto Smash feature of color and quality during harvest/pickup. [/u][/size]\n<br />[size=4]This feature is activated/deactivated via a keyboard keybind (F5 is the default). The feature is also deactivated when any menu is opened, like your inventory and chests. A highlight is placed under the farmer as an visual indicator that the feature is active. The auto smash feature operates under the rules/filters of the full button color and quality smashes. Except that only the item types that are being harvested will be smashed. Existing items of a different type in your backpack will be excluded from the auto smash. So you can have one crop you want to keep color/quality already in your inventory and then harvest another and activate auto smash for that crop only.[/size]\n<br />[b]\n<br />[size=5]Config:[/size][/b]\n<br />[size=4]The mod can be configured to not affect certain items/categories of items. This is included as protection against mistakes\n<br />\n<br />[b]You will want to look at these options as there are default values that you may not like.[/b]\n<br />\n<br />The config file itself contains brief descriptions of the options, disguised as options (since json doesn't support comments.) Changing these descriptions will have no effect on the mod.\n<br />[/size]\n<br />[size=4][b]EnableUISmashButtons[/b][/size]\n<br />[size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: true\n<br />[/size][size=4]If [u]true[/u], the Smash Colors and Smash Quality buttons will appear when opening a chest or fridge\n<br />\n<br />[size=4][b]EnableUIColorSmashButton[/b][/size]\n<br />[size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: true\n<br />[/size][size=4]If [u]true[/u] and EnableUISmashButtons is [u]true[/u], the Smash Colors UI button will be enabled[/size]\n<br />\n<br />[size=4][b]EnableUIQualitySmashButton[/b][/size]\n<br />[size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: true\n<br />[/size][size=4][size=4][size=4]If [u]true[/u] and EnableUISmashButtons is [u]true[/u], the Smash Quality UI button will be enabled[/size][/size][/size][/size]\n<br />\n<br />[size=4][b]EnableSingleItemSmashKeybinds[/b][/size]\n<br />[size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: false\n<br />[/size][size=4]If [u]true[/u], enables the use of single item smashing using keybinds[/size]\n<br />\n<br />[size=4][b]ColorSmashKeybind\n<br />[/b]Values: Any keyboard key\n<br />Default: 'C'\n<br />The key to hold when in order to color smash an item\n<br />\n<br />[b]QualitySmashKeybind[/b][/size]\n<br />[size=4]Values: Any keyboard key\n<br />Default: 'Q'\n<br />The key to hold when in order to quality smash an item[/size][b][size=4]\n<br />\n<br />IgnoreIridium\n<br />[/size][/b][size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: true\n<br />[/size][size=4]If [u]true[/u], Quality Smash will not affect items that are iridium quality.\n<br />[/size][b][size=4]\n<br />IgnoreIridiumItemExceptions[/size][/b][size=4]\n<br />Values: A list of item IDs\n<br />Default: Empty\n<br />Any iridium quality items listed in this option will be smashed to basic quality, regardless of the value of IgnoreIridium\n<br />[/size][b][size=4]\n<br />IgnoreIridiumCategoryExceptions\n<br />[/size][/b][size=4]Values: A list of category IDs. A text file containing a list of valid category IDs is included in the mod's docs folder\n<br />Default: Eggs and Milk.\n<br />Any iridium quality items that fall under a category listed here will be smashed to basic quality, regardless of the value of IgnoreIridium. \n<br />[/size][b][size=4]\n<br />IgnoreGold\n<br />[/size][/b][size=4][size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: false\n<br />[/size][size=4]If [u]true[/u], Quality Smash will not affect items that are gold quality.[/size][/size][b][size=4]\n<br />\n<br />IgnoreSilver\n<br />[/size][/b][size=4][size=4]Values: [u]true[/u] or [u]false[/u]\n<br />Default: false\n<br />[/size][size=4]If [u]true[/u], Quality Smash will not affect items that are silver quality.[/size][/size][b][size=4]\n<br />\n<br />IgnoreItemsColor\n<br />[/size][/b][size=4][size=4]Values: A list of item IDs[/size][/size][b][size=4]\n<br />[/size][/b][size=4]Default: 591 (Tulip), 593 (Summer Spangle) -- Flowers not used in recipes\n<br />[/size][size=4]Any item IDs listed here will be ignored by Smash Colors\n<br />[/size][b][size=4]\n<br />IgnoreItemsQuality\n<br />[/size][/b][size=4]Values: A list of item IDs[/size][b][size=4]\n<br />[/size][/b][size=4]Default: Wine, Mead, Pale Ale, Beer, Cheese, Goat Cheese, Ostrich Egg\n<br />[/size][size=4]Any item IDs listed here will be ignored by Smash Quality, regardless of their quality\n<br />[/size][b][size=4]\n<br />IgnoreItemsCategory[/size][/b][b][size=4]\n<br />[/size][/b][size=4]Values: A list of category IDs\n<br />Default: -26 (Artisan Goods)\n<br />Any items that fall under a category listed here will be ignored by Smash Quality, regardless of their quality\n<br />[/size][size=4]\n<br />[b]SingleSmashQualityToBase[/b]\n<br />When enabled, a single smash will lower quality to base quality in one click.\n<br />\n<br />[/size][size=4]----\n<br />\n<br />Hello, NormanPCN here.\n<br />I unofficially added a number of features to this Mod and barfytheclown decided to state that my fork was now the current version. Check the forum post for details. I am just listing some of the quick changes I made to the Mod in my fork.\n<br />\n<br />Added a Config option for single smash to smash to base quality in one click.\n<br />Single smash now combines stacks when possible.\n<br />Button smash combines in a stable manner not changing chest order.\n<br />Button smash is now allowed on the Inventory page. Backpack.\n<br />Button smash buttons no longer obscure inventory hover text.\n<br />Code updated to the current\u00A0Generic Mod Config Menu API.\n<br />Adjust the button spacing when the community center button is active. Community center not yet complete.\n<br />Added my Github fork to the update keys of this mod.\n<br />Updated for Stardew Valley version 1.6+. This mod only works with Stardew 1.6+.\n<br />[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7907",
+	"Version": "1.5.4",
+	"Updated": "2025-01-17T19:05:52+00:00",
+	"Downloads": [
+		{
+			"Id": 122655,
+			"Type": "Main",
+			"DisplayName": "QualitySmash",
+			"FileName": "QualitySmash-7907-1-5-4-1737140752.zip",
+			"Description": "Bugfix for hover tooltips in the inventory menu.",
+			"Version": "1.5.4",
+			"SizeInBytes": 39892,
+			"Uploaded": "2025-01-17T19:05:52+00:00",
+			"Mods": [
+				{
+					"Id": "NormanPCN.QualitySmash",
+					"DisplayName": "Quality Smash",
+					"Type": "Smapi",
+					"RelativePath": "QualitySmash",
+					"Manifest": {
+						"Name": "Quality Smash",
+						"Description": "Too many items? Smash 'em to reduce their quality and/or color",
+						"Author": "barfytheclown, NormanPCN",
+						"Version": "1.5.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "QualitySmash.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.8.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7907"
+						],
+						"UniqueId": "NormanPCN.QualitySmash"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342509343,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394595,
+		"UploaderId": 3449035,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

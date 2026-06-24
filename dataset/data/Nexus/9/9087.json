@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 9087,
+	"Name": "Warp Snitch",
+	"Author": "ceruleandeep",
+	"Description": "[b]Warp Snitch[/b] helps you fix/debug/recover from\n<br />\n<br />[list]\n<br />[*]NullReferenceException in warpCharacter\n<br />[*]FormatException in/around NPC.loadEndOfRouteBehavior \n<br />[*]NullReferenceException in FishPond.dayUpdate\n<br />[*]NullReferenceException in FishPond.HasUnresolvedNeeds\u00A0\n<br />[*]KeyNotFoundException in FishingRod.draw\n<br />[/list]\n<br />It doesn't fix any other errors than those.\n<br />\n<br />[size=5]I've installed Warp Snitch previously, do I need to install the latest update?[/size]\n<br />\n<br />No\n<br />\n<br />[size=5]I get a NullReferenceException in warpCharacter[/size]\n<br />\n<br />If you see this:\n<br />\n<br />[code]An error occurred in the base update loop: System.NullReferenceException: Object reference not set to an instance of an object.   at StardewValley.Game1.warpCharacter(NPC character, GameLocation targetLocation, Vector2 position)[/code]\n<br />\n<br />Warp Snitch will give you output like this, just before the crash:\n<br />\n<br />[code]\uFEFF[Warp Snitch] warpCharacter: getLocationFromName returns null for Custom_Tarniyar_GhostTown [NPC: Grogu][/code]\n<br />\n<br />In this case, you now know that the problem is caused by an NPC trying to \n<br />warp to the non-existent map Custom_Tarniyar_GhostTown. Here, Walk to \n<br />the Desert Redux has created warps to Custom_Tarniyar_GhostTown, but its\n<br /> map is actually called Custom_WTDR_GhostTown. This has tricked Grogu \n<br />into warping somewhere that doesn't exist.\n<br />\n<br />You will still get a crash! You have to fix/remove the faulty mod.\n<br />\n<br />\n<br />[size=5]I get a FormatException in/around NPC.loadEndOfRouteBehavior [/size]\n<br />\n<br />If you see this:\n<br />\n<br />[code]\uFEFFAn error occurred in the base update loop: System.FormatException: Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer&amp; number, NumberFormatInfo info, Boolean parseDecimal)\n<br />   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)\n<br />   at StardewValley.Utility.parseStringToIntArray(String s, Char delimiter)\n<br />   at StardewValley.NPC.loadEndOfRouteBehavior(String name)\n<br />[/code]\n<br />\n<br />Warp Snitch will give you output like this:\n<br />\n<br />[code]\uFEFF[Warp Snitch] loadEndOfRouteBehavior: could not parse routeEndAnimation [NPC: Mona]\n<br />[Warp Snitch] the faulty int array is: '2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 '\n<br />[/code]\n<br />In this case you now know that the problem is caused by the Mona NPC, which has a faulty animation (in Mona_Rocking, as it turns out). Luckily, Warp Snitch can prevent this crash by skipping the animation.\n<br />\n<br />[size=5]I changed my JA mods and now my fishpond crashes[/size]\n<br />\n<br />[list]\n<br />[*][size=3]install Warp Snitch[/size]\n<br />[*][size=3]Fish everything out of your pond, reset the pond, put a base game fish in the pond[/size]\n<br />[*][size=3]Ignore the yellow warning that appears 60 times a second while you do this -- Warp Snitch is rescuing you[/size]\n<br />[*][size=3]Don't do it again[/size]\n<br />[/list]\n<br />\n<br />[size=5]I get a different crash and I want Warp Snitch to fix it[/size]\n<br />[list]\n<br />[*][size=3]I need your SMAPI log[/size]\n<br />[*][size=3]I need your save[/size]\n<br />[*][size=3]I need your mods folder zipped up[/size]\n<br />[*][size=3]I need you to remove as many mods as you possibly can, if they're unrelated to the error[/size]\n<br />[*][size=3][b]I need your save+mods to load in less than 5 minutes [/b][/size]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/9087",
+	"Version": "1.0.6",
+	"Updated": "2021-07-15T21:10:14+00:00",
+	"Downloads": [
+		{
+			"Id": 43103,
+			"Type": "Main",
+			"DisplayName": "Warp Snitch",
+			"FileName": "Warp Snitch-9087-1-0-7-1626383414.zip",
+			"Description": "Fixes fishpond crashes caused by Json Shuffle, while making less log noise",
+			"Version": "1.0.7",
+			"SizeInBytes": 6929,
+			"Uploaded": "2021-07-15T21:10:14+00:00",
+			"Mods": [
+				{
+					"Id": "ceruleandeep.warpsnitch",
+					"DisplayName": "Warp Snitch",
+					"Type": "Smapi",
+					"RelativePath": "WarpSnitch",
+					"Manifest": {
+						"Name": "Warp Snitch",
+						"Description": "Log all NPC warps, detect attempts to warp NPCs to locations that don't exist",
+						"Author": "ceruleandeep",
+						"Version": "1.0.7",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "WarpSnitch.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:????"
+						],
+						"UniqueId": "ceruleandeep.warpsnitch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342429791,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395775,
+		"UploaderId": 115815328,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"Site": "Nexus",
+	"Id": 7315,
+	"Name": "Demanding Shipping",
+	"Author": "lech43",
+	"Description": "Pickle, Jelly, Juice, Wine, Roe, Aged roe, and Honey are affected by the base. For Example, If one of the demands is Parsnip, you can submit Parsnip Pickle and Parnip Juice.\u00A0\n<br />\n<br />[b]Description of config.json[/b]\n<br />\n<br />- BasicCrateIncome : one crate income when your farmer level is 0. (Default : 250 gold)\n<br />\n<br />- CrateIncomePerFarmerLevel : one crate income increasing per farmer level. In game, crate income is from 250 gold to 1000 gold because the maximum of farmer level is 25. (Default : 30 gold/level)\n<br />\n<br />-\u00A0MaxQuantity : the maximum of the crate quantity\u00A0 (Default : 20)\n<br />\n<br />- MinQuantity : the minimum of the crate quantity (Default : 1)\n<br />\n<br />- RerollChance : If you don't like demands, you can re-roll. (Default : Twice)\n<br />\n<br />- Bonus : If you finish each row, you can get a bonus. (Default : 5%, 10%, 10% )\n<br />\n<br />- EnableGiftAtFullLoad : If this is true, you can get a gift when you complete all the rows. (Default : true)\n<br />\n<br />- GiftList : when you complete all the rows ans EnableGiftAtFullLoad is true, you can get one of these. (Default : Prismatic Shard, Iridium Bar, Radioactive Bar, Golden Pumpkin, Treasure Chest)\n<br />\n<br />-\u00A0ReplaceShippingBinMenu : If this is true, you can see the mod menu when you open the shipping bin.\u00A0If there is a mode conflict, it is recommended to turn it off. (Default : true)\n<br />\n<br />- Categories : category indexes to select demands\n<br />(Default : Vegetable, Fruit, Flower, Forage, Fish, Animal product, Artisan good, Gem, Metal, and Syrup)\n<br />(Reference : [url=https://stardewvalleywiki.com/Modding:Object_data#Categories]https://stardewvalleywiki.com/Modding:Object_data#Categories[/url])\n<br />\n<br />- WithObjects : object indexes to be added separately (Default : none)\n<br />(Reference :\u00A0[url=https://stardewvalleywiki.com/Modding:Object_data]https://stardewvalleywiki.com/Modding:Object_data[/url])\n<br />\n<br />- WithoutObjects : object indexes to be removed (Default : Coal, Ores, Sap, Cinder Shard, Bone Fragment, Legendary Fishes, Qi Fruit)\n<br />(Reference : [url=https://stardewvalleywiki.com/Modding:Object_data]https://stardewvalleywiki.com/Modding:Object_data[/url])\n<br />\n<br />-\u00A0ConditionObjects : object indexes to be added separately when precondition is true. Check config.json of DynamicConditionConfig.zip in file (Dfault : None)\n<br />(Reference :\u00A0[url=https://stardewvalleywiki.com/Modding:Event_data#Event_preconditions]https://stardewvalleywiki.com/Modding:Event_data#Event_preconditions[/url])\n<br />(Reference :\u00A0[url=https://stardewvalleywiki.com/Modding:Object_data]https://stardewvalleywiki.com/Modding:Object_data[/url]) \n<br />\u00A0 \u00A0 \u00A0- expand option :\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0* \"skill &lt;name&gt; &lt;number&gt;\" : Current player has &lt;name&gt; skill at least &lt;number&gt; level .\u00A0\u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0&lt;name&gt; :\u00A0farming,\u00A0foraging,\u00A0fishing, mining, combat\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0i.e. \"skill farming 4\", \"skill foraging 3 fishing 6\"\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 * \"level &lt;number&gt;\" : Current player has farmer level at least &lt;number&gt; level\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0i.e. \"level 20\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 (Reference : [url=https://stardewvalleywiki.com/Skills#Skill-Based_Title]https://stardewvalleywiki.com/Skills#Skill-Based_Title[/url])\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 * \"farmhouse &lt;number&gt;\" : the FarmHouse has been upgraded at least &lt;number&gt;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0i.e. \"farmhouse 2\"\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 * \"recipe &lt;category name&gt; &lt;recipe name&gt;\" : Current player has recipe.\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 &lt;category name&gt; : crafting, cooking\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0i.e. \"recipe crafting Preserves_Jar\" \"recipe cooking Lucky_Lunch\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0(Reference : [url=https://stardewvalleywiki.com/Modding:Recipe_data]https://stardewvalleywiki.com/Modding:Recipe_data[/url])\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 * \"building &lt;building name&gt;\" : The Farm has the specific building.\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0i.e. \"building Coop\", \"building Mill\", \"building Deluxe_Coop Deluxe_Barn\"\n<br />\n<br />\u00A0 \u00A0 \u00A0 \u00A0 * \"collection &lt;category name&gt; &lt;object index&gt; &lt;count&gt;\" : Current player shiped the shipables , finded the arifact and mineral, caught the fish, and cooked the dish at least &lt;count&gt;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0&lt;category name&gt; : shipped, archFound, fishCaught, mineralFound, cooked\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0i.e. \"collection archFound 107 1\"",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7315",
+	"Version": "1.1.1",
+	"Updated": "2021-01-04T06:23:43+00:00",
+	"Downloads": [
+		{
+			"Id": 34651,
+			"Type": "Main",
+			"DisplayName": "DemandingShipping",
+			"FileName": "DemandingShipping-7315-1-1-1-1609741366.zip",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 27174,
+			"Uploaded": "2021-01-04T06:22:46+00:00",
+			"Mods": [
+				{
+					"Id": "lech43.DemandingShipping",
+					"DisplayName": "Demanding Shipping",
+					"Type": "Smapi",
+					"RelativePath": "DemandingShipping",
+					"Manifest": {
+						"Name": "Demanding Shipping",
+						"Description": "You can ship the ordered goods with bonus.",
+						"Author": "lech43",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "DemandingShipping.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:7315"
+						],
+						"UniqueId": "lech43.DemandingShipping"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342421339,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 34653,
+			"Type": "Optional",
+			"DisplayName": "DynamicConditionConfig",
+			"FileName": "DynamicConditionConfig-7315-1-1-1-1609741423.zip",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 1341,
+			"Uploaded": "2021-01-04T06:23:43+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "34653",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342421341,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394003,
+		"UploaderId": 93528618,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

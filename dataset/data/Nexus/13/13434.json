@@ -1,0 +1,391 @@
+{
+	"Site": "Nexus",
+	"Id": 13434,
+	"Name": "Gender Setter (Content Patcher)",
+	"Author": "sqbr",
+	"Description": "NOTE: Ignore any messages about needing to update \"Get Gender Setter\" (rather than just \"Gender Setter\"), that's an internal mod I forgot to update the version number of.\u00A0\n<br />\n<br />[b]Version 1.3 of Gender Setter is a partial compatibility fix for SDV 1.6, but it has bugs. If you find new bugs not listed here, let me know and I'll try to fix them. There is currently no [b]SDV 1.6[/b] compatible version of Gender Setter HD, but there's a portrait for Fizz in the optional files if someone wants to try and make one themselves.\n<br />[/b]\n<br />Known 1.3 bugs:\n<br />[list]\n<br />[*]Leo's scene doesn't work. Press skip or the game will crash. \n<br />[/list]\n<br />\n<br />This mod uses the same art as the [url=https://www.nexusmods.com/stardewvalley/mods/13387]Androgynous Villagers[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/13968]Configurable HD Portraits[/url]\uFEFF, see those page for more detail about the art and for links to the original artists I edited. The code is adapted from [url=https://www.nexusmods.com/stardewvalley/mods/9271]Ultimate Villager Manager[/url].\n<br />\n<br />This mod offers a simplified version of the Farmer gender options in [url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url], and uses some of the code and art. Instead of overwriting the bathhouse map, this mod just covers the gender signs and says the way to the 'wrong' gender changing room is blocked.\u00A0 \n<br />\n<br />The current pronoun options are He, She, They, They (singular), It, Xe, Fae, and E. I can add others on request but worry about the game getting too slow. I've tended towards offering less choices to make the mod simpler to use and scroll through, but if there's anything people would like to have more specific control over, let me know and I'll consider it.\n<br />\n<br />Note: this mod requires Content Patcher (and HDPortraits for the HD version), but also contains a SMAPI mod called getGS which allows external access to the variables. [url=https://github.com/sqbr/GetGS]Here's a link to the source code[/url].\n<br />\n<br />[b]Recommended companion mods:[/b]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5762?tab=description ]Pregnancy Role [/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0\n<br />[url=https://www.moddrop.com/stardew-valley/mods/1222192-swimsuit-selection]Swimsuit Selection\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/12562?tab=files]Misc introduction fixes[/url] (sets Grandpa's skin tone to match the farmer) \n<br />\n<br />[b]Other compatible mods:[/b]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/9708]Emyn's Diverse Ginger Island[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url] \n<br />[url=https://www.nexusmods.com/stardewvalley/mods/2857]Dammit Clint Stop Hitting On My Wife[/url] no-marriage-required version \n<br />[url=https://www.nexusmods.com/stardewvalley/mods/4217]SFG's No More War - Kent as Journalist (Content Patcher)\n<br />[/url] [url=https://www.nexusmods.com/stardewvalley/mods/13623]Kent Does The Dishes\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/12442]Less Ugly Town Interiors[/url]\uFEFF\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/8131]Clean Bathhouse Spa- Recolour[/url]\uFEFF and [url=https://www.nexusmods.com/stardewvalley/mods/8139?tab=description]Clean Bathhouse Spa- Vanilla Version\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/3110]Bathhouse Hot Spring - Content Patcher[/url] when combined with [url=https://www.nexusmods.com/stardewvalley/mods/11402?tab=files]Gender Neutral Hot Springs[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/14156]sqbr's Dialogue Edits[/url]\uFEFF\n<br />\n<br />Note: If you have installed [url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url], use it to set the farmer's pronouns etc rather than this mod, since the relevant parts of this mod will have been disabled to prevent conflicts.  \n<br />\n<br />[b]Configuration:\n<br />[/b]Either edit config.json or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] and then restart the game. [b]\n<br />[/b]\n<br />The individual options are described below, but if you want to set all the NPCs at once there are pre-made config files in the Variants folder. Just rename the relevant file to config.json and put it in the main folder: \n<br />[list]\n<br />[*]config All Male.json: All named NPCs are male. \n<br />[*]config All Female.json: All named NPCs are female.\n<br />[*]config All Non-Binary.json: All named NPCs and the player character are non-binary, using \"they\" pronouns.\n<br />[/list]\n<br />Any character whose gender is unchanged will keep their original art and name. To reset all characters to their canon genders, delete the config.json file in the main folder and run the game twice (SMAPI will give a bunch of errors the first time), and a new config.json will be generated.\n<br />\n<br />[b]General Settings:[/b]\n<br />\n<br />[u]MiscTextEdits[/u]: A bunch of little changes to make dialogue, books etc less heteronormative. \n<br />\n<br />[u]MiscImageEdits[/u]: A bunch of little changes to make background characters less gendered and more diverse. For example: the goblin is androgynous, the Island Trader is now a human, toddler clothing is not blue and pink. \n<br />\u00A0\u00A0 \u00A0\n<br />[u]FarmerGender[/u]: How people describe the player character using gendered words. \"Female\" characters are called woman/girl/daughter, \"Male\" characters called man/boy/son, \"Neutral\" characters called person/kid/child, etc. If set to \"false\", this mod does not change the character's gender. If not set to \"false\", the bathhouse and character creator are gender neutral. Has no effect if [url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url] is installed. \n<br />\n<br />[u]FarmerPronoun[/u]: What pronoun the player character is described with. Has no effect if FarmerGender is set to false or [url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url] is installed. \u00A0\n<br />\n<br />[b]Basic NPC Settings:[/b]\n<br />\n<br />[u](name)Name[/u]: the new name to use in dialogue etc. Not used for the Witch but I included it for consistency. \n<br />\n<br />[u](name)Gender[/u]: How people describe this character using gendered words. \"Female\" characters are called woman/girl/daughter, \"Male\" characters called man/boy/son, \"Neutral\" characters called person/kid/child, etc. Does not affect pregnancy. \n<br />\n<br />[u](name)Pronoun[/u]: What pronoun this character uses, eg if you pick \"They\", text would change from from \"She is hungry\" to \"They are hungry\". \u00A0\n<br />\n<br />[u](name)Images:[/u] Whether or not to replace the character's portrait and sprites with this mod's androgynous versions. The variables for regular portraits are described at\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/13387]Androgynous Villagers[/url] while those for HD portraits are described at [url=https://www.nexusmods.com/stardewvalley/mods/13968]Configurable HD Portraits[/url].\n<br />\n<br />[b]Advanced Settings: [/b]\n<br />\n<br />[u]EditIslandCharacters[/u]: Whether or not to edit the dialogue for characters from or on Ginger Island. This is for compatibility with mods affecting Ginger Island. Note that the images for Birdie, Leo, and Professor Snail are set separately via BirdieImages etc. \n<br />\n<br />[list]\n<br />[*]Full: Changes as much text as necessary to preserve all name/pronoun etc choices, including for Birdie, Leo, and Professor Snail. Will break the dialogue for any mod affecting Ginger Island except [url=https://www.nexusmods.com/stardewvalley/mods/9708]Emyn's Diverse Ginger Island[/url]. \n<br />[*]Minimal: makes only minor changes, to preserve name/pronoun etc choices for characters other than Birdie, Leo, and Professor Snail as much as possible. Will not always preserve these choices, but should be compatible with most mods affecting Ginger Island.\n<br />[*]None: Makes no changes for any dialogue for characters from or on Ginger Island. Should definitely be compatible with any mods affecting Ginger Island, but will ignore name/pronoun etc choices a lot. \n<br />[/list]\n<br />[u]PossessiveS[/u]: Whether to use an s for the possessive form of names ending in s. For example, if PossessiveS is true, then you'd have the sentence \"Jas's toys\", while if it's false it would be \"Jas' toys\". Always true for names containing an apostrophe. \n<br />\n<br />[u]PatchOriginalWeddingArt[/u]: Whether to patch in the vanilla game's wedding art for any character whose GameGender is being changed and who is not using the mod's art. See the \"Notes on GameGender and PatchOriginalWeddingArt\" section for more explanation. \n<br />\n<br />[b]Advanced NPC Settings[/b]:\n<br />\n<br />[u](name)Birthday[/u]: The character's birthday\n<br />\n<br />[u](name)GameGender[/u]: the 'game gender' used by the internal game code, affecting how sprites get used and whether the character can get pregnant. \n<br />\n<br />[b]Possible conflict with other mods: [/b]\n<br />\n<br />Image mods: If you've already replaced a sprite for character \"Name\" with another mod, you need to set \"(Name)EditImage\" and \"PatchOriginalWeddingArt\"to \"false\". For marriageable characters, if you have replaced their sprite sheet with one for the opposite of their canon gender, scroll down to the advanced settings and switch their \"GameGender\". \u00A0\n<br />\n<br />See [url=https://www.nexusmods.com/stardewvalley/mods/13968]Configurable HD Portraits[/url] for HDPortrait and genderswap mod compatibility for HD portraits. \n<br />\n<br />If you have \"MiscImageEdits\" turned on then the mod will also overwrite the images for the witch and some other background characters, which may get overwritten by other mods. \n<br />\n<br />The visual bathhouse changes might not work for any mod which edits the bathhouse appearance and is not listed as compatible. \n<br />\n<br />This mod only overwrites the relevant parts of each image file, so it shouldn't cause any other problems. \n<br />\n<br />Dialogue mods: This mod changes a lot of dialogue, so will conflict with most other dialogue mods, unless I've specifically added compatibility. For the compatible mods listed above, I have generally added my own versions of the shared dialogue, so may have added errors and will not keep up with any updates. \n<br />\n<br />The mod is entirely compatible with the no marriage version of [url=https://www.nexusmods.com/stardewvalley/mods/2857]Dammit Clint Stop Hitting On My Wife[/url] but will also mostly work for the marriage version, Clint's dialogue will just also be changed in some cases when you're not married to Emily. \n<br />\n<br />[b]Other Compatibility:[/b]\n<br />\n<br />I'm happy to add compatibility for other bathhouse or portrait etc mods that just need to be loaded before mine for it it work, since that's a single line of code. \n<br />\n<br />I'm open to adding compatibility for any small dialogue mods which give permission to use their assets. I have no plans to make this mod compatible with big mods like SVE. [url=https://www.nexusmods.com/stardewvalley/mods/9271]Ultimate Villager Manager[/url], which lets you change genders to male or female, has a SVE version and is working on some others. \n<br />\n<br />If you want to make your mod compatible from your end, I've set a SMAPI sub-mod up so that you can access the gender/pronoun/grammar variables from within other mods, check out [url=https://www.nexusmods.com/stardewvalley/mods/13623]Kent Does The Dishes[/url] for a simple example. \n<br />\n<br />[b]Known Issues:[/b]\n<br />\n<br />To make life easier for myself and avoid bugs/conflicts, I have where possible used gender neutral language instead of having branching alternatives. This sometimes results in clunky sentences. \n<br />\n<br />The character creator doesn't update to match changes to FarmerGender done via Generic Mod Config Menu unless the game is restarted. \n<br />\n<br />The gift hints and movie dialogue sometimes use characters' original names. \n<br />\n<br />The code to check what possessive form to use will break if the name has an apostrophe in it, and the SMAPI console will show an error. The name will still work, asides from using the possessive form \"'s\" regardless of player choice. \u00A0\n<br />\n<br />This only works for English dialogue. I don't speak any other languages so someone else will have to do any translations, sorry.\u00A0 \n<br />\n<br />I didn't test this super thoroughly so there are probably a lot of other bugs! If you tell me about them I'll do my best to fix them. \n<br />\n<br />[b]Notes on GameGender and PatchOriginalWeddingArt:[/b]\n<br />\n<br />Most people can skip this part, it's only relevant if you're using a genderswap mod for marriage candidates, or want to change whether spouses can get pregnant without using a different mod. \n<br />\n<br />The internal game code defines each NPC as male or female, which I have called the GameGender. This only really affects a couple of key traits for marriageable characters: 'male' and 'female' characters have differently structured sprite sheets, and 'female' characters can get pregnant. \n<br />\n<br />There's an option in the advanced settings to change the GameGender for each marriageable character. The only time I would recommend doing this is if you're also using a genderswap mod with it's own sprites, since in that case this mod will set the GameGender back to the default and mess up the sprites. \u00A0\n<br />\n<br />If you just want to change whether a character can get pregnant, I recommend using a mod like [url=https://www.nexusmods.com/stardewvalley/mods/5762?tab=description]Pregnancy Role[/url] instead of changing the GameGender. Marriageable character's GameGenders are temporarily set back to their original state during the flower dance, which could cause unwanted pregnancy if you're not using a mod like Pregnancy Role.\n<br />\n<br />If you set \"(name)EditArt\" to something other than false the sprites, portraits, and other appearances for (name) will be replaced. The mod will move sprites around as necessary so they still work regardless of the value of the GameGender. \n<br />\n<br />If you set \"(name)EditArt\" to \"false\" and \"PatchOriginalWeddingArt\" to \"false\", the mod won't do anything to (name)'s appearance. Choose this if you have modded (name)'s sprite with some other mod. If you've genderswapped a character, swap their GameGender too so the sprite sheets work. \u00A0\n<br />\n<br />If you set \"(name)EditArt\" to \"false\" and \"PatchOriginalWeddingArt\" to \"true\", the mod will patch in images from the vanilla game wedding sprites during any wedding scene with this character where their GameGender is the opposite of canon. Choose this if you are using the vanilla game sprites and changing the GameGender. Which I don't recommend, but I'm not the boss of you ;)\n<br />\n<br />[b]Versions:[/b]\n<br />1.2: Many image improvements, fixed the invisible Marlon bug.\n<br />1.2.1: Compatibility with [url=https://www.nexusmods.com/stardewvalley/mods/9708]Emyn's Diverse Ginger Island[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod\n<br />[/url]1.2.2: Fixed a bug where NPCs all used \"grandfather\", added compatibility for Dammit Clint Stop Hitting On My Wife and No More War.\n<br />1.2.3: Fixed issue with Alex's hair, added compatibility to Kent Does The Dishes.\n<br />1.2.4: There is no 1.2.4 &gt;.&gt;\n<br />1.2.5: Bathhouse compatibility, Caroline hair and shirt, easier compatibility for other mods. \n<br />1.2.6: Fixed an incompatibility between version numbers in the manifests. The actual mod hasn't changed.\n<br />1.2.7: Minor visual tweaks, some variable changes. Fixed a bug when FarmerGender = \"false\". \n<br />1.2.8: HD version available. Made disposition code less heavy handed for compatibility with other mods.\u00A0 \n<br />1.2.9: Fixed bug with \"they\" pronouns. Made Wizard name references more in line with the original game. The witch now has a settable gender etc. Removed those dialogue changes now included in [url=https://www.nexusmods.com/stardewvalley/mods/14156]sqbr's Dialogue Edits[/url]. \n<br />1.3: Partial SDV 1.6 compatibility for base Gender Setter. \n<br />\n<br />[b]Credits:[/b]\n<br />\n<br />This mod uses the same art as the [url=https://www.nexusmods.com/stardewvalley/mods/13387]Androgynous Villagers[/url]\u00A0 and [url=https://www.nexusmods.com/stardewvalley/mods/13968]Configurable HD Portraits[/url]\uFEFF, see those pages for more detail about the art and for links to the original artists I edited. The code is adapted from [url=https://www.nexusmods.com/stardewvalley/mods/9271]Ultimate Villager Manager[/url]. I used some art and code from [url=https://www.nexusmods.com/stardewvalley/mods/722]Gender Neutrality Mod[/url]. \n<br />\n<br />[b]Compatibility Credits:[/b]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/9708]Emyn's Diverse Ginger Island\n<br />[/url][url=https://www.nexusmods.com/stardewvalley/mods/2857]Dammit Clint Stop Hitting On My Wife[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/4217]SFG's No More War - Kent as Journalist (Content Patcher)[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13434",
+	"Version": "1.3",
+	"Updated": "2024-05-24T02:32:21+00:00",
+	"Downloads": [
+		{
+			"Id": 61961,
+			"Type": "Main",
+			"DisplayName": "Gender Setter",
+			"FileName": "Gender Setter-13434-1-2-9-1666699159.zip",
+			"Description": "Fixed bug with \"they\" pronouns. Made Wizard name references more in line with the original game. The witch now has a settable gender etc. Removed those dialogue changes now included in sqbr's Dialogue Edits\uFEFF.",
+			"Version": "1.2.9",
+			"SizeInBytes": 4078413,
+			"Uploaded": "2022-10-25T11:59:19+00:00",
+			"Mods": [
+				{
+					"Id": "sqbr.GetGS",
+					"DisplayName": "Get Gender Setter",
+					"Type": "Smapi",
+					"RelativePath": "Gender Setter\\GetGS",
+					"Manifest": {
+						"Name": "Get Gender Setter",
+						"Description": "Gets Gender Setter variables.",
+						"Author": "sqbr",
+						"Version": "1.2.9",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "GetGS.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "sqbr.GetGS"
+					}
+				},
+				{
+					"Id": "sqbr.GenderSetter",
+					"DisplayName": "Gender Setter",
+					"Type": "ContentPack",
+					"RelativePath": "Gender Setter\\[CP] Gender Setter",
+					"Manifest": {
+						"Name": "Gender Setter",
+						"Description": "Change gender of player character and NPCs",
+						"Author": "sqbr",
+						"Version": "1.2.9",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sqbr.getGS",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "gwenynnefydd.diversegingerisland",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hana.GenderNeutralityMod",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ShotFromGuns.NoMoreWarKentJournalist",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Rubecula.DammitClintStopHittingOnMyWife",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Poltergeister.SeasonalCuteCharacters",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Poltergeister.CuteSprites",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "uglynt.town.interiors",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hesper.RusticCountrysideTownInterior",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KaileyAllen.Cleanbathhouse",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KaileyAllen.Cleanbathhousevanilla",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13434"
+						],
+						"UniqueId": "sqbr.GenderSetter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448649,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 61962,
+			"Type": "Main",
+			"DisplayName": "Gender Setter HD",
+			"FileName": "Gender Setter HD-13434-1-2-9-1666699203.zip",
+			"Description": "Fixed bug with \"they\" pronouns. Made Wizard name references more in line with the original game. The witch now has a settable gender etc. Removed those dialogue changes now included in sqbr's Dialogue Edits\uFEFF.",
+			"Version": "1.2.9",
+			"SizeInBytes": 8048339,
+			"Uploaded": "2022-10-25T12:00:03+00:00",
+			"Mods": [
+				{
+					"Id": "sqbr.GetGS",
+					"DisplayName": "Get Gender Setter",
+					"Type": "Smapi",
+					"RelativePath": "Gender Setter HD\\GetGS",
+					"Manifest": {
+						"Name": "Get Gender Setter",
+						"Description": "Gets Gender Setter variables.",
+						"Author": "sqbr",
+						"Version": "1.2.9",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "GetGS.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "sqbr.GetGS"
+					}
+				},
+				{
+					"Id": "sqbr.GenderSetter",
+					"DisplayName": "Gender Setter",
+					"Type": "ContentPack",
+					"RelativePath": "Gender Setter HD\\[CP] Gender Setter",
+					"Manifest": {
+						"Name": "Gender Setter",
+						"Description": "Change gender of player character and NPCs",
+						"Author": "sqbr",
+						"Version": "1.2.9",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sqbr.getGS",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "tlitookilakin.HDPortraits",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "talkohlooeys.SeasonalPortraits",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KonaKona7.GirlMod",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "invatorzen.idcsm",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "female.bachelors.beach",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "gwenynnefydd.diversegingerisland",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "foggy.LfL",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "gwenynnefydd.diversegingerisland",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hana.GenderNeutralityMod",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ShotFromGuns.NoMoreWarKentJournalist",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Rubecula.DammitClintStopHittingOnMyWife",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Poltergeister.SeasonalCuteCharacters",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Poltergeister.CuteSprites",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "uglynt.town.interiors",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hesper.RusticCountrysideTownInterior",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KaileyAllen.Cleanbathhouse",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KaileyAllen.Cleanbathhousevanilla",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13434"
+						],
+						"UniqueId": "sqbr.GenderSetter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342448650,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 100690,
+			"Type": "Main",
+			"DisplayName": "Gender Setter",
+			"FileName": "Gender Setter-13434-1-3-1716516826.zip",
+			"Description": "Buggy update for Stardew Valley version 1.6. I ran out of steam for testing and bug fixing, it should work until year 2 at which point there will be Bugs.",
+			"Version": "1.3",
+			"SizeInBytes": 5455353,
+			"Uploaded": "2024-05-24T02:13:46+00:00",
+			"Mods": [
+				{
+					"Id": "sqbr.GetGS",
+					"DisplayName": "Get Gender Setter",
+					"Type": "Smapi",
+					"RelativePath": "Gender Setter\\GetGS",
+					"Manifest": {
+						"Name": "Get Gender Setter",
+						"Description": "Gets Gender Setter variables.",
+						"Author": "sqbr",
+						"Version": "1.2.9",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "GetGS.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:???"
+						],
+						"UniqueId": "sqbr.GetGS"
+					}
+				},
+				{
+					"Id": "sqbr.GenderSetter",
+					"DisplayName": "Gender Setter",
+					"Type": "ContentPack",
+					"RelativePath": "Gender Setter\\[CP] Gender Setter",
+					"Manifest": {
+						"Name": "Gender Setter",
+						"Description": "Change gender of player character and NPCs",
+						"Author": "sqbr",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "sqbr.getGS",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "gwenynnefydd.diversegingerisland",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hana.GenderNeutralityMod",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ShotFromGuns.NoMoreWarKentJournalist",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Rubecula.DammitClintStopHittingOnMyWife",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Poltergeister.SeasonalCuteCharacters",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Poltergeister.CuteSprites",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "uglynt.town.interiors",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Hesper.RusticCountrysideTownInterior",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KaileyAllen.Cleanbathhouse",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KaileyAllen.Cleanbathhousevanilla",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:13434"
+						],
+						"UniqueId": "sqbr.GenderSetter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342487378,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 100693,
+			"Type": "Optional",
+			"DisplayName": "Fizz HD",
+			"FileName": "Fizz HD-13434-1-0-1716517941.zip",
+			"Description": "A HD portrait for Fizz, if anyone wants to try and incorporate it into an updated version of Gender Setter HD",
+			"Version": "1.0",
+			"SizeInBytes": 29422,
+			"Uploaded": "2024-05-24T02:32:21+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "100693",
+					"Type": "Invalid",
+					"ManifestParseError": "EmptyFolder",
+					"ManifestParseErrorText": "it's an empty folder."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342487381,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342400122,
+		"UploaderId": 43761177,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

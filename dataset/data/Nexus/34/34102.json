@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 34102,
+	"Name": "Better Collection Sorting",
+	"Author": "snakebytestudios",
+	"AuthorLabel": "Snake",
+	"Description": "This mod fixes the poor ordering of the Collections tabs (especially the Items Shipped) that makes it difficult to both figure out which items you're missing and look up specific item properties. It adds five different sorting methods that you can switch between by clicking the selected collection tab. (Right-clicking the tab will go to the previous sorting method.)\n<br />\n<br />[list]\n<br />[*][b]Logical Sorting[/b] - This is a hand-crafted ordering of items that puts them in the most intuitive and useful order possible, typically by properties such as category, season, name, location, building, similarity, etc. See below for specifics.[/*]\n<br />[*][b]Alphabetical Sorting[/b] - Sorts by item name so you may quickly look up a specific item.[/*]\n<br />[*][b]Price Sorting[/b] - Sorts by item price so you can see what's worth the most.[/*]\n<br />[*][b]Count Sorting[/b] - Sorts by number of times you've shipped/caught/found/cooked an item.[/*]\n<br />[*][b]Color Sorting[/b] - Sorts by the internal color of an item. Mainly just looks cool, but can also help you choose dyes.[/*]\n<br />[/list]\n<br />[center]\uFEFF\n<br />[youtube]tJViqM4I0Ag[/youtube][/center]\n<br />[size=4][b]Custom Ordering[/b][/size]\n<br />\n<br />The ordering of items in the \"Logical\" tab is loaded from a simple text (JSON) file for each item tab. If you wish to modify this ordering, you will find these files in the [u]assets[/u] folder of this mod's data. Just open them in the text editor of your choice—even Notepad will do. Then just move the lines around to fit your desired order. All the items are labeled with their name so it's easier to tell what they are.\n<br />\n<br />You can also modify the order of color sorting by editing the [u]color_sorting.json[/u] file. It's currently ordered by Red to Violet, Prismatic, White to Black.\n<br />\n<br />SMAPI will output debug messages about how many items were loaded for each type/tab when the game loads. You may also see messages about the number of items that were left out of the ordering, so they can be fixed.\n<br />\n<br />[size=4][b]Alternative Cooking Order[/b][/size]\n<br />\n<br />The default \"Logical\" ordering of the Cooking tab is by buffs. However, there is an alternative order included that sorts by type of food, e.g. sweets, seafood, breakfast. While this alternative order is less useful from a gaming perspective, if it's what you prefer, then just rename the [u]cooking_sorting.alternative.json[/u] file in the [u]assets[/u] folder to [u]cooking_sorting.json[/u] (and rename the existing file to something else).\n<br />\n<br />[b][size=4]Translations[/size][/b]\n<br />\n<br />AI translations are provided for the added sorting method text in the UI. If they're wrong, please leave a comment or a bug report.\n<br />\n<br />[size=4][b]Full Logical Sort Map[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Items: Category\n<br />[list]\n<br />[*]Crops: Season, Special, Location (island) &gt; Name\n<br />[list]\n<br />[*]Seasons: Polyculture Achievement Requirement, Flowers &gt; Name[/*]\n<br />[/list][/*]\n<br />[*]Fruit Tree Fruits: Season &gt; Name[/*]\n<br />[*]Animal Products: Building (coop, barn), Fish &gt; Name[/*]\n<br />[*]Artisan Goods: Source (crops, trees, coop, barn, fish) &gt; Name[/*]\n<br />[*]Forage: Season, Mushrooms, Location (desert, cave, island, beach) &gt; Name[/*]\n<br />[*]Resource: Type (basics, ores, refined)[/*]\n<br />[*]Monster Loot &gt; Name[/*]\n<br />[/list][/*]\n<br />[*]Fish: Type\n<br />[list]\n<br />[*]Basic &gt; Location (valley, forest, mines, desert, submarine, island) &gt; Name\n<br />[list]\n<br />[*]Valley: Season &gt; Source (beach, lake, river) &gt; Name[/*]\n<br />[/list][/*]\n<br />[*]Legendary: Season[/*]\n<br />[*]Crab Pot &gt; Name[/*]\n<br />[*]Flora &gt; Name[/*]\n<br />[*]Jelly &gt; Name[/*]\n<br />[/list][/*]\n<br />[*]Artifacts: Type (dwarvish, golden, prehistoric, doll, fossil, bone, ocean, junk) &gt; Name\n<br />[/*]\n<br />[*]Minerals: Type (gems, forage, geodes) &gt; Name\n<br />[list]\n<br />[*]Geodes: Source (geode, frozen, magma) &gt; Name[/*]\n<br />[/list][/*]\n<br />[*]Cooking: Type\n<br />[list]\n<br />[*]Buff &gt; Stat (farming, foraging, fishing, mining, attack, defense, energy, magnetism, luck, speed) &gt; Max Increase &gt; Name[/*]\n<br />[*]Ingredient &gt; Name[/*]\n<br />[*]Others &gt; Name[/*]\n<br />[/list][/*]\n<br />[/list][size=4][b]Links[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://github.com/slserpent/Stardew-Valley-Mods]Source code[/url]\uFEFF[/*]\n<br />[*][url=https://www.snakebytestudios.com/projects/mods/stardew-valley-mods/]More of my Stardew mods[/url]\uFEFF[/*]\n<br />[/list][b][size=4]FAQ[/size]\n<br />[/b]\n<br />[size=4]Why not use the game's built-in item sorting (like for sorting your inventory) for the default collection sorting?[/size]\n<br />\n<br />It's a decent sorting algorithm (look at StardewValley.Item.CompareTo()), comparing by category, type, name, etc. But there are numerous problems with how some items are categorized in the game data. I'd have to fix the item data (and not cause any bugs by doing so) before I'd feel comfortable using the game's item sorting. But this would also not allow for custom sorting by users. That's why I decided to do the sorting with pre-defined orders.\n<br />[size=4]\n<br />Will you add your sorting to the cooking menu, crafting menu, end-of-day report, or player inventory?[/size]\n<br />\n<br />I'm definitely interested in bringing sorting to the cooking menu and the end-of-day (shipping) report, but less so for the others. Leave a comment and let me know what you'd like to see most.\n<br />\n<br />[size=4]Will you add sorting/display for mod-added items in the Collections?[/size]\n<br />\n<br />While I'm not interested in it personally, I could definitely see the benefit in having that support. Send me a message if you'd like to sponsor that feature's addition.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34102",
+	"Version": "1.0.1",
+	"Updated": "2026-05-25T04:40:26+00:00",
+	"Downloads": [
+		{
+			"Id": 168829,
+			"Type": "Main",
+			"DisplayName": "Better Collection Sorting",
+			"FileName": "Better Collection Sorting-34102-1-0-1-1779684026.zip",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 29145,
+			"Uploaded": "2026-05-25T04:40:26+00:00",
+			"Mods": [
+				{
+					"Id": "Snake.BetterCollectionSorting",
+					"DisplayName": "Better Collection Sorting",
+					"Type": "Smapi",
+					"RelativePath": "BetterCollectionSorting",
+					"Manifest": {
+						"Name": "Better Collection Sorting",
+						"Description": "Sorts items in the collections tabs in a more useful manner.",
+						"Author": "Snake",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BetterCollectionSorting.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:34102"
+						],
+						"UniqueId": "Snake.BetterCollectionSorting"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342555517,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342420790,
+		"UploaderId": 116308623,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

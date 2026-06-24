@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 13031,
+	"Name": "Adorable Beach",
+	"Author": "HurDurmods",
+	"AuthorLabel": "Sylvie",
+	"Description": "This mod can replace others maps aside from the beach farm, but it is the one I replace and recommend replacing.\u00A0\n<br />Features:\n<br />[list]\n<br />[*]Hidden Custom Location to visit along with the Farm Cave.\u00A0 (Will not provide spoiler, so don't ask.)\n<br />[*]Accessible Palm Trees\n<br />[*]Standard Beach Farm features, such as supply crates and ocean fish.\n<br />[*]Most of the map is diggable\n<br />[*]Sandy Areas allow sprinklers\n<br />[*]A small pond next to the Farmhouse for refilling the watering can.\n<br />[*]A small Quarry accessible via FarmCave\n<br />[/list]Farm Cave Features:\n<br />[list]\n<br />[*]Brings some Ginger Island flare with fish from the island.\n<br />[*]Spa water to swim in.\u00A0\n<br />[*]Acts like a greenhouse in dirt spots.\n<br />[*]Caskable\n<br />[*]Foragables, in addition to the fruit or mushrooms.\n<br />[*]Artifacts to find\n<br />[*]Functional Minecart\n<br />[*]Secret Woods theme\n<br />[/list]\n<br />This map will, for the above reasons, be a little overturned. For this reason, the extensive farming area is restricted initially, as most of the map will be inaccessible without tool upgrades or a pain to utilize. It's also adorable. This map was made for my significant other, so don't expect much regarding user support, compatibility issues, etc.\n<br />\n<br />Installation:\n<br />Extract folder into mods after installing Smapi, DaisyNiko's Tilesheets, and Content Patcher. Uses custom tilesheets.\n<br />\n<br />FOR STARDEW VALLEY EXPANDED USERS:\n<br />The nexus warp point should be edited in\u00A0&#92;Stardew Valley&#92;Mods&#92;[CP] Stardew Valley Expanded content.json to do this, open the content.json and find\u00A0//Beach Farm - A quality parsnip. Replace with the following and save:\n<br />{\u00A0 //Beach Farm - A quality parsnip\n<br />\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0 \u00A0\"Target\": \"data/events/Farmhouse\",\n<br />\u00A0 \u00A0\"When\": { \"FarmType\": \"Beach\", \"HasSeenEvent|contains=908072\": true },\n<br />\u00A0 \u00A0\"Entries\": {\n<br />\u00A0 \u00A0\"908074/t 600 2600\": \"continue/-500 -500/farmer -50 -50 0/skippable/pause 1000/changeLocation farm/warp farmer 72 28/faceDirection farmer 0 true/makeInvisible 72 25 1 3/viewport 72 27 clamp true/pause 2000/showFrame farmer 15/pause 100/startJittering/pause 250/addObject 72 25 24/playSound stoneStep/playSound stoneStep/pause 300/stopJittering/pause 230/showFrame farmer 12 true/pause 1500/playSound dwop/showFrame farmer 65 true/pause 1250/screenFlash 1/playSound wand/playSound wand/removeSprite 72 25/addLantern 1000 72 25 1/addTemporaryActor MagicWarp 48 48 72 26 2 false/positionOffset MagicaWarp 7 -6/pause 400/showFrame farmer 12 true/pause 350/playSound secret1/pause 2500/globalFade/viewport -1000 -1000/end\"\n<br />\u00A0 \u00A0}\n<br />},\n<br />{\u00A0 \u00A0//Beach Farm\u00A0 - statue warp graphic\n<br />\u00A0 \u00A0 \"Action\": \"EditMap\",\n<br />\u00A0 \u00A0 \"Target\": \"Maps/Farm_Island\",\n<br />\u00A0 \u00A0 \"FromFile\": \"assets/Maps/MapPatches/EnchantedGrove_Farm.tbin\",\n<br />   \"ToArea\": { \"X\": 71, \"Y\": 24, \"Width\": 3, \"Height\": 3 },\n<br />\u00A0 \u00A0 \"When\": { \"FarmType\": \"Beach\", \"HasSeenEvent\": \"908074\" },\n<br />   \"Update\": \"OnLocationChange\",\n<br />   \"PatchMode\": \"Overlay\"\n<br />},\n<br />{\u00A0 \u00A0//Beach Farm\u00A0 - Patches warp point on farm\n<br />\u00A0 \u00A0 \"Action\": \"EditMap\",\n<br />\u00A0 \u00A0 \"Target\": \"Maps/Farm_Island\",\n<br />   \"When\": { \"FarmType\": \"Beach\", \"HasSeenEvent\": \"908074\" },\n<br />   \"Update\": \"OnLocationChange\",\n<br />\u00A0 \u00A0 \"MapTiles\": [\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Position\": { \"X\": 72, \"Y\": 25 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Layer\": \"Back\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"SetProperties\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"TouchAction\": \"MagicWarp Custom_EnchantedGrove 30 14\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />},\n<br />{\u00A0 \u00A0//Beach Farm\u00A0 - statue light\n<br />\u00A0 \u00A0 \"Action\": \"EditMap\",\n<br />\u00A0 \u00A0 \"Target\": \"Maps/Farm_Island\",\n<br />\u00A0 \u00A0 \"When\": { \"FarmType\": \"Beach\", \"HasSeenEvent\": \"908074\" },\n<br />   \"Update\": \"OnLocationChange\",\n<br />\u00A0 \u00A0 \"TextOperations\": [\n<br />\u00A0 \u00A0 \u00A0{\n<br />\u00A0 \u00A0 \u00A0 \"Operation\": \"Append\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": [ \"MapProperties\", \"Light\" ],\n<br />\u00A0 \u00A0 \u00A0 \"Value\": \"72 25 4\",\n<br />\u00A0 \u00A0 \u00A0 \"Delimiter\": \" \"\n<br />\u00A0 \u00A0 \u00A0}\n<br />\u00A0 \u00A0]\n<br />},\n<br />{\u00A0 \u00A0//Beach Farm\u00A0 - Patches warp point at enchanted grove\n<br />\u00A0 \u00A0 \"Action\": \"EditMap\",\n<br />\u00A0 \u00A0 \"Target\": \"Maps/Custom_EnchantedGrove\",\n<br />   \"When\": { \"FarmType\": \"Beach\", \"HasSeenEvent\": \"908074\" },\n<br />   \"Update\": \"OnLocationChange\",\n<br />\u00A0 \u00A0 \"MapTiles\": [\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Position\": { \"X\": 30, \"Y\": 14 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Layer\": \"Back\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"SetProperties\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"TouchAction\": \"MagicWarp Farm 72 25\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />},",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/13031",
+	"Version": "1.0",
+	"Updated": "2022-07-23T01:54:55+00:00",
+	"Downloads": [
+		{
+			"Id": 57824,
+			"Type": "Main",
+			"DisplayName": "AdorbsBeach",
+			"FileName": "AdorbsBeach-13031-1-0-1658541295.zip",
+			"Description": "Current Version",
+			"Version": "1.0",
+			"SizeInBytes": 301668,
+			"Uploaded": "2022-07-23T01:54:55+00:00",
+			"Mods": [
+				{
+					"Id": "Sylvie.Farm_AdorbsBeach",
+					"DisplayName": "Farm_AdorbsBeach",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] - Adorbs Beach",
+					"Manifest": {
+						"Name": "Farm_AdorbsBeach",
+						"Description": null,
+						"Author": "Sylvie",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DaisyNiko.Tilesheets",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Sylvie.Farm_AdorbsBeach"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342444512,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342399719,
+		"UploaderId": 33568845,
+		"CategoryId": 21,
+		"Adult": false
+	}
+}

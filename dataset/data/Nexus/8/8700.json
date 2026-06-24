@@ -1,0 +1,69 @@
+{
+	"Site": "Nexus",
+	"Id": 8700,
+	"Name": "Tapper Report",
+	"Author": "pepoluan",
+	"Description": "[i][b]This is meant to be a replacement for the [/b][url=https://www.nexusmods.com/stardewvalley/mods/1219]\"Tapper Ready\" mod by skunkkky[/url].\n<br />\n<br />[b]I did [/b][b][u]NOT[/u] use any code from them. This is a ground-up rewrite.[/b][/i]\n<br />\n<br />\n<br />[color=#ffff00][i][b][font=Trebuchet MS]Donation Points (DP) goes 100% to \"Doctors without Borders\" [/font][/b][/i][b][font=Trebuchet MS](Médecins sans Frontières)[/font][/b][/color]\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Introduction[/size][/font][/b]\n<br />\n<br />This mod provides a handy report of all your tappers by pressing \"F9\" (customizable; see below).\n<br />\n<br />In addition, it will pop up a notification at Start of Day if any tapper gets done while you were sleeping.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]config.json Knobs[/size][/font][/b]\n<br />\n<br />[list]\n<br />[*][font=Courier New][size=4]GamePadHotKey[/size][/font] -- defaults to \"DPadLeft\" but you can, of course, change it to your heart's content\n<br />[*][font=Courier New][size=4]HotKey[/size][/font] -- defaults to \"F9\" but you can, of course, change it to your heart's content\n<br />[*][font=Courier New][size=4]Separator[/size][/font] -- the separator character between the different tapper types. Defaults to \" | \"\n<br />[*][font=Courier New][size=4]CheckNewFinishedContinually[/size][/font] -- if true, the mod will periodically check for finished tappers\n<br />[*][font=Courier New][size=4]CheckEvery[/size][/font] -- do above periodic check every Nx10 in-game minutes\n<br />[/list]\n<br />[b]This mod supports [url=https://www.nexusmods.com/stardewvalley/mods/5098]\"Generic Mod Config Menu\" (GMCM)[/url][/b], so if you have that mod installed, you can edit the settings via (1) The Options menu in Title Screen, or (2) The Options menu in-game.\n<br />\n<br />If you change config.json in-game, your changes will be made effective by pressing the hotkey. If you changed the hotkey, then you need to press the old hotkey once, then afterwards you can use the new hotkey.\n<br />\n<br />If you change the options via in-game Mod Options (provided by the aforementioned GMCM), then all changes are [i]effective immediately upon saving[/i].\n<br />\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Internationalization[/size][/font][/b]\n<br />\n<br />Fully supported. Currently only provides English, but patches are welcome.\n<br />\n<br />To \"internationalize\":\n<br />[list=1]\n<br />[*]Go to the mod's \"i18n\" directory\n<br />[*]Copy the \"default.json\" file to \"&lt;language&gt;.json\"\n<br />[*]Edit the file\n<br />[*]Save as \"UTF-8 without BOM/signature\"\n<br />[/list]\n<br />Note that [url=https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Translation#i18n_folder]SMAPI only support select languages[/url]; internationalization outside of those languages are not supported.\n<br />\n<br />\n<br />[b][font=Trebuchet MS][size=5]Source Code[/size][/font][/b]\n<br />\n<br />[size=4][url=https://sourceforge.net/p/sdvmod-tapper-report/code/ref/default/][b]Available on SourceForge[/b][/url][/size]\n<br />\n<br />Please do [i]not[/i] ask me to move it to GitHub, because I won't.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/8700",
+	"Version": "1.1.1",
+	"Updated": "2021-05-25T03:17:56+00:00",
+	"Downloads": [
+		{
+			"Id": 41491,
+			"Type": "Main",
+			"DisplayName": "Tapper Report 1.1.1",
+			"FileName": "Tapper Report 1.1.1-8700-1-1-1-1621912676.zip",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 16955,
+			"Uploaded": "2021-05-25T03:17:56+00:00",
+			"Mods": [
+				{
+					"Id": "pepoluan.TapperReport",
+					"DisplayName": "Tapper Report",
+					"Type": "Smapi",
+					"RelativePath": "TapperReport",
+					"Manifest": {
+						"Name": "Tapper Report",
+						"Description": "Make report of Tappers state (done/not) per location",
+						"Author": "pepoluan",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "3.9.5",
+						"EntryDll": "TapperReport.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8700"
+						],
+						"UniqueId": "pepoluan.TapperReport",
+						"OtherFields": {
+							"Meta:Repository": "https://sourceforge.net/p/sdvmod-tapper-report",
+							"Meta:License": "MPL-2.0",
+							"Meta:Changelog": {
+								"0.9.0": "Initial Public Release",
+								"0.9.1": "Some metafixing",
+								"0.9.5": "Preliminary support for gamepad",
+								"0.9.9": "Change target to .Net 4.5 not 4.5.2",
+								"1.0.0": "Lots of internal optimization, periodic check feature, config refresh, and config menu",
+								"1.0.1": "CheckCountdown (re)setting is now handled by UpdateConfig",
+								"1.0.2": "Show report only if player is free",
+								"1.1.0": "Change hotkeys to KeybindList",
+								"1.1.1": "Reduce logging levels for some messages"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342428179,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342395388,
+		"UploaderId": 27024274,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

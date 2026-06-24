@@ -1,0 +1,67 @@
+{
+	"Site": "Nexus",
+	"Id": 7643,
+	"Name": "Trash Can Reactions",
+	"Author": "aedenthorn",
+	"Description": "This mod allows you to set, via the config.json file created after you run the game with this mod, the following variables relating to reactions triggered when an NPC sees a farmer rummage through a trash can:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"Enabled\": true,\n<br />\u00A0 \"LinusDialogue\": \"Data&#92;&#92;ExtraDialogue:Town_DumpsterDiveComment_Linus\",\n<br />\u00A0 \"ChildDialogue\": \"Data&#92;&#92;ExtraDialogue:Town_DumpsterDiveComment_Child\",\n<br />\u00A0 \"TeenDialogue\": \"Data&#92;&#92;ExtraDialogue:Town_DumpsterDiveComment_Teen\",\n<br />\u00A0 \"AdultDialogue\": \"Data&#92;&#92;ExtraDialogue:Town_DumpsterDiveComment_Adult\",\n<br />\u00A0 \"LinusEmote\": 32,\n<br />\u00A0 \"LinusPoints\": 5,\n<br />\u00A0 \"ChildEmote\": 28,\n<br />\u00A0 \"ChildPoints\": -25,\n<br />\u00A0 \"TeenEmote\": 8,\n<br />\u00A0 \"TeenPoints\": -25,\n<br />\u00A0 \"AdultEmote\": 12,\n<br />\u00A0 \"AdultPoints\": -25\n<br />\u00A0 \"SpecificCharacters\": {\n<br />\u00A0\u00A0\u00A0 \"ExampeNPCName\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"dialogue\": \"Characters&#92;&#92;Dialogue&#92;&#92;ExampleNPC:Town_DumpsterDiveComment\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"emote\": 32,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"points\": 10\n<br />\u00A0\u00A0\u00A0 }\n<br />\u00A0 }\n<br />}\n<br />[/code]\n<br />By default this mod just replaces the in-game variables, which are split into four different sets, depending on the type of NPC reacting (Linus, a child, a teen, or an adult). The default values are what are used in the vanilla game.\n<br />\n<br />You can set custom reactions for specific NPCs by adding entries to \"SpecificCharacters\" (make sure to put a comma after the closing \"[b]}[/b]\"!).\n<br />\n<br />\n<br />[b][size=4]Dialogue Variables[/size][/b]\n<br />\n<br />The dialogue variables are paths to existing strings (or custom strings from Content Patcher mods).\n<br />\n<br />\n<br />[b][size=4]Emote Variables[/size][/b]\n<br />\n<br />The emote variables determine which emote to play. Emotes are numbered according to the file [b]TileSheets&#92;emotes [/b]by the index of the first emote in the row (there are 4 emotes per row), starting from index 0. \n<br />\n<br />So, the first emote would be [b]0[/b], the second emote would be [b]4[/b], the third emote would be [b]8[/b], etc. [b]Only use multiples of 4![/b] \n<br />\n<br />Here are my descriptions of the emotes:\n<br />\n<br />0 - emote appearing\n<br />4 - drop emptying, question mark\n<br />8 - question mark\n<br />12 - smoke, angry\n<br />16 - exclamation mark\n<br />20 - heart\n<br />24 - sleep zzz\n<br />28 - drop, sad\n<br />32 - happy\n<br />36 - X\n<br />40 - ...\n<br />44 - fishing hook\n<br />48 - community centre bundle\n<br />52 - gamepad\n<br />56 - musical note\n<br />60 - :/\n<br />\n<br />\n<br />[b][size=4]Points Variables[/size][/b]\n<br />\n<br />The points variables determine how many friendship points are gained (positive value) or lost (negative value) because of the event. There are 250 points per relationship heart.\n<br />\n<br />\n<br />[size=4][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7643",
+	"Version": "0.3.0",
+	"Updated": "2022-04-20T11:55:30+00:00",
+	"Downloads": [
+		{
+			"Id": 53467,
+			"Type": "Main",
+			"DisplayName": "Trash Can Reactions",
+			"FileName": "Trash Can Reactions-7643-0-3-0-1650455730.zip",
+			"Description": "Changes:\n<br /><br />Update for 1.5.5+",
+			"Version": "0.3.0",
+			"SizeInBytes": 10955,
+			"Uploaded": "2022-04-20T11:55:30+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.TrashCanReactions",
+					"DisplayName": "Trash Can Reactions",
+					"Type": "Smapi",
+					"RelativePath": "TrashCanReactions",
+					"Manifest": {
+						"Name": "Trash Can Reactions",
+						"Description": "Allows customization of NPC reactions when they see a farmer rummaging through the trash.",
+						"Author": "aedenthorn",
+						"Version": "0.3.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "TrashCanReactions.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Platonymous.ModUpdater",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:7643"
+						],
+						"UniqueId": "aedenthorn.TrashCanReactions",
+						"OtherFields": {
+							"ModUpdater": {
+								"Repository": "StardewValleyMods",
+								"User": "aedenthorn",
+								"Directory": "_releases",
+								"ModFolder": "TrashCanReactions"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342440155,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342394331,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

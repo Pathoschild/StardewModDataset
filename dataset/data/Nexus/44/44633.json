@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 44633,
+	"Name": "Slingshot Framework",
+	"Author": "Mamamodder",
+	"AuthorLabel": "alichanST",
+	"Description": "The mod is a framework for mod developers to create their own weapon mods for the slingshot, allowing them to add any item to it, its damage, and whether it is explosive or not.\n<br />\n<br />To create your custom slingshot mod, you must create the necessary files:\n<br />\n<br />[u]manifest.json[/u]\n<br />\n<br />[quote]\uFEFF\uFEFF{\n<br />\u00A0 \u00A0 \"Name\": \"nameMod\",\n<br />\u00A0 \u00A0 \"Author\": \"authorName\",\n<br />\u00A0 \u00A0 \"Version\": \"0.1\",\n<br />\u00A0 \u00A0 \"Description\": \"Description mod.\",\n<br />\u00A0 \u00A0 \"UniqueID\": \"authorName.nameMod\",\n<br />\u00A0 \u00A0 \"ContentPackFor\": {\n<br />\u00A0 \u00A0 \u00A0 \"UniqueID\": \"alichan.SlingShotFramework\", //reference for framework\n<br />\u00A0 \u00A0 \u00A0 \"MinimumVersion\": \"0.1\"\n<br />\u00A0 \u00A0 }\n<br />}[/quote]\n<br />\n<br />\n<br />[u]\n<br />[/u]\n<br />SlingShot.json\n<br />\n<br />[quote]\uFEFF\uFEFF{\n<br />\u00A0 \u00A0 \"validItemIds\": [\n<br />\u00A0 \u00A0 \u00A0 \"(O)392\",\n<br />\u00A0 \u00A0 \u00A0 \"(O)288\"\u00A0//Add the items you want to add to the slingshot here, in this example we added the Nautilus Shell -&gt; item code (O)392 and the Mega Bomb -&gt; item code (O)288\n<br />\u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \"ammoDamageValues\": {\n<br />\u00A0 \u00A0 \u00A0 \"(O)392\": 300,\n<br />\u00A0 \u00A0 \u00A0 \"(O)288\": 900 //Add damage to items added in the list above (O)392\u00A0receives 300 of damage and (O)288 receives 900 of damage\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \"explosiveAmmunitionIds\": [\n<br />\u00A0 \u00A0 \u00A0 \"(O)392\",\n<br />\u00A0 \u00A0 \u00A0 \"(O)288\" // Add items as explosive item ammunition\n<br />\u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \"explosionItemIds\": [\n<br />\u00A0 \u00A0 \u00A0 \"(O)392\",\n<br />\u00A0 \u00A0 \u00A0 \"(O)288\"\u00A0//\u00A0Add items as explosive item sound of explosion\n<br />\u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \"validCategories\": [\n<br />\u00A0 \u00A0 \u00A0 -74 // Add all items in the category to be used in the slingshot\n<br />\u00A0 \u00A0 ]\n<br />}[/quote]\n<br />Only these 2 files are needed to use the framework in your mod.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44633",
+	"Version": "0.1",
+	"Updated": "2026-04-04T11:21:29+00:00",
+	"Downloads": [
+		{
+			"Id": 163399,
+			"Type": "Main",
+			"DisplayName": "Slingshot Framework",
+			"FileName": "Slingshot Framework-44633-0-1-1775301689.zip",
+			"Description": "First Version",
+			"Version": "0.1",
+			"SizeInBytes": 13183,
+			"Uploaded": "2026-04-04T11:21:29+00:00",
+			"Mods": [
+				{
+					"Id": "alichan.SlingShotFramework",
+					"DisplayName": "SlingShot Framework",
+					"Type": "Smapi",
+					"RelativePath": "SlingShotFramework",
+					"Manifest": {
+						"Name": "SlingShot Framework",
+						"Description": "A framework to allow mods to add custom slingshot ammo items.",
+						"Author": "alichan",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "SlingShotFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:44633"
+						],
+						"UniqueId": "alichan.SlingShotFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342550087,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342431321,
+		"UploaderId": 283484516,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

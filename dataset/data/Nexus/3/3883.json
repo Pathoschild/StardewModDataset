@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 3883,
+	"Name": "Auto Tool Select",
+	"Author": "lolmaj",
+	"Description": "[size=2]Mod will automatically select right tool to interact with the object in your hit location.[/size]\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io/]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into\u00A0[font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[*]Change config options. Config file will be created after opening the game.\n<br />\n<br />[size=5]Compatibility[/size][list]\n<br />[*]Works with Stardew Valley 1.6.15 on Linux/Mac/Windows.\n<br />[*]Works with Generic Mod Info Menu 1.12.0\n<br />[*]Works with Smapi 4.1.10\n<br />[/list][/list][size=5]How it works[/size]\n<br />If player holds left Ctrl or toggles F5 is directed to the tile and hovers cursor over it, mod will choose the right tool from player's toolbox that can interact with it. Mod chooses\u00A0:\n<br />[list]\n<br />[*]Axe for stump, log, tree, twig or giant crop, twig bug\n<br />[*]Pickaxe for stone, meteorite, 2x2 rock, rock crab\n<br />[*]Melee Weapon for weeds, ice crystal, mine barrel, grass, crops harvestable only by scythe and dead crops (prioritizing scythe on farm and greenhouse)\n<br />[*]Hoe for digable field, artifact spots (worm), garlic and seed spots\n<br />[*]Watering can for water sources (including well) or hoed unwatered fields on farm, unwatered garden pots and greenhouse and lava in Volcano Dungeon\n<br />[*]Fishing rod for water outside farm\n<br />[*]Pan if there is shimmering lights nearby\n<br />[*]Shears for sheep that are ready to harvest\n<br />[*]Milk pail for cows and goats ready to milk\n<br />[*]When player hovers oven any machine that can process items mod will select item that can be put inside\n<br />[/list]Mod will prioritize first tool in toolbox, if you have multiple tools that can do the same (e.g. from another player). Scythe on farm is an exception.\n<br />\n<br />[size=5]Config options\n<br />[/size][color=#00ff00]Activation Key[/color] (LCtrl) - when hold, mod is activated\n<br />[color=#00ff00]Toggle Key[/color] (F5) - press to turn on/off mod\n<br />Here is list of keys\u00A0[url=https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings]https://stardewvalleywiki.com/Modding:Player_Guide/Key_Bindings\u00A0\n<br />[/url]\uFEFF\n<br />[color=#00ff00]Hoe Select[/color] - true: mod will select hoe when you target ground. I recommend\u00A0to set false\n<br />[color=#00ff00]If None Tool Choose Weapon[/color] - true: mod will select weapon/scythe when none tool was chosen. Works better with Hoe Select=false\n<br />[color=#00ff00]Ride Horse Cursor[/color] - true: mod will use cursor location to determine which tool should be chosen while riding horse (tractor), false: mod will use tool hit location to\u00A0\u00A0determine which tool should be chosen while riding horse (tractor).\u00A0I recommend to set true, but false might be useful for controller\n<br />[color=#00ff00]Pickaxe Over Watering Can[/color] - true: mod will select pickaxe on hoed dirt, instead of watering can. Can be used to collect clay. Works better with Hoe Select=true. I recommend to set false\n<br />[color=#00ff00]Cursor Over Tool Hit Location [/color][color=#f4f4f4]-\u00A0Switches to use cursor location to determine which tool should be chosen. Set it true if you use Ranged Tools or Combat Controls mods[/color]\n<br />[color=#00ff00]Check Whole Backpack[/color][color=#f4f4f4]\u00A0-\u00A0False - mod will check only toolbar for items to swap to. True - mod will check whole backpack instead[/color]\n<br />\n<br />[list]\n<br />[/list][size=5]My thoughts\n<br />[/size]I didn't fully tested all the cases that I coded. I just checked if it works as I was programming. If you find any bug or edge case that I skipped please let me know :)\n<br />\n<br />[size=5][url=https://github.com/MaciejMarkuszewski/StardewValleyAutoToolSelect]Source code[/url]\uFEFF\n<br />[url=https://www.nexusmods.com/stardewvalley/users/56620357?tab=user+files]My other mods[/url][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/3883",
+	"Version": "4.4",
+	"Updated": "2025-03-28T16:35:43+00:00",
+	"Downloads": [
+		{
+			"Id": 128557,
+			"Type": "Main",
+			"DisplayName": "AutoToolSelect",
+			"FileName": "AutoToolSelect-3883-4-4-1743179743.zip",
+			"Description": "Updated config options to have recommended settings by default",
+			"Version": "4.4",
+			"SizeInBytes": 19850,
+			"Uploaded": "2025-03-28T16:35:43+00:00",
+			"Mods": [
+				{
+					"Id": "lolmaj.AutoToolSelect",
+					"DisplayName": "AutoToolSelect",
+					"Type": "Smapi",
+					"RelativePath": "AutoToolSelect",
+					"Manifest": {
+						"Name": "AutoToolSelect",
+						"Description": "Choose right tool from toolbox based on hovering tile",
+						"Author": "lolmaj",
+						"Version": "4.4.0",
+						"MinimumApiVersion": "4.2.1",
+						"EntryDll": "AutoToolSelect.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:3883"
+						],
+						"UniqueId": "lolmaj.AutoToolSelect"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342515245,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342390571,
+		"UploaderId": 56620357,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

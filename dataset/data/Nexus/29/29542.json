@@ -1,0 +1,119 @@
+{
+	"Site": "Nexus",
+	"Id": 29542,
+	"Name": "FarmerMilk",
+	"Author": "slpOff",
+	"Description": "[font=Comic Sans MS][size=6]FARMERMILK[/size]\n<br />\uFEFF\n<br />[size=3]&gt;&gt; DESCRIPTION &lt;&lt;[/size][/font]\n<br />[quote][font=Comic Sans MS]FarmerMilk is a Stardew Valley mod that allows your farmer to perform custom animations and interact with nearby NPCs.\u00A0\n<br />It includes configurable animations, enhanced NPC reactions, and advanced layer offset management to ensure smooth visuals.[/font][/quote][font=Comic Sans MS]\n<br />[size=3]Thanks to\u00A0[url=https://forums.nexusmods.com/profile/119171613-trashracc1124/]TrashRacc1124[/url]\uFEFF, who\u00A0let me use his assets in this mod.\n<br />\n<br />&gt;&gt; HOW TO USE &lt;&lt;[/size]\n<br />1. TRIGGER ANIMATIONS\n<br />\u00A0 \u00A0- Special animations can be triggered with the MouseLeft Key.[/font]\n<br />[font=Comic Sans MS]\u00A0 \u00A0- Use Wet NewsPaper((O)172) or slO.D(seedshop)\n<br />2. NPC INTERACTIONS\n<br />\u00A0 \u00A0- NPCs will react dynamically to animations with custom dialogues or emotes.\n<br />\u00A0 \u00A0- Friendship points are awarded ONCE PER DAY for marriageable NPCs.\n<br />\u00A0 \u00A0- NPCs can continue reacting to animations throughout the day without additional friendship gain.\n<br />\n<br />\n<br />[size=3]&gt;&gt; INSTALLATION &lt;&lt;[/size]\n<br />1. REQUIRED DEPENDENCIES\n<br />\u00A0 \u00A0- **Content Patcher**\n<br />\u00A0 \u00A0- **MotionFramework**\n<br />\u00A0 \u00A0- **SMAPI v4.0.0+** (https://smapi.io/)\n<br />2. FOLDERS TO INSTALL\n<br />\u00A0 \u00A0- Extract `FarmerMilk` folders into your `Stardew Valley/Mods` directory.\n<br />3. RUN THE GAME\n<br />\u00A0 \u00A0- Launch Stardew Valley using SMAPI.\n<br />\n<br />[size=3]&gt;&gt; REQUIREMENTS &lt;&lt;[/size]\n<br />- Stardew Valley v1.6+\n<br />- SMAPI v3.0.0+\n<br />- Content Patcher (required)\n<br />- MotionFramework\n<br />\n<br />\n<br />[size=3]&gt;&gt; CREDITS &lt;&lt;[/size]\n<br />- **Original Developer:** slO\n<br />\n<br />[size=3]&gt;&gt; LICENSE &lt;&lt;[/size]\n<br />This mod is released under the **BSD 3-Clause License**.\n<br />Redistribution and modifications are allowed with proper credit.\n<br />\n<br />I want to know how to write readme pretty....[/font]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29542",
+	"Version": "3.0.1",
+	"Updated": "2026-06-11T06:46:29+00:00",
+	"Downloads": [
+		{
+			"Id": 170814,
+			"Type": "Main",
+			"DisplayName": "FarmerMilk",
+			"FileName": "FarmerMilk-29542-3-0-1-1781160389.zip",
+			"Description": "버그를 고치고, 모드를 안정화 시켰습니다. 감사합니다.",
+			"Version": "3.0.1",
+			"SizeInBytes": 378468,
+			"Uploaded": "2026-06-11T06:46:29+00:00",
+			"Mods": [
+				{
+					"Id": "slO.FarmerMilk",
+					"DisplayName": "FarmerMilk",
+					"Type": "Smapi",
+					"RelativePath": "FarmerMilk\\FarmerMilk",
+					"Manifest": {
+						"Name": "FarmerMilk",
+						"Description": "A mod to play a custom animation when pressing the X key.",
+						"Author": "slO",
+						"Version": "3.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "FarmerMilk.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "slO.MotionFramework",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "slO.MFFarmerMilk",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.4.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:29542"
+						],
+						"UniqueId": "slO.FarmerMilk",
+						"OtherFields": {
+							"LocalizedAssets": false,
+							"EnableHarmony": true
+						}
+					}
+				},
+				{
+					"Id": "slO.CPFarmerMilk",
+					"DisplayName": "(CP) FarmerMilk",
+					"Type": "ContentPack",
+					"RelativePath": "FarmerMilk\\[CP] FarmerMilk",
+					"Manifest": {
+						"Name": "(CP) FarmerMilk",
+						"Description": "Adds custom sprites for the farmer.",
+						"Author": "slO",
+						"Version": "3.0.0",
+						"MinimumApiVersion": "3.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "slO.FarmerMilk",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:29542"
+						],
+						"UniqueId": "slO.CPFarmerMilk"
+					}
+				},
+				{
+					"Id": "slO.MFFarmerMilk",
+					"DisplayName": "(MF) FarmerMilk",
+					"Type": "ContentPack",
+					"RelativePath": "FarmerMilk\\[MF] FarmerMilk",
+					"Manifest": {
+						"Name": "(MF) FarmerMilk",
+						"Description": "Milk FarmerMilk",
+						"Author": "slO",
+						"Version": "3.0.1",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "slO.MotionFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:29542"
+						],
+						"UniqueId": "slO.MFFarmerMilk"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342557502,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342416230,
+		"UploaderId": 231048348,
+		"CategoryId": 4,
+		"Adult": true
+	}
+}
