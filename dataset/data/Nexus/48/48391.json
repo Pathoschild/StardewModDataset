@@ -1,0 +1,70 @@
+{
+	"Site": "Nexus",
+	"Id": 48391,
+	"Name": "Pyrite Ticket",
+	"Author": "Bakorlam",
+	"Description": "[b]Main features\n<br />Retextured Prize Ticket item and prize machine (lit and unlit states) with a pyrite look. Custom prize machine menu UI to match. A short fanfare plays when a Prize Ticket enters your inventory. [/b]\n<br />\n<br />[b][b]Installation instructions - Use Vortex or manual install:[/b][/b]\n<br />[b]\n<br />Extract the zip and drop both folders :[/b]\n<br />[code]PyriteTicket.CP[/code][b]and [/b]\n<br />[code]PyriteTicket.SMAPI[/code][b]\u00A0into your Stardew Valley [/b]\n<br />[code]&#92;Mods[/code][b]folder.\u00A0[/b]\n<br />\n<br />[b]Both are required for the full experience — the CP folder handles the visuals, the SMAPI folder handles the sound. Launch the game through SMAPI as normal.\n<br />\n<br />Requirements: SMAPI and Content Patcher.[/b]\n<br />\n<br />[b]Compatibility note:[/b]\n<br />This mod edits:\n<br />[code]TileSheets/Objects_2[/code][code]Maps/townInterior_2[/code][code]LooseSprites/PrizeTicketMenu[/code]\n<br />If you run other interior or tilesheet recolor mods (e.g. DaisyNiko's Earthy Interiors), they may load after this one and overwrite the pyrite look since multiple mods are touching the same assets. To guard against that, this mod's patches use Content Patcher's Late/Exclusive\n<br />priority so they apply last and win the final draw order. If you still see conflicts with another mod, try giving that mod's patches a lower priority, or report it here and I'll try and take a look!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48391",
+	"Version": "1",
+	"Updated": "2026-06-30T03:41:55+00:00",
+	"Downloads": [
+		{
+			"Id": 173075,
+			"Type": "Main",
+			"DisplayName": "Pyrite Ticket",
+			"FileName": "93/ab/28/93ab282b-2711-4f88-aaeb-b8c82db567ee",
+			"Description": "Use Vortex - or extract .zip file to your mods directory",
+			"Version": "1",
+			"SizeInBytes": 237713,
+			"Uploaded": "2026-06-30T03:41:55+00:00",
+			"Mods": [
+				{
+					"Id": "Bakorlam.PyriteTicket.CP",
+					"DisplayName": "Pyrite Ticket",
+					"Type": "ContentPack",
+					"RelativePath": "Pyrite_Ticket\\PyriteTicket.CP",
+					"Manifest": {
+						"Name": "Pyrite Ticket",
+						"Description": "Retextures the Prize Ticket to a pyrite ticket.",
+						"Author": "Bakorlam",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Bakorlam.PyriteTicket.CP"
+					}
+				},
+				{
+					"Id": "Bakorlam.PyriteTicket.SMAPI",
+					"DisplayName": "Pyrite Ticket Sound",
+					"Type": "Smapi",
+					"RelativePath": "Pyrite_Ticket\\PyriteTicket.SMAPI",
+					"Manifest": {
+						"Name": "Pyrite Ticket Sound",
+						"Description": "Plays a triumphant fanfare when you pick up a Prize Ticket.",
+						"Author": "Bakorlam",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PyriteTicket.SMAPI.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Bakorlam.PyriteTicket.SMAPI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342559763,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435079,
+		"UploaderId": 18832189,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

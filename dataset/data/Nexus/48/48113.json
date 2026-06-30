@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 48113,
+	"Name": "Spouse Helper-Realistic Married Life",
+	"Author": "Changbaibai",
+	"Description": "[b][size=4]简介[/size][/b]\n<br />\u00A0 Spouse Helper 是婚后内容的功能性Mod。安装后，玩家的配偶将主动参与农场日常劳动，并拥有完整的日程安排：清晨出门干活，傍晚返回农舍为玩家准备晚餐，夜深后上床休息。配偶还会在工作时发出对话气泡，并主动呼叫玩家聊天，令农场生活更具真实感与沉浸感。\n<br />\n<br />[b][size=4]功能说明[/size][/b]\n<br />[b][size=3]1.农场劳作[/size][/b]\n<br />\u00A0 每天清晨 6:10 起，配偶会自动进入农场并开始工作。支持以下七种任务类型：\n<br />[list]\n<br />[*]浇水[/*]\n<br />[*]收获作物[/*]\n<br />[*]捡拾地面物品（松露等）[/*]\n<br />[*]播种（需背包内有种子）[/*]\n<br />[*]施肥（需背包内有肥料）[/*]\n<br />[*]收取机器产物[/*]\n<br />[*]抚摸动物[/*]\n<br />[/list]\u00A0 自动模式下，任务优先级依次为：浇水 &gt; 收获 &gt; 捡拾 &gt; 收取机器 &gt; 播种 &gt; 施肥 &gt; 抚摸动物。配偶会通过寻路系统逐一走到目标处执行操作，并在背包装满时停下来提示玩家。\n<br />[b]2.互动菜单[/b]\n<br />\u00A0 当玩家位于配偶附近（距离 2 格以内）时，按下 P 键（可自定义）可打开互动菜单，包含以下选项：\n<br />[list]\n<br />[*]打开背包：查看并取走配偶收集到的物品，可放入物品。[/*]\n<br />[*]安排任务：手动指定配偶执行特定任务，或切换为自动模式。[/*]\n<br />[*]休息一下：让配偶停止工作，在农场中漫步。[/*]\n<br />[/list][i]注意：任务分配仅在下午 4:00 之前可用，超时配偶会拒绝并提示明日再做。[/i]\n<br />[b]3.配偶背包[/b]\n<br />\u00A0 配偶拥有独立的背包（容量与普通箱子相同）。收获的作物、捡拾的物品均存放于此。玩家可随时通过菜单打开背包取走物品。若背包已满，配偶将停止活动。\n<br />[b]4.主动呼叫[/b]\n<br />\u00A0 配偶会在工作时间（上午至下午 5:00 前）不定期主动呼叫玩家。每次呼叫会弹窗显示通知，配偶同时播放表情动作，并展示一条与当前时段相符的对话。默认每隔约 100 至 140 游戏分钟触发一次（可配置）。每次呼叫有 10% 的概率附带随机礼物。\n<br />[b]5.气泡对话[/b]\n<br />\u00A0 配偶在工作时及傍晚在家闲逛时，会定期在头顶显示随机对话气泡。气泡内容会根据当前活动类别有所变化（浇水、收获、播种、抚摸动物、通用），默认每隔 15 至 40 秒触发一次（可配置）。\n<br />[b]6.晚间流程[/b]\n<br />\u00A0 配偶的晚间行为按固定时间节点自动推进：\n<br />[list]\n<br />[*]下午 4:00：停止工作，经由农舍入口返回家中。[/*]\n<br />[*]下午 6:00（可关闭）：在厨房准备晚餐，并将食物交给玩家。若玩家不在同一地图，将在约3秒后自动完成交付。[/*]\n<br />[*]晚上 7:00：在农舍内随机漫步，并显示夜间气泡对话。[/*]\n<br />[*]晚上 10:00：上床休息。此后点击配偶只会触发睡眠表情，菜单不会打开。[/*]\n<br />[/list][b]7.雨天行为[/b]\n<br />\u00A0 开启\"雨天待在家\"选项后，下雨时配偶不会外出干活，而是留在农舍内随机走动。若玩家通过菜单尝试安排户外任务，配偶会拒绝。下午 4:00 起正常进入晚间流程，晚餐照常提供。\n<br />[b]8.对话自定义[/b]\n<br />\u00A0 所有对话均可通过编辑 JSON 文件自定义，文件位于 Mod 目录下的 assets/dialogues/ 文件夹。\n<br />\n<br />[b][size=4]安装说明[/size][/b]\n<br />[list=1]\n<br />[*]安装 SMAPI（版本要求 4.0.0 及以上）[/*]\n<br />[*]将 Mod 文件夹解压至 Stardew Valley/Mods/ 目录[/*]\n<br />[*]启动游戏，结婚后即可生效[/*]\n<br />[*]可选依赖：安装 Generic Mod Config Menu（GMCM）可在游戏内调整所有配置项。[/*]\n<br />[/list]\n<br />\n<br />[size=4]Introduction[/size]\n<br />Spouse Helper is a functional mod designed for post-marriage content. Once installed, the player's spouse will actively participate in daily farm work and follow a complete daily schedule: heading out to work in the morning, returning to the farmhouse in the evening to prepare dinner for the player, and going to bed late at night. The spouse will also display speech bubbles while working and proactively call out to the player for chats, making farm life feel more authentic and immersive.\n<br />\n<br />[size=4]Features[/size]\n<br />[b]1. Farm Work[/b]\n<br />Every morning at 6:10 AM, the spouse will automatically enter the farm and begin working. The following seven task types are supported:\u00A0\n<br />\n<br />[list]\n<br />[*]Watering\u00A0[/*]\n<br />[*]Harvesting crops\u00A0[/*]\n<br />[*]Foraging ground items (e.g., truffles)\u00A0[/*]\n<br />[*]Planting seeds (requires seeds in inventory)\u00A0[/*]\n<br />[*]Fertilizing (requires fertilizer in inventory)\u00A0[/*]\n<br />[*]Collecting machine outputs\u00A0[/*]\n<br />[*]Petting animals\u00A0[/*]\n<br />[/list]\n<br />In automatic mode, task priorities are as follows: Watering &gt; Harvesting &gt; Foraging &gt; Collecting machine outputs &gt; Planting &gt; Fertilizing &gt; Petting. The spouse will navigate to each target using the pathfinding system and stop to notify the player when the backpack becomes full.\n<br />\n<br />[b]2. Interaction Menu[/b]\n<br />When the player is within 2 tiles of the spouse, pressing the P key (configurable) opens the interaction menu, which includes the following options:\u00A0\n<br />[list]\n<br />[*]Open Backpack: View and take items collected by the spouse, or place items into it.\u00A0[/*]\n<br />[*]Assign Task: Manually assign a specific task to the spouse, or switch back to automatic mode.\u00A0[/*]\n<br />[*]Take a Break: Make the spouse stop working and wander around the farm.\u00A0[/*]\n<br />[/list][i]Note: Task assignments are only available before 4:00 PM. After that time, the spouse will decline and suggest trying again tomorrow.[/i]\n<br />\n<br />[b]3. Spouse Backpack[/b]\n<br />The spouse has an independent backpack with the same capacity as a standard chest. Harvested crops and foraged items are stored here. The player can open the backpack via the menu at any time to retrieve items. If the backpack becomes full, the spouse will stop working.\n<br />[b]\n<br />4. Proactive Calls[/b]\n<br />During work hours (from morning until 5:00 PM), the spouse will occasionally call out to the player. Each call triggers a pop-up notification, while the spouse performs an emote and displays a dialogue line appropriate to the current time of day. By default, this occurs approximately every 100–140 in-game minutes (configurable). Each call has a 10% chance of including a random gift.\n<br />\n<br />[b]5. Speech Bubbles[/b]\n<br />While working or wandering around the farmhouse in the evening, the spouse will regularly display random dialogue bubbles above their head. The bubble content varies based on the current activity category (watering, harvesting, planting, petting, or general). By default, bubbles appear every 15–40 seconds (configurable).\n<br />\n<br />[b]6. Evening Routine[/b]\n<br />The spouse's evening behavior progresses automatically according to a fixed schedule:\u00A0\n<br />[list]\n<br />[*]4:00 PM: Stops working and returns home via the farmhouse entrance.\u00A0[/*]\n<br />[*]6:00 PM (toggleable): Prepares dinner in the kitchen and hands the meal to the player. If the player is not in the same map, delivery is automatically completed after approximately 3 seconds.\u00A0[/*]\n<br />[*]7:00 PM: Wanders randomly inside the farmhouse and displays evening speech bubbles.\u00A0[/*]\n<br />[*]10:00 PM: Goes to bed. After this time, clicking on the spouse only triggers a sleeping emote, and the menu will not open.[/*]\n<br />[/list]\n<br />[b]7. Rainy Day Behavior[/b]\n<br />With the \"Stay home on rainy days\" option enabled, the spouse will not go out to work during rain and will instead stay inside the farmhouse, wandering around randomly. If the player attempts to assign an outdoor task via the menu, the spouse will refuse. From 4:00 PM onward, the normal evening routine begins, and dinner is still provided as usual.\n<br />\n<br />[b]8. Dialogue Customization[/b]\n<br />All dialogue can be customized by editing JSON files located in the `assets/dialogues/` folder within the mod directory.\n<br />\n<br />[size=4][b]Installation Instructions[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI (version 4.0.0 or higher required).\u00A0[/*]\n<br />[*]Extract the mod folder into the `Stardew Valley/Mods/` directory.\u00A0[/*]\n<br />[*]Launch the game; the mod will take effect after marriage.\u00A0[/*]\n<br />[*]Installing Generic Mod Config Menu (GMCM) allows you to adjust all configuration settings in-game.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48113",
+	"Version": "1.0",
+	"Updated": "2026-06-25T00:11:25+00:00",
+	"Downloads": [
+		{
+			"Id": 172463,
+			"Type": "Main",
+			"DisplayName": "SpouseHelper",
+			"FileName": "40/a1/99/40a19910-9790-4a92-a466-a1e58f2a4055",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 102237,
+			"Uploaded": "2026-06-25T00:11:25+00:00",
+			"Mods": [
+				{
+					"Id": "Changbaibai.SpouseHelper",
+					"DisplayName": "Spouse Helper",
+					"Type": "Smapi",
+					"RelativePath": "SpouseHelper",
+					"Manifest": {
+						"Name": "Spouse Helper",
+						"Description": "Your spouse helps with farm chores after marriage. Customizable dialogue, auto-calling, dinner, and gift giving.",
+						"Author": "Changbaibai",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpouseHelper.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Changbaibai.SpouseHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342559151,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342434801,
+		"UploaderId": 108793888,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

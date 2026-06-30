@@ -5,18 +5,18 @@
 	"Author": "AmishIT",
 	"Description": "[i]Chance-Based Cooking Quality[/i] allows cooked foods to sometimes inherit the quality of their ingredients.\n<br />\n<br />By default, a recipe has a maximum 20% chance to produce an iridium cooked item, then 40% chance to produce a gold item, and then 60% chance to produce a silver item, rolled in-order until it keeps a quality level or becomes normal quality.\u00A0 The chances for each quality level are proportional to the number of ingredients at that quality or higher.\u00A0 For example, when cooking a recipe that requires two ingredients with one gold ingredient and one silver ingredient, that recipe would have a 0% chance to be iridium, 20% chance to be gold, then 60% chance to be silver.\n<br />\n<br />There are a few config options as well as support for [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] by spacechase0.\n<br />[list]\n<br />[*]Change the chances to inherit each quality level[/*]\n<br />[*]Make cooked items only inherit quality if all of their ingredients are that level or better[/*]\n<br />[*]Ignore ingredients that can't normally have quality (oil, seaweed, milled rice, etc.)[/*]\n<br />[/list]\n<br />[i]N.B.[/i]: Ingredients are consumed from right to left, bottom to top from your inventory, then your house's fridge, then minifridges.\u00A0 Make sure you put the ingredients you want consumed to the right or below\u00A0ingredients that you don't want consumed.\n<br />\n<br />Requires [i]SMAPI[/i].\n<br />\n<br />To manually install, unzip into a folder in your \"Stardew Valley/Mods/\" folder.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />Due to the nature of patches made by this mod, it may be incompatible with other mods that affect crafting and cooking, particularly those that apply patches to the same code patched by this mod or mods that replace the cooking GUI.\u00A0 If this mod applies its patch after an incompatible mod, this mod may fail to apply its patch and disable itself, leaving an error line in the SMAPI console and log file.\u00A0 GUI mods may not call the vanilla crafting function changed by this mod, thus preventing this mod from doing anything (this will not produce a SMAPI error).\n<br />\n<br />Mods that add new ingredients that can't have quality require an update on my end or other patches to work properly (or else those ingredients will count against you when used).\u00A0 For modders: these can be added to the ignore lists by patches or other mods via the IChanceBasedCookingQualityAPI interface.\n<br />\n<br />[size=3][b]Known Compatibility[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/19508]Cornucopia More Crops[/url]:\u00A0 Cornucopia's quality-less ingredients are accounted for by the 'ignore quality-less ingredients' config options.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6830?tab=description]The Love of Cooking[/url]:\u00A0 Built-in compatibility for The Love of Cooking's cooking GUI.\u00A0 The Love of Cooking also lets you select which ingredients you use and makes bulk-cooking much smoother.\u00A0 If you disable The Love of Cooking's added seasoning, make sure to disable this mod's compatibility for those seasonings in the config.\u00A0 With those seasonings enabled, Simple Seasoning has a 50/50 chance to add one quality level or do nothing and Super Seasoning always adds one quality level; the Sous Chef profession improves these to one quality level and 50/50 one or two quality levels, respectively.[/*]\n<br />[/list]\n<br />[b][size=3]Known Incompatibility[/size][/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/11115]Better Crafting[/url]:\u00A0 This mod can be made partially compatible with the Better Crafting cooking GUI, but my attempt at it left the cooking menu in an even more unwieldy state than the vanilla menu and completely broke bulk crafting.\u00A0 If you're using Better Crafting, you can disable 'Replace Cooking Menu' in its config to use the vanilla menu or a compatible cooking menu mod instead, either of which will allow this mod to function normally.[/*]\n<br />[/list]\n<br />This mod is made to work with my other mod [url=https://www.nexusmods.com/stardewvalley/mods/46573]Chance-Based Artisan Good Quality[/url], which adds chances for artisan goods to inherit the quality of their inputs and has an option to allow cooking ingredients produced in machines and the mill (oil, vinegar, wheat flour, etc.) to inherit the quality of their inputs as well, but this is not required.\n<br />\n<br />[line]\n<br />\n<br />[url=https://github.com/Amish-IT/chance-based-cooking-quality]Github[/url]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47067",
-	"Version": "1.1.0",
-	"Updated": "2026-06-20T01:38:28+00:00",
+	"Version": "1.1.1",
+	"Updated": "2026-06-24T07:15:50+00:00",
 	"Downloads": [
 		{
-			"Id": 171846,
+			"Id": 172374,
 			"Type": "Main",
-			"DisplayName": "Chance Based Cooking Quality v1.1.0",
-			"FileName": "bd/8a/1f/bd8a1f2c-1835-4392-bfed-6461d00530e8",
-			"Description": "Added Love of Cooking compatibility and added API interface.",
-			"Version": "1.1.0",
-			"SizeInBytes": 25962,
-			"Uploaded": "2026-06-20T01:38:28+00:00",
+			"DisplayName": "Chance Based Cooking Quality v1.1.1",
+			"FileName": "f5/ef/5c/f5ef5cff-63cc-407b-8c9f-b970a1052ab5",
+			"Description": "Fixed ingredient ignore lists not applying to food cooked via the Love of Cooking GUI.",
+			"Version": "1.1.1",
+			"SizeInBytes": 25980,
+			"Uploaded": "2026-06-24T07:15:50+00:00",
 			"Mods": [
 				{
 					"Id": "AIT.ChanceBasedCookingQuality",
@@ -27,7 +27,7 @@
 						"Name": "Chance-Based Cooking Quality",
 						"Description": "Makes cooked food sometimes inherit the quality of its ingredients.",
 						"Author": "AIT",
-						"Version": "1.1.0",
+						"Version": "1.1.1",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "ChanceBasedCookingQuality.dll",
 						"Dependencies": [
@@ -49,7 +49,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342558534,
+				"Uid": 5596342559062,
 				"CategoryId": 1,
 				"Primary": true
 			}

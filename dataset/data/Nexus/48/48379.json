@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 48379,
+	"Name": "Tool Upgraders",
+	"Author": "aedenthorn",
+	"Description": "[size=5][b][u]Overview[/u][/b][/size]\n<br />\n<br />This mod implements the not-fully-implemented vanilla logic for upgrading specific tools, allowing any shop to sell and carry out upgrades to tools.\n<br />\n<br />This came about from wanting the Wizard to upgrade wands for my soon-to-be-ready area-of-effect spell mod, but it can be easily applied to any shopkeeper.\n<br />\n<br />Tool upgrades are shop-dependent, so you can upgrade one tool at a time per shop.\n<br />\n<br />Mod users, just download this mod as required. It doesn't do anything by itself.\n<br />\n<br />\n<br />[size=5][b][u]Designating Tool Upgraders[/u][/b][/size]\n<br />\n<br />This mod does not add actual items to shop inventory. See [b]Adding Upgrades[/b] below for that.\n<br />\n<br />To designate a shop as an upgrader, use Content Patcher or the C# API.\n<br />\n<br />\n<br />[size=4][b]Content Patcher[/b][/size]\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.9.1\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.ToolUpgraders/dict\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"wizard\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ShopName\": \"Wizard\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"TileAction\": \"WizardBook\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Tools\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"aedenthorn.MagicWandsCP_silverWand\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"aedenthorn.MagicWandsCP_goldWand\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"UpgradeDays\": 2,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ReadyText\": null,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BeginText\": \"So it shall be. Come back in {0} days.\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"NoSpaceText\": null,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BeginSound\": \"wand\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BeginNPC\": \"Wizard\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]\n<br />ShopName and TileAction are used to trigger receiving upgraded tools - if your shop is always opened via a tile action, you don't really need the ShopName.\n<br />\n<br />Tools contains the ItemId of every tool the shop should be able to upgrade, again for triggering receipt.\n<br />\n<br />You can omit the three \"Text\" fields to use the same dialogue as for the blacksmith.\n<br />\n<br />The above example is what I'm using for my modded-in Wizard shop; it will work with any shop in Data/Shops.\n<br />\n<br />\n<br />[size=4][b]C# API[/b][/size]\n<br />\n<br />[code]Helper.ModRegistry.GetApi&lt;IToolUpgradersAPI&gt;(\"aedenthorn.ToolUpgraders\")?.AddUpgrader(\"Wizard\", \"Wizard\", \"WizardBook\", upgrades, null, Helper.Translation.Get(\"tool-ready-in-x\"), null, \"wand\", \"Wizard\", Config.UpgradeDays);[/code]\n<br />Same basic idea as above, see [url=https://github.com/aedenthorn/StardewValleyMods/blob/master/ToolUpgraders/ToolUpgradersAPI.cs]the API here[/url].\u00A0 Again, this requires me doing other things to make a new Wizard shop based on the WizardBook tile, but it works with vanilla shops, e.g. just use \"Carpenter\" instead of \"Wizard\".\n<br />\n<br />\n<br />[size=5][b][u]Adding Upgrades[/u][/b][/size]\n<br />\n<br />The vanilla game already has a method for adding upgrades to shop inventory, but it's broken. This mod fixes it, so you can do:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.8.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/Shops\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"TargetField\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Carpenter\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Items\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"(T)CopperAxe\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Id\": \"(T)CopperAxe\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemId\": \"TOOL_UPGRADES (T)CopperAxe\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />This example adds the copper axe as an upgrade - upgrade info is already present in the game code so this is all you need to add an axe upgrade to Robin's shop. Note that this won't work unless you add Carpenter to the upgraders as explained above.\n<br />\n<br />The important part here is the \"TOOL_UPGRADES (T)CopperAxe\"; this is vanilla code, but it doesn't normally work as expected (maybe it's disabled intentionally because it wouldn't work without some other things this mod does anyway).\n<br />\n<br />\n<br />[size=5][u][b]Technical[/b][/u][/size]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48379",
+	"Version": "0.1.0",
+	"Updated": "2026-06-29T23:07:16+00:00",
+	"Downloads": [
+		{
+			"Id": 173054,
+			"Type": "Main",
+			"DisplayName": "ToolUpgraders",
+			"FileName": "14/a9/2b/14a92b8e-8ebd-48c8-8ca4-52b985bfd5ca",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 25922,
+			"Uploaded": "2026-06-29T23:07:16+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.ToolUpgraders",
+					"DisplayName": "Tool Upgraders",
+					"Type": "Smapi",
+					"RelativePath": "ToolUpgraders",
+					"Manifest": {
+						"Name": "Tool Upgraders",
+						"Description": "Tool Upgraders.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ToolUpgraders.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:48379"
+						],
+						"UniqueId": "aedenthorn.ToolUpgraders"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342559742,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435067,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
