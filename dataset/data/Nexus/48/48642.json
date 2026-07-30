@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 48642,
+	"Name": "Nozzle and Enricher and Scarecrow on Sprinklers",
+	"Author": "aedenthorn",
+	"Description": "[size=5][u][b]Overview[/b][/u][/size]\n<br />\n<br />This mod adds the basic ability to add both a range-increasing [url=https://stardewvalleywiki.com/Pressure_Nozzle]pressure nozzle[/url] and a fertilizer-placing [url=https://stardewvalleywiki.com/Enricher]enricher[/url] together on any sprinkler.\n<br />\n<br />You can also set the range bonus for the pressure nozzle in the config and create custom nozzles with custom range bonuses.\n<br />\n<br />You can also now place scarecrows on sprinklers with this mod.\n<br />\n<br />[size=5][u][b]Custom Nozzles[/b][/u][/size]\n<br />\n<br />To designate an object as a custom nozzle, use Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.9.1\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.NozzleAndEnricher/dict\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"(O)aedenthorn.IridiumNozzle\": 3\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]\n<br />This designates a custom object with the ItemId \"aedenthorn.IridiumNozzle\" as having a range bonus of 3 tiles.\n<br />\n<br />Note that your nozzle object must have two sprites side-by-side in its spritesheet, just like the vanilla pressure nozzle; the first one is for the item icon, the second is for the placed visual indicator. You can find the pressure nozzle sprites in Maps/springobjects.\n<br />\n<br />\n<br />[size=5][u][b]Notes[/b][/u][/size]\n<br />\n<br />When you use a tool on a sprinkler, it will remove the enricher first, then the nozzle. To remove the nozzle first, hold down the mod key when using the tool (default Left Alt).\n<br />\n<br />This mod works by moving nozzle objects into the sprinkler's mod data, which means if you remove this mod, your placed nozzles will disappear if they have been moved into mod data. To avoid this, you'll have to remove the nozzles from the sprinklers with tools first.\n<br />\n<br />\n<br />[size=5][u][b]Technical[/b][/u][/size]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Translations for GMCM should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48642",
+	"Version": "0.2.1",
+	"Updated": "2026-07-05T02:12:01+00:00",
+	"Downloads": [
+		{
+			"Id": 173739,
+			"Type": "Main",
+			"DisplayName": "NozzleAndEnricher",
+			"FileName": "2e/68/6b/2e686b18-dabd-4d2f-b3ed-b9d55688ab66",
+			"Description": "Changes:\n\nAdded ability to add scarecrows as well, because why not?",
+			"Version": "0.2.1",
+			"SizeInBytes": 19529,
+			"Uploaded": "2026-07-05T02:12:01+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.NozzleAndEnricher",
+					"DisplayName": "Nozzle and Enricher",
+					"Type": "Smapi",
+					"RelativePath": "NozzleAndEnricher",
+					"Manifest": {
+						"Name": "Nozzle and Enricher",
+						"Description": "Nozzle and Enricher.",
+						"Author": "aedenthorn",
+						"Version": "0.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NozzleAndEnricher.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:48642"
+						],
+						"UniqueId": "aedenthorn.NozzleAndEnricher"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560427,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435330,
+		"UploaderId": 18901754,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

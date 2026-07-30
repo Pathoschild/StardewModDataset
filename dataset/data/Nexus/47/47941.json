@@ -5,18 +5,18 @@
 	"Author": "cylixlee",
 	"Description": "[size=6]Carryable Chests[/size]\n<br />[img]https://img.shields.io/badge/Android_Compatible-3DDC84?logo=android&amp;logoColor=000000[/img]\u00A0[img]https://img.shields.io/badge/Stardew_Valley_PC-1.6.15-138FBF[/img]\u00A0[img]https://img.shields.io/badge/Stardew_Valley_Android-1.6.15-138FBF[/img]\u00A0[img]https://img.shields.io/badge/SMAPI_PC-4.5.2-ff781e[/img]\u00A0[img]https://img.shields.io/badge/SMAPI_Android-4.3.2.5-ff781e[/img]\n<br />\n<br />Stardew Valley mod for picking up and moving chests without emptying them first.\n<br />\n<br />[img]https://media.githubusercontent.com/media/cylixlee/StardewValleyMods/refs/heads/main/CarryableChests/img/cover.png[/img]\n<br />\n<br />[size=5][b]How To Use[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Right-click a placed chest to open it as usual.[/*]\n<br />[*]Left-click a chest with empty hands to pick it up.[/*]\n<br />[*]Right-click while holding a chest to open it.[/*]\n<br />[*]Place the chest like any other item.[/*]\n<br />[/list][size=5][b]Settings[/b][/size]\n<br />\n<br />This mod provides the following settings in\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM (Generic Mod Config Menu)[/url].\n<br />\n<br />[img]https://media.githubusercontent.com/media/cylixlee/StardewValleyMods/refs/heads/main/CarryableChests/img/settings.png[/img]\n<br />\n<br />[size=4][b]Maximum Reach[/b][/size]\n<br />\n<br />How far away a chest can be picked up from. Defaults to `1`.\n<br />\n<br />[size=4][b]Require Empty Hands[/b][/size]\n<br />\n<br />Whether your hands must be empty before picking up a chest. Defaults to enabled.\n<br />\n<br />[size=4][b]Open Held Chest[/b][/size]\n<br />\n<br />Whether right-click opens the chest you're carrying. Defaults to enabled.\n<br />\n<br />[size=4][b]Heavy Chest Slowdown[/b][/size]\n<br />\n<br />Whether fuller carried chests slow you down.\n<br />\n<br />[b]Enabled[/b]\n<br />\n<br />Whether heavy chest slowdown is enabled. Defaults to false.\n<br />\n<br />[b]Starts At[/b]\n<br />\n<br />Chest fill percentage before slowdown starts. Defaults to 50.\n<br />\n<br />Set this to 100 if you only want full chests to slow you down.\n<br />\n<br />[b]Max Penalty[/b]\n<br />\n<br />Maximum speed penalty when the carried chest is full. Defaults to 1.\n<br />\n<br />[b]Show Icon[/b]\n<br />\n<br />Whether to show the slowdown debuff icon in the UI. Defaults to false.\n<br />\n<br />[size=5][b]Multiplayer[/b][/size]\n<br />\n<br />PC multiplayer is supported. Farmhands can pick up and place chests; the host coordinates the world changes.\n<br />\n<br />Carried chests stay carried across saves, disconnects, and reconnects. They are not automatically returned to the world.\n<br />\n<br />[size=5][b]Supported Chests[/b][/size]\n<br />\n<br />All player chest variants are supported, including normal chests, stone chests, big chests, Junimo Chests, Mini Shipping Bins, auto-loaders, and enrichers.\n<br />\n<br />Non-player reward, treasure, and gift chests are not carryable.\n<br />\n<br />[size=5][b]Limitations[/b][/size]\n<br />\n<br />Multiplayer support is currently targeted at PC. Android multiplayer is not validated yet.\n<br />\n<br />[size=5][b]Contributing[/b][/size]\n<br />\n<br />The source code is at my\u00A0[url=https://github.com/cylixlee/StardewValleyMods]GitHub repo[/url].",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47941",
-	"Version": "1.2.0",
-	"Updated": "2026-06-25T07:35:53+00:00",
+	"Version": "1.2.1",
+	"Updated": "2026-07-21T08:57:49+00:00",
 	"Downloads": [
 		{
-			"Id": 172487,
+			"Id": 175778,
 			"Type": "Main",
-			"DisplayName": "CarryableChests 1.2.0",
-			"FileName": "34/c3/c0/34c3c0e5-aedd-410c-a1d4-97c1f366b09a",
-			"Description": "",
-			"Version": "1.2.0",
-			"SizeInBytes": 48153,
-			"Uploaded": "2026-06-25T07:35:53+00:00",
+			"DisplayName": "CarryableChests 1.2.1",
+			"FileName": "e7/4d/46/e74d4634-accc-4621-b3bf-963fec9f1301",
+			"Description": "- Fixed a critical bug where right-clicking a carried chest could cause all items inside to disappear<br />- Right-click is now always intercepted when holding a carried chest, preventing the base game from attempting to place it through its own code",
+			"Version": "1.2.1",
+			"SizeInBytes": 48163,
+			"Uploaded": "2026-07-21T08:57:49+00:00",
 			"Mods": [
 				{
 					"Id": "CylixLee.StardewValley.CarryableChests",
@@ -27,7 +27,7 @@
 						"Name": "Carryable Chests",
 						"Description": "Safely pick up, carry, and place player chests without losing their contents.",
 						"Author": "cylixlee",
-						"Version": "1.2.0",
+						"Version": "1.2.1",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "CarryableChests.dll",
 						"Dependencies": [],
@@ -37,7 +37,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342559175,
+				"Uid": 5596342562466,
 				"CategoryId": 1,
 				"Primary": true
 			}

@@ -5,8 +5,8 @@
 	"Author": "aedenthorn",
 	"Description": "This is a simple achievement framework that adds custom achievements to the collections tab:\n<br />\n<br />[img]https://i.imgur.com/4sVkN3U.png[/img]\uFEFF\n<br />\n<br />Custom achievements can have custom icons as pictured above, or use the default yellow star.\n<br />\n<br />\n<br />\n<br />[b][size=5]Creating Custom Achievements[/size][/b]\n<br />\n<br />Achievements are creating using [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\uFEFF.\n<br />\n<br />Achievement data is added to a dictionary at the path [b]custom_achievements_dictionary[/b], e.g.:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.23.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\uFEFF\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"custom_achievements_dictionary\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"FarmingLevelTen\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"ID\": \"FarmingLevelTen\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"name\": \"Professional Farmer\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"description\": \"Reach farming level ten.\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"iconPath\": \"LevelAchievementsFarmingLevelTen\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"drawFace\": true\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 \"achieved\": false\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Update\": \"OnDayStart, OnLocationChange, OnTimeChange\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"custom_achievements_dictionary\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Fields\":\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"FarmingLevelTen\": {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"achieved\": true\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"When\":{\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Query: {{SkillLevel:Farming}} &gt; 9\": true\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Update\": \"OnDayStart, OnLocationChange, OnTimeChange\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 },\n<br />\uFEFF\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Action\": \"Load\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"Target\": \"LevelAchievementsFarmingLevelTen\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"FromFile\": \"assets/FarmingLevelTen.png\"\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0\u00A0 ]\n<br />}\n<br />[/code]\n<br />This sets the [b]achieved [/b]field to true when the farming skill level is greater than 9.\n<br />\n<br />Achievement notifications will trigger when Content Patcher updates the [b]achieved [/b]field in accordance with the [b]Update [/b]field.\n<br />\n<br />\n<br />[b][size=4]Custom Icons[/size][/b]\n<br />\n<br />The icon path can be omitted to make it use the default star. Otherwise, the png file must be supplied by your mod, as in the above example.\n<br />\n<br />By default, achievement star faces are chosen at random by the game. If you set [b]drawFace[/b] to [b]false[/b], it will just show whatever your icon is, with no added face.\n<br />\n<br />You can also optionally specify an [b]iconRect[/b] rectangle with X, Y, Width, and Height fields if you are using a tilesheet, to only use part of the source png.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url] and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10047",
-	"Version": "0.4.0",
-	"Updated": "2026-04-12T01:30:07+00:00",
+	"Version": "0.4.1",
+	"Updated": "2026-07-12T10:20:26+00:00",
 	"Downloads": [
 		{
 			"Id": 46788,
@@ -47,14 +47,14 @@
 			}
 		},
 		{
-			"Id": 164169,
+			"Id": 174745,
 			"Type": "Main",
 			"DisplayName": "Custom Achievements",
-			"FileName": "Custom Achievements-10047-0-4-0-1775957407.zip",
-			"Description": "Changes:<br /><br />Added pagination",
-			"Version": "0.4.0",
-			"SizeInBytes": 16271,
-			"Uploaded": "2026-04-12T01:30:07+00:00",
+			"FileName": "c7/d0/d9/c7d0d95f-2f23-414b-804e-62f2abc31271",
+			"Description": "Changes:\n\nTiming",
+			"Version": "0.4.1",
+			"SizeInBytes": 16501,
+			"Uploaded": "2026-07-12T10:20:26+00:00",
 			"Mods": [
 				{
 					"Id": "aedenthorn.CustomAchievements",
@@ -65,7 +65,7 @@
 						"Name": "Custom Achievements",
 						"Description": "Custom achievements framework.",
 						"Author": "aedenthorn",
-						"Version": "0.4.0",
+						"Version": "0.4.1",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "CustomAchievements.dll",
 						"Dependencies": [],
@@ -77,7 +77,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342550857,
+				"Uid": 5596342561433,
 				"CategoryId": 1,
 				"Primary": true
 			}

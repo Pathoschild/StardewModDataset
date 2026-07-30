@@ -3,20 +3,20 @@
 	"Id": 45827,
 	"Name": "Xiddav's Parks - Mountain and Mines",
 	"Author": "xiddav",
-	"Description": "Edit Mountain, Mine (main), Mine 20/60/100, Quarry Mine, and adds a new area with an abandoned mine.\n<br />There is a working minecart in the deepest part of the abandoned mine.\n<br />\n<br />The Dwarf now sells prismatic shards for 10,000\n<br />\n<br />\n<br />It should be compatible with east scarp\n<br />\n<br />[b]Does it work with SVE?[/b]\n<br />I didn't test it, but most likely no.\n<br />[b]Will you make it compatible with SVE?[/b]\n<br />no\n<br />[b]Will you make it compatible with [u](insert mod other then SVE)[/u]?[/b]\n<br />maybe. I can look into it and see if it's possible.",
+	"Description": "Edit Mountain, Mine, Mine 20/60/100, Quarry Mine, Science House, Maru's Basement, and adds a new area with an abandoned mine.\n<br />\n<br />The Dwarf sells prismatic shards\n<br />Adventures Guild sells Tents and Cookout Kits\n<br />\n<br />There are three new Dwarf NPCs, but they don't do anything yet.\n<br />\n<br />\n<br />\n<br />\n<br />It should be compatible with east scarp\n<br />\n<br />[b]Does it work with SVE?[/b]\n<br />I didn't test it, but most likely no.\n<br />[b]Will you make it compatible with SVE?[/b]\n<br />no\n<br />[b]Will you make it compatible with [u](insert mod other then SVE)[/u]?[/b]\n<br />maybe. I can look into it and see if it's possible.\n<br />\n<br />\n<br />\n<br />\n<br />[b]Thing I am thinking about doing in the future[/b]:\n<br />make the old mine shack repairable (It currently repairs when you reach 10 hearts with George, but I want to make it a quest)\n<br />add notes around the map\n<br />turn the deep abandoned mine into a dwarf village (started)",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45827",
-	"Version": "1.0.1",
-	"Updated": "2026-06-30T00:19:28+00:00",
+	"Version": "1.0.2",
+	"Updated": "2026-07-11T06:33:30+00:00",
 	"Downloads": [
 		{
-			"Id": 173058,
+			"Id": 174504,
 			"Type": "Main",
 			"DisplayName": "Xiddav's Parks - Mountains and Mines",
-			"FileName": "8c/ad/3b/8cad3b9a-15be-4cca-a9dc-9de9dad43b93",
-			"Description": "",
-			"Version": "1.0.1",
-			"SizeInBytes": 73137,
-			"Uploaded": "2026-06-30T00:19:28+00:00",
+			"FileName": "b0/c5/e7/b0c5e7c5-52ae-4dd9-8589-b133ca3bf436",
+			"Description": "Now requires two more mods.",
+			"Version": "1.0.2",
+			"SizeInBytes": 101398,
+			"Uploaded": "2026-07-11T06:33:30+00:00",
 			"Mods": [
 				{
 					"Id": "Xiddav.Parks.Mountain",
@@ -27,7 +27,7 @@
 						"Name": "Xiddav's Parks Mountain Edit and Expansion",
 						"Description": "I edited a lot of the town to my liking. This time it's the Mountain and Mines",
 						"Author": "Xiddav",
-						"Version": "1.0.1",
+						"Version": "1.0.2",
 						"MinimumApiVersion": "3.0.0",
 						"ContentPackFor": {
 							"UniqueId": "Pathoschild.ContentPatcher"
@@ -50,6 +50,10 @@
 								"IsRequired": true
 							},
 							{
+								"UniqueId": "Lumisteria.LumiTilesheetsIndoor",
+								"IsRequired": true
+							},
+							{
 								"UniqueId": "Lemurkat.EastScarp",
 								"IsRequired": false
 							}
@@ -59,10 +63,32 @@
 						],
 						"UniqueId": "Xiddav.Parks.Mountain"
 					}
+				},
+				{
+					"Id": "Xiddav.Parks.Mountain.FTM",
+					"DisplayName": "Xiddav's Parks Mountain FTM",
+					"Type": "ContentPack",
+					"RelativePath": "[FTM]Xiddav's Parks Mountain",
+					"Manifest": {
+						"Name": "Xiddav's Parks Mountain FTM",
+						"Description": "FTM for Xiddav's Parks Mountains",
+						"Author": "xiddav",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "2.5.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.26.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "Xiddav.Parks.Mountain.FTM"
+					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342559746,
+				"Uid": 5596342561192,
 				"CategoryId": 1,
 				"Primary": true
 			}

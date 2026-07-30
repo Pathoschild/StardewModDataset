@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 49258,
+	"Name": "Shared Friendship",
+	"Author": "Fetterus",
+	"Description": "[size=5][b]Shared Friendship[/b][/size]\n<br />\n<br />Friendship points with villagers are shared between every player on the farm. If one player gives Abigail a gift, everyone gains the friendship.\n<br />\n<br />Romance is never shared. Dating, engagement, marriage and divorce stay strictly individual, in both directions.\n<br />\n<br />Pairs well with [url=https://www.nexusmods.com/stardewvalley/mods/49256]Shared Skills[/url] — same rules, fully independent, use either or both.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Every villager, in real time.[/b] Talking, gifts, quests and heart events all count. Points are shared the moment they are earned.[/*]\n<br />[*][b]Romance is untouched.[/b] Only the points move. Who you are dating or married to is yours alone, and nobody else is dragged toward your spouse.[/*]\n<br />[*][b]Nobody ever loses points.[/b] This mod only adds. Daily decay, rejected gifts and event penalties stay with the player they happened to, and are never propagated to anyone else.[/*]\n<br />[*][b]Offline farmhands keep up.[/b] Players who are not logged in still receive friendship.[/*]\n<br />[*][b]Catch-up for new players.[/b] Each morning, and whenever someone connects, every player is brought up to the highest points anyone holds with each villager. A player who joins ahead of the farm raises everyone else, not the other way round.[/*]\n<br />[*][b]The dating limit is respected.[/b] Shared points stop below the threshold the game uses for a villager you could date but are not dating, so nobody drifts toward your bachelor or bachelorette by accident.[/*]\n<br />[*][b]Automatic backups.[/b] A snapshot of everyone's friendship is saved before the mod changes anything, and again each season. Restorable from the console.[/*]\n<br />[*][b]The host's settings apply to everyone[/b] for the duration of a session. Your own config file is left alone and comes back when you leave.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] 4.0.0 or later. Stardew Valley 1.6 or later is required.[/*]\n<br />[*]Unzip into your [b]Stardew Valley/Mods[/b] folder.[/*]\n<br />[*][b]Every player must install it.[/b] This is not optional. A player without the mod is warned in the chat box and simply does not take part in sharing; the rest of the farm keeps syncing between themselves.[/*]\n<br />[*]Run the game once to generate [b]config.json[/b].[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional but recommended: it gives you all of this in game, with no file editing. Without it, edit [b]config.json[/b] by hand.\n<br />\n<br />[code]\n<br />Setting\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Default\u00A0 \u00A0 \u00A0 What it does\n<br />---------------------------\u00A0 -----------\u00A0 ---------------------------------------\n<br />Enabled\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Turn sharing off. Nobody loses points.\n<br />FriendshipMultiplier\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 1.0\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Applied to every shared gain.\n<br />Range 0.1 to 10.\n<br />DividePerPlayerCount\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 false\u00A0 \u00A0 \u00A0 \u00A0 Split the shared portion across the\n<br />players online. Your own gains are\n<br />never reduced.\n<br />RespectDatingCap\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Keep shared points under the game's\n<br />limit for a villager you could date\n<br />but are not dating.\n<br />UnknownNpcPolicy\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 CreateEntry\u00A0 CreateEntry gives points for villagers\n<br />you have not met; SkipUnknown waits.\n<br />ReconcilePolicy\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 SyncToMax\u00A0 \u00A0 SyncToMax levels everyone each\n<br />morning; FutureGainsOnly does not.\n<br />ShareFromSpouseInteractions\u00A0 false\u00A0 \u00A0 \u00A0 \u00A0 Share the points from kisses and\n<br />spouse conversations.[/code]\n<br />While you are in someone else's session, the settings menu edits your own config rather than the host's. Your changes take effect when you leave.\n<br />\n<br />The config menu will warn you when a multiplier below 1 (or splitting between players) is being cancelled out by the default SyncToMax reconcile policy — see the FAQ below for why.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Console commands[/b][/size]\n<br />\n<br />[code]\n<br />sharedfriendship_status [npc]\u00A0 Points per player, all villagers or one\n<br />sharedfriendship_sync\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Host only. Force a catch-up now\n<br />sharedfriendship_restore\u00A0 \u00A0 \u00A0 \u00A0 Host only. List or restore a backup[/code]\n<br />If you ever report a problem, paste the output of [b]sharedfriendship_status[/b] with it — it answers most questions at a glance.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Friendship mods work, and their gains are shared.[/b] Anything that grants friendship through the game's normal path is picked up automatically. That includes [url=https://www.nexusmods.com/stardewvalley/mods/8497]Part of the Community[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/15558]Friends Forever[/url].[/*]\n<br />[*][b]NPC mods work.[/b] Modded villagers are shared like any other. If your group's mod lists differ, a villager somebody else has and you do not is skipped for you rather than written into your save as an entry pointing at nobody.[/*]\n<br />[*][b]Children are never shared.[/b] They belong to one couple's marriage.[/*]\n<br />[*]Works in split-screen and in networked co-op.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]FAQ[/b][/size]\n<br />\n<br />[b]Are marriages shared?[/b]\n<br />Never, in either direction. If you marry Abigail, nobody else becomes married to Abigail, and their points with her are still capped as if they were not dating her.\n<br />\n<br />[b]Can someone steal my spouse?[/b]\n<br />No. Shared points stop below the threshold the game uses for a villager you are not dating, and your own points from dating or marriage are never lowered. Kisses and spouse conversations are not shared at all by default.\n<br />\n<br />[b]Does anyone ever lose friendship?[/b]\n<br />No. This mod only adds. Losses stay with the player they happened to.\n<br />\n<br />[b]Then what happens to daily friendship decay?[/b]\n<br />It gets undone, and that is expected. Decay lowers your points, and the next morning's pass raises everyone to the highest total anyone holds, so if a friend of yours kept their points with that villager you get yours back. If everybody's points decay, there is no higher total to restore from and the decay stands. Set ReconcilePolicy to FutureGainsOnly if you would rather decay stick.\n<br />\n<br />[b]Can I make friendship slower than playing alone?[/b]\n<br />No. The floor is vanilla: this mod never subtracts, and your own interactions always grant the full points the game gives. A multiplier below 1 and splitting between players only shrink the shared portion — and with the default SyncToMax policy, the morning pass raises everyone back to the highest total anyway, so a reduction only delays the group by a day. For a reduction that sticks, also set ReconcilePolicy to FutureGainsOnly. The only way down to pure vanilla pace is turning the mod off.\n<br />\n<br />[b]Can we farm gifts by all giving the same villager a present?[/b]\n<br />No more than usual. The daily gift and conversation limits are never shared, so each player's own limits still apply. The points each of them legitimately earns do get shared.\n<br />\n<br />[b]What if one player does not have the mod?[/b]\n<br />They are named in the chat box when they connect, and they do not take part. Everyone else keeps sharing normally.\n<br />\n<br />[b]Can I uninstall it?[/b]\n<br />Yes. Delete the folder. Friendship points are ordinary save data and stay exactly as they are. Because this mod never subtracts, there is nothing to unwind. If you want your individual relationships back as they were, restore one of the automatic backups first.\n<br />\n<br />[b]What about villagers I have not met yet?[/b]\n<br />By default you get the points anyway and the friendship entry is created. Set UnknownNpcPolicy to SkipUnknown if you would rather meet them first.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49258",
+	"Version": "1.1.0",
+	"Updated": "2026-07-16T23:16:44+00:00",
+	"Downloads": [
+		{
+			"Id": 175214,
+			"Type": "Main",
+			"DisplayName": "SharedFriendship",
+			"FileName": "b3/5f/40/b35f407d-65ad-46b8-90ef-7e825064786a",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 42272,
+			"Uploaded": "2026-07-16T23:16:44+00:00",
+			"Mods": [
+				{
+					"Id": "mariofeter.SharedFriendship",
+					"DisplayName": "Shared Friendship",
+					"Type": "Smapi",
+					"RelativePath": "SharedFriendship",
+					"Manifest": {
+						"Name": "Shared Friendship",
+						"Description": "Shares NPC friendship points between all players in multiplayer. Romance stays individual.",
+						"Author": "mariofeter",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SharedFriendship.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:49258"
+						],
+						"UniqueId": "mariofeter.SharedFriendship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561902,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435946,
+		"UploaderId": 58817416,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

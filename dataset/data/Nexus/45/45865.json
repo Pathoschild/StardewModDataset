@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 45865,
+	"Name": "Advanced Fruit Tree Framework (AFTF)",
+	"Author": "Larvuk",
+	"Description": "[size=4][b]AFTF is a deep rework of the code behind the fruit tree system, allowing the edition of behaviours that were hardcoded before.[/b][/size]\n<br />\n<br />[size=3][b][u]As a player[/u], you can:[/b][/size]\n<br />[list]\n<br />[*][size=3]use AFTF config to change the generic behaviour of your fruit trees (number of fruits produced each day, radius of blocked growth, maximum number of fruits in a tree, number of days to mature).[/size][/*]\n<br />[*][size=3]install AFTF mod packs adding trees with specific behaviours.[/size][/*]\n<br />[/list]\n<br />[size=3][b][u]As a modder[/u], you can create or edit fruit trees in deep and strange ways to make them unique.\u00A0[/b][/size][b]Features include:[/b]\n<br />[list]\n<br />[*]total control on the [b]amount, nature, position and quality[/b] of the items produced by your trees.[/*]\n<br />[*]change their [b]planting conditions, growth time[/b], and behaviour &amp; drops when destroyed.[/*]\n<br />[*][b]complex condition system[/b] allowing you to change any behaviour depending on the season, location, weather, installed mods, config from other mods, character level, random values, and more.[/*]\n<br />[*]make [b]evolutive trees[/b], able to get better, evolve, wither, die or whatever.[/*]\n<br />[/list][i][b][size=4]See the articles for full documentation.[/size][/b][/i]\n<br />\n<br />Images from the gallery include [i]Cornucopia[/i]'s Durian Tree, [i]Kalash More Fruit Trees[/i]'s Azuravian Tree (the dead version from our collab on FTR), and the Antipodean Apple Tree from an example pack you might see sometime. The images also picture [i]Vibrant Pastoral[/i], [i]Simple Foliage[/i] and [i]Elle's Cuter Grass[/i].\n<br />A big thanks to Hayato2236 for both motivation and testing.\n<br />\n<br />---------------------------------------------------------------------------------------------------------------\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />My mod Fruit Tree Reforged (FTR) has be rewritten as an AFTF pack, so it's fully compatible starting with its 2.0 version. Older versions of FTR are not.\n<br />\n<br />AFTF uses Harmony and alters methods from the FruitTree class. Mods that aren't affecting fruit trees should all be compatible.\n<br />\n<br />Full list of Patched methods (mods affecting the same methods might or might not be compatible):\n<br />[size=1][font=Courier New]FruitTree.TryAddFruit[/font][/size][size=1] (deep prefix)\n<br />[font=Courier New]FruitTree.draw[/font] (prefix + postfix overriding the draw method)[/size]\n<br />[size=1][font=Courier New]FruitTree.dayUpdate[/font][/size][size=1] (postfix overridding the growth process)[/size]\n<br />[size=1][font=Courier New]FruitTree.performToolAction[/font][/size][size=1] (deep prefix)[/size]\n<br />[size=1][font=Courier New]FruitTree.performUseAction[/font][/size][size=1] (prefix always returning false)[/size]\n<br />[size=1][font=Courier New]FruitTree.tickUpdate[/font][/size][size=1] (prefix overriding the falling process)[/size]\n<br />[size=1][font=Courier New]FruitTree.IsGrowthBlocked [/font][/size][size=1](prefix overriding the original method for trees affected by a content pack)[/size]\n<br />[size=1][font=Courier New]FruitTree.IsTooCloseFromAnotherTree[/font][/size][size=1] (postfix)[/size]\n<br />[size=1][font=Courier New]FruitTree.loadSprite[/font][/size][size=1] (prefix returning false for trees with a modified sprite)[/size]\n<br />[size=1][font=Courier New]FruitTree.GetSpriteRowNumber[/font][/size][size=1] (postfix)[/size]\n<br />[size=1][font=Courier New]Object.placementAction[/font][/size][size=1] (prefix returning false for trees with a modified planting condition)[/size]\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45865",
+	"Version": "1.0.5",
+	"Updated": "2026-07-26T09:39:27+00:00",
+	"Downloads": [
+		{
+			"Id": 176315,
+			"Type": "Main",
+			"DisplayName": "Advanced Fruit Tree Framework",
+			"FileName": "68/33/95/68339554-8e7f-46f9-8be1-96c1d2814ea3",
+			"Description": "",
+			"Version": "1.0.5",
+			"SizeInBytes": 65725,
+			"Uploaded": "2026-07-26T09:39:27+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.AdvancedFruitTreeFramework",
+					"DisplayName": "Advanced Fruit Tree Framework",
+					"Type": "Smapi",
+					"RelativePath": "AdvancedFruitTreeFramework",
+					"Manifest": {
+						"Name": "Advanced Fruit Tree Framework",
+						"Description": "Allow modders to edit advanced data for fruit trees.",
+						"Author": "larvuk",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AdvancedFruitTreeFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Spiderbuttons.CMCT",
+								"MinimumVersion": "1.1.2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:45865"
+						],
+						"UniqueId": "larvuk.AdvancedFruitTreeFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563003,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432553,
+		"UploaderId": 200664389,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

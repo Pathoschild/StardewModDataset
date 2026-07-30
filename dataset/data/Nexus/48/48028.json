@@ -6,27 +6,28 @@
 	"Description": "[size=6][b]Bag Search[/b]\n<br />[/size]\n<br />If you run a pile of Item Bags like I do, you know the problem. You're standing at a machine, you need one specific item, and you have no clue which of your bags it's actually in. So you open them one by one until you find the thing. I got sick of that, so I made this.\n<br />\n<br />Press a key (NumPad 0 out of the box), type part of an item's name, and it shows you every bag that has it. It reads all of them, including the ones stuffed inside an Omni Bag. The results are grouped by bag and tinted by category so they're easy to scan, and you can click a bag in the list to open it right there without digging through your inventory.\n<br />\n<br />That's it. It doesn't add items, it doesn't touch balance, and it doesn't write anything to your save. It just finds your stuff.\n<br />\n<br />[b]Requirements[/b]\n<br />\n<br />SMAPI and Item Bags by SlayerDharok. Item Bags is the entire point of this, so it won't load without it.\n<br />\n<br />[size=5][b]How to use it[/b]\n<br />[/size]\n<br />Press NumPad 0 while you're playing and start typing. The list narrows as you type. Click a bag header (the ones marked [open]) to open that bag, scroll with the mouse wheel, and close it with Esc or by hitting the search key again.\n<br />\n<br />Want a different key? There's a config.json in the mod folder after the first launch. Swap \"NumPad0\" for whatever you want. It uses SMAPI's keybind format, so things like \"LeftShift + B\" work fine.\n<br />\n<br />[size=5][b]Notes and compatibility[/b]\n<br />[/size]\n<br />Works with any number of vanilla or modded bags, and with bags nested in Omni Bags (that's actually how my whole setup is built, so it's well tested there).\n<br />\n<br />It reads your bags through Item Bags' own code rather than hardcoding anything, so it should survive updates okay. If something ever does go sideways it'll throw a message on screen instead of crashing the game.\n<br />\n<br />Search matches the item's display name, anywhere in the name. Capitalization doesn't matter.\n<br />\n<br />[b][size=5]Credits[/size][/b]\n<br />\n<br />SlayerDharok for Item Bags, which this is built on top of. Pathoschild for SMAPI.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48028",
 	"Version": "1.0.0",
-	"Updated": "2026-06-21T23:07:46+00:00",
+	"Updated": "2026-07-09T13:13:53+00:00",
 	"Downloads": [
 		{
-			"Id": 172103,
+			"Id": 174293,
 			"Type": "Main",
 			"DisplayName": "BagSearch",
-			"FileName": "3e/3d/e2/3e3de247-2c98-460d-9b77-294053da60b9",
+			"FileName": "6d/b1/10/6db1107a-1c69-4e55-81c7-afa36554ad7f",
 			"Description": "",
-			"Version": "1",
-			"SizeInBytes": 16765,
-			"Uploaded": "2026-06-21T23:07:46+00:00",
+			"Version": "2",
+			"SizeInBytes": 18554,
+			"Uploaded": "2026-07-09T13:13:53+00:00",
 			"Mods": [
 				{
-					"Id": "destinyisntfree.BagSearch",
+					"Id": "LMJ.BagSearch",
 					"DisplayName": "Bag Search",
 					"Type": "Smapi",
+					"RelativePath": "BagSearch",
 					"Manifest": {
 						"Name": "Bag Search",
-						"Description": "Press a key to search every item across all your Item Bags, including bags nested inside an Omni Bag. Results are grouped by bag and color-coded by category, and you can click a bag to open it.",
-						"Author": "destinyisntfree",
-						"Version": "1.0.0",
+						"Description": "Press a key to search every item across all your Item Bags, including bags nested inside an Omni Bag. Shows which bag holds each match.",
+						"Author": "LMJ",
+						"Version": "1.0.1",
 						"MinimumApiVersion": "4.1.3",
 						"EntryDll": "BagSearch.dll",
 						"Dependencies": [
@@ -36,15 +37,13 @@
 								"IsRequired": true
 							}
 						],
-						"UpdateKeys": [
-							"Nexus:48028"
-						],
-						"UniqueId": "destinyisntfree.BagSearch"
+						"UpdateKeys": [],
+						"UniqueId": "LMJ.BagSearch"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342558791,
+				"Uid": 5596342560981,
 				"CategoryId": 1,
 				"Primary": true
 			}

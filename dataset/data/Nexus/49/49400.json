@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 49400,
+	"Name": "SaveFetch",
+	"Author": "Rinrikuku",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]I built SaveFetch to sync my Stardew Valley save to a small website I made for myself and my girlfriend to track our farms — nothing public, just something for the two of us. I'm sharing the mod itself in case anyone else wants to build their own companion site and needs the game-side half of that pipeline.[/color]\n<br />\n<br />[color=#D4D4D8]SaveFetch doesn't come with a bundled website — you point it at your own server via config.json. Once you set your login/upload URLs, you log in once through your browser (the mod never handles your password directly — your server hands back a short-lived JWT access token, which the mod stores locally and uses to authenticate future uploads on its own, refreshing it automatically when it expires). From then on, every time you save your game, the mod sends a snapshot of your farm to your server — no manual exporting, nothing to remember.\n<br />\n<br />Everything runs quietly in the background — no gameplay changes, no UI, just a one-time login and automatic syncing after that. [/color]\n<br />\n<br />What gets sent, every save:\n<br />- Basic identifiers — save ID, farm name, farmer name, game/mod version\n<br />- Progress — in-game day/season/year, days played, total playtime\n<br />- Money — current balance and total money earned\n<br />- Skill levels — farming, mining, foraging, fishing, combat\n<br />- Stats — items crafted/cooked, fish caught, monsters killed\n<br />\n<br />This mod requires you to have your own web server that implements the expected API endpoints (login redirect, save upload, avatar upload, token refresh). It's not a drop-in tool for a general audience — it's the client half of a self-hosted setup. [Link to your API contract / GitHub repo [url=https://github.com/Rinriku69/stardew-savefetch]here[/url] if you want to document it for others.]\n<br />\n<br />[b]SaveFetch — API Contract[/b]\n<br />\n<br />To use this mod, your server needs to implement four endpoints. Paths can be anything — the mod reads full URLs from config.json (LoginUrl, SaveUrl, RefreshUrl, AvatarUrl).\n<br />\n<br />1. Login redirect — GET {LoginUrl}?port={port}&amp;state={state}\n<br />Web route, session-authenticated.\n<br />- If the user isn't logged in on your site, show your normal login page first.\n<br />- Once authenticated, issue a JWT access token.\n<br />- Redirect the browser to:\n<br />http://127.0.0.1:{port}/callback?token={token}&amp;username={name}&amp;state={state}\n<br />- state must be echoed back exactly as received — the mod rejects the callback otherwise (CSRF guard).\n<br />\n<br />2. Token refresh — POST {RefreshUrl} (Bearer: expired access token)\n<br />Takes the expired token, blacklists it, and returns a replacement:\n<br />{ \"access_token\": \"…\", \"token_type\": \"bearer\", \"expires_in\": 28800 }\n<br />\n<br />\n<br />3. Save upload — POST {SaveUrl} (Bearer token, JSON body)\n<br />{\n<br />\u00A0 \"saveId\": 195023486,\n<br />\u00A0 \"farmerName\": \"Kim\",\n<br />\u00A0 \"farmName\": \"Riverside\",\n<br />\u00A0 \"uniqueMultiplayerID\": 3141592653589793,\n<br />\u00A0 \"isHost\": true,\n<br />\u00A0 \"gameVersion\": \"1.6.15\",\n<br />\u00A0 \"modVersion\": \"1.0.0\",\n<br />\u00A0 \"sentAtUtc\": \"2026-07-14T09:30:00Z\",\n<br />\u00A0 \"day\": 14,\n<br />\u00A0 \"season\": \"summer\",\n<br />\u00A0 \"year\": 2,\n<br />\u00A0 \"daysPlayed\": 42,\n<br />\u00A0 \"playtimeMs\": 10800000,\n<br />\u00A0 \"money\": 125000,\n<br />\u00A0 \"totalMoneyEarned\": 480000,\n<br />\u00A0 \"skills\": { \"farming\": 8, \"mining\": 6, \"foraging\": 5, \"fishing\": 7, \"combat\": 4 },\n<br />\u00A0 \"stats\": { \"itemsCrafted\": 120, \"itemsCooked\": 35, \"fishCaught\": 210, \"monstersKilled\": 310 }\n<br />}\n<br />- 201 stored · 401 invalid/expired token (mod refreshes and retries once) · 422 malformed payload.\n<br />- Attribute the row to the authenticated user (JWT sub), never to anything in the body.\n<br />- Key storage on (user_id, save_id) (+ in-game date if you want per-day history)\u00A0\n<br />- ⚠️In multiplayer, money/totalMoneyEarned are shared-wallet values — every client reports the same number, so don't sum across rows.\n<br />\n<br />4. Avatar upload — POST {AvatarUrl} (Bearer token, multipart/form-data)\n<br />- Single file field named avatar — a PNG (~128×192px) of the player's standing sprite.\n<br />- Only sent when the outfit actually changed since the last successful upload, so treat it as \"replace the current portrait,\" not \"add a new one\"\u00A0\n<br />- 201 stored · 401 invalid/expired token (same refresh/retry as save upload) · 422 missing/invalid file.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#D4D4D8]1. Install SMAPI if you haven't already.\n<br />2. Download this mod and unzip it into your Stardew Valley/Mods folder.\n<br />3. Config your website/app api endpoint\u00A0in config.json.[/color]\n<br />[color=#d4d4d8]4. [/color][color=#D4D4D8]Launch the game through SMAPI.[/color]\n<br />[color=#D4D4D8]5. In the SMAPI console window, type savefetch_login and press Enter — this opens your browser to log in to your\u00A0 website/app.\n<br />6. Once logged in, close the browser tab and return to the game. You're done — saves upload automatically from here on.[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[color=#D4D4D8]- One-time browser login — no passwords typed into the game or console; authentication happens securely in your browser.\n<br />- Automatic save syncing — every time the game saves, a summary of your farm (money, skill levels, stats, playtime, day/season/year) is uploaded to your profile on your\u00A0 website/app.\n<br />- Automatic portrait sync — your character's current outfit is rendered and uploaded whenever it changes, so your profile picture always matches your farmer.\n<br />- Multiplayer-aware — works correctly for farmhands; each player's own stats are attributed to their own account.\n<br />- Console commands — savefetch_login, savefetch_status (check login state and last upload result), and savefetch_logout.\n<br />- No performance impact — uploads happen on a background thread and never pause or freeze the game. [/color]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8]- SMAPI 4.0.0 or later\n<br />- Stardew Valley 1.6.0 or later\n<br />-\u00A0Your own web server/API implementing the login, save-upload, avatar-upload, and token-refresh endpoints — this mod will not work out of the box without one [/color]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8]The SMAPI team, for the modding framework this mod is built on\n<br />\n<br />Source code\u00A0[url=https://github.com/Rinriku69/stardew-savefetch]here[/url][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49400",
+	"Version": "1",
+	"Updated": "2026-07-20T04:42:27+00:00",
+	"Downloads": [
+		{
+			"Id": 175576,
+			"Type": "Main",
+			"DisplayName": "SaveFetch",
+			"FileName": "69/7c/bf/697cbfd3-f8f6-4627-83b6-e44a62d32e3d",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 28280,
+			"Uploaded": "2026-07-20T04:42:27+00:00",
+			"Mods": [
+				{
+					"Id": "Rinriku69.SaveFetch",
+					"DisplayName": "SaveFetch",
+					"Type": "Smapi",
+					"RelativePath": "SaveFetch",
+					"Manifest": {
+						"Name": "SaveFetch",
+						"Description": "Reads and exports Stardew Valley save data.",
+						"Author": "Rinriku69",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "SaveFetch.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:49400"
+						],
+						"UniqueId": "Rinriku69.SaveFetch",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342562264,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436088,
+		"UploaderId": 180751941,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 49554,
+	"Name": "DailyReminder",
+	"Author": "wzx0",
+	"Description": "\n<br /># Daily Reminder\n<br />\n<br />## Description\n<br />\n<br />每日提醒模组。每天起床自动弹出今日提醒清单，带触发时间的提醒到点响铃弹窗，支持自定义提醒频率（每天/每周/每月/每年/一次性），并自动生成 NPC 生日与节日提醒（含 1.6 节日与 mod 扩展节日）。基于 StardewUI 框架构建，通过 GMCM 可自定义快捷键与行为开关。\n<br />\n<br />## Installation instructions\n<br />\n<br />1. 确保已安装 **SMAPI** (4.0+)\n<br />2. 确保已安装 **StardewUI**（`focustense.StardewUI`，Continued 版本）\n<br />3. （可选）安装 **Generic Mod Config Menu** 用于游戏内配置\n<br />4. 将 `DailyReminder` 文件夹复制到 Stardew Valley 的 `Mods` 目录下\n<br />5. 启动游戏即可\n<br />\n<br />## Main features\n<br />\n<br />- ✅ 起床自动弹出今日提醒清单\n<br />- ✅ 到点响铃：带触发时间的提醒到点弹窗，玩家正忙时暂存、恢复自由后补弹\n<br />- ✅ 多个提醒同时到点分行列出，一屏看完\n<br />- ✅ 自定义提醒频率：每天 / 每周（选星期）/ 每月几号 / 每年哪季哪天 / 一次性\n<br />- ✅ 闹钟管理页：新建、编辑、删除用户提醒\n<br />- ✅ NPC 生日自动提醒（系统只读，每年触发）\n<br />- ✅ 节日自动提醒：原版节日全收（含沙漠节、鳗鱼节、鱿鱼节等 1.6 节日），并自动识别 mod 扩展节日\n<br />- ✅ 一次性提醒触发后自动停用\n<br />- ✅ 提醒按存档隔离持久化，仅主玩家可读写\n<br />- ✅ GMCM 集成，可自定义快捷键与行为开关\n<br />\n<br />## Requirements\n<br />\n<br />- **SMAPI** 4.0 或更高版本\n<br />- **StardewUI**（`focustense.StardewUI`）—— 必须依赖\n<br />- **Generic Mod Config Menu** —— 可选，用于游戏内配置\n<br />\n<br />## Configuration\n<br />\n<br />通过 GMCM（Generic Mod Config Menu）可配置：\n<br />\n<br />| 配置项 | 默认值 | 说明 |\n<br />|--------|--------|------|\n<br />| OpenMenuKey | F9 | 打开今日提醒清单 |\n<br />| OpenManagerKey | F6 | 打开闹钟管理页（新建/编辑/删除提醒） |\n<br />| ShowTodayListOnWakeUp | true | 每天起床时自动弹出今日提醒清单 |\n<br />| EnableTimeAlarms | true | 带触发时间的提醒到点时弹窗提醒 |\n<br />| ShowNPCBirthdays | true | 自动生成 NPC 生日提醒（只读） |\n<br />| ShowFestivals | true | 自动生成原版节日提醒（只读） |\n<br />\n<br />## Usage\n<br />\n<br />1. 按 F6 打开闹钟管理页，点「新建」创建提醒\n<br />2. 填写标题（如「给鸡喂食」），选择频率（每天/每周/每月/每年/一次性）\n<br />3. 勾选「到点响铃」并设置时间，提醒到点会弹窗；不勾则只在今日清单中展示\n<br />4. 起床时自动弹出今日清单，或随时按 F9 手动查看\n<br />5. NPC 生日与原版节日会自动出现在清单中，可在配置中关闭\n<br />\n<br />## Shout outs\n<br />\n<br />- 感谢 **Pathoschild** 开发的 SMAPI 和 ModBuildConfig\n<br />- 感谢 **focustense** 开发的 StardewUI，以及 **Mushymato** 维护的 Continued 分支\n<br />\n<br />---\n<br />\n<br />*Author: wzx*\n<br />*UniqueID: `wzx.DailyReminder`*",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49554",
+	"Version": "1.0.0",
+	"Updated": "2026-07-23T03:01:13+00:00",
+	"Downloads": [
+		{
+			"Id": 175948,
+			"Type": "Main",
+			"DisplayName": "DailyReminder 0.1.0",
+			"FileName": "79/0d/78/790d7818-d3ef-4709-b104-186853e33114",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 46969,
+			"Uploaded": "2026-07-23T03:01:13+00:00",
+			"Mods": [
+				{
+					"Id": "wzx.DailyReminder",
+					"DisplayName": "Daily Reminder",
+					"Type": "Smapi",
+					"RelativePath": "DailyReminder",
+					"Manifest": {
+						"Name": "Daily Reminder",
+						"Description": "每日提醒：起床弹今日清单 + 到点响铃，支持自定义频率、节日生日。",
+						"Author": "wzx",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DailyReminder.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:49554"
+						],
+						"UniqueId": "wzx.DailyReminder"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342562636,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436242,
+		"UploaderId": 203111648,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

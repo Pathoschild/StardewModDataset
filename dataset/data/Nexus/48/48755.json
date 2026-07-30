@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 48755,
+	"Name": "Event Browser Menu (EBM)",
+	"Author": "invatorzen",
+	"Description": "[center]\n<br />[size=6][b][color=#4ec9b0]✦ EVENT BROWSER MENU ✦[/color][/b][/size]\n<br />[size=3][i]Every event, every character, one click away.[/i][/size][/center]\n<br />[line]\n<br />[size=5][color=#4ec9b0][b]▎ What is it?[/b][/color][/size]\n<br />Have you ever wanted to re-watch an event, or test one you built, without needing to use the console? [b]Event Browser Menu[/b] gives you a clean in-game window that lists every event in the game — base game [i]and[/i] mods — organized by the characters in the events, so you can find and replay anything in seconds.\n<br />\n<br />This was made for myself as a way to test the heart events I'm making for [url=https://www.nexusmods.com/stardewvalley/mods/6754?tab=description]Aspen[/url], but I figure others may like it as well - so I'm releasing it!\n<br />[line]\n<br />[size=5][color=#4ec9b0][b]▎ Features[/b][/color][/size]\n<br />[list]\n<br />[*][b]Browse by character[/b] — pick an NPC and instantly see every event they appear in, with an event count next to each name like Aspen (13).[/*]\n<br />[*][b]Search[/b] — search through either the character or event lists as you type.[/*]\n<br />[*][b]Seen / unseen markers[/b] — know at a glance which events you've already viewed and which you haven't.[/*]\n<br />[*][b]One-click replay[/b] —\u00A0click on an event[b]\u00A0[/b]to warp to the right location and start the event immediately, no matter its requirements.[/*]\n<br />[*][b]Reads everything live[/b] — pulls events straight from the game's own data across all locations, so modded content shows up automatically.[/*]\n<br />[*][b]Display event conditions[/b] — hover an event to see its requirements.[/*]\n<br />[*][b]Reload before play[/b] — easily reload a character's content pack before playing an event.[/*]\n<br />[*][b]Set event info[/b] — mod authors can give their events a title and description for the UI (see below).[/*]\n<br />[*][b]Console commands too[/b] — prefer the keyboard? Use [color=#dcdcaa]event_list &lt;npc&gt;[/color] and [color=#dcdcaa]event_play &lt;eventId&gt;[/color].[/*]\n<br />[/list][line]\n<br />[size=5][color=#4ec9b0][b]▎ How to use[/b][/color][/size]\n<br />[list]\n<br />[*]Press [b][color=#ce9178]F9[/color][/b] in-game to open the browser.[/*]\n<br />[*]Want a different key? Change [b]OpenMenuKey[/b] in the mod's [color=#dcdcaa]config.json[/color], or rebind it in-game with Generic Mod Config Menu.[/*]\n<br />[/list][line]\n<br />[size=5][color=#4ec9b0][b]▎ FAQ[/b][/color][/size]\n<br />[b]A character I expected isn't in the list — where are they?[/b]\n<br />By default the list only shows characters who appear in at least one event that's [i]currently loaded[/i]. Tick [b]Show all[/b] in the top-left to list every character in the game — including ones with no events. If a character still isn't there, it's because their only events are locked behind conditions that aren't met yet (see below).\n<br />\n<br />[b]An event isn't showing up, or the count looks low — is it broken?[/b]\n<br />No. The browser shows events that are [i]active in your current save[/i]. Lots of events are gated by their mod which adds them to a certain day, heart level, season, flag, etc., and Content Patcher only loads them into the game once those conditions are met. So on an early save you'll see fewer events, they should appear as you progress.\n<br />\n<br />[b]Can I play an event I don't \"qualify\" for — not enough hearts, wrong day, haven't seen the prerequisite?[/b]\n<br />Yes. Clicking on an event\u00A0skips the requirements, so anything you can see in the list, you can watch. The only events you can't play are ones that aren't loaded into the game at all (the gated ones above) — there's no script to run until their condition is met.\n<br />\n<br />[b]How do I test an event that's gated behind a day / heart / flag?[/b]\n<br />Get your save into a state where the event's conditions are true, then open the browser and it'll be there.\n<br />\n<br />[b]What does \"Reload pack first\" do?[/b]\n<br />For modders: tick it, and when you play an event the mod runs Content Patcher's [color=#dcdcaa]patch reload[/color] on that event's pack first, providing you with an updated event without having to restart your game. It auto-detects which pack to reload from the event id; if your ids don't follow the [color=#dcdcaa]ModID_EventName[/color] pattern, set [b]Reload mod ID[/b] in the config.\n<br />[line]\n<br />[size=5][color=#4ec9b0][b]▎ For mod authors[/b][/color][/size]\n<br />Give your own events friendly names and descriptions so they read nicely in the browser instead of showing a raw ID. Just edit the [color=#dcdcaa]Mods/Invatorzen.EventBrowser/Events[/color] asset with Content Patcher, keyed by event ID:\n<br />\n<br />[code]\n<br />{\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"Mods/Invatorzen.EventBrowser/Events\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"YourMod_SomeEvent\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DisplayName\": \"A Night to Remember\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Description\": \"You spend a quiet night under the stars.\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \"When\": { \"HasMod |contains=Invatorzen.EventBrowser\": \"true\" }\n<br />}[/code]\n<br />Anything you don't label simply falls back to its event ID — nothing breaks.\n<br />\n<br />[line]\n<br />[size=5][color=#4ec9b0][b]▎ Compatibility[/b][/color][/size]\n<br />[list]\n<br />[*]Requires [b]SMAPI 4.0.0[/b] or newer.[/*]\n<br />[*]Safe to add or remove at any time — it never changes your save.[/*]\n<br />[*]Works alongside any content mod; the more events installed, the more it finds.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48755",
+	"Version": "1.0.0",
+	"Updated": "2026-07-09T06:09:26+00:00",
+	"Downloads": [
+		{
+			"Id": 174253,
+			"Type": "Main",
+			"DisplayName": "EventBrowser 1.0.0",
+			"FileName": "e8/ce/b5/e8ceb560-5df3-47a2-aba3-9b50005f1cb1",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 30041,
+			"Uploaded": "2026-07-09T06:09:26+00:00",
+			"Mods": [
+				{
+					"Id": "Invatorzen.EventBrowser",
+					"DisplayName": "Event Browser Menu",
+					"Type": "Smapi",
+					"RelativePath": "EventBrowser",
+					"Manifest": {
+						"Name": "Event Browser Menu",
+						"Description": "Browse events by character and replay them from a UI, showing which you've already seen.",
+						"Author": "Invatorzen",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EventBrowser.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:48755"
+						],
+						"UniqueId": "Invatorzen.EventBrowser"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560941,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435443,
+		"UploaderId": 22709859,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

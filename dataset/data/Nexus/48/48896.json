@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 48896,
+	"Name": "More Item Sorting (Chests. Player Inventory. etc.)",
+	"Author": "pneuma163",
+	"Description": "[size=3]More Item Sorting adds more sorting options to items in chests and inventories, including the player's own inventory. With this mod, hover over the Organize button and press right click (configurable) to quickly cycle through different sorting options which will be visible via a tooltip:[/size]\n<br />[size=3]- the game's default[/size]\n<br />[size=3]- alphabetically by item display name[/size]\n<br />[size=3]- by qualified item ID[/size]\n<br />[size=3]- by sell price[/size]\n<br />[size=3]- by sell price ignoring the quality of an object[/size]\n<br />[size=3]- by item count[/size]\n<br />\n<br />[size=3]Furthermore, hold left shift (configurable) to temporarily swap the order that items are sorted between ascending and descending.[/size]\n<br />\n<br />[size=3]When you choose a sort type for a chest, that chest will remember your selected sort type as long as it exists (i.e. you don't break it, but you can push it).[/size]\n<br />\n<br />[size=3]Note that tools (including weapons) do not get sorted when you click the Organize button and instead simply get placed into the first slots of the given inventory in the same order they were in already. This is normal game behavior and More Item Sorting does not change this.[/size]\n<br />\n<br />[size=3]How do you know if the mod is working? In addition to the above behavior being available, hovering over the Organize button should show the text \"(Ascending)\" along with it. This tooltip will update depending on the current sort type and order.[/size]\n<br />\n<br />[size=5]How to install:[/size]\n<br />\n<br />[size=3]- Install the latest version of SMAPI [url=https://smapi.io]https://smapi.io[/url]\n<br />- Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font]\n<br />- Run the game using SMAPI.\n<br />\n<br />If you need additional help installing the mod, the Stardew Valley wiki [url=https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started]https://stardewvalleywiki.com/Modding:Player_Guide/Getting_Started[/url] has more detailed instructions.\n<br />To uninstall the mod, delete this mod's folder from your [font=Courier New]Stardew Valley/Mods[/font] folder.\n<br />\n<br />Note: the mod can be installed (or removed) at any time.[/size]\n<br />\n<br />[size=5]Configuration[/size]\n<br />\n<br />[size=3]I recommend using [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to set your configuration options, or you can edit the config.json that generates after you run the game with the mod installed.[/size]\n<br />\n<br />[size=3]RotateSortType: the key (or keys) you press to cycle through sort types while hovering over the Organize button[/size]\n<br />[size=3]OrderModifier: the key (or keys) to hold that temporarily swaps the order between ascending and descending[/size]\n<br />[size=3]GlobalSortType: the default sort type that is used if a chest or your player inventory does not have a specific sort type specified[/size]\n<br />[size=3]SortOrder[...]: whether this sort type should sort by ascending or descending by default (if the OrderModifier key is not held). There is one config option for each of the sort types.[/size]\n<br />[size=3]ConfigStringComparison: Set the StringComparison Enum to be used for sorting items by display name. You can let the mod choose or you can specify one of InvariantCulture, CurrentCulture, or Ordinal.[/size]\n<br />\n<br />[size=5]Compatibility[/size]\n<br />\n<br />[size=3]This should be fully compatible with controllers, but you will likely want to change the default keybinds.[/size]\n<br />\n<br />[size=3]Multiplayer is untested, but should work with a few caveats. The sort type and order for a player's inventory is unique to that player. A sort type for chests is unique to that chest, but the default order (ascending/descending) is defined by the player's own configuration. Additionally, the display name sort type uses the display names of the items defined by the player, so if you and another player are playing in a different language or otherwise have different names for an item, the display name sort type will use the current player's display name for the items in the inventory.[/size]\n<br />\n<br />[size=3]More Item Sorting has built in compatibility with [url=https://www.nexusmods.com/stardewvalley/mods/32032]Better Game Menu[/url].[/size]\n<br />\n<br />[size=3]More Item Sorting edits a single line of game code in the method\u00A0organizeItemsInList\u00A0that sorts the items in an ItemGrabMenu. There are no known mod incompatibilities and it should work with any inventory that the game treats as a chest.[/size]\n<br />\n<br />[size=5]Translations[/size]\n<br />\n<br />[size=3]If you would like to translate the mod, see my profile for general instructions regarding translations.[/size]\n<br />\n<br />[size=5]Thank you[/size]\n<br />\n<br />Thank you to Scarlett for testing an early build and to Khloe and Button for helping with a bug.\n<br />\n<br />[size=3][url=https://codeberg.org/pneuma163/StardewValleyMods/src/branch/main/More%20Item%20Sorting]source code[/url][/size]\n<br />\n<br />\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48896",
+	"Version": "1.1.1",
+	"Updated": "2026-07-16T22:24:06+00:00",
+	"Downloads": [
+		{
+			"Id": 175210,
+			"Type": "Main",
+			"DisplayName": "More Item Sorting",
+			"FileName": "ac/44/79/ac4479cc-21db-4b75-a6c4-8a698c5468d9",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 23987,
+			"Uploaded": "2026-07-16T22:24:06+00:00",
+			"Mods": [
+				{
+					"Id": "pneuma163.MoreItemSorting",
+					"DisplayName": "More Item Sorting",
+					"Type": "Smapi",
+					"RelativePath": "More Item Sorting",
+					"Manifest": {
+						"Name": "More Item Sorting",
+						"Description": "Adds more sorting options to chests and player inventories.",
+						"Author": "pneuma163",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "More Item Sorting.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:48896"
+						],
+						"UniqueId": "pneuma163.MoreItemSorting",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561898,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435584,
+		"UploaderId": 134910173,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

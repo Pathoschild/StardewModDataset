@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 48797,
+	"Name": "Secret Note Framework - RU",
+	"Author": "weekpeak",
+	"Description": "[size=4][b]Secret Note Framework [/b]позволяет авторам модов добавлять в игру собственные секретные заметки.\n<br />\n<br />[b]Игроку[/b]\u00A0следует лишь скачать файл, распаковать его и начать играть.\n<br />\n<br />[b]Создателю аддонов [/b]следует внимательно изучить [url=https://github.com/ichortower/SecretNoteFramework/blob/prod/docs/author-guide.md]гайд[/url]. Если возникнут какие-либо трудности в процессе, ichortower есть в [url=https://discord.gg/stardewvalley]дискорд-сервере[/url]. Написать про баги можно в [url=https://www.nexusmods.com/stardewvalley/mods/25055?tab=bugs]соответствующем разделе[/url] или же [url=https://github.com/ichortower/SecretNoteFramework]на гитхабе[/url].[/size]\n<br />\n<br />[size=4][b]Мод также позволяет:\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4]менять доступность отдельных заметок[/size][/*]\n<br />[*][size=4]указывать конкретные места (или намекать на них), в которых может появиться заметка[/size][/*]\n<br />[*][size=4]использовать различные (можно добавляться и свои) предметы для обозначения разных заметок[/size][/*]\n<br />[*][size=4]создавать собственные оформления[/size][/*]\n<br />[*][size=4]добавлять фотографии с фрагментами текста[/size][/*]\n<br />[*][size=4]назначать любое количество действий, которые игрок выполнит после первого прочтения заметки[/size][/*]\n<br />[/list][size=4][b]\n<br />Требования:\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4]Stardew Valley 1.6.9+[/size][/*]\n<br />[*][size=4]SMAPI 4.1+[/size][/*]\n<br />[*][size=4]Content Patcher[/size][/*]\n<br />[/list]\n<br />[size=4][b]Почему мод необходим:[/b]\n<br />\n<br />Тайные заметки до сих пор требуют целочисленные ID. Так что два мода, в каждом из которых будет возможность добавлять тайные заметки, могут попросту крашнуться.[/size]\n<br />\n<br />[list]\n<br />[*][size=4]ID выполняет слишком много функций и заодно определяет тип заметки (любой ID &gt;= 1000 — это «Обрывок дневника», который спавнится только на Имбирном острове; записки с меньшим ID появляются в других местах)[/size][/*]\n<br />[*][size=4]ID также задает название заметки в меню коллекции[/size][/*]\n<br />[*][size=4]Все тайные заметки вынуждены использовать одну и ту же текстуру (для тех, что содержат картинки)[/size][/*]\n<br />[*][size=4]В исходном коде прописано, что заметок всего 38, отчего игра отрисовывает лишь одну страницу вкладки.[/size][/*]\n<br />[/list][size=4]\n<br />Автор мода обнаружил эти недочеты, когда решил добавить тайные заметки в [url=https://www.nexusmods.com/stardewvalley/mods/18177]один из других своих модов[/url]. Теперь у стардью комьюнити есть такая штучка.[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48797",
+	"Version": "1.2.1",
+	"Updated": "2026-07-07T10:18:22+00:00",
+	"Downloads": [
+		{
+			"Id": 174029,
+			"Type": "Main",
+			"DisplayName": "SecretNoteFramework - RU",
+			"FileName": "01/14/b9/0114b948-13d6-42c9-9d98-0eb79fbdae62",
+			"Description": "",
+			"Version": "1.2.1",
+			"SizeInBytes": 34909,
+			"Uploaded": "2026-07-07T10:18:22+00:00",
+			"Mods": [
+				{
+					"Id": "ichortower.SecretNoteFramework",
+					"DisplayName": "Secret Note Framework",
+					"Type": "Smapi",
+					"RelativePath": "SecretNoteFramework",
+					"Manifest": {
+						"Name": "Secret Note Framework",
+						"Description": "A framework allowing mods to add their own Secret Notes.",
+						"Author": "ichortower",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "SecretNoteFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:25055",
+							"GitHub:ichortower/SecretNoteFramework"
+						],
+						"UniqueId": "ichortower.SecretNoteFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560717,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435485,
+		"UploaderId": 120466923,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

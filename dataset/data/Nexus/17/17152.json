@@ -3,20 +3,20 @@
 	"Id": 17152,
 	"Name": "Poop Framework",
 	"Author": "aedenthorn",
-	"Description": "This mod lets you use Content Patcher to cause any Character to have a chance to poop any item at any interval. \n<br />\n<br />The mod also supports designated toilet furniture that will dispose of the poop when the character is sitting on it, instead of having it drop on the ground.\n<br />\n<br />The mod also shows a warning emote a certain number of minutes before pooping (default \"[b]sad[/b]\", [b]30[/b] minutes before).\n<br />\n<br />\n<br />[b][size=5]Poop[/size][/b]\n<br />\n<br />Poop types can be added using Content Patcher by targeting [b]\"aedenthorn.PoopFramework/poop\"[/b].\n<br />\n<br />Here's an example content.json file:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.29.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.PoopFramework/poop\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"TrashPoop\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"poopItem\" : \"Trash\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"poopSound\" : \"dwoop\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"poopEmote\" : \"happy\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 \"poopChance\" : \"50\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"poopInterval\" : \"180\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"bigCraftablePoop\" : false,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"pooper\" : \"Farmer\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />[b]pooper[/b] should work with the following types:\n<br />\n<br />[list]\n<br />[*]Farmer\n<br />[*]NPC\n<br />[*]Cat\n<br />[*]Dog\n<br />[*]FarmAnimal\n<br />[*]Child\n<br />[/list]\n<br />It should also work with any specific monster type (e.g. [b]Bat[/b]).\n<br />\n<br />You can also specify the character's name (e.g. [b]Abigail[/b]).\n<br />[b]\n<br />poopItem[/b] can be either the item name or index.\n<br />[b]poopSound[/b] can be any built in sound cue.\n<br />[b]poopEmote[/b] can be the name of any emote command name.\n<br />[b]poopChance[/b] is out of 100 - multiple poop types can compete for being pooped, only one will be pooped per interval.\n<br />\n<br />An example of a mod that adds poop is [url=https://www.nexusmods.com/stardewvalley/mods/17153]Mayo Poop[/url].\n<br />\n<br />\n<br />[b][size=5]Toilets[/size][/b]\n<br />\n<br />Toilets can be added using Content Patcher by targeting [b]\"aedenthorn.PoopFramework/toilets\"[/b].\n<br />\n<br />Here's an example content.json file:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.29.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.PoopFramework/toilets\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"himewildflour.bathroomfurniture\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"toiletNameOrId\": \"himewildflour.bathroomfurniture/Toilet\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
+	"Description": "This mod lets you use Content Patcher to cause any Character to have a chance to poop any item at any interval.\n<br />\n<br />The mod also supports designated toilet furniture that will dispose of the poop when the character is sitting on it, instead of having it drop on the ground.\n<br />\n<br />The mod also shows a warning emote a certain number of minutes before pooping (default \"[b]sad[/b]\", [b]30[/b] minutes before).\n<br />\n<br />\n<br />[b][size=5]Poop[/size][/b]\n<br />\n<br />Poop types can be added using Content Patcher by targeting [b]\"aedenthorn.PoopFramework/poop\"[/b].\n<br />\n<br />Here's an example content.json file:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.29.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.PoopFramework/poop\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"TrashPoop\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"poopItem\" : \"168\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"poopSound\" : \"dwoop\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"poopEmote\" : \"happy\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 \"poopChance\" : \"50\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"poopInterval\" : \"180\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \"bigCraftablePoop\" : false,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"pooper\" : \"Farmer\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}[/code]\n<br />[b]pooper[/b] should work with the following types:\n<br />\n<br />[list]\n<br />[*]Farmer[/*]\n<br />[*]NPC[/*]\n<br />[*]Cat[/*]\n<br />[*]Dog[/*]\n<br />[*]FarmAnimal[/*]\n<br />[*]Child[/*]\n<br />[/list]\n<br />It should also work with any specific monster type (e.g. [b]Bat[/b]).\n<br />\n<br />You can also specify the character's name (e.g. [b]Abigail[/b]).\n<br />[b]\n<br />poopItem[/b] can be either the ItemId or QualifiiedItemId.\n<br />[b]poopSound[/b] can be any built in sound cue.\n<br />[b]poopEmote[/b] can be the name of any emote command name.\n<br />[b]poopChance[/b] is out of 100 - multiple poop types can compete for being pooped, only one will be pooped per interval.\n<br />\n<br />An example of a mod that adds poop is [url=https://www.nexusmods.com/stardewvalley/mods/17153]Mayo Poop[/url].\n<br />\n<br />\n<br />[b][size=5]Toilets[/size][/b]\n<br />\n<br />Toilets can be added using Content Patcher by targeting [b]\"aedenthorn.PoopFramework/toilets\"[/b].\n<br />\n<br />Here's an example content.json file:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0\u00A0 \u00A0\"Format\": \"1.29.0\",\n<br />\u00A0\u00A0 \u00A0\"Changes\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Target\": \"aedenthorn.PoopFramework/toilets\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Entries\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"himewildflour.bathroomfurniture\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"toiletNameOrId\": \"himewildflour.bathroomfurniture/Toilet\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 }\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}[/code]\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17152",
-	"Version": "0.3.0",
-	"Updated": "2023-08-03T21:02:27+00:00",
+	"Version": "0.4.2",
+	"Updated": "2026-07-04T15:47:01+00:00",
 	"Downloads": [
 		{
-			"Id": 74141,
+			"Id": 173673,
 			"Type": "Main",
 			"DisplayName": "Poop Framework",
-			"FileName": "Poop Framework-17152-0-3-0-1691096547.zip",
-			"Description": "Changes:\n<br /><br />Added support for toilets\n<br />Added warning emote",
-			"Version": "0.3.0",
-			"SizeInBytes": 14778,
-			"Uploaded": "2023-08-03T21:02:27+00:00",
+			"FileName": "c1/a7/db/c1a7db52-506e-4dfb-97b9-adda4b2ea10b",
+			"Description": "Changes:\n\nUpdate for 1.6",
+			"Version": "0.4.2",
+			"SizeInBytes": 16916,
+			"Uploaded": "2026-07-04T15:47:01+00:00",
 			"Mods": [
 				{
 					"Id": "aedenthorn.PoopFramework",
@@ -27,32 +27,19 @@
 						"Name": "Poop Framework",
 						"Description": "Poop Framework.",
 						"Author": "aedenthorn",
-						"Version": "0.3.0",
-						"MinimumApiVersion": "3.15.0",
+						"Version": "0.4.2",
+						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "PoopFramework.dll",
-						"Dependencies": [
-							{
-								"UniqueId": "Platonymous.ModUpdater",
-								"IsRequired": false
-							}
-						],
+						"Dependencies": [],
 						"UpdateKeys": [
 							"Nexus:17152"
 						],
-						"UniqueId": "aedenthorn.PoopFramework",
-						"OtherFields": {
-							"ModUpdater": {
-								"Repository": "StardewValleyMods",
-								"User": "aedenthorn",
-								"Directory": "_releases",
-								"ModFolder": "PoopFramework"
-							}
-						}
+						"UniqueId": "aedenthorn.PoopFramework"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342460829,
+				"Uid": 5596342560361,
 				"CategoryId": 1,
 				"Primary": true
 			}

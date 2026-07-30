@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 49100,
+	"Name": "BlossomBrew",
+	"Author": "MoYuCSC",
+	"Description": "✨ Overview\n<br />BlossomBrew is a flower‑themed expansion mod that introduces new fruit tree mechanics, unique flowers, a series of flower wines, and a dedicated brewing machine.\n<br />Collect special blossoms from fruit trees during their off‑fruit seasons, then craft them into fragrant wines to enrich your farm life with elegance and charm.\n<br />[line]\n<br />\uD83C\uDF38 New Content\n<br />1. Original Fruit Trees' Off‑Season Produce\n<br />[list]\n<br />[*]Adds\u00A0[b]off‑season flower drops[/b]\u00A0to six vanilla trees: Apricot, Cherry, Orange, Peach, Apple, and Pomegranate.\n<br />[list]\n<br />[*]Example: Cherry trees bear fruit in Spring and produce Cherry Blossoms in Summer.[/*]\n<br />[*]In\u00A0[b]Greenhouse or Ginger Island[/b], flowers have a\u00A0[b]50% chance[/b]\u00A0to replace the original fruit (configurable).[/*]\n<br />[/list][/*]\n<br />[*][b]New Osmanthus Tree[/b]: Blooms in Summer and Fall, producing Osmanthus flowers (has its own sapling).[/*]\n<br />[/list]2. Seven Flowers &amp; Wines\n<br />\n<br />\n<br />[table][tr][th]Flower[/th]\n<br />[th]Wine[/th]\n<br />[/tr]\n<br />[tr][td]Osmanthus[/td]\n<br />[td]Osmanthus Wine[/td]\n<br />[/tr]\n<br />[tr][td]Orange Blossom[/td]\n<br />[td]Orange Blossom Wine[/td]\n<br />[/tr]\n<br />[tr][td]Peach Blossom[/td]\n<br />[td]Peach Blossom Wine[/td]\n<br />[/tr]\n<br />[tr][td]Pomegranate Blossom[/td]\n<br />[td]Pomegranate Blossom Wine[/td]\n<br />[/tr]\n<br />[tr][td]Apple Blossom[/td]\n<br />[td]Apple Blossom Wine[/td]\n<br />[/tr]\n<br />[tr][td]Apricot Blossom[/td]\n<br />[td]Apricot Blossom Wine[/td]\n<br />[/tr]\n<br />[tr][td]Cherry Blossom[/td]\n<br />[td]Cherry Blossom Wine[/td]\n<br />[/tr]\n<br />[/table]Each flower and wine has unique 16×16 sprites, and custom textures are supported.\n<br />3. Brewing Stand (Big Craftable)\n<br />[list]\n<br />[*]Unlocked at\u00A0[b]Farming Level 8[/b].[/*]\n<br />[*]Crafting recipe:\n<br />[list]\n<br />[*]Clay ×10[/*]\n<br />[*]Iron Bar ×5[/*]\n<br />[*]Hardwood ×10[/*]\n<br />[/list][/*]\n<br />[*]Usage: Place a flower into the Brewing Stand,\u00A0[b]with an extra cost of Coal×1 + Rice×1[/b], wait about 4 days (6000 in‑game minutes), and collect the corresponding flower wine.[/*]\n<br />[*]The machine plays a working animation and displays i18n‑based tooltips (e.g., when materials are insufficient).[/*]\n<br />[/list]4. Full Localization Support\n<br />[list]\n<br />[*]Built‑in English and Chinese translations. All item names, descriptions, and prompts will switch automatically based on your game language.[/*]\n<br />[*]You can easily modify the translation files (\n<br />[code]i18n/zh.json[/code]\u00A0and\u00A0\n<br />[code]i18n/default.json[/code]).[/*]\n<br />[/list][line]\n<br />\uD83D\uDCDC Crafting Recipe\n<br />\n<br />\n<br />[table][tr][th]Item[/th]\n<br />[th]Unlock Condition[/th]\n<br />[th]Materials[/th]\n<br />[/tr]\n<br />[tr][td]Brewing Stand[/td]\n<br />[td]Farming Level 8[/td]\n<br />[td]Clay×10 + Iron Bar×5 + Hardwood×10[/td]\n<br />[/tr]\n<br />[/table][line]\n<br />\uD83C\uDF77 Brewing Rules (Example)\n<br />\n<br />\n<br />[table][tr][th]Input Flower[/th]\n<br />[th]Output Wine[/th]\n<br />[th]Extra Cost[/th]\n<br />[th]Duration[/th]\n<br />[/tr]\n<br />[tr][td]Osmanthus[/td]\n<br />[td]Osmanthus Wine[/td]\n<br />[td]Coal×1 + Rice×1[/td]\n<br />[td]6000 min[/td]\n<br />[/tr]\n<br />[tr][td]Cherry Blossom[/td]\n<br />[td]Cherry Blossom Wine[/td]\n<br />[td]Coal×1 + Rice×1[/td]\n<br />[td]6000 min[/td]\n<br />[/tr]\n<br />[tr][td]… (similarly for others)[/td]\n<br />[td]…[/td]\n<br />[td]…[/td]\n<br />[td]…[/td]\n<br />[/tr]\n<br />[/table]All rules are fully customizable via\u00A0\n<br />[code]config/machines.json[/code]\u00A0(change quantities, time, item IDs, etc.).\n<br />[line]\n<br />⚙️ Configuration &amp; Customization\n<br />All data is managed through JSON configuration files—no recompilation needed:\n<br />[list]\n<br />[*][code]config/flowers.json[/code]\u00A0– Flower item properties[/*]\n<br />[*][code]config/wines.json[/code]\u00A0– Wine item properties[/*]\n<br />[*][code]config/trees.json[/code]\u00A0– Fruit tree (vanilla + custom) produce rules[/*]\n<br />[*][code]config/machines.json[/code]\u00A0– Brewing Stand input/output rules and extra costs[/*]\n<br />[/list]Adjust prices, yields, seasons, chances, and more to your liking.\n<br />[size=4][b]✨ 模组简介\n<br />BlossomBrew 是一个以“花”为主题的扩展模组，为星露谷物语添加了全新的果树产出机制、花朵物品、花酒酿造系统以及一台专用的酿酒机器。\n<br />你可以在果树的非结果季节收集到特殊的花朵，并用它们酿制出风味独特的花酒，为你的农场生活增添一抹芬芳与雅致。\n<br />[/b][/size]\n<br />[line]\n<br />[size=4][b]\uD83C\uDF38 新增内容\n<br />1. 原版果树的新产出\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]为杏子、樱桃、橙子、桃子、苹果、石榴六种原版果树添加了非结果季节的花朵产出。\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]例如：樱桃树在春季结果，夏季则会产出樱花。[/b][/size][/*]\n<br />[*][size=4][b]所有花朵均可在温室或姜岛中以50%概率替代原有果实（可通过配置调整）。[/b][/size][/*]\n<br />[/list][/*]\n<br />[*][size=4][b]新增桂花树：夏秋两季开花，产出桂花，不受季节限制（拥有独立树苗）。[/b][/size][/*]\n<br />[/list][size=4][b]2. 七种花朵与花酒\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]花朵对应关系：\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]桂花 → 桂花酒[/b][/size][/*]\n<br />[*][size=4][b]橘子花 → 橘子花酒[/b][/size][/*]\n<br />[*][size=4][b]桃花 → 桃花酒[/b][/size][/*]\n<br />[*][size=4][b]石榴花 → 石榴花酒[/b][/size][/*]\n<br />[*][size=4][b]苹果花 → 苹果花酒[/b][/size][/*]\n<br />[*][size=4][b]杏子花 → 杏子花酒[/b][/size][/*]\n<br />[*][size=4][b]樱花 → 樱花酒[/b][/size][/*]\n<br />[/list][/*]\n<br />[*][size=4][b]每种花朵和花酒都有独特的精灵贴图（16×16），并支持自定义纹理。[/b][/size][/*]\n<br />[/list][size=4][b]3. 酿酒台（大型工艺品）\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]需要耕种等级8解锁合成配方。[/b][/size][/*]\n<br />[*][size=4][b]合成材料：\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]粘土 ×10[/b][/size][/*]\n<br />[*][size=4][b]铁锭 ×5[/b][/size][/*]\n<br />[*][size=4][b]硬木 ×10[/b][/size][/*]\n<br />[/list][/*]\n<br />[*][size=4][b]使用方式：将花朵放入酿酒台，并额外消耗煤炭×1 + 大米×1，等待约4天（6000分钟）即可获得对应的花酒。[/b][/size][/*]\n<br />[*][size=4][b]机器工作时会有动画效果，支持i18n多语言提示（材料不足时显示友好提醒）。[/b][/size][/*]\n<br />[/list][size=4][b]4. 完整的本地化支持\n<br />[/b][/size]\n<br />[list]\n<br />[*][size=4][b]内置中英文翻译，所有物品名称、描述、提示信息均可根据游戏语言自动切换。[/b][/size][/*]\n<br />[*][size=4][b]玩家可根据需要自行修改翻译文件（\n<br />[/b][/size]\n<br />[code]i18n/zh.json[/code][size=4][b]\u00A0和\u00A0\n<br />[/b][/size]\n<br />[code]i18n/default.json[/code][size=4][b]）。[/b][/size][/*]\n<br />[/list][line]\n<br />[size=4][b]\uD83D\uDCDC 合成配方\n<br />\n<br />\n<br />[/b][/size]\n<br />[table][tr][th][size=4][b]物品[/b][/size][/th]\n<br />[th][size=4][b]解锁条件[/b][/size][/th]\n<br />[th][size=4][b]材料[/b][/size][/th]\n<br />[/tr]\n<br />[tr][td][size=4][b]酿酒台[/b][/size][/td]\n<br />[td][size=4][b]耕种等级8[/b][/size][/td]\n<br />[td][size=4][b]粘土×10 + 铁锭×5 + 硬木×10[/b][/size][/td]\n<br />[/tr]\n<br />[/table][line]\n<br />[size=4][b]\uD83C\uDF77 酿造规则（示例）\n<br />\n<br />\n<br />[/b][/size]\n<br />[table][tr][th][size=4][b]输入花朵[/b][/size][/th]\n<br />[th][size=4][b]输出花酒[/b][/size][/th]\n<br />[th][size=4][b]额外消耗[/b][/size][/th]\n<br />[th][size=4][b]耗时[/b][/size][/th]\n<br />[/tr]\n<br />[tr][td][size=4][b]桂花[/b][/size][/td]\n<br />[td][size=4][b]桂花酒[/b][/size][/td]\n<br />[td][size=4][b]煤炭×1 + 大米×1[/b][/size][/td]\n<br />[td][size=4][b]6000分钟[/b][/size][/td]\n<br />[/tr]\n<br />[tr][td][size=4][b]樱花[/b][/size][/td]\n<br />[td][size=4][b]樱花酒[/b][/size][/td]\n<br />[td][size=4][b]煤炭×1 + 大米×1[/b][/size][/td]\n<br />[td][size=4][b]6000分钟[/b][/size][/td]\n<br />[/tr]\n<br />[tr][td][size=4][b]……（其余同理）[/b][/size][/td]\n<br />[td][size=4][b]……[/b][/size][/td]\n<br />[td][size=4][b]……[/b][/size][/td]\n<br />[td][size=4][b]……[/b][/size][/td]\n<br />[/tr]\n<br />[/table][size=4][b]所有规则均可在\u00A0\n<br />[/b][/size]\n<br />[code]config/machines.json[/code][size=4][b]\u00A0中自由修改（数量、时间、物品ID等）。\n<br />[/b][/size]\n<br />[line]\n<br />[size=4][b]⚙️ 配置与自定义\n<br />所有数据均通过 JSON 配置文件管理，无需重新编译即可调整：\n<br />[/b][/size]\n<br />[list]\n<br />[*][code]config/flowers.json[/code][size=4][b]\u00A0– 花朵物品属性[/b][/size][/*]\n<br />[*][code]config/wines.json[/code][size=4][b]\u00A0– 花酒物品属性[/b][/size][/*]\n<br />[*][code]config/trees.json[/code][size=4][b]\u00A0– 果树（原版+自定义）的花果产出规则[/b][/size][/*]\n<br />[*][code]config/machines.json[/code][size=4][b]\u00A0– 酿酒台的输入/输出规则及额外消耗[/b][/size][/*]\n<br />[/list][size=4][b]您可以根据喜好调整价格、产量、季节、概率等参数。Description[/b][/size]\n<br />[color=#D4D4D8]Describe the main purpose of your mod[/color]\n<br />\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49100",
+	"Version": "1.0.0",
+	"Updated": "2026-07-13T11:08:37+00:00",
+	"Downloads": [
+		{
+			"Id": 174834,
+			"Type": "Main",
+			"DisplayName": "BlossomBrew",
+			"FileName": "05/e2/35/05e23545-bb99-4666-94a9-43385eb768fe",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 57776,
+			"Uploaded": "2026-07-13T11:08:37+00:00",
+			"Mods": [
+				{
+					"Id": "MoYu.BlossomBrew",
+					"DisplayName": "BlossomBrew",
+					"Type": "Smapi",
+					"RelativePath": "BlossomBrew",
+					"Manifest": {
+						"Name": "BlossomBrew",
+						"Description": "添加桂花树和酿酒台，用花朵酿造花酒。",
+						"Author": "MoYu",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BlossomBrew.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "MoYu.BlossomBrew",
+						"OtherFields": {
+							"Translation": {
+								"default": "default",
+								"zh": "zh"
+							}
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561522,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435788,
+		"UploaderId": 231007203,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

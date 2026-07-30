@@ -5,18 +5,18 @@
 	"Author": "aedenthorn",
 	"Description": "With this mod, when you interact with your mailbox, a menu with all new and old mail will pop up.\n<br />\n<br />Old mail can be filtered by sender.\n<br />\n<br />Alone, this mod displays every mail envelope using a generic icon. You can change the generic icon, or use custom icons for individual letters or senders using Content Patcher.\n<br />\n<br />Custom envelope packs include:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/14447]Custom Envelopes for Mailbox Menu[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/15118](CP) Zilch's Envelopes for Mailbox Menu[/url]\uFEFF\n<br />[/list]\n<br />Note: for now, modded mail using Mail Framework Mod will be displayed as vanilla rather than through the menu, as I'm not able to access that mod's functionality.\n<br />\n<br />[b][size=5]Content Patcher[/size][/b]\n<br />\n<br />There are two dictionaries that keep track of mail data: one for NPCs and one for individual letters. The Content Patcher paths are:\n<br />\n<br />[b]aedenthorn.MailboxMenu/npcs[/b]\n<br />[b]aedenthorn.MailboxMenu/letters[/b]\n<br />\n<br />The dictionary for NPCs can be used to specify a generic envelope icon for every letter sent by a specific sender (whether they are an actual NPC or not).\n<br />\n<br />The dictionary for letters can be used to specify an envelope icon for specific mail IDs. It is also used to tell the mod the name of the sender of each letter (the mod has an internal list for all vanilla mail that it pre-adds to this dictionary, letting it know the name of the sender of each vanilla mail item).\n<br />\n<br />Syntax for either list is the same, though the fields used depend on the data you're using:\n<br />\n<br />[code]\uFEFF{\n<br />\"Format\": \"1.23.0\",\n<br />\"Changes\": [\n<br />{\n<br />\"Action\": \"EditData\",\n<br />\"Target\": \"aedenthorn.MailboxMenu/npcs\",\n<br />\"Entries\": {\n<br />\n<br />\"Abigail\": {\n<br />\uFEFF   \uFEFF   \uFEFF   \uFEFF   \uFEFF\"texturePath\": \"aedenthorn.CPMBMEnvelopes/Abigail\",\n<br />\"scale\": 1,\n<br />\"frames\": 1,\n<br />\"frameWidth\": 0,\n<br />\"frameSeconds\": 0\n<br />\uFEFF   \uFEFF   \uFEFF   \uFEFF}\n<br />}\n<br />},\n<br />{\n<br />\"Action\": \"EditData\",\n<br />\"Target\": \"aedenthorn.MailboxMenu/letters\",\n<br />\"Entries\": {\n<br />\"MyLetterFromAbigail\": {\n<br />\"sender\": \"Abigail\"\n<br />},\n<br />\"abbySpiritBoard\": {\n<br />\"texturePath\": \"aedenthorn.CPMBMEnvelopes/AbigailSpecial\",\n<br />\"scale\": 1,\n<br />\"frames\": 1,\n<br />\"frameWidth\": 0,\n<br />\"frameSeconds\": 0\n<br />}\n<br />}\n<br />},\n<br />\uFEFF\uFEFF   \uFEFF{\n<br />\"Action\": \"Load\",\n<br />\"Target\": \"aedenthorn.CPMBMEnvelopes/Abigail\",\n<br />\"FromFile\": \"assets/Abigail.png\"\n<br />},\n<br />\uFEFF   \uFEFF{\n<br />\"Action\": \"Load\",\n<br />\"Target\": \"aedenthorn.CPMBMEnvelopes/AbigailSpecial\",\n<br />\"FromFile\": \"assets/AbigailSpecial.png\"\n<br />}\n<br />]\n<br />}\n<br />[/code]\n<br />The above tells the mod that generic letters from Abigail should use the content pack's png file for the envelope; that the letter with the ID \"MyLetterFromAbigail\" is from Abigail, and that the letter with the ID\u00A0abbySpiritBoard should use a special png file from the content pack.\n<br />\n<br />You can omit the other fields unless you need them:\n<br />\n<br />[list]\n<br />[*][b]scale[/b]\u00A0is for icons that are not 256 pixels wide (e.g. 64x64). This will scale the icon if set to anything besides 1.\n<br />[*][b]frames[/b]\u00A0is used for animated icons - place the frames horizontally on the png file.\n<br />[*][b]frameWidth[/b]\u00A0is how many pixels wide each animated frame is.\n<br />[*][b]frameSeconds[/b]\u00A0is how many seconds (or decimal part) each frame should last.\n<br />[/list]\n<br />\n<br />[size=5][b]Config[/b]\n<br />[/size]\n<br />You can edit the\u00A0config.json\u00A0file that is created when first running the game or use GMCM.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url].\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at\u00A0[url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit\u00A0[url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at\u00A0[url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/14439",
-	"Version": "0.4.1",
-	"Updated": "2026-05-21T16:10:41+00:00",
+	"Version": "0.4.2",
+	"Updated": "2026-07-16T18:44:06+00:00",
 	"Downloads": [
 		{
-			"Id": 168369,
+			"Id": 175194,
 			"Type": "Main",
 			"DisplayName": "Mailbox Menu",
-			"FileName": "Mailbox Menu-14439-0-4-1-1779379841.zip",
-			"Description": "Changes:<br /><br />Update for 1.6",
-			"Version": "0.4.1",
-			"SizeInBytes": 654150,
-			"Uploaded": "2026-05-21T16:10:41+00:00",
+			"FileName": "52/0b/07/520b076f-ceb2-4edb-b24f-3b3bb572c256",
+			"Description": "Changes:\n\nGMCM update",
+			"Version": "0.4.2",
+			"SizeInBytes": 654583,
+			"Uploaded": "2026-07-16T18:44:06+00:00",
 			"Mods": [
 				{
 					"Id": "aedenthorn.MailboxMenu",
@@ -27,7 +27,7 @@
 						"Name": "Mailbox Menu",
 						"Description": "Mailbox Menu.",
 						"Author": "aedenthorn",
-						"Version": "0.4.1",
+						"Version": "0.4.2",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "MailboxMenu.dll",
 						"Dependencies": [],
@@ -39,7 +39,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342555057,
+				"Uid": 5596342561882,
 				"CategoryId": 1,
 				"Primary": true
 			}

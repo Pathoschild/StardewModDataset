@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 49186,
+	"Name": "Time Control",
+	"Author": "Yousv",
+	"Description": "[center][color=#f6b26b][b][size=6]Time Control[/size][/b][/color][/center]\n<br />[center][size=5]Time skip, stamina regen, time speed control, pause, menu auto-pause, multiplayer voting, per-minute clock[/size][/center]\n<br />[line]\n<br />\n<br />[b][size=5]Time Skip[/size][/b]\n<br />[list]\n<br />[*]Open a time picker menu while sitting on furniture to select a target time.[/*]\n<br />[*]Time passes smoothly at a configurable rate, forward or backward, instead of jumping straight to the target.[/*]\n<br />[*]Option to allow skipping to past times on the same day (default: off).[/*]\n<br />[*]Restrict skip access to host only or allow any player (default: any). Host settings are enforced on all clients.[/*]\n<br />[*]Stamina regen during a skip scales with game time passed, so a 6-hour skip fills stamina regardless of how fast the skip runs.[/*]\n<br />[*]Regen multiplier is synced to all players so everyone recovers stamina at the correct rate during the skip.[/*]\n<br />[*]Show a one-time notification with the skip hotkey when sitting down.[/*]\n<br />[*]Skip broadcasts a notification to all players when finished.[/*]\n<br />[/list]\n<br />[b][size=5]Sit Energy Regen[/size][/b]\n<br />[list]\n<br />[*]Recover stamina per second while sitting on furniture.[/*]\n<br />[*]Configurable base energy rate per second.[/*]\n<br />[*]Option to ignore global time speed when calculating regen rate.[/*]\n<br />[*]Option to continue regenerating while time is frozen.[/*]\n<br />[/list]\n<br />[b][size=5]Time Speed[/size][/b]\n<br />[list]\n<br />[*]Adjust global time speed from 0.1x to 10x. 1.0 is normal, 2.0 is twice as fast, 0.5 is half speed.[/*]\n<br />[*]Tick interval scales inversely with speed setting.[/*]\n<br />[/list]\n<br />[b][size=5]Time Freeze[/size][/b]\n<br />[list]\n<br />[*][b]Pause Requirement[/b] - Any: pauses when any player needs it. All: pauses only when all players need it. Host: pauses only when host needs it.[/*]\n<br />[*][b]Auto-Pause in Menus[/b] - When enabled, time pauses only when all players are in menus, fishing, or any action that would stop time in single player. When disabled, menus never pause time (default: on).[/*]\n<br />[*][b]Lock Monsters in Place[/b] - Monsters are frozen in place and cannot deal damage while time is paused.[/*]\n<br />[*][b]Monster Invincibility[/b] - Monsters cannot lose health while time is paused.[/*]\n<br />[*][b]Pause Machine Timers[/b] - Machines and crafting stop processing while time is paused.[/*]\n<br />[*][b]Pause Buff Timers[/b] - Food, drink, and other buff durations do not expire while time is paused.[/*]\n<br />[*][b]Disable Damage While Paused[/b] - Player health is locked. Damage cannot be taken while paused.[/*]\n<br />[*][b]Pause During Events[/b] - Pauses time while any player is in a cutscene or event.[/*]\n<br />[/list]\n<br />[b][size=5]Multiplayer[/size][/b]\n<br />[list]\n<br />[*]Vote to pause or unpause time. Vote counts and player names are broadcast as chat messages.[/*]\n<br />[*]Vote state and time skip regen multiplier sync from host to all clients.[/*]\n<br />[*]Peer connect detection warns on version mismatch or missing mod.[/*]\n<br />[*]Public API for other mods to query vote state, player count, and tracked player IDs. [u]Used in my other mod:[/u] [url=https://www.nexusmods.com/stardewvalley/mods/48739]Party Info[/url][/*]\n<br />[/list]\n<br />[b][size=5]Clock Display[/size][/b]\n<br />[list]\n<br />[*]Updates the clock display every in-game minute instead of every 10 minutes.[/*]\n<br />[*]Pause indicator: shows an\u00A0X icon on the clock when time is frozen.[/*]\n<br />[/list]\n<br />[spoiler][b][size=5]API[/size][/b]\n<br />Time Control registers a SMAPI API under the mod ID [font=Consolas]yousv.TimeControl[/font]. Other mods can access it via [font=Consolas]IModRegistry.GetApi[/font].\n<br />[list]\n<br />[*][b]HasPlayerVotedToPause(long farmerId)[/b] - Returns whether the given player has toggled their pause vote on.[/*]\n<br />[*][b]VoteCount[/b] - Number of players currently with yes votes.[/*]\n<br />[*][b]TotalPlayers[/b] - Total number of tracked players.[/*]\n<br />[*][b]GetTrackedPlayerIds()[/b] - All tracked player unique IDs.[/*]\n<br />[/list]Usage example:\n<br />[code]\n<br />var api = helper.ModRegistry.GetApi&lt;ITimeControlApi&gt;(\"yousv.TimeControl\");\n<br />if (api != null)\n<br />{\n<br />\tbool voted = api.HasPlayerVotedToPause(someFarmerId);\n<br />\tint paused = api.VoteCount;\n<br />}[/code]The API is read-only. External mods can read vote state but cannot send messages or modify Time Control's internal state.[/spoiler]\n<br />\n<br />[center][b][size=5]Configuration[/size][/b][/center]\n<br />Configure in-game via [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url], or edit the config.json file directly.\n<br />[line]\n<br />\n<br />[center][size=5][b]Requirements[/b][/size][/center]\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.0.0 or later.[/*]\n<br />[*]Stardew Valley 1.6.[/*]\n<br />[/list]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\n<br />[line]\n<br />\n<br />[center][size=5][b]Installation[/b][/size][/center]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Extract the mod folder into your Stardew Valley Mods folder.[/*]\n<br />[*]Launch the game via SMAPI.[/*]\n<br />[/list]\n<br />[center][size=5][b]Support[/b][/size][/center]\n<br />[center][size=4][url=http://ko-fi.com/yousv][color=#ffd966]Ko-Fi[/color][/url][/size][/center]\n<br />[line]\n<br />[size=2][i]Report bugs in the Posts/Bugs tab with your SMAPI log.[/i][/size]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49186",
+	"Version": "1.1",
+	"Updated": "2026-07-17T11:32:53+00:00",
+	"Downloads": [
+		{
+			"Id": 175266,
+			"Type": "Main",
+			"DisplayName": "TimeControl",
+			"FileName": "13/6c/39/136c3961-041d-4ef5-8cb0-1ebddfa7bad1",
+			"Description": "",
+			"Version": "1.1",
+			"SizeInBytes": 44615,
+			"Uploaded": "2026-07-17T11:32:53+00:00",
+			"Mods": [
+				{
+					"Id": "yousv.TimeControl",
+					"DisplayName": "Time Control",
+					"Type": "Smapi",
+					"RelativePath": "TimeControl",
+					"Manifest": {
+						"Name": "Time Control",
+						"Description": "Time control, sit to pass time with stamina regen, multiplayer pause voting, and configurable time speed.",
+						"Author": "Yousv",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TimeControl.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:49186"
+						],
+						"UniqueId": "yousv.TimeControl"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561954,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435874,
+		"UploaderId": 161386073,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

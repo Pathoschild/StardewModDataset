@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 49782,
+	"Name": "Ore Spawn Control",
+	"Author": "Shnmg33",
+	"Description": "Ore Spawn Control\n<br />Ore Spawn Control\u00A0is a configurable resource-spawning mod for\u00A0Stardew Valley 1.6\u00A0and\u00A0SMAPI 4.x. It lets players customize how ores, gems, geodes, and Volcano resources appear, making mining progression easier to tailor to different playstyles.\n<br />[heading]Main Features[/heading]\n<br />[list]\n<br />[*]Supports the Mines, Skull Cavern, Quarry Mine, and Volcano Dungeon.[/*]\n<br />[*]Controls copper, iron, gold, iridium, coal, and radioactive ore nodes.[/*]\n<br />[*]Controls amethyst, aquamarine, jade, emerald, ruby, topaz, diamond, and generic gem nodes.[/*]\n<br />[*]Supports geodes, frozen geodes, magma geodes, omni geodes, mystic stones, cinder shards, Volcano gem nodes, and mussel nodes.[/*]\n<br />[*]Provides a global resource multiplier ranging up to 100x[/*]\n<br />[*]Allows each resource to be enabled or disabled individually.[/*]\n<br />[*]Provides independent multipliers and base spawn chances for each resource.[/*]\n<br />[*]Supports a minimum resource-node target for each location.[/*]\n<br />[*]Limits the total number of nodes added to each location.[/*]\n<br />[*]Includes a force mode that converts ordinary stones into a selected resource type.[/*]\n<br />[*]Supports cross-resource conversion, allowing higher-multiplier resources to replace lower-multiplier resource nodes.[/*]\n<br />[*]Supports custom resource rules through\u00A0 config.json[/*]\n<br />[*]Uses deterministic random generation, preventing the same location from being repeatedly processed on the same day.[/*]\n<br />[*]Only the host changes map objects in multiplayer, reducing synchronization issues.[/*]\n<br />[/list][heading]How It Works[/heading]\n<br />This mod does not directly replace or rewrite Stardew Valley’s original mine-generation methods. Instead, after a supported location or mine floor has loaded, it scans the existing breakable stones and converts some of them into resource nodes according to the configured probabilities, multipliers, and limits.\n<br />The game’s original resource nodes are preserved. Disabling a resource or lowering its multiplier only reduces the number of nodes added by this mod; it does not turn existing resources back into ordinary stones. This approach also reduces the risk of conflicts with other mods that modify mines or map generation.\n<br />[heading]Generic Mod Config Menu Support[/heading]\n<br />Ore Spawn Control supports\u00A0Generic Mod Config Menu. With GMCM installed, the following options can be configured directly in-game:\n<br />[list]\n<br />[*]Master mod toggle[/*]\n<br />[*]Global resource multiplier[/*]\n<br />[*]Individual resource toggles[/*]\n<br />[*]Per-resource multipliers and base probabilities[/*]\n<br />[*]Affected locations[/*]\n<br />[*]Minimum resource-node target[/*]\n<br />[*]Maximum added nodes per location[/*]\n<br />[*]Maximum stone conversion rate[/*]\n<br />[*]Cross-resource conversion[/*]\n<br />[*]Force spawning mode[/*]\n<br />[/list]GMCM is optional. If it is not installed, the mod will continue to work and load its settings from\u00A0\n<br />[code]config.json[/code].\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI 4.x[/*]\n<br />[*]Generic Mod Config Menu — optional, but recommended[/*]\n<br />[/list][heading]Installation[/heading]\n<br />[list=1]\n<br />[*]Download the latest release.[/*]\n<br />[*]Extract the mod into:[/*]\n<br />[/list]Stardew Valley/Mods/OreSpawnControl\n<br />[list=1]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[*]Optionally install Generic Mod Config Menu to configure the mod in-game.[/*]\n<br />[/list][heading]Project Links[/heading]\n<br />GitHub repository:\n<br />[url=https://github.com/Shnmg33/OreSpawnControl]https://github.com/Shnmg33/OreSpawnControl[/url]\n<br />Latest releases:\n<br />[url=https://github.com/Shnmg33/OreSpawnControl/releases]https://github.com/Shnmg33/OreSpawnControl/releases[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49782",
+	"Version": "1",
+	"Updated": "2026-07-30T05:19:37+00:00",
+	"Downloads": [
+		{
+			"Id": 176739,
+			"Type": "Main",
+			"DisplayName": "OreSpawnControl 2.0.0",
+			"FileName": "95/65/31/9565315b-de99-47d8-8b67-3ccef6db5b12",
+			"Description": "",
+			"Version": "3",
+			"SizeInBytes": 38967,
+			"Uploaded": "2026-07-30T05:19:37+00:00",
+			"Mods": [
+				{
+					"Id": "Shnmg.OreSpawnControl",
+					"DisplayName": "Ore Spawn Control",
+					"Type": "Smapi",
+					"RelativePath": "OreSpawnControl",
+					"Manifest": {
+						"Name": "Ore Spawn Control",
+						"Description": "可配置矿井、骷髅洞穴、采石场与火山地牢中的矿石节点和散落资源生成。",
+						"Author": "Shnmg",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "OreSpawnControl.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:Shnmg33/OreSpawnControl"
+						],
+						"UniqueId": "Shnmg.OreSpawnControl"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563427,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436470,
+		"UploaderId": 220853218,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

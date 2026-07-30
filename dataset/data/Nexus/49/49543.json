@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 49543,
+	"Name": "Custom Language Bundle Fix",
+	"Author": "ThatHunky",
+	"Description": "[size=4][b]The things Stardew Valley breaks for custom (mod) languages on PC — fixed.[/b][/size]\n<br />\n<br />If you play with a community translation (a custom «mod» language), a few things quietly break on the desktop game. This mod fixes all three. It works with [b]any[/b] language pack; with a built-in game language it does nothing at all.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]What it fixes[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Junimo bundle names — immediately.[/b] Community Center bundle names stay English until you save, quit to the title screen and reload, because the game caches Data/Bundles in English before your language is applied. They're now localized as soon as the save loads. [b]Your bundle progress is never touched[/b] — only display names are refreshed, so remixed bundles and completion are safe.[/*]\n<br />[*][b]Social page: single male farmers.[/b] In gendered languages the social page showed single [b]male[/b] farmers (your own character, co-op farmhands) with the [b]feminine[/b] single status. It's a first-party game bug — the farmer slot only ever reads the female status key and splits it, so a pack with separate male/female strings gets the female form for men. Each farmer now shows the correct gendered status.[/*]\n<br />[*][b]Localized «(Recipe)» suffix.[/b] For Ukrainian packs only: the game uses one «(Recipe)» key for both cooking recipes and crafting blueprints, which Ukrainian has to tell apart. Food gets «(Рецепт)», everything else «(Креслення)». Other languages are unaffected.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]SMAPI[/b] 4.0 or newer.[/*]\n<br />[*][b]A language pack[/b] — any custom language mod. With a built-in game language this mod does nothing.[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />Unzip into your [b]Mods[/b] folder and run the game through SMAPI. Everything is on by default; the three toggles live in [b]config.json[/b] if you ever hit a conflict with another mod.\n<br />\n<br />[i]On Android?[/i] Use «Custom Language Fixes» instead — it includes these fixes plus everything else the mobile port breaks for custom languages.\n<br />\n<br />[line]\n<br />\n<br />Source code and full technical write-up: [url=https://github.com/ThatHunky/CustomLanguageFixes]github.com/ThatHunky/CustomLanguageFixes[/url]. Licensed MIT.\n<br />\n<br />Credits: [b]Pereclaw[/b] for the Ukrainian translation this was diagnosed against, and [b]DID[/b] for testing.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Українською[/b][/size]\n<br />\n<br />Три речі, які гра ламає для кастомних (мод-) мов на ПК — виправлено:\n<br />[list]\n<br />[*]назви клунків Джунімо одразу після завантаження сейва, без ритуалу «збережись, вийди в меню, зайди знову» (прогрес клунків не зачіпається);[/*]\n<br />[*]правильний за статтю статус «самотній» на слоті фермера — чоловічі фермери більше не показують «незаміжня» (ванільний баг гри);[/*]\n<br />[*]суфікс «(Рецепт)»/«(Креслення)» для українських паків — гра не розрізняє їжу від креслень, а мод розрізняє.[/*]\n<br />[/list]\n<br />Потрібні SMAPI 4.0+ і будь-який мовний пак. Усе ввімкнено за замовчуванням; вимикачі — у config.json.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49543",
+	"Version": "1.1.0",
+	"Updated": "2026-07-22T20:55:54+00:00",
+	"Downloads": [
+		{
+			"Id": 175931,
+			"Type": "Main",
+			"DisplayName": "CustomLanguageBundleFix 1.1.0",
+			"FileName": "b9/ac/be/b9acbedb-da26-4aba-970e-db0eddf45001",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 7558,
+			"Uploaded": "2026-07-22T20:55:54+00:00",
+			"Mods": [
+				{
+					"Id": "ThatHunky.CustomLanguageBundleFix",
+					"DisplayName": "Custom Language Bundle Fix",
+					"Type": "Smapi",
+					"RelativePath": "CustomLanguageBundleFix",
+					"Manifest": {
+						"Name": "Custom Language Bundle Fix",
+						"Description": "Fixes for custom (mod) languages on PC: Junimo bundle names show immediately, single male farmers get the correct relationship status on the social page, and Ukrainian recipe/blueprint suffixes are localized.",
+						"Author": "ThatHunky & DID",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomLanguageBundleFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:49543"
+						],
+						"UniqueId": "ThatHunky.CustomLanguageBundleFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342562619,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436231,
+		"UploaderId": 46504617,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

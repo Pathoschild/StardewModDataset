@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 48936,
+	"Name": "PlacementTool",
+	"Author": "wzx0",
+	"Description": "# Placement Tool\n<br />\n<br />Stardew Valley 批量摆放模组，支持按行/列快速放置树苗、果树、茶苗、机器等物品。\n<br />\n<br />## 功能\n<br />\n<br />- **[b]批量放置[/b]**：按快捷键进入放置会话，左键拖动摆放一列物品\n<br />- **[b]物品分类[/b]**：自动识别普通树、果树、茶苗、机器、其他 BigCraftable，按类设置间隔\n<br />- **[b]实时预览[/b]**：拖动时显示半透明预览，绿色=可放置，红色=不可放置\n<br />- **[b]间隔配置[/b]**：可按物品类别独立配置放置间隔（紧挨、间隔1格、间隔2格等）\n<br />- **[b]库存统计[/b]**：侧边面板实时显示背包中各类物品的数量\n<br />- **[b]右键删除[/b]**：右键点击已放置的预览可移除\n<br />- **[b]确认落地*[/b]*：关闭时弹出确认对话框，显示有效/无效数量\n<br />\n<br />## 操作方式\n<br />\n<br />| 操作\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | 功能 |\n<br />|---------------|------|\n<br />| 按 `P` 键\u00A0 \u00A0 \u00A0 | 进入/退出放置会话 |\n<br />| 左键拖动\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | 沿鼠标拖动方向排列物品预览 |\n<br />| 左键松手\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | 固化当前拖动预览 |\n<br />| 右键点击\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | 删除该位置的预览 |\n<br />| 再按 `P` 或者 esc | 弹出确认对话框 |\n<br />\n<br />## 支持的物品类型\n<br />\n<br />| 类型 | 说明 | 默认间隔 |\n<br />|------|------|----------|\n<br />| 普通树 | 橡果、枫种、松果、桃花心木种子 | 1格 |\n<br />| 果树 | 各类果树树苗 | 2格 |\n<br />| 茶苗 | 茶叶树苗 | 2格 |\n<br />| 机器 | 小桶、罐头机、酒桶等可产出机器 | 紧挨 |\n<br />| 其他 | 洒水器、稻草人等 BigCraftable | 紧挨 |\n<br />\n<br />## 配置\n<br />\n<br />通过 GMCM（Generic Mod Config Menu）可配置：\n<br />\n<br />- **OpenMenuKey**：进入放置会话的快捷键（默认 `P`）\n<br />- **TreeSpacing**：普通树放置间隔\n<br />- **FruitTreeSpacing**：果树放置间隔\n<br />- **TeaBushSpacing**：茶苗放置间隔\n<br />- **MachineSpacing**：机器放置间隔\n<br />- **OtherSpacing**：其他 BigCraftable 放置间隔\n<br />\n<br />## 依赖\n<br />\n<br />| Mod | 必需 | 说明 |\n<br />|-----|------|------|\n<br />| StardewUI | 是 | UI 框架，用于渲染侧边面板和预览覆盖层 |\n<br />| Generic Mod Config Menu | 否 | 提供游戏内配置界面 |\n<br />\n<br />## 安装\n<br />\n<br />1. 安装 [SMAPI](https://smapi.io/) 4.0.0+\n<br />2. 安装 [StardewUI](https://www.nexusmods.com/stardewvalley/mods/22072)\n<br />3. 将 `PlacementTool/` 文件夹复制到游戏的 `Mods/` 目录\n<br />4. 启动游戏，SMAPI 会自动加载模组\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48936",
+	"Version": "1",
+	"Updated": "2026-07-15T01:33:53+00:00",
+	"Downloads": [
+		{
+			"Id": 175015,
+			"Type": "Main",
+			"DisplayName": "PlacementTool 1.0.0",
+			"FileName": "54/dc/b3/54dcb356-a744-4ec7-ad35-157f36248700",
+			"Description": "模组文件",
+			"Version": "1.0.0",
+			"SizeInBytes": 38859,
+			"Uploaded": "2026-07-15T01:33:53+00:00",
+			"Mods": [
+				{
+					"Id": "wzx.PlacementTool",
+					"DisplayName": "Placement Tool",
+					"Type": "Smapi",
+					"RelativePath": "PlacementTool",
+					"Manifest": {
+						"Name": "Placement Tool",
+						"Description": "批量摆放工具：按快捷键进入放置会话，左键拖动摆放一列物品（树/果树/机器），右键删除预览，关闭确认是否落地。",
+						"Author": "wzx",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PlacementTool.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:48936"
+						],
+						"UniqueId": "wzx.PlacementTool"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561703,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435624,
+		"UploaderId": 203111648,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

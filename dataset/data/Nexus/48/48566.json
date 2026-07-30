@@ -1,0 +1,95 @@
+{
+	"Site": "Nexus",
+	"Id": 48566,
+	"Name": "Luyisha - Don't Marry Events",
+	"Author": "Luyisha1",
+	"Description": "Have you ever felt that getting married in Stardew Valley lacks excitement? Especially when you have two suitors vying for your affections? Well, this mod changes everything. The night before your wedding, anyone you have a close romantic relationship with could show up at your farm to confess their feelings and beg you to elope. You'll have to make a decision that will change your life and relationships in Pelican Town forever.\n<br />---\n<br />[b][size=4]Important Note: First Mod and Support[/size][/b]\n<br />\n<br />This is [b]my first mod![/b] I'm a native Spanish speaker, and the mod was originally written and designed in Spanish. Therefore, there may be minor grammatical errors or discrepancies in the translation in the English version. If you find any, please let me know in the comments or bug reports!\n<br />\n<br />[size=4][b]Current Status[/b][/size]\n<br />Currently, [b]6 candidates[/b] are fully implemented [b](Elliott, Abigail, Sebastian, Shane, Haley, and Leah)[/b].\u00A0\n<br />\n<br />[list]\n<br />[*][b]Future Plans: [/b]If the mod receives support and positive feedback from the community, I plan to update it and complete all the remaining bachelors and bachelorettes.[/*]\n<br />[/list]---\n<br />[size=5][b]How to Install[/b][/size]\n<br />For this mod to work, [b]you must install both folders[/b] included in the download in your Mods directory:\n<br />[list=1]\n<br />[*][b][CP] Luyisha - Don't Marry Events:[/b] The content package containing all the dialogues, settings, and event definitions.[/*]\n<br />[*][b]Luyisha - Token Provider:[/b] The C# code extension that manages the marriage mechanics, custom tokens, friendship modifications, and gift rejection behavior.[/*]\n<br />[/list]Manual download the mod and extract the ZIP. file into your Stardew Valley/Mods folder.\n<br />---\n<br />[size=5][b]Mod Features and Settings[/b][/size]\n<br />The mod includes integration with the [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Configuration Menu (GMCM)[/url] so you can customize:\n<br />[list]\n<br />[*][b]House Type: [/b]Select your house's upgrade level (Improved Cottage 1 or Improved Cottage 2 and 3) to set the coordinates correctly.[/*]\n<br />[*][b]Gossip Days:[/b] Set how many days the villagers will gossip about your dramatic elopement (from 1 to 7 days).[/*]\n<br />[*][i](In the future) You can choose which candidates can confess[/i][/*]\n<br />[/list]---\n<br />[b][size=5]Requirements[/size][/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] (v4.0.0+)[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\u00A0(v1.13.0+)[/*]\n<br />[/list]---\n<br />[b][size=5]Compatibility[/size][/b]\n<br />[list]\n<br />[*][b]Custom NPCs (SVE, Ridgeside Village, East Scarpe, etc.):[/b] Although they haven't been added yet, this mod is 100% compatible with these others, and you shouldn't have any problems playing them simultaneously. In the future, after adding the 12 candidates from the vanilla game, we plan to add the candidates from the expansion mods.[/*]\n<br />[*][b]Dialogue and UI Mods:[/b] Fully compatible. In fact, the mods \"[url=https://www.nexusmods.com/stardewvalley/mods/8105]The Only for Me[/url]\" and \"[url=https://www.nexusmods.com/stardewvalley/mods/26598]Sweeter Than Pomegranates[/url]\" are highly recommended to expand and complete the dynamics with Sebastian and Elliott.[/*]\n<br />[*][b]Polyamory Mods (Free Love, Multiple Relationships):[/b]\u00A0Use with caution. Running away with an NPC changes your jilted fiancé's status to \"Divorced,\" which could cause minor UI inconsistencies in mods that allow multiple active spouses.[/*]\n<br />[/list][list]\n<br />[*][b]Instant Wedding Mods:[/b] Incompatible. These mods skip the \"night before the wedding,\" preventing elopement events from triggering.[/*]\n<br />[*][b]Gift Cheating Mods:[/b] May bypass the jilted NPC's gift rejection logic.[/*]\n<br />[/list][size=5][b]This mod is Open Source, [url=https://github.com/Luyisha1/Luyisha---Don-t-Marry-Events-Mod]Github Here![/url][/b][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48566",
+	"Version": "1.0.0",
+	"Updated": "2026-07-02T23:19:47+00:00",
+	"Downloads": [
+		{
+			"Id": 173456,
+			"Type": "Main",
+			"DisplayName": "Luyisha - Don't Marry Events V.1.0.0",
+			"FileName": "9e/1b/4e/9e1b4e08-40aa-42f5-b3bc-3acc48eb01a2",
+			"Description": "PLEASE DO NOT DELETE THE TOKEN PROVIDER FOLDER! This is where all the C# programming is located, and the mod will not work!",
+			"Version": "1",
+			"SizeInBytes": 36939,
+			"Uploaded": "2026-07-02T23:19:47+00:00",
+			"Mods": [
+				{
+					"Id": "Luyisha.TokenProvider",
+					"DisplayName": "Token Provider",
+					"Type": "Smapi",
+					"RelativePath": "Luyisha - Token Provider",
+					"Manifest": {
+						"Name": "Token Provider",
+						"Description": "Provides the necessary Content Patcher tokens for the 'Don't Marry Events' mod.",
+						"Author": "Luyisha",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TokenProvider.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.13.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:ID_DE_TU_MOD"
+						],
+						"UniqueId": "Luyisha.TokenProvider"
+					}
+				},
+				{
+					"Id": "Luyisha.Dont_Marry_Events",
+					"DisplayName": "Don't Marry Events",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Luyisha - Don't Marry Events",
+					"Manifest": {
+						"Name": "Don't Marry Events",
+						"Description": "Adds a dramatic event the night before your wedding where your lovers ask you to run away with them.",
+						"Author": "Luyisha",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.13.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Luyisha.TokenProvider",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:ID_DE_TU_MOD"
+						],
+						"UniqueId": "Luyisha.Dont_Marry_Events"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560144,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435254,
+		"UploaderId": 238943516,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

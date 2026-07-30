@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 49539,
+	"Name": "Custom Language Fixes (Android)",
+	"Author": "ThatHunky",
+	"Description": "[size=4][b]Everything the Android port breaks for custom (mod) languages, fixed in one mod.[/b][/size]\n<br />\n<br />Stardew Valley's mobile port forks a lot of its UI code, and in several places that forked code simply has no branch for the [b]mod[/b] language — the one every community translation uses. The result is a pile of small breakages that make custom translations feel broken. This mod fixes all of them.\n<br />\n<br />It works with [b]any[/b] language pack, not a specific one. Every patch is gated on «a custom language is active», so if you play in a built-in language this mod changes nothing at all.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]What it fixes[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]The HUD clock.[/b] Custom languages fall through to a 12-hour clock with no am/pm suffix at all, so 9:00 and 21:00 look identical. You now get a proper 24-hour clock, or a real 12-hour clock with a localized am/pm suffix — your choice.[/*]\n<br />[*][b]The language menu.[/b] The built-in mobile language selection menu only lists 12 hardcoded languages, so installed packs are invisible. They're now added to the list, each with its own button graphic, and the menu scrolls properly. Multiple packs each get their own row.[/*]\n<br />[*][b]Language memory.[/b] Your choice is remembered and respected on startup — including a deliberate switch back to a built-in language.[/*]\n<br />[*][b]Font zoom.[/b] The mobile font code overwrites the zoom your pack asks for, which throws off text measurement and leaves gaps at the end of lines. The pack's zoom is now restored after every recalculation.[/*]\n<br />[*][b]Junimo bundle names.[/b] Bundle names stay English until you save, quit to the menu and reload, because the bundle data is cached in English before your language is applied. They're now localized immediately, without the ritual. Bundle progress and remixed bundles are never touched.[/*]\n<br />[*][b]Social page: single male farmers.[/b] In gendered languages the social page showed single male farmers (your own character, co-op farmhands) with the feminine single status — a first-party game bug where the farmer slot only ever reads the female status key. Each farmer now shows the correct gendered status.[/*]\n<br />[*][b]Justified dialogue text.[/b] Optional: spaces are stretched so dialogue has an even right edge, which looks much better in languages with long words.[/*]\n<br />[*][b]Localized «(Recipe)» suffix.[/b] For Ukrainian packs only — other languages are unaffected.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]SMAPI for Android[/b] — the fork by NRTnarathip ([url=https://github.com/NRTnarathip/SMAPI-Android-1.6]SMAPI-Android-1.6[/url]). This mod does [b]not[/b] work on PC — see «Custom Language Bundle Fix» for the desktop version of the bundle fix.[/*]\n<br />[*][b]A language pack[/b] — any custom language mod. Without one this mod has nothing to do.[/*]\n<br />[*][b]Generic Mod Config Menu[/b] (optional) — to change settings in-game instead of editing config.json.[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install the SMAPI Launcher and Stardew Valley 1.6.15.1 or newer.[/*]\n<br />[*]Unzip the download into your [b]Mods[/b] folder, next to your language pack.[/*]\n<br />[*]Start the game through the SMAPI Launcher. Pick your language from the globe button on the title screen — custom languages are at the bottom of the list.[/*]\n<br />[/list]\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />Three settings are available in the in-game menu (with Generic Mod Config Menu installed): time format, font zoom fix, and justified dialogue. Everything else is on by default and can be switched off in [b]config.json[/b] if you ever hit a conflict with another mod.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Credits[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Pereclaw[/b] — the Ukrainian translation this was originally built for. The bugs were in the game, not in the pack.[/*]\n<br />[*][b]DID[/b] — the original desktop RecipeUkrainizacija, and all the mobile testing.[/*]\n<br />[*][b]NRTnarathip[/b] — SMAPI for Android and the Generic Mod Config Menu port.[/*]\n<br />[*][b]spacechase0[/b] — Generic Mod Config Menu.[/*]\n<br />[/list]\n<br />Source code and full technical write-up: [url=https://github.com/ThatHunky/CustomLanguageFixes]github.com/ThatHunky/CustomLanguageFixes[/url]. Licensed MIT — feel free to reuse the code, and translations of the mod's own text are very welcome.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Українською[/b][/size]\n<br />\n<br />Мод лагодить усе, що мобільна версія гри ламає для кастомних (мод-) мов — для будь-якого мовного пака, не лише українського. Раніше проєкт називався «Солов'їна Долина».\n<br />\n<br />Що виправлено: годинник на HUD (тепер або 24-годинний, або 12-годинний із дп/пп — раніше кастомні мови взагалі не мали позначки), мод-мови у вбудованому меню вибору мов, пам'ять вибору мови, зум шрифта пака, назви клунків Джунімо одразу без «збережись і перезайди», правильний за статтю статус «самотній» на слоті фермера, рівний правий край у діалогах і суфікс «(Рецепт)/(Креслення)» для українських паків.\n<br />\n<br />Потрібні SMAPI для Android (форк NRTnarathip) і будь-який мовний пак. Налаштування — у config.json або в грі через Generic Mod Config Menu.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49539",
+	"Version": "2.2.0",
+	"Updated": "2026-07-22T19:20:32+00:00",
+	"Downloads": [
+		{
+			"Id": 175920,
+			"Type": "Main",
+			"DisplayName": "CustomLanguageFixes 2.2.0",
+			"FileName": "2b/d7/ea/2bd7ea35-c9fd-49aa-ade3-adc10fcf4b92",
+			"Description": "",
+			"Version": "2.2.0",
+			"SizeInBytes": 13936,
+			"Uploaded": "2026-07-22T19:20:32+00:00",
+			"Mods": [
+				{
+					"Id": "ThatHunky.CustomLanguageFixes",
+					"DisplayName": "Custom Language Fixes",
+					"Type": "Smapi",
+					"RelativePath": "CustomLanguageFixes",
+					"Manifest": {
+						"Name": "Custom Language Fixes",
+						"Description": "Fixes everything the Android port breaks for custom (mod) languages: language selection menu, remembered language choice, 12/24-hour clock, localized recipe suffix, font zoom, justified dialogue, and Junimo bundle names.",
+						"Author": "ThatHunky & DID",
+						"Version": "2.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomLanguageFixes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:49539",
+							"GitHub:ThatHunky/CustomLanguageFixes"
+						],
+						"UniqueId": "ThatHunky.CustomLanguageFixes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342562608,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436227,
+		"UploaderId": 46504617,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

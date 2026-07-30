@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 48468,
+	"Name": "Better Junimos Scan Cache Fix",
+	"Author": "wzx0",
+	"Description": "# BetterJunimosScanCacheFix\n<br />\n<br />## Description\n<br />\n<br />修复 BetterJunimos 模组的扫描缓存问题。BetterJunimos 在 `PatchSearchAroundHut` 中使用静态字典 `_scanCache` 缓存小屋周围的可工作格子位置，但这个缓存永远不会被清除。当玩家新增/移除作物、改变地形或在姜岛/山顶农场跨地图工作时，陈旧的缓存会导致祝尼魔无法找到新的可工作格子。\n<br />\n<br />本模组通过反射在每天开始和小屋列表变化时自动清空该缓存，强制下一次扫描时重新查找。\n<br />\n<br />## Installation instructions\n<br />\n<br />1. 确保已安装 **SMAPI** (3.0+)\n<br />2. 确保已安装 **BetterJunimos** (hawkfalcon.BetterJunimos)\n<br />3. 将 `BetterJunimosScanCacheFix` 文件夹复制到 Stardew Valley 的 `Mods` 目录下\n<br />4. 启动游戏即可\n<br />\n<br />## Main features\n<br />\n<br />- ✅ 每天开始时自动清除 BetterJunimos 的扫描缓存\n<br />- ✅ 新增祝尼魔小屋时自动清除缓存\n<br />- ✅ 仅主玩家执行缓存清除，兼容多人联机\n<br />- ✅ 详细的日志输出（Debug 级别）\n<br />- ✅ 版本不兼容时自动禁用并提示\n<br />\n<br />## Requirements\n<br />\n<br />- **SMAPI** 3.0 或更高版本\n<br />- **BetterJunimos** (UniqueID: `hawkfalcon.BetterJunimos`)\n<br />\n<br />## Shout outs\n<br />\n<br />感谢 **hawkfalcon** 开发的 BetterJunimos 模组，让祝尼魔变得更加强大和智能！\n<br />\n<br />---\n<br />\n<br />*Author: wzx*\n<br />*UniqueID: `wzx.BetterJunimosScanCacheFix`*",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48468",
+	"Version": "1",
+	"Updated": "2026-07-01T06:21:47+00:00",
+	"Downloads": [
+		{
+			"Id": 173221,
+			"Type": "Main",
+			"DisplayName": "BetterJunimosScanCacheFix",
+			"FileName": "47/87/ad/4787ad80-3c52-491b-bece-da4244f03b54",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 3333,
+			"Uploaded": "2026-07-01T06:21:47+00:00",
+			"Mods": [
+				{
+					"Id": "wzx.BetterJunimosScanCacheFix",
+					"DisplayName": "Better Junimos Scan Cache Fix",
+					"Type": "Smapi",
+					"RelativePath": "BetterJunimosScanCacheFix",
+					"Manifest": {
+						"Name": "Better Junimos Scan Cache Fix",
+						"Description": "Clears BetterJunimos' internal _scanCache on day start and when huts are added, so Junimo huts re-scan for work instead of reusing a stale 'no work' result.",
+						"Author": "wzx",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BetterJunimosScanCacheFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "hawkfalcon.BetterJunimos",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "wzx.BetterJunimosScanCacheFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342559909,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435156,
+		"UploaderId": 203111648,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

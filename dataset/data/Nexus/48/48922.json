@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 48922,
+	"Name": "ChatWithNPCs",
+	"Author": "songhaifan",
+	"Description": "[center][size=5][b]Chat With NPCs[/b][/size]\n<br />Say something. I'm giving up on you.[/center]\n<br />\n<br />[line]\n<br />In vanilla Stardew Valley, you get [b]one[/b] canned line per villager per day. Then they just stand there. You, watering can in hand, heart full of things to say. Them: \"Oh, hey.\"\n<br />Not anymore.\n<br />[b]Chat With NPCs[/b] lets you type [i]anything[/i] to a villager and get a real, in-character reply — shown in a normal dialogue box, with the portrait switching to match their mood. Powered by an LLM: [b]local and free[/b], or your own cloud API.\n<br />And here's the fun part: they actually [b]know[/b] you. Your name, your friendship level, the season and time, where they're standing, their family, their schedule for the day — all of it feeds the conversation.\n<br />So when you walk up to your girlfriend Haley and open with [i]\"I like your sister more\"[/i]... she remembers you said that.\n<br />[quote]Seriously, Frank? That's incredibly rude. Emily's been wonderful to you.[/quote]Go on. Say something.\u00A0\n<br />[line]\n<br />[b]Main features[/b]\n<br />[b]\uD83D\uDCAC Actually talk to them[/b]\n<br />Free-text chat, as much as you want. Replies appear as real game dialogue with matching emotion portraits — happy, sad, angry, love.\n<br />[b]\uD83E\uDDE0 They know their world[/b]\n<br />Every reply is grounded in the game's own data: your name and gender, your friendship level, the season/day/time/weather, exactly where they are, their daily schedule, their family and relationships, and their canonical line for today — so the AI chat picks up right where the vanilla greeting left off.\n<br />[b]\uD83C\uDFAD Real personalities[/b]\n<br />Every villager has a hand-written character profile. Shane broods. Elliott waxes poetic. Abigail wants to go spelunking.\n<br />[b]\uD83C\uDF10 Speaks your language[/b]\n<br />Replies come back in your game's language automatically, using the official in-game names for people and places.\n<br />[b]\uD83D\uDD01 Remembers[/b]\n<br />Each villager remembers your recent conversation within a play session.\n<br />[b]✅ Doesn't wreck vanilla[/b]\n<br />Daily dialogue always plays first. NPCs keep their schedules and animations. A little double-speech-bubble cursor shows up when an AI chat is available.\n<br />\n<br />[line]\n<br />[b]Requirements[/b]\n<br />SMAPI 4.0+\n<br />An OpenAI-compatible chat API — pick one:\n<br />[list]\n<br />[*]Local (recommended): Ollama or LM Studio — free, private, offline[/*]\n<br />[*]Cloud: OpenAI, DeepSeek, etc. — needs your own API key[/*]\n<br />[/list]Optional: Generic Mod Config Menu for in-game settings\n<br />⚠️ You need to set up a model yourself — there's no AI bundled in the mod. It's a free, 5-minute, one-time setup with Ollama. See below.\n<br />[line]\n<br />[b]Installation instructions[/b]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Install Ollama, then run: ollama pull gemma3:12b (or any chat model you like). It runs quietly in the background.[/*]\n<br />[*](Optional) Install Generic Mod Config Menu.[/*]\n<br />[*]Unzip this mod into your Stardew Valley/Mods folder.[/*]\n<br />[*]Launch the game once via SMAPI, then set your Model (and API URL/key if using cloud) in Generic Mod Config Menu, or edit config.json.[/*]\n<br />[*]In game: right-click a villager (daily line plays first — right-click again to chat), or press N. Type, hit Enter, wait a beat for the first reply while the model warms up.[/*]\n<br />[/list]Using cloud instead of local? Set ApiUrl, ApiKey, and Model in config. Never share a config.json with a real API key in it.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48922",
+	"Version": "1",
+	"Updated": "2026-07-10T01:47:26+00:00",
+	"Downloads": [
+		{
+			"Id": 174360,
+			"Type": "Main",
+			"DisplayName": "ChatWithNPCs",
+			"FileName": "7d/b9/fc/7db9fcdb-3ecc-438d-b55f-acecd5996b81",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 64365,
+			"Uploaded": "2026-07-10T01:47:26+00:00",
+			"Mods": [
+				{
+					"Id": "Songhai.ChatWithNPCs",
+					"DisplayName": "Chat With NPCs",
+					"Type": "Smapi",
+					"RelativePath": "ChatWithNPCs",
+					"Manifest": {
+						"Name": "Chat With NPCs",
+						"Description": "Chat freely with villagers using a local or cloud LLM: in-character replies with emotion portraits, per-NPC personalities, schedule/relationship awareness, and localized to your game language.",
+						"Author": "Songhai",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChatWithNPCs.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:48922"
+						],
+						"UniqueId": "Songhai.ChatWithNPCs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561048,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435610,
+		"UploaderId": 151679033,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

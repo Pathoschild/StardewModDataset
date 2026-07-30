@@ -1,0 +1,84 @@
+{
+	"Site": "Nexus",
+	"Id": 48417,
+	"Name": "Finnegan's Fix",
+	"Author": "Bakorlam",
+	"Description": "Description\n<br />My dog Finnegan kept getting spooked by certain Stardew Valley sound effects, so I built this mod to swap them out for silence — or whatever audio you'd prefer.\n<br />Every sound can be toggled individually in Generic Mod Config Menu, organized into four categories with Mute All shortcuts per section. You can also drop in your own\u00A0.wav\u00A0files to replace any sound with something custom — an Open Sounds Folder button on each page takes you straight there.\n<br />\n<br />Note: Muting or un-muting a sound requires restarting the game — this is a Stardew Valley engine limitation, not a mod bug.\n<br />\n<br />Multiplayer safe!\n<br />\n<br />Currently covers:\n<br />Tools &amp; UI: hoe, axe swing, axe chop, tree crack, leaf rustle, tree thud, watering can, pick up item, tool charge, tool swap, rotate\n<br />Fishing: rod charge, cast click, cast, rod bend, fast reel, slow reel, lure splash, reel-in splash, fish bite, fish escape, miss sound, line whip, fish hit, fish slap\n<br />Animals — Pets: dog bark, dog panting, dog whining, cat\n<br />Animals — Farm: cow, chicken, rooster, duck, goat, sheep, pig, rabbit\n<br />Misc.: pickaxe (dirt/wood, stone/ore, hammer, clank), blade swipe (sword/dagger/scythe), bush cut, bomb fuse &amp; explosion, title music day &amp; night, elevator ding\n<br />\n<br />Requirements\n<br />[list]\n<br />[*]SMAPI[/*]\n<br />[*]Content Patcher[/*]\n<br />[*]Generic Mod Config Menu [i](optional, for in-game toggles)[/i][/*]\n<br />[/list]Installation\n<br />Install with Vortex, or unzip directly into your Mods folder\n<br />\n<br />Want to use your own sounds?\n<br />Drop any\u00A0.wav file into the matching subfolder inside\u00A0assets/sounds/ - rename to replace the blank .wav I've included\u00A0and it'll play instead. Each category page has an Open Sounds Folder button to take you straight there. No JSON editing needed.\n<br />\n<br />Compatibility\n<br />Only modifies\u00A0Data/AudioChanges\n<br />Should be compatible with everything.\n<br />\n<br />Got a sound bothering your pet or sensitive ears? Let me know and I'll try to get it added!\n<br />\n<br />Community thanks:\n<br />finnicks for the bomb sound suggestion!\n<br />janted92 for elevator ding!\n<br />reignfallen for rotate \"dwoop\"!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48417",
+	"Version": "2",
+	"Updated": "2026-07-12T01:59:52+00:00",
+	"Downloads": [
+		{
+			"Id": 174698,
+			"Type": "Main",
+			"DisplayName": "FinnegansFix",
+			"FileName": "6b/4d/e2/6b4de2bb-e352-4d92-854e-01b2f9005cb0",
+			"Description": "Interface refinement and additional mutes added",
+			"Version": "5",
+			"SizeInBytes": 36521,
+			"Uploaded": "2026-07-12T01:59:52+00:00",
+			"Mods": [
+				{
+					"Id": "Bakorlam.Finnegansfix",
+					"DisplayName": "Finnegan's Fix",
+					"Type": "ContentPack",
+					"RelativePath": "Finnegansfix.CP",
+					"Manifest": {
+						"Name": "Finnegan's Fix",
+						"Description": "Replaces startling Stardew sounds with silence or custom audio. Pet and accessibility friendly.",
+						"Author": "Bakorlam",
+						"Version": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Bakorlam.Finnegansfix.SMAPI",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Bakorlam.Finnegansfix"
+					}
+				},
+				{
+					"Id": "Bakorlam.Finnegansfix.SMAPI",
+					"DisplayName": "Finnegan's Fix",
+					"Type": "Smapi",
+					"RelativePath": "Finnegansfix.SMAPI",
+					"Manifest": {
+						"Name": "Finnegan's Fix",
+						"Description": "GMCM integration for Finnegan's Fix. Sub-pages, mute-all per category, and bidirectional sync.",
+						"Author": "Bakorlam",
+						"Version": "3.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Finnegansfix.SMAPI.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Bakorlam.Finnegansfix.SMAPI"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561386,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435105,
+		"UploaderId": 18832189,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

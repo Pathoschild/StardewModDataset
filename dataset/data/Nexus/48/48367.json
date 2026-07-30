@@ -1,0 +1,536 @@
+{
+	"Site": "Nexus",
+	"Id": 48367,
+	"Name": "LeviathaN's Custom Community Center Bundles Loader",
+	"Author": "GENLeviathaN",
+	"Description": "[center][size=5][b]LeviathaN's Custom Community Center Bundles Loader[/b][/size][/center]\n<br />[center][size=1][b][i]CCCBL for short[/i][/b][/size][/center]\n<br />\n<br />[center]CCCBL is a unified framework for customizing the Community Center bundles. It replaces and merges the functionality of two popular mods: [url=https://www.nexusmods.com/stardewvalley/mods/26998]Complete Completionist's Community Center[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/6361]Challenging Community Center Bundles[/url] into a single, cleaner solution.[/center]\n<br />[center][/center]\n<br />[center]Out of the box it does nothing and leaves your game untouched. Its purpose is to load custom bundle packs created by mod authors and let you choose between them through [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url], without ever having to rename, move, or overwrite any files, like the original mods required.[/center]\n<br />[center][line]\n<br />[b][size=4]Features[/size][/b][/center]\n<br />[center][b]Bundle pack selection via GMCM:[/b]\u00A0A dropdown menu lets you pick whichever bundle pack you want. All installed packs appear automatically by name. Changes take effect at the start of the next in-game day.[/center]\n<br />\n<br />[center][b]Completionist Mode:[/b]\u00A0A toggle that activates every possible Community Center bundle, including all Remixed Bundle variants. This is basically what CCCC did.[/center]\n<br />\n<br />[center][b]Default Mode / Off:[/b]\u00A0With no pack selected and Completionist Mode off, CCCBL does absolutely nothing. If you have other mods that modify bundles by themselves (like Stardew Valley Expanded), their changes apply normally without any interference.[/center]\n<br />\n<br />[center][b]Custom Bundle Icons:[/b]\u00A0Pack authors can include their own 32×32 sprite sheets, and CCCBL serves them to the game automatically. Bundles without a custom icon use a built-in default icon so nothing ever shows blank.[/center]\n<br />[center][/center]\n<br />[center][line]\n<br />[/center]\n<br />[center][b][size=4]Requirements[/size][/b][/center]\n<br />[center][/center]\n<br />[center][b][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url][/b][/center]\n<br />[center][b][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url][/b] (Not actually required, but if you don't have it, you will need to edit the config.json manually)[/center]\n<br />[center][/center]\n<br />[center][line]\n<br />[/center]\n<br />[center][b][size=4]Installation and Usage[/size][/b][/center]\n<br />[center][/center]\n<br />[center]1 - Install [b]SMAPI[/b] and optionally [b]Generic Mod Config Menu[/b].\n<br />2 - Download and extract this mod into your [i]Mods[/i] folder.\n<br />3 - Download any bundle packs you want to use and extract them into your [i]Mods[/i] folder as well.\n<br />4 - Launch the game, open GMCM from the title screen, and select your bundle pack, then click Save.[/center]\n<br />[center]- Alternatively, open this mod's folder, then open [b]config.json[/b] in a text editor, and change both fields to match whatever content pack you downloaded.\n<br />[/center]\n<br />[center][line]\n<br />[/center]\n<br />[center][b][size=4]Compatibility Notes[/size][/b][/center]\n<br />[center][/center]\n<br />[center]- [b]CCCBL[/b] [u][i]replaces[/i][/u] [b]CCCC and CCCB[/b]. You do not need either of those installed.\n<br />- Mods that modify bundles through Content Patcher ([i]such as Stardew Valley Expanded[/i]) are not affected when the [b]Default / Off[/b] variant is selected. CCCBL only touches bundle data when a pack is actively selected on it.\n<br />- Bundle packs originally made for CCCC and CCCB are not directly compatible, but converting one requires only minor changes to the content.json format. See the author guide for details.\n<br />[/center]\n<br />\n<br />[center][size=4][b]Compatibility Status[/b][/size][/center]\n<br />[center]- Both [b][url=https://www.nexusmods.com/stardewvalley/mods/22743]Alchemistry[/url][/b] bundles - [color=#00ff00]Morghoula added CCCBL compatibility in Alchemistry 2.0 (Check Alchemistry's Optional files)[/color]\n<br />- All [url=https://www.nexusmods.com/search?keyword=bigger%20better%20bundles][b]Glymr's Bigger Better Bundles[/b][/url][i]\u00A0[/i]bundles - [i][color=#ffff00]On it's way\u00A0:)[/color][/i]\n<br />- All[b] [url=https://www.nexusmods.com/stardewvalley/mods/6361]Challenging Community Center Bundles[/url][/b][i]\u00A0[/i]bundle[i]s -\u00A0 [color=#00ffff]Available under Optional / Miscellaneous files until\u00A0Jaksha6472\u00A0shows up to add compatibility.\n<br />- [b][url=https://www.nexusmods.com/stardewvalley/mods/46659]Warlord's Challenging Modded Bundles[/url][/b] [/color][color=#ffffff]- [/color][color=#ffff00]I've\u00A0contacted Warlord, but I'm yet to test the bundles made by him. Still,\u00A0shouldn't be a problem![/color][/i]\n<br />- [b][url=https://www.nexusmods.com/stardewvalley/mods/26998]Completionist's Complete Community Center[/url][/b]\u00A0- [color=#00ff00]Functionality now included in CCCBL's options. [/color][/center]\n<br />[center]- All[b] [url=https://www.nexusmods.com/stardewvalley/mods/21340]Custom Community Center Bundles[/url][/b][i]\u00A0[/i]bundle[i]s - [color=#00ffff]Available under Optional / Miscellaneous files until\u00A0Jaksha6472\u00A0shows up to add compatibility.[/color][/i][/center]\n<br />[center]- [b][url=https://www.nexusmods.com/stardewvalley/mods/44868]kind's Mega Modded Community Center Bundles[/url][/b]\u00A0- [color=#ffff00]Kind said compatibility will be added soon. Keep an eye on KMMCCB's mod page!\n<br />- [b][url=https://www.nexusmods.com/stardewvalley/mods/36858]Vegas' Mega Modded Bundles[/url]\u00A0[/b][/color][color=#ffffff][b]- [/b][/color][color=#ff0000]Won't be added since I'll make my own custom bundle based on Vegas', but with some changes.[/color]\n<br />[color=#ffffff]- [b][url=https://www.nexusmods.com/stardewvalley/mods/16123]ReRemixed Bundles[/url][/b] -[/color][color=#ffff00] I'm yet to test those, gonna do this soon. Assuming it works, I'll contact azhrael to ask for a CCCBL compatibie version.[/color][/center]\n<br />[center][line]\n<br />[/center]\n<br />[center][b][size=4]Regarding adding / removing custom bundles mid-save[/size]\n<br />[/b][/center]\n<br />[center][color=#ffffff]First of all, a very quick explanation on how Stardew handles bundles:\n<br />When you create a new save, the game reads the current bundle configuration and permanently writes the layout into that save file, including which bundle slots exist and which room they belong to. From that point on, the save always expects [b]exactly[/b] those slots to be present.\n<br />This means two bundle packs are only 100% compatible with each other on the same save if they use the same slot IDs. You can freely swap between them because the slots are identical, only the items and rewards change. However, switching to a pack that uses different slot IDs will almost always cause the Community Center to crash, because the save is looking for slots that no longer exist, or have different IDs.\n<br />As a practical rule: Start a new save when switching to a pack with a different slot layout. When in doubt, check with the pack author whether their pack shares slot IDs with whatever you were using before. I'll ask authors to put a little disclaimer saying how many bundles in total they're using.\u00A0[/color]\n<br />\n<br />[color=#ff0000][b][size=4]⚠️ So remember: Stardew by default has 30 + 1 bundles.The moment you add a 32nd bundle or more on your save, you're stuck with the extra bundles and can't go back to vanilla anymore [i](unless you manually edit the mod that you've used)[/i]\u00A0⚠️[/size][/b][/color][color=#ffffff]\u00A0[/color]\n<br />\n<br />[color=#b6d7a8]So, what you [b]can[/b] do:\n<br />1 - Swap from no custom bundles to vanilla Completionist Mode (it [b]adds[/b] more bundles, so it's fine);[/color][/center]\n<br />[center][color=#b6d7a8]2 - Swap from no custom bundles to a CCCBL bundle pack, that requires Completionist Mode or not;[/color][/center]\n<br />[center][color=#b6d7a8]3 - Swap from a custom bundle to another custom bundle that uses the same bundle IDs[/color][color=#b6d7a8];[/color][/center]\n<br />[center][color=#b6d7a8]4 - Swap from a custom bundle that doesn't require Completionist Mode to another bundle that requires Completionist Mode (again, it [b]adds[/b] more bundles, so it's fine)[/color][color=#b6d7a8];[/color][/center]\n<br />[center][color=#b6d7a8]5 - Remove a custom bundle in order to go back to the vanilla bundles [b]as long as the bundle in question wasn't using extra room IDs or Completionist Mode[/b].[/color][/center]\n<br />\n<br />[center][color=#ea9999]What you [b]CAN'T[/b] do:\n<br />1 - Use custom bundles or Completionist Mode on a save that had [b]\"Remixed Bundles\"[/b] selected at the time of creation. It messes eeeeverything up;[/color][/center]\n<br />[center][color=#ea9999]2 - Remove a bundle that uses extra slots IDs[/color][color=#ea9999].[/color][/center]\n<br />[center][color=#ea9999]That means that if you use CCCBL's included Completionist Mode, or a custom bundle that requires it or uses other room IDs[/color][color=#ea9999], and save your game [b]after[/b] the bundles were created (after visiting the Wizard on S6Y1+), then it gets [b]permanently added [/b]to your save.[/color][/center]\n<br />[center][color=#ea9999][b]\u00A0If you load a save that has\u00A0extra room IDs on it,\u00A0you need to be using a custom bundle with the same IDs, otherwise\u00A0the game will get stuck on an endless loop of errors if you try to enter the Community Center.[/b][/color][/center]\n<br />[center][color=#ea9999]If you used a custom bundle\u00A0that only required Completionist Mode, saved your game, but now you want to go back to vanilla bundles, make sure to select \"Default / Off\" AND have Completionist Mode checked [b]on[/b] GMCM before trying to re-enter the Community Center in that save, for example.[/color]\n<br />[/center]\n<br />[center][line]\n<br />[/center]\n<br />[center][color=#666666]This mod is based on [url=https://www.nexusmods.com/stardewvalley/mods/6361]Challenging Community Center Bundles[/url] by Jaksha6472, which is licensed under GPL v3. CCCBL is also released under GPL v3 in accordance with that license.\n<br />Built-in Completionist Mode bundle data is derived from [url=https://www.nexusmods.com/stardewvalley/mods/26998]Complete Completionist's Community Center[/url] by Nahlbrii, used with permission per their stated asset permissions.\n<br />Code available on [url=https://github.com/LeviathaNGrimms/CCCBL]GitHub[/url].[/color][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48367",
+	"Version": "1.1.0",
+	"Updated": "2026-07-27T03:42:57+00:00",
+	"Downloads": [
+		{
+			"Id": 174383,
+			"Type": "Optional",
+			"DisplayName": "Challenging CC Bundles - All bundles",
+			"FileName": "57/c0/11/57c01100-a729-4b95-bd6c-ec6c1ce61d3c",
+			"Description": "Every bundle from the original Challenging Community Center Bundles mod, ported to work with CCCBL until Jaksha adds compatibility.<br />These 8 bundles requires Cornucopia, Ridgeside Village and Stardew Valley Expanded to work.<br />Individual versions below.",
+			"Version": "1.0.0",
+			"SizeInBytes": 33829,
+			"Uploaded": "2026-07-10T05:17:57+00:00",
+			"Mods": [
+				{
+					"Id": "LeviathaN.PortedCornucopiaRSVBundles",
+					"DisplayName": "Challenging - Cornucopia + RSV",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Cornucopia + RSV",
+					"Manifest": {
+						"Name": "Challenging - Cornucopia + RSV",
+						"Description": "Ported version of Challenging Community Center Bundles - Cornucopia RSV Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.ArtisanMachines",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedCornucopiaRSVBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedCornucopiaRSVSVEBundles",
+					"DisplayName": "Challenging - Cornucopia + RSV + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Cornucopia + RSV + SVE",
+					"Manifest": {
+						"Name": "Challenging - Cornucopia + RSV + SVE",
+						"Description": "Ported version of Challenging Community Center Bundles - Cornucopia RSV SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.ArtisanMachines",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedCornucopiaRSVSVEBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedCornucopiaSVEBundles",
+					"DisplayName": "Challenging - Cornucopia + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Cornucopia + SVE",
+					"Manifest": {
+						"Name": "Challenging - Cornucopia + SVE",
+						"Description": "Ported version of Challenging Community Center Bundles - Cornucopia SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.ArtisanMachines",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedCornucopiaSVEBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedRSVSVEBundles",
+					"DisplayName": "Challenging - RSV + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging RSV + SVE",
+					"Manifest": {
+						"Name": "Challenging - RSV + SVE",
+						"Description": "Ported version of Challenging Community Center Bundles - RSV SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedRSVSVEBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedVanillaBundles",
+					"DisplayName": "Challenging - Vanilla",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Vanilla",
+					"Manifest": {
+						"Name": "Challenging - Vanilla",
+						"Description": "Ported version of Challenging Community Center Bundles - Vanilla Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedVanillaBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedVanillaCornucopiaBundles",
+					"DisplayName": "Challenging - Vanilla + Cornucopia",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Vanilla + Cornucopia",
+					"Manifest": {
+						"Name": "Challenging - Vanilla + Cornucopia",
+						"Description": "Ported version of Challenging Vanilla Cornucopia Community Center Bundles by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.ArtisanMachines",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedVanillaCornucopiaBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedVanillaRSVBundles",
+					"DisplayName": "Challenging - Vanilla + RSV",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Vanilla + RSV",
+					"Manifest": {
+						"Name": "Challenging - Vanilla + RSV",
+						"Description": "Ported version of Challenging Community Center Bundles - Vanilla RSV Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedVanillaRSVBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedVanillaSVEBundles",
+					"DisplayName": "Challenging - Vanilla + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Challenging Bundles\\[CCCBL] Challenging Vanilla + SVE",
+					"Manifest": {
+						"Name": "Challenging - Vanilla + SVE",
+						"Description": "Ported version of Challenging Vanilla SVE Community Center Bundles by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "3.5.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedVanillaSVEBundles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561071,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 174384,
+			"Type": "Optional",
+			"DisplayName": "Custom CC Bundles - All bundles",
+			"FileName": "58/c0/7b/58c07b57-7c5c-453b-a1fd-457d4f05ab86",
+			"Description": "Every bundle from the original Custom Community Center Bundles mod, ported to work with CCCBL until Jaksha adds compatibility.<br />These 7 bundles requires Cornucopia, Ridgeside Village and Stardew Valley Expanded to work.<br />Individual versions below.",
+			"Version": "1.0.0",
+			"SizeInBytes": 24789,
+			"Uploaded": "2026-07-10T05:19:18+00:00",
+			"Mods": [
+				{
+					"Id": "LeviathaN.PortedStandardCornucopiaBundles",
+					"DisplayName": "Custom - Cornucopia",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] Cornucopia",
+					"Manifest": {
+						"Name": "Custom - Cornucopia",
+						"Description": "Ported version of Custom Community Center Bundles - Cornucopia Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardCornucopiaBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedStandardCornucopiaRSVBundles",
+					"DisplayName": "Custom - Cornucopia + RSV",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] Cornucopia + RSV",
+					"Manifest": {
+						"Name": "Custom - Cornucopia + RSV",
+						"Description": "Ported version of Custom Community Center Bundles - Cornucopia RSV Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardCornucopiaRSVBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedStandardCornucopiaRSVSVEBundles",
+					"DisplayName": "Custom - Cornucopia + RSV + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] Cornucopia + RSV + SVE",
+					"Manifest": {
+						"Name": "Custom - Cornucopia + RSV + SVE",
+						"Description": "Ported version of Custom Community Center Bundles - Cornucopia RSV SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardCornucopiaRSVSVEBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedStandardCornucopiaSVEBundles",
+					"DisplayName": "Custom - Cornucopia + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] Cornucopia + SVE",
+					"Manifest": {
+						"Name": "Custom - Cornucopia + SVE",
+						"Description": "Ported version of Custom Community Center Bundles - Cornucopia SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cornucopia.MoreCrops",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cornucopia.MoreFlowers",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardCornucopiaSVEBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedStandardRSVBundles",
+					"DisplayName": "Custom - RSV",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] RSV",
+					"Manifest": {
+						"Name": "Custom - RSV",
+						"Description": "Ported version of Custom Community Center Bundles - RSV Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardRSVBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedStandardRSVSVEBundles",
+					"DisplayName": "Custom - RSV + SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] RSV + SVE",
+					"Manifest": {
+						"Name": "Custom - RSV + SVE",
+						"Description": "Ported version of Custom Community Center Bundles - RSV SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardRSVSVEBundles"
+					}
+				},
+				{
+					"Id": "LeviathaN.PortedStandardSVEBundles",
+					"DisplayName": "Custom - SVE",
+					"Type": "ContentPack",
+					"RelativePath": "[CCCBL] Custom Bundles\\[CCCBL] SVE",
+					"Manifest": {
+						"Name": "Custom - SVE",
+						"Description": "Ported version of Custom Community Center Bundles - SVE Bundle Pack by Jaksha6472",
+						"Author": "alvadea & jaksha",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "LeviathaN.CCCBL"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "LeviathaN.PortedStandardSVEBundles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561072,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 176419,
+			"Type": "Main",
+			"DisplayName": "Custom Community Center Bundles Loader 1.1.0",
+			"FileName": "02/5a/87/025a87a7-8c24-456d-ad94-97b9d3b53484",
+			"Description": "This is the main file. You only need this to make custom bundles work, but remember that the mod itself doesn't change anything, you need a custom bundle as well. Check the description for more info.",
+			"Version": "1.1.0",
+			"SizeInBytes": 54493,
+			"Uploaded": "2026-07-27T03:42:57+00:00",
+			"Mods": [
+				{
+					"Id": "LeviathaN.CCCBL",
+					"DisplayName": "LeviathaN's Custom Community Center Bundles Loader",
+					"Type": "Smapi",
+					"RelativePath": "Custom Community Center Bundles Loader",
+					"Manifest": {
+						"Name": "LeviathaN's Custom Community Center Bundles Loader",
+						"Description": "Unified replacement for CCCC and CCCB. Adds Completionist Mode and full GMCM support. Custom bundle packs can be loaded as content packs.",
+						"Author": "LeviathaN",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "CCCBL.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:48367"
+						],
+						"UniqueId": "LeviathaN.CCCBL"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563107,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435055,
+		"UploaderId": 10028625,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

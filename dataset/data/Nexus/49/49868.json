@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 49868,
+	"Name": "Free Yoga for Farmers",
+	"Author": "ioicaleb",
+	"Description": "[b][size=6]Free Yoga for Farmers[/size][/b]\n<br />\n<br />Free Yoga for Farmers lets an event temporarily swap the farmer's sprite sheet — body, shirt, and pants — for a\n<br />fully custom one, so events can show poses and actions the base game's animation set can't. It's\n<br />built to be driven entirely by **content packs**: Free Yoga for Farmers itself ships no art or events, it's a\n<br />framework other mods hook into.\n<br />\n<br />This document is for anyone building a content pack that uses Free Yoga for Farmers.\n<br />\n<br />---\n<br />[size=5]Requirements[/size]\n<br />\n<br />Your content pack needs two dependencies in its `manifest.json`:\n<br />\n<br />- **Content Patcher** — used to load your PNGs and add your event to the game (`Load`/`EditData`).\n<br />- **FarmerYoga** (unique ID `ioicaleb.farmeryoga`) — used to trigger the sprite swap from your event,\n<br />and to auto-generate a hair/accessory offset file for your sheet.\n<br />\n<br />\"Dependencies\": [\n<br />\u00A0 \u00A0\u00A0{ \"UniqueID\": \"Pathoschild.ContentPatcher\" },\n<br />\u00A0 \u00A0\u00A0{ \"UniqueID\": \"ioicaleb.farmeryoga\" }\n<br />]\n<br />\n<br />[size=5]File layout[/size]\n<br />\n<br />A minimal content pack looks like this:\n<br />\n<br />YourPack/\n<br />├── manifest.json\n<br />├── content.json\n<br />├── FY_Offsets.json← auto-generated the first time your pack loads, then yours to edit\n<br />└── &lt;subfolder&gt; (If you want to organize them into subfolders)/\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0├── farmer_&lt;suffix&gt;.png\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ├── farmer_girl_&lt;suffix&gt;.png\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0├── shirts_&lt;suffix&gt;.png\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0└── pants_&lt;suffix&gt;.png\n<br />\n<br />`&lt;suffix&gt;` is whatever short name you pick for this sprite set (e.g. `yoga1`). It's used consistently\n<br />across all four image names and in the event command that activates them.\n<br />`&lt;subfolder&gt;` is completely optional. You can store your images however you want.\n<br />\n<br />[size=5]Content.JSON[/size]\n<br />Use Content Patcher's `Load` action to register your images under the asset names Free Yoga for Farmers expects\n<br />(`Characters/Farmer/farmer_&lt;suffix&gt;`, `farmer_girl_&lt;suffix&gt;`, `shirts_&lt;suffix&gt;`, `pants_&lt;suffix&gt;`), and\n<br />`EditData` to add your event. For example:\n<br />\n<br />{\n<br />\u00A0 \u00A0\u00A0\"Format\": \"2.2.0\",\n<br />\u00A0 \u00A0\u00A0\"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0{ \"Action\": \"Load\", \"Target\": \"Characters/Farmer/farmer_&lt;suffix&gt;\", \"FromFile\": \"Images/farmer_&lt;suffix&gt;.png\" },\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0{ \"Action\": \"Load\", \"Target\": \"Characters/Farmer/farmer_girl_&lt;suffix&gt;\", \"FromFile\": \"Images/farmer_girl_&lt;suffix&gt;.png\" },\n<br />\u00A0 \u00A0 \u00A0\u00A0 \u00A0{ \"Action\": \"Load\", \"Target\": \"Characters/Farmer/shirts_&lt;suffix&gt;\", \"FromFile\": \"Images/shirts_&lt;suffix&gt;.png\" },\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0{ \"Action\": \"Load\", \"Target\": \"Characters/Farmer/pants_&lt;suffix&gt;\", \"FromFile\": \"Images/pants_&lt;suffix&gt;.png\" },\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Target\": \"Data/Events/Farmhouse\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"yourEventKey\": \"none/5 5/farmer 5 7 2/skippable/changeFarmerSprite &lt;suffix&gt;/ ... your event ... /pause 1000/globalFade/pause\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0500/end\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0}\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0}\n<br />\u00A0 \u00A0 ]\u00A0 \u00A0 \u00A0 \u00A0\n<br />}\n<br />\n<br />\n<br />You always need all four `farmer_`/`farmer_girl_`/`shirts_`/`pants_` images for a given suffix, even\n<br />if the shirt or pants art is just fully transparent placeholder — Free Yoga for Farmers doesn't require them to\n<br />contain anything, but it does look for them at those asset names.\n<br />\n<br />[size=5]Using it in an event[/size]\n<br />\n<br />Two custom event commands are available anywhere in an event script:\n<br />\n<br />- **`changeFarmerSprite &lt;suffix&gt;`** — switches the farmer to your custom sheet, hides their equipped\n<br />shirt/pants for the duration, and swaps in your hair/accessory offsets for this suffix.\n<br />- **`changeFarmerSprite base`** — reverts everything: texture, hair/accessory offsets, and the\n<br />player's real shirt/pants.\n<br />\n<br />You don't strictly have to call `changeFarmerSprite base` yourself — it happens automatically the\n<br />moment the event ends (`Game1.eventUp` becomes false) — but calling it explicitly partway through an\n<br />event is fine if you want to switch back before the event finishes.\n<br />\n<br />[size=5]Always fade before `end`[/size]\n<br />\n<br />**End every custom-sprite event with a `globalFade` (and a short `pause` after it) before `end`.**\n<br />Event teardown briefly shows the farmer's real vanilla appearance for a frame as the game's own\n<br />cleanup runs, independent of anything Free Yoga for Farmers does — this is normal Stardew event behavior, not a\n<br />bug, and the standard fix community-wide is the same one you'd want anyway for a smooth transition:\n<br />\n<br />.../pause 1000/globalFade/pause 500/end\n<br />\n<br />Skipping this will show a brief, jarring flash of the farmer's normal clothes right at the end of the\n<br />event.\n<br />\n<br />[size=5]Sprite sheet conventions[/size]\n<br />\n<br />All sheets use a 16×32 pixel grid per pose, matching the base game's convention.\n<br />\n<br />- **`farmer_&lt;suffix&gt;.png` / `farmer_girl_&lt;suffix&gt;.png`** — your custom body. Each row is 32px tall.\n<br />**Only the leftmost 6 columns of each row count as distinct poses** — this matches the vanilla\n<br />layout, where the remaining columns to the right of those 6 are arm and accessory sub-frames for\n<br />those same 6 poses, not additional poses. Your event's `animate`/frame commands should only ever\n<br />reference indices within that 6-per-row range.\n<br />- **`shirts_&lt;suffix&gt;.png`** — 8×8 cells. Doesn't need to match the body sheet's dimensions — only its\n<br />own internal frame count/order needs to line up pose-for-pose with the body (frame *N* here should\n<br />be the same pose as frame *N* in the body sheet).\n<br />- **`pants_&lt;suffix&gt;.png`** — 16×32 cells, same pose-for-pose correspondence as shirts.\n<br />- All three are read left-to-right, top-to-bottom, wrapping to a new row automatically based on each\n<br />file's own width — you don't need to pad a sheet out to some fixed size, just make sure it actually\n<br />contains a cell for every pose your event uses.\n<br />- **There's no built-in \"nude\" flag or coverage rule.** Whatever you paint as the resting skin tone in\n<br />the body sheet's torso/leg regions *is* the default look — there's nothing to toggle, and nothing\n<br />stopping pants/shirts from being as minimal or as full-coverage as you draw them. Free Yoga for Farmers fully\n<br />suppresses the vanilla fallback shirt/pants, so your art is the only thing that ends up on screen.\n<br />\n<br />[size=5]Hair and accessory offsets[/size]\u00A0(`FY_Offsets.json`)\n<br />\n<br />Since your custom poses don't match the vanilla animation set, hair and accessories need their own\n<br />per-frame position offsets or they'll draw in the wrong place relative to your custom body.\n<br />\n<br />The first time your content pack loads, Free Yoga for Farmers scans your `farmer_*.png` files and writes a\n<br />`FY_Offsets.json` at your pack's root, pre-filled with `[0, 0]` for every pose it found. From there,\n<br />use the in-game SMAPI console (not an event command) to dial them in:\n<br />\n<br />setFrameOffset &lt;suffix&gt; &lt;frame-index&gt; &lt;x-offset&gt; &lt;y-offset&gt;\n<br />getFrameOffset &lt;suffix&gt; &lt;frame-index&gt;\n<br />\n<br />- `frame-index` is the pose index within the 6-per-row body scheme described above (0-based).\n<br />- Offsets are in pixels; positive X is right, positive Y is down.\n<br />- `setFrameOffset` writes back to your pack's `FY_Offsets.json` immediately, so changes persist\n<br />between sessions — playtest a pose, nudge it, and reload the event to check.\n<br />- Every `SheetID` (your `&lt;suffix&gt;`) must be unique across **every** loaded Free Yoga for Farmers content pack,\n<br />not just your own — if two packs register the same suffix, only one will be used, and the console\n<br />will log a warning telling you which pack won.\n<br />\n<br />[size=5]Known limitations[/size]\n<br />Hair, hats, and accessories aren't repositioned by Free Yoga for Farmers beyond the offset system above. They're drawn using the game's normal per-frame offset tables, redirected to your FY_Offsets.json values — but there's currently no equivalent handling if your poses need something more elaborate than a simple X/Y nudge (e.g. hair needing to flip or restyle entirely for certain poses).\n<br />Multiplayer is not currently supported. The custom body texture is a synced field and should be visible to other players, but the shirt/pants suppression and overlay are scoped to your own client's view of your own farmer — other players will likely see your custom body with the default vanilla shirt/pants still showing rather than your custom clothing. Treat any multiplayer use as unsupported until this is revisited.\n<br />No automatic validation that shirt/pants pose counts match the body sheet. If shirts_&lt;suffix&gt; or pants_&lt;suffix&gt; has fewer poses than your body sheet actually uses, the mismatched poses will wrap around to reuse earlier frames rather than erroring — check visually across your full pose range rather than assuming coverage from a couple of test frames.\n<br />\n<br />[size=5]Roadmap[/size]\n<br />\n<br />Not yet implemented, but planned for a future update:\n<br />\n<br />Proper hair/hat/accessory handling beyond simple per-frame X/Y offsets.\n<br />Multiplayer support.\n<br />Support for gender-neutral/non-binary player models (currently, sheets are only split along the game's existing male/farmer_-female/farmer_girl_ convention).",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49868",
+	"Version": "1",
+	"Updated": "2026-07-28T23:17:09+00:00",
+	"Downloads": [
+		{
+			"Id": 176609,
+			"Type": "Main",
+			"DisplayName": "FarmerYoga",
+			"FileName": "c8/96/37/c8963723-bc52-4ed7-9509-3aa3929d0fc8",
+			"Description": "Adds update key",
+			"Version": "1",
+			"SizeInBytes": 24953,
+			"Uploaded": "2026-07-28T23:17:09+00:00",
+			"Mods": [
+				{
+					"Id": "ioicaleb.farmeryoga",
+					"DisplayName": "Free Yoga For Farmers",
+					"Type": "Smapi",
+					"RelativePath": "FarmerYoga",
+					"Manifest": {
+						"Name": "Free Yoga For Farmers",
+						"Description": "Allows use of custom farmer sprite sheets to add new frames to events",
+						"Author": "ioicaleb",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmerYoga.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "1.20.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:49868"
+						],
+						"UniqueId": "ioicaleb.farmeryoga"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563297,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436556,
+		"UploaderId": 54003797,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

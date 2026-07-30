@@ -1,0 +1,109 @@
+{
+	"Site": "Nexus",
+	"Id": 48591,
+	"Name": "Custom and Fix Relationship status labels",
+	"Author": "yhzx",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]When I was using Freelove, I noticed that NPCs still showed as 'Single' in the relationship list even after giving them bouquets and pendants, so I made this to fix that issue. Additionally, it also allows you to customize relationship status titles.[/color]\n<br />\n<br />Initially provided compatibility for all NPCs with birthdays from the base game, SVE, ES, and RSV. For other additional NPCs, you can download the optional Python file to automatically generate compatibility data.\n<br />\n<br />[b][color=#ff7700]!!!Please note: After giving a bouquet or pendant, you need to sleep for one day before the tag will update!!![/color]\n<br />[/b]\n<br />I've only done some preliminary testing with [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] , and it seems to work fine without major issues. I haven't tested [url=https://www.nexusmods.com/stardewvalley/mods/20599]PolyamorySweet[/url] , so compatibility is unknown. However, since both are relatively complex mods, if modifying tags causes incompatibility, please let me know (but I'm also a bit of a computer novice, so I'm not sure if I can fix it XD).\n<br />\n<br />For non-native English speakers, you may need to manually set the tag names in the settings interface after launching, because I haven't figured out how to make the default values of custom settings compatible with i18n.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />First, install the prerequisite mods [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/40276]NPC Relationship Tags[/url].\u00A0\n<br />Then install this mod (drag it into the mod folder).\u00A0\n<br />\n<br />If you have other mods that add NPCs, you can download the optional Python file, run it to generate a compatibility data file, and place it in this mod's folder. Detailed instructions are provided below.\u00A0\n<br />\n<br />For non-native English speakers, you may need to manually set the tag names in the settings interface after launching, because I haven't figured out how to make the default values of custom settings compatible with i18n.\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[color=#D4D4D8]Fixed an issue where, after giving an NPC a bouquet or pendant via [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url], their relationship tag still showed as \"Single\".\n<br />It also now allows you to customize romantic relationship tags. [/color]\n<br />\n<br />\u00A0I haven't tested it with [url=https://www.nexusmods.com/stardewvalley/mods/20599]PolyamorySweet[/url], so I'm not sure if there will be any issues.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/20599][/url][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/color]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/40276]NPC Relationship Tags[/url]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url]\u00A0(Optional)\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8]Thanks to [url=https://www.nexusmods.com/stardewvalley/users/18790269]mushymato[/url] for providing such a great framework\n<br />\n<br />========================================================\n<br />[b] Below are the instructions for using the optional Python file to generate compatibility data for custom NPCs: [/b]\n<br />\n<br />Because I found manually adding NPC compatibility data to be, well... you know, I had GPT write a Python program to automatically generate the compatibility file. Here's roughly how it works:[/color]\n<br />\n<br />[spoiler][color=#D4D4D8]It scans all .json files in its current folder and all subfolders. When it detects the field\u00A0[/color]\n<br />\n<br />[code]\"Target\": \"Data/Characters\"[/code][color=#D4D4D8]\u00A0and the key\u00A0[/color]\n<br />\n<br />[code]\"BirthSeason\"[/code][color=#D4D4D8], it extracts the NPC ID and generates corresponding entries in Data.json using a specific template. There are also some additional fail-safes and extra features, blah blah blah.[/color][/spoiler]\n<br />[color=#D4D4D8]\n<br />[b]How to use:[/b][/color]\n<br />\n<br />[list=1]\n<br />[*][color=#D4D4D8]Make sure Python is installed on your computer (I'm not sure which version, but it should probably work with any).[/color][/*]\n<br />[*][color=#D4D4D8]Drop the optional file\u00A0[/color]\n<br />\n<br />[code]AutoProgram.py[/code][color=#D4D4D8]\u00A0into the Mods folder.[/color][/*]\n<br />[*][color=#D4D4D8]Run\u00A0[/color]\n<br />\n<br />[code]AutoProgram.py[/code][color=#D4D4D8]. It will prompt you with two options—choose 0 or 1 for No or Yes.[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8]i. The first question asks whether you want to enable mod ID detection. If you choose Yes, the program will add an extra condition for each NPC to check whether the mod they belong to is installed. This way, if compatibility data for an NPC is added but the corresponding mod isn't actually installed in the game, the program shouldn't throw errors. Specifically, here's how it works:[/color]\n<br />\n<br />[spoiler][color=#D4D4D8]The program will look upward for the first\u00A0[/color]\n<br />\n<br />[color=#D4D4D8]manifest.json[/color][color=#d4d4d8][size=2][font=Arial, Inter, \"Inter Fallback\", ui-sans-serif, system-ui, sans-serif]'s[/font][/size][/color][color=#d4d4d8]\u00A0[/color][color=#d4d4d8]UniqueID[/color]\n<br />[color=#D4D4D8], and add a condition like\u00A0[/color]\n<br />\n<br />[code]\"HasMod |contains=Lemurkat.EastScarpNPCs\": true[/code][color=#D4D4D8]\u00A0to each NPC's compatibility entry.[/color][/spoiler]\n<br />[/*]\n<br />[*][color=#D4D4D8]ii. The second question asks whether you only want to add compatibility data for NPCs who start as single. If you choose Yes, only NPCs that are initially single will have compatibility data added. Note that some mods' NPCs don't start as single and only become available for romance later through events—for those mods, you may want to choose No.[/color][/*]\n<br />[/list][color=#D4D4D8]\u00A0 \u00A0 \u00A0 \u00A0Here's how it works specifically:[/color]\n<br />\n<br />[spoiler][color=#D4D4D8]The program will check whether the qualifying NPC has\u00A0[/color]\n<br />\n<br />[code]\"CanBeRomanced\": true[/code][color=#D4D4D8]—if so, it adds the entry. Simple as that.[/color][/spoiler]\n<br />[/*]\n<br />[/list][color=#D4D4D8]After running the program, a\u00A0[/color]\n<br />\n<br />[code]Data.json[/code][color=#D4D4D8]\u00A0compatibility file will be generated in the same directory as\u00A0\u00A0[/color][color=#d4d4d8]AutoProgram.py.[/color]\n<br />[color=#D4D4D8]\n<br />\u00A0Cut and paste this file into this mod's folder—that is,\u00A0\u00A0[/color][color=#d4d4d8][CP] Custom and Fix Relationship status labels[/color]\n<br />[color=#D4D4D8]—and overwrite if prompted.\n<br />\n<br />You may need to run this process again every time you add a new custom NPC mod.[/color]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48591",
+	"Version": "1.0.0",
+	"Updated": "2026-07-03T10:00:31+00:00",
+	"Downloads": [
+		{
+			"Id": 173512,
+			"Type": "Main",
+			"DisplayName": "Custom And Fix Relationship Status Labels",
+			"FileName": "1d/6f/bc/1d6fbc98-2556-4488-b986-e3065f120be6",
+			"Description": "Initial version 1.0.0. Non-native English speakers, remember to run the game after installation and set each tag label to your language in the settings.\n",
+			"Version": "1.0.0",
+			"SizeInBytes": 10471,
+			"Uploaded": "2026-07-03T09:38:26+00:00",
+			"Mods": [
+				{
+					"Id": "yhzx.CRNFix",
+					"DisplayName": "Custom and Fix Relationship status labels",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Custom and Fix Relationship status labels",
+					"Manifest": {
+						"Name": "Custom and Fix Relationship status labels",
+						"Description": "Allows customizing relationship labels between the player and NPCs, compatible with Freelove.",
+						"Author": "yhzx",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "mushymato.NPCRelationshipTags",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:40810"
+						],
+						"UniqueId": "yhzx.CRNFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560200,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 173514,
+			"Type": "Optional",
+			"DisplayName": "AutoProgram",
+			"FileName": "a3/9d/02/a39d02fd-7243-4a5e-9eec-6318ca4b252c",
+			"Description": "This is for users who have other NPCs beyond SVE, RSV, and ES that need compatibility. The tutorial is on the description page.\n\nAfter downloading, remember to unzip it first.",
+			"Version": "1.0.0",
+			"SizeInBytes": 2910,
+			"Uploaded": "2026-07-03T09:41:56+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "173514",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560202,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 173516,
+			"Type": "Optional",
+			"DisplayName": "For Chinese UCA Fix Relationship Status Labels",
+			"FileName": "19/a1/4b/19a14bfd-8a54-44ed-bc27-3158584079e2",
+			"Description": "This is for Chinese users.\n对于简体中文用户，如果你懒得自己去设置界面更改标签名称，你可以安装完本模组后，下载这个文件，解压并覆盖安装",
+			"Version": "1.0.0",
+			"SizeInBytes": 934,
+			"Uploaded": "2026-07-03T10:00:31+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "[CP] Custom and Fix Relationship status labels",
+					"Type": "Invalid",
+					"RelativePath": "[CP] Custom and Fix Relationship status labels",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560204,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435279,
+		"UploaderId": 141186463,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

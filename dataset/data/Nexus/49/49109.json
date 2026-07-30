@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 49109,
+	"Name": "Custom Furniture 1.6 Patch (2026 Fix)",
+	"Author": "neoiw",
+	"Description": "[center][/center]\n<br />[center]Custom Furniture 1.6 Compatibility Patch (\u00A0Community-maintained )[/center]\n<br />\n<br />\n<br />\n<br />## Quick installation / 快速安装\n<br />\n<br />1. Download and install the original **Custom Furniture 1.14.3** first:\n<br />\u00A0 https://www.nexusmods.com/stardewvalley/mods/1254\n<br />2. Install Stardew Valley 1.6, SMAPI 4, and a current compatible SpaceCore.\n<br />3. Extract this patch ZIP into `Stardew Valley/Mods`.\n<br />4. Choose merge and replace/overwrite when prompted.\n<br />5. Keep the original mod's `Furniture` folder and all other original files.\n<br />\n<br />请先下载并安装原版 **Custom Furniture 1.14.3**，再将补丁 ZIP 解压到 `Stardew Valley/Mods`。出现提示时选择合并并覆盖同名文件。请勿删除原模组的 `Furniture` 文件夹或其他原始文件。\n<br />[line]\n<br />\n<br />\n<br />## Compatibility / 兼容内容\n<br />\n<br />- Stardew Valley 1.6 and SMAPI 4 compatibility\n<br />- Preserves `Platonymous.CustomFurniture` for dependent content packs\n<br />- Preserves `GetAllFurnitureFromContentPack`\n<br />- Loads legacy CF JSON and converts it to native `Data/Furniture`\n<br />- Migrates legacy CF/PyTK save objects when possible\n<br />- Supports legacy `animationFrames`, `fps`, and `setWidth`\n<br />- Animates world, tabletop/non-tile, shop, inventory, and catalogue sprites\n<br />- English and Simplified Chinese patch messages\n<br />\n<br />- 兼容 Stardew Valley 1.6 与 SMAPI 4\n<br />- 保留 `Platonymous.CustomFurniture`，现有依赖内容包仍可识别\n<br />- 保留原公开 API\n<br />- 读取旧 CF JSON 并转换为原生 `Data/Furniture`\n<br />- 尽可能迁移旧 CF/PyTK 存档对象\n<br />- 支持 `animationFrames`、`fps`、`setWidth`\n<br />- 支持场景、桌面/非格点、商店、背包及目录图标动画\n<br />- 补丁消息支持英文与简体中文\n<br />[line]\n<br />\n<br />\n<br />## Testing status of these limitations / 关于已知限制的实测情况\n<br />\n<br />None of the limitations listed below caused a visible problem in the tested furniture set. All seven detected animated furniture items and more than 50 additional non-animated furniture items were manually inspected in game, and these issues were not observed.\n<br />\n<br />They remain documented because some legacy Custom Furniture features do not have fully equivalent Stardew Valley 1.6 implementations, and untested content packs may use those features differently.\n<br />\n<br />在本次测试的家具中，以下限制均未造成肉眼可见的问题。检测到的 7 个动画家具及另外 50 件以上非动画家具均经过游戏内人工目视检查，没有观察到下述问题。\n<br />\n<br />仍然列出这些限制，是因为部分旧版 Custom Furniture 功能在 Stardew Valley 1.6 中没有完全等价的实现，尚未测试的内容包也可能以不同方式使用这些功能。\n<br />[line]\n<br />\n<br />\n<br />## Known technical limitations / 已知技术限制\n<br />\n<br />- No visible missing-layer issue was observed in the tested furniture. However, legacy `textureOverlay` and `textureUnderlay` rendering is not fully restored, so untested furniture using additional foreground or background layers may display differently from the original version.\n<br />- No tested furniture became unavailable because of event conditions. However, legacy event-precondition strings cannot be converted losslessly to Stardew Valley 1.6 game-state queries. Affected furniture is made available instead of being hidden permanently.\n<br />- Back up important saves before first use. Removing the patch after saving may leave custom furniture IDs without data definitions.\n<br />\n<br />- 测试家具中没有观察到图层缺失问题。不过，旧版 `textureOverlay` 和 `textureUnderlay` 多层绘制尚未完整恢复，因此尚未测试的前景或背景分层家具可能与旧版显示不同。\n<br />- 测试中没有发现家具因事件条件而无法获得。不过，旧版 event-precondition 无法无损转换为 Stardew Valley 1.6 game-state query，因此相关家具会直接开放出售，而不是永久隐藏。\n<br />- 首次使用前请备份重要存档。保存后移除补丁可能导致自定义家具 ID 缺少数据定义。\n<br />[line]\n<br />\n<br />\n<br />## Verification / 验证情况\n<br />\n<br />- Stardew Valley 1.6.15 build 24354\n<br />- SMAPI 4.5.2\n<br />- SpaceCore 1.28.4\n<br />- 283 definitions from five legacy CF content packs loaded and registered successfully\n<br />- All seven detected animated items were manually observed playing in game\n<br />- More than 50 additional non-animated items were manually visually checked\n<br />- All frames and rotation rectangles for the seven animations passed texture-bound validation\n<br />\n<br />- 5 个旧版 CF 内容包的 283 个家具定义成功加载与注册\n<br />- 7 个检测到的动画家具全部经过游戏内人工目视播放验证\n<br />- 另有 50 件以上非动画家具经过人工目视检查\n<br />- 7 个动画家具的全部帧与旋转源矩形均通过贴图边界验证\n<br />\n<br />This does not claim that all 283 items were manually checked one by one.\n<br />\n<br />以上不代表 283 件家具全部经过人工逐件目视检查。\n<br />[line]\n<br />\n<br />\n<br />## License, source, and attribution / 许可证、源码与署名\n<br />\n<br />Original Custom Furniture copyright belongs to Platonymous. The original mod page links to the author's GPL-3.0 source repository:\n<br />\n<br />- Original mod: https://www.nexusmods.com/stardewvalley/mods/1254\n<br />- Original source: https://github.com/Platonymous/Stardew-Valley-Mods\n<br />- Original repository license: https://github.com/Platonymous/Stardew-Valley-Mods/blob/master/LICENSE\n<br />\n<br />This unofficial compatibility source and binary are distributed under GPL-3.0. Complete corresponding source code for this exact binary is provided as a separate **Source Code** download on this Nexus page.\n<br />\n<br />The runtime patch does not contain the original Custom Furniture DLL, furniture textures, content packs, or original release archive. Users must download Custom Furniture 1.14.3 separately from the original mod page.\n<br />\n<br />This is an unofficial community project and is not endorsed by or affiliated with the original author.\n<br />\n<br />原版 Custom Furniture 版权归 Platonymous 所有。本非官方兼容源码与二进制按 GPL-3.0 发布。本 DLL 的完整对应源码作为同一 Nexus 页面上的独立 **Source Code** 文件提供。\n<br />\n<br />运行补丁不包含原版 DLL、家具贴图、内容包或原版完整压缩包。玩家必须从原发布页另行下载 Custom Furniture 1.14.3。\n<br />\n<br />这是非官方社区项目，与原作者不存在隶属关系，也不代表原作者认可或背书。\n<br />\n<br />[line]\n<br />\n<br />\n<br />## Credits / 致谢\n<br />\n<br />- Original Custom Furniture author / 原模组作者：Platonymous\n<br />- Stardew Valley 1.6 compatibility port and maintenance / 1.6 兼容移植与维护：me\n<br />- AI-assisted development and review / AI 辅助开发与检查：DeepSeek &amp; Sol\n<br />\n<br />\n<br />Source code:\n<br />\u00A0 https://github.com/neoiw0/Custom-Furniture-1.6-Compatibility-Patch\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49109",
+	"Version": "2.1.0",
+	"Updated": "2026-07-16T02:55:37+00:00",
+	"Downloads": [
+		{
+			"Id": 175123,
+			"Type": "Main",
+			"DisplayName": "Custom Furniture 1.6 Compatibility Patch 2.1.0",
+			"FileName": "04/32/fc/0432fc92-4e4b-4967-9209-6fb28d5d47ed",
+			"Description": "",
+			"Version": "2.1.0",
+			"SizeInBytes": 39007,
+			"Uploaded": "2026-07-16T02:55:37+00:00",
+			"Mods": [
+				{
+					"Id": "Platonymous.CustomFurniture",
+					"DisplayName": "Custom Furniture",
+					"Type": "Smapi",
+					"RelativePath": "CustomFurniture",
+					"Manifest": {
+						"Name": "Custom Furniture",
+						"Description": "Unofficial Stardew Valley 1.6 compatibility port with legacy sprite animation / 支持旧版精灵动画的非官方 1.6 兼容补丁。",
+						"Author": "Platonymous (original); unofficial community 1.6 port",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "CustomFurniture.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Platonymous.CustomFurniture"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561811,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435797,
+		"UploaderId": 293224724,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}

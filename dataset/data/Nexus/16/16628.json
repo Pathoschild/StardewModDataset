@@ -3,17 +3,17 @@
 	"Id": 16628,
 	"Name": "Shared Professions",
 	"Author": "virtualbjorn",
-	"Description": "Your farmhand friend is offline and you badly need his/her profession benefits to sell or do something?\n<br />Worry not! Shared Professions is here for you!\n<br />\n<br />This mod aims to not modify your save file. The mod will only apply the benefits of the mod\u00A0[b]AFTER\u00A0[/b]the game is saved and will apply your vanilla professions\u00A0[b]BEFORE[/b]\u00A0your game is saved.\u00A0If you encounter issues with professions not reverting during the saving process. You can reach out to me to help you resolve your issue.\n<br />\n<br />This mod creates a JSON file with your Farm Name to Save the Original Professions Data.\n<br />\n<br />[b]Reminders:\n<br />[/b]When updating combat professions config i.e Health modifiers the lowest health set will be [b]20 by default[/b].\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI\n<br />[/url]Extract the ZIP file and Copy [b]SharedProfessions [/b]to your mods folder.\n<br />\n<br />Mod now supports [b]Configurations[/b]\n<br />\n<br />\n<br />You can further support me on [url=https://ko-fi.com/virtualbjorn]Ko-Fi[/url]",
+	"Description": "[size=6][b]Shared Professions[/b][/size]\n<br />[i]by virtualbjorn[/i]\n<br />\n<br />I found it very annoying to log in an offline farmhand just to gain their profession benefits, so I made this mod overnight.\n<br />\n<br />[b]Shared Professions[/b] shares every player's profession perks with everyone else on the farm. Each farmhand still chooses and keeps their [i]own[/i] professions — the mod just grants everyone the combined benefits while playing. Shared professions are removed before the game saves, so each player's save only ever contains the professions they actually earned. Uninstall any time and everyone keeps exactly what they chose.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Shared profession benefits[/b] across the host and all farmhands in multiplayer.[/*]\n<br />[*][b]Live sharing[/b] — when anyone picks a new profession on level-up, the shared benefit applies to everyone immediately, not just after the next save.[/*]\n<br />[*][b]Per-profession config[/b] — turn individual professions on or off for sharing via Generic Mod Config Menu.[/*]\n<br />[*][b]SpaceCore custom professions[/b] — professions from SpaceCore custom skills are shared just like vanilla ones, each with its own on/off toggle (shown only when SpaceCore and a custom skill are installed).[/*]\n<br />[*][b]Data recovery[/b] — an off-by-default host option to repair saves whose profession data got mixed up (see below).[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6+ and SMAPI 4.0.0+.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — optional, for the in-game settings UI.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url] — optional, only needed for custom-skill professions.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url].[/*]\n<br />[*]Unzip this mod into your [font=Courier New]Stardew Valley/Mods[/font] folder.[/*]\n<br />[*]Run the game once to generate [font=Courier New]config.json[/font] (or configure it in-game via Generic Mod Config Menu).[/*]\n<br />[*]In multiplayer, [b]every player should install the mod[/b]; the host is authoritative for shared data.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />\n<br />All options are editable in [font=Courier New]config.json[/font] or through Generic Mod Config Menu:\n<br />\n<br />[list]\n<br />[*][b]Per-profession toggles[/b] — one switch per vanilla profession (and per custom profession) controlling whether its benefit is shared.[/*]\n<br />[*][b]Data Recovery → Restore original professions on load[/b] [i](host only, default off)[/i] — on farm load, resets every player's professions to the \"original\" set the mod recorded in [font=Courier New]&lt;save&gt;.json[/font], undoing cases where one player's professions got baked into another's. During the restore it validates each profession against its skill level and drops any the level can't support, and re-offers the chooser for skills that are level 5/10 with no profession picked. Turn it back off once the save is repaired.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]How it works / notes[/b][/size]\n<br />\n<br />[list]\n<br />[*]The mod stores each player's earned (\"original\") professions in its data folder ([font=Courier New]&lt;save&gt;.json[/font], plus dated backups under [font=Courier New]backup/[/font]). Shared professions are merged in live and stripped again before every save.[/*]\n<br />[*]Professions are validated against the player's actual skill levels wherever they're recorded, so a profession a skill can't support can't be saved as a player's own. Each day the local player's stored professions are reconciled to their current skill levels (e.g. if a skill was reset).[/*]\n<br />[*]Custom professions are stored in the same [font=Courier New]Farmer.professions[/font] set as vanilla, so no separate save data is involved.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Console commands[/b][/size]\n<br />\n<br />These are development/testing helpers, run from the SMAPI console with a save loaded. They only affect your own character.\n<br />\n<br />[list]\n<br />[*][b][font=Courier New]sp_resetskill &lt;skill&gt;[/font][/b] — Reset a vanilla skill's XP and level to 0, so you can re-earn it and re-trigger the level 5/10 profession chooser. [font=Courier New]&lt;skill&gt;[/font] is one of [font=Courier New]farming[/font], [font=Courier New]fishing[/font], [font=Courier New]foraging[/font], [font=Courier New]mining[/font], [font=Courier New]combat[/font], [font=Courier New]luck[/font].[/*]\n<br />[*][b][font=Courier New]sp_resetcustomskill &lt;skillId&gt;[/font][/b] — Reset a SpaceCore custom skill's XP to 0, remove its chosen professions, and update the stored data. Run with no argument to list the available custom-skill IDs. Requires SpaceCore.[/*]\n<br />[*][b][font=Courier New]sp_resetprofession &lt;skill&gt;[/font][/b] — Clear a skill's chosen profession(s) [b]without[/b] losing the skill level and open the profession chooser immediately (no sleeping needed); on a level-10 skill the level-10 chooser follows the level-5 one. [font=Courier New]&lt;skill&gt;[/font] is a vanilla name ([font=Courier New]farming[/font], [font=Courier New]fishing[/font], [font=Courier New]foraging[/font], [font=Courier New]mining[/font], [font=Courier New]combat[/font]) or a SpaceCore skill ID.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]FAQ[/b][/size]\n<br />\n<br />[b]Does every player need to install the mod?[/b]\n<br />Yes. In multiplayer, install it for the host and every farmhand. The host is authoritative for the shared profession data.\n<br />\n<br />[b]Does it do anything in single-player?[/b]\n<br />There's nobody to share with, so there's no effect on a solo farm. It's built for multiplayer.\n<br />\n<br />[b]Will I lose my professions if I uninstall it?[/b]\n<br />No. Shared professions are stripped before every save, so your save only holds the professions you actually earned. Remove the mod any time and everyone keeps their own choices.\n<br />\n<br />[b]I chose a profession but the other players didn't get it — why?[/b]\n<br />It syncs when the profession chooser closes. If it didn't appear, load the save again (the mod re-shares on load), and make sure every player has the same version of the mod installed.\n<br />\n<br />[b]Does it support custom skills and professions?[/b]\n<br />Yes, through [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url]. Custom-skill professions are shared like vanilla ones and get their own toggles under [i]Custom Professions[/i]. Without SpaceCore, nothing changes.\n<br />\n<br />[b]A custom profession isn't shared.[/b]\n<br />Check that SpaceCore and the custom-skill mod are installed, that the player has actually reached the level and [i]picked[/i] the profession (not just leveled the skill), and that its toggle under [i]Custom Professions[/i] is on.\n<br />\n<br />[b]One player's professions got mixed into another player's — how do I fix it?[/b]\n<br />Turn on [b]Data Recovery → Restore original professions on load[/b] (host only), load the save once to repair it, then turn it back off. It resets each player to the original set stored in [font=Courier New]&lt;save&gt;.json[/font] and validates everything against skill levels.\n<br />\n<br />[b]I reset a skill but the profession is still there.[/b]\n<br />Resetting a skill only clears its experience; the profession you picked stays until it's cleaned up. The mod prunes professions a skill can no longer support during the next day/load, so sleep or reload and it will be removed.\n<br />\n<br />[b]Is sharing professions cheating?[/b]\n<br />That's up to your group. If you want a lighter touch, use the per-profession toggles to share only some of them.\n<br />\n<br />[line]\n<br />\n<br />See [url=https://www.nexusmods.com/stardewvalley/mods/16628?tab=logs]the Changelogs tab[/url] for version history.\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/16628",
-	"Version": "1.2.0",
-	"Updated": "2024-05-13T16:24:33+00:00",
+	"Version": "2.1.0",
+	"Updated": "2026-07-01T22:27:59+00:00",
 	"Downloads": [
 		{
 			"Id": 98928,
-			"Type": "Main",
+			"Type": "Optional",
 			"DisplayName": "Shared Professions",
 			"FileName": "Shared Professions-16628-1-2-0-1715617473.zip",
-			"Description": "Fix professions issue getting overwritten by Host professions",
+			"Description": "For v1.5 game version<br /><br />Fix professions issue getting overwritten by Host professions",
 			"Version": "1.2.0",
 			"SizeInBytes": 26981,
 			"Uploaded": "2024-05-13T16:24:33+00:00",
@@ -40,6 +40,48 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342485616,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 173321,
+			"Type": "Main",
+			"DisplayName": "SharedProfessions 2.1.0",
+			"FileName": "c0/49/f1/c049f162-1255-4b01-b92b-01ad83a94a08",
+			"Description": "SpaceCore custom-skill professions with per-profession toggles; profession/skill-level validation, daily reconciliation, and a host-only data-recovery option. Full notes in the changelog.",
+			"Version": "2.1.0",
+			"SizeInBytes": 38624,
+			"Uploaded": "2026-07-01T22:27:59+00:00",
+			"Mods": [
+				{
+					"Id": "virtualbjorn.SharedProfessions",
+					"DisplayName": "Shared Professions",
+					"Type": "Smapi",
+					"RelativePath": "SharedProfessions",
+					"Manifest": {
+						"Name": "Shared Professions",
+						"Description": "Shared Profession Benefits",
+						"Author": "virtualbjorn",
+						"Version": "2.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "SharedProfessions.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:16628"
+						],
+						"UniqueId": "virtualbjorn.SharedProfessions"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342560009,
 				"CategoryId": 1,
 				"Primary": true
 			}

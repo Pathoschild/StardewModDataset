@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 48739,
+	"Name": "Party Info",
+	"Author": "Yousv",
+	"Description": "[center][color=#f6b26b][b][size=6]PartyInfo[/size][/b][/color][/center]\n<br />[center][size=5]Multiplayer overlay, player health, energy, location, skills, status notifications[/size][/center]\n<br />[line]\n<br />\n<br />[b][size=5]Player Head Overlay[/size][/b]\n<br />[list]\n<br />[*]Displays head portraits of all connected players along the top, left, or right edge of the screen.[/*]\n<br />[*]Toggle visibility with a configurable keybind (default LeftAlt + C).[/*]\n<br />[*]Toggle interactions while a menu is open with the Menu Work option.[/*]\n<br />[*]Heads slide in when a player comes online with a 500ms eased animation.[/*]\n<br />[*]Offline players show a red Offline label. They can be hidden entirely via the Show Offline toggle.[/*]\n<br />[*]Show your own head with the Show Self toggle.[/*]\n<br />[*]Online players show a green Online notification when they reconnect.[/*]\n<br />[/list]\n<br />[b][size=5]Top Position Layout[/size][/b]\n<br />[center][img]https://staticdelivery.nexusmods.com/mods/1303/images/48739/48739-1784114701-352725343.gif[/img][/center]\n<br />[b][size=5]Left Position Layout[/size][/b]\n<br />[center][img]https://staticdelivery.nexusmods.com/mods/1303/images/48739/48739-1784114690-1482354187.gif[/img][/center]\n<br />[b][size=5]Status Notifications[/size][/b]\n<br />[list]\n<br />[*]Notifications appear below heads with priority ordering: Knocked Out, Critical, Exhausted, Offline.[/*]\n<br />[*][b]Knocked Out[/b] - health reaches zero. Red text, 500ms duration, no threshold.[/*]\n<br />[*][b]Critical[/b] - health drops below a configurable threshold (default 30%). Red text with vertical shake.[/*]\n<br />[*][b]Exhausted[/b] - stamina drops below a configurable threshold (default 10%). Green text with vertical shake.[/*]\n<br />[*]Each notification type has its own GMCM sub-page with settings for duration, fade timing, head shake direction and intensity, and status text shake.[/*]\n<br />[*]Notifications can be suppressed while hovering over a head (Mute Notifications toggle, default on). Mute lasts a configurable duration (default 10s).[/*]\n<br />[/list][center][img]https://staticdelivery.nexusmods.com/mods/1303/images/48739/48739-1784115035-1719233849.gif[/img] [img]https://staticdelivery.nexusmods.com/mods/1303/images/48739/48739-1784114695-760319026.gif[/img][/center]\n<br />[b][size=5]Persistent Status[/size][/b]\n<br />[list]\n<br />[*]A configurable dropdown selects what appears below each head when no notification is active: None, Location, Health, Energy.[/*]\n<br />[*][b]Location[/b] - shows the player's current area name, including custom locations added by mods. Green for safe zones, red for dangerous areas (mines, skull cavern, volcano, sewers).[/*]\n<br />[*][b]Health[/b] - shows current and max health as numbers (example: 45/150). Uses health bar red color.[/*]\n<br />[*][b]Energy[/b] - shows current and max stamina as numbers (example: 180/270). Uses stamina bar green color.[/*]\n<br />[*]The gap between head and status text is adjustable (Status Text Offset, default 28px).[/*]\n<br />[*]A black background box behind status text can be enabled with configurable transparency (Status BG, default on at 15% alpha).[/*]\n<br />[/list]\n<br />[b][size=5]Tooltips[/size][/b]\n<br />[list]\n<br />[*]Hover over a head to show a tooltip box with stat bars and location.[/*]\n<br />[*]Tooltip shows the player name with status tags appended inline (Knocked Out, Critical, Exhausted, Offline, Awaiting).[/*]\n<br />[*]Health and stamina bars display current and max values.[/*]\n<br />[*]Location line below the bars shows the player's current area.[/*]\n<br />[*]Hover and unhover have a configurable animation speed (Hover Speed, default 50ms).[/*]\n<br />[/list]\n<br />[b][size=5]Skill Tooltips[/size][/b]\n<br />[list]\n<br />[*]Hold the Skills Key (default LeftShift) while hovering to transition from stat tooltips to skill tooltips.[/*]\n<br />[*]Shows Farming, Mining, Foraging, Fishing, and Combat levels.[/*]\n<br />[*]Profession names are listed under each skill. Supports vanilla, [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url], and DaLion.Professions custom skill professions, including custom professions added by mods like [url=https://www.nexusmods.com/stardewvalley/mods/24355]Walk of Life[/url].[/*]\n<br />[*]Prestiged professions (DaLion) display as Prestiged [BaseName].[/*]\n<br />[/list]\n<br />[b][size=5]Show All Mode[/size][/b]\n<br />[list]\n<br />[*]Hold the Show All Key (default C) to display tooltips for all players simultaneously.[/*]\n<br />[*]Spacing between heads expands to fit the widest tooltip.[/*]\n<br />[*]Tooltips fade in and out at configurable speeds (Fade In, Fade Out, default 50ms each).[/*]\n<br />[*]Expand and collapse animations have separate configurable speeds (Expand Speed, Collapse Speed, default 100ms each).[/*]\n<br />[/list]\n<br />[b][size=5]Health Sync[/size][/b]\n<br />[list]\n<br />[*]Broadcasts local health and stamina data every 15 ticks via SMAPI messaging.[/*]\n<br />[*]All tooltips and notification triggers read synced data for remote players, ensuring accurate readings.[/*]\n<br />[/list]\n<br />[b][size=5]Time Control Integration[/size][/b]\n<br />[list]\n<br />[*]When [url=https://www.nexusmods.com/stardewvalley/mods/49186]Time Control[/url] (yousv.TimeControl) is installed, players who have voted to pause show a gold Paused label on their head.[/*]\n<br />[*]Pause state is synced from the host to all clients via SMAPI messaging.[/*]\n<br />[*]Toggle with the Time Control option (default on).[/*]\n<br />[/list]\n<br />[b][size=5]Credits[/size][/b]\n<br />[list]\n<br />[*]Inspired by [url=https://www.nexusmods.com/stardewvalley/mods/2173]MoreMultiplayerInfo[/url] by CheesySteak.[/*]\n<br />[/list]\n<br />[center][b][size=5]Configuration[/size][/b][/center]\n<br />All options are edited through [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]. Notification types (Critical, Exhausted, Knocked Out) have their own sub-pages accessible via page links at the bottom of the config menu.\n<br />[line]\n<br />\n<br />[center][size=5][b]Requirements[/b][/size][/center]\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 3.18.0 or later.[/*]\n<br />[*]Stardew Valley 1.6.15 or later.[/*]\n<br />[/list]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for in-game configuration. Without it, edit the config.json file directly.\n<br />Optional: [url=https://www.nexusmods.com/stardewvalley/mods/49186]Time Control[/url] for Paused status integration.\n<br />[line]\n<br />\n<br />[center][size=5][b]Installation[/b][/size][/center]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Extract the mod folder into your Mods directory.[/*]\n<br />[*]Run the game through SMAPI.[/*]\n<br />[/list][line]\n<br />\n<br />[center][size=5][b]Support[/b][/size][/center]\n<br />[center][size=4][url=http://ko-fi.com/yousv][color=#ffd966]Ko-Fi[/color][/url][/size][/center]\n<br />[line]\n<br />[size=2][i]Report bugs in the Posts/Bugs tab with your SMAPI log.[/i][/size]\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48739",
+	"Version": "1.2.1",
+	"Updated": "2026-07-15T15:05:16+00:00",
+	"Downloads": [
+		{
+			"Id": 175074,
+			"Type": "Main",
+			"DisplayName": "PartyInfo",
+			"FileName": "6c/13/08/6c13083b-c521-427e-9123-220010621e8a",
+			"Description": "",
+			"Version": "1.2.1",
+			"SizeInBytes": 55332,
+			"Uploaded": "2026-07-15T15:05:16+00:00",
+			"Mods": [
+				{
+					"Id": "yousv.partyinfo",
+					"DisplayName": "PartyInfo",
+					"Type": "Smapi",
+					"RelativePath": "PartyInfo",
+					"Manifest": {
+						"Name": "PartyInfo",
+						"Description": "Overlay showing multiplayer player info with health/energy bars, location, offline status, and skill tooltips on modifier hold.",
+						"Author": "Yousv",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "PartyInfo.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:48739"
+						],
+						"UniqueId": "yousv.partyinfo"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561762,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435427,
+		"UploaderId": 161386073,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

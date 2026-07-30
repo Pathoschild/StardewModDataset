@@ -7,17 +7,16 @@
 	"Description": "LudoTrace is a session journal for Stardew Valley. Every time you sleep, it writes an impartial record of your day to a plain JSONL file — monsters killed, fish caught, gifts given, quests started, friendship changes, what you shipped, and how you spent your energy. No overlays, no opinions, no configuration. Just the data.\n<br />\n<br />What you do with it is up to you. Paste it into an AI for coaching, comedy reacts, or a stat breakdown. Feed it into your own tools. An example AI prompt is included.\n<br />\n<br />No configuration required. File-drop install — works with any Stardew Valley save.\n<br />\n<br />[size=5][b]What it logs[/b][/size]\n<br />\n<br />Every session captures:\n<br />\n<br />[list]\n<br />[*]Character snapshot at start and end — money, energy, skill levels, relationship hearts[/*]\n<br />[*]Locations visited (deduped — each location logged once per session)[/*]\n<br />[*]Monsters killed — name and in-game time[/*]\n<br />[*]Fish caught — species, size (inches), location[/*]\n<br />[*]Gifts given — NPC, item, reaction (loved / liked / neutral / disliked / hated)[/*]\n<br />[*]Sleep result — slept normally vs passed out from exhaustion[/*]\n<br />[*]Quest changes — started and completed during the day[/*]\n<br />[*]Skill level-ups — farming, mining, foraging, fishing, combat[/*]\n<br />[*]Items consumed — food and consumables with category[/*]\n<br />[*]Friendship changes — per NPC, per day, in friendship points[/*]\n<br />[*]Crops shipped — item, count, gold value[/*]\n<br />[*]Recipes learned — cooking and crafting[/*]\n<br />[*]Mine floor reached — with Skull Cavern flag[/*]\n<br />[*]Golden Walnut zone visits (Ginger Island)[/*]\n<br />[/list]\n<br />The log is plain JSONL (one JSON object per line) written to:\n<br />\n<br />[code]Stardew Valley&#92;lt_stardew_events.jsonl[/code]\n<br />Example:\n<br />\n<br />[code]{\"type\":\"session_start\",\"game_date\":\"spring 15 Y1\",\"game_time\":\"06:00\",\"farmer_name\":\"Kris\",\"money\":4200,\"energy\":270,\"skills\":{\"farming\":1,\"mining\":0,\"foraging\":1,\"fishing\":2,\"combat\":0},\"relationships\":[{\"npc\":\"Penny\",\"hearts\":0},{\"npc\":\"Sam\",\"hearts\":1},{\"npc\":\"Leah\",\"hearts\":2}]}\n<br />{\"type\":\"location\",\"name\":\"Town\",\"game_date\":\"spring 15 Y1\",\"game_time\":\"08:30\"}\n<br />{\"type\":\"gift\",\"npc\":\"Penny\",\"item\":\"Parsnip\",\"reaction\":\"disliked\",\"game_date\":\"spring 15 Y1\",\"game_time\":\"09:10\"}\n<br />{\"type\":\"location\",\"name\":\"Forest\",\"game_date\":\"spring 15 Y1\",\"game_time\":\"10:00\"}\n<br />{\"type\":\"fish\",\"name\":\"Catfish\",\"size\":22,\"location\":\"Forest\",\"game_date\":\"spring 15 Y1\",\"game_time\":\"11:40\"}\n<br />{\"type\":\"used\",\"item\":\"Salmonberry\",\"category\":\"food\",\"game_date\":\"spring 15 Y1\",\"game_time\":\"13:20\"}\n<br />{\"type\":\"sleep\",\"result\":\"slept\",\"game_date\":\"spring 15 Y1\"}\n<br />{\"type\":\"quest_stage\",\"quest\":\"Delivery: Penny\",\"stage\":\"started\",\"game_date\":\"spring 15 Y1\"}\n<br />{\"type\":\"friendship\",\"npc\":\"Penny\",\"hearts\":0,\"delta\":-50,\"game_date\":\"spring 15 Y1\"}\n<br />{\"type\":\"session_end\",\"game_date\":\"spring 16 Y1\",\"game_time\":\"06:00\",\"farmer_name\":\"Kris\",\"money\":4200,\"energy\":270,\"skills\":{\"farming\":1,\"mining\":0,\"foraging\":1,\"fishing\":2,\"combat\":0}}[/code]\n<br />You can read it, parse it, or feed it into any tool you like. The Claude.ai coaching workflow is built in, but the log is yours.\n<br />\n<br />[size=5][b]The coaching workflow[/b][/size]\n<br />\n<br />[b]1. Play.[/b] Load any save — SMAPI registers the mod automatically on load. Sleep to end the day and flush that session's events.\n<br />\n<br />[b]2. Open Claude.ai.[/b] Start a new chat at claude.ai (free account works fine).\n<br />\n<br />[b]3. Paste the prompt + your log.[/b] A coaching prompt is included as [font=Courier New]coaching_prompt.md[/font] in the zip. Paste it, then paste the contents of [font=Courier New]lt_stardew_events.jsonl[/font] below it.\n<br />\n<br />[b]4. Get coaching.[/b] Claude reads your session and gives you specific, actionable feedback based on what actually happened — not generic Stardew tips.\n<br />\n<br />[size=5][b]Example output when piped through Claude[/b][/size]\n<br />\n<br />[i](From a real session — Year 1 Spring 15)[/i]\n<br />\n<br />[quote]You caught a 22-inch Catfish and left the river before noon. Catfish only appear after 6PM in rainy weather — check tomorrow's forecast. A rainy Spring 16 is your best shot before the season ends.\n<br />\n<br />Penny received a Parsnip and lost 50 friendship points. She loves Melons and Poppies — neither is hard to grow in Summer. Her birthday is Summer 2, which is your first gift window of the season. A loved birthday gift gives 8× the normal friendship points.\n<br />\n<br />Spring 15 with 4,200g and zero crops shipped. Pierre still has Bean Starters at 60g each. They can be planted through Spring 18 and return in 10 days — that's still a profitable spring window if you plant today.[/quote]\n<br />The coaching references your actual session — your fish, your gifts, your money — not a wiki guide.\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI 4.0 or later[/url][/*]\n<br />[/list]\n<br />[size=5][b]Install[/b][/size]\n<br />\n<br />Drop the [font=Courier New]LudoTrace[/font] folder from the zip into your [font=Courier New]Stardew Valley&#92;Mods&#92;[/font] directory. SMAPI will load it automatically on next launch.\n<br />\n<br />Or install via Vortex — the zip is structured correctly for auto-deployment.\n<br />\n<br />[size=5][b]Source[/b][/size]\n<br />\n<br />[url=https://github.com/ludotrace/stardew]github.com/ludotrace/stardew[/url]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48026",
 	"Version": "0.1.0",
-	"Updated": "2026-06-21T23:17:36+00:00",
+	"Updated": "2026-07-12T12:52:56+00:00",
 	"Downloads": [
 		{
-			"Id": 172105,
+			"Id": 174753,
 			"Type": "Main",
-			"DisplayName": "LudoTrace Stardew v0.1.0",
-			"FileName": "11/27/28/11272878-c1de-4505-a958-fc1b5d5dbec3",
-			"Description": "## v0.1.0 — 2026-06-21",
-			"Version": "v0.1.0",
-			"SizeInBytes": 24693,
-			"Uploaded": "2026-06-21T23:17:36+00:00",
+			"DisplayName": "LudoTrace Stardew v0.2.0",
+			"FileName": "a8/bd/17/a8bd17a1-1212-4f5e-8b68-f84d14bf5022",
+			"Version": "v0.2.0",
+			"SizeInBytes": 26097,
+			"Uploaded": "2026-07-12T12:52:56+00:00",
 			"Mods": [
 				{
 					"Id": "LudoTrace.Stardew",
@@ -28,7 +27,7 @@
 						"Name": "LudoTrace",
 						"Description": "Writes structured play session events for LudoTrace coaching.",
 						"Author": "LudoTrace",
-						"Version": "0.1.0",
+						"Version": "0.2.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "LudoTrace.dll",
 						"Dependencies": [],
@@ -38,7 +37,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342558793,
+				"Uid": 5596342561441,
 				"CategoryId": 1,
 				"Primary": false
 			}

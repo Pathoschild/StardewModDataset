@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 49143,
+	"Name": "FarmStats",
+	"Author": "wzx0",
+	"Description": "# FarmStats\n<br />\n<br />## Description\n<br />\n<br />农场分区统计面板。通过快捷键召唤面板，按农场分区（农场/温室/姜岛/地窖等，内置预设适配 SVE/里村等大型 mod 地点）查看机械、作物、果树三类状态，并提供全局进度统计。支持自定义分区纳入 mod 新增地点。\n<br />\n<br />## Installation instructions\n<br />\n<br />1. 确保已安装 **SMAPI** (4.0+)\n<br />2. 确保已安装 **StardewUI**（`focustense.StardewUI`，Continued 版本）\n<br />3. （可选）安装 **Generic Mod Config Menu** 用于游戏内配置\n<br />4. 将 `FarmStats` 文件夹复制到 Stardew Valley 的 `Mods` 目录下\n<br />5. 启动游戏即可\n<br />\n<br />## Main features\n<br />\n<br />- ✅ 左侧分区列表：全部统计 / 各农场分区 / 其他（兜底）/ 进度统计\n<br />- ✅ 内置预设分区：农场、温室、姜岛、地窖、里村山顶农场、里村温室、极光葡萄园、旧社区中心花园、格兰普顿平原、爷爷小屋温室\n<br />- ✅ 机械 Tab：总数 + 空闲/生产中/可收获，按机器分组，点开看每台剩余时间分桶\n<br />- ✅ 作物 Tab：可收/未浇水/将枯萎，季节末来不及成熟的单独标出；温室/姜岛等室内地点自动识别免疫枯萎\n<br />- ✅ 果树 Tab：可收/未成熟，过季、雷击恢复、已枯死、已满等状态完整显示\n<br />- ✅ 进度统计：全局成就一览（总完成度、出货、图腾柱、黄金时钟、杀怪、好友、等级、星之果实、食谱、制造、鱼、金色核桃等）\n<br />- ✅ 自定义分区：GMCM 配置最多 6 个，填入 mod 新增地点的 location name 即可纳入统计\n<br />- ✅ 懒加载：切到对应 Tab 才采集数据\n<br />- ✅ GMCM 集成，可自定义快捷键与自定义分区\n<br />\n<br />## Requirements\n<br />\n<br />- **SMAPI** 4.0 或更高版本\n<br />- **StardewUI**（`focustense.StardewUI`）—— 必须依赖\n<br />- **Generic Mod Config Menu** —— 可选，用于游戏内配置\n<br />\n<br />## Configuration\n<br />\n<br />通过 GMCM（Generic Mod Config Menu）可配置：\n<br />\n<br />| 配置项 | 默认值 | 说明 |\n<br />|--------|--------|------|\n<br />| OpenMenuKey | F7 | 打开农场统计面板的快捷键 |\n<br />| CustomZones | 6 个空槽 | 自定义分区（启用槽位后填写显示名、地点名称、是否免疫枯萎） |\n<br />\n<br />## Usage\n<br />\n<br />1. 按下配置的快捷键（默认 F7）打开农场统计面板\n<br />2. 左侧选择分区（全部统计 / 某农场分区 / 其他 / 进度统计）\n<br />3. 分区视图下切换机械 / 作物 / 果树三个 Tab 查看明细\n<br />4. 选中某行查看详情（机械剩余时间、作物成熟分布、果树品级与状态等）\n<br />5. 选择「进度统计」查看全局成就完成度\n<br />\n<br />## Shout outs\n<br />\n<br />- 感谢 **Pathoschild** 开发的 SMAPI 和 ModBuildConfig\n<br />- 感谢 **focustense** 开发的 StardewUI，以及 **Mushymato** 维护的 Continued 分支\n<br />\n<br />---\n<br />\n<br />*Author: wzx*\n<br />*UniqueID: `wzx.FarmStats`*\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49143",
+	"Version": "1.0.0",
+	"Updated": "2026-07-15T01:32:34+00:00",
+	"Downloads": [
+		{
+			"Id": 175012,
+			"Type": "Main",
+			"DisplayName": "FarmStats 1.0.0",
+			"FileName": "2b/c7/34/2bc734a1-8d8f-4098-9427-129087b1277c",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 59963,
+			"Uploaded": "2026-07-15T01:32:34+00:00",
+			"Mods": [
+				{
+					"Id": "wzx.FarmStats",
+					"DisplayName": "Farm Stats",
+					"Type": "Smapi",
+					"RelativePath": "FarmStats",
+					"Manifest": {
+						"Name": "Farm Stats",
+						"Description": "按农场分区统计机械/作物/果树/进度的 StardewUI 查看面板。",
+						"Author": "wzx",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmStats.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:49143"
+						],
+						"UniqueId": "wzx.FarmStats"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561700,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435831,
+		"UploaderId": 203111648,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

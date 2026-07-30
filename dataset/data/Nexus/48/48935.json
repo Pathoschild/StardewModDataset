@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 48935,
+	"Name": "ShinyFishMinesFix",
+	"Author": "qiujk",
+	"Description": "[b][url=https://www.nexusmods.com/stardewvalley/mods/28183]Shiny Fish[/url] Mines Fix / 矿洞[url=https://www.nexusmods.com/stardewvalley/mods/28183]闪光鱼[/url]修复[/b]\n<br />—— English ——\n<br />[b]Overview[/b]\n<br />Fixes the issue where mine fish cannot obtain shiny variants from the Shiny Fish mod.\n<br />[b]Root Cause[/b]\n<br />The Shiny Fish mod hooks the standard fishing API ( GameLocation.GetFishFromLocationData), but mine fish use a hardcoded path (MineShaft.getFish) that bypasses the standard API, preventing mine fish from ever having shiny variants.\n<br />[b]Features[/b]\n<br />[list]\n<br />[*]Mine fish (Stonefish, Ice Pip, Lava Eel, etc.) now support shiny variants[/*]\n<br />[*]Electric Fish Machine mod's legendary fish and crab pot fish support shiny variants， [b]The original version only supports regular fish.[/b] [/*]\n<br />[*]Shiny chance, fish frenzy/bubble bonuses, and Shiny Charm bonus are consistent with the Shiny Fish mod[/*]\n<br />[*]Preserves original fish quality[/*]\n<br />[/list][b]Dependencies[/b]\n<br />[list]\n<br />[*]SMAPI ≥ 4.0.0 — Required[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28183]Shiny Fish [/url]— Required[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/45923]Electric Fish Machine[/url] — Optional, auto-detected if installed[/*]\n<br />[/list][b]Installation[/b]\n<br />Extract to your Mods folder.\n<br />\n<br />—— 中文 ——\n<br />[b]简介[/b]\n<br />修复闪光鱼模组（Shiny Fish）中矿洞鱼类无法获得闪光变体的问题。\n<br />[b]问题原因[/b]\n<br />闪光鱼模组 Hook 的是标准钓鱼 API（GameLocation.GetFishFromLocationData），但矿洞鱼类使用硬编码路径（MineShaft.getFish），绕过了标准 API，导致矿洞鱼永远不会出现闪光变体。\n<br />[b]功能[/b]\n<br />[list]\n<br />[*]矿洞鱼类（石头鱼、冰柱鱼、熔岩鳗鱼等）支持闪光变体[/*]\n<br />[*]电鱼模组的传说鱼和蟹笼鱼支持闪光变体， 原版只支持普通鱼类 [/*]\n<br />[*]闪光概率、鱼狂潮/气泡点加成、闪光护身符加成均与闪光鱼模组一致[/*]\n<br />[*]保留原鱼品质[/*]\n<br />[/list][b]依赖[/b]\n<br />[list]\n<br />[*]SMAPI ≥ 4.0.0 — 必需[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28183]闪光鱼[/url]\u00A0 — 必需[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/45923]电鱼机[/url]\u00A0 — 可选，安装后自动支持[/*]\n<br />[/list][b]安装[/b]\n<br />解压到 Mods 文件夹即可。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48935",
+	"Version": "1.1.0",
+	"Updated": "2026-07-10T02:25:54+00:00",
+	"Downloads": [
+		{
+			"Id": 174366,
+			"Type": "Main",
+			"DisplayName": "ShinyFishMinesFix 1.1.0",
+			"FileName": "f4/25/ea/f425eaab-d3d0-4049-83cc-c9972a4b9cfd",
+			"Description": "Fix for the Flashing Fish mod patch\n闪光鱼模组补丁修复",
+			"Version": "1.1.0",
+			"SizeInBytes": 13547,
+			"Uploaded": "2026-07-10T02:25:54+00:00",
+			"Mods": [
+				{
+					"Id": "qjk.ShinyFishMinesFix",
+					"DisplayName": "矿洞闪光鱼修复",
+					"Type": "Smapi",
+					"RelativePath": "ShinyFishMinesFix",
+					"Manifest": {
+						"Name": "矿洞闪光鱼修复",
+						"Description": "修复矿洞鱼和电鱼模组传说鱼无法获得闪光变体的问题",
+						"Author": "qjk",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ShinyFishMinesFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Nature.ShinyFish",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Kyle.ElectricFishMachine",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "qjk.ShinyFishMinesFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342561054,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342435623,
+		"UploaderId": 286650668,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

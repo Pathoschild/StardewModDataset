@@ -1,0 +1,68 @@
+{
+	"Site": "Nexus",
+	"Id": 49421,
+	"Name": "SVE Highlands and Crimson Badlands Performance Fix",
+	"Author": "neoiw",
+	"Description": "SVE Highlands and Crimson Badlands Performance Fix\n<br />An independent SMAPI performance fix for the Highlands and Crimson Badlands in Stardew Valley Expanded. It is intended for saves where very large monster populations or dense piles of monster drops cause severe frame-rate loss.\n<br />This mod does not reduce monster spawn counts.\n<br />这是一个针对 Stardew Valley Expanded 高地与猩红荒原的独立 SMAPI 性能修复模组，适用于大量怪物或密集怪物掉落导致帧率严重下降的情况。\n<br />本模组不会减少怪物生成数量。\n<br />[heading]Requirements / 前置需求[/heading]\n<br />\n<br />[*]Stardew Valley Expanded 1.15.9 or later[/*]\n<br />[*]Generic Mod Config Menu is optional\n<br />\n<br />[heading]Installation / 安装[/heading]\n<br />Extract the ZIP into\u00A0Stardew Valley/ Mods\n<br />\n<br />Do not place the mod inside the SVE folder. Do not enable SVE's low-memory monster-count options unless you independently want fewer monsters; this fix does not require those options.\n<br />请勿将本模组放进 SVE 文件夹。除非你本来就希望减少怪物，否则不必开启 SVE 的低内存怪物数量选项；本模组不依赖这些选项。\n<br />[heading]What it changes / 工作方式[/heading]\n<br />[list]\n<br />[*]Supports the SVE Highlands and Crimson Badlands maps.[/*]\n<br />[*]Keeps monsters near any player fully active.[/*]\n<br />[*]Stops ordinary monsters far outside every player's active range from running unnecessary update logic.[/*]\n<br />[*]Skips drawing monsters far outside the current viewport.[/*]\n<br />[*]Limits the amount of dense drop-pile drawing work performed in one viewport.[/*]\n<br />[*]Spreads nearby dense-drop magnetism and inventory checks across multiple ticks.[/*]\n<br />[*]Keeps damage numbers, text popups, and temporary visual fragments fully animated.[/*]\n<br />[*]Keeps recognized bosses such as Apophis fully active by default.[/*]\n<br />[*]Supports local split-screen distance checks by considering every player in the map.[/*]\n<br />[*]支持 SVE 高地与猩红荒原地图。[/*]\n<br />[*]任一玩家附近的怪物都会保持完整活动。[/*]\n<br />[*]所有玩家活动范围外的普通怪物不会继续执行不必要的更新逻辑。[/*]\n<br />[*]怪物远离当前视口时跳过绘制。[/*]\n<br />[*]限制同一视口内密集掉落堆的绘制工作量。[/*]\n<br />[*]将附近密集掉落的吸附与背包检查分散到多个 tick。[/*]\n<br />[*]伤害数字、文字提示与临时碎片动画保持正常播放。[/*]\n<br />[*]默认让 Apophis 等已识别 Boss 始终保持完整活动。[/*]\n<br />[*]距离判断会考虑地图中的所有玩家，支持本地分屏场景。[/*]\n<br />[/list][heading]What it does not change / 不会修改的内容[/heading]\n<br />[list]\n<br />[*]Monster spawn rules or spawn counts[/*]\n<br />[*]Monster health, damage, AI data, or drops[/*]\n<br />[*]SVE or Farm Type Manager files[/*]\n<br />[*]Save data[/*]\n<br />[*]Maps other than the two named above[/*]\n<br />[*]怪物生成规则或生成数量[/*]\n<br />[*]怪物生命、伤害、AI 数据或掉落[/*]\n<br />[*]SVE 或 Farm Type Manager 文件[/*]\n<br />[*]存档数据[/*]\n<br />[*]上述两张地图以外的地图[/*]\n<br />[/list]Removing this mod restores the original runtime behavior. No save-cleaning procedure is required.\n<br />删除本模组即可恢复原本的运行逻辑，不需要清理存档。\n<br />[heading]Configuration / 配置[/heading]\n<br />The default settings are recommended. With Generic Mod Config Menu installed, you can separately enable the two maps, adjust distance and drawing limits, keep bosses fully active, or enable compact debug statistics.\n<br />推荐使用默认设置。安装 Generic Mod Config Menu 后，可以分别开关两张地图、调整距离与绘制限制、让 Boss 始终完整活动，或开启精简调试统计。\n<br />[heading]Verification / 验证情况(In split screen mode)[/heading]\n<br />The Highlands were tested in local split-screen on Stardew Valley 1.6.15, SMAPI 4.5.2, and the installed SVE environment. Before optimization, the test ran at about 51 FPS with 313 monsters (no debris), but dropped to 1.6-2 FPS near 380 monsters with over 100 nearby uncollected debris items. After adding the debris optimization, the final dense-drop test maintained above 50 FPS with more than 400 monsters and over 100 nearby uncollected debris.\n<br />\n<br />The Crimson Badlands implementation uses its installed map identifier and the same optimization path, but the test save had not unlocked that area. Crimson Badlands and remote online multiplayer have not been runtime-verified by this project.\n<br />高地已在 Stardew Valley 1.6.15、SMAPI 4.5.2 与本机 SVE 环境下进行本地分屏测试。优化前，313 只怪（无掉落物）时约 51 FPS，接近 380 只怪时（周围有 100+ 未拾取掉落物）降至 1.6-2 FPS。加入密集掉落优化后，最终测试在超过 400 只怪且仍有 100+ 未拾取掉落物的场景中仍保持 50 FPS 以上。\n<br />\n<br />猩红荒原使用已安装地图的标识并共用相同优化路径，但测试存档尚未解锁该区域。因此，本项目尚未对猩红荒原及远程在线多人模式进行实机验证。\n<br />[heading]Compatibility notes / 兼容说明[/heading]\n<br />This mod patches core location drawing, character updating, and debris updating only while one of the two target maps is active. A mod which replaces the same game methods may conflict. If you encounter missing monsters, invisible drops, unusual boss behavior, or SMAPI red errors, disable this mod and provide a SMAPI log with Debug Statistics enabled.\n<br />本模组只会在目标地图中修改场景绘制、角色更新与掉落物更新流程。其他替换相同游戏方法的模组可能产生冲突。如果遇到怪物不显示、掉落不可见、Boss 行为异常或 SMAPI 红色报错，请先停用本模组，并在开启“调试统计”后提供 SMAPI 日志。\n<br />[heading]Source, license, and attribution / 源码、许可与署名[/heading]\n<br />This mod is open source under the MIT License. The Source Code file contains the complete source corresponding to the uploaded DLL.\n<br />Stardew Valley Expanded is created by FlashShifter and contributors. Farm Type Manager is created by Esca. This mod contains no SVE or Farm Type Manager DLL, source code, maps, data, textures, music, translations, or release files. It is not affiliated with or endorsed by their authors.\n<br />本模组源码按 MIT License 发布。Source Code 文件包含与上传 DLL 对应的完整源码。\n<br />Stardew Valley Expanded 由 FlashShifter 及贡献者制作，Farm Type Manager 由 Esca 制作。本模组不包含 SVE 或 Farm Type Manager 的 DLL、源码、地图、数据、贴图、音乐、翻译或发布文件，也不代表得到其作者的官方认可或合作授权。\n<br />\n<br />\n<br />[/*]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49421",
+	"Version": "1.0.3",
+	"Updated": "2026-07-20T06:22:14+00:00",
+	"Downloads": [
+		{
+			"Id": 175584,
+			"Type": "Main",
+			"DisplayName": "SVE Highlands Crimson Badlands Performance Fix ",
+			"FileName": "d7/26/1a/d7261a4e-119d-47f3-a9d2-91624766047d",
+			"Description": "",
+			"Version": "1.0.3",
+			"SizeInBytes": 19757,
+			"Uploaded": "2026-07-20T06:22:14+00:00",
+			"Mods": [
+				{
+					"Id": "neoiw.SVEHighMonsterPerformance",
+					"DisplayName": "SVE Highlands and Crimson Badlands Performance Fix",
+					"Type": "Smapi",
+					"RelativePath": "SVEHighMonsterPerformance",
+					"Manifest": {
+						"Name": "SVE Highlands and Crimson Badlands Performance Fix",
+						"Description": "Improves performance in SVE Highlands and Crimson Badlands without reducing monster spawn counts.",
+						"Author": "neoiw",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "SVEHighMonsterPerformance.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.SVECode",
+								"MinimumVersion": "1.15.9",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Esca.FarmTypeManager",
+								"MinimumVersion": "1.26.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "neoiw.SVEHighMonsterPerformance"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342562272,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436109,
+		"UploaderId": 293224724,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
