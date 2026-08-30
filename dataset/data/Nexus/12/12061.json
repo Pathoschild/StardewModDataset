@@ -5,18 +5,18 @@
 	"Author": "adverserath",
 	"Description": "[size=4][u]What problem am I solving?[/u][/size]\n<br />In Single player when a player is trying to climb a ladder, tries to eat food, moves items in the inventory or checks a quest the entire games goes into a pause mode, so nothing moves and the player is protected.\n<br />\n<br />In coop this only happens when all players have 'requestingTimePause' flagged, which creates a horrible imbalance when trying to move through mines. You need to move some food, a bomb, reload catapult, try to climb a ladder and get prompted if you want to climb...you are always vulnerable to being attacked. I've even died when trying to climb the ladder which meant I died at level 0.\n<br />\n<br />[size=4][u]What is this mod going to do?[/u][/size]\n<br />This mod is doing 2 things:\n<br />1. When calling withinPlayerThreshold, players with requestingTimePause flagged are ignored to monsters. So they will not confront you while you are paused. But they will still move around the screen, because the clock isnt stopped.\n<br />\n<br />2. Sets CanBeDamaged to false when requestingTimePause is flagged. So if you go into a menu while a mob is touching you, or if they cross through you then you dont get hurt.\n<br />\n<br />\n<br />I have also isolated the piece of code which would let a monster target your friend when you pause. [b]BUT[/b], I am not going to do anything with this [i]yet[/i]. I think its more exploitable if I made the monsters move away from a player when they pause as a way of ditching agro on another player. Therefor, as long as the player is the closest to the mob, they will remain the main target.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/12061",
-	"Version": "1.0.3",
-	"Updated": "2024-10-11T08:55:57+00:00",
+	"Version": "1.0.4",
+	"Updated": "2026-08-20T22:19:43+00:00",
 	"Downloads": [
 		{
-			"Id": 113135,
+			"Id": 179436,
 			"Type": "Main",
 			"DisplayName": "Coop battle pause",
-			"FileName": "Coop battle pause-12061-1-0-3-1728636957.zip",
-			"Description": "Increase version in package",
-			"Version": "1.0.3",
-			"SizeInBytes": 6604,
-			"Uploaded": "2024-10-11T08:55:57+00:00",
+			"FileName": "77/6e/f6/776ef6bd-ebf2-4f03-b923-cb243fac6862",
+			"Description": "Fixed online coop bugs, its now working! Previously it was just split screen.",
+			"Version": "1.0.4",
+			"SizeInBytes": 8097,
+			"Uploaded": "2026-08-20T22:19:43+00:00",
 			"Mods": [
 				{
 					"Id": "Adverserath.CoopBattlePause",
@@ -27,7 +27,7 @@
 						"Name": "Coop Battle Pause",
 						"Description": "Players cannot be targetted or hurt by monsters when on 'requestingTimePause' is flagged by them",
 						"Author": "adverserath",
-						"Version": "1.0.3",
+						"Version": "1.0.4",
 						"MinimumApiVersion": "4.0.8",
 						"EntryDll": "CoopBattlePause.dll",
 						"Dependencies": [],
@@ -39,9 +39,9 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342499823,
+				"Uid": 5596342566124,
 				"CategoryId": 1,
-				"Primary": false
+				"Primary": true
 			}
 		}
 	],

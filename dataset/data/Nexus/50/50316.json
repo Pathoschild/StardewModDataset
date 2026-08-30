@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 50316,
+	"Name": "SteamSkip --- LAN Co-op Without Steam",
+	"Author": "neoiw",
+	"Description": "# SteamSkip — LAN Co-op Without Steam (局域网免steam直连)\n<br />\n<br />Skip Steam for LAN co-op: no more \"Error connecting to Steam.\", block Steam initialization without touching any file, and show your local IP on the co-op screen.\n<br />\n<br />## Overview\n<br />Stardew Valley's co-op normally expects Steam. If you deleted `steam_api64.dll` to play LAN-only, the game logs `Error connecting to Steam.` (DllNotFoundException) every launch. If you didn't, Steam still gets initialized for nothing. SteamSkip handles both cases with one toggle, and adds a convenience: your PC's LAN IP is drawn at the bottom of the co-op menu, so the other player can type it into \"Join LAN game\" without asking.\n<br />\n<br />## Features\n<br />- **Suppress the missing-Steam error** — if `steam_api64.dll` is already deleted, no more `Error connecting to Steam.` in the log.\n<br />- **Block Steam at startup** — if the DLL is still present, Steam initialization is skipped (same effect as not having it); no game files are modified or deleted.\n<br />- **Show your LAN IP** — the co-op menu displays your local IPv4 (`192.168.x.x` / `10.x` / `172.16–31.x`), filtered to real, connected adapters.\n<br />- **Configurable** — two toggles in `config.json` or via Generic Mod Config Menu (optional).\n<br />- **Lightweight and safe** — two Harmony patches, no save data touched, works on host and/or client.\n<br />\n<br />## How to install\n<br />1. Install SMAPI 4.0+.\n<br />2. Extract the zip into `Stardew Valley/Mods/SteamSkip/`.\n<br />3. Start the game once — `config.json` is generated automatically.\n<br />4. If you already deleted `steam_api64.dll`, keep it deleted; the error is now suppressed.\n<br />\n<br />## How to use\n<br />1. Host: Co-op → Host a new farm or a save file.\n<br />2. Friend on the same WiFi: Co-op → Join → LAN game → enter the IP shown at the bottom of the host's co-op screen.\n<br />3. Both PCs can install the mod; the friend only needs it if their game also complains about Steam.\n<br />\n<br />### Configuration\n<br />| Option | Default | Description |\n<br />|---|---|---|\n<br />| `BypassSteam` | `true` | Skip Steam entirely: suppresses the error if the DLL is missing, blocks initialization if present. Requires a game restart. |\n<br />| `ShowLocalIp` | `true` | Draw the LAN IP at the bottom of the co-op menu. |\n<br />\n<br />## Compatibility\n<br />- Stardew Valley 1.6.x (tested on 1.6.15 build 24354) with SMAPI 4.x.\n<br />- Works whether or not `steam_api64.dll` is present.\n<br />- Keep `Steamworks.NET.dll` in the game folder — the game needs that wrapper DLL to start.\n<br />- Not a DRM bypass: this mod does not change how the game is launched or owned; it only makes LAN co-op cleaner.\n<br />- While bypass is on, Steam-only features (achievements, Steam invites, friend-join) are unavailable — that is the point of LAN mode.\n<br />\n<br />## FAQ\n<br />**Q: Do both players need the mod?**\n<br />A: No. Only players whose game logs the Steam error (or who want the IP display) need it.\n<br />\n<br />**Q: Does it edit my game files?**\n<br />A: No. It never writes to the game folder.\n<br />\n<br />**Q: My IP doesn't show.**\n<br />A: Check `ShowLocalIp` in config. Only private-range IPv4 addresses on connected adapters are shown.\n<br />\n<br />## Changelog\n<br />**1.0.0** — Initial release: Steam bypass toggle, LAN IP display, GMCM support.\n<br />\n<br />## License\n<br />Open source under the **GNU GPL-3.0** (copyleft) license. See the `LICENSE` file included in the download.\n<br />\n<br />## Credits\n<br />SMAPI and Harmony (dependencies). LAN co-op tested with friends on the same WiFi.\n<br />\n<br />---\n<br />\n<br /># 局域网免steam直连 (SteamSkip)\n<br />\n<br />同 WiFi 局域网直连辅助 mod：跳过 Steam 联机，不再出现 `Error connecting to Steam.` 报错，并在联机页显示本机 IP。\n<br />\n<br />## 简介\n<br />星露谷联机默认依赖 Steam。删掉 `steam_api64.dll` 走局域网直连时，游戏每次启动都会记录 `Error connecting to Steam.`（DllNotFoundException）报错；不删的话 Steam 又会被无谓地初始化。本 mod 用一个开关同时处理两种情况，并在联机（Co-op）页面底部显示本机局域网 IP，朋友直接照着输入就能加入，不用再问。\n<br />\n<br />## 功能\n<br />- **屏蔽报错**：已删除 `steam_api64.dll` 时，不再出现 `Error connecting to Steam.` 报错。\n<br />- **屏蔽 Steam 初始化**：未删除 DLL 时，启动阶段直接跳过 Steam 初始化（等效于没有它），不修改、不删除任何游戏文件。\n<br />- **显示本机 IP**：联机页底部显示本机局域网 IPv4（`192.168.x.x` / `10.x` / `172.16–31.x`），自动过滤回环和未连接网卡。\n<br />- **可配置**：`config.json` 或游戏内 Generic Mod Config Menu（可选）调整两个开关。\n<br />- **轻量安全**：仅两个 Harmony 补丁，不触碰任何存档，主机/客户端均可安装。\n<br />\n<br />## 安装\n<br />1. 安装 SMAPI 4.0+。\n<br />2. 把压缩包解压到 `Stardew Valley/Mods/SteamSkip/`。\n<br />3. 启动一次游戏，自动生成 `config.json`。\n<br />4. 如果之前已经删了 `steam_api64.dll`，保持删除即可，报错已被屏蔽。\n<br />\n<br />## 使用方法\n<br />1. 主机：Co-op → 主机（Host），开新农场或选已有存档。\n<br />2. 朋友（同一 WiFi）：Co-op → 加入（Join）→ LAN 游戏，输入主机联机页底部显示的 IP。\n<br />3. 两台电脑都可以装本 mod；朋友那边只有出现 Steam 报错（或想显示 IP）时才必须装。\n<br />\n<br />### 配置项\n<br />| 选项 | 默认 | 说明 |\n<br />|---|---|---|\n<br />| `BypassSteam` | `true` | 跳过 Steam：DLL 已删则屏蔽报错，未删则拦截初始化。重启游戏生效。 |\n<br />| `ShowLocalIp` | `true` | 联机页底部显示本机局域网 IP。 |\n<br />\n<br />## 兼容性\n<br />- 星露谷 1.6.x（已在 1.6.15 build 24354 实测）+ SMAPI 4.x。\n<br />- 无论 `steam_api64.dll` 是否存在都可用。\n<br />- 请保留 `Steamworks.NET.dll`——游戏启动需要这个 C# 包装库。\n<br />- 本 mod 不是绕过 DRM 的工具，不改变游戏的启动或所有权，只让局域网联机更干净。\n<br />- 开启“跳过 Steam”后，依赖 Steam 的功能（成就、Steam 邀请、好友加入）不可用——这正是局域网模式的目的。\n<br />\n<br />## 常见问题\n<br />**Q：两个人都必须装吗？**\n<br />A：不用。只有游戏出现 Steam 报错（或想显示 IP）的那台需要装。\n<br />\n<br />**Q：会修改游戏文件吗？**\n<br />A：不会。本 mod 从不写入游戏目录。\n<br />\n<br />**Q：IP 没显示？**\n<br />A：检查 `ShowLocalIp` 是否开启。只显示已连接网卡上的私有网段 IPv4。\n<br />\n<br />## 更新日志\n<br />**1.0.0** — 首发：Steam 跳过开关、联机页 IP 显示、GMCM 支持。\n<br />\n<br />## 开源许可\n<br />本项目以 **GNU GPL-3.0**（强传染性 copyleft 协议）开源，`LICENSE` 文件随下载包含。\n<br />\n<br />## 致谢\n<br />SMAPI 与 Harmony（依赖项）。已在同一 WiFi 下与朋友实测局域网联机。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50316",
+	"Version": "1",
+	"Updated": "2026-08-07T06:29:39+00:00",
+	"Downloads": [
+		{
+			"Id": 177652,
+			"Type": "Main",
+			"DisplayName": "SteamSkip 1.0.0",
+			"FileName": "61/6e/0a/616e0a46-716d-48b0-aa7c-525baa2bb517",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 20202,
+			"Uploaded": "2026-08-07T06:29:39+00:00",
+			"Mods": [
+				{
+					"Id": "neoiw.SteamSkip",
+					"DisplayName": "局域网免steam直连",
+					"Type": "Smapi",
+					"RelativePath": "SteamSkip",
+					"Manifest": {
+						"Name": "局域网免steam直连",
+						"Description": "跳过 Steam 联机直连局域网：已删 steam_api64.dll 时屏蔽报错；未删时拦截 Steam 初始化。联机页显示本机 IP。",
+						"Author": "neoiw",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "SteamSkip.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "neoiw.SteamSkip"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564340,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437004,
+		"UploaderId": 293224724,
+		"CategoryId": 14,
+		"Adult": false
+	}
+}

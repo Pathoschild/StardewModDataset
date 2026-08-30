@@ -1,0 +1,141 @@
+{
+	"Site": "Nexus",
+	"Id": 50297,
+	"Name": "Recipe Ingredient Tracker - Cooking and Crafting",
+	"Author": "KaylaniSimplyMe",
+	"Description": "[size=4][b]Never wonder what you're missing again.[/b][/size]\n<br />\n<br />Press [b]F7[/b] to see every ingredient you still need across every recipe you haven't cooked yet — how many you need, how many you own, and [b]which chest they're sitting in[/b].\n<br />\n<br />Works out of the box with vanilla Stardew, and picks up modded recipes automatically if you have them.\n<br />\n<br />[line]\n<br />\n<br />[b]What it does[/b]\n<br />\n<br />[list]\n<br />[*][b]Adds up everything you need.[/b] One number per ingredient, totalled across every uncooked recipe.[/*]\n<br />[*][b]Counts what you already have.[/b] Backpack, fridge, mini-fridges, and every chest you own.[/*]\n<br />[*][b]Separates reachable from owned.[/b] Sugar in a shed is yours, but you can't cook with it. The tracker shows both numbers so it never lies to you at the stove.[/*]\n<br />[*][b]Updates as you cook.[/b] Finish a recipe and it drops out of the list. Its ingredients stop counting toward what you need.[/*]\n<br />[*][b]Click any ingredient[/b] for a breakdown: which container each stack is in, and every recipe still waiting on it.[/*]\n<br />[*][b]Search[/b] by ingredient or recipe name. Type \"cake\" to see everything every cake recipe wants.[/*]\n<br />[*][b]Crafting tab too[/b] — same tracking for crafting recipes.[/*]\n<br />[/list][b]Requirements[/b]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.0 or newer[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — optional, for in-game settings[/*]\n<br />[/list][b]Settings[/b]\n<br />\n<br />Configurable through GMCM, or by editing [i]config.json[/i]:\n<br />\n<br />[list]\n<br />[*][b]Open tracker[/b] — rebindable, defaults to F7[/*]\n<br />[*][b]Include unlearned recipes[/b] — plan ahead for recipes you haven't bought yet, or track only what you can cook now[/*]\n<br />[*][b]Scan chests everywhere[/b] — turn off to only count your backpack and fridge[/*]\n<br />[*][b]Hide satisfied ingredients[/b] — show only what you're short on[/*]\n<br />[/list][b]Gathering (optional)[/b]\n<br />\n<br />Turn on [i]Enable the Gather button[/i] in the settings, then pick a destination chest for cooking and another for crafting. Open any ingredient and click [b]Gather[/b] to pull what your recipes need into that chest from anywhere on your farm.\n<br />\n<br />Items are added to the destination before anything is removed from the source, so a full chest means nothing moves rather than anything being lost. If your chosen chest fills up partway it moves what fits and tells you.\n<br />\n<br />Off by default, since everything else in this mod only reads your world without changing it.\n<br />\n<br />[list]\n<br />[*]Chest names from Chests Anywhere and similar naming mods show up in the picker. Unnamed chests show their coordinates.[/*]\n<br />[*]If you move your target chest to a different tile, re-pick it in the menu.[/*]\n<br />[*]Single-player and main-player only.[/*]\n<br />[/list]\n<br />[b]Works with modded recipes automatically[/b]\n<br />\n<br />The tracker reads the game's recipe data at runtime instead of shipping a hardcoded list. Any mod that adds cooking or crafting recipes the normal way just shows up — no patches or compatibility files needed.\n<br />\n<br />[b]Tested with:[/b]\n<br />[list]\n<br />[*]Stardew Valley Expanded[/*]\n<br />[*]East Scarp[/*]\n<br />[*]Cornucopia (all modules)[/*]\n<br />[*]Ridgeside Village[/*]\n<br />[/list]419 ingredients tracked across that setup, all named and sprited correctly.\n<br />\n<br />Other recipe mods should work the same way. If you find one that doesn't, post in the comments and I'll take a look.\n<br />\n<br />[b]Storage mods:[/b] the tracker reads chests directly, so mods like Chests Anywhere and Automate work fine alongside it. Better Crafting users should note that the Crafting tab doesn't account for crafting from nearby chests.\n<br />\n<br />[b]UI recolours:[/b] the menu is drawn with the game's own textures, so it picks up whatever interface recolour you're running automatically.\n<br />\n<br />[b]Notes[/b]\n<br />\n<br />[list]\n<br />[*][b]Multiplayer:[/b] farmhands can't read every chest in the world, so their totals may be incomplete. The tracker says so in the footer rather than quietly showing you wrong numbers.[/*]\n<br />[*][b]Category ingredients:[/b] some recipes ask for \"any egg\" rather than a specific one. These get their own row, and any egg counts toward it — so one egg can appear in two rows. Don't add the columns together.[/*]\n<br />[/list][b]Translations:\u00A0[/b]the mod supports i18n as of 1.1.0. To contribute a translation, copy i18n/default.json to &lt;language-code&gt;.json and translate the values, then post in the comments — I'll include it in the next release with credit.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50297",
+	"Version": "1.2.0",
+	"Updated": "2026-08-12T22:29:54+00:00",
+	"Downloads": [
+		{
+			"Id": 177606,
+			"Type": "Main",
+			"DisplayName": "Recipe Ingredient Tracker 1.0.0",
+			"FileName": "0c/3b/dd/0c3bddee-2b02-464b-84c5-09aa52a1658f",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 34397,
+			"Uploaded": "2026-08-06T19:28:44+00:00",
+			"Mods": [
+				{
+					"Id": "Kaylani.RecipeIngredientTracker",
+					"DisplayName": "Recipe Ingredient Tracker",
+					"Type": "Smapi",
+					"RelativePath": "CookingTracker",
+					"Manifest": {
+						"Name": "Recipe Ingredient Tracker",
+						"Description": "Shows every ingredient you still need across all uncooked recipes, how many you have, and which chest they're in. Works with modded recipes automatically.",
+						"Author": "Kaylani",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CookingTracker.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50297"
+						],
+						"UniqueId": "Kaylani.RecipeIngredientTracker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564294,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 177715,
+			"Type": "Main",
+			"DisplayName": "Recipe Ingredient Tracker 1.1.0",
+			"FileName": "7d/e5/fd/7de5fda3-2949-4e87-acd8-f7ce7107af72",
+			"Description": "Main file. Adds translation support. Requires SMAPI 4.0+.",
+			"Version": "1.1.0",
+			"SizeInBytes": 37948,
+			"Uploaded": "2026-08-07T16:16:10+00:00",
+			"Mods": [
+				{
+					"Id": "Kaylani.RecipeIngredientTracker",
+					"DisplayName": "Recipe Ingredient Tracker",
+					"Type": "Smapi",
+					"RelativePath": "CookingTracker",
+					"Manifest": {
+						"Name": "Recipe Ingredient Tracker",
+						"Description": "Shows every ingredient you still need across all uncooked recipes, how many you have, and which chest they're in. Works with modded recipes automatically.",
+						"Author": "Kaylani",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CookingTracker.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50297"
+						],
+						"UniqueId": "Kaylani.RecipeIngredientTracker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564403,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 178469,
+			"Type": "Main",
+			"DisplayName": "Recipe Ingredient Tracker 1.2.0",
+			"FileName": "3b/e7/3b/3be73b57-5847-4c52-b9cf-e17d096e300e",
+			"Description": "Main file. Adds the optional Gather feature. Requires SMAPI 4.0+.",
+			"Version": "1.2.0",
+			"SizeInBytes": 46003,
+			"Uploaded": "2026-08-12T22:29:54+00:00",
+			"Mods": [
+				{
+					"Id": "Kaylani.RecipeIngredientTracker",
+					"DisplayName": "Recipe Ingredient Tracker",
+					"Type": "Smapi",
+					"RelativePath": "CookingTracker",
+					"Manifest": {
+						"Name": "Recipe Ingredient Tracker",
+						"Description": "Shows every ingredient you still need across all uncooked recipes, how many you have, and which chest they're in. Works with modded recipes automatically.",
+						"Author": "Kaylani",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CookingTracker.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50297"
+						],
+						"UniqueId": "Kaylani.RecipeIngredientTracker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342565157,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436985,
+		"UploaderId": 219604062,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

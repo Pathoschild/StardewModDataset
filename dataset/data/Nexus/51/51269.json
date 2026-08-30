@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 51269,
+	"Name": "True Zoom",
+	"Author": "xzqute",
+	"Description": "[center][img]https://i.imgur.com/e06a4U4.png[/img][/center]\n<br />[center][url=https://smapi.io][img]https://img.shields.io/badge/SMAPI-4.1.0+-brightgreen.svg[/img][/url]\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/5098][img]https://img.shields.io/badge/GMCM-Compatible-purple.svg[/img][/url]\u00A0 [img]https://img.shields.io/badge/Stardew%20Valley-1.6+-orange.svg[/img][/center]\n<br />[center][size=4]Sharp pixel art at clean zoom levels, smooth filtering everywhere else. No texture swaps, camera hacks, external injectors, or CPU-side image processing.[/size][/center]\n<br />[center][size=4]\u00A0[/size][/center]\n<br />[center][/center]\n<br />[center][size=4][img]https://i.imgur.com/Y84YLwD.png[/img][/size][/center]\n<br />\n<br />[heading][size=5]What it does[/size][/heading]\n<br />[size=4]Pixel art gets mushy at certain zoom levels, and the reason is boring but simple: Stardew Valley scales its world and interface render targets with linear filtering. That's the right call at arbitrary sizes. It's the wrong call at the zoom levels where the pixel grid would line up with the screen anyway.[/size]\n<br />\n<br />[size=4]True Zoom touches just those final compositor passes, nothing upstream of them. When the game's four-pixel art grid lines up cleanly with physical pixels, it switches to sharp point filtering. Uneven scaling, an active transition, or fractional camera movement all trigger the same fallback: linear filtering, so the pixels don't stretch or shimmer.[/size]\n<br />\n<br />[size=4]World scaling and UI scaling are handled separately, letting each pick whatever filtering fits its own current scale. Past that, True Zoom keeps its hands off everything else: no touching textures or game assets, no quantizing camera coordinates, no meddling with the map screenshot renderer.[/size]\n<br />\n<br />[heading][size=5]Zoom controls[/size][/heading]\n<br />[size=4]World zoom and interface scale run on the same rules: one range, one step mode, one speed, one transition system. Doesn't matter whether you're using Stardew Valley's built-in World Zoom and UI Scale selectors, the HUD zoom buttons, a custom keybind, or just the mouse wheel. They all answer to the same settings.[/size]\n<br />\n<br />[list]\n<br />[*][size=4]Hold [b]Left Control[/b] and scroll the mouse wheel to change world zoom.[/size][/*]\n<br />[*][size=4]Press [b]Home[/b] to return world zoom to 100%, or the nearest configured boundary.[/size][/*]\n<br />[*][size=4]Optional Zoom In and Zoom Out keyboard or controller bindings can be configured.[/size][/*]\n<br />[*][size=4]Mouse-wheel zoom is ignored while a menu, shop, dialogue, map, or other clickable interface is open.[/size][/*]\n<br />[/list]\n<br />[heading][size=5]Zoom modes[/size][/heading]\n<br />[size=4][b]Integer[/b] is the default mode, and it does what it sounds like: a zoom grid anchored at 100%, spaced out in 25% steps. Run the default 50-200% range through that grid and you get seven stops: 50%, 75%, 100%, 125%, 150%, 175%, 200%.[/size]\n<br />\n<br />[size=4][b]Free[/b] mode ignores the grid entirely and changes zoom by a set amount each time you scroll or press a key. Default step is 1%, fine enough to dial things in by hand. At those fractional or uneven scales, expect linear filtering to kick in so the image doesn't shimmer.[/size]\n<br />\n<br />[heading][size=5]Smooth transitions[/size][/heading]\n<br />[size=4]Zoom doesn't have to snap. Changes can ease in smoothly instead, using one of three modes: Linear, Ease Out, or Smooth Step, the default. Speed defaults to 150 percentage points per second and can be turned up or down.[/size]\n<br />\n<br />[size=4]While a transition plays out, True Zoom keeps the render target centered and holds one steady filtering mode instead of flickering between two. It doesn't reallocate render targets every single frame either. The final scale gets committed just once, after Stardew Valley has updated its own buffer.[/size]\n<br />\n<br />[heading][size=5]Installation[/size][/heading]\n<br />[list]\n<br />[*][size=4]Install [url=https://smapi.io]SMAPI[/url] 4.1.0 or newer.[/size][/*]\n<br />[*][size=4]Download True Zoom and extract the [i]TrueZoom[/i] folder into your [i]Stardew Valley/Mods[/i] folder.[/size][/*]\n<br />[*][size=4]Launch the game through SMAPI.[/size][/*]\n<br />[*][size=4](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to change settings in-game.[/size][/*]\n<br />[/list]\n<br />[heading][size=5]Configuration[/size][/heading]\n<br />[list]\n<br />[*][size=4][b]Sharp World Scaling:[/b] enables scale-aware filtering for the game world. On by default.[/size][/*]\n<br />[*][size=4][b]Sharp UI Scaling:[/b] applies the same rules independently to the interface. On by default.[/size][/*]\n<br />[*][size=4][b]Screenshot Safe Mode:[/b] preserves vanilla behavior for screenshots and unrecognized render targets. On by default.[/size][/*]\n<br />[*][size=4][b]Zoom Mode:[/b] Integer or Free. Integer by default.[/size][/*]\n<br />[*][size=4][b]Minimum Zoom:[/b] lowest world zoom and interface scale accepted by the mod. 50% by default.[/size][/*]\n<br />[*][size=4][b]Maximum Zoom:[/b] highest world zoom and interface scale accepted by the mod. 200% by default.[/size][/*]\n<br />[*][size=4][b]Integer Zoom Step:[/b] spacing of the grid anchored at 100%. 25% by default.[/size][/*]\n<br />[*][size=4][b]Free Zoom Step:[/b] amount changed per input in Free mode. 1% by default.[/size][/*]\n<br />[*][size=4][b]Smooth Zoom:[/b] enables animated world and interface scale changes. On by default.[/size][/*]\n<br />[*][size=4][b]Zoom Speed:[/b] transition speed in percentage points per second. 150 by default.[/size][/*]\n<br />[*][size=4][b]Zoom Easing:[/b] Linear, Ease Out, or Smooth Step. Smooth Step by default.[/size][/*]\n<br />[*][size=4][b]Mouse Wheel Modifier:[/b] binding held while scrolling to change world zoom. Left Control by default.[/size][/*]\n<br />[*][size=4][b]Zoom In / Zoom Out:[/b] optional keyboard or controller bindings.[/size][/*]\n<br />[*][size=4][b]Reset Zoom:[/b] returns world zoom to 100% or the nearest allowed value. Home by default.[/size][/*]\n<br />[*][size=4][b]Compatibility Fallback:[/b] disables only an affected rendering path when another mod patches the same compositor. On by default.[/size][/*]\n<br />[*][size=4][b]Debug Logging:[/b] writes throttled per-screen zoom and render-target diagnostics to the SMAPI log. Off by default.[/size][/*]\n<br />[/list]\n<br />[size=4]Generic Mod Config Menu is entirely optional. Skip it and True Zoom just writes a config.json file on first launch, using the same defaults either way.[/size]\n<br />\n<br />[heading][size=5]Compatibility[/size][/heading]\n<br />[size=4]True Zoom needs Stardew Valley 1.6 or newer, plus SMAPI 4.1.0 or newer. It was built and tested directly against 1.6.15; later 1.6 patches should work fine too, provided the compositor structure it leans on hasn't shifted underneath it.[/size]\n<br />\n<br />[size=4]Because it works on the final scaling stage rather than individual assets, it plays nicely with Content Patcher packs, recolors, custom maps, buildings, NPCs, portraits, Fashion Sense, Alternative Textures, and most sprite replacements.[/size]\n<br />\n<br />[size=4]Under the hood, True Zoom applies small Harmony patches to Stardew Valley's final compositors and native zoom controls, and double-checks the expected game methods are actually there before it touches anything. If another mod is already patching the same compositor, Compatibility Fallback quietly steps back and leaves vanilla rendering in place for that one path.[/size]\n<br />\n<br />[size=4]Local split-screen keeps separate zoom and transition state per screen. True Zoom runs entirely locally, meaning nobody else's settings need to match yours in multiplayer.[/size]\n<br />\n<br />[heading][size=5]Performance[/size][/heading]\n<br />[size=4]Nothing here runs as a fullscreen shader. There's no texture scanning, and nothing gets copied back to the CPU for inspection. All the actual work is filtering decisions and transition math, done inside the compositor Stardew Valley already runs.[/size]\n<br />\n<br />[size=4]State carries over between frames, log output is throttled, and smooth zoom doesn't force a render-target reallocation on every frame. That happens at transition boundaries instead.[/size]\n<br />\n<br />[heading][size=5]Important notes[/size][/heading]\n<br />[list]\n<br />[*][size=4]World and UI filtering are independent: flip either one off and the other keeps doing its own thing.[/size][/*]\n<br />[*][size=4]Screenshot Safe Mode covers known screenshot paths and any render target the mod doesn't recognize, not just the obvious ones.[/size][/*]\n<br />[*][size=4]The large map screenshot renderer is left alone on purpose. Stardew Valley already uses point filtering there.[/size][/*]\n<br />[*][size=4]If a compositor patch throws an error, just that one path gets disabled. Everything else, including vanilla rendering, keeps working.[/size][/*]\n<br />[/list]\n<br />[heading][size=5]Troubleshooting[/size][/heading]\n<br />[list]\n<br />[*][size=4]Check the SMAPI log for a \"Vanilla fallback\" message. It tells you which rendering feature got turned off and why.[/size][/*]\n<br />[*][size=4]If another scaling, framebuffer, or post-processing mod is causing trouble, try disabling Sharp World Scaling or Sharp UI Scaling one at a time to narrow down the conflict.[/size][/*]\n<br />[*][size=4]Leave Screenshot Safe Mode on if you're also running screenshot or post-processing mods.[/size][/*]\n<br />[*][size=4]Delete [i]config.json[/i] from the True Zoom folder to reset everything back to defaults.[/size][/*]\n<br />[*][size=4]When you report a bug, include your SMAPI log, Stardew Valley version, resolution, window mode, zoom settings, split-screen status, and any other rendering mods you have installed.[/size][/*]\n<br />[/list][line]\n<br />\n<br />[center][i][size=4]Made for the Stardew Valley community by [b]xzqute[/b][/size][/i][/center]\n<br />[center]\n<br />[url=https://ko-fi.com/A0A4JXP3F][img width=144,height=36]https://storage.ko-fi.com/cdn/kofi3.png?v=6[/img][/url][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51269",
+	"Version": "1.0.2",
+	"Updated": "2026-08-29T18:01:43+00:00",
+	"Downloads": [
+		{
+			"Id": 180723,
+			"Type": "Main",
+			"DisplayName": "True Zoom",
+			"FileName": "2e/f4/56/2ef45664-fabe-4f00-b284-e0a7ec297236",
+			"Description": "Added a configurable reset zoom value. Smooth zoom transitions now use PointClamp filtering instead, so world and UI pixels stay sharp instead of turning to mush mid-zoom.",
+			"Version": "1.0.2",
+			"SizeInBytes": 23157,
+			"Uploaded": "2026-08-29T18:01:43+00:00",
+			"Mods": [
+				{
+					"Id": "xzqute.TrueZoom",
+					"DisplayName": "True Zoom",
+					"Type": "Smapi",
+					"RelativePath": "TrueZoom",
+					"Manifest": {
+						"Name": "True Zoom",
+						"Description": "Keeps world and UI render-target scaling sharp while providing safe, per-screen zoom controls.",
+						"Author": "xzqute",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "TrueZoom.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51269"
+						],
+						"UniqueId": "xzqute.TrueZoom"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567411,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437957,
+		"UploaderId": 100380428,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,69 @@
+{
+	"Site": "Nexus",
+	"Id": 50436,
+	"Name": "Smart Filtered Hopper Compatibility Guard",
+	"Author": "yanduu8uuu",
+	"AuthorLabel": "yanduuuuu",
+	"Description": "[heading]Keeps Smart Filtered Hoppers out of Convenient Inventory Quick Stack and Craft and Build from Containers material pools, while preserving manual access and hopper automation. \n<br />\n<br />Description[/heading]\n<br />[b]Smart Filtered Hopper Compatibility Guard[/b] is a lightweight SMAPI/Harmony compatibility patch for players who use [b]Smart Filtered Hopper[/b] together with [b]Convenient Inventory[/b] and/or [b]Craft and Build from Containers[/b].\n<br />Smart Filtered Hoppers are usually used as dedicated automation and logistics nodes. However, some inventory convenience mods detect them as ordinary chests.\n<br />This can lead to two unwanted behaviors:\n<br />[b]Convenient Inventory[/b] may include Smart Filtered Hoppers as Quick Stack destinations, causing items from the player's inventory to be placed into hoppers that were intended only for an automated production or sorting system.\n<br />[b]Craft and Build from Containers[/b] may include Smart Filtered Hopper inventories in its global crafting/building material pool, allowing resources reserved for automation to be counted or consumed.\n<br />This mod prevents those interactions while leaving Smart Filtered Hopper itself fully functional.\n<br />[line]\n<br />[heading]Main features[/heading]\n<br />Convenient Inventory compatibility\n<br />Smart Filtered Hoppers are excluded from [b]Convenient Inventory Quick Stack targets[/b].\n<br />This means Quick Stack will continue to work normally with regular chests, while ignoring Smart Filtered Hoppers.\n<br />The mod does [b]not[/b] disable the hopper inventory itself and does not patch general chest storage methods.\n<br />Craft and Build from Containers compatibility\n<br />Smart Filtered Hopper inventories are excluded from the material containers returned to [b]Craft and Build from Containers[/b].\n<br />Resources stored inside a Smart Filtered Hopper will therefore not be counted as available crafting or building materials.\n<br />Regular chests and other supported containers continue to work normally.\n<br />Smart Filtered Hopper functionality is preserved\n<br />The patch is deliberately limited to the mods which should ignore the hopper.\n<br />The following behavior remains unchanged:\n<br />[list]\n<br />[*]Manual access to Smart Filtered Hoppers [/*]\n<br />[*]Smart Filtered Hopper automatic input/output behavior [/*]\n<br />[*]Filtering and logistics functionality [/*]\n<br />[*]Normal chest behavior [/*]\n<br />[*]Existing Smart Filtered Hopper / Automate integration [/*]\n<br />[/list]Automate is not patched\n<br />This mod does not modify or patch [b]Automate[/b].\n<br />Smart Filtered Hopper already handles its own Automate integration, so this compatibility patch intentionally leaves that relationship untouched.\n<br />[line]\n<br />[heading]Why this approach?[/heading]\n<br />Instead of globally blocking access to the hopper inventory, this mod filters Smart Filtered Hoppers only when specific mods request containers.\n<br />In simplified form:\n<br />[b]Convenient Inventory[/b]\n<br />Player Quick Stack\n<br /> → Convenient Inventory finds nearby chests\n<br /> → Smart Filtered Hoppers are removed from the target list\n<br /> → Quick Stack continues with normal chests\n<br />[b]Craft and Build from Containers[/b]\n<br />CBC collects available container inventories\n<br /> → Smart Filtered Hopper inventories are removed from the result\n<br /> → crafting/building continues using normal containers\n<br />This keeps the compatibility patch narrow and avoids changing general Stardew Valley chest behavior.\n<br />[line]\n<br />[heading]Installation[/heading]\n<br />[list=1]\n<br />[*]Install [b]SMAPI[/b]. [/*]\n<br />[*]Install [b]Smart Filtered Hopper[/b]. [/*]\n<br />[*]Install [b]Convenient Inventory[/b]. [/*]\n<br />[*]Optionally install [b]Craft and Build from Containers[/b] if you want CBC compatibility. [/*]\n<br />[*]Extract this mod into your Stardew Valley \n<br />[code]Mods[/code]folder. [/*]\n<br />[/list]Example:\n<br />[code]Stardew Valley/Mods/SmartFilteredHopperGuard/[/code]Launch the game through SMAPI.\n<br />[line]\n<br />[heading]Requirements[/heading]\n<br />Required\n<br />[list]\n<br />[*]SMAPI [/*]\n<br />[*]Smart Filtered Hopper [/*]\n<br />[*]Convenient Inventory [/*]\n<br />[/list]Optional\n<br />[list]\n<br />[*]Craft and Build from Containers\n<br /> If installed, Smart Filtered Hopper inventories will be excluded from its shared crafting/building material pool. [/*]\n<br />[/list]Not required\n<br />[list]\n<br />[*]Automate [/*]\n<br />[/list]Automate may still be used normally with Smart Filtered Hopper, but this compatibility mod does not depend on or patch it.\n<br />[line]\n<br />[heading]Tested configuration[/heading]\n<br />Tested successfully with:\n<br />[list]\n<br />[*]Stardew Valley 1.6.15 [/*]\n<br />[*]SMAPI 4.3.2 [/*]\n<br />[*]SmartFilteredHopper 0.3.3 [/*]\n<br />[*]Convenient Inventory 1.5.6 [/*]\n<br />[*]Craft and Build from Containers 0.3.3 [/*]\n<br />[*]Automate 2.4.5 installed alongside the above [/*]\n<br />[/list]Newer versions may also work, but compatibility with versions not listed above has not yet been verified.\n<br />[line]\n<br />[heading]What this mod does NOT do[/heading]\n<br />This mod does not:\n<br />[list]\n<br />[*]modify the original Smart Filtered Hopper files; [/*]\n<br />[*]modify Convenient Inventory files; [/*]\n<br />[*]modify Craft and Build from Containers files; [/*]\n<br />[*]modify Automate; [/*]\n<br />[*]redistribute code or assets from those mods; [/*]\n<br />[*]replace Smart Filtered Hopper; [/*]\n<br />[*]disable manual access to hoppers; [/*]\n<br />[*]disable hopper automation. [/*]\n<br />[/list]All compatibility changes are applied at runtime through SMAPI/Harmony.\n<br />[line]\n<br />[heading]Credits[/heading]\n<br />Compatibility targets / credits:\n<br />[list]\n<br />[*][b]Smart Filtered Hopper[/b] by yxlimo [/*]\n<br />[*][b]Convenient Inventory[/b] by gaussfire [/*]\n<br />[*][b]Craft and Build from Containers[/b] by aedenthorn [/*]\n<br />[*][b]SMAPI[/b] by Pathoschild and contributors [/*]\n<br />[/list]This mod does not redistribute code or assets from these projects. It only applies runtime compatibility patches.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50436",
+	"Version": "1",
+	"Updated": "2026-08-09T13:30:44+00:00",
+	"Downloads": [
+		{
+			"Id": 177980,
+			"Type": "Main",
+			"DisplayName": "SmartFilteredHopperGuard 1.2.1 Nexus Ready",
+			"FileName": "3d/9c/d7/3d9cd789-b034-41a6-9e1a-f6a385937e84",
+			"Description": "Prevents SmartFilteredHopper from being treated as a normal shared storage chest by Convenient Inventory and Craft and Build from Containers, while preserving manual access, hopper automation, and Automate integration.",
+			"Version": "1",
+			"SizeInBytes": 16598,
+			"Uploaded": "2026-08-09T13:30:44+00:00",
+			"Mods": [
+				{
+					"Id": "Private.SmartFilteredHopperGuard",
+					"DisplayName": "SmartFilteredHopper Guard",
+					"Type": "Smapi",
+					"RelativePath": "SmartFilteredHopperGuard",
+					"Manifest": {
+						"Name": "SmartFilteredHopper Guard",
+						"Description": "Excludes SmartFilteredHopper from Convenient Inventory quick-stack targets and CBC shared-material pools while preserving manual access and hopper automation.",
+						"Author": "PrivateLocalPatch",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "SmartFilteredHopperGuard.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "yxlimo.SmartFilteredHopper",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "gaussfire.ConvenientInventory",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "aedenthorn.CraftAndBuildFromContainers",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Private.SmartFilteredHopperGuard",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564668,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437124,
+		"UploaderId": 267975154,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

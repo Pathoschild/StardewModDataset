@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 50755,
+	"Name": "SDV Tracker",
+	"Author": "MrGreaterThan",
+	"Description": "[size=5]SDV Tracker Sync[/size]\n<br />\n<br />[b]A companion mod for [url=https://sdv.fullclear.io]SDV Tracker[/url], a web checklist for 100% completion.[/b] At the end of each in-game day it pushes what you have finished to your tracker account, so the checklist keeps itself instead of you ticking boxes by hand.\n<br />\n<br />[b]Check out the [/b][url=https://sdv.fullclear.io/demo][b][size=6]LIVE DEMO[/size][/b][/url][b] to get an idea of how it works.[/b]\n<br />\n<br />[b][youtube]auRunsRjIkk[/youtube][/b]\n<br />\n<br />[color=#c0483a][b]This mod does nothing on its own.[/b][/color] It needs a free account at [url=https://sdv.fullclear.io]sdv.fullclear.io[/url] — the mod carries a token from that account and has nowhere to send anything without one. If you are looking for an in-game overlay or a standalone tracker, this is not that.\n<br />\n<br />[line]\n<br />\n<br />[size=4]What the tracker gives you[/size]\n<br />\n<br />[list]\n<br />[*][b]One list for everything.[/b] The museum, every fish, all the bundles, crafting and cooking recipes, all 130 golden walnuts, heart events and villagers.\u00A0Items are\u00A0sorted, with where and when each thing comes from, and the commonly-missed ones flagged.[/*]\n<br />[*][b]Co-op.[/b] Stardew keeps a whole co-op farm in the host's save, so farmhands have no save of their own. The host's sync fills in [i]everyone[/i]; each farmer gets their own column and every row shows who has done what.[/*]\n<br />[*][b]A live world map.[/b] While you are playing it draws where everyone on the farm is standing, Ginger Island included.[/*]\n<br />[*][b]The week ahead.[/b] Crops and machines coming ready, the weather, festivals, birthdays and what the Queen of Sauce is teaching from your actual save, not a generic calendar.[/*]\n<br />[*][b]A gift tracker[/b] that knows who you have given to this week, and what each villager loves.[/*]\n<br />[*][b]Read-only share links[/b] you can post anywhere. They carry no password, no token and no risk.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4]What the mod sends[/size]\n<br />\n<br />[b]Never your save file.[/b] The mod reads the loaded game in memory and sends derived facts only. Specifically:\n<br />\n<br />[list]\n<br />[*][b]At the end of each day:[/b] which checklist items are done, what is planted and when it ripens, what your machines are making, your gift cooldowns, your skill levels, and your farmer's name and appearance so the site can draw them. On a co-op farm the host sends the same for each farmhand.[/*]\n<br />[*][b]While you play, if you leave it on:[/b] your location and position, health and stamina, the in-game clock, what you are holding and your inventory. This is what draws the live map. It is [i]never stored. T[/i]he server keeps it in memory for two minutes and forgets it. Set [font=Courier New]StreamLiveState[/font] to [font=Courier New]false[/font] to forbid sending live data and stick to save file imports.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4]Installing[/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] 4.0.0 or newer.[/*]\n<br />[*]Make a free account at [url=https://sdv.fullclear.io]sdv.fullclear.io[/url].[/*]\n<br />[*]Unzip this into [font=Courier New]Stardew Valley/Mods/[/font].[/*]\n<br />[*]On the tracker, open [b]Co-op Party[/b] → [b]Sync from the game[/b] and press [b]Download config.json[/b]. Your server address and your account's token are already in the file.[/*]\n<br />[*]Drop that file into [font=Courier New]Stardew Valley/Mods/SdvTrackerSync/[/font], replacing the one the mod wrote for itself.[/*]\n<br />[*]Load your save. The first sync happens when you go to bed, or run [font=Courier New]sdvtracker_sync[/font] in the SMAPI console to do it now.[/*]\n<br />[/list]The same box on the tracker shows [i]last synced[/i], so you can tell at a glance whether it is working.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Settings[/size]\n<br />\n<br />All in [font=Courier New]Mods/SdvTrackerSync/config.json[/font]. The tracker fills this in for you; these are what the switches mean.\n<br />\n<br />[list]\n<br />[*][font=Courier New]ServerUrl[/font] — your tracker. Defaults to [font=Courier New]https://sdv.fullclear.io[/font].[/*]\n<br />[*][font=Courier New]Token[/font] — your account's sync token.[/*]\n<br />[*][font=Courier New]SyncOnDayEnd[/font] ([i]true[/i]) — sync when the day ends. Off means the console command only.[/*]\n<br />[*][font=Courier New]SyncFarmhands[/font] ([i]true[/i]) — send the other farmers on a co-op farm. Only the host can.[/*]\n<br />[*][font=Courier New]SyncProducers[/font] ([i]true[/i]) — kegs, casks, tappers and when each can be collected.[/*]\n<br />[*][font=Courier New]SyncGifts[/font] ([i]true[/i]) — keep the gift tracker in step.[/*]\n<br />[*][font=Courier New]StreamLiveState[/font] ([i]true[/i]) — report where you are while you play. Off and the map never shows you.[/*]\n<br />[*][font=Courier New]LiveIntervalMs[/font] ([i]3000[/i]) — how often to report position, in milliseconds.[/*]\n<br />[*][font=Courier New]AutoBind[/font] ([i]true[/i]) — claim your farmer automatically on a farm you have joined.[/*]\n<br />[*][font=Courier New]VerboseLogging[/font] ([i]false[/i]) — for working out why a sync did not do what you expected.[/*]\n<br />[/list][b]Console commands[/b]\n<br />[list]\n<br />[*][font=Courier New]sdvtracker_sync[/font] — push now, instead of waiting for the day to end.[/*]\n<br />[*][font=Courier New]sdvtracker_reload[/font] — re-read config.json without restarting.[/*]\n<br />[*][font=Courier New]sdvtracker_live[/font] — say whether the live feed is running and who this game speaks for.[/*]\n<br />[*][font=Courier New]sdvtracker_bind[/font] — on a farm you have joined, say which farmer you are playing.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4]Multiplayer[/size]\n<br />\n<br />[b]The host should install it.[/b] Stardew\u00A0only saves the game on the host's computer,\u00A0so the host's sync is the only thing that can see every farmer's progress. Farmhands do not need it, though installing it does add live position for that player and lets them claim their own farmer automatically.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Compatibility[/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6+, SMAPI 4.0.0+[/*]\n<br />[*]Windows, macOS, Linux[/*]\n<br />[*]Single player and multiplayer[/*]\n<br />[*]No known conflicts. This mod does not patch the game. It only reads state and makes web requests.[/*]\n<br />[/list][b]Keeping it current:[/b] the tracker tells you in [i]Sync from the game[/i] when your install is behind the build it ships, and the mod logs a SMAPI warning once per loaded save if there is a newer one.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Uninstalling[/size]\n<br />\n<br />Delete [font=Courier New]Mods/SdvTrackerSync/[/font]. Nothing is written to your save and nothing changes in-game, so the save is untouched either way. Your tracker account and everything on it stay exactly as they were; you can go back to ticking by hand or importing a save file on the website.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50755",
+	"Version": "1.0.3",
+	"Updated": "2026-08-21T11:48:31+00:00",
+	"Downloads": [
+		{
+			"Id": 179521,
+			"Type": "Main",
+			"DisplayName": "SdvTrackerSync.1.0.3",
+			"FileName": "c2/5a/79/c25a7919-a9b8-4886-b325-8cedfc791b99",
+			"Description": "Unzip this into the Stardew Valley mods folder.\ne.g.\nC:\\SteamLibrary\\steamapps\\common\\Stardew Valley\\Mods",
+			"Version": "1.0.3",
+			"SizeInBytes": 71166,
+			"Uploaded": "2026-08-21T11:48:31+00:00",
+			"Mods": [
+				{
+					"Id": "sdvtracker.sync",
+					"DisplayName": "SDV Tracker Sync",
+					"Type": "Smapi",
+					"RelativePath": "SdvTrackerSync",
+					"Manifest": {
+						"Name": "SDV Tracker Sync",
+						"Description": "Pushes your completion progress to the SDV Tracker web checklist at the end of each in-game day, and reports where you are while you play. Sends derived item keys only - never your save file.",
+						"Author": "MrGreaterThan",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SdvTrackerSync.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50755"
+						],
+						"UniqueId": "sdvtracker.sync"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566209,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437443,
+		"UploaderId": 3049876,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

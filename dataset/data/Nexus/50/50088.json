@@ -1,0 +1,74 @@
+{
+	"Site": "Nexus",
+	"Id": 50088,
+	"Name": "Mine Lava Lake Fish",
+	"Author": "WhyBother11",
+	"Description": "This mod introduces ability to add a custom fish to the floor 100 of Mines. No longer will lava eels swim alone while\u00A0there are all modded fish on other floors of Mines. Also (optionally) comes with:\n<br />[list]\n<br />[*]two additional fish on floor 100;[/*]\n<br />[*]two additional items;[/*]\n<br />[*]one special order;[/*]\n<br />[*]one\u00A0custom buff.[/*]\n<br />[/list]Here's full breakdown:\n<br />[spoiler][list]\n<br />[*]Two new fish: Lava Carp and Fire Fish. They\u00A0have custom\u00A0fish pond data and aquarium sprites.[/*]\n<br />[*]Two additional items: Fire Essence and Fire Resistance Drink. Fire Essence\u00A0can be gathered from new fish ponds or dropped by magma sprites.\u00A0Fire Resistance Drink recipe can be learned after completing new special order and seeing special order completion\u00A0event on the Farm.\u00A0It grants a special\u00A0buff.[/*]\n<br />[*]One new special order: Lava Lake Fish Research. Help Demetrius in researching fish from the lava lake and achieve a scientific breakthrough.[/*]\n<br />[*]One new buff: Fire Resistance. Halves incoming fire damage from monsters (currently includes damage from\u00A0any attacks by magma sprites and\u00A0sparkers, fire projectiles from lava lurks and squid kids, fire breathing attack of Pepper Rexes), prevents 'Burnt' debuff from magma sprites and sparkers.[/*]\n<br />[/list][/spoiler]\n<br />[size=5]Compatibility[/size]\n<br />[list]\n<br />[*](Should be)\u00A0Compatible with any mod, including expansions and fishing\u00A0mods.[/*]\n<br />[*]Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/8897]Visible Fish[/url]. All additional modded fish from dependent mods\u00A0also should be visible.[/*]\n<br />[*]Compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/8970]Fishing Info Overlays[/url], if its config value\u00A0[u]BarExtraCheckFrequency is &gt; 0[/u],\u00A0as otherwise it uses location data which is unfortunately not applicable to floor 100. Also applicable to any dependent modded fish.[/*]\n<br />[*]Fish location will not be shown\u00A0in [url=https://www.nexusmods.com/stardewvalley/mods/33167]Fish Helper UI[/url], also not shown in available fish HUD. It may\u00A0not be hard to add compatibility but it is needed to be done on their end.[/*]\n<br />[/list][size=5]Installation[/size]\n<br />[list]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url].[/*]\n<br />[*]Install the latest version of [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] for additional content and any mod using this mod as dependency.[/*]\n<br />[*](Optionally) Install the latest version of [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0for in-game config menu.[/*]\n<br />[*]Download the mod and extract it into StardewValley/Mods.\u00A0[/*]\n<br />[/list][size=5]Config[/size]\n<br />[size=4]Main Mod[/size]\n<br />[list]\n<br />[*]Lava lake custom fish chance (MineLavaLakeFishChance): base chance of catching custom fish,\u00A0default 0.4. Note: approximate, since first\u00A0the game code will check if either lava eel or cave jelly were caught, and only then\u00A0load custom fish data. Even at 1.0 you may still catch trash if the game fails to spawn any fish based on their probabilities.[/*]\n<br />[/list][size=4]Content Patcher component[/size]\n<br />[list]\n<br />[*]Enable fish (EnableFish): whether all additional fish and content are enabled, default true.[/*]\n<br />[/list][size=5]Modder's guide[/size]\n<br />This mod allows to add custom fish to floor 100 with Content Patcher, so it supports all its features. Simply load [url=https://stardewvalleywiki.com/Modding:Location_data#Contents]vanilla fish spawn data[/url]\u00A0into 'Mods/WhyBother11.MineLavaLakeFish/MineLavaLakeFish', as you would otherwise for any location, and make sure to either add 'WhyBother11.MineLavaLakeFish'\u00A0as dependency or include 'When' block for checking if this mod is installed. Here's an\u00A0example:\n<br />[code]{\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"Mods/WhyBother11.MineLavaLakeFish/MineLavaLakeFish\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0\u00A0 \u00A0\u00A0 \"{{ModID}}_Example\": {\n<br />\u00A0 \u00A0 \u00A0\u00A0 \u00A0 \u00A0\u00A0 \"Id\": \"{{ModID}}_Example\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ItemId\": \"(O){{ModID}}_Example\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />}[/code][url=https://github.com/WhyBother11/MineLavaLakeFish]Source code[/url]\n<br />[size=5]Translations[/size]\n<br />[size=3]Currently includes English and Russian translations (both will be kept up to date with any updates). All additional translations are welcome, here they are:[/size]\n<br />[list=1]\n<br />[*][size=3][url=https://www.nexusmods.com/stardewvalley/mods/50195]Vietnamese[/url]\u00A0translation by\u00A0[url=https://www.nexusmods.com/profile/Fishlovers]Fishlovers[/url][/size][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50088",
+	"Version": "1.0.2",
+	"Updated": "2026-08-18T13:43:20+00:00",
+	"Downloads": [
+		{
+			"Id": 179165,
+			"Type": "Main",
+			"DisplayName": "MineLavaLakeFish",
+			"FileName": "5f/d4/70/5fd4707e-ffed-4fdf-a04d-715efa7f1acf",
+			"Description": "Typo and misspelling fixes, manifest version properly updated.",
+			"Version": "1.0.2",
+			"SizeInBytes": 31527,
+			"Uploaded": "2026-08-18T13:43:20+00:00",
+			"Mods": [
+				{
+					"Id": "WhyBother11.MineLavaLakeFish",
+					"DisplayName": "Mine Lava Lake Fish",
+					"Type": "Smapi",
+					"RelativePath": "MineLavaLakeFish\\MineLavaLakeFish",
+					"Manifest": {
+						"Name": "Mine Lava Lake Fish",
+						"Description": "Allows to add custom fish to lava pool at Mine level 100 floor",
+						"Author": "WhyBother11",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MineLavaLakeFish.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50088"
+						],
+						"UniqueId": "WhyBother11.MineLavaLakeFish"
+					}
+				},
+				{
+					"Id": "WhyBother11.MineLavaLakeFishCP",
+					"DisplayName": "Mine Lava Lake Fish CP component",
+					"Type": "ContentPack",
+					"RelativePath": "MineLavaLakeFish\\[CP] MineLavaLakeFish",
+					"Manifest": {
+						"Name": "Mine Lava Lake Fish CP component",
+						"Description": "Adds fish to lava lake at mines floor level 100 and some additional content",
+						"Author": "WhyBother11",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50088"
+						],
+						"UniqueId": "WhyBother11.MineLavaLakeFishCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342565853,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436776,
+		"UploaderId": 94432153,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}

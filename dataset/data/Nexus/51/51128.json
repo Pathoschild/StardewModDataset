@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 51128,
+	"Name": "Native FXAA",
+	"Author": "xzqute",
+	"Description": "[center][img]https://i.imgur.com/23AHcco.png[/img][/center]\n<br />[center][url=https://smapi.io][img]https://img.shields.io/badge/SMAPI-4.0.0+-brightgreen.svg[/img][/url] \u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098][img]https://img.shields.io/badge/GMCM-Compatible-purple.svg[/img][/url] [img]https://img.shields.io/badge/Stardew%20Valley-1.6+-orange.svg[/img][/center]\n<br />[center][size=4]Native GPU anti-aliasing for Stardew Valley. No ReShade, no injectors, no texture replacement, no CPU-side image processing.[/size][/center]\n<br />[center][size=4]\u00A0[/size][/center]\n<br />[center][size=4][img]https://i.imgur.com/5qBZ9dU.png[/img][/size][/center]\n<br />\n<br />[heading][size=5]What it does[/size][/heading]\n<br />[size=4]Stardew Valley renders its world to an internal MonoGame target before drawing the final frame. Native FXAA runs a fullscreen FXAA shader on that target and copies the result back, all on the GPU. The CPU never touches it.[/size]\n<br />\n<br />[size=4]FXAA finds high-contrast edges in the finished image and blends the visible stair-steps. It doesn't touch sprites, textures, or game files, so it works with vanilla graphics and most content mods without any extra setup.[/size]\n<br />\n<br />[size=4]It hooks into SMAPI's public rendering events, so there's no Harmony, no DLL injection, no ReShade or any other external post-processing software involved. GPU render targets are created once and reused across frames instead of allocated every frame. If a rendering pass ever throws an error, Native FXAA just switches itself off for the rest of the session rather than taking the game down with it.[/size]\n<br />\n<br />[heading][size=5]Presets[/size][/heading]\n<br />[size=4]Pixel Preserve is the default, and probably the one most people should just leave alone: it only smooths the strongest edges and keeps subpixel blending minimal, so pixel art keeps its character. Balanced pushes the smoothing further while still holding onto a decent amount of sprite detail. Smooth goes all the way, with more sensitive edge detection and stronger blending, for a softer, more conventional FXAA look. Custom uses whatever values you've set on the Advanced GMCM page or in config.json.[/size]\n<br />\n<br />[heading][size=5]Processing targets[/size][/heading]\n<br />[size=4]World Only is the default. It processes the game world before Stardew draws its HUD, menus, text, and cursor on top, so those stay untouched. A few vanilla effects and indicators are drawn straight onto the world layer, though, so those get smoothed either way. Full Frame processes everything, world and UI both, including the title screen, so text and menus get smoothed too. If you want a sharp HUD and pixel font, use World Only.[/size]\n<br />\n<br />[heading][size=5]Installation[/size][/heading]\n<br />[list]\n<br />[*][size=4]Install [url=https://smapi.io]SMAPI[/url] 4.0.0 or newer.[/size][/*]\n<br />[*][size=4]Download Native FXAA and extract the [i]NativeFxaa[/i] folder into your [i]Stardew Valley/Mods[/i] folder.[/size][/*]\n<br />[*][size=4]Launch the game through SMAPI.[/size][/*]\n<br />[*][size=4](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for in-game settings and the live Vanilla/FXAA comparison.[/size][/*]\n<br />[/list]\n<br />[heading][size=5]Configuration[/size][/heading]\n<br />[list]\n<br />[*][size=4][b]Enable FXAA:[/b] turns the effect on or off. On by default.[/size][/*]\n<br />[*][size=4][b]Preset:[/b] Pixel Preserve, Balanced, Smooth, or Custom. Pixel Preserve by default.[/size][/*]\n<br />[*][size=4][b]Processing Target:[/b] World Only or Full Frame. World Only by default.[/size][/*]\n<br />[*][size=4][b]Edge Threshold:[/b] Custom preset only. Higher values catch fewer edges and preserve more detail.[/size][/*]\n<br />[*][size=4][b]Minimum Edge Threshold:[/b] Custom preset only. Higher values ignore more subtle contrast.[/size][/*]\n<br />[*][size=4][b]Subpixel Quality:[/b] Custom preset only. Higher values smooth fine detail more aggressively, which can soften the image.[/size][/*]\n<br />[/list]\n<br />[size=4]With Generic Mod Config Menu, you get a live comparison as you adjust settings, and it updates instantly. Save or Save and Close applies your picks to the actual game and writes them to config.json. GMCM is optional. Without it, SMAPI just creates a config.json with default settings after your first launch.[/size]\n<br />\n<br />[heading][size=5]Compatibility[/size][/heading]\n<br />[size=4]Native FXAA needs Stardew Valley 1.6 or newer and SMAPI 4.0.0 or newer. It was built and tested against 1.6.15 and SMAPI 4.5.2. Because it processes the final rendered world instead of individual assets, it plays nicely with Content Patcher packs, recolors, custom maps, buildings, NPCs, portraits, Fashion Sense, Alternative Textures, and most sprite replacements, without needing a specific patch for any of them. It only touches public SMAPI and MonoGame rendering APIs, no Harmony involved, and runs entirely locally, so there's nothing to sync in multiplayer.[/size]\n<br />\n<br />[heading][size=5]Performance[/size][/heading]\n<br />[size=4]Each processed render target costs one fullscreen FXAA pass and one GPU copy, and none of it goes back to the CPU. Scratch render targets aren't reallocated every frame, only when something forces it, like a resolution change, a graphics-device reset, or lost content. World Only normally needs one scratch target; Full Frame usually needs a second for the UI layer. One RGBA scratch target runs about 7.9 MiB at 1920x1080, or 14.1 MiB at 2560x1440 - actual cost depends on your resolution and hardware.[/size]\n<br />\n<br />[heading][size=5]Important notes[/size][/heading]\n<br />[list]\n<br />[*][size=4]This is anti-aliasing, not upscaling. It won't increase texture resolution or invent missing sprite detail.[/size][/*]\n<br />[*][size=4]Full Frame smooths text and interface elements on purpose. Use World Only if you want a sharp HUD and pixel font.[/size][/*]\n<br />[*][size=4]World and UI layers are processed separately, so FXAA can't catch an edge that only exists where two independently-rendered layers overlap.[/size][/*]\n<br />[*][size=4]The big map-screenshot render path is skipped on purpose, but normal Steam and OS screenshots still capture whatever FXAA result is on screen.[/size][/*]\n<br />[*][size=4]Running multiple framebuffer or post-processing mods together isn't a great idea. Depending on render-event order, another mod's overlay might or might not end up inside the FXAA pass.[/size][/*]\n<br />[*][size=4]If the rendering pass fails, Native FXAA turns itself off for the rest of the session so the game keeps rendering normally.[/size][/*]\n<br />[*][size=4]Split-screen follows SMAPI's per-instance rendering path. I haven't had a chance to fully test how it looks there yet, so if you try it, I'd genuinely like to know how it goes.[/size][/*]\n<br />[/list]\n<br />[heading][size=5]Troubleshooting[/size][/heading]\n<br />[list]\n<br />[*][size=4]Image gone black, scaled wrong, or otherwise broken? Try disabling other framebuffer or post-processing mods first.[/size][/*]\n<br />[*][size=4]Full Frame making menus or text look too soft? Switch to World Only.[/size][/*]\n<br />[*][size=4]Delete config.json from the mod folder to get back to defaults.[/size][/*]\n<br />[*][size=4]Filing a bug report? Include your SMAPI log along with your resolution, window mode, preset, and processing target. That's usually enough for me to figure out what's going wrong.[/size][/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[center][i][size=4]Made for the Stardew Valley community by [b]xzqute\n<br />[/b][/size][/i]\u00A0\n<br />[url=https://ko-fi.com/A0A4JXP3F][img width=144,height=36]https://storage.ko-fi.com/cdn/kofi3.png?v=6[/img][/url][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51128",
+	"Version": "1.1.0",
+	"Updated": "2026-08-23T18:14:16+00:00",
+	"Downloads": [
+		{
+			"Id": 179870,
+			"Type": "Main",
+			"DisplayName": "Native FXAA",
+			"FileName": "f9/29/ad/f929add7-5f1b-4a45-a4d9-adbc2acf7d67",
+			"Description": "[center][size=4]Initial Native FXAA release. Native GPU anti-aliasing for Stardew Valley without ReShade. Requires SMAPI 4.0+.[/size][/center]\n\n[center][size=4][img]https://i.imgur.com/5qBZ9dU.png[/img][/size][/center]",
+			"Version": "1.1.0",
+			"SizeInBytes": 41993,
+			"Uploaded": "2026-08-23T18:14:16+00:00",
+			"Mods": [
+				{
+					"Id": "xzqute.NativeFXAA",
+					"DisplayName": "Native FXAA",
+					"Type": "Smapi",
+					"RelativePath": "NativeFxaa",
+					"Manifest": {
+						"Name": "Native FXAA",
+						"Description": "Adds native GPU FXAA anti-aliasing to Stardew Valley's render pipeline.",
+						"Author": "xzqute",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "NativeFxaa.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51128"
+						],
+						"UniqueId": "xzqute.NativeFXAA"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566558,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437816,
+		"UploaderId": 100380428,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

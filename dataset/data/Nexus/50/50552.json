@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 50552,
+	"Name": "Collection Optimization",
+	"Author": "MoYuCSC",
+	"Description": "[b][size=6]Please install the latest version!!! This is very important![/size][/b]\n<br />[b][size=6]请安装最新版本，这很重要！！！[/size][/b]\n<br /># Collection Optimization\n<br />\n<br />Author: MoYu ｜ Version: 1.0.0 ｜ For: Stardew Valley 1.6 + SMAPI 4.0+\n<br />\n<br />## Overview\n<br />\n<br />### 1. Instant Collection (skip drop animations)\n<br />Items dropped by chopping trees, mining, monster kills, fishing, tilling soil, opening gift boxes, etc. are **sent straight to your inventory the moment they appear**, skipping the \"bounce on the ground → walk over to pick up\" process entirely. Items you **drop manually from your inventory or toolbar are not affected** and still land normally.\n<br />\n<br />### 2. Item Gathering\n<br />When your inventory is full and items stay on the ground, they are **pulled into gathering points**:\n<br />\n<br />- **Exclusive on spawn**: no new gathering point can form inside an existing one — newly dropped items (of any type) join the nearest point instead.\n<br />- **Merge on overlap**: if two gathering points overlap, they merge into one regardless of item type, anchored at the first point.\n<br />- **Magnetic attraction**: gathering points use the exact same magnetism as vanilla drops (base magnetism + magnetic rings/buffs). Within your magnetic radius, the whole point follows you around.\n<br />- **One-shot pickup**: step into the pickup range of a point (default 1 tile) and everything inside it is collected at once. If your inventory is full, the point waits next to you and is collected as soon as you make room.\n<br />\n<br />### 3. Icons &amp; Stack Counts\n<br />- Only **one icon per item type** is rendered at a gathering point; identical items are merged visually.\n<br />- A **stack count number** is shown on the icon, decreasing in real time as items are collected — always in sync with the actual items.\n<br />- Dropping large stacks from your inventory also shows the count.\n<br />\n<br />## Installation\n<br />\n<br />1. Install [SMAPI](https://smapi.io/) (4.0 or later).\n<br />2. Put the `CollectionOptimization` folder into `Stardew Valley&#92;Mods&#92;`.\n<br />3. Launch the game.\n<br />\n<br />## Configuration (optional)\n<br />\n<br />Supports [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098): in-game ESC → Options → Mod Options → Collection Optimization. You can also edit `config.json` directly:\n<br />\n<br />| Option | Default | Description |\n<br />|---|---|---|\n<br />| `AutoCollect` | `true` | Items drop straight into your inventory (skip drop animation) |\n<br />| `ShowStackNumber` | `true` | Show stack counts on ground item icons |\n<br />| `GatherGroundItems` | `true` | Gather ground items into gathering points |\n<br />| `MergeRadius` | `320` | Gathering radius in pixels (1 tile = 64; default 5 tiles) |\n<br />| `GatherCollectRange` | `64` | Pickup range of gathering points (pixels; default 1 tile) |\n<br />| `MergeGroundItems` | `true` | Merge rendering at points (keep on while gathering is on) |\n<br />\n<br />## Compatibility\n<br />\n<br />- All patches are manually registered and target non-generic methods, so there are no conflicts with other mods' Harmony patches.\n<br />- Works in both single-player and multiplayer (physical gathering is handled by the host).\n<br />- Deeply integrated with Generic Mod Config Menu.\n<br /># 收集优化 Collection Optimization\n<br />\n<br />作者：MoYu ｜ 版本：1.0.0 ｜ 适用：星露谷物语 1.6 + SMAPI 4.0+\n<br />\n<br />## 功能简介\n<br />\n<br />### 一、收集优化（去掉掉落动画）\n<br />砍树、挖矿、打怪、钓鱼、锄地、开礼物盒等产生的掉落物，**出现的一瞬间直接送入玩家背包**，完全跳过「落地弹跳 → 走近拾取」的过程，砍树时木头不会在空中乱飞。玩家从背包/快捷栏**主动丢出的物品不受影响**，仍按原版行为落地。\n<br />\n<br />### 二、物品聚集\n<br />背包已满时落回地面的物品会被**聚拢为聚集点**：\n<br />\n<br />- **生成时互斥**：已有聚集点范围内不会生成新的聚集点，新掉落的物品（不限种类）直接并入最近的聚集点\n<br />- **重叠即合并**：两个聚集点一旦覆盖，无论物品种类都合并为一个，合并在先成立的聚集点\n<br />- **磁力吸引**：聚集点与原版掉落物完全一致的磁力机制（基础磁力 + 磁力戒指/磁力增益），玩家磁力范围内聚集点整体追着玩家移动\n<br />- **一次拾取**：玩家走进聚集点拾取范围（默认 1 格），聚集点内全部物品一次性自动进背包；背包满时聚集点停留在玩家身边，腾出空间后立即收走\n<br />\n<br />### 三、贴图与数量显示\n<br />- 聚集点内**每种物品只渲染一个图标**，同类物品合并显示\n<br />- 图标上显示**总数量数字**，随拾取实时递减，与物品位置完全同步\n<br />- 玩家丢出成堆物品时同样显示数量\n<br />\n<br />## 安装\n<br />\n<br />1. 安装 [SMAPI](https://smapi.io/)（4.0 或更高）\n<br />2. 将 `CollectionOptimization` 文件夹放入 `Stardew Valley&#92;Mods&#92;`\n<br />3. 启动游戏\n<br />\n<br />## 配置（可选）\n<br />\n<br />支持 [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098)：游戏内 ESC → 齿轮 → 模组选项 → 收集优化。也可直接编辑 `config.json`：\n<br />\n<br />| 配置项 | 默认值 | 说明 |\n<br />|---|---|---|\n<br />| `AutoCollect` | `true` | 掉落物直接进背包（去掉掉落动画） |\n<br />| `ShowStackNumber` | `true` | 地面图标显示数量数字 |\n<br />| `GatherGroundItems` | `true` | 地面物品自动聚集 |\n<br />| `MergeRadius` | `320` | 聚集范围（像素，1 格 = 64，默认 5 格） |\n<br />| `GatherCollectRange` | `64` | 聚集点拾取范围（像素，默认 1 格） |\n<br />| `MergeGroundItems` | `true` | 聚集点合并渲染（聚集开启时应保持开启） |\n<br />\n<br />## 兼容性\n<br />\n<br />- 全部补丁手动注册、非泛型方法，与其他模组的 Harmony 补丁无冲突\n<br />- 单人/多人联机均支持（物理聚集由主机统一控制）\n<br />- 与 Generic Mod Config Menu 深度集成\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50552",
+	"Version": "1.0.0",
+	"Updated": "2026-08-14T05:24:58+00:00",
+	"Downloads": [
+		{
+			"Id": 178647,
+			"Type": "Main",
+			"DisplayName": "CollectionOptimization",
+			"FileName": "fe/70/32/fe7032b7-7a97-4e60-8961-edc11fe17877",
+			"Description": "",
+			"Version": "1.0.3",
+			"SizeInBytes": 35174,
+			"Uploaded": "2026-08-14T05:24:58+00:00",
+			"Mods": [
+				{
+					"Id": "MoYu.CollectionOptimization",
+					"DisplayName": "收集优化 Collection Optimization",
+					"Type": "Smapi",
+					"RelativePath": "CollectionOptimization",
+					"Manifest": {
+						"Name": "收集优化 Collection Optimization",
+						"Description": "物品掉落直接进背包，跳过落地动画；地面物品自动聚拢为聚集点，磁力吸引、一次拾取，图标显示数量。Items drop straight into your inventory; ground items gather into magnetized points, collected at once with stack counts shown.",
+						"Author": "MoYu",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CollectionOptimization.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50552"
+						],
+						"UniqueId": "MoYu.CollectionOptimization"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342565335,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437240,
+		"UploaderId": 231007203,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 51221,
+	"Name": "Load It Up - Queue Multiple Items in Machines",
+	"Author": "xzqute",
+	"Description": "[center][img]https://i.imgur.com/w1V8Jm0.png[/img][/center]\n<br />[center][/center]\n<br />[center][url=https://smapi.io][img]https://img.shields.io/badge/SMAPI-4.0.0+-brightgreen.svg[/img][/url] [img]https://img.shields.io/badge/Stardew%20Valley-1.6+-orange.svg[/img] [url=https://www.nexusmods.com/stardewvalley/mods/5098][img]https://img.shields.io/badge/GMCM-Compatible-purple.svg[/img][/url] [url=https://www.nexusmods.com/stardewvalley/mods/1063][img]https://img.shields.io/badge/Automate-Compatible-blue.svg[/img][/url][/center]\n<br />[center][size=4]Queue up machine jobs without changing what they cost, produce, or how long they take.[/size][/center]\n<br />\n<br />[size=4][b]Load It Up[/b] lets you add more ingredients to a machine while it's still working on the last thing you gave it. I built this because standing next to a keg every ten minutes to reload it got old fast. Queue up a job and its ingredients get reserved immediately, then it waits its turn and runs through the game's normal machine logic - same as if you'd loaded it by hand.[/size]\n<br />\n<br />[size=4]This is a convenience mod, not a cheat. Nothing about the actual recipe changes: same ingredients, same processing time, same output. You're just not stuck babysitting the same machine all day.[/size]\n<br />\n<br />\n<br />[heading][size=5]Features[/size][/heading]\n<br />[list]\n<br />[*][size=4][b]Sequential queues.[/b] Add jobs to a machine while it's already working through an earlier one.[/size][/*]\n<br />[*][size=4][b]Vanilla balance.[/b] Recipes, costs, processing time, quality, random results, colors, preserve data - none of it changes.[/size][/*]\n<br />[*][size=4][b]Bulk loading.[/b] Hold [b]Left Shift[/b] to queue as many jobs as your resources and queue space allow, instead of one click at a time.[/size][/*]\n<br />[*][size=4][b]Mixed products.[/b] Different valid inputs can share a queue - up to four product types, if you raise the limit that high.[/size][/*]\n<br />[*][size=4][b]Output buffering.[/b] Finished products wait in storage so the next job starts on its own.[/size][/*]\n<br />[*][size=4][b]Queue display.[/b] Face a queued machine, or just point at it, to check what's queued and how many jobs are left - handy when you can't remember if you already loaded that furnace.[/size][/*]\n<br />[*][size=4][b]Multiplayer support.[/b] Farmhands can queue too, though the host still sets the rules.[/size][/*]\n<br />[*][size=4][b]Optional integrations.[/b] Works with Generic Mod Config Menu and Automate if you've got them.[/size][/*]\n<br />[/list]\n<br />\n<br />[heading][size=5]How to Use[/size][/heading]\n<br />[list]\n<br />[*][size=4]Load an empty supported machine like normal.[/size][/*]\n<br />[*][size=4]While it's working, hold another valid input and interact with it again - that queues one job.[/size][/*]\n<br />[*][size=4]Hold [b]Left Shift[/b] instead to queue as many jobs as possible in one go.[/size][/*]\n<br />[*][size=4]The machine works through the queue first-in, first-out.[/size][/*]\n<br />[/list]\n<br />[size=4]Ingredients get pulled the moment you queue a job, not when it starts. The default limit is [b]25 waiting jobs[/b], and the job currently running doesn't count against that.[/size]\n<br />\n<br />\n<br />[heading][size=5]Balance[/size][/heading]\n<br />[size=4][b]Collect Only After Queue Finishes[/b] is on by default. It's basically the thing stopping this mod from turning into a free upgrade for every machine in the game.[/size]\n<br />\n<br />[size=4]You still load the machine once, but everything you queue stays locked away until the whole batch finishes - not just whatever's currently cooking. Queue twenty kegs and you wait for all twenty; you don't get to grab bottles as they pop out one by one. That's the tradeoff: less clicking, but no early access to what you've made. Big batches take planning, not just patience.[/size]\n<br />\n<br />[size=4]Prefer to collect as things finish? Turn the setting off. In multiplayer, whichever way the host sets it applies to everyone, and Automate has to follow the same rule.[/size]\n<br />\n<br />\n<br />[heading][size=5]Machine Compatibility[/size][/heading]\n<br />[size=4]Load It Up works with standard minute-based machines - the ones using ordinary [i]Data/Machines[/i] input rules. That's most vanilla machines, plus anything Content Patcher adds that follows the same rules.[/size]\n<br />\n<br />[size=4]A handful of machines do their own thing, so I've left them alone completely:[/size]\n<br />[list]\n<br />[*][size=4]Crystalariums and other machines that swap inputs while full.[/size][/*]\n<br />[*][size=4]Incubators.[/size][/*]\n<br />[*][size=4]Casks and other machines that run overnight or by the day.[/size][/*]\n<br />[*][size=4]Machines whose output only appears on collection, placement, or day update.[/size][/*]\n<br />[*][size=4]Machines that rely on custom C# for loading, timing, collection, or output.[/size][/*]\n<br />[/list]\n<br />[size=4]Those still work exactly like vanilla - Load It Up just doesn't touch them. And in general, it won't touch your ingredients unless it can actually create the job you're queuing.[/size]\n<br />\n<br />\n<br />[heading][size=5]Automate[/size][/heading]\n<br />[size=4]With [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url] 2.6.1 or newer, connected storage can feed machine queues directly and pull buffered products once they're unlocked.[/size]\n<br />\n<br />[size=4]Automated jobs follow the same costs, limits, and collection rules as anything queued by hand. Automated loading and automated collection can be turned off independently, if you only want one of the two.[/size]\n<br />\n<br />\n<br />[heading][size=5]Multiplayer[/size][/heading]\n<br />[list]\n<br />[*][size=4]Install Load It Up for the host and every farmhand - everyone needs it.[/size][/*]\n<br />[*][size=4]The host validates every queue and collection action.[/size][/*]\n<br />[*][size=4]Queue size, product limits, bulk loading, collection rules, and Automate settings are all set by the host.[/size][/*]\n<br />[*][size=4]Feedback and display settings are per-player - muting notifications on your end doesn't affect anyone else.[/size][/*]\n<br />[/list]\n<br />\n<br />[heading][size=5]Installation[/size][/heading]\n<br />[list]\n<br />[*][size=4]Install [url=https://smapi.io]SMAPI[/url] 4.0.0 or newer.[/size][/*]\n<br />[*][size=4]Extract Load It Up into your [i]Stardew Valley/Mods[/i] folder.[/size][/*]\n<br />[*][size=4]Start the game through SMAPI.[/size][/*]\n<br />[*][size=4](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].[/size][/*]\n<br />[*][size=4](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url] 2.6.1 or newer.[/size][/*]\n<br />[/list]\n<br />\n<br />[heading][size=5]Configuration[/size][/heading]\n<br />[list]\n<br />[*][size=4][b]Maximum Queue Size[/b] - how many waiting jobs a machine can hold. Default: 25.[/size][/*]\n<br />[*][size=4][b]Maximum Different Products[/b] - how many product types can be buffered, active, or waiting at once. Default: 2.[/size][/*]\n<br />[*][size=4][b]Unlimited Queue[/b] - turns off the waiting-job cap entirely. Off by default.[/size][/*]\n<br />[*][size=4][b]Bulk Load Modifier[/b] - the key you hold to queue multiple jobs at once. Default: Left Shift.[/size][/*]\n<br />[*][size=4][b]Collect Only After Queue Finishes[/b] - locks completed products until the whole queue is done. On by default.[/size][/*]\n<br />[*][size=4][b]Automate Loads Queues[/b] - lets Automate add jobs to the queue. On by default.[/size][/*]\n<br />[*][size=4][b]Automate Collects Queue Output[/b] - lets Automate pull unlocked output. On by default.[/size][/*]\n<br />[*][size=4][b]Feedback Settings[/b] - turn queue displays and notifications on or off.[/size][/*]\n<br />[/list]\n<br />\n<br />[heading][size=5]Important Notes[/size][/heading]\n<br />[list]\n<br />[*][size=4]Ingredients you queue are reserved right away and stay attached to their jobs across save and load.[/size][/*]\n<br />[*][size=4]You can't pick up a working machine normally while it still has an active or waiting job.[/size][/*]\n<br />[*][size=4]Lowering the queue limit won't delete jobs already in line - it just stops new ones from being added.[/size][/*]\n<br />[*][size=4]Before uninstalling, let every queue finish and collect whatever's buffered.[/size][/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[center][i][size=4]Made for the Stardew Valley community by [b]xzqute[/b][/size][/i][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51221",
+	"Version": "1.0.0",
+	"Updated": "2026-08-24T09:33:19+00:00",
+	"Downloads": [
+		{
+			"Id": 179983,
+			"Type": "Main",
+			"DisplayName": "Load It Up",
+			"FileName": "3d/40/2f/3d402fc9-d116-4cdf-bc4f-7295a3a5f93a",
+			"Description": "Initial Load It Up release: adds machine queues, mixed products, buffered outputs, optional collection after the full queue finishes, multiplayer support, GMCM settings, and Automate integration.",
+			"Version": "1.0.0",
+			"SizeInBytes": 52573,
+			"Uploaded": "2026-08-24T09:33:19+00:00",
+			"Mods": [
+				{
+					"Id": "xzqute.LoadItUp",
+					"DisplayName": "Load It Up",
+					"Type": "Smapi",
+					"RelativePath": "LoadItUp",
+					"Manifest": {
+						"Name": "Load It Up",
+						"Description": "Queue multiple items in machines while preserving vanilla processing time and resource costs.",
+						"Author": "xzqute",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LoadItUp.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"MinimumVersion": "2.6.1",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51221"
+						],
+						"UniqueId": "xzqute.LoadItUp"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566671,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437909,
+		"UploaderId": 100380428,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

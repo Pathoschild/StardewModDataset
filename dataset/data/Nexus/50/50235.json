@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 50235,
+	"Name": "Pet faz tudo",
+	"Author": "triboroxgame",
+	"AuthorLabel": "MHM4ever",
+	"Description": "REQUISITOS (DEPENDÊNCIAS)\n<br />[table][tr][td]Mod[/td]\n<br />[td]Obrigatório?[/td]\n<br />[/tr]\n<br />[tr][td]SMAPI - API de modificação Stardew[/td]\n<br />[td]Sim[/td]\n<br />[/tr]\n<br />[tr][td]Menu de configuração de mod genérico (GMCM)[/td]\n<br />[td]Não (opcional, mas recomendado)[/td]\n<br />[/tr]\n<br />[/table]# \uD83D\uDC3E Pet Faz Tudo — seu pet é seu melhor funcionário!\n<br />\n<br />**Transforme seu cachorro ou gato em um ajudante automático da fazenda!**\n<br />\n<br />Este mod transforma seu pet num verdadeiro trabalhador da fazenda. Todo início de dia, se estiver contratado, seu pet rega automaticamente as plantações, acaricia e alimenta os animais, e recolhe os produtos caídos pelo chão, guardando tudo num inventário próprio e persistente.\n<br />\n<br />---\n<br />\n<br />## ✨ Funcionalidades\n<br />\n<br />### \uD83D\uDC3E Tarefas diárias automáticas\n<br />\n<br />Todo início de dia, seu pet contratado executa automaticamente diversas tarefas pela fazenda inteira. Ele rega todas as plantações que precisam de água, garantindo que sua fazenda continue produtiva mesmo sem supervisão. Além do cuidado com as culturas, o pet acaricia todos os animais, aumentando a amizade deles como se fosse carinho manual, e consome feno dos silos para alimentá-los automaticamente. O pet também recolhe itens caídos pelo chão — ovos, trufas, lã, leite, penas de pato — e colhe frutas maduras das árvores frutíferas e sementes caídas de árvores comuns, tudo sem causar nenhum dano.\n<br />\n<br />### \uD83D\uDCE6 O baú do pet (inventário persistente)\n<br />\n<br />Seu pet tem seu próprio inventário espaçoso! Os itens coletados são guardados automaticamente no \"Baú do Pet\" toda manhã. Esse baú funciona como um Baú Grande de verdade e pode crescer, criando novas páginas automaticamente conforme enche (até um limite configurável). Você pode abrir esse inventário a qualquer momento clicando (ou tocando, no celular) no pet — e também guardar sementes e fertilizante lá dentro, que serão usados automaticamente nas automações. Em multiplayer, o baú é totalmente sincronizado entre o host e os outros jogadores, com trava automática para evitar que dois jogadores mexam nele ao mesmo tempo.\n<br />\n<br />### \uD83C\uDF31 Automação inteligente (replantio e fertilização)\n<br />\n<br />Se você guardar sementes ou fertilizante no baú do pet, ele os utiliza automaticamente. O pet lembra o que estava plantado em cada canteiro e, assim que uma cultura é colhida, replanta a mesma semente usando o que tiver disponível no inventário. Se a semente original acabar, ele pode usar Semente Mista como alternativa, para o canteiro não ficar vazio. Também aplica fertilizante automaticamente nos canteiros que ainda não têm.\n<br />\n<br />### \uD83D\uDCB0 Economia e relatórios\n<br />\n<br />O pet cobra uma taxa configurável por cada tarefa concluída (regar, acariciar, coletar, plantar, fertilizar, alimentar). O custo total é descontado às 06:20, junto com um relatório detalhado de tudo que foi feito naquele dia. Você pode escolher se a cobrança sai do dinheiro principal da fazenda ou só do jogador que contratou o pet, permitir saldo negativo, ou cancelar o serviço automaticamente se não houver dinheiro suficiente.\n<br />\n<br />### \uD83D\uDCE3 Assobio para chamar o pet\n<br />\n<br />Clique (ou toque) na barra de energia, no canto da tela, para assobiar: todos os pets da sua localização atual são teleportados pra perto de você. Um cooldown configurável evita cliques repetidos.\n<br />\n<br />---\n<br />\n<br />## ⚙️ Configuração\n<br />\n<br />Todos os aspectos do mod podem ser personalizados pelo menu no jogo (com o [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098)) ou editando o `config.json` diretamente.\n<br />\n<br />| Categoria | Opções | Descrição |\n<br />| :--- | :--- | :--- |\n<br />| **Geral** | ModEnabled, PetServiceEnabled | Liga/desliga o mod e o serviço do pet. |\n<br />| **Tarefas** | AutoWateringEnabled, AutoPettingEnabled, AutoFeedingEnabled | Rega, carinho e alimentação automáticos. |\n<br />| **Coleta** | AutoCollectEnabled, AutoCollectTreeDropsEnabled | Coleta de itens caídos e drops de árvores. |\n<br />| **Automação** | AutoReplantEnabled, AutoFertilizeEnabled, AllowMixedSeedFallback | Replantio, fertilização e semente mista como reserva. |\n<br />| **Preços** | PricePerPlant, PricePerAnimal, PricePerItemCollected, PricePerAnimalFed, PricePerSeedPlanted, PricePerFertilizerUsed | Custo em ouro de cada ação. |\n<br />| **Cobrança** | AutoCharge, AllowNegativeBalance, CancelIfNotEnoughMoney, ChargeOnlyHiringPlayer | Regras de cobrança e saldo. |\n<br />| **Assobio** | WhistleEnabled, WhistleCooldownSeconds | Ativa o assobio e ajusta o tempo de espera entre usos. |\n<br />| **Relatório** | ShowReportAt0620, ShowPlantCount, ShowAnimalCount, ShowItemsCollectedCount, ShowAnimalsFedCount, ShowReplantedCount, ShowFertilizedCount, ShowMoneyCharged | O que aparece no relatório diário. |\n<br />\n<br />---\n<br />\n<br />## \uD83C\uDF10 Suporte a multiplayer\n<br />\n<br />O mod funciona em fazenda compartilhada. Só o host processa as tarefas diárias, evitando duplicidade. Qualquer farmhand pode contratar ou dispensar o pet — o pedido é enviado ao host, que aplica de verdade e sincroniza o estado com todo mundo. Farmhands também podem abrir o inventário do pet remotamente (o host envia os dados e tranca o baú enquanto está em uso) e usar o assobio normalmente, que pede ao host para teleportar os pets até eles.\n<br />\n<br />---\n<br />\n<br />## \uD83D\uDCCB Requisitos\n<br />\n<br />- [SMAPI](https://www.nexusmods.com/stardewvalley/mods/2400) 4.3.2 ou superior\n<br />- Stardew Valley 1.6.15 ou superior\n<br />- *(Opcional)* [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098), para configurar pelo menu do jogo\n<br />\n<br />## \uD83D\uDC1B Bugs / sugestões\n<br />\n<br />Encontrou algum problema ou tem alguma ideia? Deixe um comentário na página do mod!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50235",
+	"Version": "1.2.7",
+	"Updated": "2026-08-05T18:41:00+00:00",
+	"Downloads": [
+		{
+			"Id": 177461,
+			"Type": "Main",
+			"DisplayName": "PetFarmWorker 1.2.7",
+			"FileName": "1c/9e/ff/1c9eff31-450b-457a-b078-079d07bbf01f",
+			"Description": "",
+			"Version": "1.2.7",
+			"SizeInBytes": 46631,
+			"Uploaded": "2026-08-05T18:41:00+00:00",
+			"Mods": [
+				{
+					"Id": "SeuNome.PetFarmWorker",
+					"DisplayName": "PET faz tudo",
+					"Type": "Smapi",
+					"RelativePath": "PetFarmWorker",
+					"Manifest": {
+						"Name": "PET faz tudo",
+						"Description": "Transforme seu cachorro ou gato em um ajudante automático da fazenda: rega as plantações, acaricia e alimenta os animais, e coleta e guarda os produtos (ovos, leite, lã, trufas etc.) em um inventário persistente que pode ser aberto a qualquer momento clicando no pet.",
+						"Author": "MHM4ever",
+						"Version": "1.2.7",
+						"MinimumApiVersion": "4.3.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "PetFarmWorker.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "SeuNome.PetFarmWorker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564149,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436923,
+		"UploaderId": 96694908,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

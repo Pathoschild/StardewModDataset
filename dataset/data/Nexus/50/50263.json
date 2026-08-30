@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 50263,
+	"Name": "sherlock and john",
+	"Author": "wst100410406",
+	"AuthorLabel": "notwts",
+	"Description": "\u00A0 版本：1.0.0\n<br />\u00A0 一个 Mod 同时添加两位来自《神探夏洛克》的 NPC：夏洛克·福尔摩斯 与\n<br />\u00A0 约翰·华生。两人在星露谷生活在一起，拥有各自的每日行程，以及由 DeepSeek AI 驱动的对话系统（各自的单人对话 +\n<br />\u00A0 两人之间的双人对话）。他们能观察并推理玩家和镇民今天的活动（钓鱼、浇水、喂动物、挖矿等），在对话中自然地\"破案\"。\n<br />\n<br />\u00A0 简介\n<br />\n<br />\u00A0 夏洛克和约翰·华生以 AI 驱动的动态 NPC 形式加入星露谷，两人住在同一栋农场住宅里。他们各自按每日行程在小镇活动，下午在小\n<br />\u00A0 镇广场碰面闲逛、拌嘴、一起推理。你可以随时单独和他们对话，也可以看着他们俩自动聊起来。\n<br />\n<br />\u00A0 两位 NPC 的每日行程\n<br />\n<br />\u00A0 夏洛克·福尔摩斯\n<br />\n<br />\u00A0 ┌───────┬────────────────────────┐\n<br />\u00A0 │ 时间\u00A0 │\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 活动\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├───────┼────────────────────────┤\n<br />\u00A0 │ 06:00 │ 起床，在农场住宅内闲逛 │\n<br />\u00A0 ├───────┼────────────────────────┤\n<br />\u00A0 │ 08:20 │ 走路前往下水道调查\u00A0 \u00A0 │\n<br />\u00A0 ├───────┼────────────────────────┤\n<br />\u00A0 │ 12:00 │ 前往矿洞第一层\u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├───────┼────────────────────────┤\n<br />\u00A0 │ 15:00 │ 前往小镇广场闲逛\u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├───────┼────────────────────────┤\n<br />\u00A0 │ 20:00 │ 走路回家\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├───────┼────────────────────────┤\n<br />\u00A0 │ 22:00 │ 走到床边睡觉\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 └───────┴────────────────────────┘\n<br />\n<br />\u00A0 约翰·华生\n<br />\n<br />\u00A0 ┌─────────────┬────────────────────────────┐\n<br />\u00A0 │\u00A0 \u00A0 时间\u00A0 \u00A0 │\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 活动\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├─────────────┼────────────────────────────┤\n<br />\u00A0 │ 06:00\u00A0 \u00A0 \u00A0 │ 起床，在农场住宅内闲逛\u00A0 \u00A0 │\n<br />\u00A0 ├─────────────┼────────────────────────────┤\n<br />\u00A0 │ 08:20\u00A0 \u00A0 \u00A0 │ 走路前往小镇诊所\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├─────────────┼────────────────────────────┤\n<br />\u00A0 │ 09:00–14:30 │ 在诊所坐诊\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 ├─────────────┼────────────────────────────┤\n<br />\u00A0 │ 14:30\u00A0 \u00A0 \u00A0 │ 离开诊所，前往小镇广场闲逛 │\n<br />\u00A0 ├─────────────┼────────────────────────────┤\n<br />\u00A0 │ 20:00\u00A0 \u00A0 \u00A0 │ 走路回家\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 └─────────────┴────────────────────────────┘\n<br />\n<br />\u00A0 - 两人的床都使用游戏自带的 GetPlayerBedSpot() 动态查找，挪床/升级房屋也能找到。\n<br />\u00A0 - 全部跨地图移动都使用真实走路（即使玩家不在场也会走），并使用游戏原生的寻路与传送点。\n<br />\n<br />\u00A0 对话系统详解\n<br />\n<br />\u00A0 1. 单人对话（需要输入）\n<br />\n<br />\u00A0 夏洛克和约翰各自都有独立的单人 AI 对话，机制相同：\n<br />\u00A0 - 触发：两人距离大于 2 格时，右键点击其中一位。\n<br />\u00A0 - 形式：完整对话对话框，需要玩家输入文字。\n<br />\u00A0 - 语言：每天第一次对话默认中文；你输入后跟随你的输入语言（输入里有中文字符判中文，否则判英文，含 *动作* 等附带内容）。\n<br />\u00A0 - 流程：点击 → 头顶弹出\"正在思考\"气泡 → AI 生成开场白 → 弹出输入框 → 你输入 → 输入框显示\"正在思考\" → AI 回复。\n<br />\u00A0 - 结束：按 ESC 或点击右上角\"结束\"按钮直接结束。\n<br />\u00A0 - 输入时屏蔽游戏特殊功能键（背包 E / 日志 F / 地图 M 等），保证所有字母都能正常输入。\n<br />\n<br />\u00A0 2. 双人对话 · 气泡模式（自动，无需点击）\n<br />\n<br />\u00A0 - 触发：两人距离不超过 2 格时自动触发，无需任何操作。\n<br />\u00A0 - 间隔：每次对话结束后随机等待 40~160 秒。\n<br />\u00A0 - 保底：每天 8:20 之前至少触发一次。\n<br />\u00A0 - 形式：头顶白色气泡，逐句自动播放。每句最多 14 个字（超出会被截断），共 4~7 句。\n<br />\n<br />\u00A0 3. 双人对话 · 对话框模式（点击夏洛克触发）\n<br />\n<br />\u00A0 - 触发：两人距离不超过 2 格时，右键点击夏洛克。\n<br />\u00A0 - 形式：完整对话框，点击切换下一句（不自动）。字数不限，共 4~9 句。\n<br />\u00A0 - 触发瞬间头顶弹出\"……（两人正在交谈）\"气泡，直到第一句对话框弹出才消失。\n<br />\n<br />\u00A0 4. 行走一句话\n<br />\n<br />\u00A0 NPC 正在赶路（旅程中）或正在迈步时点击他，他会边走边随口说一句话（不做长对话）。\n<br />\n<br />\u00A0 5. 观察与推理\n<br />\n<br />\u00A0 NPC 会追踪你今天及镇民的活动，并在对话里带着推理依据地提及：\n<br />\u00A0 - 你去过哪些地方、用过什么工具（钓鱼、浇水、翻地、挖矿、砍树等）\n<br />\u00A0 - 钓到几条鱼、收获/卖出多少作物、采集/击杀数量\n<br />\u00A0 - 农场湿润耕地数（还会区分\"下雨浇的\"）、动物被摸/喂饱数\n<br />\u00A0 - 小镇各 NPC 当前的去向（\"亚历克斯在海滩\"等）\n<br />\n<br />\u00A0 例如夏洛克会说：\"你靴子上还沾着湖边的泥，身上有鱼腥味——你今天去钓过鱼吧？\"\n<br />\n<br />\u00A0 安装\n<br />\n<br />\u00A0 1. 安装 SMAPI (https://smapi.io)（星露谷 1.6）。\n<br />\u00A0 2. 把 Mod 文件夹（内含两位 NPC）放入 Stardew Valley/Mods/。\n<br />\u00A0 3. （可选但建议） 配置 DeepSeek API Key：\n<br />\u00A0 \u00A0 - 首次启动后，在 Mods/&lt;Mod文件夹&gt;/config.json 的 DeepSeekApiKey 填入你的 DeepSeek API Key（也可用环境变量\n<br />\u00A0 DEEPSEEK_API_KEY）。\n<br />\u00A0 \u00A0 - 未配置 Key 时，对话会退化为内置的简单回退台词。\n<br />\u00A0 \u00A0 - 可配置项：Model（默认 deepseek-chat）、Temperature、MaxTokens 等。\n<br />\n<br />\u00A0 ▎ 注意：AI 对话会消耗 DeepSeek API 额度（有费用）。\n<br />\n<br />\u00A0 已知缺陷与注意事项（重要，请务必阅读）\n<br />\n<br />\u00A0 ▎ 以下内容为作者已知的限制/缺陷，上传前请了解，安装后请备份存档再游玩。\n<br />\n<br />\u00A0 ⚠️ 重要\n<br />\n<br />\u00A0 1. 睡觉没有单独的躺下图像：行走图素材中没有\"躺下\"的姿势，所以睡觉时只能播放站立的图片（侧身站姿，配合画面偏移模拟躺下\n<br />\u00A0 ）。如果需要真正的躺姿，需要更换精灵图。这不是 Bug，是素材限制。\n<br />\u00A0 2. 只测试过标准农场 + 只有一张床的情况：动态找床逻辑（GetPlayerBedSpot）理论上能处理双人床/房屋升级/第二张床，但只实际\n<br />\u00A0 测试过标准农场、单床场景。如果你使用其他农场类型、多人联机（第二张床）或自定义床布局，请自行测试并注意可能的异常。\n<br />\u00A0 3. 中文显示依赖游戏版本：对话默认是中文。如果游戏不是中文版本（如英文版），中文字符可能无法正常显示（显示为方块/乱码）\n<br />\u00A0 ，因为游戏字体的限制。建议在中文版游戏中使用。\n<br />\u00A0 4. 需要 DeepSeek API Key：没有 Key 时 AI 对话不生效，只剩内置回退台词。\n<br />\n<br />\u00A0 一般限制\n<br />\n<br />\u00A0 5. AI 生成质量不完美：AI 偶尔可能脱离人设（OOC），或没有严格遵守字数限制（气泡模式会被硬截断到 14\n<br />\u00A0 字，可能切在句子中间）。\n<br />\u00A0 6. 对话有延迟：每次 AI 生成需要 1~3 秒，期间会有\"正在思考\"提示，但仍有等待时间；网络/API\n<br />\u00A0 不稳定时可能更久甚至失败（失败会自动结束对话，不会卡死）。\n<br />\u00A0 7. 节日/雨天无特殊处理：没有为节日或雨天做特殊日程处理，NPC 照常按日常行程活动（不会出现在节日现场）。\n<br />\u00A0 8. 多人联机未测试：联机模式下的行程、对话、睡觉逻辑可能有异常，请自行测试。\n<br />\u00A0 9. 与游戏原版 NPC 系统的集成有限：两位 NPC 没有在游戏原版的 Data/Characters 中注册，因此：社交面板（Heart\n<br />\u00A0 面板）不显示他们；没有送礼、好感度、生日、节日问候等；部分地图/追踪类 Mod（如 NPC Map\n<br />\u00A0 Locations）可能无法正确追踪他们的位置。\n<br />\u00A0 10. 矿洞解锁前：春 5 日（第一年）之前矿洞入口被落石挡住，但夏洛克仍会进入矿洞第一层（你暂时看不到他，功能本身正常）。\n<br />\u00A0 11. 对话记忆每天清空：没有跨天的长期记忆，每天从零开始。\n<br />\u00A0 12. 寻路兜底（瞬移）：在自定义/被其他 Mod 修改过的地图上，寻路可能失败，会触发瞬移兜底（偶尔能看到\"瞬移\"现象）。\n<br />\n<br />\u00A0 鸣谢\n<br />\n<br />\u00A0 - 行走图素材：小红书 @小凡小凡几点了\n<br />\u00A0 - AI 语C 人设设定：小红书 @双面鬼\n<br />\n<br />\u00A0 感谢两位老师的素材与设定支持！\n<br />\n<br />\u00A0 配置示例（config.json）\n<br />\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"DeepSeekApiKey\": \"sk-xxxxxxxxxxxxxxxx\",\n<br />\u00A0 \u00A0 \"Model\": \"deepseek-chat\",\n<br />\u00A0 \u00A0 \"BaseUrl\": \"https://api.deepseek.com/chat/completions\",\n<br />\u00A0 \u00A0 \"Temperature\": 0.9,\n<br />\u00A0 \u00A0 \"MaxTokens\": 500,\n<br />\u00A0 \u00A0 \"MaxWalkingTokens\": 120\n<br />\u00A0 }\n<br />\n<br />\u00A0\u00A0",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50263",
+	"Version": "1",
+	"Updated": "2026-08-06T12:30:54+00:00",
+	"Downloads": [
+		{
+			"Id": 177561,
+			"Type": "Main",
+			"DisplayName": "SherlockHolmesMod",
+			"FileName": "bf/a7/cb/bfa7cb79-95c1-4639-8d09-9490560f2741",
+			"Description": "这是sherlock的mod",
+			"Version": "4",
+			"SizeInBytes": 65046,
+			"Uploaded": "2026-08-06T12:30:42+00:00",
+			"Mods": [
+				{
+					"Id": "sherlockholmesmod.sherlockholmes",
+					"DisplayName": "Sherlock Holmes NPC",
+					"Type": "Smapi",
+					"RelativePath": "SherlockHolmesMod",
+					"Manifest": {
+						"Name": "Sherlock Holmes NPC",
+						"Description": "Adds Sherlock Holmes NPC with a daily schedule: wanders the farmhouse, visits the sewer, mines, and town plaza, then comes home to sleep.",
+						"Author": "sherlockholmes",
+						"Version": "1.0.0",
+						"EntryDll": "SherlockHolmesMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sherlockholmesmod.sherlockholmes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564249,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 177562,
+			"Type": "Main",
+			"DisplayName": "JohnWatsonMod",
+			"FileName": "4e/ef/6e/4eef6e5d-5bc7-45d8-a4b9-c3559037d7e3",
+			"Description": "这是john的mod",
+			"Version": "5",
+			"SizeInBytes": 46581,
+			"Uploaded": "2026-08-06T12:30:54+00:00",
+			"Mods": [
+				{
+					"Id": "underhillwatson.johnwatson",
+					"DisplayName": "John Watson NPC",
+					"Type": "Smapi",
+					"RelativePath": "JohnWatsonMod",
+					"Manifest": {
+						"Name": "John Watson NPC",
+						"Description": "Adds John Watson NPC.",
+						"Author": "underhillwatson",
+						"Version": "1.0.0",
+						"EntryDll": "JohnWatsonMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "underhillwatson.johnwatson"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564250,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436951,
+		"UploaderId": 294837177,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

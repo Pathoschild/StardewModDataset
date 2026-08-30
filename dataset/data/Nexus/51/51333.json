@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 51333,
+	"Name": "Ginger Island Schedule",
+	"Author": "Handamanju",
+	"AuthorLabel": "handamanju also Fundamental_YA",
+	"Description": "[size=5][GIS]\u00A0Ginger Island Schedule[/size]\n<br />\n<br />一个 SMAPI 模组，用来给村民在姜岛（Ginger Island）添加自定义行为，使用方式类似编辑日程，兼容原生/自定义动画。\n<br />只有当村民穿上[b]泳装[/b]（Island Attire）时才会生效，晚上 18:00 后会自动恢复原日程。\n<br />\n<br />依赖：\n<br />[list]\n<br />[*]SMAPI[/*]\n<br />[*]Content Patcher[/*]\n<br />[/list][quote]该mod由B站[url=https://b23.tv/Qh8S4Nu]@MC饭打馒头吖[/url]\u00A0制作，发布者是本人。\n<br />项目地址\u00A0[url=https://github.com/Fundamental-YA/GIS]Fundamental-YA/GIS[/url]\n<br />封面图像应用实例扩展自[url=https://www.nexusmods.com/profile/Trans1st0r]Trans1st0r[/url]\u00A0B站[url=https://b23.tv/hm3xlh3]@风吟梧桦[/url]的KivoValley系列模组，尾号[url=https://www.nexusmods.com/stardewvalley/mods/21371]21371[/url]，[url=https://www.nexusmods.com/stardewvalley/mods/26111]26111[/url][/quote][line]\n<br />\n<br />[size=5]配置方式[/size][size=4]（Content Patcher）[/size]\n<br />\n<br />目标资产：\n<br />[code]Mods/Funda.GIS/IslandSchedules[/code]格式（每条日程用 “[font=Courier New]/[/font]” 分隔多个时间点）：\n<br />[code]时间 地图名 X Y [朝向] [动画键] [对话键][/code][table][tr][th]字段[/th]\n<br />[th]必填[/th]\n<br />[th]说明[/th]\n<br />[/tr]\n<br />[tr][td]时间[/td]\n<br />[td]✓[/td]\n<br />[td]eg. 1400[/td]\n<br />[/tr]\n<br />[tr][td]地图名[/td]\n<br />[td]✓[/td]\n<br />[td]eg. IslandSouth、IslandNorth 等[/td]\n<br />[/tr]\n<br />[tr][td]X Y[/td]\n<br />[td]✓[/td]\n<br />[td]目标格子坐标[/td]\n<br />[/tr]\n<br />[tr][td]朝向[/td]\n<br />[td][/td]\n<br />[td]0上 1右 2下 3左（default = 2）[/td]\n<br />[/tr]\n<br />[tr][td]动画键[/td]\n<br />[td][/td]\n<br />[td]动画名称（见下方说明）[/td]\n<br />[/tr]\n<br />[tr][td]对话键[/td]\n<br />[td][/td]\n<br />[td]对话键名（从角色对话文件或字符串文件读取）[/td]\n<br />[/tr]\n<br />[/table][line]\n<br />\n<br />[size=5]原生动画兼容[/size][size=4]（ [font=Courier New]/[Special Behaviors][/font]\u00A0）[/size]\n<br />\n<br />[font=Arial]注册动画时使用\u00A0[/font][font=Courier New]/[Special Behaviors] 可在定义动画帧末尾套用原版的动画行为。[/font]\n<br />\n<br />模组简化了类似威利的钓鱼动画的套用，当你在日程里写一个含有 [font=Courier New]fish[/font]\u00A0命名的动画键（[font=Courier New]xxx_fish[/font]）时，它会尝试使用 [font=Courier New]dick_fish[/font] 作为底层特殊姿势。（优先级低于注册时的\u00A0[font=Courier New]/[Special Behaviors][/font]\u00A0）\n<br />\n<br />\n<br />[size=4]推荐写法[/size]\n<br />\n<br />在 Content Patcher 里先注册动画：\n<br />json\n<br />[code]{\n<br />\u00A0 \"LogName\": \"Register Custom Fishing Animation\",\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Data/animationDescriptions\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"miyu_fish\": \"8/8 8 9 9 10 10 11 11/8/dick_fish\"\n<br />\u00A0 }\n<br />}[/code]然后在日程里直接用这个动画键：\n<br />json\n<br />[code]{\n<br />\u00A0 \"LogName\": \"Miyu Island Schedule\",\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Mods/Funda.GIS/IslandSchedules\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"Linus\": \"1400 IslandSouth 21 44 2 miyu_fish Resort_Fishing\"\n<br />\u00A0 }\n<br />}[/code]说明：\n<br />[list]\n<br />[*][font=Courier New]最后的 /dick_fish 会让角色套用威利的钓鱼特殊姿势——威利开发用名为dick，该动画为16*64像素每帧，和普通动画的16*32相比向下延展的区域可用来绘制渔线等，人物的坐标不变[/font][/*]\n<br />[*][font=Courier New]miyu_fish[/font] 是你自定义的动画键[/*]\n<br />[*]到达目标点后会自动播放该动画，并设置对话（来自\u00A0[font=Courier New]Characters/Dialogue/Linus[/font] 的\u00A0[font=Courier New]Resort_Fishing[/font]\u00A0）[/*]\n<br />[/list][line]\n<br />\n<br />[size=5]示例[/size]\n<br />\n<br />[b]1. 在设定位置发呆\u00A0+ 朝向[/b]\n<br />json\n<br />[code]\"Alex\": \"1200 IslandSouth 18 30 2\"[/code][b]2. 带钓鱼动画\u00A0 + 对话[/b]\n<br />json\n<br />[code]\"Linus\": \"1300 IslandSouth 21 44 2 miyu_fish Resort_Fishing\"[/code][b]3. 多时间点（用 “[font=Courier New]/[/font]” 分隔）[/b]\n<br />json\n<br />[code]\"Haley\": \"1300 IslandSouth 25 20 1 / 1400 IslandSouth 18 33 2 miyu_fish Resort_Fishing / 1600 IslandSouth 12 28 0\"[/code][b]4. 完整 Content Patcher 示例[/b]\n<br />json\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.0.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"LogName\": \"Register Custom Fishing Animation\",\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Data/animationDescriptions\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"miyu_fish\": \"8/8 8 9 9 10 10 11 11/8/dick_fish\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"LogName\": \"Custom Island Schedules\",\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Funda.GIS/IslandSchedules\",\n<br />\u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Linus\": \"1400 IslandSouth 21 44 2 miyu_fish Resort_Fishing\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Alex\": \"1300 IslandSouth 18 30 2\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Haley\": \"1300 IslandSouth 25 20 1 / 1400 IslandSouth 18 33 2 miyu_fish Resort_Fishing\"\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code][line]\n<br />\n<br />[size=5]注意事项[/size]\n<br />[list]\n<br />[*]只有穿了泳装的村民才会走自定义日程，请合理规划时间。[/*]\n<br />[*]18:00 之后或脱掉泳装会强制结束自定义行为并回到更衣室换衣服。[/*]\n<br />[*]玩家进入 NPC 所在地图时，会重新触发一次到达动作（保证动画和对话）。[/*]\n<br />[*]注册动画的帧末尾使用[font=Courier New][b]/[Special Behaviors][/b][/font]可以套用原版Special Behaviors动画逻辑。[/*]\n<br />[*]动画键名如果包含 [font=Courier New][b]fish[/b][/font]（不区分大小写），会自动尝试用 [font=Courier New][b]dick_fish[/b][/font] 作为特殊姿势。（优先级低于注册时的\u00A0[font=Courier New][b]/[Special Behaviors][/b][/font]）[/*]\n<br />[*]对话键会优先从 [font=Courier New][b]Characters/Dialogue/角色名[/b][/font] 读取，找不到再尝试字符串。[/*]\n<br />[*]由于mod原理是屏蔽状态更新并覆盖，生效时可能有SMAPI控制台的状态不同步报错。[/*]\n<br />[/list][i]该 Mod 未经广泛测试，可能有 BUG，遇到问题欢迎反馈。[/i]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51333",
+	"Version": "1.0.0",
+	"Updated": "2026-08-27T05:54:25+00:00",
+	"Downloads": [
+		{
+			"Id": 180365,
+			"Type": "Main",
+			"DisplayName": "Ginger Island Schedule",
+			"FileName": "42/63/96/42639610-acd5-47de-ac2a-d4657a97152b",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 19143,
+			"Uploaded": "2026-08-27T05:54:25+00:00",
+			"Mods": [
+				{
+					"Id": "Funda.GIS",
+					"DisplayName": "Ginger Island Schedule",
+					"Type": "Smapi",
+					"RelativePath": "GIS",
+					"Manifest": {
+						"Name": "Ginger Island Schedule",
+						"Description": null,
+						"Author": "Fundamental_YA",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GIS.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Funda.GIS"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567053,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438021,
+		"UploaderId": 282012649,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

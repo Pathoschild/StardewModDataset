@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 51194,
+	"Name": "Preferred Pet Breed GSQ and CP Token",
+	"Author": "Delatrix",
+	"Description": "[size=5][b]Description[/b][/size]\n<br />[color=#D4D4D8]Provides additional ways for mod authors to query against their preferred pet's breed by adding a new [font=Courier New]PLAYER_PREFERRED_PETBREED[/font] Game State Query and a new [font=Courier New]PreferredPetBreed[/font]\u00A0Content Patcher token.\u00A0[/color]\n<br />\n<br />[size=3][color=#D4D4D8]([b]Mod Authors:\u00A0[/b]See the Stardew Modding Wiki on [url=https://stardewvalleywiki.com/Modding:Game_state_queries]Game State Queries[/url] and the\u00A0Content Patcher [url=https://github.com/Pathoschild/StardewMods/blob/stable/ContentPatcher/docs/author-guide/tokens.md#mod-provided-tokens]token[/url] guide for more details on using game state queries and\u00A0tokens.)[/color][/size]\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Ensure\u00A0the latest versions of [url=https://smapi.io]SMAPI[/url]\u00A0and\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\u00A0are\u00A0installed[/*]\n<br />[*]Unzip the mod folder into Stardew Valley/Mods.[/*]\n<br />[*][b]For players:[/b]\u00A0Run the game using SMAPI.[/*]\n<br />[*][b]For mod authors:[/b]\u00A0See Setup and Usage\u00A0section\u00A0below for how to\u00A0use this\u00A0new GSQ and CP\u00A0token with your mod[/*]\n<br />[/list]\n<br />[size=5][b]Setup and\u00A0Usage for Mod Authors:[/b][/size]\n<br />[size=4][b]Setup:[/b][/size]\n<br />[b]For mod authors:[/b]\u00A0[size=3][color=#D4D4D8]To use this game state query or\u00A0token with your own Content Patcher mod, ensure you do AT LEAST ONE OF\u00A0the following:[/color][/size]\n<br />\u00A0 1.\u00A0Add 'Delatrix.PetBreedQueryAndToken ' to your mod's manifest.json as a dependency:\u00A0 \u00A0 \u00A0\n<br />[code]\"Dependencies\": [\u00A0 { \"UniqueID\": \"Delatrix.PetBreedQueryAndToken\", \"IsRequired\": true }\u00A0 ][/code]\u00A0 2. OR Ensure the patch using the token has an immutable (i.e. not using any tokens)\u00A0HasMod condition which lists the mod ANY time it is referenced. Example:\n<br />[code]{\n<br />\u00A0\u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0 \"Target\": \"Characters/Dialogue/Marnie\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"gotPet\": \"I hope you and your pet {{Delatrix.PetBreedQueryAndToken/PreferredPetBreed}} are getting along!\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0 \"When\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"HasMod\": \"Delatrix.PetBreedQueryAndToken\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0\u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0\u00A0 ]\n<br />}[/code]\n<br />\n<br />[size=4][b][font=Courier New]PreferredPetBreed[/font] Content Patcher\u00A0Token\u00A0Usage:[/b][/size]\n<br />\u00A0 Like in the example above,\u00A0every time you wish to reference this mod's token, you MUST pre-pend it with the ModId like so:\n<br />[code]// Inline string usage:\n<br />\"What a lovely pet {{Delatrix.PetBreedQueryAndToken/PreferredPetBreed}} you have!\"\n<br />\n<br />// Condition usage for \"When\" (i.e. you have another mod that adds a custom 'GermanShepard' pet breed):\n<br />\"Changes\": [\n<br />{\n<br />\u00A0\u00A0\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"Characters/Dialogue/Marnie\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0\u00A0\u00A0 \"gotPet\": \"I hope you and your pet German Shepard are getting along!\",\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \"When\": {\n<br />\u00A0 \u00A0\u00A0\u00A0 \"Delatrix.PetBreedQueryAndToken/PreferredPetBreed\": \"GermanShepard\"\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />][/code]\n<br />\n<br />[b][size=4][font=Courier New]PLAYER_PREFERRED_PETBREED[/font]\u00A0Game State Query Usage:[/size][/b]\n<br />[b]For mod authors:[/b]\u00A0To\u00A0utilize the new game state query, use the following syntax (similar to vanilla PREFERRED_PLAYER_PET query):\n<br />[code]Delatrix.PLAYER_PREFERRED_PETBREED &lt;player&gt; &lt;pet breed&gt;+[/code]IMPORTANT NOTE: You are REQUIRED to put Delatrix. before the query!\n<br />\n<br />\n<br />Example (i.e.\u00A0you have another mod that adds a custom 'GermanShepard' pet breed):\n<br />[code]// Will check if the preferred pet breed of the current player is a German Shepard\n<br />\"Condition\": \"Delatrix.PLAYER_PREFERRED_PETBREED Current GermanShepard\"[/code]This PLAYER_PREFERRED_PETBREED\u00A0query also accepts multiple pet breeds as input (like vanilla PLAYER_PREFERRED_PET), separated by spaces. Example:\n<br />[code]// Will check if the preferred pet breed of the current player is a German Shepard OR Siberian Husky\n<br />\"Condition\": \"Delatrix.PLAYER_PREFERRED_PETBREED Current GermanShepard SiberianHusky\"[/code]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />[size=3][color=#D4D4D8]Requires SMAPI and\u00A0Content Patcher to be of any use.[/color][/size]\n<br />\n<br />[size=5][b]See Also[/b][/size]\n<br />[size=3][color=#D4D4D8]See Pathoschild's Content Patcher [url=https://github.com/Pathoschild/StardewMods/blob/stable/ContentPatcher/docs/author-guide/tokens.md#mod-provided-tokens]author guide for mod-provided tokens[/url] for additional details and tips[/color][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51194",
+	"Version": "1",
+	"Updated": "2026-08-24T01:36:31+00:00",
+	"Downloads": [
+		{
+			"Id": 179939,
+			"Type": "Main",
+			"DisplayName": "PetBreedQueryAndToken",
+			"FileName": "59/2d/ab/592dab88-9992-450a-b74f-fe5b984d0a3e",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 11511,
+			"Uploaded": "2026-08-24T01:36:31+00:00",
+			"Mods": [
+				{
+					"Id": "Delatrix.PetBreedQueryAndToken",
+					"DisplayName": "PreferredPetBreed GSQ and CP Token",
+					"Type": "Smapi",
+					"RelativePath": "PetBreedQueryAndToken",
+					"Manifest": {
+						"Name": "PreferredPetBreed GSQ and CP Token",
+						"Description": "Provides additional ways for mod authors to query against their preferred pet's breed by adding a new 'PLAYER_PREFERRED_PETBREED' Game State Query AND adds 'PreferredPetBreed' Content Patcher token for use in other mods.",
+						"Author": "Delatrix",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PetBreedQueryAndToken.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51194"
+						],
+						"UniqueId": "Delatrix.PetBreedQueryAndToken"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566627,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437882,
+		"UploaderId": 297042081,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

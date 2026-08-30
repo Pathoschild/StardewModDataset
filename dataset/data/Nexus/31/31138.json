@@ -3,45 +3,20 @@
 	"Id": 31138,
 	"Name": "Heart's Delight Farm",
 	"Author": "crownpossum",
-	"Description": "I decided to try my hand at map making and this is my first attempt! This adds a custom farm map to the game-- it does not replace any existing farm maps.\n<br />\n<br />[color=#93c47d][size=4]Updated to 2.0!\u00A0 More updates to come.[/size][/color]\n<br />[color=#93c47d][size=1][i](also yes i know my version numbering system probably makes no sense. i'm an art and writing possum, not a code wrangling possum. i am making things up as i go.)[/i][/size] [/color]\n<br />[b]\n<br />This map features:[/b]\n<br />[list]\n<br />[*][b]ALL[/b] tiles [i]should[/i] be tillable/diggable! There are no designated planting areas.[/*]\n<br />[*]Farmers start with 12 parsnips and 1 orange sapling.[/*]\n<br />[*]Picturesque waterfalls![/*]\n<br />[*]Up to two cute heart shaped ponds![/*]\n<br />[*]Optional built in animal pen![/*]\n<br />[*]A cliff top clearing with renewable stumps!\u00A0[i](Greenhouse is also located here by default.)[/i][/*]\n<br />[*]A little beach! [i](Complete with beach fish and forage!)[/i][/*]\n<br />[*]Staircase leading up to a little clearing with mahogany trees on one side of the river. Spawns mushrooms and seasonal vanilla flowers. Can place buildings here. Entrance blocked by a large log.[/*]\n<br />[*]Hidden tunnel containing a quarry and a hot spring! Entrances blocked by boulders.[/*]\n<br />[*][u]Warp/Shortcut Room:[/u] A little possum wearing a crown has taken up residence on the farm-- it seems they fancy themself royalty. In exchange for letting the possum stay on the farm, the possum has granted the farmer the title of Knighthood and access to its house and the network of tunnels within. [i](Contains four shortcut tunnels. You can enter the possum's house from its front door or any of the four stumps on the map.\n<br />[size=1](No, I will NEVER include an option to remove the possum. All they want to do is read books and have their own little garden. In this house, we love and respect our neighbors-- even if they are possums with illusions of grandeur.)[/size][/i][/*]\n<br />[/list]\n<br />[b]Current Config Options:[/b]\n<br />\uFEFF-Toggle the built in animal pen on or off! [i](Default: off)[/i]\n<br />-Toggle the build in doghouse on or off![i] (Default: on)\n<br />[/i]-Choose between a simple or a heart shaped pond in the animal pen area! [i](Default: simple)[/i]\n<br />-Choose whether certain sections of the map have detailed dirt desire paths, or if only the exits are marked by paths. Dirt paths will be replaced by normal grass with some dark grass patches thrown in.\n<br />-Toggle the grassy areas on the beach on and off. [i](If you do not like the grass, or a mod is causing graphical glitches on the grass/sand when using a recolor... feel free to turn the grassy patches off!)[/i]\n<br />-Toggle [i]some[/i] of the built in fences on and off. [i](Warp totem cliff fence, western cliff fence, and beach overhang cliff fence. Default: on.)[/i]\n<br />\n<br />It's not a perfect map, but I had fun making it!\n<br />Let me know if you encounter any weird bugs-- I'm a novice map maker and modder, so I might not know how to fix things, but I'll do my best.\n<br />\n<br />[size=5][color=#93c47d][size=4]New features coming... someday?![/size][/color][/size]\n<br />[b]Here's what I still plan on adding someday:[/b]\n<br />[list]\n<br />[*]World Map assets [i](......someday. We will all just have to deal with the sad default world map for now. I have cross referenced SEVERAL maps and none of the code I've tried has worked. I also hate the assets I made, so I need to remake them... I have decided to revisit this feature at a later date. When I make a new map, I will make sure world map assets are one of the first things I figure out and then I will come back to this map.)[/i][/*]\n<br />[*]i18n support of map flavor text if possible[/*]\n<br />[*]Recolor compatibility for custom assets [i](The map includes some custom made assets just for this map, but currently they only match the vanilla colors. Will do Earthy for sure, since I use it. However, this is not a priority.)[/i][/*]\n<br />[/list]\n<br />[b]Here's what I currently do NOT plan on adding any time soon:[/b]\n<br />[list]\n<br />[*]Secret Woods Entrance [i](Will figure out how conditional warps like this work on my next map, and will only consider adding one to this map AFTER the fact.)[/i][/*]\n<br />[/list]\n<br />\n<br />[size=5][color=#e06666]KNOWN ISSUES (CHECK BEFORE LEAVING COMMENT/BUG REPORT):[/color][/size]\n<br />[b]Technical Issues:[/b]\n<br />--[u]Map Failing to Load:[/u]\n<br />Try uninstalling and reinstalling [url=https://www.nexusmods.com/stardewvalley/mods/28434]crystalinerose Tilesheets[/url]\uFEFF if you see the following line in your smapi log:\n<br />[spoiler]\"[Content Patcher] Can't apply patch (CP) Heart's Delight &gt; Load Maps/{{ModId}}_HeartsDelight to Maps/crownpossum.HeartsDelight_HeartsDelight: StardewModdingAPI.Framework.Exceptions.SContentLoadException: (CP) Heart's Delight loaded map 'assets/Farm_HeartsDelight.tmx' with invalid tilesheet path 'spring_CR_outdoor.png'. The tilesheet couldn't be found relative to either the map file or the game's content folder.\"[/spoiler]\n<br />\n<br />--[u]Heart's Delight Clifftop Clearing showing up as Buildable on saves NOT using the Heart's Delight farm type.[/u]\n<br />I can not figure out how to make sure it ONLY appears when using this map. For now, you have two options:\n<br />1) just ignore it\n<br />2) disable this mod whenever you plan to load a save not using this farm type.\u00A0\n<br />\n<br />[b]Compatibility Issues:[/b]\n<br />--If using SVE, the late game SVE-specific warp point will strand farmers in the middle of the waterfall. [u]To avoid this[/u]:\u00A0\n<br />1) open SVE's settings\u00A0\n<br />2) change the warp point settings to \"Custom\" and set the x, y coordinates to 55, 57-- or any coordinate of your choice. (Alternatively, you can set the warp point to Grandpa's Shed if you don't mind the SVE warp being off the farm.)\n<br />\n<br />\n<br />\n<br />[b]Required tilesheets:[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/13743]Alvadea's Tilesheets[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28434]crystalinerose Tilesheets[/url]\uFEFF[/*]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/4736]DaisyNiko's Tilesheets[/url][/*]\n<br />[/list]\n<br />[center][b]Mods Used in Screenshots [/b][i](in addition to required tilesheets)[/i][b]:\n<br />[/b][url=https://www.nexusmods.com/stardewvalley/mods/20972]Simple Foliage[/url]\uFEFF - [url=https://www.nexusmods.com/stardewvalley/mods/5255]DaisyNiko's Earthy Recolor [/url]\uFEFF- Gwen's [url=https://www.nexusmods.com/stardewvalley/mods/4542]Medieval Buildings[/url]\uFEFF + [url=https://www.nexusmods.com/stardewvalley/mods/21248?tab=description]Doghouse[/url]\u00A0- [url=https://www.nexusmods.com/stardewvalley/mods/8897]Visible Fish[/url]\uFEFF\n<br />[size=1][i]Maybe some more? Give me a bit of time to check over my screenshots and identify mods. Will update this list if/when I upload more screenshots.[/i][/size]\uFEFF[/center]\n<br />",
+	"Description": "I decided to try my hand at map making and this is my first attempt! This adds a custom farm map to the game-- it does not replace any existing farm maps.\n<br />\n<br />[color=#93c47d][size=4]Updated to 2.2!\u00A0 Updates temporarily paused-- unless I need to fix bugs or someone wants to help me add world map assets and/or a secret woods shortcut.[/size][/color]\n<br />[color=#93c47d][size=1][i](also yes i know my version numbering system probably makes no sense. i'm an art and writing possum, not a code wrangling possum. i am making things up as i go.)[/i][/size] [/color]\n<br />[b]\n<br />This map features:[/b]\n<br />[list]\n<br />[*][b]ALL[/b] tiles [i]should[/i] be tillable/diggable! There are no designated planting areas.[/*]\n<br />[*]Farmers start with 12 parsnips and 1 orange sapling.[/*]\n<br />[*]Picturesque waterfalls![/*]\n<br />[*]Up to two cute heart shaped ponds![/*]\n<br />[*]Optional built in animal pen![/*]\n<br />[*]A cliff top clearing with renewable stumps!\u00A0[i](Greenhouse is also located here by default.)[/i][/*]\n<br />[*]A little beach! [i](Complete with beach fish and forage!)[/i][/*]\n<br />[*]Staircase leading up to a little clearing with mahogany trees on one side of the river. Spawns mushrooms and seasonal vanilla flowers. Can place buildings here. Entrance blocked by a large log.[/*]\n<br />[*]Hidden tunnel containing a quarry and a hot spring! Entrances blocked by boulders.[/*]\n<br />[*][u]Warp/Shortcut Room:[/u] A little possum wearing a crown has taken up residence on the farm-- it seems they fancy themself royalty. In exchange for letting the possum stay on the farm, the possum has granted the farmer the title of Knighthood and access to its house and the network of tunnels within. [i](Contains four shortcut tunnels. You can enter the possum's house from its front door or any of the four stumps on the map.\n<br />[size=1](No, I will NEVER include an option to remove the possum. All they want to do is read books and have their own little garden. In this house, we love and respect our neighbors-- even if they are possums with illusions of grandeur.)[/size][/i][/*]\n<br />[/list]\n<br />[b]Current Config Options:[/b]\n<br />\uFEFF-Toggle the built in animal pen on or off! [i](Default: off)[/i]\n<br />-Toggle the build in doghouse on or off![i] (Default: on)\n<br />[/i]-Choose between a simple or a heart shaped pond in the animal pen area! [i](Default: simple)[/i]\n<br />-Choose whether certain sections of the map have detailed dirt desire paths, or if only the exits are marked by paths. Dirt paths will be replaced by normal grass with some dark grass patches thrown in.\n<br />-Toggle the grassy areas on the beach on and off. [i](If you do not like the grass, or a mod is causing graphical glitches on the grass/sand when using a recolor... feel free to turn the grassy patches off!)[/i]\n<br />-Toggle [i]some[/i] of the built in fences on and off. [i](Warp totem cliff fence, western cliff fence, and beach overhang cliff fence. Default: on.)[/i]\n<br />\n<br />It's not a perfect map, but I had fun making it!\n<br />Let me know if you encounter any weird bugs-- I'm a novice map maker and modder, so I might not know how to fix things, but I'll do my best.\n<br />\n<br />[size=5][color=#93c47d][size=4]New features coming... someday?![/size][/color][/size]\n<br />[b]Here's what I still plan on adding someday:[/b]\n<br />[list]\n<br />[*]World Map assets [i](......someday. We will all just have to deal with the sad default world map for now. I have cross referenced SEVERAL maps and none of the code I've tried has worked. I also hate the assets I made, so I need to remake them... I have decided to revisit this feature at a later date. When I make a new map, I will make sure world map assets are one of the first things I figure out and then I will come back to this map.)[/i][/*]\n<br />[*]i18n support of map flavor text if possible[/*]\n<br />[*]Recolor compatibility for custom assets [i](The map includes some custom made assets just for this map, but currently they only match the vanilla colors. Will do Earthy for sure, since I use it. However, this is not a priority.)[/i][/*]\n<br />[/list]\n<br />[b]Here's what I currently do NOT plan on adding any time soon:[/b]\n<br />[list]\n<br />[*]Secret Woods Entrance [i](Will figure out how conditional warps like this work on my next map, and will only consider adding one to this map AFTER the fact.)[/i][/*]\n<br />[/list]\n<br />\n<br />[size=5][color=#e06666]KNOWN ISSUES (CHECK BEFORE LEAVING COMMENT/BUG REPORT):[/color][/size]\n<br />[b]Technical Issues:[/b]\n<br />--[u]Map Failing to Load:[/u]\n<br />Try uninstalling and reinstalling [url=https://www.nexusmods.com/stardewvalley/mods/28434]crystalinerose Tilesheets[/url]\uFEFF if you see the following line in your smapi log:\n<br />[spoiler]\"[Content Patcher] Can't apply patch (CP) Heart's Delight &gt; Load Maps/{{ModId}}_HeartsDelight to Maps/crownpossum.HeartsDelight_HeartsDelight: StardewModdingAPI.Framework.Exceptions.SContentLoadException: (CP) Heart's Delight loaded map 'assets/Farm_HeartsDelight.tmx' with invalid tilesheet path 'spring_CR_outdoor.png'. The tilesheet couldn't be found relative to either the map file or the game's content folder.\"[/spoiler]\n<br />\n<br />--[u]Heart's Delight Clifftop Clearing showing up as Buildable on saves NOT using the Heart's Delight farm type.[/u]\n<br />I can not figure out how to make sure it ONLY appears when using this map. For now, you have two options:\n<br />1) just ignore it\n<br />2) disable this mod whenever you plan to load a save not using this farm type.\u00A0\n<br />\n<br />[b]Compatibility Issues:[/b]\n<br />--If using SVE, the late game SVE-specific warp point will strand farmers in the middle of the waterfall. [u]To avoid this[/u]:\u00A0\n<br />1) open SVE's settings\u00A0\n<br />2) change the warp point settings to \"Custom\" and set the x, y coordinates to 55, 57-- or any coordinate of your choice. (Alternatively, you can set the warp point to Grandpa's Shed if you don't mind the SVE warp being off the farm.)\n<br />--If using\u00A0Integrated Minecarts, the default location puts the minecart right next to the possum's house... and crushes one of their royal majesty's flowers. I will share\u00A0how I set my\u00A0minecart up\u00A0in an attempt to save their flowers and add more convenience, so you don't have to figure it out yourself:\n<br />1) open Integrated Minecarts settings\n<br />2) Scroll waaaaay down to Custom Farm Map Settings and change the settings to Cart Entrance and the coordinates to 99, 29\n<br />\n<br />\n<br />\n<br />[b]Required tilesheets:[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/13743]Alvadea's Tilesheets[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28434]crystalinerose Tilesheets[/url]\uFEFF[/*]\n<br />[*]\uFEFF[url=https://www.nexusmods.com/stardewvalley/mods/4736]DaisyNiko's Tilesheets[/url][/*]\n<br />[/list]\n<br />[center][b]Mods Used in Screenshots [/b][i](in addition to required tilesheets)[/i][b]:\n<br />[/b][url=https://www.nexusmods.com/stardewvalley/mods/20972]Simple Foliage[/url]\uFEFF - [url=https://www.nexusmods.com/stardewvalley/mods/5255]DaisyNiko's Earthy Recolor [/url]\uFEFF- Gwen's [url=https://www.nexusmods.com/stardewvalley/mods/4542]Medieval Buildings[/url]\uFEFF + [url=https://www.nexusmods.com/stardewvalley/mods/21248?tab=description]Doghouse[/url]\u00A0- [url=https://www.nexusmods.com/stardewvalley/mods/8897]Visible Fish[/url]\uFEFF\n<br />[size=1][i]Maybe some more? Give me a bit of time to check over my screenshots and identify mods. Will update this list if/when I upload more screenshots.[/i][/size]\uFEFF[/center]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/31138",
-	"Version": "2.1.4",
-	"Updated": "2026-06-16T02:45:44+00:00",
+	"Version": "2.2",
+	"Updated": "2026-08-23T02:26:36+00:00",
 	"Downloads": [
 		{
-			"Id": 130814,
-			"Type": "Optional",
-			"DisplayName": "Heart's Delight (Japanese)",
-			"FileName": "Heart's Delight (Japanese)-31138-2-1-3-1745443895.zip",
-			"Description": "NOT UPDATED TO 2.1.4! <br />Only download this file if using the Japanese version! This file only contains the map with Japanese translations.<br /><br />日本語版Heart's Delightを使用する場合は、このバージョンもダウンロードしてください。元のフォルダをこのフォルダに上書きしてください。<br />このバージョンには、翻訳を含む地図ファイルのみが含まれています。",
-			"Version": "2.1.3",
-			"SizeInBytes": 40183,
-			"Uploaded": "2025-04-23T21:31:35+00:00",
-			"Mods": [
-				{
-					"Id": null,
-					"DisplayName": "Heart's Delight\\[CP] HeartsDelight\\assets",
-					"Type": "Invalid",
-					"RelativePath": "Heart's Delight\\[CP] HeartsDelight\\assets",
-					"ManifestParseError": "ManifestMissing",
-					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
-				}
-			],
-			"OtherFields": {
-				"Uid": 5596342517502,
-				"CategoryId": 3,
-				"Primary": false
-			}
-		},
-		{
-			"Id": 171432,
+			"Id": 179735,
 			"Type": "Main",
 			"DisplayName": "Heart's Delight",
-			"FileName": "ae/b8/84/aeb8847c-43ab-477c-b09c-3a698ebf29b9",
-			"Description": "v2.1.4: Various small changes. See changelog for details!<br /><br />Note: You may need to use Reset Terrain Features/Reset Terrain Features Omega if updating this mod on an existing save. Especially for the Clifftop Clearing.",
-			"Version": "2.1.4",
-			"SizeInBytes": 108010,
-			"Uploaded": "2026-06-16T02:45:44+00:00",
+			"FileName": "4c/cf/82/4ccf82d2-7f6d-43e8-816a-4505fd424c5c",
+			"Description": "v2.2: Various changes. See changelog for details!\n\nNote: You may need to use Reset Terrain Features/Reset Terrain Features Omega if updating this mod. Also need to take the time to update your farm layout slightly. Some terrain has shifted.",
+			"Version": "2.2",
+			"SizeInBytes": 109841,
+			"Uploaded": "2026-08-23T02:24:57+00:00",
 			"Mods": [
 				{
 					"Id": "crownpossum.HeartsDelight",
@@ -52,7 +27,7 @@
 						"Name": "(CP) Heart's Delight",
 						"Description": "A farm map featuring cliffs, waterfalls, and heart shaped pools.",
 						"Author": "crownpossum",
-						"Version": "2.1.4",
+						"Version": "2.2.0",
 						"MinimumApiVersion": "4.1.10",
 						"ContentPackFor": {
 							"UniqueId": "Pathoschild.ContentPatcher",
@@ -114,8 +89,33 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342558120,
+				"Uid": 5596342566423,
 				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 179736,
+			"Type": "Optional",
+			"DisplayName": "Heart's Delight (Japanese)",
+			"FileName": "d3/26/05/d3260527-4c45-48c0-b50c-d589dd2cd3c3",
+			"Description": "2.2アップデートしました！\nOnly download this file if using the Japanese version! This file only contains the map with Japanese translations.\n\n日本語版Heart's Delightを使用する場合は、このバージョンもダウンロードしてください。元のフォルダをこのフォルダに上書きしてください。\nこのバージョンには、翻訳を含む地図ファイルのみが含まれています。",
+			"Version": "2.2",
+			"SizeInBytes": 52047,
+			"Uploaded": "2026-08-23T02:26:36+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Heart's Delight\\[CP] Heart's Delight\\assets",
+					"Type": "Invalid",
+					"RelativePath": "Heart's Delight\\[CP] Heart's Delight\\assets",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566424,
+				"CategoryId": 3,
 				"Primary": false
 			}
 		}

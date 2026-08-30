@@ -5,18 +5,18 @@
 	"Author": "mushymato",
 	"Description": "[size=5][b]TrinketTinker - Stardew Valley Trinket Framework[/b]\n<br />[/size]This is a framework for creating trinkets that can have advanced abilities using just [url=https://github.com/Pathoschild/StardewMods/tree/stable/ContentPatcher]Content Patcher[/url].\n<br />\n<br />[size=4][b]What can this framework do?[/b]\n<br />[/size][list]\n<br />[*]Animated companions with various movement patterns.\n<br />[*]A skin system (variants) for companions, and related features to set/change companion variants\n<br />[*]Dynamic event based abilities that work through the companions rather than the player.\n<br />[*]Support for custom effects from other C# mods, through the use of actions.\n<br />[*]Have the player obtain trinket effects without actually having the trinket slot unlocked, through the use of special trigger actions.\n<br />[/list]\n<br />If you are looking to make mods using this framework, refer to the\u00A0[url=https://mushymato.github.io/TrinketTinker/guide/000-Trinket.html]Modder Guide[/url].\n<br />\n<br />This mod is licensed under MPL-2.0, contributions are welcome.\n<br />\n<br />[size=4][b]Example Mods for TrinketTinker[/b]\n<br />[/size][list]\n<br />[*][url=https://github.com/Mushymato/TrinketTinker/tree/main/%5BFullMod%5D/%5BCP%5D%20Sinister%20Servants][CP] Sinister Servants[/url]: Playable mod for TrinketTinker, adds 6 monster trinkets.\n<br />[*][url=https://github.com/Mushymato/TrinketTinker/tree/main/%5BFullMod%5D/%5BCP%5D%20Pack%20Possum%20and%20Critter%20Cages][CP] Pack Possum and Critter Cages[/url]: Playable mod for TrinketTinker, adds 3 \"box\" trinkets that hold more trinkets, and a hireable opossum.\n<br />[*][url=https://github.com/Mushymato/TrinketTinker/tree/main/%5BExamples%5D/%5BCP%5D%20Abigail%20Axcellent%20Adventure][CP] Abigail Axcellent Adventure[/url]: Example mod for a NPC style trinket, which are unique across the world and hides the corresponding NPC.\n<br />[*][url=https://github.com/Mushymato/TrinketTinker/tree/main/%5BExamples%5D/%5BCP%5D%20Lockmachete][CP] Abigail Axcellent Adventure[/url]: Example mod showing how frame set repeat animation works.\n<br />[*][url=https://github.com/Mushymato/TrinketTinker/tree/main/%5BExamples%5D/%5BCP%5D%20Trinket%20Tinker%20Examples][CP] Trinket Tinker Examples[/url]: Test mod, a bit messy.\n<br />[/list]\n<br />[b][size=4]Translations[/size][/b]\n<br />[list]\n<br />[*]English [url=https://github.com/Mushymato/TrinketTinker/blob/main/TrinketTinker/i18n/default.json]default.json[/url]\n<br />[*]Simplified Chinese [url=https://github.com/Mushymato/TrinketTinker/blob/main/TrinketTinker/i18n/zh.json]zh.json[/url]\n<br />[*]French [url=https://github.com/Mushymato/TrinketTinker/blob/main/TrinketTinker/i18n/fr.json]fr.json[/url] (by [url=https://next.nexusmods.com/profile/Caranud]Caranud[/url])\n<br />[/list]\n<br />[b][size=4]Compatibility[/size][/b]\n<br />[list]\n<br />[*] Compatible with Stardew Valley 1.6.9+ on Windows/Mac/Linux, see [code]manifest.json[/code] for the exact game and SMAPI version this mod is built against.\n<br />[*] Somewhat works on Android, with the exception of [url=https://mushymato.github.io/TrinketTinker/guide/005-Inventory.html]Inventory[/url] related features. This is unlikely to be fixed anytime soon.\n<br />[/list]\n<br />[b][size=4]Multiplayer[/size][/b]\n<br />It is [b]extremely important[/b] that every player has the same version of TrinketTinker and the same content packs as this mod makes use of net fields extensively to let others see your companions.\n<br />\n<br />[size=4][b]User Configuration\n<br />[/b]\n<br />[/size]These keybinds are shared across mods using this framework, for the user to set to their liking.\n<br />\n<br />[list]\n<br />[*][font=Courier New]Do Interact Key[/font]: Press this key to interact with your companion, while you are close enough. This is used for talking and putting hats on companions.\n<br />[*][font=Courier New]Open Tinker Inventory Key[/font]: Press this key to open the inventory of your equipped trinket(s).\n<br />[*][font=Courier New]Tinker Inventory Next Key[/font]: While a Tinker Inventory is open and multiple trinkets with inventory are equipped, press this to go to the next inventory.\n<br />[*][font=Courier New]Tinker Inventory Prev Key[/font]: While a Tinker Inventory is open and multiple trinkets with inventory are equipped, press this to go to the previous inventory.\n<br />[/list]\n<br />\n<br />These settings are global across all trinkets created using this framework, but have no effect on other trinkets (base game, added via other C# mods).\n<br />\n<br />[list]\n<br />[*][font=Courier New]Hide During Events[/font]: Hide all trinket companions during events. Only affects trinkets added via trinket tinker.\n<br />[*][font=Courier New]Draw Debug Mode[/font]: Enable a draw debug mode that highlights the bounds of the companion and show their current frame number. If you are not a mod developer and you see a magenta background around your trinkets, turn this off.\n<br />[/list]\n<br />\n<br />[size=4][b]Troubleshooting[/b][/size]\n<br />\n<br />If you ever end up with a trinket or a companion \"stuck\" on your player character, use [code]tt.unequip_trinket[/code] console command to remove all trinkets.\n<br />\n<br />[size=4][b]Links[/b]\n<br />[/size]\n<br />[url=https://mushymato.github.io/TrinketTinker/guide/000-Trinket.html]Modder Guide[/url]\n<br />\n<br />[url=https://github.com/Mushymato/TrinketTinker]Source Code[/url]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29073",
-	"Version": "1.8.1",
-	"Updated": "2026-07-23T22:20:56+00:00",
+	"Version": "1.9.2",
+	"Updated": "2026-08-27T23:22:53+00:00",
 	"Downloads": [
 		{
-			"Id": 176062,
+			"Id": 180464,
 			"Type": "Main",
 			"DisplayName": "TrinketTinker",
-			"FileName": "06/2e/a8/062ea8c4-4b2b-4b68-b4f7-d7351e7e0be5",
+			"FileName": "ab/ee/60/abee603e-62c8-416d-a78b-0858d6832ab0",
 			"Description": "For SDV 1.6.15, see changelog.",
-			"Version": "1.8.1",
-			"SizeInBytes": 162324,
-			"Uploaded": "2026-07-23T22:20:56+00:00",
+			"Version": "1.9.2",
+			"SizeInBytes": 164465,
+			"Uploaded": "2026-08-27T23:22:53+00:00",
 			"Mods": [
 				{
 					"Id": "mushymato.TrinketTinker",
@@ -27,7 +27,7 @@
 						"Name": "TrinketTinker",
 						"Description": "Trinket & Companion framework.",
 						"Author": "mushymato",
-						"Version": "1.8.1",
+						"Version": "1.9.2",
 						"MinimumApiVersion": "4.4.0",
 						"MinimumGameVersion": "1.6.15",
 						"EntryDll": "TrinketTinker.dll",
@@ -44,7 +44,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342562750,
+				"Uid": 5596342567152,
 				"CategoryId": 1,
 				"Primary": false
 			}

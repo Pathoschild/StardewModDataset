@@ -1,0 +1,131 @@
+{
+	"Site": "Nexus",
+	"Id": 51314,
+	"Name": "Arcade framework",
+	"Author": "Tomokisan1",
+	"Description": "[size=5][b]Arcade Framework[/b][/size]\n<br />\n<br />A framework that lets C# mods register their own minigames on arcade cabinets, with a shared ticket wallet, high scores, and a prize redemption cabinet. This mod does nothing on its own. It is a dependency for other mods. A cabinet is just an ordinary big craftable, which you can add any way you like, for example with Content Patcher, or from a C# mod. This framework only owns the arcade layer, which includes launching the game, handling tickets, scores, and prizes.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6 or later[/*]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[/list]\n<br />Generic Mod Config Menu is an optional dependency. If installed, it adds a configuration screen for the framework.\n<br />\n<br />[size=4][b]Games[/b][/size]\n<br />\n<br />The framework ships no games of its own. Games are provided by mods that use the framework. A content pack can then bind a cabinet to any game id that such a mod has registered, with no C# code of its own. The bundled example provides three games you can use out of the box: tomokisan.timingbar, tomokisan.runner, and tomokisan.memory (see the Example section).\n<br />\n<br />[size=4][b]For C# Mod Authors[/b][/size]\n<br />\n<br />To interact with the framework, copy the IArcadeFrameworkApi and IArcadeContext interfaces into your project. Then, request the API after the game launches.\n<br />\n<br />[code]var api = this.Helper.ModRegistry.GetApi&lt;IArcadeFrameworkApi&gt;(\"tomokisan.arcadeFramework\");\n<br />api.RegisterGame(\"your.gameId\", ctx =&gt; new YourGame());[/code]\n<br />The RegisterGame method takes a game identifier and a factory function. The factory function takes an IArcadeContext and returns a StardewValley.Minigames.IMinigame. The IArcadeContext provides the Player, the CabinetItemId, and the CostPaid. It is perfectly fine to ignore the context if you do not need it.\n<br />\n<br />[size=3][b]The Easy Path[/b][/size]\n<br />\n<br />The easiest way to create a game is to subclass ArcadeGameBase. Overrides are available for UpdatePlay, DrawPlay, OnKeyDown, OnClick, and OnStart. In your constructor, pass the game identifier to the base class and set the Title property. When the game ends, call EndGame to pass the score and tickets earned.\n<br />\n<br />Helper methods are available. You can use FillRect, DrawTextCentered, and PlaySound. Gamepad support is handled automatically. Pressing A or Start will begin the game, A acts as the Space key, the Directional Pad acts as the arrow keys, and B or Back will quit. Full screen layout is handled via the bounds rectangle passed to DrawPlay.\n<br />\n<br />[size=3][b]The Advanced Path[/b][/size]\n<br />\n<br />You can implement IMinigame directly. If you choose this route, you must call api.SubmitScore at the end of the game to record the score and tickets earned. As a reminder, a minigame owns its sprite batch. You must call Begin and End on the sprite batch yourself. ArcadeGameBase does this for you automatically.\n<br />\n<br />[size=3][b]Registering Cabinets and Prize Booths from C#[/b][/size]\n<br />\n<br />You can register cabinets and prize booths directly from C# code without needing a content pack.\n<br />[list]\n<br />[*]RegisterCabinet takes a qualified item identifier, a game identifier, and a ticket cost.[/*]\n<br />[*]RegisterPrizeBoothFromJson takes a qualified item identifier and a JSON string of prizes.[/*]\n<br />[/list]\n<br />[size=3][b]Introspection and Events[/b][/size]\n<br />\n<br />You can check if a game is registered using IsGameRegistered. You can get a list of all registered games using GetRegisteredGames. You can also add a listener using AddGameEndedListener. The listener will receive the game identifier, the player identifier, the score, and the tickets earned. Note that the tickets reported to the listener are the credited amount after the ticket multiplier is applied.\n<br />\n<br />[size=3][b]Ticket Wallet and Scores[/b][/size]\n<br />\n<br />Tickets and scores are stored per player on the player save data. The data is synchronized over the network in multiplayer. The game over screen shows a top three leaderboard across all players.\n<br />\n<br />[list]\n<br />[*]GetTickets returns the ticket balance for a player.[/*]\n<br />[*]AddTickets adds tickets to a player balance.[/*]\n<br />[*]TrySpendTickets attempts to spend tickets and returns true if successful.[/*]\n<br />[*]GetHighScore returns the high score for a specific game and player.[/*]\n<br />[/list]\n<br />[size=4][b]For Content Pack Authors[/b][/size]\n<br />\n<br />A content pack for the framework can ship a cabinets.json file and a prizes.json file. Code is not required to bind a cabinet to a game. The cabinet and booth are ordinary big craftables that you add any way you like, for example with Content Patcher targeting Data/BigCraftables, or from a C# mod. The framework only needs their qualified item ids.\n<br />\n<br />[size=3][b]Cabinets[/b][/size]\n<br />\n<br />The cabinets.json file contains a list of objects. Each object needs an ItemId, a GameId, and a Cost. A cabinet may instead list several games with a Games array. The Games array is a list of game identifiers. If a Games array is provided, clicking the cabinet shows a game picker. The Cost is the tickets required per play. When the cost is greater than zero, the player is asked to confirm before paying.\n<br />\n<br />Example with several cabinets, and one cabinet offering multiple games:\n<br />[code]\n<br />[\n<br />{\n<br />\"ItemId\": \"(BC)tomokisan.TimingBarCabinet\",\n<br />\"GameId\": \"tomokisan.timingbar\",\n<br />\"Cost\": 0\n<br />},\n<br />{\n<br />\"ItemId\": \"(BC)tomokisan.RunnerCabinet\",\n<br />\"GameId\": \"tomokisan.runner\",\n<br />\"Cost\": 0\n<br />},\n<br />{\n<br />\"ItemId\": \"(BC)tomokisan.MultiCabinet\",\n<br />\"Games\": [\"tomokisan.runner\", \"tomokisan.memory\"],\n<br />\"Cost\": 5\n<br />}\n<br />][/code]\n<br />[size=3][b]Prizes[/b][/size]\n<br />\n<br />The prizes.json file defines prize booths. Each object needs an ItemId for the booth and a list of Prizes. Each prize needs an ItemId, Count, Quality, Cost, and optionally a Condition, OncePerDay boolean, and Stock. The Condition is a GameStateQuery. The Stock is an integer per day, where negative one means unlimited.\n<br />\n<br />Example:\n<br />[code]\n<br />[\n<br />{\n<br />\"ItemId\": \"(BC)tomokisan.PrizeBooth\",\n<br />\"Prizes\": [\n<br />{ \"ItemId\": \"(O)MysteryBox\", \"Count\": 1, \"Cost\": 10 },\n<br />{ \"ItemId\": \"(O)395\", \"Count\": 1, \"Cost\": 20 },\n<br />{ \"ItemId\": \"(O)72\", \"Count\": 1, \"Cost\": 50, \"OncePerDay\": true, \"Stock\": 1 }\n<br />]\n<br />}\n<br />][/code]\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />If Generic Mod Config Menu is installed, a configuration screen is available. The Ticket multiplier option scales the tickets earned from playing games. The Free play option makes cabinets and prizes cost no tickets.\n<br />\n<br />[size=4][b]Console Commands[/b][/size]\n<br />\n<br />[list]\n<br />[*]arcade_tickets [n] prints the current player ticket balance, or adds n tickets if an argument is given.[/*]\n<br />[*]arcade_play &lt;gameId&gt; launches a registered game directly.[/*]\n<br />[/list]\n<br />[size=4][b]Example[/b][/size]\n<br />\n<br />The bundled example shows the whole flow, and is split into three folders:\n<br />[list]\n<br />[*][AF]arcadeFrameworkExample, a C# mod that registers three example minigames, Timing Bar, Runner, and Memory (ids tomokisan.timingbar, tomokisan.runner, tomokisan.memory). This is where the games live; the framework itself ships none.[/*]\n<br />[*][CP]arcadeFrameworkExample, a Content Patcher pack that adds four big craftables: a Timing Bar cabinet, a Runner cabinet, a Memory cabinet, and a Prize Booth.[/*]\n<br />[*][AFdata]arcadeFrameworkExample, a framework content pack whose cabinets.json binds each cabinet to one of those game ids, with no code of its own, and whose prizes.json fills the Prize Booth.[/*]\n<br />[/list]To try it in game, add the big craftables (for example with the console command player_add (BC)tomokisan.RunnerCabinet 1), place them, and interact. Use arcade_tickets 100 to get some tickets for the Prize Booth.\n<br />\n<br />My mods :\u00A0\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51314]Arcade framework[/url]\u00A0:\u00A0A dependency framework to plug your own minigames onto arcade cabinets, with a shared ticket wallet, high scores, and a prize booth. It provides a C# API, and a worked example that adds three playable games. Optional Generic Mod Config Menu support. Does nothing on its own.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51289]This week in Pelican Town[/url]\u00A0:\u00A0Turn on the TV and let the local news anchor recap your week in the valley, generated live from your own deeds. Works with other TV mods.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51294]Interactive objects framework[/url]\u00A0:\u00A0A modding framework that lets content packs and C# mods attach an interaction menu, with conditions, costs, cooldowns and effects, to any big craftable or furniture. Requires Content Patcher to create the objects.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26845]SWAPI - Stardew Valley Web API[/url] : Let your game send events to a custom web server.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24765]highRollerSlots[/url]\u00A0:\u00A0Add possibility to bet more in slots machines.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24254]geodeCrusherPlus[/url]\u00A0:\u00A0Add ability to geode crusher to crush any geode, including mysteryboxes, Artifact Trove and golden coconuts.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24885]\uFEFFTV Shopping channel[/url]\u00A0:\u00A0\uFEFFAdd a TV shopping channel.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24982]Prize Machine Custom Prizes[/url]\u00A0:\u00A0Let you easily fully customize the prize list of Prize Machine.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\uFEFF\u00A0\uFEFF:\u00A0Allow you to get one blessing by statue per day instead of only one blessing per day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25267]Custom Blessings Framework[/url]\uFEFF :\u00A0\uFEFFAllow mod developers to easily add blessings from statues of blessings.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26260]Custom Wake Up Time[/url]\u00A0:\u00A0Let you configure the wake up time for each day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26371]Anti Tool Exhaustion[/url]\u00A0:\u00A0Prevent you to become exhausted from an accidental tool use.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51314",
+	"Version": "1.0.0",
+	"Updated": "2026-08-26T09:45:45+00:00",
+	"Downloads": [
+		{
+			"Id": 180255,
+			"Type": "Main",
+			"DisplayName": "ArcadeFramework 1.0.0",
+			"FileName": "a0/6a/c4/a06ac401-1dd0-426d-9b19-e6298b40f998",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 31653,
+			"Uploaded": "2026-08-26T09:45:19+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.arcadeFramework",
+					"DisplayName": "Arcade Framework",
+					"Type": "Smapi",
+					"RelativePath": "arcadeFramework",
+					"Manifest": {
+						"Name": "Arcade Framework",
+						"Description": "A framework that lets C# mods register their own minigames on arcade cabinets, with a shared ticket wallet, high scores, and a prize-redemption cabinet.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "arcadeFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:51314"
+						],
+						"UniqueId": "tomokisan.arcadeFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566943,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 180256,
+			"Type": "Optional",
+			"DisplayName": "ArcadeFramework Example 1.0.0",
+			"FileName": "72/16/dc/7216dca0-164f-4610-a0a1-a1647704f4dd",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 17807,
+			"Uploaded": "2026-08-26T09:45:45+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.AF.Example.data",
+					"DisplayName": "Arcade Framework Example - Data",
+					"Type": "ContentPack",
+					"RelativePath": "[AFdata]arcadeFrameworkExample",
+					"Manifest": {
+						"Name": "Arcade Framework Example - Data",
+						"Description": "Binds the example cabinet to the Timing Bar game and defines the prize booth catalog.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "tomokisan.arcadeFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "tomokisan.AF.Example.data"
+					}
+				},
+				{
+					"Id": "tomokisan.AF.Example",
+					"DisplayName": "Arcade Framework Example",
+					"Type": "Smapi",
+					"RelativePath": "[AF]arcadeFrameworkExample",
+					"Manifest": {
+						"Name": "Arcade Framework Example",
+						"Description": "An example minigame for Arcade Framework.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "arcadeFrameworkExample.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "tomokisan.arcadeFramework",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "tomokisan.AF.Example"
+					}
+				},
+				{
+					"Id": "tomokisan.AF.Example.CP",
+					"DisplayName": "Arcade Framework Example - CP",
+					"Type": "ContentPack",
+					"RelativePath": "[CP]arcadeFrameworkExample",
+					"Manifest": {
+						"Name": "Arcade Framework Example - CP",
+						"Description": "Content Patcher pack for Arcade Framework Example.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "tomokisan.AF.Example.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566944,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438002,
+		"UploaderId": 205391183,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

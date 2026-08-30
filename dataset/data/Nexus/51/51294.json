@@ -1,0 +1,109 @@
+{
+	"Site": "Nexus",
+	"Id": 51294,
+	"Name": "Interactive objects framework",
+	"Author": "Tomokisan1",
+	"Description": "[size=6][b]Interactive Objects Framework[/b][/size]\n<br />\n<br />A framework for Stardew Valley 1.6 that lets content packs and C# mods attach an interaction menu to any big craftable or furniture. When the player interacts with a registered object, a question dialogue opens with options you define. Each option can be gated by conditions and by a price, and can run effects such as giving items, applying buffs, playing sounds, or running any vanilla trigger action.\n<br />\n<br />This mod does nothing on its own. It is a dependency for other mods.\n<br />\n<br />Creating the object itself, its sprite and data, is done with Content Patcher, the standard tool. This framework only owns the interaction layer, what happens when the object is clicked.\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6 or later[/*]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[/list]\n<br />[size=5][b]For players[/b][/size]\n<br />Install SMAPI, then unzip this mod into your Mods folder, along with any mod that depends on it. There is nothing to configure.\n<br />\n<br />[size=5][b]For content pack authors[/b][/size]\n<br />Create a content pack with a manifest that targets this framework, and an interactions.json file next to it.\n<br />\n<br />manifest.json:\n<br />[code]\n<br />{\n<br />\u00A0 \"Name\": \"Your Pack Name\",\n<br />\u00A0 \"Author\": \"You\",\n<br />\u00A0 \"Version\": \"1.0.0\",\n<br />\u00A0 \"Description\": \"...\",\n<br />\u00A0 \"UniqueID\": \"you.yourPack\",\n<br />\u00A0 \"MinimumApiVersion\": \"4.0.0\",\n<br />\u00A0 \"ContentPackFor\": { \"UniqueID\": \"tomokisan.interactiveObjectsFramework\" }\n<br />}[/code]\n<br />interactions.json maps a qualified item id to an interaction:\n<br />[code]\n<br />{\n<br />\u00A0 \"(BC)you.YourObject\": {\n<br />\u00A0 \u00A0 \"Question\": \"What would you like to do?\",\n<br />\u00A0 \u00A0 \"Options\": [\n<br />\u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Id\": \"buy\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Label\": \"Buy a mystery box (500g)\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Cost\": { \"Money\": 500 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Cooldown\": \"day\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Effects\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 { \"Type\": \"GiveItem\", \"ItemId\": \"(O)MysteryBox\", \"Count\": 1 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 { \"Type\": \"Message\", \"Text\": \"Thanks for your purchase.\" }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />\u00A0 }\n<br />}[/code]\n<br />[size=4][b]Interaction[/b][/size]\n<br />An interaction, and each submenu, has these fields:\n<br />[list]\n<br />[*][b]Question[/b], the prompt shown at the top of the menu. Optional.[/*]\n<br />[*][b]Options[/b], the list of options.[/*]\n<br />[*][b]Menus[/b], a set of named submenus that an option can open with GoTo. Only read on the top level.[/*]\n<br />[/list]\n<br />[size=4][b]Option[/b][/size]\n<br />[list]\n<br />[*][b]Id[/b], a short identifier, unique within its menu. Used for cooldown tracking and GoTo.[/*]\n<br />[*][b]Label[/b], the text shown for the option.[/*]\n<br />[*][b]Condition[/b], a GameStateQuery. The option is locked if it does not match. Optional.[/*]\n<br />[*][b]Cost[/b], a price in money and, or, items. Checked before the option can be picked, and consumed on success. Optional.[/*]\n<br />[*][b]Cooldown[/b], how often the option may be picked, per placed object. One of \"always\" (default), \"day\", \"season\", \"ever\", or a number of days such as \"3\". Optional.[/*]\n<br />[*][b]OncePerDay[/b], a shorthand for Cooldown set to \"day\". Optional.[/*]\n<br />[*][b]HideWhenLocked[/b], if true the option is hidden while locked instead of shown greyed out. Optional, default false.[/*]\n<br />[*][b]LockedMessage[/b], the text shown when a locked option is picked. Overrides the automatic reason. Optional.[/*]\n<br />[*][b]GoTo[/b], opens a submenu after any effects run. Use a name from Menus, or \"root\" to return to the main menu. Optional.[/*]\n<br />[*][b]Effects[/b], the list of effects to run when the option is picked.[/*]\n<br />[/list]\n<br />[size=4][b]Cost[/b][/size]\n<br />[code]\n<br />\"Cost\": { \"Money\": 100, \"Items\": [ { \"ItemId\": \"(O)72\", \"Count\": 1 } ] }[/code]If the player cannot pay, the option is locked and shows the requirement. On success the money and items are consumed automatically.\n<br />\n<br />[size=4][b]Effects[/b][/size]\n<br />[list]\n<br />[*][b]GiveItem[/b] (ItemId, Count, Quality), gives an item to the player.[/*]\n<br />[*][b]TakeItem[/b] (ItemId, Count), removes items from the player.[/*]\n<br />[*][b]GiveMoney[/b] (Amount), adds money.[/*]\n<br />[*][b]TakeMoney[/b] (Amount), removes money, floored at zero.[/*]\n<br />[*][b]ApplyBuff[/b] (Id), applies a buff by id.[/*]\n<br />[*][b]RandomItem[/b] (Items, Weights, Count, Quality), gives one item picked at random from Items. Weights is optional and must match the length of Items.[/*]\n<br />[*][b]PlaySound[/b] (Sound), plays a sound cue.[/*]\n<br />[*][b]Message[/b] (Text), shows a message.[/*]\n<br />[*][b]RunAction[/b] (Action), runs a vanilla trigger action string, which gives access to the full action vocabulary such as AddItem, AddMail, or AddMoney.[/*]\n<br />[/list]Every effect may also have a Condition, a GameStateQuery, and is skipped if it does not match.\n<br />\n<br />[size=4][b]Text and translations[/b][/size]\n<br />Any text field, Question, Label, Message, and LockedMessage, accepts:\n<br />[list]\n<br />[*]Plain text.[/*]\n<br />[*]Tokenizable strings, for example \"[LocalizedText Strings&#92;path]\".[/*]\n<br />[*]A translation key from your own pack, written as \"{{i18n:your.key}}\". The framework reads it from your pack's i18n folder, so you can ship default.json, fr.json, and so on, the same way SMAPI mods do.[/*]\n<br />[/list]\n<br />[size=4][b]Conditions[/b][/size]\n<br />Condition fields use GameStateQuery. See the Stardew Valley wiki page \"Modding:Game state queries\" for the full list. For example, \"PLAYER_CURRENT_MONEY Current 100\" is true when the current player has at least 100g.\n<br />\n<br />[size=4][b]Notes[/b][/size]\n<br />[list]\n<br />[*]Cooldowns are stored on the object's own save data, per player. Each placed object tracks its own cooldown, it survives saving and loading, and it works in multiplayer. Breaking and replacing the object resets its cooldown, since the game recreates the item without its stored data.[/*]\n<br />[*]Registering an object that already has a vanilla interaction, such as a chair, replaces that behavior. Prefer a new object with no vanilla interaction.[/*]\n<br />[/list]\n<br />[size=5][b]For C# mods[/b][/size]\n<br />Copy the IInteractiveObjectsApi interface into your project, then request the API after the game launches:\n<br />[code]\n<br />var api = this.Helper.ModRegistry.GetApi&lt;IInteractiveObjectsApi&gt;(\"tomokisan.interactiveObjectsFramework\");\n<br />api.RegisterInteractionFromJson(\"(BC)you.YourObject\", interactionJson);[/code]The JSON string uses the same schema as interactions.json, for a single interaction. Translation keys are not resolved for API registrations, so use plain text or tokenizable strings there.\n<br />\n<br />[size=5][b]Example[/b][/size]\n<br />This mod ships with a worked example, a Wishing Well, as a separate optional download. One content pack, a Content Patcher pack, adds the big craftable. A second content pack, for this framework, attaches the interaction. It shows a money cost, an item cost, per day and per season cooldowns, a submenu, and translations.\n<br />\n<br />My mods :\u00A0\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51314]Arcade framework[/url]\u00A0:\u00A0A dependency framework to plug your own minigames onto arcade cabinets, with a shared ticket wallet, high scores, and a prize booth. It provides a C# API, and a worked example that adds three playable games. Optional Generic Mod Config Menu support. Does nothing on its own.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51289]This week in Pelican Town[/url]\u00A0:\u00A0Turn on the TV and let the local news anchor recap your week in the valley, generated live from your own deeds. Works with other TV mods.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51294]Interactive objects framework[/url]\u00A0:\u00A0A modding framework that lets content packs and C# mods attach an interaction menu, with conditions, costs, cooldowns and effects, to any big craftable or furniture. Requires Content Patcher to create the objects.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26845]SWAPI - Stardew Valley Web API[/url] : Let your game send events to a custom web server.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24765]highRollerSlots[/url]\u00A0:\u00A0Add possibility to bet more in slots machines.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24254]geodeCrusherPlus[/url]\u00A0:\u00A0Add ability to geode crusher to crush any geode, including mysteryboxes, Artifact Trove and golden coconuts.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24885]\uFEFFTV Shopping channel[/url]\u00A0:\u00A0\uFEFFAdd a TV shopping channel.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24982]Prize Machine Custom Prizes[/url]\u00A0:\u00A0Let you easily fully customize the prize list of Prize Machine.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\uFEFF\u00A0\uFEFF:\u00A0Allow you to get one blessing by statue per day instead of only one blessing per day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25267]Custom Blessings Framework[/url]\uFEFF :\u00A0\uFEFFAllow mod developers to easily add blessings from statues of blessings.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26260]Custom Wake Up Time[/url]\u00A0:\u00A0Let you configure the wake up time for each day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26371]Anti Tool Exhaustion[/url]\u00A0:\u00A0Prevent you to become exhausted from an accidental tool use.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51294",
+	"Version": "1.0.0",
+	"Updated": "2026-08-25T20:26:26+00:00",
+	"Downloads": [
+		{
+			"Id": 180180,
+			"Type": "Main",
+			"DisplayName": "Interactive Objects Framework 1.0.0",
+			"FileName": "73/0a/5e/730a5ed7-e8e2-4442-8730-83694e67e87b",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 25833,
+			"Uploaded": "2026-08-25T20:25:27+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.interactiveObjectsFramework",
+					"DisplayName": "Interactive Objects Framework",
+					"Type": "Smapi",
+					"RelativePath": "interactiveObjectsFramework",
+					"Manifest": {
+						"Name": "Interactive Objects Framework",
+						"Description": "A framework that lets content packs and C# mods attach an interaction menu (with conditions and effects) to any big craftable or furniture.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "interactiveObjectsFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:51294"
+						],
+						"UniqueId": "tomokisan.interactiveObjectsFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566868,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 180181,
+			"Type": "Optional",
+			"DisplayName": "Interactive Objects Framework - Example 1.0.0",
+			"FileName": "ab/77/f7/ab77f7a7-1cda-41d1-b1e3-bb6dc5cb4e7d",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 4852,
+			"Uploaded": "2026-08-25T20:26:26+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.IOF.Example.CP",
+					"DisplayName": "(CP) Interactive Objects Framework Example",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Interactive Objects Framework Example",
+					"Manifest": {
+						"Name": "(CP) Interactive Objects Framework Example",
+						"Description": "Adds an example Wishing Well big craftable used to demo the Interactive Objects Framework.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "tomokisan.IOF.Example.CP"
+					}
+				},
+				{
+					"Id": "tomokisan.IOF.Example.IOF",
+					"DisplayName": "(IOF) Interactive Objects Framework Example",
+					"Type": "ContentPack",
+					"RelativePath": "[IOF] Interactive Objects Framework Example",
+					"Manifest": {
+						"Name": "(IOF) Interactive Objects Framework Example",
+						"Description": "Attaches a wishing-well interaction to the example big craftable.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "tomokisan.interactiveObjectsFramework"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "tomokisan.IOF.Example.IOF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566869,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437982,
+		"UploaderId": 205391183,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -5,18 +5,18 @@
 	"Author": "Spiderbuttons",
 	"Description": "Mod authors who make custom NPCs generally want them to appear at festivals. This is completely normal! The problem is there is only so much space to go around, and unless everyone who makes an NPC is aware of every spot that someone else has already chosen, it's not uncommon for two or more NPCs to be placed in the same exact spot in a festival. This leads to them overlapping, being difficult to interact with, and flickering as the game tries to figure out who should be drawn on top of who.\n<br />\n<br />This mod aims to alleviate some of that issue. Once a festival is loaded, Festival Nudge will look at every NPC, figure out which ones are overlapping, and push them apart until they are no longer overlapping (if possible). It won't push them too far, though! Just a little bit. A nudge, you could say. One tile away at most.\n<br />\n<br />Festival Nudge will not move NPCs into normally inaccessible tiles, nor will they move them into the same position as another NPC next to them. It will also not move NPCs directly in front of another NPC (that would be rude to the other NPC!) or into a position where the NPC would have their face covered by a piece of scenery.\n<br />\n<br />If there are too many NPCs in one overlapping spot with not enough free tiles around them, it will nudge them a\u00A0[i]little[/i]\u00A0bit, separating NPCs by half a tile to do its best to make sure they are still not overlapping despite how crowded they are, while still\u00A0[i]trying[/i]\u00A0to respect those earlier limitations. Even then, it will nudge them left or right or up and down just enough to make sure the NPC is still visible and not hidden behind another NPC.\n<br />\n<br />As well, Festival Nudge will never completely block the only path between you and Lewis, so even if your festival is mega-crowded with a billion NPCs, it won't be Festival Nudge's fault that you can't reach Lewis in order to get him to start the egg hunt or something. It won't (yet) guarantee that every\u00A0[i]other[/i]\u00A0NPC is just as reachable, but if necessary, we all know the Farmer has explicit permission to barrel through anyone as long as they keep running into them long enough.\n<br />\n<br />Naturally, if there are no overlapping NPCs in your festival, then Festival Nudge will not do anything, but it'll be there in the background in case you ever need it, so you may as well keep it installed in case your mod list changes in any way in the future.\n<br />\n<br />All that being said though, Festival Nudge\u00A0[i]also[/i]\u00A0allows you to move NPCs\u00A0[i]yourself[/i]\u00A0if you want to, letting you place them literally anywhere you want, facing in whichever direction you want. Inside the config you'll find a hotkey for picking up an NPC. If you press this hotkey when hovering your mouse cursor over an NPC, you will enter the NPC moving mode. The NPC will follow your cursor and you can left click to place them down again, scroll up or down to change the direction they're facing, or right click to cancel and send them back to where they were. If you press down the precision hotkey (also configurable), you can move them via individual pixels instead of tiles. You can place them truly anywhere with precision turned on. Your manual movements will be saved, too, so that the next time you see the same festival setup, you won't have to move them again.\n<br />\n<br />[b]Installation[/b]\n<br />[list]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].[/*]\n<br />[*]Extract the mod into Stardew Valley/Mods.[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list][b]Configuration[/b]\n<br />Festival Nudge comes with two configuration options, accessible via Generic Mod Config Menu:\n<br />[list]\n<br />[*]Log Movements: Enable this if you want to be told in your SMAPI console whenever an NPC is moved from their original position. This is enabled by default.[/*]\n<br />[*]Skip Walking NPCs: If enabled, Festival Nudge will not nudge NPCs that are set up to walk around the festival, since that may lead to issues. This is enabled by default.[/*]\n<br />[*]Pick Up NPC: The button you press to begin manually moving an NPC around.[/*]\n<br />[*]Precision Modifier: Hold this hotkey when moving an NPC to move them by individual pixels instead of tiles.[/*]\n<br />[*]Reset Nudges: The hotkey to press to reset all manually moved NPCs back to where they were originally. If you have an NPC picked up when you press this, it will only reset that specific NPC.[/*]\n<br />[*]Reset All Modifier: If you are holding down this key at the same time you press the Reset Nudges button, it will reset ALL movements, not just manual ones you did yourself.[/*]\n<br />[*]Per-Save Nudges: If enabled, your manual movements will be saved on a per-save file basis and not shared globally across all save files. If disabled, every save file will load your previously done manual movements for each festival, if they exist.[/*]\n<br />[/list][b]Mod Authors[/b]\n<br />You can specify a list of positions that Festival Nudge will consider first when it find that your NPC is overlapping someone else. Please see the example pack in the Miscellaneous files in the download tab if you're interested.\n<br />\n<br />[b][url=https://github.com/Spiderbuttons/FestivalNudge]Source Code[/url][/b]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/44141",
-	"Version": "1.2.3",
-	"Updated": "2026-07-03T01:02:01+00:00",
+	"Version": "1.2.4",
+	"Updated": "2026-08-17T00:18:43+00:00",
 	"Downloads": [
 		{
-			"Id": 173467,
+			"Id": 179010,
 			"Type": "Main",
 			"DisplayName": "Festival Nudge",
-			"FileName": "29/35/22/293522ef-867b-41cc-8827-745aa609f9cf",
-			"Description": "Changed: NPCs can no longer be manually moved when a menu (such as a festival shop) is open.\nTranslation: Tweaked Error.CannotMove i18n text.",
-			"Version": "1.2.3",
-			"SizeInBytes": 38232,
-			"Uploaded": "2026-07-03T01:02:01+00:00",
+			"FileName": "35/01/0e/35010e68-be03-4c98-8af3-b97050072fca",
+			"Description": "Fixed: Farmhands should no longer get a bunch of errors when using per-save nudges, and should now receive any nudges from the host. While farmhands can still move NPCs afterwards manually, their own personal nudges will not be used initially.",
+			"Version": "1.2.4",
+			"SizeInBytes": 39369,
+			"Uploaded": "2026-08-17T00:18:43+00:00",
 			"Mods": [
 				{
 					"Id": "Spiderbuttons.FestivalNudge",
@@ -27,7 +27,7 @@
 						"Name": "Festival Nudge",
 						"Description": "Prevent overlapping NPCs in highly modded festivals.",
 						"Author": "Spiderbuttons",
-						"Version": "1.2.3",
+						"Version": "1.2.4",
 						"EntryDll": "FestivalNudge.dll",
 						"Dependencies": [],
 						"UpdateKeys": [
@@ -38,7 +38,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342560155,
+				"Uid": 5596342565698,
 				"CategoryId": 1,
 				"Primary": true
 			}

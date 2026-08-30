@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 51268,
+	"Name": "FreeLove Relocation Helper",
+	"Author": "yhzx",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[quote][b]Warning:[/b]\u00A0The code for this mod is AI-generated, because I'm not very good at C# — sorry :([/quote]\n<br />I really like [url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn’s[/url] [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url], but I found that every time I loaded into a save, my spouse had a chance of appearing at (0,0) outside the map, or sometimes when I entered the farmhouse, multiple spouses would be stuck at the exact same spot...\n<br />\n<br />So I downloaded the open-source repository of [url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn’s[/url] [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] , and to my surprise, [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] actually has a fairly robust set of mechanisms to prevent spouses from overlapping or getting stuck outside the map. \n<br />\n<br />The one reason I can think of for spouses still overlapping or ending up outside the map is custom farmhouses. For example, I use [url=https://www.nexusmods.com/stardewvalley/users/78813038]tikamin557[/url]'s\u00A0[i][url=https://www.nexusmods.com/stardewvalley/mods/18917]T's Apartment House[/url][/i]\u00A0mod (which I highly recommend — it provides enough rooms for your multiple spouses). Its custom farmhouse has a teleport entrance to the second floor in the upper-left corner, but the entrance isn't sealed; the player is simply teleported away the moment they touch it. This means that without this teleport, a player or NPC could potentially reach outside the map through that gap. I suspect this bypasses [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url]'s map reachability detection. For some reason, the spouse is initially placed at (0,0), and then [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] finds that (0,0) can also reach the inside of the farmhouse through the teleport gap, so since it's not outside the map, it doesn't correct the spouse's position at (0,0).\n<br />\n<br />Also, perhaps the custom farmhouse is so large that there's some weird timing difference during loading, where the farmhouse finishes loading\u00A0[i]after[/i]\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] has already made its corrections, causing all spouses to be stuck at the same point when the player enters. That's another guess of mine (since this trigger is very unstable).\n<br />\n<br />But I'm no super expert who can optimize [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] 's algorithm — I'm just a super noob. So the solution I came up with is to completely borrow [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] 's check and placement mechanics, and every time spouse positions need to be handled, delay a certain amount of time to ensure the map is fully loaded, and then run an almost identical version of [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] 's spouse position correction mechanism. The only difference in my correction mechanism is that it only detects spouses that are inside the farmhouse, located at (0,0), or overlapping with other spouses, and then places them in a valid spot using the exact same placement logic as [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] .\n<br />\n<br />\n<br />[quote][b]Warning again:[/b]\u00A0This mod's code is AI-generated. I've placed the code in the optional files. I mean no offense to anyone. If there is any copyright infringement, please contact me and I will remove it.[/quote]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list=1]\n<br />[*][color=#D4D4D8][b]Install SMAPI[/b]\u00A0(v4.0.0 or later) if you haven’t already.[/color][/*]\n<br />[*][color=#D4D4D8][b]Install [url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] [/b]\u00A0– this mod\u00A0[b]requires[/b]\u00A0it.[/color][/*]\n<br />[*][color=#D4D4D8]Download this mod and unzip it into your Stardew Valley/Mods\u00A0folder.[/color][/*]\n<br />[*][color=#D4D4D8]Launch the game through SMAPI. The mod will generate a default config.json\u00A0on first run.[/color][/*]\n<br />[*][color=#D4D4D8](Optional) Install\u00A0[b]Generic Mod Config Menu[/b]\u00A0to adjust settings in‑game.[/color][/*]\n<br />[/list]\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][b]Smart detection[/b]\u00A0– Move spouses that are\u00A0[b]invalid[/b]\u00A0(tile 0,0) or\u00A0[b]overlapping[/b].\u00A0[/*]\n<br />[*][b]Multiple triggers[/b]\u00A0– check on save load, at the start of a new day, or when you enter your farmhouse.[/*]\n<br />[*][b]Periodic check[/b]\u00A0– optionally run scans continuously while you are inside the farmhouse.[/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][b][url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url] [/b]\u00A0– this mod will\u00A0[b]not[/b]\u00A0work without it.[/color][/*]\n<br />[/list]\n<br />[heading]Configuration[/heading]\n<br />DelaySeconds defaults to 5s, which you can adjust in the settings.\u00A0\n<br />All other options come with descriptions and should be self‑explanatory (hopefully).\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/users/18901754]aedenthorn[/url] – for the incredible [b][url=https://www.nexusmods.com/stardewvalley/mods/10021]Freelove[/url][/b] mod,\u00A0 I simply couldn’t live without it now. [/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51268",
+	"Version": "1",
+	"Updated": "2026-08-25T10:05:15+00:00",
+	"Downloads": [
+		{
+			"Id": 180119,
+			"Type": "Main",
+			"DisplayName": "FreeLoveRelocationHelper 1.0.0",
+			"FileName": "ca/40/15/ca401546-280d-4c73-bdf6-881a9f7b3be2",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 20812,
+			"Uploaded": "2026-08-25T10:05:15+00:00",
+			"Mods": [
+				{
+					"Id": "yhzx.FreeLoveRelocationHelper",
+					"DisplayName": "FreeLove Relocation Helper",
+					"Type": "Smapi",
+					"RelativePath": "FreeLoveRelocationHelper",
+					"Manifest": {
+						"Name": "FreeLove Relocation Helper",
+						"Description": "延迟检查并仅修正越界或重叠的配偶，将其重新放置到农舍随机位置。",
+						"Author": "yhzx",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FreeLoveRelocationHelper.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.FreeLove",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "yhzx.FreeLoveRelocationHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566807,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437956,
+		"UploaderId": 141186463,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

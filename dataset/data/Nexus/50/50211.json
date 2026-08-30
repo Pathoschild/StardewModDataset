@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 50211,
+	"Name": "Ferngill Republic Ministry of Agriculture",
+	"Author": "Darkskyid",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />\n<br />The Ferngill Republic Ministry of Agriculture intervenes in agricultural markets each season, adjusting the selling prices of 2 or\u00A04 crops based on events. Each price change comes with an official mail bulletin explaining the \"official\" reason for the market adjustment through\u00A0government announcements.\n<br />\n<br />Price changes only occur on [b]Day 1[/b] of each new season (Spring, Summer, Fall). If you're already past Day 1, use the SMAPI console command\n<br />[code]ferngill_test[/code]to manually trigger price changes and bulletins.\n<br />[line]\n<br />[size=4][b]Features[/b][/size]\n<br />\n<br />[b]Dynamic Price Fluctuations[/b]\n<br />[list]\n<br />[*][b]Seasonal Changes:[/b] Each season (Spring, Summer, Fall), 2 or\u00A04 crops have their selling prices modified[/*]\n<br />[*][b]Price Range:[/b] Modifiers range from -30% to +40% by default, customizable via config[/*]\n<br />[*][b]Tier-Based Logic:[/b] Higher value crops are more likely to decrease in price, while cheaper crops are more likely to increase[/*]\n<br />[*][b]Winter Dormancy:[/b] No price changes during winter, with a special bulletin explaining market inactivity[/*]\n<br />[*][b]Mod Compatibility:[/b] Works with crop adding mods,\u00A0new crops are automatically tiered based on their vanilla harvest prices[/*]\n<br />[/list][b]Government Bulletin System[/b]\n<br />[list]\n<br />[*][b]Immersive Mail:[/b] Receive official bulletins explaining the \"government reasons\" for price changes[/*]\n<br />[*][b]Immersive\u00A0Narratives:[/b] Over 40 narrative templates covering various ministries and scenarios;\u00A0\n<br />[code]Have an idea for a bulletin? Drop it in the comments![/code][/*]\n<br />[/list][b]Smart Crop Selection[/b]\n<br />[list]\n<br />[*][b]Season Aware:[/b] Only selects crops that grow in the current season[/*]\n<br />[*][b]Tier System:[/b] Crops are categorized into S, A, B, C tiers based on their vanilla prices[/*]\n<br />[*][b]Weighted Selection:[/b] Higher\u00A0tier crops more likely to be selected for price decreases[/*]\n<br />[*][b]Configurable Targets:[/b] Choose between 2 or 4 crops affected per season[/*]\n<br />[*][b]Mod Compatibility:[/b] Crops added by other mods are automatically detected and tiered based on their harvest price[/*]\n<br />[/list][b]Persistent System[/b]\n<br />[list]\n<br />[*][b]Save Compatibility:[/b] Modifiers persist through saves and game sessions[/*]\n<br />[*][b]Seasonal reset[/b]: Prices reset at the start of each new season (Spring, Summer, Fall) [/*]\n<br />[*][b]Clean Mail Management:[/b] Automatically removes old bulletins when new ones arrive[/*]\n<br />[*][b]Seasonal Timing:[/b] Price changes only occur on Day 1 of each season, use\n<br />[code]ferngill_test[/code]command if you need to trigger changes mid-season[/*]\n<br />[/list][line]\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[b]Required[/b]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.0.0+[/*]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[/list]\n<br />[b]Optional[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0For ingame configuration\n<br />Not required for mod functionality, If not installed\u00A0configure via\n<br />[code]config.json[/code]in the mod folder[/*]\n<br />[/list][line]\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*][b]Required:[/b]\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI (Stardew Modding API)[/url]\u00A0version 4.0.0 or higher[/*]\n<br />[*]Stardew Valley 1.6 or higher[/*]\n<br />[/list][/*]\n<br />[*]Download the latest release from the mod page[/*]\n<br />[*]Extract the\n<br />[code]FerngillMinistry[/code]folder to your Stardew Valley\n<br />[code]Mods[/code]directory[/*]\n<br />[*]The folder structure should be:\n<br />[code]Stardew Valley/Mods/FerngillMinistry/[/code][/*]\n<br />[*]Launch the game using SMAPI[/*]\n<br />[*][b]Optional (Recommended):[/b]\n<br />[list]\n<br />[*] Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for ingame configuration[/*]\n<br />[*]With GMCM installed, configure the mod from the games title screen or ingame menu[/*]\n<br />[/list][/*]\n<br />[/list][line]\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />The mod is highly configurable through\n<br />[code]config.json[/code]or via Generic Mod Config Menu:\n<br />\n<br />[b]Price Settings[/b]\n<br />[list]\n<br />[*][b]Min Change %:[/b] Minimum price change percentage (default: -30%)[/*]\n<br />[*][b]Max Change %:[/b] Maximum price change percentage (default: +40%)[/*]\n<br />[*][b]Price Floor:[/b] Absolute minimum multiplier (default: 0.5x / half price)[/*]\n<br />[*][b]Price Ceiling:[/b] Absolute maximum multiplier (default: 2.0x / double price)[/*]\n<br />[/list][b]Target Selection[/b]\n<br />[list]\n<br />[*][b]Number of Targets:[/b] How many crops are affected each season (2 or 4)[/*]\n<br />[*][b]Crops Only:[/b] If enabled, excludes flowers from price changes[/*]\n<br />[*][b]Exclude Starter Crops:[/b] If enabled, excludes basic crops like Parsnip[/*]\n<br />[/list][b]Mail Settings[/b]\n<br />[list]\n<br />[*][b]Enable Mail:[/b] Toggle whether to receive seasonal bulletins[/*]\n<br />[/list][b]Console Commands[/b]\n<br />[list]\n<br />[*][code]ferngill_test[/code]- Trigger a test bulletin for specified season[/*]\n<br />[*][code]ferngill_clear[/code]- Clear all active price modifiers[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50211",
+	"Version": "1.0.2",
+	"Updated": "2026-08-10T09:34:07+00:00",
+	"Downloads": [
+		{
+			"Id": 178106,
+			"Type": "Main",
+			"DisplayName": "FerngillMinistry 1.0.2",
+			"FileName": "61/ea/5a/61ea5ade-e546-46d7-9a6b-47c8a1c52582",
+			"Description": "Fixed: crops could rarely roll 0% price change. Every selected crop now actually goes up or down.",
+			"Version": "1.0.2",
+			"SizeInBytes": 37931,
+			"Uploaded": "2026-08-10T09:34:07+00:00",
+			"Mods": [
+				{
+					"Id": "Darkskyid.FerngillMinistry",
+					"DisplayName": "Ferngill Republic Ministry of Agriculture",
+					"Type": "Smapi",
+					"RelativePath": "FerngillMinistry",
+					"Manifest": {
+						"Name": "Ferngill Republic Ministry of Agriculture",
+						"Description": "Seasonal crop price fluctuations from the Ferngill Republic Ministry of Agriculture.",
+						"Author": "Darkskyid",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FerngillMinistry.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Darkskyid.FerngillMinistry"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564794,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436899,
+		"UploaderId": 10285895,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

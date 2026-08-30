@@ -1,0 +1,75 @@
+{
+	"Site": "Nexus",
+	"Id": 50043,
+	"Name": "T's Core",
+	"Author": "tikamin557",
+	"Description": "[color=#ffff00][size=6][b]About T's Core[/b][/size][/color]\n<br />T's Core is a shared library and framework for Stardew Valley mods.\n<br />It provides reusable systems and additional features for both SMAPI mods and Content Patcher Content Packs.\n<br />\n<br />[b][size=4][color=#00ff00]For players[/color]:[/size][/b]\n<br />T's Core does not add standalone gameplay content by itself. In most cases, you only need to install it when another mod lists T's Core as a requirement.\n<br />\n<br />[b][size=4][color=#00ff00]For mod authors[/color]:[/size][/b]\n<br />T's Core provides additional systems that can be used to create features which would otherwise require custom C# code, as well as shared APIs and development tools for more advanced mods.\n<br />Many features can be used directly from a Content Patcher Content Pack without writing any C# code.\n<br />[line]\n<br />[color=#ffff00][size=6][b]Documentation[/b][/size][/color]\n<br />Detailed documentation, JSON formats, examples, API references, and Content Pack guides are available on GitHub:\n<br />[u][url=https://github.com/Tikamin557/Ts-Core/tree/main/docs][size=5]GitHub Documentation[/size][/url][/u]\n<br />The GitHub documentation is actively maintained and expanded with new guides, examples, and API documentation as T's Core evolves.\n<br />[line]\n<br />[color=#00ffff][b][size=6]What Can T's Core Do?[/size][/b][/color]\n<br />Some of the main features available to mod authors are described below.\n<br />\n<br />[color=#ffff00][size=5][b]Content Patcher Integration[/b][/size][/color]\n<br />T's Core provides additional features specifically for Content Patcher Content Packs.\n<br />\n<br />[b][color=#00ff00]Conditional GMCM options[/color][/b]\n<br />Additional ConfigSchema properties can control whether a setting is displayed in Generic Mod Config Menu depending on which mods are installed.\n<br />[code]TsCore.ShowIfMod[/code]Shows the setting if at least one of the specified mods is installed.\n<br />[code]TsCore.ShowIfAllMods[/code]Shows the setting only if all specified mods are installed.\n<br />Both properties support multiple comma-separated mod IDs and can be used together.\n<br />This can be useful for compatibility settings which should only appear when the corresponding mod is installed.\n<br />\n<br />[b][color=#00ff00]Content Pack development and reloading[/color][/b]\n<br />The developer command:\n<br />[code]tscore_cp_reload &lt;ContentPackId&gt;[/code]can reload many Content Patcher Content Pack changes while Stardew Valley is still running.\n<br />It can refresh:\n<br />[list]\n<br />[*][code]content.json[/code]and patches[/*]\n<br />[*][code]ConfigSchema[/code][/*]\n<br />[*][code]config.json[/code][/*]\n<br />[*]Config Tokens[/*]\n<br />[*]GMCM settings[/*]\n<br />[*]Dynamic Tokens[/*]\n<br />[*]Dynamic Token conditions and dependencies[/*]\n<br />[/list]This can significantly reduce the number of game restarts needed while developing and testing Content Patcher mods.\n<br />\n<br />[color=#ffff00][size=5][b]T's Core Content Packs[/b][/size][/color]\n<br />Many T's Core features can be added through Content Packs without writing C# code.\n<br />T's Core Content Packs can currently register:\n<br />[list]\n<br />[*]Building Providers[/*]\n<br />[*]Warp Providers[/*]\n<br />[*]Notification Themes[/*]\n<br />[*]Migration definitions[/*]\n<br />[/list]This makes these systems available to Content Patcher mod authors as well as C# mod authors.\n<br />Detailed setup instructions and JSON examples for each system are available in the GitHub Modder Guide.\n<br />\n<br />[color=#ffff00][size=5][b]Warp Actions &amp; Warp Providers[/b][/size][/color]\n<br />Add custom warps and teleportation effects, including configurable visual effects, sounds, timing, and screen transitions.\n<br />Warp Providers can also determine destinations dynamically at runtime instead of requiring fixed coordinates.\n<br />This is useful for mods which need to warp the player to locations that may move or change depending on other installed mods.\n<br />\n<br />[color=#ffff00][size=5][b]Building Providers[/b][/size][/color]\n<br />Add additional functionality to custom buildings.\n<br />Building Providers can provide features such as:\n<br />[list]\n<br />[*]Night-time lights[/*]\n<br />[*]Additional conditional draw layers[/*]\n<br />[*]Animated building layers[/*]\n<br />[*]Enable/disable controls for individual building features[/*]\n<br />[*]Restrictions on where buildings can be constructed[/*]\n<br />[/list]These features can be defined through a T's Core Content Pack without writing C# code.\n<br />\n<br />[color=#ffff00][size=5][b]Notification System[/b][/size][/color]\n<br />Display customizable HUD notifications from your mod.\n<br />Notification Themes can control the appearance and behavior of notifications, and can be reused by multiple notifications.\n<br />Notifications can also be triggered through Trigger Actions.\n<br />\n<br />[color=#ffff00][size=5][b]Migration System[/b][/size][/color]\n<br />Safely migrate IDs stored in existing save data when a mod changes an ID in a future update.\n<br />For example, if the internal ID of a custom building needs to be changed, T's Core can migrate existing placed buildings from the old ID to the new ID when the save is loaded.\n<br />This helps mod authors make internal changes without requiring players to manually remove and rebuild affected content.\n<br />\n<br />[color=#ffff00][size=5][b]Content Patcher Tokens[/b][/size][/color]\n<br />T's Core provides reusable Content Patcher tokens which other Content Packs can use.\n<br />These include information provided by T's Core systems, such as relationship and location-related data.\n<br />See the GitHub documentation for the currently available tokens.\n<br />\n<br />[color=#ffff00][size=5][b]Relationship &amp; Location Services[/b][/size][/color]\n<br />T's Core provides shared relationship and location information which can be used by other mods.\n<br />Relationship Services provide unified partner information and support multiple relationship systems.\n<br />Current relationship integrations include:\n<br />[list]\n<br />[*]Vanilla relationships[/*]\n<br />[*]PolyamorySweetLove[/*]\n<br />[*]FreeLove[/*]\n<br />[/list]Location Services provide reusable player and location-related information for other T's Core features and integrations.\n<br />\n<br />[color=#ffff00][size=5][b]Shared APIs[/b][/size][/color]\n<br />SMAPI C# mods can access T's Core systems through public APIs.\n<br />This allows multiple mods to share common functionality instead of implementing the same systems independently.\n<br />Public APIs and examples are documented in the GitHub Modder Guide.\n<br />[line]\n<br />[color=#ffff00][size=6][b]Installation[/b][/size][/color]\n<br />Install T's Core using your preferred mod manager, or extract the downloaded archive into your Stardew Valley \"[color=#fce5cd]Mods[/color]\" folder.\n<br />T's Core requires SMAPI and Content Patcher.\n<br />If another mod requires T's Core, simply install it along with the required dependencies before launching the game.\n<br />[line]\n<br />[color=#ffff00][size=6][b]For C# Mod Developers[/b][/size][/color]\n<br />T's Core also provides public services and APIs for SMAPI C# mods.\n<br />Current systems include:\n<br />[list]\n<br />[*]Relationship Services[/*]\n<br />[*]Location Services[/*]\n<br />[*]Warp Services[/*]\n<br />[*]Building Services[/*]\n<br />[*]Migration Services[/*]\n<br />[*]Notification Services[/*]\n<br />[*]Content Patcher integration[/*]\n<br />[*]Shared utilities[/*]\n<br />[/list]Only documented public APIs should be used by other mods. Internal implementations may change between versions.\n<br />See the GitHub Modder Guide for API documentation and usage examples.\n<br />[line]\n<br />[color=#ffff00][size=6][b]Compatibility[/b][/size][/color]\n<br />T's Core is designed to provide reusable systems that can be shared between mods and to improve compatibility where runtime information is needed.\n<br />For example, Warp Providers can resolve destinations at runtime instead of relying entirely on fixed map coordinates. This can make warp-based mods more adaptable to custom maps or other mods which change locations and destinations.\n<br />Relationship Services also provide a unified interface for supported relationship systems.\n<br />Additional integrations and systems may be added in future versions.\n<br />[line]\n<br />[color=#ffff00][size=6][b]API Stability[/b][/size][/color]\n<br />T's Core is under active development.\n<br />Public APIs are intended to remain compatible whenever possible, but new functionality and optional Content Pack properties may be added as T's Core continues to develop.\n<br />When developing against T's Core:\n<br />[list]\n<br />[*]Use documented public APIs whenever possible.[/*]\n<br />[*]Avoid relying on internal implementation details.[/*]\n<br />[*]Keep your required T's Core version up to date.[/*]\n<br />[*]Test your mod after updating T's Core.[/*]\n<br />[/list][line]\n<br />\n<br />[center]( If you like this mod or any of the mods I've created, please endorse it! It improves my willingness to make mods!)[/center]\n<br />[center][size=4]-------------------------------------------------------------------------------------------[/size][/center]\n<br />[center][size=4]&gt;&gt;&gt; [url=https://www.nexusmods.com/users/78813038?tab=user+files]List of mods I made.[/url] &lt;&lt;&lt;[/size][/center]\n<br />[center][size=4]-------------------------------------------------------------------------------------------[/size][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50043",
+	"Version": "1.7.2",
+	"Updated": "2026-08-25T15:12:32+00:00",
+	"Downloads": [
+		{
+			"Id": 180146,
+			"Type": "Main",
+			"DisplayName": "T's Core",
+			"FileName": "c8/88/81/c8888114-9de9-4f90-9412-c2a7b00bd6ae",
+			"Description": "・Adds conditional GMCM option visibility for Content Patcher packs based on installed mods. See the GitHub Modder Guide for usage details.\n\nThere have been several version updates in a short period of time, so please check the changelogs.",
+			"Version": "1.7.2",
+			"SizeInBytes": 67055,
+			"Uploaded": "2026-08-25T15:12:32+00:00",
+			"Mods": [
+				{
+					"Id": "Tikamin557.TsCore",
+					"DisplayName": "T's Core",
+					"Type": "Smapi",
+					"RelativePath": "T's Core",
+					"Manifest": {
+						"Name": "T's Core",
+						"Description": "A shared core library for T's Stardew Valley Mods, providing common services, APIs, and utilities.",
+						"Author": "Tikamin557",
+						"Version": "1.7.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Ts_Core.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "aedenthorn.FreeLove",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "aedenthorn.CustomSpouseRooms",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetLove",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ApryllForever.PolyamorySweetRooms",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50043"
+						],
+						"UniqueId": "Tikamin557.TsCore"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566834,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436731,
+		"UploaderId": 78813038,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

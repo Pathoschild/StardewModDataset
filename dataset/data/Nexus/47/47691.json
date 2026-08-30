@@ -3,32 +3,82 @@
 	"Id": 47691,
 	"Name": "FadeHelm's Lunna anime style portrait",
 	"Author": "FadeHelm",
-	"Description": "[color=#00ff00][size=4]Simply place my files into the mod you want to replace, and the replacement will be applied. The file being replaced is Lunna Astray_3.4.14.[/size][/color]\n<br />\n<br />\n<br />\n<br />\n<br />[size=4]\u00A0 If you think my portrait is well done, please remember to give me a shoutout so I can see the results of my effort—this will motivate me even more to keep updating. [/size]",
+	"Description": "[center][size=4]This module is complete enough to complete all the places where portraits are used, that is, four-season portraits and festival portraits. In addition, the coding has also been completed. Now there is no need to replace it manually. You just need to put my mod in the mods folder to complete the replacement.\u00A0[/size][/center]\n<br />[center]\u00A0 \u00A0[img]https://staticdelivery.nexusmods.com/mods/1303/images/47691/47691-1785503616-1875951066.gif[/img][/center]\n<br />\n<br />[size=4]\u00A0 [color=#00ff00]If you think my portrait is well done, please remember to give me a shoutout so I can see the results of my effort—this will motivate me even more to keep updating. [/color][/size]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/47691",
-	"Version": "2",
-	"Updated": "2026-06-29T07:55:20+00:00",
+	"Version": "2.1.2",
+	"Updated": "2026-08-01T02:47:39+00:00",
 	"Downloads": [
 		{
-			"Id": 172973,
+			"Id": 176976,
 			"Type": "Main",
 			"DisplayName": "FadeHelm'S Lunna Anime Style Portrait",
-			"FileName": "d2/ec/41/d2ec4155-4fa0-4893-ae9f-b46524eba519",
+			"FileName": "39/04/51/39045157-812d-4e8e-aea6-4235d7662149",
 			"Description": "",
-			"Version": "2",
-			"SizeInBytes": 542290,
-			"Uploaded": "2026-06-29T07:55:20+00:00",
+			"Version": "2.1.2",
+			"SizeInBytes": 670194,
+			"Uploaded": "2026-08-01T02:47:39+00:00",
 			"Mods": [
 				{
-					"Id": null,
-					"DisplayName": "LunnaAstray_3.4.14\\[CP] Lunna\\assets",
-					"Type": "Invalid",
-					"RelativePath": "LunnaAstray_3.4.14\\[CP] Lunna\\assets",
-					"ManifestParseError": "EmptyFolder",
-					"ManifestParseErrorText": "it's an empty folder."
+					"Id": "ZG.LSP",
+					"DisplayName": "LunnaseasonPortraits",
+					"Type": "Smapi",
+					"RelativePath": "FadeHelm'S Lunna Anime Style Portrait2.1.2\\FadeHelm'S Lunna Anime Style Portrait2.1\\LunnaseasonPortraits",
+					"Manifest": {
+						"Name": "LunnaseasonPortraits",
+						"Description": "Exposes Lunna's Seasonal_Outfits as Content Patcher token.",
+						"Author": "Joegosma",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "LunnaseasonPortraits.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ZG.LSP"
+					}
+				},
+				{
+					"Id": "FadeHelm.LunaPortraitReplacer",
+					"DisplayName": "FadeHelm's Lunna anime style portrait",
+					"Type": "ContentPack",
+					"RelativePath": "FadeHelm'S Lunna Anime Style Portrait2.1.2\\FadeHelm'S Lunna Anime Style Portrait2.1\\[CP]lunna",
+					"Manifest": {
+						"Name": "FadeHelm's Lunna anime style portrait",
+						"Description": "替换自定义NPC露娜（Lunna）的肖像。",
+						"Author": "FadeHelm",
+						"Version": "2.1.2",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Rafseazz.LunnaCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "ZG.LSP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"47691"
+						],
+						"UniqueId": "FadeHelm.LunaPortraitReplacer",
+						"OtherFields": {
+							"LoadAfter": [
+								"Rafseazz.LunnaCP",
+								"ZG.LSP"
+							]
+						}
+					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342559661,
+				"Uid": 5596342563664,
 				"CategoryId": 1,
 				"Primary": true
 			}

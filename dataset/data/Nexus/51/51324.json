@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 51324,
+	"Name": "Supply and Demand",
+	"Author": "Tomokisan1",
+	"Description": "[size=5][b]Supply and Demand[/b][/size]\n<br />\n<br />A dynamic pricing mod. In vanilla Stardew Valley, every item has a fixed sell price. With Supply and Demand, prices react to how much you actually sell. Flood the market with one crop and its price drops, sell little of something and it keeps a scarcity premium. It turns the shipping bin into a small living economy where diversifying your farm pays off.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6 or later[/*]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[/list]\n<br />Generic Mod Config Menu is an optional dependency. If installed, it adds a configuration screen for the mod.\n<br />\n<br />[size=4][b]How it works[/b][/size]\n<br />\n<br />Each affected item tracks a recent sales volume. That volume decays a little every day, so the market slowly forgets what you sold. The sell price is then multiplied by a factor derived from that volume:\n<br />\n<br />[list]\n<br />[*]An item you have not been selling sits at the ceiling, a scarcity premium above its base price.[/*]\n<br />[*]Selling it around the reference volume brings it back to its normal base price.[/*]\n<br />[*]Selling far more than the reference volume pushes it down toward the floor.[/*]\n<br />[/list]\n<br />In short, the more you sell of one thing, the less each unit is worth, and the market recovers over time if you ease off. With the default settings, an item you never sell rests around 120 percent of its base price, reaches 100 percent once you sell about 40 of it in the recent window, and keeps falling toward 40 percent if you keep flooding the market.\n<br />\n<br />Two sales channels feed the volume:\n<br />\n<br />[list]\n<br />[*]The shipping bin, counted each morning from what you shipped.[/*]\n<br />[*]Direct sales to shops, counted at the moment of the sale. This can be turned off.[/*]\n<br />[/list]\n<br />[size=4][b]Feedback in game[/b][/size]\n<br />\n<br />Hover any affected item and the tooltip shows a Demand line with the current percentage. The sell price is coloured, red when it is below the base price and green when it is above, with the original base price shown struck through next to it. When the price equals the base price, there is no colour and no struck price. This works both in your backpack and on the shop sell screen.\n<br />\n<br />There is also a Market Report channel on any TV. It reports which goods are currently oversupplied with prices down, and which are in high demand with prices up.\n<br />\n<br />[size=4][b]Affected items[/b][/size]\n<br />\n<br />By default the mod affects crops, artisan goods, forage, animal products, and fish. Each of these categories can be turned on or off individually in the config. Items outside the enabled categories keep their vanilla price.\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />If Generic Mod Config Menu is installed, a configuration screen is available.\n<br />\n<br />[list]\n<br />[*]Price Floor, the minimum price multiplier. Default 0.40.[/*]\n<br />[*]Price Ceiling, the maximum price multiplier, the scarcity premium. Default 1.20.[/*]\n<br />[*]Intensity, how aggressively prices change per unit sold. Default 1.0.[/*]\n<br />[*]Reference Volume, the normal baseline volume of goods expected to be sold. Default 40.[/*]\n<br />[*]Daily Decay, the fraction of tracked volume retained each day. Default 0.80.[/*]\n<br />[*]Season Reset Fraction, the fraction of volume removed on season change. Default 0.5.[/*]\n<br />[*]Penalty Only, when enabled prices can only go down, never above the base price. Default off.[/*]\n<br />[*]Count Shop Sales, when enabled direct sales to shops also affect demand. Default on.[/*]\n<br />[*]Affect Crops, Affect Artisan Goods, Affect Forage, Affect Animal Products, Affect Fish, the category toggles. All on by default.[/*]\n<br />[/list]\n<br />Without Generic Mod Config Menu, the same options can be edited in config.json after the first launch.\n<br />\n<br />[size=4][b]Multiplayer[/b][/size]\n<br />\n<br />Demand is tracked by the host and stored on the farm save data, so all players share the same market. The tooltip and Market Report read that shared state.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />Supply and Demand adds a TV channel the same additive way other channel mods do, so it coexists with mods like This Week in Pelican Town. It only adjusts sell prices, it does not touch buy prices.\n<br />\n<br />My mods :\u00A0\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51314]Arcade framework[/url]\u00A0:\u00A0A dependency framework to plug your own minigames onto arcade cabinets, with a shared ticket wallet, high scores, and a prize booth. It provides a C# API, and a worked example that adds three playable games. Optional Generic Mod Config Menu support. Does nothing on its own.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51289]This week in Pelican Town[/url]\u00A0:\u00A0Turn on the TV and let the local news anchor recap your week in the valley, generated live from your own deeds. Works with other TV mods.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/51294]Interactive objects framework[/url]\u00A0:\u00A0A modding framework that lets content packs and C# mods attach an interaction menu, with conditions, costs, cooldowns and effects, to any big craftable or furniture. Requires Content Patcher to create the objects.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26845]SWAPI - Stardew Valley Web API[/url]\u00A0: Let your game send events to a custom web server.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24765]highRollerSlots[/url]\u00A0:\u00A0Add possibility to bet more in slots machines.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24254]geodeCrusherPlus[/url]\u00A0:\u00A0Add ability to geode crusher to crush any geode, including mysteryboxes, Artifact Trove and golden coconuts.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24885]\uFEFFTV Shopping channel[/url]\u00A0:\u00A0\uFEFFAdd a TV shopping channel.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/24982]Prize Machine Custom Prizes[/url]\u00A0:\u00A0Let you easily fully customize the prize list of Prize Machine.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25022]Better Statue Of Blessings[/url]\uFEFF\u00A0\uFEFF:\u00A0Allow you to get one blessing by statue per day instead of only one blessing per day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/25267]Custom Blessings Framework[/url]\uFEFF :\u00A0\uFEFFAllow mod developers to easily add blessings from statues of blessings.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26260]Custom Wake Up Time[/url]\u00A0:\u00A0Let you configure the wake up time for each day.\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/26371]Anti Tool Exhaustion[/url]\u00A0:\u00A0Prevent you to become exhausted from an accidental tool use.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51324",
+	"Version": "1.0.0",
+	"Updated": "2026-08-26T14:54:43+00:00",
+	"Downloads": [
+		{
+			"Id": 180288,
+			"Type": "Main",
+			"DisplayName": "SupplyAndDemand 1.0.0",
+			"FileName": "0e/24/90/0e2490b2-aa72-46dc-ab85-15e68723b14c",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 31019,
+			"Uploaded": "2026-08-26T14:54:43+00:00",
+			"Mods": [
+				{
+					"Id": "tomokisan.supplyAndDemand",
+					"DisplayName": "Supply and Demand",
+					"Type": "Smapi",
+					"RelativePath": "supplyAndDemand",
+					"Manifest": {
+						"Name": "Supply and Demand",
+						"Description": "Sell prices react to how much you sell, with scarcity premiums, coloured demand tooltips, and a Market Report TV channel.",
+						"Author": "Tomokisan",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "supplyAndDemand.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:51324"
+						],
+						"UniqueId": "tomokisan.supplyAndDemand"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566976,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438012,
+		"UploaderId": 205391183,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

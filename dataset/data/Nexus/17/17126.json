@@ -3,20 +3,20 @@
 	"Id": 17126,
 	"Name": "Food Cravings",
 	"Author": "Hexenentendrache",
-	"Description": "This mod adds daily cravings for cooked food for the player, the craving will be pulled from the list of recipes known to the player. The craving will be displayed at the start of the day and it will also be put into the quest log. If this craving is fulfilled, the player will receive these buffs by default (additionally to the buffs the food gives by default):\n<br />[list]\n<br />[*]+2 Attack\n<br />[*]+2 Defense\n<br />[*]+1 Speed\n<br />[/list]\n<br />[color=#ff0000][size=4]Note: Since the quest framework is broken, it is no longer used in the newest version, meaning we are back to only posting the daily craved food at the beginning of the day, it will no longer be displayed in quests. I will go back to quests once possible.[/size][/color]\n<br />\n<br />[size=5]Configuration\n<br />[/size]Because\u00A0[s]I suck at balancing[/s]\u00A0I'm not telling you how you are supposed to feel when you finally eat that food you were craving ;) you can also change the values for the buffs using the config file included in the mod.\u00A0\n<br />\n<br />The config file also includes the opion to enable \"hangry mode\", which gives you debuffs until you fulfill your craving. To enable it, simply set\u00A0[font=Courier New]\"useHangryMode\": true[/font]. Similarly to the buff values, you can also edit the debuff values in the config.\n<br />\n<br />Because some food mods may add foods that aren't really meant for consumption, but only as an ingredient for other food, the config also contains a list that you can use to blacklist certain foods. As an example of usage:\n<br />[font=Courier New]\"recipeBlacklist\": [\n<br />   \"Fried Egg\",\n<br />   \"Omelet\"\n<br />][/font]\n<br />\n<br />Also, you can choose between using the default randomization and a seeded version. Default will give you a random food every time to start the day, meaning if you quit to main menu and restart the day you will probably get something different. Seeded means the random food is fixed to each day, so resetting until you get what you want is not an option anymore. You can activate seeded randomness by setting:\n<br />[font=Courier New]\"seededRandom\": true[/font]\n<br />\n<br />[size=5]Install[/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=5]Compatibility\n<br />[/size]\n<br />[list]\n<br />[*]Works with Stardew Valley 1.5.6 on Linux/macOS/Windows.\n<br />[*]Works in single player, I couldn't test multiplayer yet (any reports on that welcome).\n<br />[*]Works together with mods adding recipes into the game (so yes, recipes from mods can be the daily craving)\n<br />[/list]\n<br />\n<br />[size=5]See also[/size]\n<br />[list]\n<br />[*][url=https://github.com/Enteligenz/StardewMods]Source Code[/url]\n<br />[*]Reading the source code of [url=https://www.nexusmods.com/stardewvalley/mods/9050]this nice mod[/url] helped me figure out how to apply buffs, so shoutout to them :)\n<br />[/list]",
+	"Description": "This mod adds daily cravings for cooked food for the player, the craving will be pulled from the list of recipes known to the player. The craving will be displayed at the start of the day and it will also be put into the quest log. If this craving is fulfilled, the player will receive these buffs by default (additionally to the buffs the food gives by default):\n<br />[list]\n<br />[*]+2 Attack[/*]\n<br />[*]+2 Defense[/*]\n<br />[*]+1 Speed[/*]\n<br />[/list]\n<br />[size=5][b]Help, I forgot my daily craving![/b][/size]\n<br />You're in luck! This mod also adds a new command that you can type into the SMAPI console: [font=Courier New]craving[/font]. This will output the name of your current daily craving to the console.\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />If using the Generic Mod Config Menu, note that any changes to the config will only start being active on the next day.\n<br />\n<br />Because\u00A0[s]I suck at balancing[/s]\u00A0I'm not telling you how you are supposed to feel when you finally eat that food you were craving ;) you can also change the values ans well as the duration for the buffs using the config file included in the mod.\u00A0The duration is given in ms, so the default value of 540000 corresponds to 9 minutes.\n<br />\n<br />The config file also includes the option to enable \"hangry mode\", which gives you debuffs until you fulfill your craving. To enable it, simply set\u00A0[font=Courier New]\"useHangryMode\": true[/font]. Similarly to the buff values, you can also edit the debuff values in the config.\n<br />\n<br />The [font=Courier New]\"skipIfNoKitchen\"[/font] option, if activated, skips picking a daily craving if you do not have a kitchen yet. I assume (I have not tested this) that this means that in multiplayer, a player that has not upgraded their own house but has access to a different kitchen might not daily cravings if this option is active.\n<br />\n<br />Because some food mods may add foods that aren't really meant for consumption, but only as an ingredient for other food, the config also contains a list that you can use to blacklist certain foods. You simply need to add the names of the food (as displayed in the game) separated with commas into the list.\u00A0As an example of usage:\n<br />[font=Courier New]\"recipeBlacklist\": [\n<br />\"Fried Egg\",\n<br />\"Omelet\"\n<br />][/font]\n<br />Note that you need to update the names in the blacklist if you ever change your language after already having written food names in it, as the name used in this mod is language-dependent.\n<br />\n<br />Also, you can choose between using the default randomization and a seeded version. Default will give you a random food every time to start the day, meaning if you quit to main menu and restart the day you will probably get something different. Seeded means the random food is fixed to each day, so resetting until you get what you want is not an option anymore. You can activate seeded randomness by setting:\n<br />[font=Courier New]\"seededRandom\": true[/font]\n<br />\n<br />[size=5][b]Install[/b][/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io]Install the latest version of SMAPI[/url].[/*]\n<br />[*]Download this mod and unzip it into [font=Courier New]Stardew Valley/Mods[/font].[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list]\n<br />[size=5][b]Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*]Works with Stardew Valley 1.6.15 or later on Linux/macOS/Windows.[/*]\n<br />[*]Works in single player, I couldn't test multiplayer yet (any reports on that welcome).[/*]\n<br />[*]Works together with mods adding recipes into the game (so yes, recipes from mods can be the daily craving)[/*]\n<br />[/list]\n<br />[size=5][b]See also[/b][/size]\n<br />[list]\n<br />[*][url=https://github.com/Enteligenz/StardewMods]Source Code[/url][/*]\n<br />[*]Reading the source code of [url=https://www.nexusmods.com/stardewvalley/mods/9050]this nice mod[/url] helped me figure out how to apply buffs, so shoutout to them :)[/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17126",
-	"Version": "2.0.0",
-	"Updated": "2024-06-02T16:51:40+00:00",
+	"Version": "3.0.1",
+	"Updated": "2026-08-07T09:08:20+00:00",
 	"Downloads": [
 		{
-			"Id": 102202,
+			"Id": 177669,
 			"Type": "Main",
-			"DisplayName": "Food Cravings 2.0.0",
-			"FileName": "Food Cravings 2.0.0-17126-2-0-0-1717347100.zip",
-			"Description": "Updated mod to SV1.6, added translation options and added buff icons. Had to remove quests since quest framework is broken.",
-			"Version": "2.0.0",
-			"SizeInBytes": 17656,
-			"Uploaded": "2024-06-02T16:51:40+00:00",
+			"DisplayName": "Food Cravings 3.0.1",
+			"FileName": "6f/34/34/6f34347d-5f46-4f87-94b4-8970b2fb9bcc",
+			"Description": "Fixed the issue of recipes from uninstalled mods still being used as daily cravings.",
+			"Version": "3.0.1",
+			"SizeInBytes": 22051,
+			"Uploaded": "2026-08-07T09:08:20+00:00",
 			"Mods": [
 				{
 					"Id": "Hexenentendrache.FoodCravings",
@@ -27,8 +27,8 @@
 						"Name": "Food Cravings",
 						"Description": "Adds daily cravings for random cooked foods for the player.",
 						"Author": "Hexenentendrache",
-						"Version": "2.0.0",
-						"MinimumApiVersion": "3.0.0",
+						"Version": "3.0.1",
+						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "FoodCravings.dll",
 						"Dependencies": [],
 						"UpdateKeys": [
@@ -39,9 +39,9 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342488890,
+				"Uid": 5596342564357,
 				"CategoryId": 1,
-				"Primary": false
+				"Primary": true
 			}
 		}
 	],

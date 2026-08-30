@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 51397,
+	"Name": "Longer or Uncapped Character Creation Name",
+	"Author": "yayuly",
+	"Description": "[heading]Longer or Uncapped\u00A0Character Creation Fields[/heading]\n<br />Stardew Valley normally stops accepting text when your player name, farm name, or favorite thing reaches the width of its text box. This mod removes that restriction during character creation. You can use longer names, enter multiple bracketed item IDs, or simply have more room when naming your character and farm.\n<br />\n<br />[b][size=4][u]What it changes[/u][/size][/b]\n<br />[list]\n<br />[*]Player name[/*]\n<br />[*]Farm name[/*]\n<br />[*]Favorite thing[/*]\n<br />[*]New farmhand creation[/*]\n<br />[*]New multiplayer host creation[/*]\n<br />[/list]The mod only changes these fields during character creation. It does not alter unrelated text boxes or the appearance-editing menus used later in the game.\n<br />\n<br />[b][size=4][u]Configuration[/u][/size][/b]\n<br />All three fields are unlimited by default. After launching the game once, a config.json file will appear inside the mod folder:\n<br />[code]{\n<br />\u00A0 \"PlayerNameLimit\": 0,\n<br />\u00A0 \"FarmNameLimit\": 0,\n<br />\u00A0 \"FavoriteThingLimit\": 0\n<br />}[/code]A value of \"0\"\u00A0means unlimited. Replace it with a positive number if you want to set a specific limit for that field.\n<br />For example, this limits player names to 64 characters while leaving the other two fields unlimited:\n<br />[code]{\n<br />\u00A0 \"PlayerNameLimit\": 64,\n<br />\u00A0 \"FarmNameLimit\": 0,\n<br />\u00A0 \"FavoriteThingLimit\": 0\n<br />}[/code]\n<br />[u][b][size=4]Requirements[/size][/b][/u]\n<br />[list]\n<br />[*]Stardew Valley 1.6 or later[/*]\n<br />[*]SMAPI 4.1 or later[/*]\n<br />[/list][b][u][size=4]Installation[/size][/u][/b]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download the main file.[/*]\n<br />[*]Extract the \" LongPlayerNames\" folder into your Stardew Valley Mods folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][b][font=Arial][size=4][u]Multiplayer[/u][/size][/font][/b]\n<br />[list]\n<br />[*]Only the person entering the long name needs the mod during character creation[/*]\n<br />[*]Other players will still see the saved name, farm name, and favorite thing[/*]\n<br />[*]Very long values may appear clipped or wrap strangely on other players’ screens.[/*]\n<br />[/list][b][size=4][u]Removing the mod[/u][/size][/b]\n<br />[list]\n<br />[*]The mod does not need to remain installed after character creation[/*]\n<br />[*]Removing it will not shorten values already saved to your character.[/*]\n<br />[/list][b][size=4][u]Important warning[/u][/size][/b]\n<br />[list]\n<br />[*]Extremely long player names may exceed save-folder or filesystem path limits and prevent the game from saving correctly[/*]\n<br />[*]Long names can also overflow dialogue boxes, menus, chat messages, and interfaces added by other mods.[/*]\n<br />[*]Back up your save before using unusually long values[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51397",
+	"Version": "1.0.0",
+	"Updated": "2026-08-28T12:36:13+00:00",
+	"Downloads": [
+		{
+			"Id": 180531,
+			"Type": "Main",
+			"DisplayName": "UncappedCharacterCreationFields 1.0.0",
+			"FileName": "78/68/31/7868318a-9149-4944-bdb6-387ed16b774a",
+			"Description": "Initial Upload",
+			"Version": "1.0.0",
+			"SizeInBytes": 11444,
+			"Uploaded": "2026-08-28T12:36:13+00:00",
+			"Mods": [
+				{
+					"Id": "LocalPlayer.LongPlayerNames",
+					"DisplayName": "Uncapped Character Creation Fields",
+					"Type": "Smapi",
+					"RelativePath": "LongPlayerNames",
+					"Manifest": {
+						"Name": "Uncapped Character Creation Fields",
+						"Description": "Removes the width and character-count limits from the player-name, farm-name, and favorite-thing fields during character creation.",
+						"Author": "Local Player",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "LongPlayerNames.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "LocalPlayer.LongPlayerNames"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567219,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438085,
+		"UploaderId": 15735419,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

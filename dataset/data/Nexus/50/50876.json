@@ -1,0 +1,35 @@
+{
+	"Site": "Nexus",
+	"Id": 50876,
+	"Name": "Stardew Script (Lua5.2 Python3.4)",
+	"Author": "sulljason",
+	"Description": "[url=https://github.com/sulljason/Stardew-Script/releases][size=4][b]Download Here (Github)[/b][/size][/url]\n<br />It got flagged because of the interpreters. This is common. I put it on Github. I'm going to email for manual review.\n<br />\n<br />[size=4][b][url=https://github.com/sulljason/Stardew-Script/tree/main/docs]Docs Viewer (Github)[/url][/b][/size]\n<br />[size=3]If you don't have a markdown reader. You can view them on Github, to view them all pretty like.[/size]\n<br />\n<br />[size=4][b]THIS IS A TESTING VERSION. (85% passed.)[/b][/size]\n<br />[size=3]I've done some testing but I can't really test it as thoroughly as people making mods with it can. I looked around and couldn't find a scripting interface/mod for SMAPI. So I made one so more people can write mods. C# and build chains\u00A0can be a scary barrier for people.[/size]\n<br />\n<br />[size=4][b]NOTE:\n<br />[/b][/size][size=3]Mod loading and save loading taking\u00A0an\u00A0extra few seconds is normal. SMAPI scans included DLLs and IronPython has big ones. I tried moving them to a separate folder\u00A0because the scanning is unnecessary. But that makes it crash when it can't trace the dependency. Saving/sleeping performance\u00A0was unaffected. The default included example scripts bind the function keys and do basically [b]cheats[/b] for testing. I'm leaving them as examples. If you're concerned about accidently [b]cheating[/b] I would remove them before launching. But tbh having a scratch\u00A0save for testing your mod is always a good idea. To be clear this mod is just basically duct taping Lua and Python interpreters to SMAPI's methods. It shouldn't corrupt saves etc. All gamestate touching\u00A0unless using raw is through SMAPI.[/size]\n<br />\n<br />[b][size=4]Description:[/size][/b]\n<br />[b]Stardew Script[/b] embeds pure managed [b]MoonSharp (Lua 5.2)[/b] and [b]IronPython 3 (Python 3.4+)[/b] runtimes directly into SMAPI. It lets you write mods in Python or Lua or mix both in the same mod with high-level API abstractions, shared state, and instant hot-reloading on script save.\u00A0No C# compiler, Visual Studio setup, or game restarts required. Just save your script and watch it run live in-game.\n<br />\n<br />[size=4][b]Installation:[/b][/size]\n<br />Install SMAPI (I built it against 4.5.2.)\n<br />Put the StardewLua folder in the usual mods folder.\n<br />It looks inside the scripts directory inside the StardewLua folder for the Lua/Python scripts.\n<br />Inside scripts there is a test/example main.lua and main.py. You can delete them or reference them.\n<br />\n<br />[b][size=4]Main Features:[/size][/b]\n<br />[size=3][b]Near/Complete API Coverage:[/b]\u00A0925 methods and properties across 16 modules.[/size]\n<br />[b]Live Hot-Reloading:[/b] Background file watcher detects changes on file save\u00A0and updates code in-game instantly.\n<br />[b]Lua and Python:[/b]\u00A0Write in your preferred scripting language with identical API naming conventions.\n<br />[b]High-Level Game API:[/b] Clean hooks for player stats, inventory, NPCs/dialogue, locations, crops, audio, and custom 2D HUD/World batch drawing.\n<br />[b]Cross-Platform:[/b] Pure managed assemblies compatible with Windows, macOS, and Linux/Steam Deck.\n<br />(I specifically chose MoonSharp and IronPython because they are platform agnostic.)\n<br />[b]Markdown Docs:[/b] In the docs.zip there's some API documentation.\n<br />[b]Proxies: [/b]Proxy modules[b]\u00A0[/b]for ease of use.\n<br />[b]Raw Mode (Lua/Python): [/b]Raw mode using reflection and type coercion for when you REALLY need to hook deeper into the engine/other mods.\n<br />[b]Multiplayer Script Sync:[/b] When you join, the host's scripts are sent to you and are loaded. Changes that the host makes to the scripts are also synced. (Let me know if the interpreter reloading causes any weird issues or missed edge cases.)\n<br />[b]Test Coverage:[/b]\u00A085% (It's a massive surface to test. I'll be working through what wasn't covered by the test scripts.)\n<br />\n<br />[b][size=4]Requirements:[/size][/b]\n<br />[b]SMAPI[/b] 4.0.0 API or newer. (I used 4.5.2.)\n<br />[b]Stardew Valley[/b] 1.6+\n<br />\n<br />[size=4][b]Special Thanks:[/b][/size]\n<br />[b]Pathoschild[/b] and the SMAPI development team for the modding framework and ecosystem.\n<br />[b]MoonSharp Team[/b] for the pure C# Lua interpreter.\n<br />[b]IronPython Community[/b] for the DLR Python runtime.\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50876",
+	"Version": "1",
+	"Updated": "2026-08-30T05:50:15+00:00",
+	"Downloads": [
+		{
+			"Id": 180767,
+			"Type": "Main",
+			"DisplayName": "Stardew Script 1.0f",
+			"FileName": "13/90/0a/13900a0d-d795-499c-b578-5556cd90d385",
+			"Description": "",
+			"Version": "8",
+			"SizeInBytes": 10324277,
+			"Uploaded": "2026-08-30T05:50:15+00:00",
+			"Mods": [],
+			"DownloadError": "Could not get download URLs: This file has been quarantined and is not available for download.",
+			"OtherFields": {
+				"Uid": 5596342567455,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437564,
+		"UploaderId": 5287033,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

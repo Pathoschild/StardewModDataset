@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 50441,
+	"Name": "Smart Storage",
+	"Author": "MoYuCSC",
+	"Description": "# Smart Storage\n<br />\n<br />A smart storage system for Stardew Valley: category-based sorting, auto-sorting, infinite capacity, quick access, and more.\n<br />\n<br />---\n<br />\n<br />## Features\n<br />\n<br />- **Category System**: chests are managed by 17 categories and only accept matching items\n<br />- **Auto-Sort &amp; Organize**: custom whitelist auto-collection, misplaced items moved back automatically\n<br />- **Quick Store**: store all backpack items into the chest with one click\n<br />- **Chest Selector**: quick switch between same-category chests, shipping bin, rename\n<br />- **Infinite Capacity Chests**: scrollable storage space\n<br />- **Material Access**: use chest items directly for crafting / cooking / building\n<br />- **Quick Open Hotkey**: open the nearest chest anywhere with a hotkey\n<br />\n<br />---\n<br />\n<br />\n<br />\n<br />## Usage\n<br />\n<br />### 1. Assign a Category to a Chest\n<br />\n<br />1. Open a chest; a row of **category tags** appears above it (Tools, Weapons, Crops, ...).\n<br />2. Click a category tag; the \"Select\" button on the left becomes translucent (**ghost state**) — this is only a **preview**.\n<br />3. Click the \"Select\" button to **exit the ghost state** (become solid); only then is the category truly saved to this chest.\n<br />\u00A0 - After that, the chest **only accepts items of that category**; other items are rejected with a message.\n<br />\u00A0 - If the chest already contains mismatched items, they are returned to your backpack when the category is confirmed.\n<br />4. Click the \"Reset\" button to clear the chest's category (back to unassigned).\n<br />5. To change the category: pick a new tag in ghost state, then exit the ghost state to confirm (the old restriction is replaced immediately).\n<br />\n<br />&gt; Note: the category is saved to the chest itself (modData). Opening/closing chests or switching chests never loses it.\n<br />\n<br />### 2. Auto-Sort (Custom-Category Chests)\n<br />\n<br />1. Set the chest's category to \"**Custom**\" (the last tag).\n<br />2. Open this chest's **Custom Manage** screen (the \"Custom Manage\" button on the left).\n<br />3. In the Custom Manage screen (70 slots):\n<br />\u00A0 - **Left-click a backpack item**: copies a mark into the screen (not actually stored).\n<br />\u00A0 - **Right-click a mark**: removes it.\n<br />\u00A0 - You cannot take or store real items in this screen.\n<br />4. Close the screen; the marked list becomes this chest's **whitelist**.\n<br />5. Effects:\n<br />\u00A0 - The chest **only accepts whitelisted items**.\n<br />\u00A0 - Placing whitelisted items anywhere auto-sorts them into this chest (auto-sort).\n<br />\u00A0 - The whitelist is cleared automatically when you reset or switch to another category.\n<br />\n<br />### 3. Quick Store\n<br />\n<br />1. Open a chest; there is an **up arrow button** right above the trash can.\n<br />2. Click it to store **all backpack items** at once:\n<br />\u00A0 - Custom-category chests distribute items by whitelist.\n<br />\u00A0 - Other category chests follow their category; mismatched items stay in your backpack.\n<br />\n<br />### 4. Chest Selector (Right Panel)\n<br />\n<br />1. After opening a chest, the right side shows the current chest's name bar with a **▼ arrow**.\n<br />2. Click the arrow to **expand the list**:\n<br />\u00A0 - The list shows chests of the **same category** (unassigned chests always show).\n<br />\u00A0 - The first entry is the **Shipping Bin**: open it to sell items (settled at night).\n<br />\u00A0 - Click other entries to **switch to that chest's space**.\n<br />3. **Double-click** the name bar to open the rename screen for the current chest.\n<br />4. In solid state, click a **category tag** above the chest to temporarily filter the list to that category.\n<br />\n<br />### 5. Infinite Capacity Chests (Optional)\n<br />\n<br />1. Open the GMCM menu and enable \"**Infinite Capacity Chests**\".\n<br />2. After enabling, chest storage becomes a **scrollable window**:\n<br />\u00A0 - Use the **mouse wheel** to scroll up/down.\n<br />\u00A0 - Or click the **up/down arrow buttons** on the right of the storage area.\n<br />3. Capacity is unlimited; store any amount of items.\n<br />\n<br />### 6. Use Chest Items for Crafting / Cooking / Building\n<br />\n<br />- **Crafting**: open the crafting screen (Tab or workbench); materials are taken from your backpack plus all chests — no need to move items into your backpack first.\n<br />- **Cooking**: the kitchen cooking screen also uses chest materials directly.\n<br />- **Building** (Robin / Wizard): when backpack materials run short, they are taken from chests automatically; build as long as backpack + chests together have enough.\n<br />- **Better Crafting**: its crafting screen can also use items from your chests (requires Better Crafting).\n<br />\n<br />### 7. Quick Open Hotkey\n<br />\n<br />- Press the hotkey (default **Ctrl+B**) **anywhere**:\n<br />\u00A0 - No menu open: opens the nearest chest.\n<br />\u00A0 - Chest already open: closes the chest menu.\n<br />- The hotkey can be changed in the GMCM menu.\n<br />\n<br />---\n<br />\n<br />\n<br />\n<br />## Configuration (GMCM)\n<br />\n<br />| Option | Description |\n<br />| --- | --- |\n<br />| Infinite Capacity Chests | Enable unlimited capacity with scrollable storage |\n<br />| Open nearest chest | Change the hotkey for opening the nearest chest |\n<br />\n<br />---\n<br />\n<br />## Credits\n<br />\n<br />Inspired by the storage sorting experience of real-life organization. Built with Harmony and SMAPI.\n<br /># Smart Storage（智能储物）\n<br />\n<br />为星露谷物语打造的智能储物系统：种类分类、自动分类、无限容量、快捷存取等功能。\n<br />\n<br />---\n<br />\n<br />## 功能简介\n<br />\n<br />- **种类分类系统**：箱子按 17 种分类管理，只收对应种类物品\n<br />- **自动分类与整理**：自定义白名单自动收物、错放物品自动归位\n<br />- **一键存储**：背包物品一键存入箱子\n<br />- **箱子选择列表**：快速切换同种类箱子、出货箱、重命名\n<br />- **无限容量箱子**：滚动存储空间\n<br />- **材料直取**：制作/烹饪/建造直接调用箱子物品\n<br />- **快捷打开快捷键**：任意位置按快捷键开箱\n<br />\n<br />---\n<br />\n<br />\n<br />## 使用方法\n<br />\n<br />### 1. 设置箱子种类\n<br />\n<br />1. 打开一个箱子，箱子上方会显示一排**种类标签**（工具、武器、作物……）。\n<br />2. 点击某个种类标签，左侧\"选择\"按钮会变为半透明（虚化状态），此时只是**预览选择**。\n<br />3. 点击左侧\"选择\"按钮**退出虚化**（变为实态），种类才会真正保存到该箱子。\n<br />\u00A0 - 保存后，该箱子**只能放入该种类的物品**，放入其他种类会被拒绝并提示。\n<br />\u00A0 - 如果箱子里已有不符合该种类的物品，会在确认种类时自动返还到背包。\n<br />4. 点击左侧\"重置\"按钮可清除箱子的种类（恢复为未分类箱子）。\n<br />5. 想修改种类：先虚化选择新种类，再退出虚化确认（旧种类的限制立即被替换）。\n<br />\n<br />&gt; 提示：种类状态保存在箱子本身（modData），打开/关闭箱子、切换箱子都不会丢失。\n<br />\n<br />### 2. 使用自动分类（自定义类箱子）\n<br />\n<br />1. 把箱子种类设置为\"**自定义**\"（种类标签最后一个）。\n<br />2. 打开该箱子的**自定义管理**界面（左边\"自定义管理\"按钮）。\n<br />3. 在自定义管理界面（70 格）中：\n<br />\u00A0 - **左键点击背包物品**：复制一份标记到界面（不是真的放进去）。\n<br />\u00A0 - **右键点击界面中的标记**：取消该标记。\n<br />\u00A0 - 界面内无法拿取/放入真实物品。\n<br />4. 关闭界面后，标记列表就是该箱子的**白名单**。\n<br />5. 效果：\n<br />\u00A0 - 该箱子**只接受白名单内的物品**。\n<br />\u00A0 - 在其他任何地方放入白名单物品，会自动分类到该箱子（自动分类）。\n<br />\u00A0 - 玩家重置或切换成其他种类时，白名单会被自动清除。\n<br />\n<br />### 3. 一键存储\n<br />\n<br />1. 打开箱子，垃圾桶**正上方**有一个向上的箭头按钮。\n<br />2. 点击后，**背包里所有物品**会一键存入箱子：\n<br />\u00A0 - 自定义类箱子按白名单分发（匹配的自动存入）。\n<br />\u00A0 - 其他种类箱子按当前种类判断，不符合的留在背包。\n<br />\n<br />### 4. 箱子选择列表（右侧面板）\n<br />\n<br />1. 打开箱子后，右侧显示当前箱子的名称栏，右侧有 **▼ 箭头**。\n<br />2. 点击箭头**展开列表**：\n<br />\u00A0 - 列表显示**同种类**的箱子（未分类箱子始终显示）。\n<br />\u00A0 - 第一项是**出货箱**：点击打开出货箱界面，放入物品即出售（晚上结算）。\n<br />\u00A0 - 点击其他箱子项：**切换到该箱子**的空间。\n<br />3. 在名称栏上**双击**：打开重命名界面，给当前箱子命名（方便区分）。\n<br />4. 实质状态下点击箱子上方的**种类标签**：列表会临时筛选显示该种类的箱子。\n<br />\n<br />### 5. 无限容量箱子（可选）\n<br />\n<br />1. 打开 GMCM 模组菜单，启用\"**无限容量箱子**\"。\n<br />2. 开启后打开箱子，存储区变为**滚动窗口**：\n<br />\u00A0 - 使用**鼠标滚轮**上下滚动。\n<br />\u00A0 - 或点击存储区右侧的**上下箭头**按钮。\n<br />3. 容量不再受限，可存放任意数量的物品。\n<br />\n<br />### 6. 制作 / 烹饪 / 建造直接取用箱子物品\n<br />\n<br />- **制作**：打开制作界面（键盘 Tab 或工作台），材料会自动从背包 + 所有箱子中扣除，无需先把物品放进背包。\n<br />- **烹饪**：厨房烹饪界面同样直接调用箱子材料。\n<br />- **建造**（罗宾家 / 法师塔）：材料不足时自动从箱子补扣，背包 + 箱子材料足够即可建造。\n<br />- **Better Crafting**：其制作界面同样可调用箱子中的物品（需要 Better Crafting 模组）。\n<br />\n<br />### 7. 快捷打开箱子\n<br />\n<br />- 在**任意位置**按下快捷键（默认 **Ctrl+B**）：\n<br />\u00A0 - 无菜单时：打开最近的箱子。\n<br />\u00A0 - 已打开箱子时：关闭箱子界面。\n<br />- 可在 GMCM 模组菜单中修改快捷键。\n<br />\n<br />---\n<br />\n<br />\n<br />## 配置（GMCM）\n<br />\n<br />| 选项 | 说明 |\n<br />| --- | --- |\n<br />| 无限容量箱子 | 开启无限容量 + 滚动存储 |\n<br />| 快捷打开箱子 | 修改\"打开最近箱子\"的快捷键 |\n<br />\n<br />---\n<br />\n<br />## 致谢\n<br />\n<br />灵感来自现实收纳整理体验。基于 Harmony 与 SMAPI 构建。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50441",
+	"Version": "1.0.0",
+	"Updated": "2026-08-23T14:31:18+00:00",
+	"Downloads": [
+		{
+			"Id": 179810,
+			"Type": "Main",
+			"DisplayName": "Smart Storage",
+			"FileName": "5a/b2/48/5ab2480b-4839-4775-964a-e1313a97e330",
+			"Description": "",
+			"Version": "1.0.6",
+			"SizeInBytes": 57782,
+			"Uploaded": "2026-08-23T14:31:18+00:00",
+			"Mods": [
+				{
+					"Id": "MoYu.SmartStorage",
+					"DisplayName": "Smart Storage（智能储物）",
+					"Type": "Smapi",
+					"RelativePath": "Smart Storage",
+					"Manifest": {
+						"Name": "Smart Storage（智能储物）",
+						"Description": "智能储物：箱子标签分类、自动整理、随时随地打开箱子。",
+						"Author": "MoYu",
+						"Version": "1.0.6",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Smart Storage.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50441"
+						],
+						"UniqueId": "MoYu.SmartStorage"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566498,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437129,
+		"UploaderId": 231007203,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

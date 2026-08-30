@@ -1,0 +1,103 @@
+{
+	"Site": "Nexus",
+	"Id": 51208,
+	"Name": "Flexible Storage Framework",
+	"Author": "Eimakore",
+	"Description": "[size=5][b]Flexible Storage Framework[/b][/size]\n<br />\n<br />Flexible Storage Framework (FSF) is a framework for adding fully customizable storage containers to Stardew Valley through SMAPI content packs.\n<br />\n<br />Content packs can create anything from small boxes and coolers to cabinets, sheds, cellars, resource piles, or other unusual storage types — each with its own appearance, capacity, footprint, restrictions, animations, and acquisition method.\n<br />\n<br />[b]The framework itself does not add any storage containers.[/b] Install a compatible content pack, such as the optional FSF Example Storage Pack, to add them to your game.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*]Custom storage capacities and inventory layouts[/*]\n<br />[*]Storage containers larger than a single tile[/*]\n<br />[*]Animated opening and closing[/*]\n<br />[*]Optional player-selected colors[/*]\n<br />[*]Custom inventory icons and world sprites[/*]\n<br />[*]Carry support for moving filled storage containers[/*]\n<br />[*]Progressive visuals based on how full a container is[/*]\n<br />[*]Item filters using item IDs and context tags[/*]\n<br />[*]Crafting recipes unlocked through skills[/*]\n<br />[*]Crafting recipes sold by shops such as Robin’s Carpenter Shop[/*]\n<br />[*]Compatibility with vanilla crafting and Better Crafting[/*]\n<br />[*]Automate support, including multi-tile storage footprints[/*]\n<br />[*]Console reload command for content pack development and testing[/*]\n<br />[/list]\n<br />[size=4][b]Item Filters[/b][/size]\n<br />\n<br />Storage containers can be restricted to specific types of items.\n<br />\n<br />For example, a content pack can create:\n<br />\n<br />[list]\n<br />[*]A cooler that accepts only fish[/*]\n<br />[*]A cabinet for clothing, hats, and boots[/*]\n<br />[*]A lumber pile for building resources[/*]\n<br />[*]A specialized container for items added by another mod[/*]\n<br />[/list]\n<br />Filtered items are blocked from manual insertion, stacking, quick transfers, standard chest insertion, and supported automation.\n<br />\n<br />If a filter is changed while a container already holds items that no longer match, those items are never deleted or ejected. They remain safely inside and can still be removed, but they cannot be inserted again.\n<br />\n<br />[size=4][b]Progressive Storage Visuals[/b][/size]\n<br />\n<br />Containers can change their appearance as they fill up.\n<br />\n<br />A pile of crates, sacks, barrels, or other visible storage can gradually grow according to the number of occupied slots, the total number of stored items, or the percentage of occupied capacity. These visuals are calculated from the current contents rather than permanently stored, so they update automatically when items are added or removed.\n<br />\n<br />\n<br />[size=4][b]Safe Content Pack Handling[/b][/size]\n<br />\n<br />FSF is designed to protect your items if a storage content pack is temporarily removed or fails to load.\n<br />\n<br />While the framework remains installed, affected containers fall back to functional vanilla chests instead of disappearing. Their contents and identifying data are preserved. If the missing content pack is installed again, FSF restores the container’s original appearance and behavior.\n<br />\n<br />For maximum safety, always make a backup of your save before removing gameplay mods. If you intend to uninstall FSF itself permanently, empty and remove its custom containers first.\n<br />\n<br />[size=4][b]Example Storage Pack[/b][/size]\n<br />\n<br />The optional FSF Example Storage Pack demonstrates the framework with six ready-to-use containers:\n<br />\n<br />[list]\n<br />[*][b]Small Crate[/b] — skill-unlocked animated storage[/*]\n<br />[*][b]Fishing Box[/b] — animation, tint, and a fish-only filter[/*]\n<br />[*][b]Farmhouse Wardrobe[/b] — a finished item sold by Robin, with animation, tint, and a clothing filter[/*]\n<br />[*][b]Storage Cellar[/b] — a large 2x2 storage whose crafting recipe is sold by Robin[/*]\n<br />[*][b]Growing Crate Stack[/b] — an ItemCount progressive storage with no animation or tint[/*]\n<br />[*][b]Artisan Display[/b] — an OccupiedSlots progressive storage combining animation, tint, and an artisan-goods filter[/*]\n<br />[/list]\n<br />The Example Storage Pack is optional and installed separately.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI[/*]\n<br />[*]A compatible Flexible Storage Framework content pack to add storage containers[/*]\n<br />[/list]\n<br />[b]Optional integrations:[/b]\n<br />\n<br />[list]\n<br />[*]Automate[/*]\n<br />[*]Better Crafting[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install the latest version of SMAPI.[/*]\n<br />[*]Download Flexible Storage Framework.[/*]\n<br />[*]Extract the framework folder into your Stardew Valley [b]Mods[/b] folder.[/*]\n<br />[*]Install at least one compatible FSF content pack.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]\n<br />Your folder structure should look similar to this:\n<br />\n<br />[code]\n<br />Stardew Valley/\n<br />\u00A0 \u00A0\u00A0\u00A0 └── Mods/\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ├── FlexibleStorageFramework/\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 └── FSF Example Storage Pack/[/code]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*]Works with vanilla crafting.[/*]\n<br />[*]Compatible with Better Crafting.[/*]\n<br />[*]Supports Automate connections across custom multi-tile footprints.[/*]\n<br />[*]Filtered storage prevents Automate from inserting disallowed items.[/*]\n<br />[*]Uses standard SMAPI content packs. Content Patcher is not required.[/*]\n<br />[*][b]Multiplayer compatibility has not yet been fully tested.[/b][/*]\n<br />[*]Carry mode is host-only. Farmhands cannot lift storage containers, and host carry behavior in multiplayer has not yet been verified.[/*]\n<br />[/list]Containers with more inventory rows than can fit on screen remain fully usable. The storage menu displays up to six rows at once, with additional rows accessible by scrolling.\n<br />\n<br />[size=4][b]Updating[/b][/size]\n<br />\n<br />Replace the old Flexible Storage Framework folder with the new version.\n<br />\n<br />Do not overwrite an existing installation if that would leave obsolete files behind. Your placed containers and stored items are saved with your game, not inside the mod folder.\n<br />\n<br />[size=4][b]Uninstallation[/b][/size]\n<br />\n<br />If you only want to remove an individual content pack, keep FSF installed. Its containers will fall back to vanilla chests and retain their contents.\n<br />\n<br />Before permanently removing the framework itself:\n<br />\n<br />[list=1]\n<br />[*]Back up your save.[/*]\n<br />[*]Empty all custom FSF storage containers.[/*]\n<br />[*]Pick up or remove those containers.[/*]\n<br />[*]Save the game.[/*]\n<br />[*]Remove FSF and its content packs from the Mods folder.[/*]\n<br />[/list]\n<br />[size=4][b]Console Commands[/b][/size]\n<br />\n<br />[code]fsf_reload[/code]Reloads all FSF storage definitions without restarting the game. This is mainly useful when testing or developing content packs.\n<br />[code]fsf_list[/code]Lists all currently registered storage definitions and their main properties.\n<br />\n<br />[size=4][b]Reporting Issues[/b][/size]\n<br />\n<br />When reporting a problem, please include:\n<br />\n<br />[list]\n<br />[*]A link to your full SMAPI log[/*]\n<br />[*]Your FSF version[/*]\n<br />[*]The name and version of the affected content pack[/*]\n<br />[*]A description of what you were doing when the problem occurred[/*]\n<br />[*]Whether the issue also happens without other storage or inventory mods[/*]\n<br />[/list]\n<br />Please do not paste only the red error text. The complete SMAPI log usually contains the information needed to identify the cause.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51208",
+	"Version": "1.1.0",
+	"Updated": "2026-08-26T16:21:13+00:00",
+	"Downloads": [
+		{
+			"Id": 180298,
+			"Type": "Main",
+			"DisplayName": "Flexible Storage Framework",
+			"FileName": "1b/41/48/1b41482f-f1ea-4297-9ddd-f7a80f06d4e2",
+			"Description": "Framework for adding fully customizable storage containers through content packs. Does nothing on its own — at least one compatible FSF content pack is required.",
+			"Version": "1.1.0",
+			"SizeInBytes": 113989,
+			"Uploaded": "2026-08-26T16:19:38+00:00",
+			"Mods": [
+				{
+					"Id": "Eimakore.FlexibleStorageFramework",
+					"DisplayName": "Flexible Storage Framework",
+					"Type": "Smapi",
+					"RelativePath": "Flexible Storage Framework",
+					"Manifest": {
+						"Name": "Flexible Storage Framework",
+						"Description": "Framework for uninstall-safe multi-tile custom storage with content packs, item filters, flexible recipe acquisition, Better Crafting and Automate compatibility, configurable full-storage carry, animation, tint masks, progressive fill visuals, flexible menus and capacities, and public C# API v3.",
+						"Author": "Eimakore & Mia",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "FlexibleStorageFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "leclair.bettercrafting",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51208"
+						],
+						"UniqueId": "Eimakore.FlexibleStorageFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566986,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 180300,
+			"Type": "Optional",
+			"DisplayName": "FSF Feature Example Pack",
+			"FileName": "01/f3/9e/01f39eb2-9ac0-4dc7-b53e-bcc6e19387a9",
+			"Description": "Optional example pack adding six storage containers that showcase FSF’s main features. Requires Flexible Storage Framework.\n",
+			"Version": "1.1.0",
+			"SizeInBytes": 13368,
+			"Uploaded": "2026-08-26T16:21:13+00:00",
+			"Mods": [
+				{
+					"Id": "Eimakore.FSFFeatureExamplePack",
+					"DisplayName": "FSF Feature Example Pack",
+					"Type": "ContentPack",
+					"RelativePath": "FSF Feature Example Pack",
+					"Manifest": {
+						"Name": "FSF Feature Example Pack",
+						"Description": "Original example storages demonstrating the main features of Flexible Storage Framework.",
+						"Author": "Eimakore",
+						"Version": "1.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Eimakore.FlexibleStorageFramework",
+							"MinimumVersion": "1.1.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Eimakore.FSFFeatureExamplePack"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566988,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437896,
+		"UploaderId": 4454462,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

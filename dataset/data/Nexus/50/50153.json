@@ -1,0 +1,108 @@
+{
+	"Site": "Nexus",
+	"Id": 50153,
+	"Name": "Stardew Loading Optimizer for SVE-Space Core-and more",
+	"Author": "neoiw",
+	"Description": "[size=4][b]# Stardew Loading Optimizer (Open-Sourced 开源项目)\n<br />\n<br />English is the default documentation language. 中文说明见下半部分。[/b][/size]\n<br />[size=4][b]\n<br />### In one sentence\n<br />\n<br />Stardew Loading Optimizer reduces the long waits of a heavily modded Stardew Valley: faster save loading, faster scene changes, without replacing your save or making the game depend on its caches.\n<br />\n<br />Measured on one machine with the same save and crossover order (two runs per condition):\n<br />**save load ~11-19% faster (cold cache gives the largest benefit), reaching interactive state after warping to the Mines ~0.8-1.1 s faster (~77-82%), and the click-to-load-start wait 91% shorter.**\n<br />\n<br />### What you get\n<br />\n<br />- **Save selection:** the built-in fixed wait between clicking a save and actual load start drops from about `2.4 s` to about `0.2 s` (-91%). This is the click-to-`SAVE LOAD START` boundary, not a complete save-load percentage.\n<br />- **Save load (same save, 100+ mods):** on average `3.2-5.3 s` faster:\n<br />\u00A0 - vs no performance mods: about `11.5%` (warm cache) and `19.0%` (cold cache);\n<br />\u00A0 - vs the full other-performance-mod stack (Speedy Solutions + ZeroXPatch family): about `14.3%` (warm) and `13.6%` (cold).\n<br />- **Scene change:** after `debug warp Mine`, reaching the interactive state is about `1.0-1.1 s` faster (~79-82%) than without SLO, and about `0.9-1.1 s` faster (~77-82%) than with only the other performance mods.\n<br />- The black-screen fade itself (Fast Warp) measured about `53%` shorter in one direct Mines pair (`1,026.7 ms → 480.8 ms`); preliminary and route-specific.\n<br />\n<br />### Head-to-head vs the other performance mods（See Compatibility\u00A0chapters, all included in this test）\n<br />\n<br />In a direct same-window crossover (two runs per condition, cold and hot cache separately, re-run after removing browser-video CPU interference):\n<br />\n<br />| Metric (mean) | only other perf mods | only SLO | delta |\n<br />|---|---:|---:|---:|\n<br />| Cold cache save load | 25,984 ms | 22,578 ms | **-3,405 ms (-13.1%)** |\n<br />| Warm cache save load | 25,660 ms | 22,207 ms | **-3,452 ms (-13.5%)** |\n<br />| Cold command-to-interactive | 1,309 ms | 238 ms | **-1,071 ms (-82%)** |\n<br />| Warm command-to-interactive | 1,105 ms | 250 ms | **-856 ms (-77%)** |\n<br />\n<br />Conclusion: **SLO alone is faster than the other performance mods alone, in both cache states.** The warp-side gain (~1 s, ~77-82%) is mostly unique to SLO; the other performance mods' benefit is mainly load-side (~1.8 s / 6.4% cold) and does not change the warp boundary. Honest caveats: the two conditions intentionally have different common mod sets, so the cross-stack delta is descriptive evidence, not a large-sample statistical proof; within-condition repeat spread (47-492 ms) is far below the ~3.4 s cross-stack delta.\n<br />\n<br />### How it was measured\n<br />\n<br />- Same Windows machine, same save, Stardew 1.6.15 / SMAPI 4.5.2, fixed 1280x720 window; crossover order `without -&gt; with -&gt; with -&gt; without`.\n<br />- Cold cache: the Windows standby list was purged before every run (verified by counter, not just script flags), so first reads hit disk; warm cache: previous runs still in memory. SLO's load benefit is larger under cold cache (-19% vs -11.5%); warp gains are consistent in both.\n<br />- After every run the save files were byte-identical (SHA-256) to the pre-test backup, zero save writes, normal exit, no leftover processes; evidence from SMAPI log markers and driver result JSON only, no screenshots/OCR.\n<br />- One earlier batch was invalidated and archived `*-INVALID-video-interference` because browser video playback interfered with CPU; the redo matches the pre-interference baseline within &lt;0.5%, confirming the invalidation.\n<br />\n<br />### Technical notes (plain first, terms after)\n<br />\n<br />1. The native 2.15 s save-slot wait is zeroed via `ActivateDelay`; the real load path (`SaveFileSlot.Activate`, `SaveGame.Load`) is not replaced.\n<br />2. Bounded, read-only preparation: background file prefetch (warms the OS file cache after load), compiled-map disk cache (reuses compatible parsed maps with fingerprints and native TMX fallback), decoded-image cache (reuses CPU-decoded image data; GPU texture creation stays on the game thread).\n<br />3. SpaceCore's independent serializers are built in parallel and published atomically, with full native fallback on contract mismatch; only confirmed-empty sidecars take the fast path.\n<br />4. Fast Warp only accelerates the ordinary black-screen fade; native warp and location ownership are unchanged.\n<br />5. Save deserialization and object ownership stay with the game and SpaceCore. The retired FastSave path (full save-object substitution) is unsafe and not part of rc.13 — the project does not claim 70% or 99%; the historical 49.1% prototype result is not an rc.13 result.\n<br />\n<br />### Compatibility\n<br /> - ** UltraSmooth :**\u00A0 For now only Compatible with UltraSmooth 1.6 \n<br />- **Speedy Solutions:** if installed, SLO disables its overlapping optimization at startup (one-time Harmony patch removal, low-frequency callback unregistration with an empty-handler fallback only if unregistration fails); Speedy's files/configs/caches are never modified. This prevents the image-type conflict that could block save loading.\n<br />- **ZeroXPatch family:** `LocationPreload`, `TextureCachePurge`, `StardewStabilizer`, `BackgroundTickThrottler` overlapping paths are retired; `StardewHighPriority`, `StardewCpuAffinity`, `NPCMapLocationsPerformancePatch`, `AutomateNoMoreLag`, `FasterMenuLoad` remain untouched (FasterMenuLoad may self-disable with UI Info Suite 2).\n<br />- **Content Patcher / SpaceCore / Generic Mod Config Menu:** optional integrations, not required.\n<br />\n<br />### Multiplayer\n<br />\n<br />No custom message, NetField, handshake, or host-state writer is added; static review found no network protocol conflict, so host-only, client-only, and both-sides installs are structurally acceptable. In online or unknown sessions, Fast Warp, deferred non-current tilesheets, and background image preparation are automatically disabled; the ordinary image cache and compiled-map cache stay local and fail-closed. Runtime acceptance\u00A0is only once for 30 min\u00A0— back up your save and report SMAPI logs if anything misbehaves.\n<br />\n<br />### Install / uninstall / license\n<br />\n<br />- Install: SMAPI 4.5.0+ and Stardew Valley 1.6.15+; extract the `StardewLoadingOptimizer` folder into `Mods`; default \"Balanced\" memory profile suits most players. Do not install `StardewLoadingOptimizer-UnattendedTestDriver` (a dev tool).\n<br />- Uninstall: optionally use the GMCM \"Clean caches and prepare to uninstall\" action, close the game, remove only the mod folder, then load via the native path. No required save field is added; the first native load after uninstall may be slower.\n<br />- License: GPL-3.0-only; `LICENSE` and `NOTICE` are included in the archive.\n<br />\n<br />### Honest boundaries\n<br />\n<br />Descriptive repeated evidence on one machine/save/mod-set (two runs per condition, crossover order), not a statistical proof; no per-switch attribution (the load delta is the outer boundary of all safe features together); no 70%/99% claims; multiplayer runtime acceptance pending. If you hit a crash, hang, black screen, or unexpected save write, attach `SMAPI-latest.txt`.\n<br />\n<br />---[/b][/size]\n<br />## 一句话介绍\n<br />\n<br />星露谷加载优化器（Stardew Loading Optimizer）是一个给\"装了很多 Mod\"的星露谷减少等待时间的 Mod：\n<br />进存档更快、切场景更快，并且不会替换你的存档、不会把缓存变成游戏必须依赖的东西。\n<br />\n<br />实测数字（同一台电脑、同一个存档、每次条件交叉跑 2 次）：\n<br />**进档时间少约 11%~19%**（冷缓存下收益最大），**传送到矿井后进入可操作状态快约 0.8~1.1 秒（约 77%~82%）**，\n<br />**点击存档到真正开始读档少等 91%**。\n<br />\n<br />---\n<br />\n<br />\n<br />\n<br />### 效果：你能感觉到什么\n<br />\n<br />在大型 Mod 环境（SVE、SpaceCore、Growing Children 等几十上百个 Mod）里：\n<br />\n<br />- **选档更快**：点击存档后到真正开始读档的固定等待，从约 `2.4 秒` 降到约 `0.2 秒`（-91%）。这是\"点击存档 → 开始读取\"这个边界的数字，不是完整进档百分比。\n<br />- **进档更快**：同一个存档、同样 100 多个 Mod，进档（从选档到 `SaveLoaded`）平均少 `3.2~5.3 秒`：\n<br />\u00A0 - 和\"不装任何性能 Mod\"比：热缓存少约 `11.5%`，冷缓存少约 `19.0%`；\n<br />\u00A0 - 和\"装了全套其他性能 Mod（Speedy Solutions + ZeroXPatch 家族等）\"比：热缓存少约 `14.3%`，冷缓存少约 `13.6%`。\n<br />- **切场景更快**：`debug warp Mine` 传送到矿井后，到达并进入可操作状态比不装时快约 `1.0~1.1 秒`（约 `79%~82%`）；比\"只装其他性能 Mod\"也快约 `0.9~1.1 秒`（约 `77%~82%`）。\n<br />- 场景切换的黑屏淡入淡出（快速传送）本身在一次直接对比中少约 `53%`（`1,026.7 ms → 480.8 ms`），属于初步、仅针对矿井路线的观察。\n<br />\n<br />### 和其他性能 Mod 比，有没有增益？（直接对决实测）\n<br />\n<br />专门做了一轮\"只有 SLO vs 只有其他性能 Mod（见兼容性章节，所有其他性能Mod全装）\"的同窗口直接对决（每条件 2 次交叉、冷热缓存分别测、关掉浏览器干扰后重跑）：\n<br />\n<br />| 指标（均值） | 只装其他性能 Mod | 只装 SLO | 差值 |\n<br />|---|---:|---:|---:|\n<br />| 冷缓存进档 | 25,984 ms | 22,578 ms | **-3,405 ms（-13.1%）** |\n<br />| 热缓存进档 | 25,660 ms | 22,207 ms | **-3,452 ms（-13.5%）** |\n<br />| 冷缓存 传送到可操作 | 1,309 ms | 238 ms | **-1,071 ms（-82%）** |\n<br />| 热缓存 传送到可操作 | 1,105 ms | 250 ms | **-856 ms（-77%）** |\n<br />\n<br />结论：**只装 SLO 比只装其他性能 Mod 更快，冷热缓存都成立**；SLO 在\"传送到矿井后可操作\"这项上快约 1 秒（约 77%~82%），是其他性能 Mod 基本覆盖不到的部分（其他性能 Mod 的收益主要只在进档加载侧，约 -1.8 秒 / -6.4%，不改变传送边界）。\n<br />\n<br />两点诚实说明：\n<br />\n<br />1. 这不代表\"其他性能 Mod 没用\"——它们单独也有加载侧收益；只是 SLO 单独装就已经更快，两者叠加时 SLO 仍然继续给出约 14% 的进档收益。\n<br />2. 两个条件的公共 Mod 集不同（一个带 SLO、一个带其他性能 Mod），跨条件差值属于**描述性证据**，不是大规模抽样统计；但每个条件内部 2 次重复的波动远小于差值（进档组内波动 47~492 ms vs 跨组差值约 3.4 秒）。\n<br />\n<br />### 实测怎么测的（可信度说明）\n<br />\n<br />- 同一台 Windows 电脑、同一个存档（`农场_412578067`），游戏 1.6.15 / SMAPI 4.5.2，窗口固定 1280x720。\n<br />- 每条件 2 次并按 `无 -&gt; 有 -&gt; 有 -&gt; 无` 交叉顺序跑，平衡先后顺序影响。\n<br />- 冷/热缓存分别声明：**热缓存** = 之前刚跑过，文件还在系统内存缓存里；**冷缓存** = 每次启动前清空系统 standby 缓存，第一次读取必须真实读盘（相当于重启电脑后第一次进游戏）。冷缓存下 SLO 的进档收益更大（-19% vs -11.5%），传送收益两种缓存一致。\n<br />- 每轮结束后存档 9 个文件 SHA-256 与测试前备份逐字节一致，0 次存档写入，正常退出、无残留进程；证据来自 SMAPI 日志标记和驱动结果 JSON，不做截图/画面判断。\n<br />- 2026-08-07 上午一轮结果因浏览器播放视频（CPU 干扰）整体作废并归档为 `*-INVALID-video-interference`，关闭视频后重跑；重跑值与干扰前有效基线吻合（偏差 &lt;0.5%），证明作废判断正确。\n<br />\n<br />### 技术原理（有少量术语，先白话后术语）\n<br />\n<br />1. **选档固定等待归零**：游戏自带的\"选档槽激活\"固定等待 2.15 秒，SLO 只把它调到 0（修改 `ActivateDelay`），**不替换**真正的读档代码（`SaveFileSlot.Activate`、`SaveGame.Load` 仍是原版）。\n<br />2. **安全预读与缓存**（全部有上限、只读、不改变游戏数据）：\n<br />\u00A0 - 后台文件预读（`background file prefetch`）：进档后按固定速率预读选中的资源，给操作系统文件缓存\"预热\"；\n<br />\u00A0 - 编译地图缓存（`compiled-map cache`）：复用已经解析过的兼容地图结果，带兼容性指纹，不适用就回退原版 TMX 加载；\n<br />\u00A0 - 已解码图片缓存（`decoded-image cache`）：复用 CPU 解码后的图片数据，**显卡贴图仍在游戏线程创建**，不会把 GPU 工作搬到后台线程。\n<br />3. **SpaceCore 独立数据加速**：SpaceCore 的独立序列化器并行建立、一次性原子发布，契约不符时完整回退；只有确认是空数据的侧车文件才走快捷通道，非空/未知数据一律走 SpaceCore 原路径。\n<br />4. **快速传送**：只加快普通场景切换的黑屏淡入淡出（`ScreenFade.UpdateFadeAlpha`），原生传送、地点切换和玩家位置仍由游戏负责。\n<br />5. **存档所有权不变**：SLO 不反序列化、不发布替代的存档对象图；存档反序列化、地点构造和生命周期仍归游戏与 SpaceCore。旧版\"完整存档对象替换\"（FastSave）已退休且不安全，**不属于 rc.13**——所以本 Mod 不宣称减少 70% 或 99%，历史上 49.1% 的原型成绩依赖已退休技术，不作数。\n<br />\n<br />### 兼容性\n<br />[b]- ** UltraSmooth :** 目前只兼容\u00A0UltraSmooth 1.6[/b] \n<br />- **SinZational Speedy Solutions**：若已安装，SLO 启动时一次性关闭它重叠的优化行为（移除其 Harmony 补丁并尝试注销低频回调），避免图片数据类型冲突导致进不了存档；**不修改 Speedy 的文件、配置或缓存**。\n<br />- **ZeroXPatch 性能家族**：`LocationPreload`、`TextureCachePurge`、`StardewStabilizer`、`BackgroundTickThrottler` 与 SLO 重叠的地图预加载/强制清理/NPC Tick 路径由 SLO 退休；`StardewHighPriority`、`StardewCpuAffinity`、`NPCMapLocationsPerformancePatch`、`AutomateNoMoreLag`、`FasterMenuLoad` 因所有权独立而保留（有 UI Info Suite 2 时 `FasterMenuLoad` 可能自行关闭）。兼容策略只作用于当前进程，不修改对方文件。\n<br />- **Content Patcher / SpaceCore / Generic Mod Config Menu**：全部可选，不是必需依赖。有 GMCM 时有游戏内设置页（内存档位、快速传送开关、测量标记等）。\n<br />- **其他内容/功能 Mod**（SVE、Growing Children Expanded、Automate、NPC Map Locations 等）：无特殊处理，实测就是在这些 Mod 都在的情况下完成的。\n<br />\n<br />### 多人模式\n<br />\n<br />- SLO **不增加**任何自定义多人消息、NetField、握手字段或主机权威写入者；静态审计没有发现网络协议冲突，因此**只装主机、只装客机、双方都装**在结构上都可运行。\n<br />- 在线主机/客机或会话状态未知时，SLO 自动关闭敏感功能：快速传送、延后非当前图集、后台图片准备；普通图片缓存和编译地图缓存仍是本地只读路径并保留原生回退，本地分屏也采用同样保守策略。Speedy 抑制只作用于安装 SLO 的电脑。\n<br />- 诚实边界：**运行时真实验收仅一次30分钟**；多人运行时请先备份存档，遇到问题可通过\"卸载\"流程安全退出。\n<br />\n<br />### 安装\n<br />\n<br />1. 安装 SMAPI 4.5.0+（游戏 1.6.15+）；\n<br />2. 把压缩包里的 `StardewLoadingOptimizer` 文件夹解压到 `Stardew Valley/Mods`；\n<br />3. 启动游戏即可。默认内存档位\"平衡\"适合大多数玩家；有 GMCM 时可切换\"高内存占用（最优效果）\"，改完需完全重启游戏。\n<br />\n<br />不要安装 `StardewLoadingOptimizer-UnattendedTestDriver`——那是本地开发测试工具，不属于发布包。\n<br />\n<br />### 卸载（安全，不影响存档）\n<br />\n<br />- 本 Mod 不向存档加入必需字段，不直接改写存档 XML；正常保存仍由游戏和实际拥有存档数据的 Mod 负责。\n<br />- 推荐：有 GMCM 时，标题界面打开本 Mod 设置 → 勾选\"清理缓存并准备卸载\"→ 保存；该操作会移除 Harmony 补丁、等待后台写入结束、释放缓存并删除本 Mod 专属 ModData。\n<br />- 然后完全关闭游戏，只删除 `Mods/StardewLoadingOptimizer` 文件夹，用原生路径读档即可。卸载后第一次原生读档可能比装 Mod 时慢，这是正常的。\n<br />- 缓存目录：`%AppData%/StardewValley/ModData/neoiw.StardewLoadingOptimizer`（不在存档目录，也不被 SMAPI 当 Mod 扫描）。\n<br />\n<br />### 测试边界（诚实免责）\n<br />\n<br />- 所有数字：同机（Windows）、同存档、同 Mod 集、每条件 2 次交叉；是**描述性重复证据**，不是大规模抽样统计证明，不同电脑/不同 Mod 组合的数字会不一样。\n<br />- 不逐开关归因：进档总收益是全部安全功能一起运行的外层边界，不能拆给某个缓存或预读功能；单功能观察（地图缓存 -8.2%、图片缓存 -13.3% 等）只是方向性证据。\n<br />- 不宣称 70% 或 99%；49.1% 的历史原型成绩不作数；多人运行时验收待完成。\n<br />- 遇到崩溃、卡死、黑屏、保存写入或不确定状态时，请保存完整 SMAPI 日志（`SMAPI-latest.txt`）后反馈。\n<br />\n<br />### 许可证\n<br />\n<br />GPL-3.0-only。主包内含 `LICENSE` 与 `NOTICE`；游戏、SMAPI、Harmony 等第三方组件不包含在本项目中，适用各自的许可证。\n<br />\n<br />\n<br />\n<br />---\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50153",
+	"Version": "1.0.0",
+	"Updated": "2026-08-08T00:10:43+00:00",
+	"Downloads": [
+		{
+			"Id": 177782,
+			"Type": "Main",
+			"DisplayName": "StardewLoadingOptimizer 1.0.0",
+			"FileName": "2e/2d/77/2e2d777b-a648-4e4b-913e-02caf45ea711",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 142500,
+			"Uploaded": "2026-08-08T00:10:43+00:00",
+			"Mods": [
+				{
+					"Id": "neoiw.StardewLoadingOptimizer",
+					"DisplayName": "Stardew Loading Optimizer",
+					"Type": "Smapi",
+					"RelativePath": "StardewLoadingOptimizer",
+					"Manifest": {
+						"Name": "Stardew Loading Optimizer",
+						"Description": "Reduces waits in heavily modded startup, save loading, and scene changes with bounded caches and native fallbacks. / 使用有上限的缓存和原生回退，减少大型 Mod 环境中的启动、进档和场景切换等待。",
+						"Author": "neoiw",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "StardewLoadingOptimizer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "SinZ.SpeedySolutions",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.LocationPreload",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.TextureCachePurge",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.StardewStabilizer",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.BackgroundTickThrottler",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.StardewHighPriority",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.StardewCpuAffinity",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.NPCMapLocationsPerformancePatch",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.FasterMenuLoad",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "ZeroXPatch.AutomateNoMoreLag",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50153"
+						],
+						"UniqueId": "neoiw.StardewLoadingOptimizer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564470,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436841,
+		"UploaderId": 293224724,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

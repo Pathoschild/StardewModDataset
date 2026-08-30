@@ -1,0 +1,42 @@
+{
+	"Site": "Nexus",
+	"Id": 50278,
+	"Name": "cn-Evelyn's Fireside Tales",
+	"Author": "guu120",
+	"Description": "# Evelyn's Fireside Tales 简体中文汉化包 —— Nexus 发布说明\n<br />\n<br />**原版 Mod**：Evelyn's Fireside Tales（Nexus ID: **50065**）\n<br />**汉化版本**：1.3（对应原版 1.3）\n<br />**适用游戏**：星露谷物语 1.6.15+\n<br />\n<br />---\n<br />\n<br />## Description 简介\n<br />\n<br />本汉化包为 **Nexus 50065《Evelyn's Fireside Tales》（艾芙琳的炉边故事）** 提供完整简体中文翻译。\n<br />\n<br />原版 mod 加入了一个\"周五炉边读书会\"玩法：艾芙琳每周五下午 1:00–5:00 在社区中心壁炉旁朗读小说，共 16 本原创故事、横跨四大类型（奇幻 / 恐怖 / 科幻 / 侦探黑色小说），并附赠随进度更新的阅读日志、完成故事后的信件与奖励。\n<br />\n<br />本汉化包翻译了原版**全部可见文本**：\n<br />- 16 本书 × 4 章，共 **64 章朗读对话**（原版作者未对这些文本启用 i18n，本包已直接修改 mod 数据文件将其接入翻译系统）\n<br />- 全部邮件：开场介绍信、每季选书预告信、16 篇读后感想信、1–4 周年茶具奖励信、16 本全集完成信\n<br />- 阅读日志全界面：目录、章节摘要、艾芙琳笔记、案件档案（侦探类专属）、进度与状态栏\n<br />- 节日提示、物品名称与描述（伯爵红茶、阅读日志）等零散条目\n<br />\n<br />**总翻译量：1394 条文本键。**\n<br />\n<br />&gt; ⚠️ **重要**：与其他仅需复制一个语言文件的汉化包不同，本汉化包**同时包含对原版 mod 数据文件的修改**（详见下方安装说明）。请务必按步骤操作并保留原文件备份。\n<br />\n<br />---\n<br />\n<br />## Installation instructions 安装方法\n<br />\n<br />### 0. 准备\n<br />确保已安装原版 mod 及全部前置（见下方 Requirements）。\n<br />\n<br />### 1. 备份（强烈建议）\n<br />将原版 mod 文件夹完整复制一份到任意位置（例如游戏根目录下的 `backup_EvelynsFiresideTales`）：\n<br />\n<br />```\n<br />Stardew Valley/backup_EvelynsFiresideTales/\u00A0 ← 备份\n<br />Stardew Valley/Mods/Evelyns Fireside Tales/\u00A0 ← 原版\n<br />```\n<br />\n<br />&gt; 备份请放在游戏根目录而非 `Mods` 文件夹内，否则 SMAPI 会把它当作另一个 mod 加载并产生冲突。\n<br />\n<br />### 2. 放入语言文件\n<br />将本汉化包的 **`zh.json`** 放入原版 mod 的 `i18n` 文件夹内，与 `default.json` 同目录：\n<br />\n<br />```\n<br />Stardew Valley/Mods/Evelyns Fireside Tales/i18n/zh.json\n<br />```\n<br />\n<br />### 3. 覆盖数据文件（本包独有步骤）\n<br />用本汉化包 **`assets` 文件夹中的 3 个文件**，覆盖原版 mod 对应文件：\n<br />\n<br />| 覆盖到的位置 | 内容 | 修改说明 |\n<br />| --- | --- | --- |\n<br />| `assets/events/chapters.json` | 64 章朗读对话 | 1067 处对话文本改为 i18n 引用 |\n<br />| `assets/parchment/reading-journal.json` | 阅读日志 | 1234 处文本改为 i18n 引用 |\n<br />| `assets/data/passive-festivals.json` | 节日提示 | 32 处文本改为 i18n 引用 |\n<br />\n<br />### 4. 启动游戏\n<br />游戏语言设置为**简体中文**，用 SMAPI 启动器（StardewModdingAPI.exe）进入游戏，汉化自动生效。\n<br />\n<br />---\n<br />\n<br />## Main features 汉化内容一览\n<br />\n<br />- ✅ **64 章朗读对话全汉化**（原版硬编码英文，本包已改造接入 i18n）\n<br />- ✅ **全部邮件汉化**：介绍信 / 选书预告 / 读后感想 / 周年茶具 / 全集完成\n<br />- ✅ **阅读日志全界面汉化**：章节摘要、艾芙琳笔记、案件档案、进度状态\n<br />- ✅ **物品与节日文本汉化**：伯爵红茶、阅读日志、节日名称与提示\n<br />- ✅ 保留原版全部特殊占位符（`@` 玩家名、`^` 换行、`^^` 空行）\n<br />- ✅ 已校验：1394 条翻译键与原版完全对应，无遗漏、无乱码、无格式破坏\n<br />- ✅ **语言隔离**：修改仅替换显示文本，不改变任何游戏逻辑；英文玩家不受影响（未装本包时原版英文正常）\n<br />\n<br />---\n<br />\n<br />## Requirements 前置要求\n<br />\n<br />| 名称 | 唯一 ID | 最低版本 | 备注 |\n<br />| --- | --- | --- | --- |\n<br />| SMAPI（模组加载器） | — | 4.1.0 | 必装 |\n<br />| Content Patcher | Pathoschild.ContentPatcher | 2.8.0 | 必装 |\n<br />| BETAS | Spiderbuttons.BETAS | 3.4.0 | 必装（原版硬性依赖） |\n<br />| Parchment | PeacefulEnd.Parchment.Core | 1.5.0 | 必装（原版硬性依赖） |\n<br />| Evelyn's Fireside Tales（原版） | CozyPsychologist.EvelynsFiresideTales | 1.3 | 本汉化针对 1.3 版制作 |\n<br />\n<br />建议安装顺序：SMAPI → Content Patcher → BETAS → Parchment → 原版 mod → 本汉化包。\n<br />\n<br />---\n<br />\n<br />## Changelog 更新日志\n<br />\n<br />**v1.3（2026-08）**\n<br />- 首次发布，对应原版 1.3\n<br />- 修复：原版对话/书页文本硬编码英文、不读取语言文件的问题（通过修改数据文件接入 i18n 解决）\n<br />\n<br />---\n<br />\n<br />## Shout outs 鸣谢\n<br />\n<br />- 感谢 **CozyPsychologist** 创作《Evelyn's Fireside Tales》这样温暖而精彩的故事合集。\n<br />- 感谢 **Pathoschild**（SMAPI / Content Patcher）、**Spiderbuttons**（BETAS）、**PeacefulEnd**（Parchment）等工具与框架作者。\n<br />- 感谢星露谷模组社区长期积累的 i18n 汉化规范与经验。\n<br />- 感谢每一位愿意在周五下午坐下来，陪艾芙琳读完一个故事的玩家。\n<br />\n<br />\n<br />---\n<br />\n<br />*本汉化包为玩家自制的非官方语言包，与原版 mod 无关，所有版权归原作者所有。*",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50278",
+	"Version": "1",
+	"Updated": "2026-08-07T07:40:05+00:00",
+	"Downloads": [
+		{
+			"Id": 177663,
+			"Type": "Main",
+			"DisplayName": "cn-Evelyn's Fireside Tales",
+			"FileName": "61/48/59/614859b7-d3e5-4255-82d6-49ea51d66b45",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 222832,
+			"Uploaded": "2026-08-07T07:40:05+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "177663",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564351,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436966,
+		"UploaderId": 292610333,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

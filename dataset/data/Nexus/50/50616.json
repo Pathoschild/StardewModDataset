@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 50616,
+	"Name": "Farm Automation",
+	"Author": "slooker",
+	"Description": "[center][size=6][b]Farm Automation[/b][/size]\n<br />[size=4]Craft helpful farm robots that harvest and replant configurable crop plots.[/size][/center]\n<br />[center][i]Small machines. Bigger harvests. More time for everything else.[/i][/center]\n<br />Farm Automation adds two craftable farm robots that automatically harvest and replant configurable crop plots.\n<br />Place a robot near your crops, choose the area you want it to manage, and link it to a nearby chest. The robot will monitor its assigned plot, place mature crops into the chest, and replant empty tilled soil using seeds stored inside.\n<br />Each robot has its own crafting tier, working range, appearance, and nighttime glow.\n<br />\n<br />[b][size=4]Iron Robot[/size][/b]\n<br />[list]\n<br />[*]Unlocks at Farming level 2 alongside the Iron Sprinkler[/*]\n<br />[*]Costs 5 Iron Bars[/*]\n<br />[*]Manages a configurable 3×3 area[/*]\n<br />[*]Links to chests within 3 tiles[/*]\n<br />[*]Features an iron-and-copper casing[/*]\n<br />[*]Produces a small, warm torch-like glow[/*]\n<br />[/list][b][size=4]Iridium Robot[/size][/b]\n<br />[list]\n<br />[*]Unlocks at Farming level 9 alongside the Iridium Sprinkler[/*]\n<br />[*]Costs 5 Iridium Bars and 1 Battery Pack[/*]\n<br />[*]Manages a configurable 5×5 area[/*]\n<br />[*]Links to chests within 10 tiles[/*]\n<br />[*]Features a purple iridium casing[/*]\n<br />[*]Produces a larger brazier-like glow[/*]\n<br />[/list][size=5][b]Installation instructions[/b][/size]\n<br />[size=4]Using Vortex[/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download Farm Automation using the Mod Manager Download option.[/*]\n<br />[*]Install and enable the mod in Vortex.[/*]\n<br />[*]Deploy your mods.[/*]\n<br />[*]Launch Stardew Valley through SMAPI.[/*]\n<br />[/list][b][size=4]Manual installation[/size][/b]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download and extract Farm Automation.[/*]\n<br />[*]Place the\n<br />[code]FarmAutomation[/code]folder inside your Stardew Valley\n<br />[code]Mods[/code]directory.[/*]\n<br />[*]Launch Stardew Valley through SMAPI.[/*]\n<br />[/list]The installed folder should look like this:\n<br />[code]Stardew Valley/\n<br />└── Mods/\n<br />\u00A0 \u00A0 └── FarmAutomation/\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ├── assets/\n<br />\u00A0 \u00A0 \u00A0 \u00A0 │\u00A0\u00A0 ├── robot.png\n<br />\u00A0 \u00A0 \u00A0 \u00A0 │\u00A0\u00A0 └── iridium-robot.png\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ├── FarmAutomation.dll\n<br />\u00A0 \u00A0 \u00A0 \u00A0 └── manifest.json[/code]\n<br />[b][size=4]Updating[/size][/b]\n<br />Close Stardew Valley before installing an update. Replace the old version through Vortex or replace the existing\n<br />[code]FarmAutomation[/code]folder manually.\n<br />Removing the mod\n<br />For the cleanest removal:\n<br />[list=1]\n<br />[*]Pick up all placed robots.[/*]\n<br />[*]Remove robot items from inventories and chests.[/*]\n<br />[*]Save and exit the game.[/*]\n<br />[*]Uninstall Farm Automation.[/*]\n<br />[/list]Removing the mod while custom robot items remain in the save may cause Stardew Valley to display them as Error Items.\n<br />\n<br />[b][size=5]Main features[/size][/b]\n<br />Configurable work areas\n<br />Placing a robot automatically opens a work-area selector.\n<br />Move the shared cursor to choose the center of the robot’s crop area, then confirm the selection:\n<br />[list]\n<br />[*]Iron Robot: 3×3[/*]\n<br />[*]Iridium Robot: 5×5[/*]\n<br />[/list]Empty tiles appear green and occupied tiles appear red. Occupied tiles can still be included, allowing sprinklers to remain inside the selected area. The robot simply skips tiles without crops or tilled soil.\n<br />Interact with a placed robot at any time to reconfigure its work area and linked chest.\n<br />Automatic harvesting\n<br />Once per second, each robot checks its assigned area for mature crops.\n<br />Harvested produce is placed directly into the linked chest. If the chest cannot hold the next crop, the robot stops harvesting and displays a gold\n<br />[code]?[/code]above its head.\n<br />Clear room in the chest and the robot will resume automatically.\n<br />Automatic replanting\n<br />When the robot finds empty tilled soil, it checks its linked chest for seeds.\n<br />The robot uses the first seed stack in visible chest-slot order. Put the seeds you want planted before other seed stacks to control its behavior.\n<br />If the first seed stack cannot be planted on a tile, the robot leaves that tile alone instead of silently choosing another seed.\n<br />Chest selection\n<br />After choosing the work area, select a highlighted chest:\n<br />[list]\n<br />[*]Iron Robot chests must be within 3 tiles.[/*]\n<br />[*]Iridium Robot chests must be within 10 tiles.[/*]\n<br />[*]The chest must be in the same game location as the robot.[/*]\n<br />[/list]Valid chests receive a green highlight. The cursor tile turns green over a selectable chest and red elsewhere.\n<br />Mouse and controller support The selectors use one shared cursor.\n<br />\n<br />[b]Mouse controls:[/b]\n<br />[list]\n<br />[*]Move the mouse to position the cursor.[/*]\n<br />[*]Left-click to confirm.[/*]\n<br />[*]Right-click or press Escape to cancel.[/*]\n<br />[/list][b]Controller controls:[/b]\n<br />[list]\n<br />[*]Move the cursor with the left thumbstick or D-pad.[/*]\n<br />[*]Press A to confirm.[/*]\n<br />[*]Press B to cancel.[/*]\n<br />[/list]Mouse and controller input can be used interchangeably.\n<br />\n<br />[size=5][b]Multiplayer[/b][/size]\n<br />Automation is host-authoritative: the host performs harvesting and planting operations.\n<br />For the most consistent multiplayer experience, all players should install the mod. Please mention whether you were the host or a farmhand when reporting multiplayer issues.\n<br />Current limitations\n<br />Farm Automation is still an early mod and currently has these limitations:\n<br />[list]\n<br />[*]Robots do not water crops.[/*]\n<br />[*]Robots do not physically walk between crops yet.[/*]\n<br />[*]Harvest output is currently one item per crop.[/*]\n<br />[*]Farming skill, fertilizer quality, luck, and bonus yields are not yet applied.[/*]\n<br />[*]The mod currently focuses on standard planted crops.[/*]\n<br />[*]Linked chests must remain in the same location as their robot.[/*]\n<br />[*]Multiplayer automation is performed by the host.[/*]\n<br />[/list][b]Requirements[/b]\n<br />[list]\n<br />[*]Stardew Valley 1.6.14 or later[/*]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[/list]No other mods are required.\n<br />If a robot does not work, check that:\n<br />[list]\n<br />[*]Its work area and chest have both been configured.[/*]\n<br />[*]The linked chest has not been moved.[/*]\n<br />[*]The chest has room for harvested produce.[/*]\n<br />[*]The crops are fully mature.[/*]\n<br />[*]Empty crop tiles contain tilled soil.[/*]\n<br />[*]The chest contains valid seeds.[/*]\n<br />[*]The desired seeds are the first seed stack in chest-slot order.[/*]\n<br />[/list]When reporting a problem, please include:\n<br />[list]\n<br />[*]Your parsed SMAPI log[/*]\n<br />[*]Your Farm Automation version[/*]\n<br />[*]Your Stardew Valley and SMAPI versions[/*]\n<br />[*]Whether you are playing single-player or multiplayer[/*]\n<br />[*]The robot tier involved[/*]\n<br />[*]Any crop, chest, or automation mods you use[/*]\n<br />[/list][size=4][b]Shout outs[/b][/size]\n<br />[list]\n<br />[*]ConcernedApe for creating Stardew Valley.[/*]\n<br />[*]Pathoschild and the SMAPI contributors for making modern Stardew Valley modding possible.[/*]\n<br />[*]The Stardew Valley modding community and wiki contributors for their documentation and examples.[/*]\n<br />[*]Everyone who tests the mod, reports bugs, and suggests improvements.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50616",
+	"Version": "0.5.10",
+	"Updated": "2026-08-26T00:18:31+00:00",
+	"Downloads": [
+		{
+			"Id": 180207,
+			"Type": "Main",
+			"DisplayName": "Farm Automation",
+			"FileName": "12/d5/53/12d553a3-bc19-4305-a895-dca6240d0753",
+			"Description": "",
+			"Version": "0.5.10",
+			"SizeInBytes": 58392,
+			"Uploaded": "2026-08-26T00:18:31+00:00",
+			"Mods": [
+				{
+					"Id": "Shawn.FarmAutomation",
+					"DisplayName": "Farm Automation",
+					"Type": "Smapi",
+					"RelativePath": "FarmAutomation",
+					"Manifest": {
+						"Name": "Farm Automation",
+						"Description": "Placeable farm robots which harvest and replant configurable crop areas.",
+						"Author": "Shawn",
+						"Version": "0.5.10",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmAutomation.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Shawn.FarmAutomation"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566895,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437304,
+		"UploaderId": 27870630,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

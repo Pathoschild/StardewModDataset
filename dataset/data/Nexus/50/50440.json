@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 50440,
+	"Name": "FlyingSwordRingMultiplayerVisuals",
+	"Author": "Friday2026",
+	"Description": "# Flying Sword Ring Multiplayer Visuals（飞剑多人画面同步）\n<br />\n<br />让《星露谷物语》联机时，飞剑不再\"只见自己的、不见别人的\"——这是一个面向玩家的辅助模组，在多人游戏中把每位玩家的飞剑（环绕、攻击、返回、穿透）丝滑地同步给其他玩家看，并稳定复刻原版的拖尾、速度线等视觉特效。\n<br />\n<br />- 适用平台：**Stardew Valley 1.6 / SMAPI 联机**（主机与农场主客户端皆可）\n<br />- 模组 ID：`OpenCode.FlyingSwordRingMultiplayerVisuals`\n<br />- 当前版本：1.4.1\n<br />\n<br />## 前置 Mod（Requirements）\n<br />\n<br />安装前请确认以下内容已就绪：\n<br />\n<br />| 依赖 | 说明 | 是否必装 |\n<br />|---|---|---|\n<br />| SMAPI | 版本需 ≥ **4.0.0**（对应星露谷 1.6） | 必装 |\n<br />| Flying Sword Ring（飞剑 / sth0901.FlyingSwordRing） | 原飞剑主模组，版本需 ≥ **2.3.2** | **必装** |\n<br />\n<br />&gt; 本模组是对「Flying Sword Ring」的联机增强，**必须与主飞剑模组一起安装**；单独安装本模组不会生效。\n<br />\n<br />## 安装方法\n<br />\n<br />1. 正常安装 SMAPI 与「Flying Sword Ring」模组；\n<br />2. 将 `FlyingSwordRingMultiplayerVisuals` 文件夹整个放入\n<br />\u00A0 `Stardew Valley/Mods/` 目录下；\n<br />3. 启动游戏确认 SMAPI 控制台出现\n<br />\u00A0 「已安装多人飞剑可见性补丁」字样，即安装成功。\n<br />\n<br />## 功能介绍\n<br />\n<br />- **跨玩家飞剑可见**：联机时其他玩家飞出、环绕、战斗的飞剑都会正确地出现在你屏幕上，不再只有自己的剑可见。\n<br />- **连续快照校正**：以数 frames 一次的高频快照持续同步位置与角度，并在两次快照之间做平滑插值，用别人视角下飞剑不会出现跳变式瞬移。\n<br />- **环绕轨迹同步**：远端玩家的环绕半径、角速度、环绕角度、环绕样式（OrbitStyle）逐一同步，多把飞剑的相对排布与他人一致。\n<br />- **稳定战斗回放**：返回（Returning）、弧线飞回（ArcBack）、穿透（Piercing）等战斗动作，依据贝塞尔曲线与进度进行回放，并自适应网络抖动，多玩家视角下的战斗场面稳定、不抽搐。\n<br />- **拖尾等特效同步**：延续攻击者本人设置——拖尾长度/颜色/淡入淡出、速度线与飞剑光亮等视觉参数随快照同步，视觉效果与操作者一致。\n<br />- **独立渲染回退**：即便主飞剑模组自身的绘制被跳过或出错，远端飞剑仍会由本模组独立渲染，最大化可见性。\n<br />- **农场主存档兼容补丁**：非主机客户端不会再因飞剑模组尝试读写存档而刷屏警告或重置解锁进度（能量数使用内存默认进度）。\n<br />- **自动清理机制**：玩家断线或超时未更新时，远端飞剑状态自动清除，不留残影。\n<br />\n<br />## 使用说明\n<br />\n<br />- 开启后既不需要配置、也不需要手动操作；进入联机后自动生效。\n<br />- 需要**房间内所有玩家**（主机 + 农场主）都安装本模组，才能保证彼此都能看到对方的飞剑。\n<br />- 本模组只负责\"联机可见性\"，不影响任何本地玩家的飞行剑逻辑与原版模组配置。\n<br />\n<br />## 兼容性与故障排查\n<br />\n<br />- 版本协议为 v3：建议所有玩家使用相同版本，跨版本传输时按协议向后兼容。\n<br />- SMAPI 日志中如出现 `无法读取 FlyingSwordRing 2.3.2 的 _swords 字段`，说明飞剑主模组版本过旧，请升级「Flying Sword Ring」至 2.3.2 或更高。\n<br />- 若偶尔出现个别飞剑轻微瞬移，属于网络快照间隔引起的正常误差，画面上显示会很快被平滑校正。\n<br />- 已知限制：本模组为视觉同步扩展，不修复飞剑主模组自身的存档机制。\n<br />\n<br />Enjoy your swords in multiplayer! \uD83C\uDFF9\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50440",
+	"Version": "1",
+	"Updated": "2026-08-09T14:51:47+00:00",
+	"Downloads": [
+		{
+			"Id": 177988,
+			"Type": "Main",
+			"DisplayName": "FlyingSwordRingMultiplayerVisuals",
+			"FileName": "8c/04/3b/8c043bf8-95ac-44c7-8a65-d806a45b2800",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 28153,
+			"Uploaded": "2026-08-09T14:51:47+00:00",
+			"Mods": [
+				{
+					"Id": "OpenCode.FlyingSwordRingMultiplayerVisuals",
+					"DisplayName": "Flying Sword Ring Multiplayer Visuals",
+					"Type": "Smapi",
+					"RelativePath": "FlyingSwordRingMultiplayerVisuals\\FlyingSwordRingMultiplayerVisuals",
+					"Manifest": {
+						"Name": "Flying Sword Ring Multiplayer Visuals",
+						"Description": "Smooth multiplayer visuals for Flying Sword Ring with continuous snapshot correction and stable combat replays.",
+						"Author": "OpenCode",
+						"Version": "1.4.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FlyingSwordRingMultiplayerVisuals.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "sth0901.FlyingSwordRing",
+								"MinimumVersion": "2.3.2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "OpenCode.FlyingSwordRingMultiplayerVisuals"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564676,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437128,
+		"UploaderId": 291703865,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

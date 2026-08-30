@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 49886,
+	"Name": "Chatty Valley - Unlimited Chats with Villagers. No API Keys Needed",
+	"Author": "edbuildingstuff",
+	"Description": "[b]Talk to Linus, and he talks back.[/b]\u00A0In his own voice, from an AI model running entirely on your own computer. No cloud, no API key, no account, no server to set up. Unzip it into your Mods folder and it works.\n<br />\n<br />[b]Early access.[/b]\u00A0Linus is the first villager. More of Pelican Town is coming, one character at a time.\n<br />\n<br />[b]What it does[/b]\n<br />Press a key near Linus and type to him. He replies in the game's own dialogue box, with his portrait and the normal typewriter text, aware of the season, the weather, the time of day, and your friendship. Every reply is different, and the conversation carries its own history, so you can actually talk rather than click through a list.\n<br />\n<br />Other AI dialogue mods either call a cloud API or make you stand up your own model server, and then wear the character as a prompt on a general chatbot. Chatty Valley ships the model with the mod, and Linus's voice is trained into it. He stays himself: he will not slip into assistant mode, will not agree to being someone else, and will tell you plainly when he does not remember something instead of playing along.\n<br />\n<br />[b]Features[/b]\n<br />[list]\n<br />[*]Free-form typed conversation with Linus, rendered in the vanilla dialogue box.[/*]\n<br />[*]The model ships with the mod. Nothing to download on first run, nothing to configure.[/*]\n<br />[*]Fully offline. No API key, no account, no cost per message, ever.[/*]\n<br />[*]Your conversations never leave your computer.[/*]\n<br />[*]Runs on your CPU. No GPU needed.[/*]\n<br />[*]Read-only by design. It never writes to your save, friendship, quests, or mail. It adds conversation and takes nothing away.[/*]\n<br />[*]Fails safe. If the model cannot start, free chat is quietly disabled and the game plays exactly as normal.[/*]\n<br />[/list][b]Why there is an .exe in the folder[/b]\n<br />Stardew runs on .NET 6, and the .NET binding for the inference library requires .NET 10, so the model cannot run inside the game process. It runs in a small companion program in\u00A0sidecar/\u00A0that the mod starts and stops for you. You never launch it, configure it, or see it.\n<br />The whole mod is open source, and you are welcome to read exactly what it does:\u00A0[url=https://github.com/edbuildingstuff/chatty-valley]https://github.com/edbuildingstuff/chatty-valley[/url]. Both binaries have clean scan on VirusTotal: [url=https://www.virustotal.com/gui/file/b7d050d4616add873c7c4843985f82aa5d5263084272d71bc628b79ebb0cdb47]the .exe itself[/url] and [url=https://www.virustotal.com/gui/file/1aa8f6f65386b7b977f9a0bb631d6d7e2a30d3beb3f5747e80e1b114f4885fb8]the llama.cpp library it loads[/url],\u00A0and every executable file we ship is listed with its hash and its own scan in the repo. Some antivirus tools flag any unsigned executable inside a game folder, which is a false positive, and the source link is there so you do not have to take our word for it.\n<br />Requirements\n<br />[list]\n<br />[*]Stardew Valley 1.6 on\u00A0[b]Windows[/b]. macOS and Linux are not supported yet. Not compatible with consoles or mobile.[/*]\n<br />[*]SMAPI 4.0.0 or newer, from\u00A0[url=https://smapi.io/]https://smapi.io[/url][/*]\n<br />[*]About 820 MB of disk space once installed.[/*]\n<br />[*]About 1 GB of free RAM beyond the game. No GPU required.[/*]\n<br />[/list][b]Install[/b]\n<br />[list=1]\n<br />[*]Install SMAPI if you have not already.[/*]\n<br />[*]Unzip this mod into your /Mods\u00A0folder.[/*]\n<br />[*]Launch the game through SMAPI, load your save, and find Linus.[/*]\n<br />[*]Stand near him and press\u00A0[b]C[/b].[/*]\n<br />[/list][b]Roadmap[/b]\n<br />More villagers, each with their own trained voice on the same shared model. macOS and Linux. Retiring the companion program so the mod is a single folder. In-game settings through Generic Mod Config Menu.\n<br />\n<br />[b]FAQ[/b]\n<br />[b]Does it cost anything?[/b]\u00A0No. The model runs on your machine, so there is no per-message cost, no subscription, and no account. It is free for as long as you play.\n<br />[b]Do I need internet?[/b]\u00A0No. Everything ships in the download and runs offline.\n<br />[b]Is it private?[/b]\u00A0Yes. Replies are generated on your computer and nothing is sent anywhere. Conversation logging is off by default.\n<br />[b]How fast is it?[/b]\u00A0A second or two per reply on a modern CPU, and longer on older hardware. The game keeps running while he thinks.\n<br />[b]Can it break my save?[/b]\u00A0No. The mod never writes to canonical game state. If anything goes wrong it disables itself and you get normal dialogue.\n<br />[b]Which model is it?[/b]\u00A0A 1.2B LFM2.5 model from Liquid AI, quantised to about 700 MB, with a small trained adapter that carries Linus's voice. Full detail in [url=https://www.ertas.ai/blog/chatty-valley-on-device-ai-mod-stardew-valley]this write up[/url].\n<br />[b]Will he stay in character?[/b]\u00A0That is the part we work hardest on. He holds up under attempts to jailbreak him, swap his persona, or feed him events that never happened. If you catch him slipping, please post it, that feedback is exactly what improves the next version.\n<br />[b]Why only Linus?[/b]\u00A0He is the pilot. The architecture is one shared model plus a small adapter per character, so adding villagers is an extension rather than a rewrite.\n<br />[b]Will it conflict with other mods?[/b]\u00A0It only adds a new conversation, and never touches vanilla dialogue, so conflicts should be rare.\n<br />[b]Multiplayer?[/b]\u00A0Single-player for now.\n<br />[b]Is this canon?[/b]\u00A0No. It is a mod, made for fun, and not affiliated with or endorsed by ConcernedApe.\n<br />\n<br />[b]Credits[/b]\n<br />ConcernedApe (Eric Barone) for Stardew Valley. Pathoschild and the SMAPI project. The llama.cpp and LLamaSharp projects. Liquid AI for the LFM2.5 base model, used under the LFM Open License v1.0.\n<br />Built by Edward Xi Yang ([url=https://github.com/edbuildingstuff]edbuildingstuff[/url]), Ertas AI. We make a tool for training and integrating\u00A0small custom models that run on-device. If you want to build models for project\u00A0like this yourself, we are at [url=https://www.ertas.ai]www.ertas.ai[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49886",
+	"Version": "0.4.0",
+	"Updated": "2026-08-10T05:38:02+00:00",
+	"Downloads": [
+		{
+			"Id": 178090,
+			"Type": "Main",
+			"DisplayName": "Chatty Valley 0.4.0 (model included)",
+			"FileName": "fb/39/01/fb3901e1-4ab3-4dfb-b4a6-5539bf388646",
+			"Description": "Everything is in this one download, including the 697 MB model, so nothing is fetched on first run. Runs on CPU or a dedicated GPU. Windows only, Stardew 1.6, SMAPI 4.0 or newer. Unzip into your Mods folder. About 880 MB once installed.",
+			"Version": "0.4.0",
+			"SizeInBytes": 800819962,
+			"Uploaded": "2026-08-10T05:38:02+00:00",
+			"Mods": [
+				{
+					"Id": "Ertas.ChattyValley",
+					"DisplayName": "Chatty Valley",
+					"Type": "Smapi",
+					"RelativePath": "ChattyValley",
+					"Manifest": {
+						"Name": "Chatty Valley",
+						"Description": "On-device AI dialogue for Pelican Town. Additive free-chat with the villagers, running on a small local model. It never replaces, pre-empts, or writes to canonical game state.",
+						"Author": "Edward Xi Yang (edbuildingstuff), Ertas AI",
+						"Version": "0.4.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChattyValley.Mod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:49886"
+						],
+						"UniqueId": "Ertas.ChattyValley"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564778,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436574,
+		"UploaderId": 295360845,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

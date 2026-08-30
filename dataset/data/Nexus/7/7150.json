@@ -3,20 +3,20 @@
 	"Id": 7150,
 	"Name": "Configurable Regrowth Time",
 	"Author": "LillieVela",
-	"Description": "This is my first mod, and i decided to do something simple: Make it possible to change how long it takes for a crop to produce again\n<br />\n<br />\n<br />This mod requires [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]. This mod changes the regrowth time based on the highest and lowest amount of days for the regrowable crops (1 through 7). This mod will only affect newly planted crops.\n<br />\n<br />I haven't played Stardew Valley since 1.5 dropped so i can't guarantee this will work with content patcher if it has changed since then.",
+	"Description": "This is my first mod, and i decided to do something simple: Make it possible to change how long it takes for a crop to produce again\n<br />\n<br />\n<br />This mod requires [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]. This mod changes the regrowth time based on the highest and lowest amount of days for the regrowable crops (1 through 12). This mod will only affect newly planted crops.\n<br />\n<br />Finally playing again, seems to be working great in 1.6 so far.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7150",
 	"Version": "1.0.1",
-	"Updated": "2020-11-18T06:12:52+00:00",
+	"Updated": "2026-08-21T07:08:54+00:00",
 	"Downloads": [
 		{
-			"Id": 32596,
+			"Id": 179497,
 			"Type": "Main",
 			"DisplayName": "Configurable Regrowth Time",
-			"FileName": "Configurable Regrowth Time-7150-1-0-1-1605679972.zip",
-			"Description": "Fixed Strawberry id and removed Tea sapling (which functions differently)",
-			"Version": "1.0.1",
-			"SizeInBytes": 1728,
-			"Uploaded": "2020-11-18T06:12:52+00:00",
+			"FileName": "ec/2f/55/ec2f55b2-2f0b-40a0-8038-070ff3e4f18c",
+			"Description": "Added Optional support for: https://www.nexusmods.com/stardewvalley/mods/4685 ",
+			"Version": "1.0.2",
+			"SizeInBytes": 1909,
+			"Uploaded": "2026-08-21T07:08:54+00:00",
 			"Mods": [
 				{
 					"Id": "Lillievela.configureregrowth",
@@ -27,12 +27,17 @@
 						"Name": "Configurable Regrowth Time",
 						"Description": "Allows you to configure how long it takes a crop to regrow",
 						"Author": "LillieVela",
-						"Version": "1.0.1",
+						"Version": "1.0.2",
 						"MinimumApiVersion": "3.0.0",
 						"ContentPackFor": {
 							"UniqueId": "Pathoschild.ContentPatcher"
 						},
-						"Dependencies": [],
+						"Dependencies": [
+							{
+								"UniqueId": "Strobe.CP.MoreCropsRegrow",
+								"IsRequired": false
+							}
+						],
 						"UpdateKeys": [
 							"7150"
 						],
@@ -41,9 +46,9 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342419284,
+				"Uid": 5596342566185,
 				"CategoryId": 1,
-				"Primary": false
+				"Primary": true
 			}
 		}
 	],

@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 50688,
+	"Name": "Mod Name Tooltip",
+	"Author": "mushymato",
+	"Description": "[size=6][b]Mod Name Tooltip[/b][/size]\n<br />Yes this is named after the minecraft mod and does the same thing.\n<br />\n<br />[size=5][b]Tooltip[/b][/size]\n<br />Show which mod added a particular item.\n<br />\n<br />This only applies to item tooltips.\n<br />\n<br />[size=5][b]HUD[/b][/size]\n<br />Show a small HUD menu that displays the subject name and mod name of a supported subject under your cursor.\n<br />\n<br />This supports:\n<br />\n<br />[list]\n<br />[*]NPCs[/*]\n<br />[*]Farm Animals[/*]\n<br />[*]Pets[/*]\n<br />[*]Objects[/*]\n<br />[*]Crops/Trees/FruitTrees[/*]\n<br />[*]Buildings (as in farm buildings, not map)[/*]\n<br />[/list][size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Download and install SMAPI.[/*]\n<br />[*]Download this mod and install to the Mods folder.[/*]\n<br />[/list][size=5][b]Configuration[/b][/size]\n<br />[list]\n<br />[*][font=Courier New]Enable_Tooltip[/font]: Enable mod names in item tooltips[/*]\n<br />[*][font=Courier New]Toggle_Tooltip[/font]: Set a keybinding to enable/disable item tooltips[/*]\n<br />[*][font=Courier New]Enable_HUD[/font]: Enable mod name HUD[/*]\n<br />[*][font=Courier New]Toggle_HUD[/font]: Set a keybinding to enable/disable HUD\n<br />[list]\n<br />[*][font=Courier New]Enable_HUD_NPC[/font]: Enable NPCs on the mod name HUD[/*]\n<br />[*][font=Courier New]Enable_HUD_FarmAnimal[/font]: Enable Farm Animals on the mod name HUD[/*]\n<br />[*][font=Courier New]Enable_HUD_Object[/font]: Enable Objects on the mod name HUD[/*]\n<br />[*][font=Courier New]Enable_HUD_TerrainFeature[/font]: Enable Crops/Trees/FruitTrees on the mod name HUD[/*]\n<br />[*][font=Courier New]Enable_HUD_Building[/font]: Enable Buildings on the mod name HUD[/*]\n<br />[*][font=Courier New]Enable_HUD_Event[/font]: Enable event names on the mod name HUD, shown when you begin an event[/*]\n<br />[*][font=Courier New]Enable_HUD_Location[/font]: Enable location names on the mod name HUD, shown always when no other subject is under the cursor[/*]\n<br />[/list][/*]\n<br />[*][font=Courier New]Display_ModId[/font]: Instead of the mod name, display the mod id[/*]\n<br />[*][font=Courier New]Display_ModSource[/font]: In addition to the mod name/mod id, show mod source (first update key in the manifest)[/*]\n<br />[*][font=Courier New]Color_SDV[/font]: Hex color code, text color for 'Stardew Valley' in tooltips and HUD[/*]\n<br />[*][font=Courier New]Color_Mod[/font]: Hex color code, text color for mod names in tooltips and HUD[/*]\n<br />[/list][size=5][b]Configuration[/b][/size]\n<br />[list]\n<br />[*]English[/*]\n<br />[*]简体中文[/*]\n<br />[*]Русский (by [url=https://github.com/ellatuk]ellatuk[/url])\n<br />[/list]Translations are welcome, feel free to post separately.\n<br />\n<br />[size=5][b]For Mod Authors[/b][/size]\n<br />\n<br />[size=4][b]C# API[/b][/size]\n<br />This mod determines what mod adds a particular item by tracing the content pipeline, making it more accurate than simply deriving a mod id prefix\u00A0from the item\u00A0id / NPC name etc.\n<br />\n<br />You can use the [url=https://github.com/Mushymato/ModNameTooltip/blob/main/ModNameTooltip/IModNameAPI.cs]provided API[/url] to fetch this info.\n<br />\n<br />[size=4][b]Providing a Translated Mod Name[/b][/size]\n<br />For content patcher, do an edit like this in your content.json\n<br />[font=Courier New]{\n<br />\u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \"Target\": \"mushymato.ModNameTooltip/ModNames\",\n<br />\u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 // need a \"mod.name\" key in your i18n\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}\": \"{{i18n: mod.name}}\"\n<br />\u00A0 \u00A0 }\n<br />}[/font]\n<br />\n<br />This asset is a [font=Courier New]Dictionary&lt;string, string&gt;[/font] so C# mods can edit it like this.\n<br />\n<br />[font=Courier New]private void OnAssetRequested(object? sender, AssetRequestedEventArgs e)\n<br />{\n<br />\u00A0 \u00A0 if (e.Name.IsEquivalentTo(\"mushymato.ModNameTooltip/ModNames\"))\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 e.Edit(\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 (asset) =&gt;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 IDictionary&lt;string, string&gt; data = asset.AsDictionary&lt;string, string&gt;().Data;\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 data[ModManifest.UniqueID] = Helper.Translation.Get(\"mod.name\");\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 AssetEditPriority.Default\n<br />\u00A0 \u00A0 \u00A0 \u00A0 );\n<br />\u00A0 \u00A0 }\n<br />}[/font]\n<br />\n<br />[size=5][b]Mods in Screenshots[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/19508]Cornucopia - More Crops[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/9600]Lumisteria Visit Mount Vapius[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/29720]Baubles[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/39379]Cat Valley(Interface)[/url][/*]\n<br />[/list]\n<br />[url=https://github.com/Mushymato/ModNameTooltip][size=5]Source Code[/size][/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50688",
+	"Version": "1.3.3",
+	"Updated": "2026-08-28T23:02:17+00:00",
+	"Downloads": [
+		{
+			"Id": 180593,
+			"Type": "Main",
+			"DisplayName": "ModNameTooltip",
+			"FileName": "20/cd/86/20cd8693-15fb-46ff-9a77-3825ff6d1dcc",
+			"Description": "For SDV 1.6.15+, initial release.",
+			"Version": "1.3.3",
+			"SizeInBytes": 50519,
+			"Uploaded": "2026-08-28T23:02:17+00:00",
+			"Mods": [
+				{
+					"Id": "mushymato.ModNameTooltip",
+					"DisplayName": "Mod Name Tooltip",
+					"Type": "Smapi",
+					"RelativePath": "ModNameTooltip",
+					"Manifest": {
+						"Name": "Mod Name Tooltip",
+						"Description": "Shows the mod name of items via tooltip",
+						"Author": "mushymato",
+						"Version": "1.3.3",
+						"MinimumApiVersion": "4.4.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "ModNameTooltip.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50688",
+							"GitHub:Mushymato/ModNameTooltip"
+						],
+						"UniqueId": "mushymato.ModNameTooltip",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567281,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437376,
+		"UploaderId": 18790269,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

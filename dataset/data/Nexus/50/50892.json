@@ -1,0 +1,100 @@
+{
+	"Site": "Nexus",
+	"Id": 50892,
+	"Name": "Chat Improvements",
+	"Author": "sjohnson1021",
+	"Description": "[size=5]Chat Improvements[/size]\n<br />\n<br />Stardew's chat box stops accepting input the moment your text reaches the edge of the box. There's no cursor, no way to select text, no copy or paste, no undo, and no way to fix a typo in the middle of a sentence without deleting everything after it. Scroll back more than a few messages and they're simply gone.\n<br />\n<br />This mod turns it into a proper text field.\n<br />\n<br />[img]https://raw.githubusercontent.com/sjohnson1021/StardewChatImprovements/main/docs/images/chat-window.png[/img]\n<br />\n<br />[line]\n<br />\n<br />[size=4]What it does[/size]\n<br />\n<br />[b]Longer messages[/b] — type up to 1,000 characters (500 by default) instead of being cut off at the width of the box. The text scrolls sideways as you type.\n<br />\n<br />[b]Scrollback[/b] — keeps up to 500 messages (100 by default) and lets you scroll through them with the mouse wheel.\n<br />\n<br />[b]A working cursor[/b] — arrow keys, Home and End move the cursor, and holding a key repeats it. Click anywhere in the box to put the cursor there.\n<br />\n<br />[b]Text selection[/b] — hold Shift with the arrow keys, click and drag, or press Ctrl+A.\n<br />\n<br />[b]Copy, cut and paste[/b] — Ctrl+C, Ctrl+X and Ctrl+V. Every keybind is rebindable.\n<br />\n<br />[img]https://raw.githubusercontent.com/sjohnson1021/StardewChatImprovements/main/docs/images/clipboard.gif[/img]\n<br />\n<br />[b]Undo and redo[/b] — Ctrl+Z and Ctrl+Y while composing.\n<br />\n<br />[img]https://raw.githubusercontent.com/sjohnson1021/StardewChatImprovements/main/docs/images/undo-redo.gif[/img]\n<br />\n<br />[b]Word-wise editing[/b] — Ctrl with the arrow keys jumps by word. Ctrl+Backspace and Ctrl+Delete delete by word.\n<br />\n<br />[b]Message colours[/b] — a colour button beside the chat box lets you choose the colour your messages send in, and your text previews in that colour as you type.\n<br />\n<br />[img]https://raw.githubusercontent.com/sjohnson1021/StardewChatImprovements/main/docs/images/color-picker.png[/img]\n<br />\n<br />[b]Clickable links[/b] — URLs in chat are highlighted and underlined. Clicking one copies it to your clipboard by default, so you can see where it goes before visiting it. Switch it to open directly in your browser if you'd rather.\n<br />\n<br />[img]https://raw.githubusercontent.com/sjohnson1021/StardewChatImprovements/main/docs/images/link-copy.gif[/img]\n<br />\n<br />[b]Emoji-aware[/b] — the cursor treats an emoji as a single character, so arrow keys step over it and backspace removes the whole thing instead of half a tag.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Works in your language[/size]\n<br />\n<br />The cursor moves by character as your language actually defines it, rather than by raw bytes. Combining marks, Korean jamo and multi-codepoint emoji stay attached to their base character while you edit — no more backspace deleting half a letter, or eleven presses to remove one emoji.\n<br />\n<br />Text is also measured with the same font it's drawn with, so the caret stays lined up with your text in Japanese, Korean, Chinese and Russian, where the game uses a different font from English.\n<br />\n<br />Every piece of text the mod shows you is translatable, and [b]translations are very welcome[/b]. Only English ships today. If you'd like to add your language it's a single small file, and partial translations work fine — anything you don't translate falls back to English. Details are in the GitHub repository.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Installing[/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] 4.0.0 or newer.[/*]\n<br />[*]Download this mod and unzip it into your [b]Stardew Valley/Mods[/b] folder.[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional but recommended — it lets you change every setting from the in-game menu instead of editing a file.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Settings[/size]\n<br />\n<br />Everything is configurable: the message length limit, how much scrollback to keep, whether horizontal scrolling, cursor control and the colour button are on, how fast held keys repeat, and all six keybinds.\n<br />\n<br />[img]https://raw.githubusercontent.com/sjohnson1021/StardewChatImprovements/main/docs/images/settings.png[/img]\n<br />\n<br />Two link settings default to the cautious option, because links in chat come from other players rather than from you:\n<br />\n<br />[list]\n<br />[*][b]Link click behavior[/b] is [b]Copy[/b] — clicking a link copies it instead of launching a browser, so you can look before you go. Switch to [b]Open[/b] if you only play with people you know.[/*]\n<br />[*][b]Clicking links while the chat box is closed[/b] is [b]off[/b] — the mod doesn't swallow the click, so it would also swing your tool.[/*]\n<br />[/list]\n<br />[b]Split long messages[/b] decides what happens when you send something longer than a player without the mod can draw. It defaults to [b]only when someone lacks the mod[/b], so your messages go out whole unless splitting them is actually needed. A split message arrives as several messages for everyone, because the game sends one message the same way to every player.\n<br />\n<br />[line]\n<br />\n<br />[size=4]Compatibility[/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6+, SMAPI 4.0.0+[/*]\n<br />[*]Single player and multiplayer. This is client-side and other players don't need it, though a player without it can't draw a longer-than-vanilla message correctly — see [b]Split long messages[/b] above.[/*]\n<br />[*]Windows, macOS and Linux.[/*]\n<br />[*][b]Item Chat Link[/b] — supported. Messages carrying an item link are left for it to draw, so its tooltips keep working; those messages don't get this mod's link colouring or bold sender name.[/*]\n<br />[*][b]Chat Time[/b] — supported. Its timestamp stays on chat messages instead of leaking into the line you're typing.[/*]\n<br />[*]The drawing patches run last, so a mod that only watches the chat being drawn still gets to. A mod that takes drawing over itself [b]will conflict[/b].[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4]Reporting a problem[/size]\n<br />\n<br />Please include your SMAPI log (upload it at [url=https://smapi.io/log]smapi.io/log[/url]) and mention which language you play in — some issues only show up in specific languages.\n<br />\n<br />Source code and issue tracker: [url=https://github.com/sjohnson1021/StardewChatImprovements]github.com/sjohnson1021/StardewChatImprovements[/url]\n<br />Released under the MIT license.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50892",
+	"Version": "1.1.0",
+	"Updated": "2026-08-30T04:20:35+00:00",
+	"Downloads": [
+		{
+			"Id": 179161,
+			"Type": "Main",
+			"DisplayName": "ChatImprovements",
+			"FileName": "a9/97/7b/a9977bcc-f81a-4e02-84ef-f3a31539b80b",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 56098,
+			"Uploaded": "2026-08-18T13:01:37+00:00",
+			"Mods": [
+				{
+					"Id": "sjohnson1021.ChatImprovements",
+					"DisplayName": "Chat Improvements",
+					"Type": "Smapi",
+					"RelativePath": "ChatImprovements",
+					"Manifest": {
+						"Name": "Chat Improvements",
+						"Description": "A better chat box: longer messages, scrollback, full cursor and selection control, undo, copy/paste, message colours and clickable links.",
+						"Author": "Sean Johnson",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChatImprovements.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:sjohnson1021/StardewChatImprovements"
+						],
+						"UniqueId": "sjohnson1021.ChatImprovements"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342565849,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 180760,
+			"Type": "Main",
+			"DisplayName": "ChatImprovements",
+			"FileName": "4d/2b/d0/4d2bd070-2e19-40bd-b864-9bc91d0398dc",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 63480,
+			"Uploaded": "2026-08-30T04:20:35+00:00",
+			"Mods": [
+				{
+					"Id": "sjohnson1021.ChatImprovements",
+					"DisplayName": "Chat Improvements",
+					"Type": "Smapi",
+					"RelativePath": "ChatImprovements",
+					"Manifest": {
+						"Name": "Chat Improvements",
+						"Description": "A better chat box: longer messages, scrollback, full cursor and selection control, undo, copy/paste, message colours and clickable links.",
+						"Author": "Sean Johnson",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChatImprovements.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:sjohnson1021/StardewChatImprovements"
+						],
+						"UniqueId": "sjohnson1021.ChatImprovements"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567448,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437580,
+		"UploaderId": 18363419,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

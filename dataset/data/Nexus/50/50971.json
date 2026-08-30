@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 50971,
+	"Name": "UltraSmooth",
+	"Author": "palmhacker13",
+	"Description": "[center]\n<br />[size=5][b]UltraSmooth — Visual Polish &amp; Performance Tweaks[/b][/size]\n<br />[size=3][i]A lightweight quality-of-life performance and visual polish companion for Stardew Valley 1.6+[/i][/size]\n<br />[/center]\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]\uD83C\uDF1F Overview[/b][/size]\n<br />[b]UltraSmooth[/b] is a lightweight client-side companion mod designed to improve motion fluidity, normalize high-refresh framerates, and reduce stutters in Stardew Valley 1.6+.\n<br />\n<br />Whether you play at a rock-solid 60 FPS or on high-refresh gaming monitors (120Hz, 144Hz, 240Hz+), UltraSmooth ensures the game world runs at its natural, intended speed without physics bugs, while providing sub-frame sprite interpolation, fast disk I/O, and background memory management for heavily modded setups (SVE, RSV, East Scarp, Content Patcher modpacks).\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]⚡ Key Features[/b][/size]\n<br />[list]\n<br />[*][b]High-Refresh Framerate &amp; Physics Pacing (120Hz / 144Hz / 240Hz / Unlocked):[/b] Locks game simulation, NPC pathing, monsters, tree falling, rock breaking, animal behaviors, projectiles, water, and weather to exact 60 TPS natural speed while rendering at full display refresh rates with zero-lag input responsiveness.[/*]\n<br />[*][b]Rock-Solid 60 FPS (Enhanced):[/b] Optimized 60 FPS fixed timestep with zero-allocation memory handling, delivering flat-line frame pacing and ultra-responsive controls without thread stalls.[/*]\n<br />[*][b]Sub-Frame Sprite Motion Interpolation:[/b] Continuously interpolates positions for farmers, NPCs, monsters, and farm animals on high-refresh displays for silky-smooth motion.[/*]\n<br />[*][b]Instant Item Magnetization &amp; Zero-Shake Harvesting:[/b] Clean, native debris handling ensures dropped items from trees, mining, and crops magnetize to the player instantly without delay, fully compatible with third-party harvest and collection mods.[/*]\n<br />[*][b]Cross-Platform 10-Minute Clock Tick Normalizer:[/b] Smooths out 10-minute in-game clock transitions without GC stalls across Windows, macOS (iMac / Apple Silicon), and Linux / Steam Deck.[/*]\n<br />[*][b]8MB Turbo Load &amp; Fast Save Engine:[/b] Accelerates save file loading and writing with 8MB memory buffers and smooth black-screen fade transitions.[/*]\n<br />[*][b]Viewport Entity &amp; Vegetation Frustum Culling:[/b] Skips draw calls for off-screen monsters, animals, grass, bushes, and crops to reduce CPU and GPU draw call bottlenecks on large farms.[/*]\n<br />[*][b]O(1) Bitwise Spatial Machine Throttling:[/b] Efficiently throttles per-frame update checks on off-screen kegs, furnaces, and jars using zero-allocation bitwise spatial hashing.[/*]\n<br />[*][b]GameStateQuery In-Frame Memoization:[/b] Caches deterministic condition queries within the tick to reduce repetitive string parsing during heavy mod checks.[/*]\n<br />[*][b]SDV-Radiance &amp; UI Info Suite 2 Compatibility:[/b] Automatically normalizes shader clocks, cloud shadows, falling blossom petals, and animal petting indicators to real-time speed.[/*]\n<br />[*][b]Audio Coalescing &amp; Earshot Culling:[/b] Prevents audio buffer congestion by dropping off-screen spatial sound cues beyond earshot.[/*]\n<br />[*][b]Clean Zero-Allocation Performance Overlay (F8):[/b] Non-intrusive in-game FPS, frametime, and RAM diagnostic HUD (split-screen co-op aware).[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]⚙️ In-Game Configuration[/b][/size]\n<br />UltraSmooth fully supports both [b]Generic Mod Config Menu (GMCM)[/b] and [b]Modern Config Menu (MCM)[/b] for seamless in-game setting adjustments and live FPS mode switching.\n<br />\n<br />[b]Framerate (FPS) Modes:[/b]\n<br />[list]\n<br />[*][b]60 FPS (Standard):[/b] Pure vanilla 60 FPS fixed timestep with background optimizations active.[/*]\n<br />[*][b]60 FPS (Enhanced):[/b] High-precision 60 FPS mode with zero-allocation memory pacing and flat-line frame times.[/*]\n<br />[*][b]60++ (Monitor Hz):[/b] Hardware-synchronized high-refresh mode (120Hz/144Hz/240Hz) with full 60 TPS simulation locks and sprite interpolation.[/*]\n<br />[*][b]??? (Unlimited):[/b] Raw uncapped framerate mode for benchmarking while preserving 60 TPS physics.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]❓ Frequently Asked Questions (FAQ)[/b][/size]\n<br />\n<br />[b]Q: Is this a pixel upscaler or texture smoother like Clear Glasses / Monocle?[/b]\n<br />[b]A:[/b] [b]No.[/b] UltraSmooth is for [b]Motion Smoothness, High Refresh Rate Pacing (120Hz/144Hz/240Hz+), and Background Performance Optimizations[/b] — NOT pixel art anti-aliasing or texture filtering. It is 100% compatible to use alongside Clear Glasses or Monocle!\n<br />\n<br />[b]Q: Does this work with large expansion mods (SVE, Ridgeside Village, East Scarp)?[/b]\n<br />[b]A:[/b] Yes! UltraSmooth is specifically designed to alleviate GC stutters, machine lag, and loading bottlenecks in heavy modpacks.\n<br />\n<br />[b]Q: Does this work with multiplayer / split-screen?[/b]\n<br />[b]A:[/b] Yes! UltraSmooth supports both online multiplayer co-op and local split-screen (with the performance overlay cleanly displayed on the primary host screen).\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]\uD83D\uDCE5 Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] (v4.0.0 or newer).[/*]\n<br />[*](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu (GMCM)[/url] or [url=https://www.nexusmods.com/stardewvalley]Modern Config Menu (MCM)[/url] to easily customize settings in-game.[/*]\n<br />[*]Download **UltraSmooth** and extract the `UltraSmooth` folder into your `Stardew Valley/Mods` folder.[/*]\n<br />[*]Launch the game through SMAPI. Press [b]F8[/b] in-game to toggle the performance overlay if desired.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50971",
+	"Version": "1.8.4",
+	"Updated": "2026-08-30T15:11:55+00:00",
+	"Downloads": [
+		{
+			"Id": 180811,
+			"Type": "Main",
+			"DisplayName": "UltraSmooth 1.8.3",
+			"FileName": "7d/fd/3b/7dfd3be2-632d-41c2-9fb7-507516d6c85b",
+			"Description": "",
+			"Version": "1.8.4",
+			"SizeInBytes": 90315,
+			"Uploaded": "2026-08-30T15:11:55+00:00",
+			"Mods": [
+				{
+					"Id": "palmhacker13.UltraSmooth",
+					"DisplayName": "Ultra Smooth",
+					"Type": "Smapi",
+					"RelativePath": "UltraSmooth",
+					"Manifest": {
+						"Name": "Ultra Smooth",
+						"Description": "A lightweight visual polish and quality-of-life performance companion for Stardew Valley 1.6.",
+						"Author": "palmhacker13",
+						"Version": "1.8.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "UltraSmooth.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "palmhacker13.ModernConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "palmhacker13.UltraSmooth"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567499,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437659,
+		"UploaderId": 215353023,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

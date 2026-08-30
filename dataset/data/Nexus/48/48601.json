@@ -4,20 +4,20 @@
 	"Name": "HostSwitcher",
 	"Author": "lyneyy",
 	"AuthorLabel": "lyneyj",
-	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]In Stardew Valley co-op, only the host's character can be played in single-player mode. This mod lets you swap which character holds the host slot before loading a save — so you can experience the game from any co-op farmer's perspective.[/color]\n<br />如果主持存档的朋友不再登录星露谷，但你对之前打拼的存档仍有留恋，可以通过这个mod一键将存档转移到自己的账号，从而保留珍贵的游戏回忆。 \n<br />\n<br />[b]How to use[/b]\n<br />[list=1]\n<br />[*]Start the game in Co-op mode and load your save once to register the farmhands.[/*]\n<br />[*]Return to the title screen.[/*]\n<br />[*]Press [b][[/b] (open bracket) on the title screen to open the Host Switcher menu.[/*]\n<br />[*]Select the farmhand you want to play as next session and confirm.[/*]\n<br />[*]Load the save — you'll now be playing as that character.[/*]\n<br />[/list][b]Features[/b]\n<br />[list]\n<br />[*]Each farmer stays in their original home after the swap (no forced relocation).[/*]\n<br />[*]The main farmhouse renders correctly for its actual resident — spouse room, Robin's extension rooms, and NPC-specific decorations all display properly.[/*]\n<br />[*]Children remain in the correct house.[/*]\n<br />[*]Farm-global progress (Ginger Island boat, farm cave choice) is preserved and won't replay.[/*]\n<br />[*]Original save backup created automatically before the first swap, restorable with\n<br />[code]hs_restore_original &lt;save_folder&gt;[/code]from the SMAPI console on the title screen.[/*]\n<br />[/list][b]Console commands\n<br />[/b] Queue a swap (alternative to the [ menu)： hs_set_next_host &lt;save&gt; &lt;farmer&gt; \n<br /> Cancel a pending swap： hs_cancel_swap &lt;save&gt; \n<br /> Show pending swap status： hs_status \n<br /> Show host and farmhand info from a save file： hs_inspect &lt;save&gt; \n<br /> Restore save to its original pre-mod state： hs_restore_original &lt;save&gt; \n<br /> Restore the save list display if it looks wrong： hs_restore_savegameinfo &lt;save&gt; \n<br />[b]\n<br />Known limitations[/b]\n<br />[list]\n<br />[*][b]Multiplayer (with the original host joining as farmhand):[/b]\u00A0The original host will need a new cabin to join.\u00A0Visual inconsistencies may appear on the farmhand's screen. This is a known limitation and may be improved in a future version.[/*]\n<br />[*]Penny's room redecoration and certain marriage-specific events are blocked in the main farmhouse when the actual resident is a farmhand — this is intentional to prevent the wrong house from being redecorated.[/*]\n<br />[/list][b]Requirements[/b]\n<br />[list]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[*]Stardew Valley 1.6.15 or later[/*]\n<br />[/list]",
+	"Description": "[b][color=#6d9eeb]Endorse[/color][color=#a4c2f4] this\u00A0mod if[/color] [color=#ead1dc]it\u00A0helps\u00A0[/color][color=#c27ba0]you\u00A0\u00A0(*ฅ́˘ฅ̀*)♡[/color][/b]\n<br />\n<br />[b][size=5]Description[/size][/b]\n<br />In Stardew Valley co-op, only the host's character can be played in single-player mode. This mod lets you swap which character holds the host slot before loading a save — so you can experience the game from any co-op farmer's perspective.\n<br />\n<br />如果主持存档的朋友不再登录星露谷，但你对之前打拼的存档仍有留恋，可以通过这个mod一键将存档转移到自己的账号，从而保留珍贵的游戏回忆。\n<br />\n<br />[b][size=3]This mod fits if you:[/size][/b]\n<br />[list]\n<br />[*]Want to keep the original host's full home and welcome them back anytime.[/*]\n<br />[*]Refuse to give up your own decorated house.[/*]\n<br />[*]Have a heavily modded save — editing XML risks breaking mod data.[/*]\n<br />[/list][line]\n<br />[b]How to use\n<br />[/b]\n<br />[list=1]\n<br />[*]After loading your save, press [ (open bracket) while in-game to open the Host Switcher menu.[/*]\n<br />[*]Select the character you want to play as next session and confirm.[/*]\n<br />[*]Exit to the title screen and reload — you'll now be playing as that character.[/*]\n<br />[/list][b]Features\n<br />[/b]\n<br />[list]\n<br />[*]Each farmer stays in their original home — no forced relocation.[/*]\n<br />[*]The main farmhouse renders correctly for its actual resident: spouse room, extension rooms, and NPC decorations all display properly.[/*]\n<br />[*]Children remain in the correct house.[/*]\n<br />[*]In multiplayer, the spouse NPC, mail, and Return Scepter point to the actual resident's farmhouse.[/*]\n<br />[*]Farm-global progress (Ginger Island boat, farm cave choice) is preserved and won't replay.[/*]\n<br />[*]Your save is backed up automatically before the first swap. Restore anytime with ‘‘ hs_restore_original &lt;save_folder&gt; ’’ from the SMAPI console on the title screen.[/*]\n<br />[/list][line]\n<br />[b]Console commands\n<br />[/b]\n<br />[table][tr][th]Command[/th]\n<br />[th]Description[/th]\n<br />[/tr]\n<br />[tr][td][code]hs_set_next_host &lt;save&gt; &lt;farmer&gt;[/code][/td]\n<br />[td]Queue a swap (alternative to the [ menu)[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_cancel_swap &lt;save&gt;[/code][/td]\n<br />[td]Cancel a pending swap[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_status[/code][/td]\n<br />[td]Show pending swap status[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_inspect &lt;save&gt;[/code][/td]\n<br />[td]Show host and farmhand info from a save file[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_restore_original &lt;save&gt;[/code][/td]\n<br />[td]Restore save to its original pre-mod state[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_restore_savegameinfo &lt;save&gt;[/code][/td]\n<br />[td]Restore the save list display if it looks wrong[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_set_key &lt;name&gt;[/code][/td]\n<br />[td]Change the menu key[/td]\n<br />[/tr]\n<br />[tr][td][code]hs_detect_key[/code][/td]\n<br />[td]Press any key to see its name (use before hs_set_key)[/td]\n<br />[/tr]\n<br />[/table][line]\n<br />[b]Known limitations\n<br />[/b]\n<br />[list]\n<br />[*]Same mod version required for all players in multiplayer.\u00A0[/*]\n<br />[*]The original host needs a cabin to rejoin as farmhand.\u00A0[/*]\n<br />[*]Uninstalling breaks the main farmhouse rendering.\u00A0[/*]\n<br />[/list]\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[*]Stardew Valley 1.6.15 or later[/*]\n<br />[/list][line]\n<br />[size=4][b]Changelog[/b][/size]\n<br />\n<br />[b]Version 1.2.0[/b]\n<br />[list]\n<br />[*]Fixed an occasional issue where Community Center stars could show as incomplete after a host swap.[/*]\n<br />[*]Fixed a rare case where the player character could become uncontrollable after a swap following a farmhouse upgrade.[/*]\n<br />[*]Added ‘hs_set_key’\u00A0/ ‘hs_detect_key’\u00A0to remap the menu key (useful for non-[ keyboards and Android).[/*]\n<br />[*]Penny's room redecoration now works correctly for the actual resident.[/*]\n<br />[/list][b]Version 1.1.0[/b]\n<br />[list]\n<br />[*]Fixed multiplayer join errors for the original host.\u00A0[/*]\n<br />[*]Added UpdateKeys for automatic update notifications.[/*]\n<br />[/list][line]\n<br />[b]Having issues?[/b]\n<br />Leave a comment on the mod page, or reach out directly:\n<br />[list]\n<br />[*]Email：lyneyj@gmail[/*]\n<br />[*]小红书/Rednote：946482526 （未来可能更新中文的使用教程视频，催催我如果你需要的话）[/*]\n<br />[/list][color=#c27ba0][b]endorse[/b][/color][color=#d5a6bd][b] this\u00A0mod if it\u00A0[/b][/color][color=#a4c2f4][b]helps\u00A0you[/b][/color] [b][color=#6d9eeb]( ´ ∀ ` )ﾉ[/color][/b]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/48601",
 	"Version": "1",
-	"Updated": "2026-07-11T06:56:56+00:00",
+	"Updated": "2026-08-26T05:36:15+00:00",
 	"Downloads": [
 		{
-			"Id": 174507,
+			"Id": 180227,
 			"Type": "Main",
 			"DisplayName": "HostSwitcher",
-			"FileName": "46/b0/8b/46b08b8a-00b4-4ea1-b114-b2ebb7b8e3d0",
-			"Description": "",
-			"Version": "2",
-			"SizeInBytes": 36428,
-			"Uploaded": "2026-07-11T06:56:56+00:00",
+			"FileName": "16/01/f0/1601f0a5-5010-4650-815c-d39918793d2d",
+			"Description": "Fixed occasional issues with Community Center stars, farmhouse upgrade edge case, and character visibility. Added hs_set_key / hs_detect_key for custom key binding.",
+			"Version": "1.2.0",
+			"SizeInBytes": 40620,
+			"Uploaded": "2026-08-26T05:36:15+00:00",
 			"Mods": [
 				{
 					"Id": "lyneyj.HostSwitcher",
@@ -26,9 +26,9 @@
 					"RelativePath": "HostSwitcher",
 					"Manifest": {
 						"Name": "Host Switcher",
-						"Description": "Switch which character is the host of a co-op save. Press [ before loading to pick a farmhand to play as next.",
+						"Description": "Switch which co-op character is the host before loading a save. Press [ in-game to open the menu, or use hs_set_key to remap it.",
 						"Author": "lyneyj",
-						"Version": "0.1.0",
+						"Version": "1.2.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "HostSwitcher.dll",
 						"Dependencies": [],
@@ -40,7 +40,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342561195,
+				"Uid": 5596342566915,
 				"CategoryId": 1,
 				"Primary": true
 			}

@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 51249,
+	"Name": "Gerard Way - Custom NPC",
+	"Author": "Deany1511",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Adds Gerard Way from My Chemical Romance to the valley, along with custom events\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Install the latest version of\u00A0[url=https://smapi.io/]SMAPI[/url].[/color][/*]\n<br />[*][color=#D4D4D8]Unzip the mod folder into\u00A0Stardew Valley/Mods.[/color][/*]\n<br />[*][color=#D4D4D8]Run the game using SMAPI.[/color][/*]\n<br />[/list]You need to also have Content Patcher downloaded\n<br />\n<br />\n<br />I used music already in Stardew Valley's files\u00A0in the mod, but if you have legally acquired\u00A0.ogg files of MCR music, you can replace the music with it following this short tutorial --\n<br />Drop two songs in the music folder that is inside the assets folder of the mod, preferably an instrumental +\u00A0a vocal song.\u00A0I used Ghost of You instrumental and Helana vocal.\n<br />Then open the content.json in the mod folder and\u00A0replace where it says\u00A0MCR_GOY_Inst\u00A0with the name of your instrumental (doesn't actually need to be instrumental)\u00A0file and replace MCR_H\u00A0with the name of your vocal (doesn't actually need to be vocal)\u00A0file.\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/AudioChanges\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_GerardMusic\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ID\": \"{{ModId}}_GerardMusic\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Category\": \"Music\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FilePaths\": [ \"{{AbsoluteFilePath: assets/Music/MCR_GOY_Inst.ogg}}\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"StreamedVorbis\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Looped\": true\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/AudioChanges\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}_MCRBandMusic\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ID\": \"{{ModId}}_MCRBandMusic\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Category\": \"Music\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FilePaths\": [ \"{{AbsoluteFilePath: assets/Music/MCR_H.ogg}}\" ],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"StreamedVorbis\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Looped\": true\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 },\n<br />Then replace where the music is referenced in the content.json, which is in several locations but only two different kinds. Replace\u00A0\"cowboy_boss\" with\u00A0{{ModId}}_MCRBandMusic and replace \"heavy\" with\u00A0{{ModId}}_GerardMusic.\n<br />\n<br />If you like this mod, or have feedback/questions, tell me about it!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51249",
+	"Version": "1",
+	"Updated": "2026-08-25T01:59:33+00:00",
+	"Downloads": [
+		{
+			"Id": 180077,
+			"Type": "Main",
+			"DisplayName": "Gerard Way - Custom NPC",
+			"FileName": "88/63/40/88634014-e559-41ca-9183-87c8d181025a",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 6082145,
+			"Uploaded": "2026-08-25T01:59:33+00:00",
+			"Mods": [
+				{
+					"Id": "Ryld.GerardWay",
+					"DisplayName": "(NPC) Gerard Way",
+					"Type": "ContentPack",
+					"RelativePath": "[NPC] Gerard Way",
+					"Manifest": {
+						"Name": "(NPC) Gerard Way",
+						"Description": "Adds custom NPC Gerard Way to the world",
+						"Author": "Ryld",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:????"
+						],
+						"UniqueId": "Ryld.GerardWay"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566765,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437937,
+		"UploaderId": 122696263,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

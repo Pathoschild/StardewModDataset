@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 51154,
+	"Name": "Valley Yaps",
+	"Author": "RhanCandia",
+	"Description": "Valley Yaps brings Pelican Town to life by replacing generic NPC silence with dynamic, AI-powered chatter.\n<br />\n<br />In vanilla Stardew Valley, talking to a villager after their daily scripted lines gives nothing or generic one-liners. Valley Yaps hooks into dialogue interactions so that once daily dialogue is exhausted, the NPC will continue conversing using an AI backend.\n<br />\n<br />It works out-of-the-box with Google Gemini (free API key), as well as local offline AI tools like Ollama, llama.cpp, LM Studio, or custom OpenAI-compatible servers.\n<br />\n<br />Each NPC stays in character with prompt context awareness, factoring in their personality, friendship hearts with the farmer, current season, in-game time, location, and family relationships.\n<br />\n<br />\n<br />AI Use &amp; Content Disclosure\n<br />- Human-Directed Design: The code architecture, prompt templates, lore integration, dialogue filters, and game hooks were all intentionally designed and directed by a human developer to respect the spirit and aesthetic of Stardew Valley.\n<br />- Preserves Handcrafted Dialogue: This mod never replaces or overrides ConcernedApe's canonical daily dialogue. It only triggers when an NPC has completely exhausted their vanilla dialogue queue for the day.\n<br />- Player Choice &amp; Privacy: Dialogue is generated at runtime through your own chosen provider (Google Gemini API with your own private key, or 100% locally and offline via Ollama/llama.cpp). No private data is logged or sent to third parties.\n<br />\n<br />\n<br />Installation instructions\n<br />1. Install SMAPI (version 4.0.0 or higher): https://www.nexusmods.com/stardewvalley/mods/2400\n<br />2. (Recommended) Install Generic Mod Config Menu (GMCM): https://www.nexusmods.com/stardewvalley/mods/5098\n<br />3. Download Valley Yaps from the Files tab.\n<br />4. Unzip the archive and place the ValleyYaps folder into your Stardew Valley/Mods/ directory.\n<br />5. Launch the game using SMAPI!\n<br />\n<br />\n<br />How to Set Up Google Gemini (Easiest &amp; Free but has rate limiting)\n<br />Valley Yaps is configured for Google Gemini by default. You only need a free API key:\n<br />\n<br />Step 1: Get a free Gemini API key\n<br />1. Go to Google AI Studio: https://aistudio.google.com/\n<br />2. Sign in with your Google account.\n<br />3. Click \"Get API key\" (top left / top right).\n<br />4. Click \"Create API key\" and copy the key (starts with \"AIzaSy...\").\n<br />\n<br />Step 2: Add your key in-game\n<br />- Using Generic Mod Config Menu (GMCM):\n<br />\u00A0 Click the gear icon on the Stardew Valley title screen or in-game options menu -&gt; select \"Valley Yaps\" -&gt; paste your key into the \"API Key\" field -&gt; Save.\n<br />- Or by editing config.json:\n<br />\u00A0 Open Stardew Valley/Mods/ValleyYaps/config.json and set \"ApiKey\": \"YOUR_KEY_HERE\".\n<br />\n<br />That's it! Talk to any villager twice in-game to start chatting.\n<br />\n<br />\n<br />Local AI Setup (Optional, unlimited generations)\n<br />If you prefer running AI offline locally on your own computer:\n<br />- Ollama: Run \"ollama run llama3.2\" in your terminal, then set Provider to \"ollama\" in GMCM.\n<br />- llama.cpp / LM Studio: Start your local server, then set Provider to \"llama.cpp\" in GMCM.\n<br />\n<br />\n<br />Main features\n<br />- In-Character Dialogue Generation: NPCs reply with sentences matching their lore, personality, and relationship level with your farmer.\n<br />- Context-Aware Prompts: Prompts dynamically inject the villager's name, personality traits, date, time of day, location, and friendship heart count.\n<br />- Zero-Friction Provider Selection: Built-in support for Gemini (default), Ollama, llama.cpp, and Custom OpenAI endpoints.\n<br />- Dynamic Topic Rotation: Automatically cycles conversation topics (hobbies, likes/dislikes, town gossip, relationships) to keep conversations fresh.\n<br />- Responsive UI Experience: Shows immediate animated placeholder dialogue while the AI generates the response in the background, smoothly swapping in the text as soon as it arrives.\n<br />- Built-in Mock Mode: Comes with an offline test mode so you can test dialogue boxes in-game without any internet or AI setup.\n<br />- Generic Mod Config Menu (GMCM) Integration: Adjust your provider, API key, model name, max tokens, temperature, and custom topics directly from the in-game options menu.\n<br />- Runtime Console Commands: Quick controls via SMAPI console:\n<br />\u00A0 * valleyyaps on / valleyyaps off -- Toggle mod on/off.\n<br />\u00A0 * valleyyaps mock / valleyyaps real -- Switch between mock replies and real AI queries.\n<br />\u00A0 * valleyyaps set provider &lt;gemini|ollama|llama.cpp|custom&gt; -- Change provider.\n<br />\u00A0 * valleyyaps set key &lt;api_key&gt; -- Set API key.\n<br />\n<br />\n<br />Requirements\n<br />- SMAPI - Stardew Modding API (v4.0.0+): https://www.nexusmods.com/stardewvalley/mods/2400\n<br />- Stardew Valley 1.6+\n<br />- An AI Provider:\n<br />\u00A0 * Free Google Gemini API key (recommended)\n<br />\u00A0 * OR local LLM (Ollama, llama.cpp, LM Studio, etc.)\n<br />\n<br />\n<br />Support &amp; Donations\n<br />If you enjoy the mod and want to support its ongoing development, feel free to buy me a coffee!\n<br />Ko-fi: [url=https://ko-fi.com/rhncnd]https://ko-fi.com/rhncnd[/url]\n<br />\n<br />\n<br />Shout outs\n<br />- ConcernedApe for creating Stardew Valley.\n<br />- Pathoschild and the SMAPI community for the modding framework and tooling.\n<br />- spacechase0 for Generic Mod Config Menu.\n<br />- Google AI Studio and the open-source LLM community.\n<br />- Source code available on GitHub: [url=https://github.com/RhanCandia/valley-yaps]https://github.com/RhanCandia/valley-yaps[/url]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51154",
+	"Version": "0.1.0",
+	"Updated": "2026-08-24T08:21:54+00:00",
+	"Downloads": [
+		{
+			"Id": 179974,
+			"Type": "Main",
+			"DisplayName": "ValleyYaps.0.1.0",
+			"FileName": "f9/c5/1a/f9c51ae6-1941-4df7-b9ab-becc74a962d8",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 31938,
+			"Uploaded": "2026-08-24T08:21:54+00:00",
+			"Mods": [
+				{
+					"Id": "ValleyYaps.ValleyYaps",
+					"DisplayName": "Valley Yaps",
+					"Type": "Smapi",
+					"RelativePath": "ValleyYaps",
+					"Manifest": {
+						"Name": "Valley Yaps",
+						"Description": "Replaces generic NPC chatter with LLM-generated dialogue from a local or remote LLM server.",
+						"Author": "Valley Yaps",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ValleyYaps.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ValleyYaps.ValleyYaps"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566662,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437842,
+		"UploaderId": 17155464,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

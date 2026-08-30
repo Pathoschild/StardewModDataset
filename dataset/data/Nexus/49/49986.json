@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 49986,
+	"Name": "ControllerZoom",
+	"Author": "mauricioalvim",
+	"Description": "[center][size=5][b]Controller Zoom[/b][/size][/center]\n<br />\n<br />[center][size=3]Bring zoom control within reach for controller players.[/size][/center]\n<br />\n<br />[hr]\n<br />\n<br />[b]Push the right thumbstick up or down to zoom in and out on the fly.[/b] Hold the cursor modifier (click the left stick by default) whenever you need the vanilla right-stick mouse cursor instead.\n<br />\n<br />[list]\n<br />[*][b]Zoom with the right stick[/b] — no more opening the options menu every time you want to see more (or less) of the map.\n<br />[*][b]Made for big maps[/b] — especially handy for [url=https://www.nexusmods.com/stardewvalley/mods/3753]Stardew Valley Expanded[/url], whose maps are far larger than vanilla.\n<br />[*][b]Keeps the mouse out of your way[/b] — before this mod, even a light brush against the right stick woke the mouse cursor mid-game and desynced your inputs. Now the mouse only appears when you deliberately hold [b]L3 + right analog stick[/b].\n<br />[/list]\n<br />[hr]\n<br />\n<br />[size=4][b]How it works[/b][/size]\n<br />\n<br />[table]\n<br />[tr][th]Action[/th][th]Control[/th][/tr]\n<br />[tr][td]Zoom in[/td][td]Push the right stick up[/td][/tr]\n<br />[tr][td]Zoom out[/td][td]Push the right stick down[/td][/tr]\n<br />[tr][td]Right stick as mouse cursor (vanilla)[/td][td]Hold L3 (left stick click) + move the right stick[/td][/tr]\n<br />[tr][td]Reset zoom to 100%[/td][td]Unbound by default (bind [i]ResetZoom[/i] in config)[/td][/tr]\n<br />[/table]\n<br />By default the right stick always zooms, and holding the cursor modifier switches it to vanilla cursor mode. Enable [i]SwapModifierRole[/i] in the config if you'd rather [b]hold the modifier to zoom[/b] and keep the bare right stick as the mouse cursor.\n<br />\n<br />Zooming is tuned for finesse: light deflection adjusts slowly, holding the stick ramps up speed, a response curve gives precise low-end control, and the world point under your cursor stays anchored while you zoom.\n<br />\n<br />[hr]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6.15+\n<br />[*]SMAPI 4.0+\n<br />[*]A gamepad with [b]Gamepad Controls[/b] enabled\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] if you haven't already.\n<br />[*]Unzip this mod into your [i]Mods[/i] folder so it lands at [i]Stardew Valley/Mods/ControllerZoom[/i].\n<br />[*]Launch the game through SMAPI (a [i]config.json[/i] is created on first run).\n<br />[*]Make sure [b]Options → Gamepad Controls[/b] is enabled.\n<br />[/list]\n<br />[hr]\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />All settings are in [i]config.json[/i] in the mod folder:\n<br />\n<br />[table]\n<br />[tr][th]Setting[/th][th]Default[/th][th]Description[/th][/tr]\n<br />[tr][td][i]Enabled[/i][/td][td][center]true[/center][/td][td]Master switch.[/td][/tr]\n<br />[tr][td][i]CursorModifier[/i][/td][td][center]LeftStick[/center][/td][td]Button held to use the right stick as the mouse cursor.[/td][/tr]\n<br />[tr][td][i]SuppressModifierVanillaAction[/i][/td][td][center]true[/center][/td][td]Stop the modifier button's vanilla action.[/td][/tr]\n<br />[tr][td][i]SwapModifierRole[/i][/td][td][center]false[/center][/td][td]Invert roles: hold modifier to zoom, bare stick moves cursor.[/td][/tr]\n<br />[tr][td][i]MinZoom[/i][/td][td][center]0.5[/center][/td][td]Lowest zoom level.[/td][/tr]\n<br />[tr][td][i]MaxZoom[/i][/td][td][center]2.0[/center][/td][td]Highest zoom level.[/td][/tr]\n<br />[tr][td][i]ZoomSpeed[/i][/td][td][center]0.7[/center][/td][td]Base zoom speed while the stick is held.[/td][/tr]\n<br />[tr][td][i]ResponseCurve[/i][/td][td][center]1.5[/center][/td][td]Stick deflection exponent (gentler fine control at higher values).[/td][/tr]\n<br />[tr][td][i]AccelerationFactor[/i][/td][td][center]2.5[/center][/td][td]Max zoom speed multiplier while holding.[/td][/tr]\n<br />[tr][td][i]AccelerationTimeMs[/i][/td][td][center]600[/center][/td][td]Time to ramp up to full acceleration.[/td][/tr]\n<br />[tr][td][i]Deadzone[/i][/td][td][center]0.25[/center][/td][td]Stick deflection required before zooming.[/td][/tr]\n<br />[tr][td][i]InvertZoomDirection[/i][/td][td][center]false[/center][/td][td]Swap up/down zoom direction.[/td][/tr]\n<br />[tr][td][i]ApplyIntervalMs[/i][/td][td][center]40[/center][/td][td]How often the zoom is applied.[/td][/tr]\n<br />[tr][td][i]ZoomIncrement[/i][/td][td][center]0.01[/center][/td][td]Rounds the zoom level to even steps.[/td][/tr]\n<br />[tr][td][i]AnchorCursorWhileZooming[/i][/td][td][center]true[/center][/td][td]Keep the view pivoted around the cursor while zooming.[/td][/tr]\n<br />[tr][td][i]ZoomSound[/i][/td][td][center]drumkit6[/center][/td][td]Sound cue while zooming ([i]\"\"[/i] to disable).[/td][/tr]\n<br />[tr][td][i]SoundEveryPercent[/i][/td][td][center]10[/center][/td][td]Play the sound each time zoom passes a multiple of this many percent.[/td][/tr]\n<br />[tr][td][i]PersistZoom[/i][/td][td][center]true[/center][/td][td]Remember the zoom level between sessions.[/td][/tr]\n<br />[tr][td][i]ResetZoom[/i][/td][td][center]unbound[/center][/td][td]Button to instantly reset zoom to 100%.[/td][/tr]\n<br />[/table]\n<br />[hr]\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6.15+ / SMAPI 4.0+.\n<br />[*]Works in single-player and split-screen multiplayer (per-screen zoom).\n<br />[*]No save edits — safe to install and uninstall anytime.\n<br />[/list]\n<br />[size=4][b]Credits[/b][/size]\n<br />\n<br />Built with [url=https://smapi.io/]SMAPI[/url] and Harmony. Licensed under [url=https://opensource.org/licenses/MIT]MIT[/url].\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49986",
+	"Version": "1",
+	"Updated": "2026-07-31T14:17:31+00:00",
+	"Downloads": [
+		{
+			"Id": 176906,
+			"Type": "Main",
+			"DisplayName": "ControllerZoom",
+			"FileName": "e7/89/b9/e789b9c4-9e0d-4c14-b907-9c21bd093cde",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 20296,
+			"Uploaded": "2026-07-31T14:17:31+00:00",
+			"Mods": [
+				{
+					"Id": "MauricioAlvim.ControllerZoom",
+					"DisplayName": "Controller Zoom",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "Controller Zoom",
+						"Description": "Changes the zoom level with the right thumbstick. Hold the cursor modifier (click the left stick by default) to use the right stick as the mouse cursor like vanilla.",
+						"Author": "Mauricio Alvim",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ControllerZoom.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus: 49986"
+						],
+						"UniqueId": "MauricioAlvim.ControllerZoom"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563594,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436674,
+		"UploaderId": 173476345,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

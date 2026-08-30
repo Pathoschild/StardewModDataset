@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 51405,
+	"Name": "Photo Tailor Offline Outfit Photos to Stardew Clothing",
+	"Author": "INSANEDUCKY",
+	"Description": "Since this mod uses [b][url=https://huggingface.co/patrickjohncyh/fashion-clip]Fashion-CLIP[/url][/b] as its base model, it is important to note that this mod shares the same limitations as [b][url=https://huggingface.co/patrickjohncyh/fashion-clip]Fashion-CLIP[/url][/b].\n<br />The images used for encoding by Fashion-CLIP are standard product images—typically pictures of clothing items against a white background without any human models. Therefore, when using clothing images that contain people, the recognition results may not always be satisfactory.\n<br />For the best recognition accuracy, please try to use clean product photos with a white background and no people in the image.\n<br />This mod will continue to receive updates and improvements in the future. Stay tuned!\n<br />\n<br />Category and Requirements\n<br />\n<br />- Game version: Stardew Valley 1.6\n<br />- Mod type: SMAPI / Clothing / Crafting\n<br />- Required: SMAPI 4.0 or later\n<br />- Supported platform: Windows x64\n<br />- Not required: Fashion Sense, Content Patcher, Python, an internet connection, or an API key\n<br />\n<br />## Recommended Upload File\n<br />\n<br />`PhotoTailor-0.15.1-Windows-x64-Nexus.zip`\n<br />\n<br />## Installation\n<br />\n<br />1. Install SMAPI 4.0 or later.\n<br />2. Download and extract the archive.\n<br />3. Place the `PhotoTailor` folder inside your Stardew Valley `Mods` folder.\n<br />4. Launch the game through SMAPI.\n<br />\n<br />The final path should be:\n<br />\n<br />`Stardew Valley/Mods/PhotoTailor/manifest.json`\n<br />\n<br />When updating, replace the existing mod files but preserve `Mods/PhotoTailor/generated/`. That folder contains the clothing you have already created.\n<br />\n<br />## Full Description\n<br />\n<br />Photo Tailor turns local outfit images into wearable clothing designed to fit Stardew Valley's vanilla visual style. Pierre's General Store sells a dedicated Photo Tailor machine for 25,000g by default. Insert one piece of Cloth, choose an image from your computer, and use either Quick Recognition or Precise Recognition to create your outfit.\n<br />\n<br />Quick Recognition analyzes the entire image automatically. Precise Recognition lets you zoom, pan, and select up to eight individual garments, with optional manual category selection. Before sewing, the mod provides a free preview showing the source image, a complete pixel-art garment draft, and the final in-game item icons. Confirming a successful order costs one Cloth and 2,000g by default. Nothing is charged if generation fails.\n<br />\n<br />Recognition and rendering run entirely on your computer. Your photos are never uploaded. The mod includes an approximately 94 MB Marqo FashionSigLIP image encoder and requires no API key, Python installation, external service, or Fashion Sense dependency.\n<br />\n<br />Generated shirts, bottoms, hats, and footwear use Stardew Valley 1.6's native equipment types and can be worn in the normal equipment slots. Composite outfits such as dresses, trench coats, overalls, and jumpsuits are automatically divided into coordinated upper- and lower-body pieces while preserving continuous colors and patterns.\n<br />\n<br />The generator first creates a higher-resolution semantic pixel-art garment draft, including its silhouette, palette, neckline, sleeves, panels, patterns, seams, and shading. Those regions are then projected onto the vanilla front, side, back, and walking-frame topology. This is intended to produce clothing that moves naturally with the player and avoids exposed body pixels, black borders, and rigid side views.\n<br />\n<br />Photo Tailor is still experimental. Its goal is to interpret an outfit as natural-looking Stardew Valley clothing, not to shrink a photograph pixel by pixel. Images containing tiny text, small logos, heavy occlusion, multiple overlapping people, or cluttered backgrounds may work better with Precise Recognition and manual cropping.\n<br />\n<br />## How to Use\n<br />\n<br />1. Buy the Photo Tailor machine from Pierre's General Store and place it down.\n<br />2. Interact with the machine and place one piece of Cloth into the material slot.\n<br />3. Select an outfit image in PNG, JPG, JPEG, WEBP, or GIF format.\n<br />4. Choose Quick Recognition, or use Precise Recognition to crop and classify individual garments.\n<br />5. Review the generated clothing preview.\n<br />6. Confirm the order to spend one Cloth and 2,000g and receive the generated items.\n<br />\n<br />Only garment categories detected in the image are created. For example, a photo containing only a shirt will produce only a shirt.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51405",
+	"Version": "1",
+	"Updated": "2026-08-28T15:43:39+00:00",
+	"Downloads": [
+		{
+			"Id": 180543,
+			"Type": "Main",
+			"DisplayName": "PhotoTailor 0.15.1 Windows X64 Nexus",
+			"FileName": "0a/f0/91/0af0911e-605f-4619-b941-f7f7d55673cf",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 73970390,
+			"Uploaded": "2026-08-28T15:43:39+00:00",
+			"Mods": [
+				{
+					"Id": "Robin.PhotoTailor",
+					"DisplayName": "Photo Tailor",
+					"Type": "Smapi",
+					"RelativePath": "PhotoTailor",
+					"Manifest": {
+						"Name": "Photo Tailor",
+						"Description": "Offline FashionSigLIP tailoring with visible portrait-density garment artwork projected into vanilla clothing animations.",
+						"Author": "Robin & Codex",
+						"Version": "0.15.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PhotoTailor.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Robin.PhotoTailor"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567231,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438093,
+		"UploaderId": 297161979,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

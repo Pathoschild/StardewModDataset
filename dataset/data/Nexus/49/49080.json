@@ -3,20 +3,20 @@
 	"Id": 49080,
 	"Name": "Willy's Apprentice",
 	"Author": "KushKodiya",
-	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Willy's Apprentice is an in-game item wiki for Stardew Valley. Instead of alt-tabbing to a browser every time you find an item you don't recognize, you hover over it, press a key, and see everything important the wiki would tell you. It reads from data built directly out of the game's own files, so it's always accurate to your game version, and it's completely self-contained: no external programs, no accounts, no setup beyond dropping it in your Mods folder.\n<br />This is the first release, focused on the item overlay. It's the foundation for a larger companion tool planned in future updates.[/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list=1]\n<br />[*][color=#D4D4D8]Install SMAPI (the Stardew Valley modding framework) if you don't already have it — get it from smapi.io and follow its installer.[/color][/*]\n<br />[*][color=#D4D4D8]Download this mod and unzip it.[/color][/*]\n<br />[*][color=#D4D4D8]Move the unzipped\u00A0\n<br />[/color]\n<br />[code]WillysApprentice[/code][color=#D4D4D8]\u00A0folder into your Stardew Valley\u00A0\n<br />[/color]\n<br />[code]Mods[/code][color=#D4D4D8]\u00A0folder.[/color][/*]\n<br />[*][color=#D4D4D8]Launch the game through SMAPI as usual.[/color][/*]\n<br />[/list]\n<br />[size=4][b]Main features[/b][/size]\n<br />[color=#D4D4D8]Hover over any item and press\u00A0[b]F5[/b]\u00A0to see:\n<br />[/color]\n<br />[list]\n<br />[*][color=#D4D4D8][b]How to craft it[/b]\u00A0— its recipe and the ingredients you need[/color][/*]\n<br />[*][color=#D4D4D8][b]What it's used to craft[/b]\u00A0— every recipe the item is an ingredient for[/color][/*]\n<br />[*][color=#D4D4D8][b]Bundle requirements[/b]\u00A0— which community center bundles the item goes toward[/color][/*]\n<br />[*][color=#D4D4D8][b]Gift preferences[/b]\u00A0— which villagers love, like, or dislike receiving it[/color][/*]\n<br />[/list][color=#D4D4D8]It works across your inventory, chests, shops, and objects placed out in the world — machines, crops, furniture, and more. Coverage spans roughly 2200 items, including regular objects, big craftables, weapons, tools, furniture, and clothing.\n<br />The overlay appears in the corner of the screen so it never blocks the item you're looking at, and long entries wrap to stay readable. Press F5 again to dismiss it.\n<br />[b]Changing the hotkey:[/b]\u00A0F5 is the default (it has no vanilla Stardew binding). To use a different key, edit\u00A0\n<br />[/color]\n<br />[code]HotKey[/code][color=#D4D4D8]\u00A0in the mod's\u00A0\n<br />[/color]\n<br />[code]config.json[/code][color=#D4D4D8], which is generated automatically in the mod folder the first time you run it.[/color]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][b]SMAPI 4.0 or later[/b]\u00A0— this is the only requirement. The mod is otherwise fully self-contained; all its data ships with it and there's nothing else to install or run.[/color][/*]\n<br />[/list]",
+	"Description": "\n<br />Willy's Apprentice is an in-game companion for Stardew Valley. Instead of alt-tabbing to a browser every time you find an item you don't recognize — or want to grind out a fish — you press a key and it's handled right in the game. Its reference data is built directly out of the game's own files, so it's always accurate to your game version, and the core features are completely self-contained: no external programs, no accounts, no setup beyond dropping it in your Mods folder.\n<br />\n<br />This 1.0 release adds an automated fishing helper and an optional chatbot alongside the original item overlay.\n<br />\n<br />Installation instructions\n<br />\n<br />1. Install SMAPI (the Stardew Valley modding framework) if you don't already have it — get it from smapi.io and follow its installer.\n<br />2. Download this mod and unzip it.\n<br />3. Move the unzipped WillysApprentice folder into your Stardew Valley Mods folder.\n<br />4. Launch the game through SMAPI as usual.\n<br />\n<br />Main features\n<br />\n<br />Item overlay — press F5\n<br />\n<br />Hover over any item and press F5 to see:\n<br />- How to craft it — its recipe and the ingredients you need\n<br />- What it's used to craft — every recipe the item is an ingredient for\n<br />- Bundle requirements — which community center bundles the item goes toward\n<br />- Gift preferences — which villagers love, like, or dislike receiving it\n<br />\n<br />It works across your inventory, chests, shops, and objects placed out in the world — machines, crops, furniture, and more. Coverage spans roughly 2,200 items, including regular objects, big craftables, weapons, tools, furniture, and clothing. The overlay appears in the corner of the screen so it never blocks the item you're looking at, and long entries wrap to stay readable. Press F5 again to dismiss it.\n<br />\n<br />Auto-fisher — press F7\n<br />\n<br />Stand next to water with a fishing rod equipped and press F7 to open the fishing panel. Type a fish name to fish until you catch it — the mod stops automatically and tells you what it landed — or leave the field blank to fish continuously until you stop it. It casts at full power, hooks on the bite, and resolves the catch for you, with progress (target, casts, last catch) shown on-screen.\n<br />\n<br />It's built to be safe to leave running: it stops on its own at 2am, when your energy runs low, when your inventory is full, or if an unexpected menu opens — and it yields instantly the moment you move or click. Note that it fishes wherever you're standing; it doesn't verify a fish is catchable at your current spot or season, so if you set a target that can't appear there it'll warn you after a while but keep trying until you stop it.\n<br />\n<br />Chatbot — press F6 (optional)\n<br />\n<br />Press F6 to ask questions in natural language about bundles, gifts, crafting, and more. This is the one feature that needs a separate local model backend; if you haven't set one up, the chatbot simply reports itself unavailable and the overlay and fishing continue to work normally. It can also be turned off entirely in the config.\n<br />\n<br />Configuration\n<br />\n<br />A config.json is generated in the mod folder the first time you run the game. Useful settings:\n<br />- HotKey, ChatKey, AutoFishKey — the F5 / F6 / F7 hotkeys (all default to keys with no vanilla Stardew binding; change them to any key you like)\n<br />- CastingPower, StaminaThreshold, SkipMinigame, SkipCatchAnimation, NoMatchWarningCasts — tune the auto-fisher (cast strength, the energy level it stops at, whether to skip the fishing minigame and catch animation, and how many casts before the \"may not be catchable here\" warning)\n<br />- AutoFishEnabled, ChatbotEnabled — turn either feature off completely\n<br />\n<br />Requirements\n<br />\n<br />SMAPI 4.0 or later. The overlay and auto-fisher are otherwise fully self-contained — all their data ships with the mod and there's nothing else to install or run. The optional F6 chatbot additionally requires a local model backend.\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49080",
 	"Version": "1",
-	"Updated": "2026-07-12T21:49:13+00:00",
+	"Updated": "2026-08-23T23:41:17+00:00",
 	"Downloads": [
 		{
-			"Id": 174790,
+			"Id": 179926,
 			"Type": "Main",
-			"DisplayName": "WillysApprentice 0.1.0",
-			"FileName": "c7/20/45/c7204548-0a52-4c43-aa7d-d2d0239e3151",
+			"DisplayName": "WillysApprentice 1.0.0",
+			"FileName": "1e/d7/64/1ed76407-a6f4-4edc-980a-da7fd421d9fc",
 			"Description": "",
-			"Version": "1",
-			"SizeInBytes": 96189,
-			"Uploaded": "2026-07-12T21:49:13+00:00",
+			"Version": "2",
+			"SizeInBytes": 121770,
+			"Uploaded": "2026-08-23T23:41:17+00:00",
 			"Mods": [
 				{
 					"Id": "KushKodiya.WillysApprentice",
@@ -25,19 +25,21 @@
 					"RelativePath": "WillysApprentice",
 					"Manifest": {
 						"Name": "Willy's Apprentice",
-						"Description": "Hover any item, press F5 for a wiki overlay (bundles, crafting uses, gift preferences).",
+						"Description": "Hover any item and press F5 for a wiki overlay (bundles, crafting uses, gift preferences). F7 opens an auto-fisher that can fish until a named target is caught. F6 opens an optional chatbot (requires a separate local model backend; disabled if unavailable).",
 						"Author": "Kush Kodiya",
-						"Version": "0.1.0",
+						"Version": "1.0.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "WillysApprentice.dll",
 						"Dependencies": [],
-						"UpdateKeys": [],
+						"UpdateKeys": [
+							"Nexus:49080"
+						],
 						"UniqueId": "KushKodiya.WillysApprentice"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342561478,
+				"Uid": 5596342566614,
 				"CategoryId": 1,
 				"Primary": true
 			}

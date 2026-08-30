@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 50128,
+	"Name": "Better  Mixed Seeds",
+	"Author": "ArslanAR24",
+	"Description": "About This Mod\n<br />Tired of getting random crops you don't need from Mixed Seeds? BetterMixSeed is a gameplay overhaul that gives you 100% control over the Mixed Seeds (ID 770) drop table! Using the Generic Mod Config Menu (GMCM), you can customize the exact drop chance for every single vanilla crop across Spring, Summer, and Fall.\n<br />Whether you want a balanced random farm, or just want to force Mixed Seeds to only grow Starfruit, the choice is yours!\n<br />Features:\n<br />[list]\n<br />[*]Fully Customizable: Adjust the drop percentage (0 to 100%) for all vanilla seasonal crops via GMCM.[/*]\n<br />[*]Greenhouse &amp; Ginger Island Support: When planting Mixed Seeds indoors or on Ginger Island (Island West), the mod will randomly select a season (Spring, Summer, or Fall) and apply your custom drop rates for that specific season![/*]\n<br />[*]Glitch-Free Planting: The RNG logic is tied to your cursor tile position, preventing \"hitbox flickering\" when planting trellis crops (like Hops or Green Beans).[/*]\n<br />[/list]HOW THE PROBABILITY SYSTEM WORKS (PLEASE READ!)\n<br />Because this mod uses a \"Cumulative Probability\" system, setting a slider to 100% does NOT automatically guarantee that crop will grow if you have other sliders &gt; 0. Here is how the math works:\n<br />[list=1]\n<br />[*]The Top-to-Bottom Rule The mod checks the crop list in order, from top to bottom. If you set Strawberry to 5% and Parsnip to 100%, the game rolls a dice from 0 to 100. Because Strawberry is checked first, there is still a 5% chance the game will pick Strawberry before it even looks at Parsnip. How to fix this: If you want a 100% guarantee for a specific crop (e.g., 100% Parsnip), you MUST set all other crops in that season to 0.[/*]\n<br />[*]The \"Vanilla Fallback\" (Under 100% Total) The dice roll goes up to 100. If the total sum of all your percentages for a season is less than 100 (for example, your total is only 70%), there is a 30% chance the mod will not pick any crop. If this happens, the game will ignore the mod and fall back to the default vanilla Stardew Valley random crops. How to fix this: To completely disable vanilla random drops, make sure the total percentage of all crops in a season adds up to exactly 100.[/*]\n<br />[/list]Requirements:\n<br />[list]\n<br />[*]SMAPI - Stardew Modding API[/*]\n<br />[*]Generic Mod Config Menu (GMCM)[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50128",
+	"Version": "1.0.0",
+	"Updated": "2026-08-03T07:07:25+00:00",
+	"Downloads": [
+		{
+			"Id": 177228,
+			"Type": "Main",
+			"DisplayName": "BetterMixSeed",
+			"FileName": "94/0d/63/940d6363-eb53-471f-9036-d099ad69cfc9",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 18505,
+			"Uploaded": "2026-08-03T07:07:25+00:00",
+			"Mods": [
+				{
+					"Id": "AR.BetterMixSeeds",
+					"DisplayName": "Better Mix Seeds",
+					"Type": "Smapi",
+					"RelativePath": "BetterMixSeed",
+					"Manifest": {
+						"Name": "Better Mix Seeds",
+						"Description": "Mixed seeds more usefull",
+						"Author": "ARSLAN",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BetterMixSeeds.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50128"
+						],
+						"UniqueId": "AR.BetterMixSeeds"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563916,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436816,
+		"UploaderId": 285793838,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

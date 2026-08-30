@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 50400,
+	"Name": "EMC-error fix for android",
+	"Author": "KhaStark",
+	"Description": "[code]EMC Automate Compatibility (Android)\n<br />\n<br />A small Android compatibility bridge for Extra Machine Config (EMC) + Automate.\n<br />\n<br />What it does\n<br />------------\n<br />The Android EMC build targeted by this mod uses an outdated Automate output callback. This bridge suppresses that incompatible callback at runtime and installs the corrected three-argument callback instead.\n<br />\n<br />It does not replace or modify Extra Machine Config itself.\n<br />\n<br />This is a focused compatibility fix only. It is not a general Android port of EMC and it does not claim to fix unrelated EMC/Android issues.\n<br />\n<br />Requirements\n<br />------------\n<br />- Stardew Valley 1.6 on Android\n<br />- SMAPI for Android 4.1.10+\n<br />- Extra Machine Config 1.17.1-unofficial.3-android\n<br />- Automate 2.5.0 or a compatible later version\n<br />\n<br />Installation\n<br />------------\n<br />1. Fully close Stardew Valley and SMAPI.\n<br />2. Delete any older/test EMCAutomateCompatibility folder.\n<br />3. Keep Extra Machine Config and Automate installed normally.\n<br />4. Extract EMCAutomateCompatibility into your Mods folder.\n<br />5. Launch through SMAPI.\n<br />\n<br />Uninstall\n<br />---------\n<br />Delete the EMCAutomateCompatibility folder. It does not alter the files in your EMC installation.\n<br />\n<br />Credits and permission\n<br />----------------------\n<br />- selph (Selph aka zombifier): Extra Machine Config and the corrected callback code this bridge is based on. Shared with the original author's permission.\n<br />- Pathoschild: Automate.\n<br />- KhaStark: Android compatibility bridge/package.\n<br />\n<br />Troubleshooting\n<br />---------------\n<br />If it still fails, reproduce the issue and include a fresh SMAPI-latest.txt together with your Stardew Valley, Android SMAPI, EMC, and Automate versions when reporting it.[/code]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50400",
+	"Version": "1",
+	"Updated": "2026-08-08T22:10:39+00:00",
+	"Downloads": [
+		{
+			"Id": 177895,
+			"Type": "Main",
+			"DisplayName": "EMC Automate Compatibility Android 1.0.2",
+			"FileName": "f7/04/60/f70460e5-230f-46f4-9cd1-9098a6d2543a",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 60632,
+			"Uploaded": "2026-08-08T22:10:39+00:00",
+			"Mods": [
+				{
+					"Id": "Khamila.EMCAutomateCompat",
+					"DisplayName": "EMC Automate Compatibility (Android)",
+					"Type": "Smapi",
+					"RelativePath": "EMCAutomateCompatibility",
+					"Manifest": {
+						"Name": "EMC Automate Compatibility (Android)",
+						"Description": "Android compatibility bridge for Extra Machine Config and Automate. Replaces EMC's incompatible Automate output callback at runtime without modifying EMC.",
+						"Author": "Khamila",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "EMCAutomateCompat.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "selph.ExtraMachineConfig",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Khamila.EMCAutomateCompat"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564583,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437088,
+		"UploaderId": 218369943,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

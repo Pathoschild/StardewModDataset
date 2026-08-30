@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 50338,
+	"Name": "T's Content Patcher Toolkit",
+	"Author": "tikamin557",
+	"Description": "[center][b][size=5]T's Content Patcher Toolkit[/size][/b]\n<br />A standalone Windows toolkit for Content Patcher modding.[/center]\n<br />[line]\n<br />\n<br />[color=#00ffff][size=4][b]About[/b][/size][/color]\n<br />T's Content Patcher Toolkit is a standalone Windows application designed to provide useful tools for creating and editing Content Patcher mods.\n<br />\n<br />[b][color=#ffff00][size=4]This is not a mod that should be installed in your Stardew Valley Mods folder.[/size][/color][/b]\n<br />Simply extract the downloaded ZIP file and run [b]TsCPToolKit.exe[/b].\n<br />\n<br />More tools may be added in future versions as the toolkit is developed.\n<br />[line]\n<br />\n<br />[size=4][b][color=#00ffff]Current Features[/color][/b][/size]\n<br />\n<br />[color=#ffff00][b]JSON Indentation[/b][/color]\n<br />The main feature of T's Content Patcher Toolkit is a tool for cleaning up the indentation of JSON files used in Content Patcher mods.\n<br />Unlike a general JSON formatter, this tool [b]does not rearrange your existing line breaks[/b]. It only adjusts the indentation at the beginning of each line.\n<br />For example, if you intentionally write something on a single line:\n<br />[code]\"Position\": { \"X\": 10, \"Y\": 20 }[/code]it will remain on a single line.\n<br />Likewise, if you intentionally write the same structure across multiple lines:\n<br />[code]\"Position\": {\n<br />\u00A0 \u00A0 \"X\": 10,\n<br />\u00A0 \u00A0 \"Y\": 20\n<br />}[/code]it will remain across multiple lines.\n<br />Multiline values are also preserved and aligned without removing their existing line breaks.\n<br />For example:\n<br />[code]\"Target\": \"Maps/Example_A,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 Maps/Example_B,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 Maps/Example_C\"[/code]The line breaks remain in place, while the continued lines are aligned with the beginning of the value.\n<br />This is useful for long Content Patcher fields such as [b]Target[/b], where keeping entries on separate lines can make the file easier to read and edit.\n<br />This means you can keep the layout you chose for your Content Patcher files while using the tool to clean up inconsistent or broken indentation.\n<br />The contents of each line are preserved, and JSON files containing comments are also supported.\n<br />\n<br />[color=#00ff00][b]Single JSON File[/b][/color]\n<br />Select a single JSON file and clean up its indentation.\n<br />You can also drag and drop a JSON file directly onto the application window.\n<br />\n<br />[color=#00ff00][b]Folder Batch Processing[/b][/color]\n<br />Process all JSON files inside a selected folder at once.\n<br />Processing files inside subfolders can also be enabled, which is useful when working with larger Content Patcher mods containing many JSON files.\n<br />\n<br />[color=#00ff00][b]Indentation Size[/b][/color]\n<br />Choose the number of spaces used for each indentation level:\n<br />[list]\n<br />[*]2 spaces[/*]\n<br />[*]3 spaces[/*]\n<br />[*]4 spaces[/*]\n<br />[*]8 spaces[/*]\n<br />[/list]\n<br />[color=#00ff00][b]Backup[/b][/color]\n<br />The application can automatically create backups before modifying JSON files.\n<br />[b]Keeping this option enabled is recommended when working with important mod files.[/b]\n<br />\n<br />[b][color=#ffff00]Languages[/color][/b]\n<br />The application currently supports:\n<br />[list]\n<br />[*]English[/*]\n<br />[*]Japanese[/*]\n<br />[/list]The selected language is saved and restored the next time the application is started.\n<br />\n<br />[b][color=#ffff00]Version Information &amp; Update Check[/color][/b]\n<br />The application can check for newer versions when it starts.\n<br />If a newer version is available, the version information window will open automatically.\n<br />You can also open the version information window manually at any time to check the current and latest available versions.\n<br />[line]\n<br />\n<br />[size=4][b][color=#00ffff]Installation[/color][/b][/size]\n<br />[b]No installation is required.[/b]\n<br />[list=1]\n<br />[*]Download the ZIP file.[/*]\n<br />[*]Extract it to any location.[/*]\n<br />[*]Run [b]TsCPToolKit.exe[/b].[/*]\n<br />[/list][b]Do not place the application in your Stardew Valley Mods folder.[/b]\n<br />The application is distributed as a standalone Windows executable, so no separate .NET installation is required.\n<br />[line]\n<br />\n<br />[color=#00ffff][size=4][b]How to Use[/b][/size][/color]\n<br />\n<br />[b][color=#ffff00]Single JSON File[/color][/b]\n<br />[list=1]\n<br />[*]Open the [b]Single JSON[/b] tab.[/*]\n<br />[*]Select a JSON file using the Browse button, or drag and drop a JSON file onto the application.[/*]\n<br />[*]Select your preferred indentation size.[/*]\n<br />[*]Choose whether to create a backup.[/*]\n<br />[*]Run the indentation process.[/*]\n<br />[/list]\n<br />[b][color=#ffff00]Folder Batch Processing[/color][/b]\n<br />[list=1]\n<br />[*]Open the [b]Batch[/b] tab.[/*]\n<br />[*]Select the folder containing the JSON files you want to process, or drag and drop the folder onto the application.[/*]\n<br />[*]Choose whether JSON files inside subfolders should also be processed.[/*]\n<br />[*]Select your preferred indentation size.[/*]\n<br />[*]Choose whether to create backups.[/*]\n<br />[*]Run the batch process.[/*]\n<br />[/list][line]\n<br />\n<br />[color=#00ffff][size=4][b]Important Notes[/b][/size][/color]\n<br />This tool is intended to help with editing and organizing Content Patcher JSON files.\n<br />It [b]does not validate or repair[/b] incorrect JSON syntax or Content Patcher patches.\n<br />The indentation tool is designed to preserve your existing formatting choices wherever possible. It does not intentionally split one-line structures into multiple lines or rearrange the contents of your JSON files.\n<br />When working with important files, keeping the backup option enabled is recommended.\n<br />[line]\n<br />\n<br />[color=#00ffff][size=4][b]Application Settings[/b][/size][/color]\n<br />Application settings are stored in:\n<br />[code]Documents\n<br />└─ T's Content Patcher Toolkit\n<br />\u00A0\u00A0 └─ config.json[/code]Deleting [b]config.json[/b] will reset the saved application settings.\n<br />[line]\n<br />\n<br />[center][b]T's Content Patcher Toolkit v1.1.0[/b][/center]\n<br />[center][/center]\n<br />[line]\n<br />\n<br />[center](\u00A0If you like this mod or any of the mods I've created, please endorse it! It improves my willingness to make mods!)[/center]\n<br />[center][size=5]-------------------------------------------------------------------------------------------[/size][/center]\n<br />[center][size=5]&gt;&gt;&gt;\u00A0 \u00A0[url=https://www.nexusmods.com/users/78813038?tab=user+files]List of mods I made.[/url]\uFEFF\uFEFF\uFEFF\uFEFF &lt;&lt;&lt;[/size][/center]\n<br />[center][size=5]-------------------------------------------------------------------------------------------[/size][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50338",
+	"Version": "1.1.0",
+	"Updated": "2026-08-10T05:24:35+00:00",
+	"Downloads": [
+		{
+			"Id": 178089,
+			"Type": "Main",
+			"DisplayName": "T's Content Patcher Toolkit v1.1.0",
+			"FileName": "0e/ea/6e/0eea6e78-ce4d-47f3-9fe8-7399c01e3ff4",
+			"Description": "- Added automatic update checking and version information.<br />- Added buttons to open referenced folders.<br />- Improved indentation for multiline values while preserving line breaks.",
+			"Version": "1.1.0",
+			"SizeInBytes": 58745065,
+			"Uploaded": "2026-08-10T05:24:35+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "T's Content Patcher Toolkit v1.1.0",
+					"Type": "Invalid",
+					"RelativePath": "T's Content Patcher Toolkit v1.1.0",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564777,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437026,
+		"UploaderId": 78813038,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

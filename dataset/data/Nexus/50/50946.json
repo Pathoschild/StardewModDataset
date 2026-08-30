@@ -1,0 +1,70 @@
+{
+	"Site": "Nexus",
+	"Id": 50946,
+	"Name": "AliveNpcs Multiplayer (Village-sync addon)",
+	"Author": "gabrieljamh",
+	"Description": "[center][size=6][b]AliveNpcs Multiplayer[/b][/size]\n<br />[size=5][b]Host-authoritative village sync addon for AliveNpcs[/b][/size][/center]\n<br />\n<br />[size=4][b][color=#ff0000](This mod is only used to sync Base Mod's data, [/color][b][color=#ffff00]it doesn't use AI[/color][/b][color=#ff0000], AI job is Base Mod &lt;AliveNpcs'&gt; only)[/color][/b][/size]\n<br />\n<br />[b]For Base Mod, go to this page:\u00A0[/b][url=https://www.nexusmods.com/stardewvalley/mods/43475]https://www.nexusmods.com/stardewvalley/mods/43475[/url]\n<br />[size=3][color=#D4D4D8]\n<br />AliveNpcs gives the villagers real AI conversations, gossip, moods and evolving relationships. On its own, it's built for single player — in co-op, each player's game would invent its own separate version of the town.\n<br />\n<br />This addon fixes that. It keeps one shared, consistent village across everyone in your farm, while still letting each player have their own private relationships and conversations.[/color][/size]\n<br />\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[size=3][color=#D4D4D8]\n<br />1. Install SMAPI, then AliveNpcs, following their own instructions.\n<br />2. Unzip this addon into your `Stardew Valley/Mods` folder.\n<br />2b. Backup you data folder from AliveNpcs, it won't break you saves, but just to be safe.\n<br />3. Make sure every player in your co-op does steps 1 and 2.\n<br />4. Launch through SMAPI and load your co-op save.\n<br />\n<br />NOTE: By default, host is set to impose EC to the same EC host has set, so it's important to make sure every player has the same EC set on AliveNpcs and the same gameplay mods.[/color][/size]\n<br />\n<br />\n<br />[size=4][b]Something about it[/b][/size]\n<br />[size=3][color=#D4D4D8]\n<br />The addon uses what's called a host-authoritative model. In plain terms: the host's game is the single source of truth for everything that belongs to the whole village.\n<br />\n<br />The host handles the shared world. Only the host's game generates:\n<br />\n<br />- Daily gossip and the rumours going around town\n<br />- Story arcs (the ongoing village storylines)\n<br />- NPC moods for the day\n<br />- NPCs interacting with each other\n<br />- The weekly news\n<br />- Letters from villagers\n<br />\n<br />The host then sends the results out to everyone, so all players see the same gossip, the same moods, and the same story arcs. Nobody ends up in a different version of Pelican Town.\n<br />\n<br />Each player keeps their own personal relationships. Your own game still handles:\n<br />\n<br />- Your conversations with NPCs (your dialogue, your history)\n<br />- Your friendship and heart levels\n<br />- Your own diary entries\n<br />\n<br />So Abigail can be close friends with you and barely know your co-op partner — exactly like normal Stardew gameplay.\n<br />\n<br />Everyone stays aware of everyone. Your interactions, your character sheet and your relationships are shared with the other players' games, so NPCs know who else lives on the farm and can react naturally to all of you, rather than acting like you're the only farmer.\n<br />\n<br />[i][b]What this means for the host?[/b][/i]\n<br />\n<br />Because the host processes all players' NPC data, the host's game does the heavy lifting.\n<br />\n<br />If you're hosting, it's worth using a capable AI model with a decent context window and reasonable speed. If sync feels slow, or gossip and moods seem incomplete on a busy farm, the host's model is usually the bottleneck — not your connection.\n<br />\n<br />If the host goes to bed or leaves, the shared village jobs simply don't run until they're back, the same way the day doesn't advance without them\n<br />\n<br />[b]The AliveNpcs team has tested with StardewProxy provider as the AI model, it works fine for hosting and is the recommended tool to use with![/b][/color][/size]\n<br />\n<br />[quote][size=3][color=#D4D4D8]You can check most of the values on the exclusive Player Directory popup, inspired by another multiplayer games, the popup shows who is online and information about them[/color][/size][/quote]\n<br />\n<br />[size=4][b].:EXCLUSIVE!:. Eavesdropping[/b][/size]\n<br />[size=3][color=#D4D4D8]\n<br />This is the addon's signature feature, and it only exists in co-op.\n<br />\n<br />When another player chats with a villager and you're standing in the same place, you'll overhear a snippet of it in the chat box.\n<br />\n<br />Standing together in the Saloon while your friend talks to Gus? You'll catch pieces of what was said, and what Gus said back. It makes the town feel genuinely shared and alive — you're not just farming near each other, you're overhearing each other's lives.\n<br />\n<br />A few things worth knowing:\n<br />\n<br />- You only overhear people in the same location as you. Conversations happening across the valley stay private.\n<br />- It's ambient flavour. It appears quietly in the chat box, and won't interrupt what you're doing.\n<br />- You never overhear yourself. Only other players.\n<br />- \"Keep secret\" is respected. AliveNpcs lets you mark a conversation as secret when you reply. Secret conversations are never broadcast to anyone — they stay on your machine only. If you want a private moment with an NPC, use that option.\n<br />- The host controls it for everyone. Eavesdropping is a host-only setting. Whatever the host chooses applies to the whole server, and farmhands' own settings are ignored. This is deliberate — otherwise one player could opt into hearing others without their group agreeing. When you join, the game tells you whether it's on.\n<br />\n<br />[b]If your group would rather keep conversations private, the host just turns it off and it's off for everybody.[/b][/color][/size]\n<br />\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[size=3][color=#D4D4D8]\n<br />Requirements are already described in the requirements field, but just to make sure:\n<br />- SMAPI: Mod Loader\n<br />- AliveNpcs: The Base Mod\n<br />- GMCM: Mod to configure the Host Settings[/color][/size]\n<br />\n<br />\n<br />[size=4][b]Last words[/b][/size]\n<br />\n<br />[quote][size=3][color=#D4D4D8][size=3][color=#D4D4D8]This is an ALPHA release: if you find any issues or bugs, please report on AliveNpcs' official Discord: [url=https://discord.gg/xG2zHgXH]https://discord.gg/xG2zHgXH[/url][/color][/size][/color][/size][/quote][size=3][color=#D4D4D8]\n<br />Huge thanks to:\n<br />- LUCASGATICA for the Base Mod and the great experiences on mod creation.\n<br />- Ryo as the creator of StardewProxy and the main active moderator on the team.[/color][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50946",
+	"Version": "0.1.0-alpha",
+	"Updated": "2026-08-19T23:16:16+00:00",
+	"Downloads": [
+		{
+			"Id": 179306,
+			"Type": "Main",
+			"DisplayName": "AliveNpcs.Multiplayer 0.1.0 Alpha",
+			"FileName": "bf/4a/31/bf4a3182-6802-4013-8619-ec23adaad14b",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 112590,
+			"Uploaded": "2026-08-19T23:16:16+00:00",
+			"Mods": [
+				{
+					"Id": "Lucas.AliveNpcs.Multiplayer",
+					"DisplayName": "AliveNpcs Multiplayer",
+					"Type": "Smapi",
+					"RelativePath": "AliveNpcs.Multiplayer",
+					"Manifest": {
+						"Name": "AliveNpcs Multiplayer",
+						"Description": "Multiplayer addon for AliveNpcs — host-authoritative village-wide state, client-local per-player data, NPC cross-player awareness.",
+						"Author": "Junji + Lucas",
+						"Version": "0.1.0-alpha",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AliveNpcs.Multiplayer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Lucas.AliveNpcs",
+								"MinimumVersion": "1.4.4",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.6.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "kittycatcasey.GenericModConfigMenu",
+								"MinimumVersion": "1.6.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:gabrieljamh/SV-AN-Multiplayer"
+						],
+						"UniqueId": "Lucas.AliveNpcs.Multiplayer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342565994,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437634,
+		"UploaderId": 4309066,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

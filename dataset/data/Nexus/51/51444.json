@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 51444,
+	"Name": "No-Miss Interact---Harvest-Interact at Full Speed",
+	"Author": "neoiw",
+	"Description": "\n<br />[center][size=6][color=#8CC63F][b]No-Miss Interact（不漏收）[/b][/color][/size]\n<br />[size=4][i][color=#E8D9A0]Stop missing machine harvests when you move fast.[/color][/i][/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b][color=#D98A2B]The Problem[/color][/b][/size]\n<br />Vanilla Stardew Valley samples the action button in fixed [b]100ms[/b] steps ([i]10Hz[/i]) and only checks the single tile in front of you each time. When you hold the action button and [u]run along a row of kegs, preserve jars or other machines[/u], the sampling phase drifts against the tile grid — so every [b][color=#FF4F4F]4th or 5th machine gets skipped[/color][/b]. You run back and forth, or you miss crops.\n<br />\n<br />[size=5][b][color=#D98A2B]The Fix[/color][/b][/size]\n<br />This mod makes the repeat interval [b]configurable[/b] ([b]1–100ms[/b], default [size=4][color=#8CC63F][b]30ms[/b][/color][/size], [b]100 = vanilla[/b]). With a shorter sampling step, [u]every machine in the row is reliably hit[/u].\n<br />\n<br />[quote][b]Not automation:[/b] each trigger still interacts with exactly [b]one[/b] target, at the same rhythm as vanilla — nothing is harvested without your action button.[/quote]\n<br />[size=5][b][color=#D98A2B]Features[/color][/b][/size]\n<br />[list]\n<br />[*][b]Configurable repeat interval[/b] — 1–100ms, default [b]30ms[/b] (100 restores vanilla).[/*]\n<br />[*][b]In-game config[/b] via Generic Mod Config Menu (optional), or edit [b]config.json[/b] directly.[/*]\n<br />[*][b]Bilingual UI[/b] (English / 简体中文) — follows your game language.[/*]\n<br />[*][b]Split-screen &amp; multiplayer safe[/b] — input is processed per player, per machine; no network code, no desync.[/*]\n<br />[*]Covers [b]keyboard[/b], [b]mouse right-click[/b] and [b]gamepad A[/b] (both vanilla repeat paths are patched).[/*]\n<br />[/list]\n<br />[size=5][b][color=#D98A2B]Configuration[/color][/b][/size]\n<br />[list]\n<br />[*][b]EnableMod[/b] — default [b]true[/b]. Master switch (restart to take effect).[/*]\n<br />[*][b]RepeatIntervalMs[/b] — default [size=4][color=#8CC63F][b]30[/b][/color][/size]. Repeat interval in ms; range 1–100; [b]100 = vanilla[/b].[/*]\n<br />[*][b]EnableDebugLog[/b] — default [b]false[/b]. Low-frequency debug logging.[/*]\n<br />[/list][i]Start at 30. Lower it only if you still miss (e.g. 10). At 100 it behaves exactly like vanilla.[/i]\n<br />\n<br />\n<br />\n<br />[line]\n<br />\n<br />[center][size=6][color=#8CC63F][b]不漏收（No-Miss Interact）[/b][/color][/size]\n<br />[size=4][i][color=#E8D9A0]快速跑动时不再漏收机器产出。[/color][/i][/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b][color=#D98A2B]问题[/color][/b][/size]\n<br />原版按住动作键的重复触发周期固定 [b]100ms[/b]（[i]10Hz[/i]），每次只判定面前一格。按住动作键沿酒桶、罐头瓶等机器列[u]快速跑动[/u]时，采样点与格子错位，[b][color=#FF4F4F]每隔四五台就漏掉一台[/color][/b]。\n<br />\n<br />[size=5][b][color=#D98A2B]解决[/color][/b][/size]\n<br />把重复触发周期改为[b]可配置[/b]（[b]1~100ms[/b]，默认 [size=4][color=#8CC63F][b]30ms[/b][/color][/size]，[b]100 = 原版[/b]）。采样步长缩小后，[u]每一台机器都会被触发点选中[/u]。\n<br />\n<br />[quote][b]非自动化：[/b]一次触发仍只交互一个目标，节奏与原版一致——没有按住动作键就不会有任何自动收获。[/quote]\n<br />[size=5][b][color=#D98A2B]特性[/color][/b][/size]\n<br />[list]\n<br />[*][b]触发周期可配置[/b]——1~100ms，默认 [b]30ms[/b]（100 还原原版）。[/*]\n<br />[*][b]游戏内配置[/b]（Generic Mod Config Menu，可选）或直接编辑 [b]config.json[/b]。[/*]\n<br />[*][b]双语界面[/b]（简体中文/English），跟随游戏语言。[/*]\n<br />[*][b]分屏与联机安全[/b]——按玩家各自处理输入、各机器各自生效；无网络代码、不会不同步。[/*]\n<br />[*]同时覆盖[b]键盘[/b]、[b]鼠标右键[/b]与[b]手柄 A[/b]两条原版重复触发路径。[/*]\n<br />[/list]\n<br />[size=5][b][color=#D98A2B]配置[/color][/b][/size]\n<br />[list]\n<br />[*][b]EnableMod[/b]——默认 [b]true[/b]。总开关（重启生效）。[/*]\n<br />[*][b]RepeatIntervalMs[/b]——默认 [size=4][color=#8CC63F][b]30[/b][/color][/size]。重复触发周期（毫秒），范围 1~100；[b]100 = 原版[/b]。[/*]\n<br />[*][b]EnableDebugLog[/b]——默认 [b]false[/b]。低频调试日志。[/*]\n<br />[/list][i]30 仍漏就调低（如 10）。设为 100 即完全还原原版行为。[/i]\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51444",
+	"Version": "1",
+	"Updated": "2026-08-29T14:20:34+00:00",
+	"Downloads": [
+		{
+			"Id": 180709,
+			"Type": "Main",
+			"DisplayName": "NoMissInteract 1.0.0",
+			"FileName": "3e/16/0d/3e160da6-f56b-44ed-b723-a5366683ae75",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 18023,
+			"Uploaded": "2026-08-29T14:20:34+00:00",
+			"Mods": [
+				{
+					"Id": "Braveturtle.NoMissInteract",
+					"DisplayName": "No-Miss Interact（不漏收）",
+					"Type": "Smapi",
+					"RelativePath": "NoMissInteract",
+					"Manifest": {
+						"Name": "No-Miss Interact（不漏收）",
+						"Description": "No-Miss Interact: prevent missed machine harvests when moving fast. 走路快时不再漏收机器：按住交互键沿机器列快速跑动时逐台收齐，不自动、不漏收。",
+						"Author": "braveturtle",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NoMissInteract.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Braveturtle.NoMissInteract"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567397,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438132,
+		"UploaderId": 293224724,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

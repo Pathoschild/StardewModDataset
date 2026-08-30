@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 50334,
+	"Name": "Seasons of Stardew",
+	"Author": "MoYuCSC",
+	"Description": "[color=#00ffff][size=4]You can now adjust the calendar's position directly with the left mouse button[/size][/color]\n<br />[color=#00ffff][size=4]现在可以直接用鼠标左键调整日历位置[/size][/color]\n<br /># Seasons of Stardew\n<br />\n<br />Extends each Stardew Valley season to 84 days (3 months × 28 days), for a 336-day year. Each season is split into 3 distinct months; includes a four-seasons calendar, season-change reminders, configurable season start month, and a birthday API.\n<br />\n<br />---\n<br />\n<br />## Features\n<br />\n<br />- **Extended Seasons**: Each season is 3 months long. Crops, weather, fish and other vanilla logic are unaffected (still on a 28-day cycle) — the season is just stretched into 3 months.\n<br />- **Four-Seasons Calendar**: The top-left corner shows a seasonal calendar texture plus the current \"month + day\" (e.g. \"March 18\").\n<br />- **Season-End Reminder**: A message on the 28th day of the 3rd month warns that the season is about to end.\n<br />- **Configurable Season Start**: Set \"Spring start month\" in the mod menu (default 1). For example, if set to 8, spring is months 8/9/10, summer is 11/12/1, fall is 2/3/4, and winter is 5/6/7.\n<br />- **Birthday System**: NPC birthdays are checked by month/day, with support for external NPC mods (already-assigned birthdays are never re-assigned).\n<br />- **Festival System**: Festivals are checked by month/day, compatible with vanilla and mod-added festivals.\n<br />- **Compatible with**: Lookup Anything (birthdays shown in the mod's calendar format), PIF (Personal Indoor Farm) room season sync.\n<br />Character birthdays will now be randomly assigned to the months that originally have the fewest seasonal events.\n<br />---\n<br />\n<br />## Configuration (GMCM)\n<br />\n<br />| Option | Description |\n<br />| --- | --- |\n<br />| Calendar X / Y position | Top-left corner of the calendar texture |\n<br />| Calendar scale | Calendar size (0.1~1.0) |\n<br />| Calendar text scale | Size of the month/day text (0.2~4.0) |\n<br />| Spring start month | The absolute month (1~12) spring starts in |\n<br />\n<br />---\n<br />\n<br />## API Usage (for mod authors)\n<br />\n<br />### Interface\n<br />\n<br />```csharp\n<br />public interface ISeasonsOfStardewApi\n<br />{\n<br />\u00A0 \u00A0 /// &lt;summary&gt;Force-set an NPC's birthday (absolute month 1-12 + day 1-28). No random assignment, persisted per save.&lt;/summary&gt;\n<br />\u00A0 \u00A0 void SetBirthday(string npcName, int absoluteMonth, int day);\n<br />}\n<br />```\n<br />\n<br />### Getting the API\n<br />\n<br />In your mod code (preferably in the `GameLaunched` event to avoid early access errors):\n<br />\n<br />```csharp\n<br />using StardewModdingAPI;\n<br />\n<br />ISeasonsOfStardewApi api = Helper.ModRegistry.GetApi&lt;ISeasonsOfStardewApi&gt;(\"MoYu.SeasonsOfStardew\");\n<br />if (api != null)\n<br />{\n<br />\u00A0 \u00A0 // API available\n<br />}\n<br />```\n<br />\n<br />&gt; Note: You must **copy the `ISeasonsOfStardewApi` interface** into your own mod (namespace may differ, but the method signature must match) to call it via `GetApi&lt;ISeasonsOfStardewApi&gt;()`.\n<br />\n<br />### Parameters\n<br />\n<br />| Parameter | Type | Description |\n<br />| --- | --- | --- |\n<br />| `npcName` | string | The NPC's internal name, e.g. `\"Abigail\"` (not the display name). Use `npc.Name`. |\n<br />| `absoluteMonth` | int | Absolute month (1~12). Automatically mapped to the correct season based on the \"Spring start month\" config. |\n<br />| `day` | int | Birthday day (1~28). |\n<br />\n<br />### Example\n<br />\n<br />```csharp\n<br />// Set Abigail's birthday to month 3, day 18\n<br />api.SetBirthday(\"Abigail\", 3, 18);\n<br />\n<br />// Set a custom NPC's birthday to month 11, day 5\n<br />api.SetBirthday(customNpc.Name, 11, 5);\n<br />```\n<br />\n<br />### Behavior\n<br />\n<br />1. **No random assignment**: After calling `SetBirthday`, that NPC's birthday is fixed and `SeasonsOfStardew` will no longer randomly assign it.\n<br />2. **Persisted**: The result is saved with the save file (in the player's `modData`), surviving restarts.\n<br />3. **Priority**: API-set birthdays take precedence over the built-in birthday table and random assignments.\n<br />4. **Absolute month mapping**: If the player changes \"Spring start month\" in GMCM, the absolute month you pass is automatically mapped to the correct season.\n<br />\n<br />---\n<br />\n<br />## Compatibility\n<br />\n<br />- Requires SMAPI 4.0.0+\n<br />- Compatible with Generic Mod Config Menu (recommended), Lookup Anything, PIF (Personal Indoor Farm)\n<br />\n<br />---\n<br />\n<br />## Credits\n<br />\n<br />Inspired by the idea of stretching the four seasons and experiencing different content month by month. Built with Harmony and SMAPI.\n<br />\n<br /># Seasons of Stardew（星露谷之四季）\n<br />\n<br />将星露谷每个季节扩展为 84 天（3 个月 × 28 天），一年共 336 天。每个季节由 3 个\"月\"组成，不同月份内容各异；附带四季日历提示、换季提醒，并支持季节起始月配置与生日 API。\n<br />\n<br />---\n<br />\n<br />## 功能简介\n<br />\n<br />- **季节扩展**：每季 3 个月，作物、天气、鱼类等原版逻辑不受影响（仍按 28 天周期推进），只是季节被\"拉长\"为 3 个月。\n<br />- **四季日历**：屏幕左上角显示四季日历贴图与当前\"月份 + 日期\"（如中文\"3月18日\"、英文\"March 18\"）。\n<br />- **换季提醒**：第 3 月第 28 天起床时提示季节即将结束。\n<br />- **季节起始月可配置**：可在模组菜单里设置\"春季开始于第几个月\"（默认 1 月）。例如设为 8 月，则春季为 8/9/10 月、夏季为 11/12/1 月、秋季为 2/3/4 月、冬季为 5/6/7 月。\n<br />- **生日系统**：NPC 生日按月/日判定，支持外部人物模组的生日分配（已分配的不再二次分配）。\n<br />- **节日系统**：节日按月/日判定，兼容原版与外部模组添加的节日。\n<br />- **兼容**：Lookup Anything（NPC 生日显示为模组日历日期）、PIF（个人室内农场）房间季节同步。\n<br />Character birthdays will now be randomly assigned to the months that originally have the fewest seasonal events.\n<br />---\n<br />\n<br />## 配置（GMCM）\n<br />\n<br />| 选项 | 说明 |\n<br />| --- | --- |\n<br />| 日历 X / Y 位置 | 日历贴图左上角坐标 |\n<br />| 日历缩放 | 日历贴图大小（0.1~1.0） |\n<br />| 日历文字缩放 | 月份、日期数字文字大小（0.2~4.0） |\n<br />| 春季开始月份 | 春季从第几个月（绝对月份 1~12）开始 |\n<br />\n<br />---\n<br />\n<br />## API 使用方法（供模组开发者）\n<br />\n<br />### 接口定义\n<br />\n<br />```csharp\n<br />public interface ISeasonsOfStardewApi\n<br />{\n<br />\u00A0 \u00A0 /// &lt;summary&gt;强制设定 NPC 的生日（绝对月份 1~12 + 日期 1~28），不再随机分配，随存档持久化。&lt;/summary&gt;\n<br />\u00A0 \u00A0 void SetBirthday(string npcName, int absoluteMonth, int day);\n<br />}\n<br />```\n<br />\n<br />### 获取 API\n<br />\n<br />在你的模组代码中（建议在 `GameLaunched` 事件里获取，避免过早调用报错）：\n<br />\n<br />```csharp\n<br />using StardewModdingAPI;\n<br />\n<br />ISeasonsOfStardewApi api = Helper.ModRegistry.GetApi&lt;ISeasonsOfStardewApi&gt;(\"MoYu.SeasonsOfStardew\");\n<br />if (api != null)\n<br />{\n<br />\u00A0 \u00A0 // API 可用\n<br />}\n<br />```\n<br />\n<br />&gt; 注意：你需要在**自己的模组**里**复制一份**这个 `ISeasonsOfStardewApi` 接口定义（命名空间随意，方法签名必须一致），才能用 `GetApi&lt;ISeasonsOfStardewApi&gt;()` 强类型调用。\n<br />\n<br />### 参数说明\n<br />\n<br />| 参数 | 类型 | 说明 |\n<br />| --- | --- | --- |\n<br />| `npcName` | string | NPC 的内部名，如 `\"Abigail\"`（不是显示名）。可用 `npc.Name` 获取。 |\n<br />| `absoluteMonth` | int | 绝对月份（1~12）。受\"春季开始月份\"配置影响，会自动映射到正确季节。 |\n<br />| `day` | int | 生日日期（1~28）。 |\n<br />\n<br />### 使用示例\n<br />\n<br />```csharp\n<br />// 设定 Abigail 的生日为 3 月 18 日\n<br />api.SetBirthday(\"Abigail\", 3, 18);\n<br />\n<br />// 设定自定义 NPC 的生日为 11 月 5 日\n<br />api.SetBirthday(customNpc.Name, 11, 5);\n<br />```\n<br />\n<br />### 行为说明\n<br />\n<br />1. **不再随机分配**：调用 `SetBirthday` 后，该 NPC 生日被固定，`SeasonsOfStardew` 不会再给它随机分配。\n<br />2. **持久化**：设定结果随存档保存（存到玩家 `modData`），重启游戏后依然有效。\n<br />3. **优先于随机分配**：生日判定时，API 设定的生日优先于内置生日表和随机分配结果。\n<br />4. **绝对月份映射**：若玩家在 GMCM 改了\"春季开始月份\"，你传入的绝对月份会自动映射到正确季节。\n<br />\n<br />---\n<br />\n<br />## 兼容性\n<br />\n<br />- 需要 SMAPI 4.0.0+\n<br />- 兼容 Generic Mod Config Menu（推荐）、Lookup Anything、PIF（Personal Indoor Farm）\n<br />\n<br />---\n<br />\n<br />## 致谢\n<br />\n<br />灵感来自把一年四季拉长、逐月体验不同内容的玩法。基于 Harmony 与 SMAPI 构建。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50334",
+	"Version": "1.0.0",
+	"Updated": "2026-08-17T18:56:25+00:00",
+	"Downloads": [
+		{
+			"Id": 179102,
+			"Type": "Main",
+			"DisplayName": "SeasonsOfStardew",
+			"FileName": "a5/8f/83/a58f83b4-5372-4644-ba2f-d944dbc8002f",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 463877,
+			"Uploaded": "2026-08-17T18:56:25+00:00",
+			"Mods": [
+				{
+					"Id": "MoYu.SeasonsOfStardew",
+					"DisplayName": "Seasons of Stardew（星露谷之四季）",
+					"Type": "Smapi",
+					"RelativePath": "SeasonsOfStardew",
+					"Manifest": {
+						"Name": "Seasons of Stardew（星露谷之四季）",
+						"Description": "将星露谷季节扩展为84天/季（3个月×28天），一年336天，附带四季日历提示与换季提醒。",
+						"Author": "MoYu",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SeasonsOfStardew.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:50334"
+						],
+						"UniqueId": "MoYu.SeasonsOfStardew"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342565790,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437022,
+		"UploaderId": 231007203,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

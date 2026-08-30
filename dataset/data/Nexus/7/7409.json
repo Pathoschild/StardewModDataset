@@ -6,8 +6,8 @@
 	"AuthorLabel": "Jamie Taylor",
 	"Description": "An in-game to-do list mod for Stardew Valley.  Horrible pun included at no extra charge.\n<br />\n<br />\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />Follow the usual installation proceedure for SMAPI mods:\n<br />1. Install [url=https://smapi.io/]SMAPI[/url]\n<br />2. Download the latest release of this mod and unzip it into the `Mods` directory\n<br />3. Run the game using SMAPI\n<br />\n<br />\n<br />[size=4][b]How To Use[/b][/size]\n<br />\n<br />Bring up the to-do list by pressing the configurable hotkey (default [font=Courier New]L[/font] for \"[b]l[/b]ist\"). \u00A0If you have the\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/6523]Mobile Phone[/url]\uFEFF mod installed then you can also bring up the list with the mobile phone app (which does exactly the same thing as the hotkey).\n<br />\n<br />Edit your list.  See \"List Editing\" below for more information on editing.\n<br />\n<br />Press escape to close the list.\n<br />\n<br />List data is saved in the game save file, so any changes since the last save will be lost when you exit.\n<br />\n<br />The list is also displayed in an overlay in the top left corner during game play.  This can be disabled in the configuration.  When the overlay is enabled,\u00A0its visibility can be toggled with a hotkey, if you configure the hotkey.  (By default, the hotkey is not configured.  Or to be pedantic, configured to `None`, which matches no buttons or keys.)\n<br />\n<br />[size=2][b]List Editing[/b][/size]\n<br />\n<br />Enter text in the textbox.  Press enter to add it to the list.\n<br />\n<br />Use the scroll gesture on your mouse or trackpad to scroll the list if it has more items than fit on one screen.  (Arrows will appear to indicate that there are more items.)\n<br />\n<br />Click a list item to mark it done. \u00A0Items that have been marked as done\u00A0will not appear in the overlay, and will be removed from the list at\u00A0the end of the day (or reset to not done if they are repeating items).\n<br />\n<br />Use the small up and down arrows to the right of items to reorder them.\n<br />Use the small configure icon to the right of an item to edit its per-item\u00A0properties (see \"Item Editing\" below).\n<br />\n<br />Right-clicking on an item will copy its text to the textbox (replacing whatever is there).  The textbox implementation is from the base game, and as far as I can tell you can only add or remove characters from the end.  If you see any open-source mods that have more advanced text editing capabilities then let me know and I'll take a look to see how they're done.\n<br />\n<br />[size=2][b]Item Editing[/b][/size]\n<br />\n<br />The item configuration screen allows you to edit the item text, move the item to the top or bottom of the list, delete the item, or set any of several properties:\n<br />\n<br />A Header item can help you organize your list by acting as a header or separator in the list.  It cannot be marked as \"done\".\n<br />\n<br />Repeating items have their \"done-ness\" reset \uFEFFat the end of each day when they\u00A0were marked as \"done\". \u00A0You can specify the number\u00A0of days before they become visible again.\n<br />\n<br />Item visibility can be set based on the weather, day of the week, and season.\n<br />\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />When SMAPI runs the mod for the first time it will create a [font=Courier New]config.json[/font] in the mod directory.  You can edit this file to configure the hotkey for opening the to-do list and for various properties of the overlay (including whether it is enabled at all).\n<br />\n<br />If [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is installed then there will be an entry for To-Dew in the in-game config menu. \u00A0A few configuration options are only available in [font=Courier New]config.json[/font] because\u00A0there is no editor for values of that type in Generic Mod Config Menu. \u00A0For\u00A0example, there are configuration options to allow multi-key bindings\u00A0(introduced in SMAPI 3.9) for the hotkey and overlay hotkey, but these are\u00A0not available in the in-game config menu.\n<br />\n<br />[size=4][b]Import and Export\n<br />[/b][/size]\n<br />\uFEFFThe to-do list for the current game can be exported to or imported from an\u00A0external file via SMAPI console commands. \u00A0Type [font=Courier New]help todo-export[/font] or\u00A0[font=Courier New]help todo-import[/font] in the SMAPI console for detailed usage information.\n<br />\n<br />The feature also allows maintaining an external \"library\" of todo items that you can add to your game. \u00A0For example, Nexus user\u00A0[url=https://www.nexusmods.com/stardewvalley/users/91942098]ImperatriceSylvanel[/url]\u00A0has created files for birthdays, daily events, etc. and published them on\u00A0[url=https://github.com/Tenebrosful/StardewToDew-Import-Data]Github[/url].\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />\n<br />Requires Stardew Valley 1.6 / SMAPI 4.0 beginning with version 2.0.Requires Stardew Valley 1.5.5 / SMAPI 3.17 beginning with version 1.13.\n<br />Requires Stardew Valley 1.5.5 / SMAPI 3.13 beginning with version 1.10.\n<br />Older versions work with Stardew Valley 1.5 / SMAPI 3.9.\n<br />\n<br />Works in single and multiplayer modes (but see\u00A0further notes on Multiplayer below). \u00A0No known incompatibilities with\u00A0other mods.\n<br />\n<br />I have no idea what things do or do not work with split-screen. \u00A0As\u00A0far as I can tell you have to have controllers to even start split-screen,\u00A0and I don't.\n<br />\n<br />Translations are included for several languages, but the translations are\u00A0all via Google Translate, so they are probably not very good.\n<br />\n<br />[size=4][b]Multiplayer Support[/b][/size]\n<br />\n<br />There is a single list for the farm, and everyone (with the mod installed) can edit it.\n<br />\n<br />List data is saved in the game save file, which is only accessible to the host.  So, in order to use the to-do list, the host must have To-Dew installed.  Farmhands that have To-Dew installed will also be able to use the list.  If a farmhand has To-Dew installed but the host does not then the farmhand will not be able to use the to-do list.  (I.e., there is no combination of places where the mod is installed or not that will result in the game being unplayable.)\n<br />\n<br />If the host and a farmhand have different versions of To-Dew installed, the mod attempts to make intelligent decisions about what to do.  Look for messages in the SMAPI console log.  This scenario is probably not well-tested and may contain bugs.\n<br />\n<br />[size=4][b]Source Code[/b][/size]\n<br />\n<br />Available on [url=https://github.com/jltaylor-us/StardewToDew]GitHub\n<br />[/url]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/7409",
-	"Version": "2.6.2",
-	"Updated": "2026-06-20T17:22:42+00:00",
+	"Version": "2.6.3",
+	"Updated": "2026-08-23T18:07:06+00:00",
 	"Downloads": [
 		{
 			"Id": 80447,
@@ -82,14 +82,14 @@
 			}
 		},
 		{
-			"Id": 171930,
+			"Id": 179869,
 			"Type": "Main",
-			"DisplayName": "ToDew 2.6.2",
-			"FileName": "dd/6c/93/dd6c930d-bb8e-48c4-b93d-16fedb198084",
+			"DisplayName": "ToDew 2.6.3",
+			"FileName": "27/3a/76/273a767b-8a9a-4755-aa82-fbd0b0b5aa82",
 			"Description": "",
-			"Version": "2.6.2",
-			"SizeInBytes": 88107,
-			"Uploaded": "2026-06-20T17:22:42+00:00",
+			"Version": "2.6.3",
+			"SizeInBytes": 88312,
+			"Uploaded": "2026-08-23T18:07:06+00:00",
 			"Mods": [
 				{
 					"Id": "jltaylor-us.ToDew",
@@ -100,7 +100,7 @@
 						"Name": "To-Dew",
 						"Description": "An in-game To-do list",
 						"Author": "Jamie Taylor",
-						"Version": "2.6.2",
+						"Version": "2.6.3",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "ToDew.dll",
 						"Dependencies": [],
@@ -113,7 +113,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342558618,
+				"Uid": 5596342566557,
 				"CategoryId": 1,
 				"Primary": true
 			}

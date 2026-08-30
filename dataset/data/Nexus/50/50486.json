@@ -1,0 +1,77 @@
+{
+	"Site": "Nexus",
+	"Id": 50486,
+	"Name": "Natural Paths Plus 1.6",
+	"Author": "TylerBits",
+	"Description": "[size=5][b]Natural Paths Plus 1.6[/b][/size]\n<br />\n<br />This mod adds 4 fully functional, seamless custom paths to Stardew Valley: [b]Dirt, Grass, Forest Grass (Dark), and Dense Grass (Darkest).[/b]\n<br />\n<br />Built from the ground up for 1.6, it goes beyond just adding textures by integrating advanced quality-of-life mechanics like block-swapping, tool protection, and deterministic texture variations.\n<br />[size=4]\n<br />✨ \u00A0Key Features[/size]\n<br />\n<br />[list]\n<br />[*][b]Adaptive Autotiling:[/b]\u00A0Unlike older methods that rely on simple transparent edges, this mod uses true engine-level autotiling. Paths dynamically adapt their borders, corners, and transition states based on neighboring path tiers (e.g., Darkest Grass seamlessly blends into Dark Grass with custom-authored transition art). [/*]\n<br />[*][b]Terraria-Style Block Swapping:\u00A0[/b]Place a new path directly over an old one to instantly swap it. No need to break the old path first.[/*]\n<br />[*][b]Underlay Support:[/b] Works perfectly under trees, grass starters, and debris.[/*]\n<br />[*][b]Path\u00A0Variations:\u00A0[/b]Paths naturally spawn variations (flowers, pebbles, rocks). These are tied to the tile coordinates, meaning they look organic but won't flicker or change every time you load your save.[/*]\n<br />[*][b]Compatible with map recolors[/b]\u00A0(DaisyNiko's Earthy Recolor, Vibrant Pastoral, Starblue, etc.).\n<br />\u00A0 [/*]\n<br />[/list]\n<br />[size=4][b]⚙️ Configuration (GMCM)[/b][/size]\n<br />\n<br />Fully compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]. You can change these settings in-game:\n<br />[list]\n<br />[*][b]Path Speed Bonus:\u00A0[/b]Adjust the movement speed multiplier when walking on these paths.[/*]\n<br />[*][b]Texture Variation Level:[/b]\u00A0A slider (0-3) to control how often flowers and pebbles spawn on the paths (0% to 30% chance).[/*]\n<br />[*][b]Toggle Mechanics:[/b] Enable or disable Path Swapping, Tool Protection, and Grass Spread.[/*]\n<br />[/list]\n<br />[size=4][b]\uD83D\uDCE6 Installation[/b][/size]\n<br />\n<br />1. Install the latest version of [url=https://smapi.io/]SMAPI[/url].\n<br />2. Install [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].\u00A0\n<br />3. (Optional but recommended) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].\n<br />4. Download this mod and extract the `.zip` file into your `Stardew Valley/Mods` folder.\n<br />5. Run the game using SMAPI.\n<br />\n<br />[b][size=4]⚠️ Compatibility[/size][/b]\n<br />[list]\n<br />[*]Works natively with [b]Stardew Valley 1.6.[/b][/*]\n<br />[*]Safe to add or remove mid-save. If you remove the mod, the custom paths will safely disappear from your farm without crashing.[/*]\n<br />[*][b]Compatible with map recolors[/b]\u00A0(DaisyNiko's Earthy Recolor, Vibrant Pastoral, Starblue, etc.).[/*]\n<br />[/list]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50486",
+	"Version": "1",
+	"Updated": "2026-08-10T12:41:15+00:00",
+	"Downloads": [
+		{
+			"Id": 178130,
+			"Type": "Main",
+			"DisplayName": "Natural Paths",
+			"FileName": "73/c5/14/73c5140b-b713-4638-a5d9-127b92cca176",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 35997,
+			"Uploaded": "2026-08-10T12:41:15+00:00",
+			"Mods": [
+				{
+					"Id": "tkedi.AutotilePaths",
+					"DisplayName": "Autotile Paths",
+					"Type": "Smapi",
+					"RelativePath": "AutotilePaths",
+					"Manifest": {
+						"Name": "Autotile Paths",
+						"Description": "Renders custom paths with 47-state Wang autotiling, ripped at runtime from the live vanilla outdoors tilesheet.",
+						"Author": "tkedi",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AutotilePaths.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "tkedi.AutotilePaths"
+					}
+				},
+				{
+					"Id": "tkedi.AutotilePaths.CP",
+					"DisplayName": "Autotile Paths (Content)",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Autotile Paths",
+					"Manifest": {
+						"Name": "Autotile Paths (Content)",
+						"Description": "Registers the Autotile Paths floor, its item, and its crafting recipe.",
+						"Author": "tkedi",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "tkedi.AutotilePaths",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "tkedi.AutotilePaths.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564818,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437174,
+		"UploaderId": 107361013,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

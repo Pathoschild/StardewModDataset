@@ -4,10 +4,10 @@
 	"Name": "FarmLink - LAN Server Discovery",
 	"Author": "sjohnson1021",
 	"AuthorLabel": "sjohnson1012",
-	"Description": "[size=6][b]FarmLink - Seamless LAN Discovery for Stardew Valley[/b][/size]\n<br />\n<br />[b]FarmLink[/b]\u00A0brings native-feeling LAN discovery to Stardew Valley. It eliminates the need to manually share and type IP addresses by automatically broadcasting hosted games to your local network and listing them directly in the Co-op menu.\n<br />\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[b][size=4]Seamless Co-op Menu Integration[/size][/b]\n<br />Servers discovered on your network appear automatically in the\u00A0[b]Co-op -&gt; Join -&gt; LAN[/b]\u00A0tab, just like standard Steam/GOG invites.\n<br />\n<br />[list]\n<br />[*][b]Zero Configuration[/b]: Works out of the box for most users.\n<br />[*][b]Rich Details[/b]: Displays the\u00A0[b]Farm Name[/b],\u00A0[b]Host Name[/b],\u00A0[b]Player Count[/b]\u00A0(e.g., 1/4), and the\u00A0[b]Server IP Address[/b].\n<br />[*][b]Visual Flair[/b]: Shows the correct icon for the farm type (Standard, Beach, etc.), including support for\u00A0[b]Modded Farm Types[/b].\n<br />[/list][img]https://i.imgur.com/nFGkCfA.png[/img]\n<br />[b][size=4]\n<br />Smart Broadcasting[/size][/b]\n<br />When you host a game, FarmLink acts as a beacon, announcing your server to other local FarmLink users.\n<br />\n<br />[list]\n<br />[*][b]VLAN Suppport[/b]: Fully compatible with virtual LANs like\u00A0[b]ZeroTier[/b],\u00A0[b]Hamachi[/b], and\u00A0[b]Radmin VPN[/b].\n<br />[*][b]Multi-Interface[/b]: Can be configured to broadcast across\u00A0[i]all[/i]\u00A0network adapters simultaneously, ensuring you're visible regardless of complex network setups.\n<br />\n<br />Real example of the exact packet that is broadcast:\n<br />[code]\uFEFF{\"Protocol\":\"StardewLAN\",\"FarmName\":\"Sandy\",\"HostName\":\"BeachBum\",\"PlayerCount\":\"1/8\",\"GameVersion\":\"1.6.15\",\"Port\":24642,\"FarmTypeId\":\"6\"}\n<br />[/code]\n<br />\n<br />[/list]\n<br />[b][size=4]Configuration[/size][/b]\n<br />FarmLink is fully integrated with\u00A0[b]Generic Mod Config Menu (GMCM)[/b]\u00A0for easy in-game settings adjustment.\n<br />[img]https://i.imgur.com/lXPljjQ.png[/img]\n<br />[list]\n<br />[*][b]Broadcast Interval:[/b]\u00A0Set the interval at which to announce the server/send the discovery packets (Default: 2 seconds).\n<br />[*][b]Broadcast Across All Interfaces: [/b]Force the mod to shout on all available networks (useful for troubleshooting connection visibility)\n<br />[*][b]Enable LAN Scaning:[/b]\u00A0Toggles the listener/scanner functionality\uFEFF\n<br />[*][b]Broadcast Port: [/b](Advanced) Change the port used for discovery packets (Default: 24644)\n<br />\n<br />[*][b]Game Port: [/b](Advanced) Ensure this matches your server's actual game port (Default:24642)\n<br />[*][b]Network Adapter:[/b]\u00A0\u00A0Select specifically which network interface to use (e.g. Ethernet vs Wi-Fi vs ZeroTier/Hamachi).\n<br />[/list]\n<br />[b][size=4]How to Use\n<br />\n<br />[/size][/b][list=1]\n<br />[*][b]Install[/b]\u00A0FarmLink on both the Host and Client computers.\n<br />[*][b]Host[/b]: Start your Co-op farm as usual.\n<br />[*][b]Client[/b]: Go to Co-op -&gt; Join -&gt;\u00A0[b]Join LAN Game[/b].\n<br />[*]Your host's farm will appear in the list. Click it to join!\n<br />[/list]\n<br />[b][size=4]Compatibility\n<br />\n<br />[/size][/b][list]\n<br />[*]Requires\u00A0[b]Stardew Valley 1.6+[/b]\u00A0and\u00A0[b]SMAPI 4.0+[/b].\n<br />[*]Works with\u00A0[b]all modded farm types[/b]\u00A0(custom icons will load if provided by the mod author).\n<br />[*]Compatible with\u00A0[b]Split Screen[/b]\u00A0(LAN scanning is auto-disabled in split-screen mode to prevent UI clutter).\n<br />\n<br />\n<br />[/list][size=4]Source Code\n<br />[/size][size=3][url=https://github.com/sjohnson1021/FarmLink]The source code is available on GitHub[/url]\uFEFF\uFEFF\uFEFF[/size]",
+	"Description": "[size=6][b]FarmLink[/b][/size]\n<br />\n<br />Swapping IP addresses to play co-op is a chore. [b]FarmLink[/b] removes that step. Host a game and you appear in your friends' Co-op menu automatically, along with the farm name, who is hosting, and how full the farm is. Click the entry to join.\n<br />\n<br />Install it on both computers and you are done. There is nothing to configure.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/41128/41128-1768081089-1326374354.png[/img]\n<br />[size=5][b]In the Co-op menu, where you would expect it[/b][/size]\n<br />Farms found on your network are listed under [b]Co-op -&gt; Join[/b] alongside everything else.\n<br />\n<br />[list]\n<br />[*][b]Nothing to set up.[/b] The settings menu exists for unusual networks, not for normal\u00A0ones.[/*]\n<br />[*][b]The details you want:[/b] farm name, host, player count, and address.[/*]\n<br />[*][b]The right farm icon[/b] for Standard, Beach, Riverland and the rest, including farm\u00A0types added by other mods.[/*]\n<br />[*][b]No firewall rule.[/b] Older versions asked you to open a port by hand. That step is\u00A0gone.[/*]\n<br />[/list]\n<br />[size=5][b]Friends who are somewhere else[/b][/size]\n<br />\n<br />FarmLink also works over a virtual network, so local co-op doesn't have to mean the same building.\n<br />\n<br />[list]\n<br />[*][b]Tailscale[/b] needs no configuration. Machines on your tailnet are found the same way\u00A0machines on your home network are. This was tested on two computers on genuinely separate\u00A0connections, one on home broadband and one on a phone hotspot.[/*]\n<br />[*][b]ZeroTier[/b] works, and is slower. Give it ten or fifteen seconds in the Co-op menu rather than one or two.[/*]\n<br />[*][b]Hamachi and Radmin VPN[/b] are expected to work but have not been verified. They create a virtual network adapter in much the same way ZeroTier does, and that is the part\u00A0FarmLink depends on.[/*]\n<br />[*][b]Anything else:[/b] put your friend's address into [b]Extra Addresses[/b] and FarmLink will check it directly. This route doesn't rely on the VPN carrying broadcast traffic, so it still works where automatic discovery doesn't.[/*]\n<br />[/list]\n<br />When a friend is reachable both on your home network and over a VPN, FarmLink now uses the\n<br />home network rather than whichever answered first.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/41128/41128-1785895810-999293024.png[/img]\n<br />[size=5][b]Settings[/b][/size]\n<br />There are three, through [b]Generic Mod Config Menu[/b], and most people never open them.\n<br />\n<br />[list]\n<br />[*][b]Enable LAN Server Discovery[/b] turns the whole thing off if you would rather type addresses yourself.[/*]\n<br />[*][b]Extra Addresses[/b] is usually empty. Put an address here for a VPN that FarmLink\u00A0cannot find on its own.[/*]\n<br />[*][b]Network Adapters[/b] starts with everything ticked, which is right for almost everyone.[/*]\n<br />[/list]\n<br />That last one is a privacy setting. When you host, FarmLink announces your farm name and your character's name over each ticked adapter so that friends can find you. If the machine has a work VPN on it, a corporate Wi-Fi profile, or a connection you pay for by\n<br />the megabyte, untick it and FarmLink will stay off it completely.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/41128/41128-1785895810-1434211454.png[/img]\n<br />Unticking an adapter never helps anyone find you. All it does is stop you being announced somewhere. Adapters you add later are used automatically, so a VPN you install next month needs no attention.\n<br />\n<br />[size=5][b]What changed in 2.0[/b][/size]\n<br />\n<br />[list]\n<br />[*]Works across Tailscale and ZeroTier instead of one home network.[/*]\n<br />[*]Joining no longer needs a firewall rule, because FarmLink sets the connection up itself.[/*]\n<br />[*]Discovery was rebuilt on DNS-SD, the standard used for this everywhere else. Farms turn\u00A0up faster and get through firewalls that used to block them.[/*]\n<br />[*]The adapter picker is back as a privacy setting rather than a troubleshooting one, and as a list you tick rather than a single choice.[/*]\n<br />[*][b]Removed:[/b] Broadcast Interval, Broadcast Port, Game Port, and Broadcast Across All Adapters. The first two stopped meaning anything when discovery moved to the standard port. Game Port never worked, because Stardew hardcodes it, so changing it only broke your own join address. Old settings still sitting in [font=Courier New]config.json[/font] are\u00A0ignored and nothing needs migrating.[/*]\n<br />[/list]\n<br />[size=5][b]What isn't proven yet[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Hamachi and Radmin VPN.[/b] Very likely fine, for the reason above, but nobody has\u00A0run them. If one of them doesn't work, [b]Extra Addresses[/b] will still get you connected.[/*]\n<br />[*][b]Some Wi-Fi networks block this kind of traffic.[/b] Guest networks and a few mesh\u00A0systems drop it. [b]Extra Addresses[/b] is the way around that too.\u00A0[b]Linux has had the most testing.[/b] Windows and macOS use the same standard\u00A0mechanism and should behave, but they have had less use.[/*]\n<br />[/list]\n<br />[size=5][b]Compatibility[/b][/size]\n<br />\n<br />[list]\n<br />[*]Requires [b]Stardew Valley 1.6+[/b] and [b]SMAPI 4.0+[/b].[/*]\n<br />[*]Works with [b]all modded farm types[/b]. Custom icons load if the farm's author provided\u00A0one.[/*]\n<br />[*]Works with [b]Split Screen[/b]. Discovery switches itself off there to keep the menu\u00A0tidy.[/*]\n<br />[*][b]Generic Mod Config Menu[/b] is optional, and only needed if you want to change\u00A0settings in game.[/*]\n<br />[/list]\n<br />[size=4][b]Source code[/b][/size]\n<br />[url=https://github.com/sjohnson1021/FarmLink]FarmLink on GitHub[/url], including what was measured, what wasn't, and why several tempting ideas were rejected.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/41128",
-	"Version": "1.0",
-	"Updated": "2026-01-10T21:50:21+00:00",
+	"Version": "2.0.0",
+	"Updated": "2026-08-05T11:41:00+00:00",
 	"Downloads": [
 		{
 			"Id": 153053,
@@ -44,6 +44,45 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342539741,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 177408,
+			"Type": "Main",
+			"DisplayName": "FarmLink.zip",
+			"FileName": "0a/11/33/0a11337d-abe5-4b4e-804b-842e3aacb25e",
+			"Description": "Revised 2.0 version, which works over TailScale, ZeroTier, and other network overlays/VPN-like software. Should not require manual firewall/port configuration.",
+			"Version": "2.0.0",
+			"SizeInBytes": 96444,
+			"Uploaded": "2026-08-05T11:41:00+00:00",
+			"Mods": [
+				{
+					"Id": "sjohnson1021.FarmLink",
+					"DisplayName": "FarmLink",
+					"Type": "Smapi",
+					"RelativePath": "FarmLink",
+					"Manifest": {
+						"Name": "FarmLink",
+						"Description": "Announces your co-op farm on the local network when hosting, and lists the farms it finds in the co-op menu, using standard DNS-SD service discovery.",
+						"Author": "Sean Johnson",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmLink.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "sjohnson1021.FarmLink"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564096,
 				"CategoryId": 1,
 				"Primary": true
 			}

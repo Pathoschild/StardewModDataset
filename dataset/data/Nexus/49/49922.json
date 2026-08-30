@@ -3,15 +3,15 @@
 	"Id": 49922,
 	"Name": "Nyapu Style Portraits for NPC Eleanor",
 	"Author": "chlkyy",
-	"Description": "[b]This mod has no content patcher components, it consists of files to replace the portraits in the base mod. To install, drag and drop the images in the corresponding folders and replace the base portraits.[/b]\n<br />\n<br />[b]Special thanks to [url=https://www.nexusmods.com/profile/nyapu]Nyapu[/url] for their portraits, and\u00A0[url=https://www.nexusmods.com/profile/StrojvedouciDenis]StrojvedouciDenis[/url]\u00A0for the base mod![/b]",
+	"Description": "[b]This mod has two files, a\u00A0content patcher mod\u00A0file and a direct png replacement file.\u00A0To install the png replacement file,\u00A0drag and drop the images in the corresponding folders and replace the base portraits. For the content patcher file, simply drag the file\u00A0into your mods folder.[/b]\n<br />\n<br />[b]Special thanks to [url=https://www.nexusmods.com/profile/nyapu]Nyapu[/url] for their portraits, [url=https://www.nexusmods.com/profile/DolphinIsNotaFish?gameId=1303]DolphinIsNotaFish[/url] for the content patcher components,\u00A0[/b][b]and\u00A0[url=https://www.nexusmods.com/profile/StrojvedouciDenis]StrojvedouciDenis[/url]\u00A0for the base mod![/b]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49922",
 	"Version": "1",
-	"Updated": "2026-07-29T23:04:18+00:00",
+	"Updated": "2026-07-31T13:36:44+00:00",
 	"Downloads": [
 		{
 			"Id": 176716,
 			"Type": "Main",
-			"DisplayName": "Nyapu Style Eleanor",
+			"DisplayName": "(PNG REPLACER) Nyapu Style Eleanor",
 			"FileName": "1c/f8/f3/1cf8f323-7297-4a0c-aead-fb0d1b1a2be1",
 			"Description": "",
 			"Version": "1",
@@ -29,6 +29,50 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342563404,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 176901,
+			"Type": "Main",
+			"DisplayName": "(CONTENT PATCHER) Nyapu Style Eleanor",
+			"FileName": "db/3b/3a/db3b3a32-9c5c-4934-9cbe-e932cc27ffe6",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 65310,
+			"Uploaded": "2026-07-31T13:36:44+00:00",
+			"Mods": [
+				{
+					"Id": "chlkyy.NyapuEleanor",
+					"DisplayName": "Nyapu-style Eleanor",
+					"Type": "ContentPack",
+					"RelativePath": "Nyapu Style Eleanor",
+					"Manifest": {
+						"Name": "Nyapu-style Eleanor",
+						"Description": "Editing the Custom NPC Eleanor into Nyapu's style",
+						"Author": "chlkyy",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.9.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "1.20.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "StrojvedouciDenis.Eleanor",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:49922"
+						],
+						"UniqueId": "chlkyy.NyapuEleanor"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342563589,
 				"CategoryId": 1,
 				"Primary": true
 			}

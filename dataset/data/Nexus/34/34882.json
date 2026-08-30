@@ -3,31 +3,31 @@
 	"Id": 34882,
 	"Name": "Multiple Actions on Purchase",
 	"Author": "MoorTarPetal",
-	"Description": "Multiple iterations of ActionsOnPurchase will be performed rather than just once when multi purchasing with the right mouse button in the shop menu.",
+	"Description": "Multiple iterations of ActionsOnPurchase will be performed rather than just once when multi purchasing with the right mouse button in the shop menu.\n<br />\n<br />[b]Not Compatible with Mobile[/b]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/34882",
-	"Version": "2.0.0",
-	"Updated": "2026-06-08T19:15:41+00:00",
+	"Version": "2.0.1",
+	"Updated": "2026-08-18T06:27:34+00:00",
 	"Downloads": [
 		{
-			"Id": 170495,
+			"Id": 179143,
 			"Type": "Main",
-			"DisplayName": "AOP (v.2.0.0)",
-			"FileName": "AOP (v.2.0.0)-34882-2-0-0-1780946141.zip",
+			"DisplayName": "AOP (v.2.0.1)",
+			"FileName": "0a/8f/d5/0a8fd57d-c229-448e-8a7a-5cb945057926",
 			"Description": "",
-			"Version": "2.0.0",
-			"SizeInBytes": 12177,
-			"Uploaded": "2026-06-08T19:15:41+00:00",
+			"Version": "2.0.1",
+			"SizeInBytes": 13851,
+			"Uploaded": "2026-08-18T06:27:34+00:00",
 			"Mods": [
 				{
 					"Id": "MoorTarPetal.MultipleActionsOnPurchase",
 					"DisplayName": "AOP",
 					"Type": "Smapi",
-					"RelativePath": "AOP",
+					"RelativePath": "AOP_\\AOPCode",
 					"Manifest": {
 						"Name": "AOP",
 						"Description": "Multiplies ActionsOnPurchase",
 						"Author": "MoorTarPetal",
-						"Version": "2.0.0",
+						"Version": "2.0.1",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "AOP.dll",
 						"Dependencies": [],
@@ -36,10 +36,34 @@
 						],
 						"UniqueId": "MoorTarPetal.MultipleActionsOnPurchase"
 					}
+				},
+				{
+					"Id": "MoorTarPetal.AOPCP",
+					"DisplayName": "AOPCP",
+					"Type": "ContentPack",
+					"RelativePath": "AOP_\\[CP]AOP",
+					"Manifest": {
+						"Name": "AOPCP",
+						"Description": "AOP Error Transations",
+						"Author": "MoorTarPetal",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "MoorTarPetal.MultipleActionsOnPurchase",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "MoorTarPetal.AOPCP"
+					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342557183,
+				"Uid": 5596342565831,
 				"CategoryId": 1,
 				"Primary": false
 			}

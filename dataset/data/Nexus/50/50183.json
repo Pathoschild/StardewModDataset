@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 50183,
+	"Name": "Junimo Storage Manager",
+	"Author": "Sinbad37",
+	"Description": "Junimo Storage Manager\n<br />[b]Junimo Storage Manager turns Junimo Chests into a network-based storage and collection system.[/b]\n<br />Use Junimo Chests as [b]Storage Anchors[/b] and [b]Collectors[/b] to connect storage chests, machines, tappers, trees, Junimo Huts, and other supported sources.\n<br />[b]Collectors gather → the Storage Anchor receives → filtered chests store.[/b]\n<br />[b]\uD83D\uDEE0️ Optional Junimo Chest Crafting\n<br />Junimo Chest crafting can be enabled in the configuration menu. Disabled by default.\n<br />[/b]\n<br />[line]\n<br />\uD83D\uDFE3 Storage Anchor\n<br />The [b]Storage Anchor[/b] is the central point of your storage network.\n<br />Connect it to normal Chests and Big Chests. Items reaching the Anchor are automatically routed to the appropriate chest using [b]Convenient Chests 2[/b] filters.\n<br />[code]\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \uD83D\uDFE3 STORAGE ANCHOR\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 │\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 ┌─────────────┼─────────────┐\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 ▼\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 ▼\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 ▼\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 Chest\u00A0 \u00A0 \u00A0 \u00A0\u00A0 Chest\u00A0 \u00A0 \u00A0 \u00A0\u00A0 Chest\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 Crops\u00A0 \u00A0 \u00A0 Artisan Goods\u00A0 \u00A0 \u00A0 Ores[/code][line]\n<br />\uD83D\uDFE3 Collector\n<br />A [b]Collector[/b] is a Junimo Chest placed near the things you want to collect.\n<br />Collectors can connect to:\n<br />[list]\n<br />[*]Machines &amp; Crystalariums[/*]\n<br />[*]Tappers[/*]\n<br />[*]Trees[/*]\n<br />[*]Junimo Huts[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/50180]Junimo Harvest Chest[/url][/*]\n<br />[/list]Collected items are sent through the network to the Storage Anchor.\n<br />[code]\u00A0 \u00A0\u00A0 Keg ─┐\n<br />\u00A0 \u00A0\u00A0 Jar ─┤\n<br />\u00A0\u00A0 Tapper ┤\n<br />\u00A0 \u00A0 Tree ─┤\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ▼\n<br />\u00A0 \u00A0\u00A0 \uD83D\uDFE3 COLLECTOR\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ▼\n<br />\u00A0\u00A0 \uD83D\uDFE3 STORAGE ANCHOR\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 \u00A0\u00A0 ┌────┼────┐\n<br />\u00A0 \u00A0\u00A0 ▼\u00A0 \u00A0 ▼\u00A0 \u00A0 ▼\n<br />\u00A0\u00A0 Chest Chest Chest[/code][b]Collectors are collection points, not storage destinations.[/b]\n<br />[line]\n<br />\uD83C\uDF33 Trees &amp; Tappers\n<br />Trees can be connected through [b]paths or flooring[/b], allowing one Collector to service a larger area.\n<br />[code]\uD83C\uDF33 ─ \uD83C\uDF33 ─ \uD83C\uDF33 ─ \uD83C\uDF33 ─ \uD83C\uDF33\n<br />└────── Path / Flooring ──────┐\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ▼\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \uD83D\uDFE3 Collector[/code]The optional [b]Tree Shaking[/b] feature can also shake connected trees and collect eligible drops.\n<br />[line]\n<br />\uD83C\uDFE0 Junimo Huts &amp; Harvest Chest\n<br />[b]Junimo Huts[/b] can send harvested crops into the network.\n<br />If you use [b]Junimo Harvest Chest[/b], Junimo Storage Manager can collect eligible items stored by it while leaving its normal harvesting and replanting behavior intact.\n<br />[line]\n<br />\uD83D\uDCE6 Storage Filtering\n<br />[b]Convenient Chests 2 is required.[/b]\n<br />Junimo Storage Manager uses its filters to determine where items should be stored.\n<br />You can therefore organize your storage however you like:\n<br />[code]\uD83D\uDFE3 Storage Anchor\n<br />\u00A0 \u00A0 \u00A0 │\n<br />\u00A0 \u00A0 \u00A0 ├── Chest → Crops\n<br />\u00A0 \u00A0 \u00A0 ├── Chest → Artisan Goods\n<br />\u00A0 \u00A0 \u00A0 ├── Chest → Ores &amp; Bars\n<br />\u00A0 \u00A0 \u00A0 ├── Chest → Minerals\n<br />\u00A0 \u00A0 \u00A0 └── Chest → Wood &amp; Forage[/code]No separate filtering system is added by this mod.\n<br />[line]\n<br />\u00A0 \u00A0 Trees\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0Machines\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Tappers\n<br />\u00A0 \u00A0 \u00A0 │\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0│\n<br />\u00A0 \u00A0 \u00A0▼\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0▼\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0▼\n<br />\uD83D\uDFE3 Collector\u00A0 \u00A0 \u00A0 \u00A0 \uD83D\uDFE3 Collector\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \uD83D\uDFE3 Collector\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0│\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 \u00A0 │\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 │\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0└───────────┴────┬───────┘\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ▼\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\uD83D\uDFE3 STORAGE ANCHOR\n<br />\n<br />[line]\n<br />⚙️ Setup\n<br />[list=1]\n<br />[*]Place your storage Chests and Big Chests.[/*]\n<br />[*]Configure their filters with [b]Convenient Chests 2[/b].[/*]\n<br />[*]Place a [b]Storage Anchor[/b].[/*]\n<br />[*]Connect your storage to the Anchor.[/*]\n<br />[*]Place [b]Collectors[/b] near your machines, trees, tappers, or other supported sources.[/*]\n<br />[*]Connect everything using the supported network connections.[/*]\n<br />[/list]Then let the Junimos handle the rest.\n<br />[line]\n<br />\uD83E\uDD16 Automate Compatibility\n<br />[b]Automate is optional and compatible.[/b]\n<br />However, Automate may treat Collector Junimo Chests as normal storage.\n<br />If you use Automate, make sure it [b]does not use your Collector chests as storage destinations[/b].\n<br />[line]\n<br />⚠️ Important\n<br />[list]\n<br />[*]Junimo Chests act as [b]Anchors or Collectors[/b], not final storage.[/*]\n<br />[*]The mod does not continuously reorganize items already inside normal chests.[/*]\n<br />[*][b]Convenient Chests 2[/b] handles storage filtering.[/*]\n<br />[*][b]Automate is not required.[/b][/*]\n<br />[/list][line]\n<br />Quick Summary\n<br />[b]\uD83D\uDFE3 Collector[/b]\n<br />Collects items from supported sources.\n<br />[b]\uD83D\uDFE3 Storage Anchor[/b]\n<br />Receives and distributes collected items.\n<br />[b]\uD83D\uDCE6 Chests[/b]\n<br />Store items according to their Convenient Chests 2 filters.\n<br />[code]SOURCE\n<br />\u00A0 ↓\n<br />\uD83D\uDFE3 COLLECTOR\n<br />\u00A0 ↓\n<br />\uD83D\uDFE3 STORAGE ANCHOR\n<br />\u00A0 ↓\n<br />\uD83D\uDCE6 FILTERED CHEST[/code][b]Collectors gather. The Anchor distributes. Convenient Chests 2 decides where things go.[/b]\n<br />[line]\n<br />[heading]Credits[/heading]\n<br />Thanks to the[b] [url=https://www.nexusmods.com/stardewvalley/mods/32558]Convenient Chests 2[/url][/b] author ([url=https://www.nexusmods.com/profile/SummerFleur]SummerFleur[/url]) for the filtering API this mod depends on.\u00A0\u00A0\n<br />Special thanks to [b]ChatGPT[/b] for help with code structure, debugging, and polishing the mod. ",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50183",
+	"Version": "1.2.5",
+	"Updated": "2026-08-29T16:50:41+00:00",
+	"Downloads": [
+		{
+			"Id": 180718,
+			"Type": "Main",
+			"DisplayName": "JunimoStorageManager",
+			"FileName": "07/2a/00/072a008a-f796-4ada-9829-1bfd302afdf7",
+			"Description": "Added a crafting recipe for additional Junimo Chests.\nStreamlined and reorganized the configuration menu.\n\nImportant: Delete the previous version of the mod and install this new version to ensure all configuration settings are updated correctly. ",
+			"Version": "1.2.5",
+			"SizeInBytes": 70998,
+			"Uploaded": "2026-08-29T16:50:41+00:00",
+			"Mods": [
+				{
+					"Id": "Sinbad.JunimoStorageManager",
+					"DisplayName": "Junimo Storage Manager",
+					"Type": "Smapi",
+					"RelativePath": "JunimoStorageManager",
+					"Manifest": {
+						"Name": "Junimo Storage Manager",
+						"Description": "Routes manual Junimo Chest input plus ready machine, tapper, tree, Junimo Hut, and Junimo Harvest Chest outputs into connected Convenient Chests 2 filtered storage.",
+						"Author": "Sinbad",
+						"Version": "1.2.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "JunimoStorageManager.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "SummerFleur.ConvenientChests",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Sinbad.JunimoHarvestChest",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Sinbad.JunimoStorageManager"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567406,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342436871,
+		"UploaderId": 181902084,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

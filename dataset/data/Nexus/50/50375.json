@@ -1,0 +1,108 @@
+{
+	"Site": "Nexus",
+	"Id": 50375,
+	"Name": "Dynamic NPC Outfit Selector",
+	"Author": "aneirine",
+	"Description": "[i][b]Ever wished you could pick what each villager wears? Now you can.\n<br />[/b][/i]\n<br />This mod exists because I got tired of manually swapping files between folders to get the look\u00A0I wanted for a season or a festival.\u00A0I wanted\u00A0something dynamic instead, something I could\u00A0just click through in-game.\u00A0\n<br />\n<br />[b]RECENT UPDATE: 1.1.0[/b]\n<br />\n<br />Outfits can now depend on the weather and on where a character is, not just the\u00A0season. Give someone a light coat indoors and a heavy one outdoors while it snows,\u00A0or a look that only shows up at the beach. Locations added by other mods appear in\u00A0the list on their own.\n<br />\n<br />Also new: a search box for the NPC list, an F9 hotkey to open the menu, and the\u00A0menu now opens showing what each character is actually wearing.\n<br />\n<br />Your existing settings carry over untouched.\n<br />\n<br />\n<br />[color=#ffffff][font=Arial Black][i][b]IMPORTANT:[/b][/i]\u00A0This mod doesn't add any outfits on its own.\u00A0It's a picker, not an art pack. It reads whatever's\u00A0already loaded in your game (from Content Patcher appearance packs, or your own PNGs, see\u00A0Requirements below) and lets you choose between them.[/font]\n<br />[/color]\n<br />\n<br />[font=Arial Black][color=#ffffff]Note:[/color][color=#ff0000]\u00A0festival [/color][color=#ffffff]and [/color][color=#ff0000]beach[/color][color=#ffffff] outfits sometimes have fewer animation frames than a regular\u00A0[/color][/font][color=#ffffff][font=Arial Black]seasonal outfit's spritesheet. Forcing one onto a different season can cause visual\u00A0[/font][/color][font=Arial Black][color=#ffffff]glitches (mismatched or invisible frames) if the source art doesn't have a full set.\u00A0Use at your own discretion,\u00A0if something looks off, just switch that slot back to \"no override.\"[/color][/font]\n<br />\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/50375/50375-1786193306-1627950116.gif[/img]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#D4D4D8]1. Install SMAPI.\n<br />2. Install Generic Mod Config Menu. It is\u00A0required\u00A0for the menu to be displayed\n<br />3. Unzip this mod into your Stardew Valley/Mods folder, so you end up with Mods/Dynamic NPC Outfit Selector/manifest.jso\n<br />4. Launch the game through SMAPI. Open the mod's page from the GMCM cog on the title screen or the in-game pause menu[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][color=#d4d4d8]Lists every NPC and every outfit variant currently loaded in your game as a clickable picture,\u00A0no matter which mod (or mods) it came from.\u00A0[/color][/*]\n<br />[*][color=#d4d4d8]Pick a condition from a dropdown — Spring, Summer, Fall, Winter, Beach, or a specific festival,\u00A0then check the outfit you want for it. Leave it on the blank \"no override\" card to let the\u00A0game (or whatever mod normally handles that NPC) keep deciding on its own.[/color][/*]\n<br />[*]Applies live: no restart, no reload, just hit Save and NPCs already in the world update immediately.[/*]\n<br />[*]Works with any Content Patcher appearance pack automatically, and also with your own [color=#d4d4d8]loose PNG files if you don't have (or want to make) a Content Patcher pack of your own.[/color][/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Stardew Valley 1.6+[/color][/*]\n<br />[*][color=#D4D4D8]SMAPI 4.0.0+[/color][/*]\n<br />[*][color=#D4D4D8]Generic Mod Config Menu is\u00A0required; the mod does nothing without it.[/color][/*]\n<br />[*][color=#D4D4D8]Content Patcher — optional, only needed if you want outfits from other authors' appearance packs. Your own local PNGs work without it.[/color][/*]\n<br />[*][color=#D4D4D8]Outfits themselves aren't included. You'll need at least one of:[/color]\n<br />1. A Content Patcher appearance pack (most \"seasonal outfit\" mods on Nexus already work this\u00A0way — just install it normally and its outfits show up here automatically), or\n<br />2.\u00A0Your own PNGs dropped straight into Mods/Dynamic NPC Outfit Selector/assets/Characters/ and\u00A0assets/Portraits/, named \"&lt;NpcName&gt;_&lt;Condition&gt;.png\" (e.g. \"Haley_Spring.png\",\u00A0\"Haley_Beach.png\"). Subfolders don't matter; portraits are optional. Full instructions are\u00A0in assets/README.txt once the mod is installed.[/*]\n<br />[/list][b]Known Limitations[/b]\n<br />[list]\n<br />[*]Only NPCs with proper appearance data show real alternatives. Older mods that just overwrite a texture file directly aren't represented as separate options — there's nothing to list[/*]\n<br />[*]\"Beach\" currently covers Ginger Island's beach resort. The regular Pelican Town beach look is swapped by a different, filename-based method and isn't force-applied by this mod yet[/*]\n<br />[*]Some assets may be replaced with default ones in case it doesn't have the required animation in their assets[/*]\n<br />[*]Forcing a festival or beach outfit onto a regular season slot (or vice versa) can cause visual glitches:\u00A0mismatched frames or invisible sprites,\u00A0if that outfit's spritesheet doesn't have the full set of animation frames a regular season needs. This is a limitation of the source art, not something this mod can fix\n<br />[/*]\n<br />[/list][heading]How the mod decides which outfit wins[/heading]\n<br />[url=https://github.com/aneirine/dynamic-npc-outfit-selector/blob/main/README.md#how-the-mod-decides-which-outfit-wins][/url] The three dropdowns combine into a single key, which is what you'll see in config.json:\n<br />[code]Spring\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 just spring\n<br />Spring::Weather_Raining\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 spring, but only when it's raining\n<br />Spring::Where_Indoor\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 spring, but only indoors\n<br />Spring::Where_Beach\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 spring, but only while they're at the beach\n<br />Winter::Weather_Snowing::Where_Outdoor\u00A0 winter, snowing, and outdoors\n<br />Weather_Sunny\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 any season, as long as it's sunny[/code]\n<br />You can set as many of these as you like for the same character, and they can all be true at once.\u00A0[b]The more specific one wins[/b]\u00A0— the key with more parts beats the key with fewer.\u00A0Each key gets a score, and the highest score is the outfit you see. The category sets the tier; the parts after it move you up\u00A0[b]within[/b]\u00A0that tier:\n<br />\n<br />[table][tr][th]Category (the tier)[/th]\n<br />[th]Points[/th]\n<br />[/tr]\n<br />[tr][td]No category at all[/td]\n<br />[td]0[/td]\n<br />[/tr]\n<br />[tr][td]A custom one of your own, e.g.\u00A0\n<br />Casual[/td]\n<br />[td]8[/td]\n<br />[/tr]\n<br />[tr][td]A season — Spring, Summer, Fall, Winter[/td]\n<br />[td]16[/td]\n<br />[/tr]\n<br />[tr][td]A festival — Egg Festival, Flower Dance, ...[/td]\n<br />[td]32[/td]\n<br />[/tr]\n<br />[/table][table][tr][th]Added on top[/th]\n<br />[th]Points[/th]\n<br />[/tr]\n<br />[tr][td]Where_Indoor\u00A0or\u00A0\n<br />Where_Outdoor[/td]\n<br />[td]+1[/td]\n<br />[/tr]\n<br />[tr][td]A weather, e.g.\u00A0\n<br />Weather_Snowing[/td]\n<br />[td]+2[/td]\n<br />[/tr]\n<br />[tr][td]An exact place, e.g.\u00A0\n<br />Where_Beach[/td]\n<br />[td]+4[/td]\n<br />[/tr]\n<br />[/table](Example) So for one character :\n<br />[table][tr][th]Key[/th]\n<br />[th]Score[/th]\n<br />[th]When it wins[/th]\n<br />[/tr]\n<br />[tr][td][code]Casual[/code][/td]\n<br />[td]8[/td]\n<br />[td]Whenever nothing below applies — a baseline look[/td]\n<br />[/tr]\n<br />[tr][td][code]Winter[/code][/td]\n<br />[td]16[/td]\n<br />[td]Any winter day[/td]\n<br />[/tr]\n<br />[tr][td][code]Winter::Where_Outdoor[/code][/td]\n<br />[td]17[/td]\n<br />[td]Outdoors in winter, beating plain\u00A0\n<br />[code]Winter[/code][/td]\n<br />[/tr]\n<br />[tr][td][code]Winter::Weather_Snowing[/code][/td]\n<br />[td]18[/td]\n<br />[td]Snowing in winter, beating both above[/td]\n<br />[/tr]\n<br />[tr][td][code]Winter::Weather_Snowing::Where_Outdoor[/code][/td]\n<br />[td]19[/td]\n<br />[td]Outdoors while it snows, beating everything above[/td]\n<br />[/tr]\n<br />[tr][td][code]Winter::Where_Town[/code][/td]\n<br />[td]20[/td]\n<br />[td]In town, beating every plain-weather key above[/td]\n<br />[/tr]\n<br />[tr][td][code]Winter Star[/code][/td]\n<br />[td]32[/td]\n<br />[td]During the festival, beating every winter key[/td]\n<br />[/tr]\n<br />[/table]\n<br />\n<br />[b][i]CREDITS[/i][/b]\n<br />\n<br />None of the outfits shown in the screenshots/video is included with this mod. They belong to\u00A0the appearance packs used to demonstrate it:\n<br />\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/5450]Seasonal Outfits - Slightly Cuter Aesthetic by Poltergeister[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/11389]Seasonal Haley[/url]\n<br />\n<br />Full credit to their authors",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50375",
+	"Version": "1.1.0",
+	"Updated": "2026-08-23T15:38:44+00:00",
+	"Downloads": [
+		{
+			"Id": 177830,
+			"Type": "Optional",
+			"DisplayName": "Dynamic NPC Outfit Selector 1.0.1",
+			"FileName": "f6/36/da/f636da0b-3a7f-4e37-8017-2b259ec6b0c2",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 29341,
+			"Uploaded": "2026-08-08T11:03:43+00:00",
+			"Mods": [
+				{
+					"Id": "Aneirine.NpcOutfitSelector",
+					"DisplayName": "Dynamic NPC Outfit Selector",
+					"Type": "Smapi",
+					"RelativePath": "Dynamic NPC Outfit Selector",
+					"Manifest": {
+						"Name": "Dynamic NPC Outfit Selector",
+						"Description": "Pick which outfit each NPC wears for Spring/Summer/Fall/Winter, Beach, and festivals, from any installed Content Patcher appearance pack or your own PNGs dropped straight into the mod folder.",
+						"Author": "aneirine",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NpcOutfitSelector.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50375"
+						],
+						"UniqueId": "Aneirine.NpcOutfitSelector"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342564518,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 179824,
+			"Type": "Main",
+			"DisplayName": "Dynamic NPC Outfit Selector 1.1.0",
+			"FileName": "7e/c3/f0/7ec3f027-ac6e-428a-b1ad-8f272c4e1532",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 38847,
+			"Uploaded": "2026-08-23T15:38:44+00:00",
+			"Mods": [
+				{
+					"Id": "Aneirine.NpcOutfitSelector",
+					"DisplayName": "Dynamic NPC Outfit Selector",
+					"Type": "Smapi",
+					"RelativePath": "Dynamic NPC Outfit Selector",
+					"Manifest": {
+						"Name": "Dynamic NPC Outfit Selector",
+						"Description": "Pick which outfit each NPC wears for Spring/Summer/Fall/Winter, Beach, and festivals, from any installed Content Patcher appearance pack or your own PNGs dropped straight into the mod folder.",
+						"Author": "aneirine",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NpcOutfitSelector.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:50375"
+						],
+						"UniqueId": "Aneirine.NpcOutfitSelector"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566512,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437063,
+		"UploaderId": 209175516,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 51196,
+	"Name": "EvolvingAIConversation",
+	"Author": "kuanglang1234",
+	"Description": "EvolvingAIConversation\n<br />[b]EvolvingAIConversation[/b] 是一个为《星露谷物语》设计的 AI NPC 互动框架。\n<br />它允许受支持的 NPC 与玩家进行动态 AI 对话，并通过长期保存的[b]人格、记忆、对玩家的印象以及关系状态[/b]，让角色在多次互动后逐渐产生连续的关系发展，而不是每次对话都从零开始。\n<br />这个 Mod 的目标并不是让 NPC 完全脱离原版性格自由发挥，而是尽可能以原版角色设定为基础，让他们在与玩家长期相处之后产生更加自然、连续的性格变化和关系发展。\n<br />[line]\n<br />安装方法\n<br />[list=1]\n<br />[*]安装 [b]SMAPI[/b]。[/*]\n<br />[*]下载 EvolvingAIConversation。[/*]\n<br />[*]解压后将 Mod 文件夹放入：[/*]\n<br />[/list][code]Stardew Valley/Mods/[/code][list=1]\n<br />[*]通过 SMAPI 启动一次游戏，使 Mod 自动生成相关配置文件。[/*]\n<br />[*]在配置中填写你的：\n<br />[list]\n<br />[*]API 地址[/*]\n<br />[*]API Key[/*]\n<br />[*]模型名称[/*]\n<br />[*]Temperature[/*]\n<br />[*]最大输出 Token 等参数[/*]\n<br />[/list][/*]\n<br />[*]进入或创建一个存档。[/*]\n<br />[*]在 Mod 中启用你希望使用 AI 功能的 NPC。[/*]\n<br />[/list]本 Mod 本身不会提供 AI API。\n<br />你需要自行准备兼容的 AI API 服务。实际费用、速度、上下文长度以及输出质量均取决于你所使用的 API 平台与模型。\n<br />[line]\n<br />主要功能\n<br />[heading]AI 对话系统[/heading]\n<br />玩家可以直接与受支持的 NPC 进行 AI 对话。\n<br />AI 回复时可以综合读取包括但不限于：\n<br />[list]\n<br />[*]NPC 当前人格[/*]\n<br />[*]NPC 对玩家的印象[/*]\n<br />[*]深层记忆[/*]\n<br />[*]短期记忆[/*]\n<br />[*]当前好感度[/*]\n<br />[*]恋爱 / 婚姻关系状态[/*]\n<br />[*]最近发生的重要互动[/*]\n<br />[*]游戏日期与季节[/*]\n<br />[*]可读取的游戏状态信息[/*]\n<br />[/list]因此，对话并不是互相独立的一次性内容。\n<br />只要相关信息被保存，NPC 可以在未来的对话中继续记得之前发生过的事情。\n<br />[line]\n<br />对话记录保存\n<br />Mod 会保存玩家与 NPC 的聊天记录。\n<br />不同存档之间的记录相互独立，不会默认共享。\n<br />玩家可以按照日期查看以前的对话，也可以将聊天内容导出，方便复制或长期保存。\n<br />[line]\n<br />人格系统\n<br />每个受支持的 NPC 都可以拥有独立的人格资料。\n<br />人格系统会尽可能以原版 NPC 的设定作为起点，然后根据玩家与 NPC 长期发生的互动逐渐发展。\n<br />玩家可以：\n<br />[list]\n<br />[*]查看人格[/*]\n<br />[*]手动修改人格[/*]\n<br />[*]与 AI 讨论人格[/*]\n<br />[*]根据当前对话重新整合人格[/*]\n<br />[*]复制人格文本[/*]\n<br />[*]将人格用于其他存档[/*]\n<br />[/list]人格并不会因为一次普通对话就被完全重写，而是用于表现 NPC 更长期的性格变化。\n<br />[line]\n<br />记忆系统\n<br />NPC 的记忆被划分为不同层级。\n<br />[heading]短期记忆[/heading]\n<br />短期记忆主要保存近期发生的事情，例如最近的重要谈话、冲突、约定或普通互动。\n<br />这些内容可以在一段时间内继续影响 NPC。\n<br />[heading]深层记忆[/heading]\n<br />深层记忆用于保存更加重要、需要长期保留的经历，例如：\n<br />[list]\n<br />[*]重要关系变化[/*]\n<br />[*]玩家告诉 NPC 的重要事情[/*]\n<br />[*]重大冲突[/*]\n<br />[*]长期承诺[/*]\n<br />[*]具有明显情感影响的事件[/*]\n<br />[/list]玩家也可以手动：\n<br />[list]\n<br />[*]添加深层记忆[/*]\n<br />[*]修改深层记忆[/*]\n<br />[*]删除深层记忆[/*]\n<br />[*]将短期记忆提升为深层记忆[/*]\n<br />[/list][line]\n<br />NPC 对玩家的印象\n<br />除了 NPC 自己的人格之外，每个 NPC 还可以维护一份独立的：\n<br />[b]“对玩家的认知 / 印象”[/b]\n<br />它可以用于记录：\n<br />[list]\n<br />[*]玩家给他的第一印象[/*]\n<br />[*]他认为玩家是什么样的人[/*]\n<br />[*]他是否信任玩家[/*]\n<br />[*]他如何理解玩家过去做过的事情[/*]\n<br />[*]他对当前关系的看法[/*]\n<br />[/list]这些内容可以随着长期相处逐渐发生变化。\n<br />因此，即使使用同一份 NPC 初始人格，不同存档最终也可能发展出完全不同的关系。\n<br />[line]\n<br />关系状态识别\n<br />AI 可以读取部分游戏中的关系信息，例如：\n<br />[list]\n<br />[*]普通认识[/*]\n<br />[*]朋友[/*]\n<br />[*]恋爱[/*]\n<br />[*]已婚[/*]\n<br />[*]当前好感度[/*]\n<br />[/list]NPC 的对话可以根据当前与玩家的关系产生变化。\n<br />[line]\n<br />AI 约会系统\n<br />支持的 NPC 可以通过 AI 与玩家讨论或提出约会。\n<br />约会相关内容可以结合角色人格、关系以及当前对话进行生成。\n<br />玩家可以根据实际情况接受或拒绝。\n<br />约会过程中也可以继续进行 AI 对话。\n<br />[line]\n<br />AI 信件系统\n<br />NPC 可以生成与当前关系和记忆有关的信件。\n<br />信件内容可能参考：\n<br />[list]\n<br />[*]最近的聊天[/*]\n<br />[*]深层记忆[/*]\n<br />[*]NPC 当前心情[/*]\n<br />[*]与玩家的关系[/*]\n<br />[*]最近发生的重要事件[/*]\n<br />[/list]玩家可以通过调整最大输出 Token 来允许 AI 生成更长的信件。\n<br />不过最终长度仍会受到模型本身行为与 API 限制影响。\n<br />[line]\n<br />信件礼物\n<br />AI 信件支持附带游戏内物品。\n<br />当对应信件包含礼物时，玩家可以在收到信件时获得相应物品。\n<br />[line]\n<br />NPC 跟随\n<br />支持的 NPC 可以进入跟随状态。\n<br />开启后，NPC 可以跟随玩家行动。\n<br />再次关闭后，NPC 会停止跟随。\n<br />NPC 也可以保留与跟随期间发生事情有关的上下文，使这一过程不仅仅是单纯的位置移动。\n<br />[line]\n<br />自定义 NPC 扩展\n<br />EvolvingAIConversation 支持将 NPC 配置与主 Mod 分离。\n<br />因此可以制作独立的：\n<br />[b]Custom NPC Pack[/b]\n<br />用于向主 Mod 添加新的 NPC AI 配置，而不需要直接修改核心 Mod。\n<br />这样可以逐步扩展更多原版 NPC 或其他受支持角色。\n<br />[line]\n<br />AI API 配置\n<br />EvolvingAIConversation 并不绑定单一 AI 平台。\n<br />根据版本与所使用的服务，玩家通常可以自行配置：\n<br />[list]\n<br />[*]API Endpoint[/*]\n<br />[*]API Key[/*]\n<br />[*]Model[/*]\n<br />[*]Temperature[/*]\n<br />[*]Max Tokens[/*]\n<br />[/list]因此可以根据价格、速度、上下文长度和回复质量选择不同模型。\n<br />[line]\n<br />关于 Token 与费用\n<br />本 Mod 使用外部 AI API 时，会产生对应平台的 API 使用量。\n<br />需要注意：\n<br />[b]ChatGPT Plus、Claude Pro、Gemini Advanced 等聊天订阅，一般并不等于 API 额度。[/b]\n<br />API 是否收费、如何收费以及具体价格，均由你所选择的平台决定。\n<br />更大的上下文、历史记录、人格资料、记忆数量和最大输出 Token，通常意味着更高的 Token 消耗。\n<br />[line]\n<br />存档独立\n<br />人格、记忆、玩家印象以及对话历史默认按照 Stardew Valley 存档分别保存。\n<br />也就是说：\n<br />存档 A 中与某个 NPC 的经历，并不会自动成为存档 B 中同一个 NPC 的经历。\n<br />如果希望多个存档使用同一份人格，可以通过人格复制功能进行迁移。\n<br />[line]\n<br />使用要求\n<br />需要：\n<br />[list]\n<br />[*]Stardew Valley[/*]\n<br />[*]SMAPI[/*]\n<br />[*]网络连接[/*]\n<br />[*]一个兼容的 AI API[/*]\n<br />[*]对应平台的有效 API Key[/*]\n<br />[/list]如果使用第三方中转 API，请自行确认对应服务能够兼容本 Mod 使用的请求格式和模型。\n<br />[line]\n<br />注意事项\n<br />AI 生成内容具有一定随机性。\n<br />即使人格、记忆和模型设置完全相同，两次生成的回复也不一定完全一致。\n<br />不同模型在角色理解、中文能力、长对话稳定性、人格一致性、速度和费用方面可能存在明显差异。\n<br />如果发现角色逐渐偏离预期，可以通过人格、记忆和玩家印象管理功能进行调整。\n<br />[line]\n<br />致谢\n<br />感谢：\n<br />[list]\n<br />[*][b]ConcernedApe[/b] 创作《星露谷物语》[/*]\n<br />[*][b]SMAPI[/b] 的开发者与星露谷 Mod 社区[/*]\n<br />[*]所有参与测试、反馈 Bug、提出建议以及制作 NPC 扩展配置的玩家[/*]\n<br />[/list]EvolvingAIConversation 是非官方玩家制作 Mod，与 ConcernedApe、《星露谷物语》官方以及任何 AI API 服务商均无隶属或官方合作关系。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51196",
+	"Version": "0.2.0",
+	"Updated": "2026-08-23T19:46:38+00:00",
+	"Downloads": [
+		{
+			"Id": 179883,
+			"Type": "Main",
+			"DisplayName": "EvolvingAIConversation",
+			"FileName": "67/62/7a/67627a13-3bce-4e4e-9441-ce005ca4d9cc",
+			"Description": "",
+			"Version": "0.2.0",
+			"SizeInBytes": 852270,
+			"Uploaded": "2026-08-23T19:46:38+00:00",
+			"Mods": [
+				{
+					"Id": "kuanglang.EvolvingAIConversation",
+					"DisplayName": "evolvingAIconversation",
+					"Type": "Smapi",
+					"RelativePath": "EvolvingAIConversation",
+					"Manifest": {
+						"Name": "evolvingAIconversation",
+						"Description": "Evolving per-save AI personalities, memories, conversations, romantic-partner dates, confinement, and world awareness.",
+						"Author": "kuanglang",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EvolvingAIConversation.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "kuanglang.EvolvingAIConversation"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566571,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437884,
+		"UploaderId": 207125475,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -5,8 +5,8 @@
 	"Author": "aedenthorn",
 	"Description": "This mod serves as a framework to allow spouse room customization.\n<br />\n<br />With it, you can customize where a specific character's spouse room is shown, what walls surround it, and where a spouse will stand inside of it.\n<br />\n<br />It also enables multiple spouse rooms for the [url=https://www.nexusmods.com/stardewvalley/mods/10021]Free Love[/url] mod. Without any additional data, it will show multiple spouse rooms in a row starting where the vanilla spouse room would show up. You can change the order of the spouse rooms in the config file.\n<br />\n<br />\n<br />To create custom spouse room data, you will need to create a content pack for this mod.\n<br />\n<br />\n<br />[b][size=5]Content Packs[/size][/b]\n<br />\n<br />Example [b]manifest.json[/b]:\n<br />\n<br />[code]\uFEFF{\n<br />\u00A0 \"Name\": \"Emily's Custom Spouse Room Content Pack\",\n<br />\u00A0 \"Author\": \"aedenthorn\",\n<br />\u00A0 \"Version\": \"0.1.0\",\n<br />\u00A0 \"Description\": \"\",\n<br />\u00A0 \"UniqueID\": \"aedenthorn.EmilyRoomCSR\",\n<br />\u00A0 \"MinimumApiVersion\": \"3.12.0\",\n<br />\u00A0 \"UpdateKeys\": [ \"\" ],\n<br />\u00A0 \"ContentPackFor\": {\n<br />\u00A0\u00A0\u00A0 \"UniqueID\": \"aedenthorn.CustomSpouseRooms\",\n<br />\u00A0\u00A0\u00A0 \"MinimumVersion\": \"0.1.0\"\n<br />\u00A0 },\n<br />\u00A0 \"Dependencies\": [\n<br />\u00A0\u00A0 {\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"UniqueID\": \"aedenthorn.CustomSpouseRooms\",\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0 \"IsRequired\": true\n<br />\u00A0\u00A0 },\n<br />\u00A0 ]\n<br />}\n<br />[/code]\n<br />\n<br />Example [b]content.json[/b]:\n<br />\n<br />[code]{\n<br />\u00A0\u00A0 \u00A0\"data\": [\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0{\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"name\": \"Emily\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"upgradeLevel\": 1,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"startPos\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 0,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 0\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"spousePosOffset\": {\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"X\": 3,\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"Y\": 5\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0},\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"shellType\": \"custom_spouse_room_closed_left\",\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0\"templateName\": \"Penny\"\n<br />\u00A0\u00A0 \u00A0\u00A0\u00A0 \u00A0}\n<br />\u00A0\u00A0 \u00A0]\n<br />}\n<br />[/code]\n<br />This example puts Emily's spouse room where the kitchen would be in the level one upgraded farmhouse.\n<br />\n<br />Possible fields:\n<br />\n<br />[list]\n<br />[*][b]name[/b]: the name of the NPC or player spouse\n<br />[*][b]upgradeLevel[/b]: the farmhouse's upgrade level to apply these settings to (set to -1 to use for all upgrade levels)\n<br />[*][b]templateName[/b]: the name of the spouse whose spouse room layout you want to use for this spouse (omit to use the spouse's own layout)\n<br />[*][b]startPos[/b]: the top left corner position of the room's shell on the map\n<br />[*][b]shellType[/b]: the name of the map file in the game's [b]Maps[/b] folder to use for the room's shell (see below)\n<br />[*][b]spousePosOffset[/b]: the position of the spouse in the spouse room as an offset from startPos\n<br />[*][b]islandFarmHouse[/b]: if set to true, use this setup for the island farm house rather than the main farm house (doesn't move the spouse).\n<br />[/list]\n<br />\n<br />[size=4][b]Template Names[/b][/size]\n<br />\n<br />You can input the name of any NPC in [b]Data/SpouseRooms[/b] to use their spouse room for the named spouse. Modded NPCs must have their spouse room added via [url=https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.5.5#Custom_spouse_rooms]this method[/url].\n<br />\n<br />\n<br />[size=3][b]Shell Types[/b][/size]\n<br />\n<br />The mod comes with four shell types, i.e. map overrides that form the walls and floors around the spouse room area:\n<br />\n<br />[list]\n<br />[*][b]custom_spouse_room_closed_left [/b]- for the left side of the map, with a wall on the left side\n<br />[*][b]custom_spouse_room_closed_right [/b]- for the right side of the map, with a wall on the right side\n<br />[*][b]custom_spouse_room_open_left [/b]- for the left side of the map, with no wall on either side\n<br />[*][b]custom_spouse_room_open_right [/b]- for the right side of the map, with no wall on either side\n<br />[/list]\n<br />To create your own shell, edit one of the mod's tmx files using Tiled (the size should stay the same for now) and add it to the game's [b]Maps[/b] folder using Content Patcher, then use the file's name in the above [b]content.json[/b] file.\n<br />\n<br />\n<br />[b][size=5]Custom NPC Spouse Rooms[/size][/b]\n<br />\n<br />Custom NPC spouses must use the new Content Patcher method of adding spouse rooms. TMXL loaded spouse rooms will not work.\u00A0 For more information on creating a Content Patcher spouse room, see the documentation here:\n<br />\n<br />[url=https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.5.5#Custom_spouse_rooms]https://stardewvalleywiki.com/Modding:Migrate_to_Stardew_Valley_1.5.5#Custom_spouse_rooms[/url]\n<br />\n<br />\n<br />This mod is a work in progress; there are probably bugs but if they are only visual they should be understood as art.\n<br />\n<br />\n<br />[size=5][b]Technical[/b][/size]\n<br />\n<br />Requires [url=https://www.nexusmods.com/stardewvalley/mods/2400/]SMAPI[/url], uses Harmony.\n<br />\n<br />Compatible with [url=https://www.nexusmods.com/stardewvalley/mods/6338]Mod Updater[/url]\uFEFF for automatic updates.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />\uFEFF\uFEFFIf you want to complain or ask for help or help me test my mods, you can visit [url=https://discord.gg/bs6zHuj]my Discord server\uFEFF[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/10029",
-	"Version": "0.9.4",
-	"Updated": "2025-10-21T16:53:18+00:00",
+	"Version": "0.9.6",
+	"Updated": "2026-08-06T12:26:35+00:00",
 	"Downloads": [
 		{
 			"Id": 51289,
@@ -53,14 +53,14 @@
 			}
 		},
 		{
-			"Id": 146185,
+			"Id": 177560,
 			"Type": "Main",
 			"DisplayName": "Custom Spouse Rooms",
-			"FileName": "Custom Spouse Rooms-10029-0-9-4-1761065598.zip",
-			"Description": "Changes:\n<br />\n<br />Fix for missing spouse room data",
-			"Version": "0.9.4",
-			"SizeInBytes": 34135,
-			"Uploaded": "2025-10-21T16:53:18+00:00",
+			"FileName": "b0/79/ee/b079ee45-ec07-4b20-8865-f2be87411ddc",
+			"Description": "Changes:\n\nFix for rebake row",
+			"Version": "0.9.6",
+			"SizeInBytes": 34108,
+			"Uploaded": "2026-08-06T12:26:35+00:00",
 			"Mods": [
 				{
 					"Id": "aedenthorn.CustomSpouseRooms",
@@ -71,7 +71,7 @@
 						"Name": "Custom Spouse Rooms",
 						"Description": "Custom spouse rooms.",
 						"Author": "aedenthorn",
-						"Version": "0.9.4",
+						"Version": "0.9.6",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "CustomSpouseRooms.dll",
 						"Dependencies": [
@@ -88,7 +88,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342532873,
+				"Uid": 5596342564248,
 				"CategoryId": 1,
 				"Primary": true
 			}

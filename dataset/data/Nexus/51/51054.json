@@ -1,0 +1,81 @@
+{
+	"Site": "Nexus",
+	"Id": 51054,
+	"Name": "Kern's Stardew Valley Romanian language mod",
+	"Author": "Kerndevelop",
+	"Description": "[size=4][b]Romanian for Stardew Valley[/b][/size]\n<br />\n<br />Stardew Valley has no official Romanian translation. This mod adds one.\n<br />\n<br />\"Română\" appears as its own button on the title screen's language menu, right alongside the vanilla languages. It is registered through [i]Data/AdditionalLanguages[/i], the exact same mechanism the base game uses for German, Turkish and the rest. Dialogue, menus, item names and descriptions, events and the other string assets are translated, and the game loads them the moment you pick the language.\n<br />\n<br />The Romanian alphabet needs six characters that the base game's fonts simply cannot draw: ă, Ă, ș, Ș, ț and Ț. To solve this, the mod ships a small SMAPI code mod that draws those glyphs into the game's font atlases at runtime. All the text paths are covered, including the chunky pixel font used for dialogue and menus, the tooltip and HUD font, and the font used on the save screens. The diacritics therefore render correctly everywhere, while ordinary text stays pixel-identical to vanilla.\n<br />\n<br />[b]Please read first[/b]\n<br />\n<br />This is not a professional translation and not a professional mod. It is a personal project by someone learning Romanian, who translated the game with the help of large language models and wrote this mod to make that translation playable. There is no guarantee that the translation is accurate or natural, and no guarantee that the mod runs without issues. Use it at your own risk, and please report anything that looks wrong or breaks.\n<br />\n<br />[b]Requirements[/b]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url], the Stardew Valley mod loader.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] 2.0.0 or newer, installed as its own mod.[/*]\n<br />[/list]\n<br />[b]What's in the download[/b]\n<br />\n<br />The mod comes in two folders that ship together and depend on each other. [b]Both are required.[/b] The content pack refuses to load without the font fix, and the font fix has nothing to do without the content pack.\n<br />\n<br />[list]\n<br />[*][b][CP] Romanian Translation[/b]: the translation itself, plain JSON and image files.[/*]\n<br />[*][b]RomanianFontFix[/b]: the font fix, with RomanianFontFix.dll already compiled.[/*]\n<br />[/list]\n<br />There is nothing to compile. Building from source is only needed if you want to change the mod itself.\n<br />\n<br />[b]Installation[/b]\n<br />\n<br />[b]1. Find your Mods folder.[/b] It sits directly inside the Stardew Valley game folder. SMAPI prints its exact location in the second line of its console window every time it starts (\"Mods go here: ...\"), which is the most reliable way to find it. In Steam you can also right-click Stardew Valley in your library and choose Manage, then Browse local files. Common defaults:\n<br />\n<br />[list]\n<br />[*]Windows (Steam): C:&#92;Program Files (x86)&#92;Steam&#92;steamapps&#92;common&#92;Stardew Valley&#92;Mods[/*]\n<br />[*]Windows (GOG): C:&#92;Program Files (x86)&#92;GOG Galaxy&#92;Games&#92;Stardew Valley&#92;Mods[/*]\n<br />[*]macOS (Steam): ~/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS/Mods[/*]\n<br />[*]Linux (Steam): ~/.steam/steam/steamapps/common/Stardew Valley/Mods[/*]\n<br />[/list]\n<br />[b]2. Install SMAPI and Content Patcher.[/b] Install SMAPI following the instructions on its site and start the game through it once to confirm it works. This creates the Mods folder if it does not exist yet. Then unzip Content Patcher so that Mods/ContentPatcher/manifest.json exists.\n<br />\n<br />[b]3. Unzip this mod and copy both folders into Mods,[/b] keeping the folder names exactly as they are, square brackets included. Afterwards both Mods/[CP] Romanian Translation/manifest.json and Mods/RomanianFontFix/manifest.json must exist. Your Mods folder should then contain:\n<br />\n<br />[code]\n<br />Mods/\n<br />├── ContentPatcher/\n<br />├── [CP] Romanian Translation/\n<br />│ ├── manifest.json\n<br />│ ├── content.json\n<br />│ └── assets/\n<br />└── RomanianFontFix/\n<br />├── manifest.json\n<br />├── RomanianFontFix.dll\n<br />└── assets/[/code]\n<br />These sit alongside ConsoleCommands and SaveBackup, which SMAPI installs itself.\n<br />\n<br />[b]4. Start the game and check the SMAPI console.[/b] You should see both parts listed, one as a mod and one as a content pack:\n<br />\n<br />[code]\n<br />[SMAPI] Loaded 4 mods:\n<br />[SMAPI] Romanian Font Fix 1.0.0 by kerngesund | ...\n<br />\n<br />[SMAPI] Loaded 1 content packs:\n<br />[SMAPI] Romanian Translation 1.0.0 by kerngesund | for Content Patcher | ...[/code]\n<br />A \"Patched game code\" warning naming Romanian Font Fix is expected and harmless. It is just SMAPI noting that the mod uses Harmony, which it must in order to draw the diacritics.\n<br />\n<br />[b]Selecting \"Română\" in-game[/b]\n<br />\n<br />[list=1]\n<br />[*]On the title screen, click the language button in the bottom right corner.[/*]\n<br />[*]The language menu opens showing the vanilla languages. \"Română\" is on the next page, so click the arrow on the right edge of the menu to page forward.[/*]\n<br />[*]The second page shows a single option, \"Română\". Click it.[/*]\n<br />[*]The title screen, its buttons, and the rest of the game now display in Romanian.[/*]\n<br />[/list]\n<br />[b]Troubleshooting[/b]\n<br />\n<br />[list]\n<br />[*][b]Neither part appears in the SMAPI console.[/b] They went into the wrong folder. Check the \"Mods go here:\" line at the top of the SMAPI console and compare it to where you copied them.[/*]\n<br />[*][b]Only one appears, and SMAPI reports a missing dependency.[/b] The two halves require each other. Install whichever one is missing.[/*]\n<br />[*][b]A folder is nested one level too deep[/b], for example Mods/RomanianFontFix/RomanianFontFix/manifest.json. SMAPI only looks one level down, so move the inner folder up.[/*]\n<br />[*][b]\"Română\" is missing from the language menu[/b] even though both parts loaded. Make sure Content Patcher itself is installed and at least version 2.0.0.[/*]\n<br />[/list]\n<br />[b]Source and reporting problems[/b]\n<br />\n<br />The full source, the technical write-up of how the font patching works, and the issue tracker are on GitHub:\n<br />[url=https://github.com/Kerndevelop/stardew-valley-romanian-language-mod]github.com/Kerndevelop/stardew-valley-romanian-language-mod[/url]\n<br />\n<br />Translation mistakes, awkward phrasing and bugs are all worth reporting, either in the posts tab here or as a GitHub issue.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51054",
+	"Version": "1.0",
+	"Updated": "2026-08-21T07:52:02+00:00",
+	"Downloads": [
+		{
+			"Id": 179502,
+			"Type": "Main",
+			"DisplayName": "Kern's Stardew Valley Romanian language mod 1.0.0",
+			"FileName": "b7/e7/73/b7e77350-3d27-46bb-9f5d-4304bdbecd99",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 1264720,
+			"Uploaded": "2026-08-21T07:52:02+00:00",
+			"Mods": [
+				{
+					"Id": "kerngesund.RomanianFontFix",
+					"DisplayName": "Romanian Font Fix",
+					"Type": "Smapi",
+					"RelativePath": "RomanianFontFix",
+					"Manifest": {
+						"Name": "Romanian Font Fix",
+						"Description": "Teaches SpriteText's bold font to draw ă, Ă, ș, Ș, ț, Ț, needed for the Romanian Translation content pack.",
+						"Author": "kerngesund",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "RomanianFontFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "kerngesund.RomanianFontFix"
+					}
+				},
+				{
+					"Id": "kerngesund.RomanianTranslation",
+					"DisplayName": "Romanian Translation",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Romanian Translation",
+					"Manifest": {
+						"Name": "Romanian Translation",
+						"Description": "Adds Romanian (Română) as a selectable language on the title screen.",
+						"Author": "kerngesund",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "kerngesund.RomanianFontFix",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "kerngesund.RomanianTranslation"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342566190,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342437742,
+		"UploaderId": 297903678,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}
