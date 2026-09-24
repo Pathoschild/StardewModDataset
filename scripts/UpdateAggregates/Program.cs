@@ -25,26 +25,45 @@ internal static class Program
 		Settings settings = ConfigHelper.LoadAppSettings<Settings>();
 		IAggregateBuilder[] builders = GetAggregateBuilders(settings).ToArray();
 
+		// get sites to scan
+		(ModSite Site, DirectoryInfo[] BucketDirs)[] sites = FileHelper
+			.EnumerateDataSites()
+			.Select(p => (p.Site, FileHelper.EnumerateBuckets(p.Directory).ToArray()))
+			.ToArray();
+
 		// scan sites
-		foreach ((ModSite site, DirectoryInfo siteDir) in FileHelper.EnumerateDataSites())
-		{
-			foreach (DirectoryInfo bucketDir in FileHelper.EnumerateBuckets(siteDir))
+		await ConsoleHelper.RunWithProgressBarsAsync(
+			labels: sites.Select(p => p.Site.ToString()),
+			run: progress =>
 			{
-				ConsoleHelper.WriteLine($"  Processing {site} {bucketDir.Name}...");
-
-				foreach (FileInfo modFile in FileHelper.EnumerateMetadataModsInBucket(bucketDir))
+				foreach ((ModSite site, DirectoryInfo[] bucketDirs) in sites)
 				{
-					// parse data
-					ModPageRecord? modPage = FileHelper.TryReadModPageFile(modFile.FullName);
-					if (modPage is null)
-						continue;
+					string progressLabel = site.ToString();
+					progress.Start(progressLabel, bucketDirs.Length);
 
-					// add to builders
-					foreach (IAggregateBuilder builder in builders)
-						builder.Collect(modPage);
+					foreach (DirectoryInfo bucketDir in bucketDirs)
+					{
+						ConsoleHelper.WriteLine($"  Processing {site} {bucketDir.Name}...");
+
+						foreach (FileInfo modFile in FileHelper.EnumerateMetadataModsInBucket(bucketDir))
+						{
+							// parse data
+							ModPageRecord? modPage = FileHelper.TryReadModPageFile(modFile.FullName);
+							if (modPage is null)
+								continue;
+
+							// add to builders
+							foreach (IAggregateBuilder builder in builders)
+								builder.Collect(modPage);
+						}
+
+						progress.Increment(progressLabel);
+					}
 				}
+
+				return Task.CompletedTask;
 			}
-		}
+		);
 
 		// save aggregate files
 		ConsoleHelper.WriteLine("Saving aggregates...");
@@ -72,7 +91,7 @@ internal static class Program
 					throw new InvalidOperationException($"Aggregate builder '{aggregate.GetType().Name}' returned unsupported aggregate type '{aggregate.Type}'.");
 			}
 		}
-		Console.WriteLine();
+		ConsoleHelper.WriteLine();
 	}
 
 

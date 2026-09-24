@@ -39,10 +39,20 @@ internal static class Program
 		using DownloadManager downloadManager = new DownloadManager(DownloadsPath, settings.SevenZipPath, settings.UserAgent);
 
 		// process sites
-		Console.WriteLine();
-		await ProcessSiteAsync(() => new CurseForgeApiClient(settings.CurseForgeExportUrl, settings.UserAgent), downloadManager, settings);
-		await ProcessSiteAsync(() => new ModDropApiClient(settings.ModDropExportUrl, settings.UserAgent, settings.ModDropUser, settings.ModDropPassword), downloadManager, settings);
-		await ProcessSiteAsync(() => new NexusApiClient(settings.NexusExportUrl, settings.UserAgent, settings.NexusApiKey, "StardewModDataset", "1.0.0"), downloadManager, settings);
+		ConsoleHelper.WriteLine();
+		await ConsoleHelper.RunWithProgressBarsAsync(
+			labels: [
+				nameof(ModSite.CurseForge),
+				nameof(ModSite.ModDrop),
+				nameof(ModSite.Nexus)
+			],
+			run: async progress =>
+			{
+				await ProcessSiteAsync(() => new CurseForgeApiClient(settings.CurseForgeExportUrl, settings.UserAgent), downloadManager, settings, progress);
+				await ProcessSiteAsync(() => new ModDropApiClient(settings.ModDropExportUrl, settings.UserAgent, settings.ModDropUser, settings.ModDropPassword), downloadManager, settings, progress);
+				await ProcessSiteAsync(() => new NexusApiClient(settings.NexusExportUrl, settings.UserAgent, settings.NexusApiKey, "StardewModDataset", "1.0.0"), downloadManager, settings, progress);
+			}
+		);
 		ConsoleHelper.WriteLine("Done.");
 	}
 
@@ -54,7 +64,8 @@ internal static class Program
 	/// <param name="buildClient">Create a new instance of the mod site's API client. This will be disposed automatically after use.</param>
 	/// <param name="downloadManager">The mod download manager with which to download and analyze mod files.</param>
 	/// <param name="settings">The tool settings to apply.</param>
-	private static async Task ProcessSiteAsync(Func<IModSiteClient> buildClient, DownloadManager downloadManager, Settings settings)
+	/// <param name="progress">The progress bars to update.</param>
+	private static async Task ProcessSiteAsync(Func<IModSiteClient> buildClient, DownloadManager downloadManager, Settings settings, ConsoleProgress progress)
 	{
 		// init client
 		using IModSiteClient client = buildClient();
@@ -72,76 +83,88 @@ internal static class Program
 			if (exportAge.TotalHours > settings.MaxExportAgeInHours)
 				ConsoleHelper.WriteWarningLine($"The data from the {client.SiteKey} export API is more than {settings.MaxExportAgeInHours} hours old (updated {Math.Round(exportAge.TotalHours, 2)} hours ago).");
 
+			// init progress bar
+			string progressLabel = client.SiteKey.ToString();
+			progress.Start(progressLabel, export.Mods.Length);
+
+			// scan mods
 			foreach (ModPageRecord modPage in export.Mods)
 			{
-				exportedIds.Add(modPage.Id);
-
-				// get cached data
-				string dataFilePath = FileHelper.GetDataFilePath(client.SiteKey, modPage.Id);
-				string downloadDirPath = FileHelper.GetDownloadDirPath(client.SiteKey, modPage.Id);
-
-				ModPageRecord? cached = FileHelper.TryReadModPageFile(dataFilePath);
-
-				// skip if already up-to-date
-				if (IsUpToDate(cached, modPage, settings.RetryPreviousFailedDownloads))
+				try
 				{
-					skipped++;
-					continue;
-				}
-				ConsoleHelper.WriteLine($"  {(cached is null ? "Adding" : "Updating")} mod page {modPage.Id} ({modPage.Name})...");
+					exportedIds.Add(modPage.Id);
 
-				// fetch download data
-				{
-					Dictionary<long, DownloadScanResult> downloads = await downloadManager.DownloadAndScanAsync(modPage, downloadDirPath, file => GetDownloadUrlsAsync(client, modPage, file));
+					// get cached data
+					string dataFilePath = FileHelper.GetDataFilePath(client.SiteKey, modPage.Id);
+					string downloadDirPath = FileHelper.GetDownloadDirPath(client.SiteKey, modPage.Id);
 
-					for (int i = 0; i < modPage.Downloads.Length; i++)
+					ModPageRecord? cached = FileHelper.TryReadModPageFile(dataFilePath);
+
+					// skip if already up-to-date
+					if (IsUpToDate(cached, modPage, settings.RetryPreviousFailedDownloads))
 					{
-						ModPageDownloadRecord file = modPage.Downloads[i];
-						DownloadScanResult analysis = downloads[file.Id];
-						file.Mods.Clear(); // should already be empty since it's a fresh instance from the export
+						skipped++;
+						continue;
+					}
+					ConsoleHelper.WriteLine($"  {(cached is null ? "Adding" : "Updating")} mod page {modPage.Id} ({modPage.Name})...");
 
-						// keep previous successful info if download failed
-						if (!analysis.FullyAnalyzed && cached?.Downloads.FirstOrDefault(p => p.Id == file.Id) is { FullyAnalyzed: true } cachedResult)
+					// fetch download data
+					{
+						Dictionary<long, DownloadScanResult> downloads = await downloadManager.DownloadAndScanAsync(modPage, downloadDirPath, file => GetDownloadUrlsAsync(client, modPage, file));
+
+						for (int i = 0; i < modPage.Downloads.Length; i++)
 						{
-							file.Mods.AddRange(cachedResult.Mods);
-							continue;
-						}
+							ModPageDownloadRecord file = modPage.Downloads[i];
+							DownloadScanResult analysis = downloads[file.Id];
+							file.Mods.Clear(); // should already be empty since it's a fresh instance from the export
 
-						// else save new info
-						{
-							file.Mods.AddRange(analysis.Mods);
-
-							long fileSizeInBytes = file.SizeInBytes > 0
-								? file.SizeInBytes
-								: analysis.FileSizeInBytes; // use download size if mod site didn't provide it
-
-							if (file.DownloadError != analysis.DownloadError || file.UnpackError != analysis.UnpackError || file.SizeInBytes != fileSizeInBytes)
+							// keep previous successful info if download failed
+							if (!analysis.FullyAnalyzed && cached?.Downloads.FirstOrDefault(p => p.Id == file.Id) is { FullyAnalyzed: true } cachedResult)
 							{
-								modPage.Downloads[i] = new ModPageDownloadRecord(
-									id: file.Id,
-									type: file.Type,
-									displayName: file.DisplayName,
-									fileName: file.FileName,
-									description: file.Description,
-									version: file.Version,
-									sizeInBytes: fileSizeInBytes,
-									uploaded: file.Uploaded,
-									otherFields: file.OtherFields,
-									mods: file.Mods,
-									downloadError: analysis.DownloadError,
-									unpackError: analysis.UnpackError
-								);
+								file.Mods.AddRange(cachedResult.Mods);
+								continue;
+							}
+
+							// else save new info
+							{
+								file.Mods.AddRange(analysis.Mods);
+
+								long fileSizeInBytes = file.SizeInBytes > 0
+									? file.SizeInBytes
+									: analysis.FileSizeInBytes; // use download size if mod site didn't provide it
+
+								if (file.DownloadError != analysis.DownloadError || file.UnpackError != analysis.UnpackError || file.SizeInBytes != fileSizeInBytes)
+								{
+									modPage.Downloads[i] = new ModPageDownloadRecord(
+										id: file.Id,
+										type: file.Type,
+										displayName: file.DisplayName,
+										fileName: file.FileName,
+										description: file.Description,
+										version: file.Version,
+										sizeInBytes: fileSizeInBytes,
+										uploaded: file.Uploaded,
+										otherFields: file.OtherFields,
+										mods: file.Mods,
+										downloadError: analysis.DownloadError,
+										unpackError: analysis.UnpackError
+									);
+								}
 							}
 						}
 					}
-				}
 
-				// save data
-				await FileHelper.WriteJsonFileAsync(dataFilePath, modPage);
-				if (cached is null)
-					added++;
-				else
-					updated++;
+					// save data
+					await FileHelper.WriteJsonFileAsync(dataFilePath, modPage);
+					if (cached is null)
+						added++;
+					else
+						updated++;
+				}
+				finally
+				{
+					progress.Increment(progressLabel);
+				}
 			}
 		}
 
@@ -192,7 +215,7 @@ internal static class Program
 		}
 
 		ConsoleHelper.WriteLine($"  {added} added, {updated} updated, {skipped} unchanged, {deleted} {(settings.DeleteRemovedMods ? "deleted" : "can be deleted")}.");
-		Console.WriteLine();
+		ConsoleHelper.WriteLine();
 	}
 
 	/// <summary>Get the URLs from which a mod download can be fetched.</summary>

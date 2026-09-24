@@ -288,6 +288,9 @@ dotnet run --project FetchMods
 dotnet run --project UpdateAggregates
 ```
 
+That will show the live progress as it proceeds:  
+![](fetch-mods.png)
+
 ## See also
 * [Mod dump][] (downloaded mod files)
 
