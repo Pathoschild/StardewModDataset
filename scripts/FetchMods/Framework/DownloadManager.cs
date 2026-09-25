@@ -30,7 +30,8 @@ internal class DownloadManager : IDisposable
 	private readonly HashSet<string> NonPackedFileExtensions = new(StringComparer.OrdinalIgnoreCase)
 	{
 		".dll",
-		".exe"
+		".exe",
+		".msi"
 	};
 
 	/****
