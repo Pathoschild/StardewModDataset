@@ -22,9 +22,6 @@ internal static class Program
 	/// <inheritdoc cref="FileHelper.DataPath" />
 	private static readonly string DataPath = FileHelper.DataPath;
 
-	/// <inheritdoc cref="FileHelper.DownloadsPath" />
-	private static readonly string DownloadsPath = FileHelper.DownloadsPath;
-
 
 	/*********
 	** Public methods
@@ -36,7 +33,7 @@ internal static class Program
 
 		// init
 		Settings settings = ConfigHelper.LoadAppSettings<Settings>();
-		using DownloadManager downloadManager = new DownloadManager(DownloadsPath, settings.SevenZipPath, settings.UserAgent);
+		using DownloadManager downloadManager = new DownloadManager(settings.SevenZipPath, settings.UserAgent);
 
 		// process sites
 		ConsoleHelper.WriteLine();

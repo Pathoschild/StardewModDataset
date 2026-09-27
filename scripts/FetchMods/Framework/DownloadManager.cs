@@ -37,9 +37,6 @@ internal class DownloadManager : IDisposable
 	/****
 	** State
 	****/
-	/// <summary>The full path to the folder in which to store the raw mod downloads.</summary>
-	private readonly string DownloadsRoot;
-
 	/// <summary>The path to the 7-zip install directory (containing 7z.dll and 7z.exe).</summary>
 	private readonly string SevenZipPath;
 
@@ -54,12 +51,10 @@ internal class DownloadManager : IDisposable
 	** Public methods
 	*********/
 	/// <summary>Construct an instance.</summary>
-	/// <param name="downloadsRoot"><inheritdoc cref="DownloadsRoot" path="/summary"/></param>
 	/// <param name="sevenZipPath"><inheritdoc cref="SevenZipPath" path="/summary"/></param>
 	/// <param name="userAgent">The user agent sent to the mod site APIs.</param>
-	public DownloadManager(string downloadsRoot, string sevenZipPath, string userAgent)
+	public DownloadManager(string sevenZipPath, string userAgent)
 	{
-		this.DownloadsRoot = downloadsRoot;
 		this.SevenZipPath = sevenZipPath;
 		this.ModToolkit = new ModToolkit();
 
@@ -76,18 +71,27 @@ internal class DownloadManager : IDisposable
 	/// <returns>Returns the download and scan results, indexed by download ID.</returns>
 	public async Task<Dictionary<long, DownloadScanResult>> DownloadAndScanAsync(ModPageRecord modPage, string modDownloadsDir, Func<ModPageDownloadRecord, Task<Uri[]>> getDownloadUrls)
 	{
-		// reset download folder
-		if (Directory.Exists(modDownloadsDir))
-			FileHelper.ForceDelete(new DirectoryInfo(modDownloadsDir));
-		Directory.CreateDirectory(modDownloadsDir);
+		// init download folder
+		DirectoryInfo modDir = new DirectoryInfo(modDownloadsDir);
+		modDir.Create();
+
+		// remove deleted or invalid downloads
+		{
+			HashSet<string> validNames = modPage.Downloads.Select(p => p.Id.ToString()).ToHashSet();
+			foreach (FileSystemInfo entry in modDir.EnumerateFileSystemInfos())
+			{
+				if (entry is not DirectoryInfo || !validNames.Contains(entry.Name))
+					this.TryCleanup(entry, "obsolete download");
+			}
+		}
 
 		// process each download
 		Dictionary<long, DownloadScanResult> results = [];
 		foreach (ModPageDownloadRecord file in modPage.Downloads)
 		{
 			DirectoryInfo extractInto = new DirectoryInfo(Path.Combine(modDownloadsDir, file.Id.ToString()));
+			DirectoryInfo stagingDir = new DirectoryInfo(Path.Combine(modDownloadsDir, $"{DownloadTempPrefix}{file.Id}"));
 			FileInfo? downloadedFile = null;
-			bool success = false;
 
 			try
 			{
@@ -95,7 +99,7 @@ internal class DownloadManager : IDisposable
 				DownloadResult rawDownload = await this.DownloadFileAsync(file, modDownloadsDir, () => getDownloadUrls(file), this.HttpClient);
 				if (!rawDownload.Downloaded)
 				{
-					ConsoleHelper.WriteWarningLine($"  Warning: can't download {modPage.Id} > {file.Id}: {rawDownload.DownloadError}");
+					LogDownloadFailedWarning(extractInto, $"  Warning: can't download {modPage.Id} > {file.Id}: {rawDownload.DownloadError}");
 					results[file.Id] = new DownloadScanResult(rawDownload.FileSizeInBytes, [], DownloadError: rawDownload.DownloadError);
 					continue;
 				}
@@ -104,19 +108,24 @@ internal class DownloadManager : IDisposable
 				// skip zero-byte archive
 				if (rawDownload.FileSizeInBytes == 0)
 				{
-					ConsoleHelper.WriteWarningLine($"  Warning: can't unpack {modPage.Id} > {file.Id}: downloaded file is empty.");
+					LogDownloadFailedWarning(extractInto, $"  Warning: can't unpack {modPage.Id} > {file.Id}: downloaded file is empty.");
 					results[file.Id] = new DownloadScanResult(rawDownload.FileSizeInBytes, [], UnpackError: "Downloaded file is empty (zero bytes).");
 					continue;
 				}
 
-				// extract download
-				ExtractResult extract = await this.ExtractDownload(downloadedFile, extractInto);
+				// extract download into staging folder
+				ExtractResult extract = await this.ExtractDownload(downloadedFile, stagingDir);
 				if (!extract.Extracted)
 				{
-					ConsoleHelper.WriteWarningLine($"  Warning: can't unpack {modPage.Id} > {file.Id}: {extract.Error}");
+					LogDownloadFailedWarning(extractInto, $"  Warning: can't unpack {modPage.Id} > {file.Id}: {extract.Error}");
 					results[file.Id] = new DownloadScanResult(rawDownload.FileSizeInBytes, [], UnpackError: extract.Error);
 					continue;
 				}
+
+				// replace previous files
+				FileHelper.ForceDelete(extractInto);
+				Directory.Move(stagingDir.FullName, extractInto.FullName); // note: don't use `stagingDir.MoveTo`, since we delete its path below
+				extractInto.Refresh();
 
 				// detect mods in extracted download
 				ModFolderRecord[] folders = this.ModToolkit
@@ -125,17 +134,24 @@ internal class DownloadManager : IDisposable
 					.ToArray();
 
 				results[file.Id] = new DownloadScanResult(rawDownload.FileSizeInBytes, folders);
-				success = true;
 			}
 			finally
 			{
 				this.TryCleanup(downloadedFile, "download");
-				if (!success)
-					this.TryCleanup(extractInto, "unpack");
+				this.TryCleanup(stagingDir, "unpack");
 			}
 		}
 
 		return results;
+
+		static void LogDownloadFailedWarning(DirectoryInfo extractInto, string message)
+		{
+			extractInto.Refresh();
+			if (extractInto.Exists && extractInto.EnumerateFileSystemInfos().Any())
+				message = $"{message.TrimEnd('.')}. Keeping the previous copy of the download as-is.";
+
+			ConsoleHelper.WriteWarningLine(message);
+		}
 	}
 
 	/// <inheritdoc />
