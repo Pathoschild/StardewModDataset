@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 53072,
+	"Name": "Neighborly Farm",
+	"Author": "truejedi52",
+	"Description": "[size=5][b]Neighborly Farm[/b][/size]\n<br />\n<br />Pelican Town finally comes to [i]you[/i].\n<br />\n<br />Once you've made friends in the valley, they'll start stopping by your farm on their own. They'll stroll through your fields, poke their heads into your coops and barns, admire the greenhouse, check out your sheds, and then head back into town to carry on with their day.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Friends visit on their own.[/b] Villagers with 4+ hearts (configurable) can visit between 10am and 5pm while you're on the farm.[/*]\n<br />[*][b]They explore your buildings.[/b] Visitors walk into barns, coops, sheds, slime hutches, the greenhouse, and modded buildings with interiors, look around, and walk back out.[/*]\n<br />[*][b]Personal reactions.[/b] 16 villagers have their own lines for arriving, the fields, your animals, the greenhouse, sheds, and saying goodbye: all 12 marriage candidates plus Linus, Lewis, Evelyn and Vincent. Everyone else uses friendly generic lines.[/*]\n<br />[*][b]Talk to them for a bonus.[/b] Chatting with a visitor on your farm gives a small extra friendship boost (once per visit), with a heart emote.[/*]\n<br />[*][b]They get on with their day.[/b] When a visit ends, the villager picks up their normal schedule right where it should be, so shops and routines aren't disrupted.[/*]\n<br />[*][b]Safe for your farm.[/b] Visitors never trample crops, sprinklers or chests, and never stand on map warps.[/*]\n<br />[*][b]Shopkeepers stay at work.[/b] Pierre, Robin, Gus, Marnie, Harvey, Clint, Willy and other service NPCs are excluded by default so their shops stay open.[/*]\n<br />[/list]\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0+[/*]\n<br />[*][i]Optional:[/i] [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for in-game settings[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip this mod into your [b]Stardew Valley/Mods[/b] folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]\n<br />[size=4][b]Configuration[/b][/size]\n<br />Edit [b]Mods/NeighborlyFarm/config.json[/b] after the first launch, or use Generic Mod Config Menu in-game.\n<br />\n<br />[list]\n<br />[*][b]MinHearts[/b] (4): hearts needed before a villager visits[/*]\n<br />[*][b]MaxVisitorsAtOnce[/b] (2): how many visitors can be on the farm at once[/*]\n<br />[*][b]VisitStartTime / VisitEndTime[/b] (1000 / 1700): when new visits can start[/*]\n<br />[*][b]LeaveByTime[/b] (1900): everyone heads out by this time[/*]\n<br />[*][b]VisitChancePer10Min[/b] (0.12): chance of a new visitor every 10 in-game minutes[/*]\n<br />[*][b]MinVisitMinutes / MaxVisitMinutes[/b] (60 / 150): visit length in game minutes[/*]\n<br />[*][b]OnlyWhenPlayerOnFarm[/b] (true): visits only start while you're on the farm[/*]\n<br />[*][b]VisitInRain[/b] (false): whether visits happen on rainy days[/*]\n<br />[*][b]ResumeScheduleAfterVisit[/b] (true): villagers return to their normal day afterwards[/*]\n<br />[*][b]BuildingEntryChance[/b] (0.35): how often visitors go inside buildings[/*]\n<br />[*][b]AllowAnimalBuildings / AllowGreenhouse / AllowOtherBuildings[/b] (true)[/*]\n<br />[*][b]AllowFarmhouse / AllowCabins[/b] (false): private spaces, off by default[/*]\n<br />[*][b]ShowComments / CommentChance[/b] (true / 0.35): speech bubbles[/*]\n<br />[*][b]PersonalCommentChance[/b] (0.7): how often villagers use their own lines[/*]\n<br />[*][b]TalkFriendshipBonus[/b] (20): extra friendship for chatting with a visitor (0 = off)[/*]\n<br />[*][b]ExcludedNpcs[/b]: villagers who never visit[/*]\n<br />[/list]\n<br />[size=4][b]Console commands[/b][/size]\n<br />Type these in the SMAPI console window:\n<br />[list]\n<br />[*][b]nf_visit &lt;name&gt;[/b]: invite a villager right now (ignores hearts and time)[/*]\n<br />[*][b]nf_status[/b]: list current visitors and what they're doing[/*]\n<br />[*][b]nf_endall[/b]: send all visitors on their way[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Tested alongside [b]Stardew Valley Expanded[/b] and [b]Ridgeside Village[/b], including SVE's farm layout.[/*]\n<br />[*]Works with modded buildings that have interiors.[/*]\n<br />[*]No Harmony patches, so it's low-risk to combine with other mods.[/*]\n<br />[*][b]Multiplayer:[/b] works, with visits run by the host. The talk bonus currently applies to the host only.[/*]\n<br />[/list]\n<br />[size=4][b]Adding your own lines[/b][/size]\n<br />All dialogue lives in [b]i18n/default.json[/b]. Generic lines look like [b]farm.3[/b]; personal lines add the villager's name, like [b]Shane.animal.1[/b]. Copy a block, change the name, and that villager has their own voice. Translations are welcome!\n<br />\n<br />[size=4][b]Known limitations[/b][/size]\n<br />[list]\n<br />[*]Visitors appear at the farm's Bus Stop edge rather than walking in from town.[/*]\n<br />[*]After a visit, villagers reappear at their current schedule stop instead of walking there.[/*]\n<br />[*]Talking to a visitor uses their normal dialogue for the day.[/*]\n<br />[/list]\n<br />[size=4][b]Bug reports[/b][/size]\n<br />Please include a SMAPI log: upload it at [url=https://smapi.io/log]smapi.io/log[/url] and paste the link in the Bugs tab.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53072",
+	"Version": "1",
+	"Updated": "2026-09-30T17:14:40+00:00",
+	"Downloads": [
+		{
+			"Id": 184909,
+			"Type": "Main",
+			"DisplayName": "NeighborlyFarm",
+			"FileName": "0b/54/16/0b541696-e2d2-4a08-8129-b941d2a3b5da",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 40907,
+			"Uploaded": "2026-09-30T17:14:40+00:00",
+			"Mods": [
+				{
+					"Id": "Andrew.NeighborlyFarm",
+					"DisplayName": "Neighborly Farm",
+					"Type": "Smapi",
+					"RelativePath": "NeighborlyFarm",
+					"Manifest": {
+						"Name": "Neighborly Farm",
+						"Description": "Villagers you're friends with drop by your farm, wander around, and step inside your buildings.",
+						"Author": "Andrew",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NeighborlyFarm.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:53072"
+						],
+						"UniqueId": "Andrew.NeighborlyFarm"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571597,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439760,
+		"UploaderId": 13455515,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
