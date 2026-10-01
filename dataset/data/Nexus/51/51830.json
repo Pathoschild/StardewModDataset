@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 51830,
+	"Name": "NPC Map Locations Performance Patch - on-demand synchronization",
+	"Author": "xihanovo",
+	"Description": "[center][size=150][color=#2E86C1]NPC Map Locations Performance Patch[/color][/size]\n<br />[color=#5D6D7E]On‑Demand Sync for NPC Map Locations[/color][/center]\n<br />[center][color=#5D6D7E]NPC地图位置按需同步性能优化补丁[/color][/center]\n<br />[line]\n<br />[b]Overview[/b]\n<br />This patch adds on‑demand synchronization to NPC Map Locations. NPC positions are computed and broadcast only when any player (farmhand or host) has the map open; all computation stops when the map is closed, dramatically reducing CPU usage. Both the host and all farmhands must install this patch, otherwise sync will not work.\n<br />\n<br />[b]How it works[/b]\n<br />[code]\n<br />Map opens → triggers sync → computation starts\n<br />Map closes → sends stop → computation stops\n<br />Any player opening the map triggers the logic.[/code][center][/center]\n<br />[center][/center]\n<br />[line]\n<br />[b]简介[/b]\n<br />本补丁为 NPC Map Locations 添加按需同步机制。仅当任意玩家（客机或主机）打开地图时，才计算并广播 NPC 位置；地图关闭时计算完全停止，大幅降低 CPU 占用。主机与所有客机必须同时安装本补丁，否则同步失效。\n<br />\n<br />[b]工作原理[/b]\n<br />[code]\n<br />打开地图 → 触发同步 → 开始计算\n<br />关闭地图 → 发送停止 → 停止计算\n<br />任意玩家打开地图均触发逻辑。[/code][line]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51830",
+	"Version": "1.2.3",
+	"Updated": "2026-09-14T05:58:27+00:00",
+	"Downloads": [
+		{
+			"Id": 182747,
+			"Type": "Main",
+			"DisplayName": "NPCMapLocationsPerformancePatch 1.2.3",
+			"FileName": "54/23/0a/54230a29-9501-49f1-a7b4-c7b45cf6140a",
+			"Description": "improve map open detection with cross-platform support\n\n改进地图打开检测，增加跨平台支持",
+			"Version": "1.2.3",
+			"SizeInBytes": 15827,
+			"Uploaded": "2026-09-14T05:58:27+00:00",
+			"Mods": [
+				{
+					"Id": "XiHanQWQ.NPCMapLocationsPerformancePatch",
+					"DisplayName": "NPC Map Locations Performance Patch",
+					"Type": "Smapi",
+					"RelativePath": "NPCMapLocationsPerformancePatch",
+					"Manifest": {
+						"Name": "NPC Map Locations Performance Patch",
+						"Description": "Optimizes NPC Map Locations with on-demand sync: clients request NPC position updates only when opening the map; host computes and broadcasts only when requested. Dramatically reduces CPU usage when map is closed.",
+						"Author": "XiHanQWQ",
+						"Version": "1.2.3",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "NPCMapLocationsPerformancePatch.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Bouhm.NPCMapLocations",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51830"
+						],
+						"UniqueId": "XiHanQWQ.NPCMapLocationsPerformancePatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569435,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438518,
+		"UploaderId": 225181089,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

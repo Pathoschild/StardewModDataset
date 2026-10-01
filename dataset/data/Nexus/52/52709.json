@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 52709,
+	"Name": "SaveSaver",
+	"Author": "secsky3",
+	"Description": "[center]\n<br />[size=6][b]SaveSaver[/b][/size]\n<br />[size=4][i]Prevent Save-Load Crashes, Heal Broken Trees &amp; Sanitize Orphaned Mod Data[/i][/size]\n<br />\n<br />[/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]✨ Why SaveSaver?[/b][/size]\n<br />Have you ever experienced your game [b]crashing to desktop or freezing infinitely[/b] when trying to load a long-played save after uninstalling a mod, updating an expansion, or cleaning up your mod list?\n<br />\n<br />In Stardew Valley 1.6+, when mods containing custom C# classes (items, equipment, buildings) or custom locations are removed, orphaned data tags remain inside your save file XML. The vanilla game deserializer throws a fatal [b]InvalidOperationException[/b] or [b]NullReferenceException[/b] and refuses to open your farm.\n<br />\n<br />[b]SaveSaver[/b] is an intelligent, automated save file protector and integrity sanitizer. It intercepts your save file at the XML stream level [b]before[/b] the vanilla deserializer touches it, safely replacing orphaned mod types with vanilla items and rescuing stranded players, all while keeping automatic timestamped backups!\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]\uD83C\uDF1F Key Features[/b][/size]\n<br />[list]\n<br />[*][b]\uD83D\uDEE1️ Zero-Crash Save Loading[/b]: Safely neutralizes unregistered C# classes ([font=Courier New]xsi:type[/font]) before vanilla deserialization, preventing game-closing crashes.[/*]\n<br />[*][b]\uD83C\uDF32 Tree Healing (Fix for SVE / Custom Trees)[/b]: Automatically detects broken mod trees (such as old SVE Fir/Birch trees) that cause red \"X\" errors in Lookup Anything or show a forbidden cursor. Converts them into healthy, fully-grown vanilla Oak/Pine trees ready for tapping and chopping![/*]\n<br />[*][b]\uD83D\uDCE6 ErrorItem Auto-Converter[/b]: Converts ugly [font=Courier New](O)ErrorItem[/font] cluttering your inventory, chests, and fridge into safe vanilla items (default: Stone, customizable via config).[/*]\n<br />[*][b]\uD83D\uDDFA️ Stranded Player Rescue &amp; Map Cleanup[/b]: If you saved your game inside a custom mod map that has since been uninstalled, SaveSaver safely warps your farmer back to your FarmHouse bed and cleans ghost map nodes from your save.[/*]\n<br />[*][b]\uD83D\uDCCB In-Game Interactive Recovery Dialog[/b]: When corruptions are neutralized, an in-game UI displays exact details of what was cleaned, allowing you to permanently clean the save with one click or keep it temporary for the session.[/*]\n<br />[*][b]\uD83D\uDCBE Automatic Safety Backup[/b]: Every time a disk clean or save sanitization occurs, an untampered timestamped backup is saved in [font=Courier New]Mods/SaveSaver/Backups/[/font].[/*]\n<br />[*][b]\uD83C\uDF10 Full i18n Localization[/b]: Supports English and Korean out-of-the-box.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]\uD83D\uDCBB Console Commands[/b][/size]\n<br />You can open the SMAPI console anytime to run diagnosis or manual fixes:\n<br />[list]\n<br />[*][b]savesaver_scan[/b] : Scans all save folders in your Stardew Valley saves directory and reports missing mod types or corrupted entries.[/*]\n<br />[*][b]savesaver_clean [save_folder_name][/b] : Permanently cleans the specified save file (or type [font=Courier New]all[/font] to clean all saves) with verified automatic backups.[/*]\n<br />[*][b]savesaver_convert_trees[/b] : Scans all loaded locations and instantly heals all broken/invalid mod trees into mature vanilla trees.[/*]\n<br />[*][b]savesaver_convert_errors[/b] : Scans inventory, chests, and fridges, converting all ErrorItems into safe vanilla items.[/*]\n<br />[*][b]savesaver_purge_errors[/b] : Deletes all ErrorItems from inventory and nearby chests.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]\uD83D\uDCE5 Requirements &amp; Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] (v4.0.0 or higher, Stardew Valley 1.6+).[/*]\n<br />[*]Download this mod and place the [b]SaveSaver[/b] folder into your [b]Stardew Valley/Mods[/b] directory.[/*]\n<br />[*]Launch the game using SMAPI![/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]\uD83E\uDD1D Compatibility[/b][/size]\n<br />[list]\n<br />[*][b]Stardew Valley 1.6+[/b]: Fully compatible with 1.6.0 through 1.6.15+ (Single-player and Multiplayer).[/*]\n<br />[*][b]Expansion Mods[/b]: Works seamlessly alongside Stardew Valley Expanded (SVE), Ridgeside Village, East Scarp, and any custom item mods.[/*]\n<br />[*][b]Lookup Anything[/b]: Resolves Lookup Anything inspection crashes on uninstalled mod trees.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]☕ Support the Author[/b][/size]\n<br />If SaveSaver helped rescue your beloved farm and you would like to support future development:\n<br />[center]\n<br />[url=https://ko-fi.com/secsky3][img]https://ko-fi.com/img/githubbutton_sm.svg[/img][/url]\n<br />[/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]\uD83C\uDDF0\uD83C\uDDF7 한국어 안내[/b][/size]\n<br />[list]\n<br />[*][b]모드 개요[/b]: 대확장 모드(SVE), 리지사이드, 각종 아이템 모드를 삭제하거나 업데이트한 후 세이브를 불러올 때 게임이 튕기거나 멈추는 현상을 원천 차단하는 세이브 복구 및 무결성 정제 모드입니다.[/*]\n<br />[*][b]크래시 방어[/b]: 세이브 역직렬화 직전 XML 스트림 단계에서 존재하지 않는 모드 C# 클래스를 감지하여 바닐라 돌로 안전 치환하므로 튕김 없이 세이브를 불러올 수 있습니다.[/*]\n<br />[*][b]고장 난 모드 나무 복구[/b]: SVE 등 삭제된 모드의 전나무/자작나무가 맵에 남아 룩업 애니띵 에러를 뿜거나 도끼질이 불가능하던 현상을 바닐라 성목(소나무/참나무)으로 즉시 정상화합니다.[/*]\n<br />[*][b]고립된 플레이어 구조[/b]: 삭제된 모드 맵에서 저장하고 모드를 지웠더라도 농가 침대로 안전하게 이동시켜 세이브가 열리지 않는 문제를 해결합니다.[/*]\n<br />[*][b]인게임 복구 메뉴 및 안전 장치[/b]:\n<br />\u00A0 - 게임 접속 시 오염 항목이 정제되면 상세 안내창이 나타나 영구 정제 여부를 결정할 수 있습니다.\n<br />\u00A0 - [b]주의사항 안내[/b]: 최근 모드를 변경하거나 삭제한 적이 없다면 모드 설정을 먼저 확인하실 수 있도록 안내합니다.\n<br />\u00A0 - [b]자동 백업[/b]: 영구 제거를 선택해도 원본 세이브 파일이 [font=Courier New]SaveSaver/Backups/[/font] 폴더에 자동 백업되므로 안심하고 사용하실 수 있습니다.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52709",
+	"Version": "1",
+	"Updated": "2026-09-26T14:07:07+00:00",
+	"Downloads": [
+		{
+			"Id": 184223,
+			"Type": "Main",
+			"DisplayName": "SaveSaver 1.0.1",
+			"FileName": "ee/56/c3/ee56c372-eabd-4791-b7dc-70916cd12888",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 43465,
+			"Uploaded": "2026-09-26T14:07:07+00:00",
+			"Mods": [
+				{
+					"Id": "Sky.SaveSaver",
+					"DisplayName": "SaveSaver",
+					"Type": "Smapi",
+					"RelativePath": "SaveSaver",
+					"Manifest": {
+						"Name": "SaveSaver",
+						"Description": "Prevents save-load crashes when custom mods (items, locations, entities) are removed by sanitizing unresolved XML types before deserialization.",
+						"Author": "Sky",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SaveSaver.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Sky.SaveSaver"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570911,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439397,
+		"UploaderId": 58646706,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,153 @@
+{
+	"Site": "Nexus",
+	"Id": 52945,
+	"Name": "UI Framework",
+	"Author": "6135",
+	"Description": "[size=5][b]UI Framework[/b][/size]\n<br />\n<br />A SMAPI library mod that other mods use to build their in-game menus, written as JSON data or C#. It provides the windows, buttons, text and number inputs, checkboxes, dropdowns, sliders, scroll areas, lists, data grids, forms and tooltips, plus layout and keyboard, mouse and gamepad handling. Authors can build up a screen together from parts instead of drawing and positioning everything by hand. Content Patcher packs can build complete, interactive screens (settings pages, HUD widgets, additions to other mods' menus) without writing any code.\n<br />\n<br />[size=4][b]For players[/b][/size]\n<br />[list]\n<br />[*][b]It does nothing on its own.[/b] Install it because another mod lists it as a requirement. If nothing requires it, you can remove it.[/*]\n<br />[*][b]Requirements:[/b] Stardew Valley 1.6 or later and SMAPI 4.x. [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional.[/*]\n<br />[*][b]Install:[/b] unzip into [font=Courier New]Stardew Valley/Mods[/font] so that [font=Courier New]Mods/UIFramework/manifest.json[/font] exists, then launch the game through SMAPI. Or use your mod manager of choice.[/*]\n<br />[*]Works in single player, multiplayer and split-screen.[/*]\n<br />[/list]\n<br />[b]What you get in every menu that uses it[/b]\n<br />[list]\n<br />[*]Four themes: [i]default[/i], [i]dark[/i], [i]high-contrast[/i] and [i]colorblind[/i]. Content packs can add more.[/*]\n<br />[*]Text scaling and reduced motion.[/*]\n<br />[*]Screen reader announcements through [url=https://www.nexusmods.com/stardewvalley/mods/16205]Stardew Access[/url].[/*]\n<br />[*]Windows you can drag, collapse and resize, remembered per save.[/*]\n<br />[*]Keyboard, mouse and gamepad navigation. One Escape closes the menu.[/*]\n<br />[*]Layouts that adapt to the window size: rows of buttons and form labels wrap, and long titles are shortened.[/*]\n<br />[*]In split-screen, each player gets their own menus (Untested, if you are able to test it and find any bugs, please report them here)[/*]\n<br />[/list]\n<br />[b]Config[/b] ([font=Courier New]Mods/UIFramework/config.json[/font], or in-game through Generic Mod Config Menu)\n<br />[list]\n<br />[*][b]TooltipDelayMs[/b] (default 400): how long the cursor must rest on an element before its tooltip appears.[/*]\n<br />[*][b]Theme[/b] (default [i]default[/i]), [b]TextScale[/b] (default 1.0) and [b]ReducedMotion[/b] (default off): the look, text size and animation of every framework menu.[/*]\n<br />[*][b]DebugOverlay[/b], [b]LogCallbacks[/b], [b]PseudoLocalize[/b] and [b]InspectorHotkey[/b] (default F10) are tools for mod authors.[/*]\n<br />[/list]\n<br />[b]Console commands (for mod authors)[/b]\n<br />[list]\n<br />[*][font=Courier New]ui_theme [name][/font]: list or switch themes.[/*]\n<br />[*][font=Courier New]ui_layout_reset[/font]: forget moved and resized windows.[/*]\n<br />[*][font=Courier New]ui_list[/font]: list the framework menus that are open.[/*]\n<br />[*][font=Courier New]ui_debug[/font]: toggle the debug overlay.[/*]\n<br />[/list]\n<br />[size=4][b]For content pack authors...[/b][/size]\n<br />\n<br />Add [font=Courier New]6135.UIFramework[/font] as a dependency of your Content Patcher pack, then edit [font=Courier New]Mods/6135.UIFramework/Menus[/font] (or [font=Courier New]Huds[/font], [font=Courier New]Owners[/font], [font=Courier New]Sprites[/font], [font=Courier New]Composites[/font], [font=Courier New]Contributions[/font]).\n<br />[list]\n<br />[*]Each menu is a tree of elements with the same names as the C# API: Stack, Grid, Label, Button, NumberInput, Dropdown, List, DataGrid, Form and more.[/*]\n<br />[*]Text shows live values ([font=Courier New]\"Clicked ${menu.clicks} times\"[/font]), inputs bind to state ([font=Courier New]\"Bind\": \"config.volume\"[/font]), and events run trigger actions ([font=Courier New]\"OnClick\": [ \"AddMoney 100\", \"6135.UIFramework_CloseMenu\" ][/font]).[/*]\n<br />[*]Named state per menu, per session, per save, and as settings that carry across saves. Game state queries, map tile actions, and a Content Patcher token so your state can drive your own patches.[/*]\n<br />[*]Menus, HUD widgets, settings screens, reusable templates and components, and additions to other mods' menus.[/*]\n<br />[*]Open a menu with a hotkey, a map tile action, any trigger action or [font=Courier New]ui_open[/font].[/*]\n<br />[*]Hot reload: [font=Courier New]patch reload[/font] keeps an open menu open.[/*]\n<br />[*][font=Courier New]ui_validate[/font] points at every mistake by path, and [font=Courier New]ui_schema[/font] gives your editor autocomplete.[/*]\n<br />[/list]\n<br />[size=4][b]And for mod authors[/b][/size]\n<br />\n<br />Copy one file ([font=Courier New]IStardewUIApi.cs[/font]) into your project, add [font=Courier New]6135.UIFramework[/font] as a dependency in your manifest, and request the API with [font=Courier New]helper.ModRegistry.GetApi&lt;IStardewUIApi&gt;(\"6135.UIFramework\")[/font].\n<br />[list]\n<br />[*]Menus from typed handles ([font=Courier New]AddGrid[/font], [font=Courier New]AddButton[/font], [font=Courier New]AddDropdown[/font], ...), getter/setter bindings, a callback for every interaction, and fully custom components through an interface.[/*]\n<br />[*]Extension slots so other mods can add UI to your screens, and shareable composite components.[/*]\n<br />[*]A sortable, filterable data grid.[/*]\n<br />[*]Signals, and auto-generated forms with undo/redo.[/*]\n<br />[*]Rich text and rich tooltips, and item images that keep flavored goods' colors.[/*]\n<br />[*]HUD widgets and toast notifications.[/*]\n<br />[*]Keep your screens in JSON, and offer your C# code to data by name: commands, functions, row sources, models (per player through [font=Courier New]ExposeModelSource[/font]), draw hooks and composites.[/*]\n<br />[*]Hotkeys accept SMAPI keybind strings straight from your config.[/*]\n<br />[*]An in-game inspector exports any menu, C# or data, as C# code or JSON.[/*]\n<br />[/list]Full documentation, the API reference: [url=https://github.com/6135/StardewValleyMods/wiki]UI Framework Wiki[/url]\n<br />Examples are available for download.\n<br />\n<br />[size=4][b]Source and issues[/b][/size]\n<br />Source code: [url=https://github.com/6135/StardewValleyMods]github.com/6135/StardewValleyMods[/url] (folder [font=Courier New]StardewUIFramework[/font]). Please report problems on the [url=https://github.com/6135/StardewValleyMods/issues]GitHub issue tracker[/url] or in this page, include your [url=https://smapi.io/log]SMAPI log[/url]\u00A0and mods in use.\n<br />\n<br />[size=4][b]Note one UI Framework and StardewUI[/b][/size]\n<br />\n<br />My ideas for a UI Framework for stardew valley came before StardewUI was ever published (though I assume it had already been in development). As such, UI Framework is not trying to compete with [url=https://www.nexusmods.com/stardewvalley/mods/43861]StardewUI[/url]\u00A0as it is\u00A0[b]the established UI framework for Stardew Valley, [/b]in my opinion, mods. [b]If you are a C# mod author choosing a UI library, use StardewUI.[/b]\u00A0\n<br />\n<br />[b]StardewUI is the better default especially because it's more mature.[/b]\n<br />\n<br />[b]What I feel UI Framework does differently[/b]\n<br />[list]\n<br />[*][b]Menus without C#.[/b] A Content Patcher pack can build complete menus, HUD widgets and settings screens as data, with expressions, named state and trigger actions. StardewUI views are also game assets, but a C# mod provides their data and opens them. I don't know Stardew UI well enough, so if I'm wrong pelase let me know.[/*]\n<br />[*][b]Mods can add to each other's menus[/b] through extension slots, contributions and decorations.[/*]\n<br />[*][b]An\u00A0n in-game inspector[/b] that exports any menu as C# or JSON.[/*]\n<br />[/list]\n<br />Use UI Framework if you want to build a menu from a Content Patcher pack without writing C#, or if you want to extend a mod that already uses it. Otherwise, StardewUI is the safer choice.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52945",
+	"Version": "1.8.3",
+	"Updated": "2026-09-29T16:13:55+00:00",
+	"Downloads": [
+		{
+			"Id": 184242,
+			"Type": "Optional",
+			"DisplayName": "UI Framework Example - csharp",
+			"FileName": "ea/5d/ba/ea5dba07-8274-4c23-9ba0-016b57d43a95",
+			"Description": "",
+			"Version": "1.8.0",
+			"SizeInBytes": 49102,
+			"Uploaded": "2026-09-26T16:50:26+00:00",
+			"Mods": [
+				{
+					"Id": "6135.UIFrameworkExample",
+					"DisplayName": "UI Framework Example",
+					"Type": "Smapi",
+					"RelativePath": "UIFrameworkExample",
+					"Manifest": {
+						"Name": "UI Framework Example",
+						"Description": "Example consumer of the UI Framework: press F9 in-game to open a demo menu. Also offers C# composites, a command and a draw hook to data UIs, and uses a data composite from the example content pack.",
+						"Author": "6135",
+						"Version": "1.8.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "UIFrameworkExample.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "6135.UIFramework",
+								"MinimumVersion": "1.8.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52945"
+						],
+						"UniqueId": "6135.UIFrameworkExample"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570930,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 184243,
+			"Type": "Optional",
+			"DisplayName": "UI Framework Example - Content Patcher",
+			"FileName": "a6/67/b8/a667b8ee-b656-44df-aef0-eed047be28d1",
+			"Description": "",
+			"Version": "1.8.0",
+			"SizeInBytes": 13592,
+			"Uploaded": "2026-09-26T16:50:43+00:00",
+			"Mods": [
+				{
+					"Id": "6135.UIFrameworkExample.CP",
+					"DisplayName": "(CP) UI Framework Example",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] UI Framework Example",
+					"Manifest": {
+						"Name": "(CP) UI Framework Example",
+						"Description": "Example content pack for UI Framework: menus, a HUD and a settings screen built entirely from Content Patcher data (no C#), plus a hybrid menu over the UI Framework Example mod's C# composites, command and draw hook, cross-mod templates, data composites and contributions (also to the example mod's C# menu) when it is installed.",
+						"Author": "6135",
+						"Version": "1.8.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "6135.UIFramework",
+								"MinimumVersion": "1.8.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "6135.UIFrameworkExample",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52945"
+						],
+						"UniqueId": "6135.UIFrameworkExample.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570931,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 184687,
+			"Type": "Main",
+			"DisplayName": "UI Framework",
+			"FileName": "c5/2a/77/c52a77b5-b027-47a7-9385-61e5fd08f5bb",
+			"Description": "",
+			"Version": "1.8.3",
+			"SizeInBytes": 527746,
+			"Uploaded": "2026-09-29T16:13:55+00:00",
+			"Mods": [
+				{
+					"Id": "6135.UIFramework",
+					"DisplayName": "UI Framework",
+					"Type": "Smapi",
+					"RelativePath": "UIFramework",
+					"Manifest": {
+						"Name": "UI Framework",
+						"Description": "A UI framework other mods and content packs use to build in-game menus out of reusable components, written as JSON data or C#.",
+						"Author": "6135",
+						"Version": "1.8.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "UIFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "shoaib.stardewaccess",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52945"
+						],
+						"UniqueId": "6135.UIFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571375,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439633,
+		"UploaderId": 4176091,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

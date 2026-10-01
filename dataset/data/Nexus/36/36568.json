@@ -4,20 +4,20 @@
 	"Name": "Auto-Sorter Building",
 	"Author": "AtlasV1224",
 	"AuthorLabel": "AtlasV",
-	"Description": "Manually sorting your items always takes so much time, add in a bunch of mods that add new items and it takes even longer!\n<br />\n<br />This mod can help! It adds a new building with 2 upgrades\u00A0that can be built by Robin that\n<br />automatically sorts all your items by category into the chests on the inside\n<br />that you place!\n<br />\n<br />\n<br />\n<br />---------------------\n<br />|\u00A0 \u00A0 \u00A0USAGE\u00A0 \u00A0 \u00A0 |\n<br />---------------------\n<br />To use it, this is all you need to do :\n<br />[list]\n<br />[*]Buy the building from Robin and wait for it to be constructed.[/*]\n<br />[*]Place a sign that can have an item displayed on it anywhere in the building.[/*]\n<br />[*]Place any kind of chest directly below the sign.[/*]\n<br />[*]Place an item on the sign with a category that matches the items you want to be stored in the chest.[/*]\n<br />[*]Optionally use a selector on the sign to filter based on the items data[/*]\n<br />[*]Then head on outside and place your items in the box to the right of the door or use Automate the transfer of items.[/*]\n<br />[*]When you close the box your items will be sorted automatically![/*]\n<br />[/list]The building can support any number of chests with signs inside!\n<br />\n<br />\n<br />There are also some fall back features so that if it doesn't find a chest that matches, your items will still be safe!\n<br />[list]\n<br />[*]If the building finds 2 chests with categories that match but one doesn't\n<br />have enough space, It will place the remaining items in the other chest.[/*]\n<br />[*]if the building finds a chest with a category match but doesn't have\n<br />enough space, or there isn't a chest for that category, it will place the items in chest below an empty sign.[/*]\n<br />[*]If the building can't do either of these the items will be placed back into the box you placed your items in.[/*]\n<br />[/list]\n<br />\n<br />\n<br />---------------------\n<br />|\u00A0 \u00A0 CREDITS\u00A0 \u00A0 |\n<br />---------------------\n<br />[url=https://next.nexusmods.com/profile/Spiderbuttons]Spiderbuttons[/url]\uFEFF, for making the original core of the mod, which has had very heavy modifications by me.\n<br />[url=https://next.nexusmods.com/profile/NaiDuBao?gameId=1303]NaiDuBao[/url], for making 19 extra colour options, and the seasonal variants for them\n<br />\n<br />\n<br />\n<br />---------------------------\n<br />|\u00A0 TRANSLATIONS\u00A0 |\n<br />---------------------------\n<br />If you'd like to translate this mod, feel free to upload an i18n file to your nexus profile and link to it with a comment.\n<br />\n<br />[list]\n<br />[*][✓] English[/*]\n<br />[*][ ] Chinese (Incomplete)[/*]\n<br />[/list]\n<br />\n<br />\n<br />----------------------------\n<br />|\u00A0 COMPATIBILITY\u00A0 \u00A0|\n<br />----------------------------\n<br />I don't know if this mod will work on android nor is it supported, if it\n<br />does work, Great! it might need the manifest changing, If it doesn't work, then I can't help you, sorry.\n<br />Muilt-player is also untested.\n<br />\n<br />\n<br />\n<br />[url=https://git.atlasv.info/Stardew-Valley-Mods/Auto-Sorter-Building]Source code[/url]\u00A0for the C# part of the mod",
+	"Description": "Manually sorting your items always takes so much time, add in a bunch of mods that add new items and it takes even longer!\n<br />\n<br />This mod can help! It adds a new building with 2 upgrades\u00A0that can be built by Robin that\n<br />automatically sorts all your items by category into the chests on the inside\n<br />that you place!\n<br />\n<br />\n<br />\n<br />[b][u][size=4]USAGE\u00A0[/size][/u][/b]\n<br />To use it, this is all you need to do :\n<br />[list]\n<br />[*]Buy the building from Robin and wait for it to be constructed.[/*]\n<br />[*]Place a sign that can have an item displayed on it anywhere in the building.[/*]\n<br />[*]Place any kind of chest directly below the sign.[/*]\n<br />[*]Place an item on the sign with a category that matches the items you want to be stored in the chest.[/*]\n<br />[*]Optionally use a selector on the sign to filter based on the items data[/*]\n<br />[*]Then head on outside and place your items in the box to the right of the door or use Automate the transfer of items.[/*]\n<br />[*]When you close the box your items will be sorted automatically![/*]\n<br />[/list]The building can support any number of chests with signs inside!\n<br />\n<br />[b][u]Multiple filters (OR type) on a single sign\n<br />[/u][/b]\n<br />[list]\n<br />[*]Hold another item with a different category[/*]\n<br />[*]Shift-interact with the existing sign, Repeat for each alternative[/*]\n<br />[*]Shift-interact with an already-added category again to remove it[/*]\n<br />[/list]A small `+N` badge shows the\u00A0number of saved alternatives, and breaking the sign clears them.\n<br />For example, a\u00A0sign displaying a sword with dagger and club added this way routes `Sword OR Dagger\n<br />OR Club` into the same chest. The sign cycles through its primary and Shift-added\n<br />sample items every two seconds so the complete filter remains visible in-game.\n<br />\n<br />[b][u]Calcifer Custom Item Categories[/u][/b]\n<br />Objects using Calcifer's custom-category field keepboth that custom category and their underlying vanilla category for sorting. Those categories form an `AND` filter on a sign: for example, an object categorized as\n<br />`Junk Food` by Calcifer with the vanilla `Cooking` category creates `Junk Food +\u00A0Cooking`. The more specific `Junk Food` chest is tried before a chest configured only for\u00A0`Cooking`.\n<br />\n<br />\n<br />There are also some fall back features so that if it doesn't find a chest that matches, your items will still be safe!\n<br />[list]\n<br />[*]If the building finds 2 chests with categories that match but one doesn't\n<br />have enough space, It will place the remaining items in the other chest.[/*]\n<br />[*]if the building finds a chest with a category match but doesn't have\n<br />enough space, or there isn't a chest for that category, it will place the items in chest below an empty sign.[/*]\n<br />[*]If the building can't do either of these the items will be placed back into the box you placed your items in.[/*]\n<br />[/list]\n<br />\n<br />\n<br />[b][u][size=4]CREDITS[/size][/u][/b]\n<br />[url=https://next.nexusmods.com/profile/Spiderbuttons]Spiderbuttons[/url]\uFEFF, for making the original core of the mod, which has had very heavy modifications by me.\n<br />[url=https://next.nexusmods.com/profile/NaiDuBao?gameId=1303]NaiDuBao[/url], for making 19 extra colour options, and the seasonal variants for them\n<br />Innti,\u00A0for the Calcifer category filter, and the OR logic for multiple categories going into the same chest.\n<br />\n<br />\n<br />[b][u][size=4]TRANSLATIONS[/size][/u][/b]\n<br />If you'd like to translate this mod, feel free to upload that translation yourself, just link back to this mod\n<br />[list]\n<br />[*]Don't use AI translation[/*]\n<br />[*]Don't upload the mods original files[/*]\n<br />[*]Fluency in target language is prefered, but not necessary[/*]\n<br />[/list]\n<br />\n<br />\n<br />[b][u][size=4]COMPATIBILITY[/size][/u][/b]\n<br />I don't know if this mod will work on android nor is it supported, if it\n<br />does work, Great! it might need the manifest changing, If it doesn't work, then I can't help you, sorry.\n<br />Muilt-player is also untested.\n<br />\n<br />\n<br />\n<br />[url=https://git.atlasv.info/Stardew-Valley-Mods/Auto-Sorter-Building]Source code[/url]\u00A0for the C# part of the mod\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/36568",
-	"Version": "1.2.1",
-	"Updated": "2026-08-06T19:42:31+00:00",
+	"Version": "1.2.2",
+	"Updated": "2026-09-21T06:43:29+00:00",
 	"Downloads": [
 		{
-			"Id": 177608,
+			"Id": 183634,
 			"Type": "Main",
 			"DisplayName": "Auto-Sorter Building",
-			"FileName": "19/6b/50/196b5019-fb46-4021-9c04-49c8cf6b0d2e",
-			"Description": "MAJOR update, please delete and fresh install and check the changelog in the \"Logs\" tab!",
-			"Version": "1.2.1",
-			"SizeInBytes": 376585,
-			"Uploaded": "2026-08-06T19:42:31+00:00",
+			"FileName": "a1/7f/c6/a17fc6f9-38f9-4000-900f-812021a952e6",
+			"Description": "Thanks to fireinnti for the Calcifer dual category system, and the OR logic for multiple categories in the same chest!",
+			"Version": "1.2.2",
+			"SizeInBytes": 387954,
+			"Uploaded": "2026-09-21T06:43:29+00:00",
 			"Mods": [
 				{
 					"Id": "AtlasV.AutoSorterBuildingCore",
@@ -27,8 +27,8 @@
 					"Manifest": {
 						"Name": "AutoSorterBuilding",
 						"Description": "The SMAPI core for Auto-Sorter Building",
-						"Author": "Spiderbuttons & AtlasV1224",
-						"Version": "1.2.1",
+						"Author": "AtlasV1224",
+						"Version": "1.2.2",
 						"EntryDll": "AutoSorterBuilding.dll",
 						"Dependencies": [],
 						"UpdateKeys": [
@@ -39,7 +39,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342564296,
+				"Uid": 5596342570322,
 				"CategoryId": 1,
 				"Primary": true
 			}

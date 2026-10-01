@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 53096,
+	"Name": "Fix Double Items",
+	"Author": "Legolukas",
+	"Description": "[center][img]https://i.imgur.com/3qxSqCb.png[/img] [/center]\n<br />\n<br />\n<br />Ever installed two fish mods and then opened the Stardew Aquarium donation list to find it broken, flickering, or empty? Chances are two of your mods add a fish with the exact same name - \"Tadpole\" from Stardew Valley Expanded and \"Tadpole\" from Unique Fish Additions, for example. The items are different and have different IDs, but a few mods (Stardew Aquarium for example) look fish up by their name, get two answers, and give up. Sometimes that means an error in your SMAPI log, sometimes it means neither fish works.\n<br />\n<br />This mod finds those name clashes and quietly gives one of the two items a new internal name. Both fish stay in your game, both keep working, and nothing looks different - the name you see in the game does not change.\n<br />\n<br />[b]HOW IT WORKS\u00A0[/b]\n<br />\n<br />Every item has an ID (which the game uses for recipes, saves, shops and so on) and an internal name (which a few mods use as a lookup key). IDs are unique. Names sometimes aren't.\n<br />\n<br />When the game loads its item list, this mod:\n<br />1. Looks for items from different mods that share an internal name (spaces and capital letters are ignored, because that's how Stardew Aquarium compares them).\n<br />2. Checks if that clash can actually cause trouble. Most name overlaps are harmless, so by default only two cases count: two fish while Stardew Aquarium is installed, or a name that game data (fish ponds, machines, gift tastes, shops, bundles...) refers to through its `item_name` tag.\n<br />3. Keeps the name of one item and adds a small suffix to the other, for example `Tadpole` and `Tadpole_otohime.uniquefish`. The displayed name stays \"Tadpole\" for both.\n<br />\n<br />Things it deliberately leaves alone: items from the same mod that share a name on purpose (variants, numbered notes and so on), and anything that clashes with a vanilla item.\n<br />\n<br />Item IDs are never touched, so recipes, machines, shops, bundles and your existing saves keep working as before.\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/SkgptFd.png[/img] [/center]\n<br />\n<br />\n<br />1. Install the latest version of SMAPI.\n<br />2. Install Generic Mod Config Menu (optional, but recommended for easy configuration).\n<br />3. Download this mod and extract it into your `Stardew Valley/Mods` folder.\n<br />4. Run the game using SMAPI.\n<br />\n<br />Nothing else to do - it works on its own. Each rename is written to the SMAPI log, together with the reason.\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/2tjtjDL.png[/img] [/center]\n<br />\n<br />\n<br />You can configure the mod in-game using Generic Mod Config Menu, or by editing `Mods/DoubleItemFixer/config.json`:\n<br />\n<br />[list]\n<br />[*][i]Enabled\u00A0[/i]- turns all renaming on or off. Takes effect as soon as you save the menu.[/*]\n<br />[*][i]Only real problem cases[/i]\u00A0- on by default. Only handles name clashes that can really break something (see above). Turn it off to handle every name overlap, which finds many harmless ones.[/*]\n<br />[*][i]Manual mode[/i] - off by default. Lets you override the automatic choice for each pair of items (see below).[/*]\n<br />[*][i]Review key[/i]\u00A0- opens the list of clashes. Defaults to `F10`.[/*]\n<br />[*][i]Log every rename[/i]\u00A0- shows each rename in the SMAPI console instead of only in the log file.[/*]\n<br />[*][i]IgnoredNames[/i] (config.json only) - internal names that should never be renamed.[/*]\n<br />[/list]\n<br />[b]MANUAL MODE[/b]\n<br />\n<br />Not happy with which item got renamed? Turn on Manual mode and press the review key (or tick \"Open review list after saving\" in the mod's menu). You get a list where every clash shows both items side by side, each with its icon, name and the mod it comes from. Hover an item to see its ID and why the clash matters. Then pick one of:\n<br />\n<br />[list]\n<br />[*][i]Rename left one[/i] or [i]Rename right one[/i] - that item gets the new name.[/*]\n<br />[*][i]Keep both[/i] - leave both names alone (the clash stays).[/*]\n<br />[*][i]Revert\u00A0[/i]- forget your choice for that pair. **Revert all choices** does it for every pair.[/*]\n<br />[/list]\n<br />Pairs you haven't decided on are renamed automatically, so nothing breaks while you look. Your choices are saved and apply the next time a save loads (Stardew Aquarium reads names only once while loading).\n<br />\n<br />[b]UNINSTALLING[/b]\n<br />\n<br />Once the mod is removed, the clashes come back. Stardew Aquarium also saves which fish you donated by name, so a donation of a renamed fish is stored under its new name. To clean that up, open the mod's Generic Mod Config Menu page with a save loaded, tick **Prepare uninstall** and **Yes, I am sure**, and press Save &amp; Close. The mod then turns itself off and removes only those donation flags, after writing a backup. **Undo preparation** puts them back. Then close the game and delete the mod folder.\n<br />\n<br />Keep in mind: without this mod, mods that use the same name may clash again, so you may need a small compatibility patch for those.\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/Eg7jJbF.png[/img] [/center]\n<br />\n<br />\n<br />The mod doesn't change any files - it only changes the internal name of an item in memory while the game loads.\n<br />\n<br />[list]\n<br />[*]Works with any mod that adds items, whichever framework it uses.[/*]\n<br />[*]Replaces small compatibility patches that only rename a clashing fish (for example fixes for Fresh Fish with Return to Mineral Town, or Unique Fish Additions with Stardew Valley Expanded). You can remove those once this mod is running.[/*]\n<br />[*]Renaming an item changes its automatic `item_&lt;name&gt;` context tag. Rules that filter by that exact tag no longer match the renamed item, which is the same trade-off those small patches make.[/*]\n<br />[*]Mods that look items up by name (for example a content pack using the ItemId token with a name) will only find the item that kept its name.[/*]\n<br />[/list]\n<br />[i]Mods that are not compatible:[/i]\n<br />None known. If a mod still errors on a name clash, send me the SMAPI log line and the two items involved.\n<br />\n<br />Feel free to support me on [url=https://www.patreon.com/cw/legolukas/membership]Patreon [/url]and don't forget to press Endorse here on Nexus if you like what I do!\u00A0\n<br />\n<br />Also check out my other Mods:\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/47267]Achievement Excluder[/url] - let's you disable modded or vanilla Items for certain achievements.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/52734]Fix Error Items[/url] - replaces broken and bugged items with working ones[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/52612]Quest Vision[/url] - marks Items in chests and menus for quests, bundles and more\n<br />\n<br />[/*]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53096",
+	"Version": "1.0.0",
+	"Updated": "2026-09-29T15:20:52+00:00",
+	"Downloads": [
+		{
+			"Id": 184683,
+			"Type": "Main",
+			"DisplayName": "DoubleItemFixer 1.0.0",
+			"FileName": "e5/2c/6f/e52c6f35-2b92-442a-b59c-15632db57300",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 36325,
+			"Uploaded": "2026-09-29T15:20:52+00:00",
+			"Mods": [
+				{
+					"Id": "Lukas.DoubleItemFixer",
+					"DisplayName": "Fix Double Items",
+					"Type": "Smapi",
+					"RelativePath": "DoubleItemFixer",
+					"Manifest": {
+						"Name": "Fix Double Items",
+						"Description": "When two mods add items with the same internal name (e.g. two 'Tadpole' fish), keeps both usable by renaming the internal name of one, so mods like Stardew Aquarium stop erroring.",
+						"Author": "Lukas",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DoubleItemFixer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53096"
+						],
+						"UniqueId": "Lukas.DoubleItemFixer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571371,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439784,
+		"UploaderId": 29762005,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

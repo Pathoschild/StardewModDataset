@@ -1,0 +1,42 @@
+{
+	"Site": "Nexus",
+	"Id": 53050,
+	"Name": "Make the Cooking more sense",
+	"Author": "OceanRambler",
+	"Description": "\n<br />[b]让烹饪更有存在感（中文说明）[/b]\n<br />按你真正投进锅里的材料给料理定价。烹饪要耗精力。练级之后菜更值钱、也更顶饱。\n<br />作者 OceanRambler · v1.5.0 · 星露谷物语 1.6.15 · SMAPI 4.3.0+ · 内置中英双语提示\n<br />\n<br />[b]这个 Mod 做什么[/b]\n<br />\n<br />[b]1. 料理按你真正用的材料定价。[/b]\n<br />原版料理很便宜：不管你把什么放进去，一道菜卖的钱都是配方作者定死的那个数字。这个 Mod 把定价改成每次制作现算。\n<br />\n<br />[code]悬浮价（= 丢进出货箱拿到的钱）=\n<br />\u00A0 \u00A0 Σ(材料标注价 × 材料品质系数 × 数量) × N × 等级倍率 × 成品品质系数 × 其它 Mod 的抬价\n<br />\n<br />商店标价（= 你在皮埃尔那儿付的钱）= 悬浮价 × 2[/code][list]\n<br />[*][b]认品质。[/b]铱级奶牛产的奶、金星蛋、银星菜——制作时按你实际放进去的那一份的品质算，不会被平均掉。[/*]\n<br />[*][b]其它 Mod 的料理同样认。[/b]凡是 Data/CookingRecipes 里的菜都会自动登记。登记表中还没有的菜，会在你第一次做它的时候用这份配方现场补登记——不需要针对单个 Mod 打补丁，内容 Mod 更新加了新菜也不用等我出适配。[/*]\n<br />[*][b]料理当材料会连锁涨价。[/b]成品身上固化的价格会带进下一道菜，所以高阶料理自然把物价抬上去，不会出现「成品比自己的材料还便宜」。[/*]\n<br />[*][b]不覆盖其它 Mod 的抬价。[/b]CookingSkillRedux 的 10 级烹饪职业是直接改成品的价格字段，本 Mod 会反推那个比例再乘回去，而不是把它抹掉。[/*]\n<br />[/list][b]2. 烹饪消耗精力。[/b]\n<br />每次 10 点，烹饪技能每满 2 级减 1 点，最低 1 点（10 级耗 5 点，18 级以上耗 1 点）。没装烹饪技能类 Mod 时固定 5 点。\n<br />\n<br />[b]3. 等级加成（需要 SpaceCore + CookingSkillRedux）。[/b]\n<br />[list]\n<br />[*]烹饪每满 2 级：成品悬浮价 +5%，回神/回血效果也 +5%，不设封顶。[/*]\n<br />[*]10 级以上：有 (等级 − 9) × 10% 概率让成品高一个品质档。[/*]\n<br />[*]读不到技能时这三项自动停用，定价和精力照常工作，不会报错。[/*]\n<br />[/list][list]\n<br />[*][b]必需：[/b]SMAPI 4.3.0 及以上（实测 4.5.2）[/*]\n<br />[*][b]可选：[/b]SpaceCore + CookingSkillRedux——开启等级加成和按等级的精力减免。不装也有定价，只是精力固定 5 点。[/*]\n<br />[*][b]兼容：[/b]Better Crafting——用它的面板制作一样生效。理论上支持其它mod的料理，在机制上设定了接口，第一制作的新品会被记录，之后再次制作就会采用本mod设定的规则了。[/*]\n<br />[/list]解压到 `Stardew Valley&#92;Mods&#92;`，得到：\n<br />[code]Mods&#92;CookingBalance&#92;\n<br />\u00A0 CookingBalance.dll\n<br />\u00A0 manifest.json\n<br />\u00A0 i18n&#92;default.json\n<br />\u00A0 i18n&#92;zh.json[/code]首次启动后在 Mod 目录生成 `config.json`。改完[b]必须重启游戏[/b]（读档时才取配置）。\n<br />\n<br />[*]基于 SMAPI 与 Harmony 实现；技能等级读取 SpaceCore 自定义技能（CookingSkillRedux）。[/*]\n<br />[*]许可协议：[b]CC BY-NC 4.0[/b]（署名 - 非商业性使用）。可以分享、可以修改、可以放进免费整合包，前提是注明作者 OceanRambler 且不用于商业；拿它卖钱或塞进收费包不在授权范围内。完整条款见压缩包里的 LICENSE 文件。[/*]\n<br />[*]反馈问题请附上 SMAPI 控制台输出，以及「你做了什么菜、你以为该卖多少」。多数情况 `cookingbalance_dump 那道菜` 一行就能自己看出来。\n<br />\n<br />—————————————————————————————————————————————————————————————\n<br />[line]\n<br />[b]What it does[/b]\n<br />[b]1. Dishes are priced from what you actually put in them.[/b]\n<br />Vanilla cooked items are cheap: a dish built from three expensive ingredients sells for the same flat number the recipe author typed in, every time, no matter what you used. This mod recalculates it per cook.\n<br />hover price (= what the shipping bin pays you) =\n<br />[code]\u00A0 \u00A0 sum(ingredient price x ingredient quality factor x count) x N x level bonus x dish quality x other mods' boost\n<br />\n<br />shop price (= what Pierre charges you) = hover price x 2[/code][list]\n<br />[*][b]Quality aware.[/b] Milk from an iridium animal, gold-star eggs, silver-star crops - the ingredient's quality is counted at craft time, not averaged away.[/*]\n<br />[*][b]Mod dishes just work.[/b] Any dish from Data/CookingRecipes is registered automatically. A dish that isn't in the registry yet gets registered on the spot the first time you cook it, from the recipe you used - no per-mod patch, nothing to update when a content mod adds recipes.[/*]\n<br />[*][b]Dishes used as ingredients chain.[/b] A finished dish carries its own stamped price into the next dish, so high-tier cooking scales naturally instead of collapsing to \"cheaper than its own ingredients\".[/*]\n<br />[*][b]Other mods' price boosts survive.[/b] CookingSkillRedux's level-10 cooking profession raises the finished item's price directly; this mod measures that boost and multiplies it back in rather than overwriting it. Same for any mod that stamps a price on a dish.[/*]\n<br />[/list][b]2. Cooking costs energy.[/b]\n<br />10 stamina per cook, minus 1 for every 2 cooking levels, minimum 1 (so level 10 costs 5, level 18+ costs 1). Without a cooking skill mod installed it is a flat 5.\n<br />\n<br />[b]3. Skill-linked bonuses (needs SpaceCore + CookingSkillRedux).[/b]\n<br />[list]\n<br />[*]Every 2 cooking levels: +5% to the dish's sell price [b]and[/b] +5% to its stamina/health recovery. No cap.[/*]\n<br />[*]Above level 10: a (level - 9) x 10% chance the finished dish comes out one quality tier higher.[/*]\n<br />[*]If the skill can't be found, these three switch themselves off and the mod keeps doing pricing + energy. Nothing breaks.[/*]\n<br />[/list][list]\n<br />[*][b]Required:[/b] SMAPI 4.3.0 or newer (tested on 4.5.2),[/*]\n<br />[*][b]Optional:[/b] SpaceCore + CookingSkillRedux - enables the level bonuses and the level-based energy reduction. Without them you still get the pricing and a flat 5 energy cost.[/*]\n<br />[*][b]Compatible:[/b] Better Crafting - cooking through its menu works identically.Theoretically, it supports other mods' recipes. Mechanically, interfaces have been set up to handle this. The first newly-made item will be recorded, and subsequent creations will follow the rules set by this mod.[/*]\n<br />[*]Tested on Stardew Valley 1.6.15. Should work on other 1.6.x.[/*]\n<br />[/list]Unzip into `Stardew Valley&#92;Mods&#92;` so you get:\n<br />Mods&#92;CookingBalance&#92;\n<br />[code]\u00A0 CookingBalance.dll\n<br />\u00A0 manifest.json\n<br />\u00A0 i18n&#92;default.json\n<br />\u00A0 i18n&#92;zh.json[/code]`config.json` is generated on first launch. Edit it and [b]restart the game[/b] (settings are read when a save loads).\n<br />[line]\n<br />[/*]\n<br />[*]Made with SMAPI and Harmony. Skill integration reads SpaceCore custom skills (CookingSkillRedux).[/*]\n<br />[*]License: [b]CC BY-NC 4.0[/b] (Attribution-NonCommercial). You may share and adapt this mod, including in a free mod pack, with credit to OceanRambler; selling it or bundling it into anything paid is not permitted. Full text in the LICENSE file inside the archive.[/*]\n<br />[*]Bug reports: paste the SMAPI console output, plus what you cooked and what you expected the price to be. `cookingbalance_dump ID` usually answers it before I even look.\n<br />\n<br />\n<br />\n<br />[/*]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53050",
+	"Version": "1.51",
+	"Updated": "2026-09-28T08:56:31+00:00",
+	"Downloads": [
+		{
+			"Id": 184523,
+			"Type": "Main",
+			"DisplayName": "CookingBalance V1.5.1",
+			"FileName": "ff/46/e6/ff46e6b8-ebdf-4543-8d1e-47b828897541",
+			"Description": "",
+			"Version": "1.51",
+			"SizeInBytes": 43931,
+			"Uploaded": "2026-09-28T08:56:31+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "184523",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571211,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439738,
+		"UploaderId": 186385938,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

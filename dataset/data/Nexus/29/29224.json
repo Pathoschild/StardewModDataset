@@ -3,20 +3,20 @@
 	"Id": 29224,
 	"Name": "Tig's Bus Edits",
 	"Author": "TigerToony",
-	"Description": "[b][size=3]ABOUT[/size][/b]\n<br />This is a simple mod that tweaks the pixel work for the bus making it a bit more detailed and similar to real buses. It also has option to replace the generic bus driver during the introduction to Pam. It should edit all instances of the bus into the new look, but let me know if I missed any.\n<br />\n<br />[b]FEATURES[/b]\n<br />[list]\n<br />[*]redrawn/edited bus sprite[/*]\n<br />[*]seasonal bus sprite changes[/*]\n<br />[*]optional pam as intro bus driver[/*]\n<br />[/list]\n<br />[b][size=3]COMPATIBILITY[/size][/b]\n<br />Obviously won't work with other mods that edit the bus. Pam as the intro bus driver option works with my own sprite edit of Pam, but will default to vanilla Pam otherwise.\u00A0Will auto-detect and change accordingly for the following recolor mods:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5255]DaisyNiko's Earthy Recolour[/url]\u00A0[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21085]Starblue Valley Unofficial[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6367]Vibrant Pastoral Redrawn[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21531]PinkStations Cotton Candy Recolor[/url]\u00A0(head into the config to change the snow option)[/*]\n<br />[/list]",
+	"Description": "[size=3][b]ABOUT[/b][/size]\n<br />This mod tweaks the pixel work for the bus making it a bit more detailed and similar to real buses. It also has a bonus toggle to replace the generic bus driver during the introduction to Pam. It should edit all instances of the bus into the new look, but let me know if I missed any. Feel free to suggest features as well.\n<br />\n<br />[b][size=3]FEATURES[/size][/b]\n<br />[list]\n<br />[*]redrawn/edited bus sprite[/*]\n<br />[*]seasonal bus sprite changes[/*]\n<br />[*]bus sprite uses summer palette for desert[/*]\n<br />[*]optional pam as intro bus driver[/*]\n<br />[*]optional replace stairs with ramp[/*]\n<br />[/list]\n<br />[b][size=3]COMPATIBILITY[/size][/b]\n<br />Likely will break with most other mods that edit the bus. Pam as the intro bus driver option works with my own sprite edit of Pam, but will default to vanilla Pam otherwise.\u00A0Will auto-detect and change accordingly for the following recolor mods:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5255]DaisyNiko's Earthy Recolour[/url]\u00A0[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21085]Starblue Valley Unofficial[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/6367]Vibrant Pastoral Redrawn[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21531]PinkStations Cotton Candy Recolor[/url]\u00A0(requires CMCT)[/*]\n<br />[/list]\n<br />[size=3][b]OTHER MODS FEATURED IN SCREENSHOTS[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/29220]Tig's Intro Edits[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/509]Experience Bars[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/239]NPC Map Locations[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/7098]UI Info Suite 2[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/21435]Vanilla Tweaks - Warrior Edition[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/25228]Prettier Bus Stop[/url][/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/29224",
-	"Version": "2.0.0",
-	"Updated": "2026-06-23T15:07:35+00:00",
+	"Version": "2.1.0",
+	"Updated": "2026-09-30T05:53:06+00:00",
 	"Downloads": [
 		{
-			"Id": 172277,
+			"Id": 184773,
 			"Type": "Main",
 			"DisplayName": "Tig's Bus Edits",
-			"FileName": "e0/77/32/e0773261-857c-4b31-9e50-81147d2157b0",
-			"Description": "added seasonal changes, recolor compatibility, reworked code and file organization",
-			"Version": "2.0.0",
-			"SizeInBytes": 100748,
-			"Uploaded": "2026-06-23T15:07:35+00:00",
+			"FileName": "2e/8b/09/2e8b09a6-017d-4ed6-9b10-dcc75f9f376e",
+			"Description": "added ramp option, cotton candy recolor compatiblity now requires CMCT",
+			"Version": "2.1.0",
+			"SizeInBytes": 104662,
+			"Uploaded": "2026-09-30T05:53:06+00:00",
 			"Mods": [
 				{
 					"Id": "TigerToony.BusEdits",
@@ -27,7 +27,7 @@
 						"Name": "Tig's Bus Edits",
 						"Description": "Makes changes to the bus sprites.",
 						"Author": "TigerToony",
-						"Version": "2.0.0",
+						"Version": "2.1.0",
 						"ContentPackFor": {
 							"UniqueId": "Pathoschild.ContentPatcher"
 						},
@@ -51,6 +51,10 @@
 							{
 								"UniqueId": "PinkStations.CottonCandyRecolor",
 								"IsRequired": false
+							},
+							{
+								"UniqueId": "Spiderbuttons.CMCT",
+								"IsRequired": false
 							}
 						],
 						"UpdateKeys": [
@@ -61,9 +65,9 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342558965,
+				"Uid": 5596342571461,
 				"CategoryId": 1,
-				"Primary": false
+				"Primary": true
 			}
 		}
 	],

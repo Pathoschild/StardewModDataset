@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 52879,
+	"Name": "Farm Computer Regions",
+	"Author": "ltlandhy",
+	"Description": "Any additional farms you own — Ginger Island, Greenhouse, mod-added areas — crops and machines on those tiles can be displayed.\n<br />[heading]Report Contents[/heading]\n<br />[list]\n<br />[*]Hay stored in silos[/*]\n<br />[*]Total crops / Crops ready to harvest / Unwatered crops[/*]\n<br />[*]Empty tilled soil[/*]\n<br />[*]Collectible items[/*]\n<br />[*]Machines with output ready to collect (including those placed inside buildings such as farmhouse, barns and sheds)[/*]\n<br />[*]Whether the Farm Cave has harvestable items[/*]\n<br />[/list][b]Greenhouse Section[/b]: The vanilla greenhouse gets its own separate entry — total crops / ready to harvest / unwatered, plus breakdown of machines inside.\n<br />[b]Building Section[/b]: Barns, coops, cabins, sheds… one line per building, listing animals and machines within it. Animals are detected whether they stay indoors or graze outside; no double-counting and no omissions.\n<br />[b]Outdoor Machines[/b]: Machine states split into three categories: Completed / In Progress / Idle.\n<br />[heading]Covered Locations[/heading]\n<br />By default, the mod reads all farm-like locations in your save: Main Farm, Ginger Island Farm, and mod-added tillable areas. Locations locked behind story quests or tasks will [b]only appear after you visit them once[/b]. It uses the game’s native \"player has visited location\" save flag to avoid spoiling unreleased areas. The Main Farm is exempt and always shown.\n<br />If you have [b]Stardew Valley Expanded (SVE) / Ridgeside Village (RSV) / East Scarp / Zuzu City[/b], the report marks each custom area with its mod source, example:\n<br />[code]Mod: Ridgeside Village (Rafseazz.RSVCP)[/code]. For locations not recognized by the built-in lookup table, you can manually define them in the config file.\n<br />[heading]Settings[/heading]\n<br />With [b]Generic Mod Config Menu (GMCM)[/b] installed, tweak options in-game via\n<br />[code]Settings → Mod Settings[/code]:\n<br />Basic\n<br />[list]\n<br />[*]Enable location selection list[/*]\n<br />[*]Show \"All Locations\" option[/*]\n<br />[*]Hide empty locations[/*]\n<br />[*]Always show Main Farm[/*]\n<br />[*]Only show locations the player has visited[/*]\n<br />[*]Show yield summary in list[/*]\n<br />[*]Remember last selected location[/*]\n<br />[*]Play sound on panel open[/*]\n<br />[/list]Interface\n<br />[list]\n<br />[*]UI text scale (slider from 1.0–2.0; increase if text is too small)[/*]\n<br />[/list]The mod works without GMCM. Edit\n<br />[code]config.json[/code]inside the mod folder directly; both methods have identical effects.\n<br />Additional advanced options (force-include locations, exclude locations, custom display names, unlock conditions per location, list sorting) use list/dictionary structures and [b]can only be edited in config.json[/b]. Full tables and examples are provided in the README.\n<br />[b]To disable[/b]: Toggle off \"Enable location selection list\". The mod reverts fully to vanilla Farm Computer behaviour; right-click opens the original vanilla report.\n<br />[heading]Compatibility[/heading]\n<br />Stardew Valley [b]1.6.15[/b], requires [b]SMAPI 4.0.0+[/b]\n<br />\n<br />[b]只要你还有其他农场 —— 姜岛、温室、模组新增区域 —— 这些地块上的作物与机器均可展示。[/b]\n<br />[heading][b]报告包含内容[/b][/heading]\n<br />[list]\n<br />[*][b]筒仓干草存量[/b][/*]\n<br />[*][b]作物总数 / 可收获作物 / 未浇水作物[/b][/*]\n<br />[*][b]闲置耕地[/b][/*]\n<br />[*][b]可拾取采集物[/b][/*]\n<br />[*][b]可收取产出的加工机器（包含建筑内部，如农舍、鸡舍、小屋内放置的机器）[/b][/*]\n<br />[*][b]农舍洞穴是否有产物可收获[/b][/*]\n<br />[/list][b][b]温室小节[/b]：原版自带温室单独分项展示 —— 作物总数 / 可收获 / 未浇水，附带温室内部机器明细。\n<br />[b]建筑小节[/b]：畜棚、鸡舍、小屋、棚屋等，每个建筑单独一行，下方列出其内动物与机器。 动物无论在建筑内或是外出放牧均可识别，不会重复统计、也不会遗漏。\n<br />[b]露天放置机器[/b]：机器状态分为三类：已完成 / 运行中 / 空闲。[/b]\n<br />[heading][b]识别区域范围[/b][/heading]\n<br />[b]默认读取存档内所有可作为农场统计的地点：主农场、姜岛农场，以及模组新增可耕种地块。 需要推进剧情 / 任务解锁的区域，[b]玩家访问一次后才会在报告中出现[/b]，判定依据为游戏原生的「玩家是否到访过该位置」存档记录，避免提前剧透未解锁区域。 主农场不受该规则限制，始终显示。\n<br />若安装了[b]星露谷扩展（SVE）/ 里奇赛德村（RSV）/ 东崖 / 祖祖镇[/b]，报告会附加标注该地块所属模组，示例：[/b]\n<br />[code]模组：里奇赛德村 (Rafseazz.RSVCP)[/code][b]。 内置识别表无法自动识别的区域，可在配置文件手动添加。[/b]\n<br />[heading][b]设置项[/b][/heading]\n<br />[b]安装 [b]Generic Mod Config Menu（GMCM）[/b] 后，可在游戏内「设置 → 模组设置」调整参数：\n<br />基础选项[/b]\n<br />[list]\n<br />[*][b]启用区域选择列表[/b][/*]\n<br />[*][b]显示【全部区域】选项[/b][/*]\n<br />[*][b]隐藏空白区域[/b][/*]\n<br />[*][b]始终显示主农场[/b][/*]\n<br />[*][b]仅展示玩家已到访区域[/b][/*]\n<br />[*][b]列表显示产出汇总[/b][/*]\n<br />[*][b]记住上次选中的区域[/b][/*]\n<br />[*][b]打开面板时播放音效[/b][/*]\n<br />[/list][b]界面选项[/b]\n<br />[list]\n<br />[*][b]界面文字大小（滑块范围 1.0–2.0，文字偏小可以调大）[/b][/*]\n<br />[/list][b]未安装 GMCM 也可使用，直接修改 mod 目录内[/b]\n<br />[code]config.json[/code][b]文件，两种配置方式效果完全一致。\n<br />另有进阶细项（强制显示指定区域、排除指定区域、自定义显示名称、为区域设置解锁条件、列表排序），这类配置为列表与字典格式，[b]仅能在 config.json 内编写[/b]，README 文档附带完整参数表与示例。\n<br />[b]关闭本模组扩展功能[/b]：关闭「启用区域选择列表」，模组将完全回退至原版农场电脑，右键直接调出原版报告。[/b]\n<br />[heading][b]兼容性[/b][/heading]\n<br />[b]星露谷物语 1.6.15，依赖 SMAPI 4.0.0 及以上版本[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52879",
+	"Version": "1.0.8",
+	"Updated": "2026-09-25T15:01:04+00:00",
+	"Downloads": [
+		{
+			"Id": 184129,
+			"Type": "Optional",
+			"DisplayName": "Farm Computer Regions ",
+			"FileName": "bc/4b/cb/bc4bcbee-0d2b-4e7f-b3e7-faa92ebac685",
+			"Description": "",
+			"Version": "1.0.8",
+			"SizeInBytes": 48786,
+			"Uploaded": "2026-09-25T15:01:04+00:00",
+			"Mods": [
+				{
+					"Id": "LTL.FarmComputerRegions",
+					"DisplayName": "Farm Computer Regions 农场电脑区域版",
+					"Type": "Smapi",
+					"RelativePath": "FarmComputerRegions",
+					"Manifest": {
+						"Name": "Farm Computer Regions 农场电脑区域版",
+						"Description": "右键农场电脑时可以选择查看哪个农场/模组地块的作物与制造机情况，支持逐区域汇总、每个区域独立统计、自动发现可耕种地块。",
+						"Author": "LTL",
+						"Version": "1.0.8",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmComputerRegions.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:52879"
+						],
+						"UniqueId": "LTL.FarmComputerRegions"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570817,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439567,
+		"UploaderId": 90799263,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

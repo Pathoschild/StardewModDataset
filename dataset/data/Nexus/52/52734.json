@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 52734,
+	"Name": "Fix Error Items",
+	"Author": "Legolukas",
+	"Description": "\n<br />[center][img]https://i.imgur.com/3qxSqCb.png[/img][/center]\n<br />[center][/center]\n<br />Ever updated a mod, or swapped it for a newer version, and suddenly half your farm is full of Error Items?\u00A0\n<br />When a mod's items get renamed under the hood, the game has no idea the old item and the new item are \"the same thing.\" It just sees a string it doesn't recognize anymore and gives up. The item isn't actually gone, the game just lost the map.\n<br />This mod scans your inventory, chests, placed objects, equipment, crops in the ground, and giant crops for anything broken like that, figures out what it's supposed to be now, and fixes it - either automatically or by asking you first, your choice.\u00A0\n<br />\n<br />[i]How it works:[/i]\n<br />Every modded item's ID usually looks like\u00A0\n<br />[code]AuthorName.ModName_ItemName[/code]When a mod gets renamed, only the\u00A0\n<br />[code]AuthorName.ModName[/code]\u00A0part changes - the\u00A0\n<br />[code]ItemName[/code]\u00A0part is almost always kept the same or very similar.\n<br />So the mod does this:\n<br />[list=1]\n<br />[*]Finds everything that's broken.[/*]\n<br />[*]Groups broken items together if they came from the same now-missing mod.[/*]\n<br />[*]Checks if any currently-installed mod defines items with matching names for that\u00A0[i]whole group[/i]\u00A0- not just one lucky guess, but most or all of them at once.[/*]\n<br />[*]Only if that match is confident does it count as \"safe\" to apply.[/*]\n<br />[/list]Anything that doesn't clear that bar - a lone broken item with no group to back it up - gets shown to you in a little popup instead, with a handful of similarly-named candidates to pick from (or you can just leave it broken if nothing looks right).\n<br />\n<br />[center][img]https://i.imgur.com/SkgptFd.png[/img][/center]\n<br />\n<br />1. Install the latest version of SMAPI.\n<br />2. Install Generic Mod Config Menu (highly recommended for easy configuration).\n<br />3. Download this mod and extract it into your `Stardew Valley/Mods` folder.\n<br />4. Run the game using SMAPI.\n<br />\n<br />[center][img]https://i.imgur.com/2tjtjDL.png[/img][/center]\n<br />You can configure the mod directly in-game using Generic Mod Config Menu (gear icon on the title screen or at the bottom of the in-game options menu), or by editing\u00A0\n<br />[code]Mods/ErrorItemFixer/config.json[/code]\u00A0yourself:\n<br />[list]\n<br />[*][b]Fix key[/b]\u00A0- the key you press in-game to run a scan. Defaults to\u00A0\n<br />[code]F8[/code][/*]\n<br />[*][b]Enable automatic fixing[/b]\u00A0- off by default. When off,\u00A0[i]every[/i]\u00A0broken item goes through the picker popup so you confirm each one yourself. Turn it on if you'd rather the mod silently apply the fixes it's confident about, and only asks you about the complicated\u00A0ones.[/*]\n<br />[*][b]Revert key[/b] - Revert the changes you did\n<br />[code]F9[/code][/*]\n<br />[/list]Just press your fix key while a save is loaded. You'll get a chat message summarizing what happened, and a popup for anything that needs your input.\n<br />[center][/center]\n<br />\n<br />\n<br />[center][img]https://i.imgur.com/Eg7jJbF.png[/img][/center]\n<br />[left]\n<br />\n<br />[i]Mods that should be compatible[/i]:[/left]\n<br />This mod doesn't touch any mod's files, textures, or data - it only ever edits item IDs already sitting in your save, using the game's own item registry to decide what's valid. Because of that it shouldn't conflict with anything.\n<br />\n<br />[i]Mods that are not compatible[/i]:\n<br />None known. If a crop or giant crop still won't harvest or draw properly after being fixed, let me know - fruit trees in particular use an older, less battle-tested code path in this mod and might need more work.\n<br />\n<br />Feel free to support me on [url=https://www.patreon.com/cw/legolukas/membership]Patreon [/url]if you like what I do!\u00A0\n<br />\n<br />Also check out my other Mods:\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/47267]Achievement Excluder[/url] - let's you disable modded or vanilla Items for certain achievements.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/52612]Quest Vision[/url] - marks needed quest items in inventory and chests[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52734",
+	"Version": "1.2.0",
+	"Updated": "2026-09-26T20:55:32+00:00",
+	"Downloads": [
+		{
+			"Id": 184274,
+			"Type": "Main",
+			"DisplayName": "ErrorItemFixer 1.2.0",
+			"FileName": "97/fd/95/97fd9505-3635-4525-98f5-998f06e894b3",
+			"Description": "",
+			"Version": "1.2.0",
+			"SizeInBytes": 51493,
+			"Uploaded": "2026-09-26T20:55:32+00:00",
+			"Mods": [
+				{
+					"Id": "Lukas.ErrorItemFixer",
+					"DisplayName": "Fix Error Items",
+					"Type": "Smapi",
+					"RelativePath": "ErrorItemFixer",
+					"Manifest": {
+						"Name": "Fix Error Items",
+						"Description": "Press a key in-game to scan your farm for broken 'Error Item' references left behind by mod updates/replacements, and auto-fix them to their current equivalents.",
+						"Author": "Lukas",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ErrorItemFixer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52734"
+						],
+						"UniqueId": "Lukas.ErrorItemFixer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570962,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439422,
+		"UploaderId": 29762005,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

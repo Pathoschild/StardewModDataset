@@ -3,20 +3,20 @@
 	"Id": 51134,
 	"Name": "AutoEat Eidee Bridge",
 	"Author": "dagarxji",
-	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Bridge mod to allow restarting autocast after autoeat.[/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[size=3][color=#D4D4D8]Lay out any steps users must follow to install your mod[/color][/size]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[size=3][color=#D4D4D8]* Bridges AutoEat and Eidee's Easy Fishing autocast.[/color][/size]\n<br />[size=3][color=#D4D4D8]* Soft cap on\u00A0fish/day via stopping this bridge (can still fish after cap).[/color][/size]\n<br />[size=3][color=#D4D4D8]* Progression system from level 0 -&gt; 10 fishing. Each level allows 10% of total cap.[/color][/size]\n<br />[size=3][color=#D4D4D8]* Total cap per day can be adjusted using Generic Mod Config Menu.[/color][/size]\n<br />[size=3][color=#D4D4D8]* Also added trash deletion option.[/color][/size]\n<br />[color=#D4D4D8]* Level 10 fishing may yield \"Angler's Seal[/color]\" which will permanently remove the cap.\n<br />* Tracker to see how many fish caught / day + rate, etc.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[size=3][color=#D4D4D8]Eidee's Easy Fishing[/color][/size]\n<br />[size=3][color=#D4D4D8]AutoEat[/color][/size]\n<br />[size=3][color=#D4D4D8]Generic Mod Config Menu[/color][/size]\n<br />\n<br />[color=#D4D4D8][url=https://github.com/dagarxji/SDVMods/releases/tag/AutoEatEideeBridge/latest]Github Link[/url][/color]\n<br />\n<br />",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Bridge mod to allow restarting autocast after autoeat.[/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#D4D4D8]Put directory containing AutoEatEideeBridge.dll into mod directory.[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*]Bridges AutoEat and Eidee's Easy Fishing autocast.[/*]\n<br />[*]Trash deletion option, with a toggleable exception for Joja Cola.[/*]\n<br />[*]Separate item deletion option in case you want to delete things like bait.[/*]\n<br />[*]Mute function.[/*]\n<br />[*]Optional Fast Animations integration tied to progression, with 20 total animation speed levels: 10 from fishing level, 5 from reaching level 10 in each skill, and 5 from mastery levels. Fishing level 10 gives 2 levels since it counts for both fishing progression and a level 10 skill.[/*]\n<br />[*]Optional TimeSpeed integration that ties faster animation levels to game speed. This helps keep faster fishing from turning into hundreds of fish per day. I use 60% TimeSpeed sync strength and that seems like a decent mix to me.[/*]\n<br />[*]Tracker to see how many fish caught / day + rate, etc.[/*]\n<br />[*]Options can be adjusted using Generic Mod Config Menu.[/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8]Eidee's Easy Fishing[/color]\n<br />[color=#D4D4D8]AutoEat[/color]\n<br />[color=#D4D4D8]Generic Mod Config Menu[/color]\n<br />\n<br />[color=#D4D4D8][size=4][b]Optional Integrations[/b][/size][/color]\n<br />[color=#D4D4D8]Fast Animations\n<br />TimeSpeed[/color]\n<br />\n<br />[color=#D4D4D8][url=https://github.com/dagarxji/SDVMods/releases/tag/AutoEatEideeBridge-release/latest]Github Link[/url][/color]\n<br />[b]Development note:[/b] This mod was primarily developed using agentic AI coding tools. I direct the features, behavior, testing, and changes, but portions of the underlying code are AI-generated and may not have been manually reviewed line-by-line.\n<br />\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51134",
 	"Version": "1",
-	"Updated": "2026-08-22T20:54:25+00:00",
+	"Updated": "2026-09-11T20:46:50+00:00",
 	"Downloads": [
 		{
-			"Id": 179712,
+			"Id": 182386,
 			"Type": "Main",
-			"DisplayName": "AutoEatEideeBridge 1.4.0",
-			"FileName": "04/f7/46/04f74669-8359-4b26-ab86-5297e2088542",
+			"DisplayName": "AutoEatEideeBridge 1.6.0",
+			"FileName": "f2/08/5b/f2085be5-0f5c-45ef-99d6-5f1436fb2fc6",
 			"Description": "",
-			"Version": "1.4.0",
-			"SizeInBytes": 25935,
-			"Uploaded": "2026-08-22T20:54:25+00:00",
+			"Version": "1.6.0",
+			"SizeInBytes": 38442,
+			"Uploaded": "2026-09-11T20:46:50+00:00",
 			"Mods": [
 				{
 					"Id": "Local.AutoEatEideeBridge",
@@ -25,9 +25,9 @@
 					"RelativePath": "AutoEatEideeBridge",
 					"Manifest": {
 						"Name": "Auto-Eat + Eidee Easy Fishing Bridge",
-						"Description": "Resumes Eidee Auto Recast after Auto-Eat, tracks fishing stats, and manages a level-scaled daily catch cap.",
+						"Description": "Resumes Eidee Auto Recast after Auto-Eat, tracks fishing stats, and syncs Fast Animations' fishing speed and TimeSpeed's flow of time with fishing/mastery level.",
 						"Author": "Local",
-						"Version": "1.4.0",
+						"Version": "1.6.0",
 						"MinimumApiVersion": "4.0.0",
 						"MinimumGameVersion": "1.6.3",
 						"EntryDll": "AutoEatEideeBridge.dll",
@@ -41,6 +41,14 @@
 								"UniqueId": "Permamiss.AutoEat",
 								"MinimumVersion": "2.3.3",
 								"IsRequired": true
+							},
+							{
+								"UniqueId": "Pathoschild.FastAnimations",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "cantorsdust.TimeSpeed",
+								"IsRequired": false
 							}
 						],
 						"UpdateKeys": [],
@@ -49,7 +57,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342566400,
+				"Uid": 5596342569074,
 				"CategoryId": 1,
 				"Primary": true
 			}

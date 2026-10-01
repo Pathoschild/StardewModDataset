@@ -1,0 +1,84 @@
+{
+	"Site": "Nexus",
+	"Id": 51685,
+	"Name": "Warehouse Storage for FSF",
+	"Author": "Eimakore",
+	"Description": "Warehouse Storage is a content pack for [b]Flexible Storage Framework[/b] that adds warehouse-themed storage containers designed for practical bulk storage and organization.\n<br />\n<br />[b][size=4]The pack is fully functional on its own[/size][/b]. Pack &amp; Preserve is not required, but optional integration is included to connect compatible storage containers with its progression and item system.\n<br />\n<br />More storage types are planned and will be added in future updates.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*]Warehouse-themed storage containers[/*]\n<br />[*]Custom capacities and inventory layouts[/*]\n<br />[*]Progressive visuals based on stored items[/*]\n<br />[*]Color customization where supported[/*]\n<br />[*]Carry support through Flexible Storage Framework[/*]\n<br />[*]Custom storage sounds[/*]\n<br />[*]Optional item filters[/*]\n<br />[*]Configurable recipes and unlock levels through FSF[/*]\n<br />[*]Optional Pack &amp; Preserve integration[/*]\n<br />[*]Current Storage[/*]\n<br />[/list]\n<br />[size=4][b]Crate Pallet[/b][/size]\n<br />\n<br />A compact pallet designed for storing stacked goods.\n<br />\n<br />[list]\n<br />[*]Capacity: 12 slots[/*]\n<br />[*]Layout: 4 × 3[/*]\n<br />[*]Footprint: 2 × 1 tiles[/*]\n<br />[*]Progressive appearance from empty to fully loaded[/*]\n<br />[*]Player-selectable color[/*]\n<br />[*]Can be carried while containing items[/*]\n<br />[*]Unlocks at Farming Level 3[/*]\n<br />[*]Crafted using 50 Wood[/*]\n<br />[/list][b]Progressive appearance from empty to fully loaded[/b]\n<br />[list]\n<br />[*]The pallet’s appearance changes based on the number of occupied inventory slots.[/*]\n<br />[*]Each visible crate on the pallet represents one occupied slot.[/*]\n<br />[*]An empty storage appears as an empty pallet.[/*]\n<br />[*]Three occupied slots display three crates.[/*]\n<br />[*]Nine occupied slots display nine crates.[/*]\n<br />[*]A completely filled 12-slot storage displays all twelve crates.[/*]\n<br />[*]Stack size does not affect the appearance — a slot containing one item and a slot containing 999 items each display one crate.[/*]\n<br />[*]The appearance updates automatically whenever items are added or removed.[/*]\n<br />[/list]\n<br />[size=4][b]Pack &amp; Preserve Integration[/b][/size]\n<br />\n<br />If Pack &amp; Preserve 2.0.0 or newer is installed, the Crate Pallet is automatically integrated into its progression.\n<br />\n<br />With the integration enabled:\n<br />\n<br />[list]\n<br />[*]The recipe is unlocked through the Packing Station mail instead of the normal Farming Level 3 unlock.[/*]\n<br />[*]The Crate Pallet is configured to store Pack &amp; Preserve crates.[/*]\n<br />[*]The item filter can still be disabled through the FSF configuration if you prefer unrestricted storage.[/*]\n<br />[/list]\n<br />Without Pack &amp; Preserve installed, the Crate Pallet simply uses its normal standalone recipe and skill unlock.\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[size=4]Required[/size]\n<br />\n<br />[list]\n<br />[*]SMAPI[/*]\n<br />[*]Content Patcher[/*]\n<br />[*]Flexible Storage Framework 1.3.0 or newer[/*]\n<br />[/list]\n<br />[size=4]Optional[/size]\n<br />\n<br />[list]\n<br />[*]Pack &amp; Preserve 2.0.0 or newer[/*]\n<br />[/list]\n<br />[size=5][b]Configuration[/b][/size]\n<br />\n<br />Warehouse Storage supports the optional configuration system provided by Flexible Storage Framework.\n<br />\n<br />Through GMCM, compatible settings such as recipe ingredients, skill unlock level, and item filtering can be adjusted without editing the content pack manually.\n<br />\n<br />[size=5][b]Compatibility[/b][/size]\n<br />\n<br />Warehouse Storage uses Flexible Storage Framework for all storage functionality.\n<br />\n<br />Removing the optional Pack &amp; Preserve integration does not prevent the storage containers themselves from working.\n<br />\n<br />[size=4][b]Future Updates[/b][/size]\n<br />\n<br />This pack is intended to grow over time. New warehouse-style storage containers will be added in future versions rather than waiting for the entire planned collection to be completed before release.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51685",
+	"Version": "1.0.0",
+	"Updated": "2026-09-03T23:05:55+00:00",
+	"Downloads": [
+		{
+			"Id": 181348,
+			"Type": "Main",
+			"DisplayName": "FSF Warehouse Storage",
+			"FileName": "0c/89/6c/0c896cfc-764b-400d-bf4a-6864f2290447",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 71858,
+			"Uploaded": "2026-09-03T23:05:55+00:00",
+			"Mods": [
+				{
+					"Id": "Eimakore.WarehouseStorageFSF.PaPIntegration",
+					"DisplayName": "Warehouse Storage - Pack and Preserve Integration",
+					"Type": "ContentPack",
+					"RelativePath": "[FSF]WarehouseStorage\\[CP] PaP Override",
+					"Manifest": {
+						"Name": "Warehouse Storage - Pack and Preserve Integration",
+						"Description": "Adds the Crate Pallet recipe to Pack and Preserve progression.",
+						"Author": "Eimakore",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Eimakore.WarehouseStorageFSF",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "eimakore.PackandPreserve",
+								"MinimumVersion": "2.0.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Eimakore.WarehouseStorageFSF.PaPIntegration"
+					}
+				},
+				{
+					"Id": "Eimakore.WarehouseStorageFSF",
+					"DisplayName": "(FSF) Warehouse Storage",
+					"Type": "ContentPack",
+					"RelativePath": "[FSF]WarehouseStorage\\[FSF]PaPStorage",
+					"Manifest": {
+						"Name": "(FSF) Warehouse Storage",
+						"Description": "Adds warehouse-themed storage containers for Flexible Storage Framework, with optional Pack & Preserve integration.",
+						"Author": "Eimakore",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Eimakore.FlexibleStorageFramework",
+							"MinimumVersion": "1.3.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:51685"
+						],
+						"UniqueId": "Eimakore.WarehouseStorageFSF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568036,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438373,
+		"UploaderId": 4454462,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

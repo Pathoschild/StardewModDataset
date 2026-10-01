@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 51498,
+	"Name": "KeyboardNav",
+	"Author": "vegetablegarden26",
+	"AuthorLabel": "vegetablegarden",
+	"Description": "[size=4][b]About[/b][/size]\n<br />[color=#D4D4D8]This mod is designed for players who wish to use the keyboard exclusively and\u00A0not need to rely on a mouse. It provides basic keyboard support for most menus, implements convenience keybinds for navigating certain menus more quickly,\u00A0prevents the cursor from getting in the way while interacting with the world, and allows you\u00A0to control the cursor independently with the keyboard.\n<br />\n<br />However, [b]this mod is still a work-in-progress,[/b]\u00A0and a few vanilla menus and\u00A0screens are currently NOT YET SUPPORTED, most notably:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]The save selection screen[/color][/*]\n<br />[*][color=#D4D4D8]The screen for selecting a place to create a building, or selecting a building to paint or upgrade[/color][/*]\n<br />[/list][color=#D4D4D8]Until these issues are fixed, a mouse or touchpad is still required to interact\u00A0with these menus and load your save.[/color]\n<br />[line]\n<br />[color=#D4D4D8][b][size=4]Features and Keybinds[/size][/b]\n<br />\n<br />[b]Menu Navigation:[/b][/color]\n<br />[color=#D4D4D8]This mod forcibly enables gamepad mode and defines a key (or keys) that will simulate a left click from within menus. Just these two features enable basic support for most menus that support the game's\u00A0gamepad mode. By default, [u]SPACE[/u] and [u]ENTER[/u]\u00A0will both left-click while in menus.[/color]\n<br />[color=#D4D4D8]\n<br />[b]Inventory Grid Keybinds:[/b]\n<br />To make navigating inventories and chests quicker, this mod defines a key for\u00A0each row and column, allowing you to jump to any given square by pressing only two keys. These keybinds are stored as an array and allow you to add additional entries to accommodate for mods which expand the size of these inventories.\n<br />\n<br />By default, the columns are numbered [u]1234567890[][/u], and the rows are numbered [u]ZXCVBNM,[/u]. These are configurable, and the labels will update to match the\u00A0corresponding letters.[/color]\n<br />\n<br />[color=#D4D4D8][img]https://staticdelivery.nexusmods.com/mods/1303/images/51498/51498-1788362686-1952073729.png[/img]\n<br />\n<br />[b]Miscellaneous Menu Keybinds:[/b]\n<br />For more efficient keyboard use, this mod defines special keybinds for various\u00A0menu-specific actions, such as organizing the inventory, opening the chest color\u00A0picker, changing tabs, and automatically adding to a chest's stacks.\n<br />\n<br />Currently the available functions are:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]Next/previous tabs (default [u]TAB[/u]/[u]LEFT SHIFT + TAB[/u])[/color][/*]\n<br />[*][color=#D4D4D8]Organize a menu's main inventory (default [u]O[/u])[/color][/*]\n<br />[*][color=#D4D4D8]Organize a menu's secondary inventory, i.e. the player's inventory when it is\u00A0[/color][color=#D4D4D8]displayed below a chest inventory (default [u]I[/u])[/color][/*]\n<br />[*][color=#D4D4D8]Fill chest stacks from inventory (default [u]U[/u])[/color][/*]\n<br />[*][color=#D4D4D8]Toggle the chest color picker (default [u]P[/u])[/color][/*]\n<br />[*][color=#D4D4D8]Move held item to the trash can (does NOT automatically throw the item away,\u00A0[/color][color=#D4D4D8]just puts the cursor over the trash can) (default [u]Y[/u])[/color][/*]\n<br />[/list][color=#D4D4D8][b]Cursor Movement:[/b]\n<br />To prevent the cursor from getting in the way and redirecting the focus of the\u00A0action and tool buttons, this mod will snap the cursor to the square directly in\u00A0front of the farmer during normal gameplay. However, sometimes you will want to\u00A0move the cursor other places on the screen (e.g. to move furniture). Holding the\u00A0cursor modifier key (default [u]LEFT SHIFT[/u]) will cause the movement keys (e.g. WASD) to move the cursor instead of the player.\n<br />\n<br />Alternatively, you may still use mouse input to move the cursor while the player is not moving, or by disabling keyboard mode using the associated keyboard\u00A0(default [u]Z[/u]).\n<br />\n<br />[b]Overriding Game Settings:[/b]\n<br />When keyboard mode is enabled, this mod automatically overrides the game's settings to turn on gamepad mode. When keyboard mode is disabled, gamepad mode\u00A0is returned to the save's default setting.[/color]\n<br />[line]\n<br />[color=#D4D4D8][b][size=4]Compatibility[/size][/b][/color]\n<br />[color=#D4D4D8]This mod is built to be theoretically compatible with mods that add larger\u00A0chests (you can add additional keybinds to the lists in the config.json), and\u00A0any other mods with custom menus that support the vanilla gamepad mode, as well as mods that add other kinds of keyboard support like Dialogue Keys. However, compatibility with any given mod is untested.\n<br />\n<br />It will not support modded menus that do not support vanilla gamepad mode,\u00A0such as GMCM. You can still use those menus with a mouse, but will not be able\u00A0to navigate them with the keyboard. If you're a mod author and want to make your mod compatible with keyboard navigation, please take a look at how the vanilla menus implement gamepad mode support.\n<br />\n<br />All added keybinds are configurable in case of conflicts, using the config.json file which will be generated in the mod folder when you first load a save with the mod installed.\u00A0[/color][color=#D4D4D8](When editing the config.json, note that the config fields labelled \"INFO\" just provide information about the configs in that group and will not do anything when changed.)[/color]\n<br />[line]\n<br />[color=#D4D4D8][b][size=4]Roadmap[/size][/b]\n<br />These are the things that I would like to add or fix in the mod, roughly in order of priority:[/color]\n<br />[list=1]\n<br />[*][color=#D4D4D8]Support for the save\u00A0selection screen[/color][/*]\n<br />[*][color=#D4D4D8]Support for the building screen (when choosing a location to build or a building to upgrade)[/color][/*]\n<br />[*][color=#D4D4D8]Disable keyboard shortcuts while setting shortcuts in the vanilla settings\u00A0[/color][color=#D4D4D8]menu (currently you need to disable keyboard mode first or the mod's keybinds\u00A0will get in the way)[/color][/*]\n<br />[*][color=#D4D4D8]More convenience keybinds:[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]Pick up 1 from stack[/color][/*]\n<br />[*][color=#D4D4D8]Sp[/color][color=#D4D4D8]lit inventory stack[/color][/*]\n<br />[*][color=#D4D4D8]Drop item[/color][/*]\n<br />[*][color=#D4D4D8]Open community center bundles menu[/color][/*]\n<br />[*][color=#D4D4D8]Select save with number keys[/color][/*]\n<br />[/list][/*]\n<br />[*][color=#D4D4D8]Ability to set and automatically restore mode-specific default keybinds\u00A0[/color][color=#D4D4D8](partially implemented)[/color][/*]\n<br />[*][color=#D4D4D8]Performance optimizations, etc.[/color][/*]\n<br />[*][color=#D4D4D8]Make the cursor invisible when it is being snapped to the player (configurable)[/color][/*]\n<br />[*][color=#D4D4D8]Support for non-wasd keys on the title screen[/color][/*]\n<br />[*][color=#D4D4D8]Custom settings page (stretch goal)[/color][/*]\n<br />[/list][color=#D4D4D8]If you encounter any other unsupported menus or issues that I have not mentioned to be\u00A0fixed, please let me know.[/color]\n<br />[line]\n<br />[color=#D4D4D8][b][size=4]Permissions and Contribution[/size][/b][/color]\n<br />[color=#D4D4D8]This mod is open source. Please see the\u00A0[url=https://codeberg.org/vegetablegarden/keyboardnav]Codeberg repository[/url]\u00A0for license and contribution information.[/color]\n<br />[line]\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#D4D4D8][size=3]To install, move the unzipped KeyboardMod folder to your mods folder. Load a save with the mod running to generate the config file if you wish to edit the default keybinds.[/size][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51498",
+	"Version": "1",
+	"Updated": "2026-09-02T15:28:09+00:00",
+	"Downloads": [
+		{
+			"Id": 181184,
+			"Type": "Main",
+			"DisplayName": "KeyboardNav 1.0.0",
+			"FileName": "8c/11/34/8c113469-2fd3-4a97-83a1-ff29c4163361",
+			"Description": "Initial release",
+			"Version": "1",
+			"SizeInBytes": 23768,
+			"Uploaded": "2026-09-02T15:28:09+00:00",
+			"Mods": [
+				{
+					"Id": "vegetablegarden.KeyboardNav",
+					"DisplayName": "Keyboard Navigation",
+					"Type": "Smapi",
+					"RelativePath": "KeyboardNav",
+					"Manifest": {
+						"Name": "Keyboard Navigation",
+						"Description": "Allows you to navigate inventory menus using the keyboard.",
+						"Author": "vegetablegarden",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "KeyboardNav.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "vegetablegarden.KeyboardNav"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567872,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438186,
+		"UploaderId": 196836809,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

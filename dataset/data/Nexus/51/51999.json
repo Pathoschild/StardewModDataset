@@ -1,0 +1,66 @@
+{
+	"Site": "Nexus",
+	"Id": 51999,
+	"Name": "Abundant Harvest Fertilizers",
+	"Author": "peterbot0",
+	"Description": "[center][size=6][b]Abundant Harvest Fertilizers[/b][/size]\n<br />\n<br />[b]Grow a little more from eligible single-yield crops with three new vanilla-style fertilizers.[/b][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Overview[/b][/size]\n<br />\n<br />Abundant Harvest Fertilizers adds Basic, Quality, and Deluxe Harvest Fertilizer. Each tier gives eligible single-yield crops one or more independent chances to produce an extra item while preserving Stardew Valley's normal harvest behavior.\n<br />\n<br />The fertilizers are crafted in batches of five from recipes delivered through normal letters. Each tier has its own inventory icon and applied-soil mark.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*]Adds three craft-only fertilizer tiers with distinct bonus rules.[/*]\n<br />[*][b]Basic:[/b] one 20% roll, for up to 1 extra item.[/*]\n<br />[*][b]Quality:[/b] two independent 25% rolls, for up to 2 extra items.[/*]\n<br />[*][b]Deluxe:[/b] three independent 30% rolls, for up to 3 extra items.[/*]\n<br />[*]Preserves the normal harvest item's identity, quality, tint, delivery behavior, animation, sound, experience, crop removal, and regrowth.[/*]\n<br />[*]Uses stable per-harvest rolls, so retrying after a full inventory does not reroll the bonus.[/*]\n<br />[*]Supports otherwise eligible regrowing crops by default, with an option to disable their bonuses.[/*]\n<br />[*]Provides configurable bonus chances through [font=Courier New]config.json[/font] and optional Generic Mod Config Menu integration.[/*]\n<br />[/list]\n<br />[b]Eligible crops[/b]\n<br />\n<br />The mod boosts crops whose effective crop data produces exactly one item without built-in quantity rolls. Potatoes, blueberries, cranberries, coffee, forage crops, sunflower's special seed output, and custom crops with variable or repeat yields are excluded.\n<br />\n<br />[size=4][b]How to Use[/b][/size]\n<br />\n<br />Learn each recipe through normal mail, craft the fertilizer, and apply it to tilled soil the same way you use vanilla fertilizer. A harvest-ready crop must be harvested before its soil can accept fertilizer. By itself, Abundant Harvest Fertilizers keeps Stardew's normal one-fertilizer-per-tile rule.\n<br />\n<br />With optional Ultimate Fertilizer 1.3.0 or later installed, one effective Harvest Fertilizer tier can share a tile with fertilizers from other categories. Multiple Harvest tiers never add together; if more than one tier is present, only the highest tier controls the Harvest bonus.\n<br />\n<br />[list]\n<br />[*][b]Basic recipe:[/b] Caroline sends it at two hearts. Craft five with 10 Sap and 5 Fiber.[/*]\n<br />[*][b]Quality recipe:[/b] Caroline sends it at six hearts after you reach Farming Level 6 and read her Basic recipe letter. Craft five with 20 Sap, 10 Moss, and 5 Bone Fragments.[/*]\n<br />[*][b]Deluxe recipe:[/b] Pierre sends it after the host receives his Community Center follow-up and you read Caroline's Quality recipe letter. Craft five with 1 Iridium Bar, 40 Sap, and 20 Moss.[/*]\n<br />[/list]\n<br />[b]Configuration[/b]\n<br />\n<br />The generated [font=Courier New]config.json[/font] contains separate 0-100 chance settings for all three tiers and an option to allow bonuses on regrowing crops. If Generic Mod Config Menu is installed, the same settings are available in its in-game menu.\n<br />\n<br />[size=4][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url].[/*]\n<br />[*]Download Abundant Harvest Fertilizers.[/*]\n<br />[*]Unzip the included [b]AbundantHarvestFertilizers[/b] folder into Stardew Valley's [b]Mods[/b] folder.[/*]\n<br />[*]Launch Stardew Valley through SMAPI.[/*]\n<br />[/list]\n<br />[b]Updating[/b]\n<br />\n<br />Close Stardew Valley, then replace the existing [b]AbundantHarvestFertilizers[/b] folder with the one from the new Main File. Keep your generated [font=Courier New]config.json[/font] if you want to preserve your settings, and make sure only one copy of the mod is installed.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6.15[/*]\n<br />[*]SMAPI 4.5.2[/*]\n<br />[*]No content pack or other mod is required[/*]\n<br />[/list]\n<br />Generic Mod Config Menu 1.16.0 is optional.\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/21318]Ultimate Fertilizer 1.3.0 or later[/url] is optional and enables the supported fertilizer-stacking integration.\n<br />\n<br />[size=4][b]Compatibility and Multiplayer[/b][/size]\n<br />\n<br />Abundant Harvest Fertilizers works through Stardew Valley's normal [font=Courier New]Crop.harvest[/font] path. Custom crops can receive bonuses when their effective crop data meets the single-yield rules and they use that normal harvest path. Mods that bypass or replace it are unsupported.\n<br />\n<br />Hand, scythe, Garden Pot, and Junimo harvests are intended to work when they continue through the normal crop-harvest path. Harvest With Scythe 7.5.0 remains an unclaimed compatibility target until both Harmony load orders complete live testing.\n<br />\n<br />Ultimate Fertilizer is the only supported way to stack a Harvest Fertilizer with another fertilizer category. Abundant Harvest Fertilizers does not enable stacking by itself and does not support other fertilizer-stacking implementations. Every multiplayer participant using stacked fertilizer must install compatible versions of both mods.\n<br />\n<br />In multiplayer, the host's effective settings control the shared farm. Every participant must install the same version of Abundant Harvest Fertilizers; a farmhand without a valid same-version host settings snapshot receives no bonus yield.\n<br />\n<br />[size=4][b]Uninstallation[/b][/size]\n<br />\n<br />Before removing the mod, use or discard held Harvest Fertilizer and let treated outdoor dirt clear at season change, or remove that dirt in-game. Then close Stardew Valley and move the [b]AbundantHarvestFertilizers[/b] folder out of your [b]Mods[/b] folder.\n<br />\n<br />The mod does not scan or delete player property. Stardew Valley 1.6 may display deliberately retained custom fertilizer items as Error Items, so clearing them first gives the cleanest result.\n<br />\n<br />[size=4][b]Support[/b][/size]\n<br />\n<br />Read the pinned support guide in the Posts tab before requesting help. If the problem continues, reproduce it once and upload that session's log through [url=https://smapi.io/log]SMAPI's log parser[/url], then start a new post with the log link, crop, fertilizer tier, harvest method, expected yield, actual yield, and any other crop or harvest mods involved.\n<br />\n<br />You can also run [font=Courier New]ahf_status[/font] in the SMAPI console to report the active patch and settings state. Point at a crop and run [font=Courier New]ahf_explain[/font] to see why that crop is or is not eligible without changing it.\n<br />\n<br />[size=4][b]Credits[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]ConcernedApe[/b] for Stardew Valley.[/*]\n<br />[*][b]Pathoschild and the SMAPI contributors[/b] for SMAPI and StardewModdingAPI.[/*]\n<br />[*][b]The Harmony contributors[/b] for Harmony.[/*]\n<br />[*]Inspired by [url=https://github.com/StardewModders/mod-ideas/issues/1462]StardewModders/mod-ideas issue #1462[/url].[/*]\n<br />[/list]\n<br />Created by Peter Carpenter with original code and pixel art. Abundant Harvest Fertilizers is an unofficial fan-made mod and is not affiliated with or endorsed by ConcernedApe. The mod is released under the MIT License included in the download.\n<br />\n<br />[line]\n<br />\n<br />[center][size=4][b]More Mods[/b][/size]\n<br />\n<br />[url=https://www.nexusmods.com/profile/peterbot0/mods][b]Check out my other mods on Nexus Mods.[/b][/url][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51999",
+	"Version": "0.1.7",
+	"Updated": "2026-09-12T07:17:58+00:00",
+	"Downloads": [
+		{
+			"Id": 182438,
+			"Type": "Main",
+			"DisplayName": "AbundantHarvestFertilizers 0.1.7",
+			"FileName": "6e/7e/62/6e7e6204-48e1-4043-996a-4b5211c439a3",
+			"Description": "Restores Harvest Fertilizer bonuses alongside Machine Terrain Framework and adds SMAPI update checks for future releases.",
+			"Version": "0.1.7",
+			"SizeInBytes": 50667,
+			"Uploaded": "2026-09-12T07:17:58+00:00",
+			"Mods": [
+				{
+					"Id": "PeterCarpenter.AbundantHarvestFertilizers",
+					"DisplayName": "Abundant Harvest Fertilizers",
+					"Type": "Smapi",
+					"RelativePath": "AbundantHarvestFertilizers",
+					"Manifest": {
+						"Name": "Abundant Harvest Fertilizers",
+						"Description": "Adds vanilla-style fertilizer tiers that increase eligible single-yield crop harvests while preserving Stardew Valley's normal harvest behavior.",
+						"Author": "Peter Carpenter",
+						"Version": "0.1.7",
+						"MinimumApiVersion": "4.5.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "AbundantHarvestFertilizers.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.16.0",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "fox_white25.ultimate_fertilizer",
+								"MinimumVersion": "1.3.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51999"
+						],
+						"UniqueId": "PeterCarpenter.AbundantHarvestFertilizers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569126,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438687,
+		"UploaderId": 287320859,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

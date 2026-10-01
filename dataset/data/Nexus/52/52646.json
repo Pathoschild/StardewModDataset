@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 52646,
+	"Name": "Headlamp",
+	"Author": "Diabolicbutterfly",
+	"Description": "[size=5][b]Description[/b][/size] \n<br />The mines are dark, your lantern is a fixed blob of light, and you have a perfectly good hard hat sitting in your inventory. Headlamp bolts a lamp onto it. Press a key and a cone of light shines out of the lamp, pointing the way you're walking. It reaches as far as you set it, fading tile by tile so the far edge is always at most half as bright as the ground at your feet. It runs on one Battery Pack at a time, which goes in like bait on a fishing rod and is used up when the charge runs out, so a night in the mines takes a little planning. Everything is adjustable in Generic Mod Config Menu: the beam's shape, reach, width, brightness, colour, how smoothly it turns, how long batteries last, where the charge gauge sits on your HUD, and how you get the hat in the first place. \n<br />\n<br />[size=5][b]Installation instructions[/b][/size] \n<br />[b]First, whichever way you install:[/b] you need [url=https://smapi.io]SMAPI[/url]. [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional but recommended, since it's how you change settings and rebind keys in game. \n<br />\n<br />[size=4][b]With Stardrop (recommended)[/b][/size]\n<br />[list=1]\n<br />[*]Install and open [url=https://www.nexusmods.com/stardewvalley/mods/10455]Stardrop[/url], and point it at your Stardew Valley folder if it asks. [/*]\n<br />[*]Add the mod, either way:\n<br />[list]\n<br />[*]Hit [b]Mod Manager Download[/b] above, if you've linked your Nexus account in Stardrop under [b]Nexus Mods &gt; API Connection[/b]; or [/*]\n<br />[*]Download the zip manually, then in Stardrop choose [b]File &gt; Add Mod[/b] and pick the zip. [/*]\n<br />[/list][/*]\n<br />[*]Make sure Headlamp is enabled in your current profile. [/*]\n<br />[*]Start the game through Stardrop (or through SMAPI as usual). [/*]\n<br />[/list]Updating: add the new zip the same way and Stardrop replaces the old version. Your config.json is kept. [size=4][b]Manual install[/b][/size]\n<br />[list=1]\n<br />[*]Download the zip from the [b]Files[/b] tab. [/*]\n<br />[*]Find your game folder. On Steam: right-click Stardew Valley, then [b]Manage &gt; Browse local files[/b]. It's the folder with Stardew Valley.exe and a [b]Mods[/b] folder in it. [/*]\n<br />[*]Unzip the download into [b]Mods[/b]. You should end up with:\n<br />[code]Stardew Valley/Mods/Headlamp/manifest.json Stardew Valley/Mods/Headlamp/Headlamp.dll[/code][/*]\n<br />[*]Launch the game through SMAPI. [/*]\n<br />[/list][b]If the mod doesn't load,[/b] it's almost always a doubled-up folder, like Mods/Headlamp/Headlamp/manifest.json. Move the inner folder up a level. The manifest.json has to sit directly inside Mods/Headlamp. Updating: unzip the new version over the old folder and overwrite. Your settings live in Mods/Headlamp/config.json and are kept. \n<br />[size=4][b]\n<br />Getting the hat[/b][/size] Craft it at Mining level 6 from a Battery Pack, 5 iron bars and 5 refined quartz, or buy it from the Hat Mouse in the abandoned house for 20,000g. In a pinch, type [b]headlamp_give[/b] in the SMAPI console. To power it, pick up a Battery Pack in your inventory and click it onto the Headlamp. Then press [b]L[/b] to switch it on and off. Rebind the key to anything you like, including controller buttons. \n<br />[size=4][b]\n<br />Console commands[/b][/size] Type these in the SMAPI console window. On a Steam Deck, the console only appears when you launch from Desktop Mode.\n<br />[list]\n<br />[*][b]headlamp_give[/b]: gives you the Headlamp. [/*]\n<br />[*][b]headlamp_battery[/b]: puts a fresh battery in the headlamp without using up a Battery Pack. [/*]\n<br />[*][b]headlamp_export[/b]: saves the hat sprite as headlamp-export.png in the mod folder, to draw your own. [/*]\n<br />[*][b]player_add (O)787 5[/b]: gives you 5 Battery Packs (a SMAPI command). [/*]\n<br />[*][b]player_add (O)335 5[/b] and [b]player_add (O)338 5[/b]: 5 iron bars and 5 refined quartz, for the recipe. [/*]\n<br />[*][b]world_settime 2200[/b]: jumps the clock to 10pm. With the lamp on, the battery drains by the time skipped, which is handy for testing. [/*]\n<br />[/list][size=4][b]Uninstalling[/b][/size] Take the Headlamp off and remove it from your inventory and chests first, or it'll turn into an Error Item. Then disable it in Stardrop, or delete the Mods/Headlamp folder. \n<br />\n<br />[size=5][b]Main features[/b][/size]\n<br />[list]\n<br />[*][b]A lamp on your hard hat.[/b] The sprite is built from the Hard Hat you already have installed, retextures included, and the lens lights up when the beam is on. [/*]\n<br />[*][b]The beam comes out of the lamp[/b] and runs level at head height, the way the game lights a lamp post, not from your feet. [/*]\n<br />[*][b]It follows where you walk[/b], including diagonally. The character sprite only faces four ways, so the mod watches how you're actually moving. Works with keyboard, controller stick and horseback. [/*]\n<br />[*][b]Smooth turning.[/b] The beam eases round when you change direction instead of snapping, and sweeps evenly on a turn-around. Adjustable, or off if you prefer it instant. [/*]\n<br />[*][b]Tiles, not guesswork.[/b] Set the reach from 1 to 15 tiles. Brightness falls in a straight line from the tile in front of you to the last one, which is capped at half brightness, and the light stops at that tile's far edge instead of bleeding past it. The beam is the same length whichever way it points. [/*]\n<br />[*][b]Cone or circle[/b], with adjustable cone width, overall intensity, a warm, neutral or cool light, and a soft glow around you so you're not standing in the dark behind your own beam. [/*]\n<br />[*][b]A battery slot, like bait on a fishing rod.[/b] Click a Battery Pack onto the Headlamp to put it in. It holds one battery at a time, which powers the helmet to a full charge and is used up when the charge runs out. The tooltip shows the slot and the charge left. [/*]\n<br />[*][b]The helmet keeps its charge.[/b] Sleeping, reloading or taking the helmet off doesn't change it, and each Headlamp has its own battery. Five hours of in-game light per Battery Pack by default, adjustable from 30 minutes to 12 hours, and it only drains while the beam is shining. [/*]\n<br />[*][b]Low battery warning[/b] when there's less than an hour left. When the battery runs out, the lamp switches off and you pop in the next Battery Pack yourself, or turn on automatic swapping and a new one from your inventory goes in by itself. [/*]\n<br />[*][b]Charge gauge on the HUD[/b], beside your health and energy bars, with a notch per hour. It turns amber, then red, and blinks when it's nearly flat. Move it to any corner, nudge it pixel by pixel, or resize it. [/*]\n<br />[*][b]Crafted or bought.[/b] A mid-game recipe at Mining 6, or 20,000g from the Hat Mouse. A Cheats section lets you change the shop, the price, and how the recipe unlocks. [/*]\n<br />[*][b]Draw your own hat[/b] if you'd rather. Export the generated sprite with [b]headlamp_export[/b], edit it, and drop it in the mod's assets folder. [/*]\n<br />[*][b]Split-screen friendly[/b], with each player's own lamp, direction and battery. [/*]\n<br />[/list][size=5][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6.9 or later [/*]\n<br />[*][url=https://smapi.io]SMAPI 4.0[/url] or later [/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional, for in-game settings and key rebinding; without it, edit config.json with the game closed) [/*]\n<br />[*]Battery Packs to run the lamp, unless you switch batteries off in the settings [/*]\n<br />[/list]In multiplayer, everyone should install the mod. Players without it will see the Headlamp as an Error Item, and your beam is drawn on your own screen only. The lamp shines where the game draws darkness: at night, in the mines, and in dark interiors. On a sunny afternoon there's nothing for it to light.\u00A0\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52646",
+	"Version": "1.5.0",
+	"Updated": "2026-09-22T06:11:36+00:00",
+	"Downloads": [
+		{
+			"Id": 183721,
+			"Type": "Main",
+			"DisplayName": "Headlamp 1.6.0",
+			"FileName": "8a/e3/51/8ae3515b-3b3b-4f65-8d9d-efbbe8922f15",
+			"Description": "",
+			"Version": "1.6.0",
+			"SizeInBytes": 55954,
+			"Uploaded": "2026-09-22T06:11:36+00:00",
+			"Mods": [
+				{
+					"Id": "HeadlampMod.Headlamp",
+					"DisplayName": "Headlamp",
+					"Type": "Smapi",
+					"RelativePath": "Headlamp",
+					"Manifest": {
+						"Name": "Headlamp",
+						"Description": "A hard hat with a little lamp bolted on. Toggle the beam with a rebindable hotkey and tune its shape, reach, and falloff in Generic Mod Config Menu.",
+						"Author": "Headlamp Mod",
+						"Version": "1.6.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.9",
+						"EntryDll": "Headlamp.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "HeadlampMod.Headlamp"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570409,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439334,
+		"UploaderId": 7524404,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

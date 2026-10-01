@@ -5,8 +5,71 @@
 	"Author": "Juanpa98ar",
 	"PageUrl": "https://www.curseforge.com/stardewvalley/mods/jps-merchants-books",
 	"Version": null,
-	"Updated": "2026-06-16T06:30:09.29+00:00",
+	"Updated": "2026-09-22T10:42:54.023+00:00",
 	"Downloads": [
+		{
+			"Id": 8927464,
+			"Type": "Main",
+			"DisplayName": "MerchantsBooks.zip (2.0)",
+			"FileName": "MerchantsBooks.zip",
+			"Version": null,
+			"SizeInBytes": 31554,
+			"Uploaded": "2026-09-20T03:26:23.057+00:00",
+			"Mods": [
+				{
+					"Id": "Juanpa98ar.Code.MerchantsBooks",
+					"DisplayName": "(JP98) Merchant's Books Code",
+					"Type": "Smapi",
+					"RelativePath": "MerchantsBooks",
+					"Manifest": {
+						"Name": "(JP98) Merchant's Books Code",
+						"Description": "Code For Merchant's Books",
+						"Author": "Juanpa98ar",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MerchantsBooks.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:43034"
+						],
+						"UniqueId": "Juanpa98ar.Code.MerchantsBooks"
+					}
+				},
+				{
+					"Id": "Juanpa98ar.Source.MerchantsBooks",
+					"DisplayName": "(CP) Merchant's Books",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Merchant's Books",
+					"Manifest": {
+						"Name": "(CP) Merchant's Books",
+						"Description": "Add special books for merchants.",
+						"Author": "Juanpa98ar",
+						"Version": "1.0.3",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Juanpa98ar.Code.MerchantsBooks",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:43034"
+						],
+						"UniqueId": "Juanpa98ar.Source.MerchantsBooks"
+					}
+				}
+			],
+			"OtherFields": {
+				"ReleaseType": 1,
+				"FileGroupType": 0,
+				"gameVersions": [
+					"1.6"
+				]
+			}
+		},
 		{
 			"Id": 8254936,
 			"Type": "Main",
@@ -143,7 +206,7 @@
 		],
 		"DateCreated": "2026-04-06T08:09:03.403+00:00",
 		"DateReleased": "2026-06-15T21:31:51.633+00:00",
-		"DateModified": "2026-06-16T06:30:09.29+00:00",
+		"DateModified": "2026-09-22T10:42:54.023+00:00",
 		"slug": "jps-merchants-books"
 	}
 }

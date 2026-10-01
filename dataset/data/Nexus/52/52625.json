@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 52625,
+	"Name": "Pet Whispers",
+	"Author": "YourPeachiness",
+	"Description": "Pet Whispers - Your Pets Talk Back\n<br />\n<br />Pet your cat, dog, or turtle and they say something back in a speech bubble\n<br />above their head.\n<br />\n<br />FEATURES\n<br />\n<br />* 147 lines, all in English and Chinese\n<br />* Three separate voice sets: Cat, Dog, Turtle (turtles are not dogs with a\n<br />\u00A0 different skin - they have their own slow, old, quiet way of talking)\n<br />* Five friendship tiers, aligned with the game's own hearts\n<br />\u00A0 (200 points = 1 heart, max 1000)\n<br />\u00A0 \u00A0 - 0-199\u00A0 \u00A0 not attached yet: only body language and silence\n<br />\u00A0 \u00A0 - 200-399\u00A0 first heart\n<br />\u00A0 \u00A0 - 400-599\u00A0 second heart\n<br />\u00A0 \u00A0 - 600-799\u00A0 third heart\n<br />\u00A0 \u00A0 - 800-1000 fourth and fifth heart - the deepest lines live here\n<br />* Conditional lines for rain, winter, late night, and low stamina.\n<br />\u00A0 These are weighted against the tier lines (60/40 by default) instead of\n<br />\u00A0 overriding them, so you still hear both.\n<br />* Four one-time milestone lines per pet:\n<br />\u00A0 \u00A0 - the very first time you pet them\n<br />\u00A0 \u00A0 - the day friendship reaches 1000\n<br />\u00A0 \u00A0 - the 100th petting\n<br />\u00A0 \u00A0 - the 500th petting\n<br />* No repeats: the last 8 lines spoken are temporarily excluded.\n<br />* The heart: the base game deliberately does NOT draw emotes on pets\n<br />\u00A0 (NPC.DrawEmote has an explicit \"!(this is Pet)\" check), so this mod draws\n<br />\u00A0 it for them - using the game's own emote sheet and geometry.\n<br />* A sound on every petting: vanilla only plays the pet's own sound the first\n<br />\u00A0 time each day; this mod plays it every time.\n<br />* A morning reminder to fill the pet bowls on non-rainy days.\n<br />\u00A0 (Rain fills them automatically, so it stays quiet then - and it only\n<br />\u00A0 reminds you if a bowl is actually empty.)\n<br />\n<br />CONFIG\n<br />\n<br />Everything is configurable in config.json, or nothing at all if you are happy\n<br />with the defaults:\n<br />\n<br />\u00A0 OnlyFirstPetPerDay\u00A0 \u00A0 \u00A0 false\u00A0 talk every time, or only on the first pet of the day\n<br />\u00A0 HeartEveryPet\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 show a heart on repeat pettings too\n<br />\u00A0 SoundEveryPet\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 play the pet's sound on repeat pettings too\n<br />\u00A0 PetSound\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"\"\u00A0 \u00A0 \u00A0 override the sound cue (blank = the pet's own)\n<br />\u00A0 WaterReminder\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 morning bowl reminder\n<br />\u00A0 ChancePercent\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 100\u00A0 \u00A0 chance to speak at all\n<br />\u00A0 BubbleDuration\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 7000\u00A0 \u00A0 how long the bubble stays (ms)\n<br />\u00A0 BubbleDelayMs\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 400\u00A0 \u00A0 delay before it appears (ms)\n<br />\u00A0 ShowHeart\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 draw the heart\n<br />\u00A0 DogsSpeak\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true\u00A0 \u00A0 toggle dogs\n<br />\u00A0 ConditionChancePercent\u00A0 60\u00A0 \u00A0 \u00A0 weight of conditional lines vs tier lines\n<br />\u00A0 DontInterruptBubble\u00A0 \u00A0 true\u00A0 \u00A0 a new petting will not overwrite a line you\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 are still reading\n<br />\n<br />CONSOLE COMMANDS\n<br />\n<br />\u00A0 pet_say\u00A0 \u00A0 \u00A0 \u00A0 make every pet speak (testing)\n<br />\u00A0 pet_friend N\u00A0 set a pet's friendship, 0-1000 (testing)\n<br />\u00A0 pet_water\u00A0 \u00A0 \u00A0 check the bowls and fire the reminder (testing)\n<br />\n<br />REQUIREMENTS\n<br />\n<br />* SMAPI 4.0.0 or later\n<br />* Stardew Valley 1.6\n<br />\n<br />TRANSLATIONS\n<br />\n<br />English and Chinese are included. Adding a language means copying\n<br />i18n/default.json and translating the values - no code changes needed.\n<br />\n<br />NOTES\n<br />\n<br />* The heart is added by this mod. In the unmodified game pets never show an\n<br />\u00A0 emote, even though the game does set the emote state internally - it simply\n<br />\u00A0 skips drawing it for pets. This mod only draws what vanilla already asked\n<br />\u00A0 for.\n<br />* The pet's own sound comes from Data/Pets. If a breed has no sound assigned,\n<br />\u00A0 set PetSound to any vanilla cue to substitute.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52625",
+	"Version": "0.1.1",
+	"Updated": "2026-09-20T07:47:08+00:00",
+	"Downloads": [
+		{
+			"Id": 183450,
+			"Type": "Main",
+			"DisplayName": "PetWhispers",
+			"FileName": "e5/c1/64/e5c1649e-3b51-4a1a-9331-04821654c61d",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 18827,
+			"Uploaded": "2026-09-20T07:47:08+00:00",
+			"Mods": [
+				{
+					"Id": "YourName.PetWhispers",
+					"DisplayName": "Pet Whispers (宠物絮语)",
+					"Type": "Smapi",
+					"RelativePath": "PetWhispers",
+					"Manifest": {
+						"Name": "Pet Whispers (宠物絮语)",
+						"Description": "摸一摸你的猫和狗，它们会回你一句话。台词按亲密度分四档解锁，并会随天气、季节、深夜与你的状态变化。",
+						"Author": "YourName",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PetWhispers.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YourName.PetWhispers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570138,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439313,
+		"UploaderId": 265230760,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

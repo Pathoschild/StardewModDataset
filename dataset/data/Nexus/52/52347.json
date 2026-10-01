@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 52347,
+	"Name": "star24hours",
+	"Author": "StevenArmstrong765676",
+	"Description": "[code]Star 24 Hours\n<br />Play Stardew Valley on a real clock: 1 in-game minute = 1 real minute\n<br />\n<br />\n<br />What it does\n<br />The in-game clock runs at real speed. With the default setting, one in-game minute takes one real minute:\n<br />\n<br />\n<br />09:10 to 10:40 (90 in-game minutes) takes 90 real minutes.A full day, 6:00 AM to 6:00 AM next morning (1440 in-game minutes), takes 24 real hours.6:00 AM to 2:00 AM (1200 in-game minutes, where vanilla knocks you out) takes 20 real hours.\n<br />Crops, machines, NPC schedules, sunset and lighting, mail, events: anything that runs on in-game minutes slows down with the clock. In game time nothing changes, the day just takes a lot longer in real time.\n<br />\n<br />Fishing is unchanged\n<br />The bite delay in Stardew Valley is counted in real milliseconds, somewhere between 0.6 and 30 seconds depending on your fishing level, bait and tackle. It has nothing to do with the game clock, so slowing the clock down does not slow the fish down. Bites come at vanilla speed and the fishing code is not patched at all. There is an optional multiplier in the config if you want them faster anyway.\n<br />\n<br />Requirements\n<br />\n<br />SMAPI 4.0.0 or newer (tested on 4.5.2)Stardew Valley 1.6.15 (1.6.x). Tested on Windows 11.Optional: a mod that stops the 2:00 AM pass-out, if you want to use the whole 24 hours.\n<br />Install\n<br />\n<br />Install SMAPI.Unzip the download and put the star24hours folder into your Mods folder.Start the game through SMAPI.Nothing is written into your save, so you can add or remove the mod whenever you like.\n<br />\n<br />Config\n<br />The mod creates a config.json in its folder on the first run:\n<br />\n<br />\n<br />{\n<br />\u00A0 \"RealMinutesPerGameMinute\": 1.0,\n<br />\u00A0 \"FishingBiteMultiplier\": 1.0,\n<br />\u00A0 \"EnforceTimeScale\": true,\n<br />\u00A0 \"VerboseLogging\": false\n<br />}\n<br />\n<br />RealMinutesPerGameMinute (1.0): real minutes per in-game minute, 0.05 to 60. At 1.0 a full day is 24 real hours, 0.5 gives you 12 hours, 2.0 gives you 48.FishingBiteMultiplier (1.0): 1.0 is vanilla bite timing, 0.5 makes fish bite twice as fast.EnforceTimeScale (true): if another mod overwrites the game's time value, put mine back and log a warning. Set it to false if you would rather keep the other mod's value.VerboseLogging (false): more detail in the log.\n<br />The first two can also be changed from the SMAPI console:\n<br />\n<br />\n<br />s24\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\u00A0 show the current settings\n<br />s24 set 0.5\u00A0 \u00A0 \u00A0 \u00A0\u00A0 1 in-game minute = 0.5 real minutes\n<br />s24 fishing 0.5\u00A0 \u00A0\u00A0 halve the bite delay\n<br />Compatibility\n<br />\n<br />CJB Cheats Menu works fine, including its freeze time cheat.Other time mods change the same value, so only one of us can win. If I detect that, I log a warning and put my value back. Set EnforceTimeScale to false if you want the other mod to win instead.Multiplayer: everyone in the session should have it installed. The host is the time authority.Calendar mods are not affected, this mod does not touch the date.At the default 1.0 a day lasts 20 real hours if you get knocked out at 2 AM, or 24 real hours with a no-pass-out mod. Lower the value if that is too long.\n<br />How it works\n<br />Clock speed in Stardew Valley comes down to one value in the game code: how many real milliseconds an in-game minute takes. Vanilla uses 700. This mod sets it to 60000, which is one real minute. The sunset math and the game's own time estimates read the same value, so the whole day scales with it and nothing else needs patching. It is a small Harmony patch (Harmony ships with SMAPI) and no other code is touched.\n<br />\n<br />Changelog\n<br />1.0.0\n<br />\n<br />First release.In-game clock runs on real time, default 1 in-game minute = 1 real minute.Fishing bite timing left at vanilla speed.config.json and the \"s24\" console command for changing the settings.Works in multiplayer, no save changes, no custom assets.\n<br />Credits\n<br />\n<br />ConcernedApe, for the gamePathoschild, for SMAPIAndreas Pardeike, for Harmony\n<br />Bugs and requests\n<br />Post a log link from smapi.io/log plus your game and SMAPI versions and I can usually see what happened. Translations are welcome, just link this page.[/code]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52347",
+	"Version": "1.0.0",
+	"Updated": "2026-09-15T15:18:29+00:00",
+	"Downloads": [
+		{
+			"Id": 182894,
+			"Type": "Main",
+			"DisplayName": "Star24Hours 1.0.0",
+			"FileName": "4b/f4/60/4bf46066-9c75-4b38-88b7-1f94805df7a1",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 6603,
+			"Uploaded": "2026-09-15T15:18:29+00:00",
+			"Mods": [
+				{
+					"Id": "ma.star24hours",
+					"DisplayName": "Star 24 Hours",
+					"Type": "Smapi",
+					"RelativePath": "star24hours",
+					"Manifest": {
+						"Name": "Star 24 Hours",
+						"Description": "让游戏内时间按现实时间流逝，默认 1 游戏分钟 = 1 现实分钟。钓鱼上钩速度保持原版不变。",
+						"Author": "MA",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "star24hours.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ma.star24hours"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569582,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439035,
+		"UploaderId": 196220048,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

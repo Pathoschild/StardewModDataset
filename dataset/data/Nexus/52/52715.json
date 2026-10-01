@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 52715,
+	"Name": "ValleyVision",
+	"Author": "NikkicZh",
+	"Description": "[size=5][b]ValleyVision (星露视界) 0.1.0[/b][/size]\n<br />\n<br />ValleyVision adds a “播放在线视频” (Play Online Video) option to the original Stardew Valley TV menu. Enter a public Bilibili or YouTube video link to play picture and sound on the selected TV. The mod-added interface text is currently Chinese. The original TV channels remain available.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />The 0.1.0 candidate ZIP was installed in an isolated mod directory and observed in-game with a dedicated save on Windows, Stardew Valley 1.6.15 (Steam), and SMAPI 4.5.2. The player confirmed Bilibili and YouTube playback, stopping, natural end, switching to original TV channels, leaving the location, and recovery after a failed link. Other Windows game versions, Linux, macOS and handheld devices remain untested.\n<br />\n<br />[size=4][b]Install[/b][/size]\n<br />1. Install Stardew Valley and SMAPI 4.5.2 or newer.\n<br />2. Extract the ValleyVision folder into the game's Mods directory. Mods/ValleyVision should directly contain manifest.json and ValleyVision.dll.\n<br />3. Install yt-dlp.exe, ffmpeg.exe and ffplay.exe yourself. Put them on PATH, or set YtDlpPath, FfmpegPath and FfplayPath to absolute paths in Mods/ValleyVision/config.json. These tools are not included in this mod. The official standalone yt-dlp.exe does not require Python.\n<br />4. YouTube extraction may also need a JavaScript runtime. Follow the official yt-dlp EJS guide to install a supported Deno or Node version. Deno can be detected by yt-dlp by default; Node 22 or newer must be explicitly enabled with YouTubeJsRuntime set to node. If setting YouTubeJsRuntimePath, also set YouTubeJsRuntime to deno or node.\n<br />\n<br />Official tool guides: [url=https://github.com/yt-dlp/yt-dlp/wiki/Installation]yt-dlp installation[/url] · [url=https://ffmpeg.org/download.html]FFmpeg downloads[/url] · [url=https://github.com/yt-dlp/yt-dlp/wiki/EJS]yt-dlp EJS[/url]\n<br />\n<br />[size=4][b]Supported links and controls[/b][/size]\n<br />Supported: HTTPS Bilibili BV video pages, valid b23.tv links leading to a BV video, valid ?p= part selections, HTTPS youtube.com/watch?v=... (including www and m), and youtu.be/... single-video links. A YouTube watch link with playlist parameters plays only the specified video from the beginning; it does not play the playlist.\n<br />\n<br />Click a TV and choose “播放在线视频” (Play Online Video) to enter a link. Click the playing TV again to choose “停止在线视频” (Stop Online Video). Selecting an original TV channel, leaving the location, returning to the title screen, or reaching the natural end stops the video session.\n<br />\n<br />[size=4][b]Limits and troubleshooting[/b][/size]\n<br />Shorts, livestreams, playlist-only pages, login-only, age-restricted, members-only and paid videos are unsupported. PO Tokens are not handled. Playback can change with network conditions, video permissions and external tool versions. Sound comes from ffplay and is not controlled by the in-game volume slider.\n<br />\n<br />If playback fails, check yt-dlp --version, ffmpeg -version and ffplay -version, verify paths and public video access, and consult the EJS guide for YouTube. The mod does not read browser cookies or user yt-dlp configuration, automatically download tools or EJS, persist entered links, or log full media addresses. Share only redacted SMAPI logs when reporting problems.\n<br />\n<br />To uninstall, close the game and remove Mods/ValleyVision.\n<br />\n<br />[size=4][b]Source, rights and AI use[/b][/size]\n<br />Source: [url=https://github.com/NikkicZh/ValleyVision]NikkicZh/ValleyVision[/url]. ValleyVision source is MIT licensed. The TV implementation was informed by the same maintainer's StardewLive work. The license does not grant rights to Stardew Valley assets, third-party tools or video content. Generative AI materially assisted code creation and this page description.\n<br />\n<br />[line]\n<br />[size=5][b]中文说明[/b][/size]\n<br />\n<br />ValleyVision（星露视界）在原版电视菜单增加“播放在线视频”，输入公开的 B 站或 YouTube 普通视频链接，即可在当前电视播放画面与声音。模组新增界面文字目前只有中文，原版电视频道仍可使用。\n<br />\n<br />[size=4][b]兼容范围[/b][/size]\n<br />0.1.0 候选 ZIP 已在 Windows、Steam 游戏 1.6.15、SMAPI 4.5.2 的隔离模组目录和专用存档中完成游戏内观察。玩家确认 B 站、YouTube、主动停止、自然结束、切回原版频道、离开场景及失败链接恢复均符合预期；其他 Windows 游戏版本、Linux、macOS 和掌机尚未验证。\n<br />\n<br />[size=4][b]安装与依赖[/b][/size]\n<br />1. 安装 Stardew Valley 和 SMAPI 4.5.2 或更新版本。\n<br />2. 将压缩包中的 ValleyVision 文件夹解压到游戏 Mods 目录，确保 Mods/ValleyVision 下直接有 manifest.json 和 ValleyVision.dll。\n<br />3. 自行安装 yt-dlp.exe、ffmpeg.exe 和 ffplay.exe，并加入 PATH；也可在 Mods/ValleyVision/config.json 中分别为 YtDlpPath、FfmpegPath 和 FfplayPath 填写绝对路径。模组包不附带这些工具；官方独立 yt-dlp.exe 不需要 Python。\n<br />4. YouTube 提取可能还需要 JavaScript 运行环境。按上方 yt-dlp EJS 官方指南安装受支持的 Deno 或 Node。Deno 可由 yt-dlp 默认探测；使用 Node 时需 22 或更新版本，并将 YouTubeJsRuntime 设为 node。填写 YouTubeJsRuntimePath 时，也必须填写 deno 或 node 类型。\n<br />\n<br />[size=4][b]支持范围与操作[/b][/size]\n<br />支持 HTTPS B 站 BV 视频页、有效的 b23.tv BV 短链、有效的 ?p= 分 P，以及 HTTPS youtube.com/watch?v=...（包括 www、m）和 youtu.be/... 单视频链接。YouTube 链接即使带播放列表参数，也只从头播放指定视频，不连续播放列表。\n<br />\n<br />点击电视选择“播放在线视频”，输入或粘贴链接。播放中再次点击电视选择“停止在线视频”可主动停止；选择原版频道、离开场景、返回标题或视频自然结束时，也会结束播放会话。\n<br />\n<br />[size=4][b]限制、卸载与排查[/b][/size]\n<br />不支持 Shorts、直播、仅列表页、登录后可见、年龄限制、会员或付费内容，也不处理 PO Token。播放会受网络、视频权限及外部工具版本影响。声音由 ffplay 播放，尚不受游戏内音量滑块控制。\n<br />\n<br />播放失败时，检查 yt-dlp --version、ffmpeg -version、ffplay -version、配置路径和公开视频访问权限；YouTube 问题另查上方 EJS 指南。模组使用 --ignore-config，不读取用户 yt-dlp 配置或浏览器 Cookie，不自动下载工具或 EJS，不持久保存输入链接，也不记录完整媒体地址。反馈问题请使用脱敏的 SMAPI 日志，避免公开私人链接。\n<br />\n<br />卸载时先关闭游戏，再删除 Mods/ValleyVision 文件夹。\n<br />\n<br />[size=4][b]源码、权利与 AI 使用[/b][/size]\n<br />源码：[url=https://github.com/NikkicZh/ValleyVision]NikkicZh/ValleyVision[/url]。ValleyVision 自有源码采用 MIT 许可；电视实现参考同一维护者的 StardewLive 经验。该许可不涵盖游戏资源、第三方工具和视频内容。生成式 AI 实质参与了代码生成及本页面文案编写。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52715",
+	"Version": "0.1.0",
+	"Updated": "2026-09-22T15:37:12+00:00",
+	"Downloads": [
+		{
+			"Id": 183776,
+			"Type": "Main",
+			"DisplayName": "ValleyVision 0.1.0",
+			"FileName": "f0/26/be/f026bed0-afc4-477c-8415-d7420d043c21",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 38769,
+			"Uploaded": "2026-09-22T15:37:12+00:00",
+			"Mods": [
+				{
+					"Id": "NikkicZh.ValleyVision",
+					"DisplayName": "ValleyVision",
+					"Type": "Smapi",
+					"RelativePath": "ValleyVision",
+					"Manifest": {
+						"Name": "ValleyVision",
+						"Description": "在星露谷物语电视中播放公开的 B 站与 YouTube 普通视频。",
+						"Author": "NikkicZh",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "ValleyVision.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:52715"
+						],
+						"UniqueId": "NikkicZh.ValleyVision"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570464,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439403,
+		"UploaderId": 113868658,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 52284,
+	"Name": "Customizable Hotel for custom NPCS",
+	"Author": "Misisipi12345",
+	"Description": "[size=4][b]IMPORTANT![/b][/size]\n<br />[size=4][b]I changed CP Mod to DLL Mod, and change folder name. check it if you downloaded CP Version.[/b][/size]\n<br />\n<br />[size=4][b]Description[/b][/size]\n<br />A beach hotel where your custom NPCs can live — so they stop fighting over the same spot on the map.\n<br />\n<br />It sits on the east side of the Beach, with a lobby, a working elevator, and 3 floors of 3 rooms each — 9 rooms total.\n<br />\n<br />Sorry, Eliot!!!!\n<br />\n<br />\n<br />[b][size=4]For players[/size][/b]\n<br />\n<br />Just install it. Any mod that registers a hotel resident gets its door hooked up automatically — nothing to configure.\n<br />\n<br />[size=4][b]For mod authors[/b][/size]\n<br />\n<br />add Dependency:\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"UniqueID\": \"misisipi.customBeachHotel\",\n<br />\u00A0 \u00A0 \u00A0 \"MinimumVersion\": \"1.0.0\"\n<br />\u00A0 \u00A0 }\n<br />\n<br />\n<br />You don't touch the hallway maps. Add one entry and the hotel wires up the door for you:\n<br />\n<br />\n<br />\n<br />\n<br />[code]\n<br />\n<br />{\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Mods/misisipi.customBeachHotel/Data\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"YourMod_Room\": {\n<br />\u00A0 \u00A0 \u00A0 \"RoomLocation\": \"Custom_YourNPCHouseInside\",\n<br />\u00A0 \u00A0 \u00A0 \"RoomX\": 3,\n<br />\u00A0 \u00A0 \u00A0 \"RoomY\": 8,\n<br />\u00A0 \u00A0 \u00A0 \"ExitX\": 3,\n<br />\u00A0 \u00A0 \u00A0 \"ExitY\": 9,\n<br />\u00A0 \u00A0 \u00A0 \"RoomFloor\": 1,\n<br />\u00A0 \u00A0 \u00A0 \"RoomNumber\": 2,\n<br />\u00A0 \u00A0 \u00A0 \"Locked\": {\n<br />\u00A0 \u00A0 \u00A0 \"OpenTime\": 0000,\n<br />\u00A0 \u00A0 \u00A0 \"CloseTime\": 2000,\n<br />\u00A0 \u00A0 \u00A0 \"IsLocked\": true,\n<br />\u00A0 \u00A0 \u00A0 \"NPC\":\"ExampleNPC\",\n<br />\u00A0 \u00A0 \u00A0 \"Friendship\": 200\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}[/code]\n<br />\n<br />\n<br />\n<br />RoomLocation │ The location the door leads to\n<br />RoomX / RoomY | Where you arrive inside it\n<br />ExitX / ExitY | The tile that leads back out. Optional — leave both out if you'd rather write the Warp / NPCWarp map properties yourself. Don't put it on the arrival tile\n<br />RoomFloor | 1~3\n<br />RoomNumber | 1~3 (LEFT -&gt; RIGHT)\n<br />Locked (1.0.6 NEW) | Work like [url=https://stardewvalleywiki.com/Modding:Maps]Action LockedWarp[/url]\n<br />\n<br />\n<br />Bad entries are skipped with a warning in the SMAPI log instead of crashing your game.\n<br />\n<br />\n<br />Requirements\n<br />\n<br />- SMAPI 4.0+\n<br />- Lumisteria's Indoor Tilesheets\n<br />- Content Patcher (only if you're a mod author registering a room)\n<br />\n<br />---\n<br />\n<br />\n<br />[size=4][b]소개[/b][/size]\n<br />해변에 커스텀 NPC들이 거주할 수 있는 호텔을 지어둡니다. 이제 부동산 때문에 걱정할 필요 없습니다 제발.\n<br />호텔과 3층높이의 복도로 구성되었으며 3개의 방이 있습니다.\n<br />\n<br />엘리엇아 미안하다\u00A0부동산 입지를 고려해서 집을 구했을텐데 내가 쌔볐다.\n<br />\n<br />\n<br />[b][size=4]일반 사용자[/size][/b]\n<br />\n<br />이 모드를 기반으로 한 모드가 있으면 그냥 설치하심 됩니다.\n<br />\n<br />[size=4][b]모더[/b][/size]\n<br />\n<br />\n<br />manifest에 의존성 추가:\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"UniqueID\": \"misisipi.customBeachHotel\",\n<br />\u00A0 \u00A0 \u00A0 \"MinimumVersion\": \"1.0.0\"\n<br />\u00A0 \u00A0 }\n<br />\n<br />\n<br />\n<br />content.json에 출/입구 관련 정보를 다음과 같이 입력하면 됩니다 :\n<br />\n<br />\n<br />[code]\n<br />\n<br />{\n<br />\u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \"Target\": \"Mods/misisipi.customBeachHotel/Data\",\n<br />\u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \"YourMod_Room\": {\n<br />\u00A0 \u00A0 \u00A0 \"RoomLocation\": \"Custom_YourNPCHouseInside\",\n<br />\u00A0 \u00A0 \u00A0 \"RoomX\": 3,\n<br />\u00A0 \u00A0 \u00A0 \"RoomY\": 8,\n<br />\u00A0 \u00A0 \u00A0 \"ExitX\": 3,\n<br />\u00A0 \u00A0 \u00A0 \"ExitY\": 9,\n<br />\u00A0 \u00A0 \u00A0 \"RoomFloor\": 1,\n<br />\u00A0 \u00A0 \u00A0 \"RoomNumber\": 2,\n<br />\u00A0 \u00A0 \u00A0 \"Locked\": {\n<br />\u00A0 \u00A0 \u00A0 \"OpenTime\": 0000,\n<br />\u00A0 \u00A0 \u00A0 \"CloseTime\": 2000,\n<br />\u00A0 \u00A0 \u00A0 \"IsLocked\": true,\n<br />\u00A0 \u00A0 \u00A0 \"NPC\":\"ExampleNPC\",\n<br />\u00A0 \u00A0 \u00A0 \"Friendship\": 200\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 }\n<br />}[/code]\n<br />\n<br />RoomLocation │ NPC가 거주하는 Location명\n<br />RoomX / RoomY | 복도에서 집 안으로 들어왔을 때 도착하는 타일\n<br />ExitX / ExitY | 집에서 밖으로 나가게 되는 타일. NPC가 워프 무한굴레에 빠질 수 있으니 RoomXY랑 같은 위치로 하지는 말아주세요. 더 필요하면 직접 맵에 warp추가해서 입력하시면 됩니다.\n<br />RoomFloor | 1~3\n<br />RoomNumber | 1~3\u00A0\n<br />Locked (1.0.6 NEW) | 잠금 설정입니다. SMAPI 문서의\u00A0[url=https://stardewvalleywiki.com/Modding:Maps]Action LockedWarp[/url]\u00A0참조.\n<br />\n<br />\n<br />층/방이 겹치면 스킵됩니다. SMAPI에 로그 뜨니 봐주십쇼\n<br />\n<br />요구사항\n<br />\n<br />- SMAPI 4.0+\n<br />- Lumisteria's Indoor Tilesheets\n<br />- Content Patcher (모딩할 때)\n<br />\n<br />---\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52284",
+	"Version": "1.0.8",
+	"Updated": "2026-09-18T01:49:51+00:00",
+	"Downloads": [
+		{
+			"Id": 183162,
+			"Type": "Main",
+			"DisplayName": "HotelForAll",
+			"FileName": "0f/2a/da/0f2ada2c-0d2f-4e19-896b-92e508d5b3aa",
+			"Description": "",
+			"Version": "1.0.8",
+			"SizeInBytes": 59850,
+			"Uploaded": "2026-09-18T01:49:51+00:00",
+			"Mods": [
+				{
+					"Id": "misisipi.customBeachHotel",
+					"DisplayName": "모두 함께 사는 호텔",
+					"Type": "Smapi",
+					"RelativePath": "HotelForAll",
+					"Manifest": {
+						"Name": "모두 함께 사는 호텔",
+						"Description": "Framework for all custom NPC in beach. I'm sorry Eliot.",
+						"Author": "Misisipi",
+						"Version": "1.0.8",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "HotelForAll.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Lumisteria.LumiTilesheetsIndoor",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52284"
+						],
+						"UniqueId": "misisipi.customBeachHotel"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569850,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438972,
+		"UploaderId": 50308756,
+		"CategoryId": 16,
+		"Adult": false
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 51519,
+	"Name": "ClickToWalk",
+	"Author": "xyhxyfx",
+	"AuthorLabel": "Xenaries",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]为《星露谷物语》添加鼠标右键自动寻路功能。Mod 会尽量保留游戏原版的右键使用物品和交互逻辑，让移动、使用物品与对象交互互不冲突。[/color]\n<br />[line]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />1. 安装 [SMAPI](https://smapi.io/)。\n<br />2. 解压本 Mod，将包含 `manifest.json` 和 `ClickToWalk.dll` 的 `ClickToWalk` 文件夹放入游戏的 `Mods` 目录。\n<br />\n<br />[b]3. （可选）配置：[/b]\n<br />首次启动后，SMAPI 会读取 Mod 文件夹内的 config.json。当前实际生效的主要配置如下：\n<br />{\n<br />\u00A0 \"EnableRightClickToMove\": true,\n<br />\u00A0 \"CancelOnKeyboardInput\": true\n<br />}\n<br />\n<br />- EnableRightClickToMove：是否启用右键自动移动，默认为 true。\n<br />- CancelOnKeyboardInput：按移动键时是否取消自动移动，默认为 true。\n<br />修改配置后需要重新启动游戏或重新加载 Mod 才会生效。\n<br />\n<br />4. 通过 SMAPI 启动游戏。\n<br />\n<br />目录结构应类似：\n<br />Stardew Valley/\n<br />└─ Mods/\n<br />\u00A0 \u00A0└─ ClickToWalk/\n<br />\u00A0 \u00A0 \u00A0 ├─ manifest.json\n<br />\u00A0 \u00A0 \u00A0 ├─ ClickToWalk.dll\n<br />\u00A0 \u00A0 \u00A0 └─ config.json\n<br />[line]\n<br />[b]Instructions for use[/b]\n<br />\n<br />右键的具体行为取决于当前手持物品是否支持原版右键使用：\n<br />\n<br />[b]手持物品不能通过右键使用时[/b]\n<br />\n<br />- 右键地图上的空地或远处位置，角色会自动寻找可行路线并移动过去。\n<br />- 右键角色附近的 NPC、箱子、机器、门等可交互对象时，保留原版右键交互。\n<br />- 如果点击的位置不能站立，Mod 会尝试移动到该位置附近最近的可通行地块。\n<br />\n<br />[b]手持物品可以通过右键使用时[/b]\n<br />\n<br />- 右键操作优先交给游戏原版处理，用于使用、放置、穿戴或执行该物品的特殊动作。\n<br />- 右键可交互对象时，按游戏原版规则进行交互。\n<br />- 此时 Mod 不会拦截右键并启动自动移动；如需右键移动，请先切换到不能通过右键使用的物品或空手状态。\n<br />\n<br />可通过右键使用的物品包括代码当前识别到的武器、食物、可放置物、家具、种子、鱼饵、部分制作物或古物，以及衣物、戒指和鞋子等。\n<br />\n<br />[i]&gt; 注意：右键远处的可交互对象时，当前版本只会移动到对象附近，不会在到达后自动完成交互。到达后请再次右键该对象。[/i]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8]None[/color]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8]GitHub项目地址：https://github.com/xyhxyfx/ClickToWalk[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51519",
+	"Version": "1",
+	"Updated": "2026-08-31T04:08:04+00:00",
+	"Downloads": [
+		{
+			"Id": 180897,
+			"Type": "Main",
+			"DisplayName": "ClickToWalk",
+			"FileName": "bb/b2/0e/bbb20e4c-7ea0-453d-b375-84802419f748",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 22682,
+			"Uploaded": "2026-08-31T04:08:04+00:00",
+			"Mods": [
+				{
+					"Id": "Xenaries.ClickToWalk",
+					"DisplayName": "Click To Walk",
+					"Type": "Smapi",
+					"RelativePath": "ClickToWalk",
+					"Manifest": {
+						"Name": "Click To Walk",
+						"Description": "使用鼠标点击让玩家自动寻路移动。",
+						"Author": "Xenaries",
+						"Version": "0.2.16",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "ClickToWalk.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Xenaries.ClickToWalk"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342567585,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438207,
+		"UploaderId": 280038286,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

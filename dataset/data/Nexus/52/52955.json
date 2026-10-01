@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 52955,
+	"Name": "Animal Cracker Expanded",
+	"Author": "KhaStark",
+	"Description": "[font=Comic Sans MS]Animal Cracker Expanded is a standalone SMAPI mod inspired by [url=https://www.nexusmods.com/stardewvalley/mods/40273]Feed More Animal Crackers[/url] by gellingly. This project uses its own mod identity, configuration, unlock system, compatibility handling, and wand asset instead of redistributing the original archive.\n<br />\n<br />The main goal is simple: let Golden Animal Crackers keep scaling animal and fish pond production beyond the first vanilla cracker, while adding a safe way to recover crackers later if you change your mind.\n<br />\n<br />The Animal Cracker Wand was also inspired by [url=https://www.nexusmods.com/stardewvalley/mods/27071]Golden Animal Cracker Extractor[/url] by Selph (zombifier). Animal Cracker Expanded uses its own recovery implementation and wand asset.[/font]\n<br />\n<br />[font=Comic Sans MS][b]Features[/b]\n<br />[/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Configurable Golden Animal Cracker cap from 2 to 100 total crackers per supported animal or fish pond. Default: 5.[/font][/*]\n<br />[*][font=Comic Sans MS]The first cracker keeps vanilla-style doubling; each additional cracker adds another base-production amount. At the default cap of 5 crackers, production reaches x6.[/font][/*]\n<br />[*][font=Comic Sans MS]Supports normal farm animals and compatible custom FarmAnimal types that can already eat Golden Animal Crackers.[/font][/*]\n<br />[*][font=Comic Sans MS]Pig / DigUp production support, enabled by default, including truffle-style dug-up produce.[/font][/*]\n<br />[*][font=Comic Sans MS]Fish ponds support stacked crackers and display their current cracker count, with separate horizontal and vertical position offsets for Android layouts.[/font][/*]\n<br />[*][font=Comic Sans MS]Optional Capybara compatibility for HarrisonGrey's Capybara. This override is OFF by default so the Capybara mod's original no-cracker behavior is preserved unless you explicitly enable it.[/font][/*]\n<br />[*][font=Comic Sans MS]Animals-tab cracker display using the format \"Crackers: current/max\", with configurable horizontal and vertical offsets for Android layouts.[/font][/*]\n<br />[*][font=Comic Sans MS]Animal Cracker Wand for recovering crackers from animals and fish ponds.[/font][/*]\n<br />[*][font=Comic Sans MS]Wand confirmation prompt before recovery to help prevent accidental mobile taps.[/font][/*]\n<br />[*][font=Comic Sans MS]Two refund modes: One at a time or All at once.[/font][/*]\n<br />[*][font=Comic Sans MS]Recovered crackers go to your inventory; if the inventory is full, they drop safely on the ground.[/font][/*]\n<br />[*][font=Comic Sans MS]Wand unlock is permanent per save after the first successful Golden Animal Cracker feed to a supported animal or fish pond, with Marnie's unlock mail arriving the next morning.[/font][/*]\n<br />[*][font=Comic Sans MS]Choose wand acquisition through Marnie's shop, crafting, or both. Default: Both.[/font][/*]\n<br />[*][font=Comic Sans MS]Marnie sells the wand when shop acquisition is enabled. Default shop price: 25,000g, configurable from 1,000g to 100,000g.[/font][/*]\n<br />[*][font=Comic Sans MS]Crafting recipe: 10 Hardwood + 5 Iridium Bars + 1 Diamond.[/font][/*]\n<br />[*][font=Comic Sans MS]Config changes after unlock apply immediately to shop/crafting availability.[/font][/*]\n<br />[*][font=Comic Sans MS]Existing saves with a vanilla Golden Animal Cracker already fed to an animal or fish pond are detected and can trigger the unlock flow.[/font][/*]\n<br />[*][font=Comic Sans MS]If the configured maximum is lowered below an animal's stored cracker count, the stored crackers are preserved and remain recoverable; new crackers are rejected until the stored count is below the cap.[/font][/*]\n<br />[/list]\n<br />[font=Comic Sans MS][b]Requirements[/b]\n<br />[/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Stardew Valley 1.6.[/font][/*]\n<br />[*][font=Comic Sans MS]SMAPI 4.0.0 or later according to the manifest.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />\n<br />[b]Optional[/b]\n<br />[/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Generic Mod Config Menu — recommended for changing settings in-game. The mod still works without GMCM.[/font][/*]\n<br />[*][font=Comic Sans MS]HarrisonGrey's Capybara 1.0.2 — only needed if you want to use the optional Capybara cracker override.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Tested on[/b]\n<br />[/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Android[/font][/*]\n<br />[*][font=Comic Sans MS]Stardew Valley 1.6.15.3 build 26177[/font][/*]\n<br />[*][font=Comic Sans MS]SMAPI Android 4.3.2.5[/font][/*]\n<br />[*][font=Comic Sans MS]Generic Mod Config Menu 1.16.0[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />Desktop is not blocked by the mod, but this release has not been tested or supported on desktop.\n<br />\n<br />[b]Installation[/b]\n<br />[/font]\n<br />[list=1]\n<br />\n<br />[*][font=Comic Sans MS]Install SMAPI for your platform.[/font][/*]\n<br />[*][font=Comic Sans MS]If Feed More Animal Crackers by gellingly is installed, remove it first. The two mods must not be installed together.[/font][/*]\n<br />[*][font=Comic Sans MS]Extract Animal Cracker Expanded into your Stardew Valley Mods folder.[/font][/*]\n<br />[*][font=Comic Sans MS]Optionally install Generic Mod Config Menu if you want to edit settings through an in-game menu.[/font][/*]\n<br />[*][font=Comic Sans MS]Launch the game through SMAPI.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Compatibility / Important notes[/b]\n<br />[/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Single-player only. Multiplayer is intentionally unsupported. [/font][/*]\n<br />[*][font=Comic Sans MS]Android is the tested target. Desktop may work, but it is currently untested and unsupported.[/font][/*]\n<br />[*][font=Comic Sans MS]Pig support can be disabled without deleting stored cracker data. Stored crackers remain visible/recoverable, but no pig production bonus is applied while the option is off.[/font][/*]\n<br />[*][font=Comic Sans MS]Capybara support behaves the same way: disabling the override preserves stored cracker data and allows recovery, but disables the production bonus and prevents new cracker feeding.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Credits[/b]\n<br />[/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/40273]Feed More Animal Crackers[/url] by gellingly — original multiple-cracker concept and behavior baseline. Permission to share an Android version was granted in the original mod's Nexus discussion.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/27071]Golden Animal Cracker Extractor[/url] by Selph (zombifier) — inspiration for the cracker-recovery tool concept. No extractor art assets are included.[/font][/*]\n<br />[*][font=Comic Sans MS]HarrisonGrey — Capybara compatibility target; no Capybara assets or code are included.[/font][/*]\n<br />[*][font=Comic Sans MS]Pathoschild and contributors — SMAPI.[/font][/*]\n<br />[*][font=Comic Sans MS]kittycatcasey — Generic Mod Config Menu.[/font][/*]\n<br />[*][font=Comic Sans MS]ConcernedApe — Stardew Valley.[/font][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52955",
+	"Version": "1.0.0",
+	"Updated": "2026-09-26T19:49:13+00:00",
+	"Downloads": [
+		{
+			"Id": 184269,
+			"Type": "Main",
+			"DisplayName": "Khastark AnimalCrackerExpanded 1.0.0",
+			"FileName": "94/c1/4a/94c14a33-e366-4219-b6f4-f77a89cf790e",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 39521,
+			"Uploaded": "2026-09-26T19:49:13+00:00",
+			"Mods": [
+				{
+					"Id": "KhaStark.AnimalCrackerExpanded",
+					"DisplayName": "Animal Cracker Expanded",
+					"Type": "Smapi",
+					"RelativePath": "Animal Cracker Expanded",
+					"Manifest": {
+						"Name": "Animal Cracker Expanded",
+						"Description": "Expands Golden Animal Crackers with configurable stacking, pig and fish pond support, cracker counts, and an Animal Cracker Wand for recovering fed crackers.",
+						"Author": "KhaStark",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AnimalCrackerExpanded.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:52955"
+						],
+						"UniqueId": "KhaStark.AnimalCrackerExpanded"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570957,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439643,
+		"UploaderId": 218369943,
+		"CategoryId": 27,
+		"Adult": false
+	}
+}

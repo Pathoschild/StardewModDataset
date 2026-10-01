@@ -5,8 +5,71 @@
 	"Author": "Juanpa98ar",
 	"PageUrl": "https://www.curseforge.com/stardewvalley/mods/jps-utility-machines-crop-compactor-mobile",
 	"Version": null,
-	"Updated": "2026-04-06T08:14:54.307+00:00",
+	"Updated": "2026-09-22T10:42:48.94+00:00",
 	"Downloads": [
+		{
+			"Id": 8927450,
+			"Type": "Main",
+			"DisplayName": "Compact Crop Core.zip (2.0)",
+			"FileName": "Compact Crop Core.zip",
+			"Version": null,
+			"SizeInBytes": 28346,
+			"Uploaded": "2026-09-20T03:23:44.8+00:00",
+			"Mods": [
+				{
+					"Id": "Juanpa98ar.Code.CompactCropCore",
+					"DisplayName": "Compact Crop Core",
+					"Type": "Smapi",
+					"RelativePath": "CompactCropCore",
+					"Manifest": {
+						"Name": "Compact Crop Core",
+						"Description": "Crop Core Compatibility",
+						"Author": "Juanpa98ar",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CompactCropCore.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:28500"
+						],
+						"UniqueId": "Juanpa98ar.Code.CompactCropCore"
+					}
+				},
+				{
+					"Id": "Juanpa98ar.Source.UM.CC",
+					"DisplayName": "(CP) Crop Compactor",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Compact Crop Core",
+					"Manifest": {
+						"Name": "(CP) Crop Compactor",
+						"Description": "Crop the crop and crop",
+						"Author": "Juanpa98ar",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Juanpa98ar.Code.CompactCropCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:28500"
+						],
+						"UniqueId": "Juanpa98ar.Source.UM.CC"
+					}
+				}
+			],
+			"OtherFields": {
+				"ReleaseType": 1,
+				"FileGroupType": 0,
+				"gameVersions": [
+					"1.6"
+				]
+			}
+		},
 		{
 			"Id": 7882519,
 			"Type": "Main",
@@ -76,7 +139,7 @@
 		],
 		"DateCreated": "2026-04-06T08:06:37.773+00:00",
 		"DateReleased": "2026-04-06T01:04:41.4+00:00",
-		"DateModified": "2026-04-06T08:14:54.307+00:00",
+		"DateModified": "2026-09-22T10:42:48.94+00:00",
 		"slug": "jps-utility-machines-crop-compactor-mobile"
 	}
 }

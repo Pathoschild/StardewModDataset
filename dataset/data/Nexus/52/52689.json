@@ -1,0 +1,66 @@
+{
+	"Site": "Nexus",
+	"Id": 52689,
+	"Name": "Zhuu's I - Automate Lantern Link",
+	"Author": "yhh2324",
+	"AuthorLabel": "Zhuu Studio",
+	"Description": "[color=#d4d4d8]自动灯笼链接[/color]\n<br />[color=#D4D4D8][b]AutomateLanternLink是一款轻量级的[/b][b]Automate[/b]插件，它允许路灯和其他可配置对象充当不同自动化网络之间的中继点。\n<br />该模组最初是为了解决一个简单的问题而开发的：有时农场的两个部分在逻辑上属于同一个生产区域，但却被道路、小径、装饰物或空地隔开。通常情况下，要用 Automate 将它们连接起来，可能需要用箱子、机器或其他连接器来填补这些空隙。\n<br />而有了 AutomateLanternLink，你就可以保持农场布局的完整性。只需在[b]同一张地图[/b]\n<br />上，将匹配的中继对象放置在两个独立的 Automate 网络附近，该模组就可以远程连接这些网络。例如，如果你在农场道路的两侧都种植了树苗，你可以在道路两侧附近放置路灯，连接这两个区域，而无需用额外的对象覆盖道路。\n<br />[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]工作原理[/color][/size][/heading]\n<br />[color=#D4D4D8]中继对象有两种工作方式。\n<br />它们可以像本地连接器一样连接到附近的自动化机器、箱子、树木和其他兼容对象。\n<br />当同一张地图上存在足够多的[b]同类型[/b]已启用中继对象时，它们还可以将附近的自动化网络连接起来，即使距离较远。\n<br />这意味着您可以创建清晰独立的生产区域，同时仍然将它们视为同一个自动化网络的一部分。[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]默认继电器[/color][/size][/heading]\n<br />[color=#D4D4D8]默认情况下，该模组启用以下功能：[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8][b]木制路灯[/b][/color][/*]\n<br />[*][color=#D4D4D8][b]铁制路灯[/b][/color][/*]\n<br />[/list][color=#D4D4D8]您可以通过配置启用其他物品，包括火把、火盆、篝火、栅栏、大门和其他支持的物品。\n<br />您还可以使用其他模组的[b]合格物品 ID[/b]添加兼容物品。[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]配置[/color][/size][/heading]\n<br />[color=#D4D4D8]该模组包含多个可选设置。\n<br />您可以选择允许哪些类型的物体作为中继器，更改创建远程连接所需的最小匹配中继器数量，还可以选择要求某些火源物体（例如火盆或篝火）在用作中继器之前必须点燃。\n<br />如果安装了[b]通用模组配置菜单 (Generic Mod Config Menu)[/b]，则可以在游戏内更方便地更改这些选项。[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]例子[/color][/size][/heading]\n<br />[color=#D4D4D8]不使用 AutomateLanternLink：[/color]\n<br />\n<br />[code]Tapper Area\n<br />████████████\n<br />\u00A0 \u00A0\u00A0 |\n<br />Chest / connector objects\n<br />\u00A0 \u00A0\u00A0 |\n<br />████████████\n<br />Tapper Area[/code][color=#D4D4D8]使用 AutomateLanternLink：[/color]\n<br />\n<br />[code]Tapper Area\n<br />\u00A0 \u00A0\u00A0 |\n<br />\u00A0 Lamp-post\n<br />\n<br />====== Road ======\n<br />\n<br />\u00A0 Lamp-post\n<br />\u00A0 \u00A0\u00A0 |\n<br />Tapper Area[/code][color=#D4D4D8]这两个区域可以在视觉上保持分离，同时共享同一个 Automate 网络。[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]要求[/color][/size][/heading]\n<br />[color=#D4D4D8][b]必需：[/b]\n<br />自动化；\n<br />[b]可选：[/b]\n<br />通用模组配置菜单[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]兼容性[/color][/size][/heading]\n<br />[color=#D4D4D8]AutomateLanternLink 的设计初衷是作为 Automate 的扩展而非替代品。\n<br />远程链接适用于[b]同一地图[/b]上的不同网络。该模组不会将 Automate 变成全球跨位置存储或传送系统。\n<br />如果已知其合格物品 ID，则可以通过配置添加自定义或修改过的中继物品。[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]此模组存在的意义[/color][/size][/heading]\n<br />[color=#D4D4D8]AutomateLanternLink 的目标很简单：[/color]\n<br />\n<br />[quote][color=#D4D4D8][b]让 Automate 适应你的农场布局，而不是强迫你的农场布局适应 Automate。[/b][/color][/quote][color=#D4D4D8]当您的自动化网络保持连接时，道路、小径、树木、装饰空间和独立的处理区域可以保留在它们所属的位置。\n<br />\n<br />AutomateLanternLink\n<br />[b]AutomateLanternLink[/b]是一个为[b]自动化[/b]制作的轻量化扩展模组，可以让灯柱和其他可配置物品配备中继点，把各个分离的自动化网络连接起来。这个模组最初是为了解决一个很简单的问题：农场上区域在功能上明明属于同一个生产区，\n<br />但中间隔着可能着道路、装饰、树木或空地。为了保持自动化一些东西，玩家往往必须在中间塞箱子、机器或其他连接物。\n<br />AutomateLanternLink，就必须要自动化而破坏不清楚的农场布局。\n<br />只要在[b]同一张地图[/b]上的两个独立的自动化网络附近放置类型的中继物品，它们就可以把两边的网络远程桥接起来。\n<br />例如，你在农场道路上方的大象都种了树，并安装了树液采集器。现在可以直接在沙漠放置灯柱，让它们成为中继点，而不需要在道路中间铺满箱子或其他连接物。[/color]\n<br />\n<br />[heading][color=#D4D4D8]工作方式[/color][/heading]\n<br />[color=#D4D4D8]\n<br />首先，它们可以像普通连接器一样，连接邻近的自动化机器、仓库、仓库和其他兼容对象。\n<br />其次，当同一地图上存在足够数量的相同类型的[b]中继对象[/b]时，它们可以把各自邻近的自动化网络远程连接起来。\n<br />这样就可以在保持区域各自独立的同时，让它们仍然属于同一个自动化网络。[/color]\n<br />\n<br />[heading][color=#D4D4D8]预设实物[/color][/heading]\n<br />[color=#D4D4D8]模组默认启用：[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8]木灯柱[/color][/*]\n<br />[*][color=#D4D4D8]铁灯柱[/color][/*]\n<br />[/list][color=#D4D4D8]还可以通过配置额外启用其他对象，包括：[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8]火把[/color][/*]\n<br />[*][color=#D4D4D8]火炬[/color][/*]\n<br />[*][color=#D4D4D8]营火[/color][/*]\n<br />[*][color=#D4D4D8]大众火盆[/color][/*]\n<br />[*][color=#D4D4D8]栅栏[/color][/*]\n<br />[*][color=#D4D4D8]门[/color][/*]\n<br />[*][color=#D4D4D8]其他支持的物品[/color][/*]\n<br />[/list][color=#D4D4D8]也可以通过填写[b]合格的物品ID[/b]，加入其他模组提供的作为物品串联。[/color]\n<br />\n<br />[heading][color=#D4D4D8]配置选项[/color][/heading]\n<br />[color=#D4D4D8]提供了一些任选设置。\n<br />你可以将哪些物品能够作为中继，调整建立远程连接所需的最少同类中继数量，也可以设置某些模板类物品必须达到点亮状态时才能生效。\n<br />如果安装了[b]通用模组配置菜单[/b]，更方便地模组可以在游戏内修改这些设置。[/color]\n<br />\n<br />[heading][color=#D4D4D8]效果[/color][/heading]\n<br />[color=#D4D4D8]没有AutomateLanternLink时：[/color]\n<br />\n<br />[code]树液采集区\n<br />████████████\n<br />\u00A0 \u00A0\u00A0 |\n<br />箱子 / 连接物\n<br />\u00A0 \u00A0\u00A0 |\n<br />████████████\n<br />树液采集区[/code][color=#D4D4D8]使用AutomateLanternLink后：[/color]\n<br />\n<br />[code]树液采集区\n<br />\u00A0 \u00A0\u00A0 |\n<br />\u00A0\u00A0 灯柱\n<br />\n<br />====== 道路 ======\n<br />\n<br />\u00A0\u00A0 灯柱\n<br />\u00A0 \u00A0\u00A0 |\n<br />树液采集区[/code][color=#D4D4D8]区域在视觉上仍然各自独立，但两个可以继续共享同一个自动化网络。[/color]\n<br />\n<br />[heading][color=#D4D4D8]前置要求[/color][/heading]\n<br />[color=#D4D4D8][b]必须安装：[/b]\n<br />自动\n<br />[b]可选安装：[/b]\n<br />通用 Mod 配置菜单[/color]\n<br />\n<br />[heading][color=#D4D4D8]兼容性[/color][/heading]\n<br />[color=#D4D4D8]AutomateLanternLink 是 Automate 的扩展模组，不会替代 Automate 本身。\n<br />远程桥接主要用于[b]同一个地图内部[/b]独立的自动化区域，而不是 Automate 变成跨地图的全局传送或端点系统。\n<br />如果其他模组项目的合格项目 ID，也可以通过配置把它们加入中继列表。[/color]\n<br />\n<br />[heading][color=#D4D4D8]制作这个模组的目的[/color][/heading]\n<br />[color=#D4D4D8]这个模组的目标很简单：[/color]\n<br />\n<br />[quote][color=#D4D4D8][b]让自动化适应你的农场布局，而不是让你的农场布局去适应自动化。[/b][/color][/quote][color=#D4D4D8]道路、树木、装饰区域和各自独立的生产区，都可以保留哪些位置，同时继续使用完整的自动化网络。[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52689",
+	"Version": "1.1.0",
+	"Updated": "2026-09-22T03:24:35+00:00",
+	"Downloads": [
+		{
+			"Id": 183710,
+			"Type": "Main",
+			"DisplayName": "Zhuu-AutomateLanternLink 1.1.0 ",
+			"FileName": "fb/55/92/fb5592e8-df86-479a-a908-e73f0194a61e",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 33795,
+			"Uploaded": "2026-09-22T03:24:35+00:00",
+			"Mods": [
+				{
+					"Id": "Zhuu.AutomationBridge",
+					"DisplayName": "AutomateLanternLink",
+					"Type": "Smapi",
+					"RelativePath": "AutomateLanternLink",
+					"Manifest": {
+						"Name": "AutomateLanternLink",
+						"Description": "把灯柱、火炬、栅栏等物品变成 Automate 中继器 / 桥接器。同地图上两个同种已勾选物品可以把两个区域连成一组。",
+						"Author": "Zhuu",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.1.10",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "AutomationBridge.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"MinimumVersion": "2.4.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52689"
+						],
+						"UniqueId": "Zhuu.AutomationBridge"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570398,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439377,
+		"UploaderId": 245719172,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

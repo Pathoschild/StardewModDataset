@@ -1,0 +1,68 @@
+{
+	"Site": "Nexus",
+	"Id": 52050,
+	"Name": "StardewSaveLauncher",
+	"Author": "slpOff",
+	"Description": "[center][size=6][b]Stardew Save Launcher[/b][/size][/center]\n<br />\n<br />[b]Stardew Save Launcher[/b] is a desktop launcher for Stardew Valley that manages mod sets and starts SMAPI with the selected save and mod set.\n<br />\n<br />Instead of manually moving folders in and out of Mods\n<br />, the launcher builds a dedicated Runtime/Mods environment and links only the mods needed for the current launch.\n<br />\n<br />It supports Common mods, mod sets, save selection, Nexus update checks, and translation file imports from one UI.\n<br />\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*] Save file list[/*]\n<br />[*]Mod selection per mod set[/*]\n<br />[*]Common mods shared by every mod set[/*]\n<br />[*]SMAPI launch with the selected save and mod set[/*]\n<br />[*]Runtime Mods generation based on selected mods and dependencies[/*]\n<br />[*]Companion SMAPI mod for automatic save loading[/*]\n<br />[*]Nexus Mods update checks[/*]\n<br />[*]Launcher self-update checks[/*]\n<br />[*]Mod and mod pack folder import[/*]\n<br />[*]Translation folder import[/*]\n<br />[*]SMAPI log and launcher error log access[/*]\n<br />[*]macOS and Windows support[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Install and Run[/b][/size]\n<br />\n<br />[size=4][b]macOS[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] Download and extract\n<br />[code]StardewSaveLauncher-2.1.0-osx-arm64.zip[/code].[/*]\n<br />[*]Move\n<br />[code]Stardew Save Launcher.app[/code]to Applications or any folder you prefer.[/*]\n<br />[*]Launch the app.[/*]\n<br />[*]If macOS blocks the app, allow it from [b]System Settings &gt; Privacy &amp; Security[/b].[/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Windows[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] Download and extract\n<br />[code]StardewSaveLauncher-2.1.0-win-x64.zip[/code].[/*]\n<br />[*]Run\n<br />[code]Start Stardew Save Launcher.cmd[/code]inside the extracted folder.[/*]\n<br />[*]The launcher UI opens automatically in your browser.[/*]\n<br />[*]If Windows shows a security warning, allow the app to run.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*] Stardew Valley[/*]\n<br />[*]SMAPI[/*]\n<br />[*]macOS or Windows[/*]\n<br />[*]Nexus Mods Personal API Key [i](for Nexus update checks)[/i][/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Initial Setup[/b][/size]\n<br />\n<br />[list=1]\n<br />[*] Check paths in the [b]HOME[/b] tab.[/*]\n<br />[*]Set these paths manually if needed:\n<br />[list]\n<br />[*] Stardew Valley path[/*]\n<br />[*]SMAPI executable path[/*]\n<br />[*]Saves path[/*]\n<br />[*]Mods path[/*]\n<br />[*]Runtime path[/*]\n<br />[/list][/*]\n<br />[*]Select a save.[/*]\n<br />[*]Select a mod set tab.[/*]\n<br />[*]Click [b]Play[/b].[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Basic Usage[/b][/size]\n<br />\n<br />[size=4][b]HOME Tab[/b][/size]\n<br />\n<br />The [b]HOME[/b] tab contains launcher settings and maintenance actions.\n<br />\n<br />[list]\n<br />[*] Game, SMAPI, save, mods, and runtime path settings[/*]\n<br />[*]Nexus API key input[/*]\n<br />[*]Nexus update check[/*]\n<br />[*]Launcher update check[/*]\n<br />[*]Open launcher error log folder[/*]\n<br />[*]Open SMAPI log[/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Save List[/b][/size]\n<br />\n<br />The left sidebar is fixed to the save file list.\n<br />\n<br />When you select a save, its name appears in the header.\n<br />\n<br />\n<br />[size=4][b]Mod Set Tabs[/b][/size]\n<br />\n<br />The top tab bar contains [b]HOME[/b], [b]Common[/b], and each individual mod set.\n<br />\n<br />[b]Common[/b] is used to manage mods that should be shared across every mod set.\n<br />\n<br />Other tabs represent individual mod sets. In these tabs, you can select additional mods that should only be used with that specific mod set.\n<br />\n<br />Mods included in [b]Common[/b] are automatically added to every mod set and hidden from the other mod set lists.\n<br />\n<br />\n<br />[size=4][b]Play / Replay[/b][/size]\n<br />\n<br />[list]\n<br />[*] [b]Play[/b]: Builds Runtime Mods for the current save and mod set, then starts SMAPI.[/*]\n<br />[*][b]Replay[/b]: Stops the running game and starts it again using the same launch flow.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Importing Mods[/b][/size]\n<br />\n<br />Use the drop zone or the [b]Browse[/b] button in a mod set tab to add mods.\n<br />\n<br />[list]\n<br />[*] A folder containing\n<br />[code]manifest.json[/code]is treated as a mod or mod pack.[/*]\n<br />[*]If you select a parent folder containing multiple mods, the folder structure is preserved.[/*]\n<br />[*]The success toast shows the actual copied path.[/*]\n<br />[*]If a folder with the same name as the selected mod set exists, it is used first. Otherwise, files are installed into the Mods path.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Importing Translation Files[/b][/size]\n<br />\n<br />If the selected folder does [b]not[/b] contain\n<br />[code]manifest.json[/code], the launcher treats it as a translation folder.\n<br />\n<br />[list=1]\n<br />[*] Select the translation folder using the [b]Browse[/b] button or drop zone.[/*]\n<br />[*]A searchable modal appears. Choose the mod that the translation belongs to.[/*]\n<br />[*]The launcher copies the translation files into the selected mod's\n<br />[code]i18n[/code]folder or matching translation file paths.[/*]\n<br />[*]Existing translation files at the target path are overwritten.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Nexus Mods Update Checks[/b][/size]\n<br />\n<br />Nexus update checks require a [b]Personal API Key[/b].\n<br />\n<br />[b]How to create an API key:[/b]\n<br />\n<br />[list=1]\n<br />[*] Log in to Nexus Mods.[/*]\n<br />[*]Click your profile icon.[/*]\n<br />[*]Open [b]Site Preferences[/b].[/*]\n<br />[*]Go to the [b]API[/b] tab.[/*]\n<br />[*]Generate and copy your [b]Personal API key[/b].[/*]\n<br />[*]Paste it into the [b]Nexus API Key[/b] field in the launcher HOME tab.[/*]\n<br />[/list]\n<br />The launcher uses the Stardew Valley domain by default, so there is no separate game field.\n<br />\n<br />\n<br />[size=5][b]Logs[/b][/size]\n<br />\n<br />[list]\n<br />[*] [b]SMAPI Log[/b]: Opens the\n<br />[code]SMAPI-latest.txt[/code]file generated by SMAPI.[/*]\n<br />[*][b]Launcher Error Log[/b]: Opens the folder containing\n<br />[code]launcher-errors.txt[/code], which records launcher client/server errors.[/*]\n<br />[/list]\n<br />If something breaks, check the [b]Launcher Error Log[/b] button in the HOME tab first.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52050",
+	"Version": "2.1.0",
+	"Updated": "2026-09-24T05:55:49+00:00",
+	"Downloads": [
+		{
+			"Id": 183972,
+			"Type": "Main",
+			"DisplayName": "StardewSaveLauncher for MacOS Arm64",
+			"FileName": "37/ec/08/37ec08c3-ad9c-4036-94b7-26f31ef40b93",
+			"Description": "for MacOS",
+			"Version": "2.1.0",
+			"SizeInBytes": 44218881,
+			"Uploaded": "2026-09-24T05:55:27+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Stardew Save Launcher.app\\Contents",
+					"Type": "Invalid",
+					"RelativePath": "Stardew Save Launcher.app\\Contents",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570660,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 183973,
+			"Type": "Main",
+			"DisplayName": "StardewSaveLauncher for Win",
+			"FileName": "1a/6c/f6/1a6cf65a-1715-41c3-aeaa-5a2254618a07",
+			"Description": "for win-x64.\n\nplease let me know your bugs:)\nI'm mac user so I can't test this well... only my friend helped me!",
+			"Version": "2.1.0",
+			"SizeInBytes": 47396506,
+			"Uploaded": "2026-09-24T05:55:49+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "StardewSaveLauncher-2.1.0-win-x64",
+					"Type": "Invalid",
+					"RelativePath": "StardewSaveLauncher-2.1.0-win-x64",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570661,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438738,
+		"UploaderId": 231048348,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

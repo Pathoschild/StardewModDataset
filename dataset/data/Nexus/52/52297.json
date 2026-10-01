@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 52297,
+	"Name": "Mouse Side Buttons Binding",
+	"Author": "khalil886",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Mouse Side Buttons lets you bind any action in the vanilla [b]Options → Controls[/b] menu to your mouse's side buttons ([b]X1 / X2[/b]) or [b]middle button[/b], exactly like a keyboard key.\n<br />\n<br />Stardew Valley's keybinding structure has no field for a side button:\n<br />\n<br />[/color]\n<br />[code]\n<br />public struct InputButton\n<br />{\n<br />\u00A0 \u00A0 public Keys key;\u00A0 \u00A0 \u00A0 \u00A0 // keyboard\n<br />\u00A0 \u00A0 public bool mouseLeft;\u00A0 // left click\n<br />\u00A0 \u00A0 public bool mouseRight;\u00A0 // right click\n<br />}[/code][color=#D4D4D8]\n<br />Because of that, the vanilla Controls screen physically cannot receive a side-button press, and no amount of config editing will bind one. This mod closes that gap.\n<br />\n<br />It binds [b]nothing[/b] by default — you decide what each button does.\n<br />\n<br />[/color]\n<br />[line]\n<br />[color=#D4D4D8]\n<br />把星露谷原生的「[b]选项 → 控制[/b]」界面里的任意操作，绑定到鼠标[b]侧键（X1 / X2）[/b]或[b]中键[/b]，就像绑定一个普通键盘按键一样。\n<br />\n<br />原版的按键数据结构（InputButton）只有键盘键、鼠标左键、鼠标右键三个字段，装不下侧键，所以原版设置界面根本收不到侧键按下，改任何配置都绑不上。本模组补上了这个缺口。\n<br />\n<br />它[b]默认不绑定任何按键[/b]，绑什么完全由你决定。[/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[color=#D4D4D8][b]Requirements first:[/b] SMAPI 4.0.0 or newer.\n<br />\n<br />[/color]\n<br />[list=1]\n<br />\n<br />[*][color=#D4D4D8]Install [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] if you have not already.[/color][/*]\n<br />[*][color=#D4D4D8]Unzip the downloaded archive so that you get this folder:[/color]\n<br />[code]Stardew Valley/Mods/MouseSideButtons/[/code][/*]\n<br />[*][color=#D4D4D8]Launch the game through SMAPI ([b]StardewModdingAPI.exe[/b], or via Steam if you set it up that way).[/color][/*]\n<br />[*][color=#D4D4D8]That's it — no configuration needed.[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />[b]Optional:[/b] if the buttons do not work, open[/color]\n<br />[code]Mods/MouseSideButtons/config.json[/code][color=#D4D4D8]and set[/color]\n<br />[code]\"DebugLog\": true[/code][color=#D4D4D8], then check the SMAPI console.\n<br />\n<br />[/color]\n<br />[line]\n<br />[color=#D4D4D8]\n<br />[b]前置要求：[/b]SMAPI 4.0.0 或更高版本。\n<br />\n<br />[/color]\n<br />[list=1]\n<br />\n<br />[*][color=#D4D4D8]安装 [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]（如果还没装）。[/color][/*]\n<br />[*][color=#D4D4D8]解压压缩包，使目录结构为：[/color]\n<br />[code]Stardew Valley/Mods/MouseSideButtons/[/code][/*]\n<br />[*][color=#D4D4D8]通过 SMAPI 启动游戏（[b]StardewModdingAPI.exe[/b]，或按你平时的 SMAPI 启动方式）。[/color][/*]\n<br />[*][color=#D4D4D8]完成，无需任何配置。[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />[b]可选：[/b]如果侧键不生效，把[/color]\n<br />[code]Mods/MouseSideButtons/config.json[/code][color=#D4D4D8]里的[/color]\n<br />[code]\"DebugLog\"[/code][color=#D4D4D8]改成[/color]\n<br />[code]true[/code][color=#D4D4D8]，然后查看 SMAPI 控制台。[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][b]Bind anything to a side button.[/b] In [b]Options → Controls[/b], click the set button next to any action and simply press your side button. The action immediately shows [i]Mouse Side Button X1[/i] / [i]Mouse Side Button X2[/i] / [i]Middle Click[/i].[/color][/*]\n<br />[*][color=#D4D4D8][b]Works for every control-driven action:[/b] use tool, action, menu, map, journal, inventory slots, toolbar swap, movement, emote, run, and so on.[/color][/*]\n<br />[*][color=#D4D4D8][b]Works in the world and inside menus.[/b] Open the map with a side button, and close it with the same button. Same for inventory and menu navigation.[/color][/*]\n<br />[*][color=#D4D4D8][b]Binds nothing by default.[/b] No key is taken from you until you assign one, and the game's normal \"already in use\" check still applies.[/color][/*]\n<br />[*][color=#D4D4D8][b]Clean uninstall.[/b] Delete the folder; leftover bindings simply never trigger.[/color][/*]\n<br />[/list]\n<br />\n<br />[line]\n<br />\n<br />\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][b]任意操作都能绑到侧键。[/b]在「[b]选项 → 控制[/b]」里点任意操作右边的设置按钮，然后按一下你的侧键，该操作会立刻显示「鼠标侧键 X1」/「鼠标侧键 X2」/「鼠标中键」。[/color][/*]\n<br />[*][color=#D4D4D8][b]对所有由控制设置驱动的操作生效：[/b]使用工具、交互、菜单、地图、日志、物品栏槽位、切换工具栏、移动、表情、跑步等。[/color][/*]\n<br />[*][color=#D4D4D8][b]游戏世界内和菜单内都生效。[/b]用侧键开地图，也能用同一个侧键关掉；背包、菜单导航同理。[/color][/*]\n<br />[*][color=#D4D4D8][b]默认不绑定任何按键。[/b]你不绑它就不占键，原版的「该键已被占用」检测依然有效。[/color][/*]\n<br />[*][color=#D4D4D8][b]卸载干净。[/b]直接删文件夹即可，残留的绑定不会再触发任何动作。[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8][b]Required:[/b]\n<br />[/color]\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI 4.0.0+[/url][/color][/*]\n<br />[*][color=#D4D4D8]Stardew Valley 1.6 or newer[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />[b]Notes:[/b]\n<br />[/color]\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][b]Windows only.[/b] The mod uses Windows-specific input handling.[/color][/*]\n<br />[*][color=#D4D4D8]No other mods are required. It does not conflict with mods that only add their own configurable keys.[/color][/*]\n<br />[*][color=#D4D4D8]If you use a gaming mouse, make sure your vendor software (Logitech G HUB, Razer Synapse, etc.) reports the side buttons as the standard [b]Mouse Button 4 / 5[/b] — if they are mapped to a macro or \"browser back/forward\", the game never sees them.[/color][/*]\n<br />[/list]\n<br />\n<br />[line]\n<br />[color=#D4D4D8]\n<br />[b]必需：[/b]\n<br />[/color]\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI 4.0.0+[/url][/color][/*]\n<br />[*][color=#D4D4D8]星露谷物语 1.6 或更高版本[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />[b]说明：[/b]\n<br />[/color]\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][b]仅支持 Windows。[/b]本模组使用了 Windows 特有的输入处理。[/color][/*]\n<br />[*][color=#D4D4D8]不需要其他模组，也不会与「只添加自己配置按键」的模组冲突。[/color][/*]\n<br />[*][color=#D4D4D8]如果你用的是游戏鼠标，请确保厂商驱动（罗技 G HUB、雷蛇 Synapse 等）把侧键识别为标准[b]「鼠标按键 4 / 5」[/b]。如果被映射成宏或「浏览器后退/前进」，游戏根本收不到这个键。[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][b]Pathoschild[/b] — for [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] and the Harmony.[/color][/*]\n<br />[*][color=#D4D4D8][b]ConcernedApe[/b] — for Stardew Valley.[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />Thanks for trying the mod — feedback in the comments is welcome.\n<br />\n<br />[/color]\n<br />[line]\n<br />\n<br />\n<br />[list]\n<br />\n<br />[*][color=#D4D4D8][b]Pathoschild[/b] — 制作了 [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 与 Harmony 工具链，这类输入层模组才成为可能。[/color][/*]\n<br />[*][color=#D4D4D8][b]ConcernedApe[/b] — 制作了星露谷物语。[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />欢迎在评论区反馈问题或建议。[/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52297",
+	"Version": "1",
+	"Updated": "2026-09-14T14:26:06+00:00",
+	"Downloads": [
+		{
+			"Id": 182788,
+			"Type": "Main",
+			"DisplayName": "MouseSideButtons 1.0.1",
+			"FileName": "e9/87/da/e987da9f-2094-4f2a-a90f-ea1bc09c710b",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 11778,
+			"Uploaded": "2026-09-14T14:26:06+00:00",
+			"Mods": [
+				{
+					"Id": "khalil886.MouseSideButtons",
+					"DisplayName": "Mouse Side Buttons",
+					"Type": "Smapi",
+					"RelativePath": "MouseSideButtons",
+					"Manifest": {
+						"Name": "Mouse Side Buttons",
+						"Description": "Bind any action in the vanilla Options -> Controls menu to your mouse side buttons (X1/X2) or middle button, exactly like a keyboard key. | 在原生的「选项 → 控制」界面里，把任意操作绑定到鼠标侧键（X1/X2）或中键，就像绑定普通键盘按键一样。",
+						"Author": "khalil886",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MouseSideButtons.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:52297"
+						],
+						"UniqueId": "khalil886.MouseSideButtons"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569476,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438985,
+		"UploaderId": 187493613,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

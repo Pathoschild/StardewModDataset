@@ -1,0 +1,102 @@
+{
+	"Site": "Nexus",
+	"Id": 52118,
+	"Name": "Location Splash Art",
+	"Author": "kreliael",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Display a temporary fullscreen splash art and the location name when you visit a new ingame location for more immersion and visual expression of the world of Stardew Valley.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[size=3][color=#D4D4D8]Extract the zip in your mods folder.[/color][/size]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[color=#D4D4D8]The mod will display the images loaded by ContentPatcher for the location you visit\u00A0as well as the zone name.[/color]\n<br />[color=#D4D4D8]By default, this mod is a framework and will do nothing without a content patcher mod providing the splash arts images.[/color]\n<br />[color=#D4D4D8]You will find in annex files a placeholder content patch to showcase the mod features.[/color]\n<br />[color=#D4D4D8]All artists are welcome to use this mod to create their set of loadscreens and publish them![/color]\n<br />\n<br />[color=#D4D4D8]Most features can be changed in the generic mod configuration menu :[/color]\n<br />[list]\n<br />[*][color=#D4D4D8]The image displayed have different display mode (Cinema with horizontal black bars, vignette with centered image, fullscreen image).[/color][/*]\n<br />[*][color=#D4D4D8]The zone name will be displayed as white text, with black outlines or in an ingame textbox.[/color][/*]\n<br />[*][color=#D4D4D8]The splash art can displayed each time you visit a zone, once each day or when/if the zone image is updated by content patcher rules since last display.[/color][/*]\n<br />[*][color=#D4D4D8]The source image can be displayed as it is or cropped by a fixed rectangle dimensions.[/color][/*]\n<br />[*][color=#D4D4D8]The splash will appears by fading in (by default in 0.5s), stays visible for a duration (4sec by default) then fades out (by default in 0.5s)\u00A0 or instantly if you click anywhere.[/color][/*]\n<br />[*]Day segments can be configured (only impactful if your splash art content patch mod rely on it)[/*]\n<br />[/list][color=#D4D4D8]The mod expose for content patcher mod authors some tokens to reload/modify the loaded splash art like the previous visited location to know from which location the player is coming from or what is the current time segment of the day (morning/noon/afternoon, etc).[/color]\n<br />\n<br />[color=#D4D4D8]No data are saved in your savegame.[/color]\n<br />\n<br />[color=#D4D4D8][size=4][b]For Content Patcher Mod Authors[/b][/size]\n<br />Put this mod as requirement in your manifest.json of your Content Patcher mods[/color]\n<br />[code]{\n<br />\u00A0 \"Name\": \"Kreliael_LocationSplashArt_CP\",\n<br />\u00A0 \"Author\": \"Kreliael\",\n<br />\u00A0 \"Version\": \"1.0.0\",\n<br />\u00A0 \"Description\": \"Assets for Kreliael.LocationSplashArt\",\n<br />\u00A0 \"UniqueID\": \"Kreliael.LocationSplashArtContentPatcher\",\n<br />\u00A0 \"MinimumApiVersion\": \"4.0.0\",\n<br />\u00A0 \"UpdateKeys\": [],\n<br />\u00A0 \"Dependencies\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"UniqueID\": \"Pathoschild.ContentPatcher\",\n<br />\u00A0 \u00A0 \u00A0 \"IsRequired\": true\n<br />\u00A0 \u00A0 },\n<br />{\n<br />\"UniqueID\": \"Kreliael.LocationSplashArt\",\n<br />\"IsRequired\": true\n<br />}\n<br />\u00A0 ],\n<br />\"ContentPackFor\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"UniqueID\": \"Pathoschild.ContentPatcher\"\n<br />\u00A0 \u00A0 }\n<br />}[/code][color=#D4D4D8]To make this mod aware of your splash art, you need to load your image like this:[/color]\n<br />[code]{\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"Load\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Kreliael.LocationSplashArt/LocationSplashArt/{ZONENAME}\",\n<br />\u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/Zones/FarmHouse/Default.png\"\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]{ZONENAME} corresponds to the internal name of the zone like \"Farm\" or \"Farmhouse\". The mod will trace in the SMAPI logs the location change with the correct internal zone names.\n<br />All the images should have the same dimensions, otherwise you will have content patch errors and the new image will silently fails to load (but it's traced in SMAPI logs).\n<br />\n<br />[color=#D4D4D8]The mod expose the following content patcher tokens:[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8]Kreliael.LocationSplashArt/PreviousLocation: Internal name of the previous visited location like \"Farm\" or \"Farmhouse\". Can be used to display a different image if player is entering the farm from the south forest or from the bus stop for example.[/color][/*]\n<br />[*][color=#D4D4D8]Kreliael.LocationSplashArt/DayPart: One value among \"Dawn\", \"Morning\", \"Noon\", \"Afternoon\", \"Sunset\", \"Dusk\", \"Dark\" according to ingame time/computation and this mod configuration. Useful to display an appropriate image for the current ingame lighting.[/color][/*]\n<br />[/list]Example to display different splash art according to your precedent location:\n<br />[code]{\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"Load\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Kreliael.LocationSplashArt/LocationSplashArt/FarmHouse\",\n<br />\u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/Zones/FarmHouse/Default.png\",\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 // When coming from FarmHouse\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditImage\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Kreliael.LocationSplashArt/LocationSplashArt/FarmHouse\",\n<br />\u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/Zones/FarmHouse/FromFarm.png\", // &lt;-Up to you to organize your files\n<br />\u00A0 \u00A0 \u00A0 \"When\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Kreliael.LocationSplashArt/PreviousLocation\": \"Farm\",\n<br />\u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \"Update\": \"OnLocationChange\",\n<br />\u00A0 \u00A0 },\n<br />\u00A0 \u00A0 // When in the afternoon\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditImage\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/Kreliael.LocationSplashArt/LocationSplashArt/FarmHouse\",\n<br />\u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/Zones/FarmHouse/AfternoonFarmHouse.png\", // &lt;-Up to you to organize your files\n<br />\u00A0 \u00A0 \u00A0 \"When\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"Kreliael.LocationSplashArt/DayPart\": \"Afternoon\",\n<br />\u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \"Update\": \"OnLocationChange\",\n<br />\u00A0 \u00A0 },\n<br />\u00A0 ],\n<br />}[/code]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8][size=3]Require SMAPI 4.0,\u00A0Content Patcher and Generic Mod Config Menu.[/size][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52118",
+	"Version": "1",
+	"Updated": "2026-09-10T23:29:02+00:00",
+	"Downloads": [
+		{
+			"Id": 182249,
+			"Type": "Main",
+			"DisplayName": "LocationSplashArt",
+			"FileName": "9e/20/33/9e203314-38c0-49e4-beff-81fb1facdc58",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 26895,
+			"Uploaded": "2026-09-10T22:17:07+00:00",
+			"Mods": [
+				{
+					"Id": "Kreliael.LocationSplashArt",
+					"DisplayName": "Kreliael Location Splash Art",
+					"Type": "Smapi",
+					"RelativePath": "LocationSplashArt",
+					"Manifest": {
+						"Name": "Kreliael Location Splash Art",
+						"Description": "Implements fake loading screen transition for more visuals",
+						"Author": "Kreliael",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "KreliaelLocationSplashArt.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Kreliael.LocationSplashArt"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568937,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 182254,
+			"Type": "Optional",
+			"DisplayName": "LocationSplashArt Example ContentPatcher",
+			"FileName": "14/7f/db/147fdb89-be8c-4dba-8d94-7f69fadf38b8",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 6362127,
+			"Uploaded": "2026-09-10T23:29:02+00:00",
+			"Mods": [
+				{
+					"Id": "Kreliael.LocationSplashArtContentPatcher",
+					"DisplayName": "Kraelia_LocationSplashArt_CP",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] LocationSplashArt",
+					"Manifest": {
+						"Name": "Kraelia_LocationSplashArt_CP",
+						"Description": "Assets for Kreliael.LocationSplashArt",
+						"Author": "Kreliael",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Kreliael.LocationSplashArt",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Kreliael.LocationSplashArtContentPatcher"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568942,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438806,
+		"UploaderId": 300043875,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

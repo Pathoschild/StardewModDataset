@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 52327,
+	"Name": "Tractor mod split-screen patch",
+	"Author": "wwl5751",
+	"Description": "拖拉机模组分屏同步——使用指南\n<br />[heading]它的作用[/heading]\n<br />[list]\n<br />[*]按下召唤键，\u00A0[b]每个本地分屏玩家都能拥有自己的拖拉机。[/b][/*]\n<br />[*]已经骑上拖拉机的玩家永远不会被赶下车或被抢走拖拉机。[/*]\n<br />[*]即使其他玩家打开了菜单，召唤功能仍然有效。[/*]\n<br />[/list][heading]要求[/heading]\n<br />[list=1]\n<br />[*]同一台电脑上的本地分屏合作游戏[/*]\n<br />[*]这些模组已安装并启用\u00A0\n<br />[code]J:&#92;Stardew Valley&#92;Mods&#92;[/code]：\n<br />[list]\n<br />[*][code]TractorMod[/code]\u00A0（原版拖拉机模组）[/*]\n<br />[*][code]TractorModMultiplayerSync[/code]\u00A0（此补丁已部署）[/*]\n<br />[/list][/*]\n<br />[*][b]每位玩家拥有一个拖拉机车库[/b]：每位玩家向罗宾订购自己的车库（约15万金币+材料）。拖拉机数量等于车库数量，因此每位骑手都需要建造一个车库。[/*]\n<br />[/list][heading]如何使用[/heading]\n<br />[list=1]\n<br />[*]启动游戏并加载您的分屏存档[/*]\n<br />[*]按下键盘上的召唤键（默认是\u00A0[b]退格键[/b]，或者 Tractor Mod 配置的任何按键）[/*]\n<br />[*]所有未驾驶拖拉机的玩家都会被传送到自己身边——只需骑上去即可。[/*]\n<br />[*]骑行时按下召唤键没有\u00A0[b]任何作用[/b]\u00A0——你仍然会待在你的拖拉机上。[/*]\n<br />[/list][heading]行为详情[/heading]\n<br />[list]\n<br />[*]首次召唤时，每位玩家都会被匹配到最近的未分配拖拉机；匹配结果会保存在存档文件中，因此之后你将一直使用同一辆拖拉机。[/*]\n<br />[*]使用原版下车方式（右键/动作键）下车；拖拉机会停留在你离开的地方。此补丁阻止了原版“召唤键会让你下车并将拖拉机送回家”的功能，因此误触不会导致你从拖拉机上掉下来。[/*]\n<br />[*]夜间拖拉机清理遵循原模组的规则（仅保留与车库关联的拖拉机）；过期的绑定将被清除并自动重新分配。[/*]\n<br />[/list][heading]故障排除[/heading]\n<br />[table][tr][th]症状[/th]\n<br />[th]原因/解决方法[/th]\n<br />[/tr]\n<br />[tr][td]日志显示\u00A0\n<br />[code]no free tractor[/code]有人什么也得不到。[/td]\n<br />[td]车库数量不足——每个玩家建造一个车库，然后再次按下召唤键。[/td]\n<br />[/tr]\n<br />[tr][td]按键后没有任何反应[/td]\n<br />[td]检查 SMAPI 控制台\u00A0\n<br />[code]Summon key pressed[/code]如果按键不存在，则无法识别——请在 Tractor Mod 的设置中检查按键绑定。[/td]\n<br />[/tr]\n<br />[tr][td]有人下马了[/td]\n<br />[td]请确保您运行的是最新补丁（自动卸载功能已被禁用）；请仅通过默认方式卸载。[/td]\n<br />[/tr]\n<br />[tr][td]拖拉机消失了，无法召唤。[/td]\n<br />[td]再次按下召唤键——该模组会清除无效绑定并重新分配；如果问题仍然存在，请检查车库是否被拆除。[/td]\n<br />[/tr]\n<br />[/table][heading]检查日志[/heading]\n<br />在 SMAPI 控制台中搜索\u00A0\n<br />[code]TractorModMultiplayerSync[/code]一个正常的召唤兽看起来像这样：\n<br />[code]Summon key pressed ...\n<br />Players: 2, tractors in world: 2\n<br />xxx: assigned tractor ..., teleporting.[/code][heading]卸载[/heading]\n<br />删除\u00A0\n<br />[code]J:&#92;Stardew Valley&#92;Mods&#92;TractorModMultiplayerSync&#92;[/code]\u00A0用于恢复原始行为的文件夹。\n<br />拖拉机模组分屏连接件使用说明\n<br />Tractor Mod Split-Screen Sync — Usage Guide\n<br />[heading]What it does[/heading]\n<br />[list]\n<br />[*]One press of the summon key gives\u00A0[b]every local split-screen player their own tractor[/b][/*]\n<br />[*]Players already riding are never dismounted or robbed of their tractor[/*]\n<br />[*]Summoning works even while another player has a menu open[/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list=1]\n<br />[*]Local split-screen co-op on the same PC[/*]\n<br />[*]These mods installed and enabled under\u00A0\n<br />[code]J:&#92;Stardew Valley&#92;Mods&#92;[/code]:\n<br />[list]\n<br />[*][code]TractorMod[/code]\u00A0(the original tractor mod)[/*]\n<br />[*][code]TractorModMultiplayerSync[/code]\u00A0(this patch, already deployed)[/*]\n<br />[/list][/*]\n<br />[*][b]One tractor garage per player[/b]: each player orders their own garage from Robin (~150k gold + materials). Number of tractors = number of garages, so build one per rider.[/*]\n<br />[/list][heading]How to use[/heading]\n<br />[list=1]\n<br />[*]Launch the game and load your split-screen save[/*]\n<br />[*]Press the summon key on the keyboard (default\u00A0[b]Backspace[/b], or whatever Tractor Mod is configured to)[/*]\n<br />[*]Every player who isn't riding gets their own tractor teleported next to them — just mount it[/*]\n<br />[*]Pressing summon while riding does\u00A0[b]nothing[/b]\u00A0— you stay on your tractor[/*]\n<br />[/list][heading]Behavior details[/heading]\n<br />[list]\n<br />[*]On first summon, each player is matched to the nearest unassigned tractor; the binding is saved in the save file, so you keep the same tractor afterwards[/*]\n<br />[*]Dismount with the vanilla dismount (right-click / action button); the tractor stays where you left it. The patch blocks the original \"summon key dismounts you and sends the tractor home\" behavior, so accidental presses can't knock you off[/*]\n<br />[*]Overnight tractor cleanup follows the original mod's rules (only garage-linked tractors persist); stale bindings are cleared and reassigned automatically[/*]\n<br />[/list][heading]Troubleshooting[/heading]\n<br />[table][tr][th]Symptom[/th]\n<br />[th]Cause / fix[/th]\n<br />[/tr]\n<br />[tr][td]Log says\u00A0\n<br />[code]no free tractor[/code], someone gets nothing[/td]\n<br />[td]Not enough garages — build one garage per player, then press summon again[/td]\n<br />[/tr]\n<br />[tr][td]Nothing happens on keypress[/td]\n<br />[td]Check the SMAPI console for\u00A0\n<br />[code]Summon key pressed[/code]; if absent, the key isn't recognized — verify the keybind in Tractor Mod's settings[/td]\n<br />[/tr]\n<br />[tr][td]Someone gets dismounted[/td]\n<br />[td]Make sure you're running the latest patch (auto-dismount is blocked); dismount only via the vanilla method[/td]\n<br />[/tr]\n<br />[tr][td]Tractor vanished and can't be summoned[/td]\n<br />[td]Press summon again — the mod clears dead bindings and reassigns; if it persists, check whether a garage was demolished[/td]\n<br />[/tr]\n<br />[/table][heading]Checking the logs[/heading]\n<br />Search the SMAPI console for\u00A0\n<br />[code]TractorModMultiplayerSync[/code]. A healthy summon looks like:\n<br />[code]Summon key pressed ...\n<br />Players: 2, tractors in world: 2\n<br />xxx: assigned tractor ..., teleporting.[/code]\n<br />[heading]Uninstall[/heading]\n<br />Delete the\u00A0\n<br />[code]J:&#92;Stardew Valley&#92;Mods&#92;TractorModMultiplayerSync&#92;[/code]\u00A0folder to restore vanilla behavior.\n<br />\n<br />如果各位有模组的创意或者想要的功能可以告诉我，如果我觉得有意思可以帮忙制作\n<br />If you have any creative ideas or desired functions for modules, feel free to share them with me. If I find them interesting, I can help develop them\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52327",
+	"Version": "1",
+	"Updated": "2026-09-16T01:34:47+00:00",
+	"Downloads": [
+		{
+			"Id": 182955,
+			"Type": "Main",
+			"DisplayName": "TractorModMultiplayerSync",
+			"FileName": "7c/d4/1c/7cd41cf1-5eb5-4ca6-a4ff-48ca7239102b",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 19968,
+			"Uploaded": "2026-09-16T01:34:47+00:00",
+			"Mods": [
+				{
+					"Id": "Custom.TractorModMultiplayerSync",
+					"DisplayName": "Tractor Mod Multiplayer Sync",
+					"Type": "Smapi",
+					"RelativePath": "TractorModMultiplayerSync",
+					"Manifest": {
+						"Name": "Tractor Mod Multiplayer Sync",
+						"Description": "When any player summons the tractor, all online teammates also get their tractor summoned. Fixes scene-change tractor loss.",
+						"Author": "Custom",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "TractorModMultiplayerSync.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.TractorMod",
+								"MinimumVersion": "4.15.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Custom.TractorModMultiplayerSync"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569643,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439015,
+		"UploaderId": 5630469,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

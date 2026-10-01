@@ -1,0 +1,108 @@
+{
+	"Site": "Nexus",
+	"Id": 51484,
+	"Name": "Ownership Marker",
+	"Author": "VotriValley",
+	"Description": "[heading][b]Ownership Marker[/b][/heading]\n<br />[b]About this mod[/b]\n<br />Ownership Marker adds simple visual markers above Pokémon, companions, summons, pets, and farm animals, making it easier to see who they belong to at a glance.\n<br />\uD83D\uDC8E Marker Colors\n<br />[list]\n<br />[*]\uD83D\uDC9A [b]Green[/b] — Yours [/*]\n<br />[*]\uD83D\uDC99 [b]Blue[/b] — Another player's [/*]\n<br />[*]\uD83D\uDC9B [b]Yellow[/b] — NPC / partner companion [/*]\n<br />[/list]Wild, quest, and battle-only creatures are left unmarked.\n<br />[line]\n<br />[b]\uD83D\uDC3E Supported[/b]\n<br />[list]\n<br />[*]Pelipper Town Pokémon[/*]\n<br />[*]Vanilla pets — dogs, cats &amp; turtles[/*]\n<br />[*]Farm animals[/*]\n<br />[*]Multiplayer ownership[/*]\n<br />[*]Designed to work with Pokémon, companion, and summon-style mods through integration support[/*]\n<br />[/list][line]\n<br />[b]\uD83D\uDCE6 Requirements[/b]\n<br />[b]Required:[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400][b]SMAPI[/b][/url] [/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915][b]Content Patcher[/b][/url] [/*]\n<br />[/list][b]Optional:[/b]\n<br />\n<br />[list]\n<br />[*][b][url=https://www.nexusmods.com/stardewvalley/mods/51072]PokeFarmRetextures[/url][/b][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/50344][b]Pelipper Town[/b][/url][/*]\n<br />[/list][line]\n<br />[b]\uD83D\uDD27 Compatibility[/b]\n<br />Works as a standalone mod and is designed to coexist with PokéFarm Retextures without duplicate ownership markers.\n<br />Simple, lightweight, and purely visual.\n<br />Know what is yours, what belongs to someone else, and what is following an NPC. \uD83D\uDC9A\uD83D\uDC99\uD83D\uDC9B\n<br />[line]\n<br />\uD83C\uDF3F\u00A0Join the Community Want to report bugs, share screenshots, suggest ideas, or just hang out? Join Votri Valley on Discord:\n<br />[url=https://discord.gg/z36Hb9775K]Discord[/url] ",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51484",
+	"Version": "1",
+	"Updated": "2026-09-07T19:21:03+00:00",
+	"Downloads": [
+		{
+			"Id": 181800,
+			"Type": "Main",
+			"DisplayName": "OwnershipMarker 1.0.0",
+			"FileName": "15/21/e7/1521e751-481a-4044-a0fb-d5df8dfd528b",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 40925,
+			"Uploaded": "2026-09-07T19:21:03+00:00",
+			"Mods": [
+				{
+					"Id": "Ronvotri.OwnershipMarker.Assets",
+					"DisplayName": "Ownership Marker Assets",
+					"Type": "ContentPack",
+					"RelativePath": "Ownership Marker\\[CP] Ownership Marker Assets",
+					"Manifest": {
+						"Name": "Ownership Marker Assets",
+						"Description": "Provides the green, blue, and yellow ownership marker sprites.",
+						"Author": "Ronvotri",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Ronvotri.OwnershipMarker.Assets"
+					}
+				},
+				{
+					"Id": "Ronvotri.OwnershipMarker",
+					"DisplayName": "Ownership Marker",
+					"Type": "Smapi",
+					"RelativePath": "Ownership Marker\\[SMAPI] Ownership Marker",
+					"Manifest": {
+						"Name": "Ownership Marker",
+						"Description": "Shows semantic ownership markers for supported creatures, with Pelipper Town and PokéFarm coexistence support.",
+						"Author": "Ronvotri",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "OwnershipMarker.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Ronvotri.OwnershipMarker.Assets",
+								"MinimumVersion": "1.0.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Griff.PelipperTown",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Ronvotri.OwnershipMarker"
+					}
+				},
+				{
+					"Id": "Ronvotri.OwnershipMarker.Pets",
+					"DisplayName": "Ownership Marker - Vanilla Pets",
+					"Type": "Smapi",
+					"RelativePath": "Ownership Marker\\[SMAPI] Ownership Marker - Vanilla Pets",
+					"Manifest": {
+						"Name": "Ownership Marker - Vanilla Pets",
+						"Description": "Adds green ownership markers for vanilla dogs, cats, and turtles.",
+						"Author": "Ronvotri",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "OwnershipMarker.Pets.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Ronvotri.OwnershipMarker",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Ronvotri.OwnershipMarker.Pets"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568488,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438172,
+		"UploaderId": 183517287,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

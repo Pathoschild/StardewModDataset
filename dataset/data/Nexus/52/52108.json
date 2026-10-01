@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 52108,
+	"Name": "Nakey Time Valley",
+	"Author": "RezDelnava",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Nakey Time Valley is a type of framework for NPC nudity. It allows the user to set scheduled times or days for nudity across the entire adult population of Stardew Valley. NTV is designed to override sprites and portraits of NPCs only during the configured Nakey Time settings; the sprites and portraits will revert to the game default or your configured portraits when outside of Nakey Time. The mod is designed to work in tandem with seasonal portrait mods. It also does not touch any NPC schedules, so it should be compatible with more mods.\u00A0[/color]\n<br />\n<br />[b][size=4]Requirements[/size][/b]\n<br />This mod requires:\n<br />PathosChild's\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\u00A0and\u00A0\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url]\n<br />\n<br />Optional (but highly recommended) :\n<br />spacechase0's [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Configuration Menu[/url]\n<br />\n<br />Extensions to this mod also requires:\n<br />SpiderButton's [url=https://www.nexusmods.com/stardewvalley/mods/28284]Cross-Mod Compatibility Tokens\u00A0[/url]\n<br />\n<br />[b][size=4]Installation instructions[/size][/b]\n<br />[size=3][color=#D4D4D8]First, remove any mod that makes NPCs nude, such as Nude Girls or Horny Bachelors.[/color][/size]\n<br />[size=3][color=#D4D4D8]Then, it's a simple Content Patcher package; just drag and drop the unpacked folder into your mods directory.\u00A0[/color][/size]\n<br />\n<br />[color=#D4D4D8]To add nude portraits and sprites for adult villagers, you will need to acquire them from elsewhere... I don't have permission to include more than the female villagers. For each villager,\u00A0you need two PNG files and to move them into the correct directory;\u00A0\n<br />Sprites go into:[/color]\n<br />[code]Mods&#92;[CP] Nakey Time Valley&#92;Assets&#92;Characters[/code][color=#D4D4D8]and Portraits go into:\u00A0[/color]\n<br />[code]Mods&#92;[CP] Nakey Time Valley&#92;Assets&#92;Portraits[/code][size=3][color=#D4D4D8]You then need to rename the files to include \"_nude\". For example:[/color][/size]\n<br />[code]Kent_nude.png[/code]Some villagers also have beach portraits and sprites that can be nude:\n<br />[code]Elliott_nude_Beach.png[/code]These also go into the sprites and portraits folders.\n<br />\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[size=3][color=#D4D4D8]The initial release includes nude sprite and portraits for many of the female villagers\u00A0[/color][/size]\n<br />\n<br />[b][i]Nakey Time[/i][/b]\n<br />The namesake feature of the mod, this lets you set scheduled hours (between 600 and 2400) for valley-wide nudity.\n<br />\n<br />[i][b]Frequency Control[/b][/i]\n<br />This sets how often Nakey Time tirggers. Options include daily, weekly, day(s) per month, and random frequency.\u00A0\n<br />\n<br />[i][b]Weekly / Monthly Controls[/b][/i]\n<br />Set the day of the week, or days of the month when\u00A0Nakey Time triggers.\n<br />\n<br />[i][b]Random Controls[/b][/i]\n<br />Set the chance for daily Nakey Time, from 10% to 90%\n<br />\n<br />For constant nudity (default), set Nakey Time to 600-2400 with daily frequency.\n<br />\n<br />[size=4][b]Tech Detail[/b][/size]\n<br />Nakey Time Valley uses Content Patcher's OnTimeChange update routine, which will then check every game tick for Nakey Time and then load the correct sprites and portraits. This may cause a noticeable decline in performance, usually as a few millisecond hitch in frame rate every ten in-game minutes.\u00A0\n<br />\n<br />Nakey Time Valley is i18n Translatable.\u00A0\n<br />\n<br />[size=4][b]Credits[/b][/size]\n<br />[size=3][color=#D4D4D8]Credit to [url=https://www.nexusmods.com/profile/TrashRacc1124]TrashRacc[/url]\u00A0for the nude sprites and portraits for female villagers, found in the [url=https://www.nexusmods.com/stardewvalley/mods/20277]Nude Girls[/url] mod.[/color][/size]\n<br />\n<br />[color=#D4D4D8][size=4][b]A.I. Disclosure[/b][/size][/color]\n<br />AI was not used in the development of the code for this mod.\n<br />AI was used for the production of one image used as the header and main mod image.\n<br />\n<br />[color=#D4D4D8][size=4][b]F.A.Q.[/b][/size][/color]\n<br />[i]Ahhhh! SMAPI just spit out a ton of yellow, what do I do!?[/i]\n<br />That's (probably) just letting you know that NTV was unable to find a sprite or portrait in the directory. You can clear these warnings by installing a sprite/portrait for the character, or by deleting the character.json\u00A0in the ...&#92;Assets&#92;Data folder. SMAPI will do this every time Nakey Time is triggered for as long as there are missing images.\u00A0\n<br />\n<br />[i]Is NTV compatible with Stardew Valley Expanded?[/i]\n<br />It should be. I didn't touch any of the villager schedules.\n<br />\n<br />[i]Is NTV compatible with Nude Girls?[/i]\n<br />No. And it doesn't need to be since NTV uses the same sprites and portraits made by TrashRacc.\n<br />\n<br />[i]Is NTV compatible with Horny Bachelors?[/i]\n<br />Yes, but no. HB modifies the default sprites and portraits of the male villagers, so Nakey Time would be redundant at best.\n<br />\n<br />[i]Is NTV compatible with Xardew, Lustdew, Valley Girls/Bros?[/i]\n<br />Probably. As far as I know, those mods use their own independent spritesheets and only update when they're being used for animations.\n<br />\n<br />[i]You said NTV works with seasonal portraits, but something isn't working... help?[/i]\n<br />Let me know in a comment what exact seasonal portrait mod you're using and what portraits you're using. I could only test a couple of popular seasonal portrait mods.\n<br />\n<br />[i]Does NTV work with Portraiture?[/i]\n<br />No, sadly. Portraiture does not account for nude portraits and overwrites any other portrait that may be active.\u00A0\n<br />\n<br />[i]What do I do with the Nakey Time Extension Template?\n<br />[/i]That's for mod creators to allow their NPC's to participate in Nakey Time. Most people will not need it.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52108",
+	"Version": "1.0.1",
+	"Updated": "2026-09-11T11:02:01+00:00",
+	"Downloads": [
+		{
+			"Id": 182316,
+			"Type": "Main",
+			"DisplayName": "Nakey Time Valley",
+			"FileName": "75/83/c0/7583c0c6-33ef-400c-9235-7454a2b74f35",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 515111,
+			"Uploaded": "2026-09-11T11:02:01+00:00",
+			"Mods": [
+				{
+					"Id": "RezDelnava.NakeyTimeValley",
+					"DisplayName": "Nakey Time Valley",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Nakey Time Valley",
+					"Manifest": {
+						"Name": "Nakey Time Valley",
+						"Description": "Allows adults in the valley to be au natural.",
+						"Author": "RezDelnava",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Poltergeister.SeasonalCuteCharacters",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "GalaxyRobot.MoreVanillaSeasonalOutfits",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "RezDelnava.NakeyTimeValley"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569004,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438796,
+		"UploaderId": 3362851,
+		"CategoryId": 5,
+		"Adult": true
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"Site": "Nexus",
+	"Id": 52159,
+	"Name": "Json Reload",
+	"Author": "NatrollEXE",
+	"Description": "[left][color=#c27ba0][size=5][b]Json [size=5]Reload[/size]\n<br />[/b][/size][/color][/left]\n<br />Reload changed Content Patcher JSON files without restarting Stardew Valley.\n<br />Json Reload is a small utility tool. Press one key and it finds the loaded content packs you changed, validates their JSON, and reloads only those packs.\n<br />\n<br />[color=#c27ba0][size=4][b]Requirements[/b][/size][/color]\n<br />- Stardew Valley 1.6\n<br />- SMAPI 4.5.0 or later\n<br />- Content Patcher 2.9.0 or later\n<br />- Generic Mod Config Menu (optional)\n<br />\n<br />[color=#c27ba0][size=4][b]Install[/b][/size][/color]\n<br />- Install the requirements above.\n<br />- Download and unzip Json Reload into your Stardew Valley Mods folder.\n<br />- Start the game through SMAPI.\n<br />\n<br />[color=#c27ba0][size=4][b]Use[/b][/size][/color]\n<br />- Edit and save a JSON or translation file in a loaded Content Patcher pack.\n<br />- Close any open dialogue or menu and finish the current event.\n<br />- Return to the game and press F6.\n<br />\n<br />You can change the key through Generic Mod Config Menu. You can also run json_reload in the SMAPI console.\n<br />Json Reload reports invalid JSON in the SMAPI console instead of attempting to reload the affected pack.\n<br />\n<br />[b][color=#c27ba0][size=4]Example[/size][/color][/b]\n<br />You notice that a Content Patcher mod is not available in your language, or you forgot to add your translation file before starting the game. Add the translation file to the mod's i18n folder, return to the game, and press the reload key. Json Reload updates the content pack without requiring you to restart the game.\n<br />\n<br />[color=#c27ba0][b][size=4]What can be reloaded[/size][/b][/color]\n<br />- Content Patcher JSON files\n<br />- Content Patcher\u00A0 i18n translation files\n<br />\n<br />Files such as manifest.json and config.json, C# mods, and content packs for other frameworks may still require a restart. Dialogues or events already in progress are not rebuilt.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52159",
+	"Version": "1.0.0",
+	"Updated": "2026-09-11T17:16:17+00:00",
+	"Downloads": [
+		{
+			"Id": 182371,
+			"Type": "Main",
+			"DisplayName": "JsonReload.1.0.0",
+			"FileName": "21/bc/0e/21bc0efd-ff3f-4128-803b-1b532060f9ea",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 25232,
+			"Uploaded": "2026-09-11T17:16:17+00:00",
+			"Mods": [
+				{
+					"Id": "NatrollEXE.JsonReload",
+					"DisplayName": "Json Reload",
+					"Type": "Smapi",
+					"RelativePath": "JsonReload",
+					"Manifest": {
+						"Name": "Json Reload",
+						"Description": "Reloads changed Content Patcher JSON and i18n files.",
+						"Author": "NatrollEXE",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.0",
+						"EntryDll": "JsonReload.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.0",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"MinimumVersion": "1.14.0",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52159"
+						],
+						"UniqueId": "NatrollEXE.JsonReload"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342569059,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438847,
+		"UploaderId": 63851226,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

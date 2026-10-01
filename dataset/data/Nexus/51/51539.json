@@ -1,0 +1,85 @@
+{
+	"Site": "Nexus",
+	"Id": 51539,
+	"Name": "Pelipper Town-MoveTutorNPC",
+	"Author": "hk1176",
+	"Description": "[heading]\uD83D\uDCCC 模组简介[/heading]\n<br />本模组在星露谷物语的[b]公交站[/b]添加了一位\u00A0[b]“技能导师”[/b]\u00A0NPC。与这位导师对话，可以让你的宝可梦花费金币学习任意招式。\n<br />[b]特色功能：[/b]\n<br />[list]\n<br />[*]✅ 自定义 NPC“技能导师”出现在公交站[/*]\n<br />[*]✅ 右键点击 NPC 弹出对话，选择“我想学习招式！”打开学习菜单[/*]\n<br />[*]✅ 学习菜单显示所有可用招式，按类型分类，支持翻页[/*]\n<br />[*]✅ 支持控制台命令\u00A0\n<br />[code]learnmove &lt;招式ID&gt;[/code][/*]\n<br />[*]✅ 学习费用可在\u00A0\n<br />[code]config.json[/code]\u00A0中调整[/*]\n<br />[*]✅ 招式名称映射表\u00A0\n<br />[code]move_display.json[/code]，支持自定义显示名称[/*]\n<br />[/list][line]\n<br />[heading]\uD83D\uDCE6 模组组成[/heading]\n<br />\n<br />\n<br />[table][tr][th]模组[/th]\n<br />[th]说明[/th]\n<br />[/tr]\n<br />[tr][td][b]LearnMove1.0[/b][/td]\n<br />[td]核心模组：学习招式的逻辑、菜单、费用控制[/td]\n<br />[/tr]\n<br />[tr][td][b]MoveTutorNPC[/b][/td]\n<br />[td]Content Patcher 内容包：创建“技能导师”NPC，包含外观、对话、日程[/td]\n<br />[/tr]\n<br />[/table][line]\n<br />[heading]\uD83D\uDD27 依赖模组[/heading]\n<br />\n<br />\n<br />[table][tr][th]模组[/th]\n<br />[th]说明[/th]\n<br />[/tr]\n<br />[tr][td][b]SMAPI[/b][/td]\n<br />[td]模组加载器（必须）[/td]\n<br />[/tr]\n<br />[tr][td][b]Content Patcher[/b][/td]\n<br />[td]NPC 生成框架（必须）[/td]\n<br />[/tr]\n<br />[tr][td][b]Pelipper Town[/b][/td]\n<br />[td]宝可梦模组（必须，提供宝可梦数据）[/td]\n<br />[/tr]\n<br />[tr][td][b]Generic Mod Config Menu[/b][/td]\n<br />[td]可选，用于在游戏内调整费用[/td]\n<br />[/tr]\n<br />[/table][line]\n<br />[heading]\uD83D\uDCE5 安装方法[/heading]\n<br />[list=1]\n<br />[*][b]安装 SMAPI[/b]：如果还没装，先去\u00A0[url=https://smapi.io/]smapi.io[/url]\u00A0下载安装[/*]\n<br />[*][b]安装 Content Patcher[/b]：从 Nexus Mods 下载\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/*]\n<br />[*][b]安装 Pelipper Town[/b]：确保\u00A0\n<br />[code]PelipperTown.Mod[/code]\u00A0已安装并启用[/*]\n<br />[*][b]将模组放入\u00A0[/b]\n<br />[code]Mods[/code][b]\u00A0文件夹[/b]：\n<br />text\n<br />Mods/\n<br />├── LearnMove1.0/\n<br />│\u00A0 ├── LearnMove1.0.dll\n<br />│\u00A0 ├── manifest.json\n<br />│\u00A0 ├── config.json\n<br />│\u00A0 └── move_display.json\n<br />└── MoveTutorNPC/\n<br />\u00A0 \u00A0 ├── manifest.json\n<br />\u00A0 \u00A0 ├── content.json\n<br />\u00A0 \u00A0 ├── dialogue.json\n<br />\u00A0 \u00A0 ├── schedule.json\n<br />\u00A0 \u00A0 └── assets/\n<br />\u00A0 \u00A0 \u00A0 \u00A0 ├── hk11761.MoveTutor.png\u00A0 ← 精灵图\n<br />\u00A0 \u00A0 \u00A0 \u00A0 └── hk11762.MoveTutor.png\u00A0 ← 立绘\n<br />[/*]\n<br />[*][b]启动游戏[/b]，模组会自动加载[/*]\n<br />[/list][line]\n<br />[heading]\uD83C\uDFAE 如何使用[/heading]\n<br />1️⃣ 找到技能导师\n<br />[list]\n<br />[*]地点：[b]公交站（BusStop）[/b][/*]\n<br />[/list]2️⃣ 学习招式\n<br />[list=1]\n<br />[*]确保[b]已经派出一只宝可梦[/b]（通过 Pelipper Town 模组）[/*]\n<br />[*]右键点击“技能导师”[/*]\n<br />[*]在招式菜单中：\n<br />[list]\n<br />[*]点击任意招式查看详情[/*]\n<br />[*]点击\u00A0[b]“学习”[/b]\u00A0按钮，消耗金币学习[/*]\n<br />[*]如果技能栏未满（&lt;4个），会自动装备；如果已满，招式会加入已学会列表，需要手动装备[/*]\n<br />[/list][/*]\n<br />[/list][heading]⚙️ 配置说明[/heading]\n<br />[code]config.json[/code]（LearnMove 配置）\n<br />json\n<br />{\n<br />\u00A0 \"LearnCost\": 1000\n<br />}\n<br />\n<br />\n<br />\n<br />[table][tr][th]字段[/th]\n<br />[th]说明[/th]\n<br />[/tr]\n<br />[tr][td][code]LearnCost[/code][/td]\n<br />[td]学习一个招式所需金币数，设为\u00A0\n<br />[code]0[/code]\u00A0则免费[/td]\n<br />[/tr]\n<br />[/table]修改后[b]重启游戏[/b]或[b]重新加载存档[/b]生效。\n<br />[code]move_display.json[/code]（招式名称映射）\n<br />格式：\n<br />json\n<br />{\n<br />\u00A0 \"kanto_thunderbolt\": \"十万伏特\",\n<br />\u00A0 \"kanto_flamethrower\": \"喷射火焰\",\n<br />\u00A0 \"kanto_recover\": \"自我再生\"\n<br />}\n<br />\n<br />[list]\n<br />[*]左侧是招式 ID（和 Pelipper Town 中一致）[/*]\n<br />[*]右侧是在菜单中显示的名称[/*]\n<br />[/list][heading]\uD83D\uDEA8 常见问题[/heading]\n<br />Q：点击 NPC 没有反应？\n<br />A：\n<br />[list=1]\n<br />[*]确认[b]已经派出一只宝可梦[/b]（通过 Pelipper Town 模组）[/*]\n<br />[*]检查是否在对话中选择了\u00A0[b]“我想学习招式！”[/b][/*]\n<br />[*]如果菜单无法打开，检查 SMAPI 日志是否有报错[/*]\n<br />[/list]Q：学习费用怎么调整？\n<br />A：编辑\u00A0\n<br />[code]Mods/LearnMove1.0/config.json[/code]\u00A0中的\u00A0\n<br />[code]LearnCost[/code]\u00A0值。\n<br />Q：NPC 的精灵图/立绘能换吗？\n<br />A：可以。替换\u00A0\n<br />[code]MoveTutorNPC/assets/[/code]\u00A0文件夹中的\u00A0\n<br />[code]hk11761.MoveTutor.png[/code]（精灵图）和\u00A0\n<br />[code]hk11762.MoveTutor.png[/code]（立绘），保持文件名不变即可。\n<br />[heading]\uD83D\uDCDD 自定义 NPC 对话[/heading]\n<br />编辑\u00A0\n<br />[code]MoveTutorNPC/assets/dialogue.json[/code]，例如：\n<br />json\n<br />{\n<br />\u00A0 \"Introduction\": \"你好！我是技能导师，可以教宝可梦学习各种招式。$h#$b#如果你想学，就点击我吧！\",\n<br />\u00A0 \"Mon\": \"周一好！今天想学什么？\",\n<br />\u00A0 \"Tue\": \"周二好！训练宝可梦需要耐心和毅力。\",\n<br />\u00A0 \"Fri\": \"周五了！要不要学个新招式庆祝一下？\"\n<br />}\n<br />[heading]\uD83D\uDE4F 致谢[/heading]\n<br />[list]\n<br />[*][b]Pelipper Town[/b]：AlexanderVerde / Griff 的宝可梦模组[/*]\n<br />[*][b]Content Patcher[/b]：Pathoschild 的内容框架[/*]\n<br />[*][b]SMAPI[/b]：Pathoschild 的模组加载器[/*]\n<br />[/list][line]\n<br />[heading]\uD83D\uDCC4 许可[/heading]\n<br />本模组仅供学习参考，请勿用于商业用途。使用前请备份存档。\n<br />[line]\n<br />[b]祝你训练愉快！\uD83C\uDF89[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51539",
+	"Version": "1",
+	"Updated": "2026-09-08T08:10:24+00:00",
+	"Downloads": [
+		{
+			"Id": 181868,
+			"Type": "Main",
+			"DisplayName": "Mods",
+			"FileName": "22/f6/b3/22f6b3c9-d421-4461-a14c-fed52ea99429",
+			"Description": "",
+			"Version": "3.2",
+			"SizeInBytes": 1652716,
+			"Uploaded": "2026-09-08T08:10:24+00:00",
+			"Mods": [
+				{
+					"Id": "hk1176.LearnMove",
+					"DisplayName": "学习招式 (LearnMove)",
+					"Type": "Smapi",
+					"RelativePath": "LearnMove1.0",
+					"Manifest": {
+						"Name": "学习招式 (LearnMove)",
+						"Description": "通过与技能导师 NPC 对话，让宝可梦花费金币学会任意招式。",
+						"Author": "hk1176",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "3.18.0",
+						"EntryDll": "LearnMove1.0.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Griff.PelipperTown",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "hk1176.LearnMove"
+					}
+				},
+				{
+					"Id": "hk1176.MoveTutorNPC",
+					"DisplayName": "技能导师 NPC",
+					"Type": "ContentPack",
+					"RelativePath": "MoveTutorNPC",
+					"Manifest": {
+						"Name": "技能导师 NPC",
+						"Description": "在农场添加技能导师 NPC。",
+						"Author": "hk1176",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "hk1176.LearnMove",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "hk1176.MoveTutorNPC"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568556,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438227,
+		"UploaderId": 203784632,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

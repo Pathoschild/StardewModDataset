@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 46120,
+	"Name": "Save Jingle (Music - Immersion - Rune Factory - Harvest Moon - Quick Song Plays At End Of Day)",
+	"Author": "DylanJames",
+	"AuthorLabel": "Dylan James",
+	"Description": "[center][url=https://www.nexusmods.com/stardewvalley/images/7639][img]https://files.catbox.moe/kcsfxk.png[/img][/url][/center]\n<br />[size=3]‎ [/size]\n<br />[center][color=#f1c232][b][size=4]Stardew Parade launches Tuesday! Join the Stardew Parade Discord Server.\u00A0\uD83D\uDE42‍↕️[/size]\n<br />[size=4]Here you can access the collection unlisted and meet people interested in the project![/size][/b][/color][/center]\n<br />[center][size=3]\u00A0[/size][/center]\n<br />[center][url=https://ko-fi.com/dylanjamesxyz][img]https://github.com/doodlum/nexusmods-widgets/blob/main/Ko-fi_40px_60fps.png?raw=true[/img][/url]\u00A0 \u00A0[url=https://discord.gg/pJ5wexKUx3][img]https://github.com/doodlum/nexusmods-widgets/blob/main/Discord_40px.png?raw=true[/img][/url]\n<br />[/center]\n<br />[size=1]ㅤ[/size]\n<br />[b][size=4]REQUIREMENTS[/size][/b]\n<br />[size=1]ㅤ[/size]\n<br />⧉ㅤ[url=https://www.nexusmods.com/stardewvalley/mods/1915][b]SMAPI[/b][/url]\n<br />[size=1]ㅤ[/size]\n<br />[b][size=4]RECOMMENDATIONS[/size][/b]\n<br />[size=1]ㅤ[/size]\n<br />⧉ㅤ[url=https://www.nexusmods.com/stardewvalley/mods/45149][b]Fish Stuff For Shrimps[/b][/url]\n<br />\n<br />[b][size=4]DESCRIPTION[/size][/b]\n<br />[size=1]ㅤ[/size]\n<br />Plays a short and familiar jingle whenever you go to bed and the end-of-day shipping menu appears.\n<br />This is reminiscent of games like [url=https://store.steampowered.com/app/2243710/Rune_Factory_3_Special/][b]Rune Factory[/b][/url], where a peaceful tune will play when saving the game.\n<br />\n<br />You can change the songs volume, as well as which category the sound plays from, in the configuration menu.\n<br />You can follow the author guide below and figure out how to replace the song yourself\n<br />\n<br />\n<br />[center][youtube]k3DB7x971I8[/youtube][/center]\n<br />[center][i][size=2]I can't believe I forgot to install [url=https://www.nexusmods.com/stardewvalley/mods/34309]My Own Mod[/url].[/size][/i][/center]\n<br />[size=1]ㅤ[/size]\n<br />[b][size=4]AUTHOR GUIDE[/size][/b]\n<br />[size=1]ㅤ[/size]\n<br />You can replace the sound cue (DylanJames.SaveJingle) with Content Patcher.\n<br />Here is an example. There is also a funny example mod in the Miscellaneous section.\n<br />\n<br />[code]{\n<br />\u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Data/AudioChanges\",\n<br />\u00A0 \u00A0 \u00A0 \"Priority\": \"Late\",\n<br />\u00A0 \u00A0 \u00A0 \"Fields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"DylanJames.SaveJingle\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FilePaths\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{AbsoluteFilePath: assets/LessFittingJingle.ogg}}\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]\n<br />[url=https://codeberg.org/dylanjames-xyz/SaveJingle/][b]Source Code[/b][/url]. Also see 'Mirrors'.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46120",
+	"Version": "0.0.1",
+	"Updated": "2026-09-26T16:05:02+00:00",
+	"Downloads": [
+		{
+			"Id": 184235,
+			"Type": "Main",
+			"DisplayName": "Save Jingle (0.0.1)",
+			"FileName": "be/24/1e/be241e21-f2f4-4e49-866f-8b75aae57ec9",
+			"Description": "Requires [url=https://smapi.io/]SMAPI[/url].\nPlease report any issues. Thank you for [b]endorsing[/b]!",
+			"Version": "0.0.1",
+			"SizeInBytes": 187942,
+			"Uploaded": "2026-09-26T16:05:02+00:00",
+			"Mods": [
+				{
+					"Id": "DylanJames.SaveJingle",
+					"DisplayName": "Save Jingle",
+					"Type": "Smapi",
+					"RelativePath": "SaveJingle",
+					"Manifest": {
+						"Name": "Save Jingle",
+						"Description": "Plays a familiar jingle when the end-of-day shipping screen opens.",
+						"Author": "Dylan James",
+						"Version": "0.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SaveJingle.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:46120"
+						],
+						"UniqueId": "DylanJames.SaveJingle"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570923,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342432808,
+		"UploaderId": 47365508,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

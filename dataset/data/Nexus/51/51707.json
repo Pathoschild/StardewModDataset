@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 51707,
+	"Name": "TimeSkipper",
+	"Author": "secsky3",
+	"Description": "[heading]Description[/heading]\n<br />[b]TimeSkipper[/b] is a debugging and convenience utility mod for Stardew Valley that allows players to fast-forward or rewind in-game time in customizable hourly increments. It is designed to quickly test time-sensitive NPC events, shop operating hours, and environmental conditions (such as night fishing) without idling through the day.\n<br />[heading]Installation instructions[/heading]\n<br />[list=1]\n<br />[*]Install the latest version of [b]SMAPI[/b].[/*]\n<br />[*]Download the [b]TimeSkipper[/b] mod archive from the Files tab.[/*]\n<br />[*]Extract the downloaded folder into your\n<br />[code]Stardew Valley/Mods[/code]directory.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[*][i](Optional)[/i] Run the game once to generate the default\n<br />[code]config.json[/code]file, or configure your keybinds in-game using Generic Mod Config Menu.[/*]\n<br />[/list][heading]Main features[/heading]\n<br />[list]\n<br />[*][b]Configurable Time Skipping[/b]: Advance or rewind the clock using customizable hotkeys (\n<br />[code]PageUp[/code]/\n<br />[code]PageDown[/code]by default) or console commands (\n<br />[code]add_time [hours][/code],\n<br />[code]sub_time [hours][/code]).[/*]\n<br />[*][b]Schedule Resync Routine[/b]: Runs an automated location and schedule update after time shifts to minimize vanilla NPC pathfinding errors.[/*]\n<br />[*][b]Safety Lockouts[/b]:\n<br />[list]\n<br />[*]Prevents input when menus, dialogue boxes, or shops are open.[/*]\n<br />[*]Disables time manipulation entirely during events and cutscenes.[/*]\n<br />[*]Blocks time adjustments within festival maps and fully disables rewinding time on festival days to prevent event state duplication.[/*]\n<br />[/list][/*]\n<br />[*][b]Known Limitations &amp; Bug Reports[/b]:\n<br />[list]\n<br />[*]Forcefully shifting the clock—especially rewinding—can occasionally cause NPCs to path incorrectly, face the wrong direction, or get stuck on geometry.[/*]\n<br />[*]If you encounter broken NPC routines, please submit a report with your parsed [b]SMAPI log link ([url=https://smapi.io/log]smapi.io/log[/url])[/b], the targeted NPC, the skipped time, and your current map location.[/*]\n<br />[/list][/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list]\n<br />[*][b]SMAPI - Stardew Modding API[/b] (Latest version required)[/*]\n<br />[*][b]Generic Mod Config Menu (GMCM)[/b] [i](Optional, recommended for in-game settings UI)[/i][/*]\n<br />[/list][heading]Shout outs[/heading]\n<br />[list]\n<br />[*]Thanks to [b]ConcernedApe[/b] for creating [i]Stardew Valley[/i].[/*]\n<br />[*]Thanks to [b]Pathoschild[/b] and the Stardew Valley modding community for developing and maintaining SMAPI and its extensive documentation.[/*]\n<br />[/list][heading]1. 주요 기능 (Overview)[/heading]\n<br />[list]\n<br />[*][b]시간대 즉각 변경[/b]: 특정 시간대 NPC 이벤트, 상점 영업 시간, 밤/낮 낚시 환경 등을 빠르게 확인하고 테스트할 수 있습니다.[/*]\n<br />[*][b]스케줄 동기화 시도[/b]: 시간 변경 시 바닐라 엔진의 NPC 경로 이탈을 줄이기 위해 목표 지점 동기화 루틴을 수행합니다.[/*]\n<br />[*][b]기본 안전 잠금[/b]: 컷신/이벤트 진행 중, 축제 맵 내부, 축제 당일 시간 역행 등 게임 로직 충돌 위험이 높은 상황에서는 조작이 제한됩니다.[/*]\n<br />[/list][heading]2. 사용 방법 (Controls &amp; Commands)[/heading]\n<br />[list]\n<br />[*][b]단축키[/b]:\n<br />[list]\n<br />[*][code]PageUp[/code](기본값): 시간 순행 (+1시간)[/*]\n<br />[*][code]PageDown[/code](기본값): 시간 역행 (-1시간)[/*]\n<br />[/list][/*]\n<br />[*][b]콘솔 명령어[/b]:\n<br />[list]\n<br />[*][code]add_time [시간][/code]: 지정한 시간만큼 시계 전진[/*]\n<br />[*][code]sub_time [시간][/code]: 지정한 시간만큼 시계 후진[/*]\n<br />[/list][/*]\n<br />[*][b]작동 제한 (Safety Checks)[/b]:\n<br />[list]\n<br />[*]이벤트/컷신 진행 중에는 시간 조작이 차단됩니다.[/*]\n<br />[*]축제 진행 중이거나 축제 당일 시간 역행 시도는 버그 방지를 위해 제한됩니다.[/*]\n<br />[*]상점, 인벤토리, 대화창 등 활성화된 메뉴가 있을 때는 단축키 입력이 무시됩니다.[/*]\n<br />[/list][/*]\n<br />[/list][heading]3. 주의사항 및 알려진 한계점 (Known Issues &amp; Gotchas)[/heading]\n<br />[list]\n<br />[*][b]NPC 동선 이상 가능성[/b]:\n<br />[list]\n<br />[*]바닐라 엔진 구조상 강제 시간 조작(특히 시간 역행) 시 일부 NPC의 이동 경로가 꼬이거나 벽 끼임, 모션 이상이 발생할 수 있습니다.[/*]\n<br />[*]타 모드(스케줄 변경 모드, 대형 확장 모드 등)와 병용할 경우 비정상적인 위치 이동이 나타날 가능성이 있습니다.[/*]\n<br />[/list][/*]\n<br />[*][b]버그 제보 안내[/b]:\n<br />[list]\n<br />[*]NPC가 특정 위치에 끼이거나 스케줄이 완전히 망가지는 현상을 발견하시면 SMAPI 로그 링크([url=https://smapi.io/log]smapi.io/log[/url])와 함께 구체적인 상황(조작한 시간, 대상 NPC, 맵 위치)을 댓글/이슈로 남겨주시면 개선에 큰 도움이 됩니다.[/*]\n<br />[/list][/*]\n<br />[*][b]축제일 조작 제한[/b]:\n<br />[list]\n<br />[*]축제 당일 시간을 과거로 되돌리면 바닐라 트리거 충돌로 인해 이벤트가 오작동할 위험이 커 기본적으로 차단되어 있습니다.[/*]\n<br />[/list][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51707",
+	"Version": "1",
+	"Updated": "2026-09-05T06:27:39+00:00",
+	"Downloads": [
+		{
+			"Id": 181523,
+			"Type": "Main",
+			"DisplayName": "TimeSkipper V1.0.1",
+			"FileName": "03/97/1c/03971c8b-abac-42f1-9816-b1b776b832e9",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 16568,
+			"Uploaded": "2026-09-05T06:27:39+00:00",
+			"Mods": [
+				{
+					"Id": "AI.TimeSkipper",
+					"DisplayName": "Time Skipper",
+					"Type": "Smapi",
+					"RelativePath": "TimeSkipper",
+					"Manifest": {
+						"Name": "Time Skipper",
+						"Description": "Skip time forward and backward by 1 hour for testing.",
+						"Author": "AI",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TimeSkipper.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "AI.TimeSkipper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568211,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438395,
+		"UploaderId": 58646706,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 51897,
+	"Name": "AbigailCelebration",
+	"Author": "CrazyMexicanVr",
+	"Description": "Description\n<br />Marrying Abigail is a big moment for her — but vanilla Stardew Valley treats it like just another Tuesday. This mod fixes that.\n<br />Once Abigail accepts the Mermaid's Pendant, she'll drag you to Pierre's General Store to break the news to her parents, kicking off a proposal cutscene. Then, three days after the wedding, Pelican Town throws a real celebration in the Town Square: a full buffet table, decorations, the whole cast in attendance, and even Sebastian dancing (eventually). It's a one-time, one-day event built entirely on public SMAPI/game APIs — no Harmony, no save corruption risk, and it plays nice with map-overhaul mods like Stardew Valley Expanded.\n<br />Installation\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] if you haven't already.[/*]\n<br />[*]Download this mod and unzip it into your \n<br />[code]Stardew Valley/Mods[/code]folder.[/*]\n<br />[*](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] if you want to tweak settings in-game instead of editing \n<br />[code]config.json[/code]by hand.[/*]\n<br />[*]Launch the game via SMAPI.[/*]\n<br />[/list]No new save required — this works on existing saves, including ones where you're already married to Abigail (see Known Behavior below).\n<br />Main Features\n<br />[list]\n<br />[*][b]A proposal cutscene[/b] at Pierre's General Store when Abigail accepts the pendant, where she tells Pierre and Caroline — and Pierre reacts exactly the way you'd expect.[/*]\n<br />[*][b]A town-wide celebration[/b], three days after the wedding, in the Town Square: a full buffet spread laid out on real furniture (not scattered on the ground), lamps, and a large cast of villagers who actually show up and dance.[/*]\n<br />[*][b]An invitation letter[/b] delivered to your mailbox the morning after the wedding, telling you the exact date and time window — no need to check the SMAPI console.[/*]\n<br />[*][b]Guaranteed clear weather[/b] on the day of the party, actively enforced so bad weather can't sneak back in and ruin it.[/*]\n<br />[*][b]Console command[/b] (\n<br />[code]abigail_celebration status|party|schedule|reset[/code]) to check state, skip ahead for testing, or reset if something goes wrong.[/*]\n<br />[*][b]Full Generic Mod Config Menu support[/b] — toggle the whole feature, adjust timing, choose whether the full town or just close friends attend, control decorations/dialogue, and more.[/*]\n<br />[*][b]Map-mod aware[/b]: actor placement and decorations are resolved against your actual loaded map at runtime, so they adapt to Stardew Valley Expanded, A Pelican Town, and other Town/SeedShop overhauls instead of assuming the vanilla layout.[/*]\n<br />[*][b]Multiplayer-safe[/b]: scheduling state lives with the host; farmhands still see the event.[/*]\n<br />[/list]Requirements\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.0.0+[/*]\n<br />[*]Stardew Valley 1.6, targeting .NET 6[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — optional, only needed for the in-game settings menu[/*]\n<br />[/list][b]Known behavior:[/b] if you were already married to Abigail before installing this mod, no party is scheduled automatically (so you're not ambushed by a retroactive cutscene) — run \n<br />[code]abigail_celebration schedule[/code]in the SMAPI console if you want one anyway.\n<br />Shout Outs\n<br />[list]\n<br />[*][b]ConcernedApe[/b], for Stardew Valley and for writing an event system flexible enough that mods like this are possible without touching a single vanilla file.[/*]\n<br />[*][b]Pathoschild[/b], for SMAPI and the mod build config that makes packaging a build-and-go process.[/*]\n<br />[*][b]The Content Patcher / SMAPI modding community[/b], whose documentation and prior art made it possible to work out event command syntax, furniture placement, and 1.6-era API changes.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51897",
+	"Version": "1.6",
+	"Updated": "2026-09-07T21:52:39+00:00",
+	"Downloads": [
+		{
+			"Id": 181810,
+			"Type": "Main",
+			"DisplayName": "AbigailCelebration",
+			"FileName": "01/8c/ef/018cef82-dda0-460a-828d-6e91bf528595",
+			"Description": "",
+			"Version": "1.6",
+			"SizeInBytes": 64290,
+			"Uploaded": "2026-09-07T21:52:39+00:00",
+			"Mods": [
+				{
+					"Id": "cmvr.AbigailCelebration",
+					"DisplayName": "Abigail's Celebration",
+					"Type": "Smapi",
+					"RelativePath": "AbigailCelebration",
+					"Manifest": {
+						"Name": "Abigail's Celebration",
+						"Description": "Pierre and Caroline throw a town-wide celebration in the Town Square three days after you marry Abigail.",
+						"Author": "cmvr",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AbigailCelebration.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "cmvr.AbigailCelebration"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342568498,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438585,
+		"UploaderId": 48664643,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

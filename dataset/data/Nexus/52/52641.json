@@ -1,0 +1,77 @@
+{
+	"Site": "Nexus",
+	"Id": 52641,
+	"Name": "SqueakyDuckShoes",
+	"Author": "YourPeachiness",
+	"AuthorLabel": "ji3214",
+	"Description": "[center][size=5][b]\uD83E\uDD86 Squeaky Duck Shoes[/b][/size][/center]\n<br />[center][i]Every step goes squeak.[/i][/center]\n<br />\n<br />[line]\n<br />\n<br />You have walked across this farm thousands of times.\n<br />Nobody ever said anything about it. Now something does.\n<br />\n<br />This mod replaces your footsteps with a soft rubber-duck squeak — two alternating squeaks with slight pitch variation, so it never sounds like a loop. Quiet, goofy, and weirdly comforting when you're doing the fourth watering run of the day.\n<br />\n<br />The optional [b]Content Patcher[/b] add-on also adds [b]Rubber Ducky Shoes[/b] to Marnie's shop, so the sound has an owner.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]What it does[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Squeaky footsteps[/b] — your step sounds are replaced with rubber-duck squeaks (two variants, pitch-randomized).[/*]\n<br />[*][b]Wear-conditioned[/b] — by default the squeak only happens in one specific pair of boots, so your regular shoes stay quiet.[/*]\n<br />[*][b]Two-in-one[/b] — leave it on as a tiny bit of farm ambience, or turn it into a running gag. Up to you.[/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.0.0 or later[/*]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] — [b]only[/b] for the optional add-on file[/*]\n<br />[/list][size=4][b]Installation[/b][/size]\n<br />\n<br />There are two files. Put both folders into your [b]Mods[/b] folder.\n<br />\n<br />[list]\n<br />[*][b]Main file[/b] (SqueakyDuckShoes) — required. This is the sound mod.[/*]\n<br />[*][b]Optional file[/b] (SqueakyDuckShoes-CP) — adds the boots you can buy. Skip it if you'd rather have every pair squeak.[/*]\n<br />[/list]The zip is packed correctly: open it and [b]manifest.json[/b] should be right at the top, not inside a second folder.\n<br />\n<br />With the add-on installed, buy the [b]Rubber Ducky Shoes[/b] from Marnie (12,000g) and put them on. Marnie will send you a letter about them.\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />\n<br />Edit [b]config.json[/b] (or use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]-compatible setup) and restart the game.\n<br />\n<br />[code]\n<br />Enabled\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 true / false\u00A0 Master switch. Turn it off when you need silence.\n<br />RequireBootsId\u00A0 boots ID\u00A0 \u00A0 \u00A0 Only this pair squeaks. Default is the Rubber Ducky Shoes.\n<br />Volume\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 0.0 - 1.0\u00A0 \u00A0 \u00A0 Default 0.1 — deliberately quiet. Raise it if you want the full joke.\n<br />SpeedBonus\u00A0 \u00A0 \u00A0 0.0\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 Optional bonus movement speed while squeaking. Off by default.[/code]Type [b]duck_status[/b] into the SMAPI console to print the current values.\n<br />\n<br />[size=4][b]Translations[/b][/size]\n<br />\n<br />English and Chinese, both included. The boots name, description and Marnie's letter follow your game language.\n<br />\n<br />[size=4][b]Known notes[/b][/size]\n<br />\n<br />[list]\n<br />[*]The squeak replaces footstep audio, so it only plays when you take a step that would make a sound — riding a horse or a minecart won't squeak.[/*]\n<br />[*][b]Do not delete config.json.[/b] If it regenerates from scratch, the boots filter falls back to a placeholder ID and nothing will sound. See the pinned comment if that happens.[/*]\n<br />[/list][line]\n<br />\n<br />[center][size=4][b]\uD83E\uDD86 中文说明[/b][/center]\n<br />\n<br />每天的农场路你要走上千步，从来没人吭过一声。现在有了。\n<br />\n<br />这个 mod 把你走路的脚步声换成小黄鸭的吱吱叫——两段音效交替，每次音高略有浮动，所以听上去不会像复读机。音量很轻，有点傻，但在你浇第四遍地的时候，会莫名其妙地让人觉得没那么孤单。\n<br />\n<br />可选的 [b]Content Patcher[/b] 附加包会在玛妮的店里加一双 [b]小黄鸭鞋[/b]，让这声音有个主人。\n<br />\n<br />[b]安装[/b]\n<br />两个文件解压后把文件夹放进 Mods 目录：\n<br />· 主文件（必须）—— 脚步声本体\n<br />· 附加文件（可选）—— 增加可以买到的鞋。不装的话也可以让它对所有鞋生效。\n<br />\n<br />装了附加包的话，去玛妮那儿花 12000g 买下小黄鸭鞋穿上，她会给你寄一封信。\n<br />\n<br />[b]配置[/b]（改 config.json 后重启游戏）\n<br />· Enabled —— 总开关\n<br />· RequireBootsId —— 限定某双鞋才响，默认是小黄鸭鞋\n<br />· Volume —— 音量，默认 0.1，故意调得很轻\n<br />· SpeedBonus —— 可选的额外移速，默认关闭\n<br />\n<br />控制台输入 [b]duck_status[/b] 可以查看当前配置。\n<br />\n<br />[b]已知说明[/b]\n<br />· 叫声音效替换的是脚步声，所以只在真正迈步出声时触发——骑马、坐矿车不会响。\n<br />· [b]不要删除 config.json。[/b]若被重新生成，鞋子限定会回退到一个占位 ID，导致完全不响。\n<br />\n<br />[line]\n<br />\n<br />[i]Made because it seemed like the kind of thing the farm was missing.[/i]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52641",
+	"Version": "1",
+	"Updated": "2026-09-20T15:48:40+00:00",
+	"Downloads": [
+		{
+			"Id": 183511,
+			"Type": "Main",
+			"DisplayName": "SqueakyDuckShoes 1.0.0",
+			"FileName": "6a/41/ff/6a41ff78-d099-4cb5-8065-102b7170e570",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 20552,
+			"Uploaded": "2026-09-20T15:48:40+00:00",
+			"Mods": [
+				{
+					"Id": "HoneyPeach.SqueakyDuckShoes",
+					"DisplayName": "Squeaky Duck Shoes",
+					"Type": "Smapi",
+					"RelativePath": "SqueakyDuckShoes-1.0.0\\DuckFootsteps",
+					"Manifest": {
+						"Name": "Squeaky Duck Shoes",
+						"Description": "Your footsteps go squeak. Adds playful rubber-ducky squeaks to every step, with toggle, boots filter and volume control. / 小黄鸭叫叫鞋：走路时脚下发出吱吱的鸭子叫声，支持总开关、指定鞋才响、音量调节。",
+						"Author": "HoneyPeach",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DuckFootsteps.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "HoneyPeach.SqueakyDuckShoes"
+					}
+				},
+				{
+					"Id": "HoneyPeach.SqueakyDuckShoes.CP",
+					"DisplayName": "(CP) Squeaky Duck Shoes",
+					"Type": "ContentPack",
+					"RelativePath": "SqueakyDuckShoes-1.0.0\\[CP] Duck Shoes",
+					"Manifest": {
+						"Name": "(CP) Squeaky Duck Shoes",
+						"Description": "Adds a pair of rubber ducky shoes, sold at Marnie's shop. Wear them and every step goes squeak (pairs with the Squeaky Duck Shoes mod). / 新增一双小黄鸭鞋，在玛妮处有售；穿上它走路会吱吱叫（配合 Squeaky Duck Shoes 主mod 使用）。",
+						"Author": "HoneyPeach",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "HoneyPeach.SqueakyDuckShoes",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "HoneyPeach.SqueakyDuckShoes.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570199,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439329,
+		"UploaderId": 265230760,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

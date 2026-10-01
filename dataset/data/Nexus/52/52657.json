@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 52657,
+	"Name": "EarthyLawnGrass",
+	"Author": "themagicalyang",
+	"Description": "[size=5][b]Earthy Lawn Grass[/b][/size]\n<br />Makes [url=https://www.nexusmods.com/stardewvalley/mods/47165]Lawn Grass[/url] match your recolour pack, and keeps a mown lawn mown.\n<br />\n<br />[size=4][b]Lawn that matches your recolour[/b][/size]\n<br />Lawn Grass ships its own bright green lawn sprites. Recolour packs don't touch them, because they are the mod's own assets rather than vanilla ones, so the lawn stays neon while the rest of your farm goes muted.\n<br />This mod repaints the lawn while the game runs, using the grass tile from whichever outdoor tilesheet is actually loaded: your recolour's, or vanilla's if you don't use one.\n<br />\n<br />[list]\n<br />[*][b]Ships no art.[/b] Nothing is copied from any recolour pack or from Lawn Grass. The pixels come from the tilesheet already loaded in your game.[/*]\n<br />[*]Works with any recolour, or with vanilla art.[/*]\n<br />[*]Follows your recolour's updates. If the recolour pack reloads, the lawn refreshes with it.[/*]\n<br />[*]All four seasons, including snowy winter lawns.[/*]\n<br />[*]Keeps Lawn Grass's own lawn shapes; only the colours change.[/*]\n<br />[/list]\n<br />[size=4][b]Keep a mown lawn mown[/b][/size]\n<br />A lawn tile cut down to bare ground only starts growing back with a small daily chance. Once it sprouts, it grows at the normal rate, so the rest of your grass isn't slowed down.\n<br />The game grows grass twice every night: once for each tile, then again in its grass-spreading pass. Both are covered (the spreading pass since 1.3.0).\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/47165]Lawn Grass[/url][/*]\n<br />[*]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url], to change settings in-game[/*]\n<br />[/list]\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI and Lawn Grass.[/*]\n<br />[*]Install this mod with Vortex, or unzip it into Stardew Valley/Mods.[/*]\n<br />[*]Run the game once to create config.json.[/*]\n<br />[/list]\n<br />[size=4][b]Settings[/b][/size]\n<br />Change them in-game with Generic Mod Config Menu, or edit config.json. Colour changes apply immediately, no restart.\n<br />[list]\n<br />[*][b]Enabled[/b] (default true): set to false to leave the lawn as Lawn Grass draws it.[/*]\n<br />[*][b]TileIndex[/b] (default 175): which tile of the outdoor tilesheet to paint the lawn with. 175 is the plain grass used across the farm. 351 is the darker mown patch the map draws around the farmhouse.[/*]\n<br />[*][b]LawnSproutChance[/b] (default 0.01): the daily chance, as a decimal from 0 to 1, that a mown lawn tile starts growing again. 0.01 = 1% (about once in 100 days), 0.001 = 0.1%, 0 = never. Set it to 1 to turn this off.[/*]\n<br />[/list]For the normal growth rate after a lawn sprouts, set Lawn Grass's own [b]GrowChance[/b] to 1.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6.14 or later, single player and multiplayer.[/*]\n<br />[*]Works with any recolour pack.[/*]\n<br />[*]Works with [url=https://www.nexusmods.com/stardewvalley/mods/2732]Grass Growth[/url].[/*]\n<br />[*]Don't use it together with another mod that replaces Lawn Grass's lawn textures; only one of them will win.[/*]\n<br />[*]Keeping the lawn mown patches Grass.dayUpdate and GameLocation.growWeedGrass. Another mod that changes how bare lawn regrows may conflict; set LawnSproutChance to 1 to switch this part off.[/*]\n<br />[/list]\n<br />[size=4][b]Source[/b][/size]\n<br />Open source (MIT): [url=https://github.com/dhanjit/EarthyLawnGrass]github.com/dhanjit/EarthyLawnGrass[/url]\n<br />\n<br />[size=4][b]Credits[/b][/size]\n<br />[list]\n<br />[*]Lawn Grass by aedenthorn. This mod only builds on it.[/*]\n<br />[*]The colours come from whatever recolour pack you use. None of its files are included here.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52657",
+	"Version": "1.3.1",
+	"Updated": "2026-09-22T15:45:14+00:00",
+	"Downloads": [
+		{
+			"Id": 183778,
+			"Type": "Main",
+			"DisplayName": "EarthyLawnGrass 1.3.1",
+			"FileName": "87/8e/ee/878eee04-c4ff-4709-a241-e8322f0b0ccc",
+			"Description": "",
+			"Version": "1.3.1",
+			"SizeInBytes": 19428,
+			"Uploaded": "2026-09-22T15:45:14+00:00",
+			"Mods": [
+				{
+					"Id": "dhanjit.EarthyLawnGrass",
+					"DisplayName": "Earthy Lawn Grass",
+					"Type": "Smapi",
+					"RelativePath": "EarthyLawnGrass",
+					"Manifest": {
+						"Name": "Earthy Lawn Grass",
+						"Description": "Retextures Lawn Grass with the grass tile from whichever outdoor tilesheet is loaded, so the lawn matches your recolour pack (or vanilla). Ships no art.",
+						"Author": "dhanjit",
+						"Version": "1.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EarthyLawnGrass.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.LawnGrass",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:52657",
+							"GitHub:dhanjit/EarthyLawnGrass"
+						],
+						"UniqueId": "dhanjit.EarthyLawnGrass"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342570466,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439345,
+		"UploaderId": 24816604,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

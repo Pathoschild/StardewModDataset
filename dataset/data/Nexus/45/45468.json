@@ -4,20 +4,20 @@
 	"Name": "Configurable Machine Speed",
 	"Author": "AditOliSamping",
 	"AuthorLabel": "Adit Oli Samping",
-	"Description": "Ever stared at a keg for 3 in-game days waiting for wine? Yeah, same.\n<br />[b]Configurable Machine Speed[/b] lets you set custom processing times for every machine in Stardew Valley. Want your furnace done in 10 minutes instead of 30? Done. Want instant output the second you drop something in? Also done.\n<br />[b]Features:[/b]\n<br />[list]\n<br />[*]Set custom processing time (in minutes) for every machine individually.[/*]\n<br />[*]Instant Output toggle — machine is ready the moment you insert an item.[/*]\n<br />[*]Works with Automate — instant output routes to chest just like normal, no weird inventory spam.[/*]\n<br />[*]Cask support — set custom days to iridium, or just instant iridium every morning.[/*]\n<br />[*]Full GMCM integration — configure everything in-game without touching any files.[/*]\n<br />[*]Clean slider UI — steps of 10 minutes, up to 14,000 min (~9.7 days).[/*]\n<br />[/list][b]Machines Supported:[/b]\n<br />Smelting &amp; Processing Furnace, Heavy Furnace, Charcoal Kiln, Bone Mill, Geode Crusher, Deconstructor, Wood Chipper, Recycling Machine, Bait Maker, Fish Smoker, and many more.\n<br />Artisan Machines Keg, Preserves Jar, Cheese Press, Mayonnaise Machine, Loom, Oil Maker, Dehydrator\n<br />Incubators Incubator (Coop), Ostrich Incubator, Slime Incubator, Slime Egg Press,\u00A0and many more.\n<br />Other Seed Maker, Crystalarium, Cask.\n<br />\n<br />[b]Compatibility:[/b]\n<br />[list]\n<br />[*]Requires SMAPI[/*]\n<br />[*]GMCM optional but strongly recommended[/*]\n<br />[*]Compatible with Automate[/*]\n<br />[/list]",
+	"Description": "[left][b]Configurable Machine Speed[/b]\n<br />[b]Take control of how long your machines take to process items.[/b]\n<br />Configurable Machine Speed lets you set an exact processing time for each supported machine, keep its vanilla timing, or enable Instant Output when you just don't feel like waiting.\n<br />Processing times are entered directly in minutes, so precise values like [b]25 minutes[/b] are easy to configure without wrestling with a huge slider or manually editing \n<br />[code]config.json[/code]\n<br />[heading]Features[/heading]\n<br />[list]\n<br />[*]Configure exact processing times for [b]23 supported machines[/b].[/*]\n<br />[*]Enter any whole-minute value directly through Generic Mod Config Menu.[/*]\n<br />[*]Set a machine to [b]0 / Default[/b] to keep its vanilla processing time.[/*]\n<br />[*]Enable [b]Instant Output[/b] for individual machines.[/*]\n<br />[*]Instant Output from manual insertion sends completed products directly to your inventory.[/*]\n<br />[*]If your inventory is full, the product safely remains ready inside the machine.[/*]\n<br />[*]Crystalarium repeat cycles respect your configured processing time.[/*]\n<br />[*]Crystalarium Instant mode makes each repeat output immediately ready without creating an automatic infinite-output loop.[/*]\n<br />[*]Configure [b]Cask aging[/b] separately by days.[/*]\n<br />[*]Optional [b]Instant Iridium[/b] setting for Casks.[/*]\n<br />[*]Incubators can complete their timer immediately while keeping Stardew Valley's normal hatching lifecycle.[/*]\n<br />[*]Automate remains optional and can continue routing machine output to chests normally.[/*]\n<br />[/list][heading]Supported Machines[/heading]\n<br />[b]Smelting &amp; Processing[/b]\n<br />Furnace, Heavy Furnace, Charcoal Kiln, Bone Mill, Geode Crusher, Deconstructor, Wood Chipper, Recycling Machine, Bait Maker, Fish Smoker\n<br />[b]Artisan Machines[/b]\n<br />Keg, Preserves Jar, Cheese Press, Mayonnaise Machine, Loom, Oil Maker, Dehydrator\n<br />[b]Incubators[/b]\n<br />Coop Incubator, Ostrich Incubator, Slime Incubator\n<br />[b]Other Machines[/b]\n<br />Slime Egg Press, Seed Maker, Crystalarium\n<br />[b]Aging[/b]\n<br />Cask\n<br />[heading]How It Works[/heading]\n<br />For each machine you can choose:\n<br />[b]Default / 0 minutes[/b]\n<br />Uses Stardew Valley's normal processing time.\n<br />[b]Custom Processing Time[/b]\n<br />Enter the exact number of minutes you want.\n<br />[b]Instant Output[/b]\n<br />Overrides the custom processing time and completes the machine immediately.\n<br />Settings apply when a machine starts a new production cycle. Machines that are already processing are generally not rewritten retroactively.\n<br />Stardew Valley still handles the actual recipe, ingredient consumption, output item, quality, and machine rules normally. This mod changes the timing rather than replacing the game's machine recipes.\n<br />[heading]Crystalarium[/heading]\n<br />Crystalariums have a repeating production cycle, so they receive some special handling.\n<br />With a custom processing time, each repeat cycle uses your configured value.\n<br />With Instant Output enabled, the next Crystalarium product becomes immediately ready after collection. Repeat products still require player interaction to collect, preventing recursive or uncontrolled automatic item generation.\n<br />[heading]Casks[/heading]\n<br />Casks use their own day-based settings instead of machine minutes.\n<br />You can configure how many days they take to reach Iridium quality or enable [b]Instant Iridium[/b].\n<br />[heading]Automate Compatibility[/heading]\n<br />[b]Automate is optional and is not required.[/b]\n<br />Manual insertion can use Instant Output normally, while automated machine input isn't redirected into the local player's inventory. This allows Automate to continue handling output through its normal chest-routing behavior.\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI 4.0+[/*]\n<br />[*]Generic Mod Config Menu — optional, but highly recommended for easy in-game configuration[/*]\n<br />[/list][heading]Installation[/heading]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Extract Configurable Machine Speed into your Stardew Valley \n<br />[code]Mods[/code]folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[*]Open Generic Mod Config Menu and configure each machine however you like.[/*]\n<br />[/list][heading]Source Code[/heading]\n<br />Source code is available on GitHub:\n<br />[url=https://github.com/Adit-Oli-Samping/Configurable-Machine-Speed]https://github.com/Adit-Oli-Samping/Configurable-Machine-Speed[/url]\n<br />Bug reports and feedback are welcome.[/left]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/45468",
-	"Version": "1.1.1",
-	"Updated": "2026-05-22T07:50:22+00:00",
+	"Version": "2.0.0",
+	"Updated": "2026-09-13T02:42:34+00:00",
 	"Downloads": [
 		{
-			"Id": 168460,
+			"Id": 182577,
 			"Type": "Main",
-			"DisplayName": "ConfigurableMachineSpeed 1.1.1",
-			"FileName": "ConfigurableMachineSpeed 1.1.1-45468-1-1-1-1779436222.zip",
-			"Description": "Requirements<br /><br />SMAPI 4.0.0 or later<br />Generic Mod Config Menu (optional, but recommended)",
-			"Version": "1.1.1",
-			"SizeInBytes": 12451,
-			"Uploaded": "2026-05-22T07:50:22+00:00",
+			"DisplayName": "ConfigurableMachineSpeed 2.0.0",
+			"FileName": "e3/c6/ab/e3c6ab84-9404-4e6d-b719-8132369cf989",
+			"Description": "Requirements\n\nSMAPI 4.0.0 or later\nGeneric Mod Config Menu (optional, but recommended)",
+			"Version": "2.0.0",
+			"SizeInBytes": 12973,
+			"Uploaded": "2026-09-13T02:42:34+00:00",
 			"Mods": [
 				{
 					"Id": "AditOliSamping.ConfigurableMachineSpeed",
@@ -28,7 +28,7 @@
 						"Name": "Configurable Machine Speed",
 						"Description": "Configure processing time (in minutes) for every machine. Instant Output sends product to inventory only when YOU manually insert items — Automate routes output to chests as normal.",
 						"Author": "Adit Oli Samping",
-						"Version": "1.1.1",
+						"Version": "2.0.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "ConfigurableMachineSpeed.dll",
 						"Dependencies": [
@@ -45,7 +45,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342555148,
+				"Uid": 5596342569265,
 				"CategoryId": 1,
 				"Primary": true
 			}
