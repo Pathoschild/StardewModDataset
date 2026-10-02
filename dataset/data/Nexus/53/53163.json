@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 53163,
+	"Name": "NPC Photo Request",
+	"Author": "WanderingInsanity",
+	"Description": "[size=5]Description[/size]\n<br />Request collectible photos, GIFs, and videos from NPCs. Friendship determines which heart folders are unlocked and the chance of refusal. Collect media, browse it in an album, replay it, or sell its inventory item for gold.\n<br />Supports vanilla and installed modded NPCs, with automatic character detection. Only AI-generated Abigail and Penny test images are included as examples 100 each. You’re welcome to create your own media packs.\n<br />This mod is a work in progress, originally made for personal use. The first video each session may take longer to load; later videos should load faster.\n<br />\n<br />[size=5]Installation instructions[/size]\n<br />[list=1]\n<br />[*]Extract the compiled mod into Stardew Valley/Mods, keeping all included files and folders together. Source downloads require compilation first.[/*]\n<br />[*]Launch through SMAPI and load your save to generate NPC folders.[/*]\n<br />[*]Add media to Pictures/&lt;NPC internal name&gt;/&lt;heart level&gt;/.[/*]\n<br />[/list]Example: Pictures/Abigail/4/photo.png\n<br />Use heart folders 0, 2, 4, 6, 8, and 10. At six hearts, folders 0, 2, 4, and 6 are eligible. Files directly inside an NPC folder are always eligible. Pictures/_Default/ supplies fallback media when no eligible files match the request.\n<br />New media is detected automatically. For custom NPCs, use their exact internal name and create the six heart folders. This supports an existing character; it does not create a new NPC.\n<br />\n<br />[size=5]Main features[/size]\n<br />[list]\n<br />[*]Press P to choose a photo, video/GIF, or random media request. Configure a fixed type or optional direct-request shortcuts.[/*]\n<br />[*]Prefer unseen media, with repeats allowed after collecting the eligible selection.[/*]\n<br />[*]Press K to browse the collection album. Filter by NPC, heart level, media type, or collected-only status.[/*]\n<br />[*]The album uses two compact columns where space allows. Green checks indicate collected media; red Xs indicate unreceived media. Hover for full details.[/*]\n<br />[*]New files refresh automatically in the open album. Missing collected files remain listed for restoration.[/*]\n<br />[*]Received media becomes an inventory item. Select it in your toolbar and right-click to replay it, or ship it for gold.[/*]\n<br />[*]Collection history remains after selling an item. When upgrading, known items in your current inventory are added; previously sold items cannot be recovered automatically.[/*]\n<br />[*]Videos and GIFs loop until closed. Viewer buttons provide pause, replay, volume, mute, and size controls where applicable.[/*]\n<br />[*]Choose original size, fit-to-screen, or fullscreen viewing. Video volume supports 0–150%. Playback shortcuts are unbound by default.[/*]\n<br />[*]Close the viewer with Esc, right-click, or its Close button.[/*]\n<br />[*]Press F8 to check pack folders, unsupported files, missing registered media, and invalid dialogue packs. Vortex backup files are ignored.[/*]\n<br />[*]Create NPC-specific dialogue in DialoguePacks/&lt;NPC internal name&gt;.json. Accepted, refused, and daily-limit responses can vary by heart tier; omitted tiers use built-in dialogue. See Examples/Abigail.json.[/*]\n<br />[*]Accepted requests show how many requests remain that day.[/*]\n<br />[*]Supports Stardew Valley Expanded, Ridgeside Village, East Scarp, and other installed NPCs.[/*]\n<br />[/list][size=5]Settings[/size]\n<br />Configure features and shortcuts through config.json or Generic Mod Config Menu.\n<br />[list]\n<br />[*]Daily requests: 3 per NPC by default. Refusals count; replays do not. Set 0 for unlimited requests.[/*]\n<br />[*]Refusal chances at 0/2/4/6/8/10 hearts: 65/50/45/30/15/5%.[/*]\n<br />[*]Item prices by source heart folder: 25/50/100/125/150/200g.[/*]\n<br />[*]Odd friendship levels use the lower even tier.[/*]\n<br />[*]Video preloading is enabled by default.[/*]\n<br />[*]Additional settings control album previews and refresh, unseen-media preference, request type, playback controls, volume, mute, pause on opening, viewer size, pack checking, custom dialogue, and remaining-request messages.[/*]\n<br />[*]Existing configs retain their saved values. Set MaxRequestsPerNpcPerDay to 3 to adopt the new default.[/*]\n<br />[/list]Supported pictures: PNG, JPG/JPEG, BMP, GIF, WebP, TIF/TIFF, TGA.\n<br />Supported videos: MP4, M4V, MOV, MKV, WebM, AVI. GIFs count as videos for requests and dialogue. Video playback depends on the codecs inside the file; not every combination has been tested.\n<br />Media pack permissions\n<br />You may create and upload your own image and video packs. Include only content you created or have permission to share. Do not reupload the mod, its code, or its original included assets without permission from WanderingInsanity. Third-party components remain covered by their included licenses.\n<br />\n<br />[size=5]Requirements[/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6.x and SMAPI 4.0+.[/*]\n<br />[*]Windows x64 for the bundled video runtime.[/*]\n<br />[*]Keep the included ImageSharp, LibVLCSharp, native VLC files, and licensing folders.[/*]\n<br />[*]Generic Mod Config Menu is optional.[/*]\n<br />[*]Intended for single-player. Collection progress is tracked per farmer; multiplayer collection sharing is not implemented.[/*]\n<br />[/list][size=5]Shout outs[/size]\n<br />Thanks to the creators of SMAPI, Generic Mod Config Menu, ImageSharp, LibVLCSharp, VideoLAN, FFmpeg, and the Stardew Valley modding community.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53163",
+	"Version": "1.6.2",
+	"Updated": "2026-10-01T20:44:01+00:00",
+	"Downloads": [
+		{
+			"Id": 185158,
+			"Type": "Main",
+			"DisplayName": "NPCPhotoRequest 1.6.2",
+			"FileName": "24/0d/3e/240d3e90-c3dd-4092-8c5b-e7a0a4474116",
+			"Description": "",
+			"Version": "1.6.2",
+			"SizeInBytes": 97180078,
+			"Uploaded": "2026-10-01T20:44:01+00:00",
+			"Mods": [
+				{
+					"Id": "WanderingInsanity.NPCPhotoRequest",
+					"DisplayName": "NPC Photo Request",
+					"Type": "Smapi",
+					"RelativePath": "NPCPhotoRequest",
+					"Manifest": {
+						"Name": "NPC Photo Request",
+						"Description": "Collect NPC photos and videos, browse your album, request unseen media, and customize playback, packs and dialogue.",
+						"Author": "WanderingInsanity",
+						"Version": "1.6.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "NPCPhotoRequest.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53163"
+						],
+						"UniqueId": "WanderingInsanity.NPCPhotoRequest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571846,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439851,
+		"UploaderId": 4631274,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -5,29 +5,29 @@
 	"Author": "MasterRoshiHEHE",
 	"Description": "\n<br />[size=4][b]Live Appearance Framework[/b][/size]\n<br />[size=2][i]By Master Roshi (kinda)[/i][/size]\n<br />[b]What It Does[/b]\n<br />LAF updates NPC sprites and portraits [b]in real-time[/b] while you're watching—not just at day start or warps. This lets modders create fluid appearance transitions throughout the day: outfit changes on schedule, location-based looks, idle animations, and custom movement routines that feel alive.\n<br />[b]Key Features[/b]\n<br />[list]\n<br />[][b]Schedule-Aware Outfits:[/b] Change appearances based on what an NPC is doing today. Works with any schedule mod (Harem Valley, Xtardew, vanilla, etc.). No mod-specific coding needed.\n<br />[][b]7 Schedule Queries:[/b] Check if an NPC visits a location, when they leave, how many minutes until departure, their current route, and more. Build outfit logic around schedules that actually change day-to-day.\n<br />[][b]Idle Poses:[/b] Custom frame animations for standing NPCs—lying on the beach, sitting at a desk, or dancing in town. Supports shuffled pose stages, intro/outro transitions, and pose-to-outfit pairing.\n<br />[][b]Detours:[/b] Queue custom movement routines (walk to the dresser, change clothes, walk back) that fit between schedule stops without making NPCs late.\n<br />[][b]Event-Safe:[/b] Events using custom spritesheets won't break—LAF detects event actors and avoids overriding their intended appearance.\n<br />[][b]Animation Guards:[/b] Handles frame availability, animation fallbacks, and repair of interrupted animations automatically.\n<br />[/list][b]For Modders[/b]\n<br />Define appearance entries in Content Patcher with LAF's Game State Queries (GSQs):\n<br />[list]\n<br />[][b]MasterRoshiHehe.LiveAppearanceFramework_SCHEDULE_VISITS[/b] Haley Beach\n<br />[][b]MasterRoshiHehe.LiveAppearanceFramework_SCHEDULE_MINUTES_BEFORE_LEAVING[/b] Beach 20\n<br />[][b]MasterRoshiHehe.LiveAppearanceFramework_NPC_IN_POSE[/b] Haley BeachTowel\n<br />[]...and 4 more schedule queries for precise control.\n<br />[/list]LAF re-checks conditions on clock ticks, warps, schedule changes, dialogues, and pose transitions—so your outfits stay synced with gameplay.\n<br />[b]Works With[/b]\n<br />Optional GMCM for settings. Console commands (laf_watch, laf_why, laf_schedule) for debugging. Integrates with Animated Portrait Framework for portraits, Positional Audio for sound cues on pose changes, and any schedule-modifying mod.\n<br />[b]Install[/b]\n<br />Drop in your SMAPI mods folder. Requires SMAPI 4.5.2+.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52940",
-	"Version": "0.2.2",
-	"Updated": "2026-09-29T00:57:20+00:00",
+	"Version": "0.2.3",
+	"Updated": "2026-10-01T01:31:18+00:00",
 	"Downloads": [
 		{
-			"Id": 184618,
+			"Id": 184998,
 			"Type": "Main",
 			"DisplayName": "Live Appearance Framework",
-			"FileName": "eb/54/e4/eb54e4b7-e583-4181-8091-913d7da857af",
-			"Description": "",
-			"Version": "0.2.2",
-			"SizeInBytes": 103194,
-			"Uploaded": "2026-09-29T00:57:20+00:00",
+			"FileName": "cf/62/84/cf628407-3121-4d05-8c40-232405cef4c1",
+			"Description": "Please report any issues in the 'Bugs' section!",
+			"Version": "0.2.3",
+			"SizeInBytes": 125695,
+			"Uploaded": "2026-10-01T01:31:18+00:00",
 			"Mods": [
 				{
 					"Id": "MasterRoshiHehe.LiveAppearanceFramework",
-					"DisplayName": "Live Appearance Framework",
+					"DisplayName": "Live Appearance Framework LAF",
 					"Type": "Smapi",
 					"RelativePath": "LiveAppearanceFramework",
 					"Manifest": {
-						"Name": "Live Appearance Framework",
+						"Name": "Live Appearance Framework LAF",
 						"Description": "Re-checks NPC Appearance entries (Data/Characters) during the day, so outfits controlled by Content Patcher change live: on clock changes, when an NPC moves or animates, and on request.",
 						"Author": "MasterRoshiHehe",
-						"Version": "0.2.2",
+						"Version": "0.2.3",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "LiveAppearanceFramework.dll",
 						"Dependencies": [
@@ -44,7 +44,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342571306,
+				"Uid": 5596342571686,
 				"CategoryId": 1,
 				"Primary": true
 			}
