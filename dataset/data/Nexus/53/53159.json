@@ -3,10 +3,10 @@
 	"Id": 53159,
 	"Name": "Synchronized Tree Growth",
 	"Author": "thoraxe12",
-	"Description": "Synchronized Tree Growth\n<br />[url=https://github.com/Thoraxe12/SynchronizedTreeGrowth#synchronized-tree-growth][/url]\n<br />A Stardew Valley mod that makes your farm's forestry much more predictable and visually satisfying. Instead of trees growing at random, independent rates, this mod synchronizes them so that all unfertilized trees on your farm advance to their next growth stage together on the exact same day.\n<br />[heading]Features[/heading]\n<br />[url=https://github.com/Thoraxe12/SynchronizedTreeGrowth#features][/url]\n<br />[list]\n<br />[*][b]Unified Forest Growth:[/b] All unfertilized standard trees (Oak, Maple, Pine, Mahogany) share a single daily growth roll. When one grows, they all grow.[/*]\n<br />[*][b]Vanilla-Friendly Winter Rules:[/b] Seamlessly respects standard game mechanics. Unfertilized trees will naturally pause their growth during the Winter season.[/*]\n<br />[*][b]Full Tree Fertilizer Compatibility:[/b] Tree Fertilizer works exactly as intended. Fertilized trees bypass the synchronization and grow one stage every single night, year-round, handled safely by the base game.[/*]\n<br />[*][b]Lightweight &amp; Safe:[/b] Uses smart state-snapshotting to prevent double-growth bugs and minimizes performance impact by letting the base game handle edge cases.[/*]\n<br />[/list][heading]Installation[/heading]\n<br />[url=https://github.com/Thoraxe12/SynchronizedTreeGrowth#installation][/url]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url].[/*]\n<br />[*]Download the latest release from the [url=https://github.com/Thoraxe12/SynchronizedTreeGrowth/releases]Releases[/url] page (or Nexus Mods, if applicable).[/*]\n<br />[*]Unzip the downloaded file and place the \n<br />[code]SynchronizedTreeGrowth[/code]folder into your \n<br />[code]Stardew Valley/Mods[/code]directory.[/*]\n<br />[*]Launch the game using SMAPI.[/*]\n<br />[/list][heading]Compatibility[/heading]\n<br />[url=https://github.com/Thoraxe12/SynchronizedTreeGrowth#compatibility][/url]\n<br />[list]\n<br />[*]Requires [b]Stardew Valley 1.6+[/b][/*]\n<br />[*]Requires [b]SMAPI 4.0.0+[/b][/*]\n<br />[*]Works in both single-player and multiplayer (install on the host machine).[/*]\n<br />[*]Safely ignores Fruit Trees, custom trees lacking standard properties, and fully grown trees.[/*]\n<br />[/list][heading]For Developers (Compiling from Source)[/heading]\n<br />[url=https://github.com/Thoraxe12/SynchronizedTreeGrowth#for-developers-compiling-from-source][/url]\n<br />If you want to modify the code or adjust the internal growth chance (currently set to \n<br />[code]0.99[/code]), you can easily compile the mod yourself:\n<br />[list=1]\n<br />[*]Clone this repository.[/*]\n<br />[*]Ensure you have the [url=https://dotnet.microsoft.com/download].NET 8.0 SDK[/url] installed.[/*]\n<br />[*]Open the \n<br />[code].sln[/code]or \n<br />[code].csproj[/code]in your preferred IDE (Visual Studio, Rider, VS Code) or run \n<br />[code]dotnet build[/code]from the command line.[/*]\n<br />[*]The compiled mod will automatically deploy to your \n<br />[code]Mods[/code]folder if your system environment variables are set up for SMAPI, or you can manually copy the output from the \n<br />[code]bin[/code]folder.[/*]\n<br />[/list][heading]License[/heading]\n<br />[url=https://github.com/Thoraxe12/SynchronizedTreeGrowth#license][/url]\n<br />This project is licensed under the MIT License - see the [url=https://github.com/Thoraxe12/SynchronizedTreeGrowth/blob/main/LICENSE]LICENSE[/url] file for details.",
+	"Description": "\n<br />[size=6][b]Synchronized Tree Growth[/b][/size]\n<br />\n<br />A Stardew Valley mod that makes your farm's forestry much more predictable and visually satisfying. Instead of trees growing at random, independent rates, this mod synchronizes them so that all unfertilized trees on your farm advance to their next growth stage together on the exact same day. Both the growth chance and if all trees or just farm trees are configurable using Generic Mod Config Menu (GMCM).\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Unified Forest Growth:[/b] All unfertilized standard trees (Oak, Maple, Pine, Mahogany) share a single daily growth roll. When one grows, they all grow.[/*]\n<br />[*][i][b]Vanilla-Friendly Winter Rules:[/b] Seamlessly respects standard game mechanics. Unfertilized trees will naturally pause their growth during the Winter season.[/i][/*]\n<br />[*][b]Full Tree Fertilizer Compatibility:[/b] Tree Fertilizer works exactly as intended. Fertilized trees bypass the synchronization and grow one stage every single night, year-round, handled safely by the base game.[/*]\n<br />[*][i][b]Lightweight &amp; Safe:[/b] Uses smart state-snapshotting to prevent double-growth bugs and minimizes performance impact by letting the base game handle edge cases.[/i][/*]\n<br />[*][b]Configurable[/b]: Growth chance and which trees can be configured using GMCM.[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install the latest version of SMAPI.[/*]\n<br />[*]Download the latest release from the Releases page (or Nexus Mods, if applicable).[/*]\n<br />[*]Unzip the downloaded file and place the [mono]SynchronizedTreeGrowth[/mono] folder into your [mono]Stardew Valley/Mods[/mono] directory.[/*]\n<br />[*](Optional) Download latest version of GMCM and place it in you [mono]Stardew Valley/Mods[/mono] directory.[/*]\n<br />[*]Launch the game using SMAPI.[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Requires [b]Stardew Valley 1.6+[/b][/*]\n<br />[*][i]Requires [b]SMAPI 4.0.0+[/b][/i][/*]\n<br />[*]Optional [b]GMCM 1.16.0+[/b][/*]\n<br />[*][i]Works in both single-player and multiplayer (install on the host machine).[/i][/*]\n<br />[*]Safely ignores Fruit Trees, custom trees lacking standard properties, and fully grown trees.[/*]\n<br />[/list]\n<br />[size=4][b]For Developers (Compiling from Source)[/b][/size]\n<br />\n<br />If you want to modify the code or adjust the internal growth chance (currently set to [mono]0.99[/mono]), you can easily compile the mod yourself:\n<br />[list=1]\n<br />[*]Clone this repository.[/*]\n<br />[*]Ensure you have the .NET 8.0 SDK installed.[/*]\n<br />[*]Open the [mono].sln[/mono] or [mono].csproj[/mono] in your preferred IDE (Visual Studio, Rider, VS Code) or run [mono]dotnet build[/mono] from the command line.[/*]\n<br />[*]The compiled mod will automatically deploy to your [mono]Mods[/mono] folder if your system environment variables are set up for SMAPI, or you can manually copy the output from the [mono]bin[/mono] folder.[/*]\n<br />[/list]\n<br />[size=4][b]License[/b][/size]\n<br />\n<br />This project is licensed under the MIT License - see the [url=LICENSE]LICENSE[/url] file for details.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53159",
-	"Version": "1",
-	"Updated": "2026-10-01T01:40:04+00:00",
+	"Version": "3",
+	"Updated": "2026-10-02T19:40:07+00:00",
 	"Downloads": [
 		{
 			"Id": 185006,
@@ -41,6 +41,80 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342571694,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185298,
+			"Type": "Main",
+			"DisplayName": "SynchronizedTreeGrowth 1.1.0",
+			"FileName": "9b/e2/db/9be2db81-1e51-4769-aa31-4de9b79f865f",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 13628,
+			"Uploaded": "2026-10-02T19:24:10+00:00",
+			"Mods": [
+				{
+					"Id": "JonathanOwney.SynchronizedTreeGrowth",
+					"DisplayName": "Synchronized Tree Growth",
+					"Type": "Smapi",
+					"RelativePath": "SynchronizedTreeGrowth",
+					"Manifest": {
+						"Name": "Synchronized Tree Growth",
+						"Description": "This mod makes all trees on the farm grow together. Original runs RNG on each tree.",
+						"Author": "Jonathan Owney",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SynchronizedTreeGrowth.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:Thoraxe12/SynchronizedTreeGrowth",
+							"Nexus:53159"
+						],
+						"UniqueId": "JonathanOwney.SynchronizedTreeGrowth"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571986,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185299,
+			"Type": "Main",
+			"DisplayName": "SynchronizedTreeGrowth 1.1.1",
+			"FileName": "53/fe/8a/53fe8a56-819e-4fd6-8343-034ff3997bfa",
+			"Description": "",
+			"Version": "3",
+			"SizeInBytes": 13634,
+			"Uploaded": "2026-10-02T19:40:07+00:00",
+			"Mods": [
+				{
+					"Id": "JonathanOwney.SynchronizedTreeGrowth",
+					"DisplayName": "Synchronized Tree Growth",
+					"Type": "Smapi",
+					"RelativePath": "SynchronizedTreeGrowth",
+					"Manifest": {
+						"Name": "Synchronized Tree Growth",
+						"Description": "This mod makes all trees on the farm grow together. Original runs RNG on each tree.",
+						"Author": "Jonathan Owney",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SynchronizedTreeGrowth.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:Thoraxe12/SynchronizedTreeGrowth",
+							"Nexus:53159"
+						],
+						"UniqueId": "JonathanOwney.SynchronizedTreeGrowth"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342571987,
 				"CategoryId": 1,
 				"Primary": true
 			}
