@@ -1,0 +1,114 @@
+{
+	"Site": "Nexus",
+	"Id": 53452,
+	"Name": "Wilcox Farm Compatibility and Settings",
+	"Author": "fudgy102",
+	"AuthorLabel": "Wilcox",
+	"Description": "A companion for the Wilcox Farm Windows Collection. Installs Wilcox's Realty compatibility mod and the shared settings used by the server. This add-on is not the full Collection.\n<br />\n<br />Requirements: Stardew Valley 1.6.15, SMAPI 4.5.2, Stardew Realty exactly 3.0.0, Multiple Farms For Multiplayer 2.2.6, HxW Custom Buildings All in One 2.0, and Ultimate Coop and Barn 1.8.22. Use the matching pinned pack.\n<br />\n<br />Release 0.3.2 includes compatibility DLL 0.1.1. It checks the original Realty DLL's SHA256 before applying runtime compatibility hooks. It handles dedicated-server startup, null menus and Realty purchase notifications in multiplayer. The new Windows fix skips only Vortex's __folder_managed_by_vortex bookkeeping file when Realty reads additional-farm configs. Real config validation stays intact. No original Realty DLL is replaced or redistributed.\n<br />\n<br />Shared settings enable Forest and Meadowlands extra farms without free starter items or buildings; select HxW's building mode and empty interiors; and disable the Ultimate pack's unselected vanilla/SVE upgrades.\n<br />\n<br />Install through Vortex. The FOMOD automatically copies five files. The Collection makes this add-on win three configuration-file conflicts. This ZIP targets Windows Vortex; the Mac setup route and Unix path preparation are separate. Use a clean Mods folder: switching Vortex profiles does not hide manually installed mods.\n<br />\n<br />Validation: the pinned pack has passed isolated game/server tests for farmhand reconnect, purchased Realty land, construction and save/reload. Release 0.3.2 also passed the native Vortex FOMOD engine, 10 Vortex/Realty regression checks and 8 startup checks. An isolated Windows client loaded all pack modules and both Realty maps with the Vortex marker present, logging zero errors and warnings. Installation from the final published Collection and an external Steam player join remain to be verified; native Mac testing is pending.\n<br />\n<br />Credits: original mod authors retain all rights to their mods. This download contains only Wilcox's compatibility code, source and chosen settings. It contains no game files, original third-party mod archives, saves or credentials. LICENSE.txt permits copying, modifying and sharing our own files.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53452",
+	"Version": "0.3.2",
+	"Updated": "2026-10-06T02:31:26+00:00",
+	"Downloads": [
+		{
+			"Id": 185644,
+			"Type": "Main",
+			"DisplayName": "Wilcox Compatibility 0.3.2 - Windows Vortex",
+			"FileName": "8d/61/4e/8d614e0d-6b90-4717-9af7-0107f106a7c1",
+			"Description": "",
+			"Version": "0.3.2",
+			"SizeInBytes": 15318,
+			"Uploaded": "2026-10-06T02:31:26+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Multiplayer Farms\\MPF_Code",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Multiplayer Farms\\MPF_Code",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.RealtyCompatibility",
+					"DisplayName": "Wilcox Realty Compatibility",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxRealtyCompat",
+					"Manifest": {
+						"Name": "Wilcox Realty Compatibility",
+						"Description": "Version-pinned startup, multiplayer notice, null-menu and Vortex compatibility for Stardew Realty 3.0.0.",
+						"Author": "Wilcox",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxRealtyCompat.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "prism99.advize.stardewrealty",
+								"MinimumVersion": "3.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.RealtyCompatibility"
+					}
+				},
+				{
+					"Id": "Wilcox.RealtyCompatibility",
+					"DisplayName": "Wilcox Realty Compatibility",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Realty Compatibility",
+						"Description": "Version-pinned startup, multiplayer notice, null-menu and Vortex compatibility for Stardew Realty 3.0.0.",
+						"Author": "Wilcox",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxRealtyCompat.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "prism99.advize.stardewrealty",
+								"MinimumVersion": "3.0.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.RealtyCompatibility"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572332,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440140,
+		"UploaderId": 277842103,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

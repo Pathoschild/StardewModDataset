@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 53419,
+	"Name": "Traveler's map-Compatibility with Ridgeside Village",
+	"Author": "dizziRD",
+	"AuthorLabel": "DizziRD Dipendor",
+	"Description": "\"Compatibility with Ridgeside\".\n<br />\n<br />v0.1.1\n<br />Fixed the teleport destination.\n<br />The mod was passing the area's centre in world-map pixels to warpFarmer, which\n<br />expects tile coordinates, so every zone landed on the same broken spot. The warp\n<br />target is now the centre of the destination map in tiles, read from Ridgeside's own\n<br />.tmx files, with a fallback to the village centre (85, 75) for unknown maps. Added\n<br />per-map nudges for spots where the exact centre is blocked, and the target is now\n<br />clamped to the map bounds.\n<br />Fixed the hover overlay.\n<br />The highlighted area was drawn as a large translucent block. It is now a 3px outline.\n<br />Removed the debug logging and the sound effects, which are not valid ids in this\n<br />game (danDrop, dropdown, woolStep).\n<br />Open the Ridgeside map with the hotkey (default R, see config.json). Right click to\n<br />go back.\n<br />\n<br />\n<br />\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53419",
+	"Version": "0.1.1",
+	"Updated": "2026-10-05T18:16:38+00:00",
+	"Downloads": [
+		{
+			"Id": 185607,
+			"Type": "Main",
+			"DisplayName": "Ridgeside Village For Traveler'S Map V0.1.1",
+			"FileName": "a4/a4/e8/a4a4e8d3-db24-4184-a51f-587dce18f836",
+			"Description": "",
+			"Version": "0.1.1",
+			"SizeInBytes": 44101,
+			"Uploaded": "2026-10-05T18:16:38+00:00",
+			"Mods": [
+				{
+					"Id": "dizziRD.RSVTravelersMapForce",
+					"DisplayName": "Ridgeside Village for Traveler's Map",
+					"Type": "Smapi",
+					"RelativePath": "Ridgeside Village for Traveler's Map",
+					"Manifest": {
+						"Name": "Ridgeside Village for Traveler's Map",
+						"Description": "Adds a Ridgeside button to Traveler's Map that opens the Ridgeside world map with clickable areas you can teleport to for a fee. Patches Traveler's Map at runtime; does not modify its files.",
+						"Author": "dizziRD",
+						"Version": "0.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "RSVTravelersMapForce.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Dipendor.TravelersMap",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Rafseazz.RSVCP",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53419"
+						],
+						"UniqueId": "dizziRD.RSVTravelersMapForce"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572295,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440107,
+		"UploaderId": 165711218,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

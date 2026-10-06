@@ -1,0 +1,86 @@
+{
+	"Site": "Nexus",
+	"Id": 53427,
+	"Name": "Reverse Undo Revert Rollback events",
+	"Author": "K1riko87",
+	"Description": "[heading]中文版[/heading]\n<br />《时光账簿》为《星露谷物语》加入最近事件回溯功能。\n<br />它不会让整个世界倒流，也不会重新载入当天存档。模组只记录最近发生的可逆操作，让你从事件列表中选择其中一项，并在确认安全后撤回。\n<br />打开事件账簿\n<br />进入存档后按 [b]Alt+F5[/b] 打开自己的事件面板。\n<br />面板会列出最近可以回溯的操作，包括事件类型、相关物品、发生时间和受影响对象。使用鼠标、滚轮或\n<br />[code]W/S[/code]选择记录，再按\n<br />[code]Enter[/code]或点击“回溯”确认。\n<br />默认显示最近 [b]60 个现实秒[/b]内的记录。你也可以在面板底部切换常用时长，或者选择“当天”，查看本游戏日内保存的全部记录。\n<br />缩短显示范围不会删除较早的事件；重新扩大范围后，它们仍会出现。\n<br />支持回溯的事件\n<br />当前版本支持：\n<br />[list]\n<br />[*]在普通金币商店购买物品。[/*]\n<br />[*]向普通金币商店出售物品。[/*]\n<br />[*]将物品放入农场的大收集箱。[/*]\n<br />[*]向普通村民赠送礼物。[/*]\n<br />[*]向机器投入材料并开始加工。[/*]\n<br />[*]用工具挖起仍在工作的机器。[/*]\n<br />[*]放置炸弹后造成的爆炸破坏。[/*]\n<br />[/list]不同事件会使用相应的原版图标，例如物品、机器、NPC 肖像、炸弹和迷你售货箱图标，方便快速辨认。\n<br />撤回购买和出售\n<br />撤回购买时，模组会检查玩家持有的物品和金币是否仍与购买后的状态一致。验证通过后，物品会被收回，花费的金币也会退还。\n<br />撤回出售或大收集箱操作时，物品会重新回到背包。背包已满时，从大收集箱撤回的物品会生成在玩家身边，不会直接丢失。\n<br />撤回送礼\n<br />送错礼物后，可以通过时光账簿恢复送礼前的状态。\n<br />模组会检查赠送的物品、NPC 好感以及相关状态是否仍然匹配。若这些内容之后又发生了变化，为避免覆盖新的关系进度，本次回溯会被拒绝。\n<br />撤回机器操作\n<br />向机器投入错误材料，或者不小心挖起正在工作的机器时，可以尝试撤回对应记录。\n<br />时光账簿会保存并验证：\n<br />[list]\n<br />[*]机器类型与所在位置。[/*]\n<br />[*]机器内部的加工物品。[/*]\n<br />[*]剩余加工时间。[/*]\n<br />[*]玩家背包中的相关物品。[/*]\n<br />[/list]验证通过后，机器会恢复到操作发生前的状态。\n<br />恢复炸弹破坏\n<br />炸弹事件会记录爆炸造成的相关变化。\n<br />如果爆炸摧毁了正在工作的机器，回溯可以恢复机器、内部物品以及剩余加工时间。即使机器掉落物已经被玩家拾取，模组也会在恢复机器时从背包中移除对应掉落，避免复制物品。\n<br />如果爆炸后的相关地块或物品又被改变，回溯会被拒绝，以免覆盖后续操作。\n<br />关联事件处理\n<br />部分事件会依赖更早发生的操作。\n<br />例如：\n<br />[list=1]\n<br />[*]购买一条鱼。[/*]\n<br />[*]把鱼放进熏鱼机。[/*]\n<br />[*]卖掉加工后的成品。[/*]\n<br />[/list]如果选择回溯最初的购买事件，后面的机器加工和出售也必须一并处理。面板会提前列出所有关联记录，并按照从新到旧的顺序撤回。\n<br />如果其中某项已经无法安全恢复，整条回溯计划会被拒绝。\n<br />安全验证\n<br />执行回溯前，模组会检查相关状态是否仍与记录一致，包括：\n<br />[list]\n<br />[*]背包物品。[/*]\n<br />[*]玩家金币。[/*]\n<br />[*]NPC 友情。[/*]\n<br />[*]机器及其加工状态。[/*]\n<br />[*]地块与放置物。[/*]\n<br />[*]爆炸产生的掉落。[/*]\n<br />[*]关联事件。[/*]\n<br />[/list]如果这些内容之后被玩家、游戏或其他 Mod 修改，时光账簿不会强行覆盖，而是取消回溯并说明原因。\n<br />联机审批\n<br />每位玩家只能看到自己的事件记录，其他玩家无法直接查看完整列表。\n<br />[list]\n<br />[*]房主可以直接回溯自己的事件。[/*]\n<br />[*]其他玩家确认后，会向房主发送回溯申请。[/*]\n<br />[*]房主可以查看事件类型、申请玩家和影响数量，并选择批准或拒绝。[/*]\n<br />[*]房主也可以开启“允许其他玩家免审批回溯”。[/*]\n<br />[/list]即使开启免审批，实际回溯仍由房主端执行，确保联机状态一致。所有参与联机的玩家都应安装相同版本的 Mod。\n<br />记录范围与保存方式\n<br />事件记录只保存在内存中：\n<br />[list]\n<br />[*]换天时清空。[/*]\n<br />[*]返回标题画面时清空。[/*]\n<br />[*]不写入游戏存档。[/*]\n<br />[*]不能跨游戏日回溯。[/*]\n<br />[/list]首次启动后，可以在\n<br />[code]config.json[/code]中修改：\n<br />[list]\n<br />[*][code]HistorySeconds[/code]：记录显示时长，最低为 10 秒。[/*]\n<br />[*][code]HistorySeconds = 0[/code]：显示本游戏日的全部记录。[/*]\n<br />[*][code]MenuKeybind[/code]：修改面板快捷键。[/*]\n<br />[*][code]AllowOtherPlayersDirectUndo[/code]：允许其他玩家免审批回溯。[/*]\n<br />[/list]不支持回溯的内容\n<br />为避免破坏存档进度，以下内容不会记录为可撤回事件：\n<br />[list]\n<br />[*]配方购买。[/*]\n<br />[*]背包升级。[/*]\n<br />[*]建筑和其他服务。[/*]\n<br />[*]特殊剧情交易。[/*]\n<br />[*]任务物品提交。[/*]\n<br />[*]求婚物品。[/*]\n<br />[*]非金币商店。[/*]\n<br />[*]整天或跨天进度。[/*]\n<br />[/list]安装要求\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI 4.0 或更高版本[/*]\n<br />[*]联机玩家需要安装相同版本[/*]\n<br />[*]中文版和英文版只能选择一个安装包；界面语言会跟随游戏设置[/*]\n<br />[/list][line]\n<br />[heading]English Version[/heading]\n<br />Time Ledger adds a recent-event undo system to Stardew Valley.\n<br />It does not rewind the entire world or reload the current day. Instead, it records supported actions for a limited period, lets you select an event, and restores its previous state only when doing so is still safe.\n<br />Opening Time Ledger\n<br />Press [b]Alt+F5[/b] after loading a save to open your personal event history.\n<br />The panel lists recent undoable actions with their event type, relevant item, age, and affected target. Select an event using the mouse, scroll wheel, or\n<br />[code]W/S[/code], then press\n<br />[code]Enter[/code]or click [b]Undo[/b].\n<br />By default, the panel displays events from the past [b]60 real-time seconds[/b]. Use the controls at the bottom to switch between common time ranges or select [b]Today[/b] to view every retained event from the current in-game day.\n<br />Reducing the visible range does not delete older records. They will reappear if you expand the range again.\n<br />Supported events\n<br />The current version can record and undo:\n<br />[list]\n<br />[*]Purchases from regular gold-based shops.[/*]\n<br />[*]Sales made to regular gold-based shops.[/*]\n<br />[*]Items placed in the farm’s main shipping bin.[/*]\n<br />[*]Gifts given to regular villagers.[/*]\n<br />[*]Items loaded into processing machines.[/*]\n<br />[*]Working machines removed with a tool.[/*]\n<br />[*]Damage caused by placed bombs.[/*]\n<br />[/list]Entries use familiar in-game icons, including item sprites, machines, NPC portraits, bomb types, and the mini shipping-bin icon.\n<br />Undoing purchases and sales\n<br />When undoing a purchase, the mod verifies that the relevant item and money state still match the recorded transaction. If validation succeeds, the purchased item is removed and the spent gold is returned.\n<br />When undoing a sale or shipping-bin action, the item is restored to the player. If the inventory is full, an item recovered from the main shipping bin is placed safely beside the player.\n<br />Undoing gifts\n<br />If you give the wrong item to a villager, Time Ledger can restore the state from before the gift.\n<br />The mod verifies the item, friendship value, and related NPC state first. If that relationship or item state has changed since the gift was recorded, the undo is rejected rather than overwriting newer progress.\n<br />Undoing machine actions\n<br />Loading the wrong ingredient into a machine or accidentally removing a working machine can also be undone.\n<br />Time Ledger records and validates:\n<br />[list]\n<br />[*]The machine type and location.[/*]\n<br />[*]Its processing item.[/*]\n<br />[*]Its remaining processing time.[/*]\n<br />[*]Related items in the player’s inventory.[/*]\n<br />[/list]If everything still matches, the machine is returned to its previous state.\n<br />Restoring bomb damage\n<br />Bomb events record the relevant changes caused by an explosion.\n<br />If a bomb destroys a working machine, undoing the event can restore the machine, its input, and its remaining processing time. If the dropped machine has already been collected, the matching item is removed from the inventory during restoration to prevent duplication.\n<br />If the affected tiles or items have changed since the explosion, the undo is safely rejected.\n<br />Linked events\n<br />Some actions depend on earlier events.\n<br />For example:\n<br />[list=1]\n<br />[*]You buy a fish.[/*]\n<br />[*]You place it in a smoker.[/*]\n<br />[*]You sell the processed item.[/*]\n<br />[/list]Undoing the original purchase also requires the later machine and sale events to be reverted. Time Ledger shows the complete linked plan before confirmation and processes it from newest to oldest.\n<br />If any required event can no longer be restored safely, the linked undo is rejected.\n<br />Safety validation\n<br />Before changing anything, Time Ledger checks the current state of:\n<br />[list]\n<br />[*]Inventory items.[/*]\n<br />[*]Player money.[/*]\n<br />[*]NPC friendship.[/*]\n<br />[*]Machines and processing states.[/*]\n<br />[*]Tiles and placed objects.[/*]\n<br />[*]Explosion drops.[/*]\n<br />[*]Linked events.[/*]\n<br />[/list]If any related state has since been changed by the player, the game, or another mod, Time Ledger cancels the undo instead of overwriting newer progress.\n<br />Multiplayer approval\n<br />Each player can only see their own complete event history.\n<br />[list]\n<br />[*]The host can undo their own events directly.[/*]\n<br />[*]Farmhands send an undo request to the host.[/*]\n<br />[*]The host can review the player, event type, and number of affected records before approving or denying it.[/*]\n<br />[*]The host may enable direct undo for other players.[/*]\n<br />[/list]Even with approval disabled, farmhand undos are still executed by the host to keep the multiplayer state synchronized. Every player should have the same version of the mod installed.\n<br />History and persistence\n<br />Event records are kept in memory only:\n<br />[list]\n<br />[*]They are cleared when a new day begins.[/*]\n<br />[*]They are cleared when returning to the title screen.[/*]\n<br />[*]They are never written into the save file.[/*]\n<br />[*]Events cannot be undone across in-game days.[/*]\n<br />[/list]The generated\n<br />[code]config.json[/code]can be used to change:\n<br />[list]\n<br />[*][code]HistorySeconds[/code]: History duration, with a minimum of 10 seconds.[/*]\n<br />[*][code]HistorySeconds = 0[/code]: Keep and display all records from the current day.[/*]\n<br />[*][code]MenuKeybind[/code]: Change the menu shortcut.[/*]\n<br />[*][code]AllowOtherPlayersDirectUndo[/code]: Allow farmhands to undo without individual approval.[/*]\n<br />[/list]Unsupported actions\n<br />To protect save progression, Time Ledger does not record:\n<br />[list]\n<br />[*]Recipe purchases.[/*]\n<br />[*]Backpack upgrades.[/*]\n<br />[*]Buildings and other services.[/*]\n<br />[*]Special story transactions.[/*]\n<br />[*]Quest turn-ins.[/*]\n<br />[*]Proposal items.[/*]\n<br />[*]Non-gold shops.[/*]\n<br />[*]Full-day or cross-day progress.[/*]\n<br />[/list]Requirements\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI 4.0 or later[/*]\n<br />[*]The same mod version for all multiplayer players[/*]\n<br />[*]Install either the Chinese or English package, not both; the interface follows the game language[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53427",
+	"Version": "1",
+	"Updated": "2026-10-06T00:59:46+00:00",
+	"Downloads": [
+		{
+			"Id": 185635,
+			"Type": "Main",
+			"DisplayName": "Time Ledger 0.1.3 Chinese",
+			"FileName": "02/4e/62/024e62f0-fe3d-4c2b-988c-c057e43060c8",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 60584,
+			"Uploaded": "2026-10-06T00:59:36+00:00",
+			"Mods": [
+				{
+					"Id": "TimeLedger.RecentUndo",
+					"DisplayName": "时光账簿",
+					"Type": "Smapi",
+					"RelativePath": "TimeLedger",
+					"Manifest": {
+						"Name": "时光账簿",
+						"Description": "可由房主审批的多人联机近期事件回溯。",
+						"Author": "TimeLedger",
+						"Version": "0.1.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TimeLedger.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "TimeLedger.RecentUndo"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572323,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185636,
+			"Type": "Main",
+			"DisplayName": "Time Ledger 0.1.3 English",
+			"FileName": "65/2c/bc/652cbc45-e63e-4535-ab6a-14381d177e89",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 59760,
+			"Uploaded": "2026-10-06T00:59:46+00:00",
+			"Mods": [
+				{
+					"Id": "TimeLedger.RecentUndo",
+					"DisplayName": "Time Ledger",
+					"Type": "Smapi",
+					"RelativePath": "TimeLedger",
+					"Manifest": {
+						"Name": "Time Ledger",
+						"Description": "Host-approved recent-event undo for multiplayer.",
+						"Author": "TimeLedger",
+						"Version": "0.1.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TimeLedger.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "TimeLedger.RecentUndo"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572324,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440115,
+		"UploaderId": 292611224,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}
