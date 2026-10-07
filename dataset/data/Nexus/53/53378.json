@@ -6,17 +6,17 @@
 	"Description": "[b][size=4][font=Georgia][i]如果使用过程中有任何体验不好的地方或者 bug，请一定告诉我，我将尽快修复！[/i][/font][/size][/b]\n<br />[b][size=4][font=Georgia][i]If you encounter any poor experience or bugs during use, please feel free to let me know, and I will fix them as soon as possible！[/i][/font][/size][/b]\n<br />\n<br />中文版\n<br />《地图传送》让玩家可以直接通过原版世界地图前往山谷中的各个地点，不需要额外制作传送道具，也不会添加独立的传送菜单。\n<br />地图选点传送\n<br />打开游戏原版地图后，用鼠标左键点击地图上的目的地即可传送。模组会在传送前验证目的地是否安全。\n<br />地图外框保持原版尺寸，不会占用额外的界面。\n<br />山谷、沙漠和姜岛\n<br />地图顶部提供三个区域页面：\n<br />[list]\n<br />[*]山谷[/*]\n<br />[*]沙漠[/*]\n<br />[*]姜岛[/*]\n<br />[/list]从山谷前往沙漠或姜岛时，会先抵达游戏原版传送图腾或方尖塔所使用的落点。到达当地后重新打开地图，即可继续选择该区域内的具体位置。\n<br />缩放与平移\n<br />[list]\n<br />[*]鼠标滚轮：以鼠标所在位置为中心缩放地图。[/*]\n<br />[*]按住鼠标中键拖动：平移地图。[/*]\n<br />[*]鼠标左键：选择目的地并传送。[/*]\n<br />[/list]玩家可以放大地图后更准确地选择道路、建筑或其他地点。\n<br />自动寻找安全落点\n<br />如果点击的位置是水面、障碍物、墙体或其他不可通行区域，模组不会强行把玩家放进去，而是寻找同一可达区域内距离目标最近的安全格子。\n<br />点击建筑时，会优先把玩家送到建筑入口外，而不是传送进墙体或建筑内部。\n<br />如果附近没有可靠的安全落点，传送会被取消。\n<br />保留游戏进度限制\n<br />默认情况下，地图传送不会绕过原版游戏的解锁条件，包括：\n<br />[list]\n<br />[*]尚未修好的沙漠巴士。[/*]\n<br />[*]尚未修好的采石场桥梁。[/*]\n<br />[*]尚未开放的铁路和山路。[/*]\n<br />[*]尚未砍开的秘密森林入口。[/*]\n<br />[*]尚未获得进入下水道的权限。[/*]\n<br />[*]尚未修好的威利的船。[/*]\n<br />[*]尚未开放的姜岛北部、西部、度假村和农舍。[/*]\n<br />[*]尚未完成条件的任务区域。[/*]\n<br />[/list]点击未解锁地区时，游戏会显示对应原因，而不是执行传送。\n<br />强制传送模式\n<br />按下 [b]Alt+F11[/b] 可以开启或关闭“强制传送”。\n<br />开启后，模组会忽略地区的进度门槛，例如在采石场桥梁修复前前往采石场。该设置会保存到\n<br />[code]config.json[/code]。\n<br />强制传送只会跳过进度限制，不会关闭以下保护：\n<br />[list]\n<br />[*]地图边界检查。[/*]\n<br />[*]碰撞与落点检查。[/*]\n<br />[*]安全格子验证。[/*]\n<br />[*]当前状态检查。[/*]\n<br />[*]未知地图保护。[/*]\n<br />[/list]因此，即使开启强制模式，也不会把玩家送进水面、墙体或地图外。\n<br />状态保护\n<br />在以下情况下，地图传送会被暂时拒绝：\n<br />[list]\n<br />[*]正在进行事件。[/*]\n<br />[*]正在游玩小游戏。[/*]\n<br />[*]正在使用工具。[/*]\n<br />[*]正在骑乘坐骑。[/*]\n<br />[*]玩家当前无法移动。[/*]\n<br />[*]游戏正在进行场景切换或淡出。[/*]\n<br />[/list]这样可以避免传送打断重要流程或导致异常状态。\n<br />地图兼容范围\n<br />当前版本优先支持 [b]Stardew Valley 1.6 原版世界地图[/b]。\n<br />无法唯一对应到一个原版地点的坐标、未知地图区域以及没有安全落点的位置都会被拒绝。其他 Mod 新增的世界地图区域需要单独的适配数据，默认不会被盲目识别或传送。\n<br />安装要求\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI 4.0 或更高版本[/*]\n<br />[*]中文版和英文版只能选择一个安装，不能同时放入\n<br />[code]Mods[/code]文件夹。[/*]\n<br />[/list][line]\n<br />[heading]English Version[/heading]\n<br />Map Teleport lets you travel directly through Stardew Valley’s vanilla world map. It does not require crafted teleport items and does not replace the map with a separate travel menu.\n<br />Click-to-travel map\n<br />Open the vanilla world map and left-click a destination to travel there. The mod verifies the destination before moving the player.\n<br />The map keeps its original frame size instead of opening an oversized custom interface.\n<br />Valley, Desert, and Ginger Island\n<br />Three regional tabs are available at the top of the map:\n<br />[list]\n<br />[*]Valley[/*]\n<br />[*]Desert[/*]\n<br />[*]Ginger Island[/*]\n<br />[/list]When travelling from the Valley to Calico Desert or Ginger Island, you first arrive at the standard warp-totem or obelisk landing tile. Once there, reopen the map to choose a more specific destination within that region.\n<br />Zooming and panning\n<br />[list]\n<br />[*]Mouse wheel: Zoom around the cursor.[/*]\n<br />[*]Hold the middle mouse button and drag: Pan the map.[/*]\n<br />[*]Left-click: Select a destination and travel.[/*]\n<br />[/list]Zooming in makes it easier to choose roads, buildings, and precise areas.\n<br />Safe landing resolution\n<br />If the selected point is water, a wall, an obstacle, or another blocked tile, the mod will not place the player there. Instead, it searches for the nearest safe tile within the same reachable area.\n<br />Clicking a building prioritizes the tile outside its entrance rather than placing the player inside a wall or inaccessible interior.\n<br />Travel is cancelled if no reliable landing tile can be found.\n<br />Progression-aware travel\n<br />By default, Map Teleport respects the game’s normal progression locks, including:\n<br />[list]\n<br />[*]The unrepaired desert bus.[/*]\n<br />[*]The unrepaired quarry bridge.[/*]\n<br />[*]Blocked railroad and mountain routes.[/*]\n<br />[*]The blocked entrance to the Secret Woods.[/*]\n<br />[*]Sewer access.[/*]\n<br />[*]Willy’s unrepaired boat.[/*]\n<br />[*]Locked sections of Ginger Island.[/*]\n<br />[*]Quest areas that have not yet been unlocked.[/*]\n<br />[/list]Selecting a locked destination displays the relevant reason instead of bypassing the requirement.\n<br />Locked-area override\n<br />Press [b]Alt+F11[/b] to toggle the locked-area override. The setting is saved in\n<br />[code]config.json[/code].\n<br />When enabled, progression requirements are ignored, allowing travel to places such as the quarry before its bridge is repaired.\n<br />The override only bypasses progression gates. It does not disable:\n<br />[list]\n<br />[*]Map-boundary checks.[/*]\n<br />[*]Collision checks.[/*]\n<br />[*]Safe-tile validation.[/*]\n<br />[*]Player-state checks.[/*]\n<br />[*]Unknown-map protection.[/*]\n<br />[/list]Even with the override enabled, the player will not be placed in water, walls, or outside the map.\n<br />Player-state protection\n<br />Map travel is temporarily unavailable while:\n<br />[list]\n<br />[*]An event is running.[/*]\n<br />[*]A minigame is active.[/*]\n<br />[*]The player is using a tool.[/*]\n<br />[*]The player is riding a mount.[/*]\n<br />[*]The player cannot move.[/*]\n<br />[*]The game is fading or changing scenes.[/*]\n<br />[/list]These checks prevent travel from interrupting important game states.\n<br />Compatibility scope\n<br />The current version primarily supports the [b]vanilla Stardew Valley 1.6 world map[/b].\n<br />Ambiguous points, unknown map regions, and destinations without a verified safe tile are rejected. World-map regions added by other mods require dedicated adapter data and are not blindly treated as valid destinations.\n<br />Requirements\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI 4.0 or later[/*]\n<br />[*]Install either the Chinese or English package, not both.[/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53378",
 	"Version": "1",
-	"Updated": "2026-10-04T15:22:29+00:00",
+	"Updated": "2026-10-06T13:41:41+00:00",
 	"Downloads": [
 		{
-			"Id": 185488,
+			"Id": 185740,
 			"Type": "Main",
 			"DisplayName": "MapTeleport English",
-			"FileName": "a4/c2/0c/a4c20cfa-f41e-4aed-82cd-9716f3fcaaeb",
+			"FileName": "de/65/b0/de65b071-84ce-4959-916d-888a4be0552e",
 			"Description": "",
-			"Version": "2",
-			"SizeInBytes": 57881,
-			"Uploaded": "2026-10-04T15:19:40+00:00",
+			"Version": "3",
+			"SizeInBytes": 45446,
+			"Uploaded": "2026-10-06T13:41:24+00:00",
 			"Mods": [
 				{
 					"Id": "MapTeleport.ClickToTravel",
@@ -27,7 +27,7 @@
 						"Name": "Map Teleport",
 						"Description": "Click built-in and compatible custom maps to travel with cursor-centered zoom, safe destinations, and progression checks.",
 						"Author": "MapTeleport",
-						"Version": "0.3.0",
+						"Version": "0.4.2",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "MapTeleport.dll",
 						"Dependencies": [],
@@ -37,31 +37,31 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342572176,
+				"Uid": 5596342572428,
 				"CategoryId": 1,
 				"Primary": false
 			}
 		},
 		{
-			"Id": 185490,
+			"Id": 185741,
 			"Type": "Main",
 			"DisplayName": "mapteleport chinese",
-			"FileName": "a7/8b/0b/a78b0bab-ea13-449f-a447-61fbcd3ff23c",
+			"FileName": "80/71/ae/8071aeb8-4835-4acf-a9c8-a6353dee9d2a",
 			"Description": "",
-			"Version": "2",
-			"SizeInBytes": 59492,
-			"Uploaded": "2026-10-04T15:22:29+00:00",
+			"Version": "3",
+			"SizeInBytes": 45446,
+			"Uploaded": "2026-10-06T13:41:41+00:00",
 			"Mods": [
 				{
 					"Id": "MapTeleport.ClickToTravel",
-					"DisplayName": "地图传送",
+					"DisplayName": "Map Teleport",
 					"Type": "Smapi",
-					"RelativePath": "地图传送",
+					"RelativePath": "Map Teleport",
 					"Manifest": {
-						"Name": "地图传送",
-						"Description": "点击原版及兼容的新增地图传送，支持鼠标中心缩放、安全落点与进度限制。",
+						"Name": "Map Teleport",
+						"Description": "Click built-in and compatible custom maps to travel with cursor-centered zoom, safe destinations, and progression checks.",
 						"Author": "MapTeleport",
-						"Version": "0.3.0",
+						"Version": "0.4.2",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "MapTeleport.dll",
 						"Dependencies": [],
@@ -71,7 +71,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342572178,
+				"Uid": 5596342572429,
 				"CategoryId": 1,
 				"Primary": true
 			}

@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 51851,
+	"Name": "Cabin Entrance to PIF Door",
+	"Author": "DragneelAce",
+	"Description": "[size=5][b]Features[/b][/size]\n<br />[list]\n<br />[*]Convert individual cabins into [url=https://www.nexusmods.com/stardewvalley/mods/20537]Personal Indoor Farm (PIF)[/url] entrances.[/*]\n<br />[*]Configure each cabin independently as either Normal or PIF.[/*]\n<br />[*]Use PIF's own room selection system.[/*]\n<br />[*]Assign different PIF rooms to different cabins.[/*]\n<br />[*]Switch a configured cabin between Normal and PIF without losing its assigned PIF room or its contents.[/*]\n<br />[*]Support PIF items and utilities that interact with PIF rooms, including the Void Key, Void Seal Liquid, Painting of the Season, and other PIF utilities. Read the mod description of the original PIF mod to see what these items\u00A0do.[/*]\n<br />[*]Preserve the cabin's original exterior, interior, map, and tiles.[/*]\n<br />[*]Support multiplayer.[/*]\n<br />[/list][b][size=5]How It Works[/size][/b]\n<br />When you first interact with an unconfigured cabin, you can choose whether to use it normally or convert it into a PIF entrance.\n<br />\n<br />When converting a cabin to PIF, CabinToPIF opens PIF's room selection system so you can choose the room for that cabin.\n<br />Once configured, the cabin keeps its own PIF room assignment.\n<br />\n<br />Switching the cabin to Normal temporarily disables its PIF entrance. Its PIF room and contents are preserved, so switching the same cabin back to PIF restores access to that room.\n<br />\n<br />To change which PIF room the cabin is assigned to, use PIF's Void Seal Liquid and select a new room.\n<br />\n<br />[size=4][b]Cabin Configuration Ownership[/b][/size]\n<br />CabinToPIF has its own configuration ownership system. The first player to configure a cabin becomes its configuration owner. The configuration owner has permission to modify that cabin's Normal/PIF mode and manage its PIF configuration. In multiplayer, configuration ownership can be transferred to another player.\n<br />\n<br />This should not be confused with Stardew Valley's normal cabin ownership, which determines a farmhand's assigned cabin, as their default home and mailbox.\n<br />\n<br />[b][size=4]Cabin Conversion Permit[/size][/b]\n<br />The Cabin Conversion Permit is a reusable, non-stackable item added to [b]Personal Indoor Farm's Magician shop[/b]\u00A0for 1,000g. The Magician can be found in the tunnels west of the Bus Stop.\n<br />\n<br />The permit can be used by the cabin's configuration owner to manage an already configured cabin.\n<br />Depending on the cabin's current state, it can be used to:\n<br />\n<br />- Convert a Normal cabin to PIF.\n<br />- Switch a PIF cabin back to Normal.\n<br />- Transfer configuration ownership in multiplayer.\n<br />\n<br />The permit is not required for the initial configuration of an unconfigured cabin.\n<br />\n<br />[b][size=4]PIF Room Preservation[/size][/b]\n<br />CabinToPIF keeps the cabin's PIF room association when the cabin is switched to Normal. This means you can temporarily use a cabin normally without having to recreate or reselect its PIF room later.\n<br />\n<br />The PIF room itself remains part of the cabin's configuration until its assignment is removed through PIF's Void Seal Liquid (just like in the original PIF mod, using Void Seal Liquid does not permanently delete the room or its content).\n<br />\n<br />[b][size=4]Demolishing a Cabin[/size][/b]\n<br />If a cabin with an associated PIF room is demolished, the generated PIF location associated with that cabin is also [color=#ff0000][b]PERMANENTLY REMOVED[/b][/color]. Move anything important out of the PIF room before demolishing the cabin.\n<br />\n<br />[b][size=4]Configuration[/size][/b]\n<br />As of 1.1.0, Cabin configuration is handled directly when interacting with the cabins. As such, modifying config.json manually or through [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is no longer needed.\n<br />The only option in `config.json` is `DebugLogging`, which enables additional troubleshooting logs. This option is intended for troubleshooting and normally does not need to be changed.\n<br />\n<br />[b][size=5]Requirements[/size][/b]\n<br />[list]\n<br />[*]Stardew Valley 1.6.15+[/*]\n<br />[*]SMAPI 4.5.2+[/*]\n<br />[*]Personal Indoor Farm (PIF) 1.4.6+[/*]\n<br />[*]At least one PIF room content pack[/*]\n<br />[/list][b][color=#ff0000][size=5]Updating from 1.0.0 [/size][/color][/b]\n<br />[b]Singleplayer:[/b] You can update normally.\n<br />[b]Multiplayer:[/b] You only need to take precautions if, in version 1.0.0, the same cabin was accidentally assigned to multiple players. Before updating, move any important items out of the PIF room(s) associated with that cabin. During migration, you will be asked which assignment to keep, and the other duplicate assignment(s) will be [color=#ff0000][b]PERMANENTLY REMOVED[/b][/color].\n<br />\n<br />[b][size=5]Compatibility[/size][/b]\n<br />CabinToPIF does not replace or modify vanilla cabin maps, interiors, exteriors, or tiles.\n<br />It should generally be compatible with other mods, but mods that directly replace or heavily modify cabin entrances or doors may conflict with CabinToPIF (no mods reportedly incompatible so far).\n<br />\n<br />[size=5][b]Changelog[/b][/size]\n<br />\n<br />[b][size=4]1.1.0[/size][/b]\n<br />[b]Major overhaul with a better and more flexible system. Introducing individual cabin configuration, multiplayer support, expanded PIF integration, and the Cabin Conversion Permit.[/b]\n<br />\n<br />- Replaced the previous cabin-type-based configuration system with individual per-cabin configuration.\n<br />- Removed the need for Generic Mod Config Menu.\n<br />- Added multiplayer support.\n<br />- Added CabinToPIF configuration ownership for individual cabins.\n<br />- Added configuration ownership transfer.\n<br />- Added compatibility with PIF items and utilities.\n<br />- Added a new item, the reusable Cabin Conversion Permit.\n<br />- Added support for switching cabins between Normal and PIF while preserving their existing PIF room and contents.\n<br />- Added improved PIF door lock and ownership synchronization.\n<br />- Added migration support for cabin assignments from version 1.0.0.\n<br />\n<br />[b][size=4]1.0.0[/size][/b]\n<br />Initial release.\n<br />\n<br />- Allowed selected vanilla cabin types to function as PIF entrances though config.\n<br />- Used PIF's room selection system for converted cabins.\n<br />- Allowed different PIF rooms to be assigned to cabins of the same type.\n<br />- Added configuration through Generic Mod Config Menu.\n<br />- Preserved the original cabin maps, interiors, exteriors, and tiles.\n<br />\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/51851",
+	"Version": "1.1.0",
+	"Updated": "2026-10-06T15:11:26+00:00",
+	"Downloads": [
+		{
+			"Id": 185753,
+			"Type": "Main",
+			"DisplayName": "CabinToPIF 1.1.0",
+			"FileName": "47/8e/3e/478e3eec-f5a9-4414-9206-966b3afb6bc5",
+			"Description": "IMPORTANT: READ DESCRIPTION TO MIGRATE IF YOU PLAYED MULTIPLAYER USING THE OLD VERSION",
+			"Version": "1.1.0",
+			"SizeInBytes": 51380,
+			"Uploaded": "2026-10-06T15:11:26+00:00",
+			"Mods": [
+				{
+					"Id": "DragneelAce.CabinToPIF",
+					"DisplayName": "Cabin Entrance to PIF Door",
+					"Type": "Smapi",
+					"RelativePath": "CabinToPIF",
+					"Manifest": {
+						"Name": "Cabin Entrance to PIF Door",
+						"Description": "Allows cabin to function as Personal Indoor Farm doors.",
+						"Author": "DragneelAce",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CabinToPIF.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "DLX.PIF",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:51851"
+						],
+						"UniqueId": "DragneelAce.CabinToPIF"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572441,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342438539,
+		"UploaderId": 48081073,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}

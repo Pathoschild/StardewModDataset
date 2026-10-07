@@ -7,7 +7,7 @@
 	"Description": "A companion for the Wilcox Farm Windows Collection. Installs Wilcox's Realty compatibility mod and the shared settings used by the server. This add-on is not the full Collection.\n<br />\n<br />Requirements: Stardew Valley 1.6.15, SMAPI 4.5.2, Stardew Realty exactly 3.0.0, Multiple Farms For Multiplayer 2.2.6, HxW Custom Buildings All in One 2.0, and Ultimate Coop and Barn 1.8.22. Use the matching pinned pack.\n<br />\n<br />Release 0.3.2 includes compatibility DLL 0.1.1. It checks the original Realty DLL's SHA256 before applying runtime compatibility hooks. It handles dedicated-server startup, null menus and Realty purchase notifications in multiplayer. The new Windows fix skips only Vortex's __folder_managed_by_vortex bookkeeping file when Realty reads additional-farm configs. Real config validation stays intact. No original Realty DLL is replaced or redistributed.\n<br />\n<br />Shared settings enable Forest and Meadowlands extra farms without free starter items or buildings; select HxW's building mode and empty interiors; and disable the Ultimate pack's unselected vanilla/SVE upgrades.\n<br />\n<br />Install through Vortex. The FOMOD automatically copies five files. The Collection makes this add-on win three configuration-file conflicts. This ZIP targets Windows Vortex; the Mac setup route and Unix path preparation are separate. Use a clean Mods folder: switching Vortex profiles does not hide manually installed mods.\n<br />\n<br />Validation: the pinned pack has passed isolated game/server tests for farmhand reconnect, purchased Realty land, construction and save/reload. Release 0.3.2 also passed the native Vortex FOMOD engine, 10 Vortex/Realty regression checks and 8 startup checks. An isolated Windows client loaded all pack modules and both Realty maps with the Vortex marker present, logging zero errors and warnings. Installation from the final published Collection and an external Steam player join remain to be verified; native Mac testing is pending.\n<br />\n<br />Credits: original mod authors retain all rights to their mods. This download contains only Wilcox's compatibility code, source and chosen settings. It contains no game files, original third-party mod archives, saves or credentials. LICENSE.txt permits copying, modifying and sharing our own files.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53452",
 	"Version": "0.3.2",
-	"Updated": "2026-10-06T02:31:26+00:00",
+	"Updated": "2026-10-07T01:19:26+00:00",
 	"Downloads": [
 		{
 			"Id": 185644,
@@ -102,6 +102,229 @@
 				"Uid": 5596342572332,
 				"CategoryId": 1,
 				"Primary": true
+			}
+		},
+		{
+			"Id": 185799,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Adventure 0.4 - Windows Vortex",
+			"FileName": "29/e4/91/29e4919a-b8e3-4d91-ad6f-8053723a457e",
+			"Description": "",
+			"Version": "0.4.0",
+			"SizeInBytes": 3178,
+			"Uploaded": "2026-10-06T23:40:35+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Multiplayer Farms\\MPF_Code",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Multiplayer Farms\\MPF_Code",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\StardewDruid",
+					"Type": "Invalid",
+					"RelativePath": "payload\\StardewDruid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572487,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185803,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Adventure 0.4 - Mac Setup Kit",
+			"FileName": "0b/1f/d7/0b1fd7b1-2d3a-4821-a362-eb8c65cdd0a8",
+			"Description": "",
+			"Version": "0.4.0",
+			"SizeInBytes": 87234,
+			"Uploaded": "2026-10-07T00:32:45+00:00",
+			"Mods": [],
+			"DownloadError": "Could not get download URLs: This file has been quarantined and is not available for download.",
+			"OtherFields": {
+				"Uid": 5596342572491,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185807,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 0.5 - Wizardry and Friendship",
+			"FileName": "07/00/5a/07005a0e-2f53-4e9f-9051-c8231173bf2c",
+			"Description": "",
+			"Version": "0.5.0",
+			"SizeInBytes": 11470,
+			"Uploaded": "2026-10-07T01:19:26+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Multiplayer Farms\\MPF_Code",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Multiplayer Farms\\MPF_Code",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.5.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.5.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572495,
+				"CategoryId": 3,
+				"Primary": false
 			}
 		}
 	],

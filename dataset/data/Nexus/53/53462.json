@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 53462,
+	"Name": "Weapon Renderer",
+	"Author": "MGLXI",
+	"Description": "[size=6][b]Weapon Renderer[/b][/size]\n<br />\n<br />A framework that renders weapon sprites at their native size during attacks. Stardew Valley forces all weapon sprites to 16x16 during the swing animation; this framework intercepts that rendering and draws the full sprite at its real size.\n<br />\n<br />[b]This mod does not add any weapons by itself.[/b] You need content packs that depend on it.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]What does it do?[/b][/size]\n<br />\n<br />[list]\n<br />[*]Renders attack sprites at their native size (24x24, 32x32, 48x48....), without cropping or rescaling.[/*]\n<br />[*]Allows creating new weapons with custom stats.[/*]\n<br />[*]Allows overriding the attack sprite of vanilla weapons without changing their icons or stats.[/*]\n<br />[*]Supports translations in all 12 official game languages.[/*]\n<br />[*]Per-weapon adjustment of pivot, rotation, offsets, and hitbox.[/*]\n<br />[*]Public API for other mods to register weapons dynamically.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] 4.0+.[/*]\n<br />[*]Extract the ZIP into [font=Courier New]Stardew Valley/Mods/[/font].[/*]\n<br />[*]Install compatible content packs.[/*]\n<br />[/list]\n<br />If you want to edit the global configuration in-game, also install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional).\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]For players[/b][/size]\n<br />\n<br />[list]\n<br />[*]Weapons appear in Marlon's shop if the content pack configures it that way.[/*]\n<br />[*]Console commands:\n<br />[list]\n<br />[*][font=Courier New]wr_reload[/font] — reloads the config without restarting the game.[/*]\n<br />[*][font=Courier New]wr_show[/font] — prints the current values.[/*]\n<br />[/list][/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]For modders[/b][/size]\n<br />\n<br />The full guide to creating content packs (folder structure, reference of every [font=Courier New]weapon.json[/font] field, pivot and hitbox formulas, vanilla weapon override mode, translations, and public API) is included in the [b]README.md[/b] inside the ZIP.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.0+ — required[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — optional[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[b]Author:[/b] MGLXI\n<br />[b]License:[/b] MIT",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53462",
+	"Version": "1.1.0",
+	"Updated": "2026-10-06T22:55:40+00:00",
+	"Downloads": [
+		{
+			"Id": 185793,
+			"Type": "Main",
+			"DisplayName": "Weapon Renderer",
+			"FileName": "c2/05/28/c205283e-18f5-4baa-bf80-7b6f23866a08",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 66334,
+			"Uploaded": "2026-10-06T22:55:40+00:00",
+			"Mods": [
+				{
+					"Id": "MGLXI.WeaponRenderer",
+					"DisplayName": "Weapon Renderer",
+					"Type": "Smapi",
+					"RelativePath": "WeaponRenderer",
+					"Manifest": {
+						"Name": "Weapon Renderer",
+						"Description": "A framework that allows for rendering weapons with attack sprites larger than 16x16—for example, 32x32 or even 48x48.",
+						"Author": "MGLXI",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WeaponRenderer.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53462"
+						],
+						"UniqueId": "MGLXI.WeaponRenderer"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572481,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440150,
+		"UploaderId": 179284119,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}
