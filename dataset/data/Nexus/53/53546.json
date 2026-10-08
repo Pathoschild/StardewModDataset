@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 53546,
+	"Name": "Farm Layout Snapshots",
+	"Author": "BensDream",
+	"Description": "Save your farm's layout, change everything around, then put it back the way it was. Handy if you set the farm up differently each season, or want to try out a new design without losing the old one.\n<br />\n<br />Nothing gets spawned in unless you ask for it. When you restore a layout, the mod looks at what's already on your farm and moves it into place. Your chests move with whatever is in them right now, machines carry on with whatever they're making, and anything you're short on is shown to you before anything changes. It can also craft the missing items for you, using recipes you know and materials you actually have.\n<br />\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install the latest version of [url=https://smapi.io/]SMAPI[/url].[/*]\n<br />[*]Download this mod and unzip it into [i]Stardew Valley/Mods[/i].[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional, if you'd like to change the settings in-game.\n<br />\n<br />[size=4][b]How to use[/b][/size]\n<br />Press [b]L[/b] to open the menu. You can change the key, or set a controller button, in the config.\n<br />[list]\n<br />[*]On the farm, or anywhere off it, you get [b]whole farm[/b] layouts. These cover the farm itself, where your buildings are, and the inside of each building.[/*]\n<br />[*]Inside a building you get layouts for just that building. There's a button to switch over to the whole farm if you want it.[/*]\n<br />[/list]From the menu you can save the current layout, restore one, update, rename or delete them, and open layout storage.\n<br />\n<br />[size=4][b]What gets saved[/b][/size]\n<br />[list]\n<br />[*]Chests, machines, sprinklers, scarecrows, fences, signs, lamps and anything else you can place[/*]\n<br />[*]Furniture, including which way it's facing[/*]\n<br />[*]Paths and flooring[/*]\n<br />[*]Building positions[/*]\n<br />[*]Trees, fruit trees, bushes, stumps, boulders, stones, weeds and twigs[/*]\n<br />[*]Crops and tilled soil[/*]\n<br />[*]Wallpaper and flooring[/*]\n<br />[/list]Chest contents aren't stored in the layout. Every chest and machine gets its own ID, so when you restore, the mod finds that exact chest and moves it along with whatever you've put in it since.\n<br />\n<br />[size=4][b]Restoring[/b][/size]\n<br />Nothing changes until you confirm. Pick a layout and hit Restore, and you'll get a preview of everything the layout needs, split up by area (outside, farmhouse, greenhouse, each shed and so on). Each item shows where it's coming from: already in place, moved from somewhere else, layout storage, your inventory or crafted. Anything missing or blocked is marked in red, along with what you'd still need to craft it. You can untick any building you don't want touched.\n<br />\n<br />The options on the preview screen:\n<br />[list]\n<br />[*][b]Auto-craft missing items[/b]: crafts what you're short on, using only recipes you know and materials you have. It can pull materials from chests around the farm too (you can turn that off).[/*]\n<br />[*][b]Match trees, bushes &amp; rocks[/b]: trees that aren't in the layout get packed away instead of chopped down, and the layout's trees come back with their growth. Tappers stay on their trees and fruit stays on fruit trees. Weeds, stones, twigs, stumps and boulders are cleared or put back to match, since the game spawns those anyway.[/*]\n<br />[*][b]Match crops &amp; tilled soil[/b]: crops get packed away with their growth, watering and fertiliser, and the layout's crops are put back (or replanted from your seeds). Out-of-season crops can't come back. You'll get a warning first, and if you go ahead they're dropped and the soil is left tilled. With this off your crops stay put, but any that are in the layout's way get removed (you'll be asked first) and their seeds go into layout storage.[/*]\n<br />[*][b]Match wallpaper &amp; floors[/b]: each room gets its saved wallpaper and flooring back. Whatever was up before goes into layout storage.[/*]\n<br />[*][b]Pay for missing buildings[/b]: if a building in the layout doesn't exist any more, it gets rebuilt in its old spot either way. Tick this to pay Robin's normal price for it, upgrades included. If you can't afford everything, the preview shows the total you're short. Cabins are never rebuilt.[/*]\n<br />[*][b]Force restore[/b]: once your items and crafting have been used, anything still missing is created from nothing. It's basically a cheat, so it's always unticked when you open the preview.[/*]\n<br />[/list]A backup of your current layout is saved before every restore, so you can go back by restoring the [Auto-backup] entry.\n<br />\n<br />[size=4][b]Layout storage[/b][/size]\n<br />Anything left over after a restore goes into layout storage instead of being thrown away: spare items, seeds from removed crops, old wallpaper and so on. Chests in there keep their contents and machines keep their progress (paused). Restores take from it automatically, so going from layout A to B and back to A gets you your own chests back. You can open it from the menu and take things out whenever you like.\n<br />\n<br />Trees and crops that get packed away are kept separately, with their growth, until a layout needs them again.\n<br />\n<br />[size=4][b]Outlines[/b][/size]\n<br />If something can't be placed, either because you don't have it or because something's in the way, a faint outline is left on the ground where it should go. Hover over it to see why. Place the item yourself and the outline disappears, or use [b]Fill outlines[/b] from the menu once you've got the items.\n<br />\n<br />[size=4][b]Config[/b][/size]\n<br />Edit [i]config.json[/i] or use Generic Mod Config Menu. You can change:\n<br />[list]\n<br />[*]the key to open the menu[/*]\n<br />[*]which restore options start ticked[/*]\n<br />[*]whether auto-craft can use materials from farm chests[/*]\n<br />[*]whether grass and empty tilled soil can be cleared to lay paths[/*]\n<br />[*]how many auto-backups to keep[/*]\n<br />[*]whether outlines are shown[/*]\n<br />[*]whether layouts can be used outside farm areas[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Needs Stardew Valley 1.6.15 or later and SMAPI 4.0 or later.[/*]\n<br />[*]No Harmony patches and no edits to game data, so it won't change how other mods' items, trees or buildings work.[/*]\n<br />[*]Modded items, machines, furniture and buildings are saved by their ID the same as vanilla ones. They'll come back as long as the mod that adds them is still installed.[/*]\n<br />[*]Can be used in the farm cave, the Ginger Island farm and modded farm areas like SVE's Frontier Farm.[/*]\n<br />[*]Not tested on Android.[/*]\n<br />[/list]\n<br />[size=4][b]Multiplayer[/b][/size]\n<br />Works in multiplayer, but only the host can save and restore layouts. Farmhands don't need the mod, but it helps if they have it: any chest they've got open that's about to be moved gets closed with a message first. Without the mod, the chest gets moved anyway after about 3 seconds.\n<br />\n<br />[size=4][b]Common questions[/b][/size]\n<br />[b]Does it give me free items?[/b]\n<br />Only if you tick Force restore. Otherwise it only uses what you have, plus anything it can craft from what you have. The exceptions are weeds, stones and stumps, which it recreates since the game spawns them anyway, and missing buildings, which are rebuilt for free unless you tick Pay for missing buildings.\n<br />\n<br />[b]Will it change anything outside the farm?[/b]\n<br />No. It only touches the farm, its buildings and the farm areas listed above. The beach, town and everywhere else are left alone, even if you restore while you're standing there.\n<br />\n<br />[b]Can I undo a restore?[/b]\n<br />Restore the [Auto-backup] it saved beforehand. It isn't a perfect undo (anything crafted stays crafted, and out-of-season crops that were removed are gone), so back up your save as well if you're unsure.\n<br />\n<br />[b]Where are my layouts saved?[/b]\n<br />As JSON files in [i]Mods/FarmLayoutSnapshots/layouts/&lt;save name&gt;/[/i]. Layout storage and outlines are kept in your save file.\n<br />\n<br />[b]Does it work with a controller?[/b]\n<br />Yes, all the menus work with a controller. Set a button for opening the menu in the config.\n<br />\n<br />[size=4][b]Bug reports[/b][/size]\n<br />This is the first release and it moves a lot of stuff around in one go, so please back up your save before trying it on a farm you care about. If something goes wrong, post in the Bugs tab with a link to your SMAPI log ([url=https://smapi.io/log]smapi.io/log[/url]) and I'll take a look.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53546",
+	"Version": "1",
+	"Updated": "2026-10-07T13:00:59+00:00",
+	"Downloads": [
+		{
+			"Id": 185855,
+			"Type": "Main",
+			"DisplayName": "FarmLayoutSnapshots",
+			"FileName": "77/6c/29/776c29d2-36fc-4b1d-858e-81df739f4bd7",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 223939,
+			"Uploaded": "2026-10-07T13:00:59+00:00",
+			"Mods": [
+				{
+					"Id": "Ben.FarmLayoutSnapshots",
+					"DisplayName": "Farm Layout Snapshots",
+					"Type": "Smapi",
+					"RelativePath": "FarmLayoutSnapshots",
+					"Manifest": {
+						"Name": "Farm Layout Snapshots",
+						"Description": "Save snapshots of your farm layout (and building interiors) and swap between them later. Restores move your real chests and machines (by ID, with whatever is in them now), use only items you own, and can auto-craft what you're short on.",
+						"Author": "Ben",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmLayoutSnapshots.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Ben.FarmLayoutSnapshots"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572543,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440234,
+		"UploaderId": 11703538,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -7,7 +7,7 @@
 	"Description": "A companion for the Wilcox Farm Windows Collection. Installs Wilcox's Realty compatibility mod and the shared settings used by the server. This add-on is not the full Collection.\n<br />\n<br />Requirements: Stardew Valley 1.6.15, SMAPI 4.5.2, Stardew Realty exactly 3.0.0, Multiple Farms For Multiplayer 2.2.6, HxW Custom Buildings All in One 2.0, and Ultimate Coop and Barn 1.8.22. Use the matching pinned pack.\n<br />\n<br />Release 0.3.2 includes compatibility DLL 0.1.1. It checks the original Realty DLL's SHA256 before applying runtime compatibility hooks. It handles dedicated-server startup, null menus and Realty purchase notifications in multiplayer. The new Windows fix skips only Vortex's __folder_managed_by_vortex bookkeeping file when Realty reads additional-farm configs. Real config validation stays intact. No original Realty DLL is replaced or redistributed.\n<br />\n<br />Shared settings enable Forest and Meadowlands extra farms without free starter items or buildings; select HxW's building mode and empty interiors; and disable the Ultimate pack's unselected vanilla/SVE upgrades.\n<br />\n<br />Install through Vortex. The FOMOD automatically copies five files. The Collection makes this add-on win three configuration-file conflicts. This ZIP targets Windows Vortex; the Mac setup route and Unix path preparation are separate. Use a clean Mods folder: switching Vortex profiles does not hide manually installed mods.\n<br />\n<br />Validation: the pinned pack has passed isolated game/server tests for farmhand reconnect, purchased Realty land, construction and save/reload. Release 0.3.2 also passed the native Vortex FOMOD engine, 10 Vortex/Realty regression checks and 8 startup checks. An isolated Windows client loaded all pack modules and both Realty maps with the Vortex marker present, logging zero errors and warnings. Installation from the final published Collection and an external Steam player join remain to be verified; native Mac testing is pending.\n<br />\n<br />Credits: original mod authors retain all rights to their mods. This download contains only Wilcox's compatibility code, source and chosen settings. It contains no game files, original third-party mod archives, saves or credentials. LICENSE.txt permits copying, modifying and sharing our own files.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53452",
 	"Version": "0.3.2",
-	"Updated": "2026-10-07T01:19:26+00:00",
+	"Updated": "2026-10-07T20:02:09+00:00",
 	"Downloads": [
 		{
 			"Id": 185644,
@@ -323,6 +323,911 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342572495,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185823,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 0.6 - SVE Settings - Staged",
+			"FileName": "11/da/4a/11da4a08-0bc4-4b0c-bea4-15a9d852b921",
+			"Description": "",
+			"Version": "0.6.0",
+			"SizeInBytes": 12737,
+			"Uploaded": "2026-10-07T04:25:31+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Immersive Farm 2 Remastered\\[CP] Immersive Farm 2 Remastered",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Immersive Farm 2 Remastered\\[CP] Immersive Farm 2 Remastered",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572511,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185835,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 0.6.1 - Frontier Settings",
+			"FileName": "71/3a/96/713a961a-445e-4102-aaad-c41c65a5a86f",
+			"Description": "",
+			"Version": "0.6.1",
+			"SizeInBytes": 12258,
+			"Uploaded": "2026-10-07T05:28:12+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572523,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185873,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 0.6.2 - Robin and Tracking",
+			"FileName": "b9/3c/f1/b93cf1ae-6b20-4bf9-b2de-7a3f4e712ee1",
+			"Description": "",
+			"Version": "0.6.2",
+			"SizeInBytes": 13775,
+			"Uploaded": "2026-10-07T16:28:43+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.RobinOptions",
+					"DisplayName": "Wilcox Robin Options",
+					"Type": "ContentPack",
+					"RelativePath": "payload\\WilcoxRobinOptions",
+					"Manifest": {
+						"Name": "Wilcox Robin Options",
+						"Description": "Unlock the installed SVE farm building catalog while preserving costs, upgrade chains, unique-building and multiplayer capacity rules.",
+						"Author": "Wilcox",
+						"Version": "0.6.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "bobkalonger.UltimateCoopAndBarnCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.RobinOptions"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"Type": "Invalid",
+					"RelativePath": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572561,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185900,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 0.6.3 - Frontier Clearing",
+			"FileName": "6a/5e/d9/6a5ed9dd-03f2-43c7-b47e-cb0482270093",
+			"Description": "",
+			"Version": "0.6.3",
+			"SizeInBytes": 21552,
+			"Uploaded": "2026-10-07T19:14:51+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.FrontierClearing",
+					"DisplayName": "Wilcox Frontier Clearing",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxFrontierClearing",
+					"Manifest": {
+						"Name": "Wilcox Frontier Clearing",
+						"Description": "Remove fixed Frontier fences, stone paving and native map bushes, preserving player objects, trees and terrain geometry.",
+						"Author": "Wilcox",
+						"Version": "0.6.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WilcoxFrontierClearing.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "flashshifter.FrontierFarm",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.FrontierClearing"
+					}
+				},
+				{
+					"Id": "Wilcox.RobinOptions",
+					"DisplayName": "Wilcox Robin Options",
+					"Type": "ContentPack",
+					"RelativePath": "payload\\WilcoxRobinOptions",
+					"Manifest": {
+						"Name": "Wilcox Robin Options",
+						"Description": "Unlock the installed SVE farm building catalog while preserving costs, upgrade chains, unique-building and multiplayer capacity rules.",
+						"Author": "Wilcox",
+						"Version": "0.6.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "bobkalonger.UltimateCoopAndBarnCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.RobinOptions"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"Type": "Invalid",
+					"RelativePath": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572588,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185906,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 0.6.4 - Bridges and Farm Finishing",
+			"FileName": "01/29/69/0129692e-e200-44dd-b300-bd59a49302b8",
+			"Description": "",
+			"Version": "0.6.4",
+			"SizeInBytes": 22657,
+			"Uploaded": "2026-10-07T20:02:09+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Integrated Minecarts\\[CP] Integrated Minecarts",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Integrated Minecarts\\[CP] Integrated Minecarts",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.FrontierClearing",
+					"DisplayName": "Wilcox Frontier Clearing",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxFrontierClearing",
+					"Manifest": {
+						"Name": "Wilcox Frontier Clearing",
+						"Description": "Remove fixed Frontier fences, stone paving and native map bushes, preserving player objects, trees and terrain geometry.",
+						"Author": "Wilcox",
+						"Version": "0.6.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WilcoxFrontierClearing.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "flashshifter.FrontierFarm",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.FrontierClearing"
+					}
+				},
+				{
+					"Id": "Wilcox.RobinOptions",
+					"DisplayName": "Wilcox Robin Options",
+					"Type": "ContentPack",
+					"RelativePath": "payload\\WilcoxRobinOptions",
+					"Manifest": {
+						"Name": "Wilcox Robin Options",
+						"Description": "Unlock the installed SVE farm building catalog while preserving costs, upgrade chains, unique-building and multiplayer capacity rules.",
+						"Author": "Wilcox",
+						"Version": "0.6.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "bobkalonger.UltimateCoopAndBarnCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.RobinOptions"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"Type": "Invalid",
+					"RelativePath": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572594,
 				"CategoryId": 3,
 				"Primary": false
 			}
