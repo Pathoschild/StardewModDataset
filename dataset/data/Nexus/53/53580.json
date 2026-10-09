@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 53580,
+	"Name": "HelperMod",
+	"Author": "shouyangchen",
+	"Description": "# HelperMod\n<br />\n<br />一个\"不破坏游戏体验\"的星露谷物语辅助模组：只在你需要的地方省掉重复劳动，不改变游戏平衡性的核心内容。\n<br />- **依赖**：**SMAPI 3.0 或更高**（游戏本体需 1.6 及以上——地图 NPC 功能用到了 1.6 才有的世界地图接口）\n<br />- **多人游戏**：支持（\"地图显示 NPC\"需要主机和访客都安装本模组）\n<br />- **配置**：支持 config.json，首次运行自动生成\n<br />\n<br />## 功能\n<br />\n<br />### 1. 地图显示 NPC\n<br />\n<br />打开地图（ESC 菜单里的 **Map** 页）时，把村民的头像画在地图上的对应位置，一眼就能看到谁在哪。\n<br />\n<br />- 同一个地点有多名 NPC 时自动错开，不会叠在一起。\n<br />- 只显示当前这张地图区域内的 NPC（例如你在山谷，就不会把姜岛的 NPC 画上来）。\n<br />- 头像按各自的头像资源加载，所以用 Content Patcher 之类的换头像模组时，地图上显示的也会是换过之后的样子。\n<br />\n<br />**多人游戏**：访客端本身看不到 NPC，所以由主机计算位置并发送，访客在本地解析头像；地图开着时约每秒刷新一次，NPC 走动也能看到。**主机与访客都要安装本模组。**\n<br />\n<br />### 2. 快速斧头\n<br />\n<br />只要手上拿着斧头，斧头等级就按最高级（4 级）计算；换成别的物品立刻恢复成你原本的等级。\n<br />\n<br />- 用来砍大树桩、大圆木这类需要高等级斧头的东西，不用真的去升级斧头。\n<br />- 存档前会先把等级恢复原样、存档后再重新提升，所以**不会把临时等级写进存档**，你的斧头等级不会被改坏。\n<br />\n<br />### 3. 自动浇水\n<br />\n<br />- 每天早上自动给所有耕地浇水（只浇种了东西的地块）。\n<br />- 刚把种子种下去的下一帧也会立刻浇一次，不用等第二天。\n<br />- 下雨或下雪时，室外地块自动跳过（本来就不用浇），温室、矿洞、姜岛小屋等室内场景照常浇。\n<br />\n<br />### 4. 简化钓鱼小游戏\n<br />\n<br />- 鱼咬钩时自动完成上钩，不用自己卡时间点。\n<br />- 钓鱼小游戏里的钓鱼条会被拉长（长度可配置，默认 200，上限 580），明显更容易钓上来。\n<br />\n<br />## 配置\n<br />\n<br />首次运行游戏后，会在 `Mods/HelperMod/` 下自动生成 `config.json`，用记事本打开即可修改（改完**重启游戏**生效）：\n<br />\n<br />| 配置项 | 类型 | 默认值 | 说明 |\n<br />| --- | --- | --- | --- |\n<br />| `EnableFastAxe` | 是/否 | `true` | 是否启用快速斧头 |\n<br />| `EnableShowNpcPos` | 是/否 | `true` | 是否在地图上显示 NPC |\n<br />| `EnableSimplifiedMiniGame` | 是/否 | `true` | 是否启用简化钓鱼小游戏 |\n<br />| `SimplifiedMinGameBobSize` | 数字 | `200` | 钓鱼条高度（像素），越大越容易；填 0 会导致钓鱼条消失，上限 580 |\n<br />| `EnableAutoWater` | 是/否 | `true` | 是否启用自动浇水 |\n<br />\n<br />不需要的功能把对应项改成 `false` 即可，例如只想用地图显示 NPC：\n<br />\n<br />```json\n<br />{\n<br />\u00A0 \"EnableFastAxe\": false,\n<br />\u00A0 \"EnableShowNpcPos\": true,\n<br />\u00A0 \"EnableSimplifiedMiniGame\": false,\n<br />\u00A0 \"SimplifiedMinGameBobSize\": 200,\n<br />\u00A0 \"EnableAutoWater\": false\n<br />}\n<br />```\n<br />\n<br />## 安装\n<br />\n<br />1. 安装 [SMAPI](https://smapi.io/)（3.0 或更高；游戏为 1.6 时请用 SMAPI 4.x）。\n<br />2. 把 `HelperMod` 文件夹整个放进 `Stardew Valley/Mods/` 目录。\n<br />3. 用 SMAPI 启动游戏。首次启动后 `Mods/HelperMod/config.json` 会自动生成。\n<br />\n<br />多人游戏里，主机和访客都要按上面的步骤安装。\n<br />\n<br />## 常见问题\n<br />\n<br />**地图上没显示 NPC？**\n<br />确认地图是 ESC 菜单里的 Map 页；确认 `EnableShowNpcPos` 是 `true`；只显示**当前地图区域**内的村民，所以别的地图上的 NPC 本来就不会出现。另外室内、矿洞等不在地图数据里的场景没有坐标，会被跳过。\n<br />\n<br />**多人游戏里访客看不到 NPC？**\n<br />检查主机是否也装了本模组——位置数据由主机提供，主机没装访客就收不到。\n<br />\n<br />**改用斧头等级会不会把我存档里的斧头改坏？**\n<br />不会。换下斧头、以及每次存档前都会恢复成你的原始等级；存档里写进去的始终是原本的等级。\n<br />\n<br />**配置改了没反应？**\n<br />配置文件只在游戏启动时读取一次，改完要重启游戏。\n<br />\n<br />## 兼容性\n<br />\n<br />- 与 Content Patcher 等替换 NPC 头像的内容包兼容。\n<br />- 不修改游戏存档中的任何数值（斧头等级是临时提升，复原后才存档）。\n<br />\n<br /># HelperMod\n<br />\n<br />A helper mod that doesn't ruin your gameplay experience: it removes repetitive busywork where you want it, without changing the core balance of the game.\n<br />\n<br />- **Author:** chenshouyang\n<br />- **Version:** 1.0.4\n<br />- **Requirements:** **SMAPI 3.0 or later** (Stardew Valley 1.6 or later — the map feature uses world-map APIs that only exist in 1.6)\n<br />- **Multiplayer:** supported (the \"NPCs on the map\" feature requires the mod on both the host and the farmhands)\n<br />- **Configuration:** supported via `config.json`, generated automatically on first launch\n<br />\n<br />## Features\n<br />\n<br />### 1. NPCs on the Map\n<br />\n<br />Open the world map (the **Map** tab of the ESC menu) and every villager's portrait is drawn at their position on the map, so you can see at a glance who is where.\n<br />\n<br />- Multiple NPCs in the same spot are offset automatically so they don't overlap.\n<br />- Only NPCs in the **current map region** are drawn (while you're in the valley, Ginger Island NPCs aren't drawn over it).\n<br />- Portraits are loaded from the normal portrait assets, so if you use content packs such as Content Patcher to replace them, the map shows the replaced portraits too.\n<br />\n<br />**Multiplayer:** farmhands can't see NPCs locally, so the host computes the positions and sends them, and each farmhand resolves the portraits on its own side. The data refreshes about once per second while the map is open, so you can see NPCs move. **The mod must be installed on both the host and the farmhands.**\n<br />\n<br />### 2. Fast Axe\n<br />\n<br />Whenever you're holding an axe, it is treated as fully upgraded (level 4); as soon as you switch to another item, your original level is restored.\n<br />\n<br />- Handy for large stumps and logs that normally require an upgraded axe — no need to actually upgrade anything.\n<br />- The original level is restored **before saving** and re-applied afterwards, so the temporary level is never written into your save file and your axe is never permanently changed.\n<br />\n<br />### 3. Automatic Watering\n<br />\n<br />- Every morning, all tilled soil with something planted in it is watered automatically.\n<br />- The moment you plant a seed, that tile is watered too — no need to wait for the next day.\n<br />- When it's raining or snowing, outdoor tiles are skipped (they don't need it), while indoor areas such as the greenhouse, the mines and the island hut are still watered.\n<br />\n<br />### 4. Simplified Fishing Minigame\n<br />\n<br />- When a fish nibbles, the hook is set automatically — no timing needed.\n<br />- The fishing bar in the minigame is made longer (configurable, default 200, maximum 580), which makes catching fish much easier.\n<br />\n<br />## Configuration\n<br />\n<br />On first launch the mod generates `config.json` inside `Mods/HelperMod/`. Open it with any text editor and edit the values (changes apply after **restarting the game**):\n<br />\n<br />| Setting | Type | Default | Description |\n<br />| --- | --- | --- | --- |\n<br />| `EnableFastAxe` | bool | `true` | Enable the fast axe feature |\n<br />| `EnableShowNpcPos` | bool | `true` | Show NPCs on the map |\n<br />| `EnableSimplifiedMiniGame` | bool | `true` | Enable the simplified fishing minigame |\n<br />| `SimplifiedMinGameBobSize` | number | `200` | Fishing bar height in pixels; higher is easier. `0` makes the bar disappear; maximum 580 |\n<br />| `EnableAutoWater` | bool | `true` | Enable automatic watering |\n<br />\n<br />Set the ones you don't want to `false`, for example if you only want the map feature:\n<br />\n<br />```json\n<br />{\n<br />\u00A0 \"EnableFastAxe\": false,\n<br />\u00A0 \"EnableShowNpcPos\": true,\n<br />\u00A0 \"EnableSimplifiedMiniGame\": false,\n<br />\u00A0 \"SimplifiedMinGameBobSize\": 200,\n<br />\u00A0 \"EnableAutoWater\": false\n<br />}\n<br />```\n<br />\n<br />## Installation\n<br />\n<br />1. Install [SMAPI](https://smapi.io/) (3.0 or later; for Stardew Valley 1.6 use SMAPI 4.x).\n<br />2. Put the whole `HelperMod` folder into your `Stardew Valley/Mods/` folder.\n<br />3. Launch the game through SMAPI. On the first launch, `Mods/HelperMod/config.json` is created automatically.\n<br />\n<br />For multiplayer, repeat the same steps on the host and on every farmhand.\n<br />\n<br />## FAQ\n<br />\n<br />**No NPCs on my map?**\n<br />Make sure you're looking at the Map tab of the ESC menu, and that `EnableShowNpcPos` is `true`. Only NPCs in the **current map region** are shown, so NPCs on other maps won't appear. Indoor and mine locations aren't part of the world-map data and are skipped.\n<br />\n<br />**Farmhands can't see the NPCs in multiplayer?**\n<br />Check that the host also has the mod installed — the position data comes from the host, so without it farmhands receive nothing.\n<br />\n<br />**Will the fast axe corrupt my axe level in the save?**\n<br />No. Your original level is restored whenever you switch away from the axe and before every save, so what gets saved is always your real level.\n<br />\n<br />**My config changes don't do anything?**\n<br />The config file is only read once when the game starts. Restart the game after editing it.\n<br />\n<br />## Compatibility\n<br />\n<br />- Compatible with content packs that replace NPC portraits, such as Content Patcher.\n<br />- The mod doesn't permanently modify any value in your save (the axe level is only boosted temporarily and restored before saving).",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53580",
+	"Version": "1",
+	"Updated": "2026-10-08T12:18:21+00:00",
+	"Downloads": [
+		{
+			"Id": 185981,
+			"Type": "Main",
+			"DisplayName": "HelperMod 1.0.0",
+			"FileName": "bb/3a/35/bb3a3527-fa4e-47d0-86a8-ffa072234c4f",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 25376,
+			"Uploaded": "2026-10-08T12:18:21+00:00",
+			"Mods": [
+				{
+					"Id": "chenshouyang.HelperMod",
+					"DisplayName": "HelperMod",
+					"Type": "Smapi",
+					"RelativePath": "HelperMod",
+					"Manifest": {
+						"Name": "HelperMod",
+						"Description": "A helper mod that doesn't ruin gameplay experience,this mod provides various helper functionalities like More Faster Axe and Automatic Watering and Display NPC loaction on Map Page",
+						"Author": "chenshouyang",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "HelperMod.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:53580"
+						],
+						"UniqueId": "chenshouyang.HelperMod"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572669,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440268,
+		"UploaderId": 302922750,
+		"CategoryId": 4,
+		"Adult": false
+	}
+}

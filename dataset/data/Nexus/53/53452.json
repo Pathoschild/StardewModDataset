@@ -7,7 +7,7 @@
 	"Description": "A companion for the Wilcox Farm Windows Collection. Installs Wilcox's Realty compatibility mod and the shared settings used by the server. This add-on is not the full Collection.\n<br />\n<br />Requirements: Stardew Valley 1.6.15, SMAPI 4.5.2, Stardew Realty exactly 3.0.0, Multiple Farms For Multiplayer 2.2.6, HxW Custom Buildings All in One 2.0, and Ultimate Coop and Barn 1.8.22. Use the matching pinned pack.\n<br />\n<br />Release 0.3.2 includes compatibility DLL 0.1.1. It checks the original Realty DLL's SHA256 before applying runtime compatibility hooks. It handles dedicated-server startup, null menus and Realty purchase notifications in multiplayer. The new Windows fix skips only Vortex's __folder_managed_by_vortex bookkeeping file when Realty reads additional-farm configs. Real config validation stays intact. No original Realty DLL is replaced or redistributed.\n<br />\n<br />Shared settings enable Forest and Meadowlands extra farms without free starter items or buildings; select HxW's building mode and empty interiors; and disable the Ultimate pack's unselected vanilla/SVE upgrades.\n<br />\n<br />Install through Vortex. The FOMOD automatically copies five files. The Collection makes this add-on win three configuration-file conflicts. This ZIP targets Windows Vortex; the Mac setup route and Unix path preparation are separate. Use a clean Mods folder: switching Vortex profiles does not hide manually installed mods.\n<br />\n<br />Validation: the pinned pack has passed isolated game/server tests for farmhand reconnect, purchased Realty land, construction and save/reload. Release 0.3.2 also passed the native Vortex FOMOD engine, 10 Vortex/Realty regression checks and 8 startup checks. An isolated Windows client loaded all pack modules and both Realty maps with the Vortex marker present, logging zero errors and warnings. Installation from the final published Collection and an external Steam player join remain to be verified; native Mac testing is pending.\n<br />\n<br />Credits: original mod authors retain all rights to their mods. This download contains only Wilcox's compatibility code, source and chosen settings. It contains no game files, original third-party mod archives, saves or credentials. LICENSE.txt permits copying, modifying and sharing our own files.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53452",
 	"Version": "0.3.2",
-	"Updated": "2026-10-07T20:02:09+00:00",
+	"Updated": "2026-10-08T06:37:22+00:00",
 	"Downloads": [
 		{
 			"Id": 185644,
@@ -1228,6 +1228,434 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342572594,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 185943,
+			"Type": "Optional",
+			"DisplayName": "Wilcox Farm 1.0 - Adventure Together",
+			"FileName": "47/19/93/4719939f-5628-4e6c-98b7-af231a25d1df",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 64577,
+			"Uploaded": "2026-10-08T06:37:22+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "fomod",
+					"Type": "Invalid",
+					"RelativePath": "fomod",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\AutomaticGates",
+					"Type": "Invalid",
+					"RelativePath": "payload\\AutomaticGates",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\BetterCrafting",
+					"Type": "Invalid",
+					"RelativePath": "payload\\BetterCrafting",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\CarpentersApprentice",
+					"Type": "Invalid",
+					"RelativePath": "payload\\CarpentersApprentice",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\ClintConcurrentUpgrades",
+					"Type": "Invalid",
+					"RelativePath": "payload\\ClintConcurrentUpgrades",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\ConvenientInventory",
+					"Type": "Invalid",
+					"RelativePath": "payload\\ConvenientInventory",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\DaLion.Combat",
+					"Type": "Invalid",
+					"RelativePath": "payload\\DaLion.Combat",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Frontier Farm\\[CP] Frontier Farm",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HorseOverhaul",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HorseOverhaul",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\HxW Buildings All in One",
+					"Type": "Invalid",
+					"RelativePath": "payload\\HxW Buildings All in One",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Integrated Minecarts\\[CP] Integrated Minecarts",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Integrated Minecarts\\[CP] Integrated Minecarts",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\ItemExtensions",
+					"Type": "Invalid",
+					"RelativePath": "payload\\ItemExtensions",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\LookupAnything",
+					"Type": "Invalid",
+					"RelativePath": "payload\\LookupAnything",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\MovementOverhaul",
+					"Type": "Invalid",
+					"RelativePath": "payload\\MovementOverhaul",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\NPCMapLocations",
+					"Type": "Invalid",
+					"RelativePath": "payload\\NPCMapLocations",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\PlatonicRelationships",
+					"Type": "Invalid",
+					"RelativePath": "payload\\PlatonicRelationships",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\SecretNoteFramework",
+					"Type": "Invalid",
+					"RelativePath": "payload\\SecretNoteFramework",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\SkullCavernElevator",
+					"Type": "Invalid",
+					"RelativePath": "payload\\SkullCavernElevator",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Stardew Valley Expanded\\[CP] Stardew Valley Expanded",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\UIInfoSuite2",
+					"Type": "Invalid",
+					"RelativePath": "payload\\UIInfoSuite2",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"Type": "Invalid",
+					"RelativePath": "payload\\Ultimate Coop and Barn\\[CP] Ultimate Coop and Barn",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.AdventureCompatibility",
+					"DisplayName": "Wilcox Adventure Compatibility",
+					"Type": "ContentPack",
+					"RelativePath": "payload\\WilcoxAdventureCompatibility",
+					"Manifest": {
+						"Name": "Wilcox Adventure Compatibility",
+						"Description": "Late Cape Stardew and Wizardry integration for the Wilcox pack.",
+						"Author": "Wilcox",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "dreamy.kickitspot",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.AdventureCompatibility"
+					}
+				},
+				{
+					"Id": "Wilcox.CapeRingCompatibility",
+					"DisplayName": "Wilcox Cape Ring Compatibility",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxCapeRingCompatibility",
+					"Manifest": {
+						"Name": "Wilcox Cape Ring Compatibility",
+						"Description": "Preserves Cape ring effects without Item Extensions equipment hooks.",
+						"Author": "Wilcox",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxCapeRingCompatibility.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "dreamy.kickitspot",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "mistyspring.ItemExtensions",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.CapeRingCompatibility"
+					}
+				},
+				{
+					"Id": "Wilcox.ChoppableFarmTrees",
+					"DisplayName": "Wilcox Farm Clearing and Paths",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxChoppableTrees",
+					"Manifest": {
+						"Name": "Wilcox Farm Clearing and Paths",
+						"Description": "Makes reachable decorative Frontier trees and rocks clearable once per save, with a modest outdoor path running bonus.",
+						"Author": "Wilcox Farm",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "WilcoxChoppableTrees.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.FrontierFarm",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Wilcox.FrontierClearing",
+								"MinimumVersion": "0.6.4",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.ChoppableFarmTrees"
+					}
+				},
+				{
+					"Id": "Wilcox.FrontierClearing",
+					"DisplayName": "Wilcox Frontier Clearing",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxFrontierClearing",
+					"Manifest": {
+						"Name": "Wilcox Frontier Clearing",
+						"Description": "Remove fixed Frontier fences, stone paving and native map bushes, preserving player objects, trees and terrain geometry.",
+						"Author": "Wilcox",
+						"Version": "0.6.4",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WilcoxFrontierClearing.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "flashshifter.FrontierFarm",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.FrontierClearing"
+					}
+				},
+				{
+					"Id": "Wilcox.GroupRules",
+					"DisplayName": "Wilcox Group Rules",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxGroupRules",
+					"Manifest": {
+						"Name": "Wilcox Group Rules",
+						"Description": "Shared earned Skull Cavern checkpoints and two Clint jobs with friendship discounts.",
+						"Author": "Wilcox",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxGroupRules.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Hornc.ClintConcurrentUpgrades",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "SkullCavernElevator",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "DIGUS.MailFrameworkMod",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.GroupRules"
+					}
+				},
+				{
+					"Id": "Wilcox.LocalMaps",
+					"DisplayName": "Wilcox Local Maps",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxLocalMaps",
+					"Manifest": {
+						"Name": "Wilcox Local Maps",
+						"Description": "Adds moving minimap positions and local terrain previews for expansion areas which otherwise have a fixed or missing map pin. Client only.",
+						"Author": "Wilcox Farm",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "WilcoxLocalMaps.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Bouhm.NPCMapLocations",
+								"MinimumVersion": "3.5.2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.LocalMaps"
+					}
+				},
+				{
+					"Id": "Wilcox.RobinOptions",
+					"DisplayName": "Wilcox Robin Options",
+					"Type": "ContentPack",
+					"RelativePath": "payload\\WilcoxRobinOptions",
+					"Manifest": {
+						"Name": "Wilcox Robin Options",
+						"Description": "Unlock the installed SVE farm building catalog while preserving costs, upgrade chains, unique-building and multiplayer capacity rules.",
+						"Author": "Wilcox",
+						"Version": "0.6.2",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "bobkalonger.UltimateCoopAndBarnCP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.RobinOptions"
+					}
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxWizardApprenticeship",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				},
+				{
+					"Id": null,
+					"DisplayName": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"Type": "Invalid",
+					"RelativePath": "payload\\[CP] ZZZ_MoreGreenhouses",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Wilcox.WizardApprenticeship",
+					"DisplayName": "Wilcox Wizard Apprenticeship",
+					"Type": "Smapi",
+					"RelativePath": "source",
+					"Manifest": {
+						"Name": "Wilcox Wizard Apprenticeship",
+						"Description": "Each farmer chooses whether to begin the Wizard's existing introductory lesson after two hearts.",
+						"Author": "Wilcox",
+						"Version": "0.6.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "WilcoxApprenticeship.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "moonslime.WizardrySkill",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "moonslime.WizardrySkill.CP",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.WizardApprenticeship"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572631,
 				"CategoryId": 3,
 				"Primary": false
 			}
