@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 53685,
+	"Name": "Mountain House - Farmhouse Replacement",
+	"Author": "PlatinumCats",
+	"Description": "[center]\n<br />Cozy, modern log cabin for the farmer. A farmhouse sprite replacement with seasonal variations.\n<br />\n<br />[img]https://i.imgur.com/k2rMWJc.png[/img][/center]\n<br />[center][/center]\n<br />[center][/center]\n<br />[center]Tested on the standard vanilla farm (Maps/Farm and Maps/Farm_Mining) with built-in compatibility for [b]Zenith Farm[/b].[/center]\n<br />[center]\n<br />For other custom farm maps, you will need to replace these lines inside your content.json:\n<br />\n<br />[code]\u00A0 {\n<br />\u00A0 \u00A0\"Action\":\"EditMap\",\n<br />\u00A0 \u00A0\"Target\":\"Maps/Farm_Zenith\",\n<br />\u00A0 \u00A0\"FromFile\":\"assets/FrontPatch0.tmx\",\n<br />\u00A0 \u00A0\"FromArea\": { \"X\": 0, \"Y\": 0, \"Width\": 9, \"Height\": 9 },\u00A0\n<br />\u00A0 \u00A0\"ToArea\": { \"X\": 39, \"Y\": 11, \"Width\": 9, \"Height\": 9 },\n<br />\u00A0 \u00A0\"PatchMode\":\"Overlay\",\n<br />\u00A0 \u00A0\"When\":{\"FarmhouseUpgrade\":0}\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0\"Action\":\"EditMap\",\n<br />\u00A0 \u00A0\"Target\":\"Maps/Farm_Zenith\",\n<br />\u00A0 \u00A0\"FromFile\":\"assets/FrontPatch1.tmx\",\n<br />\u00A0 \u00A0\"FromArea\": { \"X\": 0, \"Y\": 0, \"Width\": 9, \"Height\": 9 },\u00A0\n<br />\u00A0 \u00A0\"ToArea\": { \"X\": 39, \"Y\": 11, \"Width\": 9, \"Height\": 9 },\n<br />\u00A0 \u00A0\"PatchMode\":\"Overlay\",\n<br />\u00A0 \u00A0\"When\":{\"FarmhouseUpgrade\":1}\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0\"Action\":\"EditMap\",\n<br />\u00A0 \u00A0\"Target\":\"Maps/Farm_Zenith\",\n<br />\u00A0 \u00A0\"FromFile\":\"assets/FrontPatch2.tmx\",\n<br />\u00A0 \u00A0\"FromArea\": { \"X\": 0, \"Y\": 0, \"Width\": 9, \"Height\": 9 },\u00A0\n<br />\u00A0 \u00A0\"ToArea\": { \"X\": 39, \"Y\": 11, \"Width\": 9, \"Height\": 9 },\n<br />\u00A0 \u00A0\"PatchMode\":\"Overlay\",\n<br />\u00A0 \u00A0\"When\":{\"FarmhouseUpgrade\":2}\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0\"Action\":\"EditMap\",\n<br />\u00A0 \u00A0\"Target\":\"Maps/Farm_Zenith\",\n<br />\u00A0 \u00A0\"FromFile\":\"assets/FrontPatch3.tmx\",\n<br />\u00A0 \u00A0\"FromArea\": { \"X\": 0, \"Y\": 0, \"Width\": 9, \"Height\": 9 },\u00A0\n<br />\u00A0 \u00A0\"ToArea\": { \"X\": 39, \"Y\": 11, \"Width\": 9, \"Height\": 9 },\n<br />\u00A0 \u00A0\"PatchMode\":\"Overlay\",\n<br />\u00A0 \u00A0\"When\":{\"FarmhouseUpgrade\":3}\n<br />\u00A0 },[/code]\n<br />Replace [b]Farm_Zenith[/b] with your custom farm map's file name, and then update the [b]\"ToArea\"[/b] X and Y values to match the correct coordinates on your map. (You can find these coordinates using [b]Tiled[/b] or by debugging them in-game).\n<br />\n<br />\n<br />\n<br />\n<br />If you are using custom maps, you need to adjust the coordinates so the house patches align correctly. For example, if you are using [b]Beautiful Vista Farm by glymr[/b], your coordinate replacement values will be [b]X: 76[/b] and [b]Y: 2[/b].\n<br />\n<br />To apply this, locate the patch blocks inside your content.json and update the lines like this:\n<br />\n<br />[code]\u00A0 {\n<br />\u00A0 \u00A0\"Action\": \"EditMap\",\n<br />\u00A0 \u00A0\"Target\": \"Maps/Beautiful_Vista_Farm\",\n<br />\u00A0 \u00A0\"FromFile\": \"assets/FrontPatch0.tmx\",\n<br />\u00A0 \u00A0\"FromArea\": { \"X\": 0, \"Y\": 0, \"Width\": 9, \"Height\": 9 },\u00A0\n<br />\u00A0 \u00A0\"ToArea\": { \"X\": 76, \"Y\": 2, \"Width\": 9, \"Height\": 9 },\n<br />\u00A0 \u00A0\"PatchMode\": \"Overlay\",\n<br />\u00A0 \u00A0\"When\": { \"FarmhouseUpgrade\": 0 }\n<br />\u00A0 },[/code][i](Note: Remember to repeat this target and coordinate swap for the remaining FrontPatch1, FrontPatch2, and FrontPatch3 code blocks in your file).[/i]\n<br />\n<br />Visual reference for the X and Y coordinate replacement:[/center]\n<br />[center][img]https://i.imgur.com/q5Fc9m3.jpeg[/img][/center]\n<br />[center][/center]\n<br />[center][/center]\n<br />[center][line]\n<br />[/center]\n<br />[center][/center]\n<br />[center][b]Shout-out to Cody for commissioning the farmhouse sprites, and to all of my friends from Ko-fi, Patreon, and Nexus Mods for all the support![/b][/center]\n<br />[center][/center]\n<br />[center][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53685",
+	"Version": "1.0",
+	"Updated": "2026-10-10T07:36:50+00:00",
+	"Downloads": [
+		{
+			"Id": 186207,
+			"Type": "Main",
+			"DisplayName": "MountainHouse   Seasonal",
+			"FileName": "50/0d/59/500d594d-d836-45c4-968f-185f6170bd22",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 272893,
+			"Uploaded": "2026-10-10T07:36:50+00:00",
+			"Mods": [
+				{
+					"Id": "PC.MountainHouse",
+					"DisplayName": "Mountain Log House - Seasonal",
+					"Type": "ContentPack",
+					"RelativePath": "MountainHouse - Seasonal",
+					"Manifest": {
+						"Name": "Mountain Log House - Seasonal",
+						"Description": "Cozy, modern log house replacement for the farmhouse.",
+						"Author": "PlatinumCats",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "2.8.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:53685"
+						],
+						"UniqueId": "PC.MountainHouse"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572895,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440373,
+		"UploaderId": 147754183,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}
