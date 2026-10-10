@@ -1,0 +1,84 @@
+{
+	"Site": "Nexus",
+	"Id": 53662,
+	"Name": "Iridium Milk Cow",
+	"Author": "KhaStark",
+	"Description": "[font=Comic Sans MS]Iridium Cow adds a new late-game barn animal with its own progression path, custom milk, permanent health reward, and two selectable visual styles.[/font]\n<br />[spoiler][font=Comic Sans MS]After experiencing Mr. Qi's level-100 Skull Cavern milk event, you can buy an Iridium Livestock Permit in the Walnut Room for 100 Qi Gems. Bring the permit to Marnie, then wait until the next morning for her letter and the Iridium Cow to become available in her livestock shop.[/font][/spoiler]\n<br />[font=Comic Sans MS]Iridium Milk permanently adds 25 maximum health and 25 current health each time it is consumed. Health is unrestricted. To keep very large health totals from making the HUD bar grow endlessly, the health bar grows normally through the vanilla permanent-health range and then stays at the 205-health visual size while continuing to show your real current/max health proportion.\n<br />\n<br />The default animal art is the Vanilla-style Iridium Cow. An optional Facelift style is also included, based on/derived from siamece's [url=https://www.nexusmods.com/stardewvalley/mods/9057]Farm Animal Facelift[/url] assets and used under that mod's Nexus asset-use permissions with credit.\u00A0[/font]\n<br />\n<br />[font=Comic Sans MS][b]Requirements[/b][/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Stardew Valley 1.6.[/font][/*]\n<br />[*][font=Comic Sans MS]SMAPI 4.0.0 or later.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] 2.0.0 or later.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Tested on[/b][/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]Desktop: Stardew Valley 1.6.15 build 24356, Windows 11, SMAPI 4.5.2, Content Patcher 2.9.1, Generic Mod Config Menu 1.16.0.[/font][/*]\n<br />[*][font=Comic Sans MS]Android: Stardew Valley 1.6.15.3 build 26177, SMAPI 4.3.2.5, Content Patcher 2.8.1, Generic Mod Config Menu 1.16.0.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Installation[/b][/font]\n<br />[list=1]\n<br />\n<br />[*][font=Comic Sans MS]Install SMAPI and Content Patcher.[/font][/*]\n<br />[*][font=Comic Sans MS]Android users should also install [url=https://www.nexusmods.com/stardewvalley/mods/50397]Android Custom Animal Shop Fix[/url].[/font][/*]\n<br />[*][font=Comic Sans MS]Extract the Iridium Cow ZIP directly into your Stardew Valley Mods folder.[/font][/*]\n<br />[*][font=Comic Sans MS]Make sure both folders are present: \"Iridium Cow Health Helper\" and \"[CP] Iridium Cow\".[/font][/*]\n<br />[*][font=Comic Sans MS]Launch the game through SMAPI.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Credits[/b][/font]\n<br />[list]\n<br />\n<br />[*][font=Comic Sans MS]KhaStark — Iridium Cow design, gameplay implementation, permit edit, cross-platform helper, integration, and packaging.[/font][/*]\n<br />[*][font=Comic Sans MS]ConcernedApe — Stardew Valley; vanilla Iridium Milk artwork and the vanilla document sprite used as the base reference for the Iridium Livestock Permit.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/9057]siamece — Farm Animal Facelift[/url] — optional Facelift-style Iridium Cow art is based on/derived from these assets. The author's Nexus permissions allow asset use/modification with credit, prohibit selling mods/files using the assets, and allow Nexus Donation Points.[/font][/*]\n<br />[*][font=Comic Sans MS]Pathoschild — SMAPI and Content Patcher.[/font][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53662",
+	"Version": "1",
+	"Updated": "2026-10-09T19:06:25+00:00",
+	"Downloads": [
+		{
+			"Id": 186152,
+			"Type": "Main",
+			"DisplayName": "Khastark Iridium Cow V1.0.0",
+			"FileName": "6b/cc/95/6bcc95f1-e994-46be-a4c9-82bb69684079",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 33067,
+			"Uploaded": "2026-10-09T19:06:25+00:00",
+			"Mods": [
+				{
+					"Id": "KhaStark.IridiumCowHealth",
+					"DisplayName": "Iridium Cow Health Helper",
+					"Type": "Smapi",
+					"RelativePath": "Iridium Cow Health Helper",
+					"Manifest": {
+						"Name": "Iridium Cow Health Helper",
+						"Description": "Handles Iridium Milk's permanent health effect, the Iridium Cow permit handoff, and the UI-only health-bar growth limit.",
+						"Author": "KhaStark",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "IridiumCowHealth.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:53513"
+						],
+						"UniqueId": "KhaStark.IridiumCowHealth"
+					}
+				},
+				{
+					"Id": "KhaStark.IridiumCow",
+					"DisplayName": "(CP) Iridium Cow",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Iridium Cow",
+					"Manifest": {
+						"Name": "(CP) Iridium Cow",
+						"Description": "Adds a late-game Iridium Cow, its special Iridium Milk, and a Mr. Qi permit unlock path.",
+						"Author": "KhaStark",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "KhaStark.IridiumCowHealth",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "KhaStark.AndroidCustomAnimalShopFix",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53513"
+						],
+						"UniqueId": "KhaStark.IridiumCow"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572840,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440350,
+		"UploaderId": 218369943,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

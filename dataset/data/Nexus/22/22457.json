@@ -5,18 +5,18 @@
 	"Author": "AlanBF",
 	"Description": "[size=4][b]About[/b][/size]\n<br />\n<br />What the mod does:\n<br />\n<br />1. Makes the fridge in the Farm House and Ginger Island House be a 70 spaces fridge. (Same as a Big Chest)\n<br />2. Allows you to buy a Big Fridge from Robin, after your second House upgrade (or first upgrade and 5 hearths with her)\n<br />3. Can put the Big Fridge on top o a Mini-Fridge to replace, the same as a Chest -&gt; Big Chest\n<br />4. Adds a Color Picker for Mini-Fridges and Big Fridges\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />HouseFridgeProgressive:\n<br />[list]\n<br />[*]true: First house upgrade has a Mini-Fridge, second upgrade have a Big Fridge.\n<br />[*]false: Always a big fridge in the house.\n<br />[/list]ItemFridgeWithHearths:\n<br />[list]\n<br />[*]true: Buy Big Fridges after the first house upgrade and a few hearths with Robin.\n<br />[*]false: Can only buy after the second house upgrade.\n<br />[/list]HearthsWithRobin:\n<br />[list]\n<br />[*]Number of hearths needed with Robin for unlock early (House Upgrade 1 + x hearths)\n<br />[/list]Price:\n<br />[list]\n<br />[*]Price\n<br />[/list]\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/11115]Better Crafting[/url]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/9791]Better Chest[/url], needs to configure the fridges properly (allow color picker and disable sizing).\n<br />[/list]\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[url=https://github.com/AlanBF1992/BigFridge]Github[/url]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/22457",
-	"Version": "1.6.0",
-	"Updated": "2026-10-06T09:21:16+00:00",
+	"Version": "1.6.1",
+	"Updated": "2026-10-09T13:19:49+00:00",
 	"Downloads": [
 		{
-			"Id": 185713,
+			"Id": 186117,
 			"Type": "Main",
-			"DisplayName": "Big Fridges 1.6.0",
-			"FileName": "be/9a/cc/be9accfc-e881-42c8-a38c-33d81eef3d26",
-			"Description": "Config: Appeareance option can be changed only on title screen<br />Compat: Convenient Inventory<br />Compat: Unlimited Chest Colours<br />VPP: VPP Talent \"MiniFridgeBigSpace\" makes this mod redundant, the talent was changed to give recipes for the Mini and Big fridges",
-			"Version": "1.6.0",
-			"SizeInBytes": 62776,
-			"Uploaded": "2026-10-06T09:21:16+00:00",
+			"DisplayName": "Big Fridges 1.6.1",
+			"FileName": "54/48/34/54483412-c4d0-45dd-8299-9dcab9cfdf34",
+			"Description": "Fix: Null Reference Exception when using Big Fridge + Unlimited Chest Colours",
+			"Version": "1.6.1",
+			"SizeInBytes": 62398,
+			"Uploaded": "2026-10-09T13:19:49+00:00",
 			"Mods": [
 				{
 					"Id": "AlanBF.BigFridge",
@@ -27,7 +27,7 @@
 						"Name": "Big Fridge",
 						"Description": "Add a bigger type of fridge and give fridges a color picker",
 						"Author": "AlanBF",
-						"Version": "1.6.0",
+						"Version": "1.6.1",
 						"MinimumApiVersion": "4.0.8",
 						"EntryDll": "BigFridge.dll",
 						"Dependencies": [
@@ -39,6 +39,11 @@
 							{
 								"UniqueId": "leclair.bettercrafting",
 								"MinimumVersion": "2.17.1",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "KediDili.VanillaPlusProfessions",
+								"MinimumVersion": "1.1.1",
 								"IsRequired": false
 							},
 							{
@@ -60,7 +65,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342572401,
+				"Uid": 5596342572805,
 				"CategoryId": 1,
 				"Primary": true
 			}
