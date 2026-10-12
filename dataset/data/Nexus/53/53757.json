@@ -1,0 +1,99 @@
+{
+	"Site": "Nexus",
+	"Id": 53757,
+	"Name": "Shared Day - Turn-Based Co-op (BETA)",
+	"Author": "Squeetsquib",
+	"Description": "[quote][size=4][b][color=#e05a3c]⚠ Made with AI:[/color] this mod was built with AI assistance.[/b][/size]\n<br />[b]Source code:[/b] [url=https://github.com/CarbonNode/StardewMods]github.com/CarbonNode/StardewMods[/url]\n<br />The page art (header, thumbnail, banners) and Many Farms' in-game map and farmstead art are AI-generated too.\n<br />\n<br />[size=4][b][color=#e8a33d]BETA[/color] - in active testing now, and we are still working out bugs.[/b][/size]\n<br />[b]Back up your save before you use it[/b] (and start on a new or copied farm if you can). Please report anything odd in the [b]Bugs[/b] tab or [b]Posts[/b], with your [url=https://smapi.io/log]SMAPI log[/url].\n<br />\n<br />Shared Day has been played through dozens of automated multiplayer lab games (two- and three-player LAN farms, cold restarts, festivals, nights, villagers) and runs our own turn-based server every day. Read [i]Known limits[/i] at the bottom.[/quote]\n<br />[b]Why this exists:[/b] I built Shared Day for myself and my friends, so our co-op farm keeps going even though we are never online at the same time, and for ModRelay, the modpack and server manager I use to run our farm. It works fine without ModRelay, so I'm sharing it in case it helps your group too. The only parts that need ModRelay are the launcher extras (the turn tracker, the title-screen farm hub and waking a sleeping host PC); everything on this page works on an ordinary SMAPI co-op farm.\n<br />\n<br />[size=5][b]Play co-op Stardew on your own schedule.[/b][/size]\n<br />\n<br />Your friends are never online at the same time? With Shared Day, everybody plays [b]the same farm day[/b], one after another. Alice waters the crops and fills a chest in the morning, then finishes her day. Bob logs on in the evening and gets [b]his own 6:00 AM of that same date[/b], with Alice's work already done on the farm. When everyone has played (or been skipped), the night runs and the farm moves on to the next day together.\n<br />\n<br />No more \"can't play, the host is offline\", no more one person sleeping and dragging everyone to bed, and nobody racing ahead in the calendar.\n<br />\n<br />[size=5][b][color=#e8a33d]How it works[/color][/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Relay mode (default).[/b] Each farmer takes a turn on the current date and starts it at 6:00 AM. The world is shared and live: what the last farmer did is still there. The date advances only after every farmer on today's roster has finished or sits the day out.[/*]\n<br />[*][b]Together mode.[/b] Everyone on the roster has to be online and finished before the day ends.[/*]\n<br />[*][b]Finish my day.[/b] Press [b]F8[/b] (or go to bed) and choose [i]Finish my day[/i]. It asks once more first. Afterwards you can keep watching or disconnect, and nothing you did is lost.[/*]\n<br />[*][b]The turn board.[/b] A small wooden strip on screen shows every farmer's face with a tick (played), an empty box (still to play) or a cross (sitting out), and a gold glow on whoever is playing now. Hover it for details, click it for the menu, drag it to any corner.[/*]\n<br />[*][b]Leave mid-turn, come back later.[/b] An unfinished turn is parked at the clock and the tile you left it at, and you carry on there when you return. If somebody else is playing when you come back, you choose: join their turn now, or wait and carry on at your own clock.[/*]\n<br />[*][b]Joining part-way is never a surprise.[/b] The game tells you how much of the day you would lose before you join someone's turn in progress, and offers [i]Wait[/i] instead.[/*]\n<br />[*][b]Machines do not run twice.[/b] Kegs, furnaces and other machines only count the hours the day has not already reached, whoever replays them.[/*]\n<br />[*][b]Villagers start their morning again.[/b] Each new turn puts every villager back at their stored 6:00 AM place and schedule, without touching friendship, gifts, quests or dialogue.[/*]\n<br />[*][b]Festivals.[/b] Each turn can attend that date's festival.[/*]\n<br />[*][b]The night you missed.[/b] A farmer who was away when a date ended is credited that night (upgrades, timed quests, energy) and is shown its shipping totals and level-ups the next time they join.[/*]\n<br />[*][b]Skip someone.[/b] The host can skip an offline farmer for the day, and everyone else can vote to skip (it passes with more than half). A farmer who has not connected for 3 days (configurable) sits days out automatically until they return. Skipped farmers lose nothing.[/*]\n<br />[*][b]Save my turn.[/b] A remote farmer playing alone can save the farm mid-turn, with the clock where it is.[/*]\n<br />[*][b]Sticky notes.[/b] Leave a note on the farm's board for the next farmer (\"Left you wood in the chest!\").[/*]\n<br />[*][b]Turn notifications.[/b] Optional Discord or Slack webhook: the host posts when someone finishes, is skipped, or a new day starts, and can ping the next player.[/*]\n<br />[*][b]One-click Join.[/b] Optional: put your farm's address in the config and the title screen gets a [i]Join[/i] button for it.[/*]\n<br />[/list]\n<br />[size=5][b][color=#e8a33d]Troubleshooting[/color][/b][/size]\n<br />\n<br />When a day goes wrong, press [b]F8[/b] (or click the turn board) and open [b]Troubleshooting[/b]:\n<br />\n<br />[list]\n<br />[*][b]Give &lt;farmer&gt; a fresh day.[/b] Puts one farmer back to 6:00 AM in their own bed, in a turn of their own, while everyone else carries on. If someone else is playing, they wait until that turn ends. If they are offline, the fresh day starts when they next join.[/*]\n<br />[*][b]Restart today for everyone.[/b] Everyone back to 6:00 AM in bed, finished players play again, parked clocks are dropped.[/*]\n<br />[/list]Both reset the villagers to their stored morning. What was done today stays done: crops, items, money, and who you talked to or gave gifts to (no second round of friendship). Both are refused once the night has started, during a festival or cutscene, while saving, or while the farm is paused.\n<br />\n<br />[b]Who sees Troubleshooting:[/b] the host at its own keyboard, always. Other players only on a farm with a [b]farm password[/b] (see Configuration), as [i]Troubleshooting (farm password)[/i]. Console: [font=Courier New]shared_day fresh_day &lt;name&gt;[/font] and [font=Courier New]shared_day restart_day[/font].\n<br />\n<br />[i]Fix a problem[/i] in the same menu also lets a player reopen their own finished day, lifts a paused farm ([i]Try again[/i]), and with the farm password can bypass Shared Day for one player for the rest of the day.\n<br />\n<br />[size=5][b][color=#e8a33d]Install[/color][/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.1 or later (tested on Stardew Valley 1.6.15 with SMAPI 4.5.2).[/*]\n<br />[*]Unzip [b]Shared Day[/b] into your [font=Courier New]Mods[/font] folder. [b]The host and every player need it, the same version.[/b][/*]\n<br />[*]Launch the game once so [font=Courier New]Mods/SharedDay/config.json[/font] is created, quit, and set [font=Courier New]\"Enabled\": true[/font] on [b]every[/b] PC. Shared Day does nothing until you do.[/*]\n<br />[*]Host a co-op farm as usual. Friends join, pick a cabin and play. Start on a new or backed-up farm.[/*]\n<br />[/list]The host turns away a player whose Shared Day is missing, switched off, or a different version, and says why. [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional: with it, Shared Day has a page in Mod Options (turn board, corner, menu key).\n<br />\n<br />[b]Hosting tip:[/b] co-op always needs the host's game running. Either the host leaves the farm open after their turn (the waiting popup can stay up), or you run a spare PC as an unattended host: set [font=Courier New]\"IncludeHost\": false[/font] and [font=Courier New]\"AutoHost\": { \"Enabled\": true }[/font] so it loads the farm by itself and the host PC's farmer is not on the roster. It then presses the night's OK boxes and handles festivals on its own.\n<br />\n<br />[size=5][b][color=#e8a33d]Configuration[/color][/b][/size]\n<br />\n<br />[font=Courier New]Mods/SharedDay/config.json[/font], the settings you are most likely to touch:\n<br />[list]\n<br />[*][b]Enabled[/b] (false): switch the mod on. Every PC.[/*]\n<br />[*][b]Mode[/b] ([font=Courier New]Relay[/font]): or [font=Courier New]Together[/font].[/*]\n<br />[*][b]IncludeHost[/b] (true): whether the host's own farmer takes turns. [font=Courier New]false[/font] for a PC that only hosts.[/*]\n<br />[*][b]RequiredPlayerIds[/b] (empty): empty means every farmer who has claimed a cabin. A list fixes the roster to those farmer IDs.[/*]\n<br />[*][b]AwayAfterDays[/b] (3): days offline before a farmer sits days out automatically. 0 waits for ever.[/*]\n<br />[*][b]MenuKey[/b] (F8) and [b]Hud[/b] (turn board on/off, corner, offsets).[/*]\n<br />[*][b]Notifications.WebhookUrl[/b] and [b]Notifications.Mentions[/b]: Discord/Slack posts from the host.[/*]\n<br />[*][b]JoinServer.Address[/b] / [b]InviteCode[/b] / [b]Label[/b]: the title-screen Join button.[/*]\n<br />[*][b]AutoHost.Enabled[/b] / [b]Save[/b] / [b]HideWindow[/b]: unattended host PC.[/*]\n<br />[*][b]SaveTurnEveryMinutes[/b] (0): auto-save a lone remote farmer's turn every N farm minutes.[/*]\n<br />[*][b]Bypass.Salt[/b] / [b]Bypass.Hash[/b]: the farm password, host only, stored as a hash.[/*]\n<br />[/list][b]Setting a farm password[/b] (host PC, PowerShell). Pick any salt and password, then put both printed values in the host's config:\n<br />[quote][font=Courier New]$salt = 'any-random-words'; $pw = 'your farm password'\n<br />$h = [Security.Cryptography.SHA256]::Create().ComputeHash([Text.Encoding]::UTF8.GetBytes(\"$salt`n$pw\"))\n<br />\"Salt: $salt\"; \"Hash: \" + (-join ($h | % { $_.ToString('x2') }))[/font][/quote][b]Host console commands:[/b] [font=Courier New]shared_day status | skip | reopen | unskip | fresh_day | restart_day | bar | unbar | free_cabin | mode Relay|Together | checkpoint | retry[/font]\n<br />\n<br />The [font=Courier New]TurnTracker[/font] settings, the title-screen farm hub and [i]Wake the farm[/i] are for the ModRelay launcher, which I use to run our own server. You do not need them; leave them empty.\n<br />\n<br />[size=5][b][color=#e8a33d]Many Farms (optional file)[/color][/b][/size]\n<br />\n<br />[b]Many Farms[/b] is a separate, standalone mod in the [b]Optional files[/b]. It does not need Shared Day, and Shared Day does not need it, but together they make a turn-based farm where [b]every player has land of their own[/b].\n<br />\n<br />[list]\n<br />[*][b]Eight spare farm plots.[/b] Each player picks a farm when they join, or starts a new one on any land type (Standard, Riverland, Forest, Hill-top, Wilderness, Four Corners, Beach, Meadowlands, or a modded farm type).[/*]\n<br />[*][b]A house on your farm[/b] whose door opens into your own cabin rooms (same bed, chests, fridge). House upgrades from Robin are built there.[/*]\n<br />[*][b]Each farm works like a farm:[/b] its own cave, greenhouse, shipping bin, pet bowl, weeds, forage, crops, lightning rods, and that land type's extras.[/*]\n<br />[*][b]The Farmstead Totem[/b] (15 wood + 10 fiber, anyone can craft and use one) opens [i]Where to?[/i], a pixel-art map of the valley with a farmstead and its farmers' faces for every farm. Click one and you travel there.[/*]\n<br />[*][b]Roads lead home.[/b] Walking home from the Bus Stop, Forest or Backwoods (or a Farm warp totem) brings you to your own farm. Each player can switch this off.[/*]\n<br />[*]Money, the Community Center, festivals, the night's shipping and Grandpa's evaluation stay shared, as in any co-op game.[/*]\n<br />[/list][b]Install:[/b] unzip into [font=Courier New]Mods[/font] for the host and every player (same version). It does nothing until the [b]host[/b] sets [font=Courier New]\"Enabled\": true[/font] in [font=Courier New]Mods/ManyFarms/config.json[/font]. [b]Do not remove Many Farms from a save that has extra farms[/b]: the game drops locations it does not know, and those farms would go with it. Switching it off is safe; deleting it is not. Host console: [font=Courier New]many_farms list | kinds | start | assign | totem | place | houses[/font].\n<br />\n<br />[size=5][b][color=#e8a33d]Known limits[/color][/b][/size]\n<br />\n<br />[list]\n<br />[*]Third-party mod compatibility is not established. Mods with their own daily timers or that assume one continuous clock and one save per day may misbehave. We play it alongside a large Stardew Valley Expanded modpack, but test your own list.[/*]\n<br />[*]The same-date checkpoint saves only when no remote farmer is connected. Until that save (or the night's), a host crash rolls the farm back to the last save. Shared Day keeps a dated ZIP backup of the save under [font=Courier New]Mods/SharedDay/backups/[/font] before each checkpoint.[/*]\n<br />[*]Married villagers, weddings, construction and passing out mid-turn are less tested. At 1:50 AM the turn is finished for you, so nobody passes out at 2 AM.[/*]\n<br />[*]JunimoServer and other dedicated-server setups need their own testing.[/*]\n<br />[*]A player on a different Many Farms version is told to \"update the pack (Play through ModRelay)\". For Nexus users that simply means: install the host's version.[/*]\n<br />[/list]\n<br />[size=5][b][color=#e8a33d]Credits and permissions[/color][/b][/size]\n<br />Made by squeetsquib, with AI assistance. The page art and Many Farms' in-game map and farmstead art are AI-generated. Screenshots are from our lab games. Source code: [url=https://github.com/CarbonNode/StardewMods]github.com/CarbonNode/StardewMods[/url]. Please link to this page rather than re-uploading. Bug reports with your [url=https://smapi.io/log]SMAPI log[/url] are very welcome in the Posts or Bugs tab.\n<br />\n<br />[size=5][b][color=#e8a33d]Built for ModRelay[/color][/b][/size]\n<br />Shared Day and Many Farms started life on the farm my friends and I play through [url=https://modrelay.app]ModRelay[/url], the launcher and server manager I made to keep our modpacks and servers in sync. You don't need it for either mod; it's just where they came from, and where you'll see them running every day.\n<br />\n<br />[b]Source code:[/b] [url=https://github.com/CarbonNode/StardewMods]github.com/CarbonNode/StardewMods[/url] - releases for [url=https://github.com/CarbonNode/StardewMods/releases/tag/shared-day-v0.1.35]Shared Day 0.1.35[/url] and [url=https://github.com/CarbonNode/StardewMods/releases/tag/many-farms-v0.5.2]Many Farms 0.5.2[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53757",
+	"Version": "0.1.35",
+	"Updated": "2026-10-11T18:00:38+00:00",
+	"Downloads": [
+		{
+			"Id": 186368,
+			"Type": "Main",
+			"DisplayName": "Shared Day BETA",
+			"FileName": "f2/37/76/f2377635-07e2-426a-8aed-1443d95ebb1a",
+			"Description": "BETA. Shared Day 0.1.35: turn-based co-op. Install for the host and every player, then set \"Enabled\": true in Mods/SharedDay/config.json. Back up your save first.<br />",
+			"Version": "0.1.35",
+			"SizeInBytes": 254656,
+			"Uploaded": "2026-10-11T18:00:34+00:00",
+			"Mods": [
+				{
+					"Id": "CarbonNode.SharedDay",
+					"DisplayName": "Shared Day",
+					"Type": "Smapi",
+					"RelativePath": "SharedDay",
+					"Manifest": {
+						"Name": "Shared Day",
+						"Description": "Experimental shared-calendar co-op: take turns on a farm day, then advance together.",
+						"Author": "CarbonNode",
+						"Version": "0.1.35",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "SharedDay.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "JunimoHost.Server",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53757"
+						],
+						"UniqueId": "CarbonNode.SharedDay"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573056,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 186369,
+			"Type": "Optional",
+			"DisplayName": "Many Farms (optional)",
+			"FileName": "bf/6d/69/bf6d69f8-7f04-45db-98da-cd0a1f1d1c70",
+			"Description": "Optional, standalone. Many Farms 0.5.2: up to eight extra farms, one per player, with houses and a Farmstead Totem map. Host and every player need it; host sets \"Enabled\": true. Never remove it from a save that has extra farms.<br />",
+			"Version": "0.5.2",
+			"SizeInBytes": 260506,
+			"Uploaded": "2026-10-11T18:00:38+00:00",
+			"Mods": [
+				{
+					"Id": "CarbonNode.ManyFarms",
+					"DisplayName": "Many Farms",
+					"Type": "Smapi",
+					"RelativePath": "ManyFarms",
+					"Manifest": {
+						"Name": "Many Farms",
+						"Description": "Several farms in one game: each player picks or starts a farm of their own, and a Farmstead Totem set down in the world takes anyone to any of them.",
+						"Author": "CarbonNode",
+						"Version": "0.5.2",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "ManyFarms.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:53757"
+						],
+						"UniqueId": "CarbonNode.ManyFarms"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573057,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440445,
+		"UploaderId": 1506602,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

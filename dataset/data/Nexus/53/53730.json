@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 53730,
+	"Name": "Stardew Merge",
+	"Author": "slpOff",
+	"Description": "[size=5][b]Overview[/b][/size]\n<br />\n<br />Stardew Merge is a SMAPI mod that lets you customize game textures through a browser-based image editor.\n<br />\n<br />Choose an in-game texture, select part of a retexture image, and merge it into the desired location. Combine your favorite pieces from different retextures and check the results in-game without restarting.\n<br />\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[list]\n<br />[*]Side-by-side views of the target texture and source image.[/*]\n<br />[*]Game texture selection by folder, subfolder, and image name.[/*]\n<br />[*]Area selection and precise placement.[/*]\n<br />[*]Overlay and Replace merge modes.[/*]\n<br />[*]Adjustable grid size and grid snapping.[/*]\n<br />[*]Zoom and pan controls.[/*]\n<br />[*]Undo and redo.[/*]\n<br />[*]Load saved merged images and restore the original texture.[/*]\n<br />[*]Preview texture changes in-game without restarting.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley.[/*]\n<br />[*]SMAPI.[/*]\n<br />[*]A web browser.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download and extract Stardew Merge.[/*]\n<br />[*]Place the mod folder inside your game's [b]Mods[/b] folder.[/*]\n<br />[*]Put the retexture images you want to use in [b]stardewmerge/stardewmerge/assets[/b].\n<br />- you can put it while using web editor.[/*]\n<br />[*]Launch Stardew Valley through SMAPI.[/*]\n<br />[/list]\n<br />\n<br />[size=5][b]How to Use[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Enter [b]mopen[/b] in the SMAPI console to open the web editor.[/*]\n<br />[*]In the left panel, select the game texture you want to edit using the folder, subfolder, and image dropdowns.[/*]\n<br />[*]In the right panel, select a source image from your [b]assets[/b] folder.[/*]\n<br />[*]Drag over the source image to select the area you want to use.[/*]\n<br />[*]Choose the destination on the left image. Adjust the grid size and enable grid snapping when needed.[/*]\n<br />[*]Click [b]Overlay[/b] or [b]Replace[/b] to merge the selected area.[/*]\n<br />[*]Check the result, then click [b]Save[/b].[/*]\n<br />[*]Return to the game to view the updated texture without restarting.[/*]\n<br />[/list]\n<br />[b]Example: Retexturing a Crab Pot[/b]\n<br />\n<br />Select [b]Maps → No subfolder → springobjects[/b] in the left panel. Select your Crab Pot retexture in the right panel, choose the replacement artwork, and merge it into the Crab Pot sprite area.\n<br />\n<br />\n<br />[size=5][b]Merge Modes[/b][/size]\n<br />\n<br />[b]Overlay[/b]\n<br />Draws the selected image over the existing texture. Transparent areas preserve the pixels underneath.\n<br />\n<br />[b]Replace[/b]\n<br />Replaces the destination area, including transparent pixels. Use this to remove the old artwork completely within that area.\n<br />\n<br />\n<br />[size=5][b]Editor Controls[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]V:[/b] Switch to selection mode.[/*]\n<br />[*][b]M:[/b] Switch to move mode.[/*]\n<br />[*][b]Mouse wheel:[/b] Zoom in or out around the pointer.[/*]\n<br />[*][b]Space + drag:[/b] Pan the image.[/*]\n<br />[/list]\n<br />Use [b]Undo[/b] and [b]Redo[/b] to adjust recent edits, [b]Saved Merged Image[/b] to load an existing result, or [b]Restore Original[/b] to revert the texture.\n<br />\n<br />\n<br />[size=5][b]Asset Permissions[/b][/size]\n<br />\n<br />Please respect the permissions set by the original retexture creators. Merging images does not grant permission to redistribute them.\n<br />\n<br />Before sharing a merged texture, check each creator's terms and obtain permission where required.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53730",
+	"Version": "0.0.8",
+	"Updated": "2026-10-11T13:17:16+00:00",
+	"Downloads": [
+		{
+			"Id": 186336,
+			"Type": "Main",
+			"DisplayName": "StardewMerge",
+			"FileName": "39/df/ca/39dfcaa0-ade1-46b8-9290-0666ed8f6252",
+			"Description": "",
+			"Version": "0.0.8",
+			"SizeInBytes": 63110,
+			"Uploaded": "2026-10-11T13:17:16+00:00",
+			"Mods": [
+				{
+					"Id": "slO.stardewmerge",
+					"DisplayName": "Stardew Merge",
+					"Type": "Smapi",
+					"RelativePath": "StardewMerge\\StardewMerge",
+					"Manifest": {
+						"Name": "Stardew Merge",
+						"Description": "Open a browser editor to merge PNG regions into game image assets and persist the merged result.",
+						"Author": "slO",
+						"Version": "0.0.8",
+						"EntryDll": "StardewMerge.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "slO.stardewmerge"
+					}
+				},
+				{
+					"Id": "slO.stardewmerge.content",
+					"DisplayName": "Stardew Merge Content",
+					"Type": "ContentPack",
+					"RelativePath": "StardewMerge\\[CP] StardewMerge",
+					"Manifest": {
+						"Name": "Stardew Merge Content",
+						"Description": "Generated Content Patcher pack for Stardew Merge results.",
+						"Author": "slO",
+						"Version": "0.0.8",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "slO.stardewmerge",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "slO.stardewmerge.content"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573024,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440418,
+		"UploaderId": 231048348,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}
