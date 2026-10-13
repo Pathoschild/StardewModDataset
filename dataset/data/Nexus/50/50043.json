@@ -5,18 +5,18 @@
 	"Author": "tikamin557",
 	"Description": "[color=#ffff00][size=6][b]About T's Core[/b][/size][/color]\n<br />T's Core is a shared library and framework for Stardew Valley mods. It provides reusable features, Content Patcher integration, and public APIs for other mods.\n<br />\n<br />[b][size=4][color=#00ff00]For players[/color]:[/size][/b]\n<br />T's Core is primarily a framework, so most players only need to install it when another mod requires it. It supports both PC and Android.\n<br />\n<br />The optional Shortcut Panel gives quick access to mod features, key inputs, and settings.\n<br />Optional Time Skip tools let you advance the in-game clock to a chosen time or by a chosen duration.\n<br />Both keybinds are unassigned by default and can be configured through GMCM.\n<br />The Terrain Features management menu lets you clear, generate, or reset selected terrain features and objects. Open it with a configurable key (default: L) or the Shortcut Panel.\n<br />\n<br />[b][size=4][color=#00ff00]For mod authors[/color]:[/size][/b]\n<br />T's Core provides reusable features for Content Patcher and SMAPI mods, often without requiring custom C# code. For configuration details, examples, and API references, see the GitHub Modder Guide.\n<br />[line]\n<br />[b][color=#ffff00][size=6]Documentation[/size][/color][/b]\n<br />Detailed guides and examples are available here:\n<br />[u][size=5][url=https://github.com/Tikamin557/Ts-Core/blob/main/README.md]GitHub Documentation[/url][/size][/u]\n<br />(The Modder Guide is available in both [url=https://github.com/Tikamin557/Ts-Core/blob/main/docs/ModderGuide.md]English[/url] and [url=https://github.com/Tikamin557/Ts-Core/blob/main/docs(Japanese)/ModderGuide.md]Japanese[/url].)\n<br />[line]\n<br />[b][color=#00ffff][size=6]Main Features[/size][/color][/b]\n<br />These are some of the main systems available in T's Core. See the GitHub Modder Guide for details and usage instructions.\n<br />\n<br />[color=#ffff00][size=5][b]Content Patcher Integration[/b][/size][/color]\n<br />Extends Content Patcher with additional Data Assets, Tile Actions, Game State Queries, tokens, and other features that mod authors can use without writing C# code.\n<br />[code]tscore_cp_reload &lt;ContentPackId&gt;[/code]This development command lets Content Patcher mod authors reload many changes, including ConfigSchema and DynamicTokens, without restarting the game. Simply install T's Core to use this tool, helping reduce the need for repeated game restarts.\n<br />\n<br />[color=#ffff00][size=5][b]Mod Conflict Warnings[/b][/size][/color]\n<br />Lets Content Patcher mods define potentially conflicting mod combinations and display warnings when those mods are installed together. Custom and translated messages are supported.\n<br />\n<br />[color=#ffff00][size=5][b]Warp Services[/b][/size][/color]\n<br />Provides custom warp actions and dynamic destinations, including warp points defined directly on map tiles.\n<br />\n<br />[color=#ffff00][size=5][b]Post Renovation Patch[/b][/size][/color]\n<br />Applies map patches after FarmHouse renovations and other runtime map changes, helping prevent custom edits from being overwritten.\n<br />\n<br />[color=#ffff00][size=5][b]Terrain Features Management[/b][/size][/color]\n<br />Manage terrain features and objects using Clear, Generate, and Reset operations. Choose which types to affect and whether to process the current location or outdoor locations. Open the menu using a configurable key (default: L) or the Shortcut Panel.\n<br />\n<br />[color=#ffff00][size=5][b]Position Picker[/b][/size][/color]\n<br />Lets Content Patcher mods add an in-game map position picker to their GMCM settings, so players can select coordinates visually. Supports touch controls on Android.\n<br />\n<br />[color=#ffff00][size=5][b]Map Properties[/b][/size][/color]\n<br />Adds custom map behavior, including timed exits, greenhouse rules, ambient lighting, and masking outside map boundaries.\n<br />\n<br />[color=#ffff00][size=5][b]Building Services[/b][/size][/color]\n<br />Provides Building Providers and options for customizing building settings and visual features.\n<br />\n<br />[color=#ffff00][size=5][b]BigCraftable Extension[/b][/size][/color]\n<br />Lets Content Patcher mods create BigCraftables with custom sizes, textures, interactions, animations, lighting, and placement conditions.\n<br />\n<br />[color=#ffff00][size=5][b]Dialogue System[/b][/size][/color]\n<br />Lets Content Patcher mods create interactive dialogues with conditions, player choices, and chained conversations.\n<br />\n<br />[color=#ffff00][size=5][b]Notification System[/b][/size][/color]\n<br />Provides customizable on-screen notifications and reusable notification themes for Content Patcher and C# mods.\n<br />\n<br />[color=#ffff00][size=5][b]Migration System[/b][/size][/color]\n<br />Helps mods update supported internal IDs while preserving compatible data in existing saves.\n<br />\n<br />[color=#ffff00][size=5][b]Relationship &amp; Location Services[/b][/size][/color]\n<br />Provides reusable relationship, romanceability, and location information, including support for compatible relationship mods.\n<br />\n<br />[color=#ffff00][size=5][b]Polyamory Sweet Rooms Integration[/b][/size][/color]\n<br />Lets supported mods provide spouse room presets and allows players to assign characters to available rooms through T's Core.\n<br />\n<br />[color=#ffff00][size=5][b]Additional Actions &amp; Conditions[/b][/size][/color]\n<br />Adds Tile Actions and Game State Queries for custom sleeping behavior, location checks, and other mod features.\n<br />\n<br />[color=#ffff00][size=5][b]Additional Compatibility Fixes[/b][/size][/color]\n<br />Includes automatic fixes for certain issues involving custom FarmHouse maps, warps, spouse rooms, Rain Totems, and other modded content.\n<br />\n<br />[color=#ffff00][size=5][b]Public APIs[/b][/size][/color]\n<br />Provides documented APIs that SMAPI C# mods can use to share T's Core functionality.\n<br />[line]\n<br />[b][color=#ffff00][size=6]Installation[/size][/color][/b]\n<br />Install T's Core using your preferred mod manager, or extract the downloaded archive into your Stardew Valley \"[color=#fce5cd]Mods[/color]\" folder.\n<br />T's Core requires SMAPI and Content Patcher.\n<br />[line]\n<br />\n<br />[center]&#92;( If you like this mod or any of the mods I've created, please endorse it! It improves my willingness to make mods!)[/center]\n<br />[center][size=4]-------------------------------------------------------[/size][/center]\n<br />[center][size=4]&gt;&gt;&gt; [url=https://www.nexusmods.com/users/78813038?tab=user+files]List of mods I made[/url]\u00A0&lt;&lt;&lt;[/size][/center]\n<br />[center][size=4]-------------------------------------------------------[/size][/center]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50043",
-	"Version": "1.9.6",
-	"Updated": "2026-10-12T00:37:33+00:00",
+	"Version": "1.9.8",
+	"Updated": "2026-10-13T04:57:58+00:00",
 	"Downloads": [
 		{
-			"Id": 186411,
+			"Id": 186554,
 			"Type": "Main",
 			"DisplayName": "T's Core",
-			"FileName": "8e/0d/72/8e0d72b4-bb24-45e1-83ff-c97224c68867",
-			"Description": "Added Terrain Features management (Reset, Clear, and Generate), improved Position Picker controls on Android, and fixed GMCM menu transitions and settings preservation. Added Position Picker support for PIF maps. See the changelog for details.",
-			"Version": "1.9.6",
-			"SizeInBytes": 225257,
-			"Uploaded": "2026-10-12T00:37:33+00:00",
+			"FileName": "d8/3c/6b/d83c6bdc-8a2d-44a8-a198-4cece227f125",
+			"Description": "Fixed an issue where Position Picker previews wouldn't open when accessing mod settings from the GMCM main menu.",
+			"Version": "1.9.8",
+			"SizeInBytes": 225405,
+			"Uploaded": "2026-10-13T04:57:58+00:00",
 			"Mods": [
 				{
 					"Id": "Tikamin557.TsCore",
@@ -27,7 +27,7 @@
 						"Name": "T's Core",
 						"Description": "A shared core library for T's Stardew Valley Mods, providing common services, APIs, and utilities.",
 						"Author": "Tikamin557",
-						"Version": "1.9.6",
+						"Version": "1.9.8",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "Ts_Core.dll",
 						"Dependencies": [
@@ -60,7 +60,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342573099,
+				"Uid": 5596342573242,
 				"CategoryId": 1,
 				"Primary": true
 			}
