@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 53846,
+	"Name": "Flexible Upgrades",
+	"Author": "Yousv",
+	"Description": "[center][color=#8e7cc3][size=6][b]Flexible Upgrades[/b][/size][/color][/center]\n<br />[center][size=4]Multi-finish for Robin and Clint. Complete several buildings and upgrades at once for a fee. Fully configurable.[/size]\n<br />[line]\n<br />[/center]\n<br />[center][img]https://staticdelivery.nexusmods.com/mods/1303/images/53846/53846-1791921611-966949781.png[/img][/center]\n<br />[line]\n<br />[center][b][color=#8e7cc3][size=6]Features[/size][/color][/b][/center]\n<br />[color=#b4a7d6][size=4][b]Finish Early[/b][/size][/color]\n<br />[list]\n<br />[*][b]Robin[/b] - Finish a building, house upgrade, or community upgrade early, from her shop dialogue. (available even when she's working on a building.)[/*]\n<br />[*][b]Clint[/b] - Finish a tool upgrade early, from his shop dialogue. Ready extras are collected from his counter one per visit, like the normal tool.[/*]\n<br />[*]Each option lists its price and days left.[/*]\n<br />[/list][color=#b4a7d6][size=4][b]Multiple Orders[/b][/size][/color]\n<br />[list]\n<br />[*][b]Robin &amp; Clint [/b]- Start a new order while another runs. [color=#b4a7d6](default: on, max 3)[/color][/*]\n<br />[*]Upgrade and Construct entries show [used / max] slots.[/*]\n<br />[*]At the cap, Clint and Robin list each open job and its days left instead of accepting more.[/*]\n<br />[/list][color=#b4a7d6][size=4][b]Pricing[/b][/size][/color]\n<br />[color=#b6d7a8][size=3]Formula: base + (per day x days left) + (factor x price)[/size][/color]\n<br />[list]\n<br />[*]Prices drop as days pass.[/*]\n<br />[*][b]Robin[/b] - Base fee [color=#b4a7d6](default: 100)[/color], per-day fee [color=#b4a7d6](default: 600)[/color], building factor [color=#b4a7d6](default: 0.6)[/color].[/*]\n<br />[*][b]Clint[/b] - Base fee [color=#b4a7d6](default: 100)[/color], per-day fee [color=#b4a7d6](default: 400)[/color], upgrade factor [color=#b4a7d6](default: 0.4)[/color].[/*]\n<br />[*]Building and tool prices come from game data, so rebalances and custom content work.[/*]\n<br />[*][color=#ea9999]House upgrades (10,000 / 65,000 / 100,000) and community upgrades (500,000 / 300,000) have no data entries, so those numbers are fixed.[/color][/*]\n<br />[/list][color=#b4a7d6][size=4][b]Multiplayer[/b][/size][/color]\n<br />[list]\n<br />[*]Each player pays their own gold and collect their own tools.[/*]\n<br />[*]Buildings states get synced with the host then with other players.[/*]\n<br />[/list][color=#b4a7d6][b][size=5]API[/size][/b][/color]\n<br />[spoiler]Flexible Upgrades registers a SMAPI API under the mod ID [font=Consolas]yousv.FlexibleUpgrades[/font]. Other mods can access it via [font=Consolas]IModRegistry.GetApi[/font].\n<br />[list]\n<br />[*][b]GetRobinProjects()[/b] - Open jobs as kind, name, days left, building id.[/*]\n<br />[*][b]GetToolOrders()[/b] - Upgrades as display name, days left, item id, vanilla flag.[/*]\n<br />[/list]Usage example:\n<br />[code]\n<br />var api = helper.ModRegistry.GetApi&lt;IFlexibleUpgradesApi&gt;(\"yousv.FlexibleUpgrades\");\n<br />if (api != null)\n<br />{\n<br />var orders = api.GetToolOrders();\n<br />}[/code][b]The API is read-only.[/b][/spoiler]\n<br />[line]\n<br />[center][b][size=5]Requirements[/size][/b][/center]\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.0.0 or later.[/*]\n<br />[*]Stardew Valley 1.6.[/*]\n<br />[/list]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for in-game configuration. Without it, edit the config.json file directly.\n<br />[line]\n<br />[center][b][size=5]Installation[/size][/b][/center]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Extract the mod folder into your Stardew Valley Mods folder.[/*]\n<br />[*]Launch the game via SMAPI.[/*]\n<br />[/list][line]\n<br />[center][b][size=5]Support[/size][/b][/center]\n<br />[center][size=4][url=http://ko-fi.com/yousv][color=#ffd966]Ko-Fi[/color][/url][/size][/center]\n<br />[line]\n<br />[center][b][size=5]My other mods[/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/49065]Better Movement and Combat[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/50945]Bundle Viewer[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/50742]Chest Label Tooltip[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/50674]Early Deconstructor[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/53846]Flexible Upgrades[/url] (You're Here)[/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/48739]Party Info[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/48315]SMAPI Silent Launcher[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/49186]Time Control[/url][/size][/b]\n<br />[b][size=4][url=https://www.nexusmods.com/stardewvalley/mods/51537]Junimatic Greenhouse Workers[/url][/size][/b][/center]\n<br />[line]\n<br />[center][size=2][i]Report bugs in the Posts/Bugs tab with your SMAPI log.[/i][/size][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53846",
+	"Version": "1.0.2",
+	"Updated": "2026-10-14T02:25:52+00:00",
+	"Downloads": [
+		{
+			"Id": 186643,
+			"Type": "Main",
+			"DisplayName": "FlexibleUpgrades v1.0.2",
+			"FileName": "62/70/39/627039e5-7895-4b31-bf7c-a31c97ab91db",
+			"Description": "",
+			"Version": "1.0.2",
+			"SizeInBytes": 47388,
+			"Uploaded": "2026-10-14T02:25:52+00:00",
+			"Mods": [
+				{
+					"Id": "yousv.FlexibleUpgrades",
+					"DisplayName": "Flexible Upgrades",
+					"Type": "Smapi",
+					"RelativePath": "FlexibleUpgrades",
+					"Manifest": {
+						"Name": "Flexible Upgrades",
+						"Description": "Multi-finish for Robin and Clint. Complete several buildings and upgrades at once for a fee.",
+						"Author": "Yousv",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FlexibleUpgrades.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53846"
+						],
+						"UniqueId": "yousv.FlexibleUpgrades"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573331,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440534,
+		"UploaderId": 161386073,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
