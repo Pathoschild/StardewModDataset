@@ -1,0 +1,119 @@
+{
+	"Site": "Nexus",
+	"Id": 53889,
+	"Name": "Pokeball Atelier",
+	"Author": "Lucidvisionsinc",
+	"AuthorLabel": "dreamygloom",
+	"Description": "Description\n<br />Bring the world of Pokémon-inspired Poké Ball crafting to Stardew Valley! Grow Apricorn trees, turn your harvest into classic Poké Balls, and discover an ancient Hisuian forging method for crafting balls from materials found throughout the valley.\n<br />Whether you're a collector, a crafter, or simply a Pokémon fan, Poké Ball Atelier adds new items and crafting opportunities to explore.\n<br />Installation Instructions\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] if you haven't already.[/*]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].[/*]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/1348]SpaceCore[/url].[/*]\n<br />[*]Download and extract Poké Ball Atelier.[/*]\n<br />[*]Place the mod folder into your Stardew Valley\n<br />[code]Mods[/code]folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]Make sure all required mods are installed and up to date.\n<br />Main Features\n<br />[list]\n<br />[*][b]Grow Apricorn Trees:[/b] Cultivate colorful Apricorns to use as ingredients for crafting Poké Balls.[/*]\n<br />[*][b]Apricorn Machine:[/b] Craft a machine that transforms colored Apricorns into their corresponding classic Poké Balls.[/*]\n<br />[*][b]Ancient Hisui Forge:[/b] Discover a special forging method that combines Brown Apricorns with materials such as Stone, Wood, Hardwood, and Coal to create different Hisuian Poké Balls.[/*]\n<br />[*][b]Collectible Poké Balls:[/b] Craft a variety of classic and Hisuian designs to expand your collection.[/*]\n<br />[*][b]Throwable Poké Balls:[/b] Use the included throwable-item functionality to throw your Poké Balls in-game.[/*]\n<br />[/list]Requirements\n<br />[list]\n<br />[*][b]Stardew Valley[/b][/*]\n<br />[*][b]SMAPI[/b] — Required for loading mods.[/*]\n<br />[*][b]Content Patcher[/b][/*]\n<br />[*][b]SpaceCore[/b][/*]\n<br />[/list]Please ensure each dependency is installed correctly before launching the game.\n<br />Shout Outs\n<br />[list]\n<br />[*][b]ConcernedApe[/b] — Thank you for creating Stardew Valley.[/*]\n<br />[*][b]The Pokémon team[/b] — For the Pokémon world and Poké Ball designs that inspired this project.[/*]\n<br />[*][b]The Stardew Valley modding community[/b] — For the tools, resources, and creativity that make projects like this possible.[/*]\n<br />[/list]And thank you to everyone who downloads, plays, and supports this mod!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53889",
+	"Version": "0.1.0",
+	"Updated": "2026-10-14T21:59:44+00:00",
+	"Downloads": [
+		{
+			"Id": 186771,
+			"Type": "Main",
+			"DisplayName": "PokeBallItems",
+			"FileName": "67/be/86/67be863d-c434-4b11-a178-0a5a86c68913",
+			"Description": "beta release",
+			"Version": "0.1.0",
+			"SizeInBytes": 415355,
+			"Uploaded": "2026-10-14T21:59:44+00:00",
+			"Mods": [
+				{
+					"Id": "dreamy.PokeBallItems",
+					"DisplayName": "Poké Ball Items Helper",
+					"Type": "Smapi",
+					"RelativePath": "PokeBallItems\\PokeBallItems",
+					"Manifest": {
+						"Name": "Poké Ball Items Helper",
+						"Description": "Makes each Poké Ball shell create its matching weapon only once.",
+						"Author": "arony",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PokeBallItems.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53889"
+						],
+						"UniqueId": "dreamy.PokeBallItems"
+					}
+				},
+				{
+					"Id": "dreamygloom.PokeObjectdata",
+					"DisplayName": "Apricorn Machine: Poké Ball Weapons",
+					"Type": "ContentPack",
+					"RelativePath": "PokeBallItems\\PokeballObjects",
+					"Manifest": {
+						"Name": "Apricorn Machine: Poké Ball Weapons",
+						"Description": "Adds Apricorn trees, Apricorn Machines, the Ancient Hisui Forge, Poké Ball objects, and throwable Poké Ball weapons.",
+						"Author": "DreamyGloom",
+						"Version": "0.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "dreamy.PokeBallItems",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53889"
+						],
+						"UniqueId": "dreamygloom.PokeObjectdata"
+					}
+				},
+				{
+					"Id": "dreamygloom.PokeBallGuide",
+					"DisplayName": "Poké Ball Guide",
+					"Type": "ContentPack",
+					"RelativePath": "PokeBallItems\\[CP] Poké Ball Guide",
+					"Manifest": {
+						"Name": "Poké Ball Guide",
+						"Description": "Adds an in-game field guide covering Apricorn trees, Apricorn Machines, the Ancient Hisui Forge, and the Poké Balls in Apricorn Machine: Poké Ball Weapons.",
+						"Author": "DreamyGloom",
+						"Version": "0.1.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.Parchment.Core",
+								"MinimumVersion": "1.12.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "dreamygloom.PokeObjectdata",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53889"
+						],
+						"UniqueId": "dreamygloom.PokeBallGuide"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573459,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440577,
+		"UploaderId": 126170833,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

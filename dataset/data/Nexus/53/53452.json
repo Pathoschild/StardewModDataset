@@ -4,10 +4,10 @@
 	"Name": "Wilcox Farm Compatibility and Settings",
 	"Author": "fudgy102",
 	"AuthorLabel": "Wilcox",
-	"Description": "A companion for the Wilcox Farm Windows Collection. Installs Wilcox's Realty compatibility mod and the shared settings used by the server. This add-on is not the full Collection.\n<br />\n<br />Requirements: Stardew Valley 1.6.15, SMAPI 4.5.2, Stardew Realty exactly 3.0.0, Multiple Farms For Multiplayer 2.2.6, HxW Custom Buildings All in One 2.0, and Ultimate Coop and Barn 1.8.22. Use the matching pinned pack.\n<br />\n<br />Release 0.3.2 includes compatibility DLL 0.1.1. It checks the original Realty DLL's SHA256 before applying runtime compatibility hooks. It handles dedicated-server startup, null menus and Realty purchase notifications in multiplayer. The new Windows fix skips only Vortex's __folder_managed_by_vortex bookkeeping file when Realty reads additional-farm configs. Real config validation stays intact. No original Realty DLL is replaced or redistributed.\n<br />\n<br />Shared settings enable Forest and Meadowlands extra farms without free starter items or buildings; select HxW's building mode and empty interiors; and disable the Ultimate pack's unselected vanilla/SVE upgrades.\n<br />\n<br />Install through Vortex. The FOMOD automatically copies five files. The Collection makes this add-on win three configuration-file conflicts. This ZIP targets Windows Vortex; the Mac setup route and Unix path preparation are separate. Use a clean Mods folder: switching Vortex profiles does not hide manually installed mods.\n<br />\n<br />Validation: the pinned pack has passed isolated game/server tests for farmhand reconnect, purchased Realty land, construction and save/reload. Release 0.3.2 also passed the native Vortex FOMOD engine, 10 Vortex/Realty regression checks and 8 startup checks. An isolated Windows client loaded all pack modules and both Realty maps with the Vortex marker present, logging zero errors and warnings. Installation from the final published Collection and an external Steam player join remain to be verified; native Mac testing is pending.\n<br />\n<br />Credits: original mod authors retain all rights to their mods. This download contains only Wilcox's compatibility code, source and chosen settings. It contains no game files, original third-party mod archives, saves or credentials. LICENSE.txt permits copying, modifying and sharing our own files.",
+	"Description": "[b]Wilcox Farm 1.2 - Farm Services[/b]\n<br />\n<br />This is the matching settings and compatibility add-on for the Wilcox Farm Collection, not the complete pack.\n<br />\n<br />[b]Existing Windows Vortex players[/b]\n<br />Close Stardew. In your working Wilcox Farm 1.1 profile, update Wilcox Farm Settings to 1.2, choose Replace if asked, then Deploy Mods. Enable only one Settings version. All other pinned Collection downloads are unchanged. Launch SMAPI through Vortex. Old Play Wilcox shortcuts use a separate profile.\n<br />\n<br />[url=https://www.nexusmods.com/games/stardewvalley/collections/iripjg]Wilcox Farm Collection[/url]\n<br />[url=https://wilcox-farm-live.n5cjhzhrxr.chatgpt.site/downloads]Mac and Play Wilcox update downloads[/url]\n<br />\n<br />[b]What changes[/b]\n<br />A free commercial kitchen in the existing restaurant with seven cooking stations, twenty storage units, and preserved stocked fridges. Ordinary farmers can progress the Frontier minecart quest at its normal material cost. Junimos gain the group's earned harvest benefits and visible animal-product hauling; normal unlocks and supplies still apply. Crop helpers till, plant, water, harvest and replant without cutting trees. The host uses days lasting 1.5 times normal.\n<br />\n<br />[b]Compatibility[/b]\n<br />Use Stardew Valley 1.6.15, SMAPI 4.5.2 and the matching Wilcox Farm Collection. Do not mix current releases with the old Realty/Multiple Farms packs. The 1.2 archive includes Junimatic 2.1.6 and AutoGrab Truffles 1.1.2 under their included MIT licenses; do not install duplicate copies. Other original mods remain separate pinned Nexus downloads.\n<br />\n<br />[b]Validation[/b]\n<br />The candidate passed isolated multiplayer, kitchen/save preservation, harvest-quality and hauling tests. The actual Windows Vortex deployment matched all required files and launched without SMAPI errors. External Steam joining and native Mac gameplay still require player confirmation.\n<br />\n<br />[b]Credits[/b]\n<br />Original authors retain their rights. Licenses are included for the two bundled MIT modules, alongside Wilcox compatibility code and settings. No game files, player saves or account credentials are included. Older releases are retained for their matching historical Collections.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53452",
-	"Version": "0.3.2",
-	"Updated": "2026-10-12T01:31:36+00:00",
+	"Version": "1.2.0",
+	"Updated": "2026-10-15T00:58:56+00:00",
 	"Downloads": [
 		{
 			"Id": 185644,
@@ -101,7 +101,7 @@
 			"OtherFields": {
 				"Uid": 5596342572332,
 				"CategoryId": 1,
-				"Primary": true
+				"Primary": false
 			}
 		},
 		{
@@ -1661,14 +1661,14 @@
 			}
 		},
 		{
-			"Id": 186417,
-			"Type": "Optional",
-			"DisplayName": "Wilcox Farm 1.1 - Restaurant Update",
-			"FileName": "4b/e7/1a/4be71a1e-2165-44e2-8d27-8853d794c8a0",
-			"Description": "",
-			"Version": "1.1.0",
-			"SizeInBytes": 64924,
-			"Uploaded": "2026-10-12T01:31:36+00:00",
+			"Id": 186823,
+			"Type": "Main",
+			"DisplayName": "Wilcox Farm 1.2 - Farm Services",
+			"FileName": "be/fb/8b/befb8b11-b787-45fa-a1aa-a6232dae5782",
+			"Description": "Update your working 1.1 Vortex profile: replace Wilcox Settings with 1.2, then Deploy Mods. Commercial kitchen, farmhand minecarts and Junimo hauling. Other pinned mods stay installed. Includes Junimatic and AutoGrab Truffles under MIT licenses.",
+			"Version": "1.2.0",
+			"SizeInBytes": 457244,
+			"Uploaded": "2026-10-15T00:58:56+00:00",
 			"Mods": [
 				{
 					"Id": null,
@@ -1677,6 +1677,25 @@
 					"RelativePath": "fomod",
 					"ManifestParseError": "ManifestMissing",
 					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "Frostiverse.AutoGrabTruffles",
+					"DisplayName": "AutoGrab Truffles",
+					"Type": "Smapi",
+					"RelativePath": "payload\\AutoGrabTruffles",
+					"Manifest": {
+						"Name": "AutoGrab Truffles",
+						"Description": "Auto-Grabbers inside of barns with pigs will collect the truffles that the pigs of that barn find anywhere on your farm.",
+						"Author": "Frostiverse",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "3.0.0",
+						"EntryDll": "AutoGrabTruffles.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:21705"
+						],
+						"UniqueId": "Frostiverse.AutoGrabTruffles"
+					}
 				},
 				{
 					"Id": null,
@@ -1736,6 +1755,14 @@
 				},
 				{
 					"Id": null,
+					"DisplayName": "payload\\H&W Ripley's Country Kitchen\\[CP] H&W Ripley's Country Kitchen Buildable",
+					"Type": "Invalid",
+					"RelativePath": "payload\\H&W Ripley's Country Kitchen\\[CP] H&W Ripley's Country Kitchen Buildable",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": null,
 					"DisplayName": "payload\\HorseOverhaul",
 					"Type": "Invalid",
 					"RelativePath": "payload\\HorseOverhaul",
@@ -1765,6 +1792,29 @@
 					"RelativePath": "payload\\ItemExtensions",
 					"ManifestParseError": "ManifestMissing",
 					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				},
+				{
+					"Id": "NermNermNerm.Junimatic",
+					"DisplayName": "Junimatic",
+					"Type": "Smapi",
+					"RelativePath": "payload\\Junimatic",
+					"Manifest": {
+						"Name": "Junimatic",
+						"Description": "Allows you to automate some of the repetitive tasks with a little help from the Junimos",
+						"Author": "NermNermNerm",
+						"Version": "2.1.6",
+						"MinimumApiVersion": "3.14.0",
+						"EntryDll": "Junimatic.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:NermNermNerm/Junimatic",
+							"Nexus:22672"
+						],
+						"UniqueId": "NermNermNerm.Junimatic",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
 				},
 				{
 					"Id": null,
@@ -1924,6 +1974,58 @@
 						],
 						"UpdateKeys": [],
 						"UniqueId": "Wilcox.ChoppableFarmTrees"
+					}
+				},
+				{
+					"Id": "Wilcox.FarmhandMinecarts",
+					"DisplayName": "Wilcox Farmhand Minecarts",
+					"Type": "ContentPack",
+					"RelativePath": "payload\\WilcoxFarmhandMinecarts",
+					"Manifest": {
+						"Name": "Wilcox Farmhand Minecarts",
+						"Description": "Lets ordinary farmers complete the original Frontier minecart quest. Normal costs remain.",
+						"Author": "Wilcox Farm",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "flashshifter.FrontierFarm",
+								"MinimumVersion": "1.15.11",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.FarmhandMinecarts"
+					}
+				},
+				{
+					"Id": "Wilcox.FarmServices",
+					"DisplayName": "Wilcox Farm Services",
+					"Type": "Smapi",
+					"RelativePath": "payload\\WilcoxFarmServices",
+					"Manifest": {
+						"Name": "Wilcox Farm Services",
+						"Description": "A one-time restaurant kitchen fit-out and earned Junimatic progression for ordinary farmers.",
+						"Author": "Wilcox Farm",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "WilcoxFarmServices.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "NermNermNerm.Junimatic",
+								"MinimumVersion": "2.1.6",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "HXW.ModularKitchen",
+								"MinimumVersion": "1.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Wilcox.FarmServices"
 					}
 				},
 				{
@@ -2091,9 +2193,9 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342573105,
-				"CategoryId": 3,
-				"Primary": false
+				"Uid": 5596342573511,
+				"CategoryId": 1,
+				"Primary": true
 			}
 		}
 	],
