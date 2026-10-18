@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 54068,
+	"Name": "SlimSteed",
+	"Author": "Kkthnx",
+	"Description": "In the base game the horse is a tile and a half wide. Sideways it squeezes through 1 tile high gaps just fine, but ride it up or down a 1 tile wide alley and it stops at the entrance. Fence lined paths and gates work, almost everything else doesn't.\n<br />\n<br />SlimSteed fixes that. While you ride, the horse collides like your farmer does, so any gap the farmer can walk through, the horse can too. Up, down, left, right and diagonals.\n<br />\n<br />[size=4][b]What it does[/b][/size]\n<br />[list]\n<br />[*]Slims only the width of the horse's collision box, from 96 pixels to 48 (the same as the farmer).[/*]\n<br />[*]Draws the horse and rider a few pixels to the left while riding, so they sit centered in a gap instead of hanging over the right wall. It eases in and out, and it only affects drawing.[/*]\n<br />[*]Leaves a parked horse alone, so it stays easy to click and mount.[/*]\n<br />[/list]\n<br />[size=4][b]What it does not touch[/b][/size]\n<br />[list]\n<br />[*]Mounting and dismounting use the game's own code. You can dismount inside a gap and walk away.[/*]\n<br />[*]Houses, coops, the bus, minecarts and mine ladders still need you to get off the horse. That is the game's riding state check, and this mod never changes it.[/*]\n<br />[*]Closed gates still block you. Open gates still work.[/*]\n<br />[*]The tile the game treats as in front of you is still worked out from the normal box, so reach while riding is unchanged.[/*]\n<br />[/list]\n<br />[size=4][b]How it was tested[/b][/size]\n<br />I rode a mounted horse through over a hundred real one tile gaps across the vanilla maps and mod maps (walls made of water, cliffs, buildings, bushes, trees, boulders and fences), once with the normal horse and once with SlimSteed. The normal horse was blocked at every vertical gap I tried. SlimSteed passed every one, with no case where the normal horse made it and SlimSteed didn't. I also tested dismounting inside gaps, mounting a horse parked in a gap, gates, diagonal movement and map exits.\n<br />\n<br />[size=4][b]Known limits[/b][/size]\n<br />[list]\n<br />[*]Riding sideways, the horse's head or rump can still overlap a wall ahead by about half a tile, because the horse is a lot longer than it is wide. It never blocks a gap.[/*]\n<br />[*]Multiplayer and gamepad are untested.[/*]\n<br />[/list]\n<br />[size=4][b]Config[/b][/size]\n<br />A config.json is created the first time you run the game.\n<br />[list]\n<br />[*]Enabled (true) turns the mod on or off.[/*]\n<br />[*]Width (48) is the collision width in pixels, 32 to 96. Vanilla is 96 and one tile is 64.[/*]\n<br />[*]SpriteShift (14) is how far to draw the horse and rider to the left while riding. 0 turns it off.[/*]\n<br />[*]ThinWhenNotRidden (false) also slims a parked horse.[/*]\n<br />[*]YieldToOtherMods (true) skips patching when Horse Squeeze, Horse Overhaul, Smart Horses or Pony Weight Loss Program is installed, so the box only changes once. Set it to false to force SlimSteed on.[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip the SlimSteed folder into your Mods folder.[/*]\n<br />[*]Run the game through SMAPI.[/*]\n<br />[/list]\n<br />[size=4][b]Uninstalling[/b][/size]\n<br />Delete the SlimSteed folder. It changes nothing in your save.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />It doesn't replace any game files. It works with mods that add maps, since it changes the horse and not the maps. By default it steps aside if another mod that already slims the horse is installed.\n<br />\n<br />[size=4][b]Source code[/b][/size]\n<br />[url=https://github.com/Kkthnx-Stardew/SlimSteed]github.com/Kkthnx-Stardew/SlimSteed[/url] (MIT)",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54068",
+	"Version": "1.1.1",
+	"Updated": "2026-10-18T02:10:51+00:00",
+	"Downloads": [
+		{
+			"Id": 187297,
+			"Type": "Main",
+			"DisplayName": "SlimSteed 1.1.1",
+			"FileName": "70/37/4d/70374d86-2118-4439-8a00-adf3135c5f91",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 5562,
+			"Uploaded": "2026-10-18T02:10:51+00:00",
+			"Mods": [
+				{
+					"Id": "Kkthnx.SlimSteed",
+					"DisplayName": "SlimSteed",
+					"Type": "Smapi",
+					"RelativePath": "SlimSteed",
+					"Manifest": {
+						"Name": "SlimSteed",
+						"Description": "Slims the horse's collision box so it fits through single-tile gaps while riding.",
+						"Author": "Kkthnx",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SlimSteed.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:54068"
+						],
+						"UniqueId": "Kkthnx.SlimSteed"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573985,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440756,
+		"UploaderId": 53449976,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
