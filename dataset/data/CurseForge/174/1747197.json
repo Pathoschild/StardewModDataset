@@ -5,8 +5,107 @@
 	"Author": "dreamygloom",
 	"PageUrl": "https://www.curseforge.com/stardewvalley/mods/poke-ball-collection",
 	"Version": null,
-	"Updated": "2026-10-17T08:17:22.503+00:00",
+	"Updated": "2026-10-18T06:35:01.893+00:00",
 	"Downloads": [
+		{
+			"Id": 9236330,
+			"Type": "Main",
+			"DisplayName": "PokeBallItems 1.0.2",
+			"FileName": "PokeBallItems.zip",
+			"Version": "1.0.2",
+			"SizeInBytes": 425962,
+			"Uploaded": "2026-10-18T06:11:32.097+00:00",
+			"Mods": [
+				{
+					"Id": "dreamy.PokeBallItems",
+					"DisplayName": "Poké Ball Items Helper",
+					"Type": "Smapi",
+					"RelativePath": "PokeBallItems\\PokeBallItems",
+					"Manifest": {
+						"Name": "Poké Ball Items Helper",
+						"Description": "Makes each Poké Ball shell create its matching weapon only once.",
+						"Author": "arony",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PokeBallItems.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "dreamy.PokeBallItems"
+					}
+				},
+				{
+					"Id": "dreamygloom.PokeObjectdata",
+					"DisplayName": "Apricorn Machine: Poké Ball Weapons",
+					"Type": "ContentPack",
+					"RelativePath": "PokeBallItems\\PokeballObjects",
+					"Manifest": {
+						"Name": "Apricorn Machine: Poké Ball Weapons",
+						"Description": "Adds Apricorn trees, Apricorn Machines, the Ancient Hisui Forge, Poké Ball objects, and throwable Poké Ball weapons.",
+						"Author": "DreamyGloom",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "dreamy.PokeBallItems",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53889"
+						],
+						"UniqueId": "dreamygloom.PokeObjectdata"
+					}
+				},
+				{
+					"Id": "dreamygloom.PokeBallGuide",
+					"DisplayName": "Poké Ball Guide",
+					"Type": "ContentPack",
+					"RelativePath": "PokeBallItems\\[CP] Poké Ball Guide",
+					"Manifest": {
+						"Name": "Poké Ball Guide",
+						"Description": "Adds an in-game field guide covering Apricorn trees, Apricorn Machines, the Ancient Hisui Forge, and the Poké Balls in Apricorn Machine: Poké Ball Weapons.",
+						"Author": "DreamyGloom",
+						"Version": "1.0.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "PeacefulEnd.Parchment.Core",
+								"MinimumVersion": "1.12.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "dreamygloom.PokeObjectdata",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53889"
+						],
+						"UniqueId": "dreamygloom.PokeBallGuide"
+					}
+				}
+			],
+			"OtherFields": {
+				"ReleaseType": 1,
+				"FileGroupType": 0,
+				"gameVersions": [
+					"1.6.15"
+				]
+			}
+		},
 		{
 			"Id": 9220290,
 			"Type": "Main",
@@ -315,8 +414,8 @@
 			}
 		],
 		"DateCreated": "2026-10-16T05:32:05.593+00:00",
-		"DateReleased": "2026-10-17T08:16:57.053+00:00",
-		"DateModified": "2026-10-17T08:17:22.503+00:00",
+		"DateReleased": "2026-10-18T06:11:32.097+00:00",
+		"DateModified": "2026-10-18T06:35:01.893+00:00",
 		"slug": "poke-ball-collection"
 	}
 }

@@ -5,8 +5,8 @@
 	"Author": "dizziRD",
 	"Description": "Alecto, Leilani, Jas, Aideen and Tempysta ship their portraits as 4x sheets\n<br />(256px cells). Dialogue Display Framework Continued renders dialogue portraits\n<br />into a fixed 64x64 box, so with those NPCs it displayed an enlarged fragment\n<br />instead of the face.\n<br />\n<br />This pack sets the framework's own official 'disabled' flag for those five NPCs,\n<br />so they use the vanilla dialogue box. No configuration of your own is read or\n<br />written, and no assets are added.\n<br />\n<br />This pack contains no artwork. It ships one manifest.json and one content.json\n<br />that set five flags in the framework's dictionary. Every portrait and sprite you\n<br />see comes from the original author's mod, already installed on your machine.\n<br />\n<br />Why the portrait authors don't ship this themselves: correcting it would mean\n<br />releasing a patch that overrides their own work. That would break their users\n<br />who don't want it, so it isn't something they can reasonably ship. Load-order\n<br />and compatibility shims are nobody's job, so almost nobody writes them.\n<br />\n<br />Requires: Content Patcher 2.3.0+, SMAPI 4.0.0+\n<br />Compatible with: Dialogue Display Framework Continued (0.7.5+)\n<br />\n<br />The five NPCs are found by portrait name, so this works for any mod that\n<br />provides those portraits.\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53534",
-	"Version": "1.1",
-	"Updated": "2026-10-10T11:08:16+00:00",
+	"Version": "1.2.0",
+	"Updated": "2026-10-19T01:23:43+00:00",
 	"Downloads": [
 		{
 			"Id": 186224,
@@ -49,6 +49,50 @@
 				"Uid": 5596342572912,
 				"CategoryId": 1,
 				"Primary": true
+			}
+		},
+		{
+			"Id": 187439,
+			"Type": "Main",
+			"DisplayName": "Dizzi Vanilla Portrait Box V1.2.0",
+			"FileName": "77/c7/4d/77c74d8d-a142-4bc5-8926-ea8161d95143",
+			"Description": "",
+			"Version": "1.2.0",
+			"SizeInBytes": 27516,
+			"Uploaded": "2026-10-19T01:23:43+00:00",
+			"Mods": [
+				{
+					"Id": "dizzi.VanillaPortraitBox",
+					"DisplayName": "dizzi Vanilla Portrait Box",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] dizzi Vanilla Portrait Box",
+					"Manifest": {
+						"Name": "dizzi Vanilla Portrait Box",
+						"Description": "Excluye a Alecto, Leilani, Jas, Aideen y Tempysta de Dialogue Display Framework Continued con el flag oficial 'disabled', para que DDFC use la caja de dialogo vanilla del juego en esos NPCs. Sus retratos son sheets 4x (celdas de 256) y DDFC 0.7.5 recorta la fuente con w/h por defecto de 64, lo que producia un fragmento ampliado del portrait en vez de la cara. Solo afecta a estos 5 NPCs: el resto (Pretty Anime, OO's, Genderbends, los de SVE que usan celdas de 64) siguen usando DDFC normalmente.",
+						"Author": "dizziRD",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.3.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "zero.pixel.kent.girl",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53416"
+						],
+						"UniqueId": "dizzi.VanillaPortraitBox"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574127,
+				"CategoryId": 1,
+				"Primary": false
 			}
 		}
 	],

@@ -1,0 +1,55 @@
+{
+	"Site": "Nexus",
+	"Id": 54141,
+	"Name": "Update Tracker",
+	"Author": "wh0pp",
+	"Description": "[size=6][b]Update Tracker[/b][/size]\n<br />\n<br />[b]No mod manager? No problem.[/b]\n<br />\n<br />If your Mods folder is a hand-curated pile of unzipped downloads, SMAPI's update alerts scroll past in the console and are easy to miss. Update Tracker puts them where you can't: a small button on the title screen. See what needs updating [i]before[/i] you load a save, open the exact Nexus page for each mod, and ignore the ones you're deliberately not updating.\n<br />\n<br />No mod manager, no account linking, no API keys, no extra downloads \uD83D\uDE80 \uD83D\uDE80 \uD83D\uDE80 It just reuses the update check SMAPI already runs.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />[list]\n<br />[*]A small button in the bottom-left of the title screen.[/*]\n<br />[*]Shows a skull when updates are available and the happy pink cat when everything is up to date.[/*]\n<br />[*]A notification badge counts how many updates are waiting.[/*]\n<br />[*]Click the button for a centered list of your installed mods that have a Nexus page.[/*]\n<br />[*]Mods with updates are listed first, with [i]installed -&gt; latest[/i] versions.[/*]\n<br />[*]Every row has an [b]Open[/b] button that takes you straight to that mod's Nexus page.[/*]\n<br />[*]Click the bell to ignore a mod. Ignored mods get a red X over the bell, stop counting toward the badge, and are remembered across sessions.[/*]\n<br />[*]Scroll long lists with the mouse wheel; Esc, the X, or a click outside closes the list.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Why use it if you install mods by hand?[/b][/size]\n<br />[list]\n<br />[*]You don't have to watch the SMAPI console for update alerts that disappear as the game loads.[/*]\n<br />[*]You get a clear to-do list before you start playing, instead of discovering an outdated mod mid-save.[/*]\n<br />[*]Clicking [b]Open[/b] saves you searching Nexus for the mod you just saw on the title screen.[/*]\n<br />[*]Ignoring a mod is persistent, so optional or intentionally pinned mods stop nagging you.[/*]\n<br />[*]Works with large hand-managed Mods folders, including mods SMAPI skips because of missing dependencies.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley [b]1.6.15[/b] or later[/*]\n<br />[*][url=https://smapi.io/]SMAPI[/url] [b]4.0.0[/b] or later[/*]\n<br />[/list]\n<br />[size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI (if you haven't already).[/*]\n<br />[*]Unzip this mod into your [b]Stardew Valley/Mods[/b] folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]\n<br />No mod manager needed. The zip contains a single [b]UpdateTracker[/b] folder; drop it in [b]Mods[/b] and you're done. Nothing else to configure.\n<br />\n<br />[size=5][b]Usage[/b][/size]\n<br />Once the title screen has finished loading, the button appears in the bottom-left corner. Click it to open the list.\n<br />\n<br />[list]\n<br />[*][b]Open[/b] opens that mod's Nexus Mods page in your browser.[/*]\n<br />[*][b]Bell[/b] ignores or un-ignores a mod. Ignored mods still appear in the list, but no longer count toward the badge.[/*]\n<br />[/list]\n<br />Ignored mods are saved in [b]config.json[/b] in the mod folder, so your choices survive restarts.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]How it works / limitations[/b][/size]\n<br />[list]\n<br />[*]The mod reads SMAPI's existing update-check results. It does not contact Nexus or any other API, and needs no API key or account.[/*]\n<br />[*]Only mods with a Nexus update key in their manifest are listed. Mods whose updates come from other sites are intentionally left out.[/*]\n<br />[*]If [b]CheckForUpdates[/b] is disabled in SMAPI's settings (or the check fails, e.g. offline), no update badges will appear.[/*]\n<br />[*]SMAPI also checks mods that it skips during loading (such as mods with missing dependencies); those are recovered from SMAPI's console update alerts. Skipped mods that are already up to date cannot be listed.[/*]\n<br />[*]No Harmony patches. The button uses its own artwork; the ignore bells use the game's chat emoji texture.[/*]\n<br />[*]Generic Mod Config Menu is optional and only affects where the button sits (next to its gear). It is not required.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]Credits[/b][/size]\n<br />[list]\n<br />[*]Pathoschild for [url=https://smapi.io/]SMAPI[/url], which provides the update data.[/*]\n<br />[/list]\n<br />[size=5][b]Changelog[/b][/size]\n<br />[b]1.0.0[/b]\n<br />[list]\n<br />[*]Initial release.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54141",
+	"Version": "1.0.0",
+	"Updated": "2026-10-18T22:09:09+00:00",
+	"Downloads": [
+		{
+			"Id": 187426,
+			"Type": "Main",
+			"DisplayName": "Update Tracker 1.0.0",
+			"FileName": "b6/58/01/b6580177-3c9e-47d1-b050-e1305c552399",
+			"Description": "Main file for Update Tracker 1.0.0. Unzip into your Stardew Valley/Mods folder - no mod manager needed. Requires Stardew Valley 1.6.15+ and SMAPI 4.0.0+. See the mod description for features and usage.",
+			"Version": "1.0.0",
+			"SizeInBytes": 34426,
+			"Uploaded": "2026-10-18T22:09:09+00:00",
+			"Mods": [
+				{
+					"Id": "wh0pp.UpdateTracker",
+					"DisplayName": "Update Tracker",
+					"Type": "Smapi",
+					"RelativePath": "UpdateTracker",
+					"Manifest": {
+						"Name": "Update Tracker",
+						"Description": "Shows which installed mods have updates on the title screen, with Nexus links and per-mod ignore.",
+						"Author": "wh0pp",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "UpdateTracker.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:54141"
+						],
+						"UniqueId": "wh0pp.UpdateTracker"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574114,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440829,
+		"UploaderId": 29941020,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}
