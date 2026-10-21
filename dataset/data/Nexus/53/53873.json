@@ -5,18 +5,18 @@
 	"Author": "iamkazu",
 	"Description": "[b][size=4]Installation[/size][/b]\n<br />[color=#D4D4D8]1. Install the latest version of the supporting mod, [url=https://www.nexusmods.com/stardewvalley/mods/2400?tab=files]SMAPI[/url](required).[/color]\n<br />[color=#D4D4D8]2.\u00A0Download and extract LilyYourFarmmate.zip[/color]\n<br />[color=#D4D4D8]3.\u00A0Copy the entire newly extracted localization folder into the \"Mods\" folder within your game installation directory—for example, \"C:&#92;Program Files&#92;Stardew Valley&#92;Mods\" or \"Steam&#92;steamapps&#92;common&#92;Stardew Valley&#92;Mods\".[/color]\n<br />\n<br />Language: Tiếng việt, English, Chinese (translated).\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[color=#D4D4D8]Lily can perform five independently enabled tasks.[/color]\n<br />[code]Farm care\n<br />├── Crop care\n<br />│\u00A0\u00A0 ├── Water crops\n<br />│\u00A0\u00A0 ├── Harvest crops\n<br />│\u00A0\u00A0 └── Plant seeds\n<br />└── Animal care\n<br />\u00A0 \u00A0 ├── Pet animals\n<br />\u00A0 \u00A0 └── Collect animal products[/code][color=#D4D4D8][b]The Lily work priority differs from the menu order:\u00A0[/b][/color]\n<br />Harvest ripe crops &gt;\u00A0Plant available seeds &gt;\u00A0Water dry crops &gt;\u00A0Pet animals &gt;\u00A0Collect animal products.\n<br />[heading][size=3][color=#D4D4D8]3. Stamina and recovery stamina[/color][/size][/heading]\n<br />[color=#D4D4D8]Lily's maximum energy depends on her friendship hearts and the [b]player's current maximum stamina[/b]:[/color]\n<br />[table][tr][th][color=#D4D4D8]Hearts with Lily[/color][/th]\n<br />[th][color=#D4D4D8]Lily's maximum energy[/color][/th]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]0[/color][/td]\n<br />[td][color=#D4D4D8]25% of player maximum stamina[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]1[/color][/td]\n<br />[td][color=#D4D4D8]35%[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]2[/color][/td]\n<br />[td][color=#D4D4D8]45%[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]3[/color][/td]\n<br />[td][color=#D4D4D8]55%[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]4[/color][/td]\n<br />[td][color=#D4D4D8]65%[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]5[/color][/td]\n<br />[td][color=#D4D4D8]75%[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]6[/color][/td]\n<br />[td][color=#D4D4D8]85%[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#D4D4D8]7 or more[/color][/td]\n<br />[td][color=#D4D4D8]100%[/color][/td]\n<br />[/tr]\n<br />[/table][color=#D4D4D8]When Lily needs to recover energy, she returns to a suitable place in the farmhouse and rests. Eligible resting periods restore [b]10% of Lily's own maximum energy every 10 in-game minutes[/b], with fractional amounts carried over to later recovery intervals. When resting because of insufficient energy for work, she resumes after reaching at least [b]50%[/b] of her maximum energy. At the beginning of a new day, her energy is restored to the full current maximum.\n<br />Recovery from resting and the start-of-day refill are separate from changes to the maximum-energy cap.[/color]\n<br />[heading][size=3][color=#D4D4D8]4. Lily's backpack[/color][/size][/heading]\n<br />[color=#D4D4D8]Lily has a persistent inventory independent of the player's backpack. Open it through [b]Interact → Open backpack[/b].[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8][b]Capacity:[/b] Matches the player's currently unlocked inventory size (normally [b]12, 24, or 36 slots[/b]). The capacity updates when the player's backpack is upgraded without clearing Lily's stored items.[/color][/*]\n<br />[*][color=#D4D4D8][b]Transfers:[/b] Supported items can be moved between the player's inventory and Lily's backpack, including stackable seeds and ordinary farm products.[/color][/*]\n<br />[*][color=#D4D4D8][b]Storage restrictions:[/b] Only ordinary Stardew Valley Object items are supported. Tools, furniture, machines with internal state, and other specialized items are not accepted.[/color][/*]\n<br />[*][color=#D4D4D8][b]Persistence:[/b] Saved items retain their slots, stack sizes, quality, and supported item metadata between sessions.[/color][/*]\n<br />[*][color=#D4D4D8][b]Harvest safety:[/b] Crop and animal-product collection will not discard items when storage is insufficient; unsupported or non-fitting results are left in the world.[/color][/*]\n<br />[/list][color=#D4D4D8]Lily uses seeds [b]from this backpack[/b] for planting, and stores collected crops and animal products [b]in this backpack[/b]. Gifts given directly to Lily are a separate friendship interaction and are not deposited here.[/color]\n<br />\n<br />[heading][size=3][color=#D4D4D8]5. Lily's daily routine[/color][/size][/heading]\n<br />[color=#D4D4D8]The following times describe the default schedule. The work start/end times can be configured, but the evening home routine begins no later than [b]17:00[/b].[/color]\n<br />[table][tr][th]In-game time[/th]\n<br />[th]Lily's routine[/th]\n<br />[/tr]\n<br />[tr][td][b]06:00–07:59[/b][/td]\n<br />[td]Prepares indoors;[/td]\n<br />[/tr]\n<br />[tr][td][b]08:00–11:59[/b][/td]\n<br />[td]Morning shift: performs enabled and unlocked jobs. If exhausted, returns home to rest.[/td]\n<br />[/tr]\n<br />[tr][td][b]12:00–12:59[/b][/td]\n<br />[td]Lunch break: does not work; free roaming restores 3% per 10 minutes. If already exhausted and resting, she can continue the 10% resting recovery.[/td]\n<br />[/tr]\n<br />[tr][td][b]13:00–16:59[/b][/td]\n<br />[td]Afternoon shift: continue the list of unfinished tasks.[/td]\n<br />[/tr]\n<br />[tr][td][b]17:00–05:59[/b][/td]\n<br />[td]Stops working and returns to the farmhouse, then wanders indoors. Idle recovery restores 3% per 10 minutes.[/td]\n<br />[/tr]\n<br />[tr][td][b]New day[/b][/td]\n<br />[td]Starts indoors and receives one full energy refill for the genuinely new day. QuickSave/load on the same day does not trigger a refill.[/td]\n<br />[/tr]\n<br />[/table][b]Rainy-day:\u00A0 Lily stays inside FarmHouse and relaxes. At 12:00\u00A0, she begins travelling\u00A0 Stardrop Saloon. She relaxes and wanders inside Saloon until 21:00, when she starts walking home [/b]\n<br />\n<br />[heading]6. Lily's gift preferences\n<br />Love[/heading]\n<br />[table][tr][th]Item[/th]\n<br />[th]Item name[/th]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312134-462855751.png[/img][/td]\n<br />[td]Treasure Chest[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312140-707822868.png[/img][/td]\n<br />[td]Starfruit[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312148-2075274816.png[/img][/td]\n<br />[td]Iridium Bar[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312154-257389367.png[/img][/td]\n<br />[td]Wine[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312160-164504115.png[/img][/td]\n<br />[td]Golden Pumpkin[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312167-957791836.png[/img][/td]\n<br />[td]Pearl[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312176-906995104.png[/img][/td]\n<br />[td]Prismatic Shard[/td]\n<br />[/tr]\n<br />[/table]\n<br />[b]Like[/b]\n<br />[table][tr][th]Item[/th]\n<br />[th]Item name[/th]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312183-1886461435.png[/img][/td]\n<br />[td]Peach[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312192-756412803.png[/img][/td]\n<br />[td]Cherry[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312197-1838440766.png[/img][/td]\n<br />[td]Strawberry[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312205-644936354.png[/img][/td]\n<br />[td]Emerald[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312210-884321486.png[/img][/td]\n<br />[td]Ruby[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312217-1668602710.png[/img][/td]\n<br />[td]Diamond[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312229-829972360.png[/img][/td]\n<br />[td]Fire Quartz[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312234-261201184.png[/img][/td]\n<br />[td]Frozen Tear[/td]\n<br />[/tr]\n<br />[/table]\n<br />[b]Neutral:\u00A0[/b]All other giftable items (all remaining items not listed under Love, Like, Dislike, or Hate).\n<br />\n<br />[b]Dislike[/b]\n<br />[table][tr][th]Item[/th]\n<br />[th]Item name[/th]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312242-1572382658.png[/img][/td]\n<br />[td]Aquamarine[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312247-753557121.png[/img][/td]\n<br />[td]Quartz[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312252-1295657789.png[/img][/td]\n<br />[td]Earth Crystal[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312257-832403435.png[/img][/td]\n<br />[td]Alamite[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312262-2029202995.png[/img][/td]\n<br />[td]Bixite[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312272-695997718.png[/img][/td]\n<br />[td]Wild Horseradish[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312297-150215622.png[/img] [/td]\n<br />[td]Parsnip[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312302-1978945083.png[/img][/td]\n<br />[td]Mayonnaise[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312307-2068116478.png[/img][/td]\n<br />[td]Copper Bar[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312312-453523131.png[/img][/td]\n<br />[td]Iron Bar[/td]\n<br />[/tr]\n<br />[/table]\n<br />[b]Hate[/b]\n<br />[table][tr][th]Item[/th]\n<br />[th]Item name[/th]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312320-1689443438.png[/img][/td]\n<br />[td]Garlic[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312327-2062143041.png[/img][/td]\n<br />[td]Morel[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312332-260339209.png[/img][/td]\n<br />[td]Fiddlehead Fern[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312335-295666600.png[/img][/td]\n<br />[td]Radish[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312341-1991895983.png[/img][/td]\n<br />[td]Bok Choy[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312348-2092891183.png[/img][/td]\n<br />[td]Holly[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312352-1151424571.png[/img][/td]\n<br />[td]Void Egg[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312357-676135855.png[/img][/td]\n<br />[td]Duck Mayonnaise[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312362-1357837218.png[/img][/td]\n<br />[td]Void Mayonnaise[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312368-931124844.png[/img][/td]\n<br />[td]Clay[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312373-1434845650.png[/img][/td]\n<br />[td]Copper Ore[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312377-845796554.png[/img][/td]\n<br />[td]Iron Ore[/td]\n<br />[/tr]\n<br />[tr][td][img]https://staticdelivery.nexusmods.com/mods/1303/images/53873/53873-1792312382-1190911072.png[/img][/td]\n<br />[td]Coal[/td]\n<br />[/tr]\n<br />[/table]\n<br />\n<br />[b]NEXT UPDATE LOG:\n<br />[/b]- add event hearts.\n<br />-\u00A0expand the schedule of activities\n<br />\n<br />Thank you to everyone who has downloaded and supported the mod; every download motivates me to continue developing more features.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53873",
-	"Version": "0.9.3",
-	"Updated": "2026-10-18T08:27:09+00:00",
+	"Version": "0.9.4",
+	"Updated": "2026-10-19T13:16:09+00:00",
 	"Downloads": [
 		{
-			"Id": 187333,
+			"Id": 187489,
 			"Type": "Main",
 			"DisplayName": "Lily Your Farmmate Android",
-			"FileName": "30/3d/8a/303d8a92-7934-4b13-ad7c-7edfc0fd0f68",
+			"FileName": "b5/fc/ba/b5fcba43-0ea8-4dfc-84f3-6f7801e6afdc",
 			"Description": "",
-			"Version": "0.9.3",
-			"SizeInBytes": 154015,
-			"Uploaded": "2026-10-18T08:26:19+00:00",
+			"Version": "0.9.4",
+			"SizeInBytes": 154121,
+			"Uploaded": "2026-10-19T13:15:53+00:00",
 			"Mods": [
 				{
 					"Id": "LilyYourFarmmate.Mod",
@@ -27,7 +27,7 @@
 						"Name": "Lily Your Farmmate",
 						"Description": "Android build of Lily Your Farmmate: Lily helps with crops, animals, and farm chores, with a backpack, friendship, and English/Vietnamese/Simplified Chinese localization.",
 						"Author": "Kazu",
-						"Version": "0.9.3",
+						"Version": "0.9.4",
 						"MinimumApiVersion": "4.3.2",
 						"EntryDll": "LilyYourFarmmate.dll",
 						"Dependencies": [],
@@ -39,20 +39,20 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342574021,
+				"Uid": 5596342574177,
 				"CategoryId": 1,
 				"Primary": false
 			}
 		},
 		{
-			"Id": 187334,
+			"Id": 187490,
 			"Type": "Main",
 			"DisplayName": "Lily Your Farmmate PC",
-			"FileName": "d2/1a/fb/d21afb5b-35cb-4154-b638-198af554d32e",
+			"FileName": "b2/43/50/b2435002-1e6e-4d37-b269-765de41a87bb",
 			"Description": "",
-			"Version": "0.9.3",
-			"SizeInBytes": 153828,
-			"Uploaded": "2026-10-18T08:27:09+00:00",
+			"Version": "0.9.4",
+			"SizeInBytes": 153909,
+			"Uploaded": "2026-10-19T13:16:09+00:00",
 			"Mods": [
 				{
 					"Id": "LilyYourFarmmate.Mod",
@@ -63,7 +63,7 @@
 						"Name": "Lily Your Farmmate",
 						"Description": "Lily, your farmmate: an NPC companion who helps with crops, animals, and farm chores. Includes a backpack, friendship.",
 						"Author": "Kazu",
-						"Version": "0.9.3",
+						"Version": "0.9.4",
 						"MinimumApiVersion": "4.5.2",
 						"EntryDll": "LilyYourFarmmate.dll",
 						"Dependencies": [],
@@ -75,7 +75,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342574022,
+				"Uid": 5596342574178,
 				"CategoryId": 1,
 				"Primary": true
 			}

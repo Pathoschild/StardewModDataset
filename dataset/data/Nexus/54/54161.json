@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 54161,
+	"Name": "SDV-HD2D",
+	"Author": "ivy0x",
+	"Description": "[size=5][b]SDV-HD2D — Public Beta 0.9.0[/b][/size]\n<br />Octopath Traveler–style HD-2D for Stardew Valley. The game's own pixel art stands on a lit 3D stage, with dynamic shadows, glowing lamps, bloom, depth of field, cloud shadows and 3D weather.\n<br />\n<br />[b]Rendering only: no gameplay changes and no writes to your save.[/b]\n<br />English instructions below; 中文说明见后半部分。\n<br />[url=https://github.com/tiwe0/sdv-hd2d-release/releases/tag/v0.9.0]GitHub release and complete installation guide[/url]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley PC 1.6.15.[/*]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.5.2 or later.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/28870]StardewUI by focustense[/url] 0.6.1 or later — required for the settings page. Without it, SMAPI will not load this mod.[/*]\n<br />[/list]Developed and tested on Windows with SMAPI 4.5.2 and StardewUI 0.6.1. Linux, macOS and community forks such as StardewUI Continued are untested.\n<br />\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI. For Steam, copy the launch option printed by the installer into Stardew Valley's Steam launch options, including the quotes and %command%. See [url=https://smapi.io/install]SMAPI installation instructions[/url] for other stores.[/*]\n<br />[*]Unzip StardewUI into the game's Mods folder: Mods/StardewUI/manifest.json must exist.[/*]\n<br />[*]Unzip SDV-HD2D-0.9.0.zip into Mods: Mods/SDV-HD2D/manifest.json must exist. Avoid an extra nested folder.[/*]\n<br />[*]Launch through SMAPI. The console should list SDV-HD2D 0.9.0 by ivory and StardewUI 0.6.1.[/*]\n<br />[/list][b]Update:[/b] Quit the game and extract the new version over Mods. The archive does not include config.json, so your settings stay.\n<br />[b]Uninstall:[/b] Delete Mods/SDV-HD2D. Saves are unaffected.\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*]HDR lighting, PBR materials, ambient reflections and water reflections.[/*]\n<br />[*]Sun shadows, cloud shadows, contact shadows, and local/dynamic lights with adjustable intensity, range, bounce light and projected shadows.[/*]\n<br />[*]Distance fog, ground mist, fireflies, sparks, rain and snow.[/*]\n<br />[*]Exposure, bloom, color grading, vignette, depth of field and render scale.[/*]\n<br />[*]Orthographic and perspective cameras, adjustable pitch/yaw and perspective field of view (5–30°).[/*]\n<br />[*]Entity height correction and fading of objects that hide a character.[/*]\n<br />[*]Live settings page in English and Chinese, following the game's language.[/*]\n<br />[/list]Settings apply immediately. Save writes only Mods/SDV-HD2D/config.json; Reset restores defaults.\n<br />\n<br />[size=4][b]Controls[/b][/size]\n<br />F10 — Open/close settings, also available through the sun tab beside Options.\n<br />F8 — Toggle the 3D stage to compare with vanilla.\n<br />F9 — Switch orthographic/perspective camera.\n<br />F11 — Cell coordinates for bug reports.\n<br />F7 — World debug grid.\n<br />F6 — CPU/GPU performance overlay.\n<br />\n<br />The default orthographic camera (pitch 40°, yaw 0°) aligns with the original game layout. Mouse targeting follows the 3D picture on flat ground. Perspective or rotated cameras may be one tile off at cliff edges and slopes; switch back to the default orthographic view if needed.\n<br />\n<br />[size=4][b]Performance[/b][/size]\n<br />On the development PC at 2560×1440 borderless, VSync on and all effects enabled, measured locations ran at 60 FPS with the default camera and at 12° perspective FOV. At 30° FOV, the farm measured about 54 FPS and the morning Forest about 58 FPS. Results depend on hardware and scene.\n<br />If performance drops, lower Render scale, disable Cast shadows or Point projection shadows, disable Depth of field, or reduce perspective FOV.\n<br />\n<br />[size=4][b]Compatibility and known beta limits[/b][/size]\n<br />[list]\n<br />[*]Fishing, combat damage numbers, heart events and festivals are staged in 3D but have not been fully verified in real play.[/*]\n<br />[*]Overnight farm events and an event's custom scene retain vanilla 2D drawing. A few special lighting cases use vanilla lighting for that frame.[/*]\n<br />[*]Some terrain is inferred imperfectly, including two small waterfalls in the Forest and Mountain.[/*]\n<br />[*]Art replacement mods work normally. Map-changing mods receive a generic scene without hand-tuned details.[/*]\n<br />[*]Mods that draw custom world graphics may appear flat or misplaced. Other lighting/shader mods may conflict.[/*]\n<br />[*]Mods that read the cursor themselves still use the vanilla screen layout.[/*]\n<br />[*]Multiplayer and split screen are untested; split-screen mouse targeting retains the game's original layout.[/*]\n<br />[/list]\n<br />[size=4][b]Troubleshooting and reporting[/b][/size]\n<br />Missing StardewUI or no F10 settings page? Check Mods/StardewUI/manifest.json and the SMAPI log for StardewUI or SDV-HD2D errors.\n<br />For visual bugs, include the location, in-game time, screenshot and F11 cell coordinates.\n<br />For performance issues, use F6 or run hd2d_profile dump in the SMAPI console; the report is saved to Mods/SDV-HD2D/.dev/screenshots/frame-profile.json.\n<br />Upload SMAPI-latest.txt at [url=https://smapi.io/log]smapi.io/log[/url] and include the generated link in your report.\n<br />Other console commands: hd2d_shot [name], hd2d_settings reset, hd2d_settings save, hd2d_stage, hd2d_cells.\n<br />\n<br />[size=4][b]Credits[/b][/size]\n<br />StardewUI by focustense provides the settings interface. SMAPI provides the mod loader.\n<br />\n<br />[line]\n<br />[size=5][b]中文说明 — 0.9.0 公测版[/b][/size]\n<br />SDV-HD2D 把星露谷物语的原有像素美术放到有光照的 3D 舞台上，呈现八方旅人式 HD-2D 效果，包含阴影、发光灯具、泛光、景深、云影与 3D 天气。[b]只改渲染，不改玩法，不写入存档。[/b]\n<br />\n<br />[size=4][b]依赖与安装[/b][/size]\n<br />需要 PC 版星露谷物语 1.6.15、SMAPI 4.5.2+、StardewUI 0.6.1+。缺少 StardewUI 时模组不会加载。\n<br />[list=1]\n<br />[*]安装 SMAPI；Steam 用户按安装器提示设置启动选项。[/*]\n<br />[*]把 StardewUI 解压到 Mods，确认 Mods/StardewUI/manifest.json 存在。[/*]\n<br />[*]把 SDV-HD2D-0.9.0.zip 解压到 Mods，确认 Mods/SDV-HD2D/manifest.json 存在，不要多套文件夹。[/*]\n<br />[*]通过 SMAPI 启动游戏。[/*]\n<br />[/list]退出游戏后覆盖解压即可更新，压缩包不含 config.json，会保留设置。卸载只需删除 Mods/SDV-HD2D，不影响存档。\n<br />目前在 Windows 上开发和测试；macOS、Linux、StardewUI 社区分支尚未测试。\n<br />\n<br />[size=4][b]设置与按键[/b][/size]\n<br />F10 设置；F8 开关 3D；F9 正交/透视切换；F11 格子坐标；F7 世界网格；F6 性能面板。\n<br />设置包含阳光与阴影、局部与动态光、氛围、HDR/泛光/景深、镜头与实体五个分区，改动立即生效。保存只写入 Mods/SDV-HD2D/config.json。\n<br />默认正交镜头为俯视角 40°、水平旋转 0°，与原版布局对齐。透视或旋转镜头在悬崖边、斜坡上可能出现鼠标偏一格，可切回默认正交镜头。\n<br />\n<br />[size=4][b]公测限制与兼容性[/b][/size]\n<br />钓鱼、伤害数字、心事件和节日尚未充分实测；夜间农场事件及事件自带特殊场景保留原版 2D。少数地形（如森林、山区的小瀑布）推导仍不准确。\n<br />美术替换模组正常生效；地图模组使用通用场景。自行绘制世界图像的模组可能扁平或错位，自带光照/着色器的模组可能冲突。自行读取鼠标的模组仍按原版布局。多人联机与分屏未测试。\n<br />帧率不足时，依次尝试降低渲染比例、关闭太阳/点光投影、关闭景深、减小透视视野角度。\n<br />\n<br />[size=4][b]问题反馈[/b][/size]\n<br />请提供地点、游戏内时间、截图和 F11 格子坐标，并附上 [url=https://smapi.io/log]SMAPI 日志链接[/url]。性能问题可按 F6，或在控制台运行 hd2d_profile dump。\n<br />[url=https://github.com/tiwe0/sdv-hd2d-release/releases/tag/v0.9.0]完整安装说明及发布页面[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54161",
+	"Version": "0.9.0",
+	"Updated": "2026-10-19T06:27:49+00:00",
+	"Downloads": [
+		{
+			"Id": 187465,
+			"Type": "Main",
+			"DisplayName": "SDV HD2D 0.9.0",
+			"FileName": "b1/b4/ea/b1b4eade-92fa-4a4e-9738-c932639dc83b",
+			"Description": "early test",
+			"Version": "0.9.0",
+			"SizeInBytes": 1711963,
+			"Uploaded": "2026-10-19T06:27:49+00:00",
+			"Mods": [
+				{
+					"Id": "ivory.SDVHD2D",
+					"DisplayName": "SDV-HD2D",
+					"Type": "Smapi",
+					"RelativePath": "SDV-HD2D",
+					"Manifest": {
+						"Name": "SDV-HD2D",
+						"Description": "Octopath-style HD-2D rendering: the game's own pixel art on a lit 3D stage, with shadows, bloom, depth of field, clouds and 3D weather. Public beta.",
+						"Author": "ivory",
+						"Version": "0.9.0",
+						"MinimumApiVersion": "4.5.0",
+						"EntryDll": "SDV-HD2D.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "focustense.StardewUI",
+								"MinimumVersion": "0.6.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ivory.SDVHD2D"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574153,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440849,
+		"UploaderId": 218940388,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54203,
+	"Name": "Write a letter to pen pals",
+	"Author": "zzzzzzzhao",
+	"Description": "[size=5]本模组支持简体中文和英文。[/size]\n<br />\n<br />见字如面！给镇上的朋友写一封信吧！\n<br />你可以自由撰写信件，并收到居民回信。居民会参考各自的人物设定、与你的好感度、寄信时的季节天气，以及最近的通信内容，写下自己的回应。\n<br />\n<br />[b][size=4]主要功能[/size][/b]\n<br />[list]\n<br />[*][b]自由写信[/b]：支持中文、多行输入，单封信最多 4000 字符。[/*]\n<br />[*][b]选择收件人[/b]：选择一位已经认识的原版居民，进行私人通信。[/*]\n<br />[*][b]公共笔友信箱[/b]：让镇上的居民随机回复。通常一位，偶尔会收到两到三位居民的来信。[/*]\n<br />[*][b]独立通信记忆[/b]：每位居民保留自己的近期通信，不会自动知道你寄给其他人的内容。[/*]\n<br />[*][b]随信小礼物[/b]：部分新回信会根据来信话题和居民身份附带一件日常物品，例如木材、鱼饵或咖啡，在阅读页面领取。[/*]\n<br />[/list]附件目前按预设的话题规则匹配，并非每封信都有，也不由 AI 任意生成物品。\n<br />\n<br />\n<br />[b][size=4]安装方法[/size][/b]\n<br />[list=1]\n<br />[*]安装 SMAPI。[/*]\n<br />[*]下载并解压 Mod。[/*]\n<br />[*]将 \n<br />[code]PelicanPenPals[/code]文件夹放入游戏的 \n<br />[code]Mods[/code]文件夹。[/*]\n<br />[*]通过 SMAPI 启动一次游戏，让 Mod 生成 \n<br />[code]config.json[/code]，随后退出游戏。[/*]\n<br />[*]按下方说明配置 API，再重新启动游戏。[/*]\n<br />[/list][b]如何接入 AI API[/b]\n<br />本 Mod 需要玩家自行配置 API，安装包不包含共享密钥。\n<br />默认预设为 [b]DeepSeek[/b]：\n<br />[list=1]\n<br />[*]打开Deepseek，登录账号。[/*]\n<br />[*]在 [b]API keys / API 密钥[/b]页面创建并复制密钥。[/*]\n<br />[*]确认账户有可用的 API 余额。[/*]\n<br />[*]用记事本打开 \n<br />[code]Mods/PelicanPenPals/config.json[/code]。[/*]\n<br />[*]将自己的密钥填入 \n<br />[code]ApiKey[/code]，其余现有配置可以保留：[/*]\n<br />[/list][code]{\n<br />\u00A0 \"OpenKey\": \"F8\",\n<br />\u00A0 \"Endpoint\": \"https://api.deepseek.com/chat/completions\",\n<br />\u00A0 \"Model\": \"deepseek-flash\",\n<br />\u00A0 \"ApiKey\": \"在这里填写你的密钥\",\n<br />\u00A0 \"TimeoutSeconds\": 60,\n<br />\u00A0 \"TwoRepliesPercent\": 12,\n<br />\u00A0 \"ThreeRepliesPercent\": 3\n<br />}[/code]保存后重新启动游戏。游戏运行期间修改配置，也可以在 [b]SMAPI 控制台[/b]输入 \n<br />[code]penpals_reload[/code]重新读取。\n<br />DeepSeek 的接口及密钥申请说明见[url=https://api-docs.deepseek.com/zh-cn/]官方文档[/url]。API 调用按服务商规则计费，请勿公开密钥或将含有密钥的配置文件上传到 Nexus。\n<br />[b]使用其他 API 服务[/b]\n<br />也可以尝试使用兼容 Chat Completions 格式的服务：\n<br />[list]\n<br />[*][code]Endpoint[/code]：完整的对话接口地址，通常以 \n<br />[code]/chat/completions[/code]结尾。[/*]\n<br />[*][code]Model[/code]：服务商提供的模型名称。[/*]\n<br />[*][code]ApiKey[/code]：对应服务的密钥。[/*]\n<br />[/list]支持远程 HTTPS 接口，以及本机 HTTP 模型服务。不同服务的兼容性可能存在差异，尚未逐一测试。\n<br />\n<br />\n<br />[b][size=4]游戏内使用[/size][/b]\n<br />按 [b]F8[/b] 打开笔友信箱。\n<br />\n<br />\n<br />[size=4][b]常见问题[/b]\n<br />[/size][b][color=#9fc5e8]为什么一直没有回信？[/color][/b]\n<br />先查看收件箱中的等待状态或失败原因。生成失败后，解决对应问题，再点击“重试失败回信”，无需重新写信。\n<br />[b][color=#9fc5e8]提示 HTTP 402 是什么意思？[/color][/b]\n<br />DeepSeek 将其定义为 API 账户余额不足。补足余额后再重试。[url=https://api-docs.deepseek.com/zh-cn/quick_start/error_codes/]错误码说明[/url]\n<br />[b][color=#9fc5e8]为什么居民偶尔说错话？[/color][/b]\n<br />回信由 AI 生成，虽然提供了人物档案和背景限制，仍可能出现人设偏差、错误细节或剧透，无法完全避免。\n<br />[b][color=#9fc5e8]支持多人游戏吗？[/color][/b]\n<br />当前仅支持单人游戏和鼠标键盘操作。\n<br />\n<br />本 Mod 仍处于早期开发阶段，界面、输入体验、人物档案和附件规则会继续调整。欢迎反馈问题；提交日志或截图前，请先隐藏 API 密钥及不希望公开的信件内容。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54203",
+	"Version": "1",
+	"Updated": "2026-10-20T12:19:49+00:00",
+	"Downloads": [
+		{
+			"Id": 187617,
+			"Type": "Main",
+			"DisplayName": "PelicanPenPals 0.4.0",
+			"FileName": "30/ef/a1/30efa136-29c1-4ffc-b430-ef8ad2850207",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 46688,
+			"Uploaded": "2026-10-20T12:19:49+00:00",
+			"Mods": [
+				{
+					"Id": "Iwen.PelicanPenPals",
+					"DisplayName": "Pelican Pen Pals",
+					"Type": "Smapi",
+					"RelativePath": "PelicanPenPals",
+					"Manifest": {
+						"Name": "Pelican Pen Pals",
+						"Description": "Write to the townsfolk and receive AI letters in English or Chinese, following your game language.",
+						"Author": "Iwen",
+						"Version": "0.4.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "PenPals.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Iwen.PelicanPenPals"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574305,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440891,
+		"UploaderId": 138071883,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}
