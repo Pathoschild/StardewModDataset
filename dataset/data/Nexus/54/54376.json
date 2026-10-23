@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54376,
+	"Name": "Cheat Panel",
+	"Author": "258112zjy",
+	"Description": "Cheat Panel\n<br />Eight tabs in one window. Money, items, NPCs, quests, warping, time, weather and the calendar.\n<br />[heading]Description[/heading]\n<br />One panel, eight tabs, no console commands. Everything you would otherwise do with save editing or half a dozen separate mods is one click away: money, item spawning, friendship and marriage, quest completion, warping, the clock, the weather and the calendar.\n<br />Press [b]H[/b] and it opens. There is no command syntax to remember and no config file to learn before the first use.\n<br />It is safe to add to an existing save. The panel reads the game's own data instead of assuming fixed values, so mods that raise friendship caps or add community bundles keep working instead of silently breaking.\n<br />[heading]Installation instructions[/heading]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] 4.0 or newer.[/*]\n<br />[*]Unzip the folder into .\n<br />[code]CheatPanel[/code][code]Stardew Valley/Mods[/code][/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]Optional: install [b]Generic Mod Config Menu[/b] if you want to rebind the keys from the title screen instead of editing .\n<br />[code]config.json[/code][heading]Main features[/heading]\n<br />[list]\n<br />[*][b]Player[/b] - money (quick buttons or a custom amount), invincible, infinite stamina, infinite watering can, full heal, movement speed, +1 skill level[/*]\n<br />[*][b]Items[/b] - search the full item list, pick a quality, set a quantity, spawn into your bag or on the ground[/*]\n<br />[*][b]NPCs[/b] - friendship per villager with a heart bar, plus date / propose / marry / divorce without needing the bouquet or the mermaid pendant[/*]\n<br />[*][b]Tasks[/b] - your quest log and special orders, complete any of them with one click[/*]\n<br />[*][b]Warp[/b] - preset locations and your own saved warp points[/*]\n<br />[*][b]World[/b] - clock, freeze time, time speed, tomorrow's weather, grow crops on the current map[/*]\n<br />[*][b]Maps[/b] - every location the game has loaded, including maps from other mods[/*]\n<br />[*][b]Date[/b] - a season calendar; pick a day and you wake up on it after sleeping[/*]\n<br />[/list][heading]Keys[/heading]\n<br />[list]\n<br />[*][b]H[/b] - open / close the panel[/*]\n<br />[*][b]U[/b] - save the tile you are standing on as a warp point[/*]\n<br />[*][b]F5[/b] - save the game anywhere[/*]\n<br />[/list]All three can be rebound in .\n<br />[code]config.json[/code][heading]Details that took the most work[/heading]\n<br />[b]Friendship caps are read from the game.[/b] The panel asks instead of assuming 8 or 10 hearts, so mods that raise the cap (dating or marriage expansions) are respected. A hardcoded 2500 points would silently stop working with those mods installed.\n<br />[code]Utility.GetMaximumHeartsForCharacter[/code][b]The nightly reset is handled.[/b] Vanilla pulls non-datable NPCs back to 10 hearts every night. Friendship you push past that is stored per save and restored the next morning, so it does not quietly drain away.\n<br />[b]Bundles use the real index.[/b] Once another mod adds bundles to the community centre, the indices are no longer contiguous. The panel reads the actual key out of , so extra bundles show up and can be completed.\n<br />[code]BundleData[/code][b]Warp points are per save.[/b] They live in , keyed by save folder. Two farms never share a list, and nothing is written into the save file itself.\n<br />[code]config.json[/code][heading]Notes[/heading]\n<br />[list]\n<br />[*]Multiplayer: only the host can save or jump the date. Everything else is local to your client.[/*]\n<br />[*]\"Marry now\" skips the engagement period and the wedding event. Your spouse moves in immediately.[/*]\n<br />[*]Date jump is the only Harmony patch (on ). Everything else uses public API.\n<br />[code]Game1._newDayAfterFade[/code][/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list]\n<br />[*]Stardew Valley 1.6.x[/*]\n<br />[*]SMAPI 4.0 or newer[/*]\n<br />[*]Optional: Generic Mod Config Menu, for rebinding keys in game[/*]\n<br />[/list][heading]Only need one of these?[/heading]\n<br />This mod is the all-in-one. If you would rather not carry a full cheat panel, the same features are available as three small standalone mods, with their own hotkeys so they can sit next to anything:\n<br />[list]\n<br />[*][b]Quick Warp[/b] - warping only ([b]J[/b])[/*]\n<br />[*][b]Time &amp; Weather[/b] - clock, freeze, speed and forecast only ([b]T[/b])[/*]\n<br />[*][b]Set Date[/b] - the calendar jump only ([b]C[/b])[/*]\n<br />[/list]All four use different keys on purpose, so installing any combination works without rebinding.\n<br />One caveat if you install [b]Set Date[/b] next to this mod: both can jump the calendar and they do not share state, so set the date in one menu or the other - setting it in both before sleeping will jump the day twice.\n<br />[heading]Shout outs[/heading]\n<br />[list]\n<br />[*][b]Pathoschild[/b] for SMAPI, which makes mods like this possible at all[/*]\n<br />[*][b]Andreas Pardeike[/b] for Harmony[/*]\n<br />[*]The Stardew Valley modding wiki, for documenting the internals this mod leans on[/*]\n<br />[/list][heading]Found a bug?[/heading]\n<br />Post it with your SMAPI log ([url=https://smapi.io/log]smapi.io/log[/url]) and say which tab and which button. That is usually enough to find it.\n<br />[line]\n<br />[heading]中文说明[/heading]\n<br />星露谷 1.6 的整合作弊面板，按 [b]H[/b] 打开，八个标签页：金钱、无敌、无限体力、物品生成、NPC 好感与结婚、任务一键完成、路径点、时间、天气、季节日历。\n<br />[list]\n<br />[*]安装：装好 SMAPI 4.0+，把 文件夹解压到 ，用 SMAPI 启动游戏。\n<br />[code]CheatPanel[/code][code]Stardew Valley/Mods[/code][/*]\n<br />[*]热键：[b]H[/b] 开关面板，[b]U[/b] 保存当前脚下的传送点，[b]F5[/b] 随时存档，都能在 里改。\n<br />[code]config.json[/code][/*]\n<br />[*]多人游戏里只有房主能存档和跳日期，其他功能都是本地的。[/*]\n<br />[*]只想要某一个功能的话，[b]Quick Warp[/b]、[b]Time &amp; Weather[/b]、[b]Set Date[/b] 是拆开的轻量版，四个热键不冲突，可以任选组合。[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54376",
+	"Version": "1",
+	"Updated": "2026-10-23T04:35:32+00:00",
+	"Downloads": [
+		{
+			"Id": 188065,
+			"Type": "Main",
+			"DisplayName": "CheatPanel 1.6.0",
+			"FileName": "38/04/50/380450c1-4185-422e-a86e-fab7930c25de",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 58473,
+			"Uploaded": "2026-10-23T04:35:32+00:00",
+			"Mods": [
+				{
+					"Id": "sanyy.CheatMenu",
+					"DisplayName": "Cheat Panel",
+					"Type": "Smapi",
+					"RelativePath": "CheatPanel",
+					"Manifest": {
+						"Name": "Cheat Panel",
+						"Description": "An in-game cheat menu: money, friendship and marriage, item spawning, community bundles, quests, skills, movement speed, warping, time and weather.",
+						"Author": "sanyy",
+						"Version": "1.6.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CheatMenu.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sanyy.CheatMenu"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574753,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441064,
+		"UploaderId": 229249695,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

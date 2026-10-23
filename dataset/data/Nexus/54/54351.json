@@ -1,0 +1,93 @@
+{
+	"Site": "Nexus",
+	"Id": 54351,
+	"Name": "Network Chest",
+	"Author": "SorcererTri",
+	"AuthorLabel": "Sorcerer",
+	"Description": "[b][color=#d4d4d8]A shared-storage chest for Stardew Valley, with Automate integration.[/color][/b]\n<br />\n<br />[color=#D4D4D8]This is an early beta release. Testing, bug reports, and feedback are welcome![/color]\n<br />\n<br />[heading]The Problem[/heading]\n<br />When running large automated farms, you may have multiple production areas that rely on the same resources.\u00A0\n<br />\n<br />For example, one group of machines might process coffee beans while another processes fruit, with both drawing from a shared supply of coffee beans or fruit.\n<br />\n<br />Another example, you have kegs in the tunnel as well as the quarry. You want all of the kegs to be processing honey 24/7 that you've purchased in the desert. You are forced to purchase your honey in bulk as its only sold once a week.\n<br />\n<br />Automate's existing Junimo Chest integration lets machines access items through the Junimo Chest network, but managing surplus resources can become difficult. If you want to keep a reserve of materials that automatically replenishes machines across multiple locations, it's hard to control how those resources are distributed and ensure each production area stays supplied.\n<br />\n<br />You want to be able to store surplus resources in one place and have them automatically flow to wherever they're needed, without manually moving items between production areas or constantly restocking machine inputs.\n<br />\n<br />[b]NetworkChest aims to solve this by providing shared storage networks that Automate can use across multiple production areas[/b], making it easier to maintain a central surplus of resources and keep your automated production lines running.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI and the required mods.[/*]\n<br />[*]Download the NetworkChest beta ZIP.[/*]\n<br />[*]Download the\u00A0 Automate-NetworkChest beta ZIP.[/*]\n<br />[*]Extract the\n<br />[code]NetworkChest[/code]folder into your Stardew Valley\n<br />[code]Mods[/code]folder.[/*]\n<br />[*]Extract the\n<br />[code]Automate[/code]folder into your Stardew Valley\n<br />[code]Mods[/code]folder. [/*]\n<br />[*]Launch the game through SMAPI and check the SMAPI console for errors.[/*]\n<br />[/list]\n<br />[b][size=4]In-Game[/size][/b]\n<br />[list]\n<br />[*][b]Recipe:[/b] Currently set as requiring a farm computer and junimo chest.[/*]\n<br />[*][b]Spawn:\u00A0[/b]In SMAPI console, type this: player_add name \"network chest\" [qty][/*]\n<br />[/list]\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][b]Shared inventories:[/b] Connect multiple Network Chests using the same Network ID.[/color][/*]\n<br />[*][color=#D4D4D8][b]Multiple networks:[/b] Use different IDs to keep storage networks separate.[/color][/*]\n<br />[*][color=#D4D4D8][b]In-game setup:[/b] Assign a new or existing Network ID through the chest's interaction menu.[/color][/*]\n<br />[*][color=#D4D4D8][b]Automate integration:[/b] Allows Automate to recognize Network Chests and refresh its machine network when a chest is assigned.[/color][/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Stardew Valley[/color][/*]\n<br />[*][color=#D4D4D8]SMAPI[/color][/*]\n<br />[*][color=#D4D4D8]Automate - Network Chest Beta (required for automated machine-network integration)[/color][/*]\n<br />[/list][heading][color=#d4d4d8]Beta Testing[/color][/heading]\n<br />[color=#d4d4d8]This is an early test release. Please report any bugs you encounter, especially issues involving:[/color]\n<br />\n<br />[list]\n<br />[*][color=#d4d4d8]Network IDs and shared inventory behavior.[/color][/*]\n<br />[*][color=#d4d4d8]Storage persistence after saving and reloading.[/color][/*]\n<br />[*][color=#d4d4d8]Automate recognition and item transfers.[/color][/*]\n<br />[*][color=#d4d4d8]Compatibility with other mods.[/color][/*]\n<br />[*][color=#d4d4d8]Unexpected behavior when using multiple Network Chests.[/color][/*]\n<br />[/list][color=#d4d4d8]When reporting a bug, please include the steps to reproduce it and a SMAPI log: [url=https://smapi.io/log]https://smapi.io/log[/url][/color]\n<br />\n<br />[b][size=4]Features In-Progress[/size][/b]\n<br />[list]\n<br />[*]Compatibility with Filtered Chest Hoppers[/*]\n<br />[/list]Source Code\n<br />[list]\n<br />[*][url=https://github.com/matthew-luu/SorcererStardewMods]NetworkChest[/url][/*]\n<br />[*][url=https://github.com/matthew-luu/StardewMods/tree/newFeature-NetworkChests/Automate]Automate-NetworkChest[/url][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54351",
+	"Version": "0.1.0",
+	"Updated": "2026-10-22T23:30:41+00:00",
+	"Downloads": [
+		{
+			"Id": 188043,
+			"Type": "Main",
+			"DisplayName": "NetworkChestBeta",
+			"FileName": "42/b3/17/42b317e2-eb63-41d0-8fdc-ca77ac1f7cf6",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 13689,
+			"Uploaded": "2026-10-22T23:28:37+00:00",
+			"Mods": [
+				{
+					"Id": "Sorcerer.Stardew.NetworkChest",
+					"DisplayName": "Network Chest",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "Network Chest",
+						"Description": "Adds shared storage networks through Network Chests, integrated with Automate.",
+						"Author": "Sorcerer",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "NetworkChests.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Sorcerer.Stardew.NetworkChest"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574731,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 188045,
+			"Type": "Main",
+			"DisplayName": "Automate 2.6.2 Beta",
+			"FileName": "cb/8e/50/cb8e50db-e4db-4f40-b234-bb1610054777",
+			"Description": "Adds compatibility to the popular Automate mod by Pathoschild.",
+			"Version": "2.6.2",
+			"SizeInBytes": 203793,
+			"Uploaded": "2026-10-22T23:30:41+00:00",
+			"Mods": [
+				{
+					"Id": "Pathoschild.Automate",
+					"DisplayName": "Automate",
+					"Type": "Smapi",
+					"RelativePath": "Automate",
+					"Manifest": {
+						"Name": "Automate",
+						"Description": "Lets you automate crafting machines, fruit trees, and more by connecting them to chests.",
+						"Author": "Pathoschild",
+						"Version": "2.6.2",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "Automate.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:1063"
+						],
+						"UniqueId": "Pathoschild.Automate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574733,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441039,
+		"UploaderId": 228188058,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
