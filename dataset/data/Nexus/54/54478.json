@@ -1,0 +1,226 @@
+{
+	"Site": "Nexus",
+	"Id": 54478,
+	"Name": "Mine Fish Framework (Content Patcher)",
+	"Author": "DarkRobon",
+	"Description": "[color=#ff7700][size=4][b][u]Give each mine fishing floor its own catch table[/u][/b][/size][/color]\n<br />\n<br />Mine Fish Framework lets Content Patcher packs customize mine fishing, including the lava pool on floor 100.\n<br />\n<br />The mines use special catch-selection logic that ordinary fishing data edits don't fully expose. This framework provides separate, editable pools so pack authors can change one floor without applying the same changes to every mine fishing floor.\n<br />\n<br />[b]This is a framework.[/b] Install a compatible content pack to add catches or change the balance. By itself, it supplies defaults based on vanilla mine fishing; it doesn't add new fish items.\n<br />\n<br />[color=#ff7700][size=4][b]Features[/b][/size][/color]\n<br />\n<br />[list]\n<br />[*]Independent fishing pools for floors [b]20, 60 and 100[/b].[/*]\n<br />[*]Add, remove or replace catches through Content Patcher.[/*]\n<br />[*]Support for vanilla fish and custom fish defined by other mods.[/*]\n<br />[*]Adjustable catch chances, fishing-level and distance bonuses, bait bonuses and Curiosity Lure bonuses.[/*]\n<br />[*]Control over Cave Jelly and trash fallbacks.[/*]\n<br />[*]Conditions for time, season, progression and other game state checks.[/*]\n<br />[*]Training-rod rules, catch limits and position restrictions.[/*]\n<br />[*]Rules for additional mine floors or floor ranges, where fishable water exists.[/*]\n<br />[*]Support for Content Patcher reloads without restarting the game.[/*]\n<br />[/list]\n<br />The defaults retain the vanilla special-fish and floor 100 jelly probability formulas. Random rolls occur in a different order, so individual catches can differ even when using the default settings.\n<br />\n<br />[color=#ff7700][size=4][b]Requirements[/b][/size][/color]\n<br />\n<br />[list]\n<br />[*][b]Stardew Valley 1.6[/b].[/*]\n<br />[*][b][url=https://smapi.io/]SMAPI[/url][/b] version [b]4.3.2 or later[/b].[/*]\n<br />[*][b][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url][/b] to load Content Patcher packs.[/*]\n<br />[*]Any additional mods required by your chosen content pack, including mods that define its custom fish.[/*]\n<br />[/list]\n<br />Content Patcher is needed for the content-pack workflow. The framework itself can load without it, using its default pools.\n<br />\n<br />[color=#ff7700][size=4][b]Installation[/b][/size][/color]\n<br />\n<br />[list=1]\n<br />[*]Install SMAPI and Content Patcher.[/*]\n<br />[*]Download the main Mine Fish Framework release.[/*]\n<br />[*]Extract the ZIP into your Stardew Valley Mods folder. It should create Mods/MineFishFramework.[/*]\n<br />[*]Install the compatible content packs you want to use.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]\n<br />When updating, replace the existing framework files. Keep only one installed copy.\n<br />\n<br />[color=#ff7700][size=4][b]Scope[/b][/size][/color]\n<br />\n<br />The built-in rules cover the fishing pools on floors 20, 60 and 100, including those floor numbers in the dangerous mines. Content packs can define additional floor rules.\n<br />\n<br />Ordinary fishing locations, the Volcano Caldera, crab pots and Skull Cavern retain their existing behavior by default. Custom dungeon locations need to use the game's MineShaft class to be covered by these rules.\n<br />\n<br />[color=#ff7700][size=4][b]Compatibility[/b][/size][/color]\n<br />\n<br />[b]Content Patcher packs:[/b] Multiple packs can edit the framework's data. Packs that replace the same entry or change the same field may override each other. Pack load order and pool priority determine which changes apply.\n<br />\n<br />[b]Existing mine fishing edits:[/b] Floors 20 and 60 continue to read the normal global and underground-mine fishing tables after their explicit special-fish entries fail. Floor 100 doesn't inherit those tables by default; a framework pack can enable that behavior.\n<br />\n<br />[b]Custom fish:[/b] Supported when a catch entry references the fish's qualified item ID. The mod that defines the fish must also be installed. Adding a fish mod alone doesn't automatically add its fish to the mines.\n<br />\n<br />[b]Fishing difficulty and minigame mods:[/b] Expected to coexist when they leave catch selection alone. Mods that replace the chosen catch need individual compatibility testing.\n<br />\n<br />[b]Other mine-pool frameworks:[/b] Treat [b][url=https://www.nexusmods.com/stardewvalley/mods/44654]IamMineFish[/url][/b] as an alternative framework. Don't combine the two without a dedicated integration; both control mine catch selection, so outcomes can depend on patch order.\n<br />\n<br />The framework uses one Harmony prefix on MineShaft.getFish to expose the hardcoded mine catches. Other mods patching that method may need a compatibility patch.\n<br />\n<br />[color=#ff7700][size=4][b]Multiplayer[/b][/size][/color]\n<br />\n<br />Catch selection runs on the fishing player's client. Everyone using these pools should install matching versions of the framework, content packs, custom-fish mods and configurations.\n<br />\n<br />[b]Multiplayer and split-screen have not yet been tested[/b]\n<br />\n<br />[color=#ff7700][size=4][b]For content pack authors[/b][/size][/color]\n<br />\n<br />[b][u][color=#ff0000][url=https://github.com/darkrobon-ops/MineFishFramework/wiki/Author-Guide]Full Author Guide Here[/url][/color][/u][/b]\n<br />\n<br />Patch this data asset with Content Patcher's EditData action:\n<br />\n<br />[code]\n<br />Mods/DarkRobon.MineFishFramework/Pools[/code]\n<br />The default pool IDs are 20, 60 and 100. Each pool has a Fish list with individually addressable catch entries.\n<br />\n<br />For example, this content.json changes the Lava Eel's [b]base chance[/b] on floor 100:\n<br />\n<br />[code]\n<br />{\n<br />\u00A0 \"Format\": \"2.0.0\",\n<br />\u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \"Target\": \"Mods/DarkRobon.MineFishFramework/Pools\",\n<br />\u00A0 \u00A0 \u00A0 \"TargetField\": [\"100\", \"Fish\"],\n<br />\u00A0 \u00A0 \u00A0 \"Fields\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \"LavaEel\": { \"Chance\": 0.1 }\n<br />\u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 }\n<br />\u00A0 ]\n<br />}[/code]\n<br />Existing fishing-level, distance and equipment bonuses still apply. This changes the base value, not the final chance for every cast.\n<br />\n<br />Declare your pack as a Content Patcher pack and add a required dependency on [b]DarkRobon.MineFishFramework[/b]. Also declare dependencies on any mods that define the fish you use. Use unique IDs for your added catch entries to help packs coexist.\n<br />\n<br />Catch chances are sequential probabilities, not relative weights. Lower Precedence is checked first, and entries at equal precedence are shuffled. Only one matching pool rule is selected per cast.\n<br />\n<br />[color=#ff7700][size=4][b]Troubleshooting[/b][/size][/color]\n<br />\n<br />Run these commands in the SMAPI console:\n<br />\n<br />[list]\n<br />[*][b]mff_pools[/b]: list loaded pools and show the selected rule on your current mine floor.[/*]\n<br />[*][b]mff_reload[/b]: invalidate the pool asset so it reloads on the next cast.[/*]\n<br />[*][b]mff_patches[/b]: list Harmony patches on the shared mine fishing method for compatibility troubleshooting.[/*]\n<br />[/list]\n<br />After editing a Content Patcher pack's files, use patch reload YourPack.UniqueID so Content Patcher rereads them. mff_reload alone doesn't reread content.json.\n<br />\n<br />For bug reports, include your SMAPI log, affected floor, installed fishing packs, rod and bait, expected catch, and what happened. For suspected conflicts, also include the output of mff_pools and mff_patches.\n<br />\n<br />[color=#ff7700][size=4][b]Testing[/b][/size][/color]\n<br />\n<br />The four development test-pack scenarios have passed testing: independent floor pools, time conditions, training-rod and zero-chance behavior, and a custom fish defined by a Content Patcher pack.\n<br />\n<br />This doesn't necessarily mean compatibility with every fishing mod. SMAPI 4.3.2 is the declared minimum, so this should work with the most recent Android SMAPI\n<br />\n<br />[color=#ff7700][size=4][b]Uninstalling[/b][/size][/color]\n<br />\n<br />Remove the framework folder and any content packs that require it.\n<br />\n<br />If a separate mod defines custom fish, follow that mod's removal instructions before uninstalling it.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54478",
+	"Version": "0.1.0",
+	"Updated": "2026-10-24T02:15:13+00:00",
+	"Downloads": [
+		{
+			"Id": 188203,
+			"Type": "Main",
+			"DisplayName": "MineFishFramework 0.1.0",
+			"FileName": "3d/43/27/3d432704-fd7e-4f8f-9b95-22e5511cc369",
+			"Description": "Main file. Install manually or with a mod manager.",
+			"Version": "0.1.0",
+			"SizeInBytes": 27204,
+			"Uploaded": "2026-10-24T01:43:16+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.MineFishFramework",
+					"DisplayName": "Mine Fish Framework",
+					"Type": "Smapi",
+					"RelativePath": "MineFishFramework",
+					"Manifest": {
+						"Name": "Mine Fish Framework",
+						"Description": "A Content Patcher-friendly framework for configuring mine fishing pools.",
+						"Author": "DarkRobon",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "MineFishFramework.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:54478"
+						],
+						"UniqueId": "DarkRobon.MineFishFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574891,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 188205,
+			"Type": "Optional",
+			"DisplayName": "Example 01   Floor Isolation",
+			"FileName": "60/b4/79/60b479ff-c211-43c7-8983-364971347105",
+			"Description": "Guarantees Carp on floor 20, Perch on floor 60, and Sunfish on floor 100",
+			"Version": "0.0.1",
+			"SizeInBytes": 1043,
+			"Uploaded": "2026-10-24T02:14:27+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.MFFTestFloorIsolation",
+					"DisplayName": "MFF Test 01 - Floor Isolation",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] MFF Test 01 - Floor Isolation",
+					"Manifest": {
+						"Name": "MFF Test 01 - Floor Isolation",
+						"Description": "Guaranteed Carp on 20, Perch on 60, Sunfish on 100. Install one MFF test pack at a time.",
+						"Author": "DarkRobon",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DarkRobon.MineFishFramework",
+								"MinimumVersion": "0.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "DarkRobon.MFFTestFloorIsolation"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574893,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 188206,
+			"Type": "Optional",
+			"DisplayName": "Example 02   Time Conditions",
+			"FileName": "89/e9/f9/89e9f9d5-ba9d-4f83-a1ac-e2ea51a057ca",
+			"Description": "Guarantees Carp before noon and Perch afterward on floor 100. Magic Bait makes everything Carp",
+			"Version": "0.0.1",
+			"SizeInBytes": 1072,
+			"Uploaded": "2026-10-24T02:14:42+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.MFFTestTimeConditions",
+					"DisplayName": "MFF Test 02 - Time Conditions",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] MFF Test 02 - Time Conditions",
+					"Manifest": {
+						"Name": "MFF Test 02 - Time Conditions",
+						"Description": "Floor 100: Carp before noon, Perch from noon. Unequip Magic Bait. Install one MFF test pack at a time.",
+						"Author": "DarkRobon",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DarkRobon.MineFishFramework",
+								"MinimumVersion": "0.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "DarkRobon.MFFTestTimeConditions"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574894,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 188207,
+			"Type": "Optional",
+			"DisplayName": "Example 03   Training And Zero Chance",
+			"FileName": "d0/b2/87/d0b287b1-b231-48ea-9805-13f057eef91d",
+			"Description": "Gives Trash with a Training Rod and Carp with other rods on floor 100. The zero-chance Lava Eel should never appear.",
+			"Version": "0.0.1",
+			"SizeInBytes": 1107,
+			"Uploaded": "2026-10-24T02:15:00+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.MFFTestTraining",
+					"DisplayName": "MFF Test 03 - Training and Zero Chance",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] MFF Test 03 - Training and Zero Chance",
+					"Manifest": {
+						"Name": "MFF Test 03 - Training and Zero Chance",
+						"Description": "Floor 100: normal rods always Carp, training rod always Trash. Zero-chance Lava Eel never hooks. Install one MFF test pack at a time.",
+						"Author": "DarkRobon",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DarkRobon.MineFishFramework",
+								"MinimumVersion": "0.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "DarkRobon.MFFTestTraining"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574895,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 188208,
+			"Type": "Optional",
+			"DisplayName": "Example 04   Modded Fish",
+			"FileName": "1d/57/e6/1d57e699-a24b-44ff-8f43-429bcea5875a",
+			"Description": "Adds a custom “MFF Runtime Fish” and guarantees it on floor 100<br />",
+			"Version": "0.0.1",
+			"SizeInBytes": 1237,
+			"Uploaded": "2026-10-24T02:15:13+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.MFFTestModdedFish",
+					"DisplayName": "MFF Test 04 - Modded Fish",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] MFF Test 04 - Modded Fish",
+					"Manifest": {
+						"Name": "MFF Test 04 - Modded Fish",
+						"Description": "Defines MFF Runtime Fish and guarantees it on floor 100. Remove test fish from inventory before uninstalling. Install one MFF test pack at a time.",
+						"Author": "DarkRobon",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.0.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DarkRobon.MineFishFramework",
+								"MinimumVersion": "0.1.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "DarkRobon.MFFTestModdedFish"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574896,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441166,
+		"UploaderId": 8224263,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}
