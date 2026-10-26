@@ -3,39 +3,43 @@
 	"Id": 50284,
 	"Name": "ShedConsoleComputer",
 	"Author": "Aufhcegak",
-	"Description": "[heading]功能[/heading]\n<br />[url=https://github.com/Aufhcegak/ShedConsoleComputer#%E5%8A%9F%E8%83%BD][/url]\n<br />[list]\n<br />[*]自动投料/收成品，支持优先级设置[/*]\n<br />[*]内置投料箱+成果箱，都是完整 36 格[/*]\n<br />[*]支持小桶、木桶（陈酿）、罐头瓶[/*]\n<br />[*]机器完成瞬间立刻自动收取（无需等扫描）[/*]\n<br />[*]手动收酒后有 30 秒自动投料冷却，避免\"收酒变放水果\"[/*]\n<br />[/list]",
+	"Description": "[heading]1.5.2：敲掉电脑不再丢箱子里的东西[/heading]\n<br />用镐子把电脑敲下来时，投料箱和成果箱里的原料/成品会跟着电脑物品一起走：放回原位、换到别的屋子、读档回来都还在；电脑被炸毁时东西会散落在原地，不会凭空消失。空电脑和以前一样，掉下来就是一台空电脑。\n<br />（根因：原版敲机器只按物品 ID 重造一台新电脑，旧版快照写在了被丢弃的实例上，所以之前的\"拆机保留\"从未生效。）\n\n<br />\n\n<br />[heading]功能[/heading]\n<br />\n\n<br />[url=https://github.com/Aufhcegak/ShedConsoleComputer#%E5%8A%9F%E8%83%BD][/url]\n<br />\n\n<br />[list]\n<br />\n\n<br />[*]自动投料/收成品，支持优先级设置[/*]\n<br />\n\n<br />[*]内置投料箱+成果箱，都是完整 36 格[/*]\n<br />\n\n<br />[*]支持小桶、木桶（陈酿）、罐头瓶[/*]\n<br />\n\n<br />[*]机器完成瞬间立刻自动收取（无需等扫描）[/*]\n<br />\n\n<br />[*]手动收酒后有 30 秒自动投料冷却，避免\"收酒变放水果\"[/*]\n<br />\n\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50284",
-	"Version": "1.5.1",
-	"Updated": "2026-08-23T17:33:15+00:00",
+	"Version": "1.5.2",
+	"Updated": "2026-10-24T14:19:20+00:00",
 	"Downloads": [
 		{
-			"Id": 179861,
+			"Id": 188268,
 			"Type": "Main",
-			"DisplayName": "ShedConsoleComputer 1.5.1",
-			"FileName": "13/22/90/132290a2-cb99-4294-8ffd-5dacd9f63322",
-			"Version": "1.5.1",
-			"SizeInBytes": 53387,
-			"Uploaded": "2026-08-23T17:33:15+00:00",
+			"DisplayName": "ShedConsoleComputer 1.5.2",
+			"FileName": "74/42/df/7442df34-84ea-4def-be56-f972492c5523",
+			"Description": "1.5.2 - 修复用镐子敲下电脑后投料箱/成果箱内容丢失。<br />敲下时内容随电脑物品一起走：放回原位、换屋、读档都还在；电脑被炸毁时东西散落在原地，不会凭空消失。空电脑行为与原版一致。<br />安装：解压到 Stardew Valley/Mods/，需要 SMAPI 4.0+。",
+			"Version": "1.5.2",
+			"SizeInBytes": 51729,
+			"Uploaded": "2026-10-24T14:19:20+00:00",
 			"Mods": [
 				{
 					"Id": "Claude.ShedConsoleComputer",
 					"DisplayName": "Shed Console Computer",
 					"Type": "Smapi",
+					"RelativePath": "ShedConsoleComputer",
 					"Manifest": {
 						"Name": "Shed Console Computer",
 						"Description": "一台放在小屋里的主控电脑:统筹整个小屋的小桶,按优先级自动投放作物、自动收取成品,成果集中到一个箱子。",
 						"Author": "Claude",
-						"Version": "1.5.1",
+						"Version": "1.5.2",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "ShedConsoleComputer.dll",
 						"Dependencies": [],
-						"UpdateKeys": [],
+						"UpdateKeys": [
+							"Nexus:50284"
+						],
 						"UniqueId": "Claude.ShedConsoleComputer"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342566549,
+				"Uid": 5596342574956,
 				"CategoryId": 1,
 				"Primary": true
 			}

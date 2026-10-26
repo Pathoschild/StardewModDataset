@@ -7,17 +7,17 @@
 	"Description": "The Living Valley keeps the cozy vanilla feeling but adds a living world layer. Villagers react more naturally, requests change over time, market prices move with town activity, and the newspaper reflects what is happening around you.\n\nRequirements:\n\nStardew Valley 1.6+\nSMAPI 4.0+\nPlayer2 connection (FREE using the gpt-oss-120b AI model)\n\nInstallation:\n\nOption 1: Easy Setup (Recommended) – Player2 App\n\n1. Install SMAPI.\n2. Download this mod.\n3. Extract StardewLivingRPG into your Stardew Valley/Mods folder.\n4. Download and install the Player2 app.\n5. Open the Player2 app and make sure it’s running and you are logged in.\n6. Select gpt-oss-120b in the AI model selection if you want to play for free, which is good enough for the newspaper and market trends. But for better narrative and context flow, I recommend Gemini 3 Flash or DeepSeek V3.2\n7. Launch the game through SMAPI.\n8. Load your save and play.\n\nOption 2: Manual Connection – Browser Website\n\n1. Install SMAPI.\n2. Download this mod.\n3. Extract StardewLivingRPG into your Stardew Valley/Mods folder.\n4. Launch the game through SMAPI.\n5. Load your save and play.\n6. If prompted, connect Player2 in-game (open browser and enter code).\n7. Once the code is approved, go back in-game and wait for authorization.\n\n\nFirst-Time Quick Start:\n\nPress K to open the Market Board.\nPress J to read today's newspaper.\nPress L to check town requests.\nTalk to villagers and choose the follow-up chat option after vanilla dialogue.",
 	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1771839",
 	"Version": null,
-	"Updated": "2026-10-23T13:39:51.953+00:00",
+	"Updated": "2026-10-25T22:25:06.71+00:00",
 	"Downloads": [
 		{
-			"Id": 1812888,
+			"Id": 1812906,
 			"Type": "Main",
-			"DisplayName": "TheLivingValley-1.1.4",
-			"FileName": "TheLivingValley-1.1.4.zip",
+			"DisplayName": "TheLivingValley-1.1.5",
+			"FileName": "TheLivingValley-1.1.5.zip",
 			"Description": "Make Pelican Town feel alive! The Living Valley adds dynamic daily market prices, a readable Pelican Times newspaper, a unified town request board, and context-aware NPC chats. Watch the local economy and relationships grow alongside your farm in a truly ",
-			"Version": "1.1.4",
-			"SizeInBytes": 2251237,
-			"Uploaded": "2026-10-23T13:39:51.952+00:00",
+			"Version": "1.1.5",
+			"SizeInBytes": 2252261,
+			"Uploaded": "2026-10-25T22:25:06.71+00:00",
 			"Mods": [
 				{
 					"Id": "mx146323.StardewLivingRPG",
@@ -28,7 +28,7 @@
 						"Name": "The Living Valley",
 						"Description": "A cozy living-world layer for Stardew Valley with dynamic NPCs, requests, and town news.",
 						"Author": "mariachaaan",
-						"Version": "1.1.4",
+						"Version": "1.1.5",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "StardewLivingRPG.dll",
 						"Dependencies": [
@@ -103,18 +103,18 @@
 				"ext": ".zip",
 				"group": 0,
 				"icons": {},
-				"md5Ex": "a5b300abc26877f254e0c724a527ca41",
-				"md5In": "d1c9921750c0eeecb3161175674cba9f",
-				"patchNotes": "- New: villagers keep meetups they agree to in chat or a Chirp DM. They walk to the spot at the time and wait for you.\n- New: meetups can be planned up to a week ahead (\"tomorrow\", \"the day after tomorrow\", \"on Friday\", \"on the 7th\", \"in three days\").\n- New: showing up is remembered and raises your standing a little; missing a meetup is remembered gently, with no penalty.\n- Changed: villagers only promise meetups at places they can reach, and say so when a time or day can't work.\n- Changed: villagers agree to meetups once you have at least 2 hearts with them.\n- New: if you leave out where or when, villagers ask, and your answer completes the plan.\n- New: call off a plan in chat or a Chirp DM; the villager stays home (or heads back) and remembers you let them know.\n- New: add-on API `TryGetPlannedMeetup` and `TryDequeueMeetupOutcome`, so add-ons know about planned meetups and how they went. Chirp Valley 1.0.3 uses it.\n- Fixed: the newspaper no longer invents stories. It reports only what really happened or is really coming: yesterday's events, labelled villager talk, and, on quiet days, your farm report, festivals, birthdays, the forecast or almanac notes.\n- New: a quiet day's story is your farm report from yesterday, a festival (with where and when), a birthday (with gifts they love), tomorrow's forecast or an almanac note, taking turns day by day. Before, these days got invented or canned stories.\n- New: events from add-ons (a solved mystery, a viral chirp) now make the paper.\n- Changed: stories are a few sentences long with some warm flavor, and the AI may only reword the facts it is given; anything it adds is thrown out.\n- New: Editor's Corner, a short labelled opinion column on the day's story.\n- Changed: rumors and articles villagers pass to the paper in chat, and town events they mention, are still printed, as \"Town talk, not confirmed\"; they no longer replace the day's paper or its headline.\n- Fixed: the Market Outlook no longer prints the day's headline, and the morning toast simply says the paper is ready.",
+				"md5Ex": "2184956c319b470ef1e38b2a7065d512",
+				"md5In": "0ec777be0049de0428d364f5171bc1a8",
+				"patchNotes": "- Changed: newspaper headlines are sensational again, as before 1.1.4, still built only from the story's facts.\n- Changed: without an AI provider, headlines get their \"BREAKING:\" / \"SHOCKING:\" tag back.\n- Changed: news stories about yesterday's events get a line of color again, as in 1.1.3 (for example, town responders escorting you home after a 2am pass-out).\n- Fixed: the \"morning paper is ready\" toast shows at most once a day and only before noon, instead of whenever the AI paper arrived (even at 2am).\n- Fixed: you can kiss your spouse (or hug your roommate) again; clicking them after their daily line no longer opens Talk / Quest / Bye in place of the kiss, and the menu waits until a kiss is over.\n- Fixed: villagers talking to each other face to face stay in your game's language instead of slipping into English.",
 				"scriptType": 0,
-				"sha256Ex": "3a33c06486b3bb913edb81e74d933f0b9ad35ba408cd0985369894b80ebc7d0d",
-				"sha256In": "47306fe26b8de0c1ceefdf020064d6180d427d329fc0673c6198fa2af08e10f3"
+				"sha256Ex": "b6a782938ffa495f8f8b0d7874c1f9021cfd883d52ba082d445365f1782e18ef",
+				"sha256In": "ffe1da6f0047433c2105cd45caa24fb6d01a5acf93171ebd70282d73b953552b"
 			}
 		}
 	],
 	"OtherFields": {
 		"DatePublished": 1773584041947,
-		"DateUpdated": 1792762791953,
+		"DateUpdated": 1792967106710,
 		"IsDeleted": false,
 		"IsPublished": true,
 		"IsUnlocked": false,

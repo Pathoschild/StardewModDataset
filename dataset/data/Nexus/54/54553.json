@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 54553,
+	"Name": "Forage Bubbles",
+	"Author": "DarkRobon",
+	"Description": "[center][size=6][b]Forage Bubbles[/b][/size]\n<br />[size=3]See what's ready to gather.[/size]\n<br />By DarkRobon[/center]\n<br />\n<br />Forage Bubbles adds animated item bubbles above forage you can collect, using the style of Crop Harvest Bubbles. Spot seasonal forage, beach finds, truffles, berry bushes, and more while exploring vanilla or custom maps.\n<br />\n<br />[b]Built on aedenthorn's work.[/b] This add-on derives its bubble layout, animation, and configuration controls from [url=https://www.nexusmods.com/stardewvalley/mods/17761]Crop Harvest Bubbles by aedenthorn[/url]. The parent mod is required and continues to provide ordinary crop bubbles. Forage Bubbles adds forage coverage alongside it.\n<br />\n<br />[color=#ff7700][size=4][b]What gets a bubble?[/b][/size][/color]\n<br />[list]\n<br />[*]Collectible seasonal forage and wild flowers on the ground.[/*]\n<br />[*]Beach forage and truffles.[/*]\n<br />[*]Spring onions and ginger. Ginger still needs a hoe to harvest.[/*]\n<br />[*]Berry bushes and tea bushes when they have produce ready.[/*]\n<br />[*]Fruit trees carrying fruit, including modded fruit.[/*]\n<br />[*]Forage crops and bushes in garden pots when the potted-forage setting is enabled.[/*]\n<br />[*]Modded forage using the game's normal collectible-object and harvest systems, including custom items and maps.[/*]\n<br />[/list]\n<br />The icon shows the item to collect. Bubbles disappear when the item is picked up or its harvest source is emptied.\n<br />\n<br />[color=#ff7700][size=4][b]Requirements[/b][/size][/color]\n<br />[list]\n<br />[*][url=https://www.stardewvalley.net/]Stardew Valley[/url] 1.6 on PC.[/*]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.0.0 or newer, with a version compatible with your installed game.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/17761]Crop Harvest Bubbles[/url] 0.6.2 or newer. Keep this installed.[/*]\n<br />[*]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for in-game settings.[/*]\n<br />[/list]\n<br />[color=#ff7700][size=4][b]Installation[/b][/size][/color]\n<br />[list=1]\n<br />[*]Install SMAPI and Crop Harvest Bubbles.[/*]\n<br />[*]Download the main Forage Bubbles file from this page.[/*]\n<br />[*]Extract the ZIP so the ForageBubbles folder is directly inside Stardew Valley/Mods.[/*]\n<br />[*]Launch Stardew Valley through SMAPI.[/*]\n<br />[/list]\n<br />[b]Updating:[/b] Exit the game, replace the Forage Bubbles program files with the new main download, and keep your config.json. Old ShowCrops and IgnoreFlowers entries are removed automatically on startup or config reload. Crop Harvest Bubbles remains required.\n<br />\n<br />[b]Uninstalling:[/b] Exit the game and remove the ForageBubbles folder from Mods. Keep Crop Harvest Bubbles if you still want crop bubbles.\n<br />\n<br />[color=#ff7700][size=4][b]Settings[/b][/size][/color]\n<br />Use Generic Mod Config Menu or edit ForageBubbles/config.json while the game is closed.\n<br />\n<br />[list]\n<br />[*]Choose whether to show ground forage, spring onions and ginger, bushes, and fruit trees.[/*]\n<br />[*]Choose whether to include potted forage. Garden pots are ignored by default.[/*]\n<br />[*]Set forage bubble size and opacity. Defaults are 100% size and 75% opacity.[/*]\n<br />[*]Show bubbles continuously, hold a key to show them, or use a toggle key. Assign a key before enabling either key mode.[/*]\n<br />[*]Add item inclusions, exclusions, and custom forage-crop mappings in config.json for unusual modded items.[/*]\n<br />[/list]\n<br />The SMAPI console command [b]forage_bubbles_reload[/b] reloads and cleans the configuration while the game is running.\n<br />\n<br />[b]Crop settings belong to Crop Harvest Bubbles.[/b] Ordinary crops, wild-seed crops, cultivated flowers, and ordinary potted crops are handled by the parent. Its settings and keybinds are independent from this mod.\n<br />\n<br />[color=#ff7700][size=4][b]Mod compatibility[/b][/size][/color]\n<br />Standard modded forage is detected by its world behavior rather than a list of vanilla IDs or map names. Items with custom sprites and categories can work automatically when they use the normal spawned-pickup flags.\n<br />\n<br />A mod with its own harvesting code or missing pickup flags may need an item override or an integration. Forage Bubbles includes a provider API for these cases. Compatibility with every possible mod probably isn't possible, but I'll do what I can to incorporate it if people want.\n<br />\n<br />[color=#ff7700][size=4][b]Troubleshooting[/b][/size][/color]\n<br />[list]\n<br />[*][b]The add-on does not load:[/b] Check that Crop Harvest Bubbles 0.6.2 or newer is installed and that SMAPI reports both mods as loaded. Check the folder structure for an extra nested ForageBubbles folder.[/*]\n<br />[*][b]No forage bubbles:[/b] Check Enable forage bubbles, the source toggles, and whether a hold/toggle key is hiding them.[/*]\n<br />[*][b]Ordinary crop bubbles are missing:[/b] Check Crop Harvest Bubbles and its own settings.[/*]\n<br />[*][b]Potted forage has no bubble:[/b] Turn off Ignore potted forage in this add-on's settings.[/*]\n<br />[*][b]One custom item has no bubble:[/b] Include its mod name and item ID in your report. A nonstandard harvest system might need a compatibility patch[/*]\n<br />[/list]\n<br />For bug reports, include your game version, both mod versions, the affected location and item, steps to reproduce, and a [url=https://smapi.io/log]SMAPI log link[/url]. A screenshot helps with positioning or display problems. Please report Forage Bubbles issues on this page.\n<br />\n<br />[color=#ff7700][size=4][b]Credits[/b][/size][/color]\n<br />[list]\n<br />[*][b]aedenthorn[/b] - creator of [url=https://www.nexusmods.com/stardewvalley/mods/17761]Crop Harvest Bubbles[/url]. Its bubble rendering, animation, and configuration code form the foundation of this add-on. [url=https://github.com/aedenthorn/StardewValleyMods/tree/master/CropHarvestBubbles]Original source[/url].[/*]\n<br />[*][b]Pathoschild and SMAPI contributors[/b] - SMAPI and the mod build tools.[/*]\n<br />[*][b]spacechase0 and Generic Mod Config Menu contributors[/b] - optional configuration menu.[/*]\n<br />[*][b]ConcernedApe[/b] - Stardew Valley and the game artwork referenced by the mod.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54553",
+	"Version": "0.1.2",
+	"Updated": "2026-10-25T04:25:27+00:00",
+	"Downloads": [
+		{
+			"Id": 188393,
+			"Type": "Main",
+			"DisplayName": "ForageBubbles 0.1.2",
+			"FileName": "2e/56/9d/2e569d03-7323-4ba9-bb3a-699d9b3f9cd2",
+			"Description": "Main file. Install alongside Crop Harvest Bubbles",
+			"Version": "0.1.2",
+			"SizeInBytes": 23615,
+			"Uploaded": "2026-10-25T04:25:27+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.ForageBubbles",
+					"DisplayName": "Forage Bubbles",
+					"Type": "Smapi",
+					"RelativePath": "ForageBubbles",
+					"Manifest": {
+						"Name": "Forage Bubbles",
+						"Description": "Extends Crop Harvest Bubbles with bubbles above forage, including modded items and locations.",
+						"Author": "DarkRobon",
+						"Version": "0.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ForageBubbles.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "aedenthorn.CropHarvestBubbles",
+								"MinimumVersion": "0.6.2",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:54553"
+						],
+						"UniqueId": "DarkRobon.ForageBubbles"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575081,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441241,
+		"UploaderId": 8224263,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

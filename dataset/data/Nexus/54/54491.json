@@ -1,0 +1,75 @@
+{
+	"Site": "Nexus",
+	"Id": 54491,
+	"Name": "StardewAIWorld",
+	"Author": "knight9z43",
+	"Description": "[size=5][b]AIWorld — conversations connected to village life[/b][/size]\n<br />Version 0.12.0 Alpha | English / 中文\n<br />\n<br />AIWorld lets Stardew Valley villagers converse using their actual schedules, activities, surroundings, weather and witnessed experiences. Inspired by RimTalk's observable conversations and RimWorld's readable pawn activity, it adds a visible activity/state layer and a traceable chat console adapted to Stardew Valley.\n<br />\n<br />The game remains the source of truth. The model writes dialogue and proposes a limited set of actions; code checks consent, permissions, conditions, routes and execution results. This is an experimental conversation-and-action mod, not a complete RimWorld job or needs simulation.\n<br />\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*]Stardew Valley 1.6 desktop version.\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.0 or newer. Launch the game through SMAPI.\n<br />[*]For AI dialogue: your own working model service and credentials. Supports the DeepSeek route and compatible Chat Completions services; use a model ID actually available to your account.\n<br />[*]Optional: Stardew Valley Expanded, with its own requirements. The included AIWorld.SVE.Knowledge folder is an optional knowledge extension and is inactive without SVE.\n<br />[/list]\n<br />SocialValley, The Stardew Squad and Player2 are not required. AIWorld includes its own chat UI, vanilla dialogue bridge and following controller. No third-party mod DLLs or game assemblies are bundled.\n<br />\n<br />[b]Installation and first conversation[/b]\n<br />[list=1]\n<br />[*]Close the game and back up your save and any existing AIWorld configuration/history.\n<br />[*]Download AIWorld 0.12.0 Alpha and extract AIWorld.Demo into the game's Mods folder. The result must be Mods/AIWorld.Demo/manifest.json, without an extra nested folder.\n<br />[*]If you use SVE, also place AIWorld.SVE.Knowledge in Mods. Install SVE itself separately.\n<br />[*]When upgrading, replace the packaged files while preserving your existing config.json, history and reports. Avoid duplicate installations of the same mod ID.\n<br />[*]Launch through SMAPI, enter a save and press F9. Open the model settings and enter your service endpoint, model ID and API key. A connection test makes a real request and may cost money.\n<br />[*]Select an NPC and chat. Try asking what they are doing, inviting them along, or proposing a meeting with an explicit time such as 21:00.\n<br />[/list]\n<br />\n<br />[b]What this Alpha does[/b]\n<br />[list]\n<br />[*][b]F9 chat and settings:[/b] a translucent, draggable, resizable panel with chat, history, general settings, prompts, context and model pages. Global and character prompts can be adjusted.\n<br />[*][b]F8 vanilla continuation:[/b] continue from supported ordinary vanilla dialogue into AIWorld's own chat, then return the completed reply to the vanilla portrait box. Both views share the conversation and speaker. Scripted events, choices and complex callbacks retain their original flow.\n<br />[*][b]Daily dialogue and group conversation:[/b] supported daily lines can be rewritten from current context. Nearby eligible villagers can take turns in conversations with 2–4 participants; not every exchange becomes a group conversation.\n<br />[*][b]Readable activity state:[/b] context uses the currently selected game schedule and observed activity, including travelling, reading, following, waiting, returning or being blocked. Gift preferences and bounded nearby observations also inform dialogue. Unknown mod entities are handled conservatively.\n<br />[*][b]Date, seasons and weather:[/b] NPC context includes game date, weekday, time, relevant season and local weather, with indoor/outdoor distinctions. Public calendar information includes festivals and nearby upcoming events. Knowing a festival is scheduled does not imply having attended it.\n<br />[*][b]Sealed story knowledge and limited memory:[/b] vanilla and SVE event resources are indexed locally. Actually displayed dialogue and submitted choices can become bounded memories for eligible witnesses. Future branches and entire unseen scripts are not injected as memories. A character does not automatically know another character's private experience.\n<br />[*][b]Validated actions:[/b] after agreement, supported requests can start following, travel or appointments. Code validates destinations, routes, the next tile and map connections; cancellation or failure attempts to restore the baseline schedule. This does not grant the model arbitrary control over the game.\n<br />[*][b]Traceability:[/b] reports expose prompts, context, responses, latency, provider-reported token usage and action results. Missing token usage is shown as unknown; this is not an exact billing meter.\n<br />[*][b]Language follow:[/b] UI resources cover Simplified Chinese, Traditional Chinese, English, Japanese, Korean and Spanish. Traditional Chinese requires suitable game language/font support. Generated language still depends on the model.\n<br />[/list]\n<br />\n<br />[b]SVE and knowledge coverage[/b]\n<br />The optional SVE integration includes personality entries for 41 character IDs based on SVE 1.15.11, plus a separate event knowledge index. Vanilla and SVE story indexes are broader than the manually authored background notes: the current curated notes cover only four events, and there is no claim of complete story understanding. Old save events without captured witness evidence are not automatically turned into memories. Dedicated Ridgeside Village and East Scarp personality packs are not included.\n<br />\n<br />[b]Costs and privacy[/b]\n<br />The model service you configure receives the player text and character/game context needed for generation. Use a service you trust and review its pricing. No API key is supplied with the mod. On Windows, keys saved through the UI use user environment variables; on other systems, they remain in the current process.\n<br />\n<br />Automatic village conversation defaults to a budget of 24 calls per game day, up to four participants and six turns, with turn spacing and a conversation cooldown. This budget does not include manual chat, daily dialogue rewriting, connection tests or retries. Reports can contain full prompts and private player conversations: inspect them before sharing.\n<br />\n<br />[b]Alpha limitations and testing[/b]\n<br />This release has build and offline regression verification, including 819 distinct offline tests recorded during development. It has not completed a fresh full in-game UI/input/scaling, long-session following or multi-mod compatibility acceptance pass. Multiplayer and non-Windows platforms are not fully tested. Please report reproducible issues with the mod version, NPC/map, steps and redacted SMAPI/chat reports.\n<br />\n<br />There is no complete autonomous pawn work/needs system, arbitrary map wandering or unrestricted rewriting of an NPC's entire schedule. Some personality and story coverage is incomplete. Generated dialogue may still be inaccurate even though world-changing actions are validated.\n<br />\n<br />[b]Project and credits[/b]\n<br />[url=https://github.com/875093109-netizen/StardewAIWorld]StardewAIWorld on GitHub[/url]. The public repository snapshot may lag behind this Alpha package. RimTalk and RimWorld inspired the conversation visibility and readable activity approach; this project is not affiliated with their creators. Stardew Valley, SMAPI, SVE and other third-party content remain the work of their respective creators. No separate open-source license has yet been declared for this project.\n<br />\n<br />[size=5][b]中文说明[/b][/size]\n<br />AIWorld 希望让村民结合实际生活聊天：知道自己正在赶路、读书、跟随或等待，知道当地天气、日期和节日，也能记住自己真正见证过的剧情。设计参考 RimTalk 的聊天与追溯界面，以及 RimWorld pawn 的可观察活动状态，但保留星露谷原本的生活日程。\n<br />\n<br />[b]必要前置：[/b]星露谷 1.6 桌面版、SMAPI 4.0+；AI 对话另需自己的模型服务和 Key。无需 SocialValley、The Stardew Squad 或 Player2。SVE 可选，它的智库放在独立的 AIWorld.SVE.Knowledge 文件夹里。\n<br />\n<br />[b]安装：[/b]关闭游戏并备份存档，将压缩包里的 AIWorld.Demo 放入 Mods；SVE 玩家另外放入 AIWorld.SVE.Knowledge。升级时保留原配置、历史和报告。用 SMAPI 启动，进入存档后按 F9 配置模型、选择村民聊天。\n<br />\n<br />[b]效果：[/b]F9 提供半透明可拖动聊天框、历史、提示词、上下文和模型设置。F8 可以从受支持的原版日常对白接着聊，再把回复放回原版头像框。附近村民可进行 2–4 人轮流对话；模型能参考实际日程、当前活动、礼物喜好、周围事物和天气。请求跟随、出行或会面后，须经过同意与程序验证才执行。\n<br />\n<br />[b]智库原则：[/b]先封存剧情，实际发生后再依据现场台词、已提交选项和见证关系形成有限记忆；知者才可知。封存原文不等于所有村民都知道，旧存档也不会无依据补写经历。原版与 SVE 的索引已接入，但专用背景注释和实机覆盖仍不完整。\n<br />\n<br />[b]当前边界：[/b]这是 0.12.0 Alpha，离线测试不等于完整实机验证；尚未实现完整 RimWorld 工作/需求系统、任意自主闲逛或任意改写整张日程表。模型只负责表达和有限动作提议，真实世界状态由程序维护。聊天和测试会调用你配置的服务并可能计费；分享报告前请检查私人对话内容。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54491",
+	"Version": "0.12.0",
+	"Updated": "2026-10-24T09:12:37+00:00",
+	"Downloads": [
+		{
+			"Id": 188234,
+			"Type": "Main",
+			"DisplayName": "AIWorld 0.12.0 Alpha",
+			"FileName": "85/f2/eb/85f2ebeb-f1e4-4dff-901c-aae656250f14",
+			"Description": "0.12.0 Alpha. Standalone F9 chat, F8 vanilla dialogue continuation and native following; no SocialValley or The Stardew Squad dependency. Requires Stardew Valley 1.6, SMAPI 4.0+ and your own model service for AI dialogue. Extract AIWorld.Demo into Mods; SVE users may also install AIWorld.SVE.Knowledge. Back up saves and preserve existing configuration/history when upgrading. This build has offline verification, but full in-game UI, multiplayer and long-session compatibility testing is incomplete.<br />SHA-256: 9df3aaac798c5a1da0a43348cc4f58502d108c883ab2080c6790b7da38e825b9",
+			"Version": "0.12.0",
+			"SizeInBytes": 448034,
+			"Uploaded": "2026-10-24T09:12:37+00:00",
+			"Mods": [
+				{
+					"Id": "AIWorld.Demo",
+					"DisplayName": "AIWorld Demo",
+					"Type": "Smapi",
+					"RelativePath": "AIWorld.Demo",
+					"Manifest": {
+						"Name": "AIWorld Demo",
+						"Description": "AI NPC conversation, travel, appointments and memories, with optional built-in SVE character personas.",
+						"Author": "AIWorld",
+						"Version": "0.12.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AIWorld.Demo.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "AIWorld.Demo"
+					}
+				},
+				{
+					"Id": "AIWorld.SVE.Knowledge",
+					"DisplayName": "AIWorld SVE Story Knowledge",
+					"Type": "ContentPack",
+					"RelativePath": "AIWorld.SVE.Knowledge",
+					"Manifest": {
+						"Name": "AIWorld SVE Story Knowledge",
+						"Description": "Optional sealed event index for SVE. Inactive when SVE is not installed. Contains no SVE scripts or textures.",
+						"Author": "AIWorld",
+						"Version": "0.12.0",
+						"ContentPackFor": {
+							"UniqueId": "AIWorld.Demo"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "FlashShifter.StardewValleyExpandedCP",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "AIWorld.SVE.Knowledge"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574922,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441179,
+		"UploaderId": 98996878,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

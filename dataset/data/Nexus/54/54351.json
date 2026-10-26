@@ -7,7 +7,7 @@
 	"Description": "[b][color=#d4d4d8]A shared-storage chest for Stardew Valley, with integrations for\u00A0[size=4]Automate[/size]\u00A0as well as [size=4]Filtered Chest Hoppers![/size][/color][/b]\n<br />\n<br />[b][color=#d4d4d8][size=5]Main Features[/size][/color]\n<br />[/b]\n<br />[list]\n<br />[*][b][color=#d4d4d8]Shared inventories: Connect multiple Network Chests using the same Network ID.[/color][/b]\n<br />In this example images, I have my cellar and my Winery (building from SVE) connected to the same Cheese Cask network.[/*]\n<br />[*][b][color=#d4d4d8]Multiple networks: Use different IDs to keep storage networks separate.[/color][/b][/*]\n<br />[*][b][color=#d4d4d8]In-game setup: Assign a new or existing Network ID through the chest's interaction menu.[/color][/b][/*]\n<br />[*][b][color=#d4d4d8]Automate integration: Allows Automate to recognize Network Chests and refresh its machine network when a chest is assigned.[/color][/b][/*]\n<br />[*][b][color=#d4d4d8]Filtered Chest Hopper Integration: Beta for this mod is included in the files section. Integration as well as major bug fixes are addressed. Great for setting up global pipelines![/color][/b][/*]\n<br />[/list][b][color=#d4d4d8][size=4]In-Game[/size][/color]\n<br />[/b]\n<br />[list]\n<br />[*][b][color=#d4d4d8]Recipe: Currently set as requiring a farm computer and junimo chest.[/color][/b][/*]\n<br />[*][b][color=#d4d4d8]Spawn:\u00A0In SMAPI console, type this: player_add name \"network chest\" [qty][/color][/b][/*]\n<br />[/list][code]player_add name \"Network Chest\" 67[/code][heading]Beta Testing[/heading]\n<br />This is an early test release. Please report any bugs you encounter, especially issues involving:\n<br />\n<br />[list]\n<br />[*]Network IDs and shared inventory behavior.[/*]\n<br />[*]Storage persistence after saving and reloading.[/*]\n<br />[*]Automate recognition and item transfers.[/*]\n<br />[*]Compatibility with other mods.[/*]\n<br />[*]Unexpected behavior when using multiple Network Chests.[/*]\n<br />[/list]When reporting a bug, please include the steps to reproduce it and a SMAPI log: [url=https://smapi.io/log]https://smapi.io/log[/url]\n<br />\n<br />[color=#fafafa][size=5][b]The Problem[/b][/size][/color]\n<br />\n<br />When running large automated farms, you may have multiple production areas that rely on the same resources.\u00A0\n<br />\n<br />For example, one group of machines might process coffee beans while another processes fruit, with both drawing from a shared supply of coffee beans or fruit.\n<br />\n<br />Another example, you have kegs in the tunnel as well as the quarry. You want all of the kegs to be processing honey 24/7 that you've purchased in the desert. You are forced to purchase your honey in bulk as its only sold once a week.\n<br />\n<br />Automate's existing Junimo Chest integration lets machines access items through the Junimo Chest network, but managing surplus resources can become difficult. If you want to keep a reserve of materials that automatically replenishes machines across multiple locations, it's hard to control how those resources are distributed and ensure each production area stays supplied.\n<br />\n<br />You want to be able to store surplus resources in one place and have them automatically flow to wherever they're needed, without manually moving items between production areas or constantly restocking machine inputs.\n<br />\n<br />[b]NetworkChest aims to solve this by providing shared storage networks that Automate can use across multiple production areas[/b], making it easier to maintain a central surplus of resources and keep your automated production lines running.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI and the required mods.[/*]\n<br />[*]Download the NetworkChestBeta ZIP.[/*]\n<br />[*]Download the\u00A0 Automate Beta ZIP.[/*]\n<br />[*]Download the FilteredChestHopper Beta ZIP[/*]\n<br />[*]Extract each file:\n<br />[code]NetworkChest, FilteredChestHopper, Automate[/code]folder into your Stardew Valley\n<br />[code]Mods[/code]folder.[/*]\n<br />[*]Launch the game through SMAPI and check the SMAPI console for errors.[/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Stardew Valley[/color][/*]\n<br />[*][color=#D4D4D8]SMAPI[/color][/*]\n<br />[*][color=#D4D4D8]Automate - Network Chest Beta (required for automated machine-network integration)[/color][/*]\n<br />[*][color=#D4D4D8]Filtered Chest Hopper - Network Chest Beta (required for sorting items in and out of network chests)[/color][/*]\n<br />[/list][b][size=4]Source Code[/size][/b]\n<br />[list]\n<br />[*][url=https://github.com/matthew-luu/SorcererStardewMods]NetworkChest[/url][/*]\n<br />[*][url=https://github.com/matthew-luu/StardewMods/tree/newFeature-NetworkChests/Automate]Automate-NetworkChest[/url][/*]\n<br />[*][url=https://github.com/matthew-luu/StardewValleyMods/tree/NetworkChest]Filtered Chest Hopper - NetworkChest[/url][/*]\n<br />[/list][url=https://github.com/matthew-luu/StardewValleyMods/tree/NetworkChest][/url]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54351",
 	"Version": "0.1.1",
-	"Updated": "2026-10-23T20:11:59+00:00",
+	"Updated": "2026-10-24T05:33:55+00:00",
 	"Downloads": [
 		{
 			"Id": 188170,
@@ -85,14 +85,14 @@
 			}
 		},
 		{
-			"Id": 188172,
+			"Id": 188222,
 			"Type": "Main",
 			"DisplayName": "FilteredChestHopper 1.5.0 Beta",
-			"FileName": "b4/f2/0d/b4f20d2a-de52-4163-a25b-23adfb9e7a0f",
+			"FileName": "58/6c/5d/586c5daa-cf6a-4603-8301-4ea83e63b9e7",
 			"Description": "Makes hoppers act as filters for chests. Allows filtering based on item type, quantity, and quality.",
-			"Version": "1.5.0",
-			"SizeInBytes": 21585,
-			"Uploaded": "2026-10-23T20:11:59+00:00",
+			"Version": "1.5.1",
+			"SizeInBytes": 21590,
+			"Uploaded": "2026-10-24T05:33:55+00:00",
 			"Mods": [
 				{
 					"Id": "shivion.FilteredChestHopper",
@@ -103,7 +103,7 @@
 						"Name": "FilteredChestHopper",
 						"Description": "Makes hoppers move items between chests",
 						"Author": "Shivion",
-						"Version": "1.5.0",
+						"Version": "1.5.1",
 						"EntryDll": "FilteredChestHopper.dll",
 						"Dependencies": [],
 						"UpdateKeys": [
@@ -117,7 +117,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342574860,
+				"Uid": 5596342574910,
 				"CategoryId": 1,
 				"Primary": false
 			}
