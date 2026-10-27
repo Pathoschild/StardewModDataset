@@ -6,25 +6,8 @@
 	"Description": "[heading]Version 1.1.0 Marriage &amp; Bug Fix Update[/heading]\n<br />This update focuses on improving Katsuki's marriage behavior, fixing reported issues, and expanding his daily routines.\n<br />Fixes\n<br />[list]\n<br />[*]Fixed bouquet acceptance and engagement dialogue.[/*]\n<br />[*]Fixed missing marriage dialogue entries.[/*]\n<br />[*]Fixed Katsuki becoming stuck during his commute after marriage.[/*]\n<br />[*]Added a workaround for farmhouse scheduling issues.[/*]\n<br />[*]Fixed an incorrectly positioned heart event.[/*]\n<br />[/list]Improvements\n<br />[list]\n<br />[*]Added an updated marriage schedule.[/*]\n<br />[*]Katsuki now continues working at Clint's after marriage.[/*]\n<br />[*]Added visits to the Saloon and Mountain.[/*]\n<br />[*]Sunday is now his day off![/*]\n<br />[*]Expanded marriage dialogue and location-specific interactions.[/*]\n<br />[/list]\n<br />[b]Known Quirks Marriage Schedule[/b]\n<br />[b]Katsuki may suddenly teleport away from his spouse patio on workdays. This is intentional behavior with the current workaround![/b]\n<br />Stardew Valley sometimes places him in the spouse patio area instead of starting his work schedule. To prevent him from getting stuck there all day, the included marriage fix automatically relocates him to Clint's Blacksmith when necessary.\n<br />This may look like Katsuki suddenly disappearing from the patio, but don't worry he's just being sent to work! \uD83D\uDCA5\n<br />He has Sundays off, so the workday rescue won't activate then.\n<br />\n<br />Important\n<br />This version includes a SMAPI companion mod required for the marriage pathing fixes. Please install both included mod folders.\n<br />[b]Requirements:[/b] SMAPI and Content Patcher.\n<br />\n<br />\n<br />Thank you for playing and for reporting issues! ❤️",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46075",
 	"Version": "1.1.0",
-	"Updated": "2026-10-25T18:32:17+00:00",
+	"Updated": "2026-10-26T14:45:36+00:00",
 	"Downloads": [
-		{
-			"Id": 188514,
-			"Type": "Main",
-			"DisplayName": "KatsukiMarriageFix",
-			"FileName": "7f/27/50/7f27504c-20e0-4ed5-a320-7ff8d96585db",
-			"Description": "",
-			"Version": "1",
-			"SizeInBytes": 75456,
-			"Uploaded": "2026-10-25T18:31:33+00:00",
-			"Mods": [],
-			"DownloadError": "Could not get download URLs: This file has been quarantined and is not available for download.",
-			"OtherFields": {
-				"Uid": 5596342575202,
-				"CategoryId": 1,
-				"Primary": false
-			}
-		},
 		{
 			"Id": 188515,
 			"Type": "Main",
@@ -60,6 +43,45 @@
 				"Uid": 5596342575203,
 				"CategoryId": 1,
 				"Primary": true
+			}
+		},
+		{
+			"Id": 188673,
+			"Type": "Main",
+			"DisplayName": "KatsukiMarriageFix",
+			"FileName": "74/7a/2f/747a2f91-6952-421c-83ba-6ec5ef43a9d0",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 13638,
+			"Uploaded": "2026-10-26T14:45:36+00:00",
+			"Mods": [
+				{
+					"Id": "emkabonbonka.KatsukiMarriageFix",
+					"DisplayName": "Katsuki Marriage Fix",
+					"Type": "Smapi",
+					"RelativePath": "KatsukiMarriageFix",
+					"Manifest": {
+						"Name": "Katsuki Marriage Fix",
+						"Description": "SMAPI companion fix for KB_Katsuki spouse schedule transitions on Stardew Valley 1.6.15.",
+						"Author": "emkabonbonka",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "KatsukiMarriageFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "emkabonbonka.KatsukiBakugoNPC",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "emkabonbonka.KatsukiMarriageFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575361,
+				"CategoryId": 1,
+				"Primary": false
 			}
 		}
 	],

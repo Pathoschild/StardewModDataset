@@ -6,64 +6,184 @@
 	"AuthorLabel": "Zuzu Development Team",
 	"Description": "适配星露谷1.6的 祖祖城中文翻译\n<br />不一定全，已知购买公寓和购买锯木厂的文本没翻译，我没找到文本，可能是硬编码在dll了\n<br />如果有漏得可以提。\n<br />\n<br />没有完整测试。\n<br />\n<br />使用\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/20435]Transtar[/url]\u00A0制作翻译，这个真好用，推荐大家做翻译都用这个",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/21393",
-	"Version": "1.0",
-	"Updated": "2024-03-31T10:56:58+00:00",
+	"Version": "1",
+	"Updated": "2026-10-26T05:01:14+00:00",
 	"Downloads": [
 		{
-			"Id": 87546,
+			"Id": 188613,
 			"Type": "Main",
-			"DisplayName": "Downtown Zuzu Chinese",
-			"FileName": "Downtown Zuzu Chinese-21393-1-3-1711882618.zip",
-			"Description": "DLL 地名翻译修复，一些标点调整\n<br />来自  FENGSHUO0113",
-			"Version": "1.3",
-			"SizeInBytes": 1572276,
-			"Uploaded": "2024-03-31T10:56:58+00:00",
+			"DisplayName": "Downtown Zuzu Chinese 0.9.4 Fix",
+			"FileName": "ac/6a/f1/ac6af13b-21cb-4f2c-ab12-e45bc292442e",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 1483821,
+			"Uploaded": "2026-10-26T05:01:14+00:00",
 			"Mods": [
 				{
-					"Id": null,
-					"DisplayName": "Downtown-Zuzu-main\\[BL] Downtown Zuzu",
-					"Type": "Invalid",
-					"RelativePath": "Downtown-Zuzu-main\\[BL] Downtown Zuzu",
-					"ManifestParseError": "ManifestMissing",
-					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+					"Id": "DTZ.DowntownZuzuBL",
+					"DisplayName": "(BL) Downtown Zuzu",
+					"Type": "ContentPack",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[BL] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(BL) Downtown Zuzu",
+						"Description": "Adds a medium location that is supposed to be the outskirts of Zuzu City. It runs via BusLocations and CP.",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.1.5",
+						"ContentPackFor": {
+							"UniqueId": "hootless.BusLocations"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8587"
+						],
+						"UniqueId": "DTZ.DowntownZuzuBL"
+					}
 				},
 				{
-					"Id": null,
-					"DisplayName": "Downtown-Zuzu-main\\[CP] Downtown Zuzu",
-					"Type": "Invalid",
-					"RelativePath": "Downtown-Zuzu-main\\[CP] Downtown Zuzu",
-					"ManifestParseError": "ManifestMissing",
-					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+					"Id": "DTZ.DowntownZuzuCC",
+					"DisplayName": "(CC) Downtown Zuzu",
+					"Type": "ContentPack",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[CC] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(CC) Downtown Zuzu",
+						"Description": "Adds a medium location that is supposed to be the outskirts of Zuzu City. It runs via BusLocations and CP.",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.1.5",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.CustomCompanions"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DTZ.DowntownZuzuDLL",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8587"
+						],
+						"UniqueId": "DTZ.DowntownZuzuCC"
+					}
 				},
 				{
-					"Id": null,
-					"DisplayName": "Downtown-Zuzu-main\\[DLL] Downtown Zuzu",
-					"Type": "Invalid",
-					"RelativePath": "Downtown-Zuzu-main\\[DLL] Downtown Zuzu",
-					"ManifestParseError": "ManifestMissing",
-					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+					"Id": "DTZ.DowntownZuzuCP",
+					"DisplayName": "(CP) Downtown Zuzu",
+					"Type": "ContentPack",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[CP] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(CP) Downtown Zuzu",
+						"Description": "Adds a medium location that is supposed to be the outskirts of Zuzu City. It runs via BusLocations and CP.",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.1.5",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "DTZ.DowntownZuzuDLL",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:8587"
+						],
+						"UniqueId": "DTZ.DowntownZuzuCP"
+					}
 				},
 				{
-					"Id": null,
-					"DisplayName": "Downtown-Zuzu-main\\[MFM] Downtown Zuzu",
-					"Type": "Invalid",
-					"RelativePath": "Downtown-Zuzu-main\\[MFM] Downtown Zuzu",
-					"ManifestParseError": "ManifestMissing",
-					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+					"Id": "DTZ.DowntownZuzuDLL",
+					"DisplayName": "(DLL) Downtown Zuzu",
+					"Type": "Smapi",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[DLL] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(DLL) Downtown Zuzu",
+						"Description": "Adds a medium location that is supposed to be the outskirts of Zuzu City. It runs via BusLocations and CP.",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.1.5",
+						"EntryDll": "Downtown_Zuzu.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.SpaceCore",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "DTZ.DowntownZuzuDLL"
+					}
 				},
 				{
-					"Id": null,
-					"DisplayName": "Downtown-Zuzu-main\\[TS] Downtown Zuzu",
-					"Type": "Invalid",
-					"RelativePath": "Downtown-Zuzu-main\\[TS] Downtown Zuzu",
-					"ManifestParseError": "ManifestMissing",
-					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+					"Id": "DTZ.DowntownZuzuFTM",
+					"DisplayName": "(FTM) Downtown Zuzu",
+					"Type": "ContentPack",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[FTM] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(FTM) Downtown Zuzu",
+						"Description": "FTM for Downtown Zuzu",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Esca.FarmTypeManager",
+							"MinimumVersion": "1.10.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8587"
+						],
+						"UniqueId": "DTZ.DowntownZuzuFTM"
+					}
+				},
+				{
+					"Id": "DTZ.DowntownZuzuMFM",
+					"DisplayName": "(MFM) Downtown Zuzu",
+					"Type": "ContentPack",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[MFM] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(MFM) Downtown Zuzu",
+						"Description": "Adds a medium location that is supposed to be the outskirts of Zuzu City. It runs via BusLocations and CP.",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.1.5",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod",
+							"MinimumVersion": "1.10.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8587"
+						],
+						"UniqueId": "DTZ.DowntownZuzuMFM"
+					}
+				},
+				{
+					"Id": "DTZ.DowntownZuzuTS",
+					"DisplayName": "(TS) Downtown Zuzu",
+					"Type": "ContentPack",
+					"RelativePath": "Downtown-Zuzu-Chinese\\[TS] Downtown Zuzu",
+					"Manifest": {
+						"Name": "(TS) Downtown Zuzu",
+						"Description": "TrainStation for Downtown Zuzu",
+						"Author": "Zuzu Development Team",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "3.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Cherry.TrainStation"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:8587"
+						],
+						"UniqueId": "DTZ.DowntownZuzuTS"
+					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342474234,
+				"Uid": 5596342575301,
 				"CategoryId": 1,
-				"Primary": false
+				"Primary": true
 			}
 		}
 	],
