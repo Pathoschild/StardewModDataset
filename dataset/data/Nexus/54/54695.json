@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 54695,
+	"Name": "Snap Catch",
+	"Author": "ByVaikonC4",
+	"Description": "Snap Catch\n<br />Replaces the fishing bobber-bar minigame with a single, quick timing check - styled after the vanilla bar, so it still feels like fishing, just faster.\n<br />[heading]How it works[/heading]\n<br />When a fish bites, instead of the full bobber-bar minigame you get a short vertical bar with four nested color bands:\n<br />[list]\n<br />[*][b]Green[/b]\u00A0- Normal quality[/*]\n<br />[*][b]Yellow[/b]\u00A0- Silver quality[/*]\n<br />[*][b]Red[/b]\u00A0- Gold quality[/*]\n<br />[*][b]Purple[/b]\u00A0- Iridium quality (a \"perfect\" catch)[/*]\n<br />[/list]A marker bounces up and down the bar. Press your tool-use button (click / controller A or X) once, at the right moment, to hook the fish. Where the marker lands decides the quality - land outside every band and the fish gets away, same as missing the vanilla minigame.\n<br />If a treasure chest is rolled for that catch, landing the fish is followed by one more independent press at a separate orange hit-box, placed so it never overlaps the fish's own zone.\n<br />[heading]What scales the difficulty[/heading]\n<br />[list]\n<br />[*][b]Fish difficulty[/b]\u00A0- harder fish shrink the catch zone and speed up the marker.[/*]\n<br />[*][b]Fishing skill[/b]\u00A0- a higher Fishing level widens the zone and slows the marker a little.[/*]\n<br />[*][b]Rod tier[/b]\u00A0- better rods widen the zone.[/*]\n<br />[*][b]Tackle[/b]\u00A0- Quality Bobbers widen the zone and bump the final catch quality.[/*]\n<br />[/list]All of this reuses the game's own vanilla formulas for fish size, treasure rolls and bait bonuses - only the actual minigame is replaced, not the underlying catch balance.\n<br />[heading]Configuration[/heading]\n<br />Every number above (zone sizes, band proportions, marker speed, treasure hit-box size) is configurable. If you have\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0installed, you can tune everything from an in-game menu - no manual\u00A0\n<br />[code]config.json[/code]\u00A0editing needed.\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]\u00A04.0.0+[/*]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[/list][heading]Compatibility[/heading]\n<br />Do not use alongside other mods that also skip or replace the fishing minigame (e.g. SkipFishingMinigame) - both will try to hook the same code and only one will actually take effect, leaving the other dormant.\n<br />[heading]Credits[/heading]\n<br />Built with Pathoschild's\u00A0mod package and\u00A0[url=https://github.com/pardeike/Harmony]Harmony[/url]\u00A0(bundled with SMAPI).",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54695",
+	"Version": "1",
+	"Updated": "2026-10-27T20:03:48+00:00",
+	"Downloads": [
+		{
+			"Id": 188860,
+			"Type": "Main",
+			"DisplayName": "SnapCatch 1.0.0",
+			"FileName": "1d/c0/01/1dc001e3-50b4-4062-8709-83a4a50d207f",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 24652,
+			"Uploaded": "2026-10-27T20:03:48+00:00",
+			"Mods": [
+				{
+					"Id": "byvaikonc4.BalancedFishing",
+					"DisplayName": "Snap Catch",
+					"Type": "Smapi",
+					"RelativePath": "SnapCatch",
+					"Manifest": {
+						"Name": "Snap Catch",
+						"Description": "Replaces the fishing minigame with a quick timing-based hook check. Success and catch quality scale with your Fishing skill, rod, tackle, and the fish's difficulty.",
+						"Author": "byvaikonc4",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BalancedFishing.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "byvaikonc4.BalancedFishing"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575548,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441383,
+		"UploaderId": 42612205,
+		"CategoryId": 26,
+		"Adult": false
+	}
+}
