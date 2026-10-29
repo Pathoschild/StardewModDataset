@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54728,
+	"Name": "Mobile Dialog Button Fix",
+	"Author": "hajiminanbeiluduo114514",
+	"Description": "## Description\n<br />用于修复移动端 smapi 弹窗界面无法点击的问题。在移动端打开 SMAPI 界面时，因弹窗显示比例与触控热区出现偏差，导致玩家无法正常点击“确定”或“取消”按钮。本模组通过调整界面触控层，修复了该异常问题，确保移动端操作流畅。\n<br />\n<br />## Installation instructions\n<br />1. 确保已安装最新版本的 SMAPI。\n<br />2. 下载本模组压缩包并解压。\n<br />3. 将解压后的文件夹放入星露谷物语目录下的 `Mods` 文件夹中。\n<br />4. 启动游戏即可生效。\n<br />\n<br />## Main features\n<br />- 修复移动端 SMAPI 弹窗的触控点击范围。\n<br />- 解决弹窗因分辨率问题导致卡死或无响应的现象。\n<br />- 兼容星露谷物语主流版本，轻量无冲突。\n<br />\n<br />## Requirements\n<br />- Stardew Modding API (SMAPI) 最新版\n<br />\n<br />## Shout outs\n<br />感谢 SMAPI 开发团队 Pathoschild 提供的底层框架支持。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54728",
+	"Version": "1",
+	"Updated": "2026-10-28T16:49:50+00:00",
+	"Downloads": [
+		{
+			"Id": 188947,
+			"Type": "Main",
+			"DisplayName": "MobileDialogButtonFix",
+			"FileName": "b8/c1/5f/b8c15f3c-9ea5-4511-af00-e49e2ab6f1df",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 4858,
+			"Uploaded": "2026-10-28T16:49:50+00:00",
+			"Mods": [
+				{
+					"Id": "Operit.MobileDialogButtonFix",
+					"DisplayName": "Mobile Dialog Button Fix",
+					"Type": "Smapi",
+					"RelativePath": "MobileDialogButtonFix",
+					"Manifest": {
+						"Name": "Mobile Dialog Button Fix",
+						"Description": "Fixes unclickable O / X buttons in confirmation dialogs on SMAPI Mobile (Android). Affected menus: the single-player festival-end confirmation and the multiplayer ready-check dialog. Root cause: SMAPI Mobile layout code repositions the dialog using screen pixels (2400x1080) while the menu is actually drawn in the UI logical space (1552x699), so the buttons are drawn in one place and hit-tested in another. This mod recomputes the layout from uiViewport instead, and also draws the upper-right close button that the vanilla ConfirmationDialog never renders. ReadyCheckDialog inherits ConfirmationDialog, so both dialogs are covered by the same fix.",
+						"Author": "Operit",
+						"Version": "2.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MobileDialogButtonFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Operit.MobileDialogButtonFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575635,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441416,
+		"UploaderId": 268550749,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

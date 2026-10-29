@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 54709,
+	"Name": "Quality Giant Crops",
+	"Author": "DarkRobon",
+	"Description": "[center][size=6][b]Quality Giant Crops[/b][/size][/center]\n<br />[center][i]Big crops deserve quality harvests too.[/i][/center]\n<br />\n<br />Quality Giant Crops lets giant crop harvests produce Normal, Silver, Gold, or Iridium quality using the same quality formula as ordinary crops. Your farmer's Farming level and the best fertilizer still beneath the giant crop determine the odds.\n<br />\n<br />Supports vanilla giant crops and modded giant crops that use the game's standard giant crop system, including crops larger than 3x3.\n<br />\n<br />[color=#ff7700][size=5][b]Features[/b][/size][/color]\n<br />[list]\n<br />[*]Normal crop quality rolls for giant crop harvests.[/*]\n<br />[*]Uses the harvesting farmer's current Farming level, including buffs.[/*]\n<br />[*]Checks the entire area beneath the giant crop and uses the strongest remaining fertilizer.[/*]\n<br />[*]Supports oversized modded crops using their actual width and height.[/*]\n<br />[*]Includes bonus drops from the Shaving axe enchantment.[/*]\n<br />[*]Configurable minimum and maximum quality.[/*]\n<br />[*]Optional Generic Mod Config Menu dropdowns.[/*]\n<br />[*]Works with existing giant crops and existing saves.[/*]\n<br />[/list]\n<br />[color=#ff7700][size=5][b]How quality works[/b][/size][/color]\n<br />The mod uses the quality calculation from ordinary crop harvesting. Higher Farming levels improve your quality chances. Basic Fertilizer and Quality Fertilizer improve the odds further. Deluxe Fertilizer enables Iridium quality and guarantees at least Silver before crop-specific limits and your configured limits are applied.\n<br />\n<br />At harvest, the mod checks [b]every tile beneath the crop[/b]. A vanilla 3x3 crop has nine tiles checked; a modded 5x5 crop has 25. There is no fixed limit. The strongest quality fertilizer found is used for the harvest, even if only one fertilized soil tile remains.\n<br />\n<br />Untilled tiles are ignored. If no quality fertilizer remains, the harvest still uses Farming level, with no fertilizer bonus.\u00A0\n<br />\n<br />[b]Each returned item stack receives one quality.[/b] Items within that stack are not rolled separately. The random roll is stable for a given crop and day, so Shaving and break drops use the same roll when Farming level, fertilizer, and quality limits are the same.\n<br />\n<br />[color=#ff7700][size=5][b]Requirements and installation[/b][/size][/color]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.3.2 or later is required.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional and adds in-game settings.[/*]\n<br />[/list]\n<br />Download the main file and extract the [b]QualityGiantCrops[/b] folder into your Stardew Valley [b]Mods[/b] folder. Launch the game through SMAPI.\n<br />\n<br />Any crop packs you install may have their own requirements.\n<br />\n<br />[color=#ff7700][size=5][b]Configuration[/b][/size][/color]\n<br />With Generic Mod Config Menu installed, open the Quality Giant Crops settings and choose:\n<br />[list]\n<br />[*][b]Minimum quality:[/b] Normal, Silver, Gold, or Iridium. Default: Normal.[/*]\n<br />[*][b]Maximum quality:[/b] Normal, Silver, Gold, or Iridium. Default: Iridium.[/*]\n<br />[/list]\n<br />The default settings allow the full quality range. Setting minimum to Gold raises Normal and Silver rolls to Gold. Setting maximum to Gold caps Iridium rolls at Gold. Set both options to the same quality to force that quality for harvests handled by this mod.\n<br />\n<br />These settings apply after the normal roll and crop-specific quality limits. Explicit quality supplied by crop data or another mod is preserved, so the settings do not override every other mod's quality rules. If minimum is higher than maximum, saving raises maximum to match.\n<br />\n<br />Without Generic Mod Config Menu, launch the game once to create [b]config.json[/b] inside the mod folder, then close the game and edit it:\n<br />[code]{\n<br />\u00A0 \"MinQuality\": 0,\n<br />\u00A0 \"MaxQuality\": 4\n<br />}[/code]\n<br />Values: [b]0 = Normal, 1 = Silver, 2 = Gold, 4 = Iridium.[/b] Unsupported values reset to their defaults. Restart after editing the file; menu changes do not require a restart.\n<br />\n<br />[color=#ff7700][size=5][b]Modded crops and compatibility[/b][/size][/color]\n<br />[b]Standard modded giant crops:[/b] Supported automatically when they use the game's giant crop data and normal drop method. This includes custom harvest items and oversized giant crops with correctly defined dimensions.\n<br />\n<br />[b]Ultra-large or custom giant crop mods:[/b] Size itself is supported. A mod using a separate crop class or its own harvesting/drop code may need a compatibility patch. Support depends on how that mod implements its crops.\n<br />\n<br />[b]Other quality mods and custom drop rules:[/b] Quality Giant Crops uses explicitly configured drop quality, quality modifiers, and items already above Normal quality. Unrelated bonus drops are left alone. Another mod that also changes giant crop quality can still affect the final result depending on patch order.\n<br />\n<br />[b]Harvest quantities and growth:[/b] The mod changes eligible harvest quality. Giant crop growth chances, sizes, drop quantities, and the random stream used for the game's original drop selection are preserved.\n<br />\n<br />[b]Existing saves:[/b] You can add the mod to an existing save. Already-grown giant crops are eligible when harvested. Removing the mod stops its future quality rolls; previously harvested items keep their standard game quality.\n<br />\n<br />[b]Multiplayer:[/b]\u00A0Hasn't been tested, but it should work as long as everyone has the same mod version.\n<br />\n<br />\n<br />[color=#ff7700][size=5][b]Frequently asked questions[/b][/size][/color]\n<br />\n<br />[b]Can I get Iridium without Deluxe Fertilizer?[/b]\n<br />With default settings, the normal crop formula requires Deluxe Fertilizer for an Iridium roll. You can use the minimum-quality option to guarantee Iridium without fertilizer.\n<br />\n<br />[b]What if the soil underneath becomes untilled?[/b]\n<br />The mod checks all remaining soil within the crop's footprint. One surviving fertilized tile is enough to provide its bonus. Once all quality fertilizer is gone, only Farming level and your configured quality limits apply.\n<br />\n<br />[b]Does Shaving get quality too?[/b]\n<br />Yes. Eligible bonus drops from the Shaving axe enchantment use the same quality logic as drops from breaking the crop.\n<br />\n<br />\n<br />[color=#ff7700][size=5][b]Support[/b][/size][/color]\n<br />If a crop does not receive quality, first check that the mod loaded, your quality settings allow the result you expect, and the crop's drops are not explicitly assigned quality by another mod.\n<br />\n<br />For bug reports, include the crop/mod name, your quality settings, the fertilizer remaining beneath the crop, and a link to your [url=https://smapi.io/log]parsed SMAPI log[/url]. For oversized crops, include the crop's dimensions and a screenshot if possible.\n<br />\n<br />[color=#ff7700][size=5][b]Credits[/b][/size][/color]\n<br />\n<br />Thanks to the SMAPI and Generic Mod Config Menu developers.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54709",
+	"Version": "1.0.0",
+	"Updated": "2026-10-28T03:14:03+00:00",
+	"Downloads": [
+		{
+			"Id": 188893,
+			"Type": "Main",
+			"DisplayName": "QualityGiantCrops 1.0.0",
+			"FileName": "80/66/e0/8066e0bd-d0fd-44a6-9035-6f90a66771a5",
+			"Description": "Adds normal crop quality rolls to vanilla and standard modded giant crop harvests. Manually install or use a mod manager.",
+			"Version": "1.0.0",
+			"SizeInBytes": 15384,
+			"Uploaded": "2026-10-28T03:14:03+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.QualityGiantCrops",
+					"DisplayName": "Quality Giant Crops",
+					"Type": "Smapi",
+					"RelativePath": "QualityGiantCrops",
+					"Manifest": {
+						"Name": "Quality Giant Crops",
+						"Description": "Giant crops use normal crop quality rolls based on Farming level and the soil at harvest.",
+						"Author": "DarkRobon",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "QualityGiantCrops.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:54709"
+						],
+						"UniqueId": "DarkRobon.QualityGiantCrops"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575581,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441397,
+		"UploaderId": 8224263,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
