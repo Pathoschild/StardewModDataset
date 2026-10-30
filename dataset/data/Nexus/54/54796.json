@@ -1,0 +1,131 @@
+{
+	"Site": "Nexus",
+	"Id": 54796,
+	"Name": "Simple Bank",
+	"Author": "Akiba275",
+	"Description": "[size=5][b]Simple Bank — 中文说明[/b][/size]\n<br />\n<br />[size=4][b]模组介绍[/b][/size]\n<br />Simple Bank 是面向《星露谷物语》1.6 的银行模组。在村长家使用 ATM，即可管理活期存款、定期存款和贷款。模组提供简体中文与英文文本。\n<br />\n<br />[size=4][b]主要功能[/b][/size]\n<br />[list]\n<br />[*]活期存款按日复利计息，不足 1g 的利息保留并继续累积。\n<br />[/*]\n<br />[*]提供 7、14、28、56、112 天定期存款，可从钱包或活期账户转入；提前支取按已完成天数和活期利率结算。\n<br />[/*]\n<br />[*]提供 7、28、112 天贷款，额度依据历史收益等因素计算；贷款按未偿本金计息。\n<br />[/*]\n<br />[*]支持共享与独立多人银行账户，交易由主机校验。\n<br />[/*]\n<br />[*]支持鼠标、键盘和手柄；可通过 Generic Mod Config Menu（GMCM）调整按键和银行参数。\n<br />[/*]\n<br />[*]可选安装村长 Lewis 的一次性欢迎信。[/*]\n<br />[/list]\n<br />[size=4][b]运行要求与安装[/b][/size]\n<br />需要 Stardew Valley 1.6、SMAPI 4.1.0 或更高版本，以及 Content Patcher 2.9.0 或更高版本。\n<br />\n<br />1. 下载主包 SimpleBank-0.1.0-beta.zip，解压到游戏的 Mods 目录。\n<br />\n<br />2. 保留主包内的两个文件夹：Mods/SimpleBank/SimpleBank 和 Mods/SimpleBank/[CP] Simple Bank Map。\n<br />\n<br />3. 可选安装 Generic Mod Config Menu，以便在游戏内修改设置。\n<br />\n<br />4. 如需欢迎信，可选安装 Mail Framework Mod 1.20.0 或更高版本，以及单独的 SimpleBank-MailFramework-0.1.0-beta.zip。银行业务和逾期通知不依赖 MFM。\n<br />\n<br />5. 通过 SMAPI 启动游戏。所有联机玩家应安装相同版本的主模组及随包提供的 Content Patcher 内容包。\n<br />\n<br />[size=4][b]开始使用[/b][/size]\n<br />ATM 位于村长家墙面上的 (14,8)–(15,9) 格。站在相邻位置，面向 ATM，按游戏交互键打开菜单。通过“概览”“活期”“定期”“贷款”四个页面管理账户。\n<br />\n<br />键盘默认使用 Tab 切换页面，Esc 或 E 关闭菜单。手柄默认使用左右肩键切换页面，A 确认，B 返回。\n<br />\n<br />[size=4][b]贷款规则：借款前请阅读[/b][/size]\n<br />贷款逾期后默认有 7 天宽限期。之后的托收会依次使用超过配置保留额的活期余额、钱包中超过 1,000g 的资金，以及后续正向收入的 25%。这些条款会在借款前展示，并锁定在各份合同中。托收不会产生负钱包，也不会没收物品、建筑或未到期定存。\n<br />\n<br />逾期利息继续按未偿本金、锁定利率和逾期倍率计算，直至达到合同约定的逾期利息上限。违约状态不免除债务。存在未结清定期或贷款时，不能在共享与独立钱包之间切换。银行交易不会增加游戏历史总收益，也不会伪造成就进度。\n<br />\n<br />[size=4][b]Beta 状态与兼容性[/b][/size]\n<br />测试前请备份存档。这是首次受支持的公开 Beta；此前内部使用的 1.x 开发版本不属于受支持的数据导入来源。真实游戏画面、界面缩放、手柄操作感、断线重连和长期联机仍需要更广泛的实机测试。\n<br />\n<br />[url=https://github.com/Akiba275/SimpleBank]GitHub 源码、详细规则、验证记录和问题反馈[/url]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Simple Bank — English[/b][/size]\n<br />\n<br />[size=4][b]About the mod[/b][/size]\n<br />Simple Bank is a banking mod for Stardew Valley 1.6. Visit the ATM inside the Manor House to manage savings, term deposits, and loans. Simplified Chinese and English text are included.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*]Savings earn daily compound interest, with fractional interest below 1g carried forward.\n<br />[/*]\n<br />[*]Choose 7, 14, 28, 56, or 112-day term deposits. Fund them from your wallet or savings; early withdrawal uses the savings rate for completed days.\n<br />[/*]\n<br />[*]Choose 7, 28, or 112-day loans, with a credit limit based on historical earnings and other configured factors. Interest is calculated on outstanding principal.\n<br />[/*]\n<br />[*]Shared and individual multiplayer bank accounts, with the host validating transactions.\n<br />[/*]\n<br />[*]Mouse, keyboard, and controller support; configurable controls and banking settings through Generic Mod Config Menu (GMCM).\n<br />[/*]\n<br />[*]An optional one-time welcome letter from Mayor Lewis.[/*]\n<br />[/list]\n<br />[size=4][b]Requirements and installation[/b][/size]\n<br />Requires Stardew Valley 1.6, SMAPI 4.1.0 or later, and Content Patcher 2.9.0 or later.\n<br />\n<br />1. Download SimpleBank-0.1.0-beta.zip and extract it into your game's Mods directory.\n<br />\n<br />2. Keep both included folders: Mods/SimpleBank/SimpleBank and Mods/SimpleBank/[CP] Simple Bank Map.\n<br />\n<br />3. Optionally install Generic Mod Config Menu for in-game settings.\n<br />\n<br />4. For the optional welcome letter, install Mail Framework Mod 1.20.0 or later and the separate SimpleBank-MailFramework-0.1.0-beta.zip. MFM is not required for banking or overdue notices.\n<br />\n<br />5. Launch the game through SMAPI. All multiplayer participants should install matching versions of the main mod and the included Content Patcher pack.\n<br />\n<br />[size=4][b]Getting started[/b][/size]\n<br />The ATM is on the Manor House wall at tiles (14,8)–(15,9). Stand beside it, face it, and use the game's interaction button. Manage your account through the Overview, Savings, Term Deposits, and Loans pages.\n<br />\n<br />Keyboard defaults: Tab to change pages, Esc or E to close. Controller defaults: shoulder buttons to change pages, A to confirm, B to return.\n<br />\n<br />[size=4][b]Loan rules: read before borrowing[/b][/size]\n<br />Overdue loans have a 7-day grace period by default. Collection then uses savings above the configured reserve, wallet funds above 1,000g, and 25% of subsequent positive income. These terms are shown before borrowing and locked into each contract. Collection never creates a negative wallet or confiscates items, buildings, or unmatured term deposits.\n<br />\n<br />Overdue interest continues on outstanding principal at the locked rate and multiplier, up to the contract's overdue-interest cap. Default status does not cancel debt. Outstanding term deposits or loans prevent switching between shared and separate wallets. Bank transactions do not inflate the game's total earnings or achievement progress.\n<br />\n<br />[size=4][b]Beta status and compatibility[/b][/size]\n<br />Back up your save before testing. This is the initial supported public beta; earlier internal 1.x development builds are not supported import sources. Real-game rendering, UI scaling, controller feel, reconnects, and long multiplayer sessions still need broader testing.\n<br />\n<br />[url=https://github.com/Akiba275/SimpleBank]GitHub source code, detailed rules, verification notes, and issue reports[/url]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54796",
+	"Version": "0.1.0-beta",
+	"Updated": "2026-10-29T20:31:05+00:00",
+	"Downloads": [
+		{
+			"Id": 189145,
+			"Type": "Main",
+			"DisplayName": "Simple Bank - Beta 0.1.0",
+			"FileName": "66/92/c6/6692c61d-e84b-4510-9e50-f4bda3903661",
+			"Description": "",
+			"Version": "0.1.0-beta",
+			"SizeInBytes": 127040,
+			"Uploaded": "2026-10-29T20:29:20+00:00",
+			"Mods": [
+				{
+					"Id": "Akiba275.SimpleBank",
+					"DisplayName": "Simple Bank",
+					"Type": "Smapi",
+					"RelativePath": "SimpleBank\\SimpleBank",
+					"Manifest": {
+						"Name": "Simple Bank",
+						"Description": "A small ATM and bank system for the Manor House.",
+						"Author": "Akiba275",
+						"Version": "0.1.0-beta",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "SimpleBank.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:54796",
+							"GitHub:Akiba275/SimpleBank"
+						],
+						"UniqueId": "Akiba275.SimpleBank"
+					}
+				},
+				{
+					"Id": "Akiba275.SimpleBank.Map",
+					"DisplayName": "(CP) Simple Bank Map",
+					"Type": "ContentPack",
+					"RelativePath": "SimpleBank\\[CP] Simple Bank Map",
+					"Manifest": {
+						"Name": "(CP) Simple Bank Map",
+						"Description": "Adds the Simple Bank ATM to the Manor House.",
+						"Author": "Akiba275",
+						"Version": "0.1.0-beta",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Akiba275.SimpleBank",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:54796",
+							"GitHub:Akiba275/SimpleBank"
+						],
+						"UniqueId": "Akiba275.SimpleBank.Map"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575833,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 189146,
+			"Type": "Optional",
+			"DisplayName": "Optional Welcome Letter - Mail Framework Mod",
+			"FileName": "94/13/1a/94131ad2-7194-4e6a-915b-791a6af58758",
+			"Description": "",
+			"Version": "0.1.0-beta",
+			"SizeInBytes": 1826,
+			"Uploaded": "2026-10-29T20:31:05+00:00",
+			"Mods": [
+				{
+					"Id": "Akiba275.SimpleBank.Mail",
+					"DisplayName": "(MFM) Simple Bank Notice",
+					"Type": "ContentPack",
+					"RelativePath": "SimpleBank\\[MFM] Simple Bank Notice",
+					"Manifest": {
+						"Name": "(MFM) Simple Bank Notice",
+						"Description": "Optional one-time in-game notice from Mayor Lewis about the new ATM.",
+						"Author": "Akiba275",
+						"Version": "0.1.0-beta",
+						"ContentPackFor": {
+							"UniqueId": "DIGUS.MailFrameworkMod",
+							"MinimumVersion": "1.20.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Akiba275.SimpleBank",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:54796",
+							"GitHub:Akiba275/SimpleBank"
+						],
+						"UniqueId": "Akiba275.SimpleBank.Mail"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575834,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441484,
+		"UploaderId": 282955069,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
