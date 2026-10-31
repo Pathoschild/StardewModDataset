@@ -35,6 +35,11 @@ internal static class Program
 		Settings settings = ConfigHelper.LoadAppSettings<Settings>();
 		using DownloadManager downloadManager = new DownloadManager(settings.SevenZipPath, settings.UserAgent);
 
+		// get app version
+		string? version = typeof(Program).Assembly.GetName().Version?.ToString(3);
+		if (version is null)
+			throw new InvalidOperationException("The current app has no version number."); // shouldn't be possible
+
 		// process sites
 		ConsoleHelper.WriteLine();
 		await ConsoleHelper.RunWithProgressBarsAsync(
@@ -47,7 +52,7 @@ internal static class Program
 			{
 				await ProcessSiteAsync(() => new CurseForgeApiClient(settings.CurseForgeExportUrl, settings.UserAgent), downloadManager, settings, progress);
 				await ProcessSiteAsync(() => new ModDropApiClient(settings.ModDropExportUrl, settings.UserAgent, settings.ModDropUser, settings.ModDropPassword), downloadManager, settings, progress);
-				await ProcessSiteAsync(() => new NexusApiClient(settings.NexusExportUrl, settings.UserAgent, settings.NexusApiKey, "StardewModDataset", "1.0.0"), downloadManager, settings, progress);
+				await ProcessSiteAsync(() => new NexusApiClient(settings.NexusExportUrl, settings.UserAgent, settings.NexusApiKey, "StardewModDataset", version), downloadManager, settings, progress);
 			}
 		);
 		ConsoleHelper.WriteLine("Done.");
