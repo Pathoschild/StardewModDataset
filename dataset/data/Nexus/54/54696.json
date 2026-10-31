@@ -1,0 +1,71 @@
+{
+	"Site": "Nexus",
+	"Id": 54696,
+	"Name": "Hollow Lantern - A Dark Fantasy Shaders and Retexture",
+	"Author": "wxunlimited",
+	"Description": "[b][size=5][img width=362]https://staticdelivery.nexusmods.com/mods/1303/images/54696/54696-1793129383-1040497040.png[/img][/size][/b]\n<br />\n<br />[b][color=#8e7cc3][size=5][font=Arial Black]Hollow Lantern - A Dark Fantasy Shaders and Retexture by WxUnlimited[/font][/size][/color][/b]\n<br />\n<br />Transform Stardew Valley into a purple dark-fantasy world with atmospheric retextures and animated sun/moon water lighting.\n<br />\n<br />Hollow Lantern keeps Stardew's original pixel-art shapes while recoloring the environment with deep violet, blue, plum, and muted earth tones. It covers terrain, dirt, grass, trees, bushes, fruit trees, buildings, fences, town scenery, interiors, large rocks, and nature-related debris. Food and ordinary item sprites are preserved.\n<br />\n<br />The companion effects module adds a procedural GPU water shader. Sunlight and moonlight form moving highlights from animated water normals instead of flat reflection images. Reflections are anchored to world coordinates, so they do not follow the farmer or camera. Water highlights render behind trees, bushes, bridges, buildings, objects, and characters.\n<br />\n<br />[b][color=#674ea7][size=4]Features[/size][/color][/b]\n<br />\n<br />- Purple dark-fantasy environment palette.\n<br />- Dark-blue water with animated procedural sun and moon reflections.\n<br />- Daytime rays, soft fog, atmospheric lighting, and violet nighttime ambience.\n<br />- Rain-dependent puddles.\n<br />- Smooth player and villager shadows and water reflections.\n<br />- Large rocks, shipping bin, farmhouse, buildings, foliage, and nature debris covered.\n<br />- Original food and ordinary item colors preserved.\n<br />- Stable reflections during camera movement and location changes.\n<br />- No custom river-flow layer or obsolete reflection PNGs.\n<br />\n<br />[color=#674ea7][size=4][b]Requirements[/b][/size][/color]\n<br />\n<br />- Stardew Valley 1.6.15 or newer.\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI 4.4.0 or newer.[/url]\n<br />- [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher 2.9.0 or newer.[/url]\n<br />\n<br />The retexture component requires Content Patcher. The OpenGL shader was tested on an Intel UHD 620. DirectX shader bytecode is included and compiled, but DirectX rendering was not separately tested.\n<br />\n<br />[color=#674ea7][b][size=4]Installation[/size][/b]\n<br />[/color]\n<br />1. Install SMAPI and Content Patcher.\n<br />2. Extract the archive.\n<br />3. Copy both folders inside `Mods` into your Stardew Valley `Mods` folder:\n<br />\u00A0 - `[CP] Hollow Lantern`\n<br />\u00A0 - `HollowLantern.Effects`\n<br />4. Start the game through SMAPI.\n<br />\n<br />Do not install an older Hollow Lantern copy alongside this version. If upgrading from 2.4, remove old `sun-reflection.png` and `moon-reflection.png` files from `HollowLantern.Effects/assets`; version 2.5.1 generates reflections procedurally.\n<br />\n<br />[color=#674ea7][size=4][b]Configuration[/b][/size][/color]\n<br />\n<br />Edit `Mods/HollowLantern.Effects/config.json`:\n<br />\n<br />- `CelestialReflections`: enable or disable the water shader.\n<br />- `SunReflectionStrength`: daytime brightness.\n<br />- `MoonReflectionStrength`: nighttime brightness.\n<br />- `WaterWaveScale`: ripple density; default `2.5`.\n<br />- `WaterWaveStrength`: ripple normal strength; default `1.0`.\n<br />- `FogOpacity`, `DayRayOpacity`, and `GlowOpacity`: atmosphere controls.\n<br />- `PlayerReflections`, `NpcReflections`, `PlayerShadow`, and `NpcShadows`: character effects.\n<br />\n<br />Game time controls the day/night transition. Puddles appear only while rain has recently affected the location.\n<br />\n<br />[b][color=#674ea7][size=4]Compatibility and limitations[/size][/color][/b]\n<br />\n<br />This mod targets standard Stardew outdoor water and map layers. Mods that replace water rendering or use custom water surfaces may need a compatibility patch. Android performance and compatibility have not been verified. The shader provides directional-light shading on Stardew's 2D water surface; it is not a 3D ray-traced reflection system.\n<br />\n<br />[b][color=#674ea7][size=4]Credits and support[/size][/color][/b]\n<br />\n<br />Created by WxUnlimited. When reporting an issue, include your SMAPI log and list other mods that change maps, water, lighting, or terrain textures. Include the location, time, weather, and whether the issue occurs with `CelestialReflections` disabled.\n<br />[color=#674ea7]\n<br />[size=4][b]Version 2.5.1[/b][/size][/color]\n<br />\n<br />This release fixes water highlights appearing over tree and bush foliage. The reflection pass runs in Stardew's world-background stage before foreground sprites and resets its per-location draw state during map transitions.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54696",
+	"Version": "2.5.1",
+	"Updated": "2026-10-27T19:49:25+00:00",
+	"Downloads": [
+		{
+			"Id": 188858,
+			"Type": "Main",
+			"DisplayName": "Hollow Lantern-Dark Fantasy Shaders",
+			"FileName": "78/e0/27/78e027e7-0a39-4918-a2bd-00d12e1e1e5b",
+			"Description": "",
+			"Version": "2.5.1",
+			"SizeInBytes": 3871144,
+			"Uploaded": "2026-10-27T19:49:25+00:00",
+			"Mods": [
+				{
+					"Id": "Zai.HollowLantern.Effects",
+					"DisplayName": "Hollow Lantern - A Dark Fantasy Shaders and Retexture by WxUnlimited",
+					"Type": "Smapi",
+					"RelativePath": "HollowLantern-DarkFantasy\\HollowLantern.Effects",
+					"Manifest": {
+						"Name": "Hollow Lantern - A Dark Fantasy Shaders and Retexture by WxUnlimited",
+						"Description": "Procedural sun/moon GPU water shaders, soft fog, lighting and character effects. Water highlights render behind foreground foliage and objects.",
+						"Author": "WxUnlimited",
+						"Version": "2.5.1",
+						"MinimumApiVersion": "4.4.0",
+						"EntryDll": "HollowLantern.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Zai.HollowLantern.Effects"
+					}
+				},
+				{
+					"Id": "Zai.HollowLantern.CP",
+					"DisplayName": "Hollow Lantern - A Dark Fantasy Shaders and Retexture by WxUnlimited",
+					"Type": "ContentPack",
+					"RelativePath": "HollowLantern-DarkFantasy\\[CP] Hollow Lantern",
+					"Manifest": {
+						"Name": "Hollow Lantern - A Dark Fantasy Shaders and Retexture by WxUnlimited",
+						"Description": "Purple dark fantasy environments, large boulders and nature-only debris; original food colors preserved.",
+						"Author": "WxUnlimited",
+						"Version": "2.5.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.1.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Zai.HollowLantern.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575546,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441384,
+		"UploaderId": 183926832,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

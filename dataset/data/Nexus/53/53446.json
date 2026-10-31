@@ -1,0 +1,42 @@
+{
+	"Site": "Nexus",
+	"Id": 53446,
+	"Name": "Recurring Payment Framework",
+	"Author": "CozyPsychologist",
+	"Description": "[center][b][u][size=4]Recurring Payments Framework[/size][/u][/b][/center]\n<br />\n<br />\n<br />[size=4]A lightweight Stardew Valley 1.6 framework for creating recurring payments through JSON.\n<br />\n<br />Mod authors can use it to add:\n<br />\n<br />- memberships\n<br />- subscriptions\n<br />- taxes\n<br />- rent\n<br />- service fees\n<br />- recurring dues\n<br />- seasonal payments\n<br />- mail-based renewal offers\n<br />\n<br />[b][u]Features[/u][/b]\n<br />\u00A0\n<br />- JSON-based content packs\n<br />- Daily, seasonal, and specific-day billing\n<br />- Yes/No payment prompts\n<br />- Mail-based subscription offers\n<br />- Automatic payments\n<br />- Active/inactive subscription states\n<br />- Reoffers after insufficient funds or declined payments\n<br />- Game State Query support\n<br />- Content Patcher token support\n<br />- Public C# API\n<br />- Per-player save data\n<br />- Multiplayer support\n<br />- Developer/debug console commands\n<br />- Android-friendly mail handling[/size]\n<br />\n<br />[size=4][b][u]Example[/u][/b]\n<br />\u00A0\n<br />{\n<br />\u00A0 \"Id\": \"YourName.MyMod.Membership\",\n<br />\u00A0 \"Name\": \"Guild Membership\",\n<br />\u00A0 \"Cost\": 2500,\n<br />\u00A0\n<br />\u00A0 \"Schedule\": {\n<br />\u00A0\u00A0\u00A0 \"Type\": \"SeasonStart\"\n<br />\u00A0 },\n<br />\u00A0\n<br />\u00A0 \"Duration\": {\n<br />\u00A0\u00A0\u00A0 \"Type\": \"Season\"\n<br />\u00A0 },\n<br />\u00A0\n<br />\u00A0 \"Prompt\": {\n<br />\u00A0\u00A0\u00A0 \"Method\": \"Mail\",\n<br />\u00A0\u00A0\u00A0 \"MailId\": \"YourName.MyMod.Renewal\",\n<br />\u00A0\u00A0\u00A0 \"MailTitle\": \"Membership Renewal\",\n<br />\u00A0\u00A0\u00A0 \"MailText\": \"Your seasonal membership is ready to renew.\",\n<br />\u00A0\u00A0\u00A0 \"Text\": \"Renew your membership for {cost}g?\",\n<br />\u00A0\u00A0\u00A0 \"YesText\": \"Renew\",\n<br />\u00A0\u00A0\u00A0 \"NoText\": \"Not now\"\n<br />\u00A0 },\n<br />\u00A0\n<br />\u00A0 \"Reoffer\": {\n<br />\u00A0\u00A0\u00A0 \"Enabled\": true,\n<br />\u00A0\u00A0\u00A0 \"EveryDays\": 3,\n<br />\u00A0\u00A0\u00A0 \"OnInsufficientFunds\": true,\n<br />\u00A0\u00A0\u00A0 \"OnDecline\": false\n<br />\u00A0 }\n<br />}[/size]\n<br />\u00A0\u00A0\u00A0\u00A0\n<br />[size=4]The framework handles the rest.\u00A0[/size]\n<br />\n<br />[size=4][b][u]Requirements[/u][/b]\n<br />\u00A0\n<br />- Stardew Valley 1.6\n<br />- SMAPI\n<br />\u00A0\n<br />Content Patcher is optional and only needed if your mod uses the framework's CP tokens.[/size]\n<br />\n<br />[size=4][b][u]For Mod Authors[/u][/b]\n<br />\u00A0\n<br />A Mod Author Guide, API reference, example content pack, and JSON schema are included to help you get started.\n<br />\u00A0\n<br />This framework is intended to be used as a dependency for other mods. Players generally only need to install it when another mod requires it.[/size]\n<br />\n<br />[size=4]This mod does nothing on its own.\u00A0[/size]\n<br />\n<br />[b][u][size=4]Reporting Bugs[/size][/u][/b]\n<br />[b]If you are reporting a bug it is paramount that you include your SMAPI log. I literally cannot help fix the problem without it.\u00A0[/b]\n<br />\n<br />[size=4][b][u]Credits[/u][/b][/size]\n<br />[size=4]Rupnan for essentially commissioning this (download their mods they are aswesome).\u00A0[/size]\n<br />[size=4]Pathoschild for Content Patcher[/size]\n<br />[size=4]Concerned Ape for creating this universe. All hail the hypno toad er- I mean Concerned Ape.\u00A0[/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53446",
+	"Version": "1",
+	"Updated": "2026-10-05T22:19:46+00:00",
+	"Downloads": [
+		{
+			"Id": 185626,
+			"Type": "Main",
+			"DisplayName": "RecurringPaymentsFramework",
+			"FileName": "52/94/63/52946398-153b-4a37-aac8-96f20c67303d",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 74628,
+			"Uploaded": "2026-10-05T22:19:46+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "185626",
+					"Type": "Invalid",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572314,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440134,
+		"UploaderId": 240114851,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

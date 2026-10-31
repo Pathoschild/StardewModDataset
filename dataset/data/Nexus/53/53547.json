@@ -1,0 +1,88 @@
+{
+	"Site": "Nexus",
+	"Id": 53547,
+	"Name": "Ginger Island Mainland Adjustments Continued",
+	"Author": "6135",
+	"Description": "[size=5][b]Ginger Island Mainland Adjustments Continued[/b][/size]\n<br />\n<br />A continuation of atravita's [url=https://www.nexusmods.com/stardewvalley/mods/10004]Ginger Island Mainland Adjustments[/url], updated for Stardew Valley 1.6.15 and no longer requiring AtraCore. The content pack is bundled in the same download.\n<br />\n<br />Ginger Island isn't well integrated with the rest of NPC scheduling and dialogue. Pierre can tell you he'd rather be outside than running his shop one minute, and the next you'll find him at the Resort. Jodi might tell you to wipe your feet while she's out on the beach. This mod adds [b]specific dialogue keys[/b] that are only used while an NPC is on the mainland and headed to or back from Ginger Island. A few characters have lines in the included content pack; the [url=https://github.com/6135/StardewValleyMods/blob/master/GingerIslandMainlandAdjustmentsContinued/docs/GIDialogueKeys.MD]documentation[/url] explains how to add more.\n<br />\n<br />In vanilla, NPCs head straight to bed after an island trip (except Gus), skipping their evening plans and leaving, say, Demetrius dancing alone if Robin went to the island. [b]GIRemainder schedules[/b] now take over for the evening, so characters can make a stop or two before going home. The included content pack has them for the vanilla cast (and some SVE characters); [url=https://github.com/6135/StardewValleyMods/blob/master/GingerIslandMainlandAdjustmentsContinued/docs/GIRemainderSchedules.md]here's how to add more[/url].\n<br />\n<br />The mod can also replace the vanilla island scheduler (on by default) to add:\n<br />[list]\n<br />[*][b]Custom NPC groups.[/b] Vanilla NPCs visit in groups; those groups now live in a data asset, so mod authors can add more. Ridgeside Village and Jorts and Jean use this.[/*]\n<br />[*][b]More visitors.[/b] Raise [i]Capacity[/i] (up to 15) to send more NPCs each day. Great for gifting runs.[/*]\n<br />[*][b]Exploring.[/b] Visitors can wander to the Island North and South East areas, and the occasional adventurous group goes further.[/*]\n<br />[*][b]Gus's day.[/b] Pick a day of the week when Gus is more likely to go.[/*]\n<br />[*][b]Willy, Sandy, George, Evelyn and the Wizard can visit[/b] (configurable). Willy and Sandy leave a box on their counter so you can still shop. For Sandy beach sprites, see violetlizabet's mod.[/*]\n<br />[/list]\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url].[/*]\n<br />[*]Unzip into [i]Stardew Valley/Mods[/i]. You get the code mod and its content pack.[/*]\n<br />[*]Remove the original Ginger Island Mainland Adjustments (and its content pack), and AtraCore if nothing else needs it.[/*]\n<br />[/list]\n<br />[size=4][b]Configuration[/b][/size]\n<br />Run the game once to create [i]config.json[/i], or use Generic Mod Config Menu.\n<br />[list]\n<br />[*][b]UseThisScheduler[/b]: use this mod's island scheduler. The options below only apply when it's on.[/*]\n<br />[*][b]Capacity[/b]: maximum number of resort visitors per day (0–15, default 6).[/*]\n<br />[*][b]StageFarNpcsAtSaloon[/b]: NPCs who live far away start the day at the Saloon.[/*]\n<br />[*][b]GroupChance[/b] / [b]ExplorerChance[/b]: chance a group visits the resort / explores the north of the island.[/*]\n<br />[*][b]GusDay[/b] / [b]GusChance[/b]: Gus's day and how likely he is to go that day ([i]None[/i] to disable).[/*]\n<br />[*][b]AllowWilly[/b], [b]AllowSandy[/b], [b]AllowWizard[/b] (Yes / No / If married) and [b]AllowGeorgeAndEvelyn[/b].[/*]\n<br />[*][b]WearIslandClothing[/b]: whether visitors change into beachwear.[/*]\n<br />[*][b]RequireResortDialogue[/b]: only NPCs with a [i]Resort[/i] dialogue line can visit.[/*]\n<br />[*][b]EnforceGITiming[/b]: warns about and skips schedule points that are too close together. Useful when writing schedules.[/*]\n<br />[*][b]Schedule strictness[/b] (per NPC, in-game menu): whether an NPC with a special schedule for the day may still visit.[/*]\n<br />[/list]\n<br />[size=4][b]Console commands[/b][/size]\n<br />[list]\n<br />[*][i]av.gima.get_islanders[/i]: who is going to the island today.[/*]\n<br />[*][i]av.gima.get_schedule &lt;NPC&gt;[/i]: an NPC's schedule for the day.[/*]\n<br />[*][i]av.gima.get_locations_list[/i]: dumps the NPC route list.[/*]\n<br />[/list]\n<br />[size=4][b]For mod authors[/b][/size]\n<br />Everything from the original is kept: the [i]Mods/atravita_Ginger_Island_Adjustments_groups[/i], [i]_explorers[/i], [i]_bartenders[/i], [i]_musicians[/i] and [i]_exclusions[/i] assets, all dialogue and schedule keys, and the event and mail IDs. Existing content packs keep working.\n<br />\n<br />One change: the Content Patcher tokens moved with the mod ID. Replace [i]atravita.GingerIslandMainlandAdjustments/[/i] with [i]6135.GingerIslandMainlandAdjustments/[/i] in [i]IslandOpen[/i], [i]Bartender[/i], [i]Musician[/i] and [i]Islanders[/i].\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6.15, SMAPI 4.0+. Works in single player, multiplayer and split-screen.[/*]\n<br />[*]Content packs that set [i]CanVisitIsland[/i] in [i]Data/Characters[/i] are respected.[/*]\n<br />[*]Mods that change the Ginger Island maps may conflict, since this mod (like vanilla) uses fixed spots on the island.[/*]\n<br />[/list]\n<br />[size=4][b]Credits[/b][/size]\n<br />Original mod by atravita, MIT licensed; atravita allowed anyone to remove the AtraCore dependency and re-upload. Port and maintenance by 6135. Source: [url=https://github.com/6135/StardewValleyMods]GitHub[/url]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53547",
+	"Version": "1.2.1",
+	"Updated": "2026-10-07T13:16:46+00:00",
+	"Downloads": [
+		{
+			"Id": 185856,
+			"Type": "Main",
+			"DisplayName": "Ginger Island Mainland Adjustments Continued",
+			"FileName": "45/86/3c/45863c20-3063-40b3-a864-4a58919a912e",
+			"Description": "",
+			"Version": "1.2.1",
+			"SizeInBytes": 132255,
+			"Uploaded": "2026-10-07T13:16:46+00:00",
+			"Mods": [
+				{
+					"Id": "6135.GingerIslandMainlandAdjustments",
+					"DisplayName": "Ginger Island Mainland Adjustments Continued",
+					"Type": "Smapi",
+					"RelativePath": "GingerIslandMainlandAdjustmentsContinued\\GingerIslandMainlandAdjustmentsContinued",
+					"Manifest": {
+						"Name": "Ginger Island Mainland Adjustments Continued",
+						"Description": "Dialogue keys for NPCs headed to or away from Ginger Island, post-Ginger Island schedules, and an optional group-based island scheduler. Continuation of atravita's mod, without AtraCore.",
+						"Author": "atravita, 6135",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GingerIslandMainlandAdjustmentsContinued.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53547"
+						],
+						"UniqueId": "6135.GingerIslandMainlandAdjustments"
+					}
+				},
+				{
+					"Id": "6135.GingerIslandMainlandAdjustmentsCP",
+					"DisplayName": "(CP) Ginger Island Mainland Adjustments Continued",
+					"Type": "ContentPack",
+					"RelativePath": "GingerIslandMainlandAdjustmentsContinued\\[CP] Ginger Island Mainland Adjustments",
+					"Manifest": {
+						"Name": "(CP) Ginger Island Mainland Adjustments Continued",
+						"Description": "Adds going-to-Ginger Island + return-from-Ginger Island dialogue lines and GI Remainder schedules.",
+						"Author": "atravita, 6135",
+						"Version": "1.2.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "6135.GingerIslandMainlandAdjustments",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53547"
+						],
+						"UniqueId": "6135.GingerIslandMainlandAdjustmentsCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572544,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440235,
+		"UploaderId": 4176091,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}

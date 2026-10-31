@@ -1,0 +1,43 @@
+{
+	"Site": "Nexus",
+	"Id": 53356,
+	"Name": "Stardrop - Native MacOS",
+	"Author": "kautsaralbaa",
+	"Description": "[color=#d4d4d8]It delivers a first-class Mac desktop experience: instantaneous cold starts, native Apple trackpad physics, system menu bar integration, and zero external runtime dependencies (no .NET or Mono runtime required).[/color]\n<br />[color=#D4D4D8]\n<br />---\n<br />\n<br />[size=4][b]Why a Native Mac Edition?[/b][/size]\n<br />\n<br />While the cross-platform version of Stardrop is functional, it runs on the Avalonia UI framework, which renders controls onto an emulated canvas.\n<br />\n<br />Stardrop macOS Native bridges this gap by offering:\n<br />- Pure AppKit and SwiftUI components adhering strictly to Apple Human Interface Guidelines.\n<br />- Native Apple Silicon (M1/M2/M3/M4) and Intel (x86_64) binaries.\n<br />- Fluid trackpad scrolling, elastic overscroll bounce, and subpixel font antialiasing.\n<br />- Mod deletion integrated directly with the macOS Trash Bin rather than permanent deletion.\n<br />- Standard macOS keyboard shortcuts and window sheets.\n<br />\n<br />---\n<br />\n<br />[size=4][b]Key Features[/b][/size]\n<br />\n<br />[b]1. Direct Mod Archive Installation (Drag and Drop)[/b]\n<br />- Drag and drop `.zip`, `.7z`, `.rar`, `.tar.gz` archives or uncompressed folders directly into the app window.\n<br />- Manual file selection via Command+O or the toolbar button.\n<br />- Automatically traverses folder trees to discover nested `manifest.json` mod files.\n<br />- Preserves existing `config.json` files when reinstalling or updating mods.\n<br />\n<br />[b]2. Mod Separator System (MO2-Style)[/b]\n<br />- Organize mod lists using visual separator banners inspired by Mod Organizer 2.\n<br />- Collapse or expand sections to keep large mod lists manageable.\n<br />- Reorder separators and move mods between sections.\n<br />- Bulk enable or disable all mods within a specific separator.\n<br />\n<br />[b]3. Batch Selection and Fast Keyboard Navigation[/b]\n<br />- Select contiguous mod ranges using Shift+Click or Shift+Up/Down arrows.\n<br />- Multi-select non-contiguous mods using Command+Click.\n<br />- Select all visible mods using Command+A.\n<br />- Press Spacebar to instantly toggle single or multiple selected mods.\n<br />- Search and filter by mod name, author, or update status without keyboard shortcuts interfering with text fields.\n<br />\n<br />[b]4. Mod Deletion with Dependency Safety Warnings[/b]\n<br />- Delete mods from the right-click context menu or the sidebar inspector.\n<br />- Built-in Dependency Guard: checks whether a mod is a required dependency for any currently enabled mods and displays a confirmation warning before deletion.\n<br />- Safe deletion: deleted folders are moved to the macOS Trash Bin (~/.Trash).\n<br />- Core SMAPI components (ConsoleCommands, SaveBackup, ErrorHandler) are protected from accidental removal.\n<br />\n<br />[b]5. Nexus Mods Integration and Endorsements[/b]\n<br />- Connect your Nexus Mods personal API key.\n<br />- Displays account details and membership tier (Free / Premium).\n<br />- View endorsement status and endorse or abstain directly from within the application.\n<br />- Encrypted locally in Notion.json using AES-256-CBC obscurity, fully compatible with the original C# Stardrop format.\n<br />\n<br />[b]6. Profile Management and SMAPI Launching[/b]\n<br />- Create, duplicate, and switch between isolated mod profiles.\n<br />- Staged launching: selected mods are symlinked into the game directory during launch without duplicating gigabytes of files on disk.\n<br />- Launch the game with SMAPI directly using Command+R.\n<br />\n<br />[b]7. In-App Config Editor and Diagnostics[/b]\n<br />- Edit mod `config.json` files natively with real-time JSON syntax validation.\n<br />- One-click shortcuts to open the mod directory, SMAPI error logs, and data folders in Finder.\n<br />\n<br />---\n<br />\n<br />[b]100% Compatibility with Original Stardrop[/b]\n<br />\n<br />Stardrop macOS Native was engineered to share the exact same configuration schemas and directory structure as the official cross-platform build:\n<br />\n<br />- Location: `~/Library/Application Support/Stardrop/Data/`\n<br />- Shared Files: `Settings.json`, `Profiles/*.json`, and `Cache/Notion.json`.\n<br />\n<br />You can switch back and forth between Stardrop C# and Stardrop macOS Native without losing your profiles, settings, or mod configurations.\n<br />\n<br />---\n<br />\n<br />[b]Requirements and System Compatibility[/b]\n<br />\n<br />- Operating System: macOS 14.0 (Sonoma), macOS 15.0 (Sequoia), or later.\n<br />- Hardware: Apple Silicon (M-series chips) and Intel x86_64.\n<br />- Game: Stardew Valley (Steam or GOG release).\n<br />- Modding API: SMAPI installed.\n<br />\n<br />---\n<br />\n<br />[b]Installation[/b]\n<br />1.\u00A0Download `Stardrop-&lt;version&gt;-macOS.zip`\u00A0from the Files tab.\n<br />2. Double-click the downloaded archive\u00A0to extract it.\n<br />3. Double-click the downloaded disk image to open it.\n<br />4. Drag the **Stardrop** icon into your **Applications** folder.\n<br />5. Launch Stardrop from Launchpad, Spotlight, or Applications.\n<br />\n<br />---\n<br />\n<br />[b]Keyboard Shortcuts Quick Reference[/b]\n<br />\n<br />- `Space`: Toggle selected mod(s) enabled or disabled\n<br />- `Up` / `Down`: Navigate through the mod list\n<br />- `Shift + Up` / `Shift + Down`: Expand or contract selection range\n<br />- `Command + A`: Select all visible mods\n<br />- `Command + O`: Install mod from archive (.zip, .7z, .rar, .tar.gz) or folder\n<br />- `Command + R`: Launch Stardew Valley with SMAPI\n<br />- `Command + U`: Check for mod updates\n<br />- `Command + ,`: Open Settings / Preferences\n<br />- `Shift + Command + N`: Open Nexus Mods Account window\n<br />- `Shift + Command + S`: Create new mod separator\n<br />- `Escape`: Dismiss active sheet or modal\n<br />\n<br />---\n<br />\n<br />[b]Credits and Attribution[/b]\n<br />\n<br />- Original Stardrop Project: [url=https://github.com/Floogen/Stardrop]Floogen[/url] / [url=https://www.nexusmods.com/profile/PeacefulEnd]PeacefulEnd[/url]\n<br />- Stardew Modding API [url=https://smapi.io/]Pathoschild[/url]\n<br />- Stardew Valley: ConcernedApe (Eric Barone)\n<br />- Native macOS Edition: Developed independently by the community under the MIT license.\n<br />\n<br />\n<br />---\n<br />\n<br />Github:\u00A0[url=https://github.com/kxgcayh/Stardrop-NativeMac]Source Code[/url][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53356",
+	"Version": "1.12.0",
+	"Updated": "2026-10-04T22:14:21+00:00",
+	"Downloads": [
+		{
+			"Id": 185521,
+			"Type": "Main",
+			"DisplayName": "Stardrop-1.12.0-macOS",
+			"FileName": "71/d3/b1/71d3b19d-3c0c-4ae4-977c-8a6c604f652c",
+			"Description": "",
+			"Version": "1.12.0",
+			"SizeInBytes": 1218287,
+			"Uploaded": "2026-10-04T22:14:21+00:00",
+			"Mods": [
+				{
+					"Id": null,
+					"DisplayName": "Stardrop.app\\Contents",
+					"Type": "Invalid",
+					"RelativePath": "Stardrop.app\\Contents",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572209,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440044,
+		"UploaderId": 44771822,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

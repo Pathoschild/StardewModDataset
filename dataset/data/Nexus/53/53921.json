@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 53921,
+	"Name": "Volcano Dungeon Key",
+	"Author": "TacNotCat",
+	"Description": "\n<br />[b][size=5]Volcano Dungeon Key[/size][/b]\n<br />Tired of running back and forth over volcano pressure plates? Craft a key and let it\n<br />step on them for you.\n<br />\n<br />[b]HOW TO GET ONE[/b]\n<br />[list]\n<br />[*]Buy the recipe at [b]Mr. Qi's Walnut Room[/b] for [b]30 Qi Gems[/b] (the entry\n<br />disappears after purchase, just like vanilla recipe items).[/*]\n<br />[*]Craft it: [b]4 Iridium Bars + 1 Prismatic Shard + 1 Dragon Tooth = 4 keys[/b].[/*]\n<br />[*][b]New in 1.4.0 - buy keys directly[/b] at the [b]dwarf shop on Volcano Dungeon floor 5[/b]: [b]100,000g[/b] per key, limited to [b]5 per day per player[/b] (the entry vanishes when sold out and restocks next day - vanilla daily-stock behaviour); or [b]500,000g[/b] per key with [b]no purchase limit[/b]. Requires the Dwarvish Translation Guide, same as the vanilla shop.[/*]\n<br />[*]Or get lucky: see the drop sources below.[/*]\n<br />[/list][b]HOW TO USE[/b]\n<br />[list]\n<br />[*]Hold the key, stand within 3 tiles of a [b]locked dwarf gate inside the Volcano\n<br />Dungeon[/b], and press the [b]use tool / attack button[/b] (left click by default).[/*]\n<br />[*][b]1 key = 1 pressure plate pressed for you.[/b] A gate with N unpressed plates\n<br />needs N keys; if you already stepped on K of them, you only need N-K.[/*]\n<br />[*]Nothing to press nearby? The key is [b]not[/b] consumed.[/*]\n<br />[*]The entrance lava-river shortcut gate is deliberately [b]excluded[/b], so you\n<br />cannot skip the dungeon.[/*]\n<br />[/list][b]HOW IT WORKS (why it behaves like vanilla)[/b]\n<br />The key fires the game's own gate press-event, exactly as if you had stood on the\n<br />plate yourself. Sound effects, plates turning from red to green, the counter, the\n<br />gate opening and [b]multiplayer sync[/b] are all the original code path. In\n<br />multiplayer, a client asks the host to simulate the press and the user's own key is\n<br />consumed.\n<br />\n<br />[b]SIX EXTRA DROP SOURCES[/b]\n<br />All of them are locked behind [b]reaching the Volcano Dungeon[/b] by default (the\n<br />same vanilla progress flag that gates cinder shards in skull chests):\n<br />[list]\n<br />[*]Volcano monster kill — 1% (1 key)[/*]\n<br />[*]Volcano metal crate — 5% (1 key)[/*]\n<br />[*]Golden Coconut cracked at Clint's — 10% ([b]1-3 keys[/b])[/*]\n<br />[*]Mystery Box at Clint's — 2%[/*]\n<br />[*]Golden Mystery Box at Clint's — 5%[/*]\n<br />[*]Skull Cavern treasure-room chest (level 121+) — 3% (replaces the usual loot)[/*]\n<br />[/list][b]CONFIGURATION[/b]\n<br />Every rate above and the \"must reach the volcano first\" gate are stored in\n<br />[b]config.json[/b] inside the mod folder and can be changed without reinstalling.\n<br />With [b]Generic Mod Config Menu[/b] installed, the same settings are also tunable in-game under Mod Options.\n<br />\n<br />[b]COMPATIBILITY[/b]\n<br />Works alongside [b]CJB Item Spawner[/b], [b]Lookup Anything[/b] and [b]Generic Mod Config Menu[/b] - all optional tools, none required; gameplay is unaffected if they are not installed.\n<br />\n<br />[b]INSTALL[/b]\n<br />Unzip into your Mods folder so that you have\n<br />Mods&#92;VolcanoDungeonKey&#92;manifest.json, then start the game through SMAPI.\n<br />Name, description and messages switch automatically with your game language\n<br />(English / 简体中文).\n<br />\n<br />[b]REQUIREMENTS[/b]\n<br />[list]\n<br />[*][b]SMAPI 4.0.0[/b] or newer (Stardew Valley 1.6.x).[/*]\n<br />[/list][b]KNOWN ISSUES / NOTES[/b]\n<br />[list]\n<br />[*]On a brand-new save the drop sources stay silent until you reach the Volcano\n<br />Dungeon for the first time — that is the intended gate, not a bug.[/*]\n<br />[*]The Skull Cavern treasure chest source [b]replaces[/b] the normal treasure; set\n<br />its chance to 0 if you want the vanilla loot back.[/*]\n<br />[*]Uninstalling: consume or drop leftover keys first. The mod itself touches no\n<br />quest state, so removing the folder is otherwise save-safe.[/*]\n<br />[*]Harmony patches Monster.deathAnimation, BreakableContainer.releaseContents,\n<br />Utility.getTreasureFromGeode, MineShaft.getTreasureRoomItem and\n<br />ShopMenu.tryToPurchaseItem — a mod rewriting the same methods may conflict.[/*]\n<br />[/list][b]FEEDBACK[/b]\n<br />Please post on the Comments tab with your SMAPI log if a gate does not react or a\n<br />drop never happens.\n<br />\n<br />[b][size=4]火山地牢钥匙（中文版）[/size][/b]\n<br />[list]\n<br />[*][b]获取[/b]：姜岛齐先生的核桃房花 30 齐钻购买配方；制作：4 铱锭 + 1 五彩碎片 + 1 龙牙 = 4 把钥匙。[/*]\n<br />[*][b]1.4.0 新增[/b]：火山第 5 层矮人商店可直接购买——10 万金/把，每人每天限购 5 把（卖完商品立即消失、次日补货，原版每日限购机制），或 50 万金/把不限量；与原版商店一样需要矮人语翻译指南。[/*]\n<br />[*][b]用法[/b]：举着钥匙站在火山地牢内锁着的矮人栅栏门 3 格内，按「使用工具/攻击」键（默认左键）。\n<br />一把钥匙替你按下一个压力板；门有 N 个未踩机关就需 N 把，自己先踩过 K 个则只需 N−K 把；\n<br />附近没有可按的机关时不消耗钥匙；入口岩浆河捷径大门被排除，不能用来跳过火山。[/*]\n<br />[*][b]原理[/b]：调用原版 gate 的压力板事件，音效、按钮红点变绿、计数、开门与联机同步全部与\n<br />玩家亲自踩板完全一致；联机中客机请主机模拟踩板，消耗使用者自己的钥匙。[/*]\n<br />[*][b]额外 6 种来源[/b]（默认需先抵达火山地牢才开放）：火山怪物击杀 1%、火山金属箱 5%、\n<br />铁匠铺砸金椰子 10%（掉 1~3 把）、谜之盒 2%、金色谜之盒 5%、骷髅洞宝藏房宝箱 3%（替换原战利品）。[/*]\n<br />[*][b]配置[/b]：以上概率与门控开关都在 mod 目录 config.json 中，无需重装即可改；装 [b]Generic Mod Config Menu[/b] 后也可在游戏内调整。[/*]\n<br />[*][b]安装[/b]：解压到 Mods 目录，使 Mods&#92;VolcanoDungeonKey&#92;manifest.json 存在即可。[/*]\n<br />[*][b]需求[/b]：SMAPI 4.0.0 及以上（星露谷 1.6.x），无其他依赖。[/*]\n<br />[*][b]注意[/b]：新档在首次抵达火山地牢前，额外掉落途径按设计保持关闭；\n<br />骷髅洞宝藏房途径会替换原战利品，想保留原版奖励请把该项概率设为 0。[/*]\n<br />[*][b]兼容性[/b]：与 CJB Item Spawner、Lookup Anything、Generic Mod Config Menu 可共存——均为可选工具，非必需安装。[/*]\n<br />[/list]----------------------------------------------------------------\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53921",
+	"Version": "1.4.0",
+	"Updated": "2026-10-20T10:10:12+00:00",
+	"Downloads": [
+		{
+			"Id": 187605,
+			"Type": "Main",
+			"DisplayName": "Volcano Dungeon Key 1.4.0",
+			"FileName": "ba/7e/99/ba7e9936-9f55-43e7-aea6-43f8c08d07c3",
+			"Description": "",
+			"Version": "1.4.0",
+			"SizeInBytes": 16884,
+			"Uploaded": "2026-10-20T10:10:12+00:00",
+			"Mods": [
+				{
+					"Id": "Trae.VolcanoDungeonKey",
+					"DisplayName": "Volcano Dungeon Key",
+					"Type": "Smapi",
+					"RelativePath": "VolcanoDungeonKey",
+					"Manifest": {
+						"Name": "Volcano Dungeon Key",
+						"Description": "Adds a craftable Volcano Dungeon Key: recipe at Mr. Qi's Walnut Room (30 Qi Gems), or buy keys at the volcano floor-5 dwarf shop (100k gold, 5/day per player; 500k gold unlimited). Also drops from volcano monsters, crates, golden coconuts, mystery boxes and Skull Cavern chests. Rates tunable in Generic Mod Config Menu or config.json.",
+						"Author": "Trae",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "VolcanoDungeonKey.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:53921"
+						],
+						"UniqueId": "Trae.VolcanoDungeonKey"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574293,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440609,
+		"UploaderId": 303352344,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

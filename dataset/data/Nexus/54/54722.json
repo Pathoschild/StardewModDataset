@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 54722,
+	"Name": "Cooked Dish Price and Quality",
+	"Author": "mithril1257",
+	"Description": "[heading]功能[/heading]\n<br />1. 按材料计算菜肴基础售价（范围内可自由调整）\n<br />2. 菜肴星级（可开关）\n<br />3. 是否溯源烹饪材料\n<br />在 GMCM 中新增选项\u00A0[b]“是否溯源烹饪材料”[/b]，默认开启。\n<br />开启后会同时启用两项行为：\n<br />[list=1]\n<br />[*][b]鼠标悬停显示材料来源[/b][/*]\n<br />[*][b]不同材料做出的菜肴不再堆叠[/b][/*]\n<br />[/list]4. 兼容性设计\n<br />[list]\n<br />[*][b]SVE（Stardew Valley Expanded）[/b][/*]\n<br />[*][b]Love of Cooking 2.x[/b]：针对其\u00A0\n<br />[list]\n<br />[*]调味料属于可选添加物，[b]不计入[/b]材料公式；只有配方实际要求的材料计入。[/*]\n<br />[*]批量烹饪时，材料总价值按实际产出的菜肴数量均摊。[/*]\n<br />[/list][/*]\n<br />[*][b]其他增加食谱的 Content Patcher / JSON Assets / SpaceCore 配方[/b]：只要最终通过原版或 Love of Cooking 的烹饪流程产出菜肴，就会生效[/*]\n<br />[*]Yet Another Cooking Skill 2\n<br />[list]\n<br />[*]菜肴价格仍按本模组的材料公式计算。[/*]\n<br />[*]当本模组的“烹饪菜肴带有星级”开启时，[b]星级交给 YACS2 自己计算[/b]，本模组的“最低/最高”不会强行覆盖它，避免破坏 YACS2 的烹饪技能、食材品质和职业机制。[/*]\n<br />[*]当本模组的星级关闭时，仍会强制成品为无星。[/*]\n<br />[/list][/*]\n<br />[*]Better Crafting\n<br />[list]\n<br />[*]支持从附近箱子取材料烹饪，并正确按实际消耗材料定价。[/*]\n<br />[*]溯源模式下会处理手中已有的菜肴，避免因为“不同来源不可堆叠”导致 Better Crafting 无法继续烹饪。[/*]\n<br />[*]对不同材料的菜肴保留独立的材料记录和价格。[/*]\n<br />[/list][/*]\n<br />[/list]5. 其他细节\n<br />[list]\n<br />[*]只影响[b]新烹饪[/b]的菜肴；已经存在存档里的旧菜肴不会追溯改价。[/*]\n<br />[*]配方一次产出多份时，材料价值会平均分摊到每份菜肴。[/*]\n<br />[*]未开启材料溯源时，同品质菜肴合并到同一堆，价格按两批菜肴的总价值做[b]加权平均[/b]，不会让旧菜的价值被新菜直接覆盖。[/*]\n<br />[*]开启材料溯源时，不同材料来源的菜肴不会合并；相同来源的菜肴合并后价格本来就相同，不会产生冲突。[/*]\n<br />[*]材料价值不含职业加成；这样同一配方在不同职业下保持稳定，也避免“职业加成 → 菜肴价格 → 再作为材料”的循环放大。[/*]\n<br />[*]兼容多人游戏：价格由烹饪的玩家本地计算，物品价格会随物品同步。[/*]\n<br />[/list][heading]安装[/heading]\n<br />[list=1]\n<br />[*]安装\u00A0[b]SMAPI 4.0+[/b]\u00A0和\u00A0[b]星露谷物语 1.6+[/b]。[/*]\n<br />[*]（推荐）安装\u00A0[b]Generic Mod Config Menu[/b]，以便在游戏内配置。[/*]\n<br />[/list]\n<br />Function\n<br />1. Calculate base dish price based on ingredients (adjustable within a range)\u00A0\n<br />2. Dish star rating (toggleable)\u00A0\n<br />3. Track ingredient sourcing\u00A0\n<br />A new option \"Track Ingredient Sourcing\" has been added to GMCM, enabled by default.\u00A0\n<br />When enabled, two behaviors are activated:\u00A0\n<br />- Hovering over an item displays its source\u00A0\n<br />- Dishes made from different ingredients no longer stack\u00A0\n<br />\n<br />4. Compatibility Design\u00A0\n<br />SVE (Stardew Valley Expanded)\u00A0\n<br />Love of Cooking 2.x: For this mod,\u00A0\n<br />- Seasonings are considered optional additives and are not included in the ingredient formula; only ingredients explicitly required by the recipe are counted.\u00A0\n<br />- When cooking in bulk, the total ingredient value is evenly distributed across the number of dishes actually produced.\u00A0\n<br />Other recipe additions via Content Patcher / JSON Assets / SpaceCore: As long as the dish is ultimately created through the original game's or Love of Cooking's cooking process, it will be supported.\n<br />Yet Another Cooking Skill 2\n<br />Dish prices are still calculated according to this mod's material formula.\u00A0\n<br />When the \"Cooking Dishes with Stars\" option in this mod is enabled, star ratings are calculated independently by YACS2; this mod's \"minimum/maximum\" settings will not override them, preventing interference with YACS2's cooking skill, ingredient quality, and profession mechanics.\u00A0\n<br />When the star rating feature in this mod is disabled, the final dish will still be forced to have no stars.\n<br />Better Crafting\n<br />Supports retrieving ingredients from nearby crates for cooking and accurately pricing dishes based on actual material consumption.\u00A0\n<br />In traceability mode, existing dishes in hand will be processed to prevent Better Crafting from being blocked due to the \"non-stacking of different sources\" rule.\u00A0\n<br />Maintains separate ingredient records and pricing for dishes made with different materials.\u00A0\n<br />\n<br />5. Other Details\u00A0\n<br />Only affects newly cooked dishes; pre-existing dishes saved in archives will not have their prices retroactively adjusted.\u00A0\n<br />When a recipe produces multiple servings at once, the ingredient value is evenly distributed across each dish.\u00A0\n<br />When material tracing is disabled, dishes of the same quality are merged into a single stack, with prices calculated as a weighted average based on the total value of both batches—ensuring old dishes' values aren't directly overwritten by new ones.\u00A0\n<br />When material tracing is enabled, dishes from different ingredient sources won't merge; dishes from the same source, when merged, already share identical prices, avoiding conflicts.\u00A0\n<br />Ingredient values do not include class bonuses, ensuring consistent pricing for the same recipe across different classes and preventing cyclical amplification where \"class bonus → dish price → used as ingredient\" could escalate.\u00A0\n<br />Compatible with multiplayer: prices are locally calculated by the player who cooks, and item prices sync accordingly across players.\n<br />Installation\n<br />Install SMAPI 4.0+ and Stardew Valley 1.6+.\u00A0\n<br />(Recommended) Install Generic Mod Config Menu for in-game configuration.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54722",
+	"Version": "1.2.0",
+	"Updated": "2026-10-30T18:44:15+00:00",
+	"Downloads": [
+		{
+			"Id": 189295,
+			"Type": "Main",
+			"DisplayName": "CookedDishPriceQuality 1.4.0",
+			"FileName": "67/84/ef/6784ef5e-31c9-4c3b-9fd2-2e66d47b05c4",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 34274,
+			"Uploaded": "2026-10-30T18:44:15+00:00",
+			"Mods": [
+				{
+					"Id": "CookedDishPriceQuality",
+					"DisplayName": "Cooked Dish Price & Quality",
+					"Type": "Smapi",
+					"RelativePath": "CookedDishPriceQuality",
+					"Manifest": {
+						"Name": "Cooked Dish Price & Quality",
+						"Description": "Makes cooked dishes sell for the total value of their ingredients times (1 + 0.1 x ingredient types + 0.05 x ingredient count), with optional cooked-dish quality and ingredient traceability. / 让烹饪菜肴的售价取决于所用材料的总价值，可选择菜肴星级，并可追溯烹饪材料。",
+						"Author": "CookedDishPriceQuality",
+						"Version": "1.4.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "CookedDishPriceQuality.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "CookedDishPriceQuality",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575983,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441410,
+		"UploaderId": 199591331,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

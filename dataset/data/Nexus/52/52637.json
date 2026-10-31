@@ -6,17 +6,17 @@
 	"Description": "[heading]Simple Shop Times[/heading]\n<br />Simple Shop Times adds a small wooden hanging sign above shop and NPC house doors when you stand in front of them.\n<br />The sign shows:\n<br />[list]\n<br />[*]Building name[/*]\n<br />[*]Opening and closing time[/*]\n<br />[*]Whether it is currently open or closed[/*]\n<br />[*]Regular closing days[/*]\n<br />[/list]Only one sign appears at a time, only when you are near and facing the door, so signs do not overlap or clutter the map.\n<br />It supports vanilla shops, service buildings, NPC homes, and configurable modded locations. Player-owned farm buildings are intentionally ignored, including the farmhouse, greenhouse, barns, coops, sheds, cabins, and farm cave.\n<br />Features\n<br />[list]\n<br />[*]Shows shop hours directly at the entrance[/*]\n<br />[*]Displays live open/closed status[/*]\n<br />[*]Shows weekly closing days[/*]\n<br />[*]Supports NPC homes and public buildings[/*]\n<br />[*]Compatible with map and location mods using normal door destinations[/*]\n<br />[*]Configure additional modded shops in\n<br />[code]config.json[/code][/*]\n<br />[*]12 languages supported:\n<br />English, Chinese, French, German, Hungarian, Italian, Japanese, Korean, Portuguese, Russian, Spanish, and Turkish[/*]\n<br />[/list]Requirements\n<br />[list]\n<br />[*]Stardew Valley 1.6.15+[/*]\n<br />[*]SMAPI 4.4.0+\n<br />\n<br />[center][size=5][b]Check out my other mods[/b][/size][/center]\n<br />[center][size=5][b]•\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/52168]Simple Sprinkler Upgrade[/url]\u00A0•[/b][/size][/center]\n<br />[center][size=5][b]•\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/52279]Simple Backpack Upgrade[/url]\u00A0•[/b][/size][/center]\n<br />[center][size=5][b]•\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/52322][/url][url=https://www.nexusmods.com/stardewvalley/mods/52362]Simple Terminal Storage[/url]\u00A0•[/b]\n<br />[b]• [url=https://www.nexusmods.com/stardewvalley/mods/52374]Simple NPC Paths[/url] •[/b]\n<br />[b]• [url=https://www.nexusmods.com/stardewvalley/mods/52376]Simple Tool Delivery[/url] •[/b]\n<br />[b]• [url=https://www.nexusmods.com/stardewvalley/mods/52377]Simple Waystone[/url] •[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52493]Simple Silo Upgrade[/url]•[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52527]Simple Birthday Gifts[/url]•[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52564]Simple Pouch[/url]•[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52594]Simple Chest Upgrade[/url]•[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52600]Simple UI Themes[/url]•[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52601]Simple Crab Pot Upgrade[/url]•[/b][/size][/center]\n<br />[center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52605]Simple Tool Belt[/url]•\n<br />[/b][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52637]Simple Shop Times[/url]•[/b][/size][/center]\n<br />[/*]\n<br />[*][center][size=5][b]•[url=https://www.nexusmods.com/stardewvalley/mods/52638]Simple UI Themes 2[/url]•[/b][/size][/center]\n<br />[/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/52637",
 	"Version": "1",
-	"Updated": "2026-09-20T14:26:09+00:00",
+	"Updated": "2026-10-12T01:59:37+00:00",
 	"Downloads": [
 		{
-			"Id": 183486,
+			"Id": 186420,
 			"Type": "Main",
-			"DisplayName": "Simple Shop Times 1.0.1",
-			"FileName": "d9/b0/bb/d9b0bbe4-b3e0-4672-a319-5530c4c62af9",
+			"DisplayName": "Simple Shop Times 1.1",
+			"FileName": "5d/b2/b4/5db2b4b7-c265-4cab-a91b-834c2a919ec0",
 			"Description": "",
 			"Version": "1",
-			"SizeInBytes": 21972,
-			"Uploaded": "2026-09-20T14:26:09+00:00",
+			"SizeInBytes": 37426,
+			"Uploaded": "2026-10-12T01:59:37+00:00",
 			"Mods": [
 				{
 					"Id": "Community.SimpleShopTimes",
@@ -25,20 +25,25 @@
 					"RelativePath": "SimpleShopTimes",
 					"Manifest": {
 						"Name": "Simple Shop Times",
-						"Description": "Shows a single wooden sign with opening hours when you stand in front of a compatible shop or house door.",
-						"Author": "Community",
-						"Version": "1.0.1",
+						"Description": "One nearby doorway sign with building access, shop service status and opening hours.",
+						"Author": "xSyy",
+						"Version": "1.1.0",
 						"MinimumApiVersion": "4.4.0",
 						"MinimumGameVersion": "1.6.15",
 						"EntryDll": "SimpleShopTimes.dll",
-						"Dependencies": [],
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
 						"UpdateKeys": [],
 						"UniqueId": "Community.SimpleShopTimes"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342570174,
+				"Uid": 5596342573108,
 				"CategoryId": 1,
 				"Primary": true
 			}

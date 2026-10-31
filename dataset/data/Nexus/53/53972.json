@@ -1,0 +1,596 @@
+{
+	"Site": "Nexus",
+	"Id": 53972,
+	"Name": "Stardew Pharmacognosy",
+	"Author": "Hipperitz",
+	"Description": "\n<br />[heading][b]模组简介[/b][/heading]\n<br />[b]《星露谷生药志》[/b]为《星露谷物语》加入药用植物、传统制剂、天然产物粗提与小型实验室。\n<br />你可以种植七种季节性药用作物、在野外采集荨麻，并通过引种信获得太平洋红豆杉种子。采收不同部位的药材后，可以先用原版农场设备和厨房进行干燥与基础加工，再逐步进入更深入的实验室流程。\n<br />游戏内的[b]生药志[/b]记录植物资料、历史用途与天然产物相关知识。条目会随着实际采收和制作逐步解锁；阅读生药志是自愿的，不会限制配方或正常生产。\n<br />[heading][b]主要内容[/b][/heading]\n<br />·\u00A0[b]七种药用作物：[/b]颠茄、洋地黄、曼陀罗、黑嚏根草、药用罂粟、黄花蒿与秋水仙。\n<br />·\u00A0[b]荨麻与太平洋红豆杉：[/b]野外采集荨麻，通过引种信获得红豆杉种子，种植红豆杉并采收树皮。\n<br />·\u00A0[b]传统制剂：[/b]制作酊剂、浸膏、粉剂、片剂、药膏、熏香等经过游戏化简化的制剂。\n<br />·\u00A0[b]农场基础加工：[/b]利用原版机器和厨房完成药材干燥、罂粟籽油、淀粉及传统制剂；乳酪机附带的乳清可在化学实验台制成乳糖。\n<br />·\u00A0[b]小型实验室：[/b]包括化学实验台、相邻供料的 36 格实验储物柜、独立 70 格试剂柜、旋转蒸发仪与制备型 HPLC。\n<br />·\u00A0[b]四条精加工路线：[/b]青蒿素、秋水仙碱、洋地黄强心苷，以及太平洋红豆杉紫杉烷。\n<br />·\u00A0[b]HPLC 双产物：[/b]洋地黄和红豆杉路线各会分离出两种目标馏分。需要从馏分收集器整批领取，再分别完成后处理。\n<br />·\u00A0[b]可逐步解锁的生药志：[/b]通过真实采收和制作解锁条目，不设研究点，也不要求先读完内容才能制作。\n<br />·\u00A0[b]四种游戏内语言：[/b]简体中文、英文、日文和韩文。\n<br />[heading][b]1.0.0 正式版更新内容[/b][/heading]\n<br />本次正式版将此前分开的组件整合为单一安装目录，并补齐主要实验室加工流程。\n<br />·\u00A0新增太平洋红豆杉树木系统与引种信。\n<br />·\u00A0新增旋转蒸发仪和制备型 HPLC 设备。\n<br />·\u00A0补齐四条天然产物精加工路线，其中洋地黄与红豆杉路线具有双产物分离流程。\n<br />·\u00A0扩充生药志、加工说明、设备、试剂和实验室美术。\n<br />·\u00A0整合中文、英文、日文和韩文的游戏内文本与界面支持。\n<br />·\u00A0在支持范围内保留 Beta.10 的旧物品和生药志进度；已有粗提液可继续用于新增路线。\n<br />[heading][b]前置要求[/b][/heading]\n<br />已测试环境：\n<br />·\u00A0星露谷物语 1.6.15\n<br />·\u00A0SMAPI 4.5.2+\n<br />·\u00A0Content Patcher 2.9.1+\n<br />·\u00A0Extra Machine Config 1.18.0+\n<br />Automate 是可选项，并非必需前置。化学实验台采用手动制作；HPLC 也需要按本模组的规则手动投料并整批领取。\n<br />[heading][b]安装方法[/b][/heading]\n<br />1.\u00A0安装上述前置模组。\n<br />2.\u00A0解压下载包。\n<br />3.\u00A0将[b]整个 Stardew Pharmacognosy 文件夹[/b]放进 Stardew Valley/Mods。\n<br />4.\u00A0通过 SMAPI 启动游戏。\n<br />总文件夹内部包含多个组件，请保持它们在原有目录结构中，不要拆开散放到 Mods 根目录。更新时请移除旧版副本和重复安装的组件。补字图集与 Laboratory Text 组件也必须保留，否则部分生药志文字或特殊字符可能显示异常。\n<br />[b]安装或更新任何模组前，请先备份存档。[/b]\n<br />[heading][b]从 0.4.0-beta.10 升级[/b][/heading]\n<br />1.\u00A0退出游戏和 SMAPI，备份存档与旧模组目录。\n<br />2.\u00A0将旧版 [CP] Stardew Pharmacognosy、Stardew Pharmacognosy Core\u00A0以及旧的平铺安装副本移出 Mods。\n<br />3.\u00A0将新版 Stardew Pharmacognosy\u00A0总文件夹整体放入 Mods，不要同时保留旧版组件。\n<br />4.\u00A0如需保留个人设置，只恢复 config.json\u00A0和核心组件内的 journal-config.json。不要用旧版 DLL、content.json、配方文件、生药志文本、翻译或贴图覆盖新版文件。\n<br />5.\u00A0载入存档，检查物品、储物柜、作物和生药志，再正常过夜保存。\n<br />旧物品、库存、支持范围内的生药志进度和旧粗提液会尽可能沿用；新增生药志章节仍需要完成相应的游戏内操作。\n<br />[heading][b]游玩提示[/b][/heading]\n<br />单人测试未发现异常。\n<br />·\u00A0安装时请保留模组总文件夹内的全部组件。\n<br />·\u00A0HPLC 需要将输液模块、主机和馏分收集器横向紧邻摆放，完成后从收集器领取产物。\n<br />·\u00A036格实验储物柜可为相邻实验台供料；70格试剂柜仅负责储物。\n<br />·\u00A0HPLC 需手动投料和领取，不由 Automate 接管。\n<br />[heading][b]关于药用植物[/b][/heading]\n<br />本模组参考了现实中的药用植物、天然产物与历史制剂，其中部分植物和化合物具有毒性。游戏中的配方、加工时间、产量与效果均经过简化，[b]不能作为现实制药、植物处理或医疗用药的指导[/b]。\n<br />\n<br />[heading][b]作者说明[/b][/heading]\n<br />我目前还是一名在校大学生，这个模组也是利用课余时间制作的个人项目。学业需要优先，因此后续更新可能不太规律，无法保证固定的更新周期。欢迎反馈 Bug、翻译问题或提出建议，不过我未必能及时回复或处理。\n<br />感谢各位愿意尝试这个模组！ —— [b]Hipperitz[/b]\n<br />\n<br />——————————————————————————我是分界线——————————————————————————————\n<br />\n<br />\n<br />[heading][b]About this mod[/b][/heading]\n<br />[b]Stardew Pharmacognosy[/b]\u00A0expands farming and crafting with medicinal plants, traditional preparations, natural-product extracts, and a small laboratory.\n<br />Grow seven seasonal medicinal crops, gather wild nettles, and cultivate the slow-growing Pacific yew. Harvest different plant parts, dry or prepare them with familiar farm equipment and the kitchen, then continue into more advanced laboratory workflows.\n<br />The in-game [b]Pharmacognosy Journal[/b]\u00A0records plant information, historical uses, and notes on natural products. Entries unlock as you actually harvest and craft. The journal is optional: it does not gate recipes or normal production.\n<br />[heading][b]Features[/b][/heading]\n<br />·\u00A0[b]Seven medicinal crops:[/b]\u00A0Belladonna, foxglove, Datura, black hellebore, opium poppy, sweet wormwood ([i]Artemisia annua[/i]), and autumn crocus ([i]Colchicum autumnale[/i]).\n<br />·\u00A0[b]Wild nettles and Pacific yew:[/b]\u00A0Gather nettles, receive a yew introduction letter, grow yew trees, and harvest bark for processing.\n<br />·\u00A0[b]Traditional preparations:[/b]\u00A0Make tinctures, extracts, powders, tablets, ointments, incense, and other simplified in-game preparations.\n<br />·\u00A0[b]Farm-based processing:[/b]\u00A0Use existing machines and the kitchen for drying, seed-oil production, starch, and basic preparations. Collect whey from cheesemaking, then make lactose at the chemistry workbench.\n<br />·\u00A0[b]A compact laboratory:[/b]\u00A0Includes a chemistry workbench, adjacent 36-slot supply cabinets, a separate 70-slot reagent cabinet, a rotary evaporator, and preparative HPLC equipment.\n<br />·\u00A0[b]Four advanced production routes:[/b]\u00A0Artemisinin, colchicine, foxglove cardiac glycosides, and Pacific-yew taxanes.\n<br />·\u00A0[b]Dual-product HPLC batches:[/b]\u00A0Foxglove and yew separation each produce two target fractions. Collect the complete batch from the fraction collector, then process each fraction separately.\n<br />·\u00A0[b]An unlockable journal:[/b]\u00A0Entries progress through real harvesting and crafting actions, with no research points or mandatory reading.\n<br />·\u00A0[b]Four in-game languages:[/b]\u00A0Simplified Chinese, English, Japanese, and Korean.\n<br />[heading][b]What’s new in 1.0.0[/b][/heading]\n<br />The first full release brings the previously separate components together in one installation folder and completes the main laboratory progression.\n<br />·\u00A0Added the Pacific yew tree system and its introduction letter.\n<br />·\u00A0Added the rotary evaporator and preparative HPLC equipment.\n<br />·\u00A0Completed four advanced natural-product routes, including the two dual-product separation routes.\n<br />·\u00A0Expanded journal entries, processing descriptions, equipment, reagents, and laboratory visuals.\n<br />·\u00A0Consolidated the in-game text and interface support for Chinese, English, Japanese, and Korean.\n<br />·\u00A0Existing Beta.10 items and supported journal progress are preserved where possible; older crude extracts can continue into the new routes.\n<br />[heading][b]Requirements[/b][/heading]\n<br />Tested with:\n<br />·\u00A0Stardew Valley 1.6.15\n<br />·\u00A0SMAPI 4.5.2+\n<br />·\u00A0Content Patcher 2.9.1+\n<br />·\u00A0Extra Machine Config 1.18.0+\n<br />Automate is optional, not required. The chemistry workbench uses manual crafting. HPLC also requires the mod’s specific manual input and whole-batch collection workflow.\n<br />[heading][b]Installation[/b][/heading]\n<br />1.\u00A0Install the required frameworks listed above.\n<br />2.\u00A0Extract the archive.\n<br />3.\u00A0Place the [b]entire Stardew Pharmacognosy folder[/b]\u00A0into Stardew Valley/Mods.\n<br />4.\u00A0Launch the game through SMAPI.\n<br />The main folder contains multiple internal components. Keep them together; do not scatter them into the Mods root. Remove older copies or duplicate installations before updating. Keep the included font-support and Laboratory Text components, or some journal text and special characters may display incorrectly.\n<br />[b]Back up your save before installing or updating any mod.[/b]\n<br />[heading][b]Updating from 0.4.0-beta.10[/b][/heading]\n<br />1.\u00A0Exit the game and SMAPI, then back up your save and old mod folder.\n<br />2.\u00A0Move the old [CP] Stardew Pharmacognosy, Stardew Pharmacognosy Core, and any older flat-install copies out of Mods.\n<br />3.\u00A0Install the new Stardew Pharmacognosy\u00A0folder as a whole. Do not keep duplicate old components.\n<br />4.\u00A0If you need your personal settings, restore only config.json\u00A0and the core component’s journal-config.json. Do not overwrite the new DLL, content.json, recipe files, journal entries, translations, or artwork with old files.\n<br />5.\u00A0Load your save and check your inventory, storage cabinets, crops, and journal before sleeping to save.\n<br />Existing items, inventories, supported journal progress, and older crude extracts are intended to carry forward. New journal sections still require their corresponding in-game actions.\n<br />[heading][b]Gameplay notes[/b][/heading]\n<br />Single-player testing found no issues.\n<br />·\u00A0Keep all internal mod components together during installation.\n<br />·\u00A0For HPLC, place the solvent module, main unit and fraction collector directly beside one another in that order, from left to right on the same row. Collect products from the fraction collector.\n<br />·\u00A0The 36-slot cabinets supply adjacent workbenches. The 70-slot reagent cabinet is for storage only.\n<br />·\u00A0HPLC uses manual loading and collection; Automate does not operate it.\n<br />[heading][b]A note on medicinal plants[/b][/heading]\n<br />The mod is inspired by real medicinal plants, natural products, and historical preparations. Some featured plants and compounds are toxic. Recipes, processing times, yields, and effects are simplified for gameplay and are [b]not[/b]\u00A0instructions for real-world medicine preparation, plant handling, or treatment.\n<br />[heading][b]About the author[/b][/heading]\n<br />I’m a university student, and this is a personal project made in my spare time. My studies have to come first, so updates may be irregular and I can’t promise a fixed release schedule. Bug reports, translation corrections, and suggestions are welcome, although I may not always be able to respond or address them quickly.\n<br />Thank you for trying the mod! — [b]Hipperitz[/b]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53972",
+	"Version": "1.0.1",
+	"Updated": "2026-10-25T19:33:37+00:00",
+	"Downloads": [
+		{
+			"Id": 188524,
+			"Type": "Main",
+			"DisplayName": "Stardew Pharmacognosy 1.0.1",
+			"FileName": "48/15/74/4815747f-a351-4234-8ab5-03cdd46d0530",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 2439691,
+			"Uploaded": "2026-10-25T19:33:37+00:00",
+			"Mods": [
+				{
+					"Id": "Hipperitz.ColchicineRoute.Bridge",
+					"DisplayName": "Stardew Pharmacognosy - Colchicine Journal",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Colchicine Route Bridge",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Colchicine Journal",
+						"Description": "Stardew Pharmacognosy - Colchicine Journal. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "ColchicineRouteBridge.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.Colchicine.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.ColchicineRoute.Bridge"
+					}
+				},
+				{
+					"Id": "Hipperitz.Pharmacognosy.Dual.Journal",
+					"DisplayName": "Stardew Pharmacognosy - Dual Product Journal",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Dual Pipeline Journal",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Dual Product Journal",
+						"Description": "Stardew Pharmacognosy - Dual Product Journal. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "DualJournal.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.HPLC",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.PaclitaxelRoute.Bridge",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.HPLC.Display",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.Pharmacognosy.Dual.Journal"
+					}
+				},
+				{
+					"Id": "Hipperitz.HPLC.Display",
+					"DisplayName": "Stardew Pharmacognosy - HPLC Display",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\HPLC Display",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - HPLC Display",
+						"Description": "Stardew Pharmacognosy - HPLC Display. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "HplcDisplay.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Hipperitz.HPLC",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.HPLC.Display"
+					}
+				},
+				{
+					"Id": "Hipperitz.HPLC",
+					"DisplayName": "Stardew Pharmacognosy - Preparative HPLC",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\HPLC Prototype",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Preparative HPLC",
+						"Description": "Stardew Pharmacognosy - Preparative HPLC. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "HPLC.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.HPLC"
+					}
+				},
+				{
+					"Id": "Hipperitz.LabFurnishings",
+					"DisplayName": "Stardew Pharmacognosy - Laboratory Furnishings",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Laboratory Furnishings",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Laboratory Furnishings",
+						"Description": "Alternate laboratory supply cabinet and non-cooking 70-slot reagent cabinet.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "LabFurnishings.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Belladonna.HerbalPrototype",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.LabFurnishings"
+					}
+				},
+				{
+					"Id": "Hipperitz.LaboratorySupplyKit",
+					"DisplayName": "Stardew Pharmacognosy - HPLC Equipment Set",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Laboratory Supply Kit",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - HPLC Equipment Set",
+						"Description": "One purchasable preparative HPLC set with atomic delivery of the solvent module, main unit, and fraction collector.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "LaboratorySupplyKit.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Hipperitz.HPLC",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.HPLC.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.LaboratorySupplyKit"
+					}
+				},
+				{
+					"Id": "Hipperitz.Pharmacognosy.Text",
+					"DisplayName": "Stardew Pharmacognosy - Localized Text",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Laboratory Text",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Localized Text",
+						"Description": "Stardew Pharmacognosy - Localized Text. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "LaboratoryText.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.LaboratoryInteriors",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.Pharmacognosy.Text"
+					}
+				},
+				{
+					"Id": "Hipperitz.PacificYew",
+					"DisplayName": "Stardew Pharmacognosy - Pacific Yew",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Pacific Yew",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Pacific Yew",
+						"Description": "Stardew Pharmacognosy - Pacific Yew. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "PacificYew.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.1",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.PacificYew"
+					}
+				},
+				{
+					"Id": "Hipperitz.PaclitaxelRoute.Bridge",
+					"DisplayName": "Stardew Pharmacognosy - Paclitaxel Journal",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Paclitaxel Route Bridge",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Paclitaxel Journal",
+						"Description": "Stardew Pharmacognosy - Paclitaxel Journal. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "PaclitaxelRouteBridge.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.Paclitaxel.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.PaclitaxelRoute.Bridge"
+					}
+				},
+				{
+					"Id": "Belladonna.Harvest",
+					"DisplayName": "Stardew Pharmacognosy - Core",
+					"Type": "Smapi",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\Stardew Pharmacognosy Core",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Core",
+						"Description": "Support plugin for Stardew Pharmacognosy: harvest byproducts, grape-wine recipe matching, NPC gift tastes, saved-item compatibility, Henry recipe mail and read-only diagnostics.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "Belladonna.Harvest.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "selph.ExtraMachineConfig",
+								"MinimumVersion": "1.18.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Belladonna.Harvest"
+					}
+				},
+				{
+					"Id": "Hipperitz.Artemisinin.Content",
+					"DisplayName": "Stardew Pharmacognosy - Artemisinin Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Artemisinin Route",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Artemisinin Content",
+						"Description": "Stardew Pharmacognosy - Artemisinin Content. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.HerbalPrototype",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.RotaryEvaporator.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.Paclitaxel.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.Artemisinin.Content"
+					}
+				},
+				{
+					"Id": "Hipperitz.Colchicine.Content",
+					"DisplayName": "Stardew Pharmacognosy - Colchicine Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Colchicine Route",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Colchicine Content",
+						"Description": "Stardew Pharmacognosy - Colchicine Content. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.HPLC.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.Paclitaxel.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.RotaryEvaporator.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.Colchicine.Content"
+					}
+				},
+				{
+					"Id": "Hipperitz.HPLC.Content",
+					"DisplayName": "Stardew Pharmacognosy - HPLC Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] HPLC Prototype",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - HPLC Content",
+						"Description": "Stardew Pharmacognosy - HPLC Content. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Hipperitz.HPLC",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.HPLC.Content"
+					}
+				},
+				{
+					"Id": "Hipperitz.LaboratoryInteriors",
+					"DisplayName": "Stardew Pharmacognosy - Laboratory Interiors",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Laboratory Interiors",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Laboratory Interiors",
+						"Description": "Laboratory wallpaper and floorpaper with the existing Joja/Pierre supply rules.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.LaboratoryInteriors"
+					}
+				},
+				{
+					"Id": "Hipperitz.LaboratorySupply",
+					"DisplayName": "Stardew Pharmacognosy - Laboratory Supply",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Laboratory Supply",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Laboratory Supply",
+						"Description": "HPLC equipment and solvent supply, current equipment descriptions, and integrated colchicine  prices.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.HPLC.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.Colchicine.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.RotaryEvaporator.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.LaboratorySupplyKit",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.LaboratorySupply"
+					}
+				},
+				{
+					"Id": "Hipperitz.PacificYew.Content",
+					"DisplayName": "Stardew Pharmacognosy - Pacific Yew Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Pacific Yew",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Pacific Yew Content",
+						"Description": "Stardew Pharmacognosy - Pacific Yew Content. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Hipperitz.PacificYew",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.PacificYew.Content"
+					}
+				},
+				{
+					"Id": "Hipperitz.Paclitaxel.Content",
+					"DisplayName": "Stardew Pharmacognosy - Paclitaxel Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Paclitaxel Production Line",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Paclitaxel Content",
+						"Description": "Stardew Pharmacognosy - Paclitaxel Content. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.HerbalPrototype",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.PacificYew.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.RotaryEvaporator.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.Paclitaxel.Content"
+					}
+				},
+				{
+					"Id": "Hipperitz.Pharmacognosy.Dual.Content",
+					"DisplayName": "Stardew Pharmacognosy - Dual Product Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Pharmacognosy Dual Pipeline",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Dual Product Content",
+						"Description": "Stardew Pharmacognosy - Dual Product Content. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Hipperitz.HPLC.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.Paclitaxel.Content",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Hipperitz.RotaryEvaporator.Content",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.Pharmacognosy.Dual.Content"
+					}
+				},
+				{
+					"Id": "Hipperitz.RotaryEvaporator.Content",
+					"DisplayName": "Stardew Pharmacognosy - Rotary Evaporator",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Rotary Evaporator",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Rotary Evaporator",
+						"Description": "Stardew Pharmacognosy - Rotary Evaporator. Part of the complete Stardew Pharmacognosy release.",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Hipperitz.RotaryEvaporator.Content"
+					}
+				},
+				{
+					"Id": "Belladonna.HerbalPrototype",
+					"DisplayName": "Stardew Pharmacognosy - Base Content",
+					"Type": "ContentPack",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Main File\\Stardew Pharmacognosy\\[CP] Stardew Pharmacognosy",
+					"Manifest": {
+						"Name": "Stardew Pharmacognosy - Base Content",
+						"Description": "Medicinal Plants, Natural Products & Remedies",
+						"Author": "Hipperitz",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.5.2",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Belladonna.Harvest",
+								"MinimumVersion": "0.4.0-beta.10",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Belladonna.HerbalPrototype"
+					}
+				},
+				{
+					"Id": null,
+					"DisplayName": "Stardew-Pharmacognosy-1.0.1\\Player Guides",
+					"Type": "Invalid",
+					"RelativePath": "Stardew-Pharmacognosy-1.0.1\\Player Guides",
+					"ManifestParseError": "ManifestMissing",
+					"ManifestParseErrorText": "it contains files, but none of them are manifest.json."
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575212,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440660,
+		"UploaderId": 223531263,
+		"CategoryId": 14,
+		"Adult": false
+	}
+}

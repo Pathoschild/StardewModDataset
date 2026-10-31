@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54382,
+	"Name": "Time and Weather",
+	"Author": "258112zjy",
+	"Description": "Time &amp; Weather\n<br />Clock and weather control in one small window.\n<br />[heading]Description[/heading]\n<br />Set the clock, freeze it, run the day faster, and pick tomorrow's weather - without touching the save file and without the side effects that usually come with time mods.\n<br />Press [b]T[/b] to open the window. The current time sits in the corner of it, so you always know where you are before you change anything.\n<br />[heading]Installation instructions[/heading]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] 4.0 or newer.[/*]\n<br />[*]Unzip the \n<br />[code]TimeAndWeather[/code]folder into \n<br />[code]Stardew Valley/Mods[/code].[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][b]Generic Mod Config Menu is recommended.[/b] It is optional, but with it you can rebind the key and switch the interface language from the title screen instead of editing \n<br />[code]config.json[/code]by hand.\n<br />[heading]Language[/heading]\n<br />English by default, with a full Chinese translation. Set \n<br />[code]Language[/code]to \n<br />[code]auto[/code], \n<br />[code]en[/code]or \n<br />[code]zh[/code]- in Generic Mod Config Menu, or in \n<br />[code]config.json[/code]. \n<br />[code]auto[/code]follows the game's own language; the other two force it.\n<br />[heading]Main features[/heading]\n<br />[b]Clock[/b] - jump to 06:00, 12:00, 18:00, 22:00 or 24:00, or nudge the time by ten minutes or an hour.\n<br />Jumping the clock also [b]moves every villager to where their schedule says they should be at the new time[/b]. Vanilla only ever looks up the exact ten-minute slot, so without this Pam would still be standing in her trailer at noon instead of at the bus stop, and nobody would be \"at work\". The mod takes the last schedule entry at or before the new time and warps each villager there - across locations too - then clears the old pathfinding so they do not walk back.\n<br />Events and festivals are left alone: while a cutscene or a festival is running the game owns the NPC placement, so the mod does not touch it.\n<br />The jump runs through the game's own ten-minute clock tick instead of assigning the clock directly, because that tick is the only place that flags a festival day (\n<br />[code]whereIsTodaysFest[/code]) and the only place that swaps a map's night tileset at dusk. Jump straight to noon on a festival day without it and the flag stays null, so walking into the festival never starts the event; jump past 19:00 without it and the windows stay unlit. Machines and furniture are deliberately not advanced - a clock jump should not also smelt your ore faster.\n<br />[b]Freeze time[/b] - stops the clock where it is. Unfreezing does not fast-forward to make up for the lost time; the day simply lasts longer.\n<br />[b]Time speed[/b] - x1 to x4. The extra speed is fed into the game's own \n<br />[code]gameTimeInterval[/code]accumulator, so the ten-minute tick, the 02:00 day end and everything listening to them keep working normally.\n<br />Two side effects are handled on purpose:\n<br />[list]\n<br />[*]Your farmer gets a movement buff that matches the speed. At x4 without it you feel like you are walking in mud[/*]\n<br />[*]Villagers on the current map speed up too. Otherwise they crawl while the clock races, which looks broken[/*]\n<br />[/list][b]Tomorrow's weather[/b] - sun, rain, storm, snow, wind or green rain. This sets the same field the vanilla forecast reads, so the TV weather report agrees with it. It applies when the day rolls over, not instantly.\n<br />[heading]Keys[/heading]\n<br />[list]\n<br />[*][b]T[/b] - open / close the window[/*]\n<br />[/list]Rebindable in \n<br />[code]config.json[/code].\n<br />[heading]Notes[/heading]\n<br />[list]\n<br />[*]Freeze and speed are runtime state and reset when you go back to the title screen. Nothing is written into the save[/*]\n<br />[*]In multiplayer, time is host-authoritative. Setting the clock on a client only changes what that client sees until the host syncs[/*]\n<br />[*]No Harmony patches[/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list]\n<br />[*]Stardew Valley 1.6.x[/*]\n<br />[*]SMAPI 4.0 or newer[/*]\n<br />[*]Recommended: Generic Mod Config Menu - rebind keys and switch language in game[/*]\n<br />[/list][heading]Compatibility note[/heading]\n<br />Do not run this together with another time-speed mod (TimeSpeed and friends) - pick one, or the two multipliers will fight each other and the result is not the speed you asked for.\n<br />[heading]Part of a set[/heading]\n<br />This is the lightweight clock-and-weather version. [b]Cheat Panel[/b] bundles it with items, friendship, warping and the calendar in one panel; [b]Quick Warp[/b] and [b]Set Date[/b] are the other two standalone ones. All four ship with different hotkeys, so you can install any of them side by side.\n<br />[heading]Shout outs[/heading]\n<br />[list]\n<br />[*][b]Pathoschild[/b] for SMAPI[/*]\n<br />[*]The Stardew Valley modding wiki, for the clock and weather internals this relies on[/*]\n<br />[/list][line]\n<br />[heading]中文说明[/heading]\n<br />按 [b]T[/b] 控制时间和天气。\n<br />[list]\n<br />[*]安装：装好 SMAPI 4.0+，把 \n<br />[code]TimeAndWeather[/code]文件夹解压到 \n<br />[code]Stardew Valley/Mods[/code]，用 SMAPI 启动游戏。[/*]\n<br />[*]界面语言：默认跟随游戏语言，也可以在 GMCM 里把「语言」设成中文或 English，不用改文件。[/*]\n<br />[*]时间：跳转到 6:00 / 12:00 / 18:00 / 22:00 / 24:00，或按 10 分钟、1 小时微调。跳时间会顺带把村民挪到他们这个点该在的地方——跳到 12 点潘姆就在大巴站，上班的人就在班上。原版只查整十分钟那一格，不这么处理的话所有人都还杵在原地。[/*]\n<br />[*]剧情事件和节日进行中不会动 NPC，那时候站位归游戏自己管。[/*]\n<br />[*]跳时间是走游戏自己的「整十分钟结算」这一步，不是硬改时钟。因为节日当天的标记（\n<br />[code]whereIsTodaysFest[/code]）只在这一步里赋值——不这么走的话，节日当天 6:00 直接跳到 12:00，标记永远是空的，走到节日地点也触发不了节日。夜里 19 点之后的窗户亮灯同理，也是在这一步换的贴图。机器和家具不会因为跳时间而推进，跳时钟不该顺便帮你把矿炼好。[/*]\n<br />[*]冻结时间：原地停表，解冻后不会补回流失的时间，这一天就是变长了。[/*]\n<br />[*]倍速：1 到 4 倍，走的是游戏自己的计时累加器，所以整点结算、凌晨 2 点强制睡觉都照常。角色移速和村民移速会同步加快，不然 4 倍速下走路像踩泥。[/*]\n<br />[*]明天的天气：晴、雨、雷雨、雪、风、绿雨，改的是电视预报读的那个字段，所以预报会跟着变，隔天生效。[/*]\n<br />[*]不要和 TimeSpeed 之类的加速 mod 同时开，两个倍率会打架[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54382",
+	"Version": "1",
+	"Updated": "2026-10-23T18:48:52+00:00",
+	"Downloads": [
+		{
+			"Id": 188150,
+			"Type": "Main",
+			"DisplayName": "TimeAndWeather 1.0.0",
+			"FileName": "cf/40/5a/cf405ad3-5715-4a8d-b6ab-13e3bcaaa554",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 17426,
+			"Uploaded": "2026-10-23T18:48:52+00:00",
+			"Mods": [
+				{
+					"Id": "sanyy.TimeAndWeather",
+					"DisplayName": "Time & Weather",
+					"Type": "Smapi",
+					"RelativePath": "TimeAndWeather",
+					"Manifest": {
+						"Name": "Time & Weather",
+						"Description": "Set the clock, freeze time, run the day at up to 4x (villagers speed up too), and pick tomorrow's weather.",
+						"Author": "sanyy",
+						"Version": "1.1.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TimeAndWeather.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sanyy.TimeAndWeather"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574838,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441070,
+		"UploaderId": 229249695,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

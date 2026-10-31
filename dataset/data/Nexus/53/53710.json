@@ -1,0 +1,109 @@
+{
+	"Site": "Nexus",
+	"Id": 53710,
+	"Name": "AiDialogue",
+	"Author": "gaoqiao123",
+	"Description": "[b]AiDialogue｜自由对话、独立记忆与情绪配音[/b]\n<br />AiDialogue 让你可以在《星露谷物语》中，用自己的话与 NPC 交流，并听见他们的回应。\n<br />NPC 会结合角色人设、相关记忆、人物关系和当前场景生成开场与回答。聊天保留游戏原版对话框，你可以输入自己的回复、延续话题，也可以通过可选的语音功能，让文字带上符合情绪的声音。\n<br />你还可以调整角色人设、添加永久记忆，或观看附近 NPC 通过气泡相互交谈，让山谷的日常多一些互动。\n<br />[list]\n<br />[*][b]情绪配音[/b]：安装可选的 AiDialogueVoice 附加模组后，可为玩家与 NPC 的 AI 对话回复配音。语音读取回复中的情绪标签，调整表达方式；实际效果取决于所选 TTS 模型与音色。文字先显示，语音随后播放，合成失败不会阻止文字聊天。[/*]\n<br />[*][b]按年龄与人设自动选声[/b]：根据角色已知的年龄段、性别和公开人设匹配可用音色，并保存绑定。云端模式还支持填写音色描述，例如“温柔、略带沙哑的成年女声”，让语言模型从账户实际可用的音色中挑选；也可以手动指定 Voice ID。不同角色可能使用相同音色，这项功能不涉及声音克隆。[/*]\n<br />[*][b]自由输入对话[/b]：与符合条件的 NPC 交互，由 AI 生成普通聊天的第一句话。点击原版对话框下方的“回复”，即可输入自己的回答，不受原版每日固定台词数量限制。聊天、记忆和人设编辑支持光标移动、选区及复制粘贴。[/*]\n<br />[*][b]独立记忆与永久记忆[/b]：玩家聊天记录按存档、玩家和 NPC 分别保存。符合条件的历史默认每十五个游戏日进行压缩，记录较多时可提前触发。手动永久记忆支持设置 0–1 的重要程度，不参与自动压缩，也不会作为其他 NPC 的私人记忆使用。[/*]\n<br />[*][b]自定义人物设定[/b]：为角色设置姓名、背景、性格和说话方式，可作用于当前存档或所有存档。玩家明确填写的人设优先，未覆盖的部分由已有角色资料补充。人设与记忆分别管理。[/*]\n<br />[*][b]场景感知与扩展角色[/b]：每次请求重新读取当前地图、时间、天气、人物位置及附近角色。采用标准游戏数据的扩展 NPC 可以动态发现，并根据其公开台词和人物资料生成独立人设。按需提供的公开人物简介帮助原版与扩展角色识别彼此，私人聊天与永久记忆不加入公开资料。[/*]\n<br />[*][b]NPC 自动交流[/b]：当前屏幕内符合条件的 NPC 可在默认十格范围内发起交流，每轮共 2–5 句。参与者在本轮结束前不会加入其他对话，其他组合可以分别交流。[b]目前这些背景气泡仅显示文字，不进行配音。[/b][/*]\n<br />[*][b]立绘表情[/b]：支持图片输入的模型可以对当前加载的 NPC 立绘分类，回复时显示已有绘图对应的表情。该功能使用已安装的立绘，不生成新图片。[/*]\n<br />[*][b]可选对话好感度[/b]：根据角色性格与本轮交流评估好感变化。普通变化为 -5 至 +5，明确的重大冒犯可有更高扣分；没有每日累计评分上限，实际变化在左下角显示。每日首次成功显示的普通 AI 开场提供 10 点基础聊天好感，替代原版的 20 点。[/*]\n<br />[*][b]送礼回应与独立亲密操作[/b]：普通送礼可以生成 AI 回应，礼物消耗与游戏奖励仍由游戏处理。符合条件的配偶或室友可使用独立的“亲吻／拥抱”按钮，反复打开聊天不会自动重复亲密动作。[/*]\n<br />[*][b]灵活的接口配置[/b]：支持内置聊天服务商，也支持“自定义（OpenAI 兼容接口）”：填写 Base URL、API Key，自动获取模型或手动输入模型 ID。语音另行支持 MiniMax、ElevenLabs，以及本地 Qwen TTS。[/*]\n<br />[/list]首次使用时：\n<br />[list=1]\n<br />[*]安装 SMAPI，最低要求为 [b]4.5.2[/b]。[/*]\n<br />[*]将发布包中的 \n<br />[code]AiDialogue[/code]文件夹放入 \n<br />[code]Stardew Valley/Mods/[/code]。[/*]\n<br />[*]通过 SMAPI 启动并进入存档，打开 [b]Esc → 选项 → AI 对话设置[/b]。[/*]\n<br />[*]配置聊天服务商、API Key 和模型，启用 AI 对话并保存。[/*]\n<br />[*]如需语音，将完整的 \n<br />[code]AiDialogueVoice[/code]文件夹并列放入 \n<br />[code]Mods[/code]，使用与主模组匹配的版本，再进入语音设置配置 TTS 服务。云端需要对应服务的凭据与额度；本地 Qwen 无需 TTS Key，但需要单独启动本地服务，并具备足够的电脑资源。[/*]\n<br />[/list]模组自带设置页，不需要 GMCM。聊天 Key 不一定能够用于语音服务；自动选声默认使用聊天模型，也可单独选择用于选声的模型。停止和重播按钮可控制当前语音，重播已有缓存不会再次请求合成。\n<br />更新时请完全关闭游戏，覆盖发布文件，并保留自己的配置、人设、记忆和音色绑定。公开发布包不附带个人 API Key 或服务额度。\n<br />目前主要在 [b]Windows、Stardew Valley 1.6.15、SMAPI 4.5.2[/b] 环境测试。原版内容不需要 Content Patcher；扩展内容仍需安装其自身前置。动态发现不代表所有扩展剧情、特殊 NPC 和脚本交互均已完整适配，多人游戏也尚未完整验证。第三方人物、台词和立绘的 AI 使用应遵守对应作者的许可要求。\n<br />聊天、人设生成、记忆压缩、立绘分类、模型选声与云端配音都可能消耗 API 额度。回答准确性、角色一致性、情绪表现和等待时间取决于模型与服务，无法保证每次都完全符合预期。\n<br />配置、人设和记忆保存在本机 Mod 文件夹，API Key 以未加密形式保存在本地配置中。使用云端功能时，必要的文字、上下文或图片会发送给对应服务商；音色匹配使用公开角色资料与音色偏好，不读取玩家私人聊天或永久记忆。分享时请使用干净的发布包，避免直接分享使用过的整个 Mod 文件夹。\n<br />这是我第一次发布模组，也仍在学习。最初和朋友一起测试时，我觉得这些交流很有趣，希望把这份体验分享给更多玩家。欢迎反馈问题、建议和兼容性情况。\n<br />[b]下载交流与反馈 QQ 群：1098517417[/b]\n<br />[line]\n<br />[b]AiDialogue — Free-form Conversations, Separate Memories and Expressive Voices[/b]\n<br />AiDialogue lets you talk to Stardew Valley’s NPCs in your own words—and hear their replies.\n<br />AI-generated greetings and responses use character information, relevant memories, relationships and the current scene. Conversations appear inside the game’s original dialogue box, where you can type your own replies and continue the discussion. Optional voice support adds spoken delivery based on the reply’s emotion.\n<br />You can also customize characters, add permanent memories and watch nearby NPCs exchange speech bubbles.\n<br />[list]\n<br />[*][b]Emotion-aware speech:[/b] The optional AiDialogueVoice companion voices AI replies shown during player–NPC conversations. It uses the reply’s emotion label to guide delivery, with results depending on the TTS model and voice. Text appears first; speech is generated asynchronously. A speech failure does not prevent the text conversation.[/*]\n<br />[*][b]Automatic voice matching:[/b] Available voices are matched using the character’s known age group, gender and public persona, then saved for reuse. Cloud matching also accepts descriptions such as “a warm adult female voice with a slightly husky tone.” The language model selects from real available voices; you can specify a Voice ID manually. Characters may share voices. This feature does not clone or train voices.[/*]\n<br />[*][b]Free-form conversations:[/b] Interact with an eligible NPC for an AI-generated opening, then click [b]Reply[/b] beneath the native dialogue box to type your response. Ordinary conversations can continue beyond vanilla’s daily dialogue limit. Editors support caret movement, selection, copy and paste.[/*]\n<br />[*][b]Separate and permanent memories:[/b] Player conversations are stored separately by save, player and NPC. Eligible histories are compressed after fifteen in-game days by default, or earlier when records become large. Manual permanent memories support importance weights from 0 to 1, remain outside automatic compression and are not supplied as another NPC’s private memories.[/*]\n<br />[*][b]Custom personas:[/b] Define a character’s name, background, personality and speech style for one save or all saves. Explicit custom settings take priority, while existing information fills unspecified details. Personas and memories are managed separately.[/*]\n<br />[*][b]Scene context and expanded characters:[/b] Each request captures current locations, time, weather, positions and nearby characters. Standard data-driven custom NPCs can be discovered dynamically, with individual personas generated from their public dialogue and metadata. Relevant public profiles help vanilla and expanded NPCs recognize one another without sharing private conversations or permanent memories.[/*]\n<br />[*][b]NPC-to-NPC conversations:[/b] Eligible visible NPCs can exchange 2–5 total lines per round, within a default range of ten tiles. Participants remain reserved until their round ends, while other pairs can converse separately. [b]These background speech bubbles are currently text-only.[/b][/*]\n<br />[*][b]Portrait expressions:[/b] An image-capable model can classify installed NPC portraits and select existing expressions for replies. This uses loaded artwork rather than generating new portraits.[/*]\n<br />[*][b]Optional friendship changes:[/b] Typed replies can affect friendship according to character and context. Ordinary changes stay between -5 and +5, with stronger penalties reserved for clear major offenses. Scoring has no daily cumulative cap, and a notification shows the applied change. The first successful ordinary AI greeting each day grants a 10-point base reward, replacing vanilla’s 20 points.[/*]\n<br />[*][b]Gift reactions and separate affection controls:[/b] Ordinary gifts can receive AI reactions while the game handles items and rewards. Eligible spouses or roommates have separate [b]Kiss/Hug[/b] controls, so reopening chat does not automatically repeat affection.[/*]\n<br />[*][b]Flexible services:[/b] Use a built-in chat provider or a custom OpenAI-compatible service with a Base URL, API key and retrieved or manually entered model ID. Speech separately supports MiniMax, ElevenLabs and local Qwen TTS.[/*]\n<br />[/list]To get started:\n<br />[list=1]\n<br />[*]Install [b]SMAPI 4.5.2 or later[/b].[/*]\n<br />[*]Extract \n<br />[code]AiDialogue[/code]into \n<br />[code]Stardew Valley/Mods/[/code].[/*]\n<br />[*]Launch through SMAPI, load a save and open [b]Esc → Options → AI Dialogue Settings[/b].[/*]\n<br />[*]Configure your chat provider, API key and model, then enable AI dialogue and save.[/*]\n<br />[*]For speech, install the complete \n<br />[code]AiDialogueVoice[/code]folder alongside the main mod, using matching versions. Configure a supported TTS service in Voice settings. Cloud services require their own credentials and quota; local Qwen requires a separately running local service and sufficient hardware resources, but no TTS key.[/*]\n<br />[/list]GMCM is not required. A chat API key does not necessarily provide access to speech services. Automatic voice selection follows the chat model by default, with a separate model selection available. Current speech can be stopped or replayed; replaying cached audio does not request another synthesis.\n<br />Fully close the game before updating. Preserve your configuration, personas, memories and voice bindings when replacing release files. Public packages contain no personal API keys or service credits.\n<br />Testing primarily covers [b]Windows, Stardew Valley 1.6.15 and SMAPI 4.5.2[/b]. Content Patcher is unnecessary for vanilla content; expansions still require their own prerequisites. Dynamic discovery does not establish complete compatibility with every expansion, scripted interaction or custom code NPC. Full multiplayer compatibility remains unverified. Please respect third-party authors’ AI-use permissions for their characters, dialogue and artwork.\n<br />Chatting, persona generation, memory compression, portrait classification, model-based voice selection and cloud speech may consume API quota. Accuracy, character consistency, emotional delivery and response times depend on the selected models and services.\n<br />Configuration and memories are stored locally inside the mod folders. API keys are stored without encryption. Enabled cloud features send the necessary text, context or images to the relevant provider. Voice matching uses public character information and voice preferences, without accessing private player conversations or permanent memories. Share clean release packages rather than your used mod folders.\n<br />This is my first published mod, and I’m still learning. I enjoyed trying these conversations with friends and wanted to share the experience. Bug reports, suggestions and compatibility feedback are welcome.\n<br />[b]Download discussion and feedback QQ group: 1098517417[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53710",
+	"Version": "0.9.3",
+	"Updated": "2026-10-26T19:11:33+00:00",
+	"Downloads": [
+		{
+			"Id": 187059,
+			"Type": "Main",
+			"DisplayName": "AiDialogue",
+			"FileName": "39/96/96/3996965f-2299-42e0-a101-3985afe9b138",
+			"Description": "",
+			"Version": "0.9.3",
+			"SizeInBytes": 323425,
+			"Uploaded": "2026-10-16T16:23:35+00:00",
+			"Mods": [
+				{
+					"Id": "Local.AiDialogue",
+					"DisplayName": "AI Dialogue",
+					"Type": "Smapi",
+					"RelativePath": "AiDialogue",
+					"Manifest": {
+						"Name": "AI Dialogue",
+						"Description": "Native AI dialogue with shared public character knowledge, isolated memories, dynamic NPC/map discovery, expressions and friendship.",
+						"Author": "Local",
+						"Version": "0.9.3",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "AiDialogue.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Local.AiDialogue"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573747,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 188707,
+			"Type": "Main",
+			"DisplayName": "AiDialogue",
+			"FileName": "c5/06/6f/c5066fb4-6fc9-4779-b8db-5965db69546b",
+			"Description": "",
+			"Version": "0.9.4",
+			"SizeInBytes": 390118,
+			"Uploaded": "2026-10-26T19:11:33+00:00",
+			"Mods": [
+				{
+					"Id": "Local.AiDialogue",
+					"DisplayName": "AI Dialogue",
+					"Type": "Smapi",
+					"RelativePath": "AiDialogue",
+					"Manifest": {
+						"Name": "AI Dialogue",
+						"Description": "Native AI dialogue with shared public character knowledge, isolated memories, dynamic NPC/map discovery, expressions and friendship.",
+						"Author": "Local",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "AiDialogue.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Local.AiDialogue"
+					}
+				},
+				{
+					"Id": "Local.AiDialogueVoice",
+					"DisplayName": "AI Dialogue - Voice",
+					"Type": "Smapi",
+					"RelativePath": "AiDialogueVoice",
+					"Manifest": {
+						"Name": "AI Dialogue - Voice",
+						"Description": "Emotion-aware NPC speech with persona-based local voices and chat-model selection of real cloud voices from character or voice descriptions. Configure it in AI Dialogue's Voice settings.",
+						"Author": "Local",
+						"Version": "0.9.4",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "AiDialogueVoice.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Local.AiDialogue",
+								"MinimumVersion": "0.9.4",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Local.AiDialogueVoice"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575395,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440398,
+		"UploaderId": 255816343,
+		"CategoryId": 20,
+		"Adult": false
+	}
+}

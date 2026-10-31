@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54228,
+	"Name": "GalaxyService FIX",
+	"Author": "FranLopezZ",
+	"Description": "[line]\n<br />\n<br />[center][img width=48]https://staticdelivery.nexusmods.com/mods/1303/images/54058/54058-1792271580-953511637.png[/img] [/center]\n<br />[center][url=https://github.com/FranLopezZ/SV-GalaxyServiceFIX][color=#fdba74][u][size=4][b]Github[/b][/size][/u][/color][/url][/center]\n<br />[line]\n<br />[color=#00ffff][size=6][b]GalaxyService FIX [/b][/size][/color]\n<br />[quote][u][i]Made with [color=#ff0000]❤[/color] from Almería, Spain / Hecho con [color=#ff0000]❤[/color] desde Almería, España[/i][/u][/quote][center][b][size=4]English ⬇ · Español ⬇⬇[/size][/b][/center]\n<br />[line]\n<br />\n<br />[color=#00ffff][size=5][b]ENGLISH[/b][/size][/color]\n<br />\n<br />Fix for the co-op menu freezing on [u]recent versions[/u] of [b]SteamOS[/b] on the [b]Steam Deck[/b].\n<br />\n<br />[b][color=#e69138][size=5]What does it fix?[/size]\n<br />[/color][/b]The [b]Galaxy[/b] libraries shipped with the game ([size=2][font=Monaco, Menlo, Consolas, monospace][b]libGalaxyCSharpGlue.so[/b] [/font][/size]and [size=2][font=Monaco, Menlo, Consolas, monospace][b]libGalaxy64.so[/b][/font][/size]) are flagged as requiring an executable stack. Newer [b]glibc[/b] versions refuse to load them with that flag. The game reports it as\n<br />[code]DllNotFoundException: Unable to load shared library 'GalaxyCSharpGlue'[/code]even though the file exists, and the Co-op menu gets stuck on \"Connecting to online services...\". It happens with and without mods, and reinstalling the game does not help.\n<br />\n<br />\n<br />[size=5][color=#e69138][b]Features[/b][/color][/size]\n<br />\n<br />When [b]SMAPI[/b] starts, and before the game loads [b]Galaxy[/b], it removes that flag from the [u]two libraries[/u].\n<br />[list]\n<br />[*]Saves a [b].bak[/b] copy of each file before modifying it.[/*]\n<br />[*]If [b]Steam[/b] restores the original files ([u]update or file verification[/u]), it patches them again on the [b]next launch[/b].[/*]\n<br />[*]If the [b]libraries[/b] are already fine, it does nothing.[/*]\n<br />[*]On [b]Windows[/b] it does nothing. This is only for [b]Linux[/b], specifically the [b]Steam Deck[/b].[/*]\n<br />[/list]\n<br />\n<br />\n<br />[color=#e69138][size=5][b]Installation[/b][/size][/color]\n<br />\n<br />[size=4][b][color=#38761d]Linux[/color][/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] for Linux.[/*]\n<br />[*]Extract the [b]GalaxyExecStackFix[/b] folder into\n<br />[code]Stardew Valley/Mods/[/code][/*]\n<br />[*]Launch the game with SMAPI. The first time, the log will show\n<br />[code]pila ejecutable quitada[/code](the mod's log messages are in Spanish).[/*]\n<br />[/list]\n<br />[b][color=#e69138][size=5]Compatibility[/size][/color][/b]\n<br />\n<br />Linux only. It is not needed on Windows. Requires SMAPI: the mod does nothing if you launch the game without it.\n<br />\n<br />[line]\n<br />\n<br />[color=#00ffff][size=5][b]ESPAÑOL[/b][/size][/color]\n<br />\n<br />Solución para el problema con las [u]ultimas versiones[/u] de [b]SteamOS [/b]en [b]SteamDeck[/b].\n<br />\n<br />[b][color=#e69138][size=5]¿Qué resuelve?[/size]\n<br />[/color][/b]Las librerías de [b]Galaxy [/b]que trae el juego ([size=2][font=Monaco, Menlo, Consolas, monospace][b]libGalaxyCSharpGlue.so[/b] [/font][/size]y [size=2][font=Monaco, Menlo, Consolas, monospace][b]libGalaxy64.so[/b][/font][/size]) vienen marcadas como si necesitaran pila ejecutable. Las [b]glibc [/b]nuevas se niegan a cargarlas con esa marca. El juego lo muestra como\n<br />[code]DllNotFoundException: Unable to load shared library 'GalaxyCSharpGlue'[/code]aunque el archivo exista, y el menú Coop se queda en \"Conectando con servicios en línea...\". Ocurre con y sin mods, y reinstalar el juego no lo arregla.\n<br />\n<br />\n<br />[size=5][color=#e69138][b]Características[/b][/color][/size]\n<br />\n<br />Al arrancar [b]SMAPI[/b], y antes de que el juego cargue [b]Galaxy[/b], quita esa marca de las [u]dos librerías[/u].\n<br />[list]\n<br />[*]Guarda una copia [b].bak[/b] de cada archivo antes de modificarlo.[/*]\n<br />[*]Si [b]Steam [/b]restaura los archivos originales ([u]actualización o verificación de archivos[/u]), los vuelve a parchear en el [b]siguiente arranque[/b].[/*]\n<br />[*]Si las [b]librerías [/b]ya están bien, no hace nada.[/*]\n<br />[*]En [b]Windows [/b]no hace nada. Esto solo es para [b]Linux [/b]y concretamente para [b]Steam Deck[/b].[/*]\n<br />[/list]\n<br />\n<br />\n<br />[color=#e69138][size=5][b]Instalación[/b][/size][/color]\n<br />\n<br />[size=4][b][color=#38761d]Linux[/color][/b][/size]\n<br />[list=1]\n<br />[*]Instala [url=https://smapi.io]SMAPI[/url] para Linux.[/*]\n<br />[*]Descomprime la carpeta [b]GalaxyExecStackFix [/b]dentro de\n<br />[code]Stardew Valley/Mods/[/code][/*]\n<br />[*]Abre el juego con SMAPI. En el log verás\n<br />[code]pila ejecutable quitada[/code]la primera vez.[/*]\n<br />[/list]\n<br />[b][color=#e69138][size=5]Compatibilidad[/size][/color][/b]\n<br />\n<br />Solo funciona en Linux, en Windows no hace falta. Requiere SMAPI: sin él, el mod no hace nada.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54228",
+	"Version": "0.0.1",
+	"Updated": "2026-10-20T23:38:39+00:00",
+	"Downloads": [
+		{
+			"Id": 187690,
+			"Type": "Main",
+			"DisplayName": "GalaxyExecStackFix",
+			"FileName": "d3/a2/5b/d3a25b20-e8c4-4e6f-883d-44e3fe112dce",
+			"Description": "",
+			"Version": "0.0.1",
+			"SizeInBytes": 3266,
+			"Uploaded": "2026-10-20T23:38:39+00:00",
+			"Mods": [
+				{
+					"Id": "Kisko.GalaxyExecStackFix",
+					"DisplayName": "Galaxy ExecStack Fix",
+					"Type": "Smapi",
+					"RelativePath": "GalaxyExecStackFix",
+					"Manifest": {
+						"Name": "Galaxy ExecStack Fix",
+						"Description": "Arregla el Coop atascado en 'Conectando con servicios en linea' en Steam Deck / SteamOS reciente.",
+						"Author": "Kisko",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GalaxyExecStackFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Kisko.GalaxyExecStackFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574378,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440916,
+		"UploaderId": 107959328,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

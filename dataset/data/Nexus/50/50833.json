@@ -3,29 +3,31 @@
 	"Id": 50833,
 	"Name": "GarbageRecycler",
 	"Author": "Aufhcegak",
-	"Description": "新增两类垃圾回收机：水上垃圾回收机像蟹笼一样在水面自动打捞垃圾， 陆地垃圾回收机烧煤/木头把垃圾回收成资源，另有水域监测站远程管理。 支持箱子式快捷存取、自动分类、混合批次处理与预计完成时间。",
+	"Description": "[size=5][b]GarbageRecycler — water cleanup and resource recycling[/b][/size]\n<br />\n<br />Deploy a Water Recycler to gather trash from a water body, then carry the trash to a fueled Land Recycler to turn it into resources. A Water Monitor gives you a world-map overview, remote machine management, access to water-machine storage, purification and filter installation.\n<br />\n<br />\n<br />[b]Latest main file: PC 1.6.0.[/b] Tested on Windows, Stardew Valley 1.6.15 and SMAPI 4.5.1. The separately maintained Android build remains 1.5.0-mobile.1 and is not updated by this file. All PC participants should use 1.6.0 for its message protocol; actual two-client multiplayer is still unverified.\n<br />\n<br />\n<br />[size=4][b]Machines and recipes[/b][/size]\n<br />\n<br />[list]\n<br />[*]Water Recycler: Fishing 4; 30 Wood + 2 Copper Bars + 1 Refined Quartz. Place on water, one per water body. Add bait for daily gathering.\n<br />[/*]\n<br />[*]Land Recycler: Mining 4; 3 Copper Bars + 25 Stone + 5 Coal. Processes mixed batches of up to 10 trash items per fuel point, in 10 game minutes. Results enter the shared recycling warehouse.\n<br />[/*]\n<br />[*]Purification Cartridge: Fishing 2; 15 Fiber + 1 Refined Quartz. Reduces pollution by 10. Completely clean water does not consume a cartridge. Base sell price: 50g.\n<br />[/*]\n<br />[*]High-Efficiency Filter: Fishing 6; 2 Copper Bars + 2 Cloth + 1 Refined Quartz. Doubles water-recycler gathering; returned when retrieving the machine.\n<br />[/*]\n<br />[*]Water Monitor: Mining 6; 1 Battery Pack + 5 Copper Bars + 2 Refined Quartz. Place on land for management, the native world map and access to remote water-machine storage.\n<br />[/*]\n<br />[/list]\n<br />\n<br />\n<br />[size=4][b]Using the menus[/b][/size]\n<br />\n<br />Land: Processing / Warehouse / Backpack. Water: Storage / Map / Backpack. Monitor: Management / Map. Left-click deposits or takes one item on release; right-click a machine item takes ten; Ctrl or Shift + click transfers a stack. Dragging, long presses or releasing outside cancels the action. Short windows have a paginated Backpack tab. Use the one-click trash deposit and Collect All buttons for bulk work; anything that cannot fit stays in storage. Water-machine bait goes to its bait slot; wood, coal and reclaimed fuel go to the land-machine fuel supply. Special-quality, flavoured, quest or mod-marked items are rejected by the ID-based processing queue to protect their properties.\n<br />\n<br />\n<br />[size=4][b]Water cleanup rules[/b][/size]\n<br />\n<br />[list]\n<br />[*]A water body starts managed cleanup only after you deploy a Water Recycler or effectively use a cartridge there. Untouched waters receive no added fishing penalty, clean-water reroll or daily pollution rebound.\n<br />[/*]\n<br />[*]Once cleanup starts, a stopped, unbaited or wholly idle water machine allows pollution to rebound by 8 per day.\n<br />[/*]\n<br />[*]Pollution 40–69: ordinary wild fish have a 10% trash substitution chance. At 70 or more: 20%, plus three gathering attempts.\n<br />[/*]\n<br />[*]Below 15: ordinary trash has a 50% chance of one reroll through the same vanilla fish entry point. Each water gathering attempt has a 60% empty chance; bait is consumed only when an item is actually stored.\n<br />[/*]\n<br />[*]Fish ponds, legendary fish and special quest catches are protected. Patches cover vanilla GameLocation.getFish paths; independently rewritten fish entry points are not claimed compatible.\n<br />[/*]\n<br />[*]Remote deployment follows vanilla progression for the Desert, Sewers, Mutant Bug Lair, Witch's Swamp and Ginger Island; visit the Secret Woods first. Island West additionally needs its turtle moved. Old machines in a locked region can still be retrieved with inventory.\n<br />[/*]\n<br />[/list]\n<br />\n<br />\n<br />[size=4][b]What changed in PC 1.6.0[/b][/size]\n<br />\n<br />[list]\n<br />[*]Fuel now keeps its source: unused wood returns as wood, whole coal as coal. One wood is one fuel point; one coal is two. Legacy unknown points and a coal's remaining half become zero-sale-value Reclaimed Fuel, still one batch each. Dismantling can no longer turn deposited wood into coal.\n<br />[/*]\n<br />[*]Land machines use vanilla elapsed-minute and overnight budgets. Reloading the same day does not duplicate water gathering. A full 24-slot water inventory can still use real stack space; only actual stored items cost bait.\n<br />[/*]\n<br />[*]Untouched waters keep vanilla behaviour; fish ponds, legendary and quest catches are protected. Water Monitor checks native unlocks while preserving recovery of locked-area legacy machines.\n<br />[/*]\n<br />[*]New '?' guide explains all eight recycling outputs/chances, fuel, water rules and unlocks. Existing hover probabilities remain. Menu layout/text/icon caching reduces repeated work while real inventories and submissions are still checked live.\n<br />[/*]\n<br />[*]Purification Cartridge now uses 15 Fiber + 1 Refined Quartz instead of Cloth. Other machine recipes and recycling tables, including 70% Cloth and 20% Battery chances, retain their existing values.\n<br />[/*]\n<br />[*]Host snapshot revisions, deduplication, reservations, refunds and stale-state rejection protect queued actions. Both PC ends must update; this is not a claim of completed live multiplayer acceptance.\n<br />[/*]\n<br />[/list]\n<br />\n<br />The previous 1.5.0 menu and transaction repairs are also included: native world map, scrolling/backpack pages, duplicate collection protection, attribute safeguards, old-output migration, indoor processing and explicit network requests. Existing warehouse, queue, batch, receipt and pollution data are retained when upgrading from 1.5.0.\n<br />\n<br />\n<br />[size=4][b]Installation and compatibility[/b][/size]\n<br />\n<br />Install [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]. Quit the game, extract GarbageRecycler into Stardew Valley/Mods and replace only this mod's folder. Launch through SMAPI. Lookup Anything is optional for the monitor's F1 machine reference. Coastal Fishery is optional and remains independent: move trash between their inventories yourself. The PC package contains no Android files, config, test probes, SMAPI DLL or game assets.\n<br />\n<br />\n<br />Validation includes independent native prepared scenes, full new test-save save/title/load, an actual 1.5.0 test-save upgrade, vanilla overnight processing and single-process host/client transport fixtures. It does not certify real player saves, physical controllers, split-screen, actual two-client/disconnect play, Android, natural progression or long-term balance. Native screenshots are prepared Windows test scenes.\n<br />\n<br />\n<br />[b]AI disclosure[/b]: Development and bilingual page copy used generative AI. Original mod identity and the existing machine artwork are retained. SMAPI and Stardew Valley are separate requirements and are not included. Existing page permissions continue to apply.\n<br />\n<br />\n<br />[size=5][b]中文：垃圾回收机 PC 1.6.0[/b][/size]\n<br />\n<br />水上机每日用鱼饵打捞垃圾，陆地机烧木材/煤把垃圾变成资源，监测站用原版世界地图远程管理。垃圾从沿岸渔业工作站领出后，仍由玩家手动搬到这台独立回收机。\n<br />\n<br />\n<br />[b]1.6.0主要更新[/b]：拆机按来源返还燃料，旧点数/半煤用售价0的回收燃料保留；鱼塘、传奇与任务钓获不替换；没有开始治理的水域保持原版钓鱼，部署或使用滤芯才启用治理；监测站遵守原版解锁，旧锁区机器仍可带库存回收；接入原版实际分钟和跨夜预算，同日读档不重复打捞；满24格但可合堆时继续工作，实际入库才扣饵；新增右上角指南并缓存菜单排版。\n<br />\n<br />\n<br />[b]用料和生产[/b]：水上机30木材+2铜锭+1精炼石英（钓鱼4）；陆地机3铜锭+25石头+5煤（采矿4）；滤芯15纤维+1精炼石英（钓鱼2，减10污染）；高效滤网2铜锭+2布+1精炼石英（钓鱼6，打捞翻倍）；监测站1电池组+5铜锭+2精炼石英（采矿6）。木材1点、煤2点，每批最多10件垃圾用1点，耗时10游戏分钟。布70%、电池20%等原回收概率不变。完整治理阈值、操作和限制见上文及包内README。\n<br />\n<br />\n<br />[b]安装与边界[/b]：退出游戏后覆盖Mods/GarbageRecycler，通过SMAPI启动。本文件为PC1.6.0，手机仍是独立1.5.0-mobile.1；不要把PC包装到手机，也不与旧手机版混用联机。保留旧库存、队列、批次、收据和污染。独立新档保存重载、原1.5.0测试档升级、真实原版跨夜与单进程网络夹具已检查；未载入玩家存档，真实双客户端、Android、手柄与长期平衡尚未验收。\n<br />\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/50833",
-	"Version": "1.4.7",
-	"Updated": "2026-08-23T17:33:21+00:00",
+	"Version": "1.6.0",
+	"Updated": "2026-10-13T16:06:37+00:00",
 	"Downloads": [
 		{
-			"Id": 179862,
+			"Id": 186606,
 			"Type": "Main",
-			"DisplayName": "GarbageRecycler 1.4.7",
-			"FileName": "72/a1/e1/72a1e1c5-4400-4981-a9fb-a4b617380d7d",
-			"Version": "1.4.7",
-			"SizeInBytes": 94944,
-			"Uploaded": "2026-08-23T17:33:21+00:00",
+			"DisplayName": "GarbageRecycler PC 1.6.0",
+			"FileName": "d5/08/04/d508042c-5142-49e5-965f-e7c5272b8ec6",
+			"Description": "Windows PC release; extract the GarbageRecycler folder into Mods. Requires SMAPI. English and Chinese. See the page and included README for setup and limitations.",
+			"Version": "1.6.0",
+			"SizeInBytes": 97203,
+			"Uploaded": "2026-10-13T16:06:37+00:00",
 			"Mods": [
 				{
 					"Id": "Claude.GarbageRecycler",
 					"DisplayName": "Garbage Recycler",
 					"Type": "Smapi",
+					"RelativePath": "GarbageRecycler",
 					"Manifest": {
 						"Name": "Garbage Recycler",
 						"Description": "新增两种垃圾回收机：水上垃圾回收机像蟹笼一样放在水域自动打捞垃圾（带水域总览地图 UI），陆地垃圾回收机烧煤/木头把垃圾回收成资源。",
 						"Author": "Claude",
-						"Version": "1.4.7",
+						"Version": "1.6.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "GarbageRecycler.dll",
 						"Dependencies": [],
@@ -35,7 +37,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342566550,
+				"Uid": 5596342573294,
 				"CategoryId": 1,
 				"Primary": true
 			}

@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54831,
+	"Name": "Slingshot Bombs",
+	"Author": "wind0nd",
+	"Description": "[size=5]Slingshot Bombs[/size]\n<br />[size=5]Aim. Release. BOOM.[/size]\n<br />Your sword wants a break. Your pickaxe can stay in your backpack. Your slingshot has a new job.\n<br />Turn your ordinary slingshot into a bomb launcher and bring a little explosive problem-solving to your next mining trip.\n<br />Rocks in the way? [b]Bomb them.[/b]\n<br />Monsters closing in? [b]Bomb them too.[/b]\n<br />Rocks AND monsters? [b]Now you're getting it.[/b]\n<br />Stop constantly switching between your weapon and your pickaxe. Load up on bombs, pick your landing spot, and blast your way through the Mines and Skull Cavern.\n<br />[b]One slingshot. Plenty of bombs. A very satisfying amount of BOOM.[/b]\n<br />---\n<br />[size=4]What Does This Mod Do?[/size]\n<br />Slingshot Bombs lets you load Cherry Bombs, Bombs, and Mega Bombs into a Slingshot or Master Slingshot and launch them toward your mouse cursor.\n<br />Instead of walking up to place a bomb, you can deliver it from a distance—with a landing spot locked in when you release the shot.\n<br />The mod can also optionally take over vanilla Explosive Ammo, giving it the same charge-and-release targeting system.\n<br />This is a bomb-launching playstyle, not a source of free explosives. Every successful shot consumes one item from your loaded ammo stack.\n<br />Bring supplies. The explosions are only as endless as your bomb budget.\n<br />[size=4]Features[/size]\n<br />- Three launchable bomb types: Cherry Bombs, Bombs, and Mega Bombs.\n<br />- Works with both normally obtainable slingshots: Slingshot and Master Slingshot.\n<br />- Mouse-targeted shots: your destination is locked when you fire.\n<br />- Explode on arrival: bombs detonate when they reach the target or hit a configured obstacle.\n<br />- Charge, then release: deliberate shots instead of automatic rapid fire.\n<br />- No wasted ammo from an early release: releasing before the minimum charge time cancels the shot without consuming a bomb.\n<br />- An audible ready cue: a sound plays once when the minimum charge requirement is met.\n<br />- Charge for speed, not extra damage: longer charging increases flight speed without increasing damage or blast radius.\n<br />- Per-ammo customization: adjust blast radius, flight speed, monster damage, and charge-time overrides.\n<br />- Optional Explosive Ammo override: leave vanilla Explosive Ammo alone if you prefer.\n<br />- Optional Generic Mod Config Menu integration: adjust settings in-game, or edit `config.json` directly.\n<br />[size=4]How to Play[/size]\n<br />1. Load a supported bomb into your Slingshot or Master Slingshot, just as you would load normal ammo.\n<br />2. Aim with your mouse.\n<br />3. Hold to charge.\n<br />4. Listen for the ready sound.\n<br />5. Release to fire.\n<br />6. Enjoy the explosion—and preferably avoid standing in it.\n<br />The default minimum charge time is 0.1 seconds, with full flight speed reached after 1 second of charging.\n<br />Each release fires one shot. Holding the button does not continuously fire bombs.\n<br />[size=4]Combat and Mining, Together[/size]\n<br />Your bomb launcher can clear breakable rocks and ore nodes while damaging nearby monsters, letting you spend less time swapping equipment and more time pushing deeper.\n<br />Want a lighter, more controlled blast? Load Cherry Bombs.\n<br />Need more coverage? Bring Bombs.\n<br />Prefer a louder answer? Mega Bombs are waiting.\n<br />This is not a promise that every obstacle or enemy can be solved with one explosion. Normal game restrictions, special enemy behavior, and other mods can still affect the result.\n<br />[size=4]Damage and Balance[/size]\n<br />Monster damage always uses this mod's custom damage settings. Each supported ammo type has its own configurable value.\n<br />Player self-damage is controlled separately:\n<br />- Enable Use vanilla player explosion damage to let the game's explosion method handle player damage.\n<br />- Disable it to use the configured Custom player damage instead.\n<br />- Disable Allow self-damage if you do not want this mod to apply explosion damage to the shooter.\n<br />Vanilla player explosion damage currently requires terrain effects to be enabled.\n<br />Bomb damage is determined by the ammo settings. This mod does not add an extra damage multiplier for using the Master Slingshot.\n<br />The custom damage defaults are mod balance values—not a claim to reproduce every vanilla bomb or Explosive Ammo damage calculation.\n<br />[size=4]Obstacles and Terrain[/size]\n<br />By default:\n<br />- Walls and detected buildings stop the projectile and trigger an explosion.\n<br />- Trees do not stop it unless you enable that option.\n<br />- Rocks, ore nodes, crops, and characters do not block its flight.\n<br />Touching a monster does not automatically detonate the projectile. Aim at the spot where you want the explosion to happen.\n<br />With terrain effects enabled, the mod calls the game's native explosion method for environmental effects. It does not implement its own separate system for protecting crops, preserving machines, or rewriting obstacle destruction.\n<br />Watch where you aim. Your farm is not a firing range.\n<br />[size=4]Configuration[/size]\n<br />Customize the experience through Generic Mod Config Menu or `config.json`:\n<br />- Enable or disable the mod.\n<br />- Enable or disable the Explosive Ammo override.\n<br />- Set minimum and full-speed charge times.\n<br />- Choose whether walls or trees stop shots.\n<br />- Snap targets to tile centers.\n<br />- Enable or disable terrain effects.\n<br />- Configure player self-damage.\n<br />- Choose vanilla or custom player damage.\n<br />- Adjust each ammo type's explosion radius.\n<br />- Set minimum and maximum projectile speeds.\n<br />- Set custom monster and player damage.\n<br />- Give individual ammo types their own charge times.\n<br />- Enable debug logging for troubleshooting.\n<br />[size=4]Requirements and Installation[/size]\n<br />Required\n<br />- Stardew Valley 1.6.15\n<br />- SMAPI\n<br />Optional\n<br />- Generic Mod Config Menu, for in-game settings.\n<br />Installation\n<br />1. Install SMAPI.\n<br />2. Download and extract Slingshot Bombs into your `Mods` folder.\n<br />3. Make sure the mod's `manifest.json` and DLL are inside its own folder.\n<br />4. Launch the game through SMAPI.\n<br />Developed and tested in a Windows single-player environment using Stardew Valley 1.6.15 and SMAPI 4.5.2.\n<br />[size=4]Compatibility and Limitations[/size]\n<br />-\u00A0 Multiplayer has not been tested.\n<br />- Mouse aiming only. Controller aiming is not supported.\n<br />- Other slingshot mods may conflict with loading, charging, or firing.\n<br />- Other bomb mods may alter terrain destruction, protection, or damage.\n<br />- Calling the native explosion method does not guarantee compatibility with every bomb-related mod.\n<br />- No broad cross-mod compatibility guarantee is currently provided.\n<br />If you encounter unexpected behavior, test with only this mod and its requirements enabled first.\n<br />Experimental Release\n<br />This is an experimental early release.\n<br />Back up your save before testing, especially before using explosives around crops, machines, buildings, or other valuable objects.\n<br />For bug reports, please include:\n<br />- Your Stardew Valley and SMAPI versions.\n<br />- Your SMAPI log.\n<br />- The ammo and slingshot you were using.\n<br />- Relevant configuration settings.\n<br />- Other slingshot or bomb mods installed.\n<br />- What happened and what you expected to happen.\n<br />---\n<br />[b]Less tool swapping. More explosions.[/b]\n<br />[b]Stock up. Take aim. Make the mines considerably less quiet.[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54831",
+	"Version": "0.1.0",
+	"Updated": "2026-10-30T13:38:01+00:00",
+	"Downloads": [
+		{
+			"Id": 189270,
+			"Type": "Main",
+			"DisplayName": "Slingshot Bombs",
+			"FileName": "02/68/0e/02680e2d-7864-4d46-b16b-c48790c41edd",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 34477,
+			"Uploaded": "2026-10-30T13:38:01+00:00",
+			"Mods": [
+				{
+					"Id": "Monica.SlingshotBombs",
+					"DisplayName": "Slingshot Bombs - Targeted Shots",
+					"Type": "Smapi",
+					"RelativePath": "SlingshotBombs",
+					"Manifest": {
+						"Name": "Slingshot Bombs - Targeted Shots",
+						"Description": "Experimental single-player targeted bomb ammunition with configurable charging, speed, radius and damage.",
+						"Author": "Monica",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "SlingshotBombs.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Monica.SlingshotBombs"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575958,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441519,
+		"UploaderId": 102642923,
+		"CategoryId": 15,
+		"Adult": false
+	}
+}

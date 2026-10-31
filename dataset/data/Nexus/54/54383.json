@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54383,
+	"Name": "Set Date",
+	"Author": "258112zjy",
+	"Description": "Set Date\n<br />Pick any future day on the game's own calendar and wake up on it after sleeping.\n<br />[heading]Description[/heading]\n<br />Press [b]C[/b] to open the calendar. Click a day, sleep, and the days in between pass for real: the game's own new-day routine runs once per skipped day, so crops grow, tappers fill, machines finish, an auto-petter keeps raising animal friendship, animals produce, mail arrives, weather is rolled, quests tick down and the shipping bin settles exactly as if you had slept through them. Cross a season boundary and out-of-season crops wilt, the same as a normal night.\n<br />It is the same as clicking through the sleep screen N times, with one shortcut: only the [b]last[/b] day writes a save. Everything else the new day does still runs, so a 10-day jump takes a few seconds instead of ten save-and-reload cycles. Set \n<br />[code]FastForwardSaves[/code]to \n<br />[code]false[/code]in \n<br />[code]config.json[/code]if you would rather have one save per day - slower, but you can quit in the middle of a long jump without losing the days already passed.\n<br />One consequence worth knowing: crops only advance on days they were watered, the same as normal sleeping. With sprinklers or rain they keep growing through the jump; without either, they stall.\n<br />[b]Festivals and birthdays[/b] behave: the day you land on is a normal day, so you can still attend a festival or hand out a birthday gift. Anything the jump walks [i]over[/i] is genuinely missed - the calendar shows how many festivals and birthdays sit inside the skipped window before you commit, and which one is waiting on the landing day.\n<br />Only future dates can be picked - you cannot rewind, because the game does not store enough state to rebuild past days correctly.\n<br />[heading]Installation instructions[/heading]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] 4.0 or newer.[/*]\n<br />[*]Unzip the \n<br />[code]SetDate[/code]folder into \n<br />[code]Stardew Valley/Mods[/code].[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][b]Generic Mod Config Menu is recommended.[/b] It is optional, but with it you can rebind the key and switch the interface language from the title screen instead of editing \n<br />[code]config.json[/code]by hand.\n<br />[heading]Language[/heading]\n<br />English by default, with a full Chinese translation. Set \n<br />[code]Language[/code]to \n<br />[code]auto[/code], \n<br />[code]en[/code]or \n<br />[code]zh[/code]- in Generic Mod Config Menu, or in \n<br />[code]config.json[/code]. \n<br />[code]auto[/code]follows the game's own language; the other two force it.\n<br />[heading]Main features[/heading]\n<br />[list]\n<br />[*]The page is the vanilla billboard calendar, so the layout should already be familiar[/*]\n<br />[*][b]Grey[/b] days are in the past and cannot be selected[/*]\n<br />[*][b]Blue frame[/b] is today, [b]green frame[/b] is the day you have set[/*]\n<br />[*]Hovering a day shows the festival or birthday that falls on it, including villagers the vanilla calendar keeps hidden until you meet them[/*]\n<br />[*]Festival icons and villager portraits are the same sprites the game uses[/*]\n<br />[/list][heading]Keys[/heading]\n<br />[list]\n<br />[*][b]C[/b] - open / close the calendar[/*]\n<br />[*][b]Esc[/b] - close[/*]\n<br />[*]Left click - pick a day (click it again to cancel)[/*]\n<br />[*][b]&lt;[/b] / [b]&gt;[/b] - previous / next season[/*]\n<br />[/list]All of it can be rebound in \n<br />[code]config.json[/code], or through Generic Mod Config Menu.\n<br />[heading]Notes[/heading]\n<br />[list]\n<br />[*]Works in single player, and for the host in multiplayer. Farmhands cannot change the date[/*]\n<br />[*]In multiplayer the host drives the whole jump; farmhands follow through the game's own new-day sync and [b]do not need this mod installed[/b]. Each day still waits for every farmhand to be ready, the same as a normal night, and every day is saved there because the clients wait on the host's save flag[/*]\n<br />[*]The selection is cleared when you return to the title screen[/*]\n<br />[*]No save data is touched beyond advancing the date, so removing the mod is safe[/*]\n<br />[*]Only three Harmony patches, all for the jump: the new-day coroutine, the game's day-started hook, and the save screen[/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list]\n<br />[*]Stardew Valley 1.6.x[/*]\n<br />[*]SMAPI 4.0 or newer[/*]\n<br />[*]Recommended: Generic Mod Config Menu - rebind keys and switch language in game[/*]\n<br />[/list][heading]Edge cases[/heading]\n<br />If the date you set lands on a festival, the festival happens - that is the point. If it lands on a day the game has already scripted (a wedding, a cutscene), the game's own rules still win.\n<br />[heading]Part of a set[/heading]\n<br />This is the lightweight calendar-only version. [b]Cheat Panel[/b] bundles the same date jump with items, friendship, warping and the clock in one panel; [b]Quick Warp[/b] and [b]Time &amp; Weather[/b] are the other two standalone ones. All four ship with different hotkeys, so you can install any of them side by side.\n<br />[heading]Already running Cheat Panel?[/heading]\n<br />Its [b]Date[/b] tab does exactly the same thing, so you do not need this mod as well. If you install both anyway, set the date in one menu or the other - setting it in both before sleeping will jump the calendar twice, because the two mods do not share state.\n<br />[heading]Shout outs[/heading]\n<br />[list]\n<br />[*][b]Pathoschild[/b] for SMAPI[/*]\n<br />[*][b]Andreas Pardeike[/b] for Harmony[/*]\n<br />[*]The Stardew Valley modding wiki, for the calendar and new-day internals this relies on[/*]\n<br />[/list][line]\n<br />[heading]中文说明[/heading]\n<br />按 [b]C[/b] 打开游戏原版日历，挑任意未来的日子，睡一觉醒来就是那天。\n<br />[list]\n<br />[*]安装：装好 SMAPI 4.0+，把 \n<br />[code]SetDate[/code]文件夹解压到 \n<br />[code]Stardew Valley/Mods[/code]，用 SMAPI 启动游戏。[/*]\n<br />[*]界面语言：默认跟随游戏语言，也可以在 GMCM 里把「语言」设成中文或 English，不用改文件。[/*]\n<br />[*]热键：[b]C[/b] 开关日历，[b]Esc[/b] 关闭，点一下选日期、再点一下取消，[b]&lt;[/b] / [b]&gt;[/b] 切换季节。[/*]\n<br />[*]跳日期等于连续睡 N 觉：游戏自己的新一天流程一天一天真跑一遍。作物生长、树液收集器、机器完成、抚摸机加好感、动物产出、信件送达、天气抽取、任务倒计时、售货箱结算全都照常推进，跨季时不该当季的作物照样枯掉。[/*]\n<br />[*]只有最后一天写盘，所以跳 10 天是几秒的事，不是存 10 次档。想要每天存档，把 \n<br />[code]FastForwardSaves[/code]关掉（慢一些，但跳到一半退出不会丢进度）。[/*]\n<br />[*]作物照样只在浇过水的日子推进，跟平时睡觉一样。有洒水器或下雨就能一路长过去，都没有就会停。[/*]\n<br />[*]节日和生日：落地那天照常能参加节日、照常能送礼；被跳过去的那几天里的会真的错过，日历上会先告诉你有几个。[/*]\n<br />[*]跳日期全程只有一次黑屏：以前每跳一天就闪一下，现在整段跳转压在同一个黑屏后面，黑屏上有「第 N / 共 M 天」和进度条，能看出来还在跑、不是卡死。跳的过程中如果弹出选职业的菜单，黑屏会让开让你选，选完自动继续。[/*]\n<br />[*]过去的日期选不了，因为游戏没存够状态去重建过去的日子。[/*]\n<br />[*]多人游戏里只有房主能改日期，房主一个人驱动整个跳转，其他人跟着游戏自己的新一天同步走，[b]客户端不用装这个 mod[/b]。每一天照样等所有人准备好，跟平时睡觉一样。回到标题界面会清掉已选的日期。[/*]\n<br />[*]装了 [b]Cheat Panel[/b] 的话，它的 Date 标签页功能完全一样，不用再装这个；两个都装就在一边设日期，两边都设会跳两次。[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54383",
+	"Version": "1",
+	"Updated": "2026-10-23T18:49:55+00:00",
+	"Downloads": [
+		{
+			"Id": 188151,
+			"Type": "Main",
+			"DisplayName": "SetDate 1.0.0",
+			"FileName": "40/57/93/40579318-5f8f-4733-ab90-64e98b4d5f34",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 22956,
+			"Uploaded": "2026-10-23T18:49:55+00:00",
+			"Mods": [
+				{
+					"Id": "sanyy.SetDate",
+					"DisplayName": "Set Date",
+					"Type": "Smapi",
+					"RelativePath": "SetDate",
+					"Manifest": {
+						"Name": "Set Date",
+						"Description": "Pick any future day on the game's own calendar and wake up on it after sleeping. Festivals, mail and villager schedules still run normally.",
+						"Author": "sanyy",
+						"Version": "1.2.2",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SetDate.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "sanyy.SetDate"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574839,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441071,
+		"UploaderId": 229249695,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

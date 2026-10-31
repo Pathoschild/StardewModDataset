@@ -3,20 +3,20 @@
 	"Id": 46075,
 	"Name": "Katsuki Bakugo from My Hero Academia NPC Mod",
 	"Author": "emkabonbonka",
-	"Description": "This is the initial release of my Katsuki Bakugo NPC mod.\n<br />\n<br />Katsuki currently lives and works at the Blacksmith. He can be befriended, dated, married, and appears at several festivals. He has custom dialogue, heart events, gift tastes, dating dialogue, marriage dialogue, and festival dialogue.\n<br />\n<br />This is my first release, so there may still be bugs or missing polish. Please let me know if you find any issues. If anyone is good at making spouse rooms, lmk :').\n<br />\n<br />Art by Juneisal",
+	"Description": "[heading]Version 1.1.0 Marriage &amp; Bug Fix Update[/heading]\n<br />This update focuses on improving Katsuki's marriage behavior, fixing reported issues, and expanding his daily routines.\n<br />Fixes\n<br />[list]\n<br />[*]Fixed bouquet acceptance and engagement dialogue.[/*]\n<br />[*]Fixed missing marriage dialogue entries.[/*]\n<br />[*]Fixed Katsuki becoming stuck during his commute after marriage.[/*]\n<br />[*]Added a workaround for farmhouse scheduling issues.[/*]\n<br />[*]Fixed an incorrectly positioned heart event.[/*]\n<br />[/list]Improvements\n<br />[list]\n<br />[*]Added an updated marriage schedule.[/*]\n<br />[*]Katsuki now continues working at Clint's after marriage.[/*]\n<br />[*]Added visits to the Saloon and Mountain.[/*]\n<br />[*]Sunday is now his day off![/*]\n<br />[*]Expanded marriage dialogue and location-specific interactions.[/*]\n<br />[/list]\n<br />[b]Known Quirks Marriage Schedule[/b]\n<br />[b]Katsuki may suddenly teleport away from his spouse patio on workdays. This is intentional behavior with the current workaround![/b]\n<br />Stardew Valley sometimes places him in the spouse patio area instead of starting his work schedule. To prevent him from getting stuck there all day, the included marriage fix automatically relocates him to Clint's Blacksmith when necessary.\n<br />This may look like Katsuki suddenly disappearing from the patio, but don't worry he's just being sent to work! \uD83D\uDCA5\n<br />He has Sundays off, so the workday rescue won't activate then.\n<br />\n<br />Important\n<br />This version includes a SMAPI companion mod required for the marriage pathing fixes. Please install both included mod folders.\n<br />[b]Requirements:[/b] SMAPI and Content Patcher.\n<br />\n<br />\n<br />Thank you for playing and for reporting issues! ❤️",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/46075",
-	"Version": "1.0.0.",
-	"Updated": "2026-05-11T09:40:44+00:00",
+	"Version": "1.1.0",
+	"Updated": "2026-10-26T14:45:36+00:00",
 	"Downloads": [
 		{
-			"Id": 167181,
+			"Id": 188515,
 			"Type": "Main",
 			"DisplayName": "KatsukiNPC",
-			"FileName": "KatsukiNPC-46075-1-0-0--1778492444.zip",
+			"FileName": "28/77/1e/28771e73-e543-4466-adad-ea698596004c",
 			"Description": "",
-			"Version": "1.0.0.",
-			"SizeInBytes": 54485,
-			"Uploaded": "2026-05-11T09:40:44+00:00",
+			"Version": "1.1.0",
+			"SizeInBytes": 55283,
+			"Uploaded": "2026-10-25T18:32:17+00:00",
 			"Mods": [
 				{
 					"Id": "emkabonbonka.KatsukiBakugoNPC",
@@ -27,7 +27,7 @@
 						"Name": "Katsuki Bakugo NPC",
 						"Description": "Adds Katsuki Bakugo as a custom NPC who works and lives at the Blacksmith.",
 						"Author": "emkabonbonka",
-						"Version": "1.0.0",
+						"Version": "1.0.1",
 						"ContentPackFor": {
 							"UniqueId": "Pathoschild.ContentPatcher"
 						},
@@ -40,7 +40,46 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342553869,
+				"Uid": 5596342575203,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 188673,
+			"Type": "Main",
+			"DisplayName": "KatsukiMarriageFix",
+			"FileName": "74/7a/2f/747a2f91-6952-421c-83ba-6ec5ef43a9d0",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 13638,
+			"Uploaded": "2026-10-26T14:45:36+00:00",
+			"Mods": [
+				{
+					"Id": "emkabonbonka.KatsukiMarriageFix",
+					"DisplayName": "Katsuki Marriage Fix",
+					"Type": "Smapi",
+					"RelativePath": "KatsukiMarriageFix",
+					"Manifest": {
+						"Name": "Katsuki Marriage Fix",
+						"Description": "SMAPI companion fix for KB_Katsuki spouse schedule transitions on Stardew Valley 1.6.15.",
+						"Author": "emkabonbonka",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "KatsukiMarriageFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "emkabonbonka.KatsukiBakugoNPC",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "emkabonbonka.KatsukiMarriageFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575361,
 				"CategoryId": 1,
 				"Primary": false
 			}

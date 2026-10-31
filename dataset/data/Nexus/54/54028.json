@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54028,
+	"Name": "Dungeon Chest Spawner",
+	"Author": "aisan0425",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />\n<br />【 以下のファイル名は、各ダンジョンに出現するチェストの報酬を設定するファイル名です。 】\n<br />\n<br />・「 loot_mines.json 」 … 普通の鉱山\n<br />・「 loot_danger_mines.json 」 … Qiクエストで出現する鉱山\n<br />・「\u00A0loot_skull.json 」 … ドクロのダンジョン\n<br />・「\u00A0loot_danger_skull.json 」 … Qiクエストで出現するドクロのダンジョン\n<br />・「\u00A0loot_volcano.json 」 … ジンジャー島の火山のダンジョン\n<br />\n<br />\n<br />【 loot.jsonファイルの設定例 】\u00A0 ※ loot_mines.json 普通の鉱山 の場合 ※\n<br />\n<br />[\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"Comment\": \"1～39階: 銅鉱石 (100%)\",\u00A0 \u00A0 ←\u00A0 コメント。報酬のアイテム名などを入力しておくと分かりやすいです。\n<br />\u00A0 \u00A0 \"ItemId\": \"(O)378\",\u00A0 \u00A0← 報酬として入手できるアイテムのID。 \"(O)オブジェクト\" 以外にも \"(BC)ビッグクラフトテーブル\" なども指定できます。\n<br />\u00A0 \u00A0 \"MinLevel\": 1,\u00A0 ← このアイテム報酬が出現するフロアの最低値です。\n<br />\u00A0 \u00A0 \"MaxLevel\": 39,\u00A0 ← このアイテムが出現するフロアの最高値です。\n<br />\u00A0 \u00A0 \"DropChance\": 1.0,\u00A0 ← このアイテム報酬の出現率です。\u00A0 「1」で100%、 「0.5」で50%、 「0.01」なら1%、 「0.005」なら0.5% になります。\n<br />\u00A0 \u00A0 \"MinAmount\": 5,\u00A0 ← 報酬として手に入るアイテムの最低数です。\n<br />\u00A0 \u00A0 \"MaxAmount\": 15\u00A0 ← 報酬として手に入るアイテムの最大数です。\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"Comment\": \"40～79階: 鉄鉱石 (100%)\",\n<br />\u00A0 \u00A0 \"ItemId\": \"(O)380\",\n<br />\u00A0 \u00A0 \"MinLevel\": 40,\n<br />\u00A0 \u00A0 \"MaxLevel\": 79,\n<br />\u00A0 \u00A0 \"DropChance\": 1.0,\n<br />\u00A0 \u00A0 \"MinAmount\": 5,\n<br />\u00A0 \u00A0 \"MaxAmount\": 15\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"Comment\": \"80～120階: 金鉱石 (100%)\",\n<br />\u00A0 \u00A0 \"ItemId\": \"(O)384\",\n<br />\u00A0 \u00A0 \"MinLevel\": 80,\n<br />\u00A0 \u00A0 \"MaxLevel\": 120,\n<br />\u00A0 \u00A0 \"DropChance\": 1.0,\n<br />\u00A0 \u00A0 \"MinAmount\": 5,\n<br />\u00A0 \u00A0 \"MaxAmount\": 15\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"Comment\": \"全階層共通: アメシストの指輪 (25%)\",\n<br />\u00A0 \u00A0 \"ItemId\": \"(O)529\",\n<br />\u00A0 \u00A0 \"MinLevel\": 1,\n<br />\u00A0 \u00A0 \"MaxLevel\": 120,\n<br />\u00A0 \u00A0 \"DropChance\": 0.25,\n<br />\u00A0 \u00A0 \"MinAmount\": 1,\n<br />\u00A0 \u00A0 \"MaxAmount\": 1\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"Comment\": \"全階層共通: 爆弾 (40%)\",\n<br />\u00A0 \u00A0 \"ItemId\": \"(O)287\",\n<br />\u00A0 \u00A0 \"MinLevel\": 1,\n<br />\u00A0 \u00A0 \"MaxLevel\": 120,\n<br />\u00A0 \u00A0 \"DropChance\": 0.4,\n<br />\u00A0 \u00A0 \"MinAmount\": 1,\n<br />\u00A0 \u00A0 \"MaxAmount\": 4\n<br />\u00A0 },\n<br />\u00A0 {\n<br />\u00A0 \u00A0 \"Comment\": \"全階層共通: レインボージェム (3%)\",\n<br />\u00A0 \u00A0 \"ItemId\": \"(O)74\",\n<br />\u00A0 \u00A0 \"MinLevel\": 1,\n<br />\u00A0 \u00A0 \"MaxLevel\": 120,\n<br />\u00A0 \u00A0 \"DropChance\": 0.03,\n<br />\u00A0 \u00A0 \"MinAmount\": 1,\n<br />\u00A0 \u00A0 \"MaxAmount\": 1\n<br />\u00A0 }\n<br />]\n<br />\n<br />\n<br />\n<br />【 config.json ファイルの設定 】\u00A0 \u00A0※ GMCMでも設定可能 ※\n<br />\n<br />\n<br />{\n<br />\u00A0 \"ChestSpawnChance\": 1.0,\u00A0 ← 次のフロアに進んだ際に、チェストが出現する確率。 デフォルトでは 100% です。\n<br />\u00A0 \"MaxChestsPerFloor\": 5,\u00A0 ← 1フロアに出現するチェストの最大個数です。この場合、1～5個の数でスポーンします。\n<br />\u00A0 \"PlaySoundEffect\": true,\u00A0 ← チェストが出現したフロアに到達したときに、専用の効果音を鳴らすかどうか。 無しにする場合は \"false\"\n<br />\u00A0 \"ShowMessage\": true,\u00A0 ←\u00A0 チェストが出現したフロアに到達したときに、画面左の方にポップアップを表示するかどうか。 無しの場合は \"false\"\n<br />\u00A0 \"AllowChestPickup\": true\u00A0 ← チェストに隣接しながら「ツールを使用する」ボタンを押したとき、そのチェストを回収するかどうか。 無効にする場合は \"false\"\n<br />}\n<br />\n<br />\n<br />【 このＭＯＤの仕様について 】\n<br />\n<br />・報酬が入ったチェストは、フロアに入る度に何度でも復活します。\n<br />\n<br />・武器を振ったり農具を使用するボタンをチェストに隣接している状態で押すと、チェストの画面を開くことなくチェストが壊れ、\n<br />\u00A0 中身のアイテムが床に散らばります。\n<br />\n<br />・ドクロのダンジョンの報酬アイテムの設定は現状、1階 ～999階 まで可能です。 ( Qiクエストのダンジョンも同様 )\n<br />\n<br />・\"ItemId\": \"(O)GoldCoin\",\u00A0 と記述すると、1つにつき 250G を入手できるアイテムも設定できます。\n<br />\n<br />\n<br />【 このMODの設定ファイルを配布する際の注意事項 】\n<br />※このMODで設定した以下のファイル設定は、自由に配布可能です。\n<br />※自身の設定した、以下のjson形式のファイルが付属してあるかどうかご確認ください。\n<br />\n<br />\n<br />・config.json\n<br />・loot_danger_mines.json\n<br />・loot_danger_skull.json\n<br />・loot_mines.json\n<br />・loot_skull.json\n<br />・loot_volcano.json\n<br />\n<br />\n<br />これらの6つのファイルを、ファイルの解凍後\n<br />このMOD (\u00A0Dungeon Chest Spawner ) のファイル内に、すべて上書き保存してください。\n<br />\n<br />といった説明を、配布する際に追記していただければ分かりやすいかと思います。\n<br />\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />\n<br />[u]・ [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config[/url]\u00A0を 導入してください。\n<br />[/u]・本ModをDL、解凍してください。\n<br />・Stardew Valley の\u00A0Modsフォルダ内に、解凍したMODファイルを入れてください。\n<br />・タイトル画面のGMCMメニューまたは、ゲーム内のGMCMメニューでお好みの設定をしてください。\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[size=3][color=#D4D4D8]Describe the core features of your mod[/color][/size]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />\n<br />・Stardew Valley 1.6.15\n<br />・SMAPI 4.5.2\n<br />・ [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config[/url]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[size=3][color=#D4D4D8]Say thanks to anyone who inspired or helped you.[/color][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54028",
+	"Version": "1",
+	"Updated": "2026-10-17T09:42:03+00:00",
+	"Downloads": [
+		{
+			"Id": 187173,
+			"Type": "Main",
+			"DisplayName": "DungeonChestSpawner",
+			"FileName": "ae/81/df/ae81dff3-5e10-499d-ad1d-ba26c910194e",
+			"Description": "MODの本体です。",
+			"Version": "1",
+			"SizeInBytes": 23201,
+			"Uploaded": "2026-10-17T09:42:03+00:00",
+			"Mods": [
+				{
+					"Id": "YourName.DungeonChestSpawner",
+					"DisplayName": "Dungeon Chest Spawner",
+					"Type": "Smapi",
+					"RelativePath": "DungeonChestSpawner - β版",
+					"Manifest": {
+						"Name": "Dungeon Chest Spawner",
+						"Description": "鉱山の新しい階層に入ったときにランダムで宝箱を出現させます。",
+						"Author": "YourName",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DungeonChestSpawner.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YourName.DungeonChestSpawner"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573861,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440716,
+		"UploaderId": 167555518,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 53993,
+	"Name": "Junimatic Portal Workers",
+	"Author": "PassionFruit0001",
+	"AuthorLabel": "Luke - PassionFruit0001",
+	"Description": "Junimatic Portal Workers 1.0.0\n<br />\n<br />An independent add-on for Junimatic by NermNermNerm. Each active portal can have at most one worker, including multiple workers of the same profession on the same map.\n<br />\n<br />FEATURES\n<br />All six Junimatic professions are supported, with their original unlock requirements. Task searches, original pathfinding, profession colors, machine reservations, raisin speed boosts and villager/scare rules remain in Junimatic.\n<br />Visible workers and off-screen automation both use portal slots. All professions share each portal's one-action budget per original background scheduling pulse. Temporary background networks exclude machines assigned to a live worker, so another portal cannot take that worker's machine.\n<br />Workers fetching raisins or returning home occupy their portal until they disappear. New workers receive unique NPC names so farmhouse duplicate-name cleanup does not remove same-profession workers.\n<br />No idle workers are spawned merely to reach a number: valid floor paths, available machines, ingredients, chest capacity and original work rules still apply. Abandoned portals do not count.\n<br />\n<br />REQUIREMENTS AND INSTALLATION\n<br />SMAPI 4.5.2 or later, and EXACTLY Junimatic 2.1.6. Other Junimatic versions disable this add-on with an explanation. Built against Stardew Valley 1.6.15 for x64 Windows/Linux.\n<br />Exit the game. Extract JunimaticPortalWorkers into Mods, alongside the original Junimatic folder. KEEP BOTH. Launch through SMAPI. Automatic operation; no config options or Generic Mod Config Menu entry.\n<br />Original Junimatic: https://www.nexusmods.com/stardewvalley/mods/22672\n<br />SMAPI: https://smapi.io/\n<br />\n<br />CHECKING IT\n<br />Connect two active portals, a stocked chest and at least two machines with jobs using normal Junimatic floor/path rules. Allow the next scheduling interval; each free portal can send a worker to a different machine. Also check background progress after leaving and returning to the map.\n<br />Run jpw_check in the SMAPI console to see portals, workers per portal and overlapping machine reservations. Attach the complete SMAPI-latest.txt to a GitHub issue if something fails. Remove only this add-on folder after exiting to restore normal Junimatic scheduling.\n<br />\n<br />VALIDATION LIMITS\n<br />Original delivery passed a Release build with zero warnings/errors, 47 core tests and 50 real Junimatic DLL contract checks. Actual Steam Deck gameplay and multiplayer behavior have NOT yet been confirmed. Those offline checks are not an in-game test. The delivered DLL is unchanged in this publication.\n<br />\n<br />SOURCE, LICENSE AND CREDITS\n<br />Source and issues: https://github.com/passionfruitfruit/junimatic-portal-workers\n<br />MIT, copyright Luke. Junimatic and its original planning/pathfinding are by NermNermNerm: https://github.com/NermNermNerm/Junimatic\n<br />This is an independent add-on, not an official Junimatic release. No original Junimatic, Stardew Valley, SMAPI or Harmony DLLs are redistributed. Code and documentation were developed with substantial AI assistance from the requesting player's requirements. The cover is a utility illustration, not an in-game screenshot.\n<br />\n<br />中文说明\n<br />每个活跃祝尼莫传送门最多同时一个工作者，全部六种职业都生效；保留原规划、寻路与葡萄干规则，后台任务会避开动态工作者已领取的机器。必须保留原 Junimatic 2.1.6，把本补丁文件夹一同放进 Mods。正在取葡萄干或返回的工作者仍然占位，没有可做的工作时不会强行生成。控制台 jpw_check 可检查状态。当前通过了离线检查，尚需游戏内确认。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53993",
+	"Version": "1.0.0",
+	"Updated": "2026-10-16T15:34:26+00:00",
+	"Downloads": [
+		{
+			"Id": 187055,
+			"Type": "Main",
+			"DisplayName": "Junimatic Portal Workers 1.0.0",
+			"FileName": "5b/ae/29/5bae29fc-843a-496e-a10b-0762f70ec40b",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 17212,
+			"Uploaded": "2026-10-16T15:34:26+00:00",
+			"Mods": [
+				{
+					"Id": "Luke.JunimaticPortalWorkers",
+					"DisplayName": "Junimatic Portal Workers",
+					"Type": "Smapi",
+					"RelativePath": "JunimaticPortalWorkers",
+					"Manifest": {
+						"Name": "Junimatic Portal Workers",
+						"Description": "One Junimatic worker per active portal, using Junimatic's original planning and pathfinding.",
+						"Author": "Luke",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "JunimaticPortalWorkers.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "NermNermNerm.Junimatic",
+								"MinimumVersion": "2.1.6",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:passionfruitfruit/junimatic-portal-workers"
+						],
+						"UniqueId": "Luke.JunimaticPortalWorkers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573743,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440681,
+		"UploaderId": 222025584,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"Site": "Nexus",
+	"Id": 54739,
+	"Name": "Friendship Indicator",
+	"Author": "zacky2015",
+	"AuthorLabel": "Zach Kingcade",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Indicated to the player when their friendship with an NPC changes at all. Either in the form of a number above the NPCS head if they are on the current map or a message in the chat if they are not.[/color]\n<br />\n<br />[color=#D4D4D8][b]AI was not used in the programming of this mod.[/b][/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[size=3][color=#D4D4D8]1. Download the zip file.\u00A0[/color][/size]\n<br />[size=3][color=#D4D4D8]2. Unzip it.[/color][/size]\n<br />[size=3][color=#D4D4D8]3. Drop it in SMAPI's mods folder[/color][/size]\n<br />[size=3][color=#D4D4D8]Enjoy![/color][/size]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Whenever friendship is gained or lost it is indicated to the player in one of two ways:[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8]NPC is on current map -&gt; +/- and green/red text above their heads[/color][/*]\n<br />[*][color=#D4D4D8]NPC is not on current map -&gt; a chat message in the in game chat log[/color][/*]\n<br />[/list][/*]\n<br />[*][color=#D4D4D8]Whenever a player meets a new npc is message is read out in the in-game chat log, even if the npc is on the current map.[/color][/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8]Requires SMAPI 4.0.0+[/color]\n<br />Optionally is designed to be compatible with\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu (GMCM)[/url]\n<br />\n<br />\n<br />[b]Configuration (highly Configurable)\u00A0[/b]\n<br />{\n<br />\u00A0 \"enableChatAlerts\": true, //Enables friendship change notifications in the in-game chat\n<br />\u00A0 \"enableNpcAlerts\": true,\u00A0 //Enables floating friendship change notifications above nearby NPCs.\n<br />\u00A0 \"enableLossAlerts\": true,\u00A0 //Enables notifications when friendship points are lost.\n<br />\u00A0 \"showSignOnNpcAlerts\": true,\u00A0 //Displays a +/- sign before floating friendship values.\n<br />\u00A0 \"alwaysChatAlert\": false,\u00A0 // Also displays chat notifications when friendship changes with NPCs in the current location.\n<br />\u00A0 \"minimumChangeChatAlerts\": 0,\u00A0 // Minimum number of friendship points gained or lost required to trigger a chat notification.\n<br />\u00A0 \"minimumChangeNpcAlerts\": 0,\u00A0 // Minimum number of friendship points gained or lost required to trigger a floating NPC notification.\n<br />\u00A0 \"npcAlertDurationInSeconds\": 2.0,\u00A0 // How long floating notifications remain visible, in seconds.\n<br />\u00A0 \"npcAlertDistanceToFloatInPixels\": 100.0,\u00A0 // How far floating notifications travel upward, in pixels.\n<br />\u00A0 \"npcAlertPercentageStartFade\": 20,\u00A0 // Percentage of the notification's lifetime before it begins fading.\n<br />\u00A0 \n<br />\u00A0 //--------------------------------------------------\n<br />\u00A0 // ADVANCED SETTINGS\n<br />\u00A0 //--------------------------------------------------\n<br />\u00A0 \"gainedString\": \"gained\",\u00A0 //Word used to describe friendship gains.\n<br />\u00A0 \"lossString\": \"lost\",\u00A0 //Word used to describe friendship losses. \n<br />\u00A0 // Default Message \"Player has gained 20 friendship with Abigail!\"\n<br />\u00A0 \"gainedChatAlertPrePlayersNameText\": \"\",\u00A0 //Text displayed before the player's name in friendship gain messages.\n<br />\u00A0 \"gainedChatAlertBeforeDifferenceText\": \" has \",\u00A0 //Text between the player's name and the word describing a friendship gain.\n<br />\u00A0 \"gainedChatAlertInbetweenDifferenceAndNpcNameText\": \" friendship with \",\u00A0 //Text between the gained friendship amount and the NPC's name.\n<br />\u00A0 \"gainedChatAlertAfterNpcNameText\": \"!\",\u00A0 //Text displayed after the NPC's name in friendship gain messages.\n<br />\u00A0 \u00A0 // Default Message \"Player has lost 20 friendship with Abigail!\"\n<br />\u00A0 \"lossChatAlertPrePlayersNameText\": \"\",\u00A0 //Text displayed before the player's name in friendship loss messages.\n<br />\u00A0 \"lossChatAlertBeforeDifferenceText\": \" has \",\u00A0 //Text between the player's name and the word describing a friendship loss.\n<br />\u00A0 \"lossChatAlertInbetweenDifferenceAndNpcNameText\": \" friendship with \",\u00A0 //Text between the lost friendship amount and the NPC's name.\n<br />\u00A0 \"lossChatAlertAfterNpcNameText\": \"!\",\u00A0 //Text displayed after the NPC's name in friendship loss messages.\n<br />\u00A0 // Default none\n<br />\u00A0 \"gainedNpcAlertIPreText\": \"\",\u00A0 //Custom text displayed before a floating friendship gain value.\n<br />\u00A0 \"gainedNpcAlertIPostText\": \"\",\u00A0 //Custom text displayed after a floating friendship gain value.\n<br />\u00A0 //Default none\n<br />\u00A0 \"lossNpcAlertIPreText\": \"\",\u00A0 //Custom text displayed before a floating friendship loss value.\n<br />\u00A0 \"lossNpcAlertIPostText\": \"\",\u00A0 //Custom text displayed after a floating friendship loss value.\n<br />\u00A0 //Default Message \"Player has met Abigail!\"\n<br />\u00A0 \"metChatAlertPrePlayersNameText\": \"\",\u00A0 //Text displayed before the player's name when meeting a new NPC.\n<br />\u00A0 \"metChatAlertBetweenNamesText\": \" has met \",\u00A0 //Text displayed between the player's name and the newly met NPC's name.\n<br />\u00A0 \"metChatAlertAfterNpcNameText\": \"!\"\u00A0 //Text displayed after the newly met NPC's name.\n<br />}",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54739",
+	"Version": "1.1.0",
+	"Updated": "2026-10-28T21:07:57+00:00",
+	"Downloads": [
+		{
+			"Id": 188982,
+			"Type": "Main",
+			"DisplayName": "FriendshipIndicator 1.1.0",
+			"FileName": "32/e7/78/32e778e5-7d89-498e-8ce7-aa4013b3b91f",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 24306,
+			"Uploaded": "2026-10-28T21:07:57+00:00",
+			"Mods": [
+				{
+					"Id": "ZachKingcade.FriendshipIndicator",
+					"DisplayName": "Friendship Indicator",
+					"Type": "Smapi",
+					"RelativePath": "FriendshipIndicator",
+					"Manifest": {
+						"Name": "Friendship Indicator",
+						"Description": "Indicates to the player when their friendship with an NPC changes at all. Either in the form of a number above the NPCS head if they are on the current map or a message in the chat if they are not.",
+						"Author": "Zachary Kingcade",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FriendshipIndicator.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "ZachKingcade.FriendshipIndicator"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575670,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441427,
+		"UploaderId": 7648982,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

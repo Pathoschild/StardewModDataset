@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 53830,
+	"Name": "Gamepad Slot Fix",
+	"Author": "neoiw",
+	"Description": "[size=6][b][color=#2E75B6]Gamepad Slot Fix[/color][/b][/size]\n<br />\n<br />[b][color=#808080]Nexus #（53830）\u00A0 ·\u00A0 Version 1.1.0\u00A0 ·\u00A0 by BraveTurtle\u00A0 ·\u00A0 Stardew Valley 1.6+ / SMAPI 4.0.0+\u00A0 ·\u00A0 Windows[/color][/b]\n<br />\n<br />[line]\n<br />[center][/center]\n<br />\n<br />[center][size=3]Controller plugged in but dead — or in split-screen only the second pad works? That is a phantom device holding a player slot.[/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b][color=#2E75B6]English[/color][/b][/size]\n<br />\n<br />[size=4][b][color=#7030A0]▸ What it fixes[/color][/b][/size]\n<br />[list]\n<br />[*][size=3]A pad that is plugged in but ignored until you unplug and replug it.[/size][/*]\n<br />[*][size=3]Split-screen where the main-screen player has no input while player 2 plays fine.[/size][/*]\n<br />[*][size=3]Cheap 1-to-2 / composite HID receivers exposing extra devices with no stick and no D-pad — they no longer grab a player slot.[/size][/*]\n<br />[*][size=3]Which player gets which pad changing when you use a different USB port or plug them in a different order.[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ What it does[/color][/b][/size]\n<br />[list]\n<br />[*][size=3][b]Device ledger:[/b] every launch lists each controller's stick / D-pad / button counts and judges it usable or not — in the SMAPI log, so you can check it yourself.[/size][/*]\n<br />[*][size=3][b]Rebuilds the player slot table:[/b] slots are cleared and refilled with usable devices first, so slot 1 (main screen) always gets the first real pad.[/size][/*]\n<br />[*][size=3][b]Hot-plug aware:[/b] plugging or unplugging a pad re-checks the mapping instead of leaving a dead slot.[/size][/*]\n<br />[*][size=3][b]Manual assignment:[/b] pin a controller to player 1–4; device keys survive USB port changes and driver reinstalls.[/size][/*]\n<br />[*][size=3][b]Whitelist safety net:[/b] if a real pad is ever judged unusable, whitelist it and it is always used.[/size][/*]\n<br />[*][size=3][b]Fail open:[/b] every internal failure is caught and the original code path continues — a broken mod never stops you from playing.[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ In-game menu (GMCM, optional)[/color][/b][/size]\n<br />[list]\n<br />[*][size=3]Toggles for \"enable this mod\" and \"explain skipped devices in the log\".[/size][/*]\n<br />[*][size=3]Player 1–4 dropdowns listing the controllers found on this launch — no JSON editing.[/size][/*]\n<br />[*][size=3]Read-only ledger summary: how many devices were found, which were judged unusable.[/size][/*]\n<br />[*][size=3]Works with Generic Mod Config Menu 1.16.0; without GMCM everything still works through [font=courier]config.json[/font].[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ Install[/color][/b][/size]\n<br />[list=1]\n<br />[*][size=3]Install SMAPI 4.0.0 or newer (smapi.io).[/size][/*]\n<br />[*][size=3]Unzip the [font=courier]GamepadSlotFix[/font] folder into your [font=courier]Mods&#92;[/font] directory — it must contain [font=courier]manifest.json[/font] and [font=courier]GamepadSlotFix.dll[/font].[/size][/*]\n<br />[*][size=3]Start the game. [font=courier]config.json[/font] is created on first launch.[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ Verify it works[/color][/b][/size]\n<br />[size=3]Search the SMAPI log for [font=courier][GPADSLOT][/font]. A healthy launch ends with:[/size]\n<br />[code][GPADSLOT] devices=4\n<br />#0 key=VID_20BC&amp;PID_5500&amp;MI_02&amp;COL02 axes=0 buttons=24 hats=0 → SKIP\n<br />#1 key=VID_20BC&amp;PID_5500&amp;MI_02&amp;COL01 axes=0 buttons=3\u00A0 hats=0 → SKIP\n<br />#2 key=VID_20BC&amp;PID_5500&amp;MI_01\u00A0 \u00A0 \u00A0\u00A0 axes=6 buttons=15 hats=1 → USE\n<br />#3 key=VID_20BC&amp;PID_5500&amp;MI_00\u00A0 \u00A0 \u00A0\u00A0 axes=6 buttons=15 hats=1 → USE\n<br />[GPADSLOT] startup: GamePad 槽位表 before: count=4 keys=[0,1,2,3]；需要重建槽位=True\n<br />[GPADSLOT] 槽位重建 done: 释放=[0,1,2,3] 按计划补登记=[2,3] 槽位表 after: count=2 keys=[0,1][/code][size=3]After the rebuild the count should equal the number of real pads and the keys should start at 0 — slot 1 now holds a real controller.[/size]\n<br />\n<br />[size=4][b][color=#7030A0]▸ Notes &amp; safety[/color][/b][/size]\n<br />[list]\n<br />[*][size=3][b]No device, driver, registry or game-file changes; no save-file writes; no network access.[/b][/size][/*]\n<br />[*][size=3]Delete [font=courier]Mods&#92;GamepadSlotFix[/font] to revert completely.[/size][/*]\n<br />[*][size=3]Set [font=courier]EnableAutoFilter: false[/font] to keep the mod installed but inactive (no hooks at all).[/size][/*]\n<br />[*][size=3]Windows verified on real hardware (Stardew Valley 1.6.15, SMAPI 4.5.2); macOS/Linux unverified.[/size][/*]\n<br />[*][size=3]MIT licensed. Source code is in the source download.[/size][/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />\n<br />\n<br />[center][/center]\n<br />\n<br />[center][size=3]手柄插着却没反应，或者分屏里只有第二只手柄能用？那是伪设备占住了玩家槽位。[/size][/center]\n<br />\n<br />[size=4][b][color=#7030A0]▸ 它修什么[/color][/b][/size]\n<br />[list]\n<br />[*][size=3]手柄插着却被无视，非要拔插一次才认。[/size][/*]\n<br />[*][size=3]分屏下主屏玩家完全没有输入，第二只手柄却能正常玩。[/size][/*]\n<br />[*][size=3]便宜的一拖二／复合 HID 接收器多报出\"没有摇杆、没有十字键\"的伪设备 —— 它们不再抢走玩家槽位。[/size][/*]\n<br />[*][size=3]换 USB 口、或者插拔顺序一变，\"谁是谁\"就跟着变。[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ 它做什么[/color][/b][/size]\n<br />[list]\n<br />[*][size=3][b]设备台账：[/b]每次启动列出每只手柄的摇杆数/十字键数/按键数与判定结果，写进 SMAPI 日志，你可以自己核对。[/size][/*]\n<br />[*][size=3][b]重建玩家槽位表：[/b]先清空槽位，再按\"可用设备优先\"的顺序放回去 —— 第 1 号槽（主屏）永远给第一只真手柄。[/size][/*]\n<br />[*][size=3][b]热插拔也管：[/b]插拔后重新核对映射，而不是留下一个死槽位。[/size][/*]\n<br />[*][size=3][b]手动指定：[/b]可以把某只手柄钉给玩家 1~4；设备键是硬件标识，换 USB 口、重装驱动都不变。[/size][/*]\n<br />[*][size=3][b]白名单保险丝：[/b]万一真手柄被误判，加进白名单就永远可用。[/size][/*]\n<br />[*][size=3][b]失败即放行：[/b]任何内部异常都被捕获并放行原版流程 —— 模组出问题也不会让你玩不了游戏。[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ 游戏内菜单（GMCM，可选）[/color][/b][/size]\n<br />[list]\n<br />[*][size=3]两个开关：启用本模组、在日志里说明跳过了哪些设备。[/size][/*]\n<br />[*][size=3]玩家 1~4 下拉框：直接列出本次读到的设备键，不用手改 JSON。[/size][/*]\n<br />[*][size=3]只读台账摘要：本次识别到几台设备、哪几台被判为不可用。[/size][/*]\n<br />[*][size=3]支持 Generic Mod Config Menu 1.16.0；没装时 [font=courier]config.json[/font] 照常可用。[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ 安装[/color][/b][/size]\n<br />[list=1]\n<br />[*][size=3]先装 SMAPI 4.0.0 或更高（smapi.io）。[/size][/*]\n<br />[*][size=3]把 [font=courier]GamepadSlotFix[/font] 文件夹解压进 [font=courier]Mods&#92;[/font]，里面应有 [font=courier]manifest.json[/font] 与 [font=courier]GamepadSlotFix.dll[/font]。[/size][/*]\n<br />[*][size=3]启动游戏；首次运行会生成 [font=courier]config.json[/font]。[/size][/*]\n<br />[/list]\n<br />[size=4][b][color=#7030A0]▸ 怎么确认它在工作[/color][/b][/size]\n<br />[size=3]在 SMAPI 日志里搜 [font=courier][GPADSLOT][/font]，一次正常启动的关键几行长这样：[/size]\n<br />[code][GPADSLOT] devices=4\n<br />#0 key=VID_20BC&amp;PID_5500&amp;MI_02&amp;COL02 axes=0 buttons=24 hats=0 → SKIP\n<br />#1 key=VID_20BC&amp;PID_5500&amp;MI_02&amp;COL01 axes=0 buttons=3\u00A0 hats=0 → SKIP\n<br />#2 key=VID_20BC&amp;PID_5500&amp;MI_01\u00A0 \u00A0 \u00A0\u00A0 axes=6 buttons=15 hats=1 → USE\n<br />#3 key=VID_20BC&amp;PID_5500&amp;MI_00\u00A0 \u00A0 \u00A0\u00A0 axes=6 buttons=15 hats=1 → USE\n<br />[GPADSLOT] startup: GamePad 槽位表 before: count=4 keys=[0,1,2,3]；需要重建槽位=True\n<br />[GPADSLOT] 槽位重建 done: 释放=[0,1,2,3] 按计划补登记=[2,3] 槽位表 after: count=2 keys=[0,1][/code][size=3]重建之后 count 应等于真手柄数量、键从 0 起连续 —— 说明第 1 号槽已经是真手柄。[/size]\n<br />\n<br />[size=4][b][color=#7030A0]▸ 说明与安全[/color][/b][/size]\n<br />[list]\n<br />[*][size=3][b]不碰设备、不碰驱动、不碰注册表、不改游戏文件、不写存档、不联网。[/b][/size][/*]\n<br />[*][size=3]删掉 [font=courier]Mods&#92;GamepadSlotFix[/font] 即完全还原。[/size][/*]\n<br />[*][size=3]把 [font=courier]EnableAutoFilter[/font] 设为 [font=courier]false[/font] 可以保留模组但完全不生效（不安装任何钩子）。[/size][/*]\n<br />[*][size=3]已在 Windows 实机验证（星露谷 1.6.15、SMAPI 4.5.2）；macOS / Linux 未验证。[/size][/*]\n<br />[*][size=3]MIT 许可；源码在源码包里。[/size][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53830",
+	"Version": "1.1.0",
+	"Updated": "2026-10-13T09:17:51+00:00",
+	"Downloads": [
+		{
+			"Id": 186571,
+			"Type": "Main",
+			"DisplayName": "Gamepad Slot Fix 1.1.0",
+			"FileName": "e2/09/31/e2093119-dabe-402d-99f9-828094b15c2d",
+			"Description": "",
+			"Version": "1.1.0",
+			"SizeInBytes": 25439,
+			"Uploaded": "2026-10-13T09:17:51+00:00",
+			"Mods": [
+				{
+					"Id": "BraveTurtle.GamepadSlotFix",
+					"DisplayName": "Gamepad Slot Fix",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "Gamepad Slot Fix",
+						"Description": "Assigns game controllers to player slots by usability instead of enumeration order, and registers controllers at startup when the framework only registers them on hot-plug. Controllers with no analog stick and no D-pad (a common artifact of composite / 1-to-2 USB receivers) no longer take a player slot, and you can pin a device to a specific player from config.json. No device, driver or system change; delete the mod folder to fully revert.",
+						"Author": "BraveTurtle",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "GamepadSlotFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "BraveTurtle.GamepadSlotFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342573259,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440518,
+		"UploaderId": 293224724,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

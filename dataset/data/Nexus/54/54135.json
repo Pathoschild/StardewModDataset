@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 54135,
+	"Name": "Continuous Sprinklers",
+	"Author": "xyl114514",
+	"Description": "[b]Description[/b]\n<br />Vanilla sprinklers water once, at the start of the day, then sit idle. Till a new patch of soil at noon and you have to water it by hand.\n<br />\n<br />This mod keeps them running. Any tilled soil that appears inside a sprinkler's range is watered immediately - morning, afternoon, or 2 AM - and the sprinkler plays its usual animation while there is soil to water.\n<br />\n<br />Ranges come straight from the game, so basic, quality and iridium sprinklers cover exactly what they cover in vanilla, pressure nozzles included.\n<br />\n<br />If you would rather keep things closer to vanilla, you can tell it to skip rainy days (green rain included), or only run during set hours.\n<br />[b]Installation instructions[/b]\n<br />[list]\n<br />[*]Install SMAPI 4.0 or newer.[/*]\n<br />[*]Unzip the ContinuousSprinklers folder into your Stardew Valley/Mods folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]Generic Mod Config Menu is optional. Without it you can edit Mods/ContinuousSprinklers/config.json by hand.\n<br />To uninstall, delete the folder. Nothing is written to your save file.\n<br />\n<br />[b]Main features[/b]\n<br />[list]\n<br />[*]Watering that keeps up with you. Newly tilled soil is watered the moment it appears, whatever the hour.[/*]\n<br />[*]The vanilla effect, not a lookalike. The mod calls the game's own sprinkler animation, so it matches what you already know.[/*]\n<br />[*]Three effect modes. Always on, only when it waters something (with a duration you set), or off.[/*]\n<br />[*]The effect stops when the work stops. Clear the soil or pick the sprinkler up and the animation ends right there instead of finishing its loop.[/*]\n<br />[*]Optional water sound. Supports a wav file you supply, with distance falloff, volume and a cap on how many sprinklers play at once.[/*]\n<br />[*]Optional rainy-day idle. On rainy and green rain days the sprinklers do nothing at all, just like vanilla.[/*]\n<br />[*]Optional schedule. Pick a start and end time and the sprinklers stay idle outside that window. Overnight windows work too (for example 22:00 to 6:00).[/*]\n<br />[/list]Only two things are touched: the soil's watered state and the animation. Crop growth, quality, fertilizer, weather, seasons, prices and drops are all left alone. No game files are edited and no Harmony patches are applied.\n<br />\n<br />[b]Custom sound[/b]\n<br />No audio files are included. Taste in water sounds varies too much, and anything I picked you would probably replace anyway.\n<br />To use your own:\n<br />[list=1]\n<br />[*]Prepare a wav file that is 44,100 Hz, mono, and 16-bit PCM.[/*]\n<br />[*]Put it in Mods/ContinuousSprinklers/Audio/ (English filename).[/*]\n<br />[*]Restart the game, choose it under Sound file, then switch Sprinkler sound on.[/*]\n<br />[/list]The format matters. The game's audio engine is unreliable with anything other than 44.1 kHz mono 16-bit, and the usual symptom is the file loading fine and then playing nothing at all, with no error in the log.\n<br />Aim for 1.5 to 3 seconds with a 10 ms fade at both ends. The file loops, so a hard cut produces a click once per loop.\n<br />Converting is easy. In ocenaudio save as Linear PCM / 16-bit / no dither. In Audacity export as WAV with 16-bit PCM. With ffmpeg, run this in a terminal:\n<br />[code]ffmpeg -i input.mp3 -ac 1 -ar 44100 -acodec pcm_s16le output.wav[/code]\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*]Stardew Valley 1.6.15 or newer.[/*]\n<br />[*]SMAPI 4.0 or newer.[/*]\n<br />[*]Generic Mod Config Menu (optional, but the in-game settings are much easier).[/*]\n<br />[/list]\n<br />[b]Compatibility[/b]\n<br />[list]\n<br />[*]Multiplayer: the mod only acts on the host, so farmhand clients never fight over tile state. Install it on the host's side.[/*]\n<br />[*]Other sprinkler mods may conflict. Whichever writes the soil state last wins.[/*]\n<br />[*]Content packs are unaffected, since no assets are edited.[/*]\n<br />[/list]\n<br />[b]Shout outs[/b]\n<br />Thanks to Pathoschild for SMAPI, and to kittycatcasey for Generic Mod Config Menu.\n<br />If you run into anything odd, post the SMAPI log from smapi.io/log and mention your sprinkler tier and the mod's settings. That usually narrows it down in one reply.\n<br />Code was written with AI assistance; design, testing and all in-game tuning are my own.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54135",
+	"Version": "1.0.1",
+	"Updated": "2026-10-20T15:16:43+00:00",
+	"Downloads": [
+		{
+			"Id": 187629,
+			"Type": "Main",
+			"DisplayName": "Continuous Sprinklers 1.0.1",
+			"FileName": "d0/55/67/d05567ef-9f21-40c5-a7bc-b7c16c70480a",
+			"Description": "",
+			"Version": "1.0.1",
+			"SizeInBytes": 19987,
+			"Uploaded": "2026-10-20T15:16:43+00:00",
+			"Mods": [
+				{
+					"Id": "YG.ContinuousSprinklers",
+					"DisplayName": "全天候洒水器",
+					"Type": "Smapi",
+					"RelativePath": "ContinuousSprinklers",
+					"Manifest": {
+						"Name": "全天候洒水器",
+						"Description": "让洒水器全天候工作：范围内的耕地一出现就立刻浇灌，可选播放原版洒水特效，并支持你自己放入的水声。",
+						"Author": "YG",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ContinuousSprinklers.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:54135"
+						],
+						"UniqueId": "YG.ContinuousSprinklers"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574317,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440823,
+		"UploaderId": 186016089,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

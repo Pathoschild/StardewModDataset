@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 53861,
+	"Name": "Coastal Fishery",
+	"Author": "Aufhcegak",
+	"Description": "[b]PC 0.2.4 - the workstation page can no longer trap you (2026-10-22)[/b]\n<br />\n<br />[list]\n<br />[*]Fixed the workstation page getting stuck: opening it could leave the page impossible to close and impossible to quit, Esc did nothing, and the only way out was killing the game.\n<br />[*]Every exit path (close button, second close, Esc, controller B/Back, and the page's own invalid-state check) now goes through one fallback that also works when the page is buried under another menu or dialogue.\n<br />[*]A per-frame watchdog force-closes the page on a real Esc/B even if the window lost focus or an overlay swallowed the input, and a late \"return to station\" callback can no longer reopen it.\n<br />[*]Unchanged: closing the inventory still returns to the workstation stock page, closing that leaves the scene, and harvesting, rebaiting, sorting rules and Bait Mill progress are untouched.\n<br />[/list]\n<br />\n<br />[b]电脑版0.2.4：工作站页不会再卡住[/b]\n<br />\n<br />[list]\n<br />[*]修复打开工作站后关不掉、退出不了、ESC无效、只能强杀游戏的问题。\n<br />[*]关闭按钮、再按一次关闭、ESC、手柄B/Back、界面失效检测现在都走同一个兜底出口，即使页面被别的菜单或对话压住也能真正关闭。\n<br />[*]新增每帧看门狗：窗口失焦或被覆盖层吞掉输入时，真实ESC/B仍会强制关闭；关闭后15帧内不会被迟到的返回请求重新打开。\n<br />[*]保持不变：库存点关闭回工作站库存页，再关即退出场景；收笼、补饵、分拣规则和制饵进度都不受影响。\n<br />[/list]\n\n<br />\n\n<br />[b]PC 0.2.2 — rebaiting and readable menus[/b]\n<br />\n<br />[list]\n<br />[*]Fixed crab pots not receiving bait after the workstation inventory was closed. Collection and rebaiting now continue while the management page is open; editing the actual inventory pauses the station, and closing it resumes work.\n<br />[*]Hold bait and use the workstation to deposit it. If storage has limited room, the remaining bait stays in your backpack.\n<br />[*]Menu text now uses native font sizes. Long labels wrap, buttons adapt, and small windows have scrollable pages with fixed Inventory and Close controls.\n<br />[/list]\n<br />\n<br />[b]Install / update[/b]\n<br />Stardew Valley 1.6 and SMAPI 4.5.1+. Download the PC main file, extract the CoastalFishery folder into Mods, replace the previous version, then restart SMAPI. Existing workstations, 70-slot inventory, sorting settings and Bait Mill progress are retained. No extra mod dependency is required. The main download is the PC build.\n<br />\n<br />[b]电脑版0.2.2：补饵与界面修复[/b]\n<br />\n<br />[list]\n<br />[*]修复关闭工作站库存后，工作台有鱼饵但蟹笼不补饵的问题。打开管理页时继续收笼补饵；实际整理库存时暂停，关闭后恢复。\n<br />[*]手拿鱼饵使用工作台即可存入，空间不足时剩余鱼饵仍留在背包。\n<br />[*]正文、按钮和物品名改用原版自然字号；长文字换行、按钮自适应，短窗口正文可滚动，库存和关闭按钮固定可用。\n<br />[/list]\n<br />\n<br />[b]安装与更新[/b]\n<br />需要星露谷1.6与SMAPI4.5.1以上。下载PC主文件，把CoastalFishery文件夹放入Mods并替换旧版，再重启SMAPI。已有工作站、70格库存、分拣设置和制饵进度保留，无需重新制作。没有额外模组前置。主下载为电脑版。\n<br />\n<br />[b]About Coastal Fishery[/b]\n<br />\n<br />One coastal workstation collects and rebaits your crab pots across the current map. Manage a shared 70-slot inventory, keep per-species reserves, withdraw surplus to sell, and turn ordinary surplus catches into bait with an installed Bait Mill. English and Chinese.\n\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53861",
+	"Version": "0.2.4",
+	"Updated": "2026-10-22T15:39:32+00:00",
+	"Downloads": [
+		{
+			"Id": 187965,
+			"Type": "Main",
+			"DisplayName": "Coastal Fishery 0.2.4 - PC",
+			"FileName": "83/3b/67/833b678e-355e-4fbc-9410-676e93a28ecd",
+			"Description": "PC 0.2.4 - PC build, English and Chinese in-game text.<br />Fixes the workstation page that could not be closed (Esc did nothing, the game had to be killed). Version 0.2.4, Stardew Valley 1.6, SMAPI 4.5.1 or newer. No extra dependency.<br /><br />电脑版 0.2.4：修复工作站页关不掉、ESC无效、只能强杀游戏的问题。包含中英文游戏内文本，需要星露谷1.6与SMAPI4.5.1以上，无额外前置。",
+			"Version": "0.2.4",
+			"SizeInBytes": 82374,
+			"Uploaded": "2026-10-22T15:39:32+00:00",
+			"Mods": [
+				{
+					"Id": "xiepe.CoastalFishery",
+					"DisplayName": "Coastal Fishery - 沿岸渔业",
+					"Type": "Smapi",
+					"RelativePath": "CoastalFishery",
+					"Manifest": {
+						"Name": "Coastal Fishery - 沿岸渔业",
+						"Description": "沿岸工作站：同地点收笼补饵、统一库存与待售余量、内置渔获制饵。",
+						"Author": "xiepe",
+						"Version": "0.2.4",
+						"MinimumApiVersion": "4.5.1",
+						"EntryDll": "CoastalFishery.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "xiepe.CoastalFishery"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342574653,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342440549,
+		"UploaderId": 277653181,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

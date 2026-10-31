@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 54807,
+	"Name": "Seed Scatter",
+	"Author": "DarkRobon",
+	"Description": "[center][size=6][b]Seed Scatter[/b][/size]\n<br />[size=3]Hold. Charge. Scatter.[/size]\n<br />Plant seeds and spread fertilizer across a 3x3 or 5x5 patch with tool-style charging.\n<br />[/center]\n<br />\n<br />Equip your seeds or fertilizer, hold the usual button, and watch the highlighted area expand. Release to apply your held stack across the patch around your farmer.\n<br />\n<br />[color=#ff7700][size=4][b]Features[/b][/size][/color]\n<br />[list]\n<br />[*][b]Charge to choose your area.[/b] Reach 3x3 after half a second and 5x5 after one second by default.[/*]\n<br />[*][b]Seeds and fertilizer.[/b] Use the same controls for planting crops and applying fertilizer, including to existing crops when that fertilizer allows it.[/*]\n<br />[*][b]See your targets.[/b] Colored highlights show the placement preview and which tiles your current stack can cover.[/*]\n<br />[*][b]Move while charging.[/b] Reposition at a slower pace[/*]\n<br />[*][b]Partial stacks work.[/b] If you have fewer items than available spaces, the closest eligible tiles are filled first.[/*]\n<br />[*][b]Modded materials.[/b] Seeds and fertilizers registered through the normal game item system should work automatically, with no item ID list to configure.[/*]\n<br />[*][b]Adjustable charge times.[/b] Change both charge thresholds and toggle charge sounds in config.json.[/*]\n<br />[/list]\n<br />[color=#ff7700][size=4][b]How to use[/b][/size][/color]\n<br />[list=1]\n<br />[*]Select a stack of crop seeds or fertilizer in your hotbar.[/*]\n<br />[*]Hold your normal [b]Use Tool[/b] or [b]Action[/b] button. The mod follows your in-game bindings, including controller bindings.[/*]\n<br />[*]Hold for [b]0.5 seconds[/b] to select [b]3x3[/b], or [b]1 second[/b] to select [b]5x5[/b].[/*]\n<br />[*]Move into position if needed, then release the button to scatter.[/*]\n<br />[/list]\n<br />[b]Quick placement:[/b] Release before the first charge threshold to place a single one using normal targeting and reach. Placement happens when you release the button.\n<br />\n<br />[b]Cancel a charge:[/b] Press Escape or controller B, open a menu, change the selected item or hotbar slot, or leave the location. Losing focus, saving, and the end of the day also cancel charging.\n<br />\n<br />[b]Preview colors[/b]\n<br />[list]\n<br />[*][color=#66CC66]Green:[/color] Your held stack has an item allocated to this tile.[/*]\n<br />[*][color=#E6B84D]Gold:[/color] The placement preview accepts this tile, but your held stack does not have enough items to cover it.[/*]\n<br />[*][color=#DD7777]Red:[/color] The placement preview rejects this tile.[/*]\n<br />[/list]\n<br />[color=#ff7700][size=4][b]What can be scattered?[/b][/size][/color]\n<br />[b]Crop seeds:[/b] Plant on eligible empty tilled soil. Season and location restrictions still matter.\n<br />\n<br />[b]Fertilizer:[/b] Apply to eligible targets using that item's normal rules. Existing crops can receive fertilizer when its type and the crop's growth stage allow it. Garden pots and tree fertilizer follow their ordinary placement behavior.\n<br />\n<br />Only the selected stack is used. The mod does not pull extra items from other inventory slots or chests, and it does not mix seed or fertilizer types.\n<br />\n<br />Saplings and wild tree seeds keep their normal planting behavior. Charging is unavailable while seated, mounted, or unable to act normally.\n<br />\n<br />[color=#ff7700][size=4][b]Requirements[/b][/size][/color]\n<br />[list]\n<br />[*]Stardew Valley 1.6.[/*]\n<br />[*][url=https://smapi.io/]SMAPI[/url] [b]4.3.2 or newer[/b].[/*]\n<br />[/list]No additional mod dependency is required.\n<br />\n<br />[size=4][b][color=#ff7700]Installation[/color][/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI if you have not already.[/*]\n<br />[*]Download the main file and extract the [b]SeedScatter[/b] folder into your Stardew Valley [b]Mods[/b] folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list]The installed folder should contain SeedScatter.dll, manifest.json, and the i18n folder. The first launch creates config.json automatically.\n<br />\n<br />[b]Updating:[/b] Close the game and replace the files in your existing SeedScatter folder with the new download. Keep your config.json if you want to retain your settings.\n<br />\n<br />[b]Uninstalling:[/b] Close the game and remove the SeedScatter folder from Mods.\n<br />\n<br />[color=#ff7700][size=4][b]Configuration[/b][/size][/color]\n<br />After launching the mod once, close the game and open [b]Mods/SeedScatter/config.json[/b] in a text editor.\n<br />\n<br />[code]{\n<br />\u00A0 \"ThreeByThreeChargeMilliseconds\": 500,\n<br />\u00A0 \"FiveByFiveChargeMilliseconds\": 1000,\n<br />\u00A0 \"PlayChargeSounds\": true\n<br />}[/code][list]\n<br />[*][b]ThreeByThreeChargeMilliseconds:[/b] Time needed to reach 3x3. Default: 500 milliseconds.[/*]\n<br />[*][b]FiveByFiveChargeMilliseconds:[/b] Total time needed to reach 5x5. Default: 1000 milliseconds.[/*]\n<br />[*][b]PlayChargeSounds:[/b] Play a charge sound when the area expands. Default: true. Set to false to disable those cues.[/*]\n<br />[/list]One second is 1000 milliseconds. Keep the 5x5 threshold higher than the 3x3 threshold. Settings are edited through this file; an in-game configuration menu is not included.\n<br />\n<br />[color=#ff7700][size=4][b]Compatibility[/b][/size][/color]\n<br />Seed Scatter uses the original held item and its normal placement checks and actions. Data-registered modded crop seeds and fertilizers should work automatically, and custom item metadata is kept the same as well.\n<br />\n<br />Mods that implement planting through custom tools, unrelated item categories, or separate interactions may need an\u00A0integration patch. Mods that change input, movement, or farmer animation behavior can also affect the experience.\n<br />\n<br />The animations use the normal farmer renderer, so ordinary replacements for the farmer's textures, clothes, and appearance can continue to use their own assets. Animation overhauls that change the meaning or layout of farmer frames may need compatibility patches.\n<br />\n<br />[b]Multiplayer and split-screen:[/b] Should work, but I didn't test it, let me know if it does!\n<br />\n<br />[color=#ff7700][size=4][b]FAQ[/b][/size][/color]\n<br />[b]Do I need to buy a new tool or upgrade my hoe?[/b]\n<br />No. Hold an ordinary stack of crop seeds or fertilizer. Both charge sizes are available without an upgrade requirement.\n<br />\n<br />[b]What happens if I run out halfway through?[/b]\n<br />The mod stops when the held stack runs out. It uses the closest eligible tiles first and leaves the remaining spaces alone.\n<br />\n<br />[b]Can I hold the button to keep repeating?[/b]\n<br />Each scatter needs a hold and release. Another use cannot begin until the throw's final frame finishes.\u00A0\n<br />\n<br />[b]Why did a highlighted tile not get planted or fertilized?[/b]\n<br />The preview uses the game's usual item placement preview. Final season, location, fertilizer, or mod-specific rules can still reject an planting when you release. Rejected plantings don't consume the items.\n<br />\n<br />[b]Does this change crop growth or fertilizer strength?[/b]\n<br />No. It changes how you apply the held items. Their normal growth and fertilizer effects remain in place.\n<br />\n<br />[color=#ff7700][size=4][b]Bug reports[/b][/size][/color]\n<br />Please include your Stardew Valley version, Seed Scatter version, a [url=https://smapi.io/log]SMAPI log[/url], the item you were holding, and the steps needed to reproduce the issue. For a modded item, include the mod that adds it. For control issues, mention whether you used a mouse, keyboard, or controller.\n<br />\n<br />[color=#ff7700][size=4][b]Credits[/b][/size][/color]\n<br />Built with SMAPI and the game's existing farmer animation frames.\n<br />Credit to the SMAPI team and Concerned Ape for their vanilla farmer sprites.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54807",
+	"Version": "1.1.0",
+	"Updated": "2026-10-30T00:44:35+00:00",
+	"Downloads": [
+		{
+			"Id": 189194,
+			"Type": "Main",
+			"DisplayName": "SeedScatter 1.1.0",
+			"FileName": "17/67/50/17675063-6f75-4621-acb0-88d95232b870",
+			"Description": "Main file. Requires SMAPI 4.3.2 or newer. Extract the SeedScatter folder into Mods or use a mod manager.",
+			"Version": "1.1.0",
+			"SizeInBytes": 22101,
+			"Uploaded": "2026-10-30T00:44:35+00:00",
+			"Mods": [
+				{
+					"Id": "DarkRobon.SeedScatter",
+					"DisplayName": "Seed Scatter",
+					"Type": "Smapi",
+					"RelativePath": "SeedScatter",
+					"Manifest": {
+						"Name": "Seed Scatter",
+						"Description": "Hold seeds or fertilizer to charge a 3x3 or 5x5 area, then release to scatter.",
+						"Author": "DarkRobon",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "SeedScatter.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:54807"
+						],
+						"UniqueId": "DarkRobon.SeedScatter"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342575882,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441495,
+		"UploaderId": 8224263,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

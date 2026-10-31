@@ -1,0 +1,81 @@
+{
+	"Site": "ModDrop",
+	"Id": 1788530,
+	"Name": "Mortar SMAPI Bridge",
+	"Author": "AlbinoGeek",
+	"TagLine": "Lets the Mortar mod manager send SMAPI console commands to a running game over a private loopback socket. Installed by Mortar; adds no gameplay.",
+	"Description": "## Description\n**Mortar SMAPI Bridge** lets the [Mortar](https://github.com/Rethunk-Tech/mortar) mod manager send SMAPI console commands to a running Stardew Valley, so Mortar can reload or configure mods without you typing in the SMAPI console. It adds no gameplay and changes no game content.\n\n## Installation instructions\n- If you use Mortar, you do not need to download this: Mortar installs and updates it for you.\n- By hand: install SMAPI, then unzip the download into the game's `Mods` folder, so the `MortarSmapiBridge` folder sits inside it.\n\n## Main features\n- Runs the SMAPI console commands Mortar sends, exactly as if you typed them in the SMAPI console.\n- Optional stream overlay for OBS, off by default; it has its own token and no path to the command channel.\n- Listens on `127.0.0.1` only (never the network, never the internet), and every request needs a random token stored in a file only your user can read. It makes no outgoing connections.\n\n## Requirements\n- SMAPI 4.5.2 or a later 4.x. On SMAPI 5, or a 4.x whose internal console queue moved, the command channel stays off and logs a warning.\n- Stardew Valley 1.6.14 or later. The stream overlay runs on 1.6.14 up to, but not including, 1.7; on any other game version it stays off.\n\n## Shout outs\nBuilt on [SMAPI](https://smapi.io) by Pathoschild (LGPL-3.0), which is referenced, not redistributed.\nSource: [github.com/Rethunk-Tech/mortar-smapi-bridge](https://github.com/Rethunk-Tech/mortar-smapi-bridge) (AGPL-3.0).",
+	"PageUrl": "https://www.moddrop.com/stardew-valley/mods/1788530",
+	"Version": null,
+	"Updated": "2026-10-16T04:27:54.637+00:00",
+	"Downloads": [
+		{
+			"Id": 1811827,
+			"Type": "Main",
+			"DisplayName": "Mortar SMAPI Bridge",
+			"FileName": "Mortar SMAPI Bridge.zip",
+			"Description": "Mortar's companion mod for SMAPI, version 0.2.4. Mortar installs and updates it automatically; unzip it into Mods by hand only to drive SMAPI commands from your own tool.",
+			"Version": "0.2.4",
+			"SizeInBytes": 45118,
+			"Uploaded": "2026-10-16T03:21:01.327+00:00",
+			"Mods": [
+				{
+					"Id": "Rethunk.MortarSmapiBridge",
+					"DisplayName": "Mortar SMAPI Bridge",
+					"Type": "Smapi",
+					"RelativePath": "MortarSmapiBridge",
+					"Manifest": {
+						"Name": "Mortar SMAPI Bridge",
+						"Description": "Lets the Mortar mod manager send SMAPI console commands over a token-protected loopback socket. Installed by Mortar; not needed otherwise.",
+						"Author": "Rethunk",
+						"Version": "0.2.4",
+						"MinimumApiVersion": "4.5.2",
+						"MinimumGameVersion": "1.6.14",
+						"EntryDll": "MortarSmapiBridge.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"GitHub:Rethunk-Tech/mortar-smapi-bridge"
+						],
+						"UniqueId": "Rethunk.MortarSmapiBridge"
+					}
+				}
+			],
+			"OtherFields": {
+				"IsDeleted": false,
+				"IsHidden": false,
+				"IsDefault": true,
+				"IsOld": false,
+				"IsPreRelease": false,
+				"IsAlternative": false,
+				"ext": ".zip",
+				"group": 0,
+				"icons": {},
+				"md5Ex": "80a05af27cc548225e8f3deeae486c6d",
+				"md5In": "175e399f1c03e52d5a418e0e077b1cd5",
+				"patchNotes": "First release on ModDrop; matches the GitHub release v0.2.4.",
+				"scriptType": 0,
+				"sha256Ex": "5cdb7fbe11d93c0cbfb1b60fccc7c735f45ee0c73629c22bbb901e698b85277c",
+				"sha256In": "5c825cc18fdccb3306927b41c2db41fb5e11284d85e23824e68f195013438584"
+			}
+		}
+	],
+	"OtherFields": {
+		"DatePublished": 1792124874637,
+		"DateUpdated": 1792124858730,
+		"IsDeleted": false,
+		"IsPublished": true,
+		"IsUnlocked": false,
+		"Status": 0,
+		"dateCreated": 1792119847203,
+		"flags": 4,
+		"icons": {
+			"lgWide": "https://moddropstorage.blob.core.windows.net/modicons/mod/1788530/icon_large_wide",
+			"md": "https://moddropstorage.blob.core.windows.net/modicons/27/1788530/icon_normal",
+			"sm": "https://moddropstorage.blob.core.windows.net/modicons/27/1788530/icon_small",
+			"src": "https://moddropstorage.blob.core.windows.net/modicons/27/1788530/icon_original"
+		},
+		"isNoticeEnabled": false,
+		"isUploadedByAuthor": true,
+		"userID": 498764
+	}
+}

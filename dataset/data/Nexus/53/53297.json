@@ -1,0 +1,77 @@
+{
+	"Site": "Nexus",
+	"Id": 53297,
+	"Name": "Jin",
+	"Author": "houbeibei12",
+	"Description": "\n<br />帮助玩家处理农活，主动浇水收菜，喂养动物收集动物产品，收放蟹笼，前提是箱子里有对应的干草饵料，和收集动物产品的剪刀挤奶桶。\n<br />需要一提的是，金在白天浇水，晚上5点才会去喂养动物。\n<br />不需要好感度，第一年金就会送玩家四个小礼物，分别是春季的光辉戒指，夏季葡萄酒，秋季玫瑰仙子，冬季魔法糖冰棍。\n<br />满五心，玩家在家里添一张新床，就能开启同居，金会每天送一份食物给玩家。\n<br />好感度达到的时候，金会主动告白和求婚，婚后玩家得到金的婚戒，穿戴戒指可以随时召唤金，金会帮助玩家打怪和挖矿，收起戒指，金会回家。\n<br />离婚后金不再对玩家提供帮助，但是可以立马追求，由玩家告白和求婚，婚后恢复功能。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53297",
+	"Version": "1",
+	"Updated": "2026-10-03T15:34:20+00:00",
+	"Downloads": [
+		{
+			"Id": 185384,
+			"Type": "Main",
+			"DisplayName": "Jin   Mod V1.16.22",
+			"FileName": "a0/2e/58/a02e584e-71fe-4413-866f-daf63a97691d",
+			"Description": "",
+			"Version": "3",
+			"SizeInBytes": 3527474,
+			"Uploaded": "2026-10-03T15:34:20+00:00",
+			"Mods": [
+				{
+					"Id": "Jin.NPC.ContentPack",
+					"DisplayName": "(CP) Jin - 金",
+					"Type": "ContentPack",
+					"RelativePath": "Jin - 金\\[CP] Jin",
+					"Manifest": {
+						"Name": "(CP) Jin - 金",
+						"Description": "你的农场伙伴金 1.16.23：把金排进花舞节的节日名单 —— 此前他只加了 `Data/Festivals/spring24` 的对白（`Jin` / `Jin_Spouse`），一条站位数据都没有，所以**花舞节地图上根本没有他**。原版节日 NPC 的站位是这么来的：`set-up` 脚本里的 `loadActors Set-Up` / `MainEvent`（见 `Event.LoadActors`）会读**地图上名为 `Set-Up` / `MainEvent` 的图层** —— 砖块索引 ÷ 4 等于角色的 `Data/Characters` 里的 `FestivalVanillaActorIndex`、% 4 是朝向 —— 再加上节日数据里的 `<阶段>_additionalCharacters` 键。自定义 NPC 没有 `FestivalVanillaActorIndex`，只能走 `_additionalCharacters` 这条路，不写就不入场。现按 SVE / Ridgeside Village / East Scarp 同一套写法追加四条：`Set-Up_additionalCharacters`、`MainEvent_additionalCharacters`，以及第 2 年起用的 `_y2` 变体（游戏用 `TryGetFestivalDataForYear` 取年份对应的那一份，所以两年都得写），站位 `Jin 24 22 down`。坐标不是拍脑袋定的：拿 SVE 的 `Forest-SVE-FlowerFestival.tmx` 与 `Forest-SVE-FlowerFestival2.tmx`（SVE 用 Priority=Low 的 Load 整个替换了这两张节日地图）算 —— 先按原版 `GameLocation.isTilePassable` 的规则过一遍可走性（Back 层砖只要带 `Passable` 键就不通、Buildings 层砖既无 `Shadow` 也无 `Passable` 就不通），再用 `Set-Up` / `MainEvent` 图层的非空砖反推出**原版村民已占的格子**，取「两年 × 两个阶段都空着、四周还都有人」的格，最后跟 SVE / RSV / East Scarp 已经用掉的坐标做了去重 —— (24,22) 正好夹在原版村民 (23,22) 与 (25,22) 中间、朝下看着舞台。这样他那天会出现在观众席里、能被点到，也能接住既有的共舞邀请（接受台词与好感度门槛补丁 1.6.1 起就有了）。改的是 `content.json` 一个新增条目，其余一字未动。 1.16.24：补上署名与可选的依赖声明（纯 manifest，`content.json` 一个字节没动）。`Author` 之前是空串，SMAPI 的模组列表里会显示成「by 」、N 网包也因此匿名，现填为作者署名。另外把「站着眨眼」用到的 Content Patcher Animations 声明成**可选**依赖（`IsRequired: false`）：包里的 `AnimationFrameTime` / `AnimationFrameCount` 是那个扩展提供的字段、不属于 Content Patcher 本体，声明一下可以让玩家知道它的存在；没装的人也不会报错或变红字，只是贴图停在睁眼那一帧、不眨眼，所以标成可选而不是必需。 1.16.25：日程里写死的门口格子改到门口左侧两格（`Farm 131 20 2` → `Farm 129 20 2`，蜂蜜溪农场那 42 条全改）。**起因是个能卡住玩家的 bug**：`131 20` 正好是农舍门正下方那一格 —— 玩家进屋必须站上去的落点，而 NPC 是实体、不能被推开，金站上去就把门封死了。行为模组那边（1.8.8）已经把这格列为禁站区、选址也改成偏轴格，这里只是把数据里的同一处跟着纠正，免得日程和模组互相拉扯。另外补上 `UpdateKeys: [\"Nexus:53297\"]` —— 只写在这一份上：两个模组共用同一个 N 网页面，两边都写的话 SMAPI 会拿 JinCompanion 的版本号（1.8.x）去和页面上的 1.16.x 比，永远报「有更新」；让版本号与 zip 名一致的内容包当锚点才不会误报。",
+						"Author": "Houbeibei12",
+						"Version": "1.16.25",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.ContentPatcherAnimations",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:53297"
+						],
+						"UniqueId": "Jin.NPC.ContentPack"
+					}
+				},
+				{
+					"Id": "Jin.NPC.Companion",
+					"DisplayName": "(SMAPI) Jin Companion",
+					"Type": "Smapi",
+					"RelativePath": "Jin - 金\\[SMAPI] JinCompanion",
+					"Manifest": {
+						"Name": "(SMAPI) Jin Companion",
+						"Description": "你的农场伙伴金 1.8.6：节日/过场期间不再下地干活 —— 修「花舞节上找不到金」的另一半。内容包 1.16.23 把他排进了节日名单，但行为循环里 `DoFarmWork` 那一段没有 `Game1.eventUp` 判断：只要地里有要浇的水或要收的菜，它就会走到 `if (npc.currentLocation != farm) { warpCharacter(npc, farm, ...) }` 那一条，**把他从节日地图硬传回农场** —— 玩家在节上照样看不到人，而且日志里只会出现一条农场干活的记录，极难联想到是这里把他的位置抢走了。现在浇水/收菜整段加上 `!Game1.eventUp` 保护（`UpdateAnimalChores` 与 `EnsureJinNearHome` / `TryWaterPetBowl` 本来就有这句，只有这段漏了），节日与过场期间他老老实实待在节日地图上。只改 `src\\ModEntry.cs` 里 `OnUpdateTicked` 的一个条件。 1.8.7：补上署名（纯 manifest，代码与 dll 完全没动，发布的就是 1.8.6 那一份二进制）。`Author` 之前是空串，SMAPI 里显示成「by 」，现填为作者署名，与内容包一起打包发布。 1.8.8：两处 —— (一) 花舞节上金不再「杵在那里」：原版 `Event.setUpFestivalMainEvent()` 只给玩家（`farmer\\d`）做了「没有舞姿帧就用自己的走帧跳」的兜底，自定义 NPC 会被原样塞进贴图的 40-47 帧；原版村民那 8 格是舞蹈姿势，而金那 8 格是他的**背面行走**帧，于是他背对镜头僵在原地。新增 `src\\FlowerDanceAnimationPatch.cs`，在那个方法（最后一句是 `eventCommands = ParseCommands(rawFestivalData);`）的 postfix 里改写属于金的那几条 `showFrame` / `animate`，改用他自己的左侧行走行（`84 85 84 86`，与原版给玩家用的 `12 13 12 14` 同构）；`warp`（送上舞池）与 `positionOffset`（跟着音乐上下颠）原样保留，只在角色名恰好是 `Jin` 且帧号落在 40-47 时才动手。(二) 节日结束后他不再堵住农舍门：`GetHomeIdleTile()` 的候选表第一项原本就是 `(door.X, door.Y+1)` —— 门口正下方那格、玩家进屋的必经落点，第二项是门那格本身（玩家出屋的落点）；`AlignJinHomeAnchor()` 又把 `DefaultPosition` 设成同一格，节日结束时游戏把 NPC 送回默认位置，他正好落在门口，而 NPC 推不动 —— 玩家进不去屋。现在候选表改为门口两侧的偏轴格，新增 `IsFarmhouseDoorwayTile()`（门格 + 门前两格）作为禁站区：选址、闲逛落点都会避开，他若正站在禁站区（游戏刚把他送回来）会立刻被叫到旁边去，走不出去就闪过去。内容包 1.16.25 把日程里的同一格也改掉了。 1.8.9：花舞节舞姿修复·第二轮。1.8.8 选的 84 85 84 86（金的左侧行）帧本身合法、动画也确实在播（SMAPI 日志里舞段 21:45:24-21:46:10 正常跑完、零报错），但那三帧彼此只差一两个像素，玩家看到的就是「站在那里没跳」。更麻烦的是「节日结束后立绘变形不全」：原版 `AnimatedSprite.StopAnimation()` 为宽贴图准备了一段帧重映射 —— 64-155 帧 → `(f - f%列数) % 32 + 96`，金的贴图是 28 列，于是这个区间里任何一帧都会被砸进贴图第 4 行（杂物区，切出来放大看：f116 只有半个头）。节日一结束，任何一次 `Halt()` / `StopAnimation()`（寻路撞停、对白、节日收尾）都会把残留在 84-86 的帧重映射成 116 —— 立绘就残缺了。现在舞姿改成**正面 0 ↔ 背面 56 的转身舞**：两帧差了整整一个转身，想看不见都难；而且两帧都低于 64 —— 即使日后被 StopAnimation 重映射，走的也是安全分支（56→24、0→0，都是正面行的合法帧），再也不会产出杂物区的残帧。`FlowerDanceAnimationPatch.cs` 围绕这两个常量重写；`ModEntry` 新增 `FixDeformedIdleFrame()` 看门狗：每决策 tick 检查一次，他站着不动、身上没有动画、帧却落在第 4 行（112-139，正常行为永远到不了）时，按当前朝向复位 —— 平时走路撞停攒下的同类残帧也能一并治好。只改 `src\\FlowerDanceAnimationPatch.cs`（重写）与 `src\\ModEntry.cs`（OnUpdateTicked 加一次调用、新增 FixDeformedIdleFrame 方法），内容包一字未动。 1.8.10：日志降噪 —— 四条补丁确认横幅（花舞节补丁 / 花舞节舞姿补丁 / 点击对白补丁的「已生效」，以及花舞节当天的「舞姿指令改写 N 条」）从 Info 降为 Trace：SMAPI 控制台默认不显示 Trace，启动时不再刷屏，但 SMAPI-latest.txt 里仍查得到（排障不受影响）。安装失败 / 补丁出错的 Warn 保持原样，照样会在控制台报。只改 src 四处 LogLevel 与本 manifest，行为逻辑一字未动。",
+						"Author": "Houbeibei12",
+						"Version": "1.8.10",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "JinCompanion.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Jin.NPC.Companion"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342572072,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342439985,
+		"UploaderId": 222991761,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}
