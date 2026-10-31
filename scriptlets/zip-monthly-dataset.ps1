@@ -33,14 +33,13 @@ if (Test-Path $archivePath) {
 # -bt: show execution time stats
 # -mx7: compression level (7 = 'maximum')
 # a: add files to archive
-# -xr exclude files matching pattern
 Write-Host 'Zipping dataset...'
 Write-Host '------------------'
 $readme | & 'C:\Program Files\7-Zip\7z.exe' -bb -bt -mx7 a $archivePath '-siREADME.md'
 if ($LASTEXITCODE -ne 0) {
     throw "7-Zip failed with exit code $LASTEXITCODE."
 }
-& 'C:\Program Files\7-Zip\7z.exe' -bb -bt -mx7 '-xr!*.psd' '-xr!*.zip' '-xr!*.rar' '-xr!*.7z' a $archivePath `
+& 'C:\Program Files\7-Zip\7z.exe' -bb -bt -mx7 a $archivePath `
     (Join-Path $datasetPath data) `
     (Join-Path $datasetPath downloads) `
     (Join-Path $datasetPath indexes) `
