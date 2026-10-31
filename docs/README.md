@@ -16,6 +16,8 @@ graph].
   * [Stats](#stats)
   * [Reference data](#reference-data)
 * [Maintenance](#maintenance)
+  * [Scripts](#scripts)
+  * [Scriptlets](#scriptlets)
 * [See also](#see-also)
 
 ## Overview
@@ -274,6 +276,7 @@ file name                | contains
 `SMAPI DNS queries.json` | The number of DNS queries received by the SMAPI server domains each month, which serves as a rough indicator of player and mod author activity (since SMAPI doesn't collect telemetry).
 
 ## Maintenance
+### Scripts
 The `scripts` folder has the .NET solution used to update the dataset. It has two projects:
 
 - [`FetchMods`](../scripts/FetchMods/README.md) fetches and analyzes the latest mods from each site, and saves them to
@@ -290,6 +293,10 @@ dotnet run --project UpdateAggregates
 
 That will show the live progress as it proceeds:  
 ![](fetch-mods.png)
+
+### Scriptlets
+The `scriptlets` folder has tiny single-purpose scripts used to maintain the dataset; see the top of each file for more
+info.
 
 ## See also
 * [Mod dump][] (downloaded mod files)
