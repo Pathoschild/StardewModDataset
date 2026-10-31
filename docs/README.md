@@ -6,9 +6,10 @@ graph].
 * [Overview](#overview)
 * [Using this data](#using-this-data)
   * [In your code](#in-your-code)
-  * [Licensing](#licensing)
-  * [Versioning](#versioning)
   * [Data updates](#data-updates)
+  * [Versioning](#versioning)
+  * [Breaking changes](#breaking-changes)
+  * [Licensing](#licensing)
 * [Dataset](#dataset)
   * [Data](#data)
   * [Downloads](#downloads-1)
@@ -37,6 +38,9 @@ Some example tools using this data include:
 
 ## Using this data
 ### In your code
+> [!IMPORTANT]  
+> The SMAPI toolkit described below is added in the upcoming SMAPI 4.5.3.
+
 * If you're using C# and install [SMAPI][], the `smapi-internal/SMAPI.Toolkit.dll` assembly in your game folder includes
   the relevant data models. That lets you read a metadata file directly using `System.Text.Json`.
 
@@ -78,6 +82,39 @@ Some example tools using this data include:
 
 See [_dataset_](#dataset) for an explanation of the data in this repository.
 
+### Data updates
+Near the end of each month, the full dataset is updated in one new Git commit. You can see the previous months'
+snapshots in the Git history if you want to run historical analyses.
+
+The `nightly` branch has more frequent updates between each month (usually at least once per day), for cases where you
+need more recent data. This branch may be reset after each monthly snapshot; it's not a long-term archive of daily
+changes.
+
+### Versioning
+The dataset's structure, format, and [maintenance scripts](#maintenance) are versioned and tracked in the [changelog][].
+The [regular data updates](#data-updates) don't change the version number.
+
+The versioning applies to the monthly dataset on the `main` branch, not the `nightly` branch.
+
+### Breaking changes
+Breaking changes to the dataset's structure or format increment the major version (e.g. `1.3.0` → `2.0.0`). That
+includes deleting files, changing the folder structure, removing or renaming data fields, and changing a data field's
+format in a way likely to break tools. That does _not_ include adding new files or fields (so tools should configure
+their JSON parsers to skip unknown fields if applicable), or changes to the [maintenance scripts](#maintenance).
+
+Breaking changes are deliberately avoided when possible to minimize the need for third-party tool updates. The dataset
+is currently at `1.x.x`, so no breaking changes have ever been released so far.
+
+For automated tools which parse the dataset, you can optionally reference a Git tag to ensure breaking changes don't
+affect them. For example, reference the `v1` tag to get the latest monthly data that was published in the 1.x.x format.
+Note that:
+- The Git tags are only meant to avoid breaking tools temporarily until they're updated. When a new major version is
+  published, further data updates are only published for the newer version. Consider getting the latest date from a
+  `dataset/stats/*` file to detect when the tool stops receiving new data.
+- When using Git to fetch the dataset, you can use `git fetch --force --tags` to update the tag (since it's moved each
+  month).
+- The version tags only include the monthly update, not the `nightly` branch.
+
 ### Licensing
 This repository is dual-licensed under the [MIT license](../LICENSE) and [CC-BY-SA 4.0 license][]. You can use the data
 under either license. The data is publicly available with explicit permission from CurseForge, ModDrop, and Nexus Mods.
@@ -86,28 +123,6 @@ under either license. The data is publicly available with explicit permission fr
 > The `dataset/data` folder includes content authored by third parties (e.g. mod page descriptions). Where applicable,
 > that content remains the property of its respective copyright owners. This license doesn't apply to any such
 > copyrightable content from third parties.
-
-### Versioning
-> [!IMPORTANT]  
-> This section describes the versioning once 1.0.0 is released. The dataset may change without warning while it's in 0.x
-> alpha.
-
-The dataset's _structure and format_ are versioned and tracked in the [changelog](CHANGELOG.md). Breaking changes to
-that structure or format will increment the major version (e.g. `1.3.0` → `2.0.0`).
-
-For automated tools which parse the dataset, you can use the Git tags to avoid breaking changes. For example, reference
-the `v1` tag to get the latest data that was published in the 1.x.x format. Note that when a new major version is
-published, all later data updates are only published for the newer version. The Git tags are only intended to avoid
-breaking tools until they're updated.
-
-The dataset's [_data_ is updated regularly](#data-updates), but data updates don't change the version number.
-
-### Data updates
-Near the end of each month, the full dataset is updated in one new Git commit. You can see the previous months'
-snapshots in the Git history if you want to run historical analyses.
-
-The dataset might also be updated more often, but those intermediate updates are later merged into the end-of-month
-snapshot to minimize the repo size and make month-by-month analysis easier.
 
 ## Dataset
 The `dataset` folder has the actual dataset. This is comprised of four subfolders:
@@ -133,7 +148,7 @@ Nexus/            <-- mod site
       2400.json   <-- mod data
 ```
 
-Each file has metadata in JSON format (see also [_use in your code_](#use-in-your-code)). The fields are listed below.
+Each file has metadata in JSON format (see also [_in your code_](#in-your-code)). The fields are listed below.
 
 #### Mod page
 The top-level fields describe the _mod page_ (not the mod):
@@ -303,6 +318,9 @@ info.
 
 ## See also
 * [Mod dump][] (downloaded mod files)
+* [Changelog][]
+
+[changelog]: CHANGELOG.md
 
 [mod compatibility list]: https://smapi.io/mods
 [mod dependency graph]: https://stardew.button.gay/stats/dependencies
