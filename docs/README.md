@@ -43,10 +43,13 @@ Some example tools using this data include:
   For example:
   ```c#
   string dataPath = @"C:\source\StardewModData\dataset\data";
-  foreach (string filePath in Directory.GetFiles(dataPath, "*.json", SearchOption.AllDirectories))
+  foreach (string sitePath in Directory.GetDirectories(dataPath))
   {
-      using var fileStream = File.OpenRead(filePath);
-      var modPage = JsonSerializer.Deserialize<ModPageRecord>(fileStream);
+      foreach (string filePath in Directory.GetFiles(sitePath, "*.json", SearchOption.AllDirectories))
+      {
+          using var fileStream = File.OpenRead(filePath);
+          var modPage = JsonSerializer.Deserialize<ModPageRecord>(fileStream);
+      }
   }
   ```
 
