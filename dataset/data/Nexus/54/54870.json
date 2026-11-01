@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 54870,
+	"Name": "Valley Safety Net",
+	"Author": "dziendoberek2137",
+	"Description": "[size=5][b]Valley Safety Net[/b][/size]\n<br />\n<br />A small safety net for big modpacks. Valley Safety Net doesn't try to \"optimize everything\", because broad patches fight with other mods and cause the crashes they're meant to prevent. Instead, each feature targets one real problem that heavily modded games run into, and each one can be turned off.\n<br />\n<br />Developed and tested with 100 C# mods and 146 content packs, including Stardew Valley Expanded, Ridgeside Village and East Scarp.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />\n<br />[b]Daily save backups[/b]\n<br />When you're the host, your save is zipped at the start of every in-game day, and the newest 5 are kept (about 3 MB each). SMAPI's built-in backup only runs once per game launch, so if a save breaks two hours into a session, you'd normally lose the whole session. With this, you lose at most one day. Backups run in the background and don't slow down loading.\n<br />\n<br />[b]Error shield[/b]\n<br />When a single custom NPC or placed item is broken, it can throw an error on every frame. SMAPI then drops frames, and after enough errors in a row it shuts the game down. The error shield contains the error to that one NPC or item: it may disappear or freeze, but the game keeps running, and the error is logged once (with the NPC or item name) so you know which mod to report.\n<br />\n<br />[b]Less stutter[/b]\n<br />Avoids long memory cleanup pauses while you play, and does a full cleanup during the save screen instead, where you won't notice it.\n<br />\n<br />[b]Skip intro[/b]\n<br />Goes straight to the title buttons when the game launches.\n<br />\n<br />[b]Co-op mod check[/b]\n<br />When a player joins, it compares their mods with yours and shows a message if anything is missing or on a different version. Mismatched mods are the most common cause of co-op desyncs, missing items and errors. Only the host needs this mod for the check to work.\n<br />\n<br />[b]Lag logger[/b]\n<br />Logs every frame that freezes for longer than 250 ms, along with where it happened, and writes a summary at the end of each day. This turns \"it lags sometimes\" into \"it lags on the Farm with 4 players online\", which makes the cause much easier to find.\n<br />\n<br />[size=4][b]What it won't do[/b][/size]\n<br />It won't make loading a save much faster. With big expansions, most of the loading time is Content Patcher building their content, and skipping that would break them. If loading takes too long, the only fix is fewer or lighter content packs, or installing the game on an SSD.\n<br />\n<br />[size=4][b]Console command[/b][/size]\n<br />Type [b]safetynet[/b] in the SMAPI console to see the co-op mod differences, blocked errors, today's lag spikes and the last backup.\n<br />\n<br />[size=4][b]Restoring a backup[/b][/size]\n<br />[list=1]\n<br />[*]Close the game.[/*]\n<br />[*]Open %AppData%&#92;StardewValley&#92;Saves and move the broken save folder somewhere else (don't delete it yet).[/*]\n<br />[*]Open the newest zip in Mods&#92;ValleySafetyNet&#92;backups&#92;&lt;save name&gt;&#92; and extract its folder into Saves.[/*]\n<br />[*]Load the save. You'll be at the start of the day shown in the zip's name.[/*]\n<br />[/list]\n<br />[size=4][b]Settings[/b][/size]\n<br />Every feature can be turned on or off with Generic Mod Config Menu, or in config.json. You can also change the number of backups kept and the lag threshold.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Works in single-player and co-op. Backups are made by the host only.[/*]\n<br />[*]Safe to add to or remove from an existing save. It doesn't change your save data.[/*]\n<br />[*]Doesn't replace SMAPI's own SaveBackup. Both run side by side.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54870",
+	"Version": "1",
+	"Updated": "2026-10-31T16:03:59+00:00",
+	"Downloads": [
+		{
+			"Id": 189393,
+			"Type": "Main",
+			"DisplayName": "ValleySafetyNet 1.0.0",
+			"FileName": "10/9c/cd/109ccdbe-0b4c-48aa-834c-9d50d24e5321",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 24830,
+			"Uploaded": "2026-10-31T16:03:59+00:00",
+			"Mods": [
+				{
+					"Id": "Patryk.ValleySafetyNet",
+					"DisplayName": "Valley Safety Net",
+					"Type": "Smapi",
+					"RelativePath": "ValleySafetyNet",
+					"Manifest": {
+						"Name": "Valley Safety Net",
+						"Description": "Stability and diagnostics for big modpacks: daily save backups, crash shielding for broken NPCs and items, memory tuning, intro skip, and co-op mod mismatch checks.",
+						"Author": "Patryk",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ValleySafetyNet.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Patryk.ValleySafetyNet"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576081,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441558,
+		"UploaderId": 304482900,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

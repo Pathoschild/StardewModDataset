@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 54865,
+	"Name": "SmartTreeSpacing",
+	"Author": "Stitch1959",
+	"Description": "[b]OVERVIEW[/b]\n<br />Vanilla decides whether a tree can grow by checking its neighbours with one hard-coded rule. This mod replaces that check with a grid you can edit in game, separately for fruit trees and for wild trees.\n<br />\n<br />[b]THE GRID[/b]\n<br />• A 5x5 grid per tree type. Red cells are checked, green cells are ignored, and the centre cell is the tree itself.\n<br />• Click any cell to toggle it, no config file editing needed.\n<br />• Default is the vanilla 3x3 ring around the tree.\n<br />• Extend the red area to require more space, or clear cells so trees can grow closer together.\n<br />\n<br />[b]CATEGORY EXEMPTIONS[/b]\n<br />Six switches per tree type decide what actually counts as an obstacle: paths and paved ground, containers such as chests, other placed objects, buildings, furniture, and tilled soil with a crop.\n<br />\n<br />[b]MASTER ROW[/b]\n<br />\"Nothing blocks growth\" is ticked only while all six categories are ticked. Untick any single one and it clears immediately. Clicking it turns all six on, clicking it while all six are on turns them all off. All six off is not \"all exempt\", so the box stays clear in that case.\n<br />\n<br />[b]COMPATIBILITY[/b]\n<br />• Each rule only applies while its \"use the custom grid\" switch is on, otherwise vanilla behaviour applies.\n<br />• Works alongside Wild Tree Tweaks: that mod controls the growth chance, this one controls what blocks growth.\n<br />• Optional verbose log prints which tile and which object blocked growth, which answers \"why is my tree not growing\" without waiting days.\n<br />• No custom save data is stored, so you can remove the mod at any time.\n<br />• Languages, English, German, Spanish, French, Hungarian, Italian, Japanese, Korean, Portuguese, Russian, Turkish and Simplified Chinese.\n<br />\n<br />[b]REQUIREMENTS[/b]\n<br />• SMAPI 4.0.0 or later, tested with 4.5.2, game version 1.6.15.\n<br />• Generic Mod Config Menu is required to edit the grid and the category switches in game. Without it the mod runs with its defaults.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54865",
+	"Version": "1.0.0",
+	"Updated": "2026-10-31T12:40:13+00:00",
+	"Downloads": [
+		{
+			"Id": 189376,
+			"Type": "Main",
+			"DisplayName": "SmartTreeSpacing 1.0.0",
+			"FileName": "47/13/98/471398a3-0663-4810-af7f-c15d81ecf570",
+			"Description": "First public release. Replaces the fixed tree spacing rule with a clickable 5x5 grid per tree type plus six category exemptions. Works with Wild Tree Tweaks. 12 languages.",
+			"Version": "1.0.0",
+			"SizeInBytes": 33009,
+			"Uploaded": "2026-10-31T12:40:13+00:00",
+			"Mods": [
+				{
+					"Id": "Stitch.SmartTreeSpacing",
+					"DisplayName": "SmartTreeSpacing",
+					"Type": "Smapi",
+					"RelativePath": "SmartTreeSpacing",
+					"Manifest": {
+						"Name": "SmartTreeSpacing",
+						"Description": "Controls tree growth blocking with a 5x5 grid per tree type plus category exemptions (paths, containers, objects, buildings, furniture, crops).",
+						"Author": "Stitch",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "SmartTreeSpacing.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:54865"
+						],
+						"UniqueId": "Stitch.SmartTreeSpacing"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576064,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441553,
+		"UploaderId": 286125191,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
