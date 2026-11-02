@@ -1,0 +1,103 @@
+{
+	"Site": "Nexus",
+	"Id": 54902,
+	"Name": "Black Cat Cottage Bundles",
+	"Author": "Numenlond",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Adding a little area on Ginger Island that is home to 2 black cats. The Area is littered with debris and trash and a ruined cottage is sitting in the middle. After finishing 6 bundles inside the cottage, you can restore the Island area and the cottage and give the cats a nice cozy home. Inside the restored cottage you will find 10 more bundles to complete, some of these very challenging but giving great rewards. All bundle items are from the Vanilla game.[/color]\n<br />\n<br />The Entrance to the Area is in the South-Eastern Corner of the Ginger Island Farm map, between the cliff and the water.\n<br />\n<br />[color=#D4D4D8][size=3]I am not a modder or programmer and the whole mod was very much vibe-coded, so expect some small hic-ups with the map boundaries and a minimalistic bundle-interface. But everything works and should be compatible with almost all other mods. [/size][/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[size=3][color=#D4D4D8]Place the BlackCatCottage folder inside your Mods folder.[/color][/size]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[size=3][color=#D4D4D8]Needs SMAPI, Content Patcher, Custom Companions[/color][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54902",
+	"Version": "1",
+	"Updated": "2026-11-01T09:08:29+00:00",
+	"Downloads": [
+		{
+			"Id": 189496,
+			"Type": "Main",
+			"DisplayName": "BlackCatCottage",
+			"FileName": "f6/e8/0c/f6e80cb4-c78c-47d6-8545-0c020360b126",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 4585291,
+			"Uploaded": "2026-11-01T09:08:29+00:00",
+			"Mods": [
+				{
+					"Id": "Numenlond.BlackCatCottageCompanions",
+					"DisplayName": "Black Cat Cottage Companions",
+					"Type": "ContentPack",
+					"RelativePath": "#BlackCatCottage\\#[CC] Black Cat Cottage",
+					"Manifest": {
+						"Name": "Black Cat Cottage Companions",
+						"Description": "Two wandering black cats for Black Cat Cottage Island.",
+						"Author": "Numenlond",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "PeacefulEnd.CustomCompanions",
+							"MinimumVersion": "1.6.5"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Numenlond.BlackCatCottageCompanions"
+					}
+				},
+				{
+					"Id": "Numenlond.BlackCatCottage",
+					"DisplayName": "Black Cat Cottage",
+					"Type": "ContentPack",
+					"RelativePath": "#BlackCatCottage\\BlackCatCottage",
+					"Manifest": {
+						"Name": "Black Cat Cottage",
+						"Description": "A small cottage and two black cats on Ginger Island.",
+						"Author": "Numenlond",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Numenlond.BlackCatCottageCode",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "PeacefulEnd.CustomCompanions",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Numenlond.BlackCatCottage"
+					}
+				},
+				{
+					"Id": "Numenlond.BlackCatCottageCode",
+					"DisplayName": "Black Cat Cottage Code",
+					"Type": "Smapi",
+					"RelativePath": "#BlackCatCottage\\BlackCatCottageCode",
+					"Manifest": {
+						"Name": "Black Cat Cottage Code",
+						"Description": "Adds bundle donations and restoration progression to Black Cat Cottage.",
+						"Author": "Numenlond",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "BlackCatCottageCode.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Numenlond.BlackCatCottageCode"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576184,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441590,
+		"UploaderId": 76330943,
+		"CategoryId": 27,
+		"Adult": false
+	}
+}

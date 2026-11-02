@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 54897,
+	"Name": "Crystalarium Enhancement(EN)(CN)",
+	"Author": "964201902mod",
+	"Description": "[center][size=6][b]复制机 / Duplicator[/b][/size]\n<br />[size=4]把任何东西放进去，复制一份一模一样的出来。[/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[b]模组功能[/b]\n<br />\n<br />新增一台使用[b]原版宝石复制机贴图[/b]的「复制机」。把物品放进去，等待一段时间，就能收获一份完全相同的复制品。\n<br />\n<br />[list]\n<br />[*][b]复制任意物品[/b] —— 普通物品、模组物品都可以。[/*]\n<br />[*][b]保留星级[/b] —— 铱星进，铱星出；银星、金星同理。[/*]\n<br />[*][b]保留颜色与价格[/b] —— 复制品与原件一致。[/*]\n<br />[*][b]自动连续复制[/b] —— 收取后机器会自动开始下一份，原件不会被消耗。[/*]\n<br />[*][b]配方自动解锁[/b] —— 不需要好感或剧情，开档即可制作。[/*]\n<br />[*][b]复制时间可调[/b] —— GMCM 内可选 1 小时 / 12 小时 / 24 小时 / 3 天 / 1 周。[/*]\n<br />[*][b]中英双语[/b] —— 根据游戏语言自动显示中文或英文。[/*]\n<br />[/list][line]\n<br />\n<br />[b]制作配方[/b]\n<br />\n<br />[b]166 个铱锭 + 16 个宝石复制机[/b]\n<br />\n<br />配方在进入存档时自动学会，制作菜单里直接可见。\n<br />\n<br />[line]\n<br />\n<br />[b]复制时间[/b]\n<br />\n<br />默认 [b]3 天[/b]，可在 [b]设置 → 模组选项 → Duplicator → 复制时间[/b] 中修改：\n<br />\n<br />[list]\n<br />[*]1 小时（60 机器分钟）[/*]\n<br />[*]12 小时（720）[/*]\n<br />[*]24 小时（1440）[/*]\n<br />[*]3 天（3600，默认）[/*]\n<br />[*]1 周（8400）[/*]\n<br />[/list]修改只影响之后放入的物品；已经开始复制的机器会保留当前计时。\n<br />\n<br />[line]\n<br />\n<br />[b]前置要求[/b]\n<br />\n<br />[list]\n<br />[*]星露谷物语 [b]1.6.x[/b]（基于 1.6.15 编译测试）[/*]\n<br />[*]SMAPI [b]4.0.0[/b] 或更高[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] —— [i]可选[/i]，仅用于游戏内设置菜单[/*]\n<br />[/list][line]\n<br />\n<br />[b]安装方法[/b]\n<br />\n<br />1. 安装 SMAPI。\n<br />2. 把 [b]Duplicator[/b] 文件夹解压到 Mods 目录。\n<br />3. 通过 SMAPI 启动游戏。\n<br />\n<br />[line]\n<br />\n<br />[b]使用方法[/b]\n<br />\n<br />1. 打开制作菜单，制作「复制机」。\n<br />2. 放在农场或室内。\n<br />3. 手持任意物品，对着机器按使用键放入。\n<br />4. 等待设定时间后，对着机器按使用键收取。\n<br />5. 收取后机器会自动开始复制下一份。\n<br />\n<br />[line]\n<br />\n<br />[b]配置文件[/b]\n<br />\n<br />也可以直接编辑 [b]Mods/Duplicator/config.json[/b]：\n<br />\n<br />[code]{\n<br />\u00A0 \"CopyTime\": \"3 days\"\n<br />}[/code]可选值：`1 hour` / `12 hours` / `24 hours` / `3 days` / `1 week`\n<br />\n<br />[line]\n<br />\n<br />[b]说明与兼容性[/b]\n<br />\n<br />[list]\n<br />[*]机器通过原版 [b]Data/Machines[/b] 的 `DROP_IN_ID` + `CopyQuality` / `CopyColor` / `CopyPrice` 规则实现，因此大多数模组物品都能正常复制。[/*]\n<br />[*]工具、武器不是普通 Object 物品，能否放入取决于游戏自身的机器逻辑。[/*]\n<br />[*]没有已知冲突；不修改原版物品，只新增一台机器和一个配方。[/*]\n<br />[*]可以安全加入已有存档，也可以随时移除。[/*]\n<br />[/list][line]\n<br />\n<br />[b]制作名单[/b]\n<br />\n<br />[list]\n<br />[*][b]cherrystudio[/b] —— 设计与实现[/*]\n<br />[*][b]deepseekV4.1[/b] —— AI 开发助手[/*]\n<br />[*][b]Pathoschild[/b] —— SMAPI[/*]\n<br />[*][b]Generic Mod Config Menu 团队[/b] —— 配置菜单[/*]\n<br />[/list][line]\n<br />\n<br />[b]更新日志[/b]\n<br />\n<br />[b]1.0.0[/b]\n<br />[list]\n<br />[*]首次发布：复制机、自动解锁配方、可配置复制时间、中英双语。[/*]\n<br />[/list][center][size=6][b]Duplicator[/b][/size]\n<br />[size=4]Put anything in. Get an exact copy out.[/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[b]What this mod does[/b]\n<br />\n<br />Adds a **Duplicator** machine that uses the vanilla **Crystalarium** art. Insert an item, wait for the configured time, and collect an exact copy.\n<br />\n<br />[list]\n<br />[*][b]Duplicates any item[/b] — vanilla and modded objects alike.[/*]\n<br />[*][b]Keeps quality[/b] — iridium in, iridium out; silver and gold work the same way.[/*]\n<br />[*][b]Keeps color and price[/b] — the copy matches the original.[/*]\n<br />[*][b]Automatic repeat[/b] — after collecting, it starts the next copy; the source item is never consumed.[/*]\n<br />[*][b]Recipe auto-unlocked[/b] — no friendship or story progress required.[/*]\n<br />[*][b]Configurable copy time[/b] — 1 hour / 12 hours / 24 hours / 3 days / 1 week in GMCM.[/*]\n<br />[*][b]English &amp; Chinese[/b] — the display language follows your game language automatically.[/*]\n<br />[/list][line]\n<br />\n<br />[b]Crafting recipe[/b]\n<br />\n<br />**166 Iridium Bars + 16 Crystalariums**\n<br />\n<br />The recipe is learned automatically when a save is loaded and appears directly in the crafting menu.\n<br />\n<br />[line]\n<br />\n<br />[b]Copy time[/b]\n<br />\n<br />Default: **3 days**. Change it in **Settings → Mod Options → Duplicator → Copy time**:\n<br />\n<br />[list]\n<br />[*]1 hour (60 machine minutes)[/*]\n<br />[*]12 hours (720)[/*]\n<br />[*]24 hours (1440)[/*]\n<br />[*]3 days (3600, default)[/*]\n<br />[*]1 week (8400)[/*]\n<br />[/list]Changing the setting only affects items inserted afterwards; machines already processing keep their current timer.\n<br />\n<br />[line]\n<br />\n<br />[b]Requirements[/b]\n<br />\n<br />[list]\n<br />[*]Stardew Valley [b]1.6.x[/b] (built and tested against 1.6.15)[/*]\n<br />[*]SMAPI [b]4.0.0[/b] or later[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] — [i]optional[/i], only for the in-game settings menu[/*]\n<br />[/list][line]\n<br />\n<br />[b]Installation[/b]\n<br />\n<br />1. Install SMAPI.\n<br />2. Extract the [b]Duplicator[/b] folder into your Mods folder.\n<br />3. Launch the game through SMAPI.\n<br />\n<br />[line]\n<br />\n<br />[b]Usage[/b]\n<br />\n<br />1. Open the crafting menu and craft the Duplicator.\n<br />2. Place it on the farm or indoors.\n<br />3. Hold any item and press the use key on the machine to insert it.\n<br />4. Wait for the configured time, then press the use key to collect the copy.\n<br />5. The machine automatically starts the next copy.\n<br />\n<br />[line]\n<br />\n<br />[b]Configuration[/b]\n<br />\n<br />Or edit [b]Mods/Duplicator/config.json[/b]:\n<br />\n<br />[code]{\n<br />\u00A0 \"CopyTime\": \"3 days\"\n<br />}[/code]Allowed values: `1 hour` / `12 hours` / `24 hours` / `3 days` / `1 week`\n<br />\n<br />[line]\n<br />\n<br />[b]Notes and compatibility[/b]\n<br />\n<br />[list]\n<br />[*]The machine is data-driven through vanilla [b]Data/Machines[/b] using `DROP_IN_ID` + `CopyQuality` / `CopyColor` / `CopyPrice`, so most modded objects work.[/*]\n<br />[*]Tools and weapons are not normal Object items; whether they can be inserted depends on the game's machine logic.[/*]\n<br />[*]No known conflicts. It only adds one machine and one recipe; no vanilla items are modified.[/*]\n<br />[*]Safe to add to or remove from an existing save.[/*]\n<br />[/list][line]\n<br />\n<br />[b]Credits[/b]\n<br />\n<br />[list]\n<br />[*][b]cherrystudio[/b] — design and implementation[/*]\n<br />[*][b]deepseekV4.1[/b] — AI development assistant[/*]\n<br />[*][b]Pathoschild[/b] — SMAPI[/*]\n<br />[*][b]Generic Mod Config Menu team[/b] — config menu[/*]\n<br />[/list][line]\n<br />\n<br />[b]Changelog[/b]\n<br />\n<br />[b]1.0.0[/b]\n<br />[list]\n<br />[*]Initial release: Duplicator machine, auto-unlocked recipe, configurable copy time, English &amp; Chinese localization.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54897",
+	"Version": "1",
+	"Updated": "2026-11-01T07:11:45+00:00",
+	"Downloads": [
+		{
+			"Id": 189489,
+			"Type": "Main",
+			"DisplayName": "Duplicator 1.0.0",
+			"FileName": "6f/42/d0/6f42d0b0-ae18-41cb-a5c9-4ee52ae7a6b6",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 9382,
+			"Uploaded": "2026-11-01T07:11:45+00:00",
+			"Mods": [
+				{
+					"Id": "cherrystudio.Duplicator",
+					"DisplayName": "Duplicator",
+					"Type": "Smapi",
+					"RelativePath": "Duplicator",
+					"Manifest": {
+						"Name": "Duplicator",
+						"Description": "Adds a crystalarium-style Duplicator that copies any item and keeps its quality. Copy time is configurable. / 新增一台宝石复制机外观的「复制机」，可复制任意物品并保留星级，复制时间可配置。",
+						"Author": "cherrystudio & deepseekV4.1",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "Duplicator.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "cherrystudio.Duplicator"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576177,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441585,
+		"UploaderId": 51404306,
+		"CategoryId": 11,
+		"Adult": false
+	}
+}

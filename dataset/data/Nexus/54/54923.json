@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 54923,
+	"Name": "NPC Love Letters",
+	"Author": "handzup89",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[size=3][color=#D4D4D8]Love Letters is a Stardew Valley mod that makes villagers send you handwritten letters with pictures in your postbox as your friendship with them grows. Vanilla mail is text-only — this mod adds a picture to the letter, rendering it inside the vanilla letter viewer so each message feels like a real, hand-drawn note from the NPC.[/color][/size]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[size=3][color=#D4D4D8]1. Install SMAPI 4.3.0 or later (see the SMAPI wiki for instructions).\n<br />2. Copy the Love Letters folder into your game's Mods/ directory. It contains: the mod DLL, manifest.json, config.json, ConfigSchema.json, letters.json, and the pictures/ folder.\n<br />3. (Optional) Install Generic Mod Config Menu if you want an in-game settings UI instead of editing config.json by hand.\n<br />4. Launch the game. SMAPI will load the mod automatically — no extra steps needed.\n<br />\n<br />To add your own letters, edit letters.json and drop PNG images into the pictures/ folder. No recompilation required; pictures are loaded at runtime.[/color][/size]\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />[size=3][color=#D4D4D8]Two files in the mod folder control behaviour. Both can be edited by hand, or in-game via the Generic Mod Config Menu.\n<br />\n<br />--- config.json ---\n<br />\n<br />{\n<br />\u00A0 \"Enabled\": true,\n<br />\u00A0 \"MaxMailboxLetters\": 4,\n<br />\u00A0 \"ImageMaxPixels\": 512,\n<br />\u00A0 \"ImageMaxHeight\": 440\n<br />}\n<br />\n<br />Field — What it does — Default — Valid range\n<br />• Enabled — Master switch; false disables all letter delivery entirely. — true — true / false\n<br />• MaxMailboxLetters — Max undelivered love letters allowed in the mailbox at once; extras wait until earlier ones are read. — 4 — 1 to 20\n<br />• ImageMaxPixels — Pictures larger than this on their longest side are downscaled on load to keep memory low. — 512 — 64 to 4096\n<br />• ImageMaxHeight — Max height, in base-resolution pixels, a picture may occupy inside the letter; text paginates below it. — 440 — 96 to 560\n<br />\n<br />Tip: if your pictures are small (under 512 px), you can leave ImageMaxPixels at its default. Lower ImageMaxHeight if you prefer a bigger text area.\n<br />\n<br />--- letters.json ---\n<br />\n<br />Each entry in the JSON array defines one letter. Add new entries to create more letters — no code changes or recompilation needed.\n<br />\n<br />Example — a new letter for Abigail at 6 hearts:\n<br />{\n<br />\u00A0 \"Id\": \"LoveLetters_abigail_6\",\n<br />\u00A0 \"Npc\": \"Abigail\",\n<br />\u00A0 \"MinHearts\": 6,\n<br />\u00A0 \"Text\": \"@, I finally finished the portrait you asked for. ^It took me all week, but I think you'll like it.\",\n<br />\u00A0 \"Image\": \"pictures/abigail/hearts6.png\",\n<br />\u00A0 \"Title\": \"Your Portrait\"\n<br />}\n<br />\n<br />Field — What it does\n<br />• Id — Unique mail ID. Always prefix with \"LoveLetters_\" to avoid collisions with other mods. Use one distinct ID per letter (e.g. LoveLetters_abigail_2, _4, _6).\n<br />• Npc — The NPC's internal name (e.g. \"Abigail\", \"Leah\", \"Penny\", \"Sebastian\"). The mod checks your friendship heart level against this name.\n<br />• MinHearts — The friendship heart level at which the letter is delivered. Ranges 0–8 (8 = 4000 friendship points).\n<br />• Text — The letter body. Supports vanilla mail formatting: @ = player's name, ^ = line break, [letterbg #] = choose a parchment background (0–3).\n<br />• Image — Path to a picture, relative to the mod folder (e.g. \"pictures/abigail/hearts6.png\"). Leave null or omit for a text-only letter. PNG works best; BMP/DDS/JPEG also load in most cases.\n<br />• Title — Shown on hover in Collections → Letters. Falls back to \"Letter from {Npc}\" when omitted.\n<br />\n<br />Example — a text-only letter (no picture):\n<br />{\n<br />\u00A0 \"Id\": \"LoveLetters_leah_8\",\n<br />\u00A0 \"Npc\": \"Leah\",\n<br />\u00A0 \"MinHearts\": 8,\n<br />\u00A0 \"Text\": \"@, I've been meaning to tell you something for a while now. ^Let's grab lunch tomorrow? I could use some company.\",\n<br />\u00A0 \"Title\": \"A Little Confession\"\n<br />}\n<br />\n<br />Picture folder layout — drop your PNGs here, grouped by NPC:\n<br />pictures/\n<br />├── abigail/\n<br />│\u00A0 ├── hearts2.png\n<br />│\u00A0 ├── hearts4.png\n<br />│\u00A0 └── hearts8.png\n<br />├── leah/\n<br />│\u00A0 ├── hearts2.png\n<br />│\u00A0 └── hearts4.png\n<br />├── penny/\n<br />│\u00A0 ├── hearts2.png\n<br />│\u00A0 └── hearts6.png\n<br />└── sebastian/\n<br />\u00A0 \u00A0 └── hearts4.png\n<br />\n<br />The bundled mod ships 8 letters (Abigail x3, Leah x2, Penny x2, Sebastian x1). A missing image file never crashes the mod — it logs a warning and falls back to a text-only letter instead.[/color][/size]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[size=3][color=#D4D4D8]- Picture letters: each letter shows a text message and a picture inside the vanilla letter menu. The picture scales to fit and the text paginates below it.\n<br />- Heart-threshold delivery: letters are delivered to the postbox once friendship with a given NPC reaches the configured heart level. Each letter is sent only once (tracked via the persistent mailReceived flag).\n<br />- Collections tab support: letters also render their picture when re-read from Collections → Letters, so you can revisit them without opening the mailbox.\n<br />- Data-driven: all letters are defined in letters.json (NPC name, heart threshold, text, image path, optional collection title). Add, edit, or remove letters without touching any code.\n<br />- Flexible image handling: images are loaded at runtime from the mod folder, cached, and downscaled to keep memory usage low. If a picture file is missing, the mod falls back to a text-only letter without crashing.\n<br />- Mailbox cap: a configurable limit (default 4) prevents the mailbox from overflowing. Letters beyond the cap wait until earlier ones are read.\n<br />- Multiplayer &amp; split-screen: each player gets letters based on their own friendship, and the Collections tab swap runs per-player every tick.\n<br />- Settings (config.json or via Generic Mod Config Menu): master enable toggle, max mailbox letters, max picture size (pixels), and max picture height inside the letter.[/color][/size]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[size=3][color=#D4D4D8]- Stardew Valley 1.6\n<br />- SMAPI 4.3.0 or later\n<br />- (Optional) Generic Mod Config Menu for in-game settings\n<br />- No other mods required.[/color][/size]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[size=3][color=#D4D4D8]Thanks to Pathoschild for creating and maintaining SMAPI and the SMAPI Toolkit, which make mods like this possible. And thanks to ConcernedApe for making a game that keeps surprising me.[/color][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54923",
+	"Version": "1",
+	"Updated": "2026-11-01T15:14:28+00:00",
+	"Downloads": [
+		{
+			"Id": 189561,
+			"Type": "Main",
+			"DisplayName": "LoveLetters",
+			"FileName": "a1/af/14/a1af1404-535e-44b0-b20e-267ca200a2a5",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 44642,
+			"Uploaded": "2026-11-01T15:14:28+00:00",
+			"Mods": [
+				{
+					"Id": "linepe.loveletters",
+					"DisplayName": "Love Letters",
+					"Type": "Smapi",
+					"RelativePath": "LoveLetters",
+					"Manifest": {
+						"Name": "Love Letters",
+						"Description": "Villagers send you picture letters in your postbox as your friendship with them grows.",
+						"Author": "linepe",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.0",
+						"EntryDll": "LoveLetters.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "linepe.loveletters"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576249,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441611,
+		"UploaderId": 992492,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}
