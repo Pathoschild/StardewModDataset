@@ -3,20 +3,20 @@
 	"Id": 54831,
 	"Name": "Slingshot Bombs",
 	"Author": "wind0nd",
-	"Description": "[size=5][b]Slingshot Bombs[/b][/size]\n<br />\n<br />Turn your slingshot into a long-range demolition tool. Load it with bombs, aim at your target, and send an explosion flying across the map.\n<br />[b]Slingshot Bombs[/b] adds charge-based bomb firing, with configurable projectile speed, explosion radius, monster damage, and map interactions. Whether you’re clearing rocks or fighting monsters, you can tune the experience to suit your playstyle.\n<br />[heading]Features[/heading]\n<br />Fire bombs from your slingshot\n<br />Use the following ammunition with the mod’s projectile and explosion mechanics:\n<br />[list]\n<br />[*]Explosive Ammo[/*]\n<br />[*]Cherry Bombs[/*]\n<br />[*]Bombs[/*]\n<br />[*]Mega Bombs[/*]\n<br />[/list]Hold to charge, aim with your mouse, and release to fire. Charging increases projectile speed and applies a higher monster damage multiplier.\n<br />Customize your shots\n<br />Adjust the settings to make your slingshot feel the way you want:\n<br />[list]\n<br />[*]Set minimum and full charge times.[/*]\n<br />[*]Change the full-charge monster damage multiplier.[/*]\n<br />[*]Configure each ammunition type’s base damage, explosion radius, and projectile speed.[/*]\n<br />[*]Choose whether projectiles explode on walls, buildings, or monsters.[/*]\n<br />[*]Enable or disable slingshot bomb self-damage.[/*]\n<br />[*]Optionally snap your aim to the center of a tile.[/*]\n<br />[/list]Configure map interactions\n<br />Explosions can do more than damage monsters:\n<br />[list]\n<br />[*]Protect supported facilities and ordinary plants from accidental damage.[/*]\n<br />[*]Collect eligible map items as ground drops.[/*]\n<br />[*]Enable extra breaking of supported large stone and plant resources.[/*]\n<br />[*]Control explosion tilling.[/*]\n<br />[/list]These map features can also be enabled for [b]placed bombs[/b]. Placed bombs keep their own explosion radius and damage behavior; the slingshot’s charge and damage settings don’t apply to them.\n<br />[quote][b]Note:[/b] Protection and collection depend on how objects are identified. Some vanilla or modded objects may behave differently, and collectible player-placed items may be affected. Test near valuables with care.[/quote][heading]How to Use[/heading]\n<br />[list=1]\n<br />[*]Attach a supported bomb or Explosive Ammo to your slingshot.[/*]\n<br />[*]Hold the tool-use button to charge.[/*]\n<br />[*]Aim with your mouse and release to fire.[/*]\n<br />[*]Adjust the settings through Generic Mod Config Menu or\u00A0\n<br />[code]config.json[/code].[/*]\n<br />[/list]The default minimum charge time is [b]0.15 seconds[/b]. Releasing before the minimum charge time won’t consume ammunition.\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*][b]SMAPI[/b][/*]\n<br />[*][b]Generic Mod Config Menu[/b]\u00A0— optional, for changing settings in-game.[/*]\n<br />[/list][heading]Installation[/heading]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download and extract\u00A0[b]Slingshot Bombs[/b]\u00A0into your\u00A0\n<br />[code]Stardew Valley/Mods[/code]\u00A0folder.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[*]Configure the mod in-game with Generic Mod Config Menu, or edit its\u00A0\n<br />[code]config.json[/code]\u00A0after the first launch.[/*]\n<br />[/list][heading]Compatibility and Notes[/heading]\n<br />[list]\n<br />[*]The current version is intended for\u00A0[b]single-player[/b]\u00A0and\u00A0[b]mouse aiming[/b].[/*]\n<br />[*]Placed-bomb map features are disabled by default.[/*]\n<br />[*]Support for custom resources depends on the other mod’s implementation.[/*]\n<br />[*]Back up your save before testing map-altering features, especially when using other mods that add objects or resources.[/*]\n<br />[/list]",
+	"Description": "[center][size=6][b]Slingshot Bombs[/b][/size]\n<br />Turn your slingshot into a long-range demolition and fishing tool.[/center]\n<br />\n<br />[b]Slingshot Bombs[/b] adds charge-based bomb firing with configurable projectile speed, explosion radius, monster damage, and map interactions. Aim with your mouse, hold to charge, and send an explosion across the map — or drop one into the water and see what comes flying out.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />\n<br />[b]Fire bombs from your slingshot[/b]\n<br />[list]\n<br />[*]Use Explosive Ammo, Cherry Bombs, Bombs, and Mega Bombs with the mod's projectile and explosion mechanics.[/*]\n<br />[*]Hold to charge, aim with your mouse, and release to fire.[/*]\n<br />[*]Charging increases projectile speed and applies a higher monster damage multiplier.[/*]\n<br />[/list]\n<br />[b]Customize your shots[/b]\n<br />[list]\n<br />[*]Set minimum and full charge times.[/*]\n<br />[*]Change the full-charge monster damage multiplier (default 15x).[/*]\n<br />[*]Configure each ammunition type's base damage, explosion radius, and projectile speed.[/*]\n<br />[*]Choose whether projectiles explode on walls, buildings, or monsters.[/*]\n<br />[*]Enable or disable slingshot bomb self-damage.[/*]\n<br />[*]Optionally snap your aim to the center of a tile.[/*]\n<br />[/list]\n<br />[b]Configure map interactions[/b]\n<br />[list]\n<br />[*]Protect supported facilities and ordinary plants from accidental damage.[/*]\n<br />[*]Collect eligible map items as ground drops.[/*]\n<br />[*]Enable extra breaking of supported large stone and plant resources.[/*]\n<br />[*]Control explosion tilling.[/*]\n<br />[*]Optionally apply these map features to placed bombs as well.[/*]\n<br />[/list]\n<br />[b]Water fishing (new in 1.1.0)[/b]\n<br />[list]\n<br />[*]Bombs that explode on water now catch fish from that location's seasonal and time-based fish pool.[/*]\n<br />[*]Fish are thrown in an arc onto the nearest shore, with a large water splash, droplets, and ripples.[/*]\n<br />[*]Configure whether trash can be caught, the base fish count and variance (default 3 +/- 3), and whether fish quality rolls from your fishing level.[/*]\n<br />[*]Optionally count the fish toward your collection and grant fishing XP (off by default, since bombs are cheap).[/*]\n<br />[/list]\n<br />[b]Experience for collected items (new in 1.1.0)[/b]\n<br />[list]\n<br />[*]Forage collected by a bomb now grants vanilla foraging experience.[/*]\n<br />[*]Minerals can optionally grant mining experience.[/*]\n<br />[/list]\n<br />--------------------\n<br />\n<br />[size=5][b]How to Use[/b][/size]\n<br />\n<br />1. Attach a supported bomb or Explosive Ammo to your slingshot.\n<br />2. Hold the tool-use button to charge.\n<br />3. Aim with your mouse and release to fire.\n<br />4. Adjust settings in Generic Mod Config Menu or config.json.\n<br />\n<br />The default minimum charge time is 0.15 seconds. Releasing before the minimum charge time won't consume ammunition.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]SMAPI[/*]\n<br />[*]Generic Mod Config Menu (optional, for in-game settings)[/*]\n<br />[/list]\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />1. Install SMAPI.\n<br />2. Extract Slingshot Bombs into your Stardew Valley/Mods folder.\n<br />3. Launch the game through SMAPI.\n<br />4. Configure the mod in-game with Generic Mod Config Menu, or edit config.json after the first launch.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Compatibility and Notes[/b][/size]\n<br />[list]\n<br />[*]Intended for single-player and mouse aiming.[/*]\n<br />[*]Placed-bomb map features are disabled by default.[/*]\n<br />[*]Water fishing uses each location's fish data, so results respect season, time, and weather.[/*]\n<br />[*]Support for custom resources depends on the other mod's implementation.[/*]\n<br />[*]Protection and collection depend on how objects are identified; some vanilla or modded objects may behave differently.[/*]\n<br />[*]Back up your save before testing map-altering features, especially with mods that add objects or resources.[/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54831",
-	"Version": "1.0.1",
-	"Updated": "2026-11-01T12:20:38+00:00",
+	"Version": "1.1.0",
+	"Updated": "2026-11-02T15:41:54+00:00",
 	"Downloads": [
 		{
-			"Id": 189532,
+			"Id": 189679,
 			"Type": "Main",
 			"DisplayName": "Slingshot Bombs",
-			"FileName": "91/8e/13/918e13d1-ae58-4321-b856-d00b9cfdc969",
+			"FileName": "6c/fe/ed/6cfeedb1-5969-43ad-8e2b-a9770569ebef",
 			"Description": "",
-			"Version": "1.0.1",
-			"SizeInBytes": 50887,
-			"Uploaded": "2026-11-01T12:20:38+00:00",
+			"Version": "1.1.0",
+			"SizeInBytes": 100185,
+			"Uploaded": "2026-11-02T15:41:54+00:00",
 			"Mods": [
 				{
 					"Id": "Monica.SlingshotBombs",
@@ -25,21 +25,19 @@
 					"RelativePath": "SlingshotBombs",
 					"Manifest": {
 						"Name": "Slingshot Bombs",
-						"Description": "Fire bombs from your slingshot with configurable charging, projectile speed, explosion radius, damage, and map effects.",
+						"Description": "Bomb-firing slingshot with charge-based shots, configurable explosions and map interactions, water fishing, and optional XP.",
 						"Author": "win0nd",
-						"Version": "1.0.1",
+						"Version": "1.1.0",
 						"MinimumApiVersion": "4.5.2",
 						"EntryDll": "SlingshotBombs.dll",
 						"Dependencies": [],
-						"UpdateKeys": [
-							"Nexus:54831"
-						],
+						"UpdateKeys": [],
 						"UniqueId": "Monica.SlingshotBombs"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342576220,
+				"Uid": 5596342576367,
 				"CategoryId": 1,
 				"Primary": true
 			}

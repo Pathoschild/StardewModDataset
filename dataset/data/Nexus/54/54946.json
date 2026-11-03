@@ -1,0 +1,56 @@
+{
+	"Site": "Nexus",
+	"Id": 54946,
+	"Name": "MLD's Keybind",
+	"Author": "MLD210",
+	"Description": "[b][size=4]FEATURES[/size][/b]\n<br />\n<br />[b]One table for everything[/b]\n<br />The vanilla side covers Action, Use Tool, Menu, Journal, Map, movement,\n<br />Chat, Emote, Run, Swap Toolbar and all twelve inventory slots, plus\n<br />Cancel. The modded side pulls in every key binding that installed mods\n<br />have registered with Generic Mod Config Menu - no per-mod patches, no\n<br />manually maintained compatibility list.\n<br />[img width=434]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610459-293253723.png[/img]\n<br />[b]Rebind in place[/b]\n<br />Click a key cell and press the key you want. Vanilla bindings are written\n<br />to the game's own options; mod bindings are handed back to the mod that\n<br />owns them, so each one saves through its normal config path.\n<br />[img width=458]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610506-792765407.png[/img]\n<br />[b]Modifier combinations[/b]\n<br />For mod options that accept a key combination, hold Ctrl, Shift or Alt and\n<br />press the final key to bind something like LeftCtrl + K. Existing\n<br />combinations are displayed as they are, so you can see the full bind\n<br />rather than just its last key.\n<br />\n<br />[b]Nothing is written until you say so[/b]\n<br />Every change is staged first: pending rows are marked, the bar at the\n<br />bottom counts them, Undo removes the last one and Discard throws all of\n<br />them away. Only Apply actually writes to the game and to your mods.\n<br />[img width=595]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610570-1664034398.png[/img]\n<br />[b]Conflict detection[/b]\n<br />Any key bound to more than one action is highlighted, so a collision is\n<br />visible before you walk into it mid-fight. Conflicts are reported, not\n<br />blocked - the game itself allows duplicate bindings.\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610597-1266382497.png[/img]\n<br />[b]Search that keeps up[/b]\n<br />Type to filter by key, action name, mod name or mod ID. Start typing\n<br />anywhere in the table and the search box takes over; Esc drops focus and\n<br />keeps the filter.\n<br />[img width=473]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610621-1126395439.png[/img]\n<br />\n<br />[b]Reset one binding, or all of them[/b]\n<br />Each row has its own Reset, and Reset All stages every binding back to its\n<br />default behind a confirmation dialog. For mod bindings the atlas works out\n<br />each mod's defaults from a throwaway copy of its config class, so resetting\n<br />one key does not wipe the rest of that mod's settings.\n<br />\n<br />[b]Title screen and in-game[/b]\n<br />Some mods only allow their config to be edited from the title screen. The\n<br />table opens there too, and when a binding is locked in game the row is\n<br />greyed out with a tooltip that tells you where to go instead.\n<br />\n<br />[b]Read-only rows explain themselves[/b]\n<br />Mouse buttons, secondary vanilla keys and fixed bindings cannot be\n<br />changed, but hovering them tells you exactly why, instead of silently\n<br />doing nothing.\n<br />\n<br />[b]Localised[/b]\n<br />English and Simplified Chinese are included; the table follows the game's\n<br />language setting.\n<br />\n<br />\n<br />[b][size=4]REQUIREMENTS[/size][/b]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6 or later[/*]\n<br />[*]SMAPI 4.0 or later[/*]\n<br />[*]Generic Mod Config Menu - optional but recommended. Without it the\n<br />table still lists every vanilla binding, but mod bindings come from GMCM's\n<br />registry, so mods that do not use GMCM will not appear.[/*]\n<br />[/list]\n<br />\n<br />[b][size=4]INSTALLATION[/size][/b]\n<br />\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip this archive into your Stardew Valley/Mods folder, so that you end\n<br />up with Mods/MLD's Keybind/manifest.json.[/*]\n<br />[*]Optional: install Generic Mod Config Menu for mod keybind support.[/*]\n<br />[*]Start the game through SMAPI.[/*]\n<br />[/list]\n<br />To uninstall, delete Mods/MLD's Keybind. Your key bindings stay as you left\n<br />them, because they live in the game's options and in each mod's own config.\n<br />\n<br />\n<br />[b][size=4]HOW TO USE[/size][/b]\n<br />\n<br />[list]\n<br />[*]F9 opens and closes the table.[/*]\n<br />[*]Click a key cell, then press the new key. Esc cancels the capture.[/*]\n<br />[*]Hold Ctrl, Shift or Alt before the final key to bind a combination\n<br />(mod options that support combinations only).[/*]\n<br />[*]Press Apply to save the staged changes, Undo to drop the last one,\n<br />Discard to drop them all.[/*]\n<br />[*]Use the search box, or just start typing, to narrow the list.[/*]\n<br />[*]Click Reset on a row to restore that single binding; Reset All restores\n<br />everything after a confirmation.[/*]\n<br />[*]Esc closes the table - it first cancels a key capture, then the search\n<br />field, then the reset confirmation.[/*]\n<br />[/list]\n<br />\n<br />[b][size=4]CONFIGURATION[/size][/b]\n<br />\n<br />One setting, in Generic Mod Config Menu under \"MLD's Keybind\", or in\n<br />Mods/MLD's Keybind/config.json:\n<br />\n<br />[list]\n<br />[*][b]Open key[/b] - the key that opens the table. Default: F9.[/*]\n<br />[/list]\n<br />The table itself needs no configuration: it is rebuilt from the game's\n<br />options and from GMCM's registry every time it opens.\n<br />\n<br />\n<br />[b][size=4]HOW MOD KEY BINDINGS ARE READ[/size][/b]\n<br />\n<br />The atlas asks SMAPI for the Generic Mod Config Menu API, walks the config\n<br />menus GMCM has registered, and picks out the options whose values are keys\n<br />(a single button or a list of key combinations). Reading and writing those\n<br />options goes through the same objects GMCM uses, and each write triggers\n<br />the owning mod's own save callback - which is why changes survive a restart\n<br />and appear in that mod's config file.\n<br />\n<br />Defaults are learned without touching your live settings: a temporary\n<br />instance of the mod's config class is created, its values are read, and the\n<br />real config object is put straight back. If a mod keeps its config somewhere\n<br />unusual and the defaults cannot be read safely, the atlas falls back to that\n<br />mod's own reset routine for the single key you asked about, then restores\n<br />every other option to the value it had before.\n<br />\n<br />\n<br />[b][size=4]COMPATIBILITY[/size][/b]\n<br />\n<br />[list]\n<br />[*]Client-side only. Safe to add to an existing save and to use in\n<br />multiplayer.[/*]\n<br />[*]No Harmony patches, no game code overwritten, no new assets.[/*]\n<br />[*]Works with any mod that registers key bindings through GMCM, including\n<br />mods whose config is title-screen only.[/*]\n<br />[*]Independent of UI mods - the table draws itself and does not depend on\n<br />Content Patcher, SpaceCore or similar frameworks.[/*]\n<br />[/list]\n<br />\n<br />[b][size=4]KNOWN LIMITATIONS[/size][/b]\n<br />\n<br />[list]\n<br />[*]Mods that never register their key bindings with GMCM cannot be listed.\n<br />If a mod is missing from the table, that is almost always the reason.[/*]\n<br />[*]Mouse buttons and secondary vanilla keys are shown but cannot be\n<br />rebound here.[/*]\n<br />[*]Bindings can conflict; the table highlights them but will not stop you.[/*]\n<br />[*]A few mods store their config in a shape that cannot be inspected\n<br />safely. Their keys still appear, but they may be read-only or reset through\n<br />the mod's own routine rather than staged like the rest.[/*]\n<br />[/list]\n<br />\n<br />[b][size=4]TROUBLESHOOTING[/size][/b]\n<br />\n<br />[b]The table will not open.[/b]\n<br />Check that another menu is not already open, and that the open key is not\n<br />being swallowed by another mod. The key can be changed in GMCM.\n<br />\n<br />[b]A mod's key bindings are missing.[/b]\n<br />Open the SMAPI console and look for lines starting with \"Keybind:\". They\n<br />say which config menus could not be read, and why.\n<br />\n<br />[b]A mod's row is greyed out in game.[/b]\n<br />That mod only allows its config to be edited at the title screen. Open the\n<br />atlas from the title screen and the row becomes editable.\n<br />\n<br />[b]A change did not stick.[/b]\n<br />Look for a warning in the SMAPI console naming the action and the mod - the\n<br />mod refused the write, and the log line says which one.\n<br />\n<br />\n<br />[b][size=4]CREDITS[/size][/b]\n<br />\n<br />Made by MLD. Built on SMAPI and the Generic Mod Config Menu API by\n<br />spacechase0. Thanks to both for making mod configuration this accessible in\n<br />the first place.\n<br />\n<br />Feedback, bug reports and missing-mod cases are welcome - the SMAPI log is\n<br />the most useful thing you can attach.\n<br />[size=5]如何联系作者？[/size]\n<br />\n<br />[list]\n<br />[*][img width=48]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610936-284453178.png[/img] [url=https://www.douyin.com/user/MS4wLjABAAAAFva5cHzXf-dy_N7_4sKzjVHRBXj7_mkQ9EzTUXI96QM?from_tab_name=main&amp;is_search=0&amp;list_name=fans&amp;nt=0]MLD的抖音 - 抖音[/url] [/*]\n<br />[*][img width=48]https://staticdelivery.nexusmods.com/mods/1303/images/54946/54946-1793610961-677346863.png[/img] [url=https://space.bilibili.com/385452339?spm_id_from=333.1007.0.0]MLD丶的个人空间-MLD丶个人主页-哔哩哔哩视频[/url][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54946",
+	"Version": "0.2.0",
+	"Updated": "2026-11-02T09:19:00+00:00",
+	"Downloads": [
+		{
+			"Id": 189653,
+			"Type": "Main",
+			"DisplayName": "MLD'S Keybind 0.2.0",
+			"FileName": "56/dc/67/56dc67b5-253b-46f6-9cd8-81b032790ecc",
+			"Description": "",
+			"Version": "0.2.0",
+			"SizeInBytes": 71182,
+			"Uploaded": "2026-11-02T09:19:00+00:00",
+			"Mods": [
+				{
+					"Id": "YuGe.KeybindAtlas",
+					"DisplayName": "MLD's Keybind",
+					"Type": "Smapi",
+					"RelativePath": "MLD's Keybind",
+					"Manifest": {
+						"Name": "MLD's Keybind",
+						"Description": "An in-game table of every key binding from the game and from mods, with in-place rebinding.",
+						"Author": "MLD",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"EntryDll": "KeybindAtlas.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YuGe.KeybindAtlas",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576341,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441634,
+		"UploaderId": 190265871,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}
