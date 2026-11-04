@@ -3,20 +3,20 @@
 	"Id": 53350,
 	"Name": "Sleep With Spouse",
 	"Author": "slpOff",
-	"Description": "[center][size=6][b]SleepWithSpouse[/b][/size][/center]\n<br />[center]\n<br />End your day by going to bed together with your spouse.\n<br />[/center]\n<br />After 10 PM, talking to your spouse triggers dialogue with a [b]Yes / No[/b] choice.\n<br />[list]\n<br />[*][b]Yes:[/b] An event scene plays where you head to bed together, go to sleep, and begin the next day.[/*]\n<br />[*][b]No:[/b] Continue playing as usual.[/*]\n<br />[/list]Your spouse’s bedtime is also changed to [b]2 AM[/b].\n<br />[heading]Installation[/heading]\n<br />[b]Content Patcher[/b] is required.\n<br />Extract the downloaded archive and place [b]both the C# mod folder and the CP content pack folder[/b] in your Stardew Valley \n<br />[code]Mods[/code]folder. Both folders are required for the mod to work properly.\n<br />[heading]Languages and Translations[/heading]\n<br />The mod supports i18n, with [b]English as the default language[/b] and a [b]Korean translation included[/b].\n<br />You are welcome to translate the mod into other languages and freely share your translation files.\n<br />[heading]Compatibility[/heading]\n<br />Currently, only [b]vanilla NPC spouses[/b] are supported.\n<br />Dialogue has been added for most vanilla NPCs to accommodate mods that expand marriage options. However, custom NPCs from mods such as [b]Stardew Valley Expanded[/b] and [b]Ridgeside Village[/b] are not yet supported.\n<br />Compatibility with [b]Polyamory and other multiple-spouse mods is still being tested[/b], and proper functionality is not guaranteed.",
+	"Description": "[center][size=6][b]SleepWithSpouse[/b][/size][/center]\n<br />[center]\n<br />End your day by going to bed together with your spouse.\n<br />[/center]\n<br />After 10 PM, talking to your spouse triggers dialogue with a [b]Yes / No[/b] choice.\n<br />[list]\n<br />[*][b]Yes:[/b] An event scene plays where you head to bed together, go to sleep, and begin the next day.[/*]\n<br />[*][b]No:[/b] Continue playing as usual.[/*]\n<br />[/list]Your spouse’s bedtime is also changed to [b]2 AM[/b].\n<br />[heading]Installation[/heading]\n<br />[b]Content Patcher[/b] is required.\n<br />Extract the downloaded archive and place [b]both the C# mod folder and the CP content pack folder[/b] in your Stardew Valley\n<br />[code]Mods[/code]folder. Both folders are required for the mod to work properly.\n<br />[heading]Languages and Translations[/heading]\n<br />The mod supports i18n, with [b]English as the default language[/b] and a [b]Korean translation included[/b].\n<br />You are welcome to translate the mod into other languages and freely share your translation files.\n<br />[heading]Compatibility[/heading]\n<br />Currently, only [b]vanilla NPC spouses[/b] are supported.\n<br />Dialogue has been added for most vanilla NPCs to accommodate mods that expand marriage options. However, custom NPCs from mods such as [b]Stardew Valley Expanded[/b] and [b]Ridgeside Village[/b] are not yet supported.\n<br />Compatibility with [b]Polyamory and other multiple-spouse mods is still being tested[/b], and proper functionality is not guaranteed.",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/53350",
-	"Version": "0.0.1",
-	"Updated": "2026-10-04T00:50:37+00:00",
+	"Version": "1.1.5",
+	"Updated": "2026-11-03T13:29:29+00:00",
 	"Downloads": [
 		{
-			"Id": 185417,
+			"Id": 189814,
 			"Type": "Main",
 			"DisplayName": "SleepWithSpouse",
-			"FileName": "10/23/8f/10238f3e-7711-4175-b0e0-9087bb91f8b9",
+			"FileName": "1d/37/fe/1d37fe4c-d920-49bb-a390-dc45d491b2b2",
 			"Description": "",
-			"Version": "0.0.1",
-			"SizeInBytes": 36654,
-			"Uploaded": "2026-10-04T00:50:37+00:00",
+			"Version": "1.1.5",
+			"SizeInBytes": 54300,
+			"Uploaded": "2026-11-03T13:29:29+00:00",
 			"Mods": [
 				{
 					"Id": "slO.SleepWithSpouse",
@@ -27,10 +27,14 @@
 						"Name": "(C#) Sleep With Spouse",
 						"Description": "Lets the player ask their spouse to go to sleep together after 10 PM.",
 						"Author": "slO",
-						"Version": "1.0.0",
+						"Version": "1.1.5",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "SleepWithSpouse.dll",
 						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							},
 							{
 								"UniqueId": "slO.SleepWithSpouse.CP",
 								"IsRequired": true
@@ -40,7 +44,9 @@
 								"IsRequired": false
 							}
 						],
-						"UpdateKeys": [],
+						"UpdateKeys": [
+							"Nexus:53350"
+						],
 						"UniqueId": "slO.SleepWithSpouse"
 					}
 				},
@@ -53,7 +59,7 @@
 						"Name": "Sleep With Spouse - Content",
 						"Description": "Adds late-night spouse sleep-together dialogue data.",
 						"Author": "slO",
-						"Version": "1.0.0",
+						"Version": "1.1.5",
 						"MinimumApiVersion": "4.0.0",
 						"ContentPackFor": {
 							"UniqueId": "Pathoschild.ContentPatcher"
@@ -64,13 +70,15 @@
 								"IsRequired": false
 							}
 						],
-						"UpdateKeys": [],
+						"UpdateKeys": [
+							"Nexus:53350"
+						],
 						"UniqueId": "slO.SleepWithSpouse.CP"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342572105,
+				"Uid": 5596342576502,
 				"CategoryId": 1,
 				"Primary": true
 			}
