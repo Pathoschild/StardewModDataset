@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 55021,
+	"Name": "Boot Speed Scaling",
+	"Author": "Shtompeld",
+	"Description": "Boot Speed Scaling\n<br />[b]Make your boots more useful![/b]\n<br />Boot Speed Scaling is a lightweight, configurable mod for Stardew Valley that adds a movement speed bonus to your equipped boots based on their existing Defense and Immunity stats.\n<br />Better boots can now make you move faster, giving footwear progression an additional purpose without introducing new items, crafting recipes, or complicated upgrade systems.\n<br />[heading]Features[/heading]\n<br />[list]\n<br />[*][b]Stat-based movement speed:[/b] Boots provide additional movement speed based on their Defense and Immunity values.[/*]\n<br />[*][b]Fully configurable:[/b] Adjust how much speed each point of Defense and Immunity provides.[/*]\n<br />[*][b]Fractional bonuses:[/b] Small bonuses such as +0.2 and +0.35 are supported.[/*]\n<br />[*][b]In-game tooltips:[/b] The calculated speed bonus appears directly in the boots' item tooltip.[/*]\n<br />[*][b]Automatic updates:[/b] Speed bonuses are recalculated when you equip, replace, or remove boots.[/*]\n<br />[*][b]Vanilla-friendly:[/b] The mod preserves the original Defense and Immunity stats.[/*]\n<br />[*][b]Buff-based implementation:[/b] Uses the game's buff system to apply the movement speed bonus.[/*]\n<br />[*][b]Optional GMCM support:[/b] Configure the mod through Generic Mod Config Menu.[/*]\n<br />[*][b]Localization:[/b] English and Russian included.[/*]\n<br />[/list][heading]How It Works[/heading]\n<br />The speed bonus is calculated using the following formula:\n<br />[code]Speed Bonus = Defense × Defense Multiplier + Immunity × Immunity Multiplier[/code]By default, both multipliers are set to [b]0.1[/b].\n<br />Examples with the default configuration:\n<br />[table][tr][th]Defense[/th]\n<br />[th]Immunity[/th]\n<br />[th]Speed Bonus[/th]\n<br />[/tr]\n<br />[tr][td]1[/td]\n<br />[td]1[/td]\n<br />[td]+0.2[/td]\n<br />[/tr]\n<br />[tr][td]2[/td]\n<br />[td]1[/td]\n<br />[td]+0.3[/td]\n<br />[/tr]\n<br />[tr][td]3[/td]\n<br />[td]3[/td]\n<br />[td]+0.6[/td]\n<br />[/tr]\n<br />[tr][td]4[/td]\n<br />[td]4[/td]\n<br />[td]+0.8[/td]\n<br />[/tr]\n<br />[tr][td]7[/td]\n<br />[td]0[/td]\n<br />[td]+0.7[/td]\n<br />[/tr]\n<br />[/table]These values represent additive movement speed bonuses, not percentage increases.\n<br />The bonus is calculated from the stats of the equipped boots only. Other equipment, food, and temporary buffs do not contribute to this calculation.\n<br />[heading]Configuration[/heading]\n<br />The mod has two configuration options:\n<br />[b]SpeedPerDefense[/b]\n<br />Default: \n<br />[code]0.1[/code]Determines how much movement speed is gained per point of Defense.\n<br />[b]SpeedPerImmunity[/b]\n<br />Default: \n<br />[code]0.1[/code]Determines how much movement speed is gained per point of Immunity.\n<br />Example \n<br />[code]config.json[/code]:\n<br />[code]{\n<br />\u00A0 \"SpeedPerDefense\": 0.1,\n<br />\u00A0 \"SpeedPerImmunity\": 0.1\n<br />}[/code]Set either multiplier to \n<br />[code]0[/code]to disable its contribution.\n<br />You can configure the mod using Generic Mod Config Menu (GMCM), or edit \n<br />[code]config.json[/code]manually.\n<br />GMCM is optional. The mod works without it.\n<br />[heading]Requirements[/heading]\n<br />[b]Required:[/b]\n<br />[list]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]SMAPI (compatible 4.x version)[/*]\n<br />[/list][b]Optional:[/b]\n<br />[list]\n<br />[*]Generic Mod Config Menu[/*]\n<br />[/list]Content Patcher is not required.\n<br />[heading]Installation[/heading]\n<br />[b]Using Vortex:[/b]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download this mod using Mod Manager Download.[/*]\n<br />[*]Enable the mod in Vortex.[/*]\n<br />[*]Launch Stardew Valley through SMAPI.[/*]\n<br />[/list][b]Manual installation:[/b]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Download the mod archive.[/*]\n<br />[*]Extract the mod folder into \n<br />[code]Stardew Valley/Mods[/code].[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][heading]Compatibility[/heading]\n<br />Designed for Stardew Valley 1.6 and its compatible SMAPI versions.\n<br />The mod uses the game's buff system for movement speed and Harmony to extend boots' item tooltips.\n<br />Mods that heavily modify item tooltips may affect how the additional speed line is displayed.\n<br />Multiplayer and compatibility with every third-party interface mod have not been fully verified.\n<br />[heading]Uninstallation[/heading]\n<br />Remove Boot Speed Scaling from your Mods folder or disable it using your mod manager.\n<br />The mod does not add new boots or change their base Defense and Immunity stats. Removing the mod removes its additional speed functionality.\n<br />[heading]Feedback and Bug Reports[/heading]\n<br />If you encounter a problem, please include:\n<br />[list]\n<br />[*]Your Stardew Valley and SMAPI versions.[/*]\n<br />[*]The Boot Speed Scaling version.[/*]\n<br />[*]A description of the issue and how to reproduce it.[/*]\n<br />[*]Your SMAPI log, preferably uploaded through [url=https://smapi.io/log]https://smapi.io/log[/url].[/*]\n<br />[/list]Screenshots are especially helpful for tooltip-related issues.\n<br />[heading]Development Disclosure[/heading]\n<br />The core implementation was developed using OpenAI Codex based on author-defined requirements. The author directed the mod's design and performed in-game testing. This page description was drafted with assistance from ChatGPT.\n<br />[heading]Credits[/heading]\n<br />[list]\n<br />[*]ConcernedApe — Stardew Valley.[/*]\n<br />[*]Pathoschild and contributors — SMAPI.[/*]\n<br />[*]spacechase0 — Generic Mod Config Menu.[/*]\n<br />[*]Harmony contributors — Harmony patching library.[/*]\n<br />[/list]Thanks for trying Boot Speed Scaling!",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55021",
+	"Version": "1",
+	"Updated": "2026-11-04T09:37:28+00:00",
+	"Downloads": [
+		{
+			"Id": 189910,
+			"Type": "Main",
+			"DisplayName": "Boot Speed Scaling",
+			"FileName": "50/b3/ab/50b3ab4e-c2c9-4e63-baa2-b55afd97a92e",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 9032,
+			"Uploaded": "2026-11-04T09:37:28+00:00",
+			"Mods": [
+				{
+					"Id": "Shtompel.BootSpeedScaling",
+					"DisplayName": "Boot Speed Scaling",
+					"Type": "Smapi",
+					"RelativePath": "BootSpeedScaling",
+					"Manifest": {
+						"Name": "Boot Speed Scaling",
+						"Description": "Adds fractional movement speed based on equipped boots defense and immunity.",
+						"Author": "Shtompel",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "BootSpeedScaling.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55021"
+						],
+						"UniqueId": "Shtompel.BootSpeedScaling"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576598,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441709,
+		"UploaderId": 124332113,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
