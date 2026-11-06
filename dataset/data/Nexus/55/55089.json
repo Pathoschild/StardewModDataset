@@ -1,0 +1,104 @@
+{
+	"Site": "Nexus",
+	"Id": 55089,
+	"Name": "Sounding Animated Furniture",
+	"Author": "cassafrassarole",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]I wanted something that sounded nice when the music died in-game, so I created this to give me something to hear while working on the farm. I thought I'd share with everyone since I've been working on it.[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />- The Bamboo Chimes are in regular, black, gold, wood, and seasonal-tree styles.\n<br />- The Deer Scare animates from spring to fall, and shows a static frozen sprite in winter.\n<br />- You can use the Deer Scare to refill your watering can in any season except winter.\n<br />- The README includes how to add your own chimes.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />- SMAPI 4.0.0 or later\n<br />- Stardew Valley 1.6\n<br />- Furniture Framework 3.2.4 or later\n<br />- Content Patcher 2.9.1 or later",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55089",
+	"Version": "1.0.0",
+	"Updated": "2026-11-06T00:02:50+00:00",
+	"Downloads": [
+		{
+			"Id": 190138,
+			"Type": "Main",
+			"DisplayName": "Sounding Animated Furniture",
+			"FileName": "9c/a4/9f/9ca49fac-5ad7-47c9-96e0-7fb1ee952c65",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 3109448,
+			"Uploaded": "2026-11-06T00:02:50+00:00",
+			"Mods": [
+				{
+					"Id": "Cassafrassarole.SoundingFurniture",
+					"DisplayName": "Sounding Animated Furniture",
+					"Type": "ContentPack",
+					"RelativePath": "Sounding Animated Furniture\\SoundingAnimatedFurniture",
+					"Manifest": {
+						"Name": "Sounding Animated Furniture",
+						"Description": "Hopefully cool sounding furniture!",
+						"Author": "Cassafrassarole",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "leroymilo.FurnitureFramework",
+							"MinimumVersion": "3.2.4"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Cassafrassarole.SoundingFurniture"
+					}
+				},
+				{
+					"Id": "Cassafrassarole.SoundingFurnitureWinter",
+					"DisplayName": "Sounding Animated Furniture - Winter Deer Scare",
+					"Type": "ContentPack",
+					"RelativePath": "Sounding Animated Furniture\\SoundingAnimatedFurnitureWinter",
+					"Manifest": {
+						"Name": "Sounding Animated Furniture - Winter Deer Scare",
+						"Description": "Uses the dedicated static Deer Scare sprite in winter.",
+						"Author": "Cassafrassarole",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.9.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Cassafrassarole.SoundingFurniture",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Cassafrassarole.SoundingFurnitureWinter"
+					}
+				},
+				{
+					"Id": "Cassafrassarole.SoundingFurnitureCompanion",
+					"DisplayName": "Sounding Furniture Companion",
+					"Type": "Smapi",
+					"RelativePath": "Sounding Animated Furniture\\SoundingFurnitureCompanion",
+					"Manifest": {
+						"Name": "Sounding Furniture Companion",
+						"Description": "Custom behavior for Sounding Animated Furniture, including configurable chime gusts, Deer Scare audio, and watering-can refills.",
+						"Author": "Cassafrassarole",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SoundingFurnitureCompanion.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "leroymilo.FurnitureFramework",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "Cassafrassarole.SoundingFurniture",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Cassafrassarole.SoundingFurnitureCompanion"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576826,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441777,
+		"UploaderId": 79666068,
+		"CategoryId": 23,
+		"Adult": false
+	}
+}
