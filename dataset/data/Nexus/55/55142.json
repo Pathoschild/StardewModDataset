@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 55142,
+	"Name": "Zoom Per Map (Fork)",
+	"Author": "wind0nd",
+	"Description": "[center][size=5][b]Zoom Per Map (Fork)[/b][/size]\n<br />Zoom set with the [b]+ / -[/b] buttons or the scroll wheel is remembered.[/center]\n<br />\n<br />[line]\n<br />\n<br />[b]This is a fork.[/b] Original mod, code and design by [b]DecidedlyHuman[/b]:\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/22227]Zoom Per Map[/url]\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Why the fork[/b][/size]\n<br />This is a stopgap for the [b]+ / -[/b] zoom gap described on the original page - if DecidedlyHuman ships it, this fork goes quiet on its own.\n<br />\n<br />Zoom Per Map remembers the zoom level of each location and restores it when you walk back in. In the original, a location only stores a zoom level after you change it in the [b]options menu[/b]. Zooming with the little [b]+ / -[/b] buttons next to the clock, or with the scroll wheel, is not stored - so the zoom you were just using may not be the zoom you come back to.\n<br />\n<br />This fork stores all of it: set the zoom however you like while playing and the location remembers it.\n<br />\n<br />\n<br />[size=4][b]What this fork does[/b][/size]\n<br />[list]\n<br />[*]Zoom set with the [b]+ / -[/b] buttons by the clock, the scroll wheel or the zoom keys is remembered per location - no options menu needed (checked every 6 ticks).[/*]\n<br />[*]Only reacts to the [b]local[/b] player's map warps, so on a multiplayer farm other players can't drag your zoom around.[/*]\n<br />[*]Opening the menu outside a save no longer writes to config.json.[/*]\n<br />[*]Adds the [i]event zoom level[/i] translation key so that slider has a label.[/*]\n<br />[/list]\n<br />Everything else is untouched: same four GMCM sliders, same per-location config file, so your existing [font=Courier New]config.json[/font] keeps working.\n<br />\n<br />[size=4][b]Don't run both[/b][/size]\n<br />This fork and the original both drive the same zoom value - pick one.\n<br />\n<br />If the original is installed and is newer than [b]1.0.4[/b], this fork disables itself and tells you to use the official release. That's deliberate: the moment the author ships this behaviour upstream, you should use his build, not mine.\n<br />\n<br />[size=4][b]Source[/b][/size]\n<br />MPL-2.0, the same licence as the original: [url=https://github.com/Wind0ND/ZoomPerMap-Fork]github.com/Wind0ND/ZoomPerMap-Fork[/url]\n<br />Modified files: [font=Courier New]src/ZoomPerMap/ModEntry.cs[/font], [font=Courier New]manifest.json[/font], [font=Courier New]i18n/default.json[/font], [font=Courier New]i18n/zh.json[/font]. A copy of the source is also attached to this page.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0.0+[/*]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for the sliders[/*]\n<br />[/list]\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip the download into [font=Courier New]Stardew Valley/Mods[/font].[/*]\n<br />[*]Remove the original Zoom Per Map folder if it is still there.[/*]\n<br />[/list]\n<br />[size=4][b]Credits &amp; license[/b][/size]\n<br />Original mod, design and all original code: [b]DecidedlyHuman[/b] - [url=https://www.nexusmods.com/stardewvalley/mods/22227]original page[/url]\n<br />Fork changes and maintenance: [b]win0nd[/b]\n<br />\n<br />Distributed under the [b]Mozilla Public License 2.0[/b], the same license as the original.\n<br />\n<br />[size=4][b]Changelog[/b][/size]\n<br />[b]1.0.0[/b]\n<br />[list]\n<br />[*]Forked from Zoom Per Map 1.0.4.[/*]\n<br />[*]Zoom set with the [b]+ / -[/b] buttons or the scroll wheel is remembered per location.[/*]\n<br />[*]Local-player-only warp handling in multiplayer.[/*]\n<br />[*]Menu no longer writes config outside a save.[/*]\n<br />[*]Auto-disable when the original ships a newer version.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55142",
+	"Version": "1.0.5",
+	"Updated": "2026-11-06T17:35:17+00:00",
+	"Downloads": [
+		{
+			"Id": 190259,
+			"Type": "Main",
+			"DisplayName": "ZoomPerMap",
+			"FileName": "7f/ff/12/7fff12f0-3657-4a48-9e3d-43365a940e8e",
+			"Description": "",
+			"Version": "1.0.5",
+			"SizeInBytes": 8881,
+			"Uploaded": "2026-11-06T17:35:17+00:00",
+			"Mods": [
+				{
+					"Id": "win0nd.ZoomPerMap",
+					"DisplayName": "Zoom Per Map (Fork)",
+					"Type": "Smapi",
+					"RelativePath": "ZoomPerMap",
+					"Manifest": {
+						"Name": "Zoom Per Map (Fork)",
+						"Description": "Remembers the zoom level you set in each map, and switches to that zoom level when you enter it. Fork of DecidedlyHuman's Zoom Per Map that also remembers zoom changes made without opening the menu. Disables itself automatically once the original mod is updated past the version this fork was built against.",
+						"Author": "DecidedlyHuman & win0nd",
+						"Version": "1.0.5",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ZoomPerMap.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55142"
+						],
+						"UniqueId": "win0nd.ZoomPerMap",
+						"OtherFields": {
+							"$schema": "https://smapi.io/schemas/manifest.json"
+						}
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576947,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441830,
+		"UploaderId": 102642923,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

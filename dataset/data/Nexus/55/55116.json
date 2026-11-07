@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 55116,
+	"Name": "EmotePlus",
+	"Author": "Zexu2K",
+	"Description": "[center][b][size=6]Emote+[/size][/b]\n<br />[size=4]Custom animated emotes, NPC reactions, and rock–paper–scissors — integrated into Stardew Valley’s original emote menu![/size][/center]\n<br />[b][size=5]Features[/size][/b]\n<br />[size=4]\n<br />• 45 custom animated emotes.\n<br />• Integration with the original emote wheel and favorites selector.\n<br />• Additional pages for browsing custom emotes.\n<br />• NPC reactions based on friendship hearts.\n<br />• Rock–paper–scissors with villagers.\n<br />• Configurable friendship bonuses, cooldowns, and daily limits.\n<br />• Support for additional emote packs.\n<br />• Multiplayer synchronization.\n<br />• Optional Generic Mod Config Menu integration, with English and Polish translations.[/size]\n<br />\n<br />[center][b][size=5]Requirements &amp; Installation[/size][/b][/center]\n<br />[size=4]\n<br />Requires [b]Stardew Valley 1.6.15[/b] and [b]SMAPI 4.5.2 or newer within the 4.x series[/b].[/size]\n<br />[list=1]\n<br />[*][size=4]Extract the [b]EmotePlus[/b] folder into your game's [b]Mods[/b] folder.[/size][/*]\n<br />[*][size=4]Disable the old [b]Emote's / Custom Emotes Menu[/b] mod.[/size][/*]\n<br />[*][size=4]Launch the game through SMAPI.[/size][/*]\n<br />[/list][size=4][b]Generic Mod Config Menu[/b] is optional. Content Patcher is only needed for packs that specifically require it.\n<br />When updating Emote+, replace its files inside the existing folder to keep your [b]config.json[/b].[/size]\n<br />\n<br />[center][b][size=5]Opening &amp; Using Emotes[/size][/b][/center]\n<br />[size=4]\n<br />Open the original emote wheel using your normal game controls:\n<br />[b][color=#00ff00]Y[/color][/b] on keyboard or [b][color=#00ff00]Right Stick[/color][/b] on controller by default.\n<br />Choose an emote with the mouse or right stick. Its animation appears above your character.\n<br />Browse additional pages using:\n<br />• [b]Mouse wheel[/b]\n<br />• [b]PageUp / PageDown[/b]\n<br />• [b]LB / RB[/b] on controller\n<br />The first page keeps your eight native favorite slots. Additional pages contain the remaining custom emotes.[/size]\n<br />\n<br />[center][b][size=5]⭐ Setting Favorites[/size][/b][/center]\n<br />[size=4]\n<br />[b]Mouse:[/b] Right-click an emote slot on the wheel to open the original favorites selector.\n<br />[b]Controller:[/b] Point at a slot with the right stick, then press [b]Back / View[/b] to open the selector.\n<br />Choose an emote to assign it to that slot. Custom emotes can use all eight native favorite slots, and the game saves your choices with your character.\n<br />The larger selector also includes page buttons for browsing additional emotes.[/size]\n<br />\n<br />[center][b][size=5]NPC Reactions &amp; Friendship[/size][/b][/center]\n<br />[size=4]\n<br />Use supported emotes near a villager to receive a response! Reactions depend on your friendship and the type of emote.\n<br />[b]Default settings:[/b]\n<br />• The nearest awake villager within [b]3 tiles[/b] can respond.\n<br />• Friendly responses become available at [b]4 hearts[/b].\n<br />• Heart responses become available at [b]8 hearts[/b], when romance conditions are met.\n<br />• Romantic replies require a romanceable adult NPC you are dating or married to by default.\n<br />• Repeating the same emote three times in a row makes the NPC bored.\n<br />• An [b]8-second cooldown[/b] prevents constant reactions.\n<br />Positive interactions can grant [b]2 base friendship points[/b], with a default limit of [b]10 base points per NPC and player each day[/b]. The game may apply its own friendship modifiers.\n<br />There are no friendship penalties for losing a game or receiving a bored response.\n<br />This system supports villagers, including eligible villagers added by other mods. Pets, horses, and monsters do not participate.[/size]\n<br />\n<br />[center][b][size=5]✊ Rock–Paper–Scissors[/size][/b][/center]\n<br />[size=4]\n<br />Use [b]RPS_Rock[/b], [b]RPS_Paper[/b], or [b]RPS_Scissors[/b] near a villager to play one round.\n<br />The NPC randomly chooses a move, displays its emote, and a notification shows the result.\n<br />By default, you need [b]2 hearts[/b] to play. Wins and draws can award friendship points within the daily limit.[/size]\n<br />\n<br />[center][b][size=5]Configuration[/size][/b][/center]\n<br />[size=4]\n<br />Edit [b]config.json[/b] or use the optional [b]Generic Mod Config Menu[/b] to customize:\n<br />• NPC reactions and rock–paper–scissors.\n<br />• Friendship thresholds and romantic reply conditions.\n<br />• Interaction range and cooldown.\n<br />• Reactions to repeated emotes.\n<br />• Friendship bonuses and daily limits.\n<br />• Result notifications and additional wheel pages.\n<br />In multiplayer, the [b]host controls interaction rules and NPC outcomes[/b]. Each player can choose whether to display result notifications.[/size]\n<br />\n<br />[center][b][size=5]Multiplayer[/size][/b][/center]\n<br />[size=4]\n<br />All players should use the same version of Emote+.\n<br />Install the same emote pack files to see the same custom graphics. Textures are not transferred automatically; players without a pack will not see its custom player emotes.\n<br />The host also needs the pack to recognize its NPC interaction category.[/size]\n<br />[center][/center]\n<br />[center][b][size=5]\uD83E\uDDE9 Creating Your Own Emote Pack[/size][/b][/center]\n<br />[size=4]\n<br />Emote+ supports the original [b]cfg.json[/b] format and a new [b]emotes.json[/b] format with custom frame sizes, animation timing, and NPC interaction categories.[/size]\n<br />\n<br />[b][size=4]Step 1: Folder Structure[/size][/b]\n<br />[code]\n<br />YourEmotePack/\n<br />├── assets/\n<br />│ └── heart.png\n<br />├── emotes.json\n<br />└── manifest.json[/code][b][size=4]Step 2: manifest.json[/size][/b]\n<br />[code]\n<br />{\n<br />\"Name\": \"My Emote Pack\",\n<br />\"Author\": \"YourName\",\n<br />\"Version\": \"1.0.0\",\n<br />\"Description\": \"Custom emotes for Emote+\",\n<br />\"UniqueID\": \"YourName.MyEmotePack\",\n<br />\"ContentPackFor\": {\n<br />\"UniqueID\": \"Zexu2K.EmotePlus\",\n<br />\"MinimumVersion\": \"1.1.0\"\n<br />}\n<br />}[/code][b][size=4]Step 3: Add Your Graphics &amp; Definitions[/size][/b]\n<br />[size=4]\n<br />For a [b]single transparent 64×64 PNG[/b], save the image as [b]assets/heart.png[/b] and use this [b]emotes.json[/b]:[/size]\n<br />\n<br />[code]\n<br />{\n<br />\"MyHeart\": {\n<br />\"DisplayName\": \"My Heart\",\n<br />\"Texture\": \"assets/heart.png\",\n<br />\"FrameWidth\": 64,\n<br />\"FrameHeight\": 64,\n<br />\"IconFrame\": 0,\n<br />\"Frames\": [0],\n<br />\"FrameDurations\": [1200],\n<br />\"Scale\": 1,\n<br />\"OffsetY\": -164,\n<br />\"Reaction\": \"Love\"\n<br />}\n<br />}[/code][size=4]\n<br />For animated emotes, place frames in a PNG sprite sheet. Number frames from [b]0[/b], left to right, then top to bottom.\n<br />[b]Frames[/b] sets the playback order. [b]FrameDurations[/b] sets each frame's duration in milliseconds. Both arrays must contain the same number of entries.\n<br />[b]Reaction[/b] supports:\n<br />[b]None, Auto, Friendly, Love, Sad, Angry, Funny, Rock, Paper, Scissors[/b].\n<br />Use an explicit category for new emotes. [b]Auto[/b] recognizes selected existing names; unknown names do not trigger NPC interactions.\n<br />Example: [b]\"Reaction\": \"Rock\"[/b] lets your custom emote start a rock–paper–scissors round.[/size]\n<br />\n<br />[b][size=4]Using the Original cfg.json Format[/size][/b]\n<br />[size=4]\n<br />Existing packs can keep their original structure:[/size]\n<br />\n<br />[code]\n<br />YourEmotePack/\n<br />├── assets/\n<br />│ └── Tongue.png\n<br />├── cfg.json\n<br />└── manifest.json[/code][code]\n<br />{\n<br />\"Tongue\": \"Tongue.png\"\n<br />}[/code][size=4]\n<br />This format requires the original [b]64×64-frame sprite sheet[/b] with at least 13 frames — not a single 64×64 image. Frame 4 is the menu icon.\n<br />The animation uses:\n<br />[b]0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12[/b].\n<br />To customize timing, frame sizes, or NPC reactions, move the definition to [b]emotes.json[/b]. Do not define the same emote in both files.\n<br />[b]Updating an old pack:[/b] Change [b]ContentPackFor.UniqueID[/b] from [b]Zexu2K.NewEmotes[/b] to [b]Zexu2K.EmotePlus[/b], and update its minimum version to [b]1.1.0[/b].\n<br />Place your pack beside EmotePlus in [b]Mods[/b], then restart the game. Keep your pack's UniqueID and emote keys stable so saved favorites continue to work.[/size]\n<br />\n<br />[center][/center]\n<br />\n<br />Special thanks to [url=https://next.nexusmods.com/profile/Treeways?gameId=1303][/url][url=https://www.nexusmods.com/profile/Treeways?gameId=1303]Treeways[/url]\u00A0for the [url=https://next.nexusmods.com/profile/Treeways?gameId=1303]OwO emoji[/url] assets used in this mod.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55116",
+	"Version": "1",
+	"Updated": "2026-11-06T09:50:52+00:00",
+	"Downloads": [
+		{
+			"Id": 190200,
+			"Type": "Main",
+			"DisplayName": "EmotePlus",
+			"FileName": "1f/6a/da/1f6adaff-946e-49fa-81b2-3287f7fea479",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 122910,
+			"Uploaded": "2026-11-06T09:50:52+00:00",
+			"Mods": [
+				{
+					"Id": "Zexu2K.EmotePlus",
+					"DisplayName": "Emote+",
+					"Type": "Smapi",
+					"RelativePath": "EmotePlus",
+					"Manifest": {
+						"Name": "Emote+",
+						"Description": "Custom animated emotes in Stardew Valley's native emote wheel and selector.",
+						"Author": "Zexu2K",
+						"Version": "1.1.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "EmotePlus.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Zexu2K.EmotePlus"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576888,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441804,
+		"UploaderId": 55430287,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

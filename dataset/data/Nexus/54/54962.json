@@ -7,17 +7,17 @@
 	"Description": "[center][size=6][b]Junimos Accept Cash[/b][/size]\n<br />Buy Community Center bundles with gold — updated for Stardew Valley 1.6.[/center]\n<br />\n<br />[b]Junimos Accept Cash[/b] adds a purchase button to Junimo bundle pages. Instead of hunting down every ingredient, you can pay gold to fill the remaining slots of a bundle.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]What's changed in this unofficial update[/b][/size]\n<br />[list]\n<br />[*]Updated for Stardew Valley 1.6 and SMAPI 4.[/*]\n<br />[*]Fixed the purchase button click handling at different UI scale / zoom settings.[/*]\n<br />[*]Added Generic Mod Config Menu support with a configurable cost multiplier.[/*]\n<br />[*]Fixed matching for category ingredients (e.g. \"any fish\") and partially filled bundles.[/*]\n<br />[*]Gold is now charged before the bundle is completed, and refunded if completion fails.[/*]\n<br />[*]Added a clearer purchase log and less console spam.[/*]\n<br />[/list]\n<br />--------------------\n<br />\n<br />[size=5][b]How it works[/b][/size]\n<br />\n<br />Open any Community Center bundle page. If the bundle is not already completed and has empty slots, a purchase button appears in the upper-right corner of the page.\n<br />\n<br />The price is calculated from the missing ingredients:\n<br />\n<br />[b]cost = sum(item sell price × required stack) × cost multiplier[/b]\n<br />\n<br />The default multiplier is 10. You can change it from 1 to 100 in Generic Mod Config Menu.\n<br />\n<br />Clicking the button:\n<br />[list]\n<br />[*]Fills the empty slots with the required items.[/*]\n<br />[*]Deducts the gold.[/*]\n<br />[*]Completes the bundle through the normal Junimo Note logic, so rewards are granted as usual.[/*]\n<br />[/list]\n<br />The button is hidden for bundles that already have the vanilla purchase option, and for bundles with no empty slots.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />\n<br />Generic Mod Config Menu is optional but recommended. The only option is:\n<br />\n<br />[b]Cost Multiplier[/b] — multiplies the calculated gold cost. Default 10, range 1–100.\n<br />\n<br />You can also edit [b]config.json[/b] after the first launch.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]SMAPI 4.0.0 or later[/*]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]Generic Mod Config Menu (optional)[/*]\n<br />[/list]\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />1. Install SMAPI.\n<br />2. Extract the mod into your Stardew Valley/Mods folder.\n<br />3. Launch the game through SMAPI.\n<br />4. Optional: configure the cost multiplier in Generic Mod Config Menu.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Credits[/b][/size]\n<br />[list]\n<br />[*][b]Original mod and code:[/b] spacechase0 — [url=https://www.nexusmods.com/stardewvalley/mods/7437]Junimos Accept Cash on Nexus Mods[/url][/*]\n<br />[*][b]Original source:[/b] [url=https://github.com/spacechase0/StardewValleyMods]github.com/spacechase0/StardewValleyMods[/url][/*]\n<br />[*][b]Original license:[/b] [url=https://github.com/spacechase0/StardewValleyMods/blob/develop/LICENSE]MIT License[/url][/*]\n<br />[*][b]1.6 update, UI-scale click fix, config menu, category matching:[/b] wind0nd[/*]\n<br />[/list]\n<br />[size=5][b]License[/b][/size]\n<br />\n<br />This is an unofficial update of a mod originally released under the MIT License (Copyright (c) 2021 Chase W). It is distributed under the same MIT License; the original copyright notice and the full license text are included in the LICENSE file.\n<br />\n<br />--------------------\n<br />\n<br />[size=5][b]Notes[/b][/size]\n<br />[list]\n<br />[*]Tested in single-player.[/*]\n<br />[*]Multiplayer has not been tested; the host should install it.[/*]\n<br />[*]Back up your save before using mods that change bundle completion.[/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54962",
 	"Version": "1.2.0",
-	"Updated": "2026-11-02T17:07:03+00:00",
+	"Updated": "2026-11-06T12:45:36+00:00",
 	"Downloads": [
 		{
-			"Id": 189690,
+			"Id": 190214,
 			"Type": "Main",
 			"DisplayName": "JunimosAcceptCash",
-			"FileName": "e2/00/4f/e2004f82-1088-4897-aea6-2921bb050918",
+			"FileName": "66/82/01/6682012c-0478-44c2-a124-6a0e4c723c13",
 			"Description": "",
 			"Version": "1.2.0",
-			"SizeInBytes": 21011,
-			"Uploaded": "2026-11-02T17:07:03+00:00",
+			"SizeInBytes": 21024,
+			"Uploaded": "2026-11-06T12:45:36+00:00",
 			"Mods": [
 				{
 					"Id": "spacechase0.JunimosAcceptCash",
@@ -32,13 +32,15 @@
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "JunimosAcceptCash.dll",
 						"Dependencies": [],
-						"UpdateKeys": [],
+						"UpdateKeys": [
+							"Nexus:54962"
+						],
 						"UniqueId": "spacechase0.JunimosAcceptCash"
 					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342576378,
+				"Uid": 5596342576902,
 				"CategoryId": 1,
 				"Primary": true
 			}

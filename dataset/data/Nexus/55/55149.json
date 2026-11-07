@@ -1,0 +1,76 @@
+{
+	"Site": "Nexus",
+	"Id": 55149,
+	"Name": "Bridges and Foundation - Framework",
+	"Author": "SrNemoa",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[size=3]My favorite farm has always been the Riverland Farm, but moving around it was inconvenient, and often the buildings wouldn't end up symmetrical or positioned the way I wanted. I created this framework to solve that—for myself, and for anyone else facing a similar issue on other farm types.[/size]\n<br />\n<br />The framework allows for placing floors and paths on water tiles and assigning them different behaviors based on the tag applied.\n<br />\n<br />There are two types of tags: \"bridge_item\" and \"foundation_item.\"\n<br />\n<br />The \"bridge_item\" allows floor tiles to be placed over water, enabling you to walk across them to create connections or establish better routes.\n<br />\n<br />The \"foundation_item\" also allows flooring to be placed in water; however, it does not allow passage—instead, it enables the placement of objects, machines, and even buildings on top of the foundations.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />Just download and extract the file, then simply copy and paste it into your mods folder.\n<br />\n<br />[size=4][b]About the mod[/b][/size]\n<br />The mod contains two folders; one adds new content using the framework, consisting of bridges and foundations that are ready for use.\n<br />There are 5 bridges and 2 foundations, all ready to be used in your games.\n<br />\n<br />The other folder contains the framework, which is 100% essential; it must be present for the bridges for this mod—as well as any other mod that adds content for this mod—to function.\n<br />\n<br />[size=4]Observations[/size]\n<br />[size=3]-Some of the textures for the bridges added by the mod are subject to change, as the development focus was for the mod to function as a framework, rather than simply providing a few bridges and foundations as its entire content.[/size]\n<br />-You might notice that, while playing, there are some water tiles you can walk across even without a bridge. This isn’t a bug; it’s part of the base game. It seems they were never intended to be accessible, so they were left as walkable terrain.\n<br />-The behavior of water tiles in Stardew is quite complex, so if you encounter a bug, please report it and I will try to resolve it as quickly as I can.\n<br />\n<br />[size=4][b]How to create a bridge or foundation[/b][/size]\n<br />There are two ways to create a foundation or a bridge: you can build one from scratch by creating a \"floor and paths\" element and adding the desired behavior—either \"bridge_item\" or \"foundation_item\"—to the \"context tag\" field. This tag must be placed within the \"data/object\" section of the floor.\n<br />Example of a bridge from a content patch:\n<br />\"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"Data/Objects\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"{{ModId}}_BridgeWood\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Name\": \"BridgeWood\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"DisplayName\": \"{{i18n:bridge_wood_name}}\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Description\": \"{{i18n:bridge_wood_description}}\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Type\": \"Crafting\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Price\": 50,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"Texture\": \"Objects/{{ModId}}_BridgeWood\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"CanBeGivenAsGift\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"CanBeTrashed\": true,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"ContextTags\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"bridge_item\"\u00A0 \u00A0 \u00A0//Esta es la parte que permite que el framework lea y le de el comportamiento que queremos\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0],\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"CustomFields\": null\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0},\n<br />Another way to create a bridge or foundation is to apply a tag to an existing floor or path using Content Patcher. This saves you the trouble of having to create a new object—along with its associated data, floor properties, and textures—by simply adding a tag that allows a floor of your choice to function as a bridge.\n<br />\n<br />example of tag assignment for an existing floor:\n<br />{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\":\"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\":\"Data/Objects\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Fields\":{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"329\":\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ContextTags\":[\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"foundation_item\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0}\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0}\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }, \u00A0 \u00A0\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\":\"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\":\"Data/Objects\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Fields\":{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"328\":\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ContextTags\":[\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"bridge_item\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0}\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0}\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }, \n<br />These examples are included in the mod, so the wooden floor and the stone floor will function as a bridge and a foundation, respectively.\n<br />\n<br />If you create content that uses my mod, I would greatly appreciate it if you included the dependency on my mod, as this helps the framework gain more visibility.\n<br />\n<br />\u00A0\"Dependencies\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"UniqueID\": \"SrNemoa.Bridges\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"IsRequired\": true\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />Thank you for downloading and playing this mod. As with all my content, I am the sole developer, so if you encounter any bugs or issues, or have any suggestions, please share them in the comments—it helps me improve the content, all with the goal of making your gaming experience even more enjoyable.\n<br />Check out my other mod or translations\u00A0[url=https://www.nexusmods.com/profile/SrNemoa/mods]SrNemoa[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55149",
+	"Version": "1",
+	"Updated": "2026-11-06T18:26:52+00:00",
+	"Downloads": [
+		{
+			"Id": 190263,
+			"Type": "Main",
+			"DisplayName": "BridgesAndFoundations 1.0",
+			"FileName": "97/76/83/977683cb-4d11-45b8-9079-738e5b96ae2e",
+			"Description": "-Thanks for downloading<br /><br />-Read the description to learn about all the mod's content and how you can use it.",
+			"Version": "1",
+			"SizeInBytes": 40930,
+			"Uploaded": "2026-11-06T18:26:52+00:00",
+			"Mods": [
+				{
+					"Id": "SrNemoa.Bridges",
+					"DisplayName": "Bridges Nemo",
+					"Type": "Smapi",
+					"RelativePath": "BridgesAndFoundations\\SrNemoaBridges",
+					"Manifest": {
+						"Name": "Bridges Nemo",
+						"Description": "Framework for creating bridges and foundations for walking and building on water.",
+						"Author": "SrNemoa",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SrNemoaBridges.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "SrNemoa.Bridges"
+					}
+				},
+				{
+					"Id": "SrNemoaBridgesContentPatch",
+					"DisplayName": "Bridges Nemo Traducidos",
+					"Type": "ContentPack",
+					"RelativePath": "BridgesAndFoundations\\SrNemoaBridgesContentPatch",
+					"Manifest": {
+						"Name": "Bridges Nemo Traducidos",
+						"Description": "Crea puentes donde puedas caminar y cruzar sobre el agua.",
+						"Author": "SrNemoa",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "SrNemoa.Bridges",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "SrNemoaBridgesContentPatch"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576951,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441837,
+		"UploaderId": 243014711,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

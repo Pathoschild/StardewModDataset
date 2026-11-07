@@ -3,10 +3,10 @@
 	"Id": 55016,
 	"Name": "ChestItemFinder",
 	"Author": "cynthiazhao0411",
-	"Description": "[size=4][b]Description[/b][/size]\n<br />ChestItemFinder helps you find which chest holds the item you're looking for. Press a single key to open a search box, and every chest containing that item pulses yellow in the world. An on-screen message tells you how many chests were found and in which locations. Built for late-game farms where you have too many chests to remember what's in each one.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />1. Install SMAPI (https://smapi.io).\n<br />2. Download the zip and extract the ChestItemFinder folder into your Stardew Valley \"Mods\" folder.\n<br />3. Launch the game through SMAPI.\n<br />4. Load a save and press **H** (default key) to open the search box. Type the item name and press Enter.\n<br />*(You can change the search key in `config.json` or in-game if you have Generic Mod Config Menu installed.)*\n<br />\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*]Searches every chest in every location, including building interiors (like sheds) and Ginger Island[/*]\n<br />[*]Press H to open a clean in-game search box instead of typing console commands[/*]\n<br />[*]Matches both localized display names and internal English names, so it works in any game language[/*]\n<br />[*]Smart matching: Case-insensitive partial matching (e.g. \"gem\" or \"fish\" finds all items in that category). If an exact match exists, it prioritizes it (e.g. \"Starfruit\" won't match \"Starfruit Wine\", but you can search \"Starfruit Wine\" directly)[/*]\n<br />[*]Matching chests pulse yellow in the world[/*]\n<br />[*]Summary message shows how many chests were found and where they are located[/*]\n<br />[*]Highlights automatically clear after you open any target chest[/*]\n<br />[/list]\n<br />[size=4][b]Requirements[/b][/size]\n<br />- Stardew Valley 1.6\n<br />- SMAPI 4.0 or later\n<br />-\u00A0Generic Mod Config Menu (Optional, to change the default H keybind in-game)\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8]Thanks to Pathoschild for SMAPI, to ConcernedApe for Stardew Valley, and to the Stardew modding wiki.[/color]",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />ChestItemFinder helps you find which chest holds the item you're looking for. Open a search box, and matching chests pulse in the world. An on-screen message tells you how many chests were found and in which locations. Built for late-game farms where you have too many chests to remember what's in each one.\n<br />\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />1. Install SMAPI (https://smapi.io).\n<br />2. Download the zip and extract the ChestItemFinder folder into your Stardew Valley \"Mods\" folder.\n<br />3. Launch the game through SMAPI.\n<br />4. Load a save and press LeftShift + (default key) to open the search box. Type the item name and press Enter.\n<br />*(You can change the search key in `config.json` or in-game if you have Generic Mod Config Menu installed.)*\n<br />\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*]Search all chests in every location, including building interiors (sheds, barns) and Ginger Island.[/*]\n<br />[*]Press LeftShift + T to open a clean in-game search box instead of typing console commands.[/*]\n<br />[*]Advanced Smart Matching:[/*]\n<br />[*]P1 Category Macro (e.g. fruit, fish) finds all items in that category.[/*]\n<br />[*]P2 Multi-word Categories (e.g. artisan goods).[/*]\n<br />[*]P3 Exact Match (e.g. star fruit) highlights precisely without matching wines/jellies.[/*]\n<br />[*]P4 Fuzzy Fallback (e.g. star) finds everything with that root.[/*]\n<br />[*]Number ID Search: Type an item or category ID (e.g. -2 for all gems, 268 for Starfruit) to search directly.[/*]\n<br />[*]Quality Filter System: Click the star button next to the search box to cycle quality (Silver, Gold, Iridium, All). Items without quality (like wood) ignore this filter.[/*]\n<br />[*]Hover Tooltip &amp; Pause: Hover over location text (like \"Farm\") to see exact item counts in those chests. Hovering over the UI pauses the highlight countdown.[/*]\n<br />[*]Anti-spam protection: Blocks text searches with less than 3 characters.[/*]\n<br />[*]Highlights automatically clear after you open any target chest or when the timer runs out.[/*]\n<br />[*]Fully customizable via GMCM: 10 highlight colors, opacity slider (0% to 100%), and custom keybind.[/*]\n<br />[/list][size=4][b]Requirements[/b][/size]\n<br />- Stardew Valley 1.6\n<br />- SMAPI 4.0 or later\n<br />-\u00A0Generic Mod Config Menu (Optional, to change the default H keybind in-game)\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8]Thanks to Pathoschild for SMAPI, to ConcernedApe for Stardew Valley, and to the Stardew modding wiki.[/color]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55016",
-	"Version": "1.1.0",
-	"Updated": "2026-11-05T03:00:06+00:00",
+	"Version": "1.3.0",
+	"Updated": "2026-11-06T23:49:05+00:00",
 	"Downloads": [
 		{
 			"Id": 189899,
@@ -79,6 +79,88 @@
 			],
 			"OtherFields": {
 				"Uid": 5596342576701,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 190173,
+			"Type": "Main",
+			"DisplayName": "ChestItemFinder 1.2.0",
+			"FileName": "47/86/b4/4786b4b1-b8e7-4c03-8e7f-55825c5604e6",
+			"Description": "",
+			"Version": "1.2.0",
+			"SizeInBytes": 31703,
+			"Uploaded": "2026-11-06T04:19:57+00:00",
+			"Mods": [
+				{
+					"Id": "CynthiaZhao.ChestItemFinder",
+					"DisplayName": "ChestItemFinder",
+					"Type": "Smapi",
+					"RelativePath": "ChestItemFinder",
+					"Manifest": {
+						"Name": "ChestItemFinder",
+						"Description": "Find which chest contains your item",
+						"Author": "Cynthia Zhao",
+						"Version": "1.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChestItemFinder.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55016"
+						],
+						"UniqueId": "CynthiaZhao.ChestItemFinder"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342576861,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		},
+		{
+			"Id": 190321,
+			"Type": "Main",
+			"DisplayName": "ChestItemFinder 1.3.0",
+			"FileName": "f4/57/57/f45757c8-80c3-4c27-9651-53de8af9e034",
+			"Description": "",
+			"Version": "1.3.0",
+			"SizeInBytes": 47373,
+			"Uploaded": "2026-11-06T23:49:05+00:00",
+			"Mods": [
+				{
+					"Id": "CynthiaZhao.ChestItemFinder",
+					"DisplayName": "ChestItemFinder",
+					"Type": "Smapi",
+					"RelativePath": "ChestItemFinder",
+					"Manifest": {
+						"Name": "ChestItemFinder",
+						"Description": "Find which chest contains your item",
+						"Author": "Cynthia Zhao",
+						"Version": "1.3.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "ChestItemFinder.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55016"
+						],
+						"UniqueId": "CynthiaZhao.ChestItemFinder"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577009,
 				"CategoryId": 1,
 				"Primary": true
 			}
