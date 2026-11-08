@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 55193,
+	"Name": "CPA Performance Patch",
+	"Author": "TheKooper",
+	"Description": "[size=4][b]CPA Performance Fix[/b][/size]\n<br />\n<br />A small, drop-in performance patch for [url=https://www.nexusmods.com/stardewvalley/mods/3853]Content Patcher Animations[/url] by spacechase0.\n<br />\n<br />[b]The Problem[/b]\n<br />\n<br />Content Patcher Animations hooks into every sprite the game draws (thousands per frame) and re-parses that texture's name from scratch each time. That creates a huge amount of throwaway memory, so the game has to stop and clean up far more often, which shows up as micro-stutters and occasional longer hitches. The more mods and animated content packs you have, the worse it gets.\n<br />[size=3][b]What you'll notice[/b][/size]\n<br />[list]\n<br />[*][b]Less constant micro-stutter.[/b] Without the fix, the game had to pause for a quick memory cleanup about [b]17 times every second[/b] in my test, roughly every 4th frame at 60 FPS. Each pause is tiny, but enough of them land on the wrong frame to make walking around feel slightly uneven. With the fix, that drops to about [b]4 per second[/b].[/*]\n<br />[*][b]Smoother in busy, animated areas.[/b] Content Patcher Animations' work grows with how much is on screen, so the difference is most noticeable on a decorated farm, in town, or anywhere with lots of animated items, fish or furniture.[/*]\n<br />[*][b]More headroom every frame.[/b] CPA's draw hook went from about [b]8% of the game's total work[/b] to about [b]2.5%[/b], leaving more room for everything else your modpack is doing.[/*]\n<br />[*][b]Fewer long freezes.[/b] The single longest freeze I caught while profiling, over 3 seconds, happened entirely inside CPA's draw hook during a big memory cleanup. That cause is gone with the fix.[/*]\n<br />[/list]\n<br />[i]Tested with a large modpack (SVE, Ridgeside Village, East Scarp and dozens of animated packs) on a Ryzen 9 / RTX 4060 laptop: throwaway memory dropped from about 138 MB/s to 30 MB/s, and time spent on memory cleanup fell by more than half. Results will vary with your mod list.[/i]\n<br />\n<br />[b]Requirements[/b]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0 or later[/*]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/3853]Content Patcher Animations[/url] (tested with 1.2.4)[/*]\n<br />[/list]\n<br />[b]Installation[/b]\n<br />\n<br />Install like any SMAPI mod, alongside Content Patcher Animations. When it's working, the SMAPI console will show:\n<br />[code]Content Patcher Animations draw hook patched.[/code]Type [b]cpafix[/b] in the SMAPI console to see how many texture names it has cached.\n<br />\n<br />[b]Compatibility[/b]\n<br />[list]\n<br />[*]Does not include or replace any of Content Patcher Animations' files. You still need the original mod.[/*]\n<br />[*]Safe to add or remove at any time; it doesn't touch your save.[/*]\n<br />[*]If Content Patcher Animations is ever updated and its code no longer matches, this mod logs a warning and does nothing, rather than breaking anything.[/*]\n<br />[*]Works in split-screen.[/*]\n<br />[/list]\n<br />[b]What it won't fix[/b]\n<br />This only removes the stutter caused by Content Patcher Animations. Very large modpacks can still have occasional hitches from other mods, or from the game cleaning up a large amount of loaded textures and data.\n<br />\n<br />[b]Credits[/b]\n<br />All credit for Content Patcher Animations goes to [b]spacechase0[/b]. This is an unofficial patch, not affiliated with or endorsed by them.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55193",
+	"Version": "1",
+	"Updated": "2026-11-08T00:16:22+00:00",
+	"Downloads": [
+		{
+			"Id": 190445,
+			"Type": "Main",
+			"DisplayName": "CPAPerformanceFix 1.0.0",
+			"FileName": "01/27/1b/01271bc5-5859-43de-8f41-481f447efb79",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 11869,
+			"Uploaded": "2026-11-08T00:16:22+00:00",
+			"Mods": [
+				{
+					"Id": "TheKooper.CPAPerformanceFix",
+					"DisplayName": "CPA Performance Fix",
+					"Type": "Smapi",
+					"RelativePath": "CPAPerformanceFix",
+					"Manifest": {
+						"Name": "CPA Performance Fix",
+						"Description": "Fixes stutters caused by Content Patcher Animations re-parsing texture names on every draw call.",
+						"Author": "TheKooper",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CPAPerformanceFix.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.ContentPatcherAnimations",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "TheKooper.CPAPerformanceFix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577133,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441881,
+		"UploaderId": 18357484,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}

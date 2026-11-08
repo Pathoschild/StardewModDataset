@@ -1,0 +1,79 @@
+{
+	"Site": "Nexus",
+	"Id": 55157,
+	"Name": "The Visitor - A Strange Capsule Expansion",
+	"Author": "Flightlessfalcon",
+	"Description": "[b][size=4]AI Disclaimer*[/size][/b]\n<br />[size=3]I used AI to assist in the coding of this mod as I'm still very new to coding in general. AI was NOT used to create any of my sprites or the sounds.\u00A0[/size]\n<br />\n<br />[size=5][b]Description[/b][/size]\n<br />The Strange Capsule has always been one of my favorite Easter eggs in Stardew Valley. I've always wished there was a little more to it and that discovering it had a bigger impact on the game.\n<br />I've recently started experimenting with making my own pixel games and pixel art, and I thought expanding this Easter egg would be a fun way to practice those skills. Fair warning, I'm still very much a beginner when it comes to pixel art.\n<br />This mod expands the strange capsule easter egg into a small horror themed storyline featuring a new cutscene, infested mine floors, creepy audio encounters, and a dangerous new enemy.\n<br />\n<br />[size=5][b]Features[/b][/size]\n<br />[b]-New Cutscene:[/b] After the Strange Capsule breaks open, a mysterious encounter awaits the next time you enter the Mines\n<br />[b]-Infested Mine Floors:[/b] Discover eerie green mine floors filled with strange, destructible eggs\n<br />[b]-New Enemy:[/b] Something is lurking in the mines. It can stalk you, investigate your last known location, and attack when you least expect it\n<br />[b]-Atmospheric Audio:[/b] Hear strange clicking, growling, and hissing while exploring. Sometimes the noises are just noises. Sometimes they aren't\n<br />[b]-Configurable Encounters:[/b] Adjust infestation frequency, enemy encounter rates, false alarms, and enemy damage through Generic Mod Config Menu or\u00A0config.json\n<br />\n<br />[size=5][b]How It Works[/b][/size]\n<br />The mod is designed to expand the original Easter egg without significantly changing normal Stardew Valley gameplay.\n<br />Nothing new happens until the Strange Capsule appears on your farm and breaks open. Afterward, the next time you enter the Mines, a new cutscene will introduce the storyline. As you continue exploring, you'll begin discovering unusual infested floors and hearing strange sounds. Once you've discovered your first infestation, something new may begin hunting you. I've intentionally kept encounters relatively rare so that discovering something unusual feels like a surprise.\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI and Content Patcher.[/*]\n<br />[*]Download\n<br />TheVisitor_v1.0.0.zip (This Mod)[/*]\n<br />[*]Extract the ZIP directly into your Stardew Valley Mods folder.[/*]\n<br />[*]You should have two folders:[/*]\n<br />[/list][list]\n<br />- TheVisitor[/list][list]\n<br />- [CP] The Visitor - Intro Chamber[/list][list]\n<br />Both folders are required for the mod to work correctly.[/list]\n<br />[size=5][b]Requirements[/b][/size]\n<br />[b]-Stardew Valley 1.6[/b]\n<br />[b]-SMAPI[/b]\u00A0- Developed and tested using version 4.5.2\n<br />[b]-Content Patcher[/b]\u00A0- Required\n<br />[b]-Generic Mod Config Menu[/b]\u00A0- Optional, for adjusting encounter frequencies and enemy damage through the in-game menu\n<br />\n<br />[size=5][b]Compatibility and Known Limitations[/b][/size]\n<br />The Visitor was developed and tested in single-player using the base game.\n<br />I haven't tested compatibility with other gameplay mods or multiplayer, so I can't guarantee everything will work in those environments.\n<br />Existing saves should be compatible, but I haven't thoroughly tested every scenario, particularly saves where the Strange Capsule event has already happened.\n<br />If you run into problems, please let me know in the comments. I'm still learning mod development and appreciate bug reports and feedback.\n<br />\n<br />[size=5][b]Credits and Shout-outs[/b][/size]\n<br />Thank you to [url=https://freesound.org/people/MSEpitaph/][b]MSEpitaph[/b][/url] and [url=https://freesound.org/people/CVLTIV8R/][b]CVLTIV8R[/b][/url] on Freesound.org for creating the sound effects used in this mod.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55157",
+	"Version": "1.0.0",
+	"Updated": "2026-11-07T00:32:15+00:00",
+	"Downloads": [
+		{
+			"Id": 190324,
+			"Type": "Main",
+			"DisplayName": "TheVisitor V1.0.0",
+			"FileName": "e7/b1/dd/e7b1dd1f-d258-49fc-a2b9-b416fc0a2ff0",
+			"Description": "Initial Release ",
+			"Version": "1.0.0",
+			"SizeInBytes": 3661019,
+			"Uploaded": "2026-11-07T00:32:15+00:00",
+			"Mods": [
+				{
+					"Id": "FlightlessFalcon.TheVisitor",
+					"DisplayName": "TheVisitor",
+					"Type": "Smapi",
+					"RelativePath": "TheVisitor",
+					"Manifest": {
+						"Name": "TheVisitor",
+						"Description": "A Strange Capsule Event Expansion",
+						"Author": "FlightlessFalcon",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "TheVisitor.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "TheVisitor.IntroChamber",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55157"
+						],
+						"UniqueId": "FlightlessFalcon.TheVisitor"
+					}
+				},
+				{
+					"Id": "TheVisitor.IntroChamber",
+					"DisplayName": "The Visitor - Intro Chamber Location",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] The Visitor - Intro Chamber",
+					"Manifest": {
+						"Name": "The Visitor - Intro Chamber Location",
+						"Description": "Dedicated mine chamber for The Visitor facehugger introduction.",
+						"Author": "The Visitor",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55157"
+						],
+						"UniqueId": "TheVisitor.IntroChamber"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577012,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441845,
+		"UploaderId": 66166361,
+		"CategoryId": 18,
+		"Adult": false
+	}
+}

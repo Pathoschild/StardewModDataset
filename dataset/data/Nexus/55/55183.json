@@ -1,0 +1,62 @@
+{
+	"Site": "Nexus",
+	"Id": 55183,
+	"Name": "Building Names",
+	"Author": "SteckNy",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Give your farm buildings individual names and organize their chests in Chests Anywhere.\n<br />\n<br />Turn a shed into your Winery, Workshop or Preserves room. Name individual buildings, see their names when hovering outdoors, and use those names as the default categories for their chests in Chests Anywhere.\n<br />\n<br />FEATURES\n<br />- Name individual buildings instead of renaming an entire building type.\n<br />- Rename from inside a building or by pointing at its ground footprint outdoors.\n<br />- Show an optional hover label over named buildings.\n<br />- Use building names as default Chests Anywhere categories.\n<br />- Newly placed chests inherit the building's default category.\n<br />- Keep manually assigned chest categories, chest names, contents and settings.\n<br />- Keep names when moving buildings, with separate names for each save.\n<br />- Change shortcuts and hover labels through optional Generic Mod Config Menu.\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />1. Close the game.\n<br />2. Install SMAPI and Chests Anywhere if needed.\n<br />3. Extract the BuildingNames folder from SteckNYBuildingNames-1.0.0.zip into your game's Mods folder.\n<br />4. Launch through SMAPI and load your save.\n<br />When updating, replace the existing BuildingNames folder and keep only one copy. Preserve your config.json if you customized it.\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />HOW TO NAME A BUILDING\n<br />Stand inside a shed, barn, coop, greenhouse or another building with an interior and press F8. Alternatively, point at the building's ground footprint outdoors and press F8. Junimo Huts are supported too.\n<br />\n<br />Enter a name such as Winery and confirm. Open Chests Anywhere (B by default); chests using default categories appear under the building name. Close and reopen an existing chest menu to refresh its list.\n<br />\n<br />To reset a building, press Shift+F8 while targeting it, or submit a blank name. Normal categories return.\n<br />\n<br />Buildings may share a name if you want their chests grouped together. Names are limited to 48 UTF-16 characters.\n<br />\n<br />EXISTING CHEST CATEGORIES\n<br />A manually assigned Chests Anywhere category takes priority. To make a chest follow its building, open that chest's edit form, clear the Category field and confirm. The chest's individual name, items, sorting, hidden status and Automate settings are unaffected.\n<br />\n<br />SETTINGS\n<br />With GMCM installed, choose SteckNY Building Names in Mod Options. You can change the Rename building and Clear building name shortcuts, or disable hover labels.\n<br />Without GMCM, settings are stored in config.json after the mod runs. Close the game before editing the file.\n<br />\n<br />SAVING AND UPDATING\n<br />Names are saved with each building during the normal game save. Renaming does not save the game immediately. Existing names from earlier versions are recognized; older storage is migrated when the host loads a save and persisted by normal saving.\n<br />\n<br />MULTIPLAYER AND COMPATIBILITY\n<br />Only the farm host can rename buildings. Other players need the mod to see named categories. Multiplayer has not been verified in live testing. Android compatibility has not been tested.\n<br />\n<br />The mod integrates with an internal Chests Anywhere constructor. If a future update changes that integration, it logs an error and disables renaming rather than applying an incompatible patch.\n<br />\n<br />This mod does not rename town buildings, building type IDs, warp destinations or labels in unrelated mods. It shows hover labels; it does not add physical signs to buildings.\n<br />\n<br />UNINSTALLING\n<br />Close the game and remove BuildingNames from Mods. Default Chests Anywhere categories return because the mod does not write building category names onto chests. Keep a normal save backup when changing your mod setup.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[color=#D4D4D8][size=3]Requires the Chest Anywhere Mod V1.30.1 by Pathoschild[/size][/color]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8][size=3]Pathoschild for their Chest Anywhere Mod![/size][/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55183",
+	"Version": "1.0.0",
+	"Updated": "2026-11-07T19:01:28+00:00",
+	"Downloads": [
+		{
+			"Id": 190420,
+			"Type": "Main",
+			"DisplayName": "SteckNYBuildingNames 1.0.0",
+			"FileName": "c7/8a/ea/c78aead9-fd18-44d0-9535-e3d55b1d88a9",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 13020,
+			"Uploaded": "2026-11-07T19:01:28+00:00",
+			"Mods": [
+				{
+					"Id": "SteckNY.BuildingNames",
+					"DisplayName": "SteckNY Building Names",
+					"Type": "Smapi",
+					"RelativePath": "BuildingNames",
+					"Manifest": {
+						"Name": "SteckNY Building Names",
+						"Description": "Name individual buildings and use their names as default categories in Chests Anywhere.",
+						"Author": "SteckNY",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.1.10",
+						"EntryDll": "BuildingNames.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ChestsAnywhere",
+								"MinimumVersion": "1.30.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "SteckNY.BuildingNames"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577108,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441871,
+		"UploaderId": 167925523,
+		"CategoryId": 17,
+		"Adult": false
+	}
+}
