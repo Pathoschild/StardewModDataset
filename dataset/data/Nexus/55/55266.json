@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 55266,
+	"Name": "MultiRowToolbar",
+	"Author": "longloonglong",
+	"Description": "# Multi-Row Toolbar · 多行工具栏\n<br />\n<br />&gt; ⚠️ **AI 声明 / AI Disclosure**\n<br />&gt;\n<br />&gt; 本 mod **完全由 AI（Codex，基于 GPT 的编程代理）编写**；人类参与者仅进行了**功能测试与审核**，未编写任何代码。\n<br />&gt;\n<br />&gt; This mod was **entirely written by an AI** (Codex, a GPT-based coding agent). Human involvement was limited to **testing and review** — no code was written by a human.\n<br />\n<br />**显示所有背包行，告别 Tab 切换。**\n<br />**Show every backpack row on the HUD toolbar at once — no more pressing Tab.**\n<br />\n<br />---\n<br />\n<br /># English\n<br />\n<br />## What it does\n<br />\n<br />In vanilla Stardew Valley the backpack holds up to 36 items split into three rows of 12, but the\n<br />HUD toolbar only shows one 12-slot row at a time and you press `Tab` to switch rows. This mod shows\n<br />all of your backpack slots on screen at once:\n<br />\n<br />| Backpack size | Layout\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| ------------- | ----------------------- |\n<br />| 12 slots\u00A0 \u00A0 \u00A0 | 1 × 12 (vanilla)\u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| 24 slots\u00A0 \u00A0 \u00A0 | 2 × 12\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| 36 slots\u00A0 \u00A0 \u00A0 | 2 × 18\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />\n<br />The 36-slot backpack becomes **18 × 2** (two rows of 18) instead of three rows of 12, so everything\n<br />fits on screen without covering too much of the world. The two rows share a single border and sit\n<br />tight together.\n<br />\n<br />## Features\n<br />\n<br />- All backpack slots visible at once, no `Tab` switching.\n<br />- Single shared border around the whole toolbar (no doubled borders between rows).\n<br />- Click any slot to select it; press the use key to use the selected item.\n<br />- Item tooltips on hover, including the sell-price tooltip if **UI Info Suite 2** is installed.\n<br />- Optional integration with **Generic Mod Config Menu**.\n<br />\n<br />## Requirements\n<br />\n<br />- Stardew Valley 1.6 or later (tested on 1.6.15).\n<br />- SMAPI 4.0 or later (tested on 4.5.2).\n<br />\n<br />## Install\n<br />\n<br />1. Install SMAPI.\n<br />2. Download and unzip the mod into your Stardew Valley `Mods` folder, so the structure is\n<br />\u00A0 `Mods/MultiRowToolbar/MultiRowToolbar.dll` and `Mods/MultiRowToolbar/manifest.json`.\n<br />3. Launch the game through SMAPI.\n<br />\n<br />## Configuration\n<br />\n<br />Configuration is available in-game via **Generic Mod Config Menu**, or by editing\n<br />`config.json` next to the mod. Options:\n<br />\n<br />| Option\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | Default | Description\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| ------------------------ | ------- | ---------------------------------------------------------------------- |\n<br />| `Enabled`\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | `true`\u00A0 | Master switch for the multi-row toolbar.\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| `DisableToolbarRotation` | `true`\u00A0 | Disables the vanilla row rotation (`Tab` / controller shoulder buttons). |\n<br />| `ExtraRowSpacing`\u00A0 \u00A0 \u00A0 \u00A0 | `0`\u00A0 \u00A0 | Extra vertical pixels between rows; can be negative down to `-16`.\u00A0 \u00A0 |\n<br />\n<br />## Notes &amp; known limitations\n<br />\n<br />- In the 36-slot (18 × 2) layout, slot selection is **mouse-only**: the number keys are disabled\n<br />\u00A0 because 18 columns has no natural 1–12 hotkey mapping.\n<br />- In the 24-slot (2 × 12) layout, the number-key labels only appear on the bottom row (the row the\n<br />\u00A0 hotkeys actually control).\n<br />- Controller selection of the extra rows and split-screen multiplayer are **not implemented and\n<br />\u00A0 not tested**.\n<br />- Backpacks larger than 36 slots (e.g. \"Bigger Backpack\") will fall back to an 18-column multi-row\n<br />\u00A0 layout and are not specially tuned.\n<br />- The 18 × 2 layout needs enough horizontal room (~1200 px); it may overflow on very narrow windows.\n<br />\n<br />## Changelog\n<br />\n<br />- **0.1.0** — initial release.\n<br />\n<br />---\n<br />\n<br /># 简体中文\n<br />\n<br />## 功能简介\n<br />\n<br />原版星露谷的背包最多 36 格，分成三行、每行 12 格；但 HUD 工具栏一次只显示一行，需要按 `Tab`\n<br />切换。这个 mod 会把你背包里的所有格子一次性显示在屏幕上：\n<br />\n<br />| 背包大小 | 布局\u00A0 \u00A0 \u00A0 |\n<br />| -------- | ---------- |\n<br />| 12 格\u00A0 \u00A0 | 1 × 12（原版） |\n<br />| 24 格\u00A0 \u00A0 | 2 × 12\u00A0 \u00A0 |\n<br />| 36 格\u00A0 \u00A0 | 2 × 18\u00A0 \u00A0 |\n<br />\n<br />36 格背包会变成 **18 × 2**（两行、每行 18 格），而不是原来的三行 12 格，这样不会占用太多\n<br />纵向屏幕空间、挡住游戏世界。两行共用一条外边框，紧凑贴合。\n<br />\n<br />## 特性\n<br />\n<br />- 所有背包格子一次性常显，无需按 `Tab` 切换。\n<br />- 整个工具栏只有一圈外边框，行与行之间没有重复边框。\n<br />- 鼠标点击任意格子即可选中，按使用键即可使用。\n<br />- 悬停显示物品说明；安装 **UI Info Suite 2** 时还会显示售价提示。\n<br />- 可选接入 **Generic Mod Config Menu** 在游戏内配置。\n<br />\n<br />## 环境要求\n<br />\n<br />- 星露谷物语 1.6 或更高版本（已在 1.6.15 上测试）。\n<br />- SMAPI 4.0 或更高版本（已在 4.5.2 上测试）。\n<br />\n<br />## 安装\n<br />\n<br />1. 安装 SMAPI。\n<br />2. 将压缩包解压到星露谷的 `Mods` 文件夹，目录结构应为\n<br />\u00A0 `Mods/MultiRowToolbar/MultiRowToolbar.dll` 和 `Mods/MultiRowToolbar/manifest.json`。\n<br />3. 通过 SMAPI 启动游戏。\n<br />\n<br />## 配置\n<br />\n<br />可通过游戏内的 **Generic Mod Config Menu** 修改，或直接编辑 mod 目录下的 `config.json`。选项：\n<br />\n<br />| 选项\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | 默认值 | 说明\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| ------------------------ | ------ | -------------------------------------------------------- |\n<br />| `Enabled`\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 | `true` | 多行工具栏总开关。\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| `DisableToolbarRotation` | `true` | 禁用原版行旋转（`Tab` / 手柄肩键）。\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 |\n<br />| `ExtraRowSpacing`\u00A0 \u00A0 \u00A0 \u00A0 | `0`\u00A0 \u00A0 | 行与行之间的额外纵向间距（像素），最低可到 `-16`。\u00A0 \u00A0 \u00A0 \u00A0 |\n<br />\n<br />## 注意事项与已知限制\n<br />\n<br />- 36 格（18 × 2）布局下，格子选择**仅支持鼠标**：因为 18 列没有自然的 1–12 数字键映射，\n<br />\u00A0 数字键会被禁用。\n<br />- 24 格（2 × 12）布局下，只有下面一行显示数字快捷键角标（因为快捷键只对这一行生效）。\n<br />- 手柄选择额外行、分屏多人模式**未实现且未测试**。\n<br />- 超过 36 格的大背包（如 “Bigger Backpack”）会回退为 18 列多行布局，未做专门适配。\n<br />- 18 × 2 布局需要足够的横向空间（约 1200 像素以上），在过窄的窗口下可能溢出。\n<br />\n<br />## 更新日志\n<br />\n<br />- **0.1.0** — 首个版本。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55266",
+	"Version": "1",
+	"Updated": "2026-11-09T01:48:07+00:00",
+	"Downloads": [
+		{
+			"Id": 190607,
+			"Type": "Main",
+			"DisplayName": "MultiRowToolbar 0.1.0",
+			"FileName": "81/a5/18/81a51890-5d23-446b-b376-a5dbd1b2dd82",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 21360,
+			"Uploaded": "2026-11-09T01:48:07+00:00",
+			"Mods": [
+				{
+					"Id": "hxl97.MultiRowToolbar",
+					"DisplayName": "Multi-Row Toolbar",
+					"Type": "Smapi",
+					"RelativePath": "MultiRowToolbar",
+					"Manifest": {
+						"Name": "Multi-Row Toolbar",
+						"Description": "Shows all backpack rows in the HUD toolbar at once, without tab switching.",
+						"Author": "hxl97",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MultiRowToolbar.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "hxl97.MultiRowToolbar"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577295,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441954,
+		"UploaderId": 211086585,
+		"CategoryId": 27,
+		"Adult": false
+	}
+}

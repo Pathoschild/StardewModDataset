@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 55248,
+	"Name": "CoopTimePause",
+	"Author": "Dreamery",
+	"Description": "[size=5][b]Coop Time Pause[/b][/size]\n<br />\n<br />In single-player, time stops while you watch a cutscene or talk to someone. In co-op it doesn't: the clock keeps running while your friend sits through a heart event, and you both lose half the morning. This mod fixes that and adds a pause key that any player can use.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Cutscenes pause time.[/b] While any player is in a cutscene (heart events, story events, overnight farm events), time stops for everyone.[/*]\n<br />[*][b]Dialogue slows time down.[/b] While any player is in a dialogue box, time runs at 10% speed. You can set this anywhere from 0% (stopped) to 100% (normal).[/*]\n<br />[*][b]A pause key for everyone.[/b] Press [b]O[/b] (configurable) to pause time for all players. Anyone can press it again to unpause, no matter who paused it. A chat message shows who paused or unpaused.[/*]\n<br />[*][b]Vanilla-style indicator.[/b] While time is stopped, the time on the clock blinks, the same effect the game uses in single-player. During a manual pause, a \"Time paused\" scroll also appears at the top of the screen, like the one from the game's own /pause command.[/*]\n<br />[*]The manual pause turns off by itself when a new day starts, so nobody wakes up to a frozen clock without noticing.[/*]\n<br />[/list]\n<br />[size=4][b]How it works[/b][/size]\n<br />In co-op, only the host's game moves the clock forward. Each farmhand tells the host what they're doing (free, in a dialogue, or in a cutscene), and the host uses the \"strongest\" state among all players: a cutscene beats a dialogue, and the manual pause beats everything. The host then tells everyone whether the clock is stopped, so every screen shows the indicator.\n<br />\n<br />[b]Note:[/b] the pause only stops the clock. Players can still walk around and monsters still move. It's not a full freeze like the host-only /pause command.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Configuration[/b][/size]\n<br />Use [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional), or edit [i]config.json[/i] in the mod folder (it's created the first time you launch the game).\n<br />\n<br />[b]Host only[/b]: the host controls the clock, so only the host's settings count here.\n<br />[list]\n<br />[*][b]Pause during cutscenes[/b] ([i]PausarEmCutscene[/i]): default [i]true[/i].[/*]\n<br />[*][b]Speed during dialogue[/b] ([i]VelocidadeEmDialogoPorcento[/i]): % of normal speed, default [i]10[/i].[/*]\n<br />[/list]\n<br />[b]Per player[/b]: each player sets their own.\n<br />[list]\n<br />[*][b]Pause key[/b] ([i]TeclaPausar[/i]): default [i]O[/i].[/*]\n<br />[*][b]Show \"Time paused\" on screen[/b] ([i]MostrarAvisoPausaManual[/i]): default [i]true[/i].[/*]\n<br />[*][b]Blink clock while paused[/b] ([i]PiscarRelogioQuandoPausado[/i]): default [i]true[/i].[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0+[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional)[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip the mod into your [i]Stardew Valley/Mods[/i] folder or use the Vortex Installer[/*]\n<br />[*][b]Every player needs it installed[/b], host and farmhands. If someone joins without it, the host gets a warning, and that player's cutscenes and dialogues won't affect time.[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Only does anything in multiplayer. Single-player is untouched.[/*]\n<br />[*]Uses Harmony for a single visual patch (making the clock blink). Everything else uses plain SMAPI events.[/*]\n<br />[*]Will likely conflict with other mods that change time speed or pause time in multiplayer, so use one or the other.[/*]\n<br />[*]Split-screen should work but hasn't been tested yet.[/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55248",
+	"Version": "1.3.1",
+	"Updated": "2026-11-08T17:15:37+00:00",
+	"Downloads": [
+		{
+			"Id": 190558,
+			"Type": "Main",
+			"DisplayName": "CoopTimePause 1.3.1",
+			"FileName": "8e/70/aa/8e70aa22-5f37-4ced-8733-9d775562db29",
+			"Description": "",
+			"Version": "1.3.1",
+			"SizeInBytes": 23783,
+			"Uploaded": "2026-11-08T17:15:37+00:00",
+			"Mods": [
+				{
+					"Id": "Daniel.CoopTimePause",
+					"DisplayName": "Coop Time Pause",
+					"Type": "Smapi",
+					"RelativePath": "CoopTimePause",
+					"Manifest": {
+						"Name": "Coop Time Pause",
+						"Description": "In co-op, time stops while any player is in a cutscene and slows down while anyone is in a dialogue. Any player can pause or unpause time for everyone with a hotkey (default O), and the clock blinks while time is stopped. All players need it installed.",
+						"Author": "Daniel",
+						"Version": "1.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CoopTimePause.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55248"
+						],
+						"UniqueId": "Daniel.CoopTimePause"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577246,
+				"CategoryId": 1,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441936,
+		"UploaderId": 19392194,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

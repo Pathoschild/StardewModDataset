@@ -1,0 +1,89 @@
+{
+	"Site": "Nexus",
+	"Id": 55227,
+	"Name": "High Stakes Slot Machine",
+	"Author": "oscaryay123",
+	"Description": "[color=#d8d8d8][size=5][b]High Stakes Slot Machine[/b][/size][/color]\n<br />[size=3][color=#d8d8d8]There weren't any mods that I could find that gave you the option of betting more than 10 or 100 Qi coins at a time, which was annoying because I wanted a lot of Qi coins and I love gambling. (Admittedly, I didn't search very thoroughly).[/color][/size]\n<br />\n<br />[size=3][color=#d8d8d8]This mod\u00A0adds a green high stakes slot machine to Qi's Casino that allows you to bet 1000 or 10 000 Qi coins at a time.[/color][/size]\n<br />\n<br />[color=#d8d8d8][size=4][b]Notes[/b][/size][/color]\n<br />[size=3][color=#d8d8d8]This mod is technically two mods in one: the C# mod adds the minigame and the Content Patcher JSON Mod adds the machine into the Casino. I'm not sure what the convention is for this situation, but both are in their separate subfiles within the one parent file (and they can stay there).[/color][/size]\n<br />\n<br />[size=3][color=#d8d8d8]This is also my first C# mod for Stardew Valley!! [i]NO AI HAS BEEN USED IN DEVELOPING THIS MOD[/i].[/color][/size]\n<br />\n<br />[size=3][color=#d8d8d8]There is an ugly red line in the high stakes slot machine minigame menu that is leftover from the regular minigame menu. I have scoured through every nook and cranny in the code but I can't find what is drawing the red rectangle, so it stays. It is purely visual though.[/color][/size]\n<br />\n<br />[size=3][color=#d8d8d8]I haven't tested it in multiplayer but it should be fine. Sadly, it won't announce to everyone in multiplayer when you hit the jackpot\u00A0like the regular slots machine does :([/color][/size]\n<br />\n<br />[size=3][color=#d8d8d8]This mod is probably incompatible with any mod that majorly overhauls the layout of the Casino.[/color][/size]\n<br />\n<br />[color=#d8d8d8][size=4][b]Requirements[/b][/size][/color]\n<br />[size=3][color=#d8d8d8]Requires Co[/color][color=#d8d8d8]ntent Pa[/color][color=#d8d8d8]tcher[/color][/size]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55227",
+	"Version": "1.0.0",
+	"Updated": "2026-11-08T10:16:00+00:00",
+	"Downloads": [
+		{
+			"Id": 190507,
+			"Type": "Main",
+			"DisplayName": "HSSM",
+			"FileName": "36/68/9b/36689b58-d6b3-459d-9266-8d0c4136f6a9",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 635484,
+			"Uploaded": "2026-11-08T10:16:00+00:00",
+			"Mods": [
+				{
+					"Id": "oscaryay123.HighStakesSlotMachine",
+					"DisplayName": "HighStakesSlotMachine",
+					"Type": "Smapi",
+					"RelativePath": "HSSM\\HighStakesSlotMachine",
+					"Manifest": {
+						"Name": "HighStakesSlotMachine",
+						"Description": "Adds the high stakes slot machine minigame.",
+						"Author": "oscaryay123",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "HighStakesSlotMachine.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55227"
+						],
+						"UniqueId": "oscaryay123.HighStakesSlotMachine"
+					}
+				},
+				{
+					"Id": "oscaryay123.HighStakesSlotMachineCP",
+					"DisplayName": "HighStakesSlotMachineCP",
+					"Type": "ContentPack",
+					"RelativePath": "HSSM\\[CP] HSSM Patch",
+					"Manifest": {
+						"Name": "HighStakesSlotMachineCP",
+						"Description": "Adds a high stakes slot machine to Qi's Casino that allows you to bet 1000 or 10 000 Qi coins at a time.",
+						"Author": "oscaryay123",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "oscaryay123.HighStakesSlotMachine",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55227"
+						],
+						"UniqueId": "oscaryay123.HighStakesSlotMachineCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577195,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441915,
+		"UploaderId": 206677461,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
