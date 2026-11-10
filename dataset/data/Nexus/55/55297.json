@@ -1,0 +1,61 @@
+{
+	"Site": "Nexus",
+	"Id": 55297,
+	"Name": "StardewValley-AI-Chat",
+	"Author": "LoneJade025",
+	"Description": "[heading]中文版[/heading]\n<br />Description\n<br />StardewValley-AI-Chat 为《星露谷物语》加入结合人物设定与游戏情境的 AI 对话。玩家可以选择建议台词或自由输入，并让 NPC 记住明确表达过的偏好。\n<br />当前公测版的界面与生成对话主要使用简体中文。\n<br />Installation instructions\n<br />[list=1]\n<br />[*]安装 SMAPI。[/*]\n<br />[*]将压缩包中的整个\n<br />[code]StardewValley-AI-Chat[/code]文件夹解压到游戏的\n<br />[code]Mods[/code]目录。[/*]\n<br />[*]打开模组文件夹中的\n<br />[code]config.json[/code]填写\n<br />[code]AI.ApiKey[/code]并将\n<br />[code]AI.Enabled[/code]改为\n<br />[code]true[/code]默认服务为 DeepSeek。[/*]\n<br />[*]使用其他服务时，从\n<br />[code]ConfigTemplates[/code]选择对应模板，将其中的\n<br />[code]AI[/code]对象复制到自己的配置中，并核对地址与模型。[/*]\n<br />[*]通过 SMAPI 启动游戏，靠近并面向 NPC，按 [b]K[/b] 或右键选择“对话”。[/*]\n<br />[/list]升级前请备份自己的配置及\n<br />[code]Data/ConversationMemory[/code]中的记忆文件。\n<br />Main features\n<br />[list]\n<br />[*][b]三条建议与自由输入[/b]，选择台词后仍可编辑。[/*]\n<br />[*][b]情境化回复[/b]，结合地点、时间、天气、好感度和关系状态。[/*]\n<br />[*][b]人物设定[/b]，提供 47 份原版角色参考档案，并支持兼容的自定义 NPC。[/*]\n<br />[*][b]近期与长期记忆[/b]，保留最近六轮交流，记录玩家明确表达的偏好。[/*]\n<br />[*][b]记忆管理面板[/b]，支持查看、纠正及单条、类别或全部遗忘。[/*]\n<br />[*][b]每日交谈流程[/b]，首聊先显示原版开场，再由玩家回复。[/*]\n<br />[*][b]可配置上限与好感度[/b]，普通 NPC 默认每天五轮，伴侣默认不限，首轮回复可获得分档好感度奖励。[/*]\n<br />[*][b]多服务模板[/b]，提供 DeepSeek、Claude、OpenAI、MiniMax、Qwen、Kimi 及通用兼容接口配置。[/*]\n<br />[*][b]本地回退[/b]，远程生成不可用时使用本地对话。[/*]\n<br />[/list]Requirements\n<br />[list]\n<br />[*]已验证环境为 [b]Stardew Valley 1.6.15[/b] 与 [b]SMAPI 4.5.2[/b]。[/*]\n<br />[*]远程对话需要网络连接及所选服务的个人 API Key，调用费用由服务商收取。[/*]\n<br />[*][b]Generic Mod Config Menu[/b] 为可选依赖，用于调整每日上限、记忆与输出预算。[/*]\n<br />[*][b]Input Method Fix[/b] 为可选依赖，用于中文输入法支持。[/*]\n<br />[/list]Shout outs\n<br />感谢 ConcernedApe 创造《星露谷物语》，感谢 SMAPI、Generic Mod Config Menu、Input Method Fix 的开发者，以及 Stardew Valley Wiki 社区提供的工具与资料。\n<br />本项目使用 [b]ChatGPT / Codex[/b] 协助完成开发，采用 [b]MIT 许可证[/b]。\n<br />请查看源码：\n<br />[url=https://github.com/Lone-Jade/StardewValley-AI-Chat]https://github.com/Lone-Jade/StardewValley-AI-Chat[/url]\n<br />[line]\n<br />[heading]English Version[/heading]\n<br />Description\n<br />StardewValley-AI-Chat adds AI-powered NPC conversations informed by character profiles and game context. Choose suggested replies or write your own, and let NPCs remember preferences you explicitly share.\n<br />The current public beta primarily uses Simplified Chinese for its interface and generated dialogue.\n<br />Installation instructions\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Extract the entire\n<br />[code]StardewValley-AI-Chat[/code]folder into your game’s\n<br />[code]Mods[/code]directory.[/*]\n<br />[*]Open the included\n<br />[code]config.json[/code]enter your\n<br />[code]AI.ApiKey[/code]and set\n<br />[code]AI.Enabled[/code]to\n<br />[code]true[/code]DeepSeek is the default provider.[/*]\n<br />[*]To switch providers, copy the\n<br />[code]AI[/code]object from a matching file in\n<br />[code]ConfigTemplates[/code]into your configuration, then check the endpoint and model.[/*]\n<br />[*]Launch through SMAPI. Approach and face an NPC, then press [b]K[/b] or right-click and select the conversation option.[/*]\n<br />[/list]Before updating, back up your configuration and the memory files in\n<br />[code]Data/ConversationMemory[/code]Main features\n<br />[list]\n<br />[*]Three suggested replies alongside editable free-text input.[/*]\n<br />[*]Context-aware responses using location, time, weather, friendship, and relationship status.[/*]\n<br />[*]Reference profiles for 47 vanilla characters and support for compatible custom NPCs.[/*]\n<br />[*]Six rounds of recent conversation history and persistent memory for explicit player preferences.[/*]\n<br />[*]A memory panel for reviewing, correcting, and forgetting individual entries, categories, or all memories.[/*]\n<br />[*]Original NPC opening dialogue during the first daily conversation.[/*]\n<br />[*]Configurable daily limits and tiered first-conversation friendship rewards.[/*]\n<br />[*]Templates for DeepSeek, Claude, OpenAI, MiniMax, Qwen, Kimi, and OpenAI-compatible services.[/*]\n<br />[*]Local dialogue fallback when remote generation is unavailable.[/*]\n<br />[/list]Requirements\n<br />[list]\n<br />[*]Tested with [b]Stardew Valley 1.6.15[/b] and [b]SMAPI 4.5.2[/b].[/*]\n<br />[*]Remote conversations require internet access and your own provider API key. Provider usage charges apply.[/*]\n<br />[*][b]Generic Mod Config Menu[/b] optionally provides configuration controls.[/*]\n<br />[*][b]Input Method Fix[/b] optionally enables Chinese input-method support.[/*]\n<br />[/list]Shout outs\n<br />Thanks to ConcernedApe, the developers of SMAPI, Generic Mod Config Menu, and Input Method Fix, and the Stardew Valley Wiki community for their tools and reference material.\n<br />Developed with assistance from [b]ChatGPT / Codex[/b] and released under the [b]MIT License[/b].\n<br />The original code:\n<br />[url=https://github.com/Lone-Jade/StardewValley-AI-Chat]https://github.com/Lone-Jade/StardewValley-AI-Chat[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55297",
+	"Version": "1",
+	"Updated": "2026-11-09T16:11:31+00:00",
+	"Downloads": [
+		{
+			"Id": 190684,
+			"Type": "Main",
+			"DisplayName": "StardewValley AI Chat 0.1.0 Beta.1 ",
+			"FileName": "4d/e8/ba/4de8ba17-666c-44b9-93a2-82dd25751cd7",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 150254,
+			"Uploaded": "2026-11-09T16:11:31+00:00",
+			"Mods": [
+				{
+					"Id": "StardewValleyAIChat.Core",
+					"DisplayName": "StardewValley-AI-Chat",
+					"Type": "Smapi",
+					"RelativePath": "StardewValley-AI-Chat",
+					"Manifest": {
+						"Name": "StardewValley-AI-Chat",
+						"Description": "NPC conversations with suggested replies, free text, long-term preferences and configurable AI providers.",
+						"Author": "StardewValley-AI-Chat contributors",
+						"Version": "0.1.0-beta.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "StardewValley-AI-Chat.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Cyrilly.InputMethodFix",
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "StardewValleyAIChat.Core"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577372,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441985,
+		"UploaderId": 300768948,
+		"CategoryId": 5,
+		"Adult": false
+	}
+}

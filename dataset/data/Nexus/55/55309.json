@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 55309,
+	"Name": "BlastLens",
+	"Author": "atudota",
+	"Description": "[size=5][b]Blast Lens[/b][/size]\n<br />\n<br />Check your blast before committing. Hold a Cherry Bomb, Bomb or Mega Bomb and move the placement cursor to preview the affected area.\n<br />\n<br />[b]What the overlay shows[/b]\n<br />[list]\n<br />[*][b]Amber tiles[/b]: the vanilla object-destruction footprint, built from the game's circle outline and filled using its native scan rules.[/*]\n<br />[*][b]Red-tinted object tiles[/b]: existing objects inside that footprint. They are potentially affected, not guaranteed to be destroyed; their own explosion rules still apply.[/*]\n<br />[*][b]Red outer square[/b]: the player/monster damage rectangle. Standing outside the object circle but inside this square can still hurt you.[/*]\n<br />[*][b]Center marker[/b]: amber for a valid nearby placement and red for a position that cannot currently be used.[/*]\n<br />[/list][b]Supported bombs[/b]\n<br />Cherry Bomb: radius 3. Bomb: radius 5. Mega Bomb: radius 7. The overlay does not place, consume, defuse or alter bombs.\n<br />\n<br />[b]Controls[/b]\n<br />Hold a supported bomb to show the preview. Press [b]F8[/b] to toggle the overlay for the current player. ToggleKey, FillOpacity, HighlightObjects and ShowPlayerDangerArea can be changed in config.json; restart after editing.\n<br />\n<br />[b]Compatibility[/b]\n<br />Designed for vanilla bomb sizes and normal placement behavior. Mods that change explosion geometry, placement range or bomb rules can make the preview inaccurate. Immunity buffs can prevent damage even inside the marked danger area. This is a placement preview; it does not track already-lit bombs.\n<br />\n<br />[b]Requirements[/b]\n<br />Stardew Valley 1.6.15 for desktop and SMAPI 4.5.2 or later. Content Patcher is not required. No additional mod framework is required.\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55309",
+	"Version": "1",
+	"Updated": "2026-11-09T20:41:33+00:00",
+	"Downloads": [
+		{
+			"Id": 190707,
+			"Type": "Main",
+			"DisplayName": "BlastLens",
+			"FileName": "9c/c4/07/9cc40731-c13d-4773-9537-8cb38080fb68",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 8405,
+			"Uploaded": "2026-11-09T20:41:33+00:00",
+			"Mods": [
+				{
+					"Id": "Maksm.BlastLens",
+					"DisplayName": "Blast Lens",
+					"Type": "Smapi",
+					"RelativePath": "BlastLens",
+					"Manifest": {
+						"Name": "Blast Lens",
+						"Description": "Previews vanilla bomb placement, approximate object radius and player danger area.",
+						"Author": "autoota",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "BlastLens.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Maksm.BlastLens"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577395,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441997,
+		"UploaderId": 278496769,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}
