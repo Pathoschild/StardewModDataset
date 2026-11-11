@@ -1,0 +1,63 @@
+{
+	"Site": "Nexus",
+	"Id": 55373,
+	"Name": "Pelipper Expander PokeManager",
+	"Author": "son03052003",
+	"AuthorLabel": "Son-SDT",
+	"Description": "[center][size=6][b]Pelipper Expander PokeManager[/b][/size]\n<br />[size=3][i]One window to manage every Pokémon Hut around your chest[/i][/size][/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b][color=#e8a317]Description[/color][/b][/size]\n<br />\n<br />[b]Pelipper Expander PokeManager[/b] is a companion mod for [b]Pelipper Town[/b]. It adds a clean [b]Pokémon Manager[/b] window next to your Pokémon Chest, so you can look after dozens of Pokémon Huts without walking to each one.\n<br />\n<br />It does [b]not[/b] change or redistribute Pelipper Town. Every assign, unassign, chore and delivery change goes through Pelipper Town's own hut commands, so all of its rules still apply (blocked doors, water-only Pokémon, one resident per hut, owner checks). If something is refused, you get a readable reason instead of a silent failure.\n<br />\n<br />[line]\n<br />\n<br />[size=5][b][color=#e8a317]Installation instructions[/color][/b][/size]\n<br />\n<br />[list=1]\n<br />[*]Install [b]SMAPI 4.x[/b] and [b]Pelipper Town 1.2.7 or newer[/b] (with the mods it requires, such as SpaceCore).[/*]\n<br />[*]Download this mod and unzip it.[/*]\n<br />[*]Copy the folder [b]pelipper_expander_pokemanager[/b] into [b]Stardew Valley/Mods[/b].[/*]\n<br />[*]Start the game through SMAPI. The SMAPI log should say that Pelipper Town was detected and that the bridge was validated.[/*]\n<br />[*]Stand within 3 tiles of a [b]Pokémon Chest[/b] and press [b]K[/b] (rebindable) to open the Manager.[/*]\n<br />[/list][line]\n<br />\n<br />[size=5][b][color=#e8a317]Main features[/color][/b][/size]\n<br />\n<br />[size=4][b]Evolve tab[/b][/size]\n<br />[list]\n<br />[*]Lists every boxed Pokémon that Pelipper Town would let evolve, with avatars for the Pokémon and its evolution target(s).[/*]\n<br />[*]Evolve one, or evolve all ready Pokémon one after another. Pelipper Town's own evolution dialogue is used, so route choices and animations stay intact.[/*]\n<br />[/list]\n<br />[size=4][b]Huts tab[/b][/size]\n<br />[list]\n<br />[*][b]Overview:[/b] every Pokémon Hut inside the managed area, with position, distance, resident, HP and energy bars, chore chips and item delivery.[/*]\n<br />[*][b]Detail panel:[/b] click a hut to toggle each chore and to switch item delivery between the chest and you. Chores a Pokémon cannot do are marked with a red X.[/*]\n<br />[*][b]Search, filter, sort:[/b] search by name, species or x,y. Filter by Empty / Occupied, delivery target and chores (\"Has all\": a Pokémon must be able to do [i]all[/i] the chosen chores). Sort by position, distance, name, level or energy.[/*]\n<br />[*][b]Assign:[/b] a large picker with accent-insensitive search, sorting, minimum level, chore filter and a picture of every Pokémon. Pokémon that cannot be placed are dimmed, with the reason.[/*]\n<br />[*][b]Unassign / Unassign all:[/b] unassign all asks for confirmation.[/*]\n<br />[*][b]Template and sync:[/b] set a hut as template, then sync its chores and delivery to all huts or only the ticked ones.[/*]\n<br />[*][b]Safe batch actions:[/b] they never stop at the first problem and report \"N ok, M failed (most common reason)\".[/*]\n<br />[/list]\n<br />[size=4][b]Quick assign in 3 steps[/b][/size]\n<br />[list=1]\n<br />[*]Tick the empty huts you want to fill, then press [b]Quick assign[/b]. A green box next to the button shows it is on.[/*]\n<br />[*]Choose the chores in the [b]Has all[/b] filter. While Quick assign is on, this filter only picks the Pokémon and does not hide any huts. The button lights up.[/*]\n<br />[*]Press the button again. Free Pokémon that can do every chosen chore fill the ticked huts, and the list switches to [b]All[/b] so you can see who was placed.[/*]\n<br />[/list]\n<br />[size=4][b]Radius up to 100 tiles[/b][/size]\n<br />[list]\n<br />[*]The managed area is a radius around the chest: [b]5 = 11x11[/b] tiles, [b]100 = 201x201[/b] tiles.[/*]\n<br />[*]Use the -10 / -1 / +1 / +10 buttons or type a number and press Enter.[/*]\n<br />[/list]\n<br />[size=4][b]Vietnamese language option[/b][/size]\n<br />[list]\n<br />[*]Turn on [b]Vietnamese[/b] in the settings to show the whole Manager in Vietnamese.[/*]\n<br />[*]A bundled pixel font (VT323) makes sure every Vietnamese letter displays correctly. Pokémon names and nicknames are not translated, and Lv / HP / id stay as they are.[/*]\n<br />[/list]\n<br />[size=4][b]Settings[/b][/size]\n<br />[list]\n<br />[*]Edit [b]config.json[/b], use [b]Generic Mod Config Menu[/b] (optional), or use the SMAPI console: [font=Courier New]pe_config[/font], [font=Courier New]pe_set &lt;Key&gt; &lt;Value&gt;[/font], [font=Courier New]pe_reset[/font], [font=Courier New]pe_range &lt;radius&gt;[/font].[/*]\n<br />[*]Values are clamped to safe limits and apply immediately, no restart needed.[/*]\n<br />[*][font=Courier New]pe_huts[/font] prints a diagnostic line about how many huts were found in range.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b][color=#e8a317]Requirements[/color][/b][/size]\n<br />\n<br />[list]\n<br />[*]Stardew Valley 1.6 and [b]SMAPI 4.x[/b][/*]\n<br />[*][b]Pelipper Town 1.2.7 or newer[/b] (and the mods it requires, such as SpaceCore)[/*]\n<br />[*]Generic Mod Config Menu [i](optional, for in-game settings)[/i][/*]\n<br />[/list]\n<br />[i]Multiplayer note: Pelipper Town requires the player to stand within 3 tiles of a hut. On the host or in single player the Manager handles this for you. A farmhand can only manage huts they are standing next to.[/i]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b][color=#e8a317]Shout outs[/color][/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Griff[/b], author of Pelipper Town, for the mod this one builds on.[/*]\n<br />[*][b]Pathoschild[/b] and the SMAPI team, for SMAPI.[/*]\n<br />[*][b]spacechase0[/b], for Generic Mod Config Menu.[/*]\n<br />[*]The [b]VT323 Project Authors[/b] (Peter Hull), for the VT323 pixel font, used under the SIL Open Font License 1.1 (full text included in the download).[/*]\n<br />[*]Everyone who tested the mod and reported bugs. Thank you![/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[center][size=4]If this mod is useful, you can give me a cup of [url=https://sonhongnguyen.info.vn/donate][b]coffee[/b][/url] ^^[/size][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55373",
+	"Version": "0.3.1",
+	"Updated": "2026-11-11T03:37:31+00:00",
+	"Downloads": [
+		{
+			"Id": 190880,
+			"Type": "Main",
+			"DisplayName": "Pelipper Expander Pokemanager 0 3 1",
+			"FileName": "1a/03/c8/1a03c802-bffe-4cba-b09a-c3c2966baa32",
+			"Description": "",
+			"Version": "0.3.1",
+			"SizeInBytes": 141025,
+			"Uploaded": "2026-11-11T03:37:31+00:00",
+			"Mods": [
+				{
+					"Id": "SonSDT.PelipperExpanderPokeManager",
+					"DisplayName": "Pelipper Expander PokeManager",
+					"Type": "Smapi",
+					"RelativePath": "pelipper_expander_pokemanager",
+					"Manifest": {
+						"Name": "Pelipper Expander PokeManager",
+						"Description": "Companion mod for Pelipper Town. Stage 1: a Pokémon Manager menu (evolve, assign, unassign, quick assign, sync hut settings) with a configurable radius up to 100 tiles (201x201 area).",
+						"Author": "Son-SDT",
+						"Version": "0.3.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "PelipperExpansion.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Griff.PelipperTown",
+								"MinimumVersion": "1.2.7",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "SonSDT.PelipperExpanderPokeManager"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577568,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442061,
+		"UploaderId": 86342548,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

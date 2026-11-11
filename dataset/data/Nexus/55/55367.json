@@ -1,0 +1,76 @@
+{
+	"Site": "Nexus",
+	"Id": 55367,
+	"Name": "Industrial Fishing",
+	"Author": "Kryxone",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />It automates the fishing and cooking pipeline, letting you catch and process dishes in industrial ovens to maximize farm efficiency and profits without manual effort.\n<br />\n<br />[b]Crafting Recipes &amp; Progression[/b]\n<br />All recipes unlock naturally as you level up your skills, or can be crafted right away from your crafting menu once unlocked:\n<br />\n<br />[list]\n<br />[*][b]\u00A0Automatic Fishing Station (Fishing Lvl 6):[/b]\n<br />[list]\n<br />[*]10 Iron Bars[/*]\n<br />[*]2 Gold Bars[/*]\n<br />[*]10 Coal[/*]\n<br />[*]1 Battery Pack[/*]\n<br />[/list][/*]\n<br />[*][b]\u00A0Industrial Cooking Oven (Fishing Lvl 5 / Farming Lvl 5):[/b]\n<br />[list]\n<br />[*]1 Fish Smoker[/*]\n<br />[*]8 Iron Bars[/*]\n<br />[*]5 Copper Bars[/*]\n<br />[*]10 Coal[/*]\n<br />[/list][/*]\n<br />[*][b]1. Basic Industrial Bait (x5) (Fishing Lvl 2):[/b]\n<br />[list]\n<br />[*]5 Standard Bait + 1 Coal[/*]\n<br />[/list][/*]\n<br />[*][b]2. Refined Industrial Bait (x5) (Fishing Lvl 4):[/b]\n<br />[list]\n<br />[*]5 Basic Industrial Bait + 1 Iron Bar + 2 Slimes[/*]\n<br />[/list][/*]\n<br />[*][b]3. High-Density Gold Bait (x5) (Fishing Lvl 6):[/b]\n<br />[list]\n<br />[*]5 Refined Industrial Bait + 1 Gold Bar + 2 Solar Essence[/*]\n<br />[/list][/*]\n<br />[*][b]4. Supreme Industrial Bait (x5) (Fishing Lvl 8):[/b]\n<br />[list]\n<br />[*]5 Gold Industrial Bait + 1 Iridium Bar + 2 Void Essence + 1 Diamond[/*]\n<br />[/list][/*]\n<br />[/list]\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />Install SMAPI, then extract the mod folder into your Mods directory.\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />Highlight the automated fishing station, the industrial canning oven, and the dynamic translation system for multiple languages.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]SMAPI[/*]\n<br />[*]SpaceCore[/*]\n<br />[*]ContentPatcher[/*]\n<br />[/list][size=4][b]Shout outs[/b][/size]\n<br />[color=#D4D4D8]Massive thanks to the SMAPI, Content Patcher, and SpaceCore teams for providing the frameworks, and to the incredible Stardew Valley modding community for their constant inspiration and support in bringing this project to life. [/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55367",
+	"Version": "1.0.0",
+	"Updated": "2026-11-10T23:51:22+00:00",
+	"Downloads": [
+		{
+			"Id": 190867,
+			"Type": "Main",
+			"DisplayName": "IndustrialFishing V1.0.0",
+			"FileName": "c4/92/75/c49275b5-3ade-4a0a-94d6-6f53fac998b4",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 22823,
+			"Uploaded": "2026-11-10T23:51:22+00:00",
+			"Mods": [
+				{
+					"Id": "Kryxone.IndustrialFishing.Code",
+					"DisplayName": "Industrial Fishing & Cooking - Core Logic",
+					"Type": "Smapi",
+					"RelativePath": "IndustrialFishingCode",
+					"Manifest": {
+						"Name": "Industrial Fishing & Cooking - Core Logic",
+						"Description": "C# logic for Automatic Fishing Station, water proximity checks, Industrial Bait tiers, Industrial Cooking Oven, and Automate/adjacent routing.",
+						"Author": "Kryxone",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "IndustrialFishingCode.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Kryxone.IndustrialFishing.Code"
+					}
+				},
+				{
+					"Id": "Kryxone.IndustrialFishing.CP",
+					"DisplayName": "Industrial Fishing & Cooking (Content Patcher)",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] Industrial Fishing",
+					"Manifest": {
+						"Name": "Industrial Fishing & Cooking (Content Patcher)",
+						"Description": "Adds the Automatic Fishing Station, Industrial Cooking Oven, and 4 tiers of Industrial Bait.",
+						"Author": "Kryxone",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Kryxone.IndustrialFishing.Code",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Kryxone.IndustrialFishing.CP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577555,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442055,
+		"UploaderId": 289383812,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
