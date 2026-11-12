@@ -1,0 +1,73 @@
+{
+	"Site": "Nexus",
+	"Id": 55410,
+	"Name": "Translation Hub",
+	"Author": "4Moonnnn",
+	"Description": "[size=5][b]Translation Hub | 星露翻译管家[/b][/size]\n<br />\n<br />[b]Use translations for any mod — without editing the mod, and without losing them when the mod updates.[/b]\n<br />\n<br />[size=4][b]What it does[/b][/size]\n<br />[list]\n<br />[*]Drop an extracted translation folder into [b]Mods/TranslationHub/Inbox[/b]. Next time the game starts it is matched to the right mod automatically.[/*]\n<br />[*]Translations are merged in memory. The original mod's files are never changed, so updating the original mod does not wipe your translation.[/*]\n<br />[*]Matching, from most to least certain: the translation's manifest UniqueID → the folder name (Nexus download numbers and words like \"Chinese\" / \"Translation\" are ignored) → the translation's keys compared with every installed mod. If none is certain, nothing is applied until you pick the mod in GMCM.[/*]\n<br />[*]Lines whose {{placeholders}} don't match the original are skipped, so a translation for an older version can't break dialogue.[/*]\n<br />[*]Two enabled translations for the same mod and language? Both are paused until you keep one, instead of silently mixing.[/*]\n<br />[*]One GMCM row per translation: a dropdown for the target mod and a checkbox to turn it on or off.[/*]\n<br />[*]Interface in 12 languages: English, 简体中文, 日本語, 한국어, Deutsch, Español, Français, Italiano, Português, Русский, Türkçe, Magyar.[/*]\n<br />[/list]\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]. Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url].[/*]\n<br />[*]Unzip this mod into your Mods folder (you get TranslationHub and TranslationHubData).[/*]\n<br />[*]Download a translation, unzip it, and put the whole folder (the one containing i18n) into Mods/TranslationHub/Inbox.[/*]\n<br />[*]Start the game.[/*]\n<br />[/list]\n<br />[size=4][b]Console commands[/b][/size]\n<br />[list]\n<br />[*][b]th_status[/b] – show every translation's status and write status.json[/*]\n<br />[*][b]th_list[/b] – list installed mods and their UniqueIDs[/*]\n<br />[*][b]th_reload[/b] – rescan translations[/*]\n<br />[*][b]th_import[/b] – import a translation by path (advanced)[/*]\n<br />[/list]\n<br />[size=4][b]Notes[/b][/size]\n<br />[list]\n<br />[*]Supports standard SMAPI i18n translations (i18n/zh.json, i18n/zh/*.json …). Content Patcher / image replacement translations are not handled by this mod.[/*]\n<br />[*]After enabling, disabling or re-binding a translation, restart the game so cached text refreshes.[/*]\n<br />[*]Interface translations other than English and Chinese were not reviewed by native speakers — corrections are very welcome.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]星露翻译管家[/b][/size]\n<br />\n<br />[b]给任何 Mod 装翻译，不用改原 Mod，原 Mod 更新也不会丢翻译。[/b]\n<br />\n<br />[list]\n<br />[*]把解压后的翻译文件夹放进 [b]Mods/TranslationHub/Inbox[/b]，下次启动游戏自动认出是哪个 Mod 的翻译。[/*]\n<br />[*]翻译在内存中合并，不改原 Mod 的任何文件，原 Mod 更新后翻译照常生效。[/*]\n<br />[*]自动对应：先看翻译包 manifest 的 UniqueID，再看文件夹名（会忽略 N 网下载编号和\"中文/汉化\"等字样），最后比对翻译内容和已安装 Mod 的原文键。拿不准时不会应用，等你在 GMCM 里选。[/*]\n<br />[*]占位符 {{…}} 和原文对不上的句子会自动跳过，旧版本的翻译不会把对话弄坏。[/*]\n<br />[*]同一个 Mod、同一种语言有两份启用的翻译时会都暂停，等你只留一份，不会悄悄混用。[/*]\n<br />[*]GMCM 里每份翻译一行：下拉框选对应 Mod，右边勾选框开关翻译。[/*]\n<br />[*]界面支持 12 种语言。[/*]\n<br />[/list]\n<br />[b]安装[/b]：装好 SMAPI（GMCM 可选）→ 把本 Mod 解压到 Mods → 把翻译文件夹放进 Mods/TranslationHub/Inbox → 启动游戏。\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55410",
+	"Version": "0.6.1",
+	"Updated": "2026-11-12T01:26:51+00:00",
+	"Downloads": [
+		{
+			"Id": 190972,
+			"Type": "Main",
+			"DisplayName": "Translation Hub",
+			"FileName": "18/b5/80/18b580c2-ea7e-4116-94f8-19074f8488c7",
+			"Description": "",
+			"Version": "0.6.1",
+			"SizeInBytes": 67100,
+			"Uploaded": "2026-11-12T01:26:51+00:00",
+			"Mods": [
+				{
+					"Id": "Hazel.TranslationHub",
+					"DisplayName": "Translation Hub | 星露翻译管家",
+					"Type": "Smapi",
+					"RelativePath": "TranslationHub",
+					"Manifest": {
+						"Name": "Translation Hub | 星露翻译管家",
+						"Description": "Automatically matches standard i18n translations to installed mods; translations that cannot be confirmed are assigned in GMCM. Interface in 12 languages. / 自动匹配标准 i18n 翻译，无法确认的在 GMCM 中指定。界面支持 12 种语言。",
+						"Author": "Hazel",
+						"Version": "0.6.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "TranslationHub.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55410"
+						],
+						"UniqueId": "Hazel.TranslationHub"
+					}
+				},
+				{
+					"Id": "Hazel.TranslationHub.Data",
+					"DisplayName": "Translation Hub Data",
+					"Type": "ContentPack",
+					"RelativePath": "TranslationHubData",
+					"Manifest": {
+						"Name": "Translation Hub Data",
+						"Description": "Persistent translation data for Translation Hub.",
+						"Author": "Hazel",
+						"Version": "0.6.1",
+						"ContentPackFor": {
+							"UniqueId": "Hazel.TranslationHub",
+							"MinimumVersion": "0.6.0"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Hazel.TranslationHub.Data"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577660,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442098,
+		"UploaderId": 137206088,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}
