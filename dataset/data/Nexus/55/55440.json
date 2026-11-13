@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 55440,
+	"Name": "Fishing in Peace",
+	"Author": "hsyplayday",
+	"Description": "OVERVIEW\n<br />\n<br />No monster damage while you fish. The protection window starts the moment you press the\n<br />cast button (including the power meter) and ends when the catch animation finishes, plus\n<br />a one-second grace period after you reel in.\n<br />\n<br />Outside that window nothing changes. Walking around with a rod, mining, fighting: monsters\n<br />hurt you exactly as they always did. This is not a god mode.\n<br />\n<br />Works with or without Stardew Valley Expanded.\n<br />\n<br />\n<br />WHY THIS EXISTS\n<br />\n<br />While playing with Stardew Valley Expanded, I kept fishing in the Highlands and other\n<br />monster-heavy maps. Killing the monsters did not help: they respawn fast enough that I could\n<br />never fish in peace. Fishing is also the one situation where the game takes away your ability\n<br />to move, so you cannot run, dodge or fight back. I wanted something that covered exactly that\n<br />situation and nothing else.\n<br />\n<br />\n<br />MAIN FEATURES\n<br />\n<br />- Immune to monster damage from the moment you cast until the catch animation ends, with a\n<br />\u00A0 configurable grace period afterwards.\n<br />- Projectile damage (slime spit, fireballs) is covered as well.\n<br />- Three protection scopes plus a master switch, so you can narrow or disable it at any time.\n<br />- English and Chinese interface, independent of the game's own language.\n<br />- No new items, no textures, no dependencies beyond SMAPI. Generic Mod Config Menu optional.\n<br />\n<br />\n<br />HOW IT WORKS\n<br />\n<br />A single Harmony prefix on Farmer.takeDamage. While the player is fishing, the original method\n<br />never runs, so there is no health loss, no knockback, no hit sound, no invincibility frames\n<br />consumed and no faint check. No game files are modified: removing the folder restores vanilla\n<br />behaviour, and your save is untouched.\n<br />\n<br />The window follows the rod's own state, not a timer, a location or a key press. That matters\n<br />because during a cast the movement keys are used to adjust where the line lands, so movement\n<br />input cannot be used as a signal.\n<br />\n<br />\n<br />CONFIGURATION\n<br />\n<br />With Generic Mod Config Menu installed, settings appear under Settings &gt; Mod Options.\n<br />Otherwise edit config.json in the mod folder.\n<br />\n<br />- Protection scope: Standard / Strict / Relaxed / Off\n<br />- Grace period: seconds of protection after reeling in (default 1)\n<br />- Block unattributed damage: also block damage that reports no source, i.e. projectiles\n<br />\u00A0 (default on)\n<br />- Verbose log: write every blocked hit to the SMAPI log\n<br />- Language: English (default) or Chinese\n<br />\n<br />\n<br />INSTALLATION INSTRUCTIONS\n<br />\n<br />1. Install SMAPI 4.5.2 or newer.\n<br />2. Unzip into your Mods folder so that you have Mods/FishingInPeace/manifest.json\n<br />3. Launch the game through SMAPI.\n<br />\n<br />On startup the SMAPI log should contain a line ending in [ACTIVE]. If it says [NOT ACTIVE],\n<br />the same log explains why. Please include those lines when reporting a problem.\n<br />\n<br />\n<br />REQUIREMENTS\n<br />\n<br />Required:\n<br />- SMAPI 4.5.2 or newer\n<br />- Stardew Valley 1.6\n<br />\n<br />Optional:\n<br />- Generic Mod Config Menu - only needed for the in-game settings menu.\n<br />\u00A0 Without it, edit config.json manually.\n<br />\n<br />\n<br />KNOWN LIMITATIONS\n<br />\n<br />- It does not stop monsters from approaching. They still crowd you and make noise; they\n<br />\u00A0 simply cannot hurt you.\n<br />- Debuffs are applied inside the same method as damage, so darkness and slowness are blocked\n<br />\u00A0 in the base game. Other mods may apply them through a separate path; that is not verified.\n<br />- Projectile blocking is on by default but has not been tested in-game against a live\n<br />\u00A0 projectile. If a ranged attack still hurts you while fishing, please report it.\n<br />- Multiplayer has not been tested.\n<br />- May interact with other mods that also patch damage handling. If something looks wrong,\n<br />\u00A0 please attach your SMAPI log.\n<br />\n<br />\n<br />TESTED WITH\n<br />\n<br />Stardew Valley 1.6.15, SMAPI 4.5.2, Windows, alongside Stardew Valley Expanded.\n<br />\n<br />\n<br />AI DISCLOSURE\n<br />\n<br />This mod is labelled AI Generated Content. Here is exactly what that means.\n<br />\n<br />Written by AI: the C# source code, the README, and the first draft of this page description.\n<br />\n<br />Written by the human author: the problem definition, every design decision (the protection\n<br />window, the three modes, the grace period, the \"only while fishing\" boundary), the naming,\n<br />all in-game testing, and every decision made in response to review feedback, including the\n<br />projectile fix in 1.0.1.\n<br />\n<br />Verification: technical claims about the game's internals were checked against the actual\n<br />Stardew Valley 1.6 assembly metadata rather than assumed, then confirmed in-game. Tested\n<br />behaviour: no damage, knockback or hit sound while fishing; damage resuming about one second\n<br />after reeling in; normal damage outside fishing unaffected. Full source is on the Files tab.\n<br />\n<br />No third-party assets are used. The mod adds no art, audio, voices or translations, and\n<br />contains no AI-generated media of any kind.\n<br />\n<br />\n<br />中文说明\n<br />\n<br />钓鱼期间免疫怪物伤害。保护窗口从按下抛竿开始（包含蓄力条），到收鱼动画结束，再加收竿后\n<br />1 秒宽限。窗口之外一切照旧：举着鱼竿走路、下矿、打怪，怪物照样伤到你。这不是无敌模式。\n<br />\n<br />做这个 mod 的原因：玩 SVE 时在高地等地图钓鱼，怪物刷新太快，杀掉也没用，一直没法安静钓。\n<br />而且钓鱼恰好是游戏里唯一\"你不能移动\"的状态——跑不掉、闪不了、也还不了手。想要的就是覆盖\n<br />这一段，别的都不碰。\n<br />\n<br />实现方式：在 Farmer.takeDamage 上加一个 Harmony prefix，钓鱼状态下直接返回，原方法不执行。\n<br />不修改任何游戏文件，删掉文件夹即恢复原样。不需要 Content Patcher，不新增物品和贴图。\n<br />\n<br />配置项：保护范围（标准/严格/宽松/关闭）、收竿后宽限秒数、是否拦截来源未知的伤害、\n<br />详细日志、界面语言（英文/中文，默认英文）。\n<br />\n<br />已知限制：不阻止怪物靠近；负面状态在其他 mod 的独立路径下可能仍会生效；投射物拦截默认开启\n<br />但未经实测；多人模式未测试；与同样修改受伤逻辑的 mod 可能冲突，遇到问题请附 SMAPI 日志。\n<br />\n<br />实测环境：星露谷 1.6.15 / SMAPI 4.5.2 / Windows，与 SVE 同时运行。\n<br />\n<br />\n<br />CREDITS\n<br />\n<br />Thanks to Pathoschild for SMAPI, and to spacechase0 for Generic Mod Config Menu.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55440",
+	"Version": "1.1.1",
+	"Updated": "2026-11-12T12:14:41+00:00",
+	"Downloads": [
+		{
+			"Id": 191006,
+			"Type": "Main",
+			"DisplayName": "Fishing in Peace",
+			"FileName": "2b/bd/e3/2bbde3e5-3747-4f15-b50f-1fb6c35164ea",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 11663,
+			"Uploaded": "2026-11-12T12:14:41+00:00",
+			"Mods": [
+				{
+					"Id": "Hsypl.FishingInPeace",
+					"DisplayName": "Fishing in Peace",
+					"Type": "Smapi",
+					"RelativePath": "FishingInPeace",
+					"Manifest": {
+						"Name": "Fishing in Peace",
+						"Description": "No damage while fishing. From the moment you cast to the moment you reel in, monsters can no longer hurt you.",
+						"Author": "Hsypl",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "FishingInPeace.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55440"
+						],
+						"UniqueId": "Hsypl.FishingInPeace"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577694,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442128,
+		"UploaderId": 86865888,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

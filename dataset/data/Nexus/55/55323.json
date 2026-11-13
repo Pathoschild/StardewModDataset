@@ -6,18 +6,18 @@
 	"AuthorLabel": "NotesP",
 	"Description": "[code]《鹈鹕镇日报》\n<br />\n<br />给鹈鹕镇办的一份小报纸。每天早上，新一期会被投进你的邮箱，版面照民国旧报做：米黄纸面、深褐油墨、双层报头、三栏竖排。\n<br />\n<br />报纸内容来自你农场和镇上当天真实发生的事，不是随机编的。它只读取存档，不改你的钱、背包、任务日志和布告栏，也不新增任何 NPC、地图或物品。\n<br />\n<br />【这个模组做什么】\n<br />\n<br />· 每天早上给邮箱投一份当天的报纸，点开邮件就能读\n<br />· 按 J（可改）随时翻开完整版面，也能往回翻前几期\n<br />· 报纸上的商铺营业时间、今日特价、镇民生日与行程，都按当天的真实数据算，不是写死的模板\n<br />· 委托可以直接在报纸上接，之后当面交给镇民，或由报社邮政代寄\n<br />\n<br />【一期报纸通常包含】\n<br />\n<br />· 今日要闻 —— 今天哪家店歇业、为什么歇业，今天与明天的天气，以及镇上的其他变动\n<br />· 公告板 · 今日日程 —— 镇民生日、旅行商人位置、任务板进度、当季鱼讯\n<br />· 商铺营业表 —— 每家店今天的开关门时间，休息的店会单独标出来\n<br />· 商品版 · 今日特价 —— 当天打折的货品与柜台价，写多少就付多少\n<br />· 娱乐版 · 编辑部手记 —— 读者来稿，以及镇上传的小道消息\n<br />· 委托 · 报社代理 —— 报社代收的跑腿委托，标着需要什么、还剩几天\n<br />· 医疗公告 · 病中求援 —— 只在装了《病痛系统》时出现，列出当前病着的镇民与他们缺的东西\n<br />\n<br />【委托怎么玩】\n<br />\n<br />报纸上的委托接单后有两种交付方式：\n<br />\n<br />· 当面交付：走到委托人旁边按交互键，弹出交付窗口，当场结酬并加好感\n<br />· 报社寄交：在报纸上点「寄交」，物品直接进背包，次日由报社邮政把报酬寄到邮箱\n<br />\n<br />两条路都只结算一次，不会重复给钱。\n<br />\n<br />【它不改动你的存档】\n<br />\n<br />· 不写入你的金钱、背包、任务日志、布告栏\n<br />· 不新增 NPC、地图、物品或建筑\n<br />· 不联网、不上传任何数据；本版没有接入任何在线服务\n<br />· 报纸自己的数据只存在存档的 mod 数据段里，卸载后不会污染原版存档\n<br />\n<br />【安装】\n<br />\n<br />1. 先安装 SMAPI 4.0.0 或更高版本（https://smapi.io）\n<br />2. 把整个 StardewNewsMod 文件夹放进星露谷的 Mods 目录\n<br />3. 启动游戏，SMAPI 控制台出现「鹈鹕镇日报」的加载信息即为成功\n<br />\n<br />【可选依赖】\n<br />\n<br />· GenericModConfigMenu —— 装了可以在游戏内改设置，不装就改 config.json\n<br />· 病痛系统（StardewIllnessMod / Xiaobai.IllnessSystem） —— 装了之后报纸左栏会多出「医疗公告 · 病中求援」，列出病着的镇民和他们缺的东西；没装这一栏完全不出现，版面与原来一致，不会留空位\n<br />\n<br />这两个都不是必需的，缺了照样能正常玩。\n<br />\n<br />【设置】\n<br />\n<br />生成 config.json 后可改：\n<br />\n<br />· OpenKey —— 翻开报纸的快捷键，默认 J\n<br />· SendDailyMail —— 每天早上是否往邮箱投报纸，默认开\n<br />· EnableDiscounts / DiscountPercent / DealCount —— 商品版特价是否开启、折扣力度、每期几条\n<br />· ArchiveDepth —— 能往回翻几期，默认 5 期\n<br />· VerboseLogging —— 排查问题时打开，会输出更详细的日志\n<br />\n<br />【当前版本 0.3.20】\n<br />\n<br />· 新增「医疗公告 · 病中求援」，装了病痛系统才出现，没装不占位\n<br />· 去掉娱乐版的「读者来稿」标题行，来稿直接排在标题下\n<br />· 委托话术不再与右侧「N 个 · 剩 X 天 · 寄交」叠字\n<br />· 报纸文字不再越出实底框\n<br />· 关于依赖的说明更正：本模组不要求安装任何其他内容模组\n<br />\n<br />【已知限制】\n<br />\n<br />· 仅简体中文\n<br />· 报纸用游戏自带字体绘制，系统里需要有中文字形，缺字形会显示成方块\n<br />· 广告位目前是占位文案，不含任何外部链接与联系方式\n<br />· 医疗公告只在同时装了病痛系统时出现\n<br />\n<br />【许可】\n<br />\n<br />允许收录进免费整合包，但必须保留本说明与作者署名，且不得对模组做修改。禁止二次上传、搬运、售卖，禁止修改后以「修复版」「加强版」等名义另行发布。未经作者同意，不得反编译、拆包或替换素材后分发。\n<br />\n<br />本模组按现状提供，不附带担保。使用前请自行备份存档，因模组冲突、游戏更新或第三方修改造成的存档损坏与进度丢失，作者不承担责任。\n<br />\n<br />【特别鸣谢】\n<br />设计与程序：一本笔记本\n<br />【关于 AI 的使用】\n<br />本 Mod 的代码、界面排版与报纸文案在生成式 AI 的协助下完成，由作者确定设计方向、逐版测试与修正。游戏内的 AI 专栏功能在本版中处于关闭状态，不会向任何外部服务发送数据。\n<br />基于 Pathoschild 的 SMAPI，以及星露谷模组社区的技术文档[/code]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55323",
-	"Version": "0.3.20",
-	"Updated": "2026-11-11T09:35:50+00:00",
+	"Version": "0.3.21",
+	"Updated": "2026-11-13T01:19:58+00:00",
 	"Downloads": [
 		{
-			"Id": 190900,
+			"Id": 191062,
 			"Type": "Main",
-			"DisplayName": "StardewNewsMod 0.3.20",
-			"FileName": "c9/45/9c/c9459cc7-0682-4658-aecd-c03c8e043387",
+			"DisplayName": "StardewNewsMod 0.3.21",
+			"FileName": "85/e5/5a/85e55ab8-a40c-4ad7-83c9-e36a78fb319b",
 			"Description": "Unzip into your Mods folder. Requires SMAPI 4.0.0+. Chinese text only (no English localization). Optional: GenericModConfigMenu for in-game settings; StardewIllnessMod adds the clinic bulletin column. No AI features in this build.",
-			"Version": "0.3.20",
-			"SizeInBytes": 86125,
-			"Uploaded": "2026-11-11T09:35:50+00:00",
+			"Version": "0.3.21",
+			"SizeInBytes": 87593,
+			"Uploaded": "2026-11-13T01:19:58+00:00",
 			"Mods": [
 				{
 					"Id": "Xiaobai.DailyNews",
@@ -28,7 +28,7 @@
 						"Name": "鹈鹕镇日报",
 						"Description": "每日清晨投送的鹈鹕镇日报：今日要闻、商铺营业表、娱乐版与真实特价。",
 						"Author": "一本笔记本",
-						"Version": "0.3.20",
+						"Version": "0.3.21",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "StardewNewsMod.dll",
 						"Dependencies": [
@@ -47,7 +47,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342577588,
+				"Uid": 5596342577750,
 				"CategoryId": 1,
 				"Primary": true
 			}
