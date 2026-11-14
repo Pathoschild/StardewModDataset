@@ -5,29 +5,29 @@
 	"Author": "Kangkatoo0707",
 	"Description": "Since this is the first mod I’ve ever made, I hope you won’t be too harsh on me. I welcome any bug reports or suggestions for the mod.\n<br />\n<br />This mod was inspired by mods that turn all villagers into anthropomorphic animals. Why can’t our farmer character look like that too? This simple mod was born from that idea.\n<br />\n<br />I created this on my own, so there may still be many parts that haven’t been thoroughly tested for bugs. I appreciate your understanding.\n<br />\n<br />\n<br />[size=5][b]Bear[/b][/size]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/49832/49832-1785227517-850369446.jpg[/img]\n<br />Defense +2\n<br />Mining +2\n<br />Axe/Pickaxe Energy Drain -20%\n<br />\n<br />[size=5][b]Deer[/b][/size]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/49832/49832-1785227512-1210559933.jpg[/img]\n<br />Speed +0.75\n<br />\n<br />[size=5][b]Rabbit[/b][/size]\u00A0\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/49832/49832-1785227514-366858569.jpg[/img]\n<br />Luck +1\n<br />Farming +2\n<br />\n<br />[size=5][b]Wolf[/b][/size]\u00A0\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/49832/49832-1785227519-868392343.jpg[/img]\n<br />Combat +2\n<br />Attack +1\n<br />Monster Loot Drop +25%\n<br />\n<br />[size=5][b]Cat[/b][/size]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/49832/49832-1785300249-151735408.jpg[/img]\n<br />Fishing +1\n<br />Fishing Minigame Difficulty -10%\n<br />\n<br />[size=5][b]Raccoon[/b](new)[/size]\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/49832/49832-1785914500-294141906.jpg[/img]\n<br />Luck +1\n<br />75% trash item drop rate, 50% double item chance\n<br />\n<br />[size=5]Species dialogues are currently work-in-progress.\u00A0 I can't do English well, so translation contributions and translation packs are very welcome! Also, if you have any great idea about dialouges, I'll be consider about it gladly.[/size]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/49832",
-	"Version": "1.3.2",
-	"Updated": "2026-08-11T10:35:42+00:00",
+	"Version": "1.4.0",
+	"Updated": "2026-11-13T03:01:24+00:00",
 	"Downloads": [
 		{
-			"Id": 178280,
+			"Id": 191069,
 			"Type": "Main",
-			"DisplayName": "FarmerSpecies1.3.2",
-			"FileName": "9b/9b/14/9b9b1449-9f6b-4c78-9d5d-a23fb44f0f1f",
+			"DisplayName": "FarmerSpecies1.4.0",
+			"FileName": "8e/34/c7/8e34c7e1-defa-498d-bb0e-675c8cd948f8",
 			"Description": "",
-			"Version": "1.3.2",
-			"SizeInBytes": 760864,
-			"Uploaded": "2026-08-11T10:35:42+00:00",
+			"Version": "1.4.0",
+			"SizeInBytes": 773992,
+			"Uploaded": "2026-11-13T03:01:24+00:00",
 			"Mods": [
 				{
 					"Id": "Kangkatoo0707.FarmerSpecies",
 					"DisplayName": "Anthro Farmer",
 					"Type": "Smapi",
-					"RelativePath": "FarmerSpecies",
+					"RelativePath": "FarmerSpecies\\[C#] FarmerSpecies",
 					"Manifest": {
 						"Name": "Anthro Farmer",
 						"Description": "Adds species selection options (Bear, Wolf, Rabbit, Deer, Cat, Raccoon) to the character customization screen.",
 						"Author": "Kangkatoo0707",
-						"Version": "1.3.2",
+						"Version": "1.4.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "FarmerSpecies.dll",
 						"Dependencies": [
@@ -37,7 +37,11 @@
 							},
 							{
 								"UniqueId": "spacechase0.GenericModConfigMenu",
-								"IsRequired": true
+								"IsRequired": false
+							},
+							{
+								"UniqueId": "PeacefulEnd.FashionSense",
+								"IsRequired": false
 							}
 						],
 						"UpdateKeys": [
@@ -45,10 +49,33 @@
 						],
 						"UniqueId": "Kangkatoo0707.FarmerSpecies"
 					}
+				},
+				{
+					"Id": "Kangkatoo0707.FarmerSpeciesCP",
+					"DisplayName": "FarmerSpecies Content Patcher Pack",
+					"Type": "ContentPack",
+					"RelativePath": "FarmerSpecies\\[CP] FarmerSpecies",
+					"Manifest": {
+						"Name": "FarmerSpecies Content Patcher Pack",
+						"Description": "Content Patcher pack for Anthro Farmer Species base textures.",
+						"Author": "Kangkatoo0707",
+						"Version": "1.4.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Kangkatoo0707.FarmerSpecies",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Kangkatoo0707.FarmerSpeciesCP"
+					}
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342564968,
+				"Uid": 5596342577757,
 				"CategoryId": 1,
 				"Primary": true
 			}
