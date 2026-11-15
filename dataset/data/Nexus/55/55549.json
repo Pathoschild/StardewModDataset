@@ -1,0 +1,104 @@
+{
+	"Site": "Nexus",
+	"Id": 55549,
+	"Name": "Farmhouse Furniture Tokens",
+	"Author": "slpOff",
+	"Description": "[heading]Farmhouse Furniture Tokens[/heading]\n<br />[b]Let your furniture decide where the scene takes place.[/b]\n<br />Farmhouse Furniture Tokens (FFT) is a modding framework for creating farmhouse events that adapt to the player’s furniture layout.\n<br />Instead of placing characters at fixed coordinates, event authors can use Content Patcher tokens to position them relative to furniture and other placed objects. Move the furniture, and compatible events can use its new position.\n<br />[heading]Features[/heading]\n<br />[list]\n<br />[*][b]Furniture-based coordinates:[/b] Place event actors relative to an item’s actual tile position.[/*]\n<br />[*][b]Coordinate offsets:[/b] Adjust positions with positive or negative X and Y offsets.[/*]\n<br />[*][b]Multiple fallback targets:[/b] Use || to provide an ordered list of candidate items.[/*]\n<br />[*][b]Placement checks:[/b] Prefer candidates where the event’s actors have valid standing positions.[/*]\n<br />[*][b]Farmer-relative placement:[/b] Position NPCs relative to the farmer’s calculated event starting position.[/*]\n<br />[*][b]Placement previews:[/b] While repositioning furniture, preview the starting tiles used by compatible events.[/*]\n<br />[*][b]Console inspection:[/b] Use `fft_list` to inspect furniture names, IDs, and tile coordinates.[/*]\n<br />[/list]No separate layout file is required. Placement information is written directly into the event’s tokens.\n<br />[heading]How Fallback Selection Works[/heading]\n<br />For a candidate list such as ID1 || ID2 || ID3, FFT checks the targets in order and prefers the first candidate with valid standing positions for the associated actors.\n<br />If every available candidate has blocked positions, FFT returns the first existing candidate’s coordinates. Blocked placement alone will not prevent coordinate selection.\n<br />This checks destination tiles, not walking routes. Event authors should still account for movement and collisions in their scripts.\n<br />[heading]For Mod Authors[/heading]\n<br />FFT provides two Content Patcher tokens:\n<br />[list]\n<br />[*][code]slO.FFT/HasFurniture[/code]checks whether at least one candidate is placed in the current house. Use it in a patch’s When conditions.[/*]\n<br />[*][code]slO.FFT/EventTile[/code]returns an X Y tile coordinate using a placed item or the event farmer’s starting position as its reference.[/*]\n<br />[/list]Furniture IDs accept both qualified and unqualified forms: 123 and (F)123 refer to the same furniture ID. Explicit type prefixes can also target supported placed objects, including (O) objects and (BC) big craftables.\n<br />Use Update: OnLocationChange on compatible event patches so their coordinates can refresh when changing locations.\n<br />[heading]Placement Preview[/heading]\n<br />Preview tiles use the following colors:\n<br />[list]\n<br />[*][b]Blue:[/b] Farmer position[/*]\n<br />[*][b]Yellow:[/b] NPC positions[/*]\n<br />[*][b]Red:[/b] Blocked positions[/*]\n<br />[/list]Previews can be toggled through Generic Mod Config Menu.\n<br />[heading]Requirements[/heading]\n<br />[list]\n<br />[*]SMAPI[/*]\n<br />[*]Content Patcher[/*]\n<br />[*]Generic Mod Config Menu[/*]\n<br />[/list][heading]Installation[/heading]\n<br />[list=1]\n<br />[*]Install the required mods.[/*]\n<br />[*]Extract Farmhouse Furniture Tokens into your Mods folder.[/*]\n<br />[*]Install a content pack that uses FFT, or use its tokens in your own events.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][b]FFT is a framework. Existing events must be explicitly updated to use its tokens; installing it does not automatically convert vanilla or other mods’ events.[/b]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55549",
+	"Version": "1",
+	"Updated": "2026-11-14T12:27:26+00:00",
+	"Downloads": [
+		{
+			"Id": 191239,
+			"Type": "Main",
+			"DisplayName": "FarmhouseFurnitureTokens",
+			"FileName": "2f/be/a1/2fbea19b-3766-4f4a-8559-6e9c57cc6f14",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 50737,
+			"Uploaded": "2026-11-14T12:26:59+00:00",
+			"Mods": [
+				{
+					"Id": "slO.FFT",
+					"DisplayName": "Farmhouse Furniture Tokens",
+					"Type": "Smapi",
+					"RelativePath": "FarmhouseFurnitureTokens",
+					"Manifest": {
+						"Name": "Farmhouse Furniture Tokens",
+						"Description": "현재 집의 배치 아이템을 조회하고 이벤트 시작 배우 좌표와 가구 배치 미리보기를 제공합니다.",
+						"Author": "slO",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FarmhouseFurnitureTokens.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55549"
+						],
+						"UniqueId": "slO.FFT"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577927,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 191240,
+			"Type": "Optional",
+			"DisplayName": "ExamplePack",
+			"FileName": "8a/f5/87/8af587a3-f1a8-4c50-8aab-4bac5b00bf6b",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 3065,
+			"Uploaded": "2026-11-14T12:27:26+00:00",
+			"Mods": [
+				{
+					"Id": "slO.FFT.Example",
+					"DisplayName": "Farmhouse Furniture Tokens Example",
+					"Type": "ContentPack",
+					"RelativePath": "ExamplePack",
+					"Manifest": {
+						"Name": "Farmhouse Furniture Tokens Example",
+						"Description": "바닥 TV를 보는 농장주, 아비게일, 세바스찬과 기타를 연주하는 샘의 팜하우스 이벤트입니다.",
+						"Author": "slO",
+						"Version": "0.3.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "slO.FFT",
+								"MinimumVersion": "0.3.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "slO.FFT.Example"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577928,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442237,
+		"UploaderId": 231048348,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

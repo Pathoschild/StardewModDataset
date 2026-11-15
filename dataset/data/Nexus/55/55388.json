@@ -3,20 +3,20 @@
 	"Id": 55388,
 	"Name": "CategorizedChests",
 	"Author": "xw025",
-	"Description": "# Categorized Chests\n<br />Categorized Chests turns every chest into a smart, category-aware container. Instead of digging through a 36-slot mess, you get a filter bar that lets you view and move one kind of item at a time — and chests can be labeled with a category so your items are stored in the right place automatically.\n<br />\n<br />## Features\n<br />Category tabs A filter bar sits between the chest grid and your inventory, with 21 categories plus an All tab: Seeds, Vegetables, Fruit, Flowers, Fish, Animal Products, Minerals, Artifacts, Resources, Forage, Cooking, Artisan Goods, Crafting, Fertilizer, Trash, Fishing Tackle, Decor, Furniture, Books, Equipment, and Trinkets. Items that don't match the active tab are dimmed and can't be clicked, so the chest visually narrows down to just what you need. Each tab shows a representative item icon.\n<br />\n<br />Labeled chests Click a tab to save that category on the chest. Once a chest has a label, you can press the green Store button under your inventory to deposit every matching item from your backpack in one go, and the blue Take button to pull every stored item of that category back out.\n<br />\n<br />Smart depositing When you store items, nearby labeled chests are checked first — the chest you have open is always considered last. Each item is routed by matching, in order: the chest's exact category, the category's precise rules, then the game's own item type name. Nothing lands in the wrong chest just because two categories overlap.\n<br />\n<br />Favorites stay with you Hold Alt and left-click any item in your inventory to favorite it — it gets a gold diamond marker. Favorited items are never auto-stored by this mod, and the rule is enforced at the chest level, so they stay in your backpack no matter how you try to put them away (including the shipping bin and fridge).\n<br />\n<br />Works with modded items Classification walks through the vanilla item type, the numeric category, the qualified type prefix (weapons, tools, hats, boots, shirts, pants, rings, trinkets, furniture, wallpaper, flooring), furniture placement restrictions, the game's localized item type name, context tags, and finally name keywords. Modded items that follow vanilla conventions are categorized automatically, no patch required.\n<br />\n<br />Fully configurable Every rule lives in`config.json` : categories, category IDs, numeric categories, item type prefixes, object types, furniture restrictions, context tags, name keywords, icons, and display names. Your default rule set upgrades automatically when the mod updates — custom names, icons, and added keywords are preserved, and your own categories are appended at the end.\n<br />\n<br />## How to use\n<br />1. Install SMAPI 4.x and Stardew Valley 1.6.\n<br />2. Drop the`CategorizedChests` folder into your`Mods` directory.\n<br />3. Open any chest — the tab bar appears between the two grids.\n<br />4. Click a tab to filter and label the chest, then use Store / Take to move items in bulk.\n<br />5. Hold Alt and left-click items to mark favorites.\n<br />## Notes\n<br />- No new items, objects, or save data are added — the mod only adds UI and smart movement, so it's safe to install or remove at any time.\n<br />- Chest labels and favorite marks are stored in the chest/item`modData` , which the game already saves and syncs.\n<br />- The tab bar and all UI are rendered client-side. In multiplayer, each player needs the mod to see it; chest labels are saved by the host even if the host doesn't have the mod installed.\n<br />- Localization: English and Simplified Chinese are included.\n<br />## Compatibility\n<br />Built for Stardew Valley 1.6 and SMAPI 4.0+. Uses Harmony patches that are all wrapped in exception guards, so a failure in one feature never blocks the vanilla chest UI.",
+	"Description": "# Categorized Chests\n<br />Never dig through a messy chest again.\n<br />\n<br />Categorized Chests adds a folder-style category panel to every chest in Stardew Valley. Browse, filter, label, and auto-sort your storage without ever leaving the chest UI.\n<br />\n<br />### Features\n<br />Folder-style category panel A nested panel on the left edge of the screen with 8 groups and 40+ subcategories — Farming, Animals, Fishing, Materials, Food, Decor, Equipment, and Misc. Groups expand and collapse like folders, and the whole panel can be folded into a narrow strip.\n<br />\n<br />Visual filter hints Items matching the selected category get a gold outline; everything else gets a red outline and a slight dim. Filtering never blocks you — you can still pick up, drag, or quick-transfer any item as usual.\n<br />\n<br />Chest labels Click a category to tag the open chest with it. The label floats above the chest in the world, so you can tell at a glance what belongs where. Click the same category again to clear it.\n<br />\n<br />One-click deposit Sorts your inventory into every labeled chest on the current map. Each item is routed to the chest whose label matches best — exact category first, then condition match, then type-name fallback. Favorited items are skipped.\n<br />\n<br />One-click withdraw Pulls only the items matching the current category from the chest into your inventory. Everything else stays where it is.\n<br />\n<br />Seasonal subcategories Crops, fish, and forage each have Spring / Summer / Fall / Winter subcategories, so seasonal stock can be stored separately.\n<br />\n<br />Favorites Alt + left click any item to favorite it. Favorited items are never auto-deposited into a chest, whichever chest you open.\n<br />\n<br />Works with more than wooden chests Big Chests, Stone Chests, Fridges, and the Shipping Bin all support labeling and filtering. The panel is drawn outside the chest layout, so it never overlaps or shifts the vanilla UI, no matter how many rows a container has.\n<br />\n<br />### How to use\n<br />1. Open any chest.\n<br />2. Click a category on the left panel to filter it and label the chest.\n<br />3. Press 存入 / Deposit to sort your inventory into labeled chests, or 取出 / Withdraw to pull only the selected category.\n<br />### Compatibility\n<br />- Stardew Valley 1.6+ with SMAPI 4.0+\n<br />- Save-safe: no custom world objects; labels and favorites live in`modData`\n<br />- Multiplayer: UI renders client-side, labels sync with the save\n<br />- Modded items: matched through Type, Category, type prefixes, furniture restrictions, ContextTags, and name keywords\n<br />- Fully configurable: add or edit categories in`config.json`",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55388",
-	"Version": "1",
-	"Updated": "2026-11-11T12:26:52+00:00",
+	"Version": "1.0.1",
+	"Updated": "2026-11-14T06:01:09+00:00",
 	"Downloads": [
 		{
-			"Id": 190915,
+			"Id": 191206,
 			"Type": "Main",
-			"DisplayName": "CategorizedChests 1.0.0",
-			"FileName": "57/fc/1c/57fc1c7d-89b2-4b01-9877-4ff87e4ecbdd",
+			"DisplayName": "CategorizedChests 1.0.1",
+			"FileName": "b6/9d/37/b69d37f2-0536-469c-b785-b3c147807236",
 			"Description": "",
-			"Version": "1",
-			"SizeInBytes": 32353,
-			"Uploaded": "2026-11-11T12:26:52+00:00",
+			"Version": "1.0.1",
+			"SizeInBytes": 37094,
+			"Uploaded": "2026-11-14T06:01:09+00:00",
 			"Mods": [
 				{
 					"Id": "liucu.CategorizedChests",
@@ -27,7 +27,7 @@
 						"Name": "Categorized Chests",
 						"Description": "箱子精细分类：分类按钮过滤、一键存入/取出指定分类，兼容原版与模组箱子。",
 						"Author": "liucu",
-						"Version": "1.0.0",
+						"Version": "1.0.1",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "CategorizedChests.dll",
 						"Dependencies": [],
@@ -37,7 +37,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342577603,
+				"Uid": 5596342577894,
 				"CategoryId": 1,
 				"Primary": true
 			}

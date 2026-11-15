@@ -1,0 +1,64 @@
+{
+	"Site": "Nexus",
+	"Id": 55510,
+	"Name": "Hopper Brain - Automate Rebalance",
+	"Author": "WSAEZ",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]Automate is great, but it makes the early game too easy: any chest next to machines feeds them and collects their output from day one. [b]Hopper Brain[/b] keeps everything Automate does and changes one thing: [b]the hopper is the brain[/b]. Chests only work when a hopper touches them. By default the hopper stays a late-game item, so automation becomes a late-game reward, and you can make it cheaper or earlier in the config.[/color]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list=1]\n<br />[*][color=#D4D4D8]Install the latest [url=https://smapi.io]SMAPI[/url].[/color][/*]\n<br />[*][color=#D4D4D8]Install [url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url] 2.6.1 or later.[/color][/*]\n<br />[*][color=#D4D4D8](Optional) Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to change options in game.[/color][/*]\n<br />[*][color=#D4D4D8]Unzip this mod into [i]Stardew Valley/Mods[/i].[/color][/*]\n<br />[*][color=#D4D4D8]Run the game using SMAPI.[/color][/*]\n<br />[/list][color=#D4D4D8]Safe to add or remove mid-save. Nothing is stored in your save, and items inside hoppers stay there.[/color]\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]A [b]hopper[/b] connects to everything around it, diagonals included.[/color][/*]\n<br />[*][color=#D4D4D8][b]Machines[/b] next to machines still form a chain, so one hopper can run a whole row of kegs.[/color][/*]\n<br />[*][color=#D4D4D8]A [b]chest[/b] is only used if it [b]touches a hopper[/b]. A chest next to a machine does nothing.[/color][/*]\n<br />[*][color=#D4D4D8]Hoppers link to each other directly or through a chest touching both, so you can attach many chests.[/color][/*]\n<br />[*][color=#D4D4D8]A hopper works without a chest: inputs and outputs live in the hopper. With chests attached, output goes to the chests first.[/color][/*]\n<br />[*][color=#D4D4D8]Automate connectors (paths/flooring) extend machine chains but never pull a chest in.[/color][/*]\n<br />[*][color=#D4D4D8]Every Automate feature still works: tapped trees, fruit trees, bee houses, crystalariums, shipping bin, Junimo chests and the [b]U[/b] overlay.[/color][/*]\n<br />[*][color=#D4D4D8][b]Configurable hopper recipe:[/b] choose the cost and when you unlock it, including buying from Robin.[/color][/*]\n<br />[*][color=#D4D4D8][b]Translated[/b] config menu in all 12 game languages.[/color][/*]\n<br />[*][color=#D4D4D8][b]Safety switch:[/b] if an Automate update breaks the patch, Automate is turned off and an error is logged, so plain chests never start automating behind your back.[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Examples[/b][/size]\n<br />[color=#D4D4D8]B = chest, H = hopper, M = machine, T = tapped tree, P = path (Automate connector)[/color]\n<br />\n<br />[b]The basics[/b]\n<br />[color=#D4D4D8]No hopper, nothing works:[/color]\n<br />[code]B M M[/code][color=#D4D4D8]Works: the chest feeds both machines and gets their output.[/color]\n<br />[code]B H M M[/code][color=#D4D4D8]Works without a chest: inputs and outputs live in the hopper.[/color]\n<br />[code]H M M[/code]\n<br />[b]Chests must touch the hopper[/b]\n<br />[color=#D4D4D8]The hopper runs the machine alone; the chest is NOT connected:[/color]\n<br />[code]B M H[/code][color=#D4D4D8]Only the chest touching the hopper is used; the far one is out:[/color]\n<br />[code]B B H M[/code][color=#D4D4D8]One chest, one hopper, a whole row of machines (machines chain to machines):[/color]\n<br />[code]B H M M M M[/code]\n<br />[b]Trees[/b]\n<br />[color=#D4D4D8]Tree output goes into the hopper:[/color]\n<br />[code]H T[/code][color=#D4D4D8]Tree output goes into the chest (chests are filled first):[/color]\n<br />[code]B H T[/code]\n<br />[b]Paths (if enabled in Automate's config)[/b]\n<br />[color=#D4D4D8]Works: the path extends the chain to the machine:[/color]\n<br />[code]H P P M[/code][color=#D4D4D8]Nothing works: a path never pulls a chest in:[/color]\n<br />[code]B P M[/code]\n<br />[b]One hopper, diagonals count[/b]\n<br />[color=#D4D4D8]3 chests (the corners touch diagonally) and 5 machines:[/color]\n<br />[code]B B B\n<br />M H M\n<br />M M M[/code]\n<br />[b]Two hoppers sharing chests[/b]\n<br />[color=#D4D4D8]The middle row of chests touches both hoppers, so all 8 chests feed all 5 machines:[/color]\n<br />[code]B B B\n<br />B H B\n<br />B B B\n<br />M H M\n<br />M M M[/code]\n<br />[b]A keg shed[/b]\n<br />[color=#D4D4D8]One hopper and one chest run 22 kegs: every keg touches another keg, and the chain reaches the hopper:[/color]\n<br />[code]M M M M M M\n<br />M M M M M M\n<br />M M H M M M\n<br />M M B M M M[/code]\n<br />[size=4][b]Configuration[/b][/size]\n<br />[color=#D4D4D8]Open [b]Mod Options[/b] with Generic Mod Config Menu, or edit [i]Mods/HopperBrain/config.json[/i] after the first launch. Defaults are vanilla, so nothing changes unless you change it.\n<br />\n<br />[b]Recipe cost[/b] (default: Vanilla)[/color]\n<br />[list]\n<br />[*][color=#D4D4D8][b]Vanilla:[/b] 10 hardwood, 1 iridium bar, 1 radioactive bar[/color][/*]\n<br />[*][color=#D4D4D8][b]Copper:[/b] 50 wood, 5 copper bars[/color][/*]\n<br />[*][color=#D4D4D8][b]Iron:[/b] 10 hardwood, 5 iron bars[/color][/*]\n<br />[*][color=#D4D4D8][b]Gold:[/b] 10 hardwood, 5 gold bars, 3 clay[/color][/*]\n<br />[*][color=#D4D4D8][b]Iridium:[/b] 10 hardwood, 1 iridium bar, 1 battery pack[/color][/*]\n<br />[/list][color=#D4D4D8]\n<br />[b]Recipe unlock[/b] (default: Vanilla)[/color]\n<br />[list]\n<br />[*][color=#D4D4D8][b]Vanilla:[/b] Mr. Qi's Walnut Room on Ginger Island[/color][/*]\n<br />[*][color=#D4D4D8][b]From the start[/b][/color][/*]\n<br />[*][color=#D4D4D8][b]Farming level 4[/b][/color][/*]\n<br />[*][color=#D4D4D8][b]Farming level 9[/b][/color][/*]\n<br />[*][color=#D4D4D8][b]Buy from Robin:[/b] she sells the recipe (50,000g) and hoppers (10,000g); both prices are configurable[/color][/*]\n<br />[/list]\n<br />[list]\n<br />[*][color=#D4D4D8]A new unlock takes effect the next morning. A recipe you already learned is never removed.[/color][/*]\n<br />[*][color=#D4D4D8]Farming levels use your base level, not food or gear buffs.[/color][/*]\n<br />[*][color=#D4D4D8]Robin sells nothing hopper-related unless the unlock is \"Buy from Robin\". Her recipe entry disappears once you know it.[/color][/*]\n<br />[*][color=#D4D4D8]Mr. Qi keeps selling the hopper and its recipe in every mode.[/color][/*]\n<br />[*][color=#D4D4D8][b]Using [url=https://www.nexusmods.com/stardewvalley/mods/29973]Primitive Automate[/url]?[/b] Leave both options on Vanilla so the two mods don't fight over the recipe.[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][url=https://smapi.io]SMAPI[/url] 4.5+[/color][/*]\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/1063]Automate[/url] 2.6.1+[/color][/*]\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional)[/color][/*]\n<br />[/list][color=#D4D4D8]Tested with Stardew Valley 1.6.15, SMAPI 4.5.2 and Automate 2.6.1 in single-player. Multiplayer not tested yet; each player's own config decides their recipe cost, unlock and Robin's shop.[/color]\n<br />\n<br />[size=4][b]Translations[/b][/size]\n<br />[color=#D4D4D8]The config menu is available in English, Chinese, French, German, Hungarian, Italian, Japanese, Korean, Portuguese, Russian, Spanish and Turkish. Some item names may not match the official game wording in every language. Corrections from native speakers are very welcome in the comments or on GitHub.[/color]\n<br />\n<br />[size=4][b]Known limitations[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]A path/floor connector with a chest on top of it doesn't link the chain (not tested in game).[/color][/*]\n<br />[*][color=#D4D4D8]If the patch breaks and you re-enable Automate in its config menu, chest automation comes back until the next restart.[/color][/*]\n<br />[*][color=#D4D4D8]Mods that replace Robin's whole shop (for example Shop Tile Framework packs) may hide the \"Buy from Robin\" entries.[/color][/*]\n<br />[/list][color=#D4D4D8]Source code, full rules and changelog: [url=https://github.com/williansaez/HopperBrain]github.com/williansaez/HopperBrain[/url][/color]\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][url=https://github.com/Pathoschild/StardewMods]Pathoschild[/url] for Automate, which does all the real work.[/color][/*]\n<br />[*][color=#D4D4D8]Inspired by [url=https://www.nexusmods.com/stardewvalley/mods/9418]Super Hopper[/url], [url=https://www.nexusmods.com/stardewvalley/mods/16688]Hopper Extractor[/url], [url=https://www.nexusmods.com/stardewvalley/mods/29973]Primitive Automate[/url], [url=https://www.nexusmods.com/stardewvalley/mods/44714]Smart Filtered Hopper[/url] and [url=https://www.nexusmods.com/stardewvalley/mods/45783]Hopper Collector[/url].[/color][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55510",
+	"Version": "1.1.1",
+	"Updated": "2026-11-14T11:19:56+00:00",
+	"Downloads": [
+		{
+			"Id": 191232,
+			"Type": "Main",
+			"DisplayName": "HopperBrain.1.1.1",
+			"FileName": "05/9c/47/059c4749-6b61-4602-abba-f47c09e4fed4",
+			"Description": "",
+			"Version": "1.1.1",
+			"SizeInBytes": 31660,
+			"Uploaded": "2026-11-14T11:19:56+00:00",
+			"Mods": [
+				{
+					"Id": "WillianSaez.HopperBrain",
+					"DisplayName": "Hopper Brain - Automate Rebalance",
+					"Type": "Smapi",
+					"RelativePath": "HopperBrain",
+					"Manifest": {
+						"Name": "Hopper Brain - Automate Rebalance",
+						"Description": "Only hoppers activate Automate. Chests join a machine group only by touching a hopper.",
+						"Author": "WillianSaez",
+						"Version": "1.1.1",
+						"MinimumApiVersion": "4.5.0",
+						"EntryDll": "HopperBrain.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.Automate",
+								"MinimumVersion": "2.6.1",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"GitHub:williansaez/HopperBrain"
+						],
+						"UniqueId": "WillianSaez.HopperBrain"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577920,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442198,
+		"UploaderId": 51453301,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 55565,
+	"Name": "Asset Name Case Fixes (ANCF)",
+	"Author": "Frantalcka",
+	"Description": "[left][b]PLATFORM[/b]\n<br />Linux and macOS only. On case-insensitive file systems (Windows) the mod detects this at startup and applies no patches.\n<br />\n<br />[b]REQUIREMENTS[/b]\n<br />- Stardew Valley 1.6.14+\n<br />- SMAPI 4.x\n<br />\n<br />[b]INSTALLATION[/b][/left]\n<br />[left][list=1]\n<br />[*]Extract the AssetNameCaseFixes folder into \"Stardew Valley/Mods\".[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][b]HOW IT WORKS[/b]\n<br />At startup the mod indexes the Content folder and builds a case-insensitive map of asset names. Harmony prefixes then rewrite requested names before they reach the content pipeline:\n<br />- StardewModdingAPI.Framework.Content.AssetName.Parse(string, ...), which covers helper.GameContent.Load&lt;T&gt;(string), Content Patcher, and other string-based asset requests.\n<br />- ContentManager.OpenStream(string) and LocalizedContentManager.OpenStream(string), which cover direct Game1.content.Load&lt;T&gt;(string) calls.\n<br />Patches are wrapped in try/catch. If a patch cannot be applied, a warning is written to the SMAPI log and the game continues.\n<br />\n<br />[b]WHAT IT FIXES[/b]\n<br />Any mod that requests a vanilla Content asset with the wrong letter case.[/left]\n<br />[left][/left]\n<br />[left]Known case:[/left]\n<br />[left]Fixes Ridgeside Village (RSV) quests missing from the bulletin board. RSV requests \"data/quests\" instead of \"Data/Quests\", so the file is not found on case-sensitive file systems.\n<br />\n<br />[b]LIMITATIONS[/b]\n<br />- Missing assets are not created or substituted.\n<br />- Asset type mismatches are not corrected (e.g. requesting Texture2D for a data dictionary).\n<br />- Paths inside Mods/ are not affected.\n<br />- Errors in mod data (invalid JSON/XNB, wrong keys) are not corrected.\n<br />\n<br />[b]COMPATIBILITY[/b]\n<br />Does not alter mod logic and does not add or replace game assets. Safe to remove at any time.\n<br />\n<br />[b]SOURCE[/b]\n<br />[url=https://github.com/Frantalcka/ANCF]GitHub[/url][/left]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55565",
+	"Version": "0.1.0",
+	"Updated": "2026-11-14T18:53:01+00:00",
+	"Downloads": [
+		{
+			"Id": 191269,
+			"Type": "Main",
+			"DisplayName": "ANCF v0.1.0",
+			"FileName": "0f/07/3a/0f073ab5-94c7-40ba-b257-6000dfddd1d2",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 7494,
+			"Uploaded": "2026-11-14T18:53:01+00:00",
+			"Mods": [
+				{
+					"Id": "Frantalcka.AssetNameCaseFixes",
+					"DisplayName": "Asset Name Case Fixes",
+					"Type": "Smapi",
+					"RelativePath": "AssetNameCaseFixes",
+					"Manifest": {
+						"Name": "Asset Name Case Fixes",
+						"Description": "Automatically resolves content asset names to the real capitalization of the files in the game's Content folder. Fixes mods which request assets like 'data/quests' on case-sensitive file systems (Linux/macOS).",
+						"Author": "Frantalcka",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AssetNameCaseFixes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55565"
+						],
+						"UniqueId": "Frantalcka.AssetNameCaseFixes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577957,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442253,
+		"UploaderId": 151304778,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

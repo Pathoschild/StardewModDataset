@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 55571,
+	"Name": "Multi-Monitor Co-op (Dedicated Monitor per Player)",
+	"Author": "Xienfe",
+	"Description": "[center][size=6][b]Multi-Monitor Co-op[/b][/size]\n<br />[size=4][i]Dedicated Physical Monitor for Each Local Split-Screen Player (Up to 4 Players)[/i][/size]\n<br />Author: [b]Aitor[/b] | Version: [b]1.0.0[/b] | For Stardew Valley 1.6+\n<br />\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/2400][img]https://img.shields.io/badge/Requires-SMAPI_4.0+-brightgreen.svg[/img][/url] [url=https://www.nexusmods.com/stardewvalley/mods/5098][img]https://img.shields.io/badge/Optional-GMCM-blue.svg[/img][/url]\n<br />[/center]\n<br />\n<br />---\n<br />\n<br />[size=5][b]English Overview[/b][/size]\n<br />\n<br />Have you ever wanted to play Stardew Valley split-screen with your friends or partner, but disliked having your screen cut in half or quarters on a single monitor?\n<br />[b]Multi-Monitor Co-op[/b turns your multi-display Windows setup into the ultimate local multiplayer battlestation. Each player gets their own dedicated physical monitor with native 1:1 full-screen resolution and independent UI scaling!\n<br />\n<br />[size=4]Key Features[/size][/b]\n<br />[list]\n<br />[*][b] Dedicated Physical Monitor per Player: Supports up to 4 players, each mapped to their own physical display.[/b][/*]\n<br />[*][b]Interactive Monitor Picker Menu: When a player connects or presses Start to join split-screen, an intuitive in-game menu displays all detected Windows monitors (showing device name, resolution, refresh rate, and availability). The joining player selects their monitor with a gamepad or mouse click![/b][/*]\n<br />[*][b]Automatic Horizontal Row Normalization (Win32 API): Automatically aligns display vertical offsets during gameplay using low-level [font=Courier New]ChangeDisplaySettingsExW[/font] calls, ensuring seamless spanning without window borders. On exit, your original Windows display layout is completely and safely restored.[/b][/*]\n<br />[*][b]Automatic Mixed-HDR Protection (CCD Win32 API): Automatically disables Windows HDR on HDR monitors temporarily during multi-monitor co-op via low-level [font=Courier New]DisplayConfigSetDeviceInfo[/font] calls. This prevents Windows 11 DWM from forcing HDR tone-mapping (which causes yellow tint or washed-out colors on secondary SDR screens), and restores HDR automatically upon exit.[/b][/*]\n<br />[*][b]Bezel-Safe Partitioning: Configurable pixel gap margins between displays to prevent visual distortion or HUD elements getting lost behind thick monitor bezels.[/b][/*]\n<br />[*][b]1:1 Native UI Scale &amp; Zoom Correction: Eliminates vanilla Stardew Valley's UI stretching bug where secondary players suffer from oversized or misaligned menus on mixed-resolution / mixed-DPI monitors. Each monitor renders with true 100% pixel fidelity and custom zoom.[/b][/*]\n<br />[*][b]Seamless Mouse &amp; Cursor Coordinate Translation: Translates global cursor coordinates into each player's local viewport. Mouse clicks, tool hits, inventory management, and dialog selection work accurately on any screen.[/b][/*]\n<br />[*][b]Farmhand Inventory &amp; State Protection: Ensures safe disconnect handling so farmhand items, backpack inventories, and progress are properly guarded against duplication or inventory loss when sessions end.[/b][/*]\n<br />[*][b]Generic Mod Config Menu (GMCM) Integration: Configure bezel margins, default display mappings, UI zoom overrides, and layout behavior on the fly without closing the game.[/b][/*]\n<br />[/list][b]\n<br />[size=4]Requirements[/size][/b]\n<br />[list]\n<br />[*][b] Stardew Valley 1.6.0+[/b][/*]\n<br />[*][b][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0.0+[/b][/*]\n<br />[*][b][i](Optional)[/i] [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] for in-game configuration.[/b][/*]\n<br />[/list][b]\n<br />[size=4]Installation[/size]\n<br />[olist][/b]\n<br />[*][b]Install the latest version of SMAPI.[/b][/*]\n<br />[*][b]Download Multi-Monitor Co-op from the Files tab.[/b][/*]\n<br />[*][b]Unzip the file and place the [font=Courier New]MultiMonitorCoop[/font] folder into your [font=Courier New]Stardew Valley/Mods[/font] directory.[/b][/*]\n<br />[*][b]Launch the game through SMAPI.\n<br />[/olist]\n<br />\n<br />---\n<br />\n<br />[size=5]Descripción en Español[/size]\n<br />\n<br />¿Alguna vez has querido jugar a pantalla dividida en Stardew Valley con tu pareja o amigos sin tener que recortar la pantalla a la mitad o en cuartos dentro del mismo monitor?\n<br />Multi-Monitor Co-op[/b transforma tu configuración multimonitor de Windows en la estación cooperativa local definitiva. ¡Cada jugador cuenta con su propio monitor físico a pantalla completa nativa, con escala de interfaz 1:1 independiente!\n<br />\n<br />[size=4]Características Principales[/size]\n<br />[/b]\n<br />[list]\n<br />[*][b] Monitor Físico Dedicado por Jugador: Soporta hasta 4 jugadores simultáneos en cooperativo local, cada uno con su propio monitor físico asignado.[/b][/*]\n<br />[*][b]Selector Interactivo de Monitor al Unirse: Cuando un jugador pulsa Start o entra a la partida, se despliega una interfaz gráfica en el juego que lista todas las pantallas detectadas por Windows (resolución, tasa de refresco y disponibilidad). ¡El jugador elige su monitor libremente con mando o ratón![/b][/*]\n<br />[*][b]Normalización Automática en Fila Horizontal (Win32): Alinea temporalmente las pantallas en una fila horizontal perfecta mediante la API nativa [font=Courier New]ChangeDisplaySettingsExW[/font] para evitar descuadres de ventana en monitores de diferente altura o posición. Al salir del juego, restaura la disposición original de Windows automáticamente.[/b][/*]\n<br />[*][b]Protección Automática ante HDR Mixto (Win32 CCD API): Desactiva automáticamente el HDR de Windows de forma temporal en monitores HDR durante el cooperativo multimonitor mediante llamadas [font=Courier New]DisplayConfigSetDeviceInfo[/font]. Evita que el DWM de Windows 11 aplique mapeo tonal HDR (que provoca tinte amarillento o colores lavados en pantallas secundarias SDR), y restaura el HDR automáticamente al salir del juego.[/b][/*]\n<br />[*][b]Compensación de Marcos (Bezel-Safe): Margen de píxeles configurable entre pantallas para que los marcos físicos de los monitores no corten ni deformen el campo visual ni la interfaz.[/b][/*]\n<br />[*][b]Corrección de Zoom y Escala de UI 1:1: Soluciona el clásico fallo del juego base en monitores mixtos con diferente resolución o DPI, donde el segundo jugador sufría menús gigantes o descuadrados.[/b][/*]\n<br />[*][b]Traducción Precisa de Coordenadas de Ratón: Corrige la posición del puntero y los clics en cada ventana secundaria, permitiendo interactuar con menús, inventario y herramientas sin desfases.[/b][/*]\n<br />[*][b]Protección de Inventario de Farmhands: Gestión robusta de desconexión para evitar pérdidas de objetos o duplicación involuntaria al salir del modo pantalla dividida.[/b][/*]\n<br />[*][b]Menú de Configuración en Vivo (GMCM): Compatible con Generic Mod Config Menu para ajustar márgenes, monitores preferidos y escala directamente dentro del juego.[/b][/*]\n<br />[*][b]Totalmente Localizado: Textos y menús disponibles tanto en Inglés como en Español.[/b][/*]\n<br />[/list][b]\n<br />[size=4]Instalación[/size]\n<br />[olist]\n<br />[/b][/*]\n<br />[*][b]Asegúrate de tener instalado SMAPI 4.0.0 o superior.[/b][/*]\n<br />[*][b]Descarga Multi-Monitor Co-op desde la pestaña Files.[/b][/*]\n<br />[*][b]Descomprime el archivo y copia la carpeta [font=Courier New]MultiMonitorCoop[/font] en [font=Courier New]Stardew Valley/Mods[/font].[/b][/*]\n<br />[*][b]Inicia el juego con SMAPI ¡y disfruta del juego en múltiples pantallas!\n<br />[/olist][/b]\n<br />[center][/center]\n<br />[/*]\n<br />[center][/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55571",
+	"Version": "1",
+	"Updated": "2026-11-14T22:29:59+00:00",
+	"Downloads": [
+		{
+			"Id": 191287,
+			"Type": "Main",
+			"DisplayName": "MultiMonitorCoop 1.0.0",
+			"FileName": "24/f7/af/24f7af49-994f-43fc-904d-1fb7aa056caa",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 60609,
+			"Uploaded": "2026-11-14T22:29:59+00:00",
+			"Mods": [
+				{
+					"Id": "Aitor.MultiMonitorCoop",
+					"DisplayName": "Multi-Monitor Co-op",
+					"Type": "Smapi",
+					"RelativePath": "MultiMonitorCoop",
+					"Manifest": {
+						"Name": "Multi-Monitor Co-op",
+						"Description": "Local split-screen co-op with one physical monitor per player (up to 4). Scans Windows displays and lets each joining player pick a free one.",
+						"Author": "Aitor",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "MultiMonitorCoop.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:00000"
+						],
+						"UniqueId": "Aitor.MultiMonitorCoop"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342577975,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442259,
+		"UploaderId": 49737111,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

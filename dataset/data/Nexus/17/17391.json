@@ -4,20 +4,20 @@
 	"Name": "Move Between Buildings",
 	"Author": "vilaboa0008",
 	"AuthorLabel": "Vilaboa",
-	"Description": "[u][size=4]Features\n<br />[/size][/u]\n<br />Use path tiles next to buildings to establish connections. The direction of the tile indicates the building you'll move to: left for left, right for right, etc.\n<br />\n<br />For example\u00A0as shown in the [b]image[/b] below, if you are in a barn and you want to move to a coop to your right, place the path tile to the right of the barn and to the left of the coop. \n<br />\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/17391/17391-1689325083-887378344.png[/img]\n<br />\n<br />Compatibility-wise, this mod works with all buildings that can be built by Robin: barn, coop, shed, slime hutch, and cabin (with the cabins you will be teleported to the entrance). Please note that as of the current version, this mod does not support the main farmhouse and the greenhouse.\n<br />\uFEFF\n<br />\"Note: When there are multiple path tiles, your destination is determined by the first tile placed. However, you can teleport from any path tile. If you want to change the destination,\u00A0it is recommended to break the existing path tiles and place your desired destination\u00A0path tile first.\n<br />\n<br />[size=4][u]Installation Instructions\n<br />\n<br />[/u][/size][list=1]\n<br />[*][url=https://smapi.io/]Install the latest version of SMAPI[/url].\n<br />[*]Unzip the mod folder into\u00A0Stardew Valley/Mods.\n<br />[*]Run the game using SMAPI.\n<br />[/list]\n<br />\n<br />[size=4][u]Notes\n<br />[/u][/size]\n<br />This is my first mod, so your feedback is crucial. If you encounter any bugs or have any suggestions for improvements, please don't hesitate to share them. Your input will help me shape future updates. Thank you!",
+	"Description": "[u][size=4]Features[/size]\n<br />[/u]\n<br />Use path tiles next to buildings to establish connections. The direction of the tile indicates the building you'll move to: left for left, right for right, etc.\n<br />\n<br />For example\u00A0as shown in the [b]image[/b] below, if you are in a barn and you want to move to a coop to your right, place the path tile to the right of the barn and to the left of the coop.\n<br />\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/17391/17391-1689325083-887378344.png[/img]\n<br />\n<br />Compatibility-wise, this mod works with all buildings that can be built by Robin: barn, coop, shed, slime hutch and greenhouse.\n<br />\uFEFF\n<br />Note: When there are multiple path tiles, your destination is the path tile next to the wall you come through that is closest to where you left. If there is no path tile next to that wall, you won't be teleported.\n<br />\n<br />You can change the maximum distance between buildings and choose which path types work in config.json, or in-game with Generic Mod Config Menu (optional).\n<br />\n<br />[size=4][u]Installation Instructions\n<br />[/u][/size]\n<br />[list=1]\n<br />[*][url=https://smapi.io/]Install the latest version of SMAPI[/url].[/*]\n<br />[*]Unzip the mod folder into\u00A0Stardew Valley/Mods.[/*]\n<br />[*]Run the game using SMAPI.[/*]\n<br />[/list]",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/17391",
-	"Version": "1.0",
-	"Updated": "2024-08-09T17:30:32+00:00",
+	"Version": "1.2.0",
+	"Updated": "2026-11-14T14:34:42+00:00",
 	"Downloads": [
 		{
-			"Id": 108892,
+			"Id": 191249,
 			"Type": "Main",
-			"DisplayName": "Move Between Buildings - Stardew Valley 1.6",
-			"FileName": "Move Between Buildings - Stardew Valley 1.6-17391-1-1-0-1723224632.rar",
-			"Description": "Updated to Stardew Valley 1.6",
-			"Version": "1.1.0",
-			"SizeInBytes": 10143,
-			"Uploaded": "2024-08-09T17:30:32+00:00",
+			"DisplayName": "Move Between Buildings",
+			"FileName": "02/a9/88/02a988b8-fb30-466e-878c-0e00c3dd3558",
+			"Description": "Stardew Valley 1.6. added greenhouse support, and new options: maximum distance between buildings and which path types work. Generic Mod Config Menu is optional.",
+			"Version": "1.2.0",
+			"SizeInBytes": 19567,
+			"Uploaded": "2026-11-14T14:34:42+00:00",
 			"Mods": [
 				{
 					"Id": "Vilaboa.MoveBetweenBuildings",
@@ -28,10 +28,16 @@
 						"Name": "MoveBetweenBuildings",
 						"Description": "A mod that allows players to move seamlessly between connected buildings on the farm.",
 						"Author": "Vilaboa",
-						"Version": "1.1.0",
+						"Version": "1.2.0",
 						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
 						"EntryDll": "MoveBetweenBuildings.dll",
-						"Dependencies": [],
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
 						"UpdateKeys": [
 							"Nexus:17391"
 						],
@@ -40,7 +46,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342495580,
+				"Uid": 5596342577937,
 				"CategoryId": 1,
 				"Primary": false
 			}
