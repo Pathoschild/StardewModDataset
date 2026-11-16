@@ -1,0 +1,59 @@
+{
+	"Site": "Nexus",
+	"Id": 55598,
+	"Name": "Event Launcher",
+	"Author": "Knixel",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />Writing events means playing them over and over. Normally that's a console command with an event ID you have to look up, and after every edit another round of [i]reload_i18n[/i], [i]patch reload[/i] and [i]debug ebi[/i]. Event Launcher turns that into one key.\n<br />\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][b]Event menu (F8):[/b] a searchable list of every event in the game, vanilla and modded. Search by event ID, location, or any text in the event script, like an NPC name or a line of dialogue. Events you've already seen are greyed out. Click an event, or press Enter for the top result, to play it.[/*]\n<br />[*][b]Replay (Shift + F8):[/b] plays the last event again.[/*]\n<br />[*][b]Reload and replay (F9):[/b] reloads your translations and Content Patcher packs, then plays the last event again, so you see your edits right away. Replaying after a reload can be turned off. Please be aware that depending on the amount of packs, this might take a while.[/*]\n<br />[*][b]Your own keys:[/b] change every key in [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional). Each action has one key, and two actions can't share a key.[/*]\n<br />[/list][size=4][b]Please use a test save[/b][/size]\n<br />This mod plays events for real, the same way the game's own [i]debug ebi[/i] command does. Anything an event does happens to your save: friendship points, mail, flags, items, even a wedding. Make a copy of your save or use a separate test farm.\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]Stardew Valley 1.6 or later[/color][/*]\n<br />[*][color=#D4D4D8][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0 or later[/color][/*]\n<br />[*][color=#D4D4D8]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to change keys in-game[/color][/*]\n<br />[*][color=#D4D4D8]Optional: [url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url], for reloading content packs with F9[/color][/*]\n<br />[/list]\n<br />[b][size=4]Installation instructions[/size][/b]\n<br />Unzip into your Mods folder and start the game through [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url]. Works with [url=https://www.nexusmods.com/stardewvalley/mods/10455]Stardrop[/url] and Vortex.\n<br />\n<br />[size=4][b]Settings[/b][/size]\n<br />Use Generic Mod Config Menu, or edit [i]config.json[/i]:\n<br />[list]\n<br />[*][b]MenuKey[/b] (default F8): open or close the event menu[/*]\n<br />[*][b]ReplayKey[/b] (default LeftShift + F8): replay the last event[/*]\n<br />[*][b]ReloadKey[/b] (default F9): reload content[/*]\n<br />[*][b]ReplayAfterReload[/b] (default true): replay the last event after reloading[/*]\n<br />[*][b]ReloadPacks[/b] (default empty): Content Patcher pack IDs to reload. Leave empty to reload every pack. Only in config.json.[/*]\n<br />[/list]\n<br />[size=4][b]Good to know[/b][/size]\n<br />[list]\n<br />[*]Tested in single player. Multiplayer is currently not supported.[/*]\n<br />[*]F9 talks to SMAPI in a way SMAPI has no official option for. If a SMAPI update breaks it, the console shows an error and F8 and Shift + F8 keep working. Until there's a fix, type [i]reload_i18n[/i] and [i]patch reload[/i] in the SMAPI console yourself.[/*]\n<br />[*]Works well alongside [url=https://www.nexusmods.com/stardewvalley/mods/8505]Event Lookup[/url] (see an event's requirements) and [url=https://www.nexusmods.com/stardewvalley/mods/3642]Event Repeater[/url].[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />Doesn't change any game content, so it works with every other mod.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55598",
+	"Version": "1.0.1",
+	"Updated": "2026-11-15T12:44:12+00:00",
+	"Downloads": [
+		{
+			"Id": 191388,
+			"Type": "Main",
+			"DisplayName": "EventLauncher 1.0.1",
+			"FileName": "fb/c0/a8/fbc0a8da-dd25-44cd-8492-c0888f8f6370",
+			"Description": "",
+			"Version": "2",
+			"SizeInBytes": 24047,
+			"Uploaded": "2026-11-15T12:44:12+00:00",
+			"Mods": [
+				{
+					"Id": "Knixel.EventLauncher",
+					"DisplayName": "Event Launcher",
+					"Type": "Smapi",
+					"RelativePath": "EventLauncher",
+					"Manifest": {
+						"Name": "Event Launcher",
+						"Description": "Search every event in a menu and play it with one click. Reload your content pack and replay the event with one key.",
+						"Author": "Knixel",
+						"Version": "1.0.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "EventLauncher.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55598"
+						],
+						"UniqueId": "Knixel.EventLauncher"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578076,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442286,
+		"UploaderId": 172822315,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

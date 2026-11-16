@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 55343,
+	"Name": "Korean IME Helper",
+	"Author": "EvenifBIROK",
+	"AuthorLabel": "BIROK",
+	"Description": "[size=5][b]한글 입력 개선 모드 Korean IME Helper[/b][/size]\n<br />스타듀밸리의 한글 입력 기능을 보조하는 SMAPI 모드입니다. Windows 전용.\n<br />\n<br />\n<br />[quote][size=4][b]주요 기능[/b][/size][/quote][list]\n<br />[*][b]조합 중인 글자\u00A0표시[/b] — 자모 조합\u00A0중인 글자를 입력창에 표시합니다(예: ㅇ → 아 → 안). 멀티플레이 시 채팅에서 더 자연스럽고 편하게 입력할 수 있습니다.[/*]\n<br />[*][b]커서\u00A0이동 편집[/b] — 방향키(←/→), Home, End로 텍스트 커서를 이동하고, 커서 위치에 글자를 추가하거나 Delete/Backspace로 삭제할 수 있습니다.[/*]\n<br />[*][b]자동 입력 전환[/b] — 텍스트를 입력하지 않을 때는 한글 입력기가 자동으로 해제됩니다. 입력을 마친 뒤 한영 전환 없이 이동키와 단축키를 바로 사용할 수 있습니다.[/*]\n<br />[*][b]대체 글꼴[/b]\u00A0— '*'로 깨져 보이던 한글(초성 등의 단독 자모, 글리프가 없는\u00A0문자)을 대체하여 표시합니다. 입력창, 채팅 입력줄, 채팅 기록에 적용되며, 글리프 영역이 적은 커스텀 폰트를 사용할 때 유용합니다. 개구(Gaegu) 폰트가 기본으로 포함되어 있습니다.[/*]\n<br />[*][b]GMCM 설정[/b] — 자동 입력 전환, 입력창/채팅창 글자 위치, 대체 글꼴 크기/간격을 조정하고 설정 화면의 테스트 입력창에서 바로 확인할 수 있습니다. 모드 사용 중 문제 해결을 위한 로그 기록 옵션을 활성화할 수 있습니다.[/*]\n<br />[/list]\n<br />[quote][size=4][b]요구 사항[/b][/size][/quote][list]\n<br />[*]Windows (Windows 이외의 환경에서는 모드가 자동으로 비활성화됩니다)[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0 이상[/*]\n<br />[*](권장) [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu (GMCM)[/url][/*]\n<br />[/list]\n<br />[quote][size=4][b]설치[/b][/size][/quote][list=1]\n<br />[*]SMAPI를 설치합니다.[/*]\n<br />[*]압축을 풀어 [b]Korean IME Helper[/b] 폴더를 [b]Stardew Valley&#92;Mods[/b] 폴더에 추가합니다.[/*]\n<br />[*]SMAPI로 게임을 실행합니다. [b]Korean IME Helper가 성공적으로 활성화되었습니다.[/b]가 표시되면 정상입니다[/*]\n<br />[/list]업데이트할 때는 기존 폴더를 새 폴더로 교체하세요. config.json은 삭제하지 않아도 됩니다.\n<br />\n<br />\n<br />[quote][size=4][b]설정 (GMCM)[/b][/size][/quote][list]\n<br />[*][b]입력기[/b] — 자동 입력 전환을 활성화/비활성화합니다.[/*]\n<br />[*][b]일반 입력창 / 채팅창[/b] — 입력창 안의 글자 위치가 어긋나 보이면 가로/세로 위치를 보정할 수 있습니다. 설정 화면의 테스트 입력창을 클릭해 결과를 바로 확인할 수 있습니다.[/*]\n<br />[*][b]대체 글꼴[/b] — Fonts 폴더의 대체 글꼴 크기와 글자 간격을 보정합니다.[/*]\n<br />[*][b]문제 진단[/b] — 문제가 발생했을 때 원인을 확인하기 위한 레이아웃 로그, 커서 편집 로그, 성능 로그를 기록합니다.[/*]\n<br />[/list]성능 로그를 활성화하면 이 모드의 처리 시간을 1분마다 SMAPI 로그에 기록합니다. 비활성화 상태에서도 처리 시간이 비정상적으로 길어지면 경고를 기록합니다.\n<br />\n<br />\n<br />[quote][size=4][b]대체 글꼴 사용하기[/b][/size][/quote][list]\n<br />[*]모드 폴더의 [b]Fonts[/b] 폴더에 원하는 글꼴 파일(.ttf, .otf)을 추가하면 대체 글꼴로 사용합니다.[/*]\n<br />[*]Fonts 폴더에는 글꼴 파일을 한 개만 추가해 주세요. 여러 개이면 이름순으로 첫 번째 파일만 사용합니다.[/*]\n<br />[*]특정 파일을 사용하려면 config.json의 JamoFontFile에 파일 이름을 입력해 주세요.[/*]\n<br />[*]Fonts 폴더에 글꼴 파일이 없으면 시스템 기본 글꼴로 표시합니다.[/*]\n<br />[*]글꼴을 변경한 뒤에는 게임을 다시 실행해야 반영됩니다.[/*]\n<br />[*]다른 글꼴은 크기가 다를 수 있으니 GMCM의 대체 글꼴 크기/간격으로 조정해 주세요.[/*]\n<br />[/list]\n<br />[quote][size=4][b]호환성[/b][/size][/quote][list]\n<br />[*]CJB Item Spawner처럼 바닐라와 같은 입력창(TextBox)을 사용하는 모드에서도 작동합니다.[/*]\n<br />[*]입력창(TextBox)을 사용하지 않고 직접 만든 입력칸에는 적용되지 않거나 자동 입력 전환이 제대로 동작하지 않을 수 있습니다.[/*]\n<br />[*]멀티플레이에서 모든 플레이어가 이 모드를 설치하지 않아도 호환성 문제는 발생하지 않습니다. 설치한 사람의 화면과 입력에만 적용됩니다.[/*]\n<br />[*]대체 글꼴은 입력창과 채팅에만 적용됩니다. 그 밖의 화면에서 게임 폰트에 없는 글자는 '*'로 보일 수 있습니다.[/*]\n<br />[/list]\n<br />[quote][size=4][b]문제 신고[/b][/size][/quote][list]\n<br />[*]궁금한 점, 건의 사항, 버그 제보는 언제든 Posts 또는 Bugs 탭에 남겨 주세요.[/*]\n<br />[*]버그를 제보할 때는 [url=https://smapi.io/log]smapi.io/log[/url]에 SMAPI 로그를 올리고 링크를 함께 남겨 주세요.[/*]\n<br />[*]렉이나 입력 문제는 GMCM의 '문제 진단'에서 로그 기록을 활성화한 뒤 재현한 로그가 가장 도움이 됩니다. 렉 문제는 성능 로그를 활성화한 로그를 첨부해 주세요.[/*]\n<br />[*]1.1.3부터는 이 모드의 처리 시간이 길어지면 SMAPI 로그에 [b][성능][/b]으로 시작하는 줄이 자동으로 기록됩니다.[/*]\n<br />[/list]\n<br />[quote][size=4][b]이용 범위[/b][/size][/quote][list]\n<br />[*]디컴파일, 수정, 2차 배포를 허용합니다.[/*]\n<br />[*]단, 2차 배포 시 원본과 같은 조건으로 배포해야 하며 영리적 이용은 허용하지 않습니다.[/*]\n<br />[*]원작자(BIROK) 표기를 권장합니다.[/*]\n<br />[*]포함된 개구 글꼴에는 SIL Open Font License 1.1이 별도로 적용됩니다.[/*]\n<br />[/list]\n<br />[quote][size=4][b]크레딧[/b][/size][/quote][list]\n<br />[*]포함된 글꼴: Gaegu (개구) — 직지소프트(JIKJI SOFT), [url=https://openfontlicense.org]SIL Open Font License 1.1[/url]. 라이선스 원문(OFL.txt)이 Fonts 폴더에 함께 들어 있습니다.[/*]\n<br />[/list]\n<br />[quote][size=4][b]변경 내역[/b][/size][/quote][b]\u00A0 \u00A01.1.3[/b]\n<br />[list]\n<br />[*]초대 코드/IP 입력창, 반려동물/가축/아이 이름 입력창에서 입력창 배경이 사라지고 글자가 다른 위치에 표시되던 문제를 수정했습니다.[/*]\n<br />[*]GMCM '문제 진단'에 성능 로그 옵션을 추가했습니다. 이 모드의 처리 시간이 길어지거나 입력기 전환이 지나치게 반복되면 비활성화 상태에서도 SMAPI 로그에 경고를 기록합니다.[/*]\n<br />[*]게임이나 다른 모드가 입력기 상태를 계속 변경할 때 자동 재연결/재분리를 초당 5회로 제한합니다.[/*]\n<br />[*]대체 글꼴 렌더링이 실패하면 같은 글자를 10초 동안 다시 시도하지 않고, 실패가 계속되면 대체 글꼴 표시를 중단합니다.[/*]\n<br />[*]대체 글꼴을 게임 시작 시 미리 준비하도록 변경했습니다.[/*]\n<br />[*]채팅 기록의 대체 글꼴 처리가 채팅 기록을 작성할\u00A0때만 동작하도록 변경했습니다. 다른 화면이나 다른 모드의 글자 작성에 관여하지 않습니다.[/*]\n<br />[*]입력창과 채팅 입력줄 렌더링을 최적화해 처리량과 메모리 사용을 줄였습니다.[/*]\n<br />[/list][b]\u00A0 \u00A0[/b]\n<br />[b]1.1.2[/b]\n<br />[spoiler][list]\n<br />[*]커서 이동 편집, 자동 입력 전환, 대체 글꼴(개구 포함), GMCM 설정과 위치 테스트 입력창을 추가했습니다.[/*]\n<br />[*]한글 조합 중 백스페이스를 누르면 확정된 글자까지 삭제되던 문제를 수정했습니다.[/*]\n<br />[*]일반 입력창에서 방향키로 커서가 두 칸씩 이동하던 문제를 수정했습니다.[/*]\n<br />[/list][/spoiler]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55343",
+	"Version": "1.1.3",
+	"Updated": "2026-11-15T20:33:12+00:00",
+	"Downloads": [
+		{
+			"Id": 191442,
+			"Type": "Main",
+			"DisplayName": "Korean IME Helper",
+			"FileName": "89/c4/65/89c46510-d92c-482b-8481-cf996a935505",
+			"Description": "스타듀밸리 한글 입력 개선 모드입니다.<br />조합 중인 글자 표시, 커서 이동 편집, 자동 입력 전환, 단독 자모 대체 글꼴을 지원합니다.<br /><br />Windows 전용<br />SMAPI 4.0 이상 필요",
+			"Version": "1.1.3",
+			"SizeInBytes": 1111994,
+			"Uploaded": "2026-11-15T20:33:12+00:00",
+			"Mods": [
+				{
+					"Id": "BIROK.KoreanImeHelper",
+					"DisplayName": "Korean IME Helper",
+					"Type": "Smapi",
+					"RelativePath": "Korean IME Helper",
+					"Manifest": {
+						"Name": "Korean IME Helper",
+						"Description": "한글 입력 기능을 개선해주는 보조 모드입니다.",
+						"Author": "BIROK",
+						"Version": "1.1.3",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "KoreanImeHelper.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55343"
+						],
+						"UniqueId": "BIROK.KoreanImeHelper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578130,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442031,
+		"UploaderId": 306829611,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}
