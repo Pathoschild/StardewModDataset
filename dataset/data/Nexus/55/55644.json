@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 55644,
+	"Name": "Pelican Chat",
+	"Author": "mtxfujimi",
+	"Description": "[size=5][b]PelicanChat (Pelican4Ever.Chat)[/b][/size]\n<br />[b]A scrollable, tabbed, Discord-ready ChatBox overhaul for Stardew Valley 1.6.15+ (SMAPI 4.1.0+).[/b]\n<br />\n<br />PelicanChat upgrades the vanilla Stardew Valley chat box into a modern multi-channel chat interface with smooth scrolling, unread badges, contextual tab routing, and an optional host-side Discord bridge. It works [b]100% standalone[/b] in vanilla/co-op games and integrates automatically with [b]Pelican 4Ever[/b] when installed.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Key Features[/b][/size]\n<br />[list]\n<br />[*][b]Extended History &amp; Smooth Scrolling:[/b] Keeps up to [b]200 messages per channel[/b] (configurable from 10 to 2000) instead of vanilla's 10-line limit, with bounded height (280px open / 140px closed), mouse wheel scrolling,\n<br />[code]PageUp[/code]/\n<br />[code]PageDown[/code], and Scroll Lock while reading older messages.[/*]\n<br />[*][b]Channel Tabs &amp; Unread Badges:[/b] [b]All[/b], [b]Local[/b] (proximity &lt;= 30 tiles), [b]Global[/b], [b]Discord[/b], [b]Whispers[/b], and [b]Events[/b]. Switch tabs by clicking or pressing\n<br />[code]Tab[/code]/\n<br />[code]Shift+Tab[/code].[/*]\n<br />[*][b]Contextual Sending:[/b] Typing directly while on the [b]Local[/b] or [b]Discord[/b] tab automatically routes your message to that channel without needing to type\n<br />[code]/l[/code]or\n<br />[code]/d[/code]every time.[/*]\n<br />[*][b]Optional Discord Bridge (Host-only):[/b] Dedicated Discord channel with strict bracket/tag sanitization (\n<br />[code][color][/code]/\n<br />[code][emoji][/code]injection protection), loopback listener support, and zero bot tokens/secrets shared with clients.[/*]\n<br />[*][b]Standalone + Pelican 4Ever Integration:[/b]\n<br />[list]\n<br />[*][b]Standalone mode:[/b] Provides\n<br />[code]/l[/code](\n<br />[code]/local[/code]),\n<br />[code]/g[/code](\n<br />[code]/global[/code]),\n<br />[code]/w[/code](alias for\n<br />[code]/message[/code]), and\n<br />[code]/d[/code](\n<br />[code]/discord[/code]).[/*]\n<br />[*][b]With Pelican 4Ever:[/b] Automatically hooks via SMAPI Mod API to sync server clock\n<br />[code][HH:mm][/code]timestamps, avoid command conflicts, classify server events, and bridge external chat.[/*]\n<br />[/list][/*]\n<br />[*][b]Multilingual Support:[/b] Includes English, Spanish (\n<br />[code]es[/code]), and Simplified Chinese (\n<br />[code]zh-CN[/code]) translations.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley [b]1.6.15+[/b][/*]\n<br />[*]SMAPI [b]4.1.0+[/b][/*]\n<br />[/list][line]\n<br />\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI 4.1.0 or newer.[/*]\n<br />[*]Download [b]PelicanChat 0.1.0.zip[/b].[/*]\n<br />[*]Extract the\n<br />[code]PelicanChat[/code]folder into your\n<br />[code]Stardew Valley/Mods/[/code]directory.[/*]\n<br />[*]Launch the game through SMAPI.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4][b]Commands &amp; Controls[/b][/size]\n<br />[list]\n<br />[*][code]Tab[/code]/\n<br />[code]Shift+Tab[/code](with chat open): Cycle between chat tabs.[/*]\n<br />[*][code]Mouse Wheel[/code]/\n<br />[code]PageUp[/code]/\n<br />[code]PageDown[/code]: Scroll through chat history.[/*]\n<br />[*][code]/l &lt;message&gt;[/code]or\n<br />[code]/local &lt;message&gt;[/code]: Send a proximity chat message (standalone mode).[/*]\n<br />[*][code]/g &lt;message&gt;[/code]or\n<br />[code]/global &lt;message&gt;[/code]: Send a global chat message (standalone mode).[/*]\n<br />[*][code]/w &lt;player&gt; &lt;message&gt;[/code]: Send a whisper (alias for\n<br />[code]/message[/code]in standalone mode).[/*]\n<br />[*][code]/d &lt;message&gt;[/code]or\n<br />[code]/discord &lt;message&gt;[/code]: Send a message to the bridged Discord channel.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4][b]Configuration ([/b][/size]\n<br />[code]config.json[/code][size=4][b])[/b][/size]\n<br />Generated automatically on first launch inside\n<br />[code]Mods/PelicanChat/config.json[/code]:\n<br />[list]\n<br />[*][code]Enabled[/code](default:\n<br />[code]true[/code]) — Enable or disable the mod's visual and routing patches.[/*]\n<br />[*][code]MaxHistoryPerChannel[/code](default:\n<br />[code]200[/code], range: 10–2000) — Messages retained per tab.[/*]\n<br />[*][code]MaxVisibleHeight[/code](default:\n<br />[code]280[/code], range: 100–800) — Chat viewport height when open (px).[/*]\n<br />[*][code]MaxClosedHeight[/code](default:\n<br />[code]140[/code], range: 40–400) — Chat viewport height when closed (px).[/*]\n<br />[*][code]ShowTimestamps[/code](default:\n<br />[code]true[/code]) — Prefix messages with\n<br />[code][HH:mm][/code].[/*]\n<br />[*][code]TimestampSource[/code](default:\n<br />[code]\"Auto\"[/code]) —\n<br />[code]Auto[/code],\n<br />[code]ServerClock[/code], or\n<br />[code]LocalTime[/code].[/*]\n<br />[*][code]IncludeDiscordInAllTab[/code](default:\n<br />[code]true[/code]) — Show Discord messages in the [b]All[/b] tab.[/*]\n<br />[*][code]DefaultTab[/code](default:\n<br />[code]\"All\"[/code]) — Starting tab (\n<br />[code]All[/code],\n<br />[code]Local[/code],\n<br />[code]Global[/code],\n<br />[code]Discord[/code],\n<br />[code]Whisper[/code],\n<br />[code]System[/code]).[/*]\n<br />[*][code]ProximityRadius[/code](default:\n<br />[code]30.0[/code], range: 1–500) — Tile radius for standalone Local chat.[/*]\n<br />[*][code]CriticalToastDurationSeconds[/code](default:\n<br />[code]15[/code], range: 0–120) — Duration of cross-tab critical event toasts.[/*]\n<br />[*][code]DiscordBridgeEnabled[/code]/\n<br />[code]DiscordWebhookUrl[/code]/\n<br />[code]DiscordInboundPort[/code]/\n<br />[code]DiscordInboundToken[/code]/\n<br />[code]MaxInboundMessageLength[/code]— Optional host-only standalone Discord bridge settings.[/*]\n<br />[/list][line]\n<br />\n<br />[size=4][b]Source Code[/b][/size]\n<br />GitHub: [url=https://github.com/juanlumediterrani/Pelican-Chat]https://github.com/juanlumediterrani/Pelican-Chat[/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55644",
+	"Version": "0.1",
+	"Updated": "2026-11-16T17:05:29+00:00",
+	"Downloads": [
+		{
+			"Id": 191522,
+			"Type": "Main",
+			"DisplayName": "PelicanChat 0.1.0",
+			"FileName": "a4/eb/a5/a4eba5f5-1d95-40aa-a220-47dea477ce77",
+			"Description": "",
+			"Version": "0.1",
+			"SizeInBytes": 65414,
+			"Uploaded": "2026-11-16T17:05:29+00:00",
+			"Mods": [
+				{
+					"Id": "Pelican4Ever.Chat",
+					"DisplayName": "PelicanChat",
+					"Type": "Smapi",
+					"RelativePath": "PelicanChat",
+					"Manifest": {
+						"Name": "PelicanChat",
+						"Description": "Scrollable, tabbed, Discord-ready ChatBox overhaul for Stardew Valley with full Pelican 4Ever integration.",
+						"Author": "Pelican 4Ever Team",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.1.0",
+						"EntryDll": "PelicanChat.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Pelican4Ever.Chat"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578210,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442332,
+		"UploaderId": 900090,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

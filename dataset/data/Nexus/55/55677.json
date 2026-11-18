@@ -1,0 +1,35 @@
+{
+	"Site": "Nexus",
+	"Id": 55677,
+	"Name": "Stardew Valley Mod Manager (SVMM)",
+	"Author": "dnSmane",
+	"Description": "[size=5][b]Stardew Valley Mod Manager (SVMM)[/b][/size]\n<br />\n<br />[size=4][b]Description[/b][/size]\n<br />[b]Stardew Valley Mod Manager (SVMM)[/b] is a lightweight, portable desktop mod manager for [b]Stardew Valley[/b].\n<br />\n<br />Each modpack/profile lives in its own isolated folder (`SVMM_Data/modpacks/&lt;ProfileName&gt;/`). When you switch profiles or launch the game, SVMM uses OS-level directory junctions (`mklink /J` on Windows, symlinks on macOS/Linux) so your mods swap [b]instantly with zero file copying[/b].\n<br />\n<br />You can also launch [b]Vanilla[/b] cleanly at any time—SVMM unlinks the active `Mods` junction without touching your mod files, and safely backs up any pre-existing unmanaged `Mods` folder to `Mods_Backup`.\n<br />\n<br />[line]\n<br />\n<br />[size=4][b]Main Features[/b][/size]\n<br />[list]\n<br />[*][b]Per-Modpack Folder Isolation:[/b] Keep different mod setups completely separate under `SVMM_Data/modpacks/&lt;ProfileName&gt;/`.[/*]\n<br />[*][b]Instant Zero-Copy Profile Switching:[/b] Rebuilds profile links and points `Stardew Valley/Mods` via NTFS directory junctions without duplicating gigabytes of mod files.[/*]\n<br />[*][b]Safe Vanilla Launch &amp; Automatic Backup:[/b] Launch `Stardew Valley.exe` unmodded at any time. Any pre-existing unmanaged `Mods` folder is automatically backed up to `Mods_Backup`.[/*]\n<br />[*][b]In-App Nexus Mods Browser &amp; Installer:[/b] Browse [i]Popular[/i], [i]Latest Updated[/i], and [i]New Mods[/i], search by keyword, and install directly (supports 1-click install for Nexus Premium, automatic `Downloads` folder watching for free browser downloads, and `nxm://` link handling).[/*]\n<br />[*][b]Safe `.zip` Mod Installer:[/b] Install single or multi-mod `.zip` archives straight into your active modpack with built-in zip-slip path traversal protection.[/*]\n<br />[*][b]Dependency &amp; Conflict Warnings:[/b] Automatically checks SMAPI `manifest.json` files for missing required `Dependencies` and duplicate `UniqueID`s (`⚠` indicator with hover tooltip) and prompts before launching SMAPI.[/*]\n<br />[*][b]Tolerant SMAPI Manifest Parser:[/b] Handles UTF-8 BOM, `//` and `/* */` comments, trailing commas, and nested modpack subfolders.[/*]\n<br />[*][b]Background Mod Update Checker:[/b] Checks `Nexus:&lt;id&gt;` and `GitHub:owner/repo` `UpdateKeys` in the background with local caching (`SVMM_Data/update_cache.json`) and graceful offline support.[/*]\n<br />[*][b]Profile Management &amp; UI Quality-of-Life:[/b] Create, duplicate, import, and export profiles as JSON; switch between Dark / Light / System themes; search/filter mods; and open `SMAPI-latest.txt` directly from the launch bar.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Installation Instructions[/b][/size]\n<br />[b]Option A: Standalone Windows Executable (Recommended)[/b]\n<br />[list=1]\n<br />[*]Download the latest `SVModManager-vX.Y.Z-windows-x64.zip` from the [b]Files[/b] tab (or [url=https://github.com/smanedn/stardew_mod_manager/releases/latest]GitHub Releases[/url]).[/*]\n<br />[*]Extract `SVModManager.exe` into its own dedicated folder (e.g. `C:&#92;Games&#92;SVMM&#92;`).[/*]\n<br />[*]Double-click `SVModManager.exe` to launch. [i](If Windows SmartScreen appears because the binary is unsigned, click [b]More info → Run anyway[/b].)[/i][/*]\n<br />[*]Click [b]Browse[/b] in the top bar and select your [b]Stardew Valley[/b] installation folder.[/*]\n<br />[*]Click [b]Open Modpack Folder[/b] (or use the built-in `.zip` installer / Nexus Browser) to add mods, then click [b]Refresh (F5)[/b].[/*]\n<br />[*]Check the mods you want enabled and click [b]LAUNCH MODDED (SMAPI)[/b] or [b]LAUNCH VANILLA (NO MODS)[/b].[/*]\n<br />[/list][i]Note: All data (`SVMM_Data/`) is stored portably right next to `SVModManager.exe`.[/i]\n<br />\n<br />[b]Option B: Running from Source (Python)[/b]\n<br />[list=1]\n<br />[*]Clone or download the source from [url=https://github.com/smanedn/stardew_mod_manager]GitHub[/url].[/*]\n<br />[*]Create a virtual environment and install dependencies: `pip install -r requirements.txt`[/*]\n<br />[*]Run `python main.py` (on Windows, double-clicking `main.py` automatically detects and uses `.venv` if present).[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][b]Stardew Valley[/b] (installed locally)[/*]\n<br />[*][b][url=https://smapi.io/]SMAPI[/url][/b] installed in your Stardew Valley directory (required for modded launches; not required for Vanilla launches)[/*]\n<br />[*][b]OS:[/b] Windows x64 (tested; works without Administrator privileges). macOS and Linux are experimental.[/*]\n<br />[*][b]If running from source:[/b] Python 3.10+, `customtkinter`, and `pillow&gt;=10.0` (not needed for the standalone `.exe`).[/*]\n<br />[*][b]Optional:[/b] A Nexus Mods API key (configured in `SVMM_Data/config.json` or via the in-app Nexus Browser) for browsing/installing from Nexus Mods and checking `Nexus:&lt;id&gt;` updates; an optional `github_token` in `SVMM_Data/config.json` for higher GitHub API rate limits.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=4][b]Shout Outs[/b][/size]\n<br />[list]\n<br />[*][b]ConcernedApe[/b] for creating Stardew Valley.[/*]\n<br />[*][b]Pathoschild[/b] for SMAPI and the Stardew Valley modding ecosystem.[/*]\n<br />[*][b]Tom Schimansky[/b] for [url=https://github.com/TomSchimansky/CustomTkinter]CustomTkinter[/url] and the [b]Pillow[/b] maintainers.[/*]\n<br />[*][b]Nexus Mods[/b] and the entire Stardew Valley modding community for the inspiration, APIs, and feedback.[/*]\n<br />[/list]\n<br />[line]\n<br />[i]Open-source under the MIT License — Source &amp; issue tracker on [url=https://github.com/smanedn/stardew_mod_manager]GitHub[/url].[/i]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55677",
+	"Version": "1",
+	"Updated": "2026-11-17T20:00:48+00:00",
+	"Downloads": [
+		{
+			"Id": 191651,
+			"Type": "Main",
+			"DisplayName": "SVModManager V0.3.0 Windows X64",
+			"FileName": "06/3c/0b/063c0b74-6aec-4184-be11-6922a0a6e8ba",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 19694614,
+			"Uploaded": "2026-11-17T20:00:48+00:00",
+			"Mods": [],
+			"DownloadError": "Could not get download URLs: This file has been quarantined and is not available for download.",
+			"OtherFields": {
+				"Uid": 5596342578339,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442365,
+		"UploaderId": 135625228,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 55682,
+	"Name": "Dynamic Splitscreen",
+	"Author": "IIIHessonIII",
+	"Description": "[center][size=6][b]Dynamic Splitscreen[/b][/size]\n<br />[size=4][i]Renegade Ops-style dynamic splitscreen for Stardew Valley local co-op[/i][/size]\n<br />[b]Version 0.2.1[/b] | Author: [b]IIIHessonIII[/b]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]Overview[/b][/size]\n<br />Tired of being locked into a cramped, static 50/50 vertical or horizontal splitscreen when playing Stardew Valley locally with a friend or partner?\n<br />\n<br />[b]Dynamic Splitscreen[/b] replaces the static split with an intelligent, dynamic camera system inspired by [i]Renegade Ops[/i]:\n<br />\n<br />\n<br />[table][tr][th]Feature[/th]\n<br />[th]How It Works[/th]\n<br />[/tr]\n<br />[tr][td][b]Unified Merged Camera[/b][/td]\n<br />[td]When you and your co-op partner are near each other (&lt; 8 tiles), you share a single, full-screen camera view centered between both farmers.[/td]\n<br />[/tr]\n<br />[tr][td][b]Smooth Dynamic Zoom[/b][/td]\n<br />[td]As you move apart, the camera smoothly zooms out to keep both of you on-screen without splitting prematurely.[/td]\n<br />[/tr]\n<br />[tr][td][b]Angled Voronoi Split[/b][/td]\n<br />[td]When you wander far apart (&gt; 21 tiles), the screen seamlessly divides along a crisp angled divider line perpendicular to the vector between you.[/td]\n<br />[/tr]\n<br />[tr][td][b]Smooth Map &amp; Fade Transitions[/b][/td]\n<br />[td]Entering a different location smoothly eases (&lt;= 90°) into a vertical Left/Right split; re-entering the same map eases the Voronoi divider back into place; fade-to-black transitions mask cleanly to each player's Voronoi half-plane.[/td]\n<br />[/tr]\n<br />[tr][td][b]Unified Dual HUD &amp; Menus[/b][/td]\n<br />[td]Both players' toolbars are visible with energy/health bars docked to the outside edges, a single shared top-right clock, and un-dimmed side-by-side menus with working P1/P2 mouse &amp; controller input and tooltips.[/td]\n<br />[/tr]\n<br />[tr][td][b]Color-Coded P2 Indicators &amp; Cursor[/b][/td]\n<br />[td]Distinct cyan controller cursor for Player 2 plus unified-view world and HUD indicators (cabin/shared mailboxes, buffs, HUD alerts, quest pulse, offscreen indicator) coded warm gold (P1) vs. cyan (P2) with zero text clutter.[/td]\n<br />[/tr]\n<br />[/table]\n<br />[line]\n<br />\n<br />[size=5][b]Requirements[/b][/size]\n<br />\n<br />[table][tr][th]Component[/th]\n<br />[th]Minimum Version / Setup[/th]\n<br />[/tr]\n<br />[tr][td][b]Stardew Valley[/b][/td]\n<br />[td]1.6.0 or newer[/td]\n<br />[/tr]\n<br />[tr][td][b]SMAPI[/b][/td]\n<br />[td]4.0.0 or newer[/td]\n<br />[/tr]\n<br />[tr][td][b]Controllers[/b][/td]\n<br />[td]2 controllers (or 1 keyboard/mouse + 1 controller) configured for local co-op[/td]\n<br />[/tr]\n<br />[/table]\n<br />[line]\n<br />\n<br />[size=5][b]Installation[/b][/size]\n<br />\n<br />[table][tr][th]Step[/th]\n<br />[th]Action[/th]\n<br />[/tr]\n<br />[tr][td][b]1[/b][/td]\n<br />[td]Ensure you have [url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] installed and working.[/td]\n<br />[/tr]\n<br />[tr][td][b]2[/b][/td]\n<br />[td]Download the release archive: [b]DynamicSplitscreen-v0.2.1.zip[/b].[/td]\n<br />[/tr]\n<br />[tr][td][b]3[/b][/td]\n<br />[td]Extract the zip archive and place the [font=Courier New]DynamicSplitscreen[/font] folder directly into your [font=Courier New]Stardew Valley/Mods[/font] directory.[/td]\n<br />[/tr]\n<br />[tr][td][b]4[/b][/td]\n<br />[td]Launch the game via SMAPI ([font=Courier New]StardewModdingAPI.exe[/font]).[/td]\n<br />[/tr]\n<br />[tr][td][b]5[/b][/td]\n<br />[td]Load your farm, press [b]Esc[/b] / [b]Start[/b] -&gt; [b]Options[/b] -&gt; [b]Multiplayer[/b] -&gt; [b]Start Local Co-op[/b], and join Player 2![/td]\n<br />[/tr]\n<br />[/table]\n<br />[line]\n<br />\n<br />[size=5][b]Configuration[/b][/size]\n<br />A [font=Courier New]config.json[/font] file will be automatically generated in the mod folder after launching the game for the first time. You can customize camera behavior to your liking:\n<br />\n<br />\n<br />[table][tr][th]Setting[/th]\n<br />[th]Default[/th]\n<br />[th]Description[/th]\n<br />[/tr]\n<br />[tr][td][font=Courier New]MaxZoom[/font][/td]\n<br />[td]1.0[/td]\n<br />[td]Camera zoom level when players are close together[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]MinZoom[/font][/td]\n<br />[td]0.75[/td]\n<br />[td]Maximum zoom-out before splitting[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]SplitZoom[/font][/td]\n<br />[td]0.90[/td]\n<br />[td]Zoom level applied to each player's split viewport[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]ZoomStartDist[/font][/td]\n<br />[td]512.0[/td]\n<br />[td]Pixel distance (~8 tiles) where camera begins zooming out[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]SplitEnterDist[/font][/td]\n<br />[td]1344.0[/td]\n<br />[td]Pixel distance (~21 tiles) where screen splits into two half-planes[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]SplitExitDist[/font][/td]\n<br />[td]1120.0[/td]\n<br />[td]Pixel distance (~17.5 tiles) where screen merges back (hysteresis band)[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]CameraEaseRate[/font][/td]\n<br />[td]4.5[/td]\n<br />[td]Smoothing rate for camera motion and zoom transitions[/td]\n<br />[/tr]\n<br />[tr][td][font=Courier New]DividerWidthPx[/font][/td]\n<br />[td]3.0[/td]\n<br />[td]Pixel width of the dividing line between split screens[/td]\n<br />[/tr]\n<br />[/table]\n<br />[line]\n<br />\n<br />[size=5][b]Known Issues &amp; Status (v0.2.1)[/b][/size]\n<br />\n<br />[table][tr][th]Category[/th]\n<br />[th]Status[/th]\n<br />[th]Details[/th]\n<br />[/tr]\n<br />[tr][td][b]2-Player Local Co-op[/b][/td]\n<br />[td][color=#4ade80][b]0 Open Bugs[/b][/color][/td]\n<br />[td]All 20 M1 bugs (BUG-01 through BUG-20) have been resolved as of v0.2.1.[/td]\n<br />[/tr]\n<br />[tr][td][b]Bug Reports[/b][/td]\n<br />[td][color=#38bdf8][b]Active[/b][/color][/td]\n<br />[td]If you find any new issues or crashes, please report them under the [b]Bugs[/b] tab with your SMAPI log from [url=https://smapi.io/log]smapi.io/log[/url].[/td]\n<br />[/tr]\n<br />[/table]\n<br />[line]\n<br />\n<br />[size=5][b]Development Roadmap[/b][/size]\n<br />[b]Overall Path to v1.0.0:[/b] [font=Courier New][color=#4ade80]████████████[/color][color=#475569]░░░░░░░░[/color] 60%[/font] | Current Milestone: [color=#38bdf8][b]v0.2.1[/b][/color]\n<br />\n<br />\n<br />[table][tr][th]Version[/th]\n<br />[th]Milestone[/th]\n<br />[th]Status[/th]\n<br />[th]Progress[/th]\n<br />[th]Key Highlights[/th]\n<br />[/tr]\n<br />[tr][td][b]v0.1.0-beta[/b][/td]\n<br />[td]Core Voronoi POC[/td]\n<br />[td][color=#4ade80][b][DONE][/b][/color][/td]\n<br />[td][font=Courier New][color=#4ade80]██████████[/color] 100%[/font][/td]\n<br />[td]2-player dynamic Voronoi splitscreen on same map, smooth dynamic zoom (1.0x -&gt; 0.75x), hysteresis smoothing, [font=Courier New]config.json[/font].[/td]\n<br />[/tr]\n<br />[tr][td][b]v0.2.0[/b][/td]\n<br />[td]HUD &amp; Transitions[/td]\n<br />[td][color=#4ade80][b][DONE][/b][/color][/td]\n<br />[td][font=Courier New][color=#4ade80]██████████[/color] 100%[/font][/td]\n<br />[td]Unified dual toolbars &amp; outside-edge bars, shared top-right clock, side-by-side un-dimmed menus with tooltips, P2 cyan cursor, P2 harvest sync, smooth &lt;= 90° cross-map split, same-map re-entry easing, Voronoi fades, 17/17 beta bugs fixed.[/td]\n<br />[/tr]\n<br />[tr][td][b]v0.2.1[/b][/td]\n<br />[td]Bugfix &amp; P2 Indicators[/td]\n<br />[td][color=#38bdf8][b][CURRENT][/b][/color][/td]\n<br />[td][font=Courier New][color=#38bdf8]██████████[/color] 100%[/font][/td]\n<br />[td]Color-only P2 unified world/HUD indicators (mailboxes, buffs, alerts, quest, offscreen), P2 cabin/shared mailbox bubble, stack-safe [font=Courier New]Farm.draw[/font] transpiler, P1 unified menu mouse/controller input &amp; cursor snap (BUG-18–BUG-20, 0 open bugs).[/td]\n<br />[/tr]\n<br />[tr][td][b]v0.3.0[/b][/td]\n<br />[td]GMCM &amp; Event Polish[/td]\n<br />[td][color=#facc15][b][NEXT][/b][/color][/td]\n<br />[td][font=Courier New][color=#facc15]██░░░░░░░░[/color] 20%[/font][/td]\n<br />[td]In-game configuration via Generic Mod Config Menu (GMCM), additional cutscene/festival camera polish, and smart HUD customization.[/td]\n<br />[/tr]\n<br />[tr][td][b]v1.0.0[/b][/td]\n<br />[td]Full Release &amp; 3-4P[/td]\n<br />[td][color=#94a3b8][b][PLANNED][/b][/color][/td]\n<br />[td][font=Courier New][color=#94a3b8]░░░░░░░░░░[/color] 0%[/font][/td]\n<br />[td]3-to-4 player dynamic Voronoi / hybrid multi-viewport compositing and performance tuning for Steam Deck and lower-end PCs.[/td]\n<br />[/tr]\n<br />[/table]\n<br />[line]\n<br />\n<br />[size=5][b]Feedback[/b][/size]\n<br />Thank you for playing with Dynamic Splitscreen! All feedback, feature requests, and bug reports are welcome in the comments and bug tracker.\n<br />\n<br />Enjoy local co-op farming![/center]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55682",
+	"Version": "0.2.1",
+	"Updated": "2026-11-18T03:13:30+00:00",
+	"Downloads": [
+		{
+			"Id": 191679,
+			"Type": "Main",
+			"DisplayName": "DynamicSplitscreen V0.2.1",
+			"FileName": "72/ea/6a/72ea6ac1-ddbc-4da7-aeac-c681fc2f7e85",
+			"Description": "",
+			"Version": "0.2.1",
+			"SizeInBytes": 77859,
+			"Uploaded": "2026-11-18T03:13:30+00:00",
+			"Mods": [
+				{
+					"Id": "IIIHessonIII.DynamicSplitscreen",
+					"DisplayName": "Dynamic Splitscreen",
+					"Type": "Smapi",
+					"RelativePath": "DynamicSplitscreen",
+					"Manifest": {
+						"Name": "Dynamic Splitscreen",
+						"Description": "Renegade Ops-style dynamic Voronoi splitscreen for Stardew Valley local co-op.",
+						"Author": "IIIHessonIII",
+						"Version": "0.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DynamicSplitscreen.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55682"
+						],
+						"UniqueId": "IIIHessonIII.DynamicSplitscreen"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578367,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442370,
+		"UploaderId": 2288399,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

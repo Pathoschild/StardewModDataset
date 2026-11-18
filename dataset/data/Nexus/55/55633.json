@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 55633,
+	"Name": "Custom Seasonings",
+	"Author": "aedenthorn",
+	"Description": "[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />This mod acts as a framework to create custom seasonings, and allow choosing a seasoning (or none) when cooking any dish.\n<br />\n<br />Dish names may be altered to indicate the presence of seasoning (e.g. Ginger Salad for a salad with ginger as a seasoning), and seasoning may apply a tint to the dish's colour.\n<br />\n<br />Seasoning can change a dish's buff granularly or by setting a quality like Qi Seasoning.\n<br />\n<br />Dishes without buffs can now give\u00A0buffs when seasoned.\n<br />\n<br />Note that this mod will not work with cooking overhaul mods that replace the vanilla cooking menu, but they are welcome to implement a compatible system and use this mod's code if they want, and there is a C# API available.\n<br />\n<br />Mods that use this framework:\n<br />\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/55635]Cooking Spices[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/55650]Cornucopia Seasoning[/url][/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/55659]Special Qi Seasoning[/url][/*]\n<br />[/list]\n<br />[u][b][size=5]Creating Custom Seasoning[/size][/b][/u]\n<br />\n<br />Using Content Patcher, target\u00A0[b]\"aedenthorn.CustomSeasoning/dict\"[/b], e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.7.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.CustomSeasoning/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}.RockSalt\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BuffData\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MiningLevel\": 1\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ChangedName\": \"{{i18n:rocksalt.change}}\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Tint\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"R\": 255,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"G\": 192,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"B\": 203\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"TintAlpha\": 0.1\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0},\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"{{ModId}}.Qi\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ChangedName\": \"{{i18n:qi.name}}\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Quality\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"829\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"BuffData\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"CriticalChanceMultiplier\": 1\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"DurationMultiplier\": 2,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0\"BaseDuration\": 1200,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"ChangedName\": \"{{i18n:ginger.change}}\"\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />The dictionary keys are the unqualified item id of the seasoning, either a modded item or a vanilla item.\n<br />\n<br />[b]ChangedName [/b]should be something like \"Ginger {0}\" and the {0} will be replaced with the original dish name.\n<br />\n<br />[b]Quality [/b]affects the dish just as Qi Seasoning does (Qi Seasoning gives dishes a quality of 2).\n<br />\n<br />[b]BuffData[/b]\u00A0uses the same structure as [url=https://stardewvalleywiki.com/Modding:Objects]the vanilla Buffs-&gt;CustomAttributes field[/url].\n<br />\n<br />[b]BaseDuration[/b]\u00A0is used if the seasoning is applied to food that doesn't normally provide any buffs (default is 600 if omitted).\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Translations should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />\n<br />fc744526-3ab8-41d5-9606-0419c35ed0db ",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55633",
+	"Version": "0.2.0",
+	"Updated": "2026-11-17T08:08:07+00:00",
+	"Downloads": [
+		{
+			"Id": 191583,
+			"Type": "Main",
+			"DisplayName": "CustomSeasoning",
+			"FileName": "c6/91/bd/c691bda1-b845-49b2-bc28-8e6f071c3d76",
+			"Description": "Changes:<br /><br />Added ability to add buffs to food that normally doesn't have buffs<br />Fixed not consuming seasoning",
+			"Version": "0.2.0",
+			"SizeInBytes": 27172,
+			"Uploaded": "2026-11-17T08:08:07+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.CustomSeasoning",
+					"DisplayName": "Custom Seasoning",
+					"Type": "Smapi",
+					"RelativePath": "CustomSeasoning",
+					"Manifest": {
+						"Name": "Custom Seasoning",
+						"Description": "Allows creation of custom seasoning.",
+						"Author": "aedenthorn",
+						"Version": "0.2.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "CustomSeasoning.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55633"
+						],
+						"UniqueId": "aedenthorn.CustomSeasoning"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578271,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442321,
+		"UploaderId": 18901754,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}
