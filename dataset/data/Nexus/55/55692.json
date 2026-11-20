@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 55692,
+	"Name": "CropProgress",
+	"Author": "darkness1335ds",
+	"Description": "Crop Progress / 作物成熟进度\n<br />\n<br />Show growth progress bars above nearby crops, with a hover panel for growth stage, days remaining, and watering status.\n<br />在附近作物上方显示生长进度条，鼠标悬停可查看生长阶段、剩余天数与浇水状态。\n<br />\n<br />【Features / 功能】\n<br />• Floating progress bars above nearby crops, within a configurable radius (default 10 tiles; 0 = unlimited).\n<br />• F7 toggle for showing or hiding the bars; the setting is persisted.\n<br />• Hover panel with crop name, growth stage, days remaining, and a watering reminder.\n<br />• Works with crops in HoeDirt and garden pots, including the greenhouse, Ginger Island, and other locations while you are there.\n<br />• Supports vanilla crops and modded crops that use the standard Crop data.\n<br />• English and Simplified Chinese UI.\n<br />• Optional Generic Mod Config Menu integration.\n<br />\n<br />【Why this mod? / 特点】\n<br />Unlike hover-only crop info mods, this draws compact bars directly above each crop and can limit them to a radius around the player.\n<br />与仅提供悬停信息的模组不同，本模组直接在作物上方绘制进度条，并可限制在玩家周围一定范围内显示。\n<br />\n<br />【Requirements / 前置要求】\n<br />• Stardew Valley 1.6 or later.\n<br />• SMAPI 4.0 or later.\n<br />• Generic Mod Config Menu is optional (verified with 1.16.0). The mod works without it.\n<br />\n<br />【Installation / 安装】\n<br />1. Install SMAPI.\n<br />2. Extract the downloaded zip so that the StardewCropProgress/ folder is directly under Mods/.\n<br />3. Launch the game through SMAPI.\n<br />\n<br />【Configuration / 配置】\n<br />The mod creates a config.json in its mod folder. With Generic Mod Config Menu installed, these settings can be edited live in-game.\n<br />• ShowProgressBars — default true; show or h\n<br />• ToggleBarsKey — default F7; hotkey for toggling the bars.\n<br />• ShowHoverInfo — default true; show the hover panel.\n<br />• BarTextMode — Days, Percent, or Both; default Days.\n<br />• MaxDistanceTiles — default 10; bar display means unlimited.\n<br />• ShowMatureCrops — default false; also show mature crops with a gold full bar.\n<br />• ShowDeadCrops — default false; also show dead crops as a gray bar.\n<br />\n<br />【Progress meaning / 进度口径】\n<br />• Growing crops show the current growth stage and estimated days remaining under normal growth.\n<br />• Regrowing crops show the regrow countdown after harvest.\n<br />• Ready crops use a gold full bar and a \"ready\" label.\n<br />• Dead crops use a gray bar.\n<br />• A blue stripe and a watering reminder indicate that the crop still needs water today.\n<br />\n<br />【Debug / 调试】\n<br />Type cpp_debug in the SMAPI console to print the raw fields and calculated results for the crop under the cursor\n<br />(phaseDays, stage, watering state, days remaended for calibration and troubleshooting.\n<br />在 SMAPI 控制台输入 cpp_debug，可打印光标格作物的原始字段与计算结果，用于校准或反馈问题。\n<br />\n<br />【Known limitations / 已知限制】\n<br />• Fruit trees, bushes, tea bushes, and giant crops are not shown.\n<br />• Only the current location of the local player is scanned.\n<br />• If a location has more than 2000 crops, only 2000 are cached/drawn. The retained order is unspecified; the hover\n<br />panel is unaffected.\n<br />• The hover panel follows the mouse cursor. In vanilla 1.6.15, the right stick does not move the cursor tile in the world, so gamepad aiming is not supported.\n<br />• Bars refresh about once per second, so thete by up to roughly one second. The hoverpanel queries live state.\n<br />• Speed-Gro and the Agriculturist profession are not predicted; actual maturity may be earlier than the displayed\n<br />estimate.\n<br />\n<br />【Changelog / 更新日志】\n<br />0.1.0\n<br />• Initial release.\n<br />• Floating progress bars, hover panel, watering reminder, configurable radius, English/Chinese UI, optional GMCM integration, and cpp_debug command.\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/55692/55692-1794985019-2086003442.png[/img][img]https://staticdelivery.nexusmods.com/mods/1303/images/55692/55692-1794985024-1406587854.png[/img]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55692",
+	"Version": "1",
+	"Updated": "2026-11-18T06:59:19+00:00",
+	"Downloads": [
+		{
+			"Id": 191690,
+			"Type": "Main",
+			"DisplayName": "CropProgress 0.1.0",
+			"FileName": "95/a2/e7/95a2e78b-c6f0-4473-aab3-56c9ed38c6c2",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 42573,
+			"Uploaded": "2026-11-18T06:59:19+00:00",
+			"Mods": [
+				{
+					"Id": "fuchangling.CropProgress",
+					"DisplayName": "Crop Progress",
+					"Type": "Smapi",
+					"RelativePath": "StardewCropProgress",
+					"Manifest": {
+						"Name": "Crop Progress",
+						"Description": "Show crop growth progress bars above crops and a hover panel with stage, days remaining, and watering status.",
+						"Author": "fuchangling",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "StardewCropProgress.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "fuchangling.CropProgress"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578378,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442380,
+		"UploaderId": 284122643,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

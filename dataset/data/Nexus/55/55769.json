@@ -1,0 +1,76 @@
+{
+	"Site": "Nexus",
+	"Id": 55769,
+	"Name": "Mushroom Boxes",
+	"Author": "KhaStark",
+	"Description": "[font=Comic Sans MS][b]KhaStark Mushroom Boxes[/b] adds six placeable machines, one for each mushroom species.[/font]\n<br />[font=Comic Sans MS]\n<br />[b]Features[/b][/font]\n<br />[list]\n<br />[*][font=Comic Sans MS]Six mushroom machines: Common, Red, Purple, Chanterelle, Morel, and Magma Cap.[/font][/*]\n<br />[*][font=Comic Sans MS]Automatic mushroom production with no inputs, indoors or outdoors.[/font][/*]\n<br />[*][font=Comic Sans MS]Independent yield progression for each physical box.[/font][/*]\n<br />[*][font=Comic Sans MS]Normal-quality output only.[/font][/*]\n<br />[*][font=Comic Sans MS]A season-limited Fungal Research quest involving Demetrius, with retry support if it expires.[/font][/*]\n<br />[*][font=Comic Sans MS]A free Common Mushroom Box and Robin shop unlock after completing the research.[/font][/*]\n<br />[*][font=Comic Sans MS]Two machine looks: Vanilla and Wood[/font][/*]\n<br />[*][font=Comic Sans MS]English localization template included for community translations.[/font][/*]\n<br />[/list][font=Comic Sans MS][b]Requirements[/b][/font]\n<br />[list]\n<br />[*][font=Comic Sans MS]Stardew Valley 1.6.15.3 (Android build 26177 is the tested version).[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/44436]SMAPI for Android[/url] 4.3.2.5 (tested version; the gameplay manifest requires SMAPI 4.3.2 or later).[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/1915]Content Patcher[/url] 2.8.1 or a compatible later version (2.8.1 tested).[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Compatibility / Important notes[/b][/font]\n<br />[list]\n<br />[*][font=Comic Sans MS]Android-focused release. Other Stardew Valley, SMAPI, and Content Patcher versions, plus desktop and multiplayer, are not claimed as tested.[/font][/*]\n<br />[*][font=Comic Sans MS]Both included mod folders are required. Do not install the Content Patcher pack without its gameplay companion.[/font][/*]\n<br />[*][font=Comic Sans MS]Each existing box keeps its current per-box harvest progress. Changing sprite style does not change machine progress.[/font][/*]\n<br />[*][font=Comic Sans MS]The research request is timed to the end of its season. If the first letter would arrive late, it waits until a suitable date; a failed attempt can be offered again.[/font][/*]\n<br />[*][font=Comic Sans MS]For troubleshooting, send the freshly generated [b]SMAPI-latest.txt[/b] immediately after reproducing the issue, ideally using [url=https://smapi.io/log]SMAPI log parser[/url].[/font][/*]\n<br />[*][font=Comic Sans MS]Translations can be added by copying [b]i18n/default.json[/b] to the appropriate language filename and translating its values without modifying the DLL.[/font][/*]\n<br />[/list][font=Comic Sans MS]\n<br />[b]Credits[/b][/font]\n<br />[list]\n<br />[*][font=Comic Sans MS]KhaStark — mod design, content integration, gameplay implementation, and Wood-style machine artwork supplied for this project.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.stardewvalley.net/]ConcernedApe[/url] — Stardew Valley.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://smapi.io/]Pathoschild and SMAPI contributors[/url] — SMAPI framework.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/1915]Pathoschild[/url] — Content Patcher.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/44436]SMAPI Android maintainers[/url] — Android mod loader support.[/font][/*]\n<br />[*][font=Comic Sans MS][url=https://www.nexusmods.com/stardewvalley/mods/5098]GMCM contributors[/url] — optional configuration menu.[/font][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55769",
+	"Version": "1.0.0",
+	"Updated": "2026-11-19T19:08:53+00:00",
+	"Downloads": [
+		{
+			"Id": 191842,
+			"Type": "Main",
+			"DisplayName": "Khastark Mushroom Boxes Android V 1.0.0",
+			"FileName": "71/bc/88/71bc883a-1bf2-414c-b61e-d40d47da5f21",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 26583,
+			"Uploaded": "2026-11-19T19:08:53+00:00",
+			"Mods": [
+				{
+					"Id": "KhaStark.MushroomBoxes.Content",
+					"DisplayName": "KhaStark Mushroom Boxes - Content",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] KhaStark Mushroom Boxes",
+					"Manifest": {
+						"Name": "KhaStark Mushroom Boxes - Content",
+						"Description": "Six mushroom machines, Demetrius quest, and Robin shop stock.",
+						"Author": "KhaStark",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.8.1"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "KhaStark.MushroomBoxes",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "KhaStark.MushroomBoxes.Content"
+					}
+				},
+				{
+					"Id": "KhaStark.MushroomBoxes",
+					"DisplayName": "KhaStark Mushroom Boxes - Gameplay",
+					"Type": "Smapi",
+					"RelativePath": "[SMAPI] KhaStark Mushroom Boxes",
+					"Manifest": {
+						"Name": "KhaStark Mushroom Boxes - Gameplay",
+						"Description": "Tracks per-box mushroom harvests and discoveries; schedules research orders, retries and delayed rewards.",
+						"Author": "KhaStark",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.3.2",
+						"EntryDll": "MushroomBoxes.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "KhaStark.MushroomBoxes"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578530,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442457,
+		"UploaderId": 218369943,
+		"CategoryId": 22,
+		"Adult": false
+	}
+}

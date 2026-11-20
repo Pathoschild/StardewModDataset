@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 55777,
+	"Name": "MouseViewMode",
+	"Author": "ZengGod",
+	"Description": "[color=#d4d4d8][size=5][b]这个模组做什么[/b][/size][/color]\n<br />[color=#d4d4d8]星露谷原版的缩放只能进设置菜单拖滑条，缩放比例还是离散跳变，来回调很打断节奏。MouseViewMode 把这件事搬到手边：[/color]\n<br />\n<br />[list]\n<br />[*][color=#d4d4d8][b]按住 Ctrl 滚动滚轮[/b]即可缩放视野，滚一格改一档，松手就停在当前倍率；[/color][/*]\n<br />[*][color=#d4d4d8]缩放是[b]逐帧平滑推进[/b]的，不是一格格硬跳，视觉上像镜头推拉；[/color][/*]\n<br />[*][color=#d4d4d8]一次快速滚动滚过多格时，[b]按实际格数累计[/b]，不会出现“滚了五格只动一格”的情况；[/color][/*]\n<br />[*][color=#d4d4d8][b]RightAlt + Enter[/b] 一键在窗口 / 无边框全屏之间切换，不需要退出游戏去改启动项；[/color][/*]\n<br />[*][color=#d4d4d8]所有按键与倍率都在游戏内配置菜单里改，改完立即生效。[/color][/*]\n<br />[/list][line]\n<br />[heading][color=#d4d4d8]功能特性[/color][/heading]\n<br />[table][tr][th][color=#d4d4d8]功能[/color][/th]\n<br />[th][color=#d4d4d8]说明[/color][/th]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]Ctrl + 滚轮缩放[/color][/td]\n<br />[td][color=#d4d4d8]默认左/右 Ctrl 均可，滚轮上滚放大、下滚缩小[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]平滑镜头推进[/color][/td]\n<br />[td][color=#d4d4d8]缩放按剩余距离分帧推进，远目标和近目标都在相近时间内到位，收尾不过冲[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]多格累计[/color][/td]\n<br />[td][color=#d4d4d8]快速滚动时按真实格数累计（单次事件最多折算 8 格，避免超高速滚轮跳太远）[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]缩放上下限[/color][/td]\n<br />[td][color=#d4d4d8]默认 0.75× ～ 2.0×，可在配置里各自调整[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]每格步长[/color][/td]\n<br />[td][color=#d4d4d8]默认 0.1×／格，可在 0.05 ～ 1.0 之间调[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]全屏切换热键[/color][/td]\n<br />[td][color=#d4d4d8]默认 RightAlt + Enter，窗口 ⇄ 无边框全屏，可关闭[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]独立放大/缩小键[/color][/td]\n<br />[td][color=#d4d4d8]可额外绑定不需要修饰键的快捷键，默认留空[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]游戏内配置菜单[/color][/td]\n<br />[td][color=#d4d4d8]通过 GMCM 提供，全部选项支持热改；切换游戏语言时菜单文字自动跟随[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]多语言[/color][/td]\n<br />[td][color=#d4d4d8]简体中文 / English / 日本語 / 한국어（i18n 四套）[/color][/td]\n<br />[/tr]\n<br />[tr][td][color=#d4d4d8]不抢工具栏[/color][/td]\n<br />[td][color=#d4d4d8]缩放消费掉的滚轮不会再触发原版的「滚轮切换物品」；不按 Ctrl 时滚轮照常切换[/color][/td]\n<br />[/tr]\n<br />[/table][line]\n<br />[heading][color=#d4d4d8]安装[/color][/heading]\n<br />[list=1]\n<br />[*][color=#d4d4d8]安装 [url=https://smapi.io]SMAPI[/url]（3.8 或更高，游戏 1.6.x）。[/color][/*]\n<br />[*][color=#d4d4d8][color=#d4d4d8]把压缩包里的\u00A0MouseViewMods\u00A0[/color][/color][color=#d4d4d8]文件夹整个放进[/color][color=#ff7700]Stardew Valley/Mods/[/color][color=#d4d4d8]。[/color][/*]\n<br />[*][color=#d4d4d8]启动游戏，SMAPI 控制台出现 [/color][color=#ff7700]MouseViewMode 1.0 by ZengGod[/color][color=#d4d4d8]\u00A0[/color][color=#d4d4d8]即加载成功。[/color][/*]\n<br />[*][color=#d4d4d8]可选：安装 Generic Mod Config Menu 后，可在游戏内「选项 → Mod 选项」里直接调整本模组。[/color][/*]\n<br />[/list][line]\n<br />[heading]默认快捷键[/heading]\n<br />[table][tr][th]操作[/th]\n<br />[th]默认按键[/th]\n<br />[/tr]\n<br />[tr][td]放大视野[/td]\n<br />[td]按住 [b]Ctrl[/b]（左或右）+ 滚轮上滚[/td]\n<br />[/tr]\n<br />[tr][td]缩小视野[/td]\n<br />[td]按住 [b]Ctrl[/b]（左或右）+ 滚轮下滚[/td]\n<br />[/tr]\n<br />[tr][td]窗口 / 无边框全屏切换[/td]\n<br />[td][b]RightAlt + Enter[/b][/td]\n<br />[/tr]\n<br />[tr][td]单键放大 / 缩小[/td]\n<br />[td]未绑定（可在配置里自定义）[/td]\n<br />[/tr]\n<br />[/table][quote]把「缩放修饰键」清空后，直接滚轮即可缩放（此时滚轮不再用于切换工具栏物品）。[/quote]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55777",
+	"Version": "1.0",
+	"Updated": "2026-11-20T05:07:48+00:00",
+	"Downloads": [
+		{
+			"Id": 191880,
+			"Type": "Main",
+			"DisplayName": "MouseViewMode 1.0",
+			"FileName": "1d/7d/52/1d7d5229-3507-4e3c-ae18-ab397ea32b8e",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 17698,
+			"Uploaded": "2026-11-20T05:07:48+00:00",
+			"Mods": [
+				{
+					"Id": "ZengGod.MouseViewMode",
+					"DisplayName": "MouseViewMode (缩放与全屏)",
+					"Type": "Smapi",
+					"RelativePath": "MouseViewMode",
+					"Manifest": {
+						"Name": "MouseViewMode (缩放与全屏)",
+						"Description": "鼠标滚轮缩放（按住 Ctrl）与全屏切换快捷键。Mouse wheel zoom (hold Ctrl) and a fullscreen toggle hotkey, as a standalone mod.",
+						"Author": "ZengGod",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "3.8.0",
+						"EntryDll": "MouseViewMode.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55777"
+						],
+						"UniqueId": "ZengGod.MouseViewMode"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578568,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442465,
+		"UploaderId": 225877152,
+		"CategoryId": 10,
+		"Adult": false
+	}
+}

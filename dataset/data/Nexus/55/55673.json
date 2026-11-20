@@ -6,17 +6,17 @@
 	"Description": "[b]Stardew Climate[/b]\n<br />[b]A dynamic climate and temperature-based agricultural system for Stardew Valley.[/b]\n<br />Stardew Climate replaces the game's traditional season-based outdoor growing restrictions with a dynamic climate simulation. Instead of crops being limited to specific calendar seasons, their growth depends on the actual temperature of their surroundings.\n<br />Different locations have different climates, each with its own annual temperature curve, precipitation patterns and weather probabilities. This makes the choice of where to farm an important part of agricultural planning.\n<br />[heading]Features[/heading]\n<br />Five distinct climates\n<br />The world is divided into five climate types, each with its own temperature and precipitation patterns:\n<br />[list]\n<br />[*][b]Temperate:[/b] The default climate, covering the Farm, Pelican Town, Cindersap Forest and Bus Stop.[/*]\n<br />[*][b]Alpine:[/b] Colder conditions and greater seasonal temperature variation, covering the Mountain and Railroad.[/*]\n<br />[*][b]Oceanic:[/b] Milder temperatures and frequent precipitation, covering the Beach.[/*]\n<br />[*][b]Desert:[/b] Hot, dry conditions, covering the Calico Desert.[/*]\n<br />[*][b]Tropical:[/b] Warm temperatures and substantial rainfall throughout the year, covering Ginger Island.[/*]\n<br />[/list][u]Currently farms use the temperate climate which is supposed to emulate the 4 traditional seasons.[/u]\n<br />\n<br />[b]Dynamic temperature simulation[/b]\n<br />Each climate follows its own annual temperature curve, interpolated between configurable temperature anchors.\n<br />Daily temperatures are influenced by:\n<br />[list]\n<br />[*]The underlying seasonal temperature curve.[/*]\n<br />[*]Temperature inertia, meaning that yesterday's temperature influences today's.[/*]\n<br />[*]Random temperature variation.[/*]\n<br />[*]Weather conditions, which modify the final daily temperature.[/*]\n<br />[/list]This produces natural variation rather than perfectly predictable seasonal temperatures.\n<br />Temperature-based crop growth\n<br />Outdoor crops are no longer restricted by vanilla seasonal planting rules. Instead, every crop has four thermal thresholds:\n<br />[list]\n<br />[*][b]Minimum temperature:[/b] Below this temperature, the crop cannot grow.[/*]\n<br />[*][b]Optimal minimum:[/b] The lower boundary of optimal growth.[/*]\n<br />[*][b]Optimal maximum:[/b] The upper boundary of optimal growth.[/*]\n<br />[*][b]Maximum temperature:[/b] Above this temperature, the crop cannot grow.[/*]\n<br />[/list]Growth gradually increases as temperatures approach the optimal range and decreases as temperatures move away from it. Crops can therefore continue growing outside their optimal range, provided temperatures remain within their survival thresholds.\n<br />Crop stress\n<br />Crops can accumulate stress when exposed to temperatures outside their minimum and maximum thresholds.\n<br />Stress accumulates during unsuitable days and gradually decreases when temperatures return to a suitable range. If stress reaches the configured death threshold, the crop dies.\n<br />This makes extreme temperatures a meaningful agricultural risk without making every unsuitable day immediately fatal.\n<br />[b]Dynamic weather and precipitation[/b]\n<br />Each climate has its own precipitation frequency, storm probability and wind probability.\n<br />Depending on temperature and precipitation, days can produce rain, snow or storms. Weather conditions also influence the daily temperature experienced by crops.\n<br />Climate overlay\n<br />An optional on-screen overlay displays the current temperature and the climate of your location, allowing you to monitor environmental conditions while farming.\n<br />[heading]Configuration and customisation[/heading]\n<br />Stardew Climate is designed to be configurable rather than relying on fixed, hardcoded climate and crop values.\n<br />The mod includes two important JSON files in its \n<br />[code]assets[/code]folder:\n<br />[code]climates.json[/code][b]— Climate configuration[/b]\n<br />This file contains the temperature anchors, precipitation values, storm probabilities and wind probabilities for each climate. You can individually adjust the climate profiles to create warmer, colder, wetter or drier environments.\n<br />[code]crops.json[/code][b]— Crop temperature profiles[/b]\n<br />This file contains the four temperature thresholds for individual crops. You can edit existing crop profiles, change their thermal requirements or add entries for additional crops.\n<br />This also allows compatibility with other content mods. For example, if another mod introduces a new crop, you can add its internal harvest name and temperature profile to \n<br />[code]crops.json[/code]without needing to modify Stardew Climate's source code.\n<br />Both files are intended to be edited directly, making it possible to create custom climate configurations and agricultural experiences.\n<br />[heading]Compatibility and behaviour[/heading]\n<br />[list]\n<br />[*]Outdoor crops use the climate and temperature system instead of vanilla seasonal restrictions.[/*]\n<br />[*]Greenhouses, garden pots and indoor locations retain vanilla growing rules. They tend to follow Temperate.[/*]\n<br />[*]Crops without a custom temperature profile receive a default profile based on their vanilla growing seasons.[/*]\n<br />[*]Climate simulation is performed by the host in multiplayer.[/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list]\n<br />[*]SMAPI (want to see temps of all climates today? Write \"climate\" in Smapi console, and it will show.[/*]\n<br />[*]Content and game compatibility as specified in the mod's installation instructions.[/*]\n<br />[/list][heading]Important notes[/heading]\n<br />Stardew Climate changes the underlying agricultural and weather systems. It is intended to be used as a gameplay modification, not merely as a visual seasonal overhaul.\n<br />Some vanilla features and interactions may not yet fully reflect the simulated climate. Compatibility with other gameplay and weather modifications may vary.\n<br />This mod was made unethically with the help of AI...\u00A0\n<br />\n<br />[b]Recommended Mods:\u00A0[/b]\n<br />My mods (ofc)\n<br />\n<br />Gradual Seasons by\u00A0opoiuuuu (helps with aesthetic immersion)\n<br />\n<br />Immersive Weather Overhaul - Dynamic Weather Effects and Buffs by\u00A0ZeroXPatch\u00A0 (gives buffs from weather, example: the Beach has\u00A0rain thus rain buff, but the Town is windy so the windy buff. When someone moves between two weather types, the buffs/debuffs change dynamically rather than be stuck.\u00A0\u00A0\n<br />\n<br />\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55673",
 	"Version": "1",
-	"Updated": "2026-11-17T19:23:36+00:00",
+	"Updated": "2026-11-19T16:42:02+00:00",
 	"Downloads": [
 		{
-			"Id": 191640,
+			"Id": 191833,
 			"Type": "Main",
 			"DisplayName": "StardewClimate",
-			"FileName": "f4/db/fb/f4dbfb94-eb77-4615-8ef4-ea85034bffc4",
+			"FileName": "7a/61/12/7a611299-0068-4116-b236-677dc104fbdc",
 			"Description": "If, the file does not work: use Vortex mod loader, extract the zip file and take the folder inside with the same name and put it into Vortex, it will ask if it should make it into a mod. ",
-			"Version": "1",
-			"SizeInBytes": 30824,
-			"Uploaded": "2026-11-17T19:23:36+00:00",
+			"Version": "3",
+			"SizeInBytes": 33997,
+			"Uploaded": "2026-11-19T16:42:02+00:00",
 			"Mods": [
 				{
 					"Id": "WykaLukasz.StardewClimate",
@@ -27,7 +27,7 @@
 						"Name": "Stardew Climate",
 						"Description": "Temperature-based climates: per-location weather, selectable farm climate and crops that grow by temperature instead of season.",
 						"Author": "WykaLukasz",
-						"Version": "0.2.0",
+						"Version": "0.3.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "StardewClimate.dll",
 						"Dependencies": [],
@@ -37,7 +37,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342578328,
+				"Uid": 5596342578521,
 				"CategoryId": 1,
 				"Primary": true
 			}
