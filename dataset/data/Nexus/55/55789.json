@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 55789,
+	"Name": "Deep Loot Framework",
+	"Author": "Larvuk",
+	"Description": "[b][size=5]Players:[/size][/b]\n<br />\n<br />This mod does nothing on its own. Download it if it is required by another mod you're using.\n<br />\n<br />\n<br />[size=5][b]Modders:[/b][/size]\n<br />\n<br />DLF let you define additional loots to monsters depending on their depth in the Skull Cavern.\n<br />For example, the sword you added in your mod could be dropped by ghosts at floors 100+.\n<br />\n<br />You can set the min and max floors, the related monsters, the chances to drop the item, the min and max amounts dropped.\n<br />\n<br />[b][size=4]How to use DLF[/size][/b]\n<br />\n<br />Once DLF is installed, all configuration is done inside CP.\n<br />Inside of your item entry, add the DLF CustomFields you need as I did in the following example:\n<br />\n<br />[code]{\n<br />  \"Action\": \"EditData\",\n<br />  \"Target\": \"Data/Objects\",\n<br />  \"Entries\": {\n<br />    \"OneSeasonAtATime.energycell\": {\n<br />      \"Name\": \"OneSeasonAtATime.energycell\",\n<br />      \"Type\": \"Basic\",\n<br />      \"Category\": -15,\n<br />      \"DisplayName\": \"Energy cell\",\n<br />      \"Description\": \"Load it in your Greenhouse Controller to make it work longer.\",\n<br />      \"Texture\": \"Mods/{{ModId}}/energycell\",\n<br />      \"CustomFields\": {\n<br />        \"larvuk.DLF/MonsterId.1\": \"Royal Serpent\",\n<br />        \"larvuk.DLF/MinFloor.1\": \"15\",\n<br />        \"larvuk.DLF/MaxNumber.1\": \"2\",\n<br />        \"larvuk.DLF/Chances.1\": \"10\",\n<br />      }\n<br />    }\n<br />  }\n<br />},[/code]\n<br />This configuration will add a 1% chance to drop 1-2 energy cells when killing Royal Serpents on floors 15+ of the Skull Cavern.\n<br />The possible fields are the following:\n<br />\n<br />[font=Courier New]\"larvuk.DLF/MonsterId.X\"[/font]: the ID of the monster that will drop the item. Mandatory. See the Monsters.json file in the SDV game code: the keys are the monsters' IDs.\n<br />[font=Courier New]\"larvuk.DLF/MinFloor.X\"[/font]: the number of the shallowest floor where the drop might trigger. Default 1.\n<br />[font=Courier New]\"larvuk.DLF/MaxFloor.X\"[/font]: the number of the deepest floor where the drop might trigger. Default -1 (no limit).\n<br />[font=Courier New]\"larvuk.DLF/Chances.X\"[/font]: The chance (out of 1000) for a monster to drop an item. For example, \"100\" means 10%. Default 1000 (100%).\n<br />[font=Courier New]\"larvuk.DLF/MinNumber.X\"[/font]: The minimum stack that will be dropped. Default 1.\n<br />[font=Courier New]\"larvuk.DLF/MaxNumber.X\"[/font]: The maximum stack that will be dropped. Default 1.\n<br />\n<br />X represents an arbitrary (but mandatory) value identifying the rules that will work together. That means if you're adding the same item as a drop to different monsters (or different depths with different chances, or whatever) you'll add all the rules to the same CustomFields, but with different values of X.\n<br />\n<br />\n<br />[size=5][b]Behind the scene:[/b][/size]\n<br />\n<br />Made without any trace of AI.\n<br />DLF uses Harmony, and could have compatibility issues with other mods modifying the same method: [b][font=Courier New]Monster.InitializeForLocation[/font][/b] (postfix).\n<br />[url=https://github.com/Larvuk/DeepLootFramework/tree/master/DeepLootFramework]Source code is here[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55789",
+	"Version": "1",
+	"Updated": "2026-11-20T15:07:18+00:00",
+	"Downloads": [
+		{
+			"Id": 191943,
+			"Type": "Main",
+			"DisplayName": "DeepLootFramework1.0.0release",
+			"FileName": "21/7f/3e/217f3ead-cea1-4348-8e71-cb24a7b0d062",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 15597,
+			"Uploaded": "2026-11-20T15:07:18+00:00",
+			"Mods": [
+				{
+					"Id": "larvuk.DeepLootFramework",
+					"DisplayName": "Deep Loot Framework",
+					"Type": "Smapi",
+					"RelativePath": "DeepLootFramework",
+					"Manifest": {
+						"Name": "Deep Loot Framework",
+						"Description": "Allow modders to add monster loots to deep Skull Cavern floors.",
+						"Author": "larvuk",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "DeepLootFramework.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"MinimumVersion": "2.9.0",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus: 55789"
+						],
+						"UniqueId": "larvuk.DeepLootFramework"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578631,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442477,
+		"UploaderId": 200664389,
+		"CategoryId": 9,
+		"Adult": false
+	}
+}

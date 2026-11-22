@@ -1,0 +1,92 @@
+{
+	"Site": "Nexus",
+	"Id": 55782,
+	"Name": "Mute When Unfocused",
+	"Author": "Duckayyy",
+	"Description": "[b]Automatically mute Stardew when you switch apps.[/b]\n<br />\n<br />Mute When Unfocused silences Stardew Valley while another app is active and restores your previous audio levels when you return. No hotkey or configuration is needed. Other apps keep playing normally.\n<br />\n<br />[b]Features[/b]\n<br />[list]\n<br />[*]Mutes the game’s music, ambience, footsteps, and sound-effect categories in the background.[/*]\n<br />[*]Restores previous audio levels when you return.[/*]\n<br />[*]Works when switching away from fullscreen on the tested Mac setup.[/*]\n<br />[*]Does not write save data or change saved volume sliders.[/*]\n<br />[/list]\n<br />[b]Install[/b]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io/]SMAPI[/url] 4.5.2 or later and Stardew Valley 1.6.15 or later.[/*]\n<br />[*]Close Stardew Valley.[/*]\n<br />[*]Extract the MuteWhenUnfocused folder into Stardew Valley/Mods.[/*]\n<br />[*]Launch through SMAPI. With music playing, switch to another app and back to test it.[/*]\n<br />[/list]\n<br />[b]Compatibility — initial beta[/b]\n<br />Tested on macOS 26.6.2 with Stardew Valley 1.6.15 and SMAPI 4.5.2, including audible mute and restoration when switching away from fullscreen. This build targets x64, matching the tested macOS game running through Rosetta.\n<br />\n<br />The code uses shared Stardew/MonoGame APIs with no macOS-only calls. Windows and Linux are expected to work, but are untested. Multiplayer, split-screen, loaded-save behavior, and audio added by other mods have not been separately verified. External audio systems or other audio-management mods may require compatibility work. No CPU or FPS benchmark is claimed.\n<br />\n<br />[b]Technical note[/b]\n<br />The mod reads MonoGame’s private audio-category volume field to preserve exact levels. Both scalar and array storage are covered by regression tests. Future game or audio-library updates may need a mod update. If it fails, include a SMAPI log with your report.\n<br />\n<br />[b]Uninstall[/b]\n<br />Close the game and remove Mods/MuteWhenUnfocused. If you previously used the private Local.MuteWhenUnfocused build, remove it before installing this release so two copies do not run together.\n<br />\n<br />[b]Source and permissions[/b]\n<br />By Duckayyy. Reuse follows Nexus Mods recommended permissions. No blanket open-source license is granted. Source, build instructions, and regression tests are provided as a separate download. No game or SMAPI binaries are redistributed.\n<br />\n<br />[b]AI disclosure[/b]\n<br />The code, tests, documentation, page text, and original promotional cover were generated with OpenAI Codex at Duckayyy’s direction. Duckayyy tested the audible fullscreen behavior on macOS. The cover is illustrative pixel art, not an in-game screenshot.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55782",
+	"Version": "1.0.2",
+	"Updated": "2026-11-20T10:59:53+00:00",
+	"Downloads": [
+		{
+			"Id": 191926,
+			"Type": "Main",
+			"DisplayName": "Mute When Unfocused 1.0.2",
+			"FileName": "e2/8f/8f/e28f8f21-fc18-4c13-8620-8811560de69b",
+			"Description": "",
+			"Version": "1.0.2",
+			"SizeInBytes": 12983,
+			"Uploaded": "2026-11-20T10:58:57+00:00",
+			"Mods": [
+				{
+					"Id": "Duckayyy.MuteWhenUnfocused",
+					"DisplayName": "Mute When Unfocused",
+					"Type": "Smapi",
+					"RelativePath": "MuteWhenUnfocused",
+					"Manifest": {
+						"Name": "Mute When Unfocused",
+						"Description": "Automatically mutes Stardew Valley while its window is unfocused and restores audio on return.",
+						"Author": "Duckayyy",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.5.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "MuteWhenUnfocused.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55782"
+						],
+						"UniqueId": "Duckayyy.MuteWhenUnfocused"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578614,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		},
+		{
+			"Id": 191927,
+			"Type": "Optional",
+			"DisplayName": "Mute When Unfocused 1.0.2 - Source",
+			"FileName": "d1/9a/be/d19abefc-bbd1-4b04-a0d6-32f60757a312",
+			"Description": "",
+			"Version": "1.0.2",
+			"SizeInBytes": 7285,
+			"Uploaded": "2026-11-20T10:59:53+00:00",
+			"Mods": [
+				{
+					"Id": "Duckayyy.MuteWhenUnfocused",
+					"DisplayName": "Mute When Unfocused",
+					"Type": "Smapi",
+					"RelativePath": "MuteWhenUnfocused-source",
+					"Manifest": {
+						"Name": "Mute When Unfocused",
+						"Description": "Automatically mutes Stardew Valley while its window is unfocused and restores audio on return.",
+						"Author": "Duckayyy",
+						"Version": "1.0.2",
+						"MinimumApiVersion": "4.5.2",
+						"MinimumGameVersion": "1.6.15",
+						"EntryDll": "MuteWhenUnfocused.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:55782"
+						],
+						"UniqueId": "Duckayyy.MuteWhenUnfocused"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578615,
+				"CategoryId": 3,
+				"Primary": false
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442470,
+		"UploaderId": 107318643,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}

@@ -5,18 +5,18 @@
 	"Author": "palmhacker13",
 	"Description": "[center]\n<br />[size=7][b][color=#d48806]PureBinarySave[/color][/b][/size]\n<br />[size=4][i]Instant bedtime saves and sub-second save loading for Stardew Valley 1.6+[/i][/size]\n<br />\n<br />[b][color=#1890ff]Zero-Allocation Binary Streaming[/color]\u00A0 •\u00A0 [color=#52c41a]Speculative Preload 2.0[/color]\u00A0 •\u00A0 [color=#fa8c16]100% Reversible Vanilla XML[/color][/b]\n<br />[/center]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]\uD83D\uDCD6 Why PureBinarySave?[/b][/size]\n<br />\n<br />In heavily modded Stardew Valley playthroughs, save files are stored as huge uncompressed XML text files (often [b]15–30+ MB[/b]). Writing and parsing all that text causes long black-screen pauses at bedtime and slow loading screens.\n<br />\n<br />[b]PureBinarySave[/b] solves this cleanly without ever locking you into a custom format:\n<br />[list=1]\n<br />[*][b]Ultra-Compact Binary Format:[/b] Uses MessagePack + LZ4 zero-allocation streaming to shrink 30 MB saves down to ~900 KB [font=Courier New].bin[/font] files.[/*]\n<br />[*][b]Instant Bedtime Transitions:[/b] Saves to [font=Courier New].bin[/font] first when you go to sleep so you wake up at 6:00 AM without waiting.[/*]\n<br />[*][b]Deferred Vanilla XML Mirroring:[/b] Quietly syncs a genuine vanilla XML backup in the background after you wake up—so save editors, web tools, and vanilla compatibility remain intact.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]✨ Key Features &amp; 2.0 Engine Upgrades[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]Speculative Preload 2.0:[/b] Utilizes idle time on the title screen (and save-slot hover) to decompress and prepare save data in memory with instant byte-level cancellation ([font=Courier New]CancellableMemoryStream[/font]) and zero main-thread contention.[/*]\n<br />[*][b]Post-Load Optimization:[/b] Lazy TileSheets, Map Prewarming, and Fast Fade eliminate post-load hitching on large farms.[/*]\n<br />[*][b]Cross-Save State Isolation:[/b] Safely isolates Community Center bundles, rewards, and Museum pieces during background preloading so data never bleeds between saves.[/*]\n<br />[*][b]Rollback &amp; Backup Sync ([font=Courier New].bin.sync[/font]):[/b] Automatically detects if you restored an older [font=Courier New]_old[/font] or SMAPI backup and re-syncs cleanly without overwriting your restored XML.[/*]\n<br />[*][b]Mod-Friendly &amp; Safe:[/b] Uses the game's native [font=Courier New]SaveGame.serializer[/font] and works seamlessly with [b]SpaceCore[/b], [b]Content Patcher[/b], and multiplayer.[/*]\n<br />[*][b]Built-in A/B Benchmarking:[/b] Test binary vs. vanilla XML speed anytime with [font=Courier New]pbs_mode [binary|xml][/font] or [font=Courier New]pbs_status[/font].[/*]\n<br />[*][b]One-Click Safe Uninstall:[/b] Run [font=Courier New]pbs_revert_all[/font] (or toggle it in MCM/GMCM) to restore 100% clean vanilla XML files before removing the mod.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[size=5][b]\uD83D\uDCCC First-Time Setup Note[/b][/size]\n<br />\n<br />[quote]\n<br />[list]\n<br />[*][b]Existing Saves:[/b] Your very first load after installing will take the normal vanilla time (since only XML exists). Once you sleep and save once, the [font=Courier New].bin[/font] file is created—every load and bedtime save after that runs at full binary speed![/*]\n<br />[*][b]New Saves:[/b] Enjoy full binary speed right after Day 1.[/*]\n<br />[*][b]Wait a few seconds after waking up before Alt+F4[/b] so the background XML backup finishes syncing (around 5–6 seconds).[/*]\n<br />[/list][/quote]\n<br />[line]\n<br />\n<br />[size=5][b]\uD83D\uDCBB Useful Console Commands[/b][/size]\n<br />\n<br />[list]\n<br />[*][font=Courier New][b]pbs_status[/b][/font] — View load/save timing breakdown and file size comparison.[/*]\n<br />[*][font=Courier New][b]pbs_mode [binary|xml][/b][/font] — Switch between binary and vanilla XML for A/B testing.[/*]\n<br />[*][font=Courier New][b]restore_xml &lt;SaveFolder&gt;[/b][/font] — Rebuild XML from [font=Courier New].bin[/font] (great before sharing saves or using Stardew Checkup).[/*]\n<br />[*][font=Courier New][b]pbs_revert_all[/b][/font] — Restore all saves to clean vanilla XML and remove [font=Courier New].bin[/font] files.[/*]\n<br />[/list]\n<br />[line]\n<br />\n<br />[center]\n<br />[size=5][b]\uD83D\uDCE6 Requirements &amp; Config Menus[/b][/size]\n<br />[b]Stardew Valley 1.6+[/b]\u00A0 •\u00A0 [b]SMAPI 4.0+[/b]\n<br />Configurable via [url=https://www.nexusmods.com/stardewvalley/mods/49437][b]Modern Config Menu (MCM)[/b][/url] or [url=https://www.nexusmods.com/stardewvalley/mods/5098][b]Generic Mod Config Menu (GMCM)[/b][/url]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]\uD83D\uDE80 Complete Performance Suite[/b][/size]\n<br />[url=https://www.nexusmods.com/stardewvalley/mods/50971][b]UltraSmooth[/b][/url]\u00A0 •\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/55494][b]Automate Pro[/b][/url]\u00A0 •\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/55495][b]Next-Gen Auto-Grabber[/b][/url]\u00A0 •\u00A0 [url=https://www.nexusmods.com/stardewvalley/mods/49437][b]Modern Config Menu[/b][/url]\n<br />\n<br />[line]\n<br />\n<br />[size=5][b]☕ Support &amp; Donations[/b][/size]\n<br />[i]If you enjoy my mods and want to support future updates, feel free to leave a tip on Ko-fi. Completely optional, always appreciated![/i]\n<br />\n<br />[url=https://ko-fi.com/palmhacker][size=4][b][color=#ff5e5b]☕ Support me on Ko-fi[/color][/b][/size][/url]\n<br />[/center]\n<br />[center][/center]\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/54266",
-	"Version": "2.0.7",
-	"Updated": "2026-11-19T12:27:31+00:00",
+	"Version": "2.0.8",
+	"Updated": "2026-11-21T10:40:59+00:00",
 	"Downloads": [
 		{
-			"Id": 191809,
+			"Id": 192021,
 			"Type": "Main",
-			"DisplayName": "PureBinarySave 2.0.7",
-			"FileName": "46/f3/01/46f30114-6f93-4356-a39c-a6de545145a8",
+			"DisplayName": "PureBinarySave 2.0.8",
+			"FileName": "3a/2a/c1/3a2ac113-dd78-43c3-aa0d-2cb6302be8ae",
 			"Description": "",
-			"Version": "2.0.7",
-			"SizeInBytes": 404380,
-			"Uploaded": "2026-11-19T12:27:31+00:00",
+			"Version": "2.0.8",
+			"SizeInBytes": 404949,
+			"Uploaded": "2026-11-21T10:40:59+00:00",
 			"Mods": [
 				{
 					"Id": "palmhacker13.PureBinarySave",
@@ -27,7 +27,7 @@
 						"Name": "PureBinarySave",
 						"Description": "High-performance MessagePack + LZ4 binary save system with zero-allocation streaming and reversible XML migration.",
 						"Author": "palmhacker13",
-						"Version": "2.0.7",
+						"Version": "2.0.8",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "PureBinarySave.dll",
 						"Dependencies": [],
@@ -39,7 +39,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342578497,
+				"Uid": 5596342578709,
 				"CategoryId": 1,
 				"Primary": true
 			}
