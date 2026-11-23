@@ -6,33 +6,33 @@
 	"Description": "[size=5][b]Auto Split-Screen Co-op[/b][/size]\n<br />\n<br />Load a save that has a local co-op farmhand, and the mod opens split-screen and loads that farmhand into the second screen for you. You don't press Start or pick a slot. Saves without an eligible farmhand load single player as normal.\n<br />\n<br />[size=4][b]What it does[/b][/size]\n<br />[list]\n<br />[*]After a save finishes loading on the main screen, the mod opens a second screen using the game's own split-screen call (the same one the vanilla \"press Start to join\" menu makes).[/*]\n<br />[*]The second screen shows the vanilla farmhand selection menu. When the target farmhand appears, the mod selects that slot using the same call a slot click makes.[/*]\n<br />[*]No simulated button presses or mouse clicks, and no Harmony patches.[/*]\n<br />[*]Runs once per save load. Returning to title and loading again starts it fresh, with no duplicate screens.[/*]\n<br />[/list]\n<br />[b]Eligible farmhand:[/b] a customized farmhand (not an empty cabin) who is not already online. If several are eligible, the mod picks the one who played most recently, unless you name one in the config.\n<br />\n<br />[b]The mod does nothing when:[/b]\n<br />[list]\n<br />[*]Enabled is false in the config.[/*]\n<br />[*]Split-screen is already running.[/*]\n<br />[*]You joined someone else's game as a farmhand.[/*]\n<br />[*]The save was loaded through Co-op &gt; Host (online/LAN hosting).[/*]\n<br />[*]The save has no eligible farmhand, or none matching FarmhandName.[/*]\n<br />[/list]\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][url=https://smapi.io]SMAPI[/url] 4.5.0 or later[/*]\n<br />[*]Stardew Valley 1.6[/*]\n<br />[*]A gamepad for player 2[/*]\n<br />[/list]\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Unzip the download into your game's Mods folder.[/*]\n<br />[*]Run the game through SMAPI once to create config.json.[/*]\n<br />[*]Load a save that already has a farmhand (created earlier through split-screen or co-op) from the main Load menu.[/*]\n<br />[/list]\n<br />[size=4][b]Config[/b][/size]\n<br />Edit config.json in the mod folder. It is created the first time you run the game with the mod installed.\n<br />\n<br />[list]\n<br />[*][b]Enabled[/b] (default: true) - Turn the mod on or off.[/*]\n<br />[*][b]FarmhandName[/b] (default: empty) - Farmhand to load, case-insensitive. Empty means the most recently played eligible farmhand.[/*]\n<br />[*][b]PlayerIndex[/b] (default: One) - Controller for the second screen: One, Two, Three or Four. An invalid value logs a warning and falls back to One.[/*]\n<br />[*][b]HostUsesKeyboard[/b] (default: true) - With PlayerIndex set to One, the host keeps keyboard and mouse and controller One goes to the second screen (the same as vanilla). If you set this to false, set PlayerIndex to Two or higher, or both screens share controller One.[/*]\n<br />[/list]\n<br />Example:\n<br />[code]{\n<br />\u00A0 \"Enabled\": true,\n<br />\u00A0 \"FarmhandName\": \"\",\n<br />\u00A0 \"PlayerIndex\": \"One\",\n<br />\u00A0 \"HostUsesKeyboard\": true\n<br />}[/code]\n<br />[size=4][b]Limitations[/b][/size]\n<br />[list]\n<br />[*]Local split-screen only. It does not start or join online or LAN co-op.[/*]\n<br />[*]Load the save from the main Load menu. Saves loaded through Co-op &gt; Host are skipped, so use the vanilla join menu there.[/*]\n<br />[*]Player 2 needs a gamepad. If no controller is connected for the configured PlayerIndex, split-screen still starts and the SMAPI log shows a warning; connect the controller afterward to control the farmhand.[/*]\n<br />[*]It loads one existing farmhand. It does not create new farmhands; make one through vanilla split-screen first.[/*]\n<br />[*]If the farmhand slot does not appear within about 30 seconds, or the menu lists other farmhands but not the target, the mod logs a warning and leaves the vanilla farmhand menu open so you can pick manually.[/*]\n<br />[/list]\n<br />[size=4][b]Troubleshooting[/b][/size]\n<br />[list]\n<br />[*]Open the SMAPI log and search for \"Auto Split-Screen Co-op\".[/*]\n<br />[*]\"Starting split-screen for farmhand ...\" followed by \"Loading farmhand ... on screen 1.\" means it worked.[/*]\n<br />[*]\"Not starting split-screen: ...\" gives the reason it skipped. Some reasons are logged only at TRACE level.[/*]\n<br />[*]Warnings cover a missing controller, an invalid PlayerIndex, and a farmhand slot that never appeared.[/*]\n<br />[*]When reporting a problem, upload your log at [url=https://smapi.io/log]smapi.io/log[/url] and post the link.[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />The mod uses no Harmony patches and calls only the game's own split-screen and farmhand menu methods.\n<br />\n<br />[size=4][b]Version[/b][/size]\n<br />1.0.0 - Initial release.\n<br />",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55837",
 	"Version": "1",
-	"Updated": "2026-11-21T17:18:37+00:00",
+	"Updated": "2026-11-22T22:07:57+00:00",
 	"Downloads": [
 		{
-			"Id": 192059,
+			"Id": 192261,
 			"Type": "Main",
 			"DisplayName": "AutoSplitScreenCoop 1.1.0",
-			"FileName": "e5/78/11/e5781129-a581-4d61-af5d-a399d188fe90",
+			"FileName": "ea/44/8b/ea448baa-a85c-4739-abe1-6fd448cffa89",
 			"Description": "",
-			"Version": "2",
-			"SizeInBytes": 18626,
-			"Uploaded": "2026-11-21T17:18:37+00:00",
+			"Version": "3",
+			"SizeInBytes": 18632,
+			"Uploaded": "2026-11-22T22:07:57+00:00",
 			"Mods": [
 				{
-					"Id": "JamesKempf.AutoSplitScreenCoop",
+					"Id": "Jomeeze.AutoSplitScreenCoop",
 					"DisplayName": "Auto Split-Screen Co-op",
 					"Type": "Smapi",
 					"RelativePath": "AutoSplitScreenCoop",
 					"Manifest": {
 						"Name": "Auto Split-Screen Co-op",
 						"Description": "When the host loads a save with a local co-op farmhand, automatically opens split-screen and loads that farmhand.",
-						"Author": "James Kempf",
+						"Author": "Jomeeze",
 						"Version": "1.1.0",
 						"MinimumApiVersion": "4.5.0",
 						"EntryDll": "AutoSplitScreenCoop.dll",
 						"Dependencies": [],
 						"UpdateKeys": [],
-						"UniqueId": "JamesKempf.AutoSplitScreenCoop",
+						"UniqueId": "Jomeeze.AutoSplitScreenCoop",
 						"OtherFields": {
 							"$schema": "https://smapi.io/schemas/manifest.json"
 						}
@@ -40,7 +40,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342578747,
+				"Uid": 5596342578949,
 				"CategoryId": 1,
 				"Primary": true
 			}

@@ -1,0 +1,51 @@
+{
+	"Site": "Nexus",
+	"Id": 55869,
+	"Name": "HD Core",
+	"Author": "ParadoxQED",
+	"Description": "[size=4][b]Description[/b][/size]\n<br />[color=#D4D4D8]HDCore is a small framework that lets item icons in Stardew Valley use their [b]full texture resolution[/b] without changing how much space they take on screen.\n<br />Vanilla always draws an item icon from a hard-coded 16×16 slice of its texture and then scales that slice up 4×. A 64×64 texture therefore only ever shows its top-left corner. HDCore changes that single path: it samples the [b]whole texture[/b] for qualifying items, then scales it by \"[/color]64 / texture size\"[color=#d4d4d8], so the icon still occupies exactly one 64px grid cell.[/color]\n<br />[color=#D4D4D8]The result: 16×16 art looks identical to vanilla, 64×64 art is four times sharper, and both can sit side by side without one looking blurry next to the other.\n<br />HDCore does [b]not[/b] modify any vanilla or third-party assets. It is opt-in: a mod must declare a dependency on it and register its own texture ranges through a small API. Anything not registered renders exactly like vanilla.\n<br />Who it is for:[/color]\n<br />\n<br />[list]\n<br />[*][color=#D4D4D8][b]Players[/b] — install it and forget it. There is no config and no in-game menu. Mods that support HD icons simply look sharper.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Mod authors[/b] — a short registration gets your high-resolution icons displayed properly in inventories, shops, crafting menus and on the ground.[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Installation instructions[/b][/size]\n<br />[list=1]\n<br />[*][color=#d4d4d8]Install SMAPI 4.0.0 or later.[/color][/*]\n<br />[*][color=#D4D4D8]Download and unzip HDCore.[/color][/*]\n<br />[*][color=#d4d4d8]Put the \"[/color]HDCore\" folder into your \"Stardew Valley/Mods\" folder.[/*]\n<br />[*][color=#d4d4d8]Launch the game through SMAPI.[/color][/*]\n<br />[/list][color=#D4D4D8]To confirm it loaded, check your SMAPI log for a line containing\u00A0[/color][HDCore][color=#d4d4d8].[/color]\n<br />[color=#D4D4D8]To uninstall, delete the \"[/color]HDCore\"\u00A0[color=#d4d4d8]folder. Mods that relied on it fall back to vanilla rendering automatically, and no save data is touched.[/color]\n<br />\n<br />\n<br />[size=4][b]Main features[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][b]Full-resolution icons, same footprint[/b] — qualifying textures are drawn from the whole image and scaled to a fixed 64px cell, so grid layout never changes.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]One consistent path everywhere[/b] — inventory, shops, crafting menu, BetterCrafting recipe grid, buff icons, held items and dropped-item debris all use the same scaling rule, so HD icons no longer become 4× giants in the world.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Furniture icons[/b] — non-square furniture art is fitted by its longest edge to 64px instead of overflowing its cell.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Weapons[/b] — weapon textures keep a downscaled copy for the 4× held/swing path (so a held weapon stays normal-sized) while the full-resolution original is used for menu icons.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Big craftables[/b] — square big-craftable icons are drawn as a one-cell-wide square anchored to the bottom of their footprint, instead of being stretched to twice their height by the vanilla 1:2 target rectangle.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Large-texture handling[/b] — only square item textures larger than 1024×1024 are area-averaged down to 1024 at load time; anything smaller is kept native.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Opt-in by design[/b] — unregistered mods, multi-frame atlases (\"SpriteIndex != 0[/color][color=#D4D4D8]), 16×16 legacy art and UI textures are never touched.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]Fail-safe patches[/b] — every patch is wrapped individually, so a single failed hook disables only that path and never interrupts the game.[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8][b]Stardew Valley 1.6+[/b][/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]SMAPI 4.0.0+[/b] (required)[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8][b]BetterCrafting[/b] (optional) — detected at runtime, its recipe grid is scaled automatically. HDCore never references its assembly directly.[/color][/*]\n<br />[/list]\n<br />\n<br />[size=4][b]For mod authors[/b][/size]\n<br />HDCore is a framework; nothing is taken over automatically. To have your icons handled:\n<br />[list=1]\n<br />[*]Declare the dependency in your \"manifest.json\":\u00A0\n<br />\"Dependencies\": [\u00A0 { \"UniqueID\": \"ParadoxQED.HDCore\", \"MinimumVersion\": \"1.0.0\", \"IsRequired\": true }][/*]\n<br />[*]Declare a matching interface in your own source. You do [b]not[/b] need to reference \"HDCore.dll\"— SMAPI proxies the API by member name:\u00A0\n<br />public interface IHdCoreApi{\u00A0 \u00A0 bool IsApplied { get; }\u00A0 \u00A0 int IconSize { get; }\u00A0 \u00A0 int IndexedTextures { get; }\u00A0 \u00A0 bool Register(string modUniqueId, string[] textureNamePatterns);}[/*]\n<br />[*]Register from \"GameLaunched\"— querying the API earlier returns null:\u00A0\n<br />var api = Helper.ModRegistry.GetApi&lt;IHdCoreApi&gt;(\"ParadoxQED.HDCore\");api?.Register(ModManifest.UniqueID, new[] { \"Mods/YourAuthor.YourMod/\" });[/*]\n<br />[/list]Registration is rejected when the dependency is not declared in your manifest. Author your icons as [b]square and at least 64×64[/b] (68, 72, 96, 128 all work — they are scaled by actual size). If the source art is rectangular, pad the short edge up to the long one; never stretch it.\n<br />\n<br />\n<br />[size=4][b]Shout outs[/b][/size]\n<br />[list]\n<br />[*][color=#D4D4D8]The Stardew Valley modding community and the SMAPI team, for an API that makes this kind of surgical draw-path change possible.[/color][/*]\n<br />[/list][list]\n<br />[*][color=#D4D4D8]Everyone who reported blurry or oversized icons — those reports shaped the 1.1.0 and 1.2.0 fixes.[/color][/*]\n<br />[/list]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55869",
+	"Version": "1.2.1",
+	"Updated": "2026-11-22T08:39:11+00:00",
+	"Downloads": [
+		{
+			"Id": 192179,
+			"Type": "Main",
+			"DisplayName": "HDCore",
+			"FileName": "61/e9/47/61e947bb-3524-4f7c-be76-965dbd0637d1",
+			"Description": "",
+			"Version": "1.2.1",
+			"SizeInBytes": 34910,
+			"Uploaded": "2026-11-22T08:39:11+00:00",
+			"Mods": [
+				{
+					"Id": "ParadoxQED.HDCore",
+					"DisplayName": "HD 图标引擎 (HDCore)",
+					"Type": "Smapi",
+					"Manifest": {
+						"Name": "HD 图标引擎 (HDCore)",
+						"Description": "高清物品图标引擎：贴图整图取样 + 屏幕上恒定 64px + 制作界面（含 BetterCrafting）同步缩放。只对「方形、边长 ≥64、SpriteIndex = 0」的物品贴图生效。1.2.0：修正建造物（bigCraftable）世界绘制——原版把 16×32 格子塞进 1:2 目标矩形，方形图标会被竖向拉成两倍高；改为一格宽正方形、底边贴格子底部，并补 Object.drawAsProp（放置预览）同口径。1.2.1：加载降采样阈值 256 → 1024（超限也只压到 1024），否则「短边补到长边」恢复出来的 288/359 图标会在加载时被压回 64。",
+						"Author": "ParadoxQED",
+						"Version": "1.2.1",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "HDCore.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "ParadoxQED.HDCore"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342578867,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442557,
+		"UploaderId": 239832959,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}
