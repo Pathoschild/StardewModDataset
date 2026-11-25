@@ -3,20 +3,20 @@
 	"Id": 55970,
 	"Name": "Fish Tank Capacity",
 	"Author": "aedenthorn",
-	"Description": "[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />This is a simple mod that lets you put as much stuff in fish tanks, aquariams, etc.\n<br />\n<br />By default, it removes all limits (technically sets the limit of each category to 2,147,483,647), but you can set limit multipliers or set custom limits in the config.\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Translations should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />\n<br />7000e6e4-2c0d-40e5-b0ef-134c496c17b2",
+	"Description": "[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />This is a simple mod that lets you put as much stuff in fish tanks, aquariams, etc. as you like.\n<br />\n<br />By default, it removes all limits (technically sets the limit of each category to 2,147,483,647), but you can set limit multipliers or set custom limits in the config.\n<br />\n<br />The mod also lets you add items not normally allowed in fish tanks as decorations by holding down the modifier key (default [b]Left Shift[/b]) while adding the item.\n<br />\n<br />Note that fish tanks have a limited number of decoration slots, so there is a maximum to the number of decorations displayed at one time.\n<br />\n<br />\n<br />[u][b][size=5]Custom Decoration Display[/size][/b][/u]\n<br />\n<br />Modders can cause specific objects to display differently from their ordinary appearance, similar to the modified appearances of ordinary fish tank decorations, using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.FishTankCapacity/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"767\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Texture\": \"TileSheets/companions\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"SourceRect\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 64,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 160,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 16\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Frames\": 6,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FrameRate\": 30,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Scale\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />This causes a bat wing to display as an animated parrot when placed in a fish tank. Frames and FramRate should be omitted for non-animated decorations. Frames are taken from the source texture in horizontal order. FrameRate is the number of ticks per frame.\n<br />\n<br />Note that the dictionary value is an array, so you can include multiple entries and the mod will choose one at random, similar to how coral has a random appearance.\n<br />\n<br />The appearance of items ordinarily placable in the vanilla game cannot be modified using this method as their appearance is hardcoded.\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Translations should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />\n<br />7000e6e4-2c0d-40e5-b0ef-134c496c17b2",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55970",
-	"Version": "0.1.0",
-	"Updated": "2026-11-24T02:29:37+00:00",
+	"Version": "0.3.0",
+	"Updated": "2026-11-24T22:14:24+00:00",
 	"Downloads": [
 		{
-			"Id": 192392,
+			"Id": 192495,
 			"Type": "Main",
 			"DisplayName": "FishTankCapacity",
-			"FileName": "85/72/45/857245ea-9766-46f8-9636-fb0291eb822b",
-			"Description": "",
-			"Version": "0.1.0",
-			"SizeInBytes": 18198,
-			"Uploaded": "2026-11-24T02:29:37+00:00",
+			"FileName": "cd/45/26/cd45265b-c099-44e2-a2c4-09cf5c1260bd",
+			"Description": "Changes:<br /><br />Added mod key to add any item as a decoration.<br />Added ability to create custom decoration appearance.",
+			"Version": "0.3.0",
+			"SizeInBytes": 22089,
+			"Uploaded": "2026-11-24T22:14:24+00:00",
 			"Mods": [
 				{
 					"Id": "aedenthorn.FishTankCapacity",
@@ -27,7 +27,7 @@
 						"Name": "Fish Tank Capacity",
 						"Description": "Fish Tank Capacity.",
 						"Author": "aedenthorn",
-						"Version": "0.1.0",
+						"Version": "0.3.0",
 						"MinimumApiVersion": "4.0.0",
 						"EntryDll": "FishTankCapacity.dll",
 						"Dependencies": [],
@@ -39,7 +39,7 @@
 				}
 			],
 			"OtherFields": {
-				"Uid": 5596342579080,
+				"Uid": 5596342579183,
 				"CategoryId": 1,
 				"Primary": true
 			}

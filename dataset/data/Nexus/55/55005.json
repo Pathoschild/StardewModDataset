@@ -1,0 +1,60 @@
+{
+	"Site": "Nexus",
+	"Id": 55005,
+	"Name": "Hard Mode Economy",
+	"Author": "GoldBrickMods",
+	"AuthorLabel": "Gold Brick",
+	"Description": "Once a farm is running well, gold piles up faster than there's anything to spend it on. This mod keeps money tight as your farm grows. Lewis bills you every Monday for a share of last week's earnings, sell prices drop, and unpaid bills turn into debt with interest and, eventually, repossession.\n<br />\n<br />The taxes and sell prices don't change until your net worth reaches 50,000g. From there they ramp up until it hits full strength at 1,000,000g, and it eases off again if you get poorer. Net worth counts your gold plus your buildings, animals and machines, and it's recalculated every morning.\n<br />\n<br />[size=4][b]What it does[/b][/size]\n<br />[list]\n<br />[*]Lewis's Monday bill comes out of your wallet but never takes you below 0g. His letter shows what you earned, the rate and what you still owe.[/*]\n<br />[*]Debt gains 5% interest every Monday.[/*]\n<br />[*]Sell prices drop as your net worth grows.[/*]\n<br />[*]By default, monsters hit harder (set by the preset) and move 15% faster, and mine and Skull Cavern floors get 25% more of them. Their health is unchanged. These monster settings don't depend on your net worth.[/*]\n<br />[*]You pay your debt at the ledger book on Lewis's desk in the Mayor's Office, or at your mailbox when it's empty. The debt ledger shows the debt, the interest and the deadlines, with buttons to pay.[/*]\n<br />[/list]\n<br />[size=4][b]Presets[/b][/size]\n<br />Pick one in the config menu, then change any value you like. The tax and sell numbers are the values at full strength.\n<br />[list]\n<br />[*]Easy: 5% tax, 0.95x sell prices, 1.1x monster damage[/*]\n<br />[*]Normal: 10% tax, 0.85x sell prices, 1.25x monster damage[/*]\n<br />[*]Hard: 20% tax, 0.7x sell prices, 1.5x monster damage[/*]\n<br />[*]Brutal: 35% tax, 0.5x sell prices, 2x monster damage[/*]\n<br />[/list]\n<br />[size=4][b]If you don't pay[/b][/size]\n<br />Lewis writes every 28 days while you owe money, and sooner if things get worse. After 56 days overdue (half a year) the shops refuse to serve you, though catalogues and dressers still work. After 112 days (a full year) the town starts collecting.\n<br />[spoiler]\n<br />The town takes gold first, then chest items (most valuable first), machines, animals, buildings and finally farmhouse upgrades. It never takes the farmhouse itself, cabins, the greenhouse or the shipping bin, and if you're married the farmhouse stays at level 1 or higher. Anything inside a building that gets taken goes to the Lost and Found at Lewis's house. When a farmhouse upgrade is taken, furniture that no longer fits goes there too. Your own bed is moved into the smaller house on the standard farmhouse layouts; if a modded house has no spot for it, it goes to the Lost and Found as well.[/spoiler]\n<br />Shop refusal and repossession can each be turned off in the config.\n<br />\n<br />[size=4][b]Install[/b][/size]\n<br />[list=1]\n<br />[*]Install [url=https://smapi.io]SMAPI[/url] 4.0 or newer.[/*]\n<br />[*]Unzip the mod into your Stardew Valley/Mods folder.[/*]\n<br />[*]Run the game through SMAPI.[/*]\n<br />[/list][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] is optional and gives you an in-game settings page. Without it, edit config.json. Everything can be changed: the net worth range, the interest rate, the deadlines and each part of the mod.\n<br />\n<br />[size=4][b]Compatibility[/b][/size]\n<br />[list]\n<br />[*]Tested on Stardew Valley 1.6.15 with SMAPI 4.5.2 on Windows.[/*]\n<br />[*]Single player is tested. Co-op hasn't been tested: in multiplayer the host's copy runs the taxes and debt, and farmhands who also install the mod get the lower sell prices.[/*]\n<br />[*]Written to work alongside SVE, Ridgeside Village, East Scarp, Automate, Chests Anywhere, Lookup Anything and UI Info Suite 2, though not every combination has been tested. Lookup Anything and UI Info Suite show the lowered sell prices.[/*]\n<br />[/list]\n<br />[size=4][b]Removing it[/b][/size]\n<br />The mod adds no items and keeps its letters out of your save file, so you can remove it mid-save by deleting the HardModeEconomy folder. What already happened stays: repossessed things stay gone, taxes you paid aren't refunded and a downgraded farmhouse stays downgraded.\n<br />\n<br />[size=4][b]Works with my other mods[/b][/size]\n<br />[list]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/55006]Spouse Keeps Routine[/url]: your spouse goes to work and brings home pay that counts toward your weekly earnings.[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/55007]Villager Exile[/url]: its Eviction Notice is sold at the Mayor's Office, priced by this mod's costs.[/*]\n<br />[/list]\n<br />[size=4][b]For modders[/b][/size]\n<br />There's an API for net worth, the current multipliers, debt, household income and adding options to the Mayor's Office. Get it after GameLaunched with helper.ModRegistry.GetApi&lt;IHardModeEconomyApi&gt;(\"Goldm.HardModeEconomy\") and declare only the members you use. The economy runs on the host, so on farmhands the getters return neutral values (multipliers 1, debt 0).\n<br />[spoiler]\n<br />[code]long GetNetWorth();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  // the host's net worth as of this morning\n<br />float GetDifficultyRamp();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  // 0 (vanilla) to 1 (full strength)\n<br />float GetSellPriceMultiplier();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 // current sell multiplier for normal items\n<br />float GetCostMultiplier();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  // 1 / sell multiplier: scale your own fees by it\n<br />float GetTaxRate();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 // current weekly tax rate, 0 to 1\n<br />long GetDebt();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 // unpaid debt including interest\n<br />bool AreShopsRefusing();\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  // shops refusing service over overdue debt\n<br />IReadOnlyList&lt;string&gt; GetRepossessedToday();\n<br />void AddIncome(int amount, string source, bool addGold);\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  // taxable household income\n<br />void AddIncome(int amount, string source, bool addGold, long farmerId);\n<br />void AddMayorsOfficeEntry(string modId, string entryId, Func&lt;string&gt; label, Func&lt;bool&gt; isAvailable, Action onSelected);\n<br />void RemoveMayorsOfficeEntry(string modId, string entryId);\n<br />void OpenMayorsOffice();[/code][/spoiler]\n<br />\n<br />Report bugs on the Bugs tab. Thanks for the endorsements, and for any tips on [url=https://ko-fi.com/goldbrick]Ko-fi[/url].",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55005",
+	"Version": "1.0.0",
+	"Updated": "2026-11-24T21:22:18+00:00",
+	"Downloads": [
+		{
+			"Id": 192486,
+			"Type": "Main",
+			"DisplayName": "Hard Mode Economy",
+			"FileName": "70/4b/e9/704be9aa-4313-440e-8f23-59ecc41c1270",
+			"Description": "A harder economy: taxes, debt, repossession",
+			"Version": "1.0.0",
+			"SizeInBytes": 69062,
+			"Uploaded": "2026-11-24T21:22:18+00:00",
+			"Mods": [
+				{
+					"Id": "Goldm.HardModeEconomy",
+					"DisplayName": "Hard Mode Economy",
+					"Type": "Smapi",
+					"RelativePath": "HardModeEconomy",
+					"Manifest": {
+						"Name": "Hard Mode Economy",
+						"Description": "Keeps the late game challenging: taxes and sell prices that scale with your net worth, debt with interest and repossession, and tougher, faster, more numerous monsters. Every feature is configurable.",
+						"Author": "Gold Brick",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "HardModeEconomy.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:55005"
+						],
+						"UniqueId": "Goldm.HardModeEconomy"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579174,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342441693,
+		"UploaderId": 92933873,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

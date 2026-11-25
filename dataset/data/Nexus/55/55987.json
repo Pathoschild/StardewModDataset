@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 55987,
+	"Name": "(AAC) Auto Animation Cancel",
+	"Author": "xhvsh",
+	"Description": "[size=5][b](AAC) Auto Animation Cancel[/b][/size]\n<br />\n<br />Cancels tool animations the moment the hit lands, allowing faster consecutive swings with a single keybind. Built on the game's own tool logic, so targeting, facing direction and tool behaviour match vanilla.\n<br />\n<br />[size=4][b]Features[/b][/size]\n<br />[list]\n<br />[*][b]Hit-frame cancel[/b] - the swing is cut on the tick right after the tool's hit registers, never before. No lost hits.[/*]\n<br />[*][b]Input buffering[/b] - a press made mid-swing is queued and fires immediately after the cancel.[/*]\n<br />[*][b]Target checks[/b] - the keybind only swings when the aimed tile has something the tool can affect. Empty tiles, placed objects and invalid targets are ignored.[/*]\n<br />[*][b]No ghost swings[/b] - the cancel does not trigger the game's extra follow-up animation.[/*]\n<br />[*][b]Vanilla targeting[/b] - aims at the cursor when visible, otherwise at the tile you're facing.[/*]\n<br />[*][b]Client-side[/b] - works in multiplayer without other players installing it.[/*]\n<br />[/list]\n<br />[size=4][b]Target checks[/b][/size]\n<br />[list]\n<br />[*][b]Axe[/b] - trees, fruit trees, stumps (while falling too), destroyable bushes, twigs, weeds, giant crops, mine containers. Large stumps and hollow logs only with a strong enough axe.[/*]\n<br />[*][b]Pickaxe[/b] - stones, ore and gem nodes, weeds, mine containers, empty tilled soil. Boulders and meteorites only with a strong enough pickaxe. Machines, chests and other placed objects are never hit.[/*]\n<br />[*][b]Hoe[/b] - untilled diggable ground, artifact spots, seed spots, ginger.[/*]\n<br />[*][b]Watering can[/b] - dry tilled soil, dry garden pots, empty pet bowls, refilling at water when not full.[/*]\n<br />[/list]Anything else still works with the normal tool button.\n<br />\n<br />[size=4][b]Notes[/b][/size]\n<br />[list]\n<br />[*]The keybind always performs an uncharged swing. Charging upgraded tools stays on the normal tool button.[/*]\n<br />[*]Melee weapons: the keybind acts as a regular attack click.[/*]\n<br />[*]Scythe, fishing rod, slingshot and other tools are not affected.[/*]\n<br />[/list]\n<br />[size=4][b]Configuration[/b][/size]\n<br />Editable in [i]config.json[/i] or in-game via Generic Mod Config Menu.\n<br />[list]\n<br />[*][b]CancelKey[/b] - keybind (default: Space)[/*]\n<br />[*][b]GuardMisclicks[/b] - enable target checks (default: true)[/*]\n<br />[*][b]BufferInput[/b] - queue presses made mid-swing (default: true)[/*]\n<br />[*][b]PostHitDelayMs[/b] - extra delay before cancelling, in ms (default: 0)[/*]\n<br />[*][b]EnableAxe / EnablePickaxe / EnableHoe / EnableWateringCan / EnableMeleeWeapons[/b] - per-tool toggles[/*]\n<br />[/list]\n<br />[size=4][b]Requirements[/b][/size]\n<br />[list]\n<br />[*]Stardew Valley 1.6+[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/2400]SMAPI[/url] 4.0+[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional)[/*]\n<br />[/list]\n<br />[size=4][b]Installation[/b][/size]\n<br />[list=1]\n<br />[*]Install SMAPI.[/*]\n<br />[*]Extract the zip into [i]Stardew Valley/Mods[/i].[/*]\n<br />[*]Run the game through SMAPI.[/*]\n<br />[/list]\n<br />[size=4][b]Compatibility[/b][/size]\n<br />Do not use alongside other animation cancel mods.",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55987",
+	"Version": "1",
+	"Updated": "2026-11-24T18:14:15+00:00",
+	"Downloads": [
+		{
+			"Id": 192464,
+			"Type": "Main",
+			"DisplayName": "AutoAnimationCancel 1.0.0",
+			"FileName": "f2/8f/cf/f28fcfd3-3396-48af-9d50-b896bb4d737d",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 18897,
+			"Uploaded": "2026-11-24T18:14:15+00:00",
+			"Mods": [
+				{
+					"Id": "xhvsh.AutoAnimationCancel",
+					"DisplayName": "(AAC) Auto Animation Cancel",
+					"Type": "Smapi",
+					"RelativePath": "AutoAnimationCancel",
+					"Manifest": {
+						"Name": "(AAC) Auto Animation Cancel",
+						"Description": "Press Space to swing; the follow-through is cancelled the instant the hit lands. Misclick guard, no ghost swings. Client-side.",
+						"Author": "xhvsh",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "AutoAnimationCancel.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "xhvsh.AutoAnimationCancel"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579152,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442675,
+		"UploaderId": 196613888,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}
