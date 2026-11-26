@@ -1,0 +1,53 @@
+{
+	"Site": "Nexus",
+	"Id": 56048,
+	"Name": "Super Star Valley - Music Replacer",
+	"Author": "Stacked4ths",
+	"Description": "[color=#b6b6b6][size=4][u][i][b]NOTE: [/b][/i]This mod is incomplete. Most tracks are replaced, but it is still a work in progress. Send in any song suggestions in the comments. I am also including instructions + a video tutorial on how to add to this mod if you want to![/u][/size][/color]\n<br />\n<br />[size=4][b]Description[/b][/size]\n<br />[size=3][color=#D4D4D8]\u00A0 \u00A0This mod replaces the music of Stardew Valley with music from the classic era of 3D Mario. I am a huge fan of the Sunshine, Galaxy, and 3D World games, and I also love Stardew. I couldn't find any up-to-date music replacement frameworks, so here I am with this. Instructions for adding on to it will be below.[/color][/size]\n<br />\n<br />[size=4][b]Installation /\u00A0Requirements[/b][/size]\n<br />[size=3][color=#D4D4D8]\u00A0 \u00A0This mod uses Content Patcher, so you will have to have that first. Otherwise, it shouldn't interfere with much else.[/color][/size]\n<br />\n<br />[b][color=#ff00ff][size=5]How to edit the music yourself:[/size][/color][/b]\n<br />[size=4]\u00A0 \u00A0Because of the relatively simple nature of this mod, it is pretty easy to change to your liking. Here's how.[/size]\n<br />\n<br />1. Go into the mod folder and open the content.json. It should look like this.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/56048/56048-1795658440-15080456.png[/img]\n<br />\n<br />^\u00A0\n<br />2. Choose which song you'd like to replace and [color=#ffd966]find its [u]sound ID/cue ID[/u][/color] (ID that triggers the song to play) using this list: [url=https://stardewvalleywiki.com/Modding:Audio#Track_list]https://stardewvalleywiki.com/Modding:Audio#Track_list[/url]\u00A0\n<br />\n<br />3. If the sound is already replaced in my mod, search for that sound ID in the content.json. From there, you can use this format to replace the sound:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/56048/56048-1795658440-580390260.png[/img]\n<br />\n<br />^\n<br />4. In order to replace the sound with your own music, you will need to [color=#ffd966]get your own audio file.[/color] I personally use youtube or this website:\u00A0[url=https://downloads.khinsider.com/]https://downloads.khinsider.com/[/url]\u00A0\n<br />Then, I use an audio editing software (Audacity) to [u][color=#ffd966]convert the sound file to a .ogg file![/color][/u]\u00A0I also use the [i]normalize loudness[/i]\u00A0function and bring the percieved loudness down to about -17.5 LUFs. You don't have to do this, but it helps the track blend in better.\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/56048/56048-1795659160-487951559.png[/img]\u00A0 \u00A0 \u00A0 &lt;--- (Loudness Normalization in Audacity)\n<br />\n<br />5. After you have your .ogg file, name it something easy to type and [u][color=#ffd966]put it into this mod's \"assets\" folder.[/color][/u]\n<br />\n<br />6. Back in the content.json, reroute the file path to your own .ogg file by [color=#ffd966]replacing the file name[/color] for that particular sound ID.\u00A0\n<br />\n<br />As seen below:\n<br />\n<br />[img]https://staticdelivery.nexusmods.com/mods/1303/images/56048/56048-1795658440-2100471367.png[/img]\n<br />\n<br />\u00A0 \u00A0And that's it! Unless...\n<br />\n<br />[color=#6aa84f][size=5][b][i]What if the song I want to replace isn't already in the content.json???[/i][/b][/size][/color]\n<br />[color=#6aa84f][size=5][b][i]+ VIDEO TUTORIAL[/i][/b][/size][/color]\n<br />\n<br />[color=#ffffff][size=4]\u00A0 \u00A0 You will need to complete steps 1, 2, 4, and 5, then [u]add your own entry to the json using this template and tutorial:[/u][/size][/color]\n<br />\n<br />[size=4][color=#6d9eeb]\"SOUNDID\":{\n<br />\"ID\":\"SOUNDID\",\n<br />\"Category\":\"Music\",\n<br />\"FilePaths\": [ \"{{AbsoluteFilePath: assets/FILENAME.ogg}}\" ],\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\"StreamedVorbis\": true,\n<br />\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\"Looped\": true\n<br />},[/color][/size]\n<br />\n<br />[color=#ffffff][size=4][u][youtube]2XNzx2I9R6U[/youtube][/u][/size][/color]\n<br />\n<br />[color=#ffffff][size=4][u]Please comment\u00A0if you have any questions! This mod is a WIP but it is going to be completed eventually.[/u][/size][/color]\n<br />",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/56048",
+	"Version": "1",
+	"Updated": "2026-11-26T03:14:54+00:00",
+	"Downloads": [
+		{
+			"Id": 192654,
+			"Type": "Main",
+			"DisplayName": "Super Star Valley",
+			"FileName": "7d/f6/9a/7df69ac6-cc46-4952-a6a5-f64572daf9b0",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 100135077,
+			"Uploaded": "2026-11-26T03:14:54+00:00",
+			"Mods": [
+				{
+					"Id": "Stacked4ths.SuperStarValley",
+					"DisplayName": "Super Star Valley",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] SuperStarValley",
+					"Manifest": {
+						"Name": "Super Star Valley",
+						"Description": "Changes Stardew's soundtrack to music from the classic 3D era of Super Mario.",
+						"Author": "Stacked4ths",
+						"Version": "1.0.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher"
+						},
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "Stacked4ths.SuperStarValley"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579342,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442736,
+		"UploaderId": 218905603,
+		"CategoryId": 12,
+		"Adult": false
+	}
+}
