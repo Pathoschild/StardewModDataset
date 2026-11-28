@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 56091,
+	"Name": "Luck Forecaster",
+	"Author": "Lorrain233",
+	"Description": "[center][size=6][b]运气推算[/b][/size]\n<br />[i]星露谷的每日运气不是随机的，它是由你今天走的步数决定的。[/i][/center]\n<br />\n<br />[size=5][b]核心机制[/b][/size]\n<br />\n<br />星露谷每天换天时，会拿三个值生成随机种子：\n<br />\n<br />[list]\n<br />[*]存档编号[/*]\n<br />[*]已经过的天数[/*]\n<br />[*][b]你走过的步数[/b][/*]\n<br />[/list]前两个你改不了，第三个随便走。\n<br />\n<br />种子生成出来之后，第一个被抽出来的就是 [b]每日运气[/b]，范围 −0.1 到 +0.1，精确到小数点后三位。\n<br />\n<br />也就是说：[b]你走的每一步，都在改明天的运气。[/b]而且这个数是完全可预测的。\n<br />\n<br />[size=5][b]这个 MOD 做什么[/b][/size]\n<br />\n<br />它把「按你现在的步数，明天运气是多少」实时算出来摆在屏幕上，所以你睡之前就知道自己还该走多少步。\n<br />\n<br />[size=5][b]屏幕上显示什么[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]步数[/b] —— 当前累计步数[/*]\n<br />[*][b]今日运气[/b] —— 真实的每日运气（和右上角那栏一致）[/*]\n<br />[*][b]明日运气[/b] —— 按当前步数算出来的[/*]\n<br />[*][b]明日天气[/b] —— 顺带算出来的，见下[/*]\n<br />[*][b]C 值[/b] —— 内部精度标记，正常是 7[/*]\n<br />[/list][size=5][b]关于天气（附带功能）[/b][/size]\n<br />\n<br />运气之外，同一颗种子还会顺带影响明天的天气变体：\n<br />\n<br />[list]\n<br />[*]春 / 秋 —— 晴天 vs 大风天[/*]\n<br />[*]夏 —— 雷阵雨 vs 普通雨（前提是那天本来就下雨）[/*]\n<br />[/list]但要说清楚：[b]步数决定不了下不下雨[/b]。雨是另一套随机定的，走多少步都改不动。\n<br />\n<br />[size=5][b]快捷键[/b][/size]\n<br />\n<br />[list]\n<br />[*][b]F8[/b] —— 开 / 关\u00A0 主面板[/*]\n<br />[*][b]F5[/b] —— 开 / 关\u00A0 运气档位对照表[/*]\n<br />[/list]开关状态和面板位置都会自动保存。\n<br />\n<br />[size=5][b]怎么用[/b][/size]\n<br />\n<br />[list=1]\n<br />[*]先看第 3 行，知道当前步数会把明天的运气推到哪一档[/*]\n<br />[*]在农场连续走（只有连续移动才算步数，来回蹭不算）[/*]\n<br />[*]走到目标数字后，改成一格一格点着走回床边，路上不再加[/*]\n<br />[*]睡觉。第二天早上第 3 行会变成第 2 行，对不对一眼就知道[/*]\n<br />[/list][size=5][b]运行环境[/b][/size]\n<br />\n<br />[list]\n<br />[*][url=https://smapi.io/]SMAPI 4.0.0[/url] 或更高[/*]\n<br />[*]星露谷 1.6[/*]\n<br />[/list][size=5][b]安装[/b][/size]\n<br />\n<br />解压后把 [b]WeatherRng[/b] 文件夹整个放进 [b]Mods[/b] 目录。包内附中文使用说明。",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/56091",
+	"Version": "1",
+	"Updated": "2026-11-27T06:44:36+00:00",
+	"Downloads": [
+		{
+			"Id": 192766,
+			"Type": "Main",
+			"DisplayName": "Luck Forecaster 1.0",
+			"FileName": "b4/06/c8/b406c841-9a2c-46c9-9ced-d370b0f0a7f8",
+			"Description": "",
+			"Version": "1",
+			"SizeInBytes": 17830,
+			"Uploaded": "2026-11-27T06:44:36+00:00",
+			"Mods": [
+				{
+					"Id": "YG.WeatherRngProbe",
+					"DisplayName": "运气推算",
+					"Type": "Smapi",
+					"RelativePath": "运气推算",
+					"Manifest": {
+						"Name": "运气推算",
+						"Description": "用步数推算每日运气：实时显示今日运气，以及按当前步数算出的明日运气，顺带显示明日天气。",
+						"Author": "洛兰",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "WeatherRng.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "YG.WeatherRngProbe"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579454,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442779,
+		"UploaderId": 289028804,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

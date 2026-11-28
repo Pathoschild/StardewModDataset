@@ -1,0 +1,57 @@
+{
+	"Site": "Nexus",
+	"Id": 56116,
+	"Name": "Passing Greetings",
+	"Author": "SEDUS69",
+	"Description": "[b][color=#00ff00][size=5]Automatically completes the normal daily NPC talk when you walk close to a villager. No button press and no dialogue window: just walk by, and the day's friendship points are awarded.[/size][/color][/b]\n<br />[heading][size=5]Features[/size][/heading]\n<br />[list]\n<br />[*]Completes the daily talk (friendship points and the \"talked today\" flag) when you come within range of an NPC.[/*]\n<br />[*]Triggers once per NPC per day, like vanilla talking.[/*]\n<br />[*]Optional speech bubble above the NPC, with configurable text and delay.[/*]\n<br />[*]Fully configurable in-game through Generic Mod Config Menu (optional).[/*]\n<br />[/list][heading]Requirements[/heading]\n<br />[list]\n<br />[*]Stardew Valley 1.6 (1.6.15 or later)[/*]\n<br />[*][url=https://smapi.io/]SMAPI[/url] 4.5.2 or later[/*]\n<br />[*][url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] (optional, for in-game settings)[/*]\n<br />[/list][heading]Installation[/heading]\n<br />[center][/center]\n<br />[list=1]\n<br />[*][size=2][url=https://smapi.io/]Install the latest version of SMAPI[/url].[/size][/*]\n<br />[*][size=2][i](Optional)[/i] Install [url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url] to configure the mod.[/size][/*]\n<br />[*][size=2]Unzip the mod folder into Stardew Valley&#92;Mods.[/size][/*]\n<br />[*][size=2]Run the game using SMAPI.[/size][/*]\n<br />[/list][heading]Configuration[/heading]\n<br />With Generic Mod Config Menu installed, open the mod's settings page from the title screen or the in-game Options menu. Changes apply immediately after saving; no restart is needed.\n<br />[table][tr][th]Setting[/th]\n<br />[th]Range[/th]\n<br />[th]Default[/th]\n<br />[th]Description[/th]\n<br />[/tr]\n<br />[tr][td]Enable automatic daily chat[/td]\n<br />[td]on / off[/td]\n<br />[td]on[/td]\n<br />[td]Turns the feature on or off.[/td]\n<br />[/tr]\n<br />[tr][td]Detection radius[/td]\n<br />[td]0.5–10 tiles[/td]\n<br />[td]2[/td]\n<br />[td]Maximum distance between you and an NPC.[/td]\n<br />[/tr]\n<br />[tr][td]Detection frequency[/td]\n<br />[td]1–120 ticks[/td]\n<br />[td]15[/td]\n<br />[td]How often nearby NPCs are checked. Lower reacts faster but checks more often.[/td]\n<br />[/tr]\n<br />[tr][td]Friendship points per chat[/td]\n<br />[td]0–1000[/td]\n<br />[td]20[/td]\n<br />[td]20 matches vanilla talking. Higher values act as a cheat.[/td]\n<br />[/tr]\n<br />[tr][td]Show NPC response[/td]\n<br />[td]on / off[/td]\n<br />[td]on[/td]\n<br />[td]Shows a speech bubble above the NPC.[/td]\n<br />[/tr]\n<br />[tr][td]NPC response[/td]\n<br />[td]up to 30 characters[/td]\n<br />[td]\"Hey!\"[/td]\n<br />[td]Text shown above the NPC. Longer text is shortened when saved.[/td]\n<br />[/tr]\n<br />[tr][td]NPC response delay[/td]\n<br />[td]0–120 ticks[/td]\n<br />[td]18[/td]\n<br />[td]Delay before the bubble appears. 60 ticks is about one second.[/td]\n<br />[/tr]\n<br />[/table]Editing config.json\n<br />[url=https://github.com/Sedus/stardew-passing-greetings/blob/main/README.md#editing-configjson][/url]\n<br />Without Generic Mod Config Menu, edit\n<br />[code]config.json[/code]in the mod folder (it is created the first time you run the game).\n<br />[code]config.json[/code]is read at startup, so restart the game after editing it. Out-of-range values are clamped to the limits above, and the response text is trimmed and shortened to 30 characters.\n<br />[heading]How it works[/heading]\n<br />[list]\n<br />[*]Checks nearby NPCs at the configured interval, using straight-line distance in tiles.[/*]\n<br />[*]Only runs while you are free to act: it pauses during menus, events, cutscenes, and minigames.[/*]\n<br />[*]Skips hidden NPCs and NPCs you can't normally talk to.[/*]\n<br />[*]Ignores NPCs you haven't met yet (no friendship record). Talk to them normally once first.[/*]\n<br />[*]Does not open dialogue or simulate dialogue choices. It completes the daily-talk friendship interaction only, so dialogue-based quests and event scripts still need a real conversation.[/*]\n<br />[/list][heading]Known limitations[/heading]\n<br />[list]\n<br />[*]Not tested in multiplayer or split-screen.[/*]\n<br />[*]Friendship caps still apply (for example, the cap for NPCs you aren't dating or married to).[/*]\n<br />[/list][url=https://github.com/Sedus/stardew-passing-greetings][size=6]GitHub[/size][/url]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/56116",
+	"Version": "1.0.0",
+	"Updated": "2026-11-28T00:00:12+00:00",
+	"Downloads": [
+		{
+			"Id": 192850,
+			"Type": "Main",
+			"DisplayName": "PassingGreetings 1.0.0",
+			"FileName": "3b/74/69/3b746936-b948-4ea1-ab84-3c32f1e62b96",
+			"Description": "",
+			"Version": "1.0.0",
+			"SizeInBytes": 15543,
+			"Uploaded": "2026-11-28T00:00:12+00:00",
+			"Mods": [
+				{
+					"Id": "Sedus.Passing.Greetings",
+					"DisplayName": "Passing Greetings",
+					"Type": "Smapi",
+					"RelativePath": "PassingGreetings",
+					"Manifest": {
+						"Name": "Passing Greetings",
+						"Description": "Automatically completes daily NPC conversations when you walk nearby, with in-game configuration support.",
+						"Author": "Sedus",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.5.2",
+						"EntryDll": "PassingGreetings.dll",
+						"Dependencies": [
+							{
+								"UniqueId": "spacechase0.GenericModConfigMenu",
+								"IsRequired": false
+							}
+						],
+						"UpdateKeys": [],
+						"UniqueId": "Sedus.Passing.Greetings"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579538,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442804,
+		"UploaderId": 88717333,
+		"CategoryId": 3,
+		"Adult": false
+	}
+}

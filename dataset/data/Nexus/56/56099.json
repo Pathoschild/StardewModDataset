@@ -1,0 +1,52 @@
+{
+	"Site": "Nexus",
+	"Id": 56099,
+	"Name": "Spouse Night Dialogue Fix",
+	"Author": "ViaScrybe",
+	"Description": "[b]About:\u00A0[/b]\n<br />\n<br />This is a simple mod that changes the way that spouse dialogue loads in the evening. Currently, in 1.6, if a spouse comes home after 6:00 PM, their evening dialogue will not load correctly. This can severely impact certain mods such as RRRR (where Magnus comes home late four days of the week, and non-evening dialogue is fairly distinctive, breaking immersion.) This mod fixes that so that all spouses can share their nighttime thoughts.\u00A0\n<br />\n<br />In more technical terms: In vanilla, the game checks at 6:00 PM whether the spouse is at the farmhouse. If they are, it loads their night dialogue. If they are not, it does not load their night dialogue, and will not for the rest of the night. This mod tries to change that behavior so that after 6:00 PM, the game will check every 10 minutes whether the spouse is home and whether dialogue has been loaded already that day. Once that says \"Spouse is home and hasn't talked yet\", the game will add a flag that says \"dialogue was loaded on [that day's date]\" to the NPC's data and will load a random dialogue seeded from 6:00 PM (as so that the time of day that the spouse comes home won't influence RNG.)\u00A0\n<br />\n<br />[b]I do not believe this is an issue in versions outside of 1.6.\u00A0[/b]I don't think it would be fully broken on 1.5 or below, but I would not reccomend installing it.\u00A0\n<br />\n<br />\n<br />\n<br />[b]Installation:[/b]\n<br />\n<br />This is like most Stardew mods: Download the ZIP, extract the contents into your Stardew Valley/Mods folder. After that you're good to go! (You will need SMAPI, but I assume if you're using this, you have that already.)\u00A0\n<br />\n<br />\n<br />\n<br />[b]Compatibility/other notes:\u00A0[/b]\n<br />\n<br />This *should* be compatible with polyamory mods. The check is per-spouse, so it should load their night dialogues separately with the same system. \n<br />\n<br />I don't 100% trust this to be compatible with multiplayer (because of the NPC data flags and the way they're stored), but if you want to give it a shot, feel free to let me know how it goes.\n<br />\n<br />This was designed to work with RRRR but should work with any spouse, modded or not! (Although many spouses won't need it to begin with.\n<br />\n<br />[color=#D4D4D8]Thank you to Conchyy for the idea! [/color]",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/56099",
+	"Version": "1.0",
+	"Updated": "2026-11-27T12:17:40+00:00",
+	"Downloads": [
+		{
+			"Id": 192779,
+			"Type": "Main",
+			"DisplayName": "SpouseNightDialogueFix",
+			"FileName": "39/88/a4/3988a4e6-305e-4864-b6ad-8acb0040cbb4",
+			"Description": "",
+			"Version": "1.0",
+			"SizeInBytes": 10909,
+			"Uploaded": "2026-11-27T12:17:40+00:00",
+			"Mods": [
+				{
+					"Id": "viascrybe.spousenightdialoguefix",
+					"DisplayName": "Nighttime Marriage Dialogue Fix",
+					"Type": "Smapi",
+					"RelativePath": "SpouseNightDialogueFix",
+					"Manifest": {
+						"Name": "Nighttime Marriage Dialogue Fix",
+						"Description": "Changes the loading behavior for nighttime spouse dialogue so that it still loads for spouses that come home after 6:00 PM.",
+						"Author": "viascrybe",
+						"Version": "1.0.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "SpouseNightDialogueFix.dll",
+						"Dependencies": [],
+						"UpdateKeys": [],
+						"UniqueId": "viascrybe.spousenightdialoguefix"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579467,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442787,
+		"UploaderId": 176125509,
+		"CategoryId": 2,
+		"Adult": false
+	}
+}
