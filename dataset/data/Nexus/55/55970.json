@@ -3,15 +3,15 @@
 	"Id": 55970,
 	"Name": "Fish Tank Capacity",
 	"Author": "aedenthorn",
-	"Description": "[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />This is a simple mod that lets you put as much stuff in fish tanks, aquariams, etc. as you like.\n<br />\n<br />By default, it removes all limits (technically sets the limit of each category to 2,147,483,647), but you can set limit multipliers or set custom limits in the config.\n<br />\n<br />The mod also lets you add items not normally allowed in fish tanks as decorations by holding down the modifier key (default [b]Left Shift[/b]) while adding the item.\n<br />\n<br />Note that fish tanks have a limited number of decoration slots, so there is a maximum to the number of decorations displayed at one time.\n<br />\n<br />\n<br />[u][b][size=5]Custom Decoration Display[/size][/b][/u]\n<br />\n<br />Modders can cause specific objects to display differently from their ordinary appearance, similar to the modified appearances of ordinary fish tank decorations, using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.FishTankCapacity/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"767\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Texture\": \"TileSheets/companions\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"SourceRect\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 64,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 160,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 16\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Frames\": 6,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FrameRate\": 30,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Scale\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />This causes a bat wing to display as an animated parrot when placed in a fish tank. Frames and FramRate should be omitted for non-animated decorations. Frames are taken from the source texture in horizontal order. FrameRate is the number of ticks per frame.\n<br />\n<br />Note that the dictionary value is an array, so you can include multiple entries and the mod will choose one at random, similar to how coral has a random appearance.\n<br />\n<br />The appearance of items ordinarily placable in the vanilla game can be modified using this method as well.\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Translations should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />\n<br />7000e6e4-2c0d-40e5-b0ef-134c496c17b2",
+	"Description": "[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />This is a simple mod that lets you put as much stuff in fish tanks, aquariams, etc. as you like.\n<br />\n<br />By default, it removes all limits (technically sets the limit of each category to 2,147,483,647), but you can set limit multipliers or set custom limits in the config.\n<br />\n<br />The mod also lets you add items not normally allowed in fish tanks as decorations by holding down the modifier key (default [b]Left Shift[/b]) while adding the item.\n<br />\n<br />Note that fish tanks have a limited number of decoration slots, so there is a maximum to the number of decorations displayed at one time.\n<br />\n<br />Also check out [b][url=https://www.nexusmods.com/stardewvalley/mods/56087]Fish Tank Wallpaper[/url][/b] for adding wallpaper to fish tanks.\n<br />\n<br />[u][b][size=5]Custom Decoration Display[/size][/b][/u]\n<br />\n<br />Modders can cause specific objects to display differently from their ordinary appearance, similar to the modified appearances of ordinary fish tank decorations, using Content Patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />{\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"Load\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.SeaweedDecorationCP/seaweed\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FromFile\": \"assets/seaweed.png\",\n<br />},\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.FishTankCapacity/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"152\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Texture\": \"aedenthorn.SeaweedDecorationCP/seaweed\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"SourceRect\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 0,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 16,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 16\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 },\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Frames\": 4,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"FrameRate\": 120,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Scale\": 4\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />This causes seaweed to display using a custom animated sprite when placed in a fish tank. I've included a pack using the above code in the optional files if you want to use it as a template.\u00A0\n<br />\n<br />Frames and FrameRate should be omitted for non-animated decorations. Frames are taken from the source texture in horizontal order. FrameRate is the number of ticks per frame.\n<br />\n<br />Note that the dictionary value is an array, so you can include multiple entries and the mod will choose one at random, similar to how seaweed ordinarily\u00A0has a random appearance taken from three different sprites.\n<br />\n<br />The above method works for items not ordinarily placeable in fish tanks as well.\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Translations should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />\n<br />7000e6e4-2c0d-40e5-b0ef-134c496c17b2",
 	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/55970",
-	"Version": "0.3.0",
-	"Updated": "2026-11-26T02:58:58+00:00",
+	"Version": "0.1.0",
+	"Updated": "2026-11-26T07:31:54+00:00",
 	"Downloads": [
 		{
 			"Id": 192651,
 			"Type": "Main",
-			"DisplayName": "FishTankCapacity",
+			"DisplayName": "Fish Tank Capacity",
 			"FileName": "45/ac/60/45ac6097-e4ef-4efd-94e0-991c97c3c99d",
 			"Description": "Changes:<br /><br />Added mod key to add any item as a decoration.<br />Added ability to create custom decoration appearance.<br />Added ability to change vanilla decoration sprites.",
 			"Version": "0.4.1",
@@ -42,6 +42,55 @@
 				"Uid": 5596342579339,
 				"CategoryId": 1,
 				"Primary": true
+			}
+		},
+		{
+			"Id": 192665,
+			"Type": "Optional",
+			"DisplayName": "Seaweed Decoration",
+			"FileName": "15/07/d2/1507d2a1-e3bc-4a7a-a1a3-b69a37287c87",
+			"Description": "An example of a custom decoration appearance, making seaweed animated.",
+			"Version": "0.1.0",
+			"SizeInBytes": 2016,
+			"Uploaded": "2026-11-26T07:31:54+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.SeaweedDecorationCP",
+					"DisplayName": "Seaweed Decoration",
+					"Type": "ContentPack",
+					"RelativePath": "[CP] [FTC] Seaweed Decoration",
+					"Manifest": {
+						"Name": "Seaweed Decoration",
+						"Description": "Seaweed Decoration.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"MinimumGameVersion": "1.6.0",
+						"ContentPackFor": {
+							"UniqueId": "Pathoschild.ContentPatcher",
+							"MinimumVersion": "2.4.0"
+						},
+						"Dependencies": [
+							{
+								"UniqueId": "Pathoschild.ContentPatcher",
+								"IsRequired": true
+							},
+							{
+								"UniqueId": "aedenthorn.FishTankCapacity",
+								"IsRequired": true
+							}
+						],
+						"UpdateKeys": [
+							"Nexus:"
+						],
+						"UniqueId": "aedenthorn.SeaweedDecorationCP"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579353,
+				"CategoryId": 3,
+				"Primary": false
 			}
 		}
 	],

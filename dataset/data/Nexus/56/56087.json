@@ -1,0 +1,54 @@
+{
+	"Site": "Nexus",
+	"Id": 56087,
+	"Name": "Fish Tank Wallpaper",
+	"Author": "aedenthorn",
+	"Description": "[u][b][size=5]Overview[/size][/b][/u]\n<br />\n<br />Drop wallpaper into fish tanks just as you would any other item. The back glass pane of the tank will be replaced with the wallpaper..\n<br />\n<br />Fish tank wallpaper is displayed the same size as ordinary wallpaper, which means it usually doesn't show the entire height of the wallpaper sprite.\u00A0\n<br />\n<br />To adjust the portion of the wallpaper displayed, hover over the tank and hold down the up or down adjust keys (default [b]Up[/b] and [b]Down[/b] keys).\n<br />\n<br />Also check out\u00A0[b][url=https://www.nexusmods.com/stardewvalley/mods/55970]Fish Tank Capacity[/url][/b] for adding custom decorations to fish tanks.\n<br />\n<br />[u][b][size=5]Custom Fish Tanks[/size][/b][/u]\n<br />\n<br />In order for fish tanks to display wallpaper, they must be added to this mod's dictionary using content patcher, e.g.:\n<br />\n<br />[code]{\n<br />\u00A0 \u00A0 \"Format\": \"2.9.0\",\n<br />\u00A0 \u00A0 \"Changes\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Action\": \"EditData\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Target\": \"aedenthorn.FishTankWallpaper/dict\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Entries\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"MyFishTank\": [\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Texture\": \"PathToTextureWithoutBackGlass\",\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"WallpaperBounds\": {\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"X\": 4,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Y\": 10,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Width\": 104,\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \"Height\": 19\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 ]\n<br />\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 \u00A0 \u00A0 }\n<br />\u00A0 \u00A0 ]\n<br />}[/code]\n<br />The texture should be a duplicate of the fish tank's main texture with the back pane of glass removed. You can see how this is done in the mod's assets/fishtanks.png file.\n<br />\n<br />The bounds refers to the portion of the sprite that should contain the wallpaper.\n<br />\n<br />\n<br />[u][b][size=5]Technical[/size][/b][/u]\n<br />\n<br />Requires SMAPI.\n<br />\n<br />Implements a\u00A0[url=https://www.nexusmods.com/stardewvalley/mods/5098]Generic Mod Config Menu[/url]\u00A0interface to change config settings in-game.\n<br />\n<br />Translations should use config variable names as the keys, adding .Desc to the end of the key for hover descriptions.\n<br />\n<br />Code is at [url=https://github.com/aedenthorn/StardewValleyMods]https://github.com/aedenthorn/StardewValleyMods[/url].\n<br />\n<br />A list of all my mods for Stardew Valley is available at [url=https://www.nexusmods.com/stardewvalley/articles/895]https://www.nexusmods.com/stardewvalley/articles/895[/url].\n<br />\n<br />41061302-afc2-401b-851f-eee849bd2ad0",
+	"PageUrl": "https://www.nexusmods.com/stardewvalley/mods/56087",
+	"Version": "0.1.0",
+	"Updated": "2026-11-27T05:02:04+00:00",
+	"Downloads": [
+		{
+			"Id": 192761,
+			"Type": "Main",
+			"DisplayName": "FishTankWallpaper",
+			"FileName": "3d/8d/ae/3d8dae91-8bb2-4f52-b09d-2d541dc32e42",
+			"Description": "",
+			"Version": "0.1.0",
+			"SizeInBytes": 33706,
+			"Uploaded": "2026-11-27T05:02:04+00:00",
+			"Mods": [
+				{
+					"Id": "aedenthorn.FishTankWallpaper",
+					"DisplayName": "Fish Tank Wallpaper",
+					"Type": "Smapi",
+					"RelativePath": "FishTankWallpaper",
+					"Manifest": {
+						"Name": "Fish Tank Wallpaper",
+						"Description": "Fish Tank Wallpaper.",
+						"Author": "aedenthorn",
+						"Version": "0.1.0",
+						"MinimumApiVersion": "4.0.0",
+						"EntryDll": "FishTankWallpaper.dll",
+						"Dependencies": [],
+						"UpdateKeys": [
+							"Nexus:56087"
+						],
+						"UniqueId": "aedenthorn.FishTankWallpaper"
+					}
+				}
+			],
+			"OtherFields": {
+				"Uid": 5596342579449,
+				"CategoryId": 1,
+				"Primary": true
+			}
+		}
+	],
+	"OtherFields": {
+		"Uid": 5596342442775,
+		"UploaderId": 18901754,
+		"CategoryId": 25,
+		"Adult": false
+	}
+}
